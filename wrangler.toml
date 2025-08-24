@@ -1,0 +1,50 @@
+# Cloudflare Workers configuration for Carmen de Areco Transparency Portal
+name = "carmen-de-areco-transparency"
+main = "worker/index.js"
+compatibility_date = "2024-01-15"
+compatibility_flags = ["nodejs_compat"]
+
+# Static assets configuration
+[site]
+bucket = "./frontend/dist"
+entry-point = "worker"
+
+# Production environment
+[env.production]
+name = "carmen-de-areco-transparency-prod"
+routes = [
+  { pattern = "cda-transparencia.org/*", zone_name = "cda-transparencia.org" }
+]
+
+# Staging environment
+[env.staging]
+name = "carmen-de-areco-transparency-staging"
+routes = [
+  { pattern = "staging.cda-transparencia.org/*", zone_name = "cda-transparencia.org" }
+]
+
+# Development environment
+[env.development]
+name = "carmen-de-areco-transparency-dev"
+
+# Static assets configuration for SPA
+[[rules]]
+type = "ESModule"
+globs = ["**/*.js", "**/*.mjs"]
+
+# Environment variables (configure in Cloudflare dashboard)
+[vars]
+ENVIRONMENT = "production"
+API_BASE_URL = "https://api.cda-transparencia.org"
+CONTACT_EMAIL = "transparencia@cda-transparencia.org"
+
+# KV namespace for caching (optional - for future use)
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "your-kv-namespace-id"
+
+# D1 database (optional - for future backend)
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "transparency-db"
+# database_id = "your-d1-database-id"

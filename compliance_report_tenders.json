@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "total_activities": 2,
+    "violations": 0,
+    "warnings": 1,
+    "blocked": 0,
+    "compliance_rate": 100.0
+  },
+  "recent_violations": [],
+  "recent_warnings": [
+    {
+      "activity": {
+        "type": "web_request",
+        "url": "https://licitacionesv2.gobdigital.gba.gob.ar/obras",
+        "purpose": "Extracting public tenders",
+        "headers": {},
+        "robots_checked": false,
+        "robots_allowed": true,
+        "timestamp": "2025-08-24T10:25:14.236675",
+        "id": "50ee013e"
+      },
+      "rule": "robots_txt",
+      "issue": "robots.txt not checked before access",
+      "timestamp": "2025-08-24T10:25:14.236729"
+    }
+  ],
+  "active_monitoring": {
+    "domains_tracked": 1,
+    "rules_active": 6
+  },
+  "legal_framework": {
+    "argentina": [
+      "Ley 27.275",
+      "Ley 25.326",
+      "C\u00f3digo Penal"
+    ],
+    "australia": [
+      "FOI Act 1982",
+      "Privacy Act 1988",
+      "Crimes Act 1914"
+    ]
+  },
+  "generated_at": "2025-08-24T10:25:15.806408"
+}

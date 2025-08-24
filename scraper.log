@@ -1,0 +1,691 @@
+2025-08-23 17:00:01,423 - INFO - Starting Carmen de Areco transparency portal scraping for https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar/...
+2025-08-23 17:00:01,423 - INFO - Starting current site scraping...
+2025-08-23 17:00:02,730 - ERROR - Error scraping https://web.archive.org/transparencia: 404 Client Error: NOT FOUND for url: https://web.archive.org/transparencia
+2025-08-23 17:00:02,934 - ERROR - Error scraping https://web.archive.org/presupuesto: 404 Client Error: NOT FOUND for url: https://web.archive.org/presupuesto
+2025-08-23 17:00:03,137 - ERROR - Error scraping https://web.archive.org/licitaciones: 404 Client Error: NOT FOUND for url: https://web.archive.org/licitaciones
+2025-08-23 17:00:03,343 - ERROR - Error scraping https://web.archive.org/ordenanzas: 404 Client Error: NOT FOUND for url: https://web.archive.org/ordenanzas
+2025-08-23 17:00:03,551 - ERROR - Error scraping https://web.archive.org/boletin-oficial: 404 Client Error: NOT FOUND for url: https://web.archive.org/boletin-oficial
+2025-08-23 17:00:03,757 - ERROR - Error scraping https://web.archive.org/declaraciones-juradas: 404 Client Error: NOT FOUND for url: https://web.archive.org/declaraciones-juradas
+2025-08-23 17:00:03,970 - ERROR - Error scraping https://web.archive.org/presupuesto-participativo: 404 Client Error: NOT FOUND for url: https://web.archive.org/presupuesto-participativo
+2025-08-23 17:00:04,176 - ERROR - Error scraping https://web.archive.org/empleados: 404 Client Error: NOT FOUND for url: https://web.archive.org/empleados
+2025-08-23 17:00:04,380 - ERROR - Error scraping https://web.archive.org/gobierno: 404 Client Error: NOT FOUND for url: https://web.archive.org/gobierno
+2025-08-23 17:00:04,585 - ERROR - Error scraping https://web.archive.org/noticias: 404 Client Error: NOT FOUND for url: https://web.archive.org/noticias
+2025-08-23 17:00:04,804 - ERROR - Error scraping https://web.archive.org/servicios: 404 Client Error: NOT FOUND for url: https://web.archive.org/servicios
+2025-08-23 17:00:04,805 - INFO - Starting Wayback Machine scraping...
+2025-08-23 17:00:04,805 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar/: 'Url' object has no attribute 'cdx_api'
+2025-08-23 17:00:04,805 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar//transparencia: 'Url' object has no attribute 'cdx_api'
+2025-08-23 17:00:04,806 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar//presupuesto: 'Url' object has no attribute 'cdx_api'
+2025-08-23 17:00:04,806 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar//licitaciones: 'Url' object has no attribute 'cdx_api'
+2025-08-23 17:00:04,806 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar//ordenanzas: 'Url' object has no attribute 'cdx_api'
+2025-08-23 17:00:04,807 - INFO - Report saved to cold_storage/scraping_report.json
+2025-08-23 17:00:04,807 - INFO - Scraping completed! Check the 'cold_storage' directory for results.
+2025-08-23 17:02:32,895 - INFO - Starting Carmen de Areco transparency portal scraping for https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar/...
+2025-08-23 17:02:32,895 - INFO - Starting current site scraping...
+2025-08-23 17:02:34,628 - ERROR - Error scraping https://web.archive.org/transparencia: 404 Client Error: NOT FOUND for url: https://web.archive.org/transparencia
+2025-08-23 17:02:34,828 - ERROR - Error scraping https://web.archive.org/presupuesto: 404 Client Error: NOT FOUND for url: https://web.archive.org/presupuesto
+2025-08-23 17:02:35,042 - ERROR - Error scraping https://web.archive.org/licitaciones: 404 Client Error: NOT FOUND for url: https://web.archive.org/licitaciones
+2025-08-23 17:02:35,244 - ERROR - Error scraping https://web.archive.org/ordenanzas: 404 Client Error: NOT FOUND for url: https://web.archive.org/ordenanzas
+2025-08-23 17:02:35,445 - ERROR - Error scraping https://web.archive.org/boletin-oficial: 404 Client Error: NOT FOUND for url: https://web.archive.org/boletin-oficial
+2025-08-23 17:02:35,652 - ERROR - Error scraping https://web.archive.org/declaraciones-juradas: 404 Client Error: NOT FOUND for url: https://web.archive.org/declaraciones-juradas
+2025-08-23 17:02:35,852 - ERROR - Error scraping https://web.archive.org/presupuesto-participativo: 404 Client Error: NOT FOUND for url: https://web.archive.org/presupuesto-participativo
+2025-08-23 17:02:36,053 - ERROR - Error scraping https://web.archive.org/empleados: 404 Client Error: NOT FOUND for url: https://web.archive.org/empleados
+2025-08-23 17:02:36,255 - ERROR - Error scraping https://web.archive.org/gobierno: 404 Client Error: NOT FOUND for url: https://web.archive.org/gobierno
+2025-08-23 17:02:36,457 - ERROR - Error scraping https://web.archive.org/noticias: 404 Client Error: NOT FOUND for url: https://web.archive.org/noticias
+2025-08-23 17:02:36,658 - ERROR - Error scraping https://web.archive.org/servicios: 404 Client Error: NOT FOUND for url: https://web.archive.org/servicios
+2025-08-23 17:02:36,658 - INFO - Starting Wayback Machine scraping...
+2025-08-23 17:02:36,658 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar/: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 17:02:36,658 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar//transparencia: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 17:02:36,658 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar//presupuesto: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 17:02:36,658 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar//licitaciones: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 17:02:36,658 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar//ordenanzas: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 17:02:36,659 - INFO - Report saved to cold_storage/scraping_report.json
+2025-08-23 17:02:36,659 - INFO - Scraping completed! Check the 'cold_storage' directory for results.
+2025-08-23 17:48:31,909 - INFO - Starting Carmen de Areco transparency portal scraping for https://web.archive.org/web/20221202000000*/https://carmendeareco.gob.ar/noticias...
+2025-08-23 17:48:31,909 - INFO - Starting current site scraping...
+2025-08-23 17:48:33,659 - ERROR - Error scraping https://web.archive.org/transparencia: 404 Client Error: NOT FOUND for url: https://web.archive.org/transparencia
+2025-08-23 17:48:33,862 - ERROR - Error scraping https://web.archive.org/presupuesto: 404 Client Error: NOT FOUND for url: https://web.archive.org/presupuesto
+2025-08-23 17:48:34,066 - ERROR - Error scraping https://web.archive.org/licitaciones: 404 Client Error: NOT FOUND for url: https://web.archive.org/licitaciones
+2025-08-23 17:48:34,270 - ERROR - Error scraping https://web.archive.org/ordenanzas: 404 Client Error: NOT FOUND for url: https://web.archive.org/ordenanzas
+2025-08-23 17:48:34,472 - ERROR - Error scraping https://web.archive.org/boletin-oficial: 404 Client Error: NOT FOUND for url: https://web.archive.org/boletin-oficial
+2025-08-23 17:48:34,673 - ERROR - Error scraping https://web.archive.org/declaraciones-juradas: 404 Client Error: NOT FOUND for url: https://web.archive.org/declaraciones-juradas
+2025-08-23 17:48:34,879 - ERROR - Error scraping https://web.archive.org/presupuesto-participativo: 404 Client Error: NOT FOUND for url: https://web.archive.org/presupuesto-participativo
+2025-08-23 17:48:35,084 - ERROR - Error scraping https://web.archive.org/empleados: 404 Client Error: NOT FOUND for url: https://web.archive.org/empleados
+2025-08-23 17:48:35,290 - ERROR - Error scraping https://web.archive.org/gobierno: 404 Client Error: NOT FOUND for url: https://web.archive.org/gobierno
+2025-08-23 17:48:35,495 - ERROR - Error scraping https://web.archive.org/noticias: 404 Client Error: NOT FOUND for url: https://web.archive.org/noticias
+2025-08-23 17:48:35,698 - ERROR - Error scraping https://web.archive.org/servicios: 404 Client Error: NOT FOUND for url: https://web.archive.org/servicios
+2025-08-23 17:48:35,700 - INFO - Starting Wayback Machine scraping...
+2025-08-23 17:48:35,700 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20221202000000*/https://carmendeareco.gob.ar/noticias: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 17:48:35,700 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20221202000000*/https://carmendeareco.gob.ar/noticias/transparencia: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 17:48:35,700 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20221202000000*/https://carmendeareco.gob.ar/noticias/presupuesto: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 17:48:35,700 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20221202000000*/https://carmendeareco.gob.ar/noticias/licitaciones: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 17:48:35,701 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20221202000000*/https://carmendeareco.gob.ar/noticias/ordenanzas: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 17:48:35,702 - INFO - Report saved to cold_storage/scraping_report.json
+2025-08-23 17:48:35,703 - INFO - Scraping completed! Check the 'cold_storage' directory for results.
+2025-08-23 18:12:46,818 - INFO - Starting Carmen de Areco transparency portal scraping for https://web.archive.org/web/20221007000000*/https://carmendeareco.gob.ar/turismo...
+2025-08-23 18:12:46,818 - INFO - Starting current site scraping...
+2025-08-23 18:12:48,519 - ERROR - Error scraping https://web.archive.org/transparencia: 404 Client Error: NOT FOUND for url: https://web.archive.org/transparencia
+2025-08-23 18:12:48,723 - ERROR - Error scraping https://web.archive.org/presupuesto: 404 Client Error: NOT FOUND for url: https://web.archive.org/presupuesto
+2025-08-23 18:12:48,929 - ERROR - Error scraping https://web.archive.org/licitaciones: 404 Client Error: NOT FOUND for url: https://web.archive.org/licitaciones
+2025-08-23 18:12:49,136 - ERROR - Error scraping https://web.archive.org/ordenanzas: 404 Client Error: NOT FOUND for url: https://web.archive.org/ordenanzas
+2025-08-23 18:12:49,339 - ERROR - Error scraping https://web.archive.org/boletin-oficial: 404 Client Error: NOT FOUND for url: https://web.archive.org/boletin-oficial
+2025-08-23 18:12:49,543 - ERROR - Error scraping https://web.archive.org/declaraciones-juradas: 404 Client Error: NOT FOUND for url: https://web.archive.org/declaraciones-juradas
+2025-08-23 18:12:49,747 - ERROR - Error scraping https://web.archive.org/presupuesto-participativo: 404 Client Error: NOT FOUND for url: https://web.archive.org/presupuesto-participativo
+2025-08-23 18:12:49,953 - ERROR - Error scraping https://web.archive.org/empleados: 404 Client Error: NOT FOUND for url: https://web.archive.org/empleados
+2025-08-23 18:12:50,161 - ERROR - Error scraping https://web.archive.org/gobierno: 404 Client Error: NOT FOUND for url: https://web.archive.org/gobierno
+2025-08-23 18:12:50,365 - ERROR - Error scraping https://web.archive.org/noticias: 404 Client Error: NOT FOUND for url: https://web.archive.org/noticias
+2025-08-23 18:12:50,567 - ERROR - Error scraping https://web.archive.org/servicios: 404 Client Error: NOT FOUND for url: https://web.archive.org/servicios
+2025-08-23 18:12:50,567 - INFO - Starting Wayback Machine scraping...
+2025-08-23 18:12:50,567 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20221007000000*/https://carmendeareco.gob.ar/turismo: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 18:12:50,567 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20221007000000*/https://carmendeareco.gob.ar/turismo/transparencia: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 18:12:50,568 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20221007000000*/https://carmendeareco.gob.ar/turismo/presupuesto: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 18:12:50,568 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20221007000000*/https://carmendeareco.gob.ar/turismo/licitaciones: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 18:12:50,568 - ERROR - Error getting Wayback snapshots for https://web.archive.org/web/20221007000000*/https://carmendeareco.gob.ar/turismo/ordenanzas: 'Url' object has no attribute 'archived_snapshots'
+2025-08-23 18:12:50,568 - INFO - Report saved to cold_storage/scraping_report.json
+2025-08-23 18:12:50,568 - INFO - Scraping completed! Check the 'cold_storage' directory for results.
+2025-08-23 18:26:30,335 - INFO - Downloading specific Wayback Machine snapshot: https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar/
+2025-08-23 18:26:31,392 - INFO - Downloaded specific Wayback snapshot: https://web.archive.org/web/20230618000000*/https://carmendeareco.gob.ar/
+2025-08-23 18:26:31,392 - INFO - Report saved to cold_storage/scraping_report.json
+2025-08-23 18:26:31,392 - INFO - Scraping completed! Check the 'cold_storage' directory for results.
+2025-08-23 18:28:26,234 - INFO - Downloading specific Wayback Machine snapshot: https://web.archive.org/web/20221202000000*/https://carmendeareco.gob.ar/noticias
+2025-08-23 18:28:27,441 - INFO - Downloaded specific Wayback snapshot: https://web.archive.org/web/20221202000000*/https://carmendeareco.gob.ar/noticias
+2025-08-23 18:28:27,441 - INFO - Report saved to cold_storage/scraping_report.json
+2025-08-23 18:28:27,441 - INFO - Scraping completed! Check the 'cold_storage' directory for results.
+2025-08-23 18:28:37,853 - INFO - Downloading specific Wayback Machine snapshot: https://web.archive.org/web/20221007000000*/https://carmendeareco.gob.ar/turismo
+2025-08-23 18:28:39,011 - INFO - Downloaded specific Wayback snapshot: https://web.archive.org/web/20221007000000*/https://carmendeareco.gob.ar/turismo
+2025-08-23 18:28:39,012 - INFO - Report saved to cold_storage/scraping_report.json
+2025-08-23 18:28:39,012 - INFO - Scraping completed! Check the 'cold_storage' directory for results.
+2025-08-24 10:20:26,645 - INFO - Starting ETL for tenders from https://licitacionesv2.gobdigital.gba.gob.ar/obras
+2025-08-24 10:20:39,154 - INFO - Starting ETL for tenders from https://licitacionesv2.gobdigital.gba.gob.ar/obras
+2025-08-24 10:20:39,155 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:20:39,155 - ERROR - Request failed: Session.request() got an unexpected keyword argument 'purpose'
+2025-08-24 10:20:39,155 - ERROR - Failed to retrieve content from https://licitacionesv2.gobdigital.gba.gob.ar/obras
+2025-08-24 10:20:59,680 - INFO - Starting ETL for tenders from https://licitacionesv2.gobdigital.gba.gob.ar/obras
+2025-08-24 10:20:59,680 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:21:01,611 - WARNING - No table with class 'table' found on the page.
+2025-08-24 10:21:01,611 - INFO - Prepared 0 tenders for loading.
+2025-08-24 10:21:01,611 - INFO - Extracted tenders saved to cold_storage/metadata/tenders_extracted.json
+2025-08-24 10:21:01,612 - INFO - Tenders ETL process completed!
+2025-08-24 10:21:43,811 - INFO - Starting ETL for tenders from https://licitacionesv2.gobdigital.gba.gob.ar/obras
+2025-08-24 10:21:43,812 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:21:45,374 - WARNING - Could not parse date: 12/09/2025 12:00hs
+2025-08-24 10:21:45,374 - WARNING - Could not parse date: 12/09/2025 12:00hs
+2025-08-24 10:21:45,374 - WARNING - Could not parse date: 12/09/2025 12:00hs
+2025-08-24 10:21:45,374 - INFO - Prepared 3 tenders for loading.
+2025-08-24 10:21:45,375 - INFO - Extracted tenders saved to cold_storage/metadata/tenders_extracted.json
+2025-08-24 10:21:45,376 - INFO - Tenders ETL process completed!
+2025-08-24 10:21:59,787 - INFO - Starting ETL for tenders from https://licitacionesv2.gobdigital.gba.gob.ar/obras
+2025-08-24 10:21:59,788 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:22:01,386 - INFO - Prepared 3 tenders for loading.
+2025-08-24 10:22:01,386 - INFO - Extracted tenders saved to cold_storage/metadata/tenders_extracted.json
+2025-08-24 10:22:01,387 - INFO - Tenders ETL process completed!
+2025-08-24 10:22:27,969 - INFO - Starting ETL for tenders from https://licitacionesv2.gobdigital.gba.gob.ar/obras
+2025-08-24 10:22:27,970 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:22:29,584 - WARNING - No tender entries found with class 'col-md-6'. Check HTML structure.
+2025-08-24 10:22:29,584 - INFO - Prepared 0 tenders for loading.
+2025-08-24 10:22:29,585 - INFO - Extracted tenders saved to cold_storage/metadata/tenders_extracted.json
+2025-08-24 10:22:29,586 - INFO - Tenders ETL process completed!
+2025-08-24 10:23:05,502 - INFO - Starting ETL for tenders from https://licitacionesv2.gobdigital.gba.gob.ar/obras
+2025-08-24 10:23:05,502 - INFO - ====== WebDriver manager ======
+2025-08-24 10:23:05,543 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 10:23:05,867 - INFO - About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_mac_arm64.zip
+2025-08-24 10:23:06,424 - INFO - Driver downloading response is 200
+2025-08-24 10:23:07,284 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 10:23:07,598 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 10:23:07,864 - INFO - Driver has been saved in cache [/Users/flong/.wdm/drivers/chromedriver/mac64/114.0.5735.90]
+2025-08-24 10:23:08,250 - ERROR - Error during Selenium scraping of https://licitacionesv2.gobdigital.gba.gob.ar/obras: Message: unknown error: cannot find Chrome binary
+Stacktrace:
+0   chromedriver                        0x00000001030b7f48 chromedriver + 4226888
+1   chromedriver                        0x00000001030b04f4 chromedriver + 4195572
+2   chromedriver                        0x0000000102cf4d68 chromedriver + 281960
+3   chromedriver                        0x0000000102d1bc24 chromedriver + 441380
+4   chromedriver                        0x0000000102d1a150 chromedriver + 434512
+5   chromedriver                        0x0000000102d5793c chromedriver + 686396
+6   chromedriver                        0x0000000102d57164 chromedriver + 684388
+7   chromedriver                        0x0000000102d23f1c chromedriver + 474908
+8   chromedriver                        0x0000000102d24ef4 chromedriver + 478964
+9   chromedriver                        0x000000010307959c chromedriver + 3970460
+10  chromedriver                        0x000000010307d6f0 chromedriver + 3987184
+11  chromedriver                        0x00000001030835b4 chromedriver + 4011444
+12  chromedriver                        0x000000010307e2fc chromedriver + 3990268
+13  chromedriver                        0x00000001030561c0 chromedriver + 3826112
+14  chromedriver                        0x000000010309a088 chromedriver + 4104328
+15  chromedriver                        0x000000010309a1e0 chromedriver + 4104672
+16  chromedriver                        0x00000001030a9f28 chromedriver + 4169512
+17  libsystem_pthread.dylib             0x000000018aec3c0c _pthread_start + 136
+18  libsystem_pthread.dylib             0x000000018aebeb80 thread_start + 8
+
+2025-08-24 10:23:08,251 - INFO - Tenders ETL process completed!
+2025-08-24 10:23:23,418 - INFO - Starting ETL for tenders from https://licitacionesv2.gobdigital.gba.gob.ar/obras
+2025-08-24 10:23:23,418 - INFO - ====== WebDriver manager ======
+2025-08-24 10:23:23,457 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 10:23:23,692 - INFO - About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_mac_arm64.zip
+2025-08-24 10:23:24,221 - INFO - Driver downloading response is 200
+2025-08-24 10:23:25,775 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 10:23:26,102 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 10:23:26,395 - INFO - Driver has been saved in cache [/Users/flong/.wdm/drivers/chromedriver/mac64/114.0.5735.90]
+2025-08-24 10:23:26,603 - ERROR - Error during Selenium scraping of https://licitacionesv2.gobdigital.gba.gob.ar/obras: Message: unknown error: no chrome binary at /Users/flong/Developer/cda-transparencia/scripts/transparencia_project/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
+Stacktrace:
+0   chromedriver                        0x0000000100ab3f48 chromedriver + 4226888
+1   chromedriver                        0x0000000100aac4f4 chromedriver + 4195572
+2   chromedriver                        0x00000001006f0d68 chromedriver + 281960
+3   chromedriver                        0x0000000100717698 chromedriver + 439960
+4   chromedriver                        0x0000000100716150 chromedriver + 434512
+5   chromedriver                        0x000000010075393c chromedriver + 686396
+6   chromedriver                        0x0000000100753164 chromedriver + 684388
+7   chromedriver                        0x000000010071ff1c chromedriver + 474908
+8   chromedriver                        0x0000000100720ef4 chromedriver + 478964
+9   chromedriver                        0x0000000100a7559c chromedriver + 3970460
+10  chromedriver                        0x0000000100a796f0 chromedriver + 3987184
+11  chromedriver                        0x0000000100a7f5b4 chromedriver + 4011444
+12  chromedriver                        0x0000000100a7a2fc chromedriver + 3990268
+13  chromedriver                        0x0000000100a521c0 chromedriver + 3826112
+14  chromedriver                        0x0000000100a96088 chromedriver + 4104328
+15  chromedriver                        0x0000000100a961e0 chromedriver + 4104672
+16  chromedriver                        0x0000000100aa5f28 chromedriver + 4169512
+17  libsystem_pthread.dylib             0x000000018aec3c0c _pthread_start + 136
+18  libsystem_pthread.dylib             0x000000018aebeb80 thread_start + 8
+
+2025-08-24 10:23:26,604 - INFO - Tenders ETL process completed!
+2025-08-24 10:24:46,523 - INFO - Starting ETL for tenders from https://licitacionesv2.gobdigital.gba.gob.ar/obras
+2025-08-24 10:24:46,523 - INFO - ====== WebDriver manager ======
+2025-08-24 10:24:46,559 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 10:24:46,792 - INFO - About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_mac_arm64.zip
+2025-08-24 10:24:47,036 - INFO - Driver downloading response is 200
+2025-08-24 10:24:48,025 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 10:24:48,322 - INFO - Get LATEST chromedriver version for google-chrome
+2025-08-24 10:24:48,581 - INFO - Driver has been saved in cache [/Users/flong/.wdm/drivers/chromedriver/mac64/114.0.5735.90]
+2025-08-24 10:24:48,789 - ERROR - Error during Selenium scraping of https://licitacionesv2.gobdigital.gba.gob.ar/obras: Message: unknown error: cannot find Chrome binary
+Stacktrace:
+0   chromedriver                        0x0000000102473f48 chromedriver + 4226888
+1   chromedriver                        0x000000010246c4f4 chromedriver + 4195572
+2   chromedriver                        0x00000001020b0d68 chromedriver + 281960
+3   chromedriver                        0x00000001020d7c24 chromedriver + 441380
+4   chromedriver                        0x00000001020d6150 chromedriver + 434512
+5   chromedriver                        0x000000010211393c chromedriver + 686396
+6   chromedriver                        0x0000000102113164 chromedriver + 684388
+7   chromedriver                        0x00000001020dff1c chromedriver + 474908
+8   chromedriver                        0x00000001020e0ef4 chromedriver + 478964
+9   chromedriver                        0x000000010243559c chromedriver + 3970460
+10  chromedriver                        0x00000001024396f0 chromedriver + 3987184
+11  chromedriver                        0x000000010243f5b4 chromedriver + 4011444
+12  chromedriver                        0x000000010243a2fc chromedriver + 3990268
+13  chromedriver                        0x00000001024121c0 chromedriver + 3826112
+14  chromedriver                        0x0000000102456088 chromedriver + 4104328
+15  chromedriver                        0x00000001024561e0 chromedriver + 4104672
+16  chromedriver                        0x0000000102465f28 chromedriver + 4169512
+17  libsystem_pthread.dylib             0x000000018aec3c0c _pthread_start + 136
+18  libsystem_pthread.dylib             0x000000018aebeb80 thread_start + 8
+
+2025-08-24 10:24:48,790 - INFO - Tenders ETL process completed!
+2025-08-24 10:25:14,236 - INFO - Starting ETL for tenders from https://licitacionesv2.gobdigital.gba.gob.ar/obras
+2025-08-24 10:25:14,237 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:25:15,805 - WARNING - No tender entries found with class 'col-md-6'. Check HTML structure.
+2025-08-24 10:25:15,805 - INFO - Prepared 0 tenders for loading.
+2025-08-24 10:25:15,805 - INFO - Extracted tenders saved to cold_storage/metadata/tenders_extracted.json
+2025-08-24 10:25:15,806 - INFO - Tenders ETL process completed!
+2025-08-24 10:25:53,328 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:25:53,328 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:26:04,761 - INFO - Found 3 relevant links.
+2025-08-24 10:26:04,761 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf
+2025-08-24 10:26:04,761 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf
+2025-08-24 10:26:04,761 - INFO - - http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:26:04,761 - INFO - Extracted links saved to cold_storage/metadata/boletin_oficial_links.json
+2025-08-24 10:26:04,762 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:26:41,902 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:26:41,903 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:26:48,367 - INFO - Found 3 relevant links.
+2025-08-24 10:26:48,367 - INFO - - http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:27:03,940 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:27:03,940 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:27:09,535 - INFO - Found 3 relevant links.
+2025-08-24 10:27:09,536 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf
+2025-08-24 10:27:25,421 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:27:25,421 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:27:31,457 - INFO - Found 3 relevant links.
+2025-08-24 10:27:31,457 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf
+2025-08-24 10:27:31,457 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:27:37,151 - WARNING - BLOCKED ACTIVITY: response_check
+2025-08-24 10:27:37,152 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf -> cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1.pdf
+2025-08-24 10:27:37,153 - INFO - - http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:27:37,153 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:27:44,439 - INFO - Downloaded PDF: http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf -> cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:27:44,439 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf
+2025-08-24 10:27:44,439 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:27:51,333 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf -> cold_storage/documents/pdf/130_Aniversario-Historia.pdf
+2025-08-24 10:27:51,334 - INFO - Extracted links saved to cold_storage/metadata/boletin_oficial_links.json
+2025-08-24 10:27:51,334 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:28:41,582 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:28:41,583 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:28:48,403 - INFO - Found 3 relevant links.
+2025-08-24 10:28:48,403 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf
+2025-08-24 10:28:48,404 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:28:56,604 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf -> cold_storage/documents/pdf/130_Aniversario-Historia_1.pdf
+2025-08-24 10:28:56,604 - INFO - - http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:28:56,604 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:29:08,550 - INFO - Downloaded PDF: http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf -> cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020_1.pdf
+2025-08-24 10:29:08,550 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf
+2025-08-24 10:29:08,550 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:29:11,778 - WARNING - BLOCKED ACTIVITY: response_check
+2025-08-24 10:29:11,780 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf -> cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1_1.pdf
+2025-08-24 10:29:11,780 - INFO - Extracted links saved to cold_storage/metadata/boletin_oficial_links.json
+2025-08-24 10:29:11,781 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:29:42,420 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:29:42,421 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:29:50,122 - ERROR - Request failed: Object of type bytes is not JSON serializable
+2025-08-24 10:29:50,124 - ERROR - Failed to retrieve content from https://www.boletinoficial.gob.ar/
+2025-08-24 10:29:50,125 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:30:10,960 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:30:10,961 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:30:16,990 - ERROR - Request failed: Object of type bytes is not JSON serializable
+2025-08-24 10:30:16,992 - ERROR - Failed to retrieve content from https://www.boletinoficial.gob.ar/
+2025-08-24 10:30:16,993 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:31:12,701 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:31:12,702 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:31:18,339 - ERROR - Request failed: Object of type bytes is not JSON serializable
+2025-08-24 10:31:18,341 - ERROR - Failed to retrieve content from https://www.boletinoficial.gob.ar/
+2025-08-24 10:31:18,343 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:31:38,786 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:31:38,786 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:31:45,521 - ERROR - Request failed: Object of type bytes is not JSON serializable
+2025-08-24 10:31:45,523 - ERROR - Failed to retrieve content from https://www.boletinoficial.gob.ar/
+2025-08-24 10:31:45,523 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:32:01,931 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:32:01,931 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:32:07,804 - ERROR - Request failed: Object of type bytes is not JSON serializable
+2025-08-24 10:32:07,804 - ERROR - Failed to retrieve content from https://www.boletinoficial.gob.ar/
+2025-08-24 10:32:07,805 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:32:26,869 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:32:26,869 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:32:32,990 - ERROR - Request failed: Object of type bytes is not JSON serializable
+2025-08-24 10:32:32,991 - ERROR - Failed to retrieve content from https://www.boletinoficial.gob.ar/
+2025-08-24 10:32:32,992 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:32:57,265 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:32:57,265 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:33:02,837 - ERROR - Error checking rule no_exploits: Object of type bytes is not JSON serializable
+2025-08-24 10:33:02,867 - INFO - Found 3 relevant links.
+2025-08-24 10:33:02,867 - INFO - - http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:33:02,867 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:33:12,386 - ERROR - Error checking rule no_exploits: Object of type bytes is not JSON serializable
+2025-08-24 10:33:12,429 - INFO - Downloaded PDF: http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf -> cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020_2.pdf
+2025-08-24 10:33:12,429 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf
+2025-08-24 10:33:12,430 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:33:24,983 - ERROR - Error checking rule no_exploits: Object of type bytes is not JSON serializable
+2025-08-24 10:33:25,012 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf -> cold_storage/documents/pdf/130_Aniversario-Historia_2.pdf
+2025-08-24 10:33:25,012 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf
+2025-08-24 10:33:25,012 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:33:28,291 - ERROR - Error checking rule no_exploits: Object of type bytes is not JSON serializable
+2025-08-24 10:33:28,292 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf -> cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1_2.pdf
+2025-08-24 10:33:28,292 - INFO - Extracted links saved to cold_storage/metadata/boletin_oficial_links.json
+2025-08-24 10:33:28,293 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:33:57,583 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:33:57,584 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:34:04,036 - INFO - Found 3 relevant links.
+2025-08-24 10:34:04,036 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf
+2025-08-24 10:34:04,037 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:34:07,247 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf -> cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1_3.pdf
+2025-08-24 10:34:07,247 - INFO - - http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:34:07,247 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:34:14,418 - INFO - Downloaded PDF: http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf -> cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020_3.pdf
+2025-08-24 10:34:14,418 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf
+2025-08-24 10:34:14,419 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:34:26,521 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf -> cold_storage/documents/pdf/130_Aniversario-Historia_3.pdf
+2025-08-24 10:34:26,521 - INFO - Extracted links saved to cold_storage/metadata/boletin_oficial_links.json
+2025-08-24 10:34:26,522 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:34:53,753 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:34:53,754 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:35:01,423 - INFO - Found 3 relevant links.
+2025-08-24 10:35:01,423 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf
+2025-08-24 10:35:01,423 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:35:04,633 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf -> cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1_4.pdf
+2025-08-24 10:35:04,728 - INFO - Extracted text from PDF: cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1_4.pdf (first 200 chars): Buenos Aires, miércoles 20 de agosto de 2025
+Año CXXXIII - Número 35.731
+Legislación y Avisos oficiales
+ | Primera Sección
+SUPLEMENTO
+Correspondiente a la edición Nº 35.731 de la Primera Sección del m...
+2025-08-24 10:35:04,728 - INFO - - http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:35:04,729 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:35:19,336 - INFO - Downloaded PDF: http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf -> cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020_4.pdf
+2025-08-24 10:36:10,062 - INFO - Extracted text from PDF: cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020_4.pdf (first 200 chars): Digesto Jurídico Emergencia Sanitaria 
+Coronavirus COVID-19
+La Acción del Gobierno en Actos Administrativos 
+Tomo I (2020)
+Secretaría
+Legal y Técnica Dirección Nacional 
+del Registr o OﬁcialBolet ín O...
+2025-08-24 10:36:10,062 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf
+2025-08-24 10:36:10,062 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:36:22,153 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf -> cold_storage/documents/pdf/130_Aniversario-Historia_4.pdf
+2025-08-24 10:36:22,788 - WARNING - unknown widths : 
+[0, IndirectObject(1571, 0, 4381868880)]
+2025-08-24 10:36:22,788 - WARNING - unknown widths : 
+[0, IndirectObject(1566, 0, 4381868880)]
+2025-08-24 10:36:22,788 - WARNING - unknown widths : 
+[0, IndirectObject(1561, 0, 4381868880)]
+2025-08-24 10:36:22,789 - WARNING - unknown widths : 
+[0, IndirectObject(1556, 0, 4381868880)]
+2025-08-24 10:36:22,789 - WARNING - unknown widths : 
+[0, IndirectObject(1551, 0, 4381868880)]
+2025-08-24 10:36:22,789 - WARNING - unknown widths : 
+[0, IndirectObject(1546, 0, 4381868880)]
+2025-08-24 10:36:22,789 - WARNING - unknown widths : 
+[0, IndirectObject(1541, 0, 4381868880)]
+2025-08-24 10:36:22,790 - WARNING - unknown widths : 
+[0, IndirectObject(1536, 0, 4381868880)]
+2025-08-24 10:36:22,790 - WARNING - unknown widths : 
+[0, IndirectObject(1531, 0, 4381868880)]
+2025-08-24 10:36:22,790 - WARNING - unknown widths : 
+[0, IndirectObject(1526, 0, 4381868880)]
+2025-08-24 10:36:22,790 - WARNING - unknown widths : 
+[0, IndirectObject(1521, 0, 4381868880)]
+2025-08-24 10:36:22,790 - WARNING - unknown widths : 
+[0, IndirectObject(1516, 0, 4381868880)]
+2025-08-24 10:36:22,791 - WARNING - unknown widths : 
+[0, IndirectObject(1511, 0, 4381868880)]
+2025-08-24 10:36:22,791 - WARNING - unknown widths : 
+[0, IndirectObject(1506, 0, 4381868880)]
+2025-08-24 10:36:22,791 - WARNING - unknown widths : 
+[0, IndirectObject(1501, 0, 4381868880)]
+2025-08-24 10:36:22,791 - WARNING - unknown widths : 
+[0, IndirectObject(1496, 0, 4381868880)]
+2025-08-24 10:36:22,791 - WARNING - unknown widths : 
+[0, IndirectObject(1491, 0, 4381868880)]
+2025-08-24 10:36:22,792 - WARNING - unknown widths : 
+[0, IndirectObject(1486, 0, 4381868880)]
+2025-08-24 10:36:22,794 - INFO - Extracted text from PDF: cold_storage/documents/pdf/130_Aniversario-Historia_4.pdf (first 200 chars): 
+Historia del Boletín Oﬁcial 
+de la República Argentina
+Coordinación: María Angélica Lobo.
+Edición: Sergio ArribáDiseño de interior y cubierta: Florencia Denise Alcover Lanosa.Producción: Antonella Tr...
+2025-08-24 10:36:22,794 - INFO - Extracted links saved to cold_storage/metadata/boletin_oficial_links.json
+2025-08-24 10:36:22,794 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:37:32,820 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:37:32,821 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:37:41,246 - INFO - Found 3 relevant links.
+2025-08-24 10:37:41,246 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf
+2025-08-24 10:37:41,246 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:37:44,674 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf -> cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1_5.pdf
+2025-08-24 10:37:44,778 - INFO - Extracted text from PDF: cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1_5.pdf (first 200 chars): Buenos Aires, miércoles 20 de agosto de 2025
+Año CXXXIII - Número 35.731
+Legislación y Avisos oficiales
+ | Primera Sección
+SUPLEMENTO
+Correspondiente a la edición Nº 35.731 de la Primera Sección del m...
+2025-08-24 10:37:44,779 - INFO - Parsed PDF data: {'document_type': 'Legislation', 'publication_date': '2025-08-20T00:00:00', 'document_number': '35', 'summary': 'Buenos Aires, miércoles 20 de agosto de 2025\nAño CXXXIII - Número 35.731\nLegislación y Avisos oficiales\n | Primera Sección\nSUPLEMENTO\nCorrespondiente a la edición Nº 35.731 de la Primera Sección del miércoles 20 de agosto de 2025.\nLos documentos que aparecen en el BOLETÍN OFICIAL DE LA REPÚBLICA ARGENTINA serán tenidos por\nauténticos y obligatorios por el efecto de esta publicación y por comunicados y suficientemente circulados\ndentro de todo el territorio nacional (Decreto Nº 659/1947). La edic'}
+2025-08-24 10:37:44,779 - ERROR - Error extracting text from PDF cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1_5.pdf: name 'extracted_documents_data' is not defined
+2025-08-24 10:37:44,780 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf
+2025-08-24 10:37:44,780 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:38:00,961 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf -> cold_storage/documents/pdf/130_Aniversario-Historia_5.pdf
+2025-08-24 10:38:01,487 - WARNING - unknown widths : 
+[0, IndirectObject(1571, 0, 4366998640)]
+2025-08-24 10:38:01,488 - WARNING - unknown widths : 
+[0, IndirectObject(1566, 0, 4366998640)]
+2025-08-24 10:38:01,488 - WARNING - unknown widths : 
+[0, IndirectObject(1561, 0, 4366998640)]
+2025-08-24 10:38:01,488 - WARNING - unknown widths : 
+[0, IndirectObject(1556, 0, 4366998640)]
+2025-08-24 10:38:01,488 - WARNING - unknown widths : 
+[0, IndirectObject(1551, 0, 4366998640)]
+2025-08-24 10:38:01,488 - WARNING - unknown widths : 
+[0, IndirectObject(1546, 0, 4366998640)]
+2025-08-24 10:38:01,489 - WARNING - unknown widths : 
+[0, IndirectObject(1541, 0, 4366998640)]
+2025-08-24 10:38:01,489 - WARNING - unknown widths : 
+[0, IndirectObject(1536, 0, 4366998640)]
+2025-08-24 10:38:01,489 - WARNING - unknown widths : 
+[0, IndirectObject(1531, 0, 4366998640)]
+2025-08-24 10:38:01,489 - WARNING - unknown widths : 
+[0, IndirectObject(1526, 0, 4366998640)]
+2025-08-24 10:38:01,490 - WARNING - unknown widths : 
+[0, IndirectObject(1521, 0, 4366998640)]
+2025-08-24 10:38:01,490 - WARNING - unknown widths : 
+[0, IndirectObject(1516, 0, 4366998640)]
+2025-08-24 10:38:01,490 - WARNING - unknown widths : 
+[0, IndirectObject(1511, 0, 4366998640)]
+2025-08-24 10:38:01,490 - WARNING - unknown widths : 
+[0, IndirectObject(1506, 0, 4366998640)]
+2025-08-24 10:38:01,490 - WARNING - unknown widths : 
+[0, IndirectObject(1501, 0, 4366998640)]
+2025-08-24 10:38:01,491 - WARNING - unknown widths : 
+[0, IndirectObject(1496, 0, 4366998640)]
+2025-08-24 10:38:01,491 - WARNING - unknown widths : 
+[0, IndirectObject(1491, 0, 4366998640)]
+2025-08-24 10:38:01,491 - WARNING - unknown widths : 
+[0, IndirectObject(1486, 0, 4366998640)]
+2025-08-24 10:38:01,493 - INFO - Extracted text from PDF: cold_storage/documents/pdf/130_Aniversario-Historia_5.pdf (first 200 chars): 
+Historia del Boletín Oﬁcial 
+de la República Argentina
+Coordinación: María Angélica Lobo.
+Edición: Sergio ArribáDiseño de interior y cubierta: Florencia Denise Alcover Lanosa.Producción: Antonella Tr...
+2025-08-24 10:38:01,498 - INFO - Parsed PDF data: {'document_type': 'Legislation', 'publication_date': None, 'document_number': '2', 'summary': "\nHistoria del Boletín Oﬁcial \nde la República Argentina\nCoordinación: María Angélica Lobo.\nEdición: Sergio ArribáDiseño de interior y cubierta: Florencia Denise Alcover Lanosa.Producción: Antonella Trentadue, Natalia López Fernández, Lautaro Catrilef, Natalia Yoma Auerbach.\n3XEOLFDFLµQ\x03GH\x03OD\x03'LUHFFLµQ\x031DFLRQDO\x03GHO\x035HJLVWUR\x032ߔFLDO\x03GH\x03OD\x036XEVHFUHWDU¯D\x03\nTécnica de la Secretaría Legal y Técnica de la Presidencia de la Nación.\nCiudad Autónoma de Buenos Aires, 2023.\nImpreso en la República Argentina.D"}
+2025-08-24 10:38:01,498 - ERROR - Error extracting text from PDF cold_storage/documents/pdf/130_Aniversario-Historia_5.pdf: name 'extracted_documents_data' is not defined
+2025-08-24 10:38:01,498 - INFO - - http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:38:01,499 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:38:20,949 - INFO - Downloaded PDF: http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf -> cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020_5.pdf
+2025-08-24 10:39:12,367 - INFO - Extracted text from PDF: cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020_5.pdf (first 200 chars): Digesto Jurídico Emergencia Sanitaria 
+Coronavirus COVID-19
+La Acción del Gobierno en Actos Administrativos 
+Tomo I (2020)
+Secretaría
+Legal y Técnica Dirección Nacional 
+del Registr o OﬁcialBolet ín O...
+2025-08-24 10:39:12,371 - INFO - Parsed PDF data: {'document_type': 'Public Tender', 'publication_date': '2020-12-30T00:00:00', 'document_number': '27', 'summary': 'Digesto Jurídico Emergencia Sanitaria \nCoronavirus COVID-19\nLa Acción del Gobierno en Actos Administrativos \nTomo I (2020)\nSecretaría\nLegal y Técnica Dirección Nacional \ndel Registr o OﬁcialBolet ín Oﬁcial de la República Argentina\nDigesto Jurídico Emergencia Sanitaria \nCoronavirus COVID-19\nLa Acción del Gobierno en Actos Administrativos \nTomo I (2020)\nSecretaría\nLegal y Técnica Dirección Nacional \ndel Registro OﬁcialBoletín Oﬁcial de la República Argentina\nPRESIDENTE DE\xa0LA\xa0NACIÓN\nDr. Alberto Án'}
+2025-08-24 10:39:12,371 - ERROR - Error extracting text from PDF cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020_5.pdf: name 'extracted_documents_data' is not defined
+2025-08-24 10:39:12,371 - INFO - Extracted links saved to cold_storage/metadata/boletin_oficial_links.json
+2025-08-24 10:40:21,801 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:40:21,802 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:40:28,318 - INFO - Found 3 relevant links.
+2025-08-24 10:40:28,318 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf
+2025-08-24 10:40:28,318 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:40:31,561 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf -> cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1.pdf
+2025-08-24 10:40:31,659 - INFO - Extracted text from PDF: cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1.pdf (first 200 chars): Buenos Aires, miércoles 20 de agosto de 2025
+Año CXXXIII - Número 35.731
+Legislación y Avisos oficiales
+ | Primera Sección
+SUPLEMENTO
+Correspondiente a la edición Nº 35.731 de la Primera Sección del m...
+2025-08-24 10:40:31,660 - INFO - Parsed PDF data: {'document_type': 'Legislation', 'publication_date': '2025-08-20T00:00:00', 'document_number': '35', 'summary': 'Buenos Aires, miércoles 20 de agosto de 2025\nAño CXXXIII - Número 35.731\nLegislación y Avisos oficiales\n | Primera Sección\nSUPLEMENTO\nCorrespondiente a la edición Nº 35.731 de la Primera Sección del miércoles 20 de agosto de 2025.\nLos documentos que aparecen en el BOLETÍN OFICIAL DE LA REPÚBLICA ARGENTINA serán tenidos por\nauténticos y obligatorios por el efecto de esta publicación y por comunicados y suficientemente circulados\ndentro de todo el territorio nacional (Decreto Nº 659/1947). La edic', 'is_relevant_to_carmen_de_areco': True}
+2025-08-24 10:40:31,660 - ERROR - Error extracting text from PDF cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1.pdf: name 'extracted_documents_data' is not defined
+2025-08-24 10:40:31,660 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf
+2025-08-24 10:40:31,660 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:40:41,634 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf -> cold_storage/documents/pdf/130_Aniversario-Historia.pdf
+2025-08-24 10:40:42,159 - WARNING - unknown widths : 
+[0, IndirectObject(1571, 0, 4346637984)]
+2025-08-24 10:40:42,159 - WARNING - unknown widths : 
+[0, IndirectObject(1566, 0, 4346637984)]
+2025-08-24 10:40:42,159 - WARNING - unknown widths : 
+[0, IndirectObject(1561, 0, 4346637984)]
+2025-08-24 10:40:42,160 - WARNING - unknown widths : 
+[0, IndirectObject(1556, 0, 4346637984)]
+2025-08-24 10:40:42,160 - WARNING - unknown widths : 
+[0, IndirectObject(1551, 0, 4346637984)]
+2025-08-24 10:40:42,160 - WARNING - unknown widths : 
+[0, IndirectObject(1546, 0, 4346637984)]
+2025-08-24 10:40:42,160 - WARNING - unknown widths : 
+[0, IndirectObject(1541, 0, 4346637984)]
+2025-08-24 10:40:42,160 - WARNING - unknown widths : 
+[0, IndirectObject(1536, 0, 4346637984)]
+2025-08-24 10:40:42,161 - WARNING - unknown widths : 
+[0, IndirectObject(1531, 0, 4346637984)]
+2025-08-24 10:40:42,161 - WARNING - unknown widths : 
+[0, IndirectObject(1526, 0, 4346637984)]
+2025-08-24 10:40:42,161 - WARNING - unknown widths : 
+[0, IndirectObject(1521, 0, 4346637984)]
+2025-08-24 10:40:42,161 - WARNING - unknown widths : 
+[0, IndirectObject(1516, 0, 4346637984)]
+2025-08-24 10:40:42,162 - WARNING - unknown widths : 
+[0, IndirectObject(1511, 0, 4346637984)]
+2025-08-24 10:40:42,162 - WARNING - unknown widths : 
+[0, IndirectObject(1506, 0, 4346637984)]
+2025-08-24 10:40:42,162 - WARNING - unknown widths : 
+[0, IndirectObject(1501, 0, 4346637984)]
+2025-08-24 10:40:42,162 - WARNING - unknown widths : 
+[0, IndirectObject(1496, 0, 4346637984)]
+2025-08-24 10:40:42,162 - WARNING - unknown widths : 
+[0, IndirectObject(1491, 0, 4346637984)]
+2025-08-24 10:40:42,163 - WARNING - unknown widths : 
+[0, IndirectObject(1486, 0, 4346637984)]
+2025-08-24 10:40:42,164 - INFO - Extracted text from PDF: cold_storage/documents/pdf/130_Aniversario-Historia.pdf (first 200 chars): 
+Historia del Boletín Oﬁcial 
+de la República Argentina
+Coordinación: María Angélica Lobo.
+Edición: Sergio ArribáDiseño de interior y cubierta: Florencia Denise Alcover Lanosa.Producción: Antonella Tr...
+2025-08-24 10:40:42,170 - INFO - Parsed PDF data: {'document_type': 'Legislation', 'publication_date': None, 'document_number': '2', 'summary': "\nHistoria del Boletín Oﬁcial \nde la República Argentina\nCoordinación: María Angélica Lobo.\nEdición: Sergio ArribáDiseño de interior y cubierta: Florencia Denise Alcover Lanosa.Producción: Antonella Trentadue, Natalia López Fernández, Lautaro Catrilef, Natalia Yoma Auerbach.\n3XEOLFDFLµQ\x03GH\x03OD\x03'LUHFFLµQ\x031DFLRQDO\x03GHO\x035HJLVWUR\x032ߔFLDO\x03GH\x03OD\x036XEVHFUHWDU¯D\x03\nTécnica de la Secretaría Legal y Técnica de la Presidencia de la Nación.\nCiudad Autónoma de Buenos Aires, 2023.\nImpreso en la República Argentina.D", 'is_relevant_to_carmen_de_areco': True}
+2025-08-24 10:40:42,170 - ERROR - Error extracting text from PDF cold_storage/documents/pdf/130_Aniversario-Historia.pdf: name 'extracted_documents_data' is not defined
+2025-08-24 10:40:42,170 - INFO - - http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:40:42,170 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:40:50,443 - INFO - Downloaded PDF: http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf -> cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:41:41,975 - INFO - Extracted text from PDF: cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf (first 200 chars): Digesto Jurídico Emergencia Sanitaria 
+Coronavirus COVID-19
+La Acción del Gobierno en Actos Administrativos 
+Tomo I (2020)
+Secretaría
+Legal y Técnica Dirección Nacional 
+del Registr o OﬁcialBolet ín O...
+2025-08-24 10:41:41,979 - INFO - Parsed PDF data: {'document_type': 'Public Tender', 'publication_date': '2020-12-30T00:00:00', 'document_number': '27', 'summary': 'Digesto Jurídico Emergencia Sanitaria \nCoronavirus COVID-19\nLa Acción del Gobierno en Actos Administrativos \nTomo I (2020)\nSecretaría\nLegal y Técnica Dirección Nacional \ndel Registr o OﬁcialBolet ín Oﬁcial de la República Argentina\nDigesto Jurídico Emergencia Sanitaria \nCoronavirus COVID-19\nLa Acción del Gobierno en Actos Administrativos \nTomo I (2020)\nSecretaría\nLegal y Técnica Dirección Nacional \ndel Registro OﬁcialBoletín Oﬁcial de la República Argentina\nPRESIDENTE DE\xa0LA\xa0NACIÓN\nDr. Alberto Án', 'is_relevant_to_carmen_de_areco': True}
+2025-08-24 10:41:41,979 - ERROR - Error extracting text from PDF cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf: name 'extracted_documents_data' is not defined
+2025-08-24 10:41:41,980 - INFO - Extracted links saved to cold_storage/metadata/boletin_oficial_links.json
+2025-08-24 10:42:10,084 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:42:10,085 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:42:15,715 - INFO - Found 3 relevant links.
+2025-08-24 10:42:15,715 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf
+2025-08-24 10:42:15,715 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:42:25,220 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf -> cold_storage/documents/pdf/130_Aniversario-Historia_1.pdf
+2025-08-24 10:42:25,774 - WARNING - unknown widths : 
+[0, IndirectObject(1571, 0, 4393001872)]
+2025-08-24 10:42:25,774 - WARNING - unknown widths : 
+[0, IndirectObject(1566, 0, 4393001872)]
+2025-08-24 10:42:25,774 - WARNING - unknown widths : 
+[0, IndirectObject(1561, 0, 4393001872)]
+2025-08-24 10:42:25,774 - WARNING - unknown widths : 
+[0, IndirectObject(1556, 0, 4393001872)]
+2025-08-24 10:42:25,774 - WARNING - unknown widths : 
+[0, IndirectObject(1551, 0, 4393001872)]
+2025-08-24 10:42:25,775 - WARNING - unknown widths : 
+[0, IndirectObject(1546, 0, 4393001872)]
+2025-08-24 10:42:25,775 - WARNING - unknown widths : 
+[0, IndirectObject(1541, 0, 4393001872)]
+2025-08-24 10:42:25,775 - WARNING - unknown widths : 
+[0, IndirectObject(1536, 0, 4393001872)]
+2025-08-24 10:42:25,775 - WARNING - unknown widths : 
+[0, IndirectObject(1531, 0, 4393001872)]
+2025-08-24 10:42:25,776 - WARNING - unknown widths : 
+[0, IndirectObject(1526, 0, 4393001872)]
+2025-08-24 10:42:25,776 - WARNING - unknown widths : 
+[0, IndirectObject(1521, 0, 4393001872)]
+2025-08-24 10:42:25,776 - WARNING - unknown widths : 
+[0, IndirectObject(1516, 0, 4393001872)]
+2025-08-24 10:42:25,776 - WARNING - unknown widths : 
+[0, IndirectObject(1511, 0, 4393001872)]
+2025-08-24 10:42:25,776 - WARNING - unknown widths : 
+[0, IndirectObject(1506, 0, 4393001872)]
+2025-08-24 10:42:25,777 - WARNING - unknown widths : 
+[0, IndirectObject(1501, 0, 4393001872)]
+2025-08-24 10:42:25,777 - WARNING - unknown widths : 
+[0, IndirectObject(1496, 0, 4393001872)]
+2025-08-24 10:42:25,777 - WARNING - unknown widths : 
+[0, IndirectObject(1491, 0, 4393001872)]
+2025-08-24 10:42:25,777 - WARNING - unknown widths : 
+[0, IndirectObject(1486, 0, 4393001872)]
+2025-08-24 10:42:25,779 - INFO - Extracted text from PDF: cold_storage/documents/pdf/130_Aniversario-Historia_1.pdf (first 200 chars): 
+Historia del Boletín Oﬁcial 
+de la República Argentina
+Coordinación: María Angélica Lobo.
+Edición: Sergio ArribáDiseño de interior y cubierta: Florencia Denise Alcover Lanosa.Producción: Antonella Tr...
+2025-08-24 10:42:25,785 - INFO - Parsed PDF data: {'document_type': 'Legislation', 'publication_date': None, 'document_number': '2', 'summary': "\nHistoria del Boletín Oﬁcial \nde la República Argentina\nCoordinación: María Angélica Lobo.\nEdición: Sergio ArribáDiseño de interior y cubierta: Florencia Denise Alcover Lanosa.Producción: Antonella Trentadue, Natalia López Fernández, Lautaro Catrilef, Natalia Yoma Auerbach.\n3XEOLFDFLµQ\x03GH\x03OD\x03'LUHFFLµQ\x031DFLRQDO\x03GHO\x035HJLVWUR\x032ߔFLDO\x03GH\x03OD\x036XEVHFUHWDU¯D\x03\nTécnica de la Secretaría Legal y Técnica de la Presidencia de la Nación.\nCiudad Autónoma de Buenos Aires, 2023.\nImpreso en la República Argentina.D", 'is_relevant_to_carmen_de_areco': True}
+2025-08-24 10:42:25,785 - INFO - - http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:42:25,785 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:42:36,820 - INFO - Downloaded PDF: http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf -> cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020_1.pdf
+2025-08-24 10:43:29,464 - INFO - Extracted text from PDF: cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020_1.pdf (first 200 chars): Digesto Jurídico Emergencia Sanitaria 
+Coronavirus COVID-19
+La Acción del Gobierno en Actos Administrativos 
+Tomo I (2020)
+Secretaría
+Legal y Técnica Dirección Nacional 
+del Registr o OﬁcialBolet ín O...
+2025-08-24 10:43:29,469 - INFO - Parsed PDF data: {'document_type': 'Public Tender', 'publication_date': '2020-12-30T00:00:00', 'document_number': '27', 'summary': 'Digesto Jurídico Emergencia Sanitaria \nCoronavirus COVID-19\nLa Acción del Gobierno en Actos Administrativos \nTomo I (2020)\nSecretaría\nLegal y Técnica Dirección Nacional \ndel Registr o OﬁcialBolet ín Oﬁcial de la República Argentina\nDigesto Jurídico Emergencia Sanitaria \nCoronavirus COVID-19\nLa Acción del Gobierno en Actos Administrativos \nTomo I (2020)\nSecretaría\nLegal y Técnica Dirección Nacional \ndel Registro OﬁcialBoletín Oﬁcial de la República Argentina\nPRESIDENTE DE\xa0LA\xa0NACIÓN\nDr. Alberto Án', 'is_relevant_to_carmen_de_areco': True}
+2025-08-24 10:43:29,469 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf
+2025-08-24 10:43:29,469 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:43:32,709 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf -> cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1_1.pdf
+2025-08-24 10:43:32,790 - INFO - Extracted text from PDF: cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1_1.pdf (first 200 chars): Buenos Aires, miércoles 20 de agosto de 2025
+Año CXXXIII - Número 35.731
+Legislación y Avisos oficiales
+ | Primera Sección
+SUPLEMENTO
+Correspondiente a la edición Nº 35.731 de la Primera Sección del m...
+2025-08-24 10:43:32,790 - INFO - Parsed PDF data: {'document_type': 'Legislation', 'publication_date': '2025-08-20T00:00:00', 'document_number': '35', 'summary': 'Buenos Aires, miércoles 20 de agosto de 2025\nAño CXXXIII - Número 35.731\nLegislación y Avisos oficiales\n | Primera Sección\nSUPLEMENTO\nCorrespondiente a la edición Nº 35.731 de la Primera Sección del miércoles 20 de agosto de 2025.\nLos documentos que aparecen en el BOLETÍN OFICIAL DE LA REPÚBLICA ARGENTINA serán tenidos por\nauténticos y obligatorios por el efecto de esta publicación y por comunicados y suficientemente circulados\ndentro de todo el territorio nacional (Decreto Nº 659/1947). La edic', 'is_relevant_to_carmen_de_areco': True}
+2025-08-24 10:43:32,790 - INFO - Extracted links saved to cold_storage/metadata/boletin_oficial_links.json
+2025-08-24 10:43:32,791 - INFO - Extracted documents data saved to cold_storage/metadata/boletin_oficial_documents_data.json
+2025-08-24 10:43:32,791 - INFO - Boletín Oficial ETL process completed!
+2025-08-24 10:44:15,813 - INFO - Starting ETL for Boletín Oficial from https://www.boletinoficial.gob.ar/
+2025-08-24 10:44:15,814 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access']
+2025-08-24 10:44:23,972 - INFO - Found 3 relevant links.
+2025-08-24 10:44:23,973 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf
+2025-08-24 10:44:23,973 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:44:32,438 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf -> cold_storage/documents/pdf/130_Aniversario-Historia_2.pdf
+2025-08-24 10:44:33,002 - WARNING - unknown widths : 
+[0, IndirectObject(1571, 0, 4369421696)]
+2025-08-24 10:44:33,003 - WARNING - unknown widths : 
+[0, IndirectObject(1566, 0, 4369421696)]
+2025-08-24 10:44:33,003 - WARNING - unknown widths : 
+[0, IndirectObject(1561, 0, 4369421696)]
+2025-08-24 10:44:33,003 - WARNING - unknown widths : 
+[0, IndirectObject(1556, 0, 4369421696)]
+2025-08-24 10:44:33,003 - WARNING - unknown widths : 
+[0, IndirectObject(1551, 0, 4369421696)]
+2025-08-24 10:44:33,004 - WARNING - unknown widths : 
+[0, IndirectObject(1546, 0, 4369421696)]
+2025-08-24 10:44:33,004 - WARNING - unknown widths : 
+[0, IndirectObject(1541, 0, 4369421696)]
+2025-08-24 10:44:33,004 - WARNING - unknown widths : 
+[0, IndirectObject(1536, 0, 4369421696)]
+2025-08-24 10:44:33,004 - WARNING - unknown widths : 
+[0, IndirectObject(1531, 0, 4369421696)]
+2025-08-24 10:44:33,005 - WARNING - unknown widths : 
+[0, IndirectObject(1526, 0, 4369421696)]
+2025-08-24 10:44:33,005 - WARNING - unknown widths : 
+[0, IndirectObject(1521, 0, 4369421696)]
+2025-08-24 10:44:33,005 - WARNING - unknown widths : 
+[0, IndirectObject(1516, 0, 4369421696)]
+2025-08-24 10:44:33,005 - WARNING - unknown widths : 
+[0, IndirectObject(1511, 0, 4369421696)]
+2025-08-24 10:44:33,006 - WARNING - unknown widths : 
+[0, IndirectObject(1506, 0, 4369421696)]
+2025-08-24 10:44:33,006 - WARNING - unknown widths : 
+[0, IndirectObject(1501, 0, 4369421696)]
+2025-08-24 10:44:33,006 - WARNING - unknown widths : 
+[0, IndirectObject(1496, 0, 4369421696)]
+2025-08-24 10:44:33,006 - WARNING - unknown widths : 
+[0, IndirectObject(1491, 0, 4369421696)]
+2025-08-24 10:44:33,006 - WARNING - unknown widths : 
+[0, IndirectObject(1486, 0, 4369421696)]
+2025-08-24 10:44:33,008 - INFO - Extracted text from PDF: cold_storage/documents/pdf/130_Aniversario-Historia_2.pdf (first 200 chars): 
+Historia del Boletín Oﬁcial 
+de la República Argentina
+Coordinación: María Angélica Lobo.
+Edición: Sergio ArribáDiseño de interior y cubierta: Florencia Denise Alcover Lanosa.Producción: Antonella Tr...
+2025-08-24 10:44:33,015 - INFO - Parsed PDF data: {'document_type': 'Legislation', 'publication_date': None, 'document_number': '2', 'summary': "\nHistoria del Boletín Oﬁcial \nde la República Argentina\nCoordinación: María Angélica Lobo.\nEdición: Sergio ArribáDiseño de interior y cubierta: Florencia Denise Alcover Lanosa.Producción: Antonella Trentadue, Natalia López Fernández, Lautaro Catrilef, Natalia Yoma Auerbach.\n3XEOLFDFLµQ\x03GH\x03OD\x03'LUHFFLµQ\x031DFLRQDO\x03GHO\x035HJLVWUR\x032ߔFLDO\x03GH\x03OD\x036XEVHFUHWDU¯D\x03\nTécnica de la Secretaría Legal y Técnica de la Presidencia de la Nación.\nCiudad Autónoma de Buenos Aires, 2023.\nImpreso en la República Argentina.D", 'is_relevant_to_carmen_de_areco': True}
+2025-08-24 10:44:33,015 - INFO - - https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf
+2025-08-24 10:44:33,016 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:44:37,014 - INFO - Downloaded PDF: https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf -> cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1_2.pdf
+2025-08-24 10:44:37,070 - INFO - Extracted text from PDF: cold_storage/documents/pdf/primera-seccion_20-08-2025_suplemento-1_2.pdf (first 200 chars): Buenos Aires, miércoles 20 de agosto de 2025
+Año CXXXIII - Número 35.731
+Legislación y Avisos oficiales
+ | Primera Sección
+SUPLEMENTO
+Correspondiente a la edición Nº 35.731 de la Primera Sección del m...
+2025-08-24 10:44:37,071 - INFO - Parsed PDF data: {'document_type': 'Legislation', 'publication_date': '2025-08-20T00:00:00', 'document_number': '35', 'summary': 'Buenos Aires, miércoles 20 de agosto de 2025\nAño CXXXIII - Número 35.731\nLegislación y Avisos oficiales\n | Primera Sección\nSUPLEMENTO\nCorrespondiente a la edición Nº 35.731 de la Primera Sección del miércoles 20 de agosto de 2025.\nLos documentos que aparecen en el BOLETÍN OFICIAL DE LA REPÚBLICA ARGENTINA serán tenidos por\nauténticos y obligatorios por el efecto de esta publicación y por comunicados y suficientemente circulados\ndentro de todo el territorio nacional (Decreto Nº 659/1947). La edic', 'is_relevant_to_carmen_de_areco': True}
+2025-08-24 10:44:37,071 - INFO - - http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf
+2025-08-24 10:44:37,071 - WARNING - Compliance warnings: ['robots_txt: robots.txt not checked before access', 'gov_transparency: Activity not clearly for government transparency']
+2025-08-24 10:44:56,470 - INFO - Downloaded PDF: http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf -> cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020_2.pdf
+2025-08-24 10:45:47,987 - INFO - Extracted text from PDF: cold_storage/documents/pdf/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020_2.pdf (first 200 chars): Digesto Jurídico Emergencia Sanitaria 
+Coronavirus COVID-19
+La Acción del Gobierno en Actos Administrativos 
+Tomo I (2020)
+Secretaría
+Legal y Técnica Dirección Nacional 
+del Registr o OﬁcialBolet ín O...
+2025-08-24 10:45:47,993 - INFO - Parsed PDF data: {'document_type': 'Legislation', 'publication_date': '2020-12-30T00:00:00', 'document_number': '27', 'summary': 'Digesto Jurídico Emergencia Sanitaria \nCoronavirus COVID-19\nLa Acción del Gobierno en Actos Administrativos \nTomo I (2020)\nSecretaría\nLegal y Técnica Dirección Nacional \ndel Registr o OﬁcialBolet ín Oﬁcial de la República Argentina\nDigesto Jurídico Emergencia Sanitaria \nCoronavirus COVID-19\nLa Acción del Gobierno en Actos Administrativos \nTomo I (2020)\nSecretaría\nLegal y Técnica Dirección Nacional \ndel Registro OﬁcialBoletín Oﬁcial de la República Argentina\nPRESIDENTE DE\xa0LA\xa0NACIÓN\nDr. Alberto Án', 'is_relevant_to_carmen_de_areco': True}
+2025-08-24 10:45:47,994 - INFO - Extracted links saved to cold_storage/metadata/boletin_oficial_links.json
+2025-08-24 10:45:47,994 - INFO - Extracted documents data saved to cold_storage/metadata/boletin_oficial_documents_data.json
+2025-08-24 10:45:47,995 - INFO - Boletín Oficial ETL process completed!

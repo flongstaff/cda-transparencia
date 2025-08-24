@@ -1,0 +1,47 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import Home from './pages/Home';
+import About from './pages/About';
+import Budget from './pages/Budget';
+import PublicSpending from './pages/PublicSpending';
+import Revenue from './pages/Revenue';
+import Contracts from './pages/Contracts';
+import PropertyDeclarations from './pages/PropertyDeclarations';
+import Salaries from './pages/Salaries';
+import Database from './pages/Database';
+import Reports from './pages/Reports';
+import Contact from './pages/Contact';
+import Whistleblower from './pages/Whistleblower';
+import DataIntegrityDashboard from './components/DataIntegrityDashboard';
+import { ThemeProvider } from './contexts/ThemeContext';
+import { LanguageProvider } from './contexts/LanguageContext';
+
+function App() {
+  return (
+    <LanguageProvider>
+      <ThemeProvider>
+        <Router>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/budget" element={<Budget />} />
+              <Route path="/spending" element={<PublicSpending />} />
+              <Route path="/revenue" element={<Revenue />} />
+              <Route path="/contracts" element={<Contracts />} />
+              <Route path="/salaries" element={<Salaries />} />
+              <Route path="/database" element={<Database />} />
+              <Route path="/reports" element={<Reports />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/whistleblower" element={<Whistleblower />} />
+              <Route path="/data-integrity" element={<DataIntegrityDashboard />} />
+            </Routes>
+          </Layout>
+        </Router>
+      </ThemeProvider>
+    </LanguageProvider>
+  );
+}
+
+export default App;

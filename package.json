@@ -1,0 +1,47 @@
+{
+  "name": "carmen-de-areco-transparency",
+  "version": "1.0.0",
+  "description": "Portal de Transparencia de Carmen de Areco - Complete deployment pipeline",
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "test": "cd frontend && npm run test",
+    "lint": "cd frontend && npm run lint",
+    "dev": "cd frontend && npm run dev",
+    "deploy:dev": "wrangler deploy --env development",
+    "deploy:staging": "wrangler deploy --env staging", 
+    "deploy:prod": "wrangler deploy --env production",
+    "preview": "wrangler dev",
+    "setup:cloudflare": "echo '🌐 Setting up Cloudflare...' && wrangler login",
+    "setup:complete": "npm run install:all && npm run build && echo '✅ Setup complete! Run npm run preview to test locally'",
+    "deploy": "./scripts/deploy.sh",
+    "deploy:help": "./scripts/deploy.sh --help",
+    "logs:dev": "wrangler tail --env development",
+    "logs:staging": "wrangler tail --env staging",
+    "logs:prod": "wrangler tail --env production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/cda-transparencia.git"
+  },
+  "keywords": [
+    "transparency",
+    "government",
+    "cloudflare-workers",
+    "react",
+    "argentina",
+    "municipal"
+  ],
+  "author": "Carmen de Areco Municipality",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.78.12"
+  },
+  "dependencies": {
+    "axios": "^1.11.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

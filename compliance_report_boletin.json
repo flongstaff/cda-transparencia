@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "total_activities": 8,
+    "violations": 0,
+    "warnings": 4,
+    "blocked": 0,
+    "compliance_rate": 100.0
+  },
+  "recent_violations": [],
+  "recent_warnings": [
+    {
+      "activity": {
+        "type": "web_request",
+        "url": "https://www.boletinoficial.gob.ar/",
+        "purpose": "Extracting links from Official Gazette",
+        "headers": {},
+        "robots_checked": false,
+        "robots_allowed": true,
+        "timestamp": "2025-08-24T10:44:15.813705",
+        "id": "e930e5e9"
+      },
+      "rule": "robots_txt",
+      "issue": "robots.txt not checked before access",
+      "timestamp": "2025-08-24T10:44:15.813750"
+    },
+    {
+      "activity": {
+        "type": "web_request",
+        "url": "https://s3.arsat.com.ar/cdn-bo-001/130_Aniversario-Historia.pdf",
+        "purpose": "Downloading Official Gazette PDF",
+        "headers": {},
+        "robots_checked": false,
+        "robots_allowed": true,
+        "timestamp": "2025-08-24T10:44:23.973225",
+        "id": "f1a6c603"
+      },
+      "rule": "robots_txt",
+      "issue": "robots.txt not checked before access",
+      "timestamp": "2025-08-24T10:44:23.973270"
+    },
+    {
+      "activity": {
+        "type": "web_request",
+        "url": "https://s3.arsat.com.ar/cdn-bo-001/suplementos/2025/08/20/primera-seccion_20-08-2025_suplemento-1.pdf",
+        "purpose": "Downloading Official Gazette PDF",
+        "headers": {},
+        "robots_checked": false,
+        "robots_allowed": true,
+        "timestamp": "2025-08-24T10:44:33.015961",
+        "id": "eb9fef84"
+      },
+      "rule": "robots_txt",
+      "issue": "robots.txt not checked before access",
+      "timestamp": "2025-08-24T10:44:33.015995"
+    },
+    {
+      "activity": {
+        "type": "web_request",
+        "url": "http://s3.arsat.com.ar/cdn-bo-001/banner/Digesto_Juridico_Emergencia_Sanitaria_Tomo_I_2020.pdf",
+        "purpose": "Downloading Official Gazette PDF",
+        "headers": {},
+        "robots_checked": false,
+        "robots_allowed": true,
+        "timestamp": "2025-08-24T10:44:37.071515",
+        "id": "8a98d604"
+      },
+      "rule": "robots_txt",
+      "issue": "robots.txt not checked before access",
+      "timestamp": "2025-08-24T10:44:37.071545"
+    }
+  ],
+  "active_monitoring": {
+    "domains_tracked": 2,
+    "rules_active": 6
+  },
+  "legal_framework": {
+    "argentina": [
+      "Ley 27.275",
+      "Ley 25.326",
+      "C\u00f3digo Penal"
+    ],
+    "australia": [
+      "FOI Act 1982",
+      "Privacy Act 1988",
+      "Crimes Act 1914"
+    ]
+  },
+  "generated_at": "2025-08-24T10:45:47.995134"
+}
