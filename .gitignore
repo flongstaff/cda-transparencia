@@ -3,25 +3,19 @@ node_modules/
 venv/
 
 # Large binary files (GitHub storage optimization)
-data/source_materials/**/*.pdf
-data/source_materials/**/*.xlsx
-data/source_materials/**/*.xls
-data/source_materials/**/*.zip
-cold_storage/
+**/*.pdf
+**/*.xlsx
+**/*.xls
+**/*.zip
 
 # Keep data structure but exclude large binaries
 !data/source_materials/README.md
 !data/source_materials/*/README.md
 
-# Keep document registry for GitHub deployment
-!src/data/document_registry.json
-
-# Build outputs
+# Build outputs and logs
 frontend/dist/
 frontend/build/
-
-# Logs
-*.log
+output/**
 
 # Environment files
 .env
@@ -44,7 +38,13 @@ frontend/.vite/
 # Scripts with large Chrome files
 scripts/transparencia_project/chrome-mac-arm64/
 
-# Keep scripts but exclude large binaries
+# Keep scripts but exclude generated files and binaries
+!*.py
+!*.js
+!*.sh
+
+# Ignore virtual environments (common across platforms)
+venv/
 !scripts/*.py
 !scripts/*.js
 !scripts/*.sh
