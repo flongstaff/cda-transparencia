@@ -1,0 +1,57 @@
+# Carmen de Areco Transparency Portal - Clean Repository
+# Only essential files for transparency investigation
+
+# === DEPENDENCIES ===
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+
+# === BUILD OUTPUTS ===
+dist/
+build/
+.vite/
+coverage/
+
+# === ENVIRONMENT & SECURITY ===
+# No sensitive data in public repository
+.env*
+!.env.example
+*.key
+*.pem
+*.crt
+
+# === DEVELOPMENT ===
+.cache/
+*.log
+.DS_Store
+._*
+Thumbs.db
+
+# === IDE FILES ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === SENSITIVE MATERIALS ===
+# Hosted separately for security
+cold_storage/
+source_materials/
+raw_data/
+internal_docs/
+data/documents/
+data/processed/
+
+# === DATABASE FILES ===
+# Live data from APIs only
+*.db
+*.sqlite*
+
+# === LARGE FILES ===
+**/*.pdf
+**/*.xlsx
+**/*.zip
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
