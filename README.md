@@ -5,6 +5,7 @@
 [![Frontend CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/frontend-ci.yml)
 [![Backend CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/backend-ci.yml)
 [![Deploy](https://github.com/flongstaff/cda-transparencia/actions/workflows/deploy.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/deploy.yml)
+[![GitHub Pages](https://img.shields.io/github/deployments/flongstaff/cda-transparencia/github-pages?label=GitHub%20Pages)](https://flongstaff.github.io/cda-transparencia/)
 
 ## 📊 Investigación de Transparencia Municipal (2009-2025)
 
@@ -50,7 +51,9 @@ Análisis integral de 15 años de gestión municipal para identificar:
 - Python 3.8+
 - Docker (para la base de datos)
 
-### Frontend
+### Opción 1: Comandos manuales
+
+#### Frontend
 
 ```bash
 cd frontend
@@ -59,7 +62,7 @@ npm run dev
 # Acceder a http://localhost:5173
 ```
 
-### Backend
+#### Backend
 
 ```bash
 cd backend
@@ -68,20 +71,40 @@ npm start
 # API disponible en http://localhost:3000/api
 ```
 
-### Base de Datos
+#### Base de Datos
 
 ```bash
 cd backend
 docker-compose up -d
 ```
 
+### Opción 2: Script de desarrollo (recomendado)
+
+```bash
+# Iniciar servidor de desarrollo frontend
+./dev.sh frontend
+
+# Construir frontend para producción
+./dev.sh build
+
+# Probar construcción
+./dev.sh test
+
+# Ver todas las opciones
+./dev.sh help
+```
+
 ## 📱 Acceso a los Datos
 
-### 🌐 Dashboard Web
+### 🌐 Dashboard Web (Desarrollo Local)
 ```bash
 cd frontend && npm install && npm run dev
 # Acceder a http://localhost:5173
 ```
+
+### 🌐 Dashboard Web (Producción)
+El portal está desplegado automáticamente en GitHub Pages:
+[https://flongstaff.github.io/cda-transparencia/](https://flongstaff.github.io/cda-transparencia/)
 
 ### 🔍 API REST
 ```bash
