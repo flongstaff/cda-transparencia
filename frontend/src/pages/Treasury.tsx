@@ -18,11 +18,10 @@ const Treasury: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
-  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   
   const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017'];
 
-    const loadTreasuryDataForYear = async (year: string) => {
+  const loadTreasuryDataForYear = async (year: string) => {
     setLoading(true);
     setError(null);
     try {
@@ -40,7 +39,7 @@ const Treasury: React.FC = () => {
   // Load treasury data when sources change
   useEffect(() => {
     void loadTreasuryDataForYear(activeYear);
-  }, [selectedSources]);
+  }, [selectedSources, activeYear]);
 
   const handleSourceChange = (newSelectedSources: string[]) => {
     setSelectedSources(newSelectedSources);
@@ -51,14 +50,6 @@ const Treasury: React.FC = () => {
   };
 
   const formatCurrency = (value: number) => formatCurrencyARS(value);
-
-  const handleSourceChange = (newSelectedSources: string[]) => {
-    setSelectedSources(newSelectedSources);
-  };
-
-  const handleDataRefresh = () => {
-    loadTreasuryDataForYear(activeYear);
-  };
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('es-AR');

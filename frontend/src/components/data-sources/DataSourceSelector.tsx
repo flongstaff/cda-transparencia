@@ -1,25 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { Check, Globe, Archive, FileText, Database, AlertCircle, Info, Loader2 } from 'lucide-react';
-
-export interface DataSource {
-  id: string;
-  name: string;
-  description: string;
-  type: 'official' | 'archive' | 'processed' | 'database';
-  url?: string;
-  status: 'active' | 'inactive' | 'error' | 'loading';
-  lastUpdate?: string;
-  recordCount?: number;
-  icon: React.ReactNode;
-}
-
-interface DataSourceSelectorProps {
-  selectedSources: string[];
-  onSourceChange: (selectedSources: string[]) => void;
-  onDataRefresh?: () => void;
-  className?: string;
-}
-
 import React, { useState } from 'react';
 import { RefreshCw, Database, Globe, Download, Archive } from 'lucide-react';
 
@@ -36,8 +14,6 @@ const DataSourceSelector: React.FC<DataSourceSelectorProps> = ({
   onDataRefresh,
   className = '' 
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
   const toggleSource = (sourceId: string) => {
     const newSelectedSources = selectedSources.includes(sourceId)
       ? selectedSources.filter(id => id !== sourceId)

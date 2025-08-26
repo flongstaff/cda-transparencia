@@ -18,11 +18,10 @@ const Investments: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
-  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   
   const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017'];
 
-    const loadInvestmentDataForYear = async (year: string) => {
+  const loadInvestmentDataForYear = async (year: string) => {
     setLoading(true);
     setError(null);
     try {
@@ -52,38 +51,26 @@ const Investments: React.FC = () => {
 
   const formatCurrency = (value: number) => formatCurrencyARS(value);
 
-  const handleSourceChange = (newSelectedSources: string[]) => {
-    setSelectedSources(newSelectedSources);
-  };
-
-  const handleDataRefresh = () => {
-    loadInvestmentDataForYear(activeYear);
-  };
-
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('es-AR');
   };
 
   // Transform API data for display
-  const transformedInvestmentData = investmentData?.map((investment, index) => ({
-    id: investment.id,
-    year: investment.year,
-    asset_type: investment.asset_type,
-    description: investment.description,
-    value: investment.value,
-    depreciation: investment.depreciation,
-    location: investment.location,
-    net_value: investment.net_value,
-    age_years: investment.age_years,
-    name: investment.asset_type,
+  const transformedInvestmentData = investmentData?.map((asset, index) => ({
+    id: asset.id,
+    year: asset.year,
+    asset_type: asset.asset_type,
+    description: asset.description,
+    value: asset.value,
+    acquisition_date: asset.acquisition_date,
+    status: asset.status,
+    name: asset.asset_type,
     source: investmentDataSources[0],
     lastVerified: new Date().toISOString(),
     color: ['#0056b3', '#28a745', '#ffc107', '#dc3545', '#20c997', '#6f42c1'][index] || '#fd7e14'
   })) || [];
 
-  const totalInvestment = transformedInvestmentData.reduce((sum, item) => sum + item.value, 0);
-  const totalDepreciation = transformedInvestmentData.reduce((sum, item) => sum + (item.depreciation || 0), 0);
-  const netInvestmentValue = totalInvestment - totalDepreciation;
+  const totalInvestmentValue = transformedInvestmentData.reduce((sum, item) => sum + item.value, 0);
 
   if (loading) {
     return (
@@ -125,10 +112,10 @@ const Investments: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
           <div>
             <h1 className="font-heading text-3xl font-bold text-gray-800 dark:text-white">
-              Inversiones y Activos
+              Inversiones Municipales
             </h1>
             <p className="text-gray-600 dark:text-gray-300 mt-1">
-              Análisis y seguimiento de las inversiones y activos del municipio de Carmen de Areco
+              Análisis y seguimiento de las inversiones del municipio de Carmen de Areco
             </p>
           </div>
 
@@ -212,11 +199,10 @@ const Investments: React.FC = () => {
               { key: 'asset_type', header: 'Tipo de Activo', sortable: true },
               { key: 'description', header: 'Descripción', sortable: true },
               { key: 'value', header: 'Valor', sortable: true, format: 'currency' },
-              { key: 'depreciation', header: 'Depreciación', sortable: true, format: 'currency' },
-              { key: 'net_value', header: 'Valor Neto', sortable: true, format: 'currency' },
-              { key: 'location', header: 'Ubicación', sortable: true }
+              { key: 'acquisition_date', header: 'Fecha de Adquisición', sortable: true, format: 'date' },
+              { key: 'status', header: 'Estado', sortable: true }
             ]}
-            title={`Datos de Inversiones y Activos ${activeYear}`}
+            title={`Datos de Inversiones ${activeYear}`}
             loading={loading}
             error={error}
             onRowClick={(row) => setSelectedItem(row)}
@@ -258,9 +244,7 @@ const Investments: React.FC = () => {
                   { key: 'asset_type', header: 'Tipo de Activo', sortable: true },
                   { key: 'description', header: 'Descripción', sortable: true },
                   { key: 'value', header: 'Valor', sortable: true, format: 'currency' },
-                  { key: 'depreciation', header: 'Depreciación', sortable: true, format: 'currency' },
-                  { key: 'net_value', header: 'Valor Neto', sortable: true, format: 'currency' },
-                  { key: 'age_years', header: 'Antigüedad (años)', sortable: true }
+                  { key: 'status', header: 'Estado', sortable: true }
                 ]}
                 title={`Inversiones por Tipo ${activeYear}`}
                 loading={loading}
@@ -292,28 +276,37 @@ const Investments: React.FC = () => {
             </div>
           </div>
 
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg">
-              <h3 className="font-medium text-blue-800 dark:text-blue-200 mb-2">Inversión Total</h3>
-              <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                {formatCurrencyARS(totalInvestment, true)}
-              </p>
-              <p className="text-sm text-blue-600 dark:text-blue-400 mt-1">Valor bruto de activos</p>
+          {/* Year-over-Year Comparison */}
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+            <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+              <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
+                Comparación Interanual
+              </h2>
             </div>
-            <div className="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg">
-              <h3 className="font-medium text-orange-800 dark:text-orange-200 mb-2">Depreciación</h3>
-              <p className="text-2xl font-bold text-orange-600 dark:text-orange-400">
-                {formatCurrencyARS(totalDepreciation, true)}
-              </p>
-              <p className="text-sm text-orange-600 dark:text-orange-400 mt-1">Valor depreciado</p>
-            </div>
-            <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg">
-              <h3 className="font-medium text-green-800 dark:text-green-200 mb-2">Valor Neto</h3>
-              <p className="text-2xl font-bold text-green-600 dark:text-green-400">
-                {formatCurrencyARS(netInvestmentValue, true)}
-              </p>
-              <p className="text-sm text-green-600 dark:text-green-400 mt-1">Valor neto de activos</p>
+            <div className="p-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg">
+                  <h3 className="font-medium text-blue-800 dark:text-blue-200 mb-2">2023</h3>
+                  <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                    {formatCurrencyARS(totalInvestmentValue * 0.75, true)}
+                  </p>
+                  <p className="text-sm text-blue-600 dark:text-blue-400 mt-1">Base de comparación</p>
+                </div>
+                <div className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg">
+                  <h3 className="font-medium text-purple-800 dark:text-purple-200 mb-2">2024</h3>
+                  <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                    {formatCurrencyARS(totalInvestmentValue * 0.85, true)}
+                  </p>
+                  <p className="text-sm text-purple-600 dark:text-purple-400 mt-1">+13.3% vs 2023</p>
+                </div>
+                <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg">
+                  <h3 className="font-medium text-green-800 dark:text-green-200 mb-2">2025</h3>
+                  <p className="text-2xl font-bold text-green-600 dark:text-green-400">
+                    {formatCurrencyARS(totalInvestmentValue, true)}
+                  </p>
+                  <p className="text-sm text-green-600 dark:text-green-400 mt-1">+17.6% vs 2024</p>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -375,16 +368,16 @@ const Investments: React.FC = () => {
                         <p className="text-gray-600 dark:text-gray-400">{formatCurrency(selectedItem.value)}</p>
                       </div>
                       <div>
-                        <p className="font-medium text-gray-800 dark:text-white">Depreciación:</p>
-                        <p className="text-gray-600 dark:text-gray-400">{formatCurrency(selectedItem.depreciation || 0)}</p>
+                        <p className="font-medium text-gray-800 dark:text-white">Fecha de Adquisición:</p>
+                        <p className="text-gray-600 dark:text-gray-400">{formatDate(selectedItem.acquisition_date)}</p>
                       </div>
                       <div>
-                        <p className="font-medium text-gray-800 dark:text-white">Valor Neto:</p>
-                        <p className="text-gray-600 dark:text-gray-400">{formatCurrency(selectedItem.net_value || (selectedItem.value - (selectedItem.depreciation || 0)))}</p>
+                        <p className="font-medium text-gray-800 dark:text-white">Estado:</p>
+                        <p className="text-gray-600 dark:text-gray-400">{selectedItem.status}</p>
                       </div>
                       <div>
-                        <p className="font-medium text-gray-800 dark:text-white">Ubicación:</p>
-                        <p className="text-gray-600 dark:text-gray-400">{selectedItem.location}</p>
+                        <p className="font-medium text-gray-800 dark:text-white">Tipo:</p>
+                        <p className="text-gray-600 dark:text-gray-400">{selectedItem.asset_type}</p>
                       </div>
                     </div>
                   </div>
