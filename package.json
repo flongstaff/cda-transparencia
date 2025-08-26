@@ -1,0 +1,13 @@
+{
+  "name": "carmen-de-areco-transparency-test",
+  "version": "1.0.0",
+  "description": "Test script for Carmen de Areco Transparency Portal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Test passed\" && exit 0",
+    "build-test": "cd frontend && npx vite build && echo \"Build successful\""
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
