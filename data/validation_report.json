@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-26T11:43:10.520441",
+  "timestamp": "2025-08-26T16:15:07.030180",
   "original_files": 571,
   "markdown_files": 478,
   "db_records": 257,
@@ -48,7 +48,6 @@
   "safe_to_delete": false,
   "recommendations": [
     "\u274c Conversion rate too low: 93.2% (need >95%)",
-    "\u274c Preserved data integrity issues",
     "\u274c Too many missing conversions: 39"
   ]
 }
