@@ -1,0 +1,98 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "carmen-transparency"
+version = "1.0.0"
+description = "Transparency data processing tools for Carmen de Areco"
+authors = [
+    {name = "Franco Longstaff", email = "franco.longstaff@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "pandas>=1.5.0",
+    "openpyxl>=3.0.10",
+    "python-docx>=0.8.11",
+    "pdfminer.six>=20221105",
+    "requests>=2.28.0",
+    "beautifulsoup4>=4.11.0",
+    "lxml>=4.9.0",
+    "tabula-py>=2.6.0",
+    "numpy>=1.24.0",
+    "matplotlib>=3.6.0",
+    "seaborn>=0.12.0",
+    "click>=8.1.0",
+    "tqdm>=4.64.0",
+    "python-dotenv>=0.21.0",
+    "psycopg2-binary>=2.9.0",
+    "sqlalchemy>=1.4.0",
+    "flask>=2.2.0",
+    "flask-cors>=3.0.10",
+    "flask-sqlalchemy>=2.5.0",
+    "flask-migrate>=3.1.0",
+    "gunicorn>=20.1.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.2.0",
+    "pytest-cov>=4.0.0",
+    "black>=22.10.0",
+    "flake8>=5.0.0",
+    "mypy>=0.980",
+    "pre-commit>=2.20.0",
+    "jupyter>=1.0.0",
+    "jupyterlab>=3.5.0"
+]
+
+[project.scripts]
+process-data = "scripts.process_all:main"
+scrape-documents = "scripts.scraper:main"
+generate-reports = "scripts.reports:main"
+validate-data = "scripts.validator:main"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "scripts/tests",
+]
+
+[tool.mypy]
+python_version = "3.8"
+check_untyped_defs = true
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
