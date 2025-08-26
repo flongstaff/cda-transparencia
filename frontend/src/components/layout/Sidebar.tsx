@@ -12,7 +12,11 @@ import {
   Home,
   Info,
   Mail,
-  Code // For API Explorer
+  Code, // For API Explorer
+  FolderOpen, // For Documents
+  PieChart, // For Debt
+  Building, // For Investments
+  Wallet // For Treasury
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -25,11 +29,18 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
   const navItems = [
     { to: '/', label: t('sidebar.home'), icon: <Home size={20} /> },
     { to: '/about', label: t('sidebar.about'), icon: <Info size={20} /> },
+    { to: '/dashboard', label: t('sidebar.dashboard'), icon: <BarChart3 size={20} /> },
     { to: '/budget', label: t('sidebar.budget'), icon: <BarChart3 size={20} /> },
     { to: '/spending', label: t('sidebar.spending'), icon: <Banknote size={20} /> },
     { to: '/revenue', label: t('sidebar.revenue'), icon: <LineChart size={20} /> },
     { to: '/contracts', label: t('sidebar.contracts'), icon: <FileText size={20} /> },
+    { to: '/debt', label: t('sidebar.debt'), icon: <PieChart size={20} /> },
+    { to: '/investments', label: t('sidebar.investments'), icon: <Building size={20} /> },
+    { to: '/treasury', label: t('sidebar.treasury'), icon: <Wallet size={20} /> },
+    { to: '/property-declarations', label: t('sidebar.property'), icon: <FileText size={20} /> },
+    { to: '/salaries', label: t('sidebar.salaries'), icon: <FileText size={20} /> },
     { to: '/database', label: t('sidebar.database'), icon: <Database size={20} /> },
+    { to: '/documents', label: t('sidebar.documents'), icon: <FolderOpen size={20} /> },
     { to: '/reports', label: t('sidebar.reports'), icon: <FileBarChart size={20} /> },
     { to: '/contact', label: t('sidebar.contact'), icon: <Mail size={20} /> },
     { to: '/whistleblower', label: t('sidebar.whistleblower'), icon: <AlertTriangle size={20} /> },

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Search, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, Building, DollarSign, ShieldCheck, Loader2 } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
+import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import OSINTComplianceService from '../services/OSINTComplianceService';
 import ApiService, { PublicTender } from '../services/ApiService';
 
@@ -13,17 +14,21 @@ const Contracts: React.FC = () => {
   const [selectedTender, setSelectedTender] = useState<PublicTender | null>(null);
   const [activeTab, setActiveTab] = useState('overview');
   const [sortBy, setSortBy] = useState('amount');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const [filterStatus, setFilterStatus] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   const [tenders, setTenders] = useState<PublicTender[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const availableYears = ['2024', '2023', '2022', '2021', '2020', '2019', '2018'];
+  const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017'];
 
   const fetchTenders = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await ApiService.getPublicTenders(parseInt(activeYear));
+      const data = await ApiService.getPublicTenders(parseInt(activeYear), selectedSources);
       setTenders(data);
     } catch (err) {
       console.error('Failed to fetch public tenders:', err);
@@ -33,12 +38,12 @@ const Contracts: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  }, [activeYear]);
+  }, [activeYear, selectedSources]);
 
-  // Fetch tenders data when year changes
+  // Fetch tenders data when year or sources change
   useEffect(() => {
     void fetchTenders();
-  }, [activeYear, fetchTenders]);
+  }, [activeYear, selectedSources, fetchTenders]);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('es-AR', {
@@ -237,6 +242,16 @@ const Contracts: React.FC = () => {
               Exportar Datos
             </button>
           </div>
+        </div>
+
+        {/* Data Source Selector */}
+        <div className="mb-6">
+          <DataSourceSelector
+            selectedSources={selectedSources}
+            onSourceChange={setSelectedSources}
+            onDataRefresh={fetchTenders}
+            className="max-w-4xl mx-auto"
+          />
         </div>
 
         {/* Compliance Dashboard */}

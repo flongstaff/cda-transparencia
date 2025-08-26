@@ -1,0 +1,72 @@
+{
+  "investigation_metadata": {
+    "title": "Carmen de Areco Transparency Investigation",
+    "period": "2009-2025",
+    "generated_at": "2025-08-25T19:33:44.073812",
+    "total_processing_time_seconds": null
+  },
+  "data_collection_summary": {
+    "local_files": {
+      "processed": 571,
+      "errors": 0,
+      "records": 571
+    },
+    "official_sites": {
+      "scraped": 3,
+      "documents": 13,
+      "errors": 1
+    },
+    "web_archives": {
+      "snapshots": 45,
+      "processed": 45,
+      "errors": 0
+    }
+  },
+  "database_summary": {
+    "total_records": 351,
+    "tables_created": 3
+  },
+  "investigation_periods": [
+    {
+      "name": "Período Crítico 1",
+      "start": 2009,
+      "end": 2015
+    },
+    {
+      "name": "Período Crítico 2",
+      "start": 2016,
+      "end": 2019
+    },
+    {
+      "name": "Período Crítico 3",
+      "start": 2020,
+      "end": 2023
+    },
+    {
+      "name": "Período Actual",
+      "start": 2024,
+      "end": 2025
+    }
+  ],
+  "data_quality": {
+    "total_errors": 0,
+    "error_rate": 0.0,
+    "data_completeness": 43.01470588235294
+  },
+  "recommendations": [
+    "Focus analysis on salary progression patterns over the 15-year period",
+    "Cross-validate local documents with official site publications",
+    "Analyze historical transparency practices using archived snapshots",
+    "Identify gaps in public document availability",
+    "Examine budget execution patterns for irregularities",
+    "Investigate public tender processes for transparency compliance",
+    "Compare spending patterns across different administrations"
+  ],
+  "next_steps": [
+    "Review and validate extracted financial data",
+    "Cross-reference with external accountability sources",
+    "Identify patterns and anomalies in spending",
+    "Generate specific investigation leads",
+    "Prepare public transparency reports"
+  ]
+}

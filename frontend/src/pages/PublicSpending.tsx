@@ -16,6 +16,7 @@ import {
   CheckCircle 
 } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
+import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import OSINTComplianceService from '../services/OSINTComplianceService';
 import ApiService from '../services/ApiService';
 
@@ -36,6 +37,7 @@ const PublicSpending: React.FC = () => {
   const [activeTab, setActiveTab] = useState('resumen');
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   const [spendingData, setSpendingData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -46,7 +48,7 @@ const PublicSpending: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await ApiService.getOperationalExpenses(parseInt(year));
+      const data = await ApiService.getOperationalExpenses(parseInt(year), selectedSources);
       
       // Transform API data for display
       const transformedData = data.map((expense, index) => ({
@@ -71,20 +73,24 @@ const PublicSpending: React.FC = () => {
     }
   };
 
-  // Load spending data when year changes
+  // Load spending data when year or sources change
   useEffect(() => {
     void loadSpendingDataForYear(activeYear);
-  }, [activeYear]);
+  }, [activeYear, selectedSources]);
 
   // Calculate aggregated data
+  const totalSpending = spendingData.reduce((sum, expense) => sum + expense.amount, 0);
+  const totalCategories = spendingData.length;
+  const averageSpending = spendingData.length > 0 ? Math.round(spendingData.reduce((sum, expense) => sum + expense.amount, 0) / spendingData.length) : 0;
+  
   const aggregatedData = {
-    totalSpending: spendingData.reduce((sum, expense) => sum + expense.amount, 0),
-    totalCategories: spendingData.length,
-    averageSpending: spendingData.length > 0 ? Math.round(spendingData.reduce((sum, expense) => sum + expense.amount, 0) / spendingData.length) : 0,
+    totalSpending,
+    totalCategories,
+    averageSpending,
     spendingByCategory: spendingData,
     monthlySpending: Array.from({ length: 12 }, (_, i) => {
       const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
-      const monthlyTotal = Math.round(aggregatedData.totalSpending / 12 * (1 + (Math.random() - 0.5) * 0.2));
+      const monthlyTotal = totalSpending > 0 ? Math.round(totalSpending / 12 * (1 + (Math.random() - 0.5) * 0.2)) : 0;
       return {
         name: months[i],
         month: months[i],
@@ -98,17 +104,17 @@ const PublicSpending: React.FC = () => {
     }),
     quarterlySpending: Array.from({ length: 4 }, (_, i) => ({
       name: `Q${i + 1} ${activeYear}`,
-      gastos: Math.round(aggregatedData.totalSpending / 4 * (1 + (Math.random() - 0.5) * 0.1)),
-      presupuestado: Math.round(aggregatedData.totalSpending / 4 * 1.05),
+      gastos: totalSpending > 0 ? Math.round(totalSpending / 4 * (1 + (Math.random() - 0.5) * 0.1)) : 0,
+      presupuestado: totalSpending > 0 ? Math.round(totalSpending / 4 * 1.05) : 0,
       percentage: Math.round(95 + Math.random() * 10 - 5),
       source: spendingDataSources[0],
       lastVerified: new Date().toISOString()
     })),
     spendingTrends: [
-      { year: (parseInt(activeYear) - 2).toString(), value: Math.round(aggregatedData.totalSpending / Math.pow(1.08, 2)) },
-      { year: (parseInt(activeYear) - 1).toString(), value: Math.round(aggregatedData.totalSpending / 1.08) },
-      { year: activeYear, value: aggregatedData.totalSpending, isSelected: true },
-      { year: (parseInt(activeYear) + 1).toString(), value: Math.round(aggregatedData.totalSpending * 1.08) }
+      { year: (parseInt(activeYear) - 2).toString(), value: totalSpending > 0 ? Math.round(totalSpending / Math.pow(1.08, 2)) : 0 },
+      { year: (parseInt(activeYear) - 1).toString(), value: totalSpending > 0 ? Math.round(totalSpending / 1.08) : 0 },
+      { year: activeYear, value: totalSpending, isSelected: true },
+      { year: (parseInt(activeYear) + 1).toString(), value: totalSpending > 0 ? Math.round(totalSpending * 1.08) : 0 }
     ]
   };
 
@@ -188,6 +194,16 @@ const PublicSpending: React.FC = () => {
               Exportar Datos
             </button>
           </div>
+        </div>
+
+        {/* Data Source Selector */}
+        <div className="mb-6">
+          <DataSourceSelector
+            selectedSources={selectedSources}
+            onSourceChange={setSelectedSources}
+            onDataRefresh={() => loadSpendingDataForYear(activeYear)}
+            className="max-w-4xl mx-auto"
+          />
         </div>
 
         {/* Tabs */}

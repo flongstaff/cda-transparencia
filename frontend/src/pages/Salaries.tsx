@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Filter, Search, Calendar, FileText, Eye, TrendingUp, TrendingDown, Users, DollarSign, BarChart3, AlertCircle, CheckCircle, Loader2 } from 'lucide-react';
+import { Download, Filter, Search, Calendar, FileText, Eye, TrendingUp, TrendingDown, Users, DollarSign, BarChart3, AlertCircle, CheckCircle, Loader2, Info, Database } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
+import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import OSINTComplianceService from '../services/OSINTComplianceService';
 import ApiService, { Salary } from '../services/ApiService';
 
@@ -21,30 +22,32 @@ const Salaries: React.FC = () => {
   const [activeYear, setActiveYear] = useState('2024');
   const [activeTab, setActiveTab] = useState('resumen');
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   const [salaries, setSalaries] = useState<Salary[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   
-  const availableYears = ['2024', '2023', '2022', '2021', '2020', '2019', '2018'];
+  const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017'];
 
   const loadSalaryDataForYear = async (year: string) => {
     setLoading(true);
     setError(null);
     try {
-      const salaryData = await ApiService.getSalaries(parseInt(year));
-      setSalaries(salaryData);
-    } catch (error) {
-      console.error('Failed to load salary data for year:', year, error);
+      const data = await ApiService.getSalaries(parseInt(year), selectedSources);
+      setSalaries(data);
+    } catch (err) {
+      console.error('Failed to load salary data for year:', year, err);
       setError('Failed to load salary data');
+      setSalaries([]);
     } finally {
       setLoading(false);
     }
   };
 
-  // Load salary data when year changes
+  // Load salary data when year or sources change
   useEffect(() => {
     void loadSalaryDataForYear(activeYear);
-  }, [activeYear]);
+  }, [activeYear, selectedSources]);
 
   // Transform API data for display
   const transformedSalaries = salaries.map((salary, index) => ({
@@ -66,55 +69,63 @@ const Salaries: React.FC = () => {
   }));
 
   // Calculate aggregated data
+  const totalPayroll = transformedSalaries.reduce((sum, salary) => sum + salary.totalPayroll, 0);
+  const totalEmployees = transformedSalaries.length;
+  const averageSalary = transformedSalaries.length > 0 ? Math.round(transformedSalaries.reduce((sum, salary) => sum + salary.totalPayroll, 0) / transformedSalaries.length) : 0;
+  
+  const recentAdjustments = [
+    { 
+      date: '2024-02-01', 
+      percentage: 25.5, 
+      type: 'general_increase',
+      document: 'ESCALAS-SALARIALES-FEBRERO-2024.pdf',
+      description: 'Incremento general por paritarias'
+    },
+    { 
+      date: '2024-07-01', 
+      percentage: 18.2, 
+      type: 'adjustment',
+      document: 'adjustment-july-2024.pdf',
+      description: 'Ajuste por inflación semestre'
+    },
+    { 
+      date: '2024-10-01', 
+      percentage: 22.1, 
+      type: 'scale_update',
+      document: 'ESCALA-SALARIAL-OCTUBRE-2024.pdf',
+      description: 'Actualización escalas salariales'
+    }
+  ];
+  
+  const inflationData = { annual: 117.8, cumulative: 4353.9, realSalaryChange: -65.2 };
+  
   const aggregatedData = {
-    totalPayroll: transformedSalaries.reduce((sum, salary) => sum + salary.totalPayroll, 0),
-    totalEmployees: transformedSalaries.length,
-    averageSalary: transformedSalaries.length > 0 ? Math.round(transformedSalaries.reduce((sum, salary) => sum + salary.totalPayroll, 0) / transformedSalaries.length) : 0,
+    totalPayroll,
+    totalEmployees,
+    averageSalary,
     salariesByCategory: transformedSalaries,
     monthlyEvolution: Array.from({ length: 12 }, (_, i) => {
       const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
-      const monthlyTotal = Math.round(aggregatedData.totalPayroll / 12 * (1 + (Math.random() - 0.5) * 0.2));
+      const monthlyTotal = totalPayroll > 0 ? Math.round(totalPayroll / 12 * (1 + (Math.random() - 0.5) * 0.2)) : 0;
       return {
         month: months[i],
         name: months[i],
         value: monthlyTotal,
         amount: monthlyTotal,
-        employees: Math.round(aggregatedData.totalEmployees / 12),
-        averageSalary: Math.round(monthlyTotal / (aggregatedData.totalEmployees / 12))
+        employees: totalEmployees > 0 ? Math.round(totalEmployees / 12) : 0,
+        averageSalary: (totalEmployees > 0 && totalEmployees / 12 > 0) ? Math.round(monthlyTotal / (totalEmployees / 12)) : 0
       };
     }),
     purchasingPowerAnalysis: {
       currentYear: parseInt(activeYear),
-      inflationRate: aggregatedData.inflationData?.annual || 0,
-      cumulativeInflation: aggregatedData.inflationData?.cumulative || 0,
-      realSalaryChange: aggregatedData.inflationData?.realSalaryChange || 0,
-      adjustmentsCount: aggregatedData.recentAdjustments?.length || 0,
+      inflationRate: inflationData?.annual || 0,
+      cumulativeInflation: inflationData?.cumulative || 0,
+      realSalaryChange: inflationData?.realSalaryChange || 0,
+      adjustmentsCount: recentAdjustments?.length || 0,
       nextAdjustmentDue: 'Próximo trimestre'
     },
-    recentAdjustments: [
-      { 
-        date: '2024-02-01', 
-        percentage: 25.5, 
-        type: 'general_increase',
-        document: 'ESCALAS-SALARIALES-FEBRERO-2024.pdf',
-        description: 'Incremento general por paritarias'
-      },
-      { 
-        date: '2024-07-01', 
-        percentage: 18.2, 
-        type: 'adjustment',
-        document: 'adjustment-july-2024.pdf',
-        description: 'Ajuste por inflación semestre'
-      },
-      { 
-        date: '2024-10-01', 
-        percentage: 22.1, 
-        type: 'scale_update',
-        document: 'ESCALA-SALARIAL-OCTUBRE-2024.pdf',
-        description: 'Actualización escalas salariales'
-      }
-    ],
-    inflationData: { annual: 117.8, cumulative: 4353.9, realSalaryChange: -65.2 }
+    recentAdjustments,
+    inflationData
   };
 
   const filteredSalaries = transformedSalaries.filter((salary) => {
@@ -128,6 +139,31 @@ const Salaries: React.FC = () => {
         <div className="text-center">
           <Loader2 className="h-8 w-8 animate-spin text-primary-500 mx-auto mb-2" />
           <p className="text-gray-600 dark:text-gray-400">Cargando datos de salarios...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Show message when no data is available for the selected year
+  if (!loading && salaries.length === 0) {
+    return (
+      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-6">
+        <div className="flex items-center">
+          <Info className="h-5 w-5 text-blue-500 mr-2" />
+          <h3 className="text-lg font-medium text-blue-800 dark:text-blue-200">Datos no disponibles</h3>
+        </div>
+        <p className="mt-2 text-blue-700 dark:text-blue-300">
+          No hay datos estructurados de salarios disponibles para el año {activeYear}. 
+          Puede consultar los documentos originales en la sección de Base de Datos.
+        </p>
+        <div className="mt-4">
+          <a 
+            href="/database" 
+            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            <Database className="h-4 w-4 mr-2" />
+            Ver Documentos del {activeYear}
+          </a>
         </div>
       </div>
     );
@@ -192,6 +228,16 @@ const Salaries: React.FC = () => {
                   className="pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 />
               </div>
+            </div>
+
+            {/* Data Source Selector */}
+            <div className="mt-6">
+              <DataSourceSelector
+                selectedSources={selectedSources}
+                onSourceChange={setSelectedSources}
+                onDataRefresh={() => loadSalaryDataForYear(activeYear)}
+                className="max-w-4xl mx-auto"
+              />
             </div>
           </div>
         </div>

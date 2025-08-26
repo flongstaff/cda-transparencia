@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-08-25T19:33:12.684660",
+  "investigation_period": {
+    "start_year": 2009,
+    "end_year": 2025,
+    "critical_periods": [
+      {
+        "start": "2009-01-01",
+        "end": "2015-12-31",
+        "label": "Período Crítico 1"
+      },
+      {
+        "start": "2016-01-01",
+        "end": "2019-12-31",
+        "label": "Período Crítico 2"
+      },
+      {
+        "start": "2020-01-01",
+        "end": "2023-12-31",
+        "label": "Período Crítico 3"
+      },
+      {
+        "start": "2024-01-01",
+        "end": "2025-12-31",
+        "label": "Período Actual"
+      }
+    ]
+  },
+  "scraping_stats": {
+    "sites_checked": 3,
+    "pages_scraped": 16,
+    "documents_found": 13,
+    "historical_snapshots": 0,
+    "database_records": 3,
+    "errors": [
+      "Error scraping MUNICIPAL_PORTAL: Cannot connect to host www.carmensdeareco.gov.ar:443 ssl:default [nodename nor servname provided, or not known]"
+    ]
+  },
+  "sources_configured": 4,
+  "archive_sources": 2,
+  "success_summary": {
+    "sites_accessible": 3,
+    "pages_scraped": 16,
+    "documents_discovered": 13,
+    "historical_snapshots": 0,
+    "database_records": 3,
+    "error_count": 1
+  }
+}

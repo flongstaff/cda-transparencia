@@ -17,6 +17,7 @@ import {
   ShieldCheck 
 } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
+import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import OSINTComplianceService from '../services/OSINTComplianceService';
 import ApiService from '../services/ApiService';
 
@@ -31,55 +32,32 @@ const PropertyDeclarations: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [sortBy, setSortBy] = useState('totalAssets');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   const [declarations, setDeclarations] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018'];
+  const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017'];
 
-  const loadDeclarationsForYear = async (year: string) => {
+    const loadDeclarationsForYear = async (year: string) => {
     setLoading(true);
     setError(null);
     try {
-      const data = await ApiService.getPropertyDeclarations(parseInt(year));
-      
-      // Transform API data for display
-      const transformedData = data.map((declaration: PropertyDeclaration) => ({
-        id: declaration.id,
-        year: declaration.year,
-        official: declaration.official_name,
-        position: declaration.role,
-        submissionDate: declaration.declaration_date,
-        status: declaration.status,
-        totalAssets: declaration.total_assets || 0,
-        realEstate: declaration.real_estate || 0,
-        vehicles: declaration.vehicles || 0,
-        investments: declaration.investments || 0,
-        bankAccounts: declaration.bank_accounts || 0,
-        previousYear: declaration.previous_year_assets || 0,
-        change: declaration.change_percentage || 0,
-        complianceScore: declaration.compliance_score || 0,
-        lastModified: declaration.declaration_date,
-        cuil: declaration.cuil,
-        uuid: declaration.uuid,
-        observations: declaration.observations,
-        public_verification: declaration.public_verification,
-        critical_review: declaration.critical_review
-      }));
-      
-      setDeclarations(transformedData);
+      const data = await ApiService.getPropertyDeclarations(parseInt(year), selectedSources);
+      setDeclarations(data);
     } catch (err) {
-      console.error('Failed to load property declarations for year:', year, err);
+      console.error('Failed to load declarations for year:', year, err);
       setError('Failed to load property declarations data');
+      setDeclarations([]);
     } finally {
       setLoading(false);
     }
   };
 
-  // Load declarations data when year changes
+  // Load declarations when year or sources change
   useEffect(() => {
     void loadDeclarationsForYear(activeYear);
-  }, [activeYear]);
+  }, [activeYear, selectedSources]);
 
   const formatCurrency = (value: number): string => {
     return new Intl.NumberFormat('es-AR', {
@@ -129,11 +107,15 @@ const PropertyDeclarations: React.FC = () => {
       return sortOrder === 'desc' ? bValue - aValue : aValue - bValue;
     });
 
-  // Aggregated data for charts
+  // Calculate aggregated data
+  const totalDeclarations = declarations.length;
+  const totalAssets = declarations.reduce((sum, decl) => sum + decl.totalAssets, 0);
+  const averageAssets = declarations.length > 0 ? Math.round(declarations.reduce((sum, decl) => sum + decl.totalAssets, 0) / declarations.length) : 0;
+  
   const aggregatedData = {
-    totalDeclarations: declarations.length,
-    totalAssets: declarations.reduce((sum, decl) => sum + decl.totalAssets, 0),
-    averageAssets: declarations.length > 0 ? Math.round(declarations.reduce((sum, decl) => sum + decl.totalAssets, 0) / declarations.length) : 0,
+    totalDeclarations,
+    totalAssets,
+    averageAssets,
     declarationsByStatus: [
       { name: 'Publicadas', value: declarations.filter(d => d.status === 'published').length, color: '#28a745' },
       { name: 'Pendientes', value: declarations.filter(d => d.status === 'pending').length, color: '#ffc107' },
@@ -152,7 +134,7 @@ const PropertyDeclarations: React.FC = () => {
     })),
     monthlyEvolution: Array.from({ length: 12 }, (_, i) => {
       const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
-      const monthlyTotal = Math.round(aggregatedData.totalAssets / 12 * (1 + (Math.random() - 0.5) * 0.2));
+      const monthlyTotal = totalAssets > 0 ? Math.round(totalAssets / 12 * (1 + (Math.random() - 0.5) * 0.2)) : 0;
       return {
         name: months[i],
         month: months[i],
@@ -242,6 +224,16 @@ const PropertyDeclarations: React.FC = () => {
               Exportar Datos
             </button>
           </div>
+        </div>
+
+        {/* Data Source Selector */}
+        <div className="mb-6">
+          <DataSourceSelector
+            selectedSources={selectedSources}
+            onSourceChange={setSelectedSources}
+            onDataRefresh={() => loadDeclarationsForYear(activeYear)}
+            className="max-w-4xl mx-auto"
+          />
         </div>
 
         {/* Compliance Dashboard */}

@@ -599,7 +599,7 @@ The transparency portal has successfully achieved its core integration objective
 10. Contact (/contact) - Contact information
 
 #### Missing Pages (4/14)
-1. Meetings & Decisions - No implementation
+
 2. Property Declarations - No dedicated page (data exists but no specialized page)
 3. Salaries - No dedicated page (data exists but no specialized page)
 4. API Explorer - No API documentation/explorer page

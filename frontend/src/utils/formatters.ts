@@ -2,8 +2,22 @@
 
 /**
  * Format currency in Argentine Pesos
+ * @param amount - The amount to format
+ * @param compact - Whether to format in compact form (e.g., $1M instead of $1.000.000)
  */
-export const formatCurrencyARS = (amount: number): string => {
+export const formatCurrencyARS = (amount: number, compact: boolean = false): string => {
+  if (compact && Math.abs(amount) >= 1000000) {
+    // Format as millions
+    return new Intl.NumberFormat('es-AR', {
+      style: 'currency',
+      currency: 'ARS',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+      notation: 'compact',
+      compactDisplay: 'short'
+    }).format(amount);
+  }
+  
   return new Intl.NumberFormat('es-AR', {
     style: 'currency',
     currency: 'ARS',

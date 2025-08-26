@@ -52,7 +52,7 @@ const FinancialStatsSummary: React.FC<Props> = ({ activeYear = '2025' }) => {
       const totalRevenues = revenues.reduce((sum, rev) => sum + rev.revenue, 0);
       const executionPercentage = totalBudget > 0 ? (totalExpenses / totalBudget) * 100 : 0;
       const monthlySpending = totalExpenses / 12;
-      const activeTenders = tenders.filter(tender => tender.status === 'active').length;
+      const activeTenders = tenders.filter(tender => tender.execution_status === 'in_progress').length;
 
       // Calculate changes from previous year
       const prevYear = (parseInt(year) - 1).toString();
@@ -73,7 +73,7 @@ const FinancialStatsSummary: React.FC<Props> = ({ activeYear = '2025' }) => {
       const prevTotalRevenues = prevRevenues.reduce((sum: number, rev: any) => sum + rev.revenue, 0);
       const prevExecutionPercentage = prevTotalBudget > 0 ? (prevTotalExpenses / prevTotalBudget) * 100 : 0;
       const prevMonthlySpending = prevTotalExpenses / 12;
-      const prevActiveTenders = prevTenders.filter((tender: any) => tender.status === 'active').length;
+      const prevActiveTenders = prevTenders.filter((tender: any) => tender.execution_status === 'in_progress').length;
 
       const budgetChange = prevTotalBudget > 0 ? ((totalBudget - prevTotalBudget) / prevTotalBudget) * 100 : 0;
       const executionChange = executionPercentage - prevExecutionPercentage;

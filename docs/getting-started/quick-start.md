@@ -1,26 +1,39 @@
 # Getting Started
 
+Welcome to the Carmen de Areco Transparency Portal project! This guide will help you get up and running with the project locally.
+
 ## Prerequisites
 
-- Node.js v16+
-- npm v8+
-- PostgreSQL v12+
-- Docker (for containerized deployment)
+Before you begin, ensure you have the following installed:
+
+- Node.js 18+ (for frontend and backend)
+- Python 3.8+ (for data processing scripts)
+- Docker (for database)
+- Git
 
 ## Project Structure
 
 ```
-cda-transparencia/
-├── backend/              # Node.js API
-├── frontend/             # React application
-├── data/                 # Data processing scripts and source materials
-├── docs/                 # Project documentation
-└── scripts/              # Automation scripts
+├── data/                   # All data files
+│   ├── preserved/          # Processed data in structured formats
+│   ├── markdown_documents/ # Documents converted to markdown
+│   └── source_materials/   # Original source files
+├── frontend/              # React dashboard application
+├── backend/               # Node.js API server
+├── scripts/               # Python data processing scripts
+└── docs/                  # Project documentation
 ```
 
-## Installation
+## Quick Start
 
-### Frontend Setup
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/flongstaff/cda-transparencia.git
+cd cda-transparencia
+```
+
+### 2. Frontend Setup
 
 ```bash
 cd frontend
@@ -28,40 +41,38 @@ npm install
 npm run dev
 ```
 
-The frontend will be available at http://localhost:5173
+The frontend will be available at `http://localhost:5173`
 
-### Backend Setup
+### 3. Backend Setup
 
 ```bash
 cd backend
 npm install
-npm run dev
+npm start
 ```
 
-The backend API will be available at http://localhost:3000
+The API will be available at `http://localhost:3000/api`
 
-## Environment Configuration
+### 4. Database Setup
 
-### Frontend (.env)
-```env
-VITE_API_URL=http://localhost:3000/api
+```bash
+cd backend
+docker-compose up -d
 ```
 
-### Backend (.env)
-```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=transparency_portal
-DB_USER=postgres
-DB_PASSWORD=postgres
-PORT=3000
-NODE_ENV=development
+This will start a PostgreSQL database container.
+
+### 5. Data Processing (Optional)
+
+```bash
+cd scripts
+pip install -r requirements.txt
+python process_all.py
 ```
 
-## Quick Start
+## Next Steps
 
-1. Set up PostgreSQL database
-2. Configure environment variables
-3. Install dependencies for both frontend and backend
-4. Start both services
-5. Access the application at http://localhost:5173
+- [API Documentation](../api/endpoints.md)
+- [Architecture Overview](../architecture/overview.md)
+- [Data Sources](../data/DATA_SOURCES.md)
+- [Development Guide](../development/guide.md)

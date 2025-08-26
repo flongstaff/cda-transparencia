@@ -1,112 +1,128 @@
-# Carmen de Areco - Portal de Transparencia 🔍
+# 🏛️ Portal de Transparencia - Carmen de Areco
 
-Portal de transparencia financiera para investigar la gestión de fondos públicos de la Municipalidad de Carmen de Areco durante los últimos 15 años.
+**Portal oficial de transparencia financiera y datos abiertos**
 
-![Transparency Portal](https://img.shields.io/badge/Transparency-Investigation-red.svg)
-![React](https://img.shields.io/badge/React-18-blue.svg)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue.svg)
-![Build Status](https://img.shields.io/badge/Build-Passing-green.svg)
+[![Frontend CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/frontend-ci.yml)
+[![Backend CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/backend-ci.yml)
+[![Deploy](https://github.com/flongstaff/cda-transparencia/actions/workflows/deploy.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/deploy.yml)
 
-## 🎯 Objetivo del Proyecto
+## 📊 Investigación de Transparencia Municipal (2009-2025)
 
-Este proyecto tiene como objetivo **exponer y visualizar datos financieros públicos** para investigar posibles malversaciones de fondos en la administración municipal de Carmen de Areco, Buenos Aires, Argentina.
+### 🎯 Objetivo
+Análisis integral de 15 años de gestión municipal para identificar:
+- Patrones en la ejecución presupuestaria
+- Transparencia en contrataciones públicas
+- Evolución salarial del sector público
+- Cumplimiento de normativa de transparencia
 
-## 📊 Análisis de Transparencia
+### 📈 Estadísticas del Proyecto
 
-### Períodos de Investigación
-- **2009-2015**: Período Crítico 1
-- **2016-2019**: Período Crítico 2  
-- **2020-2023**: Período Crítico 3
-- **2024-2025**: Período Actual
+- **270** documentos procesados
+- **9** años de datos
+- **124** documentos de alta prioridad
+- **100%** de verificación de integridad
 
-### Visualizaciones Implementadas
-- ✅ **Evolución del Gasto Mensual**: Tendencias de gastos a lo largo del tiempo
-- ✅ **Distribución por Categoría**: Análisis sectorial de gastos municipales
-- ✅ **Distribución por Fuente de Ingreso**: Origen y composición de ingresos
-- ✅ **Desglose por Fuentes**: Análisis detallado de fuentes de financiamiento
+## 🚀 Tecnologías
 
-### Funcionalidades de Investigación
-- 🔍 **Detección de Anomalías**: Identificación automática de gastos inusuales
-- 📈 **Análisis Histórico**: Comparación de 15 años de datos financieros
-- 🔄 **Validación Cruzada**: Verificación con múltiples fuentes oficiales
-- 📋 **Análisis de Discrepancias**: Comparación presupuesto vs ejecución
+- **Frontend:** React + TypeScript + Vite
+- **Backend:** Node.js + Express API
+- **Base de Datos:** PostgreSQL (Docker)
+- **Procesamiento de Datos:** Python scripts para Excel/PDF
+- **Despliegue:** GitHub Pages + GitHub Actions
 
-## 🚀 Instalación y Desarrollo
+## 🗂️ Estructura del Repositorio
+
+```
+├── data/
+│   ├── preserved/           # Datos estructurados (JSON, CSV)
+│   ├── markdown_documents/ # Documentos en formato markdown
+│   └── source_materials/   # Archivos originales por año
+├── frontend/              # Dashboard interactivo (React)
+├── backend/               # API REST (Node.js + PostgreSQL)
+├── scripts/               # Scripts de procesamiento
+└── docs/                  # Documentación del proyecto
+```
+
+## 🛠️ Desarrollo Local
 
 ### Requisitos Previos
 - Node.js 18+
-- npm
+- Python 3.8+
+- Docker (para la base de datos)
 
-### Configuración Rápida
+### Frontend
 
 ```bash
-# Clonar el repositorio
-git clone https://github.com/flongstaff/cda-transparencia.git
-cd cda-transparencia
-
-# Instalar dependencias del frontend
 cd frontend
 npm install
-
-# Desarrollar localmente
 npm run dev
-
-# Build para producción
-npm run build:production
+# Acceder a http://localhost:5173
 ```
 
-## 🌐 Despliegue
+### Backend
 
-- **Producción**: https://cda-transparencia.org
-- **CI/CD**: GitHub Actions
-- **Hosting**: GitHub Pages con dominio personalizado
+```bash
+cd backend
+npm install
+npm start
+# API disponible en http://localhost:3000/api
+```
 
-## 🔗 Fuentes de Datos Oficiales
+### Base de Datos
 
-### APIs Gubernamentales
-- **Municipal**: `https://api.carmendeareco.gob.ar`
-- **Provincial BA**: `https://www.gba.gob.ar/transparencia`
-- **Boletín Oficial**: `https://www.gba.gob.ar/boletin_oficial`
-- **SINBA**: `https://sinba.gba.gov.ar/api`
+```bash
+cd backend
+docker-compose up -d
+```
 
-### Validación y Cross-Reference
-- Múltiples fuentes oficiales para verificación
-- Detección automática de inconsistencias
-- Archivo histórico de cambios en datos
+## 📱 Acceso a los Datos
 
-## 🔒 Política de Transparencia
+### 🌐 Dashboard Web
+```bash
+cd frontend && npm install && npm run dev
+# Acceder a http://localhost:5173
+```
 
-### Principios del Proyecto
-1. **Datos Públicos Únicamente**: Solo información gubernamental oficial
-2. **Transparencia Total**: Código y metodología completamente abiertos
-3. **Verificación Independiente**: Múltiples fuentes para validación
-4. **Acceso Ciudadano**: Herramientas para investigación ciudadana
+### 🔍 API REST
+```bash
+cd backend && npm install && npm start
+# API disponible en http://localhost:3000/api
+```
 
-### Fuentes de Información
-✅ Portales oficiales de transparencia gubernamental  
-✅ APIs abiertas de datos públicos  
-✅ Boletín Oficial de la Provincia de Buenos Aires  
-✅ Documentos de acceso público por Ley de Transparencia  
+### 📊 Datos Estructurados
+- [`data/preserved/json/`](./data/preserved/json/) - Formato JSON
+- [`data/preserved/csv/`](./data/preserved/csv/) - Formato CSV
+- [`data/markdown_documents/`](./data/markdown_documents/) - Documentos markdown
 
-❌ No utilizamos información privada o confidencial  
-❌ No accedemos a sistemas internos no públicos  
-❌ No revelamos datos personales de funcionarios  
+## 🔍 Búsqueda de Documentos
 
-## 📜 Licencia
+Utiliza la búsqueda de GitHub para encontrar información específica:
+- `filename:presupuesto` - Buscar documentos de presupuesto
+- `path:2024/` - Documentos del año 2024
+- `"licitación pública"` - Buscar licitaciones
 
-Este proyecto está dedicado al **dominio público** para promover la transparencia gubernamental y el acceso ciudadano a la información pública.
+## ⚖️ Marco Legal
+
+Este proyecto cumple con:
+- **Ley 27.275** (Acceso a la Información Pública)
+- **Ley 25.326** (Protección de Datos Personales)
+- **Normativa municipal** de transparencia
+
+## 🤝 Contribuciones
+
+1. Fork del repositorio
+2. Crear una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abrir un Pull Request
+
+## 📞 Contacto
+
+Para consultas sobre transparencia municipal:
+- **Portal Oficial:** [carmendeareco.gob.ar/transparencia](https://carmendeareco.gob.ar/transparencia/)
+- **Archivo Web:** [Wayback Machine](https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/)
 
 ---
 
-### 📞 Contacto
-
-Para consultas sobre transparencia municipal o mejoras al proyecto:
-- **Website**: https://cda-transparencia.org
-- **Issues**: GitHub Issues para reportar problemas
-- **Email**: transparencia@carmendeareco.gob.ar
-
----
-
-*Proyecto desarrollado para promover la transparencia y rendición de cuentas en la administración pública municipal de Carmen de Areco, Buenos Aires, Argentina.*
-
-**🔍 "La transparencia es la mejor política" - Acceso ciudadano a la información pública**
+**🎯 Proyecto de investigación de transparencia municipal**
+*Última actualización: 26/08/2025*

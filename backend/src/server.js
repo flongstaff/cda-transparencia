@@ -149,6 +149,28 @@ app.get('/api/documents', (req, res) => {
   }
 });
 
+// Serve markdown content
+app.get('/api/documents/:category/:filename/content', (req, res) => {
+  try {
+    const { category, filename } = req.params;
+    const markdownPath = path.join(__dirname, `../../data/markdown_documents/${category}/${filename.replace(/\.(pdf|xlsx?|docx?)$/i, '.md')}`);
+    
+    if (fs.existsSync(markdownPath)) {
+      const content = fs.readFileSync(markdownPath, 'utf8');
+      res.json({ content, source: 'local_markdown' });
+    } else {
+      // Return sample content if file doesn't exist
+      res.json({
+        content: `# ${filename}\n\n## Document Information\n\nThis document is not available locally. Please visit the official source to access the content.\n\n## Official Sources\n\n- [Official Website](https://carmendeareco.gob.ar/transparencia/)\n- [Web Archive](https://web.archive.org/web/*/https://carmendeareco.gob.ar/transparencia/)`,
+        source: 'fallback'
+      });
+    }
+  } catch (error) {
+    console.error('Error serving markdown content:', error);
+    res.status(500).json({ error: 'Error loading document content' });
+  }
+});
+
 // Routes
 const apiRoutes = require('./routes');
 app.use('/api', apiRoutes);

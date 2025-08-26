@@ -10,7 +10,7 @@
 | **Tipo** | PDF Document |
 | **Tamaño** | 926,838 bytes |
 | **Hash SHA256** | `e7eea4db8ab0c33fded4a869303accb07792c3ba4d8b53cfff1a583c9ae7f108` |
-| **Fecha de Procesamiento** | 25/08/2025 15:54 |
+| **Fecha de Procesamiento** | 25/08/2025 19:16 |
 
 ## 🔗 Fuentes Oficiales
 

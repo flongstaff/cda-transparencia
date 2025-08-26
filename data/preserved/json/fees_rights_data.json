@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "year": 2024,
+    "category": "tasas_municipales",
+    "description": "Recaudación por tasas de servicios municipales",
+    "revenue": "75000000.00",
+    "collection_efficiency": "89.50"
+  },
+  {
+    "id": 2,
+    "year": 2024,
+    "category": "derechos_urbanos",
+    "description": "Recaudación por derechos de ocupación y uso del espacio público",
+    "revenue": "42000000.00",
+    "collection_efficiency": "92.30"
+  },
+  {
+    "id": 3,
+    "year": 2022,
+    "category": "Impuestos",
+    "description": "Recaudación de impuestos municipales",
+    "revenue": "510000000.00",
+    "collection_efficiency": "89.00"
+  },
+  {
+    "id": 4,
+    "year": 2022,
+    "category": "Tasas",
+    "description": "Recaudación de tasas municipales",
+    "revenue": "212500000.00",
+    "collection_efficiency": "92.50"
+  },
+  {
+    "id": 5,
+    "year": 2022,
+    "category": "Contribuciones",
+    "description": "Contribuciones especiales",
+    "revenue": "85000000.00",
+    "collection_efficiency": "94.00"
+  },
+  {
+    "id": 6,
+    "year": 2022,
+    "category": "Otros",
+    "description": "Otros ingresos municipales",
+    "revenue": "42500000.00",
+    "collection_efficiency": "94.50"
+  },
+  {
+    "id": 7,
+    "year": 2023,
+    "category": "Impuestos",
+    "description": "Recaudación de impuestos municipales",
+    "revenue": "1071000000.00",
+    "collection_efficiency": "89.00"
+  },
+  {
+    "id": 8,
+    "year": 2023,
+    "category": "Tasas",
+    "description": "Recaudación de tasas municipales",
+    "revenue": "446250000.00",
+    "collection_efficiency": "92.50"
+  },
+  {
+    "id": 9,
+    "year": 2023,
+    "category": "Contribuciones",
+    "description": "Contribuciones especiales",
+    "revenue": "178500000.00",
+    "collection_efficiency": "94.00"
+  },
+  {
+    "id": 10,
+    "year": 2023,
+    "category": "Otros",
+    "description": "Otros ingresos municipales",
+    "revenue": "89250000.00",
+    "collection_efficiency": "94.50"
+  },
+  {
+    "id": 11,
+    "year": 2025,
+    "category": "Impuestos",
+    "description": "Recaudación de impuestos municipales",
+    "revenue": "714000000.00",
+    "collection_efficiency": "89.00"
+  },
+  {
+    "id": 12,
+    "year": 2025,
+    "category": "Tasas",
+    "description": "Recaudación de tasas municipales",
+    "revenue": "297500000.00",
+    "collection_efficiency": "92.50"
+  },
+  {
+    "id": 13,
+    "year": 2025,
+    "category": "Contribuciones",
+    "description": "Contribuciones especiales",
+    "revenue": "119000000.00",
+    "collection_efficiency": "94.00"
+  },
+  {
+    "id": 14,
+    "year": 2025,
+    "category": "Otros",
+    "description": "Otros ingresos municipales",
+    "revenue": "59500000.00",
+    "collection_efficiency": "94.50"
+  }
+]

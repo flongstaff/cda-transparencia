@@ -99,10 +99,12 @@ export const API_CONFIG = {
   }
 } as const;
 
+// API Base URL - supports local development and production deployment
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+
 // Build API URL with proper configuration
 export const buildApiUrl = (endpoint: string, params?: Record<string, string>): string => {
-  const baseUrl = API_ENDPOINTS.CARMENDEARECO_API;
-  let url = `${baseUrl}${endpoint}`;
+  let url = `${API_BASE_URL}${endpoint}`;
   
   if (params) {
     const searchParams = new URLSearchParams(params);

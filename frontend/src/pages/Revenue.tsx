@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Filter, Search, Calendar, FileText, Eye, TrendingUp, TrendingDown, Users, DollarSign, BarChart3, AlertCircle, CheckCircle } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
+import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import OSINTComplianceService from '../services/OSINTComplianceService';
 import ApiService, { FeeRight } from '../services/ApiService';
 
@@ -22,6 +23,7 @@ const Revenue: React.FC = () => {
   const [activeTab, setActiveTab] = useState('resumen');
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   const [revenueData, setRevenueData] = useState<FeeRight[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -32,20 +34,21 @@ const Revenue: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await ApiService.getFeesRights(parseInt(year));
+      const data = await ApiService.getFeesRights(parseInt(year), selectedSources);
       setRevenueData(data);
     } catch (err) {
       console.error('Failed to load revenue data for year:', year, err);
       setError('Failed to load revenue data');
+      setRevenueData([]);
     } finally {
       setLoading(false);
     }
   };
 
-  // Load revenue data when year changes
+  // Load revenue data when year or sources change
   useEffect(() => {
     void loadRevenueDataForYear(activeYear);
-  }, [activeYear]);
+  }, [activeYear, selectedSources]);
 
   // Transform API data for display
   const transformedRevenueData = revenueData.map((fee, index) => ({
@@ -172,6 +175,16 @@ const Revenue: React.FC = () => {
                 Descargar Informe
               </button>
             </div>
+          </div>
+
+          {/* Data Source Selector */}
+          <div className="mt-6">
+            <DataSourceSelector
+              selectedSources={selectedSources}
+              onSourceChange={setSelectedSources}
+              onDataRefresh={() => loadRevenueDataForYear(activeYear)}
+              className="max-w-4xl mx-auto"
+            />
           </div>
         </div>
 

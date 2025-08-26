@@ -1,224 +1,68 @@
-# Contributing Guide
+# Contributing to Carmen de Areco Transparency Portal
 
-## Welcome!
+We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
 
-Thank you for your interest in contributing to the Carmen de Areco Transparency Portal! This document provides guidelines and processes for contributing to the project.
+- Reporting a bug
+- Discussing the current state of the code
+- Submitting a fix
+- Proposing new features
+- Becoming a maintainer
 
-## Code of Conduct
+## We Develop with Github
 
-Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md) to ensure a welcoming and inclusive environment for all contributors.
+We use github to host code, to track issues and feature requests, as well as accept pull requests.
 
-## How to Contribute
+## We Use [Github Flow](https://guides.github.com/introduction/flow/index.html), So All Code Changes Happen Through Pull Requests
 
-### Reporting Issues
+Pull requests are the best way to propose changes to the codebase. We actively welcome your pull requests:
 
-#### Bug Reports
-Before submitting a bug report, please check if the issue has already been reported. If not, create a new issue with:
-- A clear and descriptive title
-- Steps to reproduce the issue
-- Expected vs. actual behavior
-- Screenshots or code examples if applicable
-- Environment information (OS, browser, Node.js version, etc.)
+1. Fork the repo and create your branch from `main`.
+2. If you've added code that should be tested, add tests.
+3. If you've changed APIs, update the documentation.
+4. Ensure the test suite passes.
+5. Make sure your code lints.
+6. Issue that pull request!
 
-#### Feature Requests
-We welcome feature requests! Please create an issue with:
-- A clear and descriptive title
-- Detailed description of the proposed feature
-- Use cases and benefits
-- Any implementation ideas or suggestions
+## Any contributions you make will be under the MIT Software License
 
-### Code Contributions
+In short, when you submit code changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
 
-#### Getting Started
-1. Fork the repository
-2. Clone your fork locally
-3. Create a new branch for your feature or bug fix
-4. Make your changes
-5. Write tests if applicable
-6. Ensure all tests pass
-7. Submit a pull request
+## Report bugs using Github's [issues](https://github.com/flongstaff/cda-transparencia/issues)
 
-#### Branch Naming
-Use descriptive branch names:
-- `feature/new-feature-name`
-- `bugfix/issue-description`
-- `docs/documentation-update`
-- `refactor/code-improvement`
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/flongstaff/cda-transparencia/issues/new); it's that easy!
 
-#### Pull Request Process
-1. Ensure your code follows the project's coding standards
-2. Write clear, descriptive commit messages
-3. Include tests for new functionality
-4. Update documentation as needed
-5. Describe your changes in the pull request description
-6. Link to any related issues
-7. Request review from maintainers
+## Write bug reports with detail, background, and sample code
 
-### Development Setup
+**Great Bug Reports** tend to have:
 
-See the [Development Guide](../development/development-guide.md) for detailed setup instructions.
+- A quick summary and/or background
+- Steps to reproduce
+  - Be specific!
+  - Give sample code if you can.
+- What you expected would happen
+- What actually happens
+- Notes (possibly including why you think this might be happening, or stuff you tried that didn't work)
 
-## Coding Standards
+People *love* thorough bug reports. I'm not even kidding.
 
-### General Principles
-- Write clean, readable, and maintainable code
-- Follow established patterns and conventions
-- Write comprehensive documentation and comments
-- Prioritize security and performance
-- Ensure accessibility compliance
+## Use a Consistent Coding Style
 
-### TypeScript
-- Use strong typing for all functions and variables
-- Define interfaces for complex data structures
-- Use generics where appropriate
-- Enable strict TypeScript compiler options
+### JavaScript/TypeScript (Frontend & Backend)
+- 2 spaces for indentation rather than tabs
+- Use semicolons
+- Use camelCase for variables and functions
+- Use PascalCase for classes and components
 
-### React
-- Use functional components with hooks
-- Follow the Container/Presentational pattern
-- Use React Context for global state management
-- Implement proper error boundaries
-- Write component tests
-
-### Backend (Node.js/Express)
-- Use Express.js middleware pattern
-- Implement proper error handling
-- Use Sequelize ORM for database operations
-- Follow RESTful API design principles
-- Write comprehensive API tests
-
-### Database (PostgreSQL)
-- Use proper indexing for frequently queried fields
-- Follow normalization principles
-- Use transactions for complex operations
-- Implement proper constraints and validations
-
-### CSS/Tailwind
-- Use Tailwind CSS utility classes
-- Follow the BEM naming convention for custom classes
-- Maintain consistent spacing and typography
-- Ensure responsive design
-
-## Testing
-
-### Test Coverage
-- Aim for >80% test coverage for new features
-- Write unit tests for business logic
-- Write integration tests for API endpoints
-- Write end-to-end tests for critical user flows
-
-### Testing Tools
-- **Frontend**: Jest, React Testing Library
-- **Backend**: Jest, Supertest
-- **End-to-end**: Cypress (planned)
-
-### Running Tests
-```bash
-# Frontend tests
-cd frontend
-npm test
-
-# Backend tests
-cd backend
-npm test
-
-# Run tests with coverage
-npm test -- --coverage
-```
-
-## Documentation
-
-### When to Update Documentation
-- When adding new features
-- When changing existing functionality
-- When fixing bugs that affect usage
-- When improving developer experience
-
-### Documentation Style
-- Use clear, concise language
-- Include examples where appropriate
-- Keep documentation up to date with code changes
-- Use consistent formatting and structure
-
-### Documentation Locations
-- **User Documentation**: `docs/` directory
-- **API Documentation**: Inline code comments and API reference
-- **Code Comments**: Inline with complex logic
-- **README**: Project overview and quick start guide
-
-## Code Review Process
-
-### Review Criteria
-- Code correctness and functionality
-- Adherence to coding standards
-- Test coverage and quality
-- Documentation completeness
-- Performance considerations
-- Security implications
-- Accessibility compliance
-
-### Review Timeline
-- Initial review within 48 hours
-- Follow-up reviews within 24 hours
-- Merge after approval from at least one maintainer
-
-### Review Feedback
-- Be constructive and respectful
-- Provide specific suggestions for improvement
-- Explain the reasoning behind feedback
-- Offer help with implementation if needed
-
-## Community
-
-### Communication Channels
-- **GitHub Issues**: For bug reports and feature requests
-- **GitHub Discussions**: For general questions and community discussion
-- **Email**: For sensitive or private communications
-
-### Community Roles
-- **Maintainers**: Project core contributors with merge rights
-- **Contributors**: Anyone who contributes code, documentation, or feedback
-- **Users**: Anyone who uses the project
-
-### Recognition
-We recognize and appreciate all contributions:
-- Code contributions
-- Documentation improvements
-- Bug reports
-- Feature requests
-- Community support
-- Translation efforts
-
-## Security
-
-### Reporting Security Issues
-Please report security vulnerabilities to [security email] rather than creating public issues.
-
-### Security Best Practices
-- Follow the principle of least privilege
-- Validate and sanitize all inputs
-- Use secure coding practices
-- Keep dependencies up to date
-- Implement proper authentication and authorization
+### Python (Data Processing Scripts)
+- Follow PEP 8 style guide
+- Use 4 spaces for indentation
+- Use snake_case for variables and functions
+- Use PascalCase for classes
 
 ## License
 
-By contributing to this project, you agree that your contributions will be licensed under the project's [LICENSE](../../LICENSE).
+By contributing, you agree that your contributions will be licensed under its MIT License.
 
-## Getting Help
+## References
 
-If you need help with contributing:
-1. Check the documentation
-2. Look at existing code examples
-3. Ask questions in GitHub Discussions
-4. Contact maintainers directly
-
-## Recognition
-
-Contributors are recognized in:
-- Release notes
-- Contributor list in documentation
-- GitHub contributor graph
-- Social media announcements (for significant contributions)
-
-Thank you for helping make the Carmen de Areco Transparency Portal better for everyone!
+This document was adapted from the open-source contribution guidelines for [Facebook's Draft](https://github.com/facebook/draft-js/blob/master/CONTRIBUTING.md)

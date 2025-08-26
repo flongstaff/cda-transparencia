@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Filter, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, DollarSign, Loader2 } from 'lucide-react';
-import ValidatedChart from '../components/ValidatedChart';
-import OSINTComplianceService from '../services/OSINTComplianceService';
+import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
+import FinancialDataTable from '../components/tables/FinancialDataTable';
+import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import ApiService, { FinancialReport } from '../services/ApiService';
+import { formatCurrencyARS } from '../utils/formatters';
 
 // Data sources for validation
-const budgetDataSources = OSINTComplianceService.getCrossValidationSources('budget').map(s => s.url);
+const budgetDataSources = ['https://carmendeareco.gob.ar/transparencia/'];
 
 const Budget: React.FC = () => {
   const [activeYear, setActiveYear] = useState('2025');
@@ -15,14 +17,16 @@ const Budget: React.FC = () => {
   const [budgetData, setBudgetData] = useState<FinancialReport[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
+  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   
-  const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018'];
+  const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017'];
 
   const loadBudgetDataForYear = async (year: string) => {
     setLoading(true);
     setError(null);
     try {
-      const data = await ApiService.getFinancialReports(parseInt(year));
+      const data = await ApiService.getFinancialReports(parseInt(year), selectedSources);
       setBudgetData(data);
     } catch (err) {
       console.error('Failed to load budget data for year:', year, err);
@@ -34,19 +38,20 @@ const Budget: React.FC = () => {
     }
   };
 
-  // Load budget data when year changes
+  // Load budget data when year or sources change
   useEffect(() => {
     void loadBudgetDataForYear(activeYear);
-  }, [activeYear]);
+  }, [activeYear, selectedSources]);
 
-  const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('es-AR', {
-      style: 'currency',
-      currency: 'ARS',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    }).format(value);
+  const handleSourceChange = (newSelectedSources: string[]) => {
+    setSelectedSources(newSelectedSources);
   };
+
+  const handleDataRefresh = () => {
+    loadBudgetDataForYear(activeYear);
+  };
+
+  const formatCurrency = (value: number) => formatCurrencyARS(value);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('es-AR');
@@ -147,6 +152,16 @@ const Budget: React.FC = () => {
               Descargar PDF
             </button>
           </div>
+        </div>
+
+        {/* Data Source Selector */}
+        <div className="mb-6">
+          <DataSourceSelector
+            selectedSources={selectedSources}
+            onSourceChange={handleSourceChange}
+            onDataRefresh={handleDataRefresh}
+            className="max-w-4xl mx-auto"
+          />
         </div>
 
         {/* Tabs */}
@@ -253,146 +268,26 @@ const Budget: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Distribución por Categoría */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
-            <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-              <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
-                Distribución por Categoría {activeYear}
-              </h2>
-            </div>
-            <div className="p-6">
-              <ValidatedChart
-                data={transformedBudgetData.map(item => ({
-                  ...item,
-                  name: `${item.report_type} Q${item.quarter}`,
-                  value: Math.round(item.income / 1000000)
-                }))}
-                chartType="pie"
-                title={`Distribución por Categoría ${activeYear}`}
-                dataType="budget"
-                sources={budgetDataSources}
-                showValidation={true}
-              />
-            </div>
-          </div>
+          {/* Budget Analysis Chart */}
+          <BudgetAnalysisChart year={parseInt(activeYear)} />
 
-          {/* Distribución por Fuente de Ingreso */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
-            <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-              <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
-                Distribución por Fuente de Ingreso {activeYear}
-              </h2>
-            </div>
-            <div className="p-6">
-              <ValidatedChart
-                data={transformedBudgetData.map(item => ({
-                  ...item,
-                  name: `Ingresos Q${item.quarter}`,
-                  value: Math.round(item.income / 1000000),
-                  fuente: item.report_type
-                }))}
-                chartType="doughnut"
-                title={`Distribución por Fuente de Ingreso ${activeYear}`}
-                dataType="budget"
-                sources={budgetDataSources}
-                showValidation={true}
-              />
-            </div>
-          </div>
-
-          {/* Evolución del Gasto Mensual */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
-            <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-              <div className="flex justify-between items-center">
-                <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
-                  Evolución del Gasto Mensual {activeYear}
-                </h2>
-                <button className="text-sm text-gray-500 dark:text-gray-400 flex items-center hover:text-gray-700 dark:hover:text-gray-300">
-                  <Filter size={16} className="mr-1" />
-                  Filtrar
-                </button>
-              </div>
-            </div>
-            <div className="p-6">
-              <ValidatedChart
-                data={transformedBudgetData.map((item, index) => ({
-                  ...item,
-                  name: `${['Ene-Mar', 'Abr-Jun', 'Jul-Sep', 'Oct-Dic'][item.quarter - 1] || `Q${item.quarter}`}`,
-                  value: Math.round(item.expenses / 1000000),
-                  gastoMensual: Math.round(item.expenses / (3 * 1000000)), // Promedio mensual del trimestre
-                  presupuestado: Math.round(item.income / 1000000),
-                  ejecutado: Math.round(item.expenses / 1000000)
-                }))}
-                chartType="line"
-                title={`Evolución del Gasto Mensual ${activeYear}`}
-                dataType="budget"
-                sources={budgetDataSources}
-                showValidation={true}
-              />
-            </div>
-          </div>
-
-          {/* Desglose por Fuentes */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
-            <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-              <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
-                Desglose por Fuentes {activeYear}
-              </h2>
-            </div>
-            <div className="p-6">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div>
-                  <ValidatedChart
-                    data={transformedBudgetData.map(item => ({
-                      ...item,
-                      name: `${item.report_type}`,
-                      value: Math.round(item.income / 1000000),
-                      ingresos: Math.round(item.income / 1000000),
-                      gastos: Math.round(item.expenses / 1000000)
-                    }))}
-                    chartType="bar"
-                    title={`Ingresos por Fuente ${activeYear}`}
-                    dataType="budget"
-                    sources={budgetDataSources}
-                    showValidation={true}
-                  />
-                </div>
-                <div>
-                  <h3 className="font-medium text-gray-800 dark:text-white mb-4">
-                    Resumen por Fuente
-                  </h3>
-                  <div className="space-y-3">
-                    {transformedBudgetData.map((item) => (
-                      <div key={item.id} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                        <div className="flex items-center">
-                          <div 
-                            className="w-4 h-4 rounded-sm mr-3" 
-                            style={{ backgroundColor: item.color }}
-                          ></div>
-                          <div>
-                            <div className="font-medium text-gray-900 dark:text-white">
-                              {item.report_type}
-                            </div>
-                            <div className="text-sm text-gray-500 dark:text-gray-400">
-                              Q{item.quarter} {item.year}
-                            </div>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <div className="font-mono text-sm font-medium text-gray-900 dark:text-white">
-                            {formatCurrency(item.income)}
-                          </div>
-                          <div className="text-xs text-gray-500 dark:text-gray-400">
-                            {((item.income / totalBudget) * 100).toFixed(1)}% del total
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Financial Data Table */}
+          <FinancialDataTable
+            data={transformedBudgetData}
+            columns={[
+              { key: 'quarter', header: 'Trimestre', sortable: true },
+              { key: 'report_type', header: 'Tipo de Reporte', sortable: true },
+              { key: 'income', header: 'Ingresos', sortable: true, format: 'currency' },
+              { key: 'expenses', header: 'Gastos', sortable: true, format: 'currency' },
+              { key: 'balance', header: 'Balance', sortable: true, format: 'currency' },
+              { key: 'execution_percentage', header: '% Ejecución', sortable: true, format: 'percentage' }
+            ]}
+            title={`Datos Presupuestarios ${activeYear}`}
+            loading={loading}
+            error={error}
+            onRowClick={(row) => setSelectedItem(row)}
+            onExport={() => console.log('Export budget data')}
+          />
         </motion.div>
       )}
 

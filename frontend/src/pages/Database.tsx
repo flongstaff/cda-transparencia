@@ -18,7 +18,7 @@ const Database: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   // Available years for filtering
-  const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018'];
+  const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017'];
 
   // Category filters
   const categoryFilters = [

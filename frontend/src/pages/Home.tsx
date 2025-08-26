@@ -16,7 +16,8 @@ import {
   Shield,
   Loader2,
   DollarSign,
-  Users
+  Users,
+  FolderOpen
 } from 'lucide-react';
 import FinancialStatsSummary from '../components/dashboard/FinancialStatsSummary';
 import RecentUpdatesList from '../components/dashboard/RecentUpdatesList';
@@ -65,7 +66,7 @@ const Home: React.FC = () => {
       const completionRate = Math.min(100, Math.round(85 + (parseInt(year) - 2024) * 3 + Math.random() * 5));
 
       // Get real data from data integrity endpoint
-      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
       const integrityResponse = await fetch(`${API_BASE}/data-integrity`);
       const integrityData: { 
         total_documents?: number; 
@@ -147,6 +148,13 @@ const Home: React.FC = () => {
       icon: <Database size={24} />,
       link: '/database',
       color: 'bg-warning-50 text-warning-500',
+    },
+    {
+      title: 'Documentos Oficiales',
+      description: 'Acceso a documentos oficiales convertidos a markdown con verificación SHA256 y enlaces a fuentes',
+      icon: <FolderOpen size={24} />,
+      link: '/documents',
+      color: 'bg-indigo-50 text-indigo-500',
     },
     {
       title: t('home.reports.title'),
@@ -437,7 +445,7 @@ const Home: React.FC = () => {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <Link 
-            to="/declarations" 
+            to="/property-declarations" 
             className="flex flex-col items-center p-4 bg-primary-50 dark:bg-primary-900/20 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-800 transition-colors"
           >
             <FileText size={24} className="text-primary-500 dark:text-primary-400 mb-2" />

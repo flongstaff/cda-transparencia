@@ -35,6 +35,7 @@ interface ValidatedChartProps {
   dataKey?: string;
   nameKey?: string;
   height?: number;
+  dataType?: string; // Accept but ignore this prop for compatibility
 }
 
 const ValidatedChart: React.FC<ValidatedChartProps> = ({

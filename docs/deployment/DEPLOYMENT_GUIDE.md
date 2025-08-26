@@ -1,358 +1,332 @@
-# 🚀 Carmen de Areco Transparency Portal - Free Deployment Guide
+# Deployment Guide
 
-## Overview
+This guide explains how to deploy the Carmen de Areco Transparency Portal to production environments.
 
-This guide provides complete instructions for deploying the Carmen de Areco Transparency Portal using **100% free infrastructure**:
+## Deployment Options
 
-- 🌐 **Cloudflare Workers** (Free: 100,000 requests/day)
-- ⚡ **GitHub Actions** (Free: 2,000 minutes/month)
-- 📊 **GitHub Pages** (Free hosting)
-- 🔒 **Free SSL certificates** (via Cloudflare)
-- 🌍 **Global CDN** (via Cloudflare)
+### 1. GitHub Pages (Recommended for Demo)
 
-**Total Cost: $0/month** ✨
+The project is configured to automatically deploy to GitHub Pages using GitHub Actions.
 
-## 🏗️ Architecture
+**Requirements:**
+- Repository must be public
+- GitHub Pages must be enabled in repository settings
 
-```
-GitHub Repository → GitHub Actions → Cloudflare Workers → Global CDN
-     ↓                    ↓               ↓                ↓
-  Code Push        Build & Test     Deploy & Serve    Users Worldwide
-```
+**Automatic Deployment:**
+- Any push to the `main` branch triggers deployment
+- Manual deployment can be triggered from GitHub Actions
 
-## 📋 Prerequisites
+### 2. VPS/Cloud Server
 
-1. **GitHub Account** (free)
-2. **Cloudflare Account** (free)
-3. **Domain name** (optional - can use `*.workers.dev` subdomain for free)
+For full control over the deployment, you can deploy to a VPS or cloud server.
 
-## 🚀 Step-by-Step Setup
+## GitHub Pages Deployment
 
-### Step 1: Cloudflare Setup
+### Setup
+1. Go to repository Settings
+2. Navigate to Pages section
+3. Set Source to "GitHub Actions"
+4. Save settings
 
-1. **Create Cloudflare Account**
-   ```bash
-   # Go to https://cloudflare.com and sign up (free)
-   ```
-
-2. **Get API Token**
-   - Go to `My Profile` → `API Tokens`
-   - Click `Create Token`
-   - Use `Custom Token` template with these permissions:
-     ```
-     Zone: Zone Settings:Read, Zone:Read
-     Account: Cloudflare Workers:Edit
-     ```
-   - Save the token securely
-
-3. **Get Account ID**
-   - Go to your Cloudflare dashboard
-   - Copy your `Account ID` from the right sidebar
-
-### Step 2: GitHub Repository Setup
-
-1. **Fork/Clone Repository**
-   ```bash
-   git clone https://github.com/your-org/cda-transparencia.git
-   cd cda-transparencia
-   ```
-
-2. **Add GitHub Secrets**
-   - Go to your repository → `Settings` → `Secrets and variables` → `Actions`
-   - Add these secrets:
-     ```
-     CLOUDFLARE_API_TOKEN: [your_api_token_from_step_1]
-     CLOUDFLARE_ACCOUNT_ID: [your_account_id_from_step_1]
-     ```
-
-### Step 3: Configure Deployment
-
-1. **Update wrangler.toml** (if using custom domain)
-   ```toml
-   # Edit wrangler.toml
-   [env.production]
-   name = "carmen-de-areco-transparency-prod"
-   routes = [
-     { pattern = "your-domain.com/*", zone_name = "your-domain.com" }
-   ]
-   ```
-
-2. **Verify GitHub Actions**
-   ```bash
-   # The workflow file is already configured at:
-   .github/workflows/deploy.yml
-   ```
-
-### Step 4: Deploy
-
-1. **Push to Main Branch**
-   ```bash
-   git add .
-   git commit -m "🚀 Initial deployment setup"
-   git push origin main
-   ```
-
-2. **Monitor Deployment**
-   - Go to your repository → `Actions` tab
-   - Watch the deployment progress
-   - All steps should complete successfully ✅
-
-## 🌐 Environments
-
-The setup includes three environments:
-
-### 🔴 Production (`main` branch)
-- **URL**: `https://carmen-de-areco-transparency-prod.workers.dev`
-- **Custom Domain**: Your production domain
-- **Auto-deploys**: On push to `main`
-
-### 🟡 Staging (`staging` branch)
-- **URL**: `https://carmen-de-areco-transparency-staging.workers.dev`
-- **Auto-deploys**: On push to `staging`
-
-### 🟢 Development (`development` branch)
-- **URL**: `https://carmen-de-areco-transparency-dev.workers.dev`
-- **Auto-deploys**: On push to `development`
-
-## 📊 Features Included
-
-### ✅ **Automatic Deployments**
-- Build and test on every push
-- Deploy to environment based on branch
-- Zero-downtime deployments
-
-### ✅ **Security**
-- HTTPS by default (free SSL)
-- Security headers configured
-- Vulnerability scanning with Trivy
-- Content Security Policy
-
-### ✅ **Performance**
-- Global CDN (190+ locations)
-- Static asset caching
-- Lighthouse performance audits
-- Progressive Web App support
-
-### ✅ **Monitoring**
-- Deployment status notifications
-- Performance audits on production
-- Error tracking and logging
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Configure these in your Cloudflare Worker dashboard:
-
-```toml
-[vars]
-ENVIRONMENT = "production"
-API_BASE_URL = "https://api.cda-transparencia.org"
-CONTACT_EMAIL = "transparencia@cda-transparencia.org"
-SITE_URL = "https://cda-transparencia.org"
-ANALYTICS_ID = "" # Optional Google Analytics ID
+### Manual Deployment
+```bash
+# From repository root
+cd frontend
+npm run build
+npm run deploy
 ```
 
-### Custom Domain Setup - cda-transparencia.org
+## VPS Deployment
 
-1. **Add Domain to Cloudflare**
-   - Go to Cloudflare dashboard
-   - Click `Add Site`
-   - Enter `cda-transparencia.org`
-   - Follow the instructions to update nameservers at your domain registrar
+### Server Requirements
+- Ubuntu 20.04+ or CentOS 8+
+- Node.js 18+
+- PostgreSQL 13+
+- Nginx or Apache
+- 2GB+ RAM
+- 20GB+ disk space
 
-2. **Configure DNS Records**
-   ```
-   Type: CNAME
-   Name: @ (root domain)
-   Target: carmen-de-areco-transparency-prod.workers.dev
-   Proxied: Yes (orange cloud enabled)
-   TTL: Auto
-   
-   Type: CNAME  
-   Name: www
-   Target: cda-transparencia.org
-   Proxied: Yes (orange cloud enabled)
-   TTL: Auto
-   ```
-
-3. **Update wrangler.toml**
-   ```toml
-   [env.production]
-   name = "carmen-de-areco-transparency-prod"
-   routes = [
-     { pattern = "cda-transparencia.org/*", zone_name = "cda-transparencia.org" },
-     { pattern = "www.cda-transparencia.org/*", zone_name = "cda-transparencia.org" }
-   ]
-   ```
-
-4. **SSL Configuration**
-   - Cloudflare automatically provides free SSL certificates
-   - Go to `SSL/TLS` → `Overview` 
-   - Set encryption mode to `Full (strict)` for maximum security
-   - Enable `Always Use HTTPS` in `SSL/TLS` → `Edge Certificates`
-
-5. **Additional Security Settings**
-   - Go to `Security` → `Settings`
-   - Set Security Level to `Medium` or `High`
-   - Enable `Browser Integrity Check`
-   - Configure `Firewall Rules` if needed for geographic restrictions
-
-6. **Performance Optimization**
-   - Go to `Speed` → `Optimization`
-   - Enable `Auto Minify` for HTML, CSS, and JavaScript
-   - Enable `Brotli` compression
-   - Set appropriate `Browser Cache TTL` (4 hours recommended)
-
-7. **Verify Domain Setup**
-   ```bash
-   # Test domain resolution
-   nslookup cda-transparencia.org
-   
-   # Test SSL certificate
-   curl -I https://cda-transparencia.org
-   
-   # Test redirect from www
-   curl -I https://www.cda-transparencia.org
-   ```
-
-## 🚨 Monitoring & Maintenance
-
-### Performance Monitoring
-- **Lighthouse CI**: Runs on every production deployment
-- **Web Vitals**: Core performance metrics tracked
-- **Uptime**: 99.9% SLA with Cloudflare
-
-### Cost Monitoring
-```
-Cloudflare Workers Free Tier:
-✅ 100,000 requests/day (3M/month)
-✅ 10ms CPU time per request
-✅ Global CDN included
-
-GitHub Actions Free Tier:
-✅ 2,000 minutes/month
-✅ Unlimited public repositories
-```
-
-### Scaling Options
-
-**When you exceed free limits:**
-
-1. **Cloudflare Workers Paid ($5/month)**
-   - 10 million requests/month
-   - 50ms CPU time per request
-   - Additional features
-
-2. **GitHub Actions ($0.008/minute)**
-   - Only charged for usage beyond free tier
-
-## 🛠️ Local Development
+### 1. Install Dependencies
 
 ```bash
-# Install dependencies
-cd frontend
-npm install
+# Update system
+sudo apt update && sudo apt upgrade -y
 
-# Run development server
-npm run dev
+# Install Node.js
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
-# Build for production
-npm run build
+# Install PostgreSQL
+sudo apt install postgresql postgresql-contrib -y
 
-# Test Cloudflare Worker locally
-wrangler dev
+# Install Nginx
+sudo apt install nginx -y
 ```
 
-## 📞 Support & Troubleshooting
+### 2. Database Setup
+
+```bash
+# Start PostgreSQL
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+
+# Create database and user
+sudo -u postgres psql
+CREATE DATABASE transparency_portal;
+CREATE USER transparency_user WITH ENCRYPTED PASSWORD 'secure_password';
+GRANT ALL PRIVILEGES ON DATABASE transparency_portal TO transparency_user;
+\q
+```
+
+### 3. Backend Deployment
+
+```bash
+# Clone repository
+git clone https://github.com/flongstaff/cda-transparencia.git
+cd cda-transparencia/backend
+
+# Install dependencies
+npm install
+
+# Set environment variables
+cp .env.example .env
+# Edit .env with your configuration
+
+# Run database migrations
+npm run setup-db
+
+# Start backend service
+npm start
+```
+
+### 4. Frontend Deployment
+
+```bash
+# Build frontend
+cd ../frontend
+npm install
+npm run build:production
+
+# Copy build files to web server directory
+sudo cp -r dist/* /var/www/html/
+```
+
+### 5. Nginx Configuration
+
+Create `/etc/nginx/sites-available/transparency`:
+
+```nginx
+server {
+    listen 80;
+    server_name your-domain.com;
+
+    # Frontend
+    location / {
+        root /var/www/html;
+        index index.html;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # API
+    location /api/ {
+        proxy_pass http://localhost:3000/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+
+Enable the site:
+```bash
+sudo ln -s /etc/nginx/sites-available/transparency /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+### 6. Process Management
+
+Install PM2 for process management:
+
+```bash
+sudo npm install -g pm2
+
+# Start backend with PM2
+cd /path/to/cda-transparencia/backend
+pm2 start npm --name "transparency-api" -- run start
+
+# Save PM2 configuration
+pm2 save
+pm2 startup
+```
+
+## Docker Deployment
+
+### Single Container Deployment
+
+```bash
+# Build and run backend
+cd backend
+docker build -t transparency-backend .
+docker run -d -p 3000:3000 --name transparency-api transparency-backend
+
+# Build and run frontend
+cd ../frontend
+docker build -t transparency-frontend .
+docker run -d -p 80:80 --name transparency-web transparency-frontend
+```
+
+### Docker Compose (Recommended)
+
+```bash
+# From repository root
+docker-compose up -d
+```
+
+## Environment Variables
+
+### Backend (.env)
+```env
+# Database
+DATABASE_URL=postgresql://transparency_user:secure_password@localhost:5432/transparency_portal
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=transparency_portal
+DB_USER=transparency_user
+DB_PASSWORD=secure_password
+
+# Server
+PORT=3000
+NODE_ENV=production
+
+# Security
+JWT_SECRET=your_jwt_secret_here
+CORS_ORIGIN=https://your-domain.com
+
+# API Keys (if needed)
+GOOGLE_API_KEY=your_google_api_key
+```
+
+### Frontend (.env)
+```env
+# API Configuration
+VITE_API_URL=https://your-domain.com/api
+VITE_BASE_URL=/cda-transparencia
+
+# Analytics (optional)
+VITE_GA_ID=your_google_analytics_id
+```
+
+## SSL Configuration
+
+### Let's Encrypt with Certbot
+
+```bash
+# Install Certbot
+sudo apt install certbot python3-certbot-nginx -y
+
+# Obtain SSL certificate
+sudo certbot --nginx -d your-domain.com
+
+# Auto-renewal
+sudo crontab -e
+# Add: 0 12 * * * /usr/bin/certbot renew --quiet
+```
+
+## Monitoring and Maintenance
+
+### Log Monitoring
+```bash
+# View backend logs
+pm2 logs transparency-api
+
+# View frontend logs
+tail -f /var/log/nginx/access.log
+tail -f /var/log/nginx/error.log
+```
+
+### Data Updates
+```bash
+# Run data processing scripts
+cd /path/to/cda-transparencia/scripts
+python process_all.py
+
+# Update database
+cd ../backend
+npm run sync-data
+```
+
+### Backup Strategy
+```bash
+#!/bin/bash
+# backup.sh
+
+# Database backup
+pg_dump -U transparency_user -h localhost transparency_portal > /backups/transparency_$(date +%Y%m%d).sql
+
+# File backup
+tar -czf /backups/transparency_files_$(date +%Y%m%d).tar.gz /path/to/cda-transparencia/data/
+
+# Keep only last 30 days of backups
+find /backups -name "transparency*" -mtime +30 -delete
+```
+
+Add to crontab:
+```bash
+# Daily backup at 2 AM
+0 2 * * * /path/to/backup.sh
+```
+
+## Troubleshooting
 
 ### Common Issues
 
-**Deployment fails with "Wrangler not found"**
-```bash
-# Solution: Check wrangler.toml configuration
-wrangler whoami
-```
+1. **Database Connection Failed**
+   - Check PostgreSQL service status
+   - Verify database credentials in .env
+   - Ensure PostgreSQL is accepting connections
 
-**SSL Certificate errors**
-```bash
-# Solution: Ensure domain is proxied through Cloudflare
-# Check DNS settings in Cloudflare dashboard
-```
+2. **API Not Responding**
+   - Check if backend service is running
+   - Verify PORT in .env
+   - Check firewall settings
 
-**Build fails on GitHub Actions**
-```bash
-# Solution: Check Node.js version compatibility
-# Verify package.json dependencies
-```
+3. **Frontend Not Loading**
+   - Verify build was successful
+   - Check Nginx configuration
+   - Ensure static files are in correct directory
 
-### Get Help
+### Logs Location
 
-1. **GitHub Issues**: Report bugs and feature requests
-2. **Documentation**: Check `/docs` directory
-3. **Community**: Join discussions in repository
+- **Backend:** `/var/log/pm2/` or PM2 logs
+- **Frontend:** `/var/log/nginx/`
+- **Database:** `/var/log/postgresql/`
+- **System:** `/var/log/syslog`
 
-## 🔄 Update Process
+## Performance Optimization
 
-### Automated Updates
-```bash
-# 1. Make changes locally
-git add .
-git commit -m "✨ New feature"
+### Database
+- Enable query caching
+- Create appropriate indexes
+- Regularly vacuum and analyze tables
 
-# 2. Push to appropriate branch
-git push origin staging  # Test in staging first
-git push origin main     # Deploy to production
-```
+### Frontend
+- Enable gzip compression in Nginx
+- Use CDN for static assets
+- Implement browser caching
 
-### Manual Updates
-```bash
-# Deploy directly using Wrangler CLI
-wrangler deploy --env production
-```
+### API
+- Implement response caching for frequently accessed data
+- Use database connection pooling
+- Implement rate limiting
 
-## 🎯 Best Practices
+## Security Considerations
 
-### Security
-- ✅ Keep secrets in GitHub repository settings
-- ✅ Use environment-specific configurations
-- ✅ Enable Cloudflare security features
-- ✅ Regular dependency updates
-
-### Performance
-- ✅ Optimize images and assets
-- ✅ Enable compression
-- ✅ Use appropriate caching headers
-- ✅ Monitor Core Web Vitals
-
-### Maintenance
-- ✅ Monitor deployment notifications
-- ✅ Review Lighthouse reports
-- ✅ Update dependencies regularly
-- ✅ Test in staging before production
-
-## 🌟 Advanced Features
-
-### Coming Soon
-- 🗄️ **Cloudflare D1** (Free SQLite database)
-- 📧 **Email Workers** (Contact form processing)
-- 🔐 **KV Storage** (Caching and sessions)
-- 📊 **Analytics** (Visitor tracking)
-
----
-
-## ✅ Deployment Checklist
-
-- [ ] Cloudflare account created
-- [ ] API tokens configured
-- [ ] GitHub secrets added
-- [ ] Repository forked/cloned
-- [ ] Domain configured (optional)
-- [ ] First deployment successful
-- [ ] SSL certificate active
-- [ ] Performance audit passed
-- [ ] Custom domain working (if applicable)
-
-**🎉 Your Carmen de Areco Transparency Portal is now live and completely free!**
-
-For support or questions, please open an issue in the GitHub repository.
+- Keep all software updated
+- Use strong, unique passwords
+- Implement proper firewall rules
+- Regular security audits
+- HTTPS only (redirect HTTP to HTTPS)
+- Regular backup verification

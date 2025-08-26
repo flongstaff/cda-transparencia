@@ -116,6 +116,7 @@ const Header: React.FC = () => {
     { name: 'Contratos', href: '/contracts' },
     { name: 'Salarios', href: '/salaries' },
     { name: 'Base de Datos', href: '/database' },
+    { name: 'Documentos', href: '/documents' },
     { name: 'Integridad', href: '/data-integrity' },
     { name: 'Informes', href: '/reports' },
     { name: 'Contacto', href: '/contact' },

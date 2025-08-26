@@ -10,7 +10,7 @@
 | **Tipo** | Excel Spreadsheet |
 | **Tamaño** | 57,712 bytes |
 | **Hash SHA256** | `8fabef6454699b8ed67281bbe450aa214e96bbdb544cba1eef9f8e1f07a68e14` |
-| **Fecha de Procesamiento** | 25/08/2025 15:53 |
+| **Fecha de Procesamiento** | 25/08/2025 19:16 |
 
 ## 🔗 Fuentes Oficiales
 
