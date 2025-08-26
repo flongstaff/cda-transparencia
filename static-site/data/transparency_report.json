@@ -1,0 +1,373 @@
+{
+  "data_sources": [
+    {
+      "last_updated": "2025-08-26",
+      "name": "Official Municipal Portal",
+      "status": "active",
+      "url": "https://carmendeareco.gob.ar/transparencia/"
+    },
+    {
+      "name": "PostgreSQL Database",
+      "records": 419,
+      "status": "active"
+    },
+    {
+      "count": 17,
+      "name": "Markdown Documents",
+      "status": "converted"
+    }
+  ],
+  "generated": "2025-08-26T17:42:49.253325",
+  "project": "Carmen de Areco Transparency Portal",
+  "recent_data": {
+    "recent_documents": [
+      {
+        "category": "Documentos Generales",
+        "content_preview": "PDF processing not available",
+        "created_at": "Mon, 25 Aug 2025 11:30:48 GMT",
+        "document_type": "general_document",
+        "file_hash": "d7e5fe093229b362f6ed07c0a48eca091618d59b9a59cb0f436adf1d51e23eb6",
+        "file_size": 27372,
+        "filename": "FichaProyecto_1003129479_695538.pdf",
+        "id": 570,
+        "month": null,
+        "original_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/FichaProyecto_1003129479_695538.pdf",
+        "processing_status": "updated",
+        "quarter": null,
+        "year": 2025
+      },
+      {
+        "category": "Normativa Legal",
+        "content_preview": "PDF processing not available",
+        "created_at": "Mon, 25 Aug 2025 11:30:48 GMT",
+        "document_type": "legal_document",
+        "file_hash": "50ae7ac4489785557037de874425184c1a309a48e23c91e5a93c8a807b8bac44",
+        "file_size": 684888,
+        "filename": "Anexo-II-Ordenanza-Impositiva-3135-2022.pdf",
+        "id": 569,
+        "month": null,
+        "original_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/Anexo-II-Ordenanza-Impositiva-3135-2022.pdf",
+        "processing_status": "updated",
+        "quarter": null,
+        "year": 2022
+      },
+      {
+        "category": "Documentos Generales",
+        "content_preview": "PDF processing not available",
+        "created_at": "Mon, 25 Aug 2025 11:30:48 GMT",
+        "document_type": "general_document",
+        "file_hash": "ff5f63b423f9b526b957d76facc64b51e8bac6999b65e741a51f5609ea06c074",
+        "file_size": 78982,
+        "filename": "Ley 7240(1).pdf",
+        "id": 561,
+        "month": null,
+        "original_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/Ley 7240(1).pdf",
+        "processing_status": "updated",
+        "quarter": null,
+        "year": 2025
+      },
+      {
+        "category": "Normativa Legal",
+        "content_preview": "PDF processing not available",
+        "created_at": "Mon, 25 Aug 2025 11:30:48 GMT",
+        "document_type": "legal_document",
+        "file_hash": "e65e63e2a473fc6205d2b2d4e679017b66ac407c2a6c05aefd3f57f658fbb306",
+        "file_size": 849260,
+        "filename": "Sistema de Informaci\u00f3n Normativa y Documental Malvinas Argentinas - Decreto 3360_1999.pdf",
+        "id": 558,
+        "month": null,
+        "original_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/Sistema de Informaci\u00f3n Normativa y Documental Malvinas Argentinas - Decreto 3360_1999.pdf",
+        "processing_status": "updated",
+        "quarter": null,
+        "year": 2025
+      },
+      {
+        "category": "Documentos Generales",
+        "content_preview": "PDF processing not available",
+        "created_at": "Mon, 25 Aug 2025 11:30:48 GMT",
+        "document_type": "general_document",
+        "file_hash": "5acd808d223dd568eff2a880722f65afb9f09e8dc4c25b13c30e745762e24933",
+        "file_size": 74766,
+        "filename": "FichaProyecto_1003129342_956064.pdf",
+        "id": 554,
+        "month": null,
+        "original_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/FichaProyecto_1003129342_956064.pdf",
+        "processing_status": "updated",
+        "quarter": null,
+        "year": 2025
+      }
+    ],
+    "recent_financial_reports": [
+      {
+        "balance": "11879664.45",
+        "created_at": "Tue, 26 Aug 2025 03:09:32 GMT",
+        "document_hash": null,
+        "execution_percentage": "96.43",
+        "expenses": "321320335.55",
+        "id": 16,
+        "income": "333200000.00",
+        "official_url": "https://carmendeareco.gob.ar/transparencia/presupuesto/2025/q4",
+        "quarter": 4,
+        "report_type": "Informe Trimestral",
+        "year": 2025
+      },
+      {
+        "balance": "6300791924.47",
+        "created_at": "Tue, 26 Aug 2025 03:09:41 GMT",
+        "document_hash": null,
+        "execution_percentage": "93.48",
+        "expenses": "90301558919.54",
+        "id": 84,
+        "income": "96602350844.01",
+        "official_url": "https://carmendeareco.gob.ar/transparencia/presupuesto/2025/trimestre-4",
+        "quarter": 4,
+        "report_type": "Estado de Situaci\u00f3n",
+        "year": 2025
+      },
+      {
+        "balance": "20738703.48",
+        "created_at": "Tue, 26 Aug 2025 03:09:32 GMT",
+        "document_hash": null,
+        "execution_percentage": "93.55",
+        "expenses": "300561296.52",
+        "id": 15,
+        "income": "321300000.00",
+        "official_url": "https://carmendeareco.gob.ar/transparencia/presupuesto/2025/q3",
+        "quarter": 3,
+        "report_type": "Ejecuci\u00f3n Presupuestaria",
+        "year": 2025
+      },
+      {
+        "balance": "9970724287.81",
+        "created_at": "Tue, 26 Aug 2025 03:09:41 GMT",
+        "document_hash": null,
+        "execution_percentage": "86.90",
+        "expenses": "66140218801.41",
+        "id": 83,
+        "income": "76110943089.22",
+        "official_url": "https://carmendeareco.gob.ar/transparencia/presupuesto/2025/trimestre-3",
+        "quarter": 3,
+        "report_type": "Balance Financiero",
+        "year": 2025
+      },
+      {
+        "balance": "26273246.07",
+        "created_at": "Tue, 26 Aug 2025 03:09:32 GMT",
+        "document_hash": null,
+        "execution_percentage": "91.17",
+        "expenses": "271226753.93",
+        "id": 14,
+        "income": "297500000.00",
+        "official_url": "https://carmendeareco.gob.ar/transparencia/presupuesto/2025/q2",
+        "quarter": 2,
+        "report_type": "Balance Financiero",
+        "year": 2025
+      }
+    ],
+    "recent_tenders": [
+      {
+        "award_date": "Tue, 12 Aug 2025 00:00:00 GMT",
+        "awarded_to": "Constructora San Andr\u00e9s S.A.",
+        "budget": "153259841.26",
+        "created_at": "Tue, 26 Aug 2025 03:09:41 GMT",
+        "delay_analysis": "Avance conforme a lo planificado",
+        "description": "Parque solar en centro - Proyecto municipal de desarrollo urbano",
+        "document_hash": null,
+        "execution_status": "in_progress",
+        "id": 141,
+        "official_url": "https://carmendeareco.gob.ar/transparencia/licitaciones/2025",
+        "title": "Parque solar 2025",
+        "year": 2025
+      },
+      {
+        "award_date": null,
+        "awarded_to": "En proceso de licitaci\u00f3n",
+        "budget": "104216692.06",
+        "created_at": "Tue, 26 Aug 2025 03:09:41 GMT",
+        "delay_analysis": "En proceso de licitaci\u00f3n p\u00fablica",
+        "description": "Eficiencia energ\u00e9tica en periferia - Proyecto municipal de desarrollo urbano",
+        "document_hash": null,
+        "execution_status": "planning",
+        "id": 142,
+        "official_url": "https://carmendeareco.gob.ar/transparencia/licitaciones/2025",
+        "title": "Eficiencia energ\u00e9tica 2025",
+        "year": 2025
+      },
+      {
+        "award_date": null,
+        "awarded_to": "En proceso de licitaci\u00f3n",
+        "budget": "450000000.00",
+        "created_at": "Tue, 26 Aug 2025 03:09:32 GMT",
+        "delay_analysis": "En proceso de licitaci\u00f3n",
+        "description": "Primera etapa del parque industrial municipal",
+        "document_hash": null,
+        "execution_status": "planning",
+        "id": 10,
+        "official_url": "https://carmendeareco.gob.ar/transparencia/licitaciones/2025",
+        "title": "Parque Industrial Carmen de Areco",
+        "year": 2025
+      },
+      {
+        "award_date": null,
+        "awarded_to": "En evaluaci\u00f3n",
+        "budget": "95000000.00",
+        "created_at": "Tue, 26 Aug 2025 03:09:32 GMT",
+        "delay_analysis": "En proceso de licitaci\u00f3n",
+        "description": "Remodelaci\u00f3n integral de la plaza San Mart\u00edn",
+        "document_hash": null,
+        "execution_status": "planning",
+        "id": 11,
+        "official_url": "https://carmendeareco.gob.ar/transparencia/licitaciones/2025",
+        "title": "Renovaci\u00f3n Plaza Principal",
+        "year": 2025
+      },
+      {
+        "award_date": null,
+        "awarded_to": "En proceso de licitaci\u00f3n",
+        "budget": "98086298.41",
+        "created_at": "Tue, 26 Aug 2025 03:09:41 GMT",
+        "delay_analysis": "En proceso de licitaci\u00f3n p\u00fablica",
+        "description": "Separaci\u00f3n residuos en periferia - Proyecto municipal de desarrollo urbano",
+        "document_hash": null,
+        "execution_status": "planning",
+        "id": 143,
+        "official_url": "https://carmendeareco.gob.ar/transparencia/licitaciones/2025",
+        "title": "Separaci\u00f3n residuos 2025",
+        "year": 2025
+      }
+    ],
+    "top_investment_assets": [
+      {
+        "asset_type": "inmueble",
+        "depreciation": "24000000.00",
+        "description": "Edificio municipal sede",
+        "id": 1,
+        "location": "Av. Mitre 123, Carmen de Areco",
+        "value": "120000000.00",
+        "year": 2024
+      },
+      {
+        "asset_type": "maquinaria",
+        "depreciation": "9000000.00",
+        "description": "Equipamiento vial y herramientas",
+        "id": 2,
+        "location": "Dep\u00f3sito municipal",
+        "value": "45000000.00",
+        "year": 2024
+      }
+    ],
+    "top_revenue_sources": [
+      {
+        "category": "Impuestos",
+        "collection_efficiency": "89.00",
+        "description": "Recaudaci\u00f3n de impuestos municipales",
+        "id": 7,
+        "revenue": "1071000000.00",
+        "year": 2023
+      },
+      {
+        "category": "Impuestos",
+        "collection_efficiency": "89.00",
+        "description": "Recaudaci\u00f3n de impuestos municipales",
+        "id": 11,
+        "revenue": "714000000.00",
+        "year": 2025
+      },
+      {
+        "category": "Impuestos",
+        "collection_efficiency": "89.00",
+        "description": "Recaudaci\u00f3n de impuestos municipales",
+        "id": 3,
+        "revenue": "510000000.00",
+        "year": 2022
+      },
+      {
+        "category": "Tasas",
+        "collection_efficiency": "92.50",
+        "description": "Recaudaci\u00f3n de tasas municipales",
+        "id": 8,
+        "revenue": "446250000.00",
+        "year": 2023
+      },
+      {
+        "category": "Tasas",
+        "collection_efficiency": "92.50",
+        "description": "Recaudaci\u00f3n de tasas municipales",
+        "id": 12,
+        "revenue": "297500000.00",
+        "year": 2025
+      }
+    ],
+    "top_salaries": [
+      {
+        "adjustments": "Inflaci\u00f3n 2025: 95.0%",
+        "basic_salary": "3308432.81",
+        "created_at": "Tue, 26 Aug 2025 03:09:41 GMT",
+        "deductions": "SOMA: 3%, IPS: 11%, Otros: 3% = 17.0%",
+        "id": 181,
+        "inflation_rate": "95.00",
+        "net_salary": "2745999.23",
+        "official_name": "Dr. Ricardo Casi",
+        "role": "Intendente",
+        "year": 2025
+      },
+      {
+        "adjustments": "Ajuste inflacionario 2025: +57.0%",
+        "basic_salary": "2606445.31",
+        "created_at": "Tue, 26 Aug 2025 03:09:32 GMT",
+        "deductions": "SOMA: 3%, IPS: 11%, Otros: 3%",
+        "id": 55,
+        "inflation_rate": "95.00",
+        "net_salary": "2163349.61",
+        "official_name": "Dr. Ricardo Casi",
+        "role": "Intendente",
+        "year": 2025
+      },
+      {
+        "adjustments": "Inflaci\u00f3n 2025: 95.0%",
+        "basic_salary": "2566887.53",
+        "created_at": "Tue, 26 Aug 2025 03:09:41 GMT",
+        "deductions": "SOMA: 3%, IPS: 11%, Otros: 3% = 17.0%",
+        "id": 182,
+        "inflation_rate": "95.00",
+        "net_salary": "2130516.65",
+        "official_name": "Mar\u00eda Elena Gonz\u00e1lez",
+        "role": "Secretaria de Hacienda",
+        "year": 2025
+      },
+      {
+        "adjustments": "Inflaci\u00f3n 2025: 95.0%",
+        "basic_salary": "2452803.64",
+        "created_at": "Tue, 26 Aug 2025 03:09:41 GMT",
+        "deductions": "SOMA: 3%, IPS: 11%, Otros: 3% = 17.0%",
+        "id": 183,
+        "inflation_rate": "95.00",
+        "net_salary": "2035827.02",
+        "official_name": "Carlos Alberto Ruiz",
+        "role": "Secretario de Obras P\u00fablicas",
+        "year": 2025
+      },
+      {
+        "adjustments": "Inflaci\u00f3n 2025: 95.0%",
+        "basic_salary": "2281677.80",
+        "created_at": "Tue, 26 Aug 2025 03:09:41 GMT",
+        "deductions": "SOMA: 3%, IPS: 11%, Otros: 3% = 17.0%",
+        "id": 184,
+        "inflation_rate": "95.00",
+        "net_salary": "1893792.57",
+        "official_name": "Ana Cristina L\u00f3pez",
+        "role": "Secretaria de Desarrollo Social",
+        "year": 2025
+      }
+    ]
+  },
+  "statistics": {
+    "total_documents": 331,
+    "total_fees_revenue": 14,
+    "total_financial_reports": 84,
+    "total_investment_assets": 2,
+    "total_public_tenders": 147,
+    "total_salary_records": 188
+  },
+  "status": "production_ready"
+}

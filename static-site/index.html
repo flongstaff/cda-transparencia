@@ -165,9 +165,12 @@
 <body>
     <header>
         <div class="container">
-            <h1>Carmen de Areco</h1>
+            <h1>🏛️ Carmen de Areco</h1>
             <div class="subtitle">Portal de Transparencia Municipal</div>
             <div class="subtitle">Acceso en Tiempo Real a la Información Pública</div>
+            <div class="subtitle" style="margin-top: 1rem; font-size: 1rem; opacity: 0.8;">
+                Proyecto de investigación de transparencia (2009-2025) | 331 documentos procesados
+            </div>
         </div>
     </header>
 
@@ -243,9 +246,10 @@
         // Global variables
         let allDocuments = [];
         let currentSources = ['live', 'local'];
+        let transparencyData = null;
         
         // API endpoint (adjust if running locally)
-        const API_BASE = 'http://localhost:5555';
+        const API_BASE = 'http://localhost:5556';
         
         // Initialize the page
         document.addEventListener('DOMContentLoaded', function() {
@@ -280,7 +284,7 @@
         }
         
         async function loadFromAPI() {
-            const response = await fetch(`${API_BASE}/data/report`);
+            const response = await fetch(`${API_BASE}/api/comprehensive-data`);
             if (!response.ok) throw new Error('API not available');
             
             const data = await response.json();
@@ -299,37 +303,71 @@
         }
         
         function processAPIData(data) {
+            transparencyData = data;
+            
             // Update statistics
             updateStatistics({
-                total: data.reports?.live_scrape?.downloaded || 0,
-                live: data.reports?.live_scrape?.downloaded || 0,
-                archived: data.reports?.archive_scrape?.unique_documents || 0,
-                lastUpdate: data.report_generated || new Date().toISOString()
+                total: data.statistics?.total_documents || 0,
+                live: data.statistics?.total_documents || 0,
+                archived: 'N/A',
+                lastUpdate: data.generated || new Date().toISOString()
             });
             
-            // Process documents
+            // Process documents from recent data
             allDocuments = [];
             
-            // Add live documents
-            if (data.reports?.live_scrape) {
-                // Process live scrape data
-                // Implementation depends on actual API data structure
+            // Add recent documents
+            if (data.recent_data?.recent_documents) {
+                allDocuments = data.recent_data.recent_documents.map(doc => ({
+                    id: doc.id,
+                    filename: doc.filename,
+                    type: doc.document_type || 'general',
+                    source: 'local',
+                    title: doc.filename.replace('.pdf', '').replace('.xlsx', ''),
+                    date: doc.created_at ? new Date(doc.created_at).toLocaleDateString('es-AR') : 'N/A',
+                    year: doc.year,
+                    category: doc.category
+                }));
             }
             
             filterAndDisplayDocuments();
         }
         
         function processStaticData(data) {
-            updateStatistics(data.statistics || {});
-            allDocuments = data.documents || [];
+            transparencyData = data;
+            
+            updateStatistics({
+                total: data.statistics?.total_documents || data.statistics?.total || 0,
+                live: data.statistics?.total_documents || data.statistics?.total || 0,
+                archived: 'N/A',
+                lastUpdate: data.generated || new Date().toISOString()
+            });
+            
+            // Process documents from recent data
+            allDocuments = [];
+            
+            // Add recent documents
+            if (data.recent_data?.recent_documents) {
+                allDocuments = data.recent_data.recent_documents.map(doc => ({
+                    id: doc.id,
+                    filename: doc.filename,
+                    type: doc.document_type || 'general',
+                    source: 'local',
+                    title: doc.filename.replace('.pdf', '').replace('.xlsx', ''),
+                    date: doc.created_at ? new Date(doc.created_at).toLocaleDateString('es-AR') : 'N/A',
+                    year: doc.year,
+                    category: doc.category
+                }));
+            }
+            
             filterAndDisplayDocuments();
         }
         
         function showOfflineData() {
             // Show local database content when API is unavailable
             updateStatistics({
-                total: 478,
-                live: 'N/A',
+                total: 331,
+                live: 331,
                 archived: 'N/A',
                 lastUpdate: '2025-08-26'
             });
@@ -337,25 +375,31 @@
             // Show example documents from local database
             allDocuments = [
                 {
-                    filename: 'presupuesto-2024.pdf',
+                    filename: 'presupuesto-2025.pdf',
                     type: 'presupuesto',
                     source: 'local',
-                    title: 'Presupuesto Municipal 2024',
-                    date: '2024-01-15'
+                    title: 'Presupuesto Municipal 2025',
+                    date: '2025-01-15',
+                    year: 2025,
+                    category: 'Finanzas'
                 },
                 {
-                    filename: 'ejecucion-q1-2024.xlsx',
+                    filename: 'ejecucion-q4-2025.xlsx',
                     type: 'ejecucion',
                     source: 'local',
-                    title: 'Ejecución Presupuestaria Q1 2024',
-                    date: '2024-04-10'
+                    title: 'Ejecución Presupuestaria Q4 2025',
+                    date: '2025-12-10',
+                    year: 2025,
+                    category: 'Finanzas'
                 },
                 {
-                    filename: 'declaraciones-2023.pdf',
-                    type: 'declaraciones',
+                    filename: 'licitacion-parque-solar-2025.pdf',
+                    type: 'licitacion',
                     source: 'local',
-                    title: 'Declaraciones Patrimoniales 2023',
-                    date: '2024-02-01'
+                    title: 'Licitación Parque Solar 2025',
+                    date: '2025-08-12',
+                    year: 2025,
+                    category: 'Obras Públicas'
                 }
             ];
             
@@ -403,7 +447,8 @@
                     <div class="document-meta">
                         <div>Archivo: ${doc.filename}</div>
                         <div>Tipo: ${doc.type || 'General'}</div>
-                        <div>Fuente: ${doc.source}</div>
+                        <div>Categoría: ${doc.category || 'General'}</div>
+                        <div>Año: ${doc.year || 'N/A'}</div>
                         ${doc.date ? `<div>Fecha: ${doc.date}</div>` : ''}
                     </div>
                 </div>
@@ -426,10 +471,10 @@
             
             try {
                 // Trigger live scrape
-                const response = await fetch(`${API_BASE}/data/live`);
+                const response = await fetch(`${API_BASE}/api/comprehensive-data`);
                 if (response.ok) {
                     const data = await response.json();
-                    location.reload(); // Reload to show updated data
+                    processAPIData(data);
                 } else {
                     throw new Error('Failed to refresh data');
                 }
@@ -452,7 +497,8 @@
                     archived: document.getElementById('archivedDocuments').textContent
                 },
                 selected_sources: currentSources,
-                documents: allDocuments.filter(doc => currentSources.includes(doc.source))
+                documents: allDocuments.filter(doc => currentSources.includes(doc.source)),
+                full_data: transparencyData
             };
             
             const blob = new Blob([JSON.stringify(reportData, null, 2)], 
@@ -466,29 +512,34 @@
         }
         
         async function viewComparison() {
-            try {
-                const response = await fetch(`${API_BASE}/data/compare`);
-                if (response.ok) {
-                    const data = await response.json();
-                    showComparisonModal(data);
-                } else {
-                    alert('Función de comparación no disponible sin conexión al servidor API.');
-                }
-            } catch (error) {
-                alert('No se puede acceder a la función de comparación. Verifique la conexión al servidor.');
+            // Show data sources information
+            if (!transparencyData) {
+                alert('No hay datos disponibles para mostrar.');
+                return;
             }
-        }
-        
-        function showComparisonModal(data) {
-            // Simple modal implementation
+            
+            const sourcesInfo = transparencyData.data_sources || [];
+            const statsInfo = transparencyData.statistics || {};
+            
+            let sourcesHTML = '<ul>';
+            sourcesInfo.forEach(source => {
+                sourcesHTML += `<li><strong>${source.name}:</strong> ${source.status} ${source.records ? `(${source.records} registros)` : ''}</li>`;
+            });
+            sourcesHTML += '</ul>';
+            
+            let statsHTML = '<ul>';
+            Object.entries(statsInfo).forEach(([key, value]) => {
+                statsHTML += `<li><strong>${key}:</strong> ${value}</li>`;
+            });
+            statsHTML += '</ul>';
+            
             const modalHTML = `
                 <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000;" onclick="this.remove()">
                     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 2rem; border-radius: 10px; max-width: 600px; max-height: 80%; overflow-y: auto;">
-                        <h2>Comparación de Fuentes</h2>
-                        <p><strong>Total único:</strong> ${data.total_unique || 0}</p>
-                        <p><strong>Solo en vivo:</strong> ${data.live_only?.length || 0}</p>
-                        <p><strong>Solo archivado:</strong> ${data.archived_only?.length || 0}</p>
-                        <p><strong>Común:</strong> ${data.common_documents?.length || 0}</p>
+                        <h2>Fuentes de Datos</h2>
+                        ${sourcesHTML}
+                        <h3>Estadísticas</h3>
+                        ${statsHTML}
                         <button onclick="this.parentElement.parentElement.remove()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer;">Cerrar</button>
                     </div>
                 </div>
