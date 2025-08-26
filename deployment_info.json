@@ -1,0 +1,28 @@
+{
+  "deployment_date": "2025-08-26T16:38:24.867114",
+  "project_name": "Carmen de Areco Transparency Portal",
+  "version": "1.0.0",
+  "status": "production_ready",
+  "data_coverage": {
+    "earliest_year": 2009,
+    "latest_year": 2025,
+    "total_years": 17
+  },
+  "services": {
+    "backend_api": "Node.js + Express + PostgreSQL",
+    "frontend": "React + TypeScript + Vite",
+    "live_scraper": "Python + Flask",
+    "database": "PostgreSQL 15"
+  },
+  "deployment_targets": [
+    "GitHub Pages (Static)",
+    "Heroku (Full Stack)",
+    "Vercel (Frontend + API)",
+    "Local Docker (Development)"
+  ],
+  "urls": {
+    "repository": "https://github.com/user/cda-transparencia",
+    "demo": "https://user.github.io/cda-transparencia",
+    "api": "https://api.transparencia-carmen.herokuapp.com"
+  }
+}
