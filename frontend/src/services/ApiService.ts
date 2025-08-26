@@ -394,6 +394,19 @@ class ApiService {
     }
   }
 
+  // Transparency Documents
+  async getTransparencyDocuments(year?: number, dataSources: string[] = ['database_local', 'official_site']): Promise<{ id: number; year: number; title: string; category: string; created_at: string; }[]> {
+    try {
+      const endpoint = year 
+        ? `/documents/year/${year}`
+        : '/documents';
+      return await this.request<{ id: number; year: number; title: string; category: string; created_at: string; }[]>(endpoint, {}, dataSources);
+    } catch (error) {
+      console.error('Failed to fetch transparency documents:', error);
+      return []; // Return empty array as fallback
+    }
+  }
+
   // Helper methods to get data for a specific year
   async getDataForYear(year: number, dataSources: string[] = ['database_local', 'official_site']): Promise<{
     declarations: PropertyDeclaration[];

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FileText, FolderOpen, Database, TrendingUp } from 'lucide-react';
 import DocumentViewer from '../components/documents/DocumentViewer';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
+import YearlySummaryDashboard from '../components/dashboard/YearlySummaryDashboard';
 
 interface DocumentMetadata {
   filename: string;
@@ -245,6 +246,17 @@ const Documents: React.FC = () => {
           onSourceChange={handleSourceChange}
           onDataRefresh={handleDataRefresh}
           className="max-w-4xl mx-auto"
+        />
+      </div>
+
+      {/* Yearly Documents Summary */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        <YearlySummaryDashboard
+          dataType="documents"
+          title="Documentos de Transparencia"
+          startYear={2018}
+          endYear={2025}
+          showComparison={true}
         />
       </div>
 

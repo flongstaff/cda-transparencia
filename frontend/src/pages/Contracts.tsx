@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Download, Search, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, Building, DollarSign, ShieldCheck, Loader2 } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
+import YearlySummaryDashboard from '../components/dashboard/YearlySummaryDashboard';
 import OSINTComplianceService from '../services/OSINTComplianceService';
 import ApiService, { PublicTender } from '../services/ApiService';
 
@@ -344,6 +345,15 @@ const Contracts: React.FC = () => {
         {/* Tab Content */}
         {activeTab === 'overview' && (
           <>
+            {/* Yearly Summary Dashboard */}
+            <YearlySummaryDashboard
+              dataType="tenders"
+              title="Licitaciones y Contratos Públicos"
+              startYear={2018}
+              endYear={2025}
+              showComparison={true}
+            />
+
             {/* Key Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">

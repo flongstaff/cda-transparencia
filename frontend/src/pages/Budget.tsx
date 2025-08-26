@@ -4,6 +4,7 @@ import { Download, Filter, Eye, FileText, TrendingUp, Calendar, AlertTriangle, C
 import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
 import FinancialDataTable from '../components/tables/FinancialDataTable';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
+import YearlySummaryDashboard from '../components/dashboard/YearlySummaryDashboard';
 import ApiService, { FinancialReport } from '../services/ApiService';
 import { formatCurrencyARS } from '../utils/formatters';
 
@@ -188,6 +189,15 @@ const Budget: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
+          {/* Yearly Summary Dashboard */}
+          <YearlySummaryDashboard
+            dataType="financial"
+            title="Presupuesto Municipal"
+            startYear={2018}
+            endYear={2025}
+            showComparison={true}
+          />
+
           {/* Budget Analysis Chart */}
           <BudgetAnalysisChart year={parseInt(activeYear)} />
 

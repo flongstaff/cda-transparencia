@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Download, Filter, Search, Calendar, FileText, Eye, TrendingUp, TrendingDown, Users, DollarSign, BarChart3, AlertCircle, CheckCircle, Loader2, Info, Database } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
+import YearlySummaryDashboard from '../components/dashboard/YearlySummaryDashboard';
 import OSINTComplianceService from '../services/OSINTComplianceService';
 import ApiService, { Salary } from '../services/ApiService';
 
@@ -268,6 +269,15 @@ const Salaries: React.FC = () => {
         {/* Tab Content */}
         {activeTab === 'resumen' && (
           <div className="space-y-8">
+            {/* Yearly Summary Dashboard */}
+            <YearlySummaryDashboard
+              dataType="salaries"
+              title="Salarios Municipales"
+              startYear={2018}
+              endYear={2025}
+              showComparison={true}
+            />
+
             {/* Key Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <motion.div
