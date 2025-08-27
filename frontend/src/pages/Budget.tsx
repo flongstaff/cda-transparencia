@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Filter, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, DollarSign, Loader2 } from 'lucide-react';
 import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
+import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
 import FinancialDataTable from '../components/tables/FinancialDataTable';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import YearlySummaryDashboard from '../components/dashboard/YearlySummaryDashboard';
@@ -201,6 +202,22 @@ const Budget: React.FC = () => {
           {/* Budget Analysis Chart */}
           <BudgetAnalysisChart year={parseInt(activeYear)} />
 
+          {/* Comprehensive Budget Visualization */}
+          <ComprehensiveVisualization
+            data={transformedBudgetData.map(item => ({
+              name: item.title || item.category,
+              value: item.amount || 0,
+              year: item.year,
+              category: item.category,
+              status: item.status
+            }))}
+            title={`Análisis Presupuestario Detallado ${activeYear}`}
+            type="overview"
+            timeRange={`${Math.min(...availableYears.map(Number))}-${Math.max(...availableYears.map(Number))}`}
+            showControls={true}
+            height={450}
+          />
+
           {/* Budget Data Table */}
           <FinancialDataTable
             data={transformedBudgetData}
@@ -284,6 +301,29 @@ const Budget: React.FC = () => {
               <BudgetAnalysisChart year={parseInt(activeYear)} />
             </div>
           </div>
+
+          {/* Multi-Year Category Comparison */}
+          <ComprehensiveVisualization
+            data={transformedBudgetData.reduce((acc, item) => {
+              const existingCategory = acc.find(cat => cat.name === item.category);
+              if (existingCategory) {
+                existingCategory.value += item.amount || 0;
+              } else {
+                acc.push({
+                  name: item.category || 'Sin categoría',
+                  value: item.amount || 0,
+                  year: item.year,
+                  category: item.category
+                });
+              }
+              return acc;
+            }, [] as any[])}
+            title={`Distribución Presupuestaria por Categorías ${activeYear}`}
+            type="distribution"
+            timeRange={activeYear}
+            showControls={true}
+            height={400}
+          />
 
           {/* Category Breakdown */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { BarChart3, PieChart, TrendingUp, DollarSign, FileText, Calendar, Filter, Download, AlertTriangle, CheckCircle, Loader2 } from 'lucide-react';
 import FinancialOverview from '../components/dashboard/FinancialOverview';
 import ValidatedChart from '../components/ValidatedChart';
+import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
 import FinancialDataTable from '../components/tables/FinancialDataTable';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import ApiService, { FinancialReport } from '../services/ApiService';

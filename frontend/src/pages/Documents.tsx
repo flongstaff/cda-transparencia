@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FileText, FolderOpen, Database, TrendingUp } from 'lucide-react';
 import DocumentViewer from '../components/documents/DocumentViewer';
+import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import YearlySummaryDashboard from '../components/dashboard/YearlySummaryDashboard';
 
@@ -258,6 +259,24 @@ const Documents: React.FC = () => {
           endYear={2025}
           showComparison={true}
         />
+
+        {/* Document Analytics Visualization */}
+        <div className="mt-8">
+          <ComprehensiveVisualization
+            data={documents.map(doc => ({
+              name: doc.filename,
+              value: doc.size_bytes / 1024, // Convert to KB
+              year: doc.year,
+              category: doc.category,
+              trend: doc.verification_status === 'verified' ? 1 : 0
+            }))}
+            title="Análisis de Documentos por Categoría y Año"
+            type="distribution"
+            timeRange="2018-2025"
+            showControls={true}
+            height={400}
+          />
+        </div>
       </div>
 
       {/* Document Viewer */}

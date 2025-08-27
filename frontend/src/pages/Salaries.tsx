@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Filter, Search, Calendar, FileText, Eye, TrendingUp, TrendingDown, Users, DollarSign, BarChart3, AlertCircle, CheckCircle, Loader2, Info, Database } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
+import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import YearlySummaryDashboard from '../components/dashboard/YearlySummaryDashboard';
 import OSINTComplianceService from '../services/OSINTComplianceService';
@@ -276,6 +277,22 @@ const Salaries: React.FC = () => {
               startYear={2018}
               endYear={2025}
               showComparison={true}
+            />
+
+            {/* Comprehensive Salary Visualization */}
+            <ComprehensiveVisualization
+              data={salaries.map(salary => ({
+                name: salary.official_name,
+                value: salary.net_salary,
+                year: salary.year,
+                category: salary.role,
+                trend: salary.inflation_rate
+              }))}
+              title={`Análisis Salarial Detallado ${activeYear}`}
+              type="overview"
+              timeRange={`2018-2025`}
+              showControls={true}
+              height={450}
             />
 
             {/* Key Metrics */}

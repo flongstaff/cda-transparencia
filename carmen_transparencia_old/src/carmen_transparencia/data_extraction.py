@@ -1,0 +1,238 @@
+# data_extraction.py
+"""
+Functions for crawling the «transparencia» pages and downloading documents.
+"""
+
+import pathlib
+import re
+import time
+import requests
+import urllib.parse
+import asyncio
+import aiohttp
+from typing import Iterable, List, Tuple
+from bs4 import BeautifulSoup
+import tqdm
+
+# ──────┐  Global helpers – can easily be replaced
+BASE_URL = "https://carmendeareco.gob.ar/transparencia/"
+
+# ──────┐  Generic *request* that retries a request
+class RateLimitError(RuntimeError):
+    pass
+
+async def retry_req(
+        url: str,
+        session: aiohttp.ClientSession,
+        *,
+        attempts: int = 5,
+        backoff: float = 0.5,
+) -> aiohttp.ClientResponse:
+    """
+    Retry a request with exponential backoff.
+    
+    Args:
+        url: URL to request
+        session: aiohttp session
+        attempts: number of retry attempts
+        backoff: base backoff time in seconds
+        
+    Returns:
+        Response object
+        
+    Raises:
+        aiohttp.ClientError: if all retries fail
+    """
+    if attempts < 1:
+        raise RuntimeError("invalid attempts")
+    
+    for n in range(attempts):
+        try:
+            async with session.get(url, timeout=aiohttp.ClientTimeout(total=15)) as resp:
+                resp.raise_for_status()
+                return resp
+        except (aiohttp.ClientError, asyncio.TimeoutError) as err:
+            if n >= attempts-1:
+                raise
+            # simple exponential back‑off
+            await asyncio.sleep(backoff * (2**n) + 0.1)
+
+async def fetch_page(url: str, session: aiohttp.ClientSession) -> BeautifulSoup:
+    """
+    Return a BS4 soup for the page.
+    
+    Args:
+        url: URL to fetch
+        session: aiohttp session
+        
+    Returns:
+        BeautifulSoup object
+    """
+    async with session.get(url, timeout=aiohttp.ClientTimeout(total=15)) as resp:
+        resp.raise_for_status()
+        content = await resp.read()
+        soup = BeautifulSoup(content, features="lxml")
+        return soup
+
+async def _get_links(
+        url: str,
+        pattern: re.Pattern = re.compile(r'\.(pdf|xlsx|docx?|csv|xls)$', re.I),
+        *,
+        depth: int = 1,
+        session: aiohttp.ClientSession = None
+) -> List[str]:
+    """
+    Return absolute list of URLs found on the page.
+    
+    Args:
+        url: Base URL to search
+        pattern: Regex pattern to match file extensions
+        depth: Recursion depth
+        session: aiohttp session
+        
+    Returns:
+        List of URLs
+    """
+    if session is None:
+        async with aiohttp.ClientSession() as session:
+            return await _get_links(url, pattern, depth=depth, session=session)
+    
+    soup = await fetch_page(url, session)
+    
+    seen: set = set()
+    result: List[str] = []
+
+    for a in soup.find_all("a", href=True):
+        href = a["href"]
+        absurl = urllib.parse.urljoin(url, href)
+        # only internal – no "http://" that is outside the domain
+        if not absurl.startswith("https://carmendeareco.gob.ar"):
+            continue
+        if pattern.search(href) and absurl not in seen:
+            seen.add(absurl)
+            result.append(absurl)
+            # Recursive depth handling
+            if depth > 1 and href.endswith('/') and absurl not in seen:
+                seen.add(absurl)
+                try:
+                    deeper_links = await _get_links(absurl, pattern, depth=depth-1, session=session)
+                    result.extend(deeper_links)
+                except Exception as e:
+                    print(f"Error crawling {absurl}: {e}")
+    return result
+
+# ──────┐  Public helpers
+async def scrape_live(
+        base_url: str = BASE_URL,
+        output_dir: str = "data",
+        depth: int = 1,
+) -> List[Tuple[str, pathlib.Path]]:
+    """
+    Scrape *base_url* and returns a list of (URL, Path) tuples.
+    
+    Args:
+        base_url: Base URL to scrape
+        output_dir: Directory to save files
+        depth: Recursion depth
+        
+    Returns:
+        List of (URL, Path) tuples
+    """
+    out = pathlib.Path(output_dir).resolve()
+    out.mkdir(parents=True, exist_ok=True)
+    
+    results = []
+    
+    async with aiohttp.ClientSession() as session:
+        # Get all document links
+        links = await _get_links(base_url, depth=depth, session=session)
+        
+        for url in tqdm.tqdm(links, desc="Downloading"):
+            name = pathlib.Path(urllib.parse.urlparse(url).path).name
+            if not name:
+                name = f"document_{len(results)}.pdf"
+            dest = out / name
+            
+            # Skip if file already exists
+            if dest.exists():
+                results.append((url, dest))
+                continue
+                
+            try:
+                async with session.get(url, timeout=aiohttp.ClientTimeout(total=30)) as resp:
+                    resp.raise_for_status()
+                    content = await resp.read()
+                    
+                    # Save file
+                    with open(dest, "wb") as fh:
+                        fh.write(content)
+                    
+                    results.append((url, dest))
+                    
+            except Exception as e:
+                print(f"Error downloading {url}: {e}")
+                
+    return results
+
+# ──────┐  Alternative: fetch from Wayback
+WAYBACK_FMT = "https://web.archive.org/web/20231231212000id_/{path}"
+
+async def scrape_wayback(
+        base_url: str = BASE_URL,
+        output_dir: str = "wayback",
+        depth: int = 1,
+) -> List[Tuple[str, pathlib.Path]]:
+    """
+    Same as *scrape_live* but using Wayback.  The timestamp can be changed accordingly.
+    
+    Args:
+        base_url: Base URL to scrape
+        output_dir: Directory to save files
+        depth: Recursion depth
+        
+    Returns:
+        List of (URL, Path) tuples
+    """
+    out = pathlib.Path(output_dir).resolve()
+    out.mkdir(parents=True, exist_ok=True)
+    
+    results = []
+    
+    async with aiohttp.ClientSession() as session:
+        # Get original links first
+        links = await _get_links(base_url, depth=depth, session=session)
+        
+        for url in tqdm.tqdm(links, desc="Downloading via Wayback"):
+            url_path = urllib.parse.urlparse(url).path
+            wayback_url = WAYBACK_FMT.format(path=url_path)
+            
+            name = pathlib.Path(url).name
+            dest = out / name
+            
+            if dest.exists():
+                results.append((url, dest))
+                continue
+                
+            try:
+                async with session.get(wayback_url, timeout=aiohttp.ClientTimeout(total=30)) as resp:
+                    resp.raise_for_status()
+                    content = await resp.read()
+                    
+                    with open(dest, "wb") as fh:
+                        fh.write(content)
+                    
+                    results.append((url, dest))
+                    
+            except Exception as e:
+                print(f"Error downloading {wayback_url}: {e}")
+                
+    return results
+
+# Synchronous wrappers for CLI
+def scrape_live_sync(**kwargs):
+    """Synchronous wrapper for scrape_live"""
+    return asyncio.run(scrape_live(**kwargs))
+
+def scrape_wayback_sync(**kwargs):
+    """Synchronous wrapper for scrape_wayback"""
+    return asyncio.run(scrape_wayback(**kwargs))

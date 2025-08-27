@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "carmen_transparencia"
+version = "0.1.0"
+description = "Carmen de Areco Transparency Document Scraper and Processor"
+authors = [{name = "Transparency Research Team"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "click>=8.1.3",
+    "requests>=2.32.4",
+    "beautifulsoup4>=4.12.2",
+    "lxml>=4.9.1",
+    "pandas>=2.0.2",
+    "tabula-py>=2.7.0",
+    "python-docx>=0.8.10",
+    "tqdm>=4.66.3",
+    "aiohttp>=3.9.3",
+    "openpyxl>=3.1.2"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=5.0.0"
+]
+
+[project.scripts]
+carmen-transparencia = "carmen_transparencia.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"

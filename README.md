@@ -16,12 +16,13 @@ Análisis integral de 15 años de gestión municipal para identificar:
 - Evolución salarial del sector público
 - Cumplimiento de normativa de transparencia
 
-### 📈 Estadísticas del Proyecto
+### 📈 Estadísticas del Sistema
 
-- **270** documentos procesados
-- **9** años de datos
-- **124** documentos de alta prioridad
-- **100%** de verificación de integridad
+- **433** registros de datos activos
+- **17** años de cobertura (2009-2025)
+- **3** fuentes de datos integradas
+- **4/6** endpoints operacionales
+- **1,381** documentos archivados totales
 
 ## 🚀 Tecnologías
 
@@ -103,8 +104,9 @@ cd frontend && npm install && npm run dev
 ```
 
 ### 🌐 Dashboard Web (Producción)
-El portal está desplegado automáticamente en GitHub Pages:
-[https://flongstaff.github.io/cda-transparencia/](https://flongstaff.github.io/cda-transparencia/)
+El portal está desplegado automáticamente con CI/CD:
+- **GitHub Pages:** [https://flongstaff.github.io/cda-transparencia/](https://flongstaff.github.io/cda-transparencia/)
+- **Cloudflare DNS:** transparency.carmendeareco.gov.ar (pendiente configuración)
 
 ### 🔍 API REST
 ```bash

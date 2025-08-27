@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Filter, Search, Calendar, FileText, Eye, TrendingUp, TrendingDown, Users, DollarSign, BarChart3, AlertCircle, CheckCircle } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
+import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import OSINTComplianceService from '../services/OSINTComplianceService';
 import ApiService, { FeeRight } from '../services/ApiService';
@@ -320,6 +321,16 @@ const Revenue: React.FC = () => {
                 />
               </div>
             </div>
+
+            {/* Comprehensive Revenue Analysis */}
+            <ComprehensiveVisualization
+              data={transformedRevenueData}
+              title={`Análisis Integral de Ingresos ${activeYear}`}
+              type="overview"
+              timeRange={activeYear}
+              showControls={true}
+              height={400}
+            />
 
             {/* Revenue Distribution by Source */}
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
