@@ -113,7 +113,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
           className="inline-flex items-center text-blue-600 hover:text-blue-800 underline"
         >
           {match[1]}
-          <ExternalLink size={14} className="ml-1" />
+          <ExternalLink size={14} />
         </a>
       );
       

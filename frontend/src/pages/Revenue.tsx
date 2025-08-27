@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Filter, Search, Calendar, FileText, Eye, TrendingUp, TrendingDown, Users, DollarSign, BarChart3, AlertCircle, CheckCircle } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
+import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
 import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import OSINTComplianceService from '../services/OSINTComplianceService';
 import ApiService, { FeeRight } from '../services/ApiService';
+import PowerBIIntegrationService from '../services/PowerBIIntegrationService';
 
 // Verified revenue data sources
 const revenueDataSources = OSINTComplianceService.getCrossValidationSources('revenue').map(s => s.url);
@@ -331,6 +333,35 @@ const Revenue: React.FC = () => {
               showControls={true}
               height={400}
             />
+
+            {/* Document Analysis for Revenue - Historical Calculations */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+              <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
+                      Análisis de Documentos de Ingresos (2018-{activeYear})
+                    </h2>
+                    <p className="text-gray-600 dark:text-gray-400 mt-1">
+                      Cálculos de ingresos derivados del análisis de documentos oficiales de tasas, derechos y recaudación
+                    </p>
+                  </div>
+                  <div className="text-sm text-blue-600 dark:text-blue-400 flex items-center">
+                    <FileText size={16} className="mr-1" />
+                    {revenueData.length} registros analizados
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <DocumentAnalysisChart 
+                  startYear={2018}
+                  endYear={parseInt(activeYear)}
+                  focusDocumentType="ingresos"
+                  showPowerBIComparison={false}
+                  powerBIData={null}
+                />
+              </div>
+            </div>
 
             {/* Revenue Distribution by Source */}
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">

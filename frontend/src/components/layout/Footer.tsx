@@ -223,19 +223,6 @@ const Footer: React.FC = () => {
                     <span className="mr-1" aria-hidden="true">🇪🇸</span>
                     ES
                   </button>
-                  <button 
-                    onClick={() => setLanguage('it')}
-                    className={`px-3 py-2 text-xs rounded-md flex items-center transition-all duration-150 font-medium focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-800 ${
-                      language === 'it' 
-                        ? 'bg-primary-500 text-white shadow-md' 
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
-                    }`}
-                    aria-pressed={language === 'it'}
-                    title="Cambia a Italiano"
-                  >
-                    <span className="mr-1" aria-hidden="true">🇮🇹</span>
-                    IT
-                  </button>
                 </div>
               </div>
             </div>

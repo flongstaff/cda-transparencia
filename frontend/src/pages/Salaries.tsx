@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Filter, Search, Calendar, FileText, Eye, TrendingUp, TrendingDown, Users, DollarSign, BarChart3, AlertCircle, CheckCircle, Loader2, Info, Database } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
+import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
 import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import YearlySummaryDashboard from '../components/dashboard/YearlySummaryDashboard';
@@ -294,6 +295,35 @@ const Salaries: React.FC = () => {
               showControls={true}
               height={450}
             />
+
+            {/* Document Analysis for Salaries */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+              <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
+                      Análisis de Documentos Salariales (2018-{activeYear})
+                    </h2>
+                    <p className="text-gray-600 dark:text-gray-400 mt-1">
+                      Seguimiento de sueldos, categorías y beneficios del personal municipal
+                    </p>
+                  </div>
+                  <div className="text-sm text-blue-600 dark:text-blue-400 flex items-center">
+                    <Users size={16} className="mr-1" />
+                    {salaries.length} empleados analizados
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <DocumentAnalysisChart 
+                  startYear={2018}
+                  endYear={parseInt(activeYear)}
+                  focusDocumentType="salarios"
+                  showPowerBIComparison={false}
+                  powerBIData={null}
+                />
+              </div>
+            </div>
 
             {/* Key Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

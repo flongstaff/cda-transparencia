@@ -1,6 +1,6 @@
 import React, { createContext, useContext, ReactNode, useState, useEffect } from 'react';
 
-type Language = 'es' | 'it';
+type Language = 'es';
 
 interface LanguageContextType {
   language: Language;
@@ -10,7 +10,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// Translation dictionary
+// Translation dictionary - Only Spanish Argentina for now
 const translations: Record<Language, Record<string, string>> = {
   es: {
     // Home page
@@ -136,131 +136,6 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.form.message': 'Mensaje',
     'contact.form.send': 'Enviar Mensaje',
     'contact.form.success': '¡Mensaje enviado con éxito! Nos pondremos en contacto con usted pronto.',
-  },
-  it: {
-    // Home page
-    'home.title': 'Portale di Trasparenza Finanziaria',
-    'home.description': 'Accedi alle informazioni pubbliche su bilanci, spese, entrate e processi di appalto del Comune di Carmen de Areco.',
-    'home.budget.title': 'Bilancio Comunale',
-    'home.budget.description': 'Distribuzione ed esecuzione del bilancio comunale per settori',
-    'home.spending.title': 'Spese Pubbliche',
-    'home.spending.description': 'Registrazioni dettagliate delle spese effettuate dal comune',
-    'home.revenue.title': 'Entrate Comunali',
-    'home.revenue.description': 'Fonti e distribuzione delle entrate pubbliche',
-    'home.contracts.title': 'Contratti e Gare d\'Appalto',
-    'home.contracts.description': 'Informazioni sui processi di appalto e gare',
-    'home.database.title': 'Banca Dati Pubblica',
-    'home.database.description': 'Consulta atti, gare d\'appalto e documentazione legale',
-    'home.reports.title': 'Rapporti e Audit',
-    'home.reports.description': 'Rapporti finanziari e rapporti di audit',
-    'home.explore.title': 'Esplora i nostri servizi',
-    'home.explore.description': 'Accedi alle informazioni finanziarie pubbliche organizzate per categorie',
-    'home.updates.title': 'Aggiornamenti Recenti',
-    'home.updates.description': 'Ultimi aggiornamenti di informazioni pubbliche',
-    'home.whistleblower.title': 'Hai rilevato irregolarità?',
-    'home.whistleblower.description': 'Qualsiasi cittadino può segnalare possibili casi di corruzione o uso improprio di fondi pubblici attraverso il nostro sistema anonimo.',
-    'home.whistleblower.button': 'Segnala una Violazione',
-    'home.budget.button': 'Visualizza Bilancio',
-    'home.database.button': 'Consulta Banca Dati',
-    'home.viewMore': 'Vedi di più',
-    
-    // Header
-    'header.title': 'Portale di Trasparenza',
-    'header.subtitle': 'Comune di Carmen de Areco',
-    'header.search.placeholder': 'Cerca informazioni, atti, gare d\'appalto...',
-    'header.search.mobile': 'Cerca...',
-    'header.theme.light': 'Passa alla modalità chiara',
-    'header.theme.dark': 'Passa alla modalità scura',
-    'header.nav.home': 'Home',
-    'header.nav.about': 'Chi Siamo',
-    'header.nav.transparency': 'Trasparenza',
-    'header.nav.reports': 'Rapporti',
-    'header.nav.contact': 'Contatti',
-    
-    // Sidebar
-    'sidebar.menu': 'Menu',
-    'sidebar.home': 'Home',
-    'sidebar.about': 'Chi Siamo',
-    'sidebar.dashboard': 'Pannello Finanziario',
-    'sidebar.budget': 'Bilancio',
-    'sidebar.spending': 'Spese Pubbliche',
-    'sidebar.revenue': 'Entrate',
-    'sidebar.contracts': 'Contratti',
-    'sidebar.debt': 'Debito',
-    'sidebar.investments': 'Investimenti',
-    'sidebar.treasury': 'Tesoreria',
-    'sidebar.property': 'Dichiarazioni Patrimoniali',
-    'sidebar.salaries': 'Stipendi',
-    'sidebar.database': 'Banca Dati',
-    'sidebar.documents': 'Documenti',
-    'sidebar.reports': 'Rapporti',
-    'sidebar.contact': 'Contatti',
-    'sidebar.whistleblower': 'Segnalazioni',
-    'sidebar.apiExplorer': 'Esploratore API',
-    'sidebar.language': 'Lingua',
-    'sidebar.theme': 'Tema',
-    
-    // Footer
-    'footer.copyright': '© 2025 Portale di Trasparenza di Carmen de Areco. Tutti i diritti riservati.',
-    'footer.accessibility': 'Accessibilità',
-    'footer.privacy': 'Informativa sulla Privacy',
-    'footer.terms': 'Termini di Utilizzo',
-    
-    // Pages
-    'page.budget.title': 'Bilancio Comunale',
-    'page.spending.title': 'Spese Pubbliche',
-    'page.revenue.title': 'Entrate Comunali',
-    'page.contracts.title': 'Contratti e Gare d\'Appalto',
-    'page.database.title': 'Banca Dati Pubblica',
-    'page.reports.title': 'Rapporti e Audit',
-    'page.whistleblower.title': 'Sistema di Segnalazione',
-    
-    // About page
-    'about.title': 'Chi Siamo',
-    'about.introduction': 'Il Portale di Trasparenza Finanziaria di Carmen de Areco è una piattaforma digitale che consente ai cittadini di accedere facilmente e gratuitamente alle informazioni finanziarie e amministrative del comune.',
-    'about.mission.title': 'La Nostra Missione',
-    'about.mission.description': 'Promuovere la trasparenza e la rendicontazione nella gestione pubblica comunale mediante l\'accesso aperto alle informazioni, rafforzando così la partecipazione dei cittadini e la democrazia locale.',
-    'about.transparency.title': 'Impegno per la Trasparenza',
-    'about.transparency.description': 'Crediamo fermamente che la trasparenza sia un pilastro fondamentale di una gestione pubblica efficiente e democratica. Questo portale mira a portare ai cittadini tutte le informazioni rilevanti sulla gestione comunale.',
-    'about.commitment.title': 'Impegno verso i Cittadini',
-    'about.commitment.description': 'Ci impegniamo a mantenere aggiornate e accessibili le informazioni finanziarie e amministrative del comune, garantendo il diritto dei cittadini di conoscere come viene gestito il pubblico.',
-    'about.data.title': 'Dati Pubblicati',
-    'about.data.description': 'In questo portale troverai informazioni aggiornate su:',
-    'about.data.point1': 'Bilancio comunale ed esecuzione',
-    'about.data.point2': 'Spese ed entrate pubbliche',
-    'about.data.point3': 'Contratti e gare d\'appalto',
-    'about.data.point4': 'Documentazione amministrativa rilevante',
-    'about.team.title': 'Il Nostro Team',
-    'about.team.member1.name': 'Juan Pérez',
-    'about.team.member1.role': 'Direttore della Trasparenza',
-    'about.team.member1.description': 'Specialista in gestione pubblica e trasparenza amministrativa',
-    'about.team.member2.name': 'María Sánchez',
-    'about.team.member2.role': 'Coordinatrice dei Dati',
-    'about.team.member2.description': 'Esperta in analisi dei dati e visualizzazione delle informazioni',
-    'about.team.member3.name': 'Tomás Romero',
-    'about.team.member3.role': 'Sviluppatore Web',
-    'about.team.member3.description': 'Ingegnere informatico specializzato in applicazioni web',
-    
-    // Contact page
-    'contact.title': 'Contatti',
-    'contact.description': 'Ha domande, suggerimenti o ha bisogno di aiuto? Contattaci.',
-    'contact.info.title': 'Informazioni di Contatto',
-    'contact.info.address.title': 'Indirizzo',
-    'contact.info.address.value': 'Comune di Carmen de Areco\nAv. 25 de Mayo 123\nCarmen de Areco, Buenos Aires',
-    'contact.info.phone.title': 'Telefono',
-    'contact.info.phone.value': '+54 2323 456789',
-    'contact.info.email.title': 'Email',
-    'contact.info.email.value': 'transparencia@carmendeareco.gob.ar',
-    'contact.info.hours.title': 'Orario di Apertura',
-    'contact.info.hours.value': 'Lunedì - Venerdì: 8:00 - 16:00',
-    'contact.follow.title': 'Seguici',
-    'contact.form.title': 'Invia un Messaggio',
-    'contact.form.name': 'Nome',
-    'contact.form.email': 'Email',
-    'contact.form.subject': 'Oggetto',
-    'contact.form.message': 'Messaggio',
-    'contact.form.send': 'Invia Messaggio',
-    'contact.form.success': 'Messaggio inviato con successo! Ti contatteremo al più presto.',
   }
 };
 
@@ -278,24 +153,23 @@ interface LanguageProviderProps {
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    const savedLanguage = localStorage.getItem('language');
-    return (savedLanguage as Language) || 'es';
+    // Always default to Spanish Argentina
+    return 'es';
   });
 
-  useEffect(() => {
-    localStorage.setItem('language', language);
-  }, [language]);
+  // We don't need to save the language preference since we're only supporting Spanish Argentina
 
   const setLanguage = (newLanguage: Language) => {
-    setLanguageState(newLanguage);
+    // We don't allow changing the language since we're only supporting Spanish Argentina
+    console.warn('Language change is not supported. This portal only supports Spanish Argentina.');
   };
 
   const t = (key: string): string => {
-    return translations[language][key] || key;
+    return translations.es[key] || key;
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language: 'es', setLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );

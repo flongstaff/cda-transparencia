@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Download, Search, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, Building, DollarSign, ShieldCheck, Loader2 } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
+import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
 import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import YearlySummaryDashboard from '../components/dashboard/YearlySummaryDashboard';
@@ -370,6 +371,35 @@ const Contracts: React.FC = () => {
               showControls={true}
               height={450}
             />
+
+            {/* Document Analysis for Contracts and Tenders */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+              <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
+                      Análisis de Documentos de Licitaciones y Contratos (2018-{activeYear})
+                    </h2>
+                    <p className="text-gray-600 dark:text-gray-400 mt-1">
+                      Seguimiento de todos los contratos y licitaciones: montos, adjudicaciones y ejecución
+                    </p>
+                  </div>
+                  <div className="text-sm text-orange-600 dark:text-orange-400 flex items-center">
+                    <Building size={16} className="mr-1" />
+                    {tenders.length} licitaciones analizadas
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <DocumentAnalysisChart 
+                  startYear={2018}
+                  endYear={parseInt(activeYear)}
+                  focusDocumentType="contratos"
+                  showPowerBIComparison={false}
+                  powerBIData={null}
+                />
+              </div>
+            </div>
 
             {/* Key Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

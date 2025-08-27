@@ -5,7 +5,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { Search, Sun, Moon, Globe, Menu, X, Shield, Eye } from 'lucide-react';
 
 const Header: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { isDark, toggleTheme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
   const navigate = useNavigate();
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const handleLanguageChange = useCallback((lang: 'es' | 'it') => {
+  const handleLanguageChange = useCallback((lang: 'es') => {
     setLanguage(lang);
     setLanguageOpen(false);
   }, [setLanguage]);
@@ -237,18 +237,6 @@ const Header: React.FC = () => {
                     >
                       🇪🇸 Español
                     </button>
-                    <button 
-                      className={`block px-4 py-2 text-sm w-full text-left transition-colors duration-150 ${
-                        language === 'it' 
-                          ? 'bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-200' 
-                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700'
-                      } focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-inset`}
-                      onClick={() => handleLanguageChange('it')}
-                      role="menuitem"
-                      tabIndex={0}
-                    >
-                      🇮🇹 Italiano
-                    </button>
                   </div>
                 )}
               </div>
@@ -267,10 +255,10 @@ const Header: React.FC = () => {
               <button 
                 onClick={toggleTheme}
                 className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition duration-150 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
-                aria-label={theme === 'dark' ? t('header.theme.light') : t('header.theme.dark')}
-                title={theme === 'dark' ? t('header.theme.light') : t('header.theme.dark')}
+                aria-label={isDark ? t('header.theme.light') : t('header.theme.dark')}
+                title={isDark ? t('header.theme.light') : t('header.theme.dark')}
               >
-                {theme === 'dark' ? <Sun size={20} aria-hidden="true" /> : <Moon size={20} aria-hidden="true" />}
+                {isDark ? <Sun size={20} aria-hidden="true" /> : <Moon size={20} aria-hidden="true" />}
               </button>
               
               {/* Mobile menu button */}
@@ -279,7 +267,7 @@ const Header: React.FC = () => {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label="Toggle menu"
                 aria-expanded={mobileMenuOpen}
-                ref={mobileMenuRef}
+                ref={mobileMenuRef as unknown as React.Ref<HTMLButtonElement>}
               >
                 {mobileMenuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
               </button>

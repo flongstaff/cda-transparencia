@@ -4,6 +4,7 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import Header from './Header';
 import Footer from './Footer';
 import Sidebar from './Sidebar';
+import LegalDisclaimer from '../LegalDisclaimer';
 import { Menu, X } from 'lucide-react';
 
 interface LayoutProps {
@@ -20,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
       <Header />
       
       <div className="flex-grow flex">
@@ -36,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {/* Sidebar */}
         <div className={`
           fixed md:static inset-y-0 left-0 transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} 
-          md:translate-x-0 transition duration-200 ease-in-out z-40 w-64 bg-white shadow-md md:shadow
+          md:translate-x-0 transition duration-200 ease-in-out z-40 w-64 bg-white dark:bg-gray-800 shadow-md md:shadow
         `}>
           <Sidebar closeSidebar={() => setSidebarOpen(false)} />
         </div>
@@ -50,6 +51,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </div>
       
       <Footer />
+      <LegalDisclaimer />
     </div>
   );
 };

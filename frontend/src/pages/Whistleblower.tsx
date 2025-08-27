@@ -10,9 +10,11 @@ import {
   ChevronRight, 
   Upload, 
   X,
-  HelpCircle
+  HelpCircle,
+  ExternalLink
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import LegalDisclaimer from '../components/LegalDisclaimer';
 
 // Step enum
 enum FormStep {
@@ -140,6 +142,34 @@ const Whistleblower: React.FC = () => {
                 Este portal permite a cualquier ciudadano reportar posibles casos de corrupción, 
                 fraude o irregularidades en la administración de fondos públicos.
               </p>
+              <div className="bg-white dark:bg-gray-800 p-4 rounded-lg mb-4 border border-amber-300 dark:border-amber-700">
+                <div className="flex items-start">
+                  <Info size={20} className="text-amber-600 dark:text-amber-400 mr-2 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-bold text-amber-800 dark:text-amber-200 mb-2">
+                      Importante: Proyecto Independiente
+                    </h3>
+                    <p className="text-amber-700 dark:text-amber-300 text-sm">
+                      Este es un <strong>proyecto independiente</strong> no oficial del Concejo Municipal de Carmen de Areco. 
+                      Para denuncias oficiales, utiliza siempre los canales gubernamentales:
+                    </p>
+                    <ul className="mt-2 space-y-1 text-amber-700 dark:text-amber-300 text-sm">
+                      <li className="flex items-center">
+                        <ExternalLink size={14} className="mr-1" />
+                        Fiscalía de Estado de Buenos Aires (denuncias anónimas)
+                      </li>
+                      <li className="flex items-center">
+                        <ExternalLink size={14} className="mr-1" />
+                        AFIP (irregularidades tributarias)
+                      </li>
+                      <li className="flex items-center">
+                        <ExternalLink size={14} className="mr-1" />
+                        Tribunal de Cuentas de la Provincia (manejo de fondos públicos)
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
               <div className="bg-white dark:bg-gray-800 p-4 rounded-lg mb-4">
                 <h3 className="font-medium text-gray-800 dark:text-white mb-2">
                   Garantías del sistema:
@@ -774,6 +804,22 @@ const Whistleblower: React.FC = () => {
                 ? 'Guarde este número de referencia para consultas futuras sobre el estado de la denuncia.' 
                 : 'Le recomendamos guardar este número de referencia para futuras consultas.'}
             </p>
+            
+            <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800 max-w-2xl mx-auto">
+              <div className="flex items-start">
+                <Info size={20} className="text-amber-600 dark:text-amber-400 mr-2 mt-0.5 flex-shrink-0" />
+                <div className="text-left">
+                  <h3 className="font-bold text-amber-800 dark:text-amber-200 mb-1">
+                    Recordatorio Importante
+                  </h3>
+                  <p className="text-amber-700 dark:text-amber-300 text-sm">
+                    Este es un <strong>proyecto independiente</strong> no oficial del Concejo Municipal de Carmen de Areco. 
+                    Para denuncias oficiales con protección gubernamental, utiliza siempre los canales oficiales como 
+                    la Fiscalía de Estado de Buenos Aires.
+                  </p>
+                </div>
+              </div>
+            </div>
             
             <div className="mt-8">
               <Link 

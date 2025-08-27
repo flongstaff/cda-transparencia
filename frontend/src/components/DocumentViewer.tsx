@@ -10,6 +10,8 @@ interface Document {
   archive_url: string;
   verification_status: 'verified' | 'partial' | 'unverified';
   download_date: string;
+  primary_download?: string;
+  archive_download?: string;
 }
 
 interface DocumentViewerProps {
@@ -69,11 +71,11 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
   const getVerificationIcon = (status: string) => {
     switch (status) {
       case 'verified':
-        return <CheckCircle className="w-4 h-4 text-green-500" title="Verificado" />;
+        return <CheckCircle className="w-4 h-4 text-green-500" />;
       case 'partial':
-        return <AlertCircle className="w-4 h-4 text-yellow-500" title="Verificación Parcial" />;
+        return <AlertCircle className="w-4 h-4 text-yellow-500" />;
       default:
-        return <AlertCircle className="w-4 h-4 text-red-500" title="Sin Verificar" />;
+        return <AlertCircle className="w-4 h-4 text-red-500" />;
     }
   };
 

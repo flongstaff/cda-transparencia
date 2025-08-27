@@ -71,6 +71,7 @@ class OSINTComplianceService {
   };
 
   private dataSources: DataSource[] = [
+    // Primary Municipal Sources
     {
       id: 'carmen-official',
       name: 'Sitio Oficial - Carmen de Areco',
@@ -82,6 +83,157 @@ class OSINTComplianceService {
       complianceVerified: true,
       verificationMethod: 'Direct government website'
     },
+    {
+      id: 'local-collection',
+      name: 'Colección Local de Documentos',
+      url: '/data/source_materials/',
+      type: 'local',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 100,
+      complianceVerified: true,
+      verificationMethod: 'Local backup'
+    },
+    
+    // National Government Sources
+    {
+      id: 'afip-padron',
+      name: 'AFIP - Padrón de Contribuyentes',
+      url: 'https://seti.afip.gob.ar/padron-puc-constancia-internet/',
+      type: 'official',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 95,
+      complianceVerified: true,
+      verificationMethod: 'National tax authority'
+    },
+    {
+      id: 'contrataciones-nacionales',
+      name: 'Sistema Nacional de Contrataciones',
+      url: 'https://contrataciones.gov.ar/consultas/',
+      type: 'official',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 94,
+      complianceVerified: true,
+      verificationMethod: 'National contracting system'
+    },
+    {
+      id: 'presupuesto-abierto',
+      name: 'Presupuesto Abierto Nacional',
+      url: 'https://www.presupuestoabierto.gob.ar/',
+      type: 'official',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 93,
+      complianceVerified: true,
+      verificationMethod: 'National budget transparency'
+    },
+    {
+      id: 'datos-argentina',
+      name: 'Portal Nacional de Datos Abiertos',
+      url: 'https://datos.gob.ar/',
+      type: 'official',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 92,
+      complianceVerified: true,
+      verificationMethod: 'National open data portal'
+    },
+    {
+      id: 'boletin-oficial',
+      name: 'Boletín Oficial de la República Argentina',
+      url: 'https://www.boletinoficial.gob.ar/',
+      type: 'official',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 98,
+      complianceVerified: true,
+      verificationMethod: 'Official government gazette'
+    },
+    {
+      id: 'indec',
+      name: 'INDEC - Instituto Nacional de Estadística',
+      url: 'https://www.indec.gob.ar/',
+      type: 'official',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 96,
+      complianceVerified: true,
+      verificationMethod: 'National statistics institute'
+    },
+    
+    // Provincial Sources
+    {
+      id: 'provincia-ba-transparencia',
+      name: 'Provincia de Buenos Aires - Transparencia',
+      url: 'https://www.gba.gob.ar/transparencia_institucional',
+      type: 'official',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 90,
+      complianceVerified: true,
+      verificationMethod: 'Provincial government transparency'
+    },
+    {
+      id: 'tribunal-cuentas-ba',
+      name: 'Tribunal de Cuentas - Provincia de Buenos Aires',
+      url: 'https://www.tc.gba.gov.ar/',
+      type: 'official',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 94,
+      complianceVerified: true,
+      verificationMethod: 'Provincial audit court'
+    },
+    {
+      id: 'ministerio-hacienda-ba',
+      name: 'Ministerio de Hacienda y Finanzas - Buenos Aires',
+      url: 'https://www.gba.gob.ar/hacienda',
+      type: 'official',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 92,
+      complianceVerified: true,
+      verificationMethod: 'Provincial finance ministry'
+    },
+    
+    // Oversight and Control Bodies
+    {
+      id: 'anticorrupcion',
+      name: 'Oficina Anticorrupción',
+      url: 'https://www.argentina.gob.ar/anticorrupcion',
+      type: 'official',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 95,
+      complianceVerified: true,
+      verificationMethod: 'National anti-corruption office'
+    },
+    {
+      id: 'sigen',
+      name: 'SIGEN - Sindicatura General de la Nación',
+      url: 'https://www.sigen.gob.ar/',
+      type: 'official',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 94,
+      complianceVerified: true,
+      verificationMethod: 'National internal audit'
+    },
+    {
+      id: 'agn',
+      name: 'Auditoría General de la Nación',
+      url: 'https://www.agn.gob.ar/',
+      type: 'official',
+      status: 'active',
+      lastVerified: new Date().toISOString(),
+      reliability: 96,
+      complianceVerified: true,
+      verificationMethod: 'National audit office'
+    },
+    
+    // Archive Sources
     {
       id: 'web-archive-nov',
       name: 'Archivo Web - Noviembre 2024',
@@ -103,17 +255,6 @@ class OSINTComplianceService {
       reliability: 95,
       complianceVerified: true,
       verificationMethod: 'Internet Archive snapshot'
-    },
-    {
-      id: 'local-collection',
-      name: 'Colección Local de Documentos',
-      url: '/data/source_materials/',
-      type: 'local',
-      status: 'active',
-      lastVerified: new Date().toISOString(),
-      reliability: 100,
-      complianceVerified: true,
-      verificationMethod: 'Local backup'
     },
     {
       id: 'wayback-machine',
@@ -368,46 +509,86 @@ class OSINTComplianceService {
   async getCrossReferenceSources(dataType: string): Promise<string[]> {
     const sourcesMap: Record<string, string[]> = {
       'budget': [
-        'https://www.gba.gob.ar/transparencia',
-        'https://datos.gob.ar/dataset?q=presupuesto+carmen+areco',
-        'https://www.argentina.gob.ar/jefatura/innovacion-publica/datos-abertos'
+        'https://www.presupuestoabierto.gob.ar/',
+        'https://www.gba.gob.ar/hacienda/presupuesto',
+        'https://datos.gob.ar/dataset?q=presupuesto+municipal',
+        'https://www.tc.gba.gov.ar/presupuestos',
+        'https://www.agn.gob.ar/informes-auditoria',
+        'https://www.indec.gob.ar/nivel3_default.asp?id_tema=3&id_tema_1=39'
       ],
       'contracts': [
-        'https://contratos.gov.ar',
+        'https://contrataciones.gov.ar/consultas/',
         'https://www.gba.gob.ar/contrataciones',
-        'https://www.argentina.gob.ar/obras-publicas'
+        'https://www.argentina.gob.ar/obras-publicas',
+        'https://www.boletinoficial.gob.ar/',
+        'https://www.sigen.gob.ar/informes',
+        'https://www.tc.gba.gov.ar/contrataciones'
       ],
       'revenue': [
-        'https://www.gba.gob.ar/hacienda',
-        'https://datos.gob.ar/dataset?q=ingresos',
-        'https://www.indec.gob.ar'
+        'https://seti.afip.gob.ar/padron-puc-constancia-internet/',
+        'https://www.gba.gob.ar/hacienda/recursos',
+        'https://datos.gob.ar/dataset?q=ingresos+tributarios',
+        'https://www.indec.gob.ar/',
+        'https://www.argentina.gob.ar/hacienda/ingresos-publicos'
       ],
       'declarations': [
         'https://www.argentina.gob.ar/anticorrupcion/declaraciones-juradas',
-        'https://www.gba.gob.ar/transparencia/declaraciones'
+        'https://www.gba.gob.ar/transparencia/declaraciones',
+        'https://www.boletinoficial.gob.ar/',
+        'https://www.agn.gob.ar/declaraciones'
       ],
       'salaries': [
         'https://www.argentina.gob.ar/trabajo/salarios',
-        'https://www.gba.gob.ar/recursos-humanos'
+        'https://www.gba.gob.ar/recursos-humanos/remuneraciones',
+        'https://www.indec.gob.ar/nivel2_default.asp?id_tema=4',
+        'https://datos.gob.ar/dataset?q=salarios+publicos'
       ],
       'spending': [
-        'https://www.gba.gob.ar/gastos',
-        'https://datos.gob.ar/dataset?q=gastos+municipales'
+        'https://www.gba.gob.ar/hacienda/gastos',
+        'https://datos.gob.ar/dataset?q=gastos+publicos',
+        'https://www.presupuestoabierto.gob.ar/ejecucion',
+        'https://www.tc.gba.gov.ar/gastos',
+        'https://www.sigen.gob.ar/gastos-publicos'
       ],
       'debt': [
-        'https://www.argentina.gob.ar/hacienda/deuda',
-        'https://www.gba.gob.ar/finanzas/deuda'
+        'https://www.argentina.gob.ar/hacienda/finanzas/deuda-publica',
+        'https://www.gba.gob.ar/hacienda/deuda',
+        'https://www.indec.gob.ar/nivel2_default.asp?id_tema=3',
+        'https://www.tc.gba.gov.ar/deuda'
       ],
       'investments': [
-        'https://www.argentina.gob.ar/inversiones',
-        'https://www.gba.gob.ar/planificacion/inversiones'
+        'https://www.argentina.gob.ar/planificacion/inversion-publica',
+        'https://www.gba.gob.ar/planificacion/inversiones',
+        'https://datos.gob.ar/dataset?q=inversiones+publicas',
+        'https://www.agn.gob.ar/informes-inversion'
+      ],
+      'treasury': [
+        'https://www.gba.gob.ar/hacienda/tesoreria',
+        'https://www.argentina.gob.ar/hacienda/tesoreria',
+        'https://www.tc.gba.gov.ar/tesoreria',
+        'https://datos.gob.ar/dataset?q=movimientos+financieros'
+      ],
+      'taxes': [
+        'https://seti.afip.gob.ar/',
+        'https://www.arba.gov.ar/',
+        'https://www.gba.gob.ar/hacienda/recursos',
+        'https://datos.gob.ar/dataset?q=recaudacion+tributaria'
+      ],
+      'oversight': [
+        'https://www.argentina.gob.ar/anticorrupcion',
+        'https://www.sigen.gob.ar/',
+        'https://www.agn.gob.ar/',
+        'https://www.tc.gba.gov.ar/',
+        'https://www.boletinoficial.gob.ar/'
       ]
     };
 
     return sourcesMap[dataType] || [
       'https://carmendeareco.gob.ar/transparencia/',
-      'https://web.archive.org/web/*/carmendeareco.gob.ar_transparencia/*',
-      'https://datos.gob.ar/search?q=carmen+de+areco'
+      'https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/*',
+      'https://datos.gob.ar/search?q=carmen+de+areco',
+      'https://www.gba.gob.ar/transparencia_institucional',
+      'https://www.boletinoficial.gob.ar/'
     ];
   }
 

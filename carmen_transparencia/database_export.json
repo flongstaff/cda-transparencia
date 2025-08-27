@@ -1,0 +1,261 @@
+{
+  "export_date": "2025-08-26T22:25:45.522545",
+  "documents": [
+    {
+      "id": 1,
+      "url": "https://carmendeareco.gob.ar/transparencia/Acta_de_Apertura_FEAsaU6.pdf",
+      "filename": "Acta_de_Apertura_FEAsaU6.pdf",
+      "location": "/tmp/Acta_de_Apertura_FEAsaU6.pdf",
+      "size": 40418,
+      "content_type": ".pdf",
+      "sha256": "f432c7da410ff983f8d59be6c2392a737945dd9ff71beee51f3a1cc0a010dfa3",
+      "created_at": "2025-08-26 14:24:59",
+      "last_verified": "2025-08-26 14:24:59",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "url": "https://carmendeareco.gob.ar/transparencia/RS-2017-03840811-GDEBA.pdf",
+      "filename": "RS-2017-03840811-GDEBA.pdf",
+      "location": "/tmp/RS-2017-03840811-GDEBA.pdf",
+      "size": 110518,
+      "content_type": ".pdf",
+      "sha256": "62d089efa6fd632317ce3a9d349943c231cbe29805ee2ce3521603d75d91db2a",
+      "created_at": "2025-08-26 14:24:59",
+      "last_verified": "2025-08-26 14:24:59",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "url": "https://carmendeareco.gob.ar/documents/sample.json",
+      "filename": "sample.json",
+      "location": "/tmp/sample.json",
+      "size": 252,
+      "content_type": ".json",
+      "sha256": "94690fc33023690ef914e9e2abea050e32c0a97e9e3589a02b2eb0a37bc29595",
+      "created_at": "2025-08-26 14:24:59",
+      "last_verified": "2025-08-26 14:24:59",
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "url": "https://carmendeareco.gob.ar/transparencia/Sistema de Información Normativa y Documental Malvinas Argentinas - Resolución 206_2018 del Organismo de Control de la Energía Eléctrica.pdf",
+      "filename": "Sistema de Información Normativa y Documental Malvinas Argentinas - Resolución 206_2018 del Organismo de Control de la Energía Eléctrica.pdf",
+      "location": "/tmp/Sistema de Información Normativa y Documental Malvinas Argentinas - Resolución 206_2018 del Organismo de Control de la Energía Eléctrica.pdf",
+      "size": 895552,
+      "content_type": ".pdf",
+      "sha256": "2e126a8b6dd084f584819e987f3f51faab88552d9cbc66b33bef9217b48c8806",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "url": "https://carmendeareco.gob.ar/transparencia/Resolución 210_2018.pdf",
+      "filename": "Resolución 210_2018.pdf",
+      "location": "/tmp/Resolución 210_2018.pdf",
+      "size": 116936,
+      "content_type": ".pdf",
+      "sha256": "c3607adde11ce3e991e396da63c6d057f77fbc2c4e30b87c57a2beff62986303",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 8,
+      "url": "https://carmendeareco.gob.ar/transparencia/.DS_Store",
+      "filename": ".DS_Store",
+      "location": "/tmp/.DS_Store",
+      "size": 6148,
+      "content_type": null,
+      "sha256": "3874751cd6132ff561b19e56f901309f858d7cad21b177f106c04d360d7feedd",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 9,
+      "url": "https://carmendeareco.gob.ar/transparencia/Resolución 206_2018.pdf",
+      "filename": "Resolución 206_2018.pdf",
+      "location": "/tmp/Resolución 206_2018.pdf",
+      "size": 118435,
+      "content_type": ".pdf",
+      "sha256": "6f25cab84d4361538d641d1370bd8b92c90969517b8c718292feea27f002e2b6",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 10,
+      "url": "https://carmendeareco.gob.ar/transparencia/Sistema de Información Normativa y Documental Malvinas Argentinas - Resolución 210_2018 del Organismo de Control de la Energía Eléctrica.pdf",
+      "filename": "Sistema de Información Normativa y Documental Malvinas Argentinas - Resolución 210_2018 del Organismo de Control de la Energía Eléctrica.pdf",
+      "location": "/tmp/Sistema de Información Normativa y Documental Malvinas Argentinas - Resolución 210_2018 del Organismo de Control de la Energía Eléctrica.pdf",
+      "size": 894125,
+      "content_type": ".pdf",
+      "sha256": "0f1bda7659820b8eff7d2d05c33f9e4e4d50bf2a71d066c17ff259f8cbe37b50",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 11,
+      "url": "https://carmendeareco.gob.ar/transparencia/Contrato_CGZzWR1.pdf",
+      "filename": "Contrato_CGZzWR1.pdf",
+      "location": "/tmp/Contrato_CGZzWR1.pdf",
+      "size": 252764,
+      "content_type": ".pdf",
+      "sha256": "2f1f86bc917a9b8f6a07ce83d3873c92d463370af24912639b8b158b9d54ad08",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 12,
+      "url": "https://carmendeareco.gob.ar/transparencia/Acto_de_Adjudicacion_QmqNYiE.pdf",
+      "filename": "Acto_de_Adjudicacion_QmqNYiE.pdf",
+      "location": "/tmp/Acto_de_Adjudicacion_QmqNYiE.pdf",
+      "size": 113410,
+      "content_type": ".pdf",
+      "sha256": "404f623ad0e66811b90d31123a9b8ac2c1495742295b0ec805a8f6ddafd44c38",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 13,
+      "url": "https://carmendeareco.gob.ar/transparencia/2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+      "filename": "2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+      "location": "/tmp/2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+      "size": 1135686,
+      "content_type": ".pdf",
+      "sha256": "66c98b8278c16c1aabd723f72891d9550ca3d521209b73bcaf4dd45b41fb6921",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 14,
+      "url": "https://carmendeareco.gob.ar/transparencia/Informe Económico 2019 _ Carmen de Areco - Municipio2.pdf",
+      "filename": "Informe Económico 2019 _ Carmen de Areco - Municipio2.pdf",
+      "location": "/tmp/Informe Económico 2019 _ Carmen de Areco - Municipio2.pdf",
+      "size": 3935334,
+      "content_type": ".pdf",
+      "sha256": "a1316675942dad8e9fff95601cd36bb01cefcfd6ec496a8246783392d611c022",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 15,
+      "url": "https://carmendeareco.gob.ar/transparencia/Informe Económico 2019 _ Carmen de Areco - Municipio.pdf",
+      "filename": "Informe Económico 2019 _ Carmen de Areco - Municipio.pdf",
+      "location": "/tmp/Informe Económico 2019 _ Carmen de Areco - Municipio.pdf",
+      "size": 4278204,
+      "content_type": ".pdf",
+      "sha256": "252c4a89c8cb0ab972456ff8d3dd7f1c054a9b102ebee41c111ab6a68e7aa353",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 17,
+      "url": "https://carmendeareco.gob.ar/transparencia/GANADERIA 2016-2020.pdf",
+      "filename": "GANADERIA 2016-2020.pdf",
+      "location": "/tmp/GANADERIA 2016-2020.pdf",
+      "size": 546208,
+      "content_type": ".pdf",
+      "sha256": "b72bb47859599a62254411a6f425ce6e49d1306e530ba34800f358099a7ee62b",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 18,
+      "url": "https://carmendeareco.gob.ar/transparencia/Resolución 1089_2020.pdf",
+      "filename": "Resolución 1089_2020.pdf",
+      "location": "/tmp/Resolución 1089_2020.pdf",
+      "size": 12619465,
+      "content_type": ".pdf",
+      "sha256": "5c8e37d88e727add24ea82251e0babacec782dbea9f882c6b7135e47a155c925",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 19,
+      "url": "https://carmendeareco.gob.ar/transparencia/EJECUCION-DE-RECURSOS-PERIODO-2020.pdf",
+      "filename": "EJECUCION-DE-RECURSOS-PERIODO-2020.pdf",
+      "location": "/tmp/EJECUCION-DE-RECURSOS-PERIODO-2020.pdf",
+      "size": 347152,
+      "content_type": ".pdf",
+      "sha256": "11a148bbad8a341633b948e22dbc875bbd1afd383ac8c6ae0f03d0010a56e7a3",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 20,
+      "url": "https://carmendeareco.gob.ar/transparencia/CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-2020.pdf",
+      "filename": "CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-2020.pdf",
+      "location": "/tmp/CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-2020.pdf",
+      "size": 361931,
+      "content_type": ".pdf",
+      "sha256": "311ce971ec5467e71983f8fc9699a4a26a7493cf90842bfc2b31aa8cadbed03d",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 21,
+      "url": "https://carmendeareco.gob.ar/transparencia/INFORME-ECONÓMICO-FINANCIERO-2020.pdf",
+      "filename": "INFORME-ECONÓMICO-FINANCIERO-2020.pdf",
+      "location": "/tmp/INFORME-ECONÓMICO-FINANCIERO-2020.pdf",
+      "size": 1440758,
+      "content_type": ".pdf",
+      "sha256": "47c990cd7ed1325d5f868a100b33645f050733cd94bfd47e17ec7eb3d92c870f",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 22,
+      "url": "https://carmendeareco.gob.ar/transparencia/SITUACION-ECONOMICA-FINANCIERA.pdf",
+      "filename": "SITUACION-ECONOMICA-FINANCIERA.pdf",
+      "location": "/tmp/SITUACION-ECONOMICA-FINANCIERA.pdf",
+      "size": 71806,
+      "content_type": ".pdf",
+      "sha256": "62714c8f024b25fe17407dada6e257af30413e4c76d1e6ae99796011bad52571",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    },
+    {
+      "id": 23,
+      "url": "https://carmendeareco.gob.ar/transparencia/SITUACIÓN-ECONÓMICO-FINANCIERA.pdf",
+      "filename": "SITUACIÓN-ECONÓMICO-FINANCIERA.pdf",
+      "location": "/tmp/SITUACIÓN-ECONÓMICO-FINANCIERA.pdf",
+      "size": 988198,
+      "content_type": ".pdf",
+      "sha256": "dd4e115fbc76921b166aba549d0d5bc19538da8b6107cbdc9086bd859954d9ef",
+      "created_at": "2025-08-26 14:25:45",
+      "last_verified": "2025-08-26 14:25:45",
+      "status": "active"
+    }
+  ],
+  "processed_files": [],
+  "statistics": {
+    "total_documents": 20,
+    "by_type": {
+      ".pdf": 18,
+      ".json": 1,
+      "null": 1
+    },
+    "size_stats": {
+      "total_size": 28273300,
+      "avg_size": 1413665.0,
+      "min_size": 252,
+      "max_size": 12619465
+    },
+    "processing": {}
+  }
+}

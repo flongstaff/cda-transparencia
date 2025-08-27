@@ -4,7 +4,119 @@ const DocumentService = require('../services/DocumentService');
 
 const documentService = new DocumentService();
 
-// Get all documents with optional filtering
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Document:
+ *       type: object
+ *       required:
+ *         - id
+ *         - filename
+ *         - original_path
+ *         - document_type
+ *         - category
+ *         - year
+ *       properties:
+ *         id:
+ *           type: string
+ *           description: The auto-generated id of the document
+ *         filename:
+ *           type: string
+ *           description: The name of the document file
+ *         original_path:
+ *           type: string
+ *           description: The original path of the document
+ *         markdown_path:
+ *           type: string
+ *           description: The path to the markdown version of the document
+ *         document_type:
+ *           type: string
+ *           description: The type of the document
+ *         category:
+ *           type: string
+ *           description: The category of the document
+ *         year:
+ *           type: integer
+ *           description: The year of the document
+ *         file_size:
+ *           type: integer
+ *           description: The size of the file in bytes
+ *         file_hash:
+ *           type: string
+ *           description: The hash of the file
+ *         verification_status:
+ *           type: string
+ *           description: The verification status of the document
+ *         official_url:
+ *           type: string
+ *           description: The official URL of the document
+ *         archive_url:
+ *           type: string
+ *           description: The archive URL of the document
+ *         markdown_available:
+ *           type: boolean
+ *           description: Whether a markdown version of the document is available
+ *         verification_status_badge:
+ *           type: string
+ *           description: The verification status badge
+ *         display_category:
+ *           type: string
+ *           description: The display category of the document
+ *         file_size_formatted:
+ *           type: string
+ *           description: The formatted file size
+ */
+
+/**
+ * @swagger
+ * tags:
+ *   name: Documents
+ *   description: API for managing documents
+ */
+
+/**
+ * @swagger
+ * /api/documents:
+ *   get:
+ *     summary: Returns a list of documents
+ *     tags: [Documents]
+ *     parameters:
+ *       - in: query
+ *         name: category
+ *         schema:
+ *           type: string
+ *         description: The category of the document
+ *       - in: query
+ *         name: year
+ *         schema:
+ *           type: string
+ *         description: The year of the document
+ *       - in: query
+ *         name: type
+ *         schema:
+ *           type: string
+ *         description: The type of the document
+ *     responses:
+ *       200:
+ *         description: The list of documents
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 documents:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Document'
+ *                 total:
+ *                   type: integer
+ *                 filters_applied:
+ *                   type: integer
+ *                 generated_at:
+ *                   type: string
+ *                   format: date-time
+ */
 router.get('/', async (req, res) => {
   try {
     const filters = {
@@ -30,7 +142,29 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get document by ID with full content
+/**
+ * @swagger
+ * /api/documents/{id}:
+ *   get:
+ *     summary: Get a document by ID
+ *     tags: [Documents]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: The document ID
+ *     responses:
+ *       200:
+ *         description: The document description by id
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Document'
+ *       404:
+ *         description: The document was not found
+ */
 router.get('/:id', async (req, res) => {
   try {
     const document = await documentService.getDocumentById(req.params.id);
