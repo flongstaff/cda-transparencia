@@ -1,6 +1,6 @@
+require('dotenv').config();
 // Database configuration using Sequelize
 const { Sequelize } = require('sequelize');
-require('dotenv').config();
 
 // Validate environment variables
 if (!process.env.DB_NAME || !process.env.DB_USER || !process.env.DB_PASSWORD || !process.env.DB_HOST || !process.env.DB_PORT) {

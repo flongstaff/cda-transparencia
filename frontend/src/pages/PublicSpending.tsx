@@ -19,28 +19,19 @@ import ValidatedChart from '../components/ValidatedChart';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import ComprehensiveSpendingAnalysis from '../components/analysis/ComprehensiveSpendingAnalysis';
 import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
+import PowerBIEmbed from '../components/powerbi/PowerBIEmbed';
 import OSINTComplianceService from '../services/OSINTComplianceService';
 import ApiService from '../services/ApiService';
-import PowerBIIntegrationService from '../services/PowerBIIntegrationService';
+import { formatCurrencyARS } from '../utils/formatters';
 
 // Verified spending data sources
 const spendingDataSources = OSINTComplianceService.getCrossValidationSources('spending').map(s => s.url);
-
-const formatCurrency = (amount: number): string => {
-  return new Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
-};
 
 const PublicSpending: React.FC = () => {
   const [activeYear, setActiveYear] = useState('2025');
   const [activeTab, setActiveTab] = useState('resumen');
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   const [spendingData, setSpendingData] = useState<any[]>([]);
   const [powerBIData, setPowerBIData] = useState<any>(null);
   const [documentAnalysis, setDocumentAnalysis] = useState<any[]>([]);
@@ -54,150 +45,107 @@ const PublicSpending: React.FC = () => {
     setError(null);
     try {
       // Load local spending data
-      const data = await ApiService.getOperationalExpenses(parseInt(year), selectedSources);
-      
-      // Load PowerBI data for comparison
-      try {
-        const powerBIExtract = await PowerBIIntegrationService.extractFinancialData(parseInt(year));
-        setPowerBIData(powerBIExtract);
-        
-        // Compare local vs PowerBI data for auditing
-        if (powerBIExtract && data.length > 0) {
-          const comparison = await PowerBIIntegrationService.compareWithLocalData(data, powerBIExtract);
-          console.log('Data comparison results:', comparison);
-        }
-      } catch (powerBIError) {
-        console.warn('PowerBI data unavailable:', powerBIError);
-      }
+      const data = await ApiService.getOperationalExpenses(parseInt(year));
+      setSpendingData(data);
       
       // Generate document analysis data for the year
       const analysisData = generateDocumentAnalysisForYear(parseInt(year), data);
       setDocumentAnalysis(analysisData);
-      
-      // Transform API data for display
-      const transformedData = data.map((expense, index) => ({
-        id: expense.id,
-        year: expense.year,
-        name: expense.description || expense.category,
-        category: expense.category,
-        value: Math.round(expense.amount),
-        amount: expense.amount,
-        percentage: ((expense.amount / data.reduce((sum, exp) => sum + exp.amount, 0)) * 100).toFixed(1),
-        color: ['#dc3545', '#28a745', '#0056b3', '#ffc107', '#20c997', '#6f42c1'][index % 6] || '#fd7e14',
-        source: spendingDataSources[0],
-        lastVerified: new Date().toISOString(),
-        powerBIMatch: powerBIData ? checkPowerBIMatch(expense, powerBIData) : null
-      }));
-      
-      setSpendingData(transformedData);
     } catch (err) {
       console.error('Failed to load spending data for year:', year, err);
       setError('Failed to load spending data');
+      setSpendingData([]);
     } finally {
       setLoading(false);
     }
   };
 
-  const generateDocumentAnalysisForYear = (year: number, spendingData: any[]) => {
-    const documentTypes = ['presupuesto', 'gastos', 'contratos', 'licitaciones', 'balances'];
-    return documentTypes.map(docType => {
-      const relatedSpending = spendingData.filter(item => 
-        item.category?.toLowerCase().includes(docType) || 
-        item.description?.toLowerCase().includes(docType)
-      );
-      
-      const totalAmount = relatedSpending.reduce((sum, item) => sum + item.amount, 0);
-      const avgAmount = relatedSpending.length > 0 ? totalAmount / relatedSpending.length : 0;
-      
-      return {
-        year,
-        documentType: docType,
-        documentsAnalyzed: Math.max(relatedSpending.length, Math.floor(Math.random() * 20) + 5),
-        totalAmount,
-        averageAmount: avgAmount,
-        keyFindings: [
-          `${docType.charAt(0).toUpperCase() + docType.slice(1)} total: ${formatCurrency(totalAmount)}`,
-          `Promedio por ${docType}: ${formatCurrency(avgAmount)}`,
-          `Documentos procesados: ${relatedSpending.length}`
-        ],
-        anomaliesDetected: Math.floor(Math.random() * 3),
-        verificationStatus: Math.random() > 0.2 ? 'verified' : 'pending',
-        powerBIComparison: powerBIData ? {
-          matches: Math.floor(Math.random() * relatedSpending.length * 0.8),
-          discrepancies: Math.floor(Math.random() * 3),
-          confidence: Math.random() * 30 + 70
-        } : null
-      };
-    });
+  // Load spending data when year changes
+  useEffect(() => {
+    void loadSpendingDataForYear(activeYear);
+  }, [activeYear]);
+
+  const handleDataRefresh = () => {
+    loadSpendingDataForYear(activeYear);
   };
 
-  const checkPowerBIMatch = (expense: any, powerBIData: any) => {
+  const formatCurrency = (value: number): string => {
+    return new Intl.NumberFormat('es-AR', {
+      style: 'currency',
+      currency: 'ARS',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(value);
+  };
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('es-AR');
+  };
+
+  // Generate document analysis data for a specific year
+  const generateDocumentAnalysisForYear = (year: number, spendingData: any[]): any[] => {
+    return spendingData.map((expense, index) => ({
+      id: expense.id,
+      year: expense.year,
+      documentType: 'gastos',
+      totalAmount: expense.amount,
+      transactionCount: Math.floor(Math.random() * 20) + 5,
+      averageAmount: expense.amount / (Math.floor(Math.random() * 20) + 5),
+      monthlyFlow: Array.from({ length: 12 }, (_, i) => ({
+        month: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'][i],
+        amount: Math.round(expense.amount / 12 * (0.7 + Math.random() * 0.6))
+      })),
+      recipients: [
+        {
+          name: expense.description || expense.category,
+          amount: expense.amount,
+          category: expense.category,
+          percentage: 100
+        }
+      ],
+      anomalies: []
+    }));
+  };
+
+  // Check if a spending item matches PowerBI data
+  const checkPowerBIMatch = (expense: any, powerBIData: any): any | null => {
     if (!powerBIData?.tables?.[0]?.data) return null;
     
     const matchingRecord = powerBIData.tables[0].data.find((pbiRecord: any) => 
-      Math.abs(pbiRecord.amount - expense.amount) < expense.amount * 0.05 && // 5% tolerance
-      pbiRecord.year === expense.year
+      pbiRecord.description === expense.description && 
+      Math.abs(pbiRecord.amount - expense.amount) < expense.amount * 0.05
     );
     
-    return {
-      found: !!matchingRecord,
-      confidence: matchingRecord ? 95 : 0,
-      amountDifference: matchingRecord ? matchingRecord.amount - expense.amount : null
-    };
+    return matchingRecord ? {
+      found: true,
+      confidence: 95,
+      amountDifference: matchingRecord.amount - expense.amount
+    } : null;
   };
 
-  // Load spending data when year or sources change
-  useEffect(() => {
-    void loadSpendingDataForYear(activeYear);
-  }, [activeYear, selectedSources]);
+  // Transform API data for display
+  const transformedSpendingData = spendingData.map((expense, index) => ({
+    id: expense.id,
+    year: expense.year,
+    name: expense.description || expense.category,
+    category: expense.category,
+    value: Math.round(expense.amount),
+    amount: expense.amount,
+    percentage: ((expense.amount / spendingData.reduce((sum, exp) => sum + exp.amount, 0)) * 100).toFixed(1),
+    color: ['#dc3545', '#28a745', '#0056b3', '#ffc107', '#20c997', '#6f42c1'][index % 6] || '#fd7e14',
+    source: spendingDataSources.length > 0 ? spendingDataSources[0] : 'Unknown Source',
+    lastVerified: new Date().toISOString(),
+    powerBIMatch: powerBIData ? checkPowerBIMatch(expense, powerBIData) : null
+  }));
 
-  // Calculate aggregated data
-  const totalSpending = spendingData.reduce((sum, expense) => sum + expense.amount, 0);
-  const totalCategories = spendingData.length;
-  const averageSpending = spendingData.length > 0 ? Math.round(spendingData.reduce((sum, expense) => sum + expense.amount, 0) / spendingData.length) : 0;
-  
-  const aggregatedData = {
-    totalSpending,
-    totalCategories,
-    averageSpending,
-    spendingByCategory: spendingData,
-    monthlySpending: Array.from({ length: 12 }, (_, i) => {
-      const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
-      const monthlyTotal = totalSpending > 0 ? Math.round(totalSpending / 12 * (1 + (Math.random() - 0.5) * 0.2)) : 0;
-      return {
-        name: months[i],
-        month: months[i],
-        value: monthlyTotal,
-        amount: monthlyTotal,
-        gastos: monthlyTotal,
-        presupuestado: monthlyTotal * 1.05, // 5% buffer
-        source: spendingDataSources[0],
-        lastVerified: new Date().toISOString()
-      };
-    }),
-    quarterlySpending: Array.from({ length: 4 }, (_, i) => ({
-      name: `Q${i + 1} ${activeYear}`,
-      gastos: totalSpending > 0 ? Math.round(totalSpending / 4 * (1 + (Math.random() - 0.5) * 0.1)) : 0,
-      presupuestado: totalSpending > 0 ? Math.round(totalSpending / 4 * 1.05) : 0,
-      percentage: Math.round(95 + Math.random() * 10 - 5),
-      source: spendingDataSources[0],
-      lastVerified: new Date().toISOString()
-    })),
-    spendingTrends: [
-      { year: (parseInt(activeYear) - 2).toString(), value: totalSpending > 0 ? Math.round(totalSpending / Math.pow(1.08, 2)) : 0 },
-      { year: (parseInt(activeYear) - 1).toString(), value: totalSpending > 0 ? Math.round(totalSpending / 1.08) : 0 },
-      { year: activeYear, value: totalSpending, isSelected: true },
-      { year: (parseInt(activeYear) + 1).toString(), value: totalSpending > 0 ? Math.round(totalSpending * 1.08) : 0 }
-    ]
-  };
-
-  const filteredSpending = spendingData.filter((expense) => {
-    const matchesSearch = searchTerm === '' || 
-      expense.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      expense.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesFilter = activeFilter === 'all' || expense.category === activeFilter;
-    return matchesSearch && matchesFilter;
-  });
+  const filteredSpending = transformedSpendingData
+    .filter((expense) => {
+      const matchesSearch = searchTerm === '' || 
+        expense.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        expense.category.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesFilter = activeFilter === 'all' || expense.category === activeFilter;
+      return matchesSearch && matchesFilter;
+    });
 
   if (loading) {
     return (
@@ -272,9 +220,7 @@ const PublicSpending: React.FC = () => {
         {/* Data Source Selector */}
         <div className="mb-6">
           <DataSourceSelector
-            selectedSources={selectedSources}
-            onSourceChange={setSelectedSources}
-            onDataRefresh={() => loadSpendingDataForYear(activeYear)}
+            onDataRefresh={handleDataRefresh}
             className="max-w-4xl mx-auto"
           />
         </div>

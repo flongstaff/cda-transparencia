@@ -184,9 +184,12 @@ export interface FinancialIndicator {
 }
 
 class ApiService {
-  private async request<T>(endpoint: string, options: RequestInit = {}, dataSources: string[] = ['database_local', 'official_site']): Promise<T> {
-    // Add data sources as query parameters
-    const dataSourceParams = dataSources.map(source => `source=${source}`).join('&');
+  // Define all available data sources
+  private readonly ALL_DATA_SOURCES = ['database_local', 'official_site', 'archive', 'scraped'];
+  
+  private async request<T>(endpoint: string, options: RequestInit = {}, dataSources: string[] = this.ALL_DATA_SOURCES): Promise<T> {
+    // Always use all available data sources
+    const dataSourceParams = this.ALL_DATA_SOURCES.map(source => `source=${source}`).join('&');
     const separator = endpoint.includes('?') ? '&' : '?';
     const url = `${API_BASE_URL}/api${endpoint}${separator}${dataSourceParams}`;
     
@@ -220,12 +223,12 @@ class ApiService {
   }
 
   // Property Declarations
-  async getPropertyDeclarations(year?: number, dataSources: string[] = ['database_local', 'official_site']): Promise<PropertyDeclaration[]> {
+  async getPropertyDeclarations(year?: number): Promise<PropertyDeclaration[]> {
     try {
       const endpoint = year 
         ? `/declarations/year/${year}`
         : '/declarations';
-      return await this.request<PropertyDeclaration[]>(endpoint, {}, dataSources);
+      return await this.request<PropertyDeclaration[]>(endpoint, {});
     } catch (error) {
       console.error('Failed to fetch property declarations:', error);
       return []; // Return empty array as fallback
@@ -242,12 +245,12 @@ class ApiService {
   }
 
   // Salaries
-  async getSalaries(year?: number, dataSources: string[] = ['database_local', 'official_site']): Promise<Salary[]> {
+  async getSalaries(year?: number): Promise<Salary[]> {
     try {
       const endpoint = year 
         ? `/salaries/year/${year}`
         : '/salaries';
-      return await this.request<Salary[]>(endpoint, {}, dataSources);
+      return await this.request<Salary[]>(endpoint, {});
     } catch (error) {
       console.error('Failed to fetch salaries:', error);
       return []; // Return empty array as fallback
@@ -281,12 +284,12 @@ class ApiService {
   }
 
   // Public Tenders
-  async getPublicTenders(year?: number, dataSources: string[] = ['database_local', 'official_site']): Promise<PublicTender[]> {
+  async getPublicTenders(year?: number): Promise<PublicTender[]> {
     try {
       const endpoint = year 
         ? `/tenders/year/${year}`
         : '/tenders';
-      return await this.request<PublicTender[]>(endpoint, {}, dataSources);
+      return await this.request<PublicTender[]>(endpoint, {});
     } catch (error) {
       console.error('Failed to fetch public tenders:', error);
       return []; // Return empty array as fallback
@@ -294,12 +297,12 @@ class ApiService {
   }
 
   // Financial Reports
-  async getFinancialReports(year?: number, dataSources: string[] = ['database_local', 'official_site']): Promise<FinancialReport[]> {
+  async getFinancialReports(year?: number): Promise<FinancialReport[]> {
     try {
       const endpoint = year 
         ? `/reports/year/${year}`
         : '/reports';
-      const data = await this.request<any[]>(endpoint, {}, dataSources);
+      const data = await this.request<any[]>(endpoint, {});
       
       // Transform string values to numbers
       return data.map(report => ({
@@ -320,9 +323,9 @@ class ApiService {
   }
 
   // Treasury Movements
-  async getTreasuryMovements(dataSources: string[] = ['database_local', 'official_site']): Promise<TreasuryMovement[]> {
+  async getTreasuryMovements(): Promise<TreasuryMovement[]> {
     try {
-      return await this.request<TreasuryMovement[]>('/treasury', {}, dataSources);
+      return await this.request<TreasuryMovement[]>('/treasury', {});
     } catch (error) {
       console.error('Failed to fetch treasury movements:', error);
       return []; // Return empty array as fallback
@@ -330,12 +333,12 @@ class ApiService {
   }
 
   // Fees and Rights
-  async getFeesRights(year?: number, dataSources: string[] = ['database_local', 'official_site']): Promise<FeeRight[]> {
+  async getFeesRights(year?: number): Promise<FeeRight[]> {
     try {
       const endpoint = year 
         ? `/fees/year/${year}`
         : '/fees';
-      return await this.request<FeeRight[]>(endpoint, {}, dataSources);
+      return await this.request<FeeRight[]>(endpoint, {});
     } catch (error) {
       console.error('Failed to fetch fees and rights:', error);
       return []; // Return empty array as fallback
@@ -343,12 +346,12 @@ class ApiService {
   }
 
   // Operational Expenses
-  async getOperationalExpenses(year?: number, dataSources: string[] = ['database_local', 'official_site']): Promise<OperationalExpense[]> {
+  async getOperationalExpenses(year?: number): Promise<OperationalExpense[]> {
     try {
       const endpoint = year 
         ? `/expenses/year/${year}`
         : '/expenses';
-      return await this.request<OperationalExpense[]>(endpoint, {}, dataSources);
+      return await this.request<OperationalExpense[]>(endpoint, {});
     } catch (error) {
       console.error('Failed to fetch operational expenses:', error);
       return []; // Return empty array as fallback
@@ -356,12 +359,12 @@ class ApiService {
   }
 
   // Municipal Debt
-  async getMunicipalDebt(year?: number, dataSources: string[] = ['database_local', 'official_site']): Promise<MunicipalDebt[]> {
+  async getMunicipalDebt(year?: number): Promise<MunicipalDebt[]> {
     try {
       const endpoint = year 
         ? `/debt/year/${year}`
         : '/debt';
-      return await this.request<MunicipalDebt[]>(endpoint, {}, dataSources);
+      return await this.request<MunicipalDebt[]>(endpoint, {});
     } catch (error) {
       console.error('Failed to fetch municipal debt:', error);
       return []; // Return empty array as fallback
@@ -369,12 +372,12 @@ class ApiService {
   }
 
   // Investments and Assets
-  async getInvestmentsAssets(year?: number, dataSources: string[] = ['database_local', 'official_site']): Promise<InvestmentAsset[]> {
+  async getInvestmentsAssets(year?: number): Promise<InvestmentAsset[]> {
     try {
       const endpoint = year 
         ? `/investments/year/${year}`
         : '/investments';
-      return await this.request<InvestmentAsset[]>(endpoint, {}, dataSources);
+      return await this.request<InvestmentAsset[]>(endpoint, {});
     } catch (error) {
       console.error('Failed to fetch investments and assets:', error);
       return []; // Return empty array as fallback
@@ -382,12 +385,12 @@ class ApiService {
   }
 
   // Financial Indicators
-  async getFinancialIndicators(year?: number, dataSources: string[] = ['database_local', 'official_site']): Promise<FinancialIndicator[]> {
+  async getFinancialIndicators(year?: number): Promise<FinancialIndicator[]> {
     try {
       const endpoint = year 
         ? `/indicators/year/${year}`
         : '/indicators';
-      return await this.request<FinancialIndicator[]>(endpoint, {}, dataSources);
+      return await this.request<FinancialIndicator[]>(endpoint, {});
     } catch (error) {
       console.error('Failed to fetch financial indicators:', error);
       return []; // Return empty array as fallback
@@ -395,12 +398,12 @@ class ApiService {
   }
 
   // Transparency Documents
-  async getTransparencyDocuments(year?: number, dataSources: string[] = ['database_local', 'official_site']): Promise<{ id: number; year: number; title: string; category: string; created_at: string; }[]> {
+  async getTransparencyDocuments(year?: number): Promise<{ id: number; year: number; title: string; category: string; created_at: string; }[]> {
     try {
       const endpoint = year 
         ? `/documents/year/${year}`
         : '/documents';
-      return await this.request<{ id: number; year: number; title: string; category: string; created_at: string; }[]>(endpoint, {}, dataSources);
+      return await this.request<{ id: number; year: number; title: string; category: string; created_at: string; }[]>(endpoint, {});
     } catch (error) {
       console.error('Failed to fetch transparency documents:', error);
       return []; // Return empty array as fallback

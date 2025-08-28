@@ -10,6 +10,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: transparency_portal
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    
     steps:
       - uses: actions/checkout@v3
       
@@ -23,24 +35,17 @@ jobs:
         with:
           python-version: '3.11'
           
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt || echo "Python requirements installation failed, continuing anyway"
-          
-      - name: Install Node.js dependencies
-        run: |
-          cd frontend
-          npm ci
+          cd frontend && npm install
+          cd ../backend && npm install
+          pip install -r requirements.txt
           
       - name: Build frontend
-        run: |
-          cd frontend
-          npx vite build
-          
+        run: cd frontend && npm run build
+        
       - name: Run live data scraper
-        run: |
-          python src/live_scrape.py || echo "Live scraping failed, continuing anyway"
+        run: python3 src/live_scrape.py
         
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

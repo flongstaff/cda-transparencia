@@ -71,6 +71,7 @@ const translations: Record<Language, Record<string, string>> = {
     'sidebar.reports': 'Informes',
     'sidebar.contact': 'Contacto',
     'sidebar.whistleblower': 'Denuncias',
+    'sidebar.audit': 'Auditoría',
     'sidebar.apiExplorer': 'Explorador de API',
     'sidebar.language': 'Idioma',
     'sidebar.theme': 'Tema',

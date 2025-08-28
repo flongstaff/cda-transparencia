@@ -8,20 +8,19 @@ import Revenue from './pages/Revenue';
 import Contracts from './pages/Contracts';
 import PropertyDeclarations from './pages/PropertyDeclarations';
 import Salaries from './pages/Salaries';
-import Database from './pages/Database';
 import Documents from './pages/Documents';
 import DocumentDetail from './pages/DocumentDetail';
 import Reports from './pages/Reports';
 import Contact from './pages/Contact';
 import Whistleblower from './pages/Whistleblower';
-import ApiExplorer from './pages/ApiExplorer';
 import FinancialDashboard from './pages/FinancialDashboard';
 import Debt from './pages/Debt';
 import Investments from './pages/Investments';
-import Treasury from './pages/Treasury';
+import Audit from './pages/Audit';
+import PowerBIData from './pages/PowerBIData';
+import FinancialHistory from './pages/FinancialHistory';
 import DataIntegrityDashboard from './components/DataIntegrityDashboard';
 import ErrorBoundary from './components/ErrorBoundary';
-import TodoList from './components/TodoList';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LanguageProvider } from './contexts/LanguageContext';
 
@@ -42,18 +41,17 @@ function App() {
                 <Route path="/contracts" element={<Contracts />} />
                 <Route path="/debt" element={<Debt />} />
                 <Route path="/investments" element={<Investments />} />
-                <Route path="/treasury" element={<Treasury />} />
                 <Route path="/property-declarations" element={<PropertyDeclarations />} />
                 <Route path="/salaries" element={<Salaries />} />
-                <Route path="/database" element={<Database />} />
                 <Route path="/documents" element={<Documents />} />
                 <Route path="/documents/:id" element={<DocumentDetail />} />
                 <Route path="/reports" element={<Reports />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/whistleblower" element={<Whistleblower />} />
-                <Route path="/api-explorer" element={<ApiExplorer />} />
+                <Route path="/audit" element={<Audit />} />
+                <Route path="/powerbi-data" element={<PowerBIData />} />
+                <Route path="/financial-history" element={<FinancialHistory />} />
                 <Route path="/data-integrity" element={<DataIntegrityDashboard />} />
-                <Route path="/todo" element={<TodoList />} />
               </Routes>
             </Layout>
           </Router>

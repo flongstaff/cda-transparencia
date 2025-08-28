@@ -1,587 +1,423 @@
 import React, { useState, useEffect } from 'react';
-import { FileText, FolderOpen, Database, TrendingUp, Calendar, CheckCircle, ExternalLink, Download } from 'lucide-react';
-import DocumentViewer from '../components/documents/DocumentViewer';
-import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
-import DataSourceSelector from '../components/data-sources/DataSourceSelector';
-import YearlySummaryDashboard from '../components/dashboard/YearlySummaryDashboard';
-import ApiService from '../services/ApiService';
-
-interface DocumentMetadata {
-  filename: string;
-  year: number;
-  category: string;
-  type: string;
-  size_bytes: number;
-  sha256_hash: string;
-  processing_date: string;
-  official_url?: string;
-  archive_url?: string;
-  verification_status: 'verified' | 'partial' | 'unverified';
-  path: string;
-  content?: string;
-}
+import { useNavigate, useParams } from 'react-router-dom';
+import { 
+  FileText, 
+  FolderOpen, 
+  Calendar, 
+  CheckCircle, 
+  ExternalLink, 
+  Eye, 
+  Search, 
+  Filter, 
+  BarChart3,
+  Database,
+  Globe,
+  Download
+} from 'lucide-react';
+import { motion } from 'framer-motion';
+import ComprehensivePDFViewer from '../components/documents/ComprehensivePDFViewer';
+import ComprehensiveDataService, { DocumentLink } from '../services/ComprehensiveDataService';
 
 const Documents: React.FC = () => {
-  const [documents, setDocuments] = useState<DocumentMetadata[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [selectedSources, setSelectedSources] = useState<string[]>(['processed_documents', 'database_local']);
-  const [stats, setStats] = useState({
-    total: 0,
-    verified: 0,
-    categories: 0,
-    years: 0
-  });
+  const navigate = useNavigate();
+  const { documentId } = useParams();
+  const [documents, setDocuments] = useState<DocumentLink[]>([]);
   const [selectedYear, setSelectedYear] = useState<number | 'all'>('all');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [loading, setLoading] = useState(true);
+  const [selectedDocument, setSelectedDocument] = useState<DocumentLink | null>(null);
+  const [viewMode, setViewMode] = useState<'list' | 'viewer' | 'comparison'>('list');
+  const [stats, setStats] = useState<any>(null);
+  const [availableYears, setAvailableYears] = useState<number[]>([]);
+  const [availableCategories, setAvailableCategories] = useState<string[]>([]);
+
+  const dataService = ComprehensiveDataService.getInstance();
 
   useEffect(() => {
     loadDocuments();
-  }, [selectedSources]);
+    loadStats();
+  }, []);
 
-  const handleSourceChange = (newSelectedSources: string[]) => {
-    setSelectedSources(newSelectedSources);
-  };
-
-  const handleDataRefresh = () => {
-    loadDocuments();
-  };
+  useEffect(() => {
+    if (documentId) {
+      loadSpecificDocument(documentId);
+    }
+  }, [documentId]);
 
   const loadDocuments = async () => {
-    setIsLoading(true);
+    setLoading(true);
     try {
-      // Fetch documents from API
-      const apiDocuments = await ApiService.getTransparencyDocuments();
+      const allDocs = await dataService.getAllDocuments();
+      setDocuments(allDocs);
       
-      // Transform API documents to our format
-      const formattedDocuments: DocumentMetadata[] = apiDocuments.map(doc => ({
-        filename: doc.title,
-        year: doc.year,
-        category: doc.category,
-        type: 'pdf', // Default type for now
-        size_bytes: 0, // Would need to fetch actual size
-        sha256_hash: '', // Would need to fetch actual hash
-        processing_date: doc.created_at,
-        official_url: `https://carmendeareco.gob.ar/transparencia/${doc.year}/${doc.title}`,
-        archive_url: `https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/${doc.year}/${doc.title}`,
-        verification_status: 'verified',
-        path: `/data/markdown_documents/${doc.category}/${doc.title}.md`
-      }));
-
-      // Add sample documents for demonstration
-      const sampleDocuments: DocumentMetadata[] = [
-        // Salary documents
-        {
-          filename: 'SUELDOS-MAYO-2023.pdf',
-          year: 2023,
-          category: 'financial_data',
-          type: 'pdf',
-          size_bytes: 426361,
-          sha256_hash: 'c0527043855b3ac643bffca66386fa767acea85df33b253225bd13438182d6ab',
-          processing_date: '2025-08-25T19:53:04.853155',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/SUELDOS-MAYO-2023.pdf',
-          archive_url: 'https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/SUELDOS-MAYO-2023.pdf',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/financial_data/SUELDOS-MAYO-2023.md'
-        },
-        {
-          filename: 'SUELDOS-JULIO-2023.pdf',
-          year: 2023,
-          category: 'financial_data',
-          type: 'pdf',
-          size_bytes: 423892,
-          sha256_hash: '8faf1bf409d47260ea562b4ee642a990bde54681687703a62ee9e2e930023bcd',
-          processing_date: '2025-08-25T19:53:04.856186',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/SUELDOS-JULIO-2023.pdf',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/financial_data/SUELDOS-JULIO-2023.md'
-        },
-        {
-          filename: 'ESCALA-SALARIAL-OCTUBRE-2024.pdf',
-          year: 2024,
-          category: 'financial_data',
-          type: 'pdf',
-          size_bytes: 434499,
-          sha256_hash: '012eb13ac4865f3b77360ea43210993993ff7b3c7bce8afb3c9a3c4673656d55',
-          processing_date: '2025-08-25T19:53:04.919004',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/ESCALA-SALARIAL-OCTUBRE-2024.pdf',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/financial_data/ESCALA-SALARIAL-OCTUBRE-2024.md'
-        },
-        // Public tenders
-        {
-          filename: 'LICITACION-PUBLICA-N°11.pdf',
-          year: 2024,
-          category: 'tenders',
-          type: 'pdf',
-          size_bytes: 523456,
-          sha256_hash: 'a1b2c3d4e5f6789012345678901234567890123456789012345678901234567890',
-          processing_date: '2025-08-25T20:15:30.123456',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/licitaciones/',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/tenders/LICITACION-PUBLICA-N°11.md'
-        },
-        {
-          filename: 'LICITACION-PUBLICA-N°10.pdf',
-          year: 2024,
-          category: 'tenders',
-          type: 'pdf',
-          size_bytes: 498123,
-          sha256_hash: 'b1c2d3e4f5f6789012345678901234567890123456789012345678901234567890',
-          processing_date: '2025-08-25T20:10:25.789456',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/licitaciones/',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/tenders/LICITACION-PUBLICA-N°10.md'
-        },
-        // Financial reports
-        {
-          filename: 'ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf',
-          year: 2023,
-          category: 'financial_data',
-          type: 'pdf',
-          size_bytes: 789123,
-          sha256_hash: 'b2c3d4e5f6789012345678901234567890123456789012345678901234567890',
-          processing_date: '2025-08-25T18:30:15.789123',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/presupuesto/',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/financial_data/ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.md'
-        },
-        {
-          filename: 'Estado-de-Ejecucion-de-Gastos-Marzo.pdf',
-          year: 2024,
-          category: 'financial_data',
-          type: 'pdf',
-          size_bytes: 567890,
-          sha256_hash: 'c3d4e5f6789012345678901234567890123456789012345678901234567890123',
-          processing_date: '2025-08-25T17:45:30.456789',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/presupuesto/',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/financial_data/Estado-de-Ejecucion-de-Gastos-Marzo.md'
-        },
-        {
-          filename: 'SITUACION-ECONOMICO-FINANCIERA.pdf',
-          year: 2023,
-          category: 'financial_data',
-          type: 'pdf',
-          size_bytes: 678123,
-          sha256_hash: 'd4e5f6789012345678901234567890123456789012345678901234567890123456',
-          processing_date: '2025-08-25T16:20:45.123456',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/presupuesto/',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/financial_data/SITUACION-ECONOMICO-FINANCIERA.md'
-        },
-        // Additional documents for different years
-        {
-          filename: 'Presupuesto-Municipal-2022.pdf',
-          year: 2022,
-          category: 'budget',
-          type: 'pdf',
-          size_bytes: 892345,
-          sha256_hash: 'e5f678901234567890123456789012345678901234567890123456789012345678',
-          processing_date: '2025-08-20T10:30:15.123456',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/presupuesto/2022/',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/budget/Presupuesto-Municipal-2022.md'
-        },
-        {
-          filename: 'Informe-Anual-2021.pdf',
-          year: 2021,
-          category: 'reports',
-          type: 'pdf',
-          size_bytes: 1234567,
-          sha256_hash: 'f67890123456789012345678901234567890123456789012345678901234567890',
-          processing_date: '2025-07-15T14:20:30.789123',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/informes/2021/',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/reports/Informe-Anual-2021.md'
-        },
-        {
-          filename: 'Declaraciones-Juradas-2020.pdf',
-          year: 2020,
-          category: 'declarations',
-          type: 'pdf',
-          size_bytes: 567890,
-          sha256_hash: '01234567890123456789012345678901234567890123456789012345678901234',
-          processing_date: '2025-06-10T09:45:22.456789',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/declaraciones/2020/',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/declarations/Declaraciones-Juradas-2020.md'
-        }
-      ];
-
-      // Combine API documents with sample documents
-      const allDocuments = [...formattedDocuments, ...sampleDocuments];
-
-      setDocuments(allDocuments);
-
-      // Calculate stats
-      const totalDocs = allDocuments.length;
-      const verifiedDocs = allDocuments.filter(doc => doc.verification_status === 'verified').length;
-      const uniqueCategories = new Set(allDocuments.map(doc => doc.category)).size;
-      const uniqueYears = new Set(allDocuments.map(doc => doc.year)).size;
-
-      setStats({
-        total: totalDocs,
-        verified: verifiedDocs,
-        categories: uniqueCategories,
-        years: uniqueYears
-      });
-
+      const years = await dataService.getAvailableYears();
+      const categories = await dataService.getAvailableCategories();
+      
+      setAvailableYears(years);
+      setAvailableCategories(categories);
+      
+      console.log(`✅ Loaded ${allDocs.length} comprehensive documents`);
+      console.log(`📅 Available years: ${years.join(', ')}`);
+      console.log(`📂 Available categories: ${categories.join(', ')}`);
+      
     } catch (error) {
       console.error('Error loading documents:', error);
-      // Fallback to sample documents only
-      const sampleDocuments: DocumentMetadata[] = [
-        {
-          filename: 'SUELDOS-MAYO-2023.pdf',
-          year: 2023,
-          category: 'financial_data',
-          type: 'pdf',
-          size_bytes: 426361,
-          sha256_hash: 'c0527043855b3ac643bffca66386fa767acea85df33b253225bd13438182d6ab',
-          processing_date: '2025-08-25T19:53:04.853155',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/SUELDOS-MAYO-2023.pdf',
-          archive_url: 'https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/SUELDOS-MAYO-2023.pdf',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/financial_data/SUELDOS-MAYO-2023.md'
-        },
-        {
-          filename: 'SUELDOS-JULIO-2023.pdf',
-          year: 2023,
-          category: 'financial_data',
-          type: 'pdf',
-          size_bytes: 423892,
-          sha256_hash: '8faf1bf409d47260ea562b4ee642a990bde54681687703a62ee9e2e930023bcd',
-          processing_date: '2025-08-25T19:53:04.856186',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/SUELDOS-JULIO-2023.pdf',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/financial_data/SUELDOS-JULIO-2023.md'
-        },
-        {
-          filename: 'ESCALA-SALARIAL-OCTUBRE-2024.pdf',
-          year: 2024,
-          category: 'financial_data',
-          type: 'pdf',
-          size_bytes: 434499,
-          sha256_hash: '012eb13ac4865f3b77360ea43210993993ff7b3c7bce8afb3c9a3c4673656d55',
-          processing_date: '2025-08-25T19:53:04.919004',
-          official_url: 'https://carmendeareco.gob.ar/transparencia/ESCALA-SALARIAL-OCTUBRE-2024.pdf',
-          verification_status: 'verified',
-          path: '/data/markdown_documents/financial_data/ESCALA-SALARIAL-OCTUBRE-2024.md'
-        }
-      ];
-
-      setDocuments(sampleDocuments);
-
-      // Calculate stats for sample documents
-      const totalDocs = sampleDocuments.length;
-      const verifiedDocs = sampleDocuments.filter(doc => doc.verification_status === 'verified').length;
-      const uniqueCategories = new Set(sampleDocuments.map(doc => doc.category)).size;
-      const uniqueYears = new Set(sampleDocuments.map(doc => doc.year)).size;
-
-      setStats({
-        total: totalDocs,
-        verified: verifiedDocs,
-        categories: uniqueCategories,
-        years: uniqueYears
-      });
     } finally {
-      setIsLoading(false);
+      setLoading(false);
     }
   };
 
-  // Get unique years and categories for filters
-  const availableYears = [...new Set(documents.map(doc => doc.year))].sort((a, b) => b - a);
-  const availableCategories = [...new Set(documents.map(doc => doc.category))].sort();
+  const loadStats = async () => {
+    try {
+      const comprehensiveStats = await dataService.getComprehensiveStats();
+      setStats(comprehensiveStats);
+      console.log('📊 Comprehensive stats loaded:', comprehensiveStats);
+    } catch (error) {
+      console.error('Error loading stats:', error);
+    }
+  };
 
-  // Filter documents based on selected year and category
+  const loadSpecificDocument = async (docId: string) => {
+    try {
+      const allDocs = await dataService.getAllDocuments();
+      const doc = allDocs.find(d => d.id === docId);
+      if (doc) {
+        setSelectedDocument(doc);
+        setViewMode('viewer');
+      }
+    } catch (error) {
+      console.error('Error loading specific document:', error);
+    }
+  };
+
   const filteredDocuments = documents.filter(doc => {
-    const yearMatch = selectedYear === 'all' || doc.year === selectedYear;
-    const categoryMatch = selectedCategory === 'all' || doc.category === selectedCategory;
-    return yearMatch && categoryMatch;
+    const matchesYear = selectedYear === 'all' || doc.year === selectedYear;
+    const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory;
+    const matchesSearch = searchTerm === '' || 
+      doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      doc.category.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    return matchesYear && matchesCategory && matchesSearch;
   });
 
-  // Group documents by year for the year view
-  const documentsByYear: Record<number, DocumentMetadata[]> = {};
-  filteredDocuments.forEach(doc => {
-    if (!documentsByYear[doc.year]) {
-      documentsByYear[doc.year] = [];
+  const handleDocumentSelect = (document: DocumentLink) => {
+    setSelectedDocument(document);
+    setViewMode('viewer');
+    navigate(`/documents/${document.id}`);
+  };
+
+  const getDocumentTypeIcon = (docType: DocumentLink['document_type']) => {
+    switch (docType) {
+      case 'budget_execution': return <BarChart3 className="w-5 h-5 text-green-600" />;
+      case 'financial_statement': return <FileText className="w-5 h-5 text-blue-600" />;
+      case 'debt_report': return <FileText className="w-5 h-5 text-red-600" />;
+      case 'salary_report': return <FileText className="w-5 h-5 text-purple-600" />;
+      case 'tender': return <FolderOpen className="w-5 h-5 text-orange-600" />;
+      default: return <FileText className="w-5 h-5 text-gray-600" />;
     }
-    documentsByYear[doc.year].push(doc);
-  });
-
-  const formatFileSize = (bytes: number): string => {
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  const getCategoryColor = (category: string) => {
-    const colors: Record<string, string> = {
-      'financial_data': 'bg-blue-100 text-blue-800',
-      'tenders': 'bg-green-100 text-green-800',
-      'budget': 'bg-purple-100 text-purple-800',
-      'reports': 'bg-orange-100 text-orange-800',
-      'declarations': 'bg-pink-100 text-pink-800',
-      'salaries': 'bg-indigo-100 text-indigo-800'
+  const getDocumentTypeBadge = (docType: DocumentLink['document_type']) => {
+    const badges = {
+      budget_execution: 'bg-green-100 text-green-800',
+      financial_statement: 'bg-blue-100 text-blue-800',
+      debt_report: 'bg-red-100 text-red-800',
+      salary_report: 'bg-purple-100 text-purple-800',
+      tender: 'bg-orange-100 text-orange-800',
+      ordinance: 'bg-gray-100 text-gray-800'
     };
-    return colors[category] || 'bg-gray-100 text-gray-800';
+
+    return badges[docType] || badges.ordinance;
   };
 
-  if (isLoading) {
+  if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Cargando documentos...</p>
-        </div>
+      <div className="flex justify-center items-center h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
       </div>
     );
   }
 
+  // If we have a selected document or we're viewing a specific document
+  if (viewMode !== 'list' || documentId) {
+    return (
+      <ComprehensivePDFViewer
+        documentId={documentId || selectedDocument?.id}
+        showComparison={viewMode === 'comparison'}
+      />
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Page Header */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Documentos Oficiales</h1>
-              <p className="mt-2 text-gray-600">
-                Acceso a todos los documentos de transparencia con verificación y enlaces a fuentes oficiales
-              </p>
-            </div>
-          </div>
-
-          {/* Stats Cards */}
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-4">
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg p-6 text-white">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-blue-100">Total de Documentos</p>
-                  <p className="text-3xl font-bold">{stats.total}</p>
-                </div>
-                <FileText className="h-8 w-8 text-blue-200" />
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-lg p-6 text-white">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-green-100">Verificados</p>
-                  <p className="text-3xl font-bold">{stats.verified}</p>
-                </div>
-                <CheckCircle className="h-8 w-8 text-green-200" />
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg p-6 text-white">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-purple-100">Categorías</p>
-                  <p className="text-3xl font-bold">{stats.categories}</p>
-                </div>
-                <FolderOpen className="h-8 w-8 text-purple-200" />
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg p-6 text-white">
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-orange-100">Años Cubiertos</p>
-                  <p className="text-3xl font-bold">{stats.years}</p>
-                </div>
-                <Calendar className="h-8 w-8 text-orange-200" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Filters */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="bg-white rounded-lg shadow-sm p-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Filtrar por Año</label>
-              <select
-                value={selectedYear}
-                onChange={(e) => setSelectedYear(e.target.value === 'all' ? 'all' : parseInt(e.target.value))}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              >
-                <option value="all">Todos los años</option>
-                {availableYears.map(year => (
-                  <option key={year} value={year}>{year}</option>
-                ))}
-              </select>
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Filtrar por Categoría</label>
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-              >
-                <option value="all">Todas las categorías</option>
-                {availableCategories.map(category => (
-                  <option key={category} value={category}>
-                    {category.charAt(0).toUpperCase() + category.slice(1)}
-                  </option>
-                ))}
-              </select>
-            </div>
-            
-            <div className="flex items-end">
-              <button
-                onClick={handleDataRefresh}
-                className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                Actualizar Datos
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Yearly Documents Summary */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
-        <YearlySummaryDashboard
-          dataType="documents"
-          title="Documentos de Transparencia"
-          startYear={2018}
-          endYear={2025}
-          showComparison={true}
-        />
-
-        {/* Document Analytics Visualization */}
-        <div className="mt-8">
-          <ComprehensiveVisualization
-            data={filteredDocuments.map(doc => ({
-              name: doc.filename,
-              value: doc.size_bytes / 1024, // Convert to KB
-              year: doc.year,
-              category: doc.category,
-              trend: doc.verification_status === 'verified' ? 1 : 0
-            }))}
-            title="Análisis de Documentos por Categoría y Año"
-            type="distribution"
-            timeRange="2018-2025"
-            showControls={true}
-            height={400}
-          />
-        </div>
-      </div>
-
-      {/* Year-Based Document Display */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="px-6 py-4 border-b border-gray-200">
-            <h2 className="text-xl font-semibold text-gray-800">
-              Documentos por Año
-              {selectedYear !== 'all' && ` - ${selectedYear}`}
-              {selectedCategory !== 'all' && ` - ${selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)}`}
-            </h2>
-            <p className="text-sm text-gray-600 mt-1">
-              Mostrando {filteredDocuments.length} de {documents.length} documentos
+    <div className="max-w-7xl mx-auto p-6">
+      {/* Header with Stats */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-lg p-6 text-white mb-8">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold mb-2">Portal de Documentos</h1>
+            <p className="text-blue-100">
+              Carmen de Areco - Documentos Oficiales Verificados
             </p>
           </div>
-          
-          <div className="overflow-y-auto" style={{ maxHeight: '400px' }}>
-            {Object.keys(documentsByYear).length > 0 ? (
-              Object.entries(documentsByYear)
-                .sort(([yearA], [yearB]) => parseInt(yearB) - parseInt(yearA))
-                .map(([year, yearDocuments]) => (
-                  <div key={year} className="border-b border-gray-200 last:border-b-0">
-                    <div className="bg-gray-50 px-6 py-3">
-                      <h3 className="font-medium text-gray-900 flex items-center">
-                        <Calendar className="h-4 w-4 mr-2 text-gray-500" />
-                        {year} ({yearDocuments.length} documentos)
-                      </h3>
-                    </div>
-                    <div className="divide-y divide-gray-100">
-                      {yearDocuments.map((doc) => (
-                        <div key={`${doc.filename}-${doc.year}`} className="px-6 py-4 hover:bg-gray-50">
-                          <div className="flex items-start justify-between">
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center">
-                                <FileText className="h-5 w-5 text-gray-400 mr-2 flex-shrink-0" />
-                                <p className="text-sm font-medium text-gray-900 truncate">
-                                  {doc.filename}
-                                </p>
-                                <span className={`ml-2 px-2 py-1 text-xs rounded-full ${getCategoryColor(doc.category)}`}>
-                                  {doc.category}
-                                </span>
-                              </div>
-                              <div className="mt-2 flex flex-wrap items-center text-xs text-gray-500">
-                                <span className="mr-4">Tamaño: {formatFileSize(doc.size_bytes)}</span>
-                                <span className="mr-4">Verificación: 
-                                  <span className={`ml-1 ${doc.verification_status === 'verified' ? 'text-green-600' : doc.verification_status === 'partial' ? 'text-yellow-600' : 'text-gray-600'}`}>
-                                    {doc.verification_status === 'verified' ? 'Verificado' : doc.verification_status === 'partial' ? 'Parcial' : 'No verificado'}
-                                  </span>
-                                </span>
-                                <span>Procesado: {new Date(doc.processing_date).toLocaleDateString('es-AR')}</span>
-                              </div>
-                            </div>
-                            <div className="flex space-x-2 ml-4">
-                              {doc.official_url && (
-                                <a
-                                  href={doc.official_url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="p-2 text-gray-500 hover:text-gray-700"
-                                  title="Fuente oficial"
-                                >
-                                  <ExternalLink className="h-4 w-4" />
-                                </a>
-                              )}
-                              {doc.archive_url && (
-                                <a
-                                  href={doc.archive_url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="p-2 text-gray-500 hover:text-gray-700"
-                                  title="Archivo web"
-                                >
-                                  <Database className="h-4 w-4" />
-                                </a>
-                              )}
-                              <button
-                                className="p-2 text-gray-500 hover:text-gray-700"
-                                title="Descargar"
-                              >
-                                <Download className="h-4 w-4" />
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))
-            ) : (
-              <div className="px-6 py-12 text-center">
-                <FileText className="mx-auto h-12 w-12 text-gray-400" />
-                <h3 className="mt-2 text-sm font-medium text-gray-900">No se encontraron documentos</h3>
-                <p className="mt-1 text-sm text-gray-500">
-                  No hay documentos que coincidan con los filtros seleccionados.
-                </p>
+          {stats && (
+            <div className="text-right">
+              <div className="text-4xl font-bold">{stats.total_documents}</div>
+              <div className="text-blue-100">Documentos Totales</div>
+              <div className="text-sm text-blue-200 mt-1">
+                Score: {stats.transparency_score}% | {stats.year_range}
               </div>
-            )}
+            </div>
+          )}
+        </div>
+
+        {stats && (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+            <div className="text-center">
+              <div className="text-2xl font-bold">{stats.verified_documents}</div>
+              <div className="text-blue-100 text-sm">Verificados</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold">{stats.years_covered}</div>
+              <div className="text-blue-100 text-sm">Años</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold">{stats.categories_count}</div>
+              <div className="text-blue-100 text-sm">Categorías</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold">{stats.total_file_size_mb.toFixed(0)} MB</div>
+              <div className="text-blue-100 text-sm">Tamaño Total</div>
+            </div>
           </div>
+        )}
+      </div>
+
+      {/* Data Sources Info */}
+      {stats?.data_sources && (
+        <div className="bg-white rounded-lg border border-gray-200 p-6 mb-6">
+          <h2 className="text-xl font-semibold mb-4 flex items-center">
+            <Database className="w-5 h-5 mr-2 text-blue-600" />
+            Fuentes de Datos Integradas
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-blue-50 rounded-lg p-4">
+              <div className="flex items-center space-x-2 mb-2">
+                <Globe className="w-4 h-4 text-blue-600" />
+                <span className="font-medium">Sitio Oficial</span>
+              </div>
+              <div className="text-sm text-gray-600">
+                {stats.data_sources.live_scrape_count} documentos descargados directamente
+              </div>
+            </div>
+            
+            <div className="bg-green-50 rounded-lg p-4">
+              <div className="flex items-center space-x-2 mb-2">
+                <FileText className="w-4 h-4 text-green-600" />
+                <span className="font-medium">Documentos Procesados</span>
+              </div>
+              <div className="text-sm text-gray-600">
+                {stats.data_sources.markdown_count} documentos en formato markdown
+              </div>
+            </div>
+            
+            <div className="bg-purple-50 rounded-lg p-4">
+              <div className="flex items-center space-x-2 mb-2">
+                <BarChart3 className="w-4 h-4 text-purple-600" />
+                <span className="font-medium">API Backend</span>
+              </div>
+              <div className="text-sm text-gray-600">
+                {stats.data_sources.api_count} documentos vía API
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Filters */}
+      <div className="bg-white rounded-lg border border-gray-200 p-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Buscar Documentos
+            </label>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full"
+                placeholder="Buscar por título o categoría..."
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Año
+            </label>
+            <select
+              value={selectedYear}
+              onChange={(e) => setSelectedYear(e.target.value === 'all' ? 'all' : parseInt(e.target.value))}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="all">Todos los años</option>
+              {availableYears.map(year => (
+                <option key={year} value={year}>{year}</option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Categoría
+            </label>
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="all">Todas las categorías</option>
+              {availableCategories.map(category => (
+                <option key={category} value={category}>{category}</option>
+              ))}
+            </select>
+          </div>
+
+          <div className="flex items-end">
+            <button
+              onClick={() => {
+                setSelectedYear('all');
+                setSelectedCategory('all');
+                setSearchTerm('');
+              }}
+              className="w-full px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 flex items-center justify-center"
+            >
+              <Filter className="w-4 h-4 mr-2" />
+              Limpiar Filtros
+            </button>
+          </div>
+        </div>
+
+        <div className="mt-4 text-sm text-gray-600">
+          Mostrando {filteredDocuments.length} de {documents.length} documentos
         </div>
       </div>
 
-      {/* Document Viewer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden" style={{ height: '80vh' }}>
-          <DocumentViewer 
-            documents={filteredDocuments} 
-            selectedSources={selectedSources}
-            onSourceChange={handleSourceChange}
-          />
-        </div>
+      {/* Documents Grid */}
+      <div className="grid grid-cols-1 gap-4">
+        {filteredDocuments.map((document) => (
+          <motion.div
+            key={document.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-200 cursor-pointer"
+            onClick={() => handleDocumentSelect(document)}
+          >
+            <div className="p-6">
+              <div className="flex items-start justify-between">
+                <div className="flex items-start space-x-4 flex-1">
+                  <div className="flex-shrink-0">
+                    {getDocumentTypeIcon(document.document_type)}
+                  </div>
+                  
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <h3 className="text-lg font-semibold text-gray-900">
+                        {document.title}
+                      </h3>
+                      <span className={`px-2 py-1 text-xs rounded-full ${getDocumentTypeBadge(document.document_type)}`}>
+                        {document.document_type.replace('_', ' ')}
+                      </span>
+                      {document.verification_status === 'verified' && (
+                        <CheckCircle className="w-4 h-4 text-green-600" />
+                      )}
+                    </div>
+                    
+                    <div className="flex items-center space-x-4 text-sm text-gray-600 mb-3">
+                      <span className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        {document.year}
+                      </span>
+                      <span>{document.category}</span>
+                      <span>{document.file_size_mb.toFixed(1)} MB</span>
+                    </div>
+
+                    <div className="flex items-center space-x-2">
+                      <span className="text-xs text-gray-500">Fuentes:</span>
+                      {document.data_sources.slice(0, 3).map((source, index) => (
+                        <span 
+                          key={index}
+                          className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                        >
+                          {source.includes('transparency') ? 'Oficial' : 
+                           source.includes('live_scrape') ? 'Descarga' :
+                           source.includes('markdown') ? 'Procesado' : 'API'}
+                        </span>
+                      ))}
+                      {document.data_sources.length > 3 && (
+                        <span className="text-xs text-gray-500">
+                          +{document.data_sources.length - 3}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-2 ml-4">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(document.direct_pdf_url, '_blank');
+                    }}
+                    className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg"
+                    title="Ver PDF"
+                  >
+                    <Eye className="w-4 h-4" />
+                  </button>
+                  
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(document.official_url, '_blank');
+                    }}
+                    className="p-2 text-green-600 hover:bg-green-50 rounded-lg"
+                    title="Sitio oficial"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </button>
+
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedDocument(document);
+                      setViewMode('comparison');
+                    }}
+                    className="p-2 text-purple-600 hover:bg-purple-50 rounded-lg"
+                    title="Comparar datos"
+                  >
+                    <BarChart3 className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
+
+      {filteredDocuments.length === 0 && (
+        <div className="text-center py-12">
+          <FileText className="mx-auto w-16 h-16 text-gray-400 mb-4" />
+          <h3 className="text-lg font-medium text-gray-900 mb-2">
+            No se encontraron documentos
+          </h3>
+          <p className="text-gray-500">
+            Intenta ajustar los filtros de búsqueda
+          </p>
+        </div>
+      )}
     </div>
   );
 };

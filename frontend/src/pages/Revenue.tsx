@@ -26,7 +26,6 @@ const Revenue: React.FC = () => {
   const [activeTab, setActiveTab] = useState('resumen');
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   const [revenueData, setRevenueData] = useState<FeeRight[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -37,7 +36,7 @@ const Revenue: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await ApiService.getFeesRights(parseInt(year), selectedSources);
+      const data = await ApiService.getFeesRights(parseInt(year));
       setRevenueData(data);
     } catch (err) {
       console.error('Failed to load revenue data for year:', year, err);
@@ -48,10 +47,14 @@ const Revenue: React.FC = () => {
     }
   };
 
-  // Load revenue data when year or sources change
+  // Load revenue data when year changes
   useEffect(() => {
     void loadRevenueDataForYear(activeYear);
-  }, [activeYear, selectedSources]);
+  }, [activeYear]);
+
+  const handleDataRefresh = () => {
+    loadRevenueDataForYear(activeYear);
+  };
 
   // Transform API data for display
   const transformedRevenueData = revenueData.map((fee, index) => ({
@@ -65,53 +68,24 @@ const Revenue: React.FC = () => {
     revenue: fee.revenue,
     efficiency: fee.collection_efficiency,
     color: ['#0056b3', '#28a745', '#ffc107', '#dc3545', '#20c997', '#6f42c1'][index % 6] || '#fd7e14',
-    source: revenueDataSources[0],
+    source: revenueDataSources.length > 0 ? revenueDataSources[0] : 'Unknown Source',
     lastVerified: new Date().toISOString()
   }));
 
-  // Calculate totals first
+  // Calculate aggregated data
   const totalRevenue = revenueData.reduce((sum, fee) => sum + fee.revenue, 0);
-  const totalEfficiency = revenueData.length > 0 
+  const avgEfficiency = revenueData.length > 0 
     ? revenueData.reduce((sum, fee) => sum + fee.collection_efficiency, 0) / revenueData.length 
     : 0;
 
-  // Calculate aggregated data
-  const aggregatedData = {
-    totalRevenue,
-    totalEfficiency,
-    revenuesBySource: transformedRevenueData,
-    monthlyRevenue: Array.from({ length: 12 }, (_, i) => {
-      const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
-      const monthlyTotal = Math.round(totalRevenue / 12 * (1 + (Math.random() - 0.5) * 0.2));
-      return {
-        month: months[i],
-        name: months[i],
-        value: monthlyTotal,
-        amount: monthlyTotal,
-        actual: monthlyTotal,
-        projected: monthlyTotal,
-        source: revenueDataSources[0],
-        lastVerified: new Date().toISOString()
-      };
-    }),
-    revenueBySource: transformedRevenueData,
-    trends: {
-      year: parseInt(activeYear),
-      totalRevenue: totalRevenue,
-      growth: (parseInt(activeYear) - 2023) * 12.8,
-      projectedNext: Math.round(totalRevenue * 1.15),
-      source: revenueDataSources[0],
-      lastVerified: new Date().toISOString()
-    }
-  };
-
-  const filteredRevenue = transformedRevenueData.filter((revenue) => {
-    const matchesSearch = searchTerm === '' || 
-      revenue.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      revenue.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesFilter = activeFilter === 'all' || revenue.category === activeFilter;
-    return matchesSearch && matchesFilter;
-  });
+  const filteredRevenue = transformedRevenueData
+    .filter((revenue) => {
+      const matchesSearch = searchTerm === '' || 
+        revenue.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        revenue.category.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesFilter = activeFilter === 'all' || revenue.category === activeFilter;
+      return matchesSearch && matchesFilter;
+    });
 
   if (loading) {
     return (
@@ -183,9 +157,7 @@ const Revenue: React.FC = () => {
           {/* Data Source Selector */}
           <div className="mt-6">
             <DataSourceSelector
-              selectedSources={selectedSources}
-              onSourceChange={setSelectedSources}
-              onDataRefresh={() => loadRevenueDataForYear(activeYear)}
+              onDataRefresh={handleDataRefresh}
               className="max-w-4xl mx-auto"
             />
           </div>

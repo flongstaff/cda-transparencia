@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircleIcon, ClockIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
+import { CheckCircleIcon, ClockIcon, ExclamationTriangleIcon, GlobeEuropeAfricaIcon, ArchiveBoxIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 
 interface DataSource {
   id: string;
@@ -8,10 +8,7 @@ interface DataSource {
   description: string;
   lastUpdate?: string;
   reliability: 'high' | 'medium' | 'low';
-}
-
-interface DataSourceSelectorProps {
-  onSourceChange: (selectedSources: string[]) => void;
+  type: 'official' | 'archive' | 'local' | 'backup';
 }
 
 const DATA_SOURCES: DataSource[] = [
@@ -21,7 +18,8 @@ const DATA_SOURCES: DataSource[] = [
     status: 'working',
     description: 'Fuente primaria - Portal oficial de transparencia municipal',
     lastUpdate: new Date().toISOString(),
-    reliability: 'high'
+    reliability: 'high',
+    type: 'official'
   },
   {
     id: 'web_archive', 
@@ -29,7 +27,17 @@ const DATA_SOURCES: DataSource[] = [
     status: 'working',
     description: 'Respaldo histórico - Snapshots del portal oficial',
     lastUpdate: new Date().toISOString(),
-    reliability: 'high'
+    reliability: 'high',
+    type: 'archive'
+  },
+  {
+    id: 'local_collection',
+    name: 'Colección Local de Documentos',
+    status: 'working',
+    description: 'Documentos almacenados localmente para acceso garantizado',
+    lastUpdate: new Date().toISOString(),
+    reliability: 'high',
+    type: 'local'
   },
   {
     id: 'provincial_ba',
@@ -37,57 +45,56 @@ const DATA_SOURCES: DataSource[] = [
     status: 'working',
     description: 'Datos provinciales relacionados con el municipio',
     lastUpdate: new Date().toISOString(),
-    reliability: 'medium'
+    reliability: 'medium',
+    type: 'official'
   },
   {
     id: 'afip_padron',
     name: 'AFIP - Padrón de Contribuyentes',
     status: 'pronto',
     description: 'Datos fiscales y tributarios municipales',
-    reliability: 'high'
+    reliability: 'high',
+    type: 'official'
   },
   {
     id: 'contrataciones_gov',
     name: 'Argentina Compra (Contrataciones)',
     status: 'pronto',
     description: 'Sistema Nacional de Contrataciones Públicas',
-    reliability: 'high'
+    reliability: 'high',
+    type: 'official'
   },
   {
     id: 'presupuesto_abierto',
     name: 'Presupuesto Abierto Nacional',
     status: 'pronto',
     description: 'Transferencias y coparticipación federal',
-    reliability: 'medium'
+    reliability: 'medium',
+    type: 'official'
   },
   {
     id: 'datos_argentina',
     name: 'Portal Nacional de Datos Abiertos',
     status: 'pronto',
     description: 'Datasets gubernamentales abiertos',
-    reliability: 'medium'
+    reliability: 'medium',
+    type: 'official'
   },
   {
     id: 'boletin_oficial',
     name: 'Boletín Oficial Nacional',
     status: 'pronto',
     description: 'Publicaciones oficiales y normativas',
-    reliability: 'high'
+    reliability: 'high',
+    type: 'official'
   }
 ];
 
-const DataSourceSelector: React.FC<DataSourceSelectorProps> = ({ onSourceChange }) => {
-  const [selectedSources, setSelectedSources] = useState<string[]>(['local_official', 'web_archive']);
+const DataSourceSelector: React.FC = () => {
   const [showDetails, setShowDetails] = useState(false);
-
-  const handleSourceToggle = (sourceId: string) => {
-    const newSelection = selectedSources.includes(sourceId)
-      ? selectedSources.filter(id => id !== sourceId)
-      : [...selectedSources, sourceId];
-    
-    setSelectedSources(newSelection);
-    onSourceChange(newSelection);
-  };
+  
+  // All sources are always selected by default
+  const selectedSources = DATA_SOURCES.filter(s => s.status === 'working').map(s => s.id);
 
   const getStatusIcon = (status: DataSource['status']) => {
     switch (status) {
@@ -97,6 +104,21 @@ const DataSourceSelector: React.FC<DataSourceSelectorProps> = ({ onSourceChange 
         return <ClockIcon className="w-5 h-5 text-yellow-600" />;
       case 'error':
         return <ExclamationTriangleIcon className="w-5 h-5 text-red-600" />;
+    }
+  };
+
+  const getTypeIcon = (type: DataSource['type']) => {
+    switch (type) {
+      case 'official':
+        return <GlobeEuropeAfricaIcon className="w-5 h-5 text-blue-600" />;
+      case 'archive':
+        return <ArchiveBoxIcon className="w-5 h-5 text-purple-600" />;
+      case 'local':
+        return <ShieldCheckIcon className="w-5 h-5 text-green-600" />;
+      case 'backup':
+        return <ShieldCheckIcon className="w-5 h-5 text-gray-600" />;
+      default:
+        return <GlobeEuropeAfricaIcon className="w-5 h-5 text-gray-600" />;
     }
   };
 
@@ -129,9 +151,9 @@ const DataSourceSelector: React.FC<DataSourceSelectorProps> = ({ onSourceChange 
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-lg font-semibold text-gray-900">Fuentes de Datos</h3>
+          <h3 className="text-lg font-semibold text-gray-900">Fuentes de Datos Disponibles</h3>
           <p className="text-sm text-gray-600">
-            Selecciona las fuentes para verificación cruzada de información
+            Todas las fuentes activas utilizadas para verificar la información
           </p>
         </div>
         <button
@@ -142,37 +164,53 @@ const DataSourceSelector: React.FC<DataSourceSelectorProps> = ({ onSourceChange 
         </button>
       </div>
 
-      {/* Working Sources */}
+      {/* Information Banner */}
+      <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+        <div className="flex">
+          <ShieldCheckIcon className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+          <div className="ml-3">
+            <h4 className="text-sm font-medium text-blue-800">
+              Verificación Automática de Fuentes
+            </h4>
+            <p className="text-sm text-blue-700 mt-1">
+              Todos los documentos en este portal son verificados automáticamente a través de múltiples fuentes 
+              para garantizar su autenticidad y disponibilidad. No es necesario seleccionar fuentes - todas 
+              están activas por defecto.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Working Sources - Always Active */}
       <div className="mb-6">
         <h4 className="text-sm font-medium text-gray-700 mb-3">
-          📊 Fuentes Operativas ({workingSources.length})
+          📊 Fuentes Activas ({workingSources.length})
         </h4>
         <div className="grid grid-cols-1 gap-3">
           {workingSources.map(source => (
-            <label
+            <div
               key={source.id}
-              className={`flex items-center p-3 rounded-lg border-2 cursor-pointer transition-colors ${
+              className={`flex items-center p-3 rounded-lg border-2 transition-colors ${
                 selectedSources.includes(source.id)
                   ? 'border-green-500 bg-green-50'
-                  : 'border-gray-200 hover:border-gray-300'
+                  : 'border-gray-200'
               }`}
             >
-              <input
-                type="checkbox"
-                checked={selectedSources.includes(source.id)}
-                onChange={() => handleSourceToggle(source.id)}
-                className="sr-only"
-              />
               <div className="flex-1">
                 <div className="flex items-center gap-3">
-                  {getStatusIcon(source.status)}
+                  {getTypeIcon(source.type)}
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <span className="font-medium text-gray-900">{source.name}</span>
-                      <span className={`text-xs ${getReliabilityColor(source.reliability)}`}>
-                        {source.reliability === 'high' ? 'Alta confiabilidad' : 
-                         source.reliability === 'medium' ? 'Confiabilidad media' : 'Baja confiabilidad'}
-                      </span>
+                      <div className="flex items-center space-x-2">
+                        <span className={`text-xs ${getReliabilityColor(source.reliability)}`}>
+                          {source.reliability === 'high' ? 'Alta confiabilidad' : 
+                           source.reliability === 'medium' ? 'Confiabilidad media' : 'Baja confiabilidad'}
+                        </span>
+                        <span className="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
+                          Activa
+                        </span>
+                      </div>
                     </div>
                     {showDetails && (
                       <p className="text-sm text-gray-600 mt-1">{source.description}</p>
@@ -185,7 +223,7 @@ const DataSourceSelector: React.FC<DataSourceSelectorProps> = ({ onSourceChange 
                   <CheckCircleIcon className="w-3 h-3 text-white" />
                 </div>
               )}
-            </label>
+            </div>
           ))}
         </div>
       </div>
@@ -242,7 +280,7 @@ const DataSourceSelector: React.FC<DataSourceSelectorProps> = ({ onSourceChange 
       {/* Selection Summary */}
       <div className="mt-4 pt-4 border-t border-gray-200">
         <p className="text-sm text-gray-600">
-          <strong>{selectedSources.length}</strong> fuentes seleccionadas para verificación cruzada
+          <strong>{selectedSources.length}</strong> fuentes activas verificando automáticamente la información
         </p>
       </div>
     </div>

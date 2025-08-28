@@ -17,7 +17,6 @@ const Investments: React.FC = () => {
   const [investmentData, setInvestmentData] = useState<InvestmentAsset[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   
   const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017'];
 
@@ -25,7 +24,7 @@ const Investments: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await ApiService.getInvestmentsAssets(parseInt(year), selectedSources);
+      const data = await ApiService.getInvestmentsAssets(parseInt(year));
       setInvestmentData(data);
     } catch (err) {
       console.error('Failed to load investment data for year:', year, err);
@@ -36,14 +35,10 @@ const Investments: React.FC = () => {
     }
   };
 
-  // Load investment data when year or sources change
+  // Load investment data when year changes
   useEffect(() => {
     void loadInvestmentDataForYear(activeYear);
-  }, [activeYear, selectedSources]);
-
-  const handleSourceChange = (newSelectedSources: string[]) => {
-    setSelectedSources(newSelectedSources);
-  };
+  }, [activeYear]);
 
   const handleDataRefresh = () => {
     loadInvestmentDataForYear(activeYear);
@@ -147,8 +142,6 @@ const Investments: React.FC = () => {
         {/* Data Source Selector */}
         <div className="mb-6">
           <DataSourceSelector
-            selectedSources={selectedSources}
-            onSourceChange={handleSourceChange}
             onDataRefresh={handleDataRefresh}
             className="max-w-4xl mx-auto"
           />

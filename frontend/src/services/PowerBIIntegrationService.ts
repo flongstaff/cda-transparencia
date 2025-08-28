@@ -267,8 +267,8 @@ class PowerBIIntegrationService {
   }> {
     let matches = 0;
     const discrepancies = [];
-    let missingInLocal: any[] = [];
-    let missingInPowerBI: any[] = [];
+    const missingInLocal: any[] = [];
+    const missingInPowerBI: any[] = [];
     
     // Extract comparable data from PowerBI
     const powerBIFinancial = powerBIData.tables.find(t => t.name === 'FinancialData');
@@ -402,9 +402,10 @@ class PowerBIIntegrationService {
         case 'json':
           return new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
         
-        case 'csv':
+        case 'csv': {
           const csv = this.convertToCSV(data.tables);
           return new Blob([csv], { type: 'text/csv' });
+        }
         
         case 'excel':
           // Would implement Excel export here

@@ -117,6 +117,8 @@ const Header: React.FC = () => {
     { name: 'Salarios', href: '/salaries' },
     { name: 'Base de Datos', href: '/database' },
     { name: 'Documentos', href: '/documents' },
+    { name: 'Power BI', href: '/powerbi-data' },
+    { name: 'Historial', href: '/financial-history' },
     { name: 'Integridad', href: '/data-integrity' },
     { name: 'Informes', href: '/reports' },
     { name: 'Contacto', href: '/contact' },

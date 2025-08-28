@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { Download, Search, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, Building, DollarSign, ShieldCheck, Loader2 } from 'lucide-react';
+import { Download, Search, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, Building, DollarSign, ShieldCheck, Loader2, ExternalLink, Database, Info, Users, BarChart3 } from 'lucide-react';
 import ValidatedChart from '../components/ValidatedChart';
 import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
 import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import YearlySummaryDashboard from '../components/dashboard/YearlySummaryDashboard';
-import OSINTComplianceService from '../services/OSINTComplianceService';
+import ComprehensiveDataService, { DocumentLink } from '../services/ComprehensiveDataService';
 import ApiService, { PublicTender } from '../services/ApiService';
+import CarmenArecoPowerBIService from '../services/CarmenArecoPowerBIService';
 
 // Data sources for validation
 const contractsDataSources = OSINTComplianceService.getCrossValidationSources('contracts').map(s => s.url);
@@ -20,7 +21,6 @@ const Contracts: React.FC = () => {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [filterStatus, setFilterStatus] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   const [tenders, setTenders] = useState<PublicTender[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -31,7 +31,7 @@ const Contracts: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await ApiService.getPublicTenders(parseInt(activeYear), selectedSources);
+      const data = await ApiService.getPublicTenders(parseInt(activeYear));
       setTenders(data);
     } catch (err) {
       console.error('Failed to fetch public tenders:', err);
@@ -41,12 +41,12 @@ const Contracts: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  }, [activeYear, selectedSources]);
+  }, [activeYear]);
 
-  // Fetch tenders data when year or sources change
+  // Fetch tenders data when year changes
   useEffect(() => {
     void fetchTenders();
-  }, [activeYear, selectedSources, fetchTenders]);
+  }, [activeYear, fetchTenders]);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('es-AR', {
@@ -250,9 +250,7 @@ const Contracts: React.FC = () => {
         {/* Data Source Selector */}
         <div className="mb-6">
           <DataSourceSelector
-            selectedSources={selectedSources}
-            onSourceChange={setSelectedSources}
-            onDataRefresh={fetchTenders}
+            onDataRefresh={handleDataRefresh}
             className="max-w-4xl mx-auto"
           />
         </div>

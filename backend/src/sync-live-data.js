@@ -4,6 +4,13 @@ const fs = require('fs').promises;
 const path = require('path');
 const { Sequelize } = require('sequelize');
 
+// Basic Logger
+const logger = {
+  info: (...args) => console.log('[INFO]', ...args),
+  warn: (...args) => console.warn('[WARN]', ...args),
+  error: (...args) => console.error('[ERROR]', ...args),
+};
+
 // Database configuration
 const sequelize = new Sequelize({
   dialect: 'postgres',
@@ -16,36 +23,7 @@ const sequelize = new Sequelize({
 });
 
 // Official data sources for Carmen de Areco
-const DATA_SOURCES = {
-  // Municipal transparency portal
-  TRANSPARENCY_PORTAL: {
-    base_url: 'https://www.carmensdeareco.gov.ar/transparencia',
-    endpoints: {
-      salaries: '/sueldos',
-      expenses: '/gastos',
-      contracts: '/contrataciones',
-      budget: '/presupuesto'
-    }
-  },
-  
-  // Provincial transparency systems
-  PROVINCIAL_SYSTEM: {
-    base_url: 'https://www.gba.gob.ar/transparencia',
-    municipalities: '/municipios/carmen-de-areco'
-  },
-  
-  // National transparency portal
-  NATIONAL_PORTAL: {
-    base_url: 'https://www.argentina.gob.ar/jefatura/transparencia',
-    municipal_data: '/datos-municipales'
-  },
-  
-  // Official gazette and bulletins
-  OFFICIAL_BULLETIN: {
-    base_url: 'https://www.gba.gob.ar/boletin_oficial',
-    search: '/buscar'
-  }
-};
+const DATA_SOURCES = require('./config/data-sources');
 
 // Investigation timeframe (2009-2025)
 const INVESTIGATION_PERIOD = {
@@ -75,8 +53,8 @@ class LiveDataSynchronizer {
   }
 
   async syncAllSources() {
-    console.log('Starting live data synchronization for Carmen de Areco investigation...');
-    console.log(`Investigation period: ${INVESTIGATION_PERIOD.START_YEAR}-${INVESTIGATION_PERIOD.END_YEAR}`);
+    logger.info('Starting live data synchronization for Carmen de Areco investigation...');
+    logger.info(`Investigation period: ${INVESTIGATION_PERIOD.START_YEAR}-${INVESTIGATION_PERIOD.END_YEAR}`);
     
     try {
       // Sync transparency portal data
@@ -97,7 +75,7 @@ class LiveDataSynchronizer {
       return this.syncStats;
       
     } catch (error) {
-      console.error('Sync failed:', error);
+      logger.error('Sync failed:', error);
       this.syncStats.errors.push({
         source: 'general',
         error: error.message,
@@ -108,7 +86,7 @@ class LiveDataSynchronizer {
   }
 
   async syncTransparencyPortal() {
-    console.log('Syncing municipal transparency portal...');
+    logger.info('Syncing municipal transparency portal...');
     this.syncStats.sources_checked++;
     
     try {
@@ -127,11 +105,11 @@ class LiveDataSynchronizer {
           await this.processSectionData(section);
         }
         
-        console.log(`Found ${sections.length} transparency sections`);
+        logger.info(`Found ${sections.length} transparency sections`);
       }
       
     } catch (error) {
-      console.error('Error syncing transparency portal:', error.message);
+      logger.error('Error syncing transparency portal:', error.message);
       this.syncStats.errors.push({
         source: 'transparency_portal',
         error: error.message,
@@ -144,6 +122,7 @@ class LiveDataSynchronizer {
     const sections = [];
     
     // Look for common transparency section patterns
+    // TODO: Implement more robust HTML parsing and selector logic to handle website structure changes
     const sectionSelectors = [
       'a[href*="transparencia"]',
       'a[href*="presupuesto"]',
@@ -188,7 +167,7 @@ class LiveDataSynchronizer {
 
   async processSectionData(section) {
     try {
-      console.log(`Processing section: ${section.title}`);
+      logger.info(`Processing section: ${section.title}`);
       
       const response = await this.httpClient.get(section.url);
       
@@ -216,7 +195,7 @@ class LiveDataSynchronizer {
       }
       
     } catch (error) {
-      console.error(`Error processing section ${section.title}:`, error.message);
+      logger.error(`Error processing section ${section.title}:`, error.message);
       this.syncStats.errors.push({
         source: section.url,
         error: error.message,
@@ -227,6 +206,7 @@ class LiveDataSynchronizer {
 
   findDownloadableFiles($, baseUrl) {
     const files = [];
+    // TODO: Implement more robust file discovery, e.g., by content type or by crawling sub-pages
     const fileSelectors = [
       'a[href$=".pdf"]',
       'a[href$=".xlsx"]', 
@@ -260,7 +240,7 @@ class LiveDataSynchronizer {
 
   extractDataTables($) {
     const tables = [];
-    
+    // TODO: Implement more robust table extraction, e.g., handling merged cells or complex layouts
     $('table').each((i, table) => {
       const $table = $(table);
       const headers = [];
@@ -295,7 +275,7 @@ class LiveDataSynchronizer {
   }
 
   extractYear(text) {
-    const yearMatch = text.match(/20(0[9]|1[0-9]|2[0-5])/);
+    const yearMatch = text.match(/(20\d{2})/);
     return yearMatch ? parseInt(yearMatch[0]) : null;
   }
 
@@ -450,7 +430,7 @@ class LiveDataSynchronizer {
       this.syncStats.records_synchronized++;
       
     } catch (error) {
-      console.error('Error saving data source:', error);
+      logger.error('Error saving data source:', error);
       throw error;
     }
   }
@@ -478,16 +458,16 @@ class LiveDataSynchronizer {
     // Save report to database
     await this.saveSyncReport(report);
     
-    console.log('\n=== SYNC REPORT ===');
-    console.log(`Sources checked: ${this.syncStats.sources_checked}`);
-    console.log(`Documents found: ${this.syncStats.documents_found}`);
-    console.log(`Records synchronized: ${this.syncStats.records_synchronized}`);
-    console.log(`Errors: ${this.syncStats.errors.length}`);
+    logger.info('\n=== SYNC REPORT ===');
+    logger.info(`Sources checked: ${this.syncStats.sources_checked}`);
+    logger.info(`Documents found: ${this.syncStats.documents_found}`);
+    logger.info(`Records synchronized: ${this.syncStats.records_synchronized}`);
+    logger.info(`Errors: ${this.syncStats.errors.length}`);
     
     if (this.syncStats.errors.length > 0) {
-      console.log('\nErrors:');
+      logger.info('Errors:');
       this.syncStats.errors.forEach(error => {
-        console.log(`- ${error.source}: ${error.error}`);
+        logger.info(`- ${error.source}: ${error.error}`);
       });
     }
     
@@ -543,7 +523,7 @@ class LiveDataSynchronizer {
       });
       
     } catch (error) {
-      console.error('Error saving sync report:', error);
+      logger.error('Error saving sync report:', error);
     }
   }
 }
@@ -558,6 +538,62 @@ async function main() {
     
     const result = await synchronizer.syncAllSources();
     console.log('Synchronization completed successfully');
+    
+    return result;
+    
+  } catch (error) {
+    console.error('Synchronization failed:', error);
+    process.exit(1);
+  }
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = LiveDataSynchronizer; LiveDataSynchronizer;) {
+  main();
+}
+
+module.exports = LiveDataSynchronizer;zation completed successfully');
+    
+    return result;
+    
+  } catch (error) {
+    console.error('Synchronization failed:', error);
+    process.exit(1);
+  }
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = LiveDataSynchronizer; (error) {
+    console.error('Synchronization failed:', error);
+    process.exit(1);
+  }
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = LiveDataSynchronizer;zation completed successfully');
+    
+    return result;
+    
+  } catch (error) {
+    console.error('Synchronization failed:', error);
+    process.exit(1);
+  }
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = LiveDataSynchronizer;zation completed successfully');
     
     return result;
     

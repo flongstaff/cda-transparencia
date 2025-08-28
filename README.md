@@ -20,7 +20,7 @@ Análisis integral de 15 años de gestión municipal para identificar:
 
 - **433** registros de datos activos
 - **17** años de cobertura (2009-2025)
-- **3** fuentes de datos integradas
+- **4** fuentes de datos integradas (incluyendo Power BI)
 - **4/6** endpoints operacionales
 - **1,381** documentos archivados totales
 
@@ -28,6 +28,20 @@ Análisis integral de 15 años de gestión municipal para identificar:
 
 - **Frontend:** React + TypeScript + Vite
 - **Backend:** Node.js + Express API
+
+## 🔍 Extracción de Datos de Power BI
+
+El portal incluye un sistema automatizado para extraer datos del dashboard de Power BI del municipio:
+
+- **Extracción automatizada** de datos financieros
+- **Interfaz web** para visualizar y comparar datos
+- **API** para integración con otros sistemas
+- **Documentación** completa en [`docs/powerbi-extraction.md`](docs/powerbi-extraction.md)
+
+Para ejecutar la extracción:
+```bash
+python scripts/run_powerbi_extraction.py
+```
 - **Base de Datos:** PostgreSQL (Docker)
 - **Procesamiento de Datos:** Python scripts para Excel/PDF
 - **Despliegue:** GitHub Pages + GitHub Actions

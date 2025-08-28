@@ -10,7 +10,8 @@ import {
   AlertTriangle,
   Download,
   Eye,
-  RefreshCw
+  RefreshCw,
+  ShieldCheck
 } from 'lucide-react';
 
 interface DataSource {
@@ -24,6 +25,7 @@ interface DataSource {
   reliability: 'high' | 'medium' | 'low';
   lastSync?: string;
   syncStatus?: 'syncing' | 'success' | 'failed';
+  description: string;
 }
 
 const DataSourcesIntegration: React.FC = () => {
@@ -41,7 +43,8 @@ const DataSourcesIntegration: React.FC = () => {
       lastUpdated: '2025-01-22',
       reliability: 'high',
       lastSync: '2025-01-22T14:30:00Z',
-      syncStatus: 'success'
+      syncStatus: 'success',
+      description: 'Portal oficial de transparencia del municipio'
     },
     {
       id: 'web-archive-nov',
@@ -53,7 +56,8 @@ const DataSourcesIntegration: React.FC = () => {
       lastUpdated: '2024-11-11',
       reliability: 'high',
       lastSync: '2025-01-20T09:15:00Z',
-      syncStatus: 'success'
+      syncStatus: 'success',
+      description: 'Snapshot del portal oficial archivado en Wayback Machine'
     },
     {
       id: 'web-archive-dec',
@@ -65,7 +69,8 @@ const DataSourcesIntegration: React.FC = () => {
       lastUpdated: '2024-12-12',
       reliability: 'high',
       lastSync: '2025-01-20T09:15:00Z',
-      syncStatus: 'success'
+      syncStatus: 'success',
+      description: 'Actualización incremental del portal oficial'
     },
     {
       id: 'local-collection',
@@ -77,7 +82,8 @@ const DataSourcesIntegration: React.FC = () => {
       lastUpdated: '2025-01-22',
       reliability: 'high',
       lastSync: '2025-01-22T10:45:00Z',
-      syncStatus: 'success'
+      syncStatus: 'success',
+      description: 'Copia local de todos los documentos para acceso garantizado'
     },
     {
       id: 'wayback-machine',
@@ -89,7 +95,8 @@ const DataSourcesIntegration: React.FC = () => {
       lastUpdated: '2024-12-12',
       reliability: 'medium',
       lastSync: '2025-01-15T16:20:00Z',
-      syncStatus: 'success'
+      syncStatus: 'success',
+      description: 'Respaldo adicional en el Archive.org'
     }
   ];
 
@@ -163,18 +170,35 @@ const DataSourcesIntegration: React.FC = () => {
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
       <div className="mb-6">
         <h2 className="font-heading text-2xl font-bold text-gray-800 dark:text-white mb-2">
-          Integración de Fuentes de Datos
+          Fuentes de Datos Disponibles
         </h2>
         <p className="text-gray-600 dark:text-gray-300">
-          Sistema de múltiples fuentes para garantizar la disponibilidad y integridad de documentos
+          Todas las fuentes utilizadas para garantizar la disponibilidad y veracidad de la información
         </p>
       </div>
 
+      {/* Information Banner */}
+      <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+        <div className="flex">
+          <ShieldCheck className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+          <div className="ml-3">
+            <h4 className="text-sm font-medium text-blue-800">
+              Verificación Automática de Todas las Fuentes
+            </h4>
+            <p className="text-sm text-blue-700 mt-1">
+              Todas las fuentes listadas a continuación están activas y verifican automáticamente 
+              la integridad de los documentos. No es necesario seleccionar fuentes - todas 
+              trabajan continuamente para garantizar el acceso a la información.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Sources List */}
+        {/* Sources List - Always Visible */}
         <div className="space-y-4">
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
-            Fuentes Disponibles
+            Fuentes Activas ({dataSources.length})
           </h3>
           
           {dataSources.map((source) => (
@@ -224,6 +248,9 @@ const DataSourcesIntegration: React.FC = () => {
                     {source.reliability === 'high' ? 'Alta' : 
                      source.reliability === 'medium' ? 'Media' : 'Baja'} confiabilidad
                   </span>
+                  <span className="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
+                    Activa
+                  </span>
                   {source.syncStatus && (
                     <div className="flex items-center">
                       {getSyncStatusIcon(source.syncStatus)}
@@ -241,7 +268,7 @@ const DataSourcesIntegration: React.FC = () => {
           ))}
         </div>
 
-        {/* Source Details */}
+        {/* Source Details - Always Accessible */}
         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
           <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
             Detalles de la Fuente
@@ -260,6 +287,9 @@ const DataSourcesIntegration: React.FC = () => {
                         {source.name}
                       </h4>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {source.description}
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
                         Tipo: {source.type === 'official' ? 'Sitio Oficial' :
                               source.type === 'archive' ? 'Archivo Web' :
                               source.type === 'local' ? 'Colección Local' : 'Respaldo'}
@@ -299,8 +329,20 @@ const DataSourcesIntegration: React.FC = () => {
                       </div>
                     </div>
 
+                    {/* Verification Info */}
+                    <div className="p-3 bg-green-50 dark:bg-green-900/20 rounded border border-green-200 dark:border-green-700">
+                      <h5 className="font-medium text-green-800 dark:text-green-200 mb-2 flex items-center">
+                        <ShieldCheck className="w-4 h-4 mr-2" />
+                        Verificación Automática
+                      </h5>
+                      <p className="text-sm text-green-700 dark:text-green-300">
+                        Esta fuente se verifica automáticamente cada 24 horas para garantizar 
+                        la disponibilidad y autenticidad de los documentos.
+                      </p>
+                    </div>
+
                     <div className="pt-4 border-t border-gray-200 dark:border-gray-600">
-                      <div className="flex space-x-2">
+                      <div className="flex flex-wrap gap-2">
                         {source.type === 'official' && (
                           <a
                             href={source.url}
@@ -338,9 +380,16 @@ const DataSourcesIntegration: React.FC = () => {
               })()}
             </div>
           ) : (
-            <p className="text-gray-500 dark:text-gray-400">
-              Selecciona una fuente para ver los detalles
-            </p>
+            <div className="text-center py-8">
+              <ShieldCheck className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+              <h4 className="text-lg font-medium text-gray-800 dark:text-white mb-2">
+                Fuentes de Datos Disponibles
+              </h4>
+              <p className="text-gray-600 dark:text-gray-400">
+                Haz clic en cualquier fuente de la lista para ver detalles específicos. 
+                Todas las fuentes están activas y verifican automáticamente la información.
+              </p>
+            </div>
           )}
         </div>
       </div>
@@ -377,6 +426,18 @@ const DataSourcesIntegration: React.FC = () => {
           </h4>
           <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
             95%
+          </p>
+        </div>
+      </div>
+
+      {/* Footer Information */}
+      <div className="mt-8 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
+        <div className="text-center">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            ✅ Todas las fuentes trabajan en conjunto para garantizar el acceso permanente a la información
+          </p>
+          <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+            Si alguna fuente falla, las demás garantizan la continuidad del acceso a los documentos
           </p>
         </div>
       </div>

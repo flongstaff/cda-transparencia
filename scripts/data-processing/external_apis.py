@@ -9,6 +9,8 @@ import json
 from datetime import datetime, date
 from typing import Dict, List, Optional, Any
 import time
+import csv
+import io
 
 class ExternalAPIsClient:
     def __init__(self):
@@ -43,56 +45,83 @@ class ExternalAPIsClient:
                 "base_url": "https://www.pami.org.ar/api/",
                 "description": "PAMI - Programa de Atención Médica Integral",
                 "rate_limit": 2.0
+            },
+            "georef_api": {
+                "base_url": "https://apis.datos.gob.ar/georef/api/",
+                "description": "API del Servicio de Normalización de Datos Geográficos de Argentina",
+                "rate_limit": 0.5
             }
         }
 
-    def get_municipal_cuit_data(self, search_term: str = "CARMEN DE ARECO") -> Dict[str, Any]:
-        """Get CUIT/tax data for municipality from AFIP"""
-        print(f"🏛️ Searching AFIP for: {search_term}")
+    def get_georef_data(self, municipality_name: str) -> Dict[str, Any]:
+        """Get geographic data for a municipality from Georef API"""
+        print(f"📍 Searching Georef for: {municipality_name}")
         
         try:
-            # AFIP Padrón consultation
-            afip_url = "https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do"
-            params = {
-                "method": "buscar",
-                "razonSocial": search_term,
-                "tipoPersona": "J"  # Juridica (legal entity)
-            }
+            url = f"{self.apis['georef_api']['base_url']}municipios"
+            params = {"nombre": municipality_name}
             
-            response = self.session.get(afip_url, params=params, timeout=30)
-            time.sleep(self.apis["afip_ws"]["rate_limit"])
+            response = self.session.get(url, params=params, timeout=30)
+            time.sleep(self.apis['georef_api']['rate_limit'])
             
             if response.status_code == 200:
-                # Parse HTML response for CUIT data
-                from bs4 import BeautifulSoup
-                soup = BeautifulSoup(response.content, 'html.parser')
-                
-                results = []
-                # Look for CUIT data in response
-                for row in soup.find_all('tr'):
-                    cells = row.find_all('td')
-                    if len(cells) >= 3:
-                        cuit = cells[0].get_text().strip() if cells[0] else ""
-                        name = cells[1].get_text().strip() if cells[1] else ""
-                        
-                        if cuit and "CARMEN" in name.upper():
-                            results.append({
-                                "cuit": cuit,
-                                "razon_social": name,
-                                "source": "AFIP",
-                                "timestamp": datetime.now().isoformat()
-                            })
-                
-                return {
-                    "success": True,
-                    "data": results,
-                    "source": "AFIP Padrón"
-                }
+                data = response.json()
+                if data and data["cantidad"] > 0:
+                    return {"success": True, "data": data["municipios"][0]}
+                else:
+                    return {"success": False, "error": "Municipality not found"}
             else:
                 return {"success": False, "error": f"HTTP {response.status_code}"}
                 
         except Exception as e:
             return {"success": False, "error": str(e)}
+
+    def get_municipal_cuit_data(self, search_terms: List[str] = ["CARMEN DE ARECO", "MUNICIPALIDAD DE CARMEN DE ARECO"]) -> Dict[str, Any]:
+        """Get CUIT/tax data for municipality from AFIP"""
+        print(f"🏛️ Searching AFIP for: {search_terms}")
+        
+        results = []
+        for search_term in search_terms:
+            try:
+                # AFIP Padrón consultation
+                afip_url = "https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do"
+                params = {
+                    "method": "buscar",
+                    "razonSocial": search_term,
+                    "tipoPersona": "J"  # Juridica (legal entity)
+                }
+                
+                response = self.session.get(afip_url, params=params, timeout=30)
+                time.sleep(self.apis["afip_ws"]["rate_limit"])
+                
+                if response.status_code == 200:
+                    # Parse HTML response for CUIT data
+                    from bs4 import BeautifulSoup
+                    soup = BeautifulSoup(response.content, 'html.parser')
+                    
+                    # Look for CUIT data in response
+                    for row in soup.find_all('tr'):
+                        cells = row.find_all('td')
+                        if len(cells) >= 3:
+                            cuit = cells[0].get_text().strip() if cells[0] else ""
+                            name = cells[1].get_text().strip() if cells[1] else ""
+                            
+                            if cuit and "CARMEN" in name.upper():
+                                results.append({
+                                    "cuit": cuit,
+                                    "razon_social": name,
+                                    "source": "AFIP",
+                                    "timestamp": datetime.now().isoformat()
+                                })
+                    
+            except Exception as e:
+                return {"success": False, "error": str(e)}
+
+        return {
+            "success": True,
+            "data": results,
+            "source": "AFIP Padrón"
+        }
 
     def get_national_budget_transfers(self, year: int = 2024) -> Dict[str, Any]:
         """Get national budget transfers to Carmen de Areco"""
@@ -148,9 +177,9 @@ class ExternalAPIsClient:
         """Get relevant economic indicators from BCRA and INDEC"""
         print("📊 Getting economic indicators")
         
+        errors = []
+        results = {}
         try:
-            results = {}
-            
             # BCRA - Exchange rate and inflation
             bcra_endpoints = {
                 "usd_rate": "estadisticas/v2.0/DatoVariable/1",  # USD exchange rate
@@ -161,7 +190,7 @@ class ExternalAPIsClient:
             for name, endpoint in bcra_endpoints.items():
                 try:
                     url = f"{self.apis['bcra_api']['base_url']}{endpoint}"
-                    response = self.session.get(url, timeout=30)
+                    response = self.session.get(url, timeout=30, verify=False)
                     time.sleep(self.apis["bcra_api"]["rate_limit"])
                     
                     if response.status_code == 200:
@@ -170,8 +199,14 @@ class ExternalAPIsClient:
                             "data": data,
                             "timestamp": datetime.now().isoformat()
                         }
+                    else:
+                        error_message = f"BCRA {name}: HTTP {response.status_code}"
+                        print(f"  ⚠️ {error_message}")
+                        errors.append(error_message)
                 except Exception as e:
-                    results[f"bcra_{name}"] = {"error": str(e)}
+                    error_message = f"BCRA {name}: {e}"
+                    print(f"  ⚠️ {error_message}")
+                    errors.append(error_message)
             
             # INDEC - Provincial and municipal indicators
             indec_series = {
@@ -194,9 +229,23 @@ class ExternalAPIsClient:
                             "data": data,
                             "timestamp": datetime.now().isoformat()
                         }
+                    else:
+                        error_message = f"INDEC {name}: HTTP {response.status_code}"
+                        print(f"  ⚠️ {error_message}")
+                        errors.append(error_message)
                 except Exception as e:
-                    results[f"indec_{name}"] = {"error": str(e)}
+                    error_message = f"INDEC {name}: {e}"
+                    print(f"  ⚠️ {error_message}")
+                    errors.append(error_message)
             
+            if errors:
+                return {
+                    "success": False,
+                    "error": ", ".join(errors),
+                    "indicators": results,
+                    "source": "BCRA + INDEC"
+                }
+
             return {
                 "success": True,
                 "indicators": results,
@@ -210,47 +259,55 @@ class ExternalAPIsClient:
         """Get national contracting data involving Carmen de Areco"""
         print("🏢 Getting national contracting data")
         
+        errors = []
         try:
-            # Argentina Compra API
-            contracting_url = "https://contrataciones.gov.ar/consultas/api/"
+            # Get Carmen de Areco data from Georef API
+            georef_data = self.get_georef_data("Carmen de Areco")
+            if not georef_data["success"]:
+                errors.append(f"Georef API error: {georef_data['error']}")
+                return {"success": False, "error": ", ".join(errors)}
             
-            search_terms = [
-                "CARMEN DE ARECO",
-                "MUNICIPALIDAD CARMEN",
-                "INTENDENCIA CARMEN"
-            ]
+            carmen_de_areco_id = georef_data["data"]["id"]
+            carmen_de_areco_name = georef_data["data"]["nombre"]
+
+            # Download the geographic location CSV file
+            geo_csv_url = "https://infra.datos.gob.ar/catalog/jgm/dataset/30/distribution/30.6/download/onc-contratar-ubicacion-geografica.csv"
+            response = self.session.get(geo_csv_url, timeout=60)
+            response.raise_for_status()
+
+            # Parse the geographic CSV data and find obra_numbers for Carmen de Areco
+            obra_numbers = set()
+            geo_csv_file = io.StringIO(response.text)
+            geo_reader = csv.DictReader(geo_csv_file)
+            for row in geo_reader:
+                if row.get("localidad_nombre", "").upper() == carmen_de_areco_name.upper() or \
+                   row.get("departamento_nombre", "").upper() == carmen_de_areco_name.upper():
+                    if row.get("numero_obra"):
+                        obra_numbers.add(row["numero_obra"])
             
+            if not obra_numbers:
+                return {"success": True, "contracts": [], "total_found": 0, "source": "datos.gob.ar - Contratos de Obra Pública"}
+
+            # Download the contracts CSV file
+            contracts_csv_url = "https://infra.datos.gob.ar/catalog/jgm/dataset/30/distribution/30.4/download/onc-contratar-contratos.csv"
+            response = self.session.get(contracts_csv_url, timeout=60)
+            response.raise_for_status()
+
+            # Parse the contracts CSV data and filter by obra_numbers
             results = []
-            for term in search_terms:
-                try:
-                    params = {
-                        "entidadContratante": term,
-                        "estado": "todos",
-                        "limit": 50
-                    }
-                    
-                    response = self.session.get(
-                        f"{contracting_url}procedimientos", 
-                        params=params, 
-                        timeout=30
-                    )
-                    time.sleep(2.0)
-                    
-                    if response.status_code == 200:
-                        data = response.json()
-                        if data and "procedimientos" in data:
-                            results.extend(data["procedimientos"])
-                            
-                except Exception as e:
-                    print(f"  ⚠️ Error searching for {term}: {e}")
-            
+            contracts_csv_file = io.StringIO(response.text)
+            contracts_reader = csv.DictReader(contracts_csv_file)
+            for row in contracts_reader:
+                if row.get("numero_obra") in obra_numbers:
+                    results.append(row)
+
             return {
                 "success": True,
                 "contracts": results,
                 "total_found": len(results),
-                "source": "Argentina Compra"
+                "source": "datos.gob.ar - Contratos de Obra Pública"
             }
-            
+
         except Exception as e:
             return {"success": False, "error": str(e)}
 

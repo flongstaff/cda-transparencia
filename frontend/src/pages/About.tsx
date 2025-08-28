@@ -2,25 +2,30 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Shield, Database, Search, TrendingUp, Users, FileText, CheckCircle, Globe, ExternalLink } from 'lucide-react';
+import OfficialDataService from '../services/OfficialDataService';
 
 const About: React.FC = () => {
   const { t } = useLanguage();
-  const [transparencyMetrics, setTransparencyMetrics] = useState({
-    totalDocuments: 708,
-    verifiedDocuments: 708,
-    transparencyScore: 94.2,
-    dataSources: 3,
-    monthlyQueries: 1523,
-    documentDownloads: 2847,
+  // Get real metrics from OfficialDataService
+  const officialStats = OfficialDataService.getSummaryStats();
+  const transparencyMetrics = OfficialDataService.getTransparencyMetrics();
+  
+  const [metrics, setMetrics] = useState({
+    totalDocuments: officialStats.total_documents,
+    verifiedDocuments: officialStats.verified_documents,
+    transparencyScore: transparencyMetrics.score,
+    dataSources: 5, // OSINT sources verified
+    responseTime: `${transparencyMetrics.website_response_time.toFixed(2)}s`,
+    sslEnabled: transparencyMetrics.ssl_enabled,
     osintCompliance: 100,
-    lastUpdated: new Date().toLocaleDateString('es-AR')
+    lastUpdated: officialStats.last_updated
   });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchTransparencyData = async () => {
       try {
-        const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+        const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
         const [integrityResponse, analyticsResponse] = await Promise.all([
           fetch(`${API_BASE}/data-integrity`),
           fetch(`${API_BASE}/analytics/dashboard`)
@@ -30,20 +35,20 @@ const About: React.FC = () => {
           const integrityData = await integrityResponse.json();
           const analyticsData = await analyticsResponse.json();
           
-          setTransparencyMetrics({
-            totalDocuments: integrityData.total_documents || 708,
-            verifiedDocuments: integrityData.verified_documents || 708,
-            transparencyScore: analyticsData.transparency_score || 94.2,
-            dataSources: integrityData.data_sources?.length || 3,
-            monthlyQueries: analyticsData.citizen_engagement?.search_queries || 1523,
-            documentDownloads: analyticsData.citizen_engagement?.document_downloads || 2847,
+          setMetrics({
+            totalDocuments: integrityData.total_documents || officialStats.total_documents,
+            verifiedDocuments: integrityData.verified_documents || officialStats.verified_documents,
+            transparencyScore: analyticsData.transparency_score || transparencyMetrics.score,
+            dataSources: integrityData.data_sources?.length || 5,
+            responseTime: `${transparencyMetrics.website_response_time.toFixed(2)}s`,
+            sslEnabled: transparencyMetrics.ssl_enabled,
             osintCompliance: 100,
-            lastUpdated: new Date().toLocaleDateString('es-AR')
+            lastUpdated: officialStats.last_updated
           });
         }
       } catch (error) {
-        console.error('Error fetching transparency data:', error);
-        // Keep default values on error
+        console.log('API not available, using OfficialDataService data only');
+        // Keep official data from OfficialDataService
       } finally {
         setLoading(false);
       }
@@ -158,13 +163,13 @@ const About: React.FC = () => {
                   <FileText size={24} />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-gray-800 dark:text-white mb-1">
-                  {transparencyMetrics.totalDocuments.toLocaleString()}
+                  {metrics.totalDocuments.toLocaleString()}
                 </h3>
                 <p className="text-blue-600 dark:text-blue-400 font-medium mb-2">
                   Documentos Oficiales
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
-                  ✅ {transparencyMetrics.verifiedDocuments.toLocaleString()} verificados
+                  ✅ {metrics.verifiedDocuments.toLocaleString()} verificados
                 </p>
               </div>
               
@@ -173,7 +178,7 @@ const About: React.FC = () => {
                   <Shield size={24} />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-gray-800 dark:text-white mb-1">
-                  {transparencyMetrics.transparencyScore}%
+                  {metrics.transparencyScore}%
                 </h3>
                 <p className="text-green-600 dark:text-green-400 font-medium mb-2">
                   Índice de Transparencia
@@ -188,7 +193,7 @@ const About: React.FC = () => {
                   <Globe size={24} />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-gray-800 dark:text-white mb-1">
-                  {transparencyMetrics.osintCompliance}%
+                  {metrics.osintCompliance}%
                 </h3>
                 <p className="text-purple-600 dark:text-purple-400 font-medium mb-2">
                   Cumplimiento OSINT
@@ -203,10 +208,10 @@ const About: React.FC = () => {
                   <Users size={24} />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-gray-800 dark:text-white mb-1">
-                  {transparencyMetrics.monthlyQueries.toLocaleString()}
+                  {metrics.dataSources}
                 </h3>
                 <p className="text-orange-600 dark:text-orange-400 font-medium mb-2">
-                  Consultas Mensuales
+                  Fuentes de Datos
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                   Participación ciudadana activa
@@ -236,19 +241,19 @@ const About: React.FC = () => {
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 dark:text-gray-300">Documentos Accesibles:</span>
-                  <span className="font-semibold text-green-600">{transparencyMetrics.totalDocuments.toLocaleString()}</span>
+                  <span className="font-semibold text-green-600">{metrics.totalDocuments.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 dark:text-gray-300">Fuentes de Datos:</span>
-                  <span className="font-semibold text-blue-600">{transparencyMetrics.dataSources}</span>
+                  <span className="font-semibold text-blue-600">{metrics.dataSources}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-600 dark:text-gray-300">Descargas Mensuales:</span>
-                  <span className="font-semibold text-purple-600">{transparencyMetrics.documentDownloads.toLocaleString()}</span>
+                  <span className="text-gray-600 dark:text-gray-300">Tiempo de Respuesta:</span>
+                  <span className="font-semibold text-purple-600">{metrics.responseTime}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 dark:text-gray-300">Última Actualización:</span>
-                  <span className="font-semibold text-orange-600">{transparencyMetrics.lastUpdated}</span>
+                  <span className="font-semibold text-orange-600">{metrics.lastUpdated}</span>
                 </div>
               </div>
             </div>
@@ -260,7 +265,7 @@ const About: React.FC = () => {
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 dark:text-gray-300">Documentos Verificados:</span>
-                  <span className="font-semibold text-green-600">✅ {transparencyMetrics.verifiedDocuments.toLocaleString()}</span>
+                  <span className="font-semibold text-green-600">✅ {metrics.verifiedDocuments.toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 dark:text-gray-300">Integridad de Datos:</span>
@@ -268,7 +273,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 dark:text-gray-300">Cumplimiento Legal:</span>
-                  <span className="font-semibold text-green-600">{transparencyMetrics.osintCompliance}%</span>
+                  <span className="font-semibold text-green-600">{metrics.osintCompliance}%</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600 dark:text-gray-300">Acceso Disponible:</span>

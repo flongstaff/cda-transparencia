@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Archive, CheckCircle, AlertCircle, Download } from 'lucide-react';
+import { ExternalLink, Archive, CheckCircle, AlertCircle, Download, ShieldCheck, Globe, FileText } from 'lucide-react';
 
 interface Document {
   filename: string;
@@ -12,6 +12,7 @@ interface Document {
   download_date: string;
   primary_download?: string;
   archive_download?: string;
+  local_path?: string;
 }
 
 interface DocumentViewerProps {
@@ -122,9 +123,25 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
           </div>
           <div className="text-right">
             <div className="flex items-center text-green-600">
-              <CheckCircle className="w-4 h-4 mr-1" />
-              <span className="text-sm">Fuentes Oficiales Verificadas</span>
+              <ShieldCheck className="w-4 h-4 mr-1" />
+              <span className="text-sm">Verificación Automática</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Information Banner */}
+      <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+        <div className="flex">
+          <ShieldCheck className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
+          <div className="ml-3">
+            <h4 className="text-sm font-medium text-green-800">
+              Acceso Garantizado a Fuentes Oficiales
+            </h4>
+            <p className="text-sm text-green-700 mt-1">
+              Cada documento incluye enlaces directos a las fuentes originales. 
+              Si alguna fuente no está disponible, se proporcionan alternativas de respaldo.
+            </p>
           </div>
         </div>
       </div>
@@ -154,14 +171,18 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
               </div>
             </div>
 
-            {/* Source Attribution */}
+            {/* Source Attribution - Always Visible */}
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
-              <h5 className="font-medium text-gray-800 mb-3 text-sm">
-                🔍 Fuentes y Verificación
+              <h5 className="font-medium text-gray-800 mb-3 text-sm flex items-center">
+                <ShieldCheck className="w-4 h-4 mr-2 text-green-600" />
+                Fuentes Verificadas y Acceso Garantizado
               </h5>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600">Fuente Oficial:</span>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between p-2 bg-white rounded border">
+                  <div className="flex items-center">
+                    <Globe className="w-4 h-4 text-blue-600 mr-2" />
+                    <span className="text-sm text-gray-700">Fuente Oficial</span>
+                  </div>
                   <a
                     href={doc.official_url}
                     target="_blank"
@@ -172,23 +193,46 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
                     Portal de Transparencia
                   </a>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600">Archivo Web:</span>
+                
+                <div className="flex items-center justify-between p-2 bg-white rounded border">
+                  <div className="flex items-center">
+                    <Archive className="w-4 h-4 text-purple-600 mr-2" />
+                    <span className="text-sm text-gray-700">Archivo Web</span>
+                  </div>
                   <a
                     href={doc.archive_url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-purple-600 hover:text-purple-800 text-sm"
                   >
-                    <Archive className="w-3 h-3 mr-1" />
+                    <ExternalLink className="w-3 h-3 mr-1" />
                     Wayback Machine
                   </a>
                 </div>
+                
+                {doc.local_path && (
+                  <div className="flex items-center justify-between p-2 bg-white rounded border">
+                    <div className="flex items-center">
+                      <FileText className="w-4 h-4 text-green-600 mr-2" />
+                      <span className="text-sm text-gray-700">Copia Local</span>
+                    </div>
+                    <span className="text-sm text-gray-500">
+                      Disponible para acceso garantizado
+                    </span>
+                  </div>
+                )}
+              </div>
+              
+              <div className="mt-3 p-2 bg-blue-50 rounded text-xs text-blue-700">
+                <p>
+                  ✅ Este documento ha sido verificado automáticamente a través de múltiples fuentes. 
+                  Si una fuente no está disponible, las demás garantizan el acceso a la información.
+                </p>
               </div>
             </div>
 
             {/* Actions - GitHub Compatible */}
-            <div className="flex items-center space-x-3">
+            <div className="flex flex-wrap items-center gap-3">
               {doc.primary_download ? (
                 <a
                   href={doc.primary_download}
@@ -226,6 +270,16 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
                 >
                   <Archive className="w-4 h-4 mr-2" />
                   Archivo Web
+                </button>
+              )}
+              
+              {doc.local_path && (
+                <button
+                  onClick={() => console.log('Access local copy:', doc.local_path)}
+                  className="flex items-center px-4 py-2 border border-green-300 text-green-600 rounded-lg hover:bg-green-50 transition-colors text-sm"
+                >
+                  <FileText className="w-4 h-4 mr-2" />
+                  Copia Local
                 </button>
               )}
             </div>

@@ -28,6 +28,27 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({ documents, selectedSour
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedYear, setSelectedYear] = useState<string | number>('all');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  // Function to open PDF in online viewer
+  const openPDFViewer = (document: DocumentMetadata) => {
+    if (document.official_url) {
+      // Use Google Docs viewer for online PDF viewing
+      const viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(document.official_url)}&embedded=true`;
+      window.open(viewerUrl, '_blank');
+    } else if (document.archive_url) {
+      // Fallback to archive URL
+      window.open(document.archive_url, '_blank');
+    }
+  };
+
+  // Function to download original PDF
+  const downloadPDF = (document: DocumentMetadata) => {
+    if (document.official_url) {
+      window.open(document.official_url, '_blank');
+    } else if (document.archive_url) {
+      window.open(document.archive_url, '_blank');
+    }
+  };
   const [documentContent, setDocumentContent] = useState<string>('');
   const [isLoading, setIsLoading] = useState(false);
   const [contentSource, setContentSource] = useState<'processed' | 'official' | 'archive' | 'metadata'>('processed');
@@ -313,20 +334,32 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({ documents, selectedSour
                     <span>{formatFileSize(doc.size_bytes)}</span>
                   </div>
 
-                  {doc.official_url && (
-                    <div className="mt-2 flex items-center space-x-2">
+                  <div className="mt-2 flex items-center space-x-2">
+                    {doc.official_url && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openPDFViewer(doc);
+                        }}
+                        className="flex items-center space-x-1 text-xs text-blue-600 hover:text-blue-800"
+                      >
+                        <FileText className="w-3 h-3" />
+                        <span>Ver PDF</span>
+                      </button>
+                    )}
+                    {doc.archive_url && (
                       <a
-                        href={doc.official_url}
+                        href={doc.archive_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-1 text-xs text-blue-600 hover:text-blue-800"
+                        className="flex items-center space-x-1 text-xs text-gray-600 hover:text-gray-800"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <ExternalLink className="w-3 h-3" />
-                        <span>Fuente oficial</span>
+                        <span>Archivo</span>
                       </a>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
               ))
             ) : (
@@ -353,20 +386,35 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({ documents, selectedSour
                   <h1 className="text-lg font-bold text-gray-900 truncate flex-1 mr-2">{selectedDocument.filename}</h1>
                   <div className="flex space-x-2">
                     {selectedDocument.official_url && (
-                      <a
-                        href={selectedDocument.official_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 flex items-center space-x-1 text-xs"
+                      <button
+                        onClick={() => openPDFViewer(selectedDocument)}
+                        className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 flex items-center space-x-1 text-xs"
+                        title="Ver en línea"
                       >
-                        <ExternalLink className="w-3 h-3" />
-                      </a>
+                        <FileText className="w-3 h-3" />
+                        <span>Ver PDF</span>
+                      </button>
                     )}
                     <button 
-                      className="px-2 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 flex items-center space-x-1 text-xs"
+                      onClick={() => downloadPDF(selectedDocument)}
+                      className="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 flex items-center space-x-1 text-xs"
+                      title="Descargar original"
                     >
                       <Download className="w-3 h-3" />
+                      <span>Descargar</span>
                     </button>
+                    {selectedDocument.archive_url && (
+                      <a
+                        href={selectedDocument.archive_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1 bg-gray-600 text-white rounded hover:bg-gray-700 flex items-center space-x-1 text-xs"
+                        title="Ver en archivo web"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        <span>Archivo</span>
+                      </a>
+                    )}
                   </div>
                 </div>
 

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, ArrowDownRight, HelpCircle, Info, Loader2 } from 'lucide-react';
+import { ArrowUpRight, ArrowDownRight, HelpCircle, Info, Loader2, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { formatCurrencyARS, formatNumberARS, formatDateARS } from '../../utils/formatters';
 import ApiService from '../../services/ApiService';
+import { EnhancedApiService } from '../../services/EnhancedApiService';
 
 interface FinancialStat {
   title: string;
@@ -23,6 +24,7 @@ const FinancialStatsSummary: React.FC<Props> = ({ activeYear = '2025' }) => {
   const [stats, setStats] = useState<FinancialStat[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [dataSource, setDataSource] = useState<'api' | 'fallback'>('api');
 
   // Load stats when year changes
   useEffect(() => {
@@ -32,8 +34,10 @@ const FinancialStatsSummary: React.FC<Props> = ({ activeYear = '2025' }) => {
   const loadStatsForYear = async (year: string) => {
     setLoading(true);
     setError(null);
+    setDataSource('api');
+    
     try {
-      // Load all financial data for the year
+      // Try to load data from API first
       const [
         budgets,
         expenses,
@@ -118,13 +122,25 @@ const FinancialStatsSummary: React.FC<Props> = ({ activeYear = '2025' }) => {
       setStats(yearStats);
     } catch (err) {
       console.error('Failed to load financial stats for year:', year, err);
-      setError('Failed to load financial statistics');
+      setError('Failed to load financial statistics from API, using fallback data');
+      setDataSource('fallback');
       
-      // Fallback to default values
+      // Use fallback data when API fails
+      // Use mock financial data as fallback
+      const latestData = {
+        budget: 2400000000,
+        revenue: 2100000000,
+        expenses: 2250000000,
+        balance: -150000000,
+        execution_rate: 93.5,
+        collection_efficiency: 87.5,
+        last_updated: new Date().toISOString()
+      };
+      
       const fallbackStats: FinancialStat[] = [
         {
           title: 'Presupuesto Total',
-          value: '$1,245,300,000',
+          value: formatCurrencyARS(latestData.budget),
           change: '+4.75%',
           isPositive: true,
           link: '/budget',
@@ -132,7 +148,7 @@ const FinancialStatsSummary: React.FC<Props> = ({ activeYear = '2025' }) => {
         },
         {
           title: 'Ejecución Presupuestaria',
-          value: '65.3%',
+          value: `${latestData.executionPercentage.toFixed(1)}%`,
           change: '+2.4%',
           isPositive: true,
           link: '/budget',
@@ -140,7 +156,7 @@ const FinancialStatsSummary: React.FC<Props> = ({ activeYear = '2025' }) => {
         },
         {
           title: 'Gastos Mensuales',
-          value: '$103,750,000',
+          value: formatCurrencyARS(latestData.expenses / 12),
           change: '-3.2%',
           isPositive: false,
           link: '/spending',
@@ -173,20 +189,40 @@ const FinancialStatsSummary: React.FC<Props> = ({ activeYear = '2025' }) => {
     );
   }
 
-  if (error) {
-    return (
-      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-xl p-4">
-        <div className="flex items-center">
-          <Info size={16} className="text-red-500 mr-2" />
-          <h3 className="text-sm font-medium text-red-800 dark:text-red-200">Error al cargar estadísticas</h3>
-        </div>
-        <p className="mt-1 text-sm text-red-700 dark:text-red-300">{error}</p>
-      </div>
-    );
-  }
-
   return (
     <div className="p-0">
+      {error && (
+        <div className={`rounded-lg p-3 mb-4 flex items-center ${
+          dataSource === 'fallback' 
+            ? 'bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700' 
+            : 'bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700'
+        }`}>
+          {dataSource === 'fallback' ? (
+            <Info size={16} className="text-blue-500 mr-2" />
+          ) : (
+            <AlertTriangle size={16} className="text-yellow-500 mr-2" />
+          )}
+          <div>
+            <h3 className={`text-sm font-medium ${
+              dataSource === 'fallback' 
+                ? 'text-blue-800 dark:text-blue-200' 
+                : 'text-yellow-800 dark:text-yellow-200'
+            }`}>
+              {dataSource === 'fallback' 
+                ? 'Mostrando datos de respaldo' 
+                : 'Datos parciales disponibles'}
+            </h3>
+            <p className={`text-xs mt-1 ${
+              dataSource === 'fallback' 
+                ? 'text-blue-700 dark:text-blue-300' 
+                : 'text-yellow-700 dark:text-yellow-300'
+            }`}>
+              {error}
+            </p>
+          </div>
+        </div>
+      )}
+      
       <div className="text-sm text-gray-500 dark:text-gray-400 flex items-center mb-6">
         <Info size={16} className="mr-2" />
         Actualizado: {formatDateARS(new Date())}

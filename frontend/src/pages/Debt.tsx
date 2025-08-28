@@ -17,7 +17,6 @@ const Debt: React.FC = () => {
   const [debtData, setDebtData] = useState<MunicipalDebt[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedSources, setSelectedSources] = useState<string[]>(['database_local', 'official_site']);
   
   const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017'];
 
@@ -25,7 +24,7 @@ const Debt: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await ApiService.getMunicipalDebt(parseInt(year), selectedSources);
+      const data = await ApiService.getMunicipalDebt(parseInt(year));
       setDebtData(data);
     } catch (err) {
       console.error('Failed to load debt data for year:', year, err);
@@ -36,14 +35,10 @@ const Debt: React.FC = () => {
     }
   };
 
-  // Load debt data when year or sources change
+  // Load debt data when year changes
   useEffect(() => {
     void loadDebtDataForYear(activeYear);
-  }, [activeYear, selectedSources]);
-
-  const handleSourceChange = (newSelectedSources: string[]) => {
-    setSelectedSources(newSelectedSources);
-  };
+  }, [activeYear]);
 
   const handleDataRefresh = () => {
     loadDebtDataForYear(activeYear);
@@ -151,8 +146,6 @@ const Debt: React.FC = () => {
         {/* Data Source Selector */}
         <div className="mb-6">
           <DataSourceSelector
-            selectedSources={selectedSources}
-            onSourceChange={handleSourceChange}
             onDataRefresh={handleDataRefresh}
             className="max-w-4xl mx-auto"
           />

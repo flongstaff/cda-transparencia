@@ -37,6 +37,12 @@ export const cases: CaseRecord[] = [
       'Informe de Auditoría',
       'Facturas y Comprobantes',
       'Reportes de Gestión'
+    ],
+    confidence: 95,
+    relatedDocuments: [
+      'Informe de Auditoría',
+      'Facturas y Comprobantes',
+      'Reportes de Gestión'
     ]
   },
   {

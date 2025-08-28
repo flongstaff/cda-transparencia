@@ -16,7 +16,8 @@ import {
   FolderOpen, // For Documents
   PieChart, // For Debt
   Building, // For Investments
-  Wallet // For Treasury
+  Wallet, // For Treasury
+  Search // For Audit
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -36,15 +37,14 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
     { to: '/contracts', label: t('sidebar.contracts'), icon: <FileText size={20} /> },
     { to: '/debt', label: t('sidebar.debt'), icon: <PieChart size={20} /> },
     { to: '/investments', label: t('sidebar.investments'), icon: <Building size={20} /> },
-    { to: '/treasury', label: t('sidebar.treasury'), icon: <Wallet size={20} /> },
     { to: '/property-declarations', label: t('sidebar.property'), icon: <FileText size={20} /> },
     { to: '/salaries', label: t('sidebar.salaries'), icon: <FileText size={20} /> },
-    { to: '/database', label: t('sidebar.database'), icon: <Database size={20} /> },
     { to: '/documents', label: t('sidebar.documents'), icon: <FolderOpen size={20} /> },
     { to: '/reports', label: t('sidebar.reports'), icon: <FileBarChart size={20} /> },
+    { to: '/audit', label: t('sidebar.audit'), icon: <Search size={20} /> },
     { to: '/contact', label: t('sidebar.contact'), icon: <Mail size={20} /> },
     { to: '/whistleblower', label: t('sidebar.whistleblower'), icon: <AlertTriangle size={20} /> },
-    { to: '/api-explorer', label: t('sidebar.apiExplorer'), icon: <Code size={20} /> },
+    { to: '/data-integrity', label: 'Integridad de Datos', icon: <Database size={20} /> },
   ];
 
   return (

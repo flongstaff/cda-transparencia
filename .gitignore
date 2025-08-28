@@ -187,3 +187,18 @@ backend/coverage/
 # Data files that shouldn't be committed
 data/source_materials/*.*
 data/temp/
+
+# Generated data from external_apis.py
+external_apis_data_*.json
+
+# Generated data directories
+data/master_execution_report.json
+data/bora_scrape/
+data/infrastructure_tracking/
+data/organized_data/
+data/osint/
+data/powerbi_extraction/
+data/reports/
+
+# Production configuration file
+production.config.js
