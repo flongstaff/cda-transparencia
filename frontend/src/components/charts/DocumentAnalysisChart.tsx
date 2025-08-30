@@ -71,13 +71,14 @@ const DocumentAnalysisChart: React.FC<DocumentAnalysisChartProps> = ({
       for (const year of years) {
         try {
           // Get real document counts and amounts from comprehensive service
-          const comprehensiveData = await comprehensiveService.getAllSourcesData();
+          const comprehensiveData = await comprehensiveService.getAllDocuments();
           const powerbiData = await powerbiService.getDataByYear(year);
           const markdownDocs = await markdownService.getDocumentsByYear(year);
           
           for (const docType of documentTypes) {
             // Calculate real metrics from actual data
-            const totalDocs = (comprehensiveData[docType]?.length || 0) + 
+            const filteredDocs = comprehensiveData.filter((d: any) => d.document_type?.includes(docType));
+            const totalDocs = filteredDocs.length + 
                             (markdownDocs.filter((d: any) => d.category?.includes(docType)).length || 0);
             const analyzedDocs = Math.max(1, Math.floor(totalDocs * 0.85)); // 85% analyzed
             
