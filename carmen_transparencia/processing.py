@@ -1,8 +1,3 @@
-# processing.py
-"""
-Analysis and conversion utilities.
-"""
-
 import pathlib
 import tabula
 import pandas as pd
@@ -11,6 +6,8 @@ import json
 import csv
 import re
 import hashlib
+from carmen_transparencia.data_access import insert_document
+from datetime import datetime
 
 def _calculate_sha256(file_path: str) -> str:
     """Calculate the SHA256 checksum of a file."""
@@ -19,6 +16,75 @@ def _calculate_sha256(file_path: str) -> str:
         for byte_block in iter(lambda: f.read(4096), b""):
             sha256_hash.update(byte_block)
     return sha256_hash.hexdigest()
+
+def generate_title(filename):
+    clean_name = filename.replace('.pdf', '').replace('-', ' ')
+    title_mappings = {
+        'ESTADO DE EJECUCION DE GASTOS': 'Estado de Ejecución de Gastos',
+        'ESTADO DE EJECUCION DE RECURSOS': 'Estado de Ejecución de Recursos',
+        'SITUACION ECONOMICA FINANCIERA': 'Situación Económica Financiera',
+        'BALANCE GENERAL': 'Balance General Municipal',
+        'ESCALA SALARIAL': 'Escala Salarial Municipal',
+        'PRESUPUESTO': 'Presupuesto Municipal',
+        'LICITACION PUBLICA': 'Licitación Pública',
+        'DDJJ': 'Declaración Jurada Patrimonial'
+    }
+    for key, value in title_mappings.items():
+        if key in clean_name.upper():
+            return f"{value} - {extract_period(filename)}"
+    return clean_name
+
+def categorize_document(filename):
+    upper = filename.upper()
+    if 'EJECUCION' in upper and 'GASTOS' in upper: return 'Ejecución de Gastos'
+    if 'EJECUCION' in upper and 'RECURSOS' in upper: return 'Ejecución de Recursos'
+    if 'BALANCE' in upper: return 'Estados Financieros'
+    if 'SITUACION' in upper and 'ECONOMICA' in upper: return 'Estados Financieros'
+    if 'ESCALA' in upper or 'SUELDO' in upper: return 'Recursos Humanos'
+    if 'PRESUPUESTO' in upper: return 'Presupuesto Municipal'
+    if 'LICITACION' in upper: return 'Contrataciones'
+    if 'DDJJ' in upper: return 'Declaraciones Patrimoniales'
+    if 'CAIF' in upper: return 'Salud Pública'
+    return 'Documentos Municipales'
+
+def extract_year(filename):
+    match = re.search(r'(20\d{2})', filename)
+    return int(match.group(1)) if match else None
+
+def extract_quarter(filename):
+    upper = filename.upper()
+    if '1°TRI' in upper or '1°TRIMESTRE' in upper: return '1Q'
+    if '2°TRI' in upper or '2°TRIMESTRE' in upper: return '2Q'
+    if '3°TRI' in upper or '3°TRIMESTRE' in upper: return '3Q'
+    if '4°TRI' in upper or '4°TRIMESTRE' in upper: return '4Q'
+    if 'ENERO' in upper or 'JANUARY' in upper: return 'Q1'
+    if 'ABRIL' in upper or 'APRIL' in upper: return 'Q2'
+    if 'JULIO' in upper or 'JULY' in upper: return 'Q3'
+    if 'OCTUBRE' in upper or 'OCTOBER' in upper: return 'Q4'
+    return None
+
+def extract_period(filename):
+    year = extract_year(filename)
+    quarter = extract_quarter(filename)
+    if quarter:
+        return f"{year} - {quarter}"
+    return str(year) if year else ''
+
+def get_document_type(filename):
+    upper = filename.upper()
+    if 'EJECUCION' in upper: return 'budget_execution'
+    if 'BALANCE' in upper or 'SITUACION' in upper: return 'financial_statement'
+    if 'ESCALA' in upper or 'SUELDO' in upper: return 'payroll'
+    if 'LICITACION' in upper: return 'contract'
+    return 'other'
+
+def get_priority(filename):
+    upper = filename.upper()
+    if 'EJECUCION' in upper: return 'high'
+    if 'BALANCE' in upper: return 'high'
+    if 'ESCALA' in upper: return 'medium'
+    if 'LICITACION' in upper: return 'medium'
+    return 'low'
 
 def convert_table_pdf_to_csv(pdf_path: str, output_csv: str) -> bool:
     """
@@ -122,7 +188,7 @@ def extract_financial_data(text: str) -> dict:
     }
     
     # Pattern for amounts (Argentine pesos)
-    amount_pattern = r'\$?[" + "d,]+\.?\d*'
+    amount_pattern = r'
     amounts = re.findall(amount_pattern, text)
     financial_data['amounts'] = amounts
     
@@ -189,3 +255,63 @@ def validate_document_integrity(file_path: str, expected_checksum: str = None) -
         result['error'] = str(e)
     
     return result
+
+
+def process_directory(
+        input_dir: str,
+        output_dir: str,
+        *, 
+        formats: list[str] = None,
+        validate: bool = False,
+) -> list[dict]:
+    """
+    Process all files in a directory.
+    """
+    if formats is None:
+        formats = ['csv', 'txt']
+        
+    in_dir = pathlib.Path(input_dir)
+    out_dir = pathlib.Path(output_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    
+    results = []
+    
+    for path in in_dir.iterdir():
+        if not path.is_file():
+            continue
+            
+        doc = {
+            'id': path.stem,
+            'filename': path.name,
+            'title': generate_title(path.name),
+            'category': categorize_document(path.name),
+            'year': extract_year(path.name),
+            'quarter': extract_quarter(path.name),
+            'size_mb': round(path.stat().st_size / 1024 / 1024, 2),
+            'source': 'local',
+            'path': str(path),
+            'official_url': f"http://carmendeareco.gob.ar/wp-content/uploads/{path.name}",
+            'last_modified': datetime.fromtimestamp(path.stat().st_mtime).isoformat(),
+            'processing_date': datetime.now().isoformat(),
+            'verification_status': 'verified',
+            'document_type': get_document_type(path.name),
+            'priority': get_priority(path.name),
+            'has_structured_data': False,
+            'extracted_data': None
+        }
+
+        if validate:
+            validation_result = validate_document_integrity(str(path))
+            doc['verification_status'] = 'valid' if validation_result['valid'] else 'invalid'
+
+        if 'csv' in formats and path.suffix.lower() == '.pdf':
+            out_csv = out_dir / f"{path.stem}.csv"
+            if convert_table_pdf_to_csv(str(path), str(out_csv)):
+                doc['has_structured_data'] = True
+                with open(out_csv, 'r') as f:
+                    doc['extracted_data'] = f.read()
+
+        insert_document(doc)
+        results.append(doc)
+        
+    return results

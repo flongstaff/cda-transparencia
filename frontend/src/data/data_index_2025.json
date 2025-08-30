@@ -1,0 +1,186 @@
+{
+  "year": 2025,
+  "municipality": "Carmen de Areco",
+  "data_sources": {
+    "public_tenders": {
+      "type": "public_works",
+      "description": "Licitaciones Públicas Municipales",
+      "active_tenders": 5,
+      "documents": [
+        {
+          "number": 7,
+          "file": "LICITACION-PUBLICA-N°7.pdf",
+          "status": "active",
+          "format": "pdf"
+        },
+        {
+          "number": 8,
+          "file": "LICITACION-PUBLICA-N°8.pdf",
+          "status": "active",
+          "format": "pdf"
+        },
+        {
+          "number": 9,
+          "file": "LICITACION-PUBLICA-N°9.pdf",
+          "status": "active",
+          "format": "pdf"
+        },
+        {
+          "number": 10,
+          "file": "LICITACION-PUBLICA-N°10.pdf",
+          "status": "active",
+          "format": "pdf"
+        },
+        {
+          "number": 11,
+          "file": "LICITACION-PUBLICA-N°11.pdf",
+          "status": "active",
+          "format": "pdf"
+        }
+      ]
+    },
+    "tax_ordinances": {
+      "type": "tax_regulation",
+      "description": "Ordenanzas Impositivas",
+      "ordinances": ["3202/24", "3282/25"],
+      "documents": [
+        {
+          "ordinance": "3202/24",
+          "file": "ORDENANZA-IMPOSITIVA-3202-24.pdf",
+          "year": 2024,
+          "description": "Ordenanza Impositiva 2024 (aplicable a transición 2025)",
+          "format": "pdf"
+        },
+        {
+          "ordinance": "3282/25",
+          "file": "ORDENANZA-IMPOSITIVA-3282-25.pdf",
+          "year": 2025,
+          "description": "Ordenanza Impositiva 2025",
+          "format": "pdf"
+        }
+      ]
+    },
+    "tax_zones": {
+      "type": "tax_zones_classification",
+      "description": "Clasificación de Zonas Impositivas",
+      "document": {
+        "file": "ANEXO-II-ZONAS-IMPOSITIVAS.pdf",
+        "format": "pdf"
+      }
+    },
+    "contract_documents": {
+      "type": "contract_administration",
+      "description": "Documentos Contractuales y Actas",
+      "total": 2,
+      "documents": [
+        {
+          "type": "Acta de Apertura",
+          "file": "Acta_de_Apertura_FEAsaU6.pdf",
+          "code": "FEAsaU6",
+          "format": "pdf"
+        },
+        {
+          "type": "Contrato",
+          "file": "Contrato_CGZzWR1.pdf",
+          "code": "CGZzWR1",
+          "format": "pdf"
+        }
+      ]
+    },
+    "dispositions": {
+      "type": "administrative_disposition",
+      "description": "Disposiciones Administrativas",
+      "total": 1,
+      "documents": [
+        {
+          "number": "61/2025",
+          "file": "Disposición 61_2025.pdf",
+          "format": "pdf"
+        }
+      ]
+    },
+    "declarations_template": {
+      "type": "declaration_template",
+      "description": "Plantillas de Declaraciones Juradas",
+      "document": {
+        "file": "descargar-declaracion-jurada.pdf",
+        "format": "pdf"
+      }
+    },
+    "provincial_resolution": {
+      "type": "provincial_regulation",
+      "description": "Resolución Provincial Aplicable",
+      "document": {
+        "number": "RS-2017-03840811-GDEBA",
+        "file": "RS-2017-03840811-GDEBA.pdf",
+        "entity": "Gobierno de la Provincia de Buenos Aires",
+        "year": 2017,
+        "format": "pdf"
+      }
+    }
+  },
+  "summary": {
+    "total_documents": 13,
+    "formats": {
+      "pdf": 13
+    },
+    "categories": {
+      "public_tenders": 5,
+      "tax_ordinances": 2,
+      "tax_zones": 1,
+      "contracts": 2,
+      "dispositions": 1,
+      "declarations": 1,
+      "provincial": 1
+    }
+  },
+  "live_data_sources": {
+    "api_endpoints": {
+      "licitaciones_endpoint": "/api/licitaciones?year=2025",
+      "ordenanzas_impositivas_endpoint": "/api/ordenanzas/impositivas?year=2025",
+      "contratos_endpoint": "/api/contratos?year=2025",
+      "disposiciones_endpoint": "/api/disposiciones?year=2025",
+      "declaraciones_endpoint": "/api/declaraciones?year=2025"
+    },
+    "web_sources": {
+      "transparencia_portal": "https://carmendeareco.gob.ar/transparencia?year=2025",
+      "boletin_oficial": "https://carmendeareco.gob.ar/boletin-oficial?year=2025",
+      "licitaciones_portal": "https://carmendeareco.gob.ar/licitaciones",
+      "ordenanzas_portal": "https://carmendeareco.gob.ar/ordenanzas",
+      "current_live": "https://carmendeareco.gob.ar/transparencia"
+    }
+  },
+  "markdown_documentation": {
+    "data_sources": "/docs/DATA_SOURCES.md",
+    "financial_analysis": "/docs/FINANCIAL_ANALYSIS_GUIDE.md",
+    "power_bi_integration": "/docs/POWER_BI_INTEGRATION.md",
+    "deployment_guide": "/docs/deployment/DEPLOYMENT_GUIDE.md",
+    "api_reference": "/docs/api/api-reference.md",
+    "quick_start": "/docs/getting-started/quick-start.md"
+  },
+  "services_integration": {
+    "recommended_services": [
+      "RealDataService",
+      "OfficialDataService",
+      "PowerBIIntegrationService",
+      "CarmenArecoWebScraper",
+      "DataValidationService",
+      "OSINTComplianceService"
+    ],
+    "api_service": "ApiService",
+    "powerbi_service": "PowerBIIntegrationService",
+    "real_time": true,
+    "caching": false,
+    "live_monitoring": true
+  },
+  "extracted_data_references": {
+    "database_export": "/carmen_transparencia/database_export.json",
+    "transparency_report": "/static-site/data/transparency_report.json"
+  },
+  "current_status": {
+    "active_monitoring": true,
+    "last_scrape": "2025-08-29",
+    "next_update": "2025-08-30"
+  },
+  "last_updated": "2025-08-29"
+}

@@ -1,4 +1,3 @@
-// Main Routes File
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
@@ -16,6 +15,8 @@ const municipalDebtRoutes = require('./municipalDebtRoutes');
 const investmentsAssetsRoutes = require('./investmentsAssetsRoutes');
 const financialIndicatorsRoutes = require('./financialIndicatorsRoutes');
 const documentsRoutes = require('./documentsRoutes');
+const powerbiRoutes = require('./powerbiRoutes');
+const yearsRoutes = require('./yearsRoutes');
 
 // Use all routes
 router.use('/declarations', propertyDeclarationsRoutes);
@@ -29,6 +30,8 @@ router.use('/debt', municipalDebtRoutes);
 router.use('/investments', investmentsAssetsRoutes);
 router.use('/indicators', financialIndicatorsRoutes);
 router.use('/documents', documentsRoutes);
+router.use('/powerbi', powerbiRoutes);
+router.use('/years', yearsRoutes);
 
 // Health check endpoint
 router.get('/', (req, res) => {

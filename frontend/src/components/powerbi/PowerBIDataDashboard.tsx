@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { 
   Database, 
   Table, 
@@ -8,8 +7,10 @@ import {
   AlertTriangle,
   Download,
   RefreshCw,
-  Play
+  Play,
+  Loader
 } from 'lucide-react';
+import PowerBIDataService from '../../services/PowerBIDataService';
 
 interface PowerBIDataset {
   name: string;
@@ -55,33 +56,28 @@ const PowerBIDataDashboard: React.FC = () => {
   const loadData = async () => {
     try {
       setLoading(true);
+      setError(null);
       
       // Check if Power BI data is available
-      const statusResponse = await fetch('/api/powerbi/status');
-      const statusData = await statusResponse.json();
+      const isAvailable = await PowerBIDataService.isDataAvailable();
       
-      if (!statusData.available) {
+      if (!isAvailable) {
         setError('Los datos de Power BI aún no han sido extraídos. Por favor, ejecute el proceso de extracción primero.');
         return;
       }
       
-      // Load all data
-      const [datasetsRes, tablesRes, recordsRes, reportRes] = await Promise.all([
-        fetch('/api/powerbi/datasets'),
-        fetch('/api/powerbi/tables'),
-        fetch('/api/powerbi/records'),
-        fetch('/api/powerbi/report')
+      // Load all data concurrently
+      const [datasetsData, tablesData, recordsData, reportData] = await Promise.all([
+        PowerBIDataService.fetchDatasets(),
+        PowerBIDataService.fetchTables(),
+        PowerBIDataService.fetchRecords(100),
+        PowerBIDataService.fetchReport()
       ]);
       
-      const datasetsData = await datasetsRes.json();
-      const tablesData = await tablesRes.json();
-      const recordsData = await recordsRes.json();
-      const reportData = await reportRes.json();
-      
-      setDatasets(datasetsData.datasets);
-      setTables(tablesData.tables);
-      setRecords(recordsData.records);
-      setReport(reportData.report);
+      setDatasets(datasetsData);
+      setTables(tablesData);
+      setRecords(recordsData);
+      setReport(reportData);
     } catch (err) {
       setError('Error al cargar los datos de Power BI');
       console.error('Power BI data load error:', err);
@@ -91,8 +87,6 @@ const PowerBIDataDashboard: React.FC = () => {
   };
 
   const refreshData = () => {
-    // In a real implementation, this would trigger a new extraction
-    // For now, we'll just reload the existing data
     loadData();
   };
 
@@ -101,14 +95,7 @@ const PowerBIDataDashboard: React.FC = () => {
       setExtracting(true);
       setError(null);
       
-      const response = await fetch('/api/powerbi/extract', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      
-      const result = await response.json();
+      const result = await PowerBIDataService.triggerExtraction();
       
       if (result.success) {
         // Reload data after successful extraction

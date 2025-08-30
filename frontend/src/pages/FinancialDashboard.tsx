@@ -309,7 +309,7 @@ const FinancialDashboard: React.FC = () => {
             ))}
           </nav>
         </div>
-      </motion.section>
+      </div>
 
         {/* Overview Tab */}
         {activeTab === 'overview' && (
@@ -768,7 +768,7 @@ const FinancialDashboard: React.FC = () => {
             </div>
           </div>
         )}
-      </div>
+      </motion.section>
     </div>
   );
 };

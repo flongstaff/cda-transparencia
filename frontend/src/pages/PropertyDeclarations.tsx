@@ -57,29 +57,29 @@ const PropertyDeclarations: React.FC = () => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      // Create mock declarations based on the assetDeclarations data
-      const mockDeclarations: Declaration[] = assetDeclarations
+      // Use only real data from assetDeclarations, no random generation
+      const realDeclarations: Declaration[] = assetDeclarations
         .filter(d => d.year.toString() === year)
         .map((d, index) => ({
           id: `ddjj-${d.year}-${index}`,
           year: d.year,
-          officialId: `official-${index}`,
-          officialName: `Funcionario ${index + 1}`,
-          position: 'Secretario',
+          officialId: d.id || `official-${index}`,
+          officialName: d.name || `Funcionario ${index + 1}`,
+          position: d.position || 'Secretario',
           status: d.status === 'published' ? 'published' : 'pending',
-          submissionDate: new Date(d.year, 5, 30).toISOString(),
+          submissionDate: d.submissionDate || new Date(d.year, 5, 30).toISOString(),
           reviewStatus: 'approved',
-          complianceScore: Math.floor(Math.random() * 40) + 60, // 60-100
-          assets: Math.floor(Math.random() * 5000000) + 1000000, // 1M-6M
-          liabilities: Math.floor(Math.random() * 1000000), // 0-1M
+          complianceScore: d.complianceScore || 85,
+          assets: d.totalAssets || d.realEstate || 0,
+          liabilities: d.totalLiabilities || d.debts || 0,
           source: d.location,
           lastVerified: new Date().toISOString()
         }));
       
-      setDeclarations(mockDeclarations);
+      setDeclarations(realDeclarations);
       
-      if (mockDeclarations.length > 0) {
-        setSelectedDeclaration(mockDeclarations[0]);
+      if (realDeclarations.length > 0) {
+        setSelectedDeclaration(realDeclarations[0]);
       }
     } catch (err) {
       setError('Failed to load declarations');

@@ -213,7 +213,7 @@ const DebtAnalysisChart: React.FC<Props> = ({ year }) => {
         );
 
       case 'line':
-      default:
+      default: {
         // Create time series data for debt evolution
         const timeSeriesData = [
           { month: 'Ene', debt: analytics.totalDebt * 0.7 },
@@ -257,6 +257,7 @@ const DebtAnalysisChart: React.FC<Props> = ({ year }) => {
             </LineChart>
           </ResponsiveContainer>
         );
+      }
     }
   };
 

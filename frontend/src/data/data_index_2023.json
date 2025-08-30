@@ -1,0 +1,245 @@
+{
+  "year": 2023,
+  "municipality": "Carmen de Areco",
+  "data_sources": {
+    "salary_data": {
+      "type": "monthly_payroll",
+      "description": "Sueldos mensuales del personal municipal",
+      "months_available": ["Enero", "Marzo", "Mayo", "Junio", "Julio", "Septiembre"],
+      "documents": [
+        {
+          "month": "Enero 2023",
+          "file": "SUELDOS-ENERO-2023.pdf",
+          "format": "pdf"
+        },
+        {
+          "month": "Marzo 2023",
+          "file": "SUELDOS-MARZO-2023.pdf",
+          "format": "pdf"
+        },
+        {
+          "month": "Mayo 2023",
+          "file": "SUELDOS-MAYO-2023.pdf",
+          "format": "pdf"
+        },
+        {
+          "month": "Junio 2023",
+          "file": "SUELDOS-JUNIO-2023.pdf",
+          "format": "pdf"
+        },
+        {
+          "month": "Julio 2023",
+          "file": "SUELDOS-JULIO-2023.pdf",
+          "format": "pdf"
+        },
+        {
+          "month": "Septiembre 2023",
+          "file": "SUELDOS-SEPTIEMBRE-2023.pdf",
+          "format": "pdf"
+        }
+      ]
+    },
+    "budget_execution": {
+      "type": "quarterly_execution",
+      "description": "Estados de Ejecución Presupuestaria Trimestral",
+      "quarters": ["Marzo", "Junio", "3er Trimestre", "4to Trimestre"],
+      "documents": [
+        {
+          "period": "Marzo 2023",
+          "file": "Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+          "format": "pdf"
+        },
+        {
+          "period": "Junio 2023",
+          "file": "Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+          "format": "pdf"
+        },
+        {
+          "period": "3er Trimestre 2023",
+          "file": "Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf",
+          "format": "pdf"
+        },
+        {
+          "period": "4to Trimestre 2023",
+          "file": "Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf",
+          "format": "pdf"
+        }
+      ]
+    },
+    "fiscal_module": {
+      "type": "fiscal_data",
+      "description": "Módulos Fiscales con datos tributarios",
+      "documents": [
+        {
+          "type": "Principal",
+          "file": "MODULO-FISCAL.xlsx",
+          "format": "excel",
+          "description": "Módulo fiscal completo con datos tributarios"
+        },
+        {
+          "type": "Actualizado",
+          "file": "MODULO-FISCAL_1.xlsx",
+          "format": "excel",
+          "description": "Versión actualizada del módulo fiscal"
+        }
+      ]
+    },
+    "resolutions": {
+      "type": "administrative_resolutions",
+      "description": "Resoluciones Administrativas Provinciales y Municipales",
+      "total": 7,
+      "entities": [
+        "Ministerio de Hacienda y Finanzas",
+        "Provincial",
+        "Organismo Provincial de la Niñez y Adolescencia",
+        "Ministerio de Desarrollo de la Comunidad",
+        "Ministerio de Infraestructura y Servicios Públicos"
+      ],
+      "documents": [
+        {
+          "number": "297/2023",
+          "entity": "Ministerio de Hacienda y Finanzas",
+          "category": "finance"
+        },
+        {
+          "number": "790/2023",
+          "entity": "Provincial",
+          "category": "general"
+        },
+        {
+          "number": "828/2023",
+          "entity": "Organismo Provincial de la Niñez y Adolescencia",
+          "category": "social_services"
+        },
+        {
+          "number": "1536/2023",
+          "entity": "Ministerio de Desarrollo de la Comunidad",
+          "category": "community_development"
+        },
+        {
+          "number": "1556/2023",
+          "entity": "Ministerio de Infraestructura y Servicios Públicos",
+          "category": "infrastructure"
+        },
+        {
+          "number": "1691/2023",
+          "entity": "Provincial",
+          "category": "general"
+        },
+        {
+          "number": "3016/2023",
+          "entity": "Provincial",
+          "category": "general"
+        }
+      ]
+    },
+    "caif_data": {
+      "type": "investment_financing",
+      "description": "Cuenta de Ahorro, Inversión y Financiamiento",
+      "quarters": ["3er Trimestre", "4to Trimestre"],
+      "documents": [
+        {
+          "period": "3er Trimestre 2023",
+          "files": ["CAIF-3.pdf", "CAIF-3°TRIMESTRE.pdf"],
+          "format": "pdf"
+        },
+        {
+          "period": "4to Trimestre 2023",
+          "file": "CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023.pdf",
+          "format": "pdf"
+        }
+      ]
+    },
+    "budget_categories": {
+      "type": "budget_classification",
+      "description": "Clasificación presupuestaria por categorías",
+      "categories": [
+        {
+          "name": "Por Carácter Económico",
+          "files": [
+            "GASTOS-POR-CARACTER-ECONOMICO.pdf",
+            "RECURSOS-POR-CARACTER-ECONOMICO.pdf"
+          ],
+          "format": "pdf"
+        },
+        {
+          "name": "Por Finalidad y Función",
+          "file": "GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+          "format": "pdf"
+        },
+        {
+          "name": "Por Fuente de Financiamiento",
+          "file": "GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+          "format": "pdf"
+        },
+        {
+          "name": "Por Procedencia",
+          "file": "RECURSOS-POR-PROCEDENCIA.pdf",
+          "format": "pdf"
+        }
+      ]
+    },
+    "gender_perspective": {
+      "type": "gender_budget",
+      "description": "Análisis presupuestario con enfoque de género",
+      "period": "4to Trimestre 2023",
+      "document": {
+        "file": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+        "format": "pdf"
+      }
+    }
+  },
+  "summary": {
+    "total_documents": 25,
+    "formats": {
+      "pdf": 23,
+      "excel": 2
+    },
+    "categories": {
+      "salary": 6,
+      "budget_execution": 4,
+      "fiscal": 2,
+      "resolutions": 7,
+      "caif": 3,
+      "classifications": 5,
+      "gender": 1
+    }
+  },
+  "live_data_sources": {
+    "api_endpoints": {
+      "sueldos_endpoint": "/api/salarios?year=2023",
+      "gastos_endpoint": "/api/gastos?year=2023",
+      "modulo_fiscal_endpoint": "/api/fiscal?year=2023",
+      "resoluciones_endpoint": "/api/resoluciones?year=2023",
+      "caif_endpoint": "/api/caif?year=2023"
+    },
+    "web_sources": {
+      "transparencia_portal": "https://carmendeareco.gob.ar/transparencia?year=2023",
+      "boletin_oficial": "https://carmendeareco.gob.ar/boletin-oficial?year=2023",
+      "wayback_archive": "https://web.archive.org/web/20230000000000*/https://carmendeareco.gob.ar/transparencia/"
+    }
+  },
+  "markdown_documentation": {
+    "data_sources": "/docs/DATA_SOURCES.md",
+    "financial_analysis": "/docs/FINANCIAL_ANALYSIS_GUIDE.md",
+    "power_bi_integration": "/docs/POWER_BI_INTEGRATION.md",
+    "audit_data_summary": "/docs/AUDIT_DATA_SOURCES_SUMMARY.md"
+  },
+  "services_integration": {
+    "recommended_services": [
+      "FinancialDataService",
+      "YearlyDataService",
+      "CrossValidationService", 
+      "OfficialDataService",
+      "MarkdownDataService"
+    ],
+    "api_service": "EnhancedApiService",
+    "real_time": true,
+    "caching": true
+  },
+  "extracted_data_references": {
+    "powerbi_data": "/data/powerbi_extraction/powerbi_data_latest.json",
+    "enhanced_audit": "/enhanced_audit_data/enhanced_audit_results.json"
+  },
+  "last_updated": "2023-12-31"
+}

@@ -15,6 +15,11 @@ class LiveScraper:
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.base_url = "https://carmendeareco.gob.ar/transparencia/"
+        self.financial_keywords = [
+            "presupuesto", "balance", "ejecucion", "financiero", 
+            "ordenanza impositiva", "contrato", "licitacion", "gasto", 
+            "ingreso", "deuda", "salario", "declaracion jurada"
+        ]
         
     def scrape_all(self):
         """Main scraping function"""
@@ -27,7 +32,17 @@ class LiveScraper:
             
             for link in soup.find_all('a', href=True):
                 href = link['href']
+                link_text = link.get_text().lower()
+                
+                # Check if the link is a document and contains financial keywords
+                is_financial_document = False
                 if doc_pattern.search(href):
+                    for keyword in self.financial_keywords:
+                        if keyword in link_text or keyword in href.lower():
+                            is_financial_document = True
+                            break
+                
+                if is_financial_document:
                     if not href.startswith('http'):
                         full_url = f"{self.base_url.rstrip('/')}/{href.lstrip('/')}"
                     else:

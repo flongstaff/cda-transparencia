@@ -1,5 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { X, Download, ZoomIn, ZoomOut, RotateCw, ChevronLeft, ChevronRight, Maximize2, Minimize2 } from 'lucide-react';
+import { X, Download, ZoomIn, ZoomOut, RotateCw, ChevronLeft, ChevronRight, Maximize2, Minimize2, ExternalLink, Database, Activity, FileText, BarChart3 } from 'lucide-react';
+import ComprehensiveDataService from '../services/ComprehensiveDataService';
+import PowerBIDataService from '../services/PowerBIDataService';
+import MarkdownDataService from '../services/MarkdownDataService';
 
 interface PDFViewerProps {
   isOpen: boolean;
@@ -12,6 +15,8 @@ interface PDFViewerProps {
   officialUrl?: string;
   archiveUrl?: string;
   verificationStatus?: string;
+  year?: number;
+  category?: string;
 }
 
 const PDFViewer: React.FC<PDFViewerProps> = ({
@@ -24,7 +29,9 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
   markdownContent,
   officialUrl,
   archiveUrl,
-  verificationStatus
+  verificationStatus,
+  year,
+  category
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -33,25 +40,174 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
   const [isLoading, setIsLoading] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [viewMode, setViewMode] = useState<'pdf' | 'markdown' | 'info'>('pdf');
+  const [viewMode, setViewMode] = useState<'pdf' | 'markdown' | 'info' | 'powerbi' | 'comprehensive'>('pdf');
   const [documentData, setDocumentData] = useState<any>(null);
+  const [dataIndex, setDataIndex] = useState<any>(null);
+  const [comprehensiveData, setComprehensiveData] = useState<any>(null);
+  const [powerbiData, setPowerbiData] = useState<any>(null);
+  const [markdownData, setMarkdownData] = useState<any>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Load ALL available data sources using existing services
+  useEffect(() => {
+    const loadAllData = async () => {
+      if (!isOpen) return;
+      
+      try {
+        // Load comprehensive data service (integrates everything)
+        const comprehensiveService = new ComprehensiveDataService();
+        const allData = await comprehensiveService.getAllSourcesData();
+        setComprehensiveData(allData);
+
+        // Load year-specific data index
+        if (year) {
+          try {
+            const response = await fetch(`/src/data/data_index_${year}.json`);
+            if (response.ok) {
+              const indexData = await response.json();
+              setDataIndex(indexData);
+              
+              // Try to find document info in index
+              const docInfo = findDocumentInIndex(indexData, documentTitle);
+              if (docInfo) {
+                setDocumentData(docInfo);
+              }
+            }
+          } catch (err) {
+            console.warn(`Could not load data index for year ${year}:`, err);
+          }
+        }
+
+        // Load PowerBI data if available
+        try {
+          const powerbiService = new PowerBIDataService();
+          const powerbi = await powerbiService.getAllData();
+          setPowerbiData(powerbi);
+        } catch (err) {
+          console.warn('Could not load PowerBI data:', err);
+        }
+
+        // Load markdown documentation
+        try {
+          const markdownService = new MarkdownDataService();
+          const docs = await markdownService.getAllDocuments();
+          setMarkdownData(docs);
+        } catch (err) {
+          console.warn('Could not load markdown data:', err);
+        }
+
+      } catch (error) {
+        console.error('Error loading comprehensive data:', error);
+      }
+    };
+    
+    loadAllData();
+  }, [isOpen, year, documentTitle]);
+
+  // Find document information in the loaded index
+  const findDocumentInIndex = (index: any, title: string) => {
+    if (!index?.data_sources) return null;
+    
+    for (const [sourceKey, sourceData] of Object.entries(index.data_sources)) {
+      const source = sourceData as any;
+      
+      // Check documents array
+      if (source.documents && Array.isArray(source.documents)) {
+        const doc = source.documents.find((d: any) => 
+          (typeof d === 'string' && d.includes(title)) ||
+          (typeof d === 'object' && (d.file?.includes(title) || d.document?.includes(title)))
+        );
+        if (doc) {
+          return {
+            ...doc,
+            source_category: sourceKey,
+            source_type: source.type,
+            source_description: source.description
+          };
+        }
+      }
+      
+      // Check nested structure
+      if (source.categories && Array.isArray(source.categories)) {
+        for (const category of source.categories) {
+          if (category.documents && Array.isArray(category.documents)) {
+            const doc = category.documents.find((d: string) => d.includes(title));
+            if (doc) {
+              return {
+                file: doc,
+                category: category.name,
+                source_category: sourceKey,
+                source_type: source.type
+              };
+            }
+          }
+        }
+      }
+    }
+    return null;
+  };
 
   useEffect(() => {
     if (isOpen && documentUrl) {
       setIsLoading(true);
       setError(null);
       
-      // For demonstration, we'll use a timeout to simulate loading
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-        setTotalPages(Math.floor(Math.random() * 50) + 10); // Random page count for demo
-      }, 1500);
+      // Try to get real PDF info or use API
+      const loadDocument = async () => {
+        try {
+          // Try to get document metadata from API
+          const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+          
+          if (documentId) {
+            const response = await fetch(`${API_BASE}/api/documentos/${documentId}`, {
+              headers: { 'Accept': 'application/json' }
+            });
+            
+            if (response.ok) {
+              const docData = await response.json();
+              setTotalPages(docData.total_pages || 1);
+              setDocumentData(prev => ({ ...prev, ...docData }));
+            }
+          }
+          
+          // If no API data, set reasonable defaults based on document type
+          if (!totalPages || totalPages === 1) {
+            const estimatedPages = estimatePageCount(documentTitle);
+            setTotalPages(estimatedPages);
+          }
+          
+          setIsLoading(false);
+        } catch (err) {
+          console.warn('Could not load document metadata:', err);
+          // Set reasonable defaults
+          const estimatedPages = estimatePageCount(documentTitle);
+          setTotalPages(estimatedPages);
+          setIsLoading(false);
+        }
+      };
       
-      return () => clearTimeout(timer);
+      loadDocument();
     }
-  }, [isOpen, documentUrl]);
+  }, [isOpen, documentUrl, documentId]);
+
+  // Estimate page count based on document type
+  const estimatePageCount = (title: string): number => {
+    const titleLower = title.toLowerCase();
+    
+    if (titleLower.includes('presupuest')) return 50;
+    if (titleLower.includes('ordenanza')) return 15;
+    if (titleLower.includes('estado') && titleLower.includes('ejecucion')) return 25;
+    if (titleLower.includes('sueldo')) return 20;
+    if (titleLower.includes('resolucion')) return 5;
+    if (titleLower.includes('disposicion')) return 3;
+    if (titleLower.includes('licitacion')) return 10;
+    if (titleLower.includes('contrat')) return 8;
+    if (titleLower.includes('caif')) return 15;
+    if (titleLower.includes('deuda')) return 12;
+    
+    return 5; // Default for unknown document types
+  };
 
   if (!isOpen) return null;
 
@@ -124,10 +280,16 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
         <div className="flex-1 flex items-center justify-center bg-gray-100 dark:bg-gray-900">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
-            <p className="text-gray-600 dark:text-gray-400">Cargando documento PDF...</p>
+            <p className="text-gray-600 dark:text-gray-400">Cargando documento...</p>
             <p className="text-sm text-gray-500 dark:text-gray-500 mt-2">
-              Conectando con: {documentUrl.includes('carmendeareco.gob.ar') ? 'Sitio Oficial' : 'Archivo Local'}
+              {year ? `Cargando índice de datos ${year}...` : 'Cargando desde archivo...'}
             </p>
+            {documentUrl.includes('carmendeareco.gob.ar') && (
+              <p className="text-sm text-green-600 dark:text-green-400 mt-1">
+                <ExternalLink className="inline mr-1" size={14} />
+                Fuente oficial
+              </p>
+            )}
           </div>
         </div>
       );
@@ -346,8 +508,73 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
           </div>
         </div>
 
+        {/* View Mode Tabs */}
+        <div className="flex border-b border-gray-200 dark:border-gray-700 px-4 overflow-x-auto">
+          <button
+            onClick={() => setViewMode('pdf')}
+            className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap ${
+              viewMode === 'pdf' 
+                ? 'border-primary-500 text-primary-600 dark:text-primary-400' 
+                : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+            }`}
+          >
+            <FileText className="inline mr-2" size={16} />
+            PDF Document
+          </button>
+          <button
+            onClick={() => setViewMode('info')}
+            className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap ${
+              viewMode === 'info' 
+                ? 'border-primary-500 text-primary-600 dark:text-primary-400' 
+                : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+            }`}
+          >
+            <Database className="inline mr-2" size={16} />
+            Índice de Datos
+          </button>
+          {powerbiData && (
+            <button
+              onClick={() => setViewMode('powerbi')}
+              className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap ${
+                viewMode === 'powerbi' 
+                  ? 'border-primary-500 text-primary-600 dark:text-primary-400' 
+                  : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+              }`}
+            >
+              <BarChart3 className="inline mr-2" size={16} />
+              Datos PowerBI
+            </button>
+          )}
+          {comprehensiveData && (
+            <button
+              onClick={() => setViewMode('comprehensive')}
+              className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap ${
+                viewMode === 'comprehensive' 
+                  ? 'border-primary-500 text-primary-600 dark:text-primary-400' 
+                  : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+              }`}
+            >
+              <Activity className="inline mr-2" size={16} />
+              Datos Integrales
+            </button>
+          )}
+          {(markdownContent || markdownData) && (
+            <button
+              onClick={() => setViewMode('markdown')}
+              className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap ${
+                viewMode === 'markdown' 
+                  ? 'border-primary-500 text-primary-600 dark:text-primary-400' 
+                  : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+              }`}
+            >
+              <FileText className="inline mr-2" size={16} />
+              Documentación
+            </button>
+          )}
+        </div>
+
         {/* Navigation Controls */}
-        {!isLoading && !error && (
+        {!isLoading && !error && viewMode === 'pdf' && (
           <div className="flex items-center justify-center space-x-4 px-4 pb-4">
             <button
               onClick={handlePrevPage}

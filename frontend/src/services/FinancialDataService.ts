@@ -324,12 +324,4 @@ export class FinancialDataService {
       ]
     };
   }
-}iales', monto: 7000000, variacion: -2.4 }
-      ]
-    };
-  }
-} }
-      ]
-    };
-  }
 }

@@ -87,7 +87,7 @@ const ComprehensiveDocumentViewer: React.FC<ComprehensiveDocumentViewerProps> = 
   };
 
   const filterDocuments = () => {
-    let filtered = documents.filter(doc => {
+    const filtered = documents.filter(doc => {
       const matchesSearch = searchTerm === '' || 
         doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchTerm.toLowerCase());

@@ -204,8 +204,7 @@ const InvestmentAnalysisChart: React.FC<Props> = ({ year }) => {
           </ResponsiveContainer>
         );
 
-      case 'line':
-      default:
+      case 'line': {
         // Create time series data for investment evolution
         const timeSeriesData = [
           { month: 'Ene', investment: analytics.totalInvestment * 0.7 },
@@ -249,6 +248,9 @@ const InvestmentAnalysisChart: React.FC<Props> = ({ year }) => {
             </LineChart>
           </ResponsiveContainer>
         );
+      }
+      default:
+        return null;
     }
   };
 
@@ -257,7 +259,7 @@ const InvestmentAnalysisChart: React.FC<Props> = ({ year }) => {
       <div className="flex items-center justify-center h-64">
         <div className="text-center">
           <Loader2 className="h-8 w-8 animate-spin text-primary-500 mx-auto mb-2" />
-          <p className="text-gray-600 dark:text-gray-400">Cargando análisis de inversiones...</p>
+          <p className="text-gray-600 dark:text-gray-400">Cargando datos de inversiones...</p>
         </div>
       </div>
     );

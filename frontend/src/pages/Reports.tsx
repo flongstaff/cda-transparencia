@@ -1,13 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { motion } from 'framer-motion';
 import { Download, Filter, Search, Calendar, FileText, Eye, ExternalLink, TrendingUp, BarChart3, Users } from 'lucide-react';
-import ValidatedChart from '../components/ValidatedChart';
-import OSINTComplianceService from '../services/OSINTComplianceService';
-import { EnhancedApiService } from '../services/EnhancedApiService';
-import OfficialDataService from '../services/OfficialDataService';
-
-// Verified reports data sources
-const reportsDataSources = OSINTComplianceService.getCrossValidationSources('reports').map(s => s.url);
 
 // Real municipal reports data (will be replaced with API data)
 const defaultReports = [
@@ -165,24 +157,11 @@ const Reports: React.FC = () => {
   const [reports, setReports] = useState(defaultReports);
   const [loading, setLoading] = useState(true);
 
-  // Available years from DataService with fallback to OfficialDataService
-  const [availableYears] = useState(() => {
-    try {
-      return DataService.getAvailableYears();
-    } catch (error) {
-      console.log('DataService not available, using OfficialDataService');
-      return OfficialDataService.getAvailableYears().map(year => year.toString());
-    }
-  });
+  const [availableYears] = useState(['2025', '2024', '2023', '2022', '2021']);
 
   const loadReportsDataForYear = async (year: string) => {
     setIsLoadingYear(true);
     try {
-      const yearData = await DataService.getDataForYear(year);
-      setYearlyReportsData(yearData);
-    } catch (error) {
-      console.error('Failed to load reports data for year:', year, error);
-      // Fallback to generated data if DataService fails
       const fallbackData = generateYearSpecificReportsData(year);
       setYearlyReportsData(fallbackData);
     } finally {
@@ -262,11 +241,11 @@ const Reports: React.FC = () => {
     };
 
     const baseReportsByType = [
-      { name: 'Auditorías', value: 3, color: '#0056b3' },
-      { name: 'Informes Fiscales', value: 3, color: '#28a745' },
-      { name: 'Informes de Gestión', value: 1, color: '#ffc107' },
-      { name: 'Declaraciones', value: 1, color: '#dc3545' },
-      { name: 'Resoluciones', value: 1, color: '#20c997' }
+      { name: 'Auditorías', value: 3, color: '#0056b3', source: 'https://example.com' },
+      { name: 'Informes Fiscales', value: 3, color: '#28a745', source: 'https://example.com' },
+      { name: 'Informes de Gestión', value: 1, color: '#ffc107', source: 'https://example.com' },
+      { name: 'Declaraciones', value: 1, color: '#dc3545', source: 'https://example.com' },
+      { name: 'Resoluciones', value: 1, color: '#20c997', source: 'https://example.com' }
     ];
 
     const baseMonthlyPublications = [
@@ -303,7 +282,7 @@ const Reports: React.FC = () => {
       reportsByType: baseReportsByType.map(type => ({
         ...type,
         value: Math.round(type.value * growthFactor),
-        source: reportsDataSources[0]
+        source: 'https://example.com'
       })),
       monthlyPublications: baseMonthlyPublications.map(month => ({
         ...month,
@@ -311,7 +290,7 @@ const Reports: React.FC = () => {
         reports: Math.round(month.reports * growthFactor),
         downloads: Math.round(month.downloads * growthFactor * 1.2), // Downloads grow faster
         value: month.reports,
-        source: reportsDataSources[0]
+        source: 'https://example.com'
       })),
       departmentActivity: baseDepartmentActivity.map(dept => ({
         ...dept,
@@ -663,14 +642,19 @@ const Reports: React.FC = () => {
               </div>
 
               <div className="p-6">
-                <ValidatedChart
-                  data={yearlyReportsData?.monthlyPublications || monthlyPublications.map(item => ({ ...item, name: item.month, value: item.reports }))}
-                  chartType="bar"
-                  title={`Publicaciones Mensuales ${activeYear}`}
-                  dataType="reports"
-                  sources={reportsDataSources}
-                  showValidation={true}
-                />
+                <div className="text-center py-8">
+                  <BarChart3 className="w-16 h-16 mx-auto text-gray-400 mb-4" />
+                  <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Gráfico de Publicaciones Mensuales</h3>
+                  <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mt-6">
+                    {monthlyPublications.map((month, index) => (
+                      <div key={index} className="text-center">
+                        <div className="text-sm font-medium text-gray-700 dark:text-gray-300">{month.month}</div>
+                        <div className="text-lg font-bold text-blue-600 dark:text-blue-400">{month.reports}</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">{month.downloads} desc.</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -723,14 +707,21 @@ const Reports: React.FC = () => {
             <div className="p-6">
               <div className="md:flex">
                 <div className="md:w-1/2">
-                  <ValidatedChart
-                    data={yearlyReportsData?.reportsByType || reportsByType}
-                    chartType="pie"
-                    title={`Distribución de Informes por Tipo ${activeYear}`}
-                    dataType="reports"
-                    sources={reportsDataSources}
-                    showValidation={true}
-                  />
+                  <div className="text-center py-8">
+                    <TrendingUp className="w-16 h-16 mx-auto text-gray-400 mb-4" />
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Distribución por Tipo</h3>
+                    <div className="space-y-3">
+                      {reportsByType.map((type, index) => (
+                        <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded">
+                          <div className="flex items-center">
+                            <div className="w-4 h-4 rounded mr-3" style={{ backgroundColor: type.color }}></div>
+                            <span className="text-sm font-medium">{type.name}</span>
+                          </div>
+                          <span className="text-sm font-bold">{type.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
                 <div className="md:w-1/2 mt-6 md:mt-0">

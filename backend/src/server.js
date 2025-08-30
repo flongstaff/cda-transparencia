@@ -4,7 +4,7 @@ const helmet = require('helmet');
 const dotenv = require('dotenv');
 const path = require('path');
 const fs = require('fs');
-const sequelize = require('./config/database');
+const sequelize = null; // We'll set this to null since we're not using a database for our new endpoints
 const RealDataLoader = require('./real-data-loader');
 
 // Load environment variables
@@ -12,7 +12,7 @@ dotenv.config();
 
 // Create Express app
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;  // Changed from 3000 to 3001
 
 // Initialize Real Data Loader
 const realDataLoader = new RealDataLoader();

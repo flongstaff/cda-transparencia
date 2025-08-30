@@ -212,7 +212,7 @@ const SalaryAnalysisChart: React.FC<Props> = ({ year }) => {
     }
 
     switch (selectedChart) {
-      case 'distribution':
+      case 'distribution': {
         const distributionData = getSalaryDistributionData();
         return (
           <ResponsiveContainer width="100%" height={400}>
@@ -226,8 +226,9 @@ const SalaryAnalysisChart: React.FC<Props> = ({ year }) => {
             </BarChart>
           </ResponsiveContainer>
         );
+      }
 
-      case 'roles':
+      case 'roles': {
         const roleData = getRoleAnalysisData();
         return (
           <ResponsiveContainer width="100%" height={400}>
@@ -252,8 +253,9 @@ const SalaryAnalysisChart: React.FC<Props> = ({ year }) => {
             </BarChart>
           </ResponsiveContainer>
         );
+      }
 
-      case 'trends':
+      case 'trends': {
         const scatterData = getScatterData();
         return (
           <ResponsiveContainer width="100%" height={400}>
@@ -290,10 +292,11 @@ const SalaryAnalysisChart: React.FC<Props> = ({ year }) => {
                 }}
               />
               <Scatter data={scatterData} fill="#8B5CF6" />
-              <ReferenceLine y={analytics.averageSalary} stroke="#EF4444" strokeDasharray="5 5" />
+              <ReferenceLine y={analytics.averageSalary} stroke="#EF4444" strokeDashArray="5 5" />
             </ScatterChart>
           </ResponsiveContainer>
         );
+      }
 
       default:
         return null;

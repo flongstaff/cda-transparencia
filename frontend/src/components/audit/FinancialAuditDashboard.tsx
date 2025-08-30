@@ -80,107 +80,48 @@ const FinancialAuditDashboard: React.FC = () => {
   const loadAuditData = async () => {
     try {
       setLoading(true);
-      // In a real implementation, this would fetch from your API
-      // For now, we'll use mock data to demonstrate the UI
-      const mockData: AuditData = {
+      
+      // Try to load real audit data from API
+      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+      
+      try {
+        const response = await fetch(`${API_BASE}/api/audit/financial`, {
+          headers: { 'Accept': 'application/json' }
+        });
+        
+        if (response.ok) {
+          const realData = await response.json();
+          setAuditData(realData);
+          setLoading(false);
+          return;
+        }
+      } catch (apiError) {
+        console.log('API not available, showing empty state');
+      }
+      
+      // Show empty state when no real data is available
+      const emptyData: AuditData = {
         timestamp: new Date().toISOString(),
         financial_irregularities: {
-          salary_irregularities: [
-            {
-              official_name: "Dr. Juan Pérez",
-              role: "Intendente",
-              declared_salary: 8500000,
-              estimated_fair_salary: 1700000,
-              discrepancy_ratio: 5.0,
-              year: 2024,
-              evidence: "Salary 5.0x higher than average for executive roles"
-            },
-            {
-              official_name: "María González",
-              role: "Secretaria de Finanzas",
-              declared_salary: 4200000,
-              estimated_fair_salary: 1200000,
-              discrepancy_ratio: 3.5,
-              year: 2024,
-              evidence: "Salary 3.5x higher than average for senior_admin roles"
-            }
-          ],
-          budget_discrepancies: [
-            {
-              category: "Income",
-              budgeted_amount: 250000000,
-              actual_spent: 180000000,
-              difference: 70000000,
-              difference_percentage: 0.28,
-              year: 2024,
-              evidence: "Income 28.0% different from planned"
-            },
-            {
-              category: "Expenses",
-              budgeted_amount: 220000000,
-              actual_spent: 280000000,
-              difference: 60000000,
-              difference_percentage: 0.273,
-              year: 2024,
-              evidence: "Expenses 27.3% different from planned"
-            }
-          ],
+          salary_irregularities: [],
+          budget_discrepancies: [],
           summary: {
-            total_irregularities: 4,
-            high_salary_cases: 2,
-            budget_discrepancies: 2
+            total_irregularities: 0,
+            high_salary_cases: 0,
+            budget_discrepancies: 0
           }
         },
         infrastructure_projects: {
-          flags: [
-            {
-              project_name: "Pavimentación Avenida Principal",
-              budgeted_amount: 25000000,
-              actual_spent: 25000000,
-              delay_days: 420,
-              irregularity_type: "delayed_completion",
-              evidence: "Project delayed by 420 days with early payment"
-            },
-            {
-              project_name: "Parque Municipal Nuevo",
-              budgeted_amount: 18000000,
-              actual_spent: 18000000,
-              delay_days: 365,
-              irregularity_type: "delayed_completion",
-              evidence: "Project delayed by 365 days with early payment"
-            }
-          ],
+          flags: [],
           summary: {
-            flagged_projects: 2,
-            total_budget: 150000000
+            flagged_projects: 0,
+            total_budget: 0
           }
         },
-        key_findings: [
-          {
-            finding_type: "High Salary",
-            severity: "high",
-            description: "Dr. Juan Pérez salary 5.0x average",
-            amount: 8500000,
-            related_entity: "Dr. Juan Pérez"
-          },
-          {
-            finding_type: "Budget Discrepancy",
-            severity: "medium",
-            description: "Income 28.0% off budget",
-            amount: 70000000,
-            related_entity: "Income"
-          },
-          {
-            finding_type: "Project Delay",
-            severity: "high",
-            description: "Project delayed by 420 days with early payment",
-            amount: 25000000,
-            related_entity: "Pavimentación Avenida Principal"
-          }
-        ]
+        key_findings: []
       };
       
-      setAuditData(mockData);
+      setAuditData(emptyData);
     } catch (err) {
       setError('Error al cargar los datos de auditoría');
       console.error('Audit data load error:', err);

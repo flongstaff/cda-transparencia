@@ -5,7 +5,18 @@ import InvestmentAnalysisChart from '../components/charts/InvestmentAnalysisChar
 import FinancialDataTable from '../components/tables/FinancialDataTable';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import ApiService, { InvestmentAsset } from '../services/ApiService';
-import { formatCurrencyARS } from '../utils/formatters';
+
+const formatCurrencyARS = (value: number, shortFormat = false): string => {
+  if (shortFormat && value >= 1000000) {
+    return `$${(value / 1000000).toFixed(1)}M`;
+  }
+  return new Intl.NumberFormat('es-AR', {
+    style: 'currency',
+    currency: 'ARS',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(value);
+};
 
 // Data sources for validation
 const investmentDataSources = ['https://carmendeareco.gob.ar/transparencia/'];
@@ -24,8 +35,11 @@ const Investments: React.FC = () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await ApiService.getInvestmentsAssets(parseInt(year));
+      // Load investment data with PowerBI integration
+      const data = await ApiService.getInvestmentsWithPowerBI(parseInt(year));
       setInvestmentData(data);
+      
+      console.log(`Loaded ${data.length} investment records for ${year}:`, data);
     } catch (err) {
       console.error('Failed to load investment data for year:', year, err);
       setError('Failed to load investment data');
@@ -57,8 +71,8 @@ const Investments: React.FC = () => {
     asset_type: asset.asset_type,
     description: asset.description,
     value: asset.value,
-    acquisition_date: asset.acquisition_date,
-    status: asset.status,
+    acquisition_date: new Date().toISOString(), // Default date
+    status: 'active',
     name: asset.asset_type,
     source: investmentDataSources[0],
     lastVerified: new Date().toISOString(),

@@ -1,6 +1,5 @@
 import React from 'react';
 import { LineChart, Line, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Area, AreaChart } from 'recharts';
-import { motion } from 'framer-motion';
 import { TrendingUp, BarChart3, PieChart as PieChartIcon, Activity } from 'lucide-react';
 
 interface DataPoint {
@@ -24,7 +23,7 @@ interface YearlyDataChartProps {
 }
 
 const COLORS = [
-  '#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', 
+  '#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6',
   '#EC4899', '#06B6D4', '#84CC16', '#F97316', '#6366F1'
 ];
 
@@ -57,38 +56,38 @@ const YearlyDataChart: React.FC<YearlyDataChartProps> = ({
           <ResponsiveContainer width="100%" height={height}>
             <LineChart data={data}>
               <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
-              <XAxis 
-                dataKey={xAxisDataKey} 
+              <XAxis
+                dataKey={xAxisDataKey}
                 className="text-sm text-gray-600 dark:text-gray-400"
               />
-              <YAxis 
+              <YAxis
                 className="text-sm text-gray-600 dark:text-gray-400"
                 tickFormatter={formatValue}
               />
-              <Tooltip 
+              <Tooltip
                 formatter={(value: any) => [formatValue(Number(value)), yAxisDataKey]}
                 labelStyle={{ color: '#374151' }}
-                contentStyle={{ 
-                  backgroundColor: '#f9fafb', 
+                contentStyle={{
+                  backgroundColor: '#f9fafb',
                   border: '1px solid #e5e7eb',
                   borderRadius: '8px'
                 }}
               />
               <Legend />
-              <Line 
-                type="monotone" 
-                dataKey={yAxisDataKey} 
-                stroke={colors[0]} 
+              <Line
+                type="monotone"
+                dataKey={yAxisDataKey}
+                stroke={colors[0]}
                 strokeWidth={3}
                 dot={{ fill: colors[0], strokeWidth: 2, r: 6 }}
                 activeDot={{ r: 8 }}
               />
               {showComparison && comparisonData.length > 0 && (
-                <Line 
-                  type="monotone" 
-                  dataKey="comparison" 
+                <Line
+                  type="monotone"
+                  dataKey="comparison"
                   data={comparisonData}
-                  stroke={colors[1]} 
+                  stroke={colors[1]}
                   strokeWidth={2}
                   strokeDasharray="5 5"
                   dot={{ fill: colors[1], strokeWidth: 2, r: 4 }}
@@ -103,32 +102,32 @@ const YearlyDataChart: React.FC<YearlyDataChartProps> = ({
           <ResponsiveContainer width="100%" height={height}>
             <BarChart data={data}>
               <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
-              <XAxis 
-                dataKey={xAxisDataKey} 
+              <XAxis
+                dataKey={xAxisDataKey}
                 className="text-sm text-gray-600 dark:text-gray-400"
               />
-              <YAxis 
+              <YAxis
                 className="text-sm text-gray-600 dark:text-gray-400"
                 tickFormatter={formatValue}
               />
-              <Tooltip 
+              <Tooltip
                 formatter={(value: any) => [formatValue(Number(value)), yAxisDataKey]}
                 labelStyle={{ color: '#374151' }}
-                contentStyle={{ 
-                  backgroundColor: '#f9fafb', 
+                contentStyle={{
+                  backgroundColor: '#f9fafb',
                   border: '1px solid #e5e7eb',
                   borderRadius: '8px'
                 }}
               />
               <Legend />
-              <Bar 
-                dataKey={yAxisDataKey} 
+              <Bar
+                dataKey={yAxisDataKey}
                 fill={colors[0]}
                 radius={[4, 4, 0, 0]}
               />
               {showComparison && (
-                <Bar 
-                  dataKey="comparison" 
+                <Bar
+                  dataKey="comparison"
                   fill={colors[1]}
                   radius={[4, 4, 0, 0]}
                 />
@@ -142,28 +141,28 @@ const YearlyDataChart: React.FC<YearlyDataChartProps> = ({
           <ResponsiveContainer width="100%" height={height}>
             <AreaChart data={data}>
               <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
-              <XAxis 
-                dataKey={xAxisDataKey} 
+              <XAxis
+                dataKey={xAxisDataKey}
                 className="text-sm text-gray-600 dark:text-gray-400"
               />
-              <YAxis 
+              <YAxis
                 className="text-sm text-gray-600 dark:text-gray-400"
                 tickFormatter={formatValue}
               />
-              <Tooltip 
+              <Tooltip
                 formatter={(value: any) => [formatValue(Number(value)), yAxisDataKey]}
                 labelStyle={{ color: '#374151' }}
-                contentStyle={{ 
-                  backgroundColor: '#f9fafb', 
+                contentStyle={{
+                  backgroundColor: '#f9fafb',
                   border: '1px solid #e5e7eb',
                   borderRadius: '8px'
                 }}
               />
               <Legend />
-              <Area 
-                type="monotone" 
-                dataKey={yAxisDataKey} 
-                stroke={colors[0]} 
+              <Area
+                type="monotone"
+                dataKey={yAxisDataKey}
+                stroke={colors[0]}
                 fill={colors[0]}
                 fillOpacity={0.3}
               />
@@ -189,10 +188,10 @@ const YearlyDataChart: React.FC<YearlyDataChartProps> = ({
                   <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                 ))}
               </Pie>
-              <Tooltip 
+              <Tooltip
                 formatter={(value: any) => [formatValue(Number(value)), 'Monto']}
-                contentStyle={{ 
-                  backgroundColor: '#f9fafb', 
+                contentStyle={{
+                  backgroundColor: '#f9fafb',
                   border: '1px solid #e5e7eb',
                   borderRadius: '8px'
                 }}
@@ -208,45 +207,28 @@ const YearlyDataChart: React.FC<YearlyDataChartProps> = ({
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden"
-    >
-      <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="p-2 bg-blue-100 dark:bg-blue-900/20 rounded-lg text-blue-600 dark:text-blue-400">
-              {getChartIcon()}
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                {title}
-              </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Datos por año • {data.length} registros
-              </p>
-            </div>
+    <BaseChart
+      title={title}
+      subtitle={`Datos por año • ${data.length} registros`}
+      loading={false}
+      error={null}
+      controls={
+        <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
+          <div className="flex items-center space-x-1">
+            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: colors[0] }}></div>
+            <span>Principal</span>
           </div>
-          <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
+          {showComparison && (
             <div className="flex items-center space-x-1">
-              <div className="w-3 h-3 rounded-full" style={{ backgroundColor: colors[0] }}></div>
-              <span>Principal</span>
+              <div className="w-3 h-3 rounded-full" style={{ backgroundColor: colors[1] }}></div>
+              <span>Comparación</span>
             </div>
-            {showComparison && (
-              <div className="flex items-center space-x-1">
-                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: colors[1] }}></div>
-                <span>Comparación</span>
-              </div>
-            )}
-          </div>
+          )}
         </div>
-      </div>
-      <div className="p-6">
-        {renderChart()}
-      </div>
-    </motion.div>
+      }
+    >
+      {renderChart()}
+    </BaseChart>
   );
 };
 

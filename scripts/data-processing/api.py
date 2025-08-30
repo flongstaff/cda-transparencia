@@ -5,7 +5,7 @@ Live Data API - Carmen de Areco Transparency Portal
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from live_scrape import LiveScraper
+from scripts.scraping.live_scrape import LiveScraper
 import json
 from datetime import datetime
 
