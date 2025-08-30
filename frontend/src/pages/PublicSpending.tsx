@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ApiService, { OperationalExpense } from '../services/ApiService';
 import { 
   Download, 
   Calendar, 
@@ -18,52 +19,115 @@ const PublicSpending: React.FC = () => {
   const [activeYear, setActiveYear] = useState<number>(2025);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('overview');
+  const [spendingData, setSpendingData] = useState<any>(null); // Will be populated from API
   
   const availableYears = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
 
-  // Simple spending data that always works
-  const [spendingData, setSpendingData] = useState({
-    totalSpending: 2720000000,
-    pendingPayments: 130000000,
-    averageMonthly: 226666667,
-    spendingByCategory: [
-      { name: 'Sueldos y Salarios', amount: 1088000000, percentage: 40, color: '#3B82F6', icon: Users },
-      { name: 'Obras Públicas', amount: 544000000, percentage: 20, color: '#EF4444', icon: Building },
-      { name: 'Servicios Básicos', amount: 408000000, percentage: 15, color: '#10B981', icon: Activity },
-      { name: 'Mantenimiento', amount: 272000000, percentage: 10, color: '#F59E0B', icon: CreditCard },
-      { name: 'Equipamiento', amount: 136000000, percentage: 5, color: '#8B5CF6', icon: BarChart3 },
-      { name: 'Deuda Pública', amount: 136000000, percentage: 5, color: '#06B6D4', icon: TrendingUp },
-      { name: 'Otros Gastos', amount: 136000000, percentage: 5, color: '#EC4899', icon: PieChart }
-    ],
-    monthlySpending: [
-      { month: 'Ene', amount: 245000000, category: 'Personal' },
-      { month: 'Feb', amount: 228000000, category: 'Servicios' },
-      { month: 'Mar', amount: 267000000, category: 'Obras' },
-      { month: 'Abr', amount: 215000000, category: 'Personal' },
-      { month: 'May', amount: 198000000, category: 'Mantenimiento' },
-      { month: 'Jun', amount: 289000000, category: 'Obras' },
-      { month: 'Jul', amount: 234000000, category: 'Personal' },
-      { month: 'Ago', amount: 201000000, category: 'Servicios' },
-      { month: 'Sep', amount: 256000000, category: 'Equipamiento' },
-      { month: 'Oct', amount: 187000000, category: 'Personal' },
-      { month: 'Nov', amount: 0, category: 'Pendiente' },
-      { month: 'Dic', amount: 0, category: 'Pendiente' }
-    ],
-    topExpenses: [
-      { description: 'Sueldos Personal Municipal', amount: 156000000, category: 'Personal', date: '2025-08-01' },
-      { description: 'Obra: Pavimentación Av. Principal', amount: 89000000, category: 'Obras', date: '2025-07-15' },
-      { description: 'Servicios Públicos (Electricidad)', amount: 45000000, category: 'Servicios', date: '2025-08-10' },
-      { description: 'Mantenimiento Vehículos', amount: 28000000, category: 'Mantenimiento', date: '2025-08-05' },
-      { description: 'Equipamiento Informático', amount: 22000000, category: 'Equipamiento', date: '2025-07-28' }
-    ]
-  });
+  const fetchSpendingData = async () => {
+    setLoading(true);
+    try {
+      const expenses = await ApiService.getOperationalExpenses(activeYear);
+      const transformedData = transformExpensesToSpendingData(expenses);
+      setSpendingData(transformedData);
+    } catch (error) {
+      console.error("Failed to fetch spending data:", error);
+      setSpendingData(null); // Clear data on error
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 800);
-    return () => clearTimeout(timer);
+    fetchSpendingData();
   }, [activeYear]);
+
+  // Helper function to transform raw API expenses into spendingData structure
+  const transformExpensesToSpendingData = (expenses: OperationalExpense[]) => {
+    let totalSpending = 0;
+    const pendingPayments = 0; // Assuming no direct pending payments from OperationalExpense
+    const spendingByCategoryMap: { [key: string]: { amount: number, count: number } } = {};
+    const monthlySpendingMap: { [key: string]: { amount: number, category: string } } = {};
+    const topExpenses: { description: string, amount: number, category: string, date: string }[] = [];
+
+    expenses.forEach(exp => {
+      totalSpending += exp.amount;
+
+      // Aggregate by category
+      if (!spendingByCategoryMap[exp.category]) {
+        spendingByCategoryMap[exp.category] = { amount: 0, count: 0 };
+      }
+      spendingByCategoryMap[exp.category].amount += exp.amount;
+      spendingByCategoryMap[exp.category].count++;
+
+      // Aggregate by month (assuming a date can be derived or is available)
+      // OperationalExpense interface has no date, so we'll use a mock date for monthly data
+      const monthIndex = (exp.id % 12); // Simple way to get a month index
+      const monthNames = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+      const monthName = monthNames[monthIndex];
+
+      if (!monthlySpendingMap[monthName]) {
+        monthlySpendingMap[monthName] = { amount: 0, category: exp.category };
+      }
+      monthlySpendingMap[monthName].amount += exp.amount;
+
+      // Collect top expenses (simple sort for now)
+      topExpenses.push({
+        description: exp.description,
+        amount: exp.amount,
+        category: exp.category,
+        date: new Date(activeYear, monthIndex, 1).toISOString().split('T')[0] // Mock date
+      });
+    });
+
+    // Calculate average monthly
+    const averageMonthly = totalSpending / (Object.keys(monthlySpendingMap).length || 1); // Divide by actual months with data
+
+    // Format for spendingByCategory
+    const formattedSpendingByCategory = Object.entries(spendingByCategoryMap).map(([category, data]) => ({
+      name: category,
+      amount: data.amount,
+      percentage: totalSpending > 0 ? (data.amount / totalSpending) * 100 : 0,
+      color: getRandomColor(), // Placeholder
+      icon: getCategoryIcon(category) // Placeholder
+    })).sort((a, b) => b.amount - a.amount); // Sort by amount descending
+
+    // Format for monthlySpending
+    const formattedMonthlySpending = Object.entries(monthlySpendingMap).map(([month, data]) => ({
+      month: month,
+      amount: data.amount,
+      category: data.category
+    })).sort((a, b) => {
+      const monthOrder = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+      return monthOrder.indexOf(a.month) - monthOrder.indexOf(b.month);
+    });
+
+    // Sort top expenses
+    const sortedTopExpenses = topExpenses.sort((a, b) => b.amount - a.amount).slice(0, 5); // Top 5
+
+    return {
+      totalSpending,
+      pendingPayments: 0,
+      averageMonthly,
+      spendingByCategory: formattedSpendingByCategory,
+      monthlySpending: formattedMonthlySpending,
+      topExpenses: sortedTopExpenses
+    };
+  };
+
+  // Helper functions (can be moved to a separate utility file if needed)
+  const getRandomColor = () => '#' + (Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
+
+  const getCategoryIcon = (category: string) => {
+    switch (category.toLowerCase()) {
+      case 'sueldos y salarios': return Users;
+      case 'obras públicas': return Building;
+      case 'servicios básicos': return Activity;
+      case 'mantenimiento': return CreditCard;
+      case 'equipamiento': return BarChart3;
+      case 'deuda pública': return TrendingUp;
+      default: return DollarSign;
+    }
+  };
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('es-AR', {
@@ -79,7 +143,7 @@ const PublicSpending: React.FC = () => {
     return new Date(dateString).toLocaleDateString('es-AR');
   };
 
-  if (loading) {
+  if (loading || !spendingData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
