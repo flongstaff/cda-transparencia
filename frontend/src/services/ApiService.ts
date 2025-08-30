@@ -3,7 +3,7 @@
 import PowerBIIntegrationService from './PowerBIIntegrationService';
 
 // Use the local backend API with PowerBI integration
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 // Helper function to convert string values to numbers in API responses
 const transformApiResponse = <T>(data: any): T => {
