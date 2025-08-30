@@ -15,4 +15,5 @@ The portal now includes:
 4. Complete document viewing capabilities with multiple content sources
 5. Year-based document organization and filtering
 
-The portal is ready for deployment to GitHub Pages.
+The portal is ready for deployment to GitHub Pages.Deployment triggered on: 
+Sat Aug 30 12:53:13 AWST 2025
