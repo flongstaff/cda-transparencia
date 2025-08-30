@@ -16,6 +16,7 @@ Análisis integral de 15 años de gestión municipal para identificar:
 - Evolución salarial del sector público
 - Cumplimiento de normativa de transparencia
 
+<<<<<<< HEAD
 ### 📈 Estadísticas del Sistema
 
 - **433** registros de datos activos
@@ -24,6 +25,8 @@ Análisis integral de 15 años de gestión municipal para identificar:
 - **4/6** endpoints operacionales
 - **1,381** documentos archivados totales
 
+=======
+>>>>>>> 4a494309b91337a057db9c6248de4217d96ee916
 ## 🚀 Tecnologías
 
 - **Frontend:** React + TypeScript + Vite
@@ -45,14 +48,6 @@ python scripts/run_powerbi_extraction.py
 - **Base de Datos:** PostgreSQL (Docker)
 - **Procesamiento de Datos:** Python scripts para Excel/PDF
 - **Despliegue:** GitHub Pages + GitHub Actions
-
-## ✅ Estado del Proyecto
-
-- **Frontend:** ✅ Completo y funcional
-- **Documentos:** ✅ 1,381 documentos organizados por año
-- **Fuentes de Datos:** ✅ 3 fuentes integradas (sitio oficial, archivo web, procesados)
-- **Endpoints API:** ✅ 6/6 operacionales
-- **Construcción:** ✅ Vite build exitoso (TypeScript relajado para compatibilidad)
 
 ## 🗂️ Estructura del Repositorio
 
@@ -138,7 +133,7 @@ cd frontend && npm install && npm run dev
 ### 🌐 Dashboard Web (Producción)
 El portal está desplegado automáticamente con CI/CD:
 - **GitHub Pages:** [https://flongstaff.github.io/cda-transparencia/](https://flongstaff.github.io/cda-transparencia/)
-- **Cloudflare DNS:** transparency.carmendeareco.gov.ar (pendiente configuración)
+- **Cloudflare DNS:** cda-transparencia.org (pendiente configuración)
 
 ### ✅ Funcionalidad de Documentos
 - **Organización por Año:** Documentos organizados de 2017-2025
