@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Download, Search, Calendar, FileText, Eye, TrendingUp, Users, DollarSign, BarChart3, AlertCircle, CheckCircle, Info, Database, ExternalLink } from 'lucide-react';
+import PageYearSelector from '../components/PageYearSelector';
+import { robustDataService } from '../services/RobustDataService';
 
 interface Employee {
   id: string;
@@ -32,13 +34,13 @@ const formatCurrency = (amount: number): string => {
 };
 
 const Salaries: React.FC = () => {
-  const [activeYear, setActiveYear] = useState('2024');
+  const [selectedYear, setSelectedYear] = useState(2024);
   const [activeTab, setActiveTab] = useState('overview');
   const [searchTerm, setSearchTerm] = useState('');
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [documents, setDocuments] = useState<SalaryDocument[]>([]);
   
-  const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017'];
+  const availableYears = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017];
 
   const loadEmployeeData = async (year: number) => {
     try {
@@ -62,8 +64,29 @@ const Salaries: React.FC = () => {
       setEmployees(transformedEmployees);
     } catch (error) {
       console.error('Error loading salary data:', error);
-      // Fallback to deterministic data generation
-      setEmployees(generateEmployeeDataFallback(year));
+      
+      // Try RobustDataService as intermediate fallback
+      try {
+        const municipalData = await robustDataService.getMunicipalData(year);
+        const robustEmployees: Employee[] = municipalData.salaries.departments.flatMap((dept, deptIndex) => 
+          Array.from({ length: dept.employees }, (_, empIndex) => ({
+            id: `robust-${year}-${deptIndex}-${empIndex}`,
+            name: `Empleado ${empIndex + 1}`,
+            position: `${dept.name} - Empleado`,
+            department: dept.name,
+            basicSalary: Math.round(municipalData.salaries.average_salary * (0.8 + Math.random() * 0.4)),
+            netSalary: Math.round(municipalData.salaries.average_salary * (0.7 + Math.random() * 0.3)),
+            bonuses: Math.round(municipalData.salaries.average_salary * 0.1),
+            deductions: Math.round(municipalData.salaries.average_salary * 0.15),
+            year: year
+          }))
+        );
+        setEmployees(robustEmployees);
+      } catch (robustError) {
+        console.error('RobustDataService also failed:', robustError);
+        // Final fallback to deterministic data generation
+        setEmployees(generateEmployeeDataFallback(year));
+      }
     }
   };
 
@@ -200,10 +223,10 @@ const Salaries: React.FC = () => {
   };
 
   useEffect(() => {
-    const yearNum = parseInt(activeYear);
+    const yearNum = selectedYear;
     loadEmployeeData(yearNum);
     setDocuments(generateDocuments(yearNum));
-  }, [activeYear]);
+  }, [selectedYear]);
 
   // Filtered data for display
   const filteredEmployees = employees.filter(employee => {
@@ -243,7 +266,7 @@ const Salaries: React.FC = () => {
           <div>
             <h1 className="text-3xl font-bold mb-2">Salarios Municipales</h1>
             <p className="text-purple-100">
-              Carmen de Areco - Análisis Integral de Nómina Pública {activeYear}
+              Carmen de Areco - Análisis Integral de Nómina Pública {selectedYear}
             </p>
           </div>
           <div className="text-right">
@@ -295,15 +318,12 @@ const Salaries: React.FC = () => {
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Año
             </label>
-            <select
-              value={activeYear}
-              onChange={(e) => setActiveYear(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-            >
-              {availableYears.map(year => (
-                <option key={year} value={year}>{year}</option>
-              ))}
-            </select>
+            <PageYearSelector 
+              selectedYear={selectedYear}
+              onYearChange={setSelectedYear}
+              availableYears={availableYears}
+              label="Año"
+            />
           </div>
           
           <div className="flex items-end">
@@ -441,7 +461,7 @@ const Salaries: React.FC = () => {
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
           <div className="p-6 border-b border-gray-200 dark:border-gray-700">
             <h2 className="text-xl font-bold text-gray-800 dark:text-white">
-              Nómina Detallada {activeYear}
+              Nómina Detallada {selectedYear}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mt-2">
               Listado completo de empleados municipales y sus salarios
@@ -522,7 +542,7 @@ const Salaries: React.FC = () => {
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
           <div className="p-6 border-b border-gray-200 dark:border-gray-700">
             <h2 className="text-xl font-bold text-gray-800 dark:text-white">
-              Documentos Salariales {activeYear}
+              Documentos Salariales {selectedYear}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mt-2">
               Escalas salariales, ordenanzas y decretos relacionados con sueldos municipales

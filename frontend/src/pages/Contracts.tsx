@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Download, Search, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, Building, DollarSign, ShieldCheck, Users, BarChart3 } from 'lucide-react';
+import PageYearSelector from '../components/PageYearSelector';
+import { robustDataService } from '../services/RobustDataService';
 
 interface Contract {
   id: string;
@@ -17,7 +19,7 @@ interface Contract {
 }
 
 const Contracts: React.FC = () => {
-  const [activeYear, setActiveYear] = useState('2024');
+  const [selectedYear, setSelectedYear] = useState(2024);
   const [selectedContract, setSelectedContract] = useState<Contract | null>(null);
   const [activeTab, setActiveTab] = useState('overview');
   const [sortBy, setSortBy] = useState('budget');
@@ -25,7 +27,7 @@ const Contracts: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [contractsData, setContractsData] = useState<Contract[]>([]);
 
-  const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017'];
+  const availableYears = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017];
 
   const loadContractsData = async (year: number) => {
     try {
@@ -78,7 +80,31 @@ const Contracts: React.FC = () => {
         setContractsData(transformedContracts);
       } catch (fallbackError) {
         console.error('Fallback data loading failed:', fallbackError);
-        setContractsData([]);
+        
+        // Final fallback: Use RobustDataService
+        try {
+          const municipalData = await robustDataService.getMunicipalData(year);
+          const robustContracts: Contract[] = municipalData.contracts.items.map((item, index) => ({
+            id: `robust-${year}-${index}`,
+            year: year,
+            title: item.title,
+            description: `Contrato para ${item.title}`,
+            budget: item.amount,
+            awarded_to: item.contractor,
+            award_date: new Date().toISOString(),
+            execution_status: item.status === 'Activo' ? 'in_progress' : 
+                            item.status === 'Completado' ? 'completed' : 'delayed',
+            status: item.status === 'Activo' ? 'active' : 
+                   item.status === 'Completado' ? 'closed' : 'bidding',
+            type: item.category === 'Obras Públicas' ? 'public_works' : 
+                 item.category === 'Servicios' ? 'services' : 'supplies',
+            category: item.category
+          }));
+          setContractsData(robustContracts);
+        } catch (robustError) {
+          console.error('Error with robust data service:', robustError);
+          setContractsData([]);
+        }
       }
     }
   };
@@ -150,8 +176,8 @@ const Contracts: React.FC = () => {
   };
 
   useEffect(() => {
-    loadContractsData(parseInt(activeYear));
-  }, [activeYear]);
+    loadContractsData(selectedYear);
+  }, [selectedYear]);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('es-AR', {
@@ -280,22 +306,12 @@ const Contracts: React.FC = () => {
         </div>
 
         <div className="mt-4 md:mt-0 flex flex-wrap gap-3">
-          <div className="relative">
-            <select
-              className="appearance-none bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              value={activeYear}
-              onChange={(e) => setActiveYear(e.target.value)}
-            >
-              {availableYears.map(year => (
-                <option key={year} value={year}>
-                  {year}
-                </option>
-              ))}
-            </select>
-            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 dark:text-gray-300">
-              <Calendar className="h-4 w-4" />
-            </div>
-          </div>
+          <PageYearSelector 
+            selectedYear={selectedYear}
+            onYearChange={setSelectedYear}
+            availableYears={availableYears}
+            label="Año"
+          />
 
           <button className="inline-flex items-center py-2 px-4 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition duration-150">
             <Download size={18} className="mr-2" />
@@ -307,7 +323,7 @@ const Contracts: React.FC = () => {
       {/* Dashboard Overview */}
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-6 mb-8 border border-blue-200 dark:border-blue-700">
         <h2 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-4">
-          📊 Panel de Contrataciones {activeYear}
+          📊 Panel de Contrataciones {selectedYear}
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">

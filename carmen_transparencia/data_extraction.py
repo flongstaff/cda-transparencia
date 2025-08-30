@@ -56,20 +56,7 @@ async def fetch_page(url: str, session: aiohttp.ClientSession) -> BeautifulSoup:
         return soup
 
 
-import pathlib
-import re
-import sys
-import time
-import traceback
-import requests
-import asyncio
-import urllib.parse
-import aiohttp
 
-from typing import Iterable, List
-from bs4 import BeautifulSoup
-import tqdm
-from carmen_transparencia.processing import process_directory
 
 # Global helpers
 BASE_URL = "https://carmendeareco.gob.ar/transparencia/"
@@ -111,7 +98,7 @@ async def fetch_page(url: str, session: aiohttp.ClientSession) -> BeautifulSoup:
 
 async def _get_links(
         url: str,
-        pattern: re.Pattern = re.compile(r'\.(pdf|xlsx|docx?|csv|xls)
+        pattern: re.Pattern = re.compile(r'\.(pdf|xlsx|docx?|csv|xls)')
 
 # Public helpers
 async def scrape_live(

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3, PieChart, TrendingUp, DollarSign, FileText, Calendar, Filter, Download, AlertTriangle, CheckCircle, Loader2, ExternalLink, Eye, Database, Search, Info } from 'lucide-react';
+import PageYearSelector from '../components/PageYearSelector';
 import FinancialOverview from '../components/dashboard/FinancialOverview';
 import ValidatedChart from '../components/ValidatedChart';
 import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
@@ -11,13 +12,14 @@ import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
 import ComprehensiveDataService, { DocumentLink } from '../services/ComprehensiveDataService';
 import ApiService, { FinancialReport } from '../services/ApiService';
 import CarmenArecoPowerBIService from '../services/CarmenArecoPowerBIService';
+import { robustDataService } from '../services/RobustDataService';
 import { formatCurrencyARS } from '../utils/formatters';
 
 // Comprehensive data service instance
 const dataService = ComprehensiveDataService.getInstance();
 
 const FinancialDashboard: React.FC = () => {
-  const [activeYear, setActiveYear] = useState('2024');
+  const [selectedYear, setSelectedYear] = useState(2024);
   const [activeTab, setActiveTab] = useState('overview');
   const [searchTerm, setSearchTerm] = useState('');
   const [documents, setDocuments] = useState<DocumentLink[]>([]);
@@ -27,7 +29,7 @@ const FinancialDashboard: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [stats, setStats] = useState<any>(null);
   
-  const availableYears = ['2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017'];
+  const availableYears = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017];
 
   const loadComprehensiveFinancialData = async () => {
     setLoading(true);
@@ -52,7 +54,7 @@ const FinancialDashboard: React.FC = () => {
       
       // Load backend financial reports
       try {
-        const apiReports = await ApiService.getFinancialReports(parseInt(activeYear));
+        const apiReports = await ApiService.getFinancialReports(selectedYear);
         setFinancialReports(apiReports);
         console.log(`✅ Backend financial reports loaded:`, apiReports.length, 'entries');
       } catch (apiError) {
@@ -63,10 +65,10 @@ const FinancialDashboard: React.FC = () => {
       // Load Carmen de Areco PowerBI financial data
       try {
         const powerBIService = CarmenArecoPowerBIService.getInstance();
-        const municipalData = await powerBIService.getMunicipalData(parseInt(activeYear));
+        const municipalData = await powerBIService.getMunicipalData(selectedYear);
         setPowerBIData(municipalData);
         
-        console.log(`✅ Carmen de Areco PowerBI financial data loaded for ${activeYear}:`, {
+        console.log(`✅ Carmen de Areco PowerBI financial data loaded for ${selectedYear}:`, {
           budget: municipalData.presupuesto?.totalBudget || 0,
           revenue: municipalData.ingresos?.total || 0,
           spending: municipalData.gastos?.total || 0,
@@ -81,6 +83,30 @@ const FinancialDashboard: React.FC = () => {
       // Generate comprehensive stats
       const comprehensiveStats = await dataService.getComprehensiveStats();
       setStats(comprehensiveStats);
+      
+      // Use RobustDataService as fallback for complete data
+      try {
+        const municipalData = await robustDataService.getMunicipalData(selectedYear);
+        if (!powerBIData && (!financialReports || financialReports.length === 0)) {
+          // If we don't have PowerBI or API data, enhance with robust fallback data
+          setPowerBIData({
+            presupuesto: { totalBudget: municipalData.budget.total },
+            ingresos: { total: municipalData.revenue.total },
+            gastos: { 
+              total: municipalData.expenses.total,
+              corrientes: municipalData.expenses.operational,
+              capital: municipalData.expenses.investment
+            },
+            contratos: { totalValue: municipalData.contracts.total },
+            deuda: { 
+              totalDebt: municipalData.debt.total,
+              servicio: municipalData.debt.interest_rate
+            }
+          });
+        }
+      } catch (robustError) {
+        console.warn('RobustDataService not available:', robustError);
+      }
       
       console.log(`✅ Comprehensive financial data loaded:`);
       console.log(`📊 Financial documents: ${financialDocs.length}`);
@@ -97,7 +123,7 @@ const FinancialDashboard: React.FC = () => {
   // Load comprehensive financial data on mount and year change
   useEffect(() => {
     loadComprehensiveFinancialData();
-  }, [activeYear]);
+  }, [selectedYear]);
 
   const handleDataRefresh = () => {
     loadComprehensiveFinancialData();
@@ -111,8 +137,8 @@ const FinancialDashboard: React.FC = () => {
 
   // Generate comprehensive financial analysis
   const generateFinancialAnalysis = (docs: DocumentLink[], reports: FinancialReport[], powerbi: any) => {
-    const currentYearDocs = docs.filter(doc => doc.year === parseInt(activeYear));
-    const allYearsDocs = docs.filter(doc => doc.year >= 2018 && doc.year <= parseInt(activeYear));
+    const currentYearDocs = docs.filter(doc => doc.year === selectedYear);
+    const allYearsDocs = docs.filter(doc => doc.year >= 2018 && doc.year <= selectedYear);
     
     // Calculate totals from PowerBI data if available
     const powerBIBudget = powerbi?.presupuesto?.totalBudget || 0;
@@ -177,7 +203,7 @@ const FinancialDashboard: React.FC = () => {
         </div>
         <p className="mt-2 text-red-700 dark:text-red-300">{error}</p>
         <button 
-          onClick={() => loadFinancialDataForYear(activeYear)}
+          onClick={() => loadComprehensiveFinancialData()}
           className="mt-4 px-4 py-2 bg-red-100 dark:bg-red-800 text-red-700 dark:text-red-200 rounded-lg hover:bg-red-200 dark:hover:bg-red-700 transition-colors"
         >
           Reintentar
@@ -201,7 +227,7 @@ const FinancialDashboard: React.FC = () => {
             <div>
               <h1 className="text-3xl font-bold mb-2">Dashboard Financiero</h1>
               <p className="text-green-100">
-                Carmen de Areco - Análisis Integral de Finanzas Municipales {activeYear}
+                Carmen de Areco - Análisis Integral de Finanzas Municipales {selectedYear}
               </p>
             </div>
             {stats && (
@@ -260,15 +286,12 @@ const FinancialDashboard: React.FC = () => {
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Año Fiscal
               </label>
-              <select
-                value={activeYear}
-                onChange={(e) => setActiveYear(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                {availableYears.map(year => (
-                  <option key={year} value={year}>{year}</option>
-                ))}
-              </select>
+              <PageYearSelector 
+                selectedYear={selectedYear}
+                onYearChange={setSelectedYear}
+                availableYears={availableYears}
+                label="Año Fiscal"
+              />
             </div>
             
             <div className="flex items-end">
@@ -331,7 +354,7 @@ const FinancialDashboard: React.FC = () => {
                       {formatCurrency(financialAnalysis.totalBudget)}
                     </p>
                     <span className="text-sm text-green-600">
-                      {activeYear}
+                      {selectedYear}
                     </span>
                   </div>
                 </div>
@@ -457,7 +480,7 @@ const FinancialDashboard: React.FC = () => {
                       Estado Financiero Verificado - Carmen de Areco
                     </h3>
                     <p className="text-green-700">
-                      {financialAnalysis.verificationSources} fuente{financialAnalysis.verificationSources !== 1 ? 's' : ''} independiente{financialAnalysis.verificationSources !== 1 ? 's' : ''} confirma{financialAnalysis.verificationSources === 1 ? '' : 'n'} los datos financieros del {activeYear}
+                      {financialAnalysis.verificationSources} fuente{financialAnalysis.verificationSources !== 1 ? 's' : ''} independiente{financialAnalysis.verificationSources !== 1 ? 's' : ''} confirma{financialAnalysis.verificationSources === 1 ? '' : 'n'} los datos financieros del {selectedYear}
                     </p>
                   </div>
                 </div>
@@ -486,7 +509,7 @@ const FinancialDashboard: React.FC = () => {
             <div className="bg-white rounded-xl shadow-sm overflow-hidden">
               <div className="p-6 border-b border-gray-200">
                 <h2 className="text-xl font-bold text-gray-800">
-                  Ejecución Presupuestaria {activeYear}
+                  Ejecución Presupuestaria {selectedYear}
                 </h2>
                 <p className="text-gray-600 mt-2">
                   Seguimiento trimestral del presupuesto municipal
@@ -501,7 +524,7 @@ const FinancialDashboard: React.FC = () => {
                       ejecutado: Math.round(report.expenses / 1000000),
                       balance: Math.round(report.balance / 1000000)
                     }))}
-                    title={`Presupuesto vs Ejecución ${activeYear} (Millones ARS)`}
+                    title={`Presupuesto vs Ejecución ${selectedYear} (Millones ARS)`}
                     sources={['https://carmendeareco.gob.ar/transparencia/']}
                     type="bar"
                     xAxisDataKey="name"
@@ -511,7 +534,7 @@ const FinancialDashboard: React.FC = () => {
                 ) : (
                   <div className="text-center py-12">
                     <PieChart className="mx-auto w-16 h-16 text-gray-400 mb-4" />
-                    <p className="text-gray-500">No hay datos de ejecución presupuestaria disponibles para {activeYear}</p>
+                    <p className="text-gray-500">No hay datos de ejecución presupuestaria disponibles para {selectedYear}</p>
                   </div>
                 )}
               </div>
@@ -522,7 +545,7 @@ const FinancialDashboard: React.FC = () => {
               <div className="bg-white rounded-xl shadow-sm overflow-hidden">
                 <div className="p-6 border-b border-gray-200">
                   <h2 className="text-xl font-bold text-gray-800">
-                    Composición del Presupuesto {activeYear}
+                    Composición del Presupuesto {selectedYear}
                   </h2>
                   <p className="text-gray-600 mt-2">
                     Distribución por categorías principales
@@ -536,7 +559,7 @@ const FinancialDashboard: React.FC = () => {
                       { name: 'Servicio de Deuda', value: financialAnalysis.powerBIData.deuda.servicio || 0, color: '#F59E0B' },
                       { name: 'Transferencias', value: financialAnalysis.powerBIData.gastos.transferencias || 0, color: '#8B5CF6' }
                     ].filter(item => item.value > 0)}
-                    title={`Distribución Presupuestaria ${activeYear}`}
+                    title={`Distribución Presupuestaria ${selectedYear}`}
                     sources={['PowerBI Carmen de Areco']}
                     type="pie"
                     dataKey="value"
@@ -617,7 +640,7 @@ const FinancialDashboard: React.FC = () => {
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
             <div className="p-6 border-b border-gray-200 dark:border-gray-700">
               <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
-                Análisis de Ingresos {activeYear}
+                Análisis de Ingresos {selectedYear}
               </h2>
             </div>
             <div className="p-6">
@@ -630,7 +653,7 @@ const FinancialDashboard: React.FC = () => {
                   { name: 'Otros', value: 5000000, color: '#EC4899' }
                 ]}
                 chartType="pie"
-                title={`Composición de Ingresos ${activeYear}`}
+                title={`Composición de Ingresos ${selectedYear}`}
                 sources={financialDataSources}
                 showValidation={true}
               />
@@ -641,7 +664,7 @@ const FinancialDashboard: React.FC = () => {
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
             <div className="p-6 border-b border-gray-200 dark:border-gray-700">
               <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
-                Tendencia de Ingresos {activeYear}
+                Tendencia de Ingresos {selectedYear}
               </h2>
             </div>
             <div className="p-6">
@@ -653,7 +676,7 @@ const FinancialDashboard: React.FC = () => {
                   ejecutado: Math.round(item.expenses / 1000000)
                 }))}
                 chartType="line"
-                title={`Tendencia de Ingresos Trimestral ${activeYear}`}
+                title={`Tendencia de Ingresos Trimestral ${selectedYear}`}
                 sources={financialDataSources}
                 showValidation={true}
               />
@@ -674,7 +697,7 @@ const FinancialDashboard: React.FC = () => {
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
             <div className="p-6 border-b border-gray-200 dark:border-gray-700">
               <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
-                Distribución de Gastos por Categoría {activeYear}
+                Distribución de Gastos por Categoría {selectedYear}
               </h2>
             </div>
             <div className="p-6">
@@ -687,7 +710,7 @@ const FinancialDashboard: React.FC = () => {
                   { name: 'Administración', value: 5000000, color: '#EC4899' }
                 ]}
                 chartType="pie"
-                title={`Distribución de Gastos ${activeYear}`}
+                title={`Distribución de Gastos ${selectedYear}`}
                 sources={financialDataSources}
                 showValidation={true}
               />
@@ -698,7 +721,7 @@ const FinancialDashboard: React.FC = () => {
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
             <div className="p-6 border-b border-gray-200 dark:border-gray-700">
               <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
-                Tendencia de Gastos {activeYear}
+                Tendencia de Gastos {selectedYear}
               </h2>
             </div>
             <div className="p-6">
@@ -710,7 +733,7 @@ const FinancialDashboard: React.FC = () => {
                   ejecutado: Math.round(item.expenses / 1000000)
                 }))}
                 chartType="area"
-                title={`Tendencia de Gastos Trimestral ${activeYear}`}
+                title={`Tendencia de Gastos Trimestral ${selectedYear}`}
                 sources={financialDataSources}
                 showValidation={true}
               />
@@ -739,9 +762,9 @@ const FinancialDashboard: React.FC = () => {
                 category: report.reportType,
                 trend: report.executionPercentage
               }))}
-              title={`Análisis Financiero Visual ${activeYear}`}
+              title={`Análisis Financiero Visual ${selectedYear}`}
               type="overview"
-              timeRange={`2018-${activeYear}`}
+              timeRange={`2018-${selectedYear}`}
               showControls={true}
               height={450}
             />
@@ -750,7 +773,7 @@ const FinancialDashboard: React.FC = () => {
             <div className="bg-white rounded-xl shadow-sm overflow-hidden">
               <div className="p-6 border-b border-gray-200">
                 <h2 className="text-xl font-bold text-gray-800">
-                  Análisis de Documentos Financieros (2018-{activeYear})
+                  Análisis de Documentos Financieros (2018-{selectedYear})
                 </h2>
                 <p className="text-gray-600 mt-2">
                   Seguimiento histórico de balances y estados financieros
@@ -759,7 +782,7 @@ const FinancialDashboard: React.FC = () => {
               <div className="p-6">
                 <DocumentAnalysisChart 
                   startYear={2018}
-                  endYear={parseInt(activeYear)}
+                  endYear={selectedYear}
                   focusDocumentType="financiero"
                   showPowerBIComparison={!!powerBIData}
                   powerBIData={powerBIData}
