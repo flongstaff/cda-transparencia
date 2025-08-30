@@ -16,7 +16,6 @@ Análisis integral de 15 años de gestión municipal para identificar:
 - Evolución salarial del sector público
 - Cumplimiento de normativa de transparencia
 
-<<<<<<< HEAD
 ### 📈 Estadísticas del Sistema
 
 - **433** registros de datos activos
@@ -25,8 +24,8 @@ Análisis integral de 15 años de gestión municipal para identificar:
 - **4/6** endpoints operacionales
 - **1,381** documentos archivados totales
 
-=======
->>>>>>> 4a494309b91337a057db9c6248de4217d96ee916
+
+
 ## 🚀 Tecnologías
 
 - **Frontend:** React + TypeScript + Vite
