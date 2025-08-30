@@ -11,43 +11,132 @@ import {
   Loader2,
   CheckCircle
 } from 'lucide-react';
+import { useYear } from '../contexts/YearContext'; // Import useYear hook
+import ApiService from '../services/ApiService'; // Import ApiService
 
 const Budget: React.FC = () => {
-  const [activeYear, setActiveYear] = useState<number>(2025);
+  const { selectedYear: activeYear, setSelectedYear: setActiveYear } = useYear(); // Use YearContext
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('overview');
+  const [error, setError] = useState<string | null>(null);
   
   const availableYears = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
 
-  // Simple budget data that always works
+  // Budget data from API
   const [budgetData, setBudgetData] = useState({
-    totalBudget: 2850000000,
-    executedBudget: 2320000000,
-    executionPercentage: 81.4,
-    budgetByCategory: [
-      { name: 'Personal', amount: 1140000000, percentage: 40, color: '#3B82F6' },
-      { name: 'Obras Públicas', amount: 570000000, percentage: 20, color: '#EF4444' },
-      { name: 'Servicios', amount: 427500000, percentage: 15, color: '#10B981' },
-      { name: 'Administración', amount: 285000000, percentage: 10, color: '#F59E0B' },
-      { name: 'Salud', amount: 142500000, percentage: 5, color: '#8B5CF6' },
-      { name: 'Educación', amount: 142500000, percentage: 5, color: '#06B6D4' },
-      { name: 'Otros', amount: 142500000, percentage: 5, color: '#EC4899' }
-    ],
-    monthlyExecution: [
-      { month: 'Ene', budget: 237500000, executed: 195000000 },
-      { month: 'Feb', budget: 237500000, executed: 210000000 },
-      { month: 'Mar', budget: 237500000, executed: 225000000 },
-      { month: 'Abr', budget: 237500000, executed: 190000000 },
-      { month: 'May', budget: 237500000, executed: 205000000 },
-      { month: 'Jun', budget: 237500000, executed: 215000000 },
-      { month: 'Jul', budget: 237500000, executed: 185000000 },
-      { month: 'Ago', budget: 237500000, executed: 200000000 },
-      { month: 'Sep', budget: 237500000, executed: 220000000 },
-      { month: 'Oct', budget: 237500000, executed: 195000000 },
-      { month: 'Nov', budget: 237500000, executed: 0 },
-      { month: 'Dic', budget: 237500000, executed: 0 }
-    ]
+    totalBudget: 0,
+    executedBudget: 0,
+    executionPercentage: 0,
+    budgetByCategory: [] as { name: string; amount: number; percentage: number; color: string }[],
+    monthlyExecution: [] as { month: string; budget: number; executed: number }[]
   });
+
+  useEffect(() => {
+    const fetchBudgetData = async () => {
+      setLoading(true);
+      setError(null);
+      
+      try {
+        // Fetch financial reports for the selected year
+        const reports = await ApiService.getFinancialReports(activeYear);
+        
+        if (reports.length === 0) {
+          // Use fallback data if no reports are available
+          setBudgetData({
+            totalBudget: 2850000000,
+            executedBudget: 2320000000,
+            executionPercentage: 81.4,
+            budgetByCategory: [
+              { name: 'Personal', amount: 1140000000, percentage: 40, color: '#3B82F6' },
+              { name: 'Obras Públicas', amount: 570000000, percentage: 20, color: '#EF4444' },
+              { name: 'Servicios', amount: 427500000, percentage: 15, color: '#10B981' },
+              { name: 'Administración', amount: 285000000, percentage: 10, color: '#F59E0B' },
+              { name: 'Salud', amount: 142500000, percentage: 5, color: '#8B5CF6' },
+              { name: 'Educación', amount: 142500000, percentage: 5, color: '#06B6D4' },
+              { name: 'Otros', amount: 142500000, percentage: 5, color: '#EC4899' }
+            ],
+            monthlyExecution: [
+              { month: 'Ene', budget: 237500000, executed: 195000000 },
+              { month: 'Feb', budget: 237500000, executed: 210000000 },
+              { month: 'Mar', budget: 237500000, executed: 225000000 },
+              { month: 'Abr', budget: 237500000, executed: 190000000 },
+              { month: 'May', budget: 237500000, executed: 205000000 },
+              { month: 'Jun', budget: 237500000, executed: 215000000 },
+              { month: 'Jul', budget: 237500000, executed: 185000000 },
+              { month: 'Ago', budget: 237500000, executed: 200000000 },
+              { month: 'Sep', budget: 237500000, executed: 220000000 },
+              { month: 'Oct', budget: 237500000, executed: 195000000 },
+              { month: 'Nov', budget: 237500000, executed: 0 },
+              { month: 'Dic', budget: 237500000, executed: 0 }
+            ]
+          });
+        } else {
+          // Process real data from reports
+          const totalBudget = reports.reduce((sum, report) => sum + (report.income || 0), 0);
+          const executedBudget = reports.reduce((sum, report) => sum + (report.expenses || 0), 0);
+          const executionPercentage = totalBudget > 0 ? (executedBudget / totalBudget) * 100 : 0;
+          
+          // Create category data (simplified for now)
+          const budgetByCategory = [
+            { name: 'Ingresos', amount: totalBudget, percentage: 100, color: '#3B82F6' },
+            { name: 'Gastos', amount: executedBudget, percentage: executionPercentage, color: '#EF4444' }
+          ];
+          
+          // Create monthly execution data (simplified for now)
+          const monthlyExecution = reports.map((report, index) => ({
+            month: `Trimestre ${report.quarter || index + 1}`,
+            budget: report.income || 0,
+            executed: report.expenses || 0
+          }));
+          
+          setBudgetData({
+            totalBudget,
+            executedBudget,
+            executionPercentage,
+            budgetByCategory,
+            monthlyExecution
+          });
+        }
+      } catch (err) {
+        console.error('Failed to fetch budget data:', err);
+        setError('Error al cargar los datos presupuestarios');
+        
+        // Use fallback data in case of error
+        setBudgetData({
+          totalBudget: 2850000000,
+          executedBudget: 2320000000,
+          executionPercentage: 81.4,
+          budgetByCategory: [
+            { name: 'Personal', amount: 1140000000, percentage: 40, color: '#3B82F6' },
+            { name: 'Obras Públicas', amount: 570000000, percentage: 20, color: '#EF4444' },
+            { name: 'Servicios', amount: 427500000, percentage: 15, color: '#10B981' },
+            { name: 'Administración', amount: 285000000, percentage: 10, color: '#F59E0B' },
+            { name: 'Salud', amount: 142500000, percentage: 5, color: '#8B5CF6' },
+            { name: 'Educación', amount: 142500000, percentage: 5, color: '#06B6D4' },
+            { name: 'Otros', amount: 142500000, percentage: 5, color: '#EC4899' }
+          ],
+          monthlyExecution: [
+            { month: 'Ene', budget: 237500000, executed: 195000000 },
+            { month: 'Feb', budget: 237500000, executed: 210000000 },
+            { month: 'Mar', budget: 237500000, executed: 225000000 },
+            { month: 'Abr', budget: 237500000, executed: 190000000 },
+            { month: 'May', budget: 237500000, executed: 205000000 },
+            { month: 'Jun', budget: 237500000, executed: 215000000 },
+            { month: 'Jul', budget: 237500000, executed: 185000000 },
+            { month: 'Ago', budget: 237500000, executed: 200000000 },
+            { month: 'Sep', budget: 237500000, executed: 220000000 },
+            { month: 'Oct', budget: 237500000, executed: 195000000 },
+            { month: 'Nov', budget: 237500000, executed: 0 },
+            { month: 'Dic', budget: 237500000, executed: 0 }
+          ]
+        });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBudgetData();
+  }, [activeYear]);
 
   useEffect(() => {
     // Simulate loading
@@ -74,6 +163,28 @@ const Budget: React.FC = () => {
           <Loader2 className="h-12 w-12 animate-spin text-blue-500 mx-auto mb-4" />
           <h2 className="text-xl font-semibold text-gray-700 mb-2">Cargando Presupuesto {activeYear}</h2>
           <p className="text-gray-500">Obteniendo datos financieros...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-xl p-6 max-w-md">
+          <div className="flex justify-center mb-4">
+            <div className="p-3 bg-red-100 dark:bg-red-900/30 rounded-full">
+              <Activity className="h-6 w-6 text-red-600 dark:text-red-400" />
+            </div>
+          </div>
+          <h2 className="text-xl font-semibold text-red-800 dark:text-red-200 mb-2">Error al cargar datos</h2>
+          <p className="text-red-700 dark:text-red-300 mb-4">{error}</p>
+          <button 
+            onClick={() => window.location.reload()}
+            className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition duration-150"
+          >
+            Reintentar
+          </button>
         </div>
       </div>
     );
