@@ -5,10 +5,11 @@ import InvestmentAnalysisChart from '../components/charts/InvestmentAnalysisChar
 import FinancialDataTable from '../components/tables/FinancialDataTable';
 import DataSourceSelector from '../components/data-sources/DataSourceSelector';
 import ApiService, { InvestmentAsset } from '../services/ApiService';
+import { useYear } from '../contexts/YearContext'; // Import useYear hook
 
 const formatCurrencyARS = (value: number, shortFormat = false): string => {
   if (shortFormat && value >= 1000000) {
-    return `$${(value / 1000000).toFixed(1)}M`;
+    return `${(value / 1000000).toFixed(1)}M`;
   }
   return new Intl.NumberFormat('es-AR', {
     style: 'currency',
@@ -22,7 +23,7 @@ const formatCurrencyARS = (value: number, shortFormat = false): string => {
 const investmentDataSources = ['https://carmendeareco.gob.ar/transparencia/'];
 
 const Investments: React.FC = () => {
-  const [activeYear, setActiveYear] = useState('2025');
+  const { selectedYear, setSelectedYear } = useYear(); // Use YearContext
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedItem, setSelectedItem] = useState<InvestmentAsset | null>(null);
   const [investmentData, setInvestmentData] = useState<InvestmentAsset[] | null>(null);
@@ -51,8 +52,8 @@ const Investments: React.FC = () => {
 
   // Load investment data when year changes
   useEffect(() => {
-    void loadInvestmentDataForYear(activeYear);
-  }, [activeYear]);
+    loadInvestmentDataForYear(selectedYear.toString());
+  }, [selectedYear]);
 
   const handleDataRefresh = () => {
     loadInvestmentDataForYear(activeYear);

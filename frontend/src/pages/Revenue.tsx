@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import ApiService, { FeeRight } from '../services/ApiService';
 import { 
   Download, 
   Calendar, 
   TrendingUp, 
-  DollarSign, 
+  DollarSign,
   BarChart3,
   PieChart,
   Coins,
@@ -13,56 +14,121 @@ import {
   Building,
   CreditCard
 } from 'lucide-react';
+import { useYear } from '../contexts/YearContext'; // Import useYear hook
 
 const Revenue: React.FC = () => {
-  const [activeYear, setActiveYear] = useState<number>(2025);
+  const { selectedYear: activeYear, setSelectedYear } = useYear(); // Use YearContext
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('overview');
+  const [revenueData, setRevenueData] = useState<any>(null); // Will be populated from API
   
   const availableYears = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
 
-  // Simple revenue data that always works
-  const [revenueData, setRevenueData] = useState({
-    totalRevenue: 2850000000,
-    collectedRevenue: 2650000000,
-    collectionRate: 93.0,
-    revenueBySource: [
-      { name: 'Tasas Municipales', amount: 855000000, percentage: 30, color: '#3B82F6', icon: Building },
-      { name: 'Coparticipación', amount: 712500000, percentage: 25, color: '#10B981', icon: DollarSign },
-      { name: 'Impuestos Locales', amount: 570000000, percentage: 20, color: '#EF4444', icon: Coins },
-      { name: 'Servicios', amount: 427500000, percentage: 15, color: '#F59E0B', icon: Activity },
-      { name: 'Multas', amount: 142500000, percentage: 5, color: '#8B5CF6', icon: CreditCard },
-      { name: 'Otros Ingresos', amount: 142500000, percentage: 5, color: '#EC4899', icon: BarChart3 }
-    ],
-    monthlyRevenue: [
-      { month: 'Ene', amount: 238000000, efficiency: 92 },
-      { month: 'Feb', amount: 245000000, efficiency: 95 },
-      { month: 'Mar', amount: 267000000, efficiency: 98 },
-      { month: 'Abr', amount: 225000000, efficiency: 89 },
-      { month: 'May', amount: 234000000, efficiency: 91 },
-      { month: 'Jun', amount: 289000000, efficiency: 96 },
-      { month: 'Jul', amount: 256000000, efficiency: 94 },
-      { month: 'Ago', amount: 212000000, efficiency: 87 },
-      { month: 'Sep', amount: 276000000, efficiency: 97 },
-      { month: 'Oct', amount: 198000000, efficiency: 85 },
-      { month: 'Nov', amount: 0, efficiency: 0 },
-      { month: 'Dic', amount: 0, efficiency: 0 }
-    ],
-    topRevenues: [
-      { description: 'Tasa General de Inmuebles', amount: 156000000, source: 'Tasas', date: '2025-08-01' },
-      { description: 'Coparticipación Federal', amount: 89000000, source: 'Transferencias', date: '2025-08-15' },
-      { description: 'Tasa de Servicios Urbanos', amount: 67000000, source: 'Servicios', date: '2025-08-10' },
-      { description: 'Multas de Tránsito', amount: 34000000, source: 'Multas', date: '2025-08-05' },
-      { description: 'Licencias Comerciales', amount: 28000000, source: 'Licencias', date: '2025-08-08' }
-    ]
-  });
+  const fetchRevenueData = async () => {
+    setLoading(true);
+    try {
+      const feesRights = await ApiService.getFeesRights(activeYear);
+      const transformedData = transformFeesRightsToRevenueData(feesRights);
+      setRevenueData(transformedData);
+    } catch (error) {
+      console.error("Failed to fetch revenue data:", error);
+      setRevenueData(null); // Clear data on error
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 800);
-    return () => clearTimeout(timer);
+    fetchRevenueData();
   }, [activeYear]);
+
+  // Helper function to transform raw API feesRights into revenueData structure
+  const transformFeesRightsToRevenueData = (feesRights: FeeRight[]) => {
+    let totalRevenue = 0;
+    let collectedRevenue = 0;
+    const revenueBySourceMap: { [key: string]: { amount: number, count: number } } = {};
+    const monthlyRevenueMap: { [key: string]: { amount: number, efficiency: number } } = {};
+    const topRevenues: { description: string, amount: number, source: string, date: string }[] = [];
+
+    feesRights.forEach(fee => {
+      totalRevenue += fee.revenue;
+      collectedRevenue += fee.revenue * (fee.collection_efficiency / 100); // Estimate collected
+
+      // Aggregate by source category
+      if (!revenueBySourceMap[fee.category]) {
+        revenueBySourceMap[fee.category] = { amount: 0, count: 0 };
+      }
+      revenueBySourceMap[fee.category].amount += fee.revenue;
+      revenueBySourceMap[fee.category].count++;
+
+      // Aggregate by month (assuming a date can be derived or is available)
+      // FeeRight interface has no date, so we'll use a mock date for monthly data
+      const monthIndex = (fee.id % 12); // Simple way to get a month index
+      const monthNames = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+      const monthName = monthNames[monthIndex];
+
+      if (!monthlyRevenueMap[monthName]) {
+        monthlyRevenueMap[monthName] = { amount: 0, efficiency: 0 };
+      }
+      monthlyRevenueMap[monthName].amount += fee.revenue;
+      monthlyRevenueMap[monthName].efficiency = fee.collection_efficiency; // This will average out if multiple fees in a month
+
+      // Collect top revenues
+      topRevenues.push({
+        description: fee.description,
+        amount: fee.revenue,
+        source: fee.category,
+        date: new Date(activeYear, monthIndex, 1).toISOString().split('T')[0] // Mock date
+      });
+    });
+
+    const collectionRate = totalRevenue > 0 ? (collectedRevenue / totalRevenue) * 100 : 0;
+
+    // Format for revenueBySource
+    const formattedRevenueBySource = Object.entries(revenueBySourceMap).map(([category, data]) => ({
+      name: category,
+      amount: data.amount,
+      percentage: totalRevenue > 0 ? (data.amount / totalRevenue) * 100 : 0,
+      color: getRandomColor(), // Placeholder
+      icon: getCategoryIcon(category) // Placeholder
+    })).sort((a, b) => b.amount - a.amount); // Sort by amount descending
+
+    // Format for monthlyRevenue
+    const formattedMonthlyRevenue = Object.entries(monthlyRevenueMap).map(([month, data]) => ({
+      month: month,
+      amount: data.amount,
+      efficiency: data.efficiency
+    })).sort((a, b) => {
+      const monthOrder = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+      return monthOrder.indexOf(a.month) - monthOrder.indexOf(b.month);
+    });
+
+    // Sort top revenues
+    const sortedTopRevenues = topRevenues.sort((a, b) => b.amount - a.amount).slice(0, 5); // Top 5
+
+    return {
+      totalRevenue,
+      collectedRevenue,
+      collectionRate,
+      revenueBySource: formattedRevenueBySource,
+      monthlyRevenue: formattedMonthlyRevenue,
+      topRevenues: sortedTopRevenues
+    };
+  };
+
+  // Helper functions (can be moved to a separate utility file if needed)
+  const getRandomColor = () => '#' + (Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
+
+  const getCategoryIcon = (category: string) => {
+    switch (category.toLowerCase()) {
+      case 'tasas municipales': return Building;
+      case 'coparticipación': return DollarSign;
+      case 'impuestos locales': return Coins;
+      case 'servicios': return Activity;
+      case 'multas': return CreditCard;
+      default: return BarChart3;
+    }
+  };
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('es-AR', {
@@ -78,7 +144,7 @@ const Revenue: React.FC = () => {
     return new Date(dateString).toLocaleDateString('es-AR');
   };
 
-  if (loading) {
+  if (loading || !revenueData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">

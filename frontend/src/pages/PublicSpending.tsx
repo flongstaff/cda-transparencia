@@ -14,9 +14,10 @@ import {
   Users,
   Building
 } from 'lucide-react';
+import { useYear } from '../contexts/YearContext'; // Import useYear hook
 
 const PublicSpending: React.FC = () => {
-  const [activeYear, setActiveYear] = useState<number>(2025);
+  const { selectedYear: activeYear, setSelectedYear } = useYear(); // Use YearContext
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('overview');
   const [spendingData, setSpendingData] = useState<any>(null); // Will be populated from API
