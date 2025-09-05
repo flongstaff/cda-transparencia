@@ -18,7 +18,7 @@ def prepare_deployment():
     # 1. Verify all services are running
     print("🔍 Service Status Check:")
     services = [
-        ("Backend API", "http://localhost:3000/api/salaries"),
+        ("Backend API", "http://localhost:3001/api/salaries"),
         ("Live Data API", "http://localhost:5555/health"),
         ("Comprehensive API", "http://localhost:5556/health"),
         ("Frontend", "http://localhost:5174")

@@ -7,7 +7,7 @@
 CREATE TABLE IF NOT EXISTS transparency.documents (
     id SERIAL PRIMARY KEY,
     url TEXT UNIQUE,
-    filename TEXT NOT NULL,
+    filename TEXT NOT NULL UNIQUE,
     location TEXT,
     size INTEGER,
     content_type TEXT,

@@ -1,0 +1,11 @@
+{
+  "name": "carmen-de-areco-transparency",
+  "main": "src/cf-worker/index.js",
+  "compatibility_date": "2023-05-15",
+  "workers_dev": true,
+  "env": {
+    "production": {
+      "name": "carmen-de-areco-transparency-prod"
+    }
+  }
+}

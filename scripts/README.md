@@ -49,7 +49,7 @@ Multiple verification scripts ensure system integrity:
 
 All scripts are designed to work with the existing database and API infrastructure:
 - PostgreSQL database: `transparency_portal_db`
-- Backend API: `http://localhost:3000`
+- Backend API: `http://localhost:3001`
 - Frontend: `http://localhost:5174`
 
 ## Environment Requirements

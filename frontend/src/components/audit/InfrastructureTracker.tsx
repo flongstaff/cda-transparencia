@@ -64,7 +64,7 @@ const InfrastructureTracker: React.FC = () => {
       setLoading(true);
       
       // Try to load real infrastructure data from API
-      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001';
       
       try {
         const response = await fetch(`${API_BASE}/api/audit/infrastructure`, {

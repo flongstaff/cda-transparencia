@@ -188,7 +188,7 @@ def extract_financial_data(text: str) -> dict:
     }
     
     # Pattern for amounts (Argentine pesos)
-    amount_pattern = r'
+    amount_pattern = r'\$([0-9]{1,3}(?:\.[0-9]{3})*(?:,[0-9]{2})?)'
     amounts = re.findall(amount_pattern, text)
     financial_data['amounts'] = amounts
     

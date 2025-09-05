@@ -82,7 +82,7 @@ jobs:
       run: |
         node src/server.js &
         sleep 10
-        curl -f http://localhost:3000/api/salaries || exit 1
-        curl -f http://localhost:3000/api/tenders || exit 1
-        curl -f http://localhost:3000/api/reports || exit 1
-        curl -f http://localhost:3000/api/data-integrity || exit 1
+        curl -f http://localhost:3001/api/salaries || exit 1
+        curl -f http://localhost:3001/api/tenders || exit 1
+        curl -f http://localhost:3001/api/reports || exit 1
+        curl -f http://localhost:3001/api/data-integrity || exit 1

@@ -1,0 +1,2 @@
+# Cloudflare Workers development dependencies
+wrangler>=3.0.0

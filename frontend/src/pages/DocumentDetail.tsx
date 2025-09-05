@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { FileText, Download, ExternalLink, Calendar, Hash, CheckCircle, Eye, Database, ArrowLeft } from 'lucide-react';
 import MarkdownRenderer from '../components/documents/MarkdownRenderer';
+import { unifiedDataService } from '../services/UnifiedDataService';
 
 interface DocumentMetadata {
   id: number;
@@ -14,7 +15,9 @@ interface DocumentMetadata {
   verification_status: 'verified' | 'partial' | 'unverified';
   sha256_hash: string;
   size_bytes?: number;
-  content?: string;
+  content?: string; // Processed content
+  markdown_path?: string; // Path to markdown content if available
+  data_sources?: string[]; // Array of data sources
 }
 
 const DocumentDetail: React.FC = () => {
@@ -35,28 +38,37 @@ const DocumentDetail: React.FC = () => {
   const loadDocument = async (documentId: number) => {
     setIsLoading(true);
     setError(null);
-    
+
     try {
-      // In a real implementation, you would fetch the document details by ID
-      // For now, we'll simulate with sample data
-      const sampleDocument: DocumentMetadata = {
-        id: documentId,
-        title: `Documento-${documentId}.pdf`,
-        year: 2024,
-        category: 'financial_data',
-        created_at: '2025-08-25T19:53:04.853155',
-        official_url: 'https://carmendeareco.gob.ar/transparencia/documento.pdf',
-        archive_url: 'https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/documento.pdf',
-        verification_status: 'verified',
-        sha256_hash: 'c0527043855b3ac643bffca66386fa767acea85df33b253225bd13438182d6ab',
-        size_bytes: 426361
-      };
-      
-      setDocument(sampleDocument);
-      loadDocumentContent(sampleDocument, contentSource);
+      // Use UnifiedDataService for all document data
+      const fetchedDocument = await apiService.getRealDocumentById(String(documentId));
+      if (fetchedDocument && fetchedDocument.document) {
+        // Map fetched data to DocumentMetadata interface
+        const mappedDocument: DocumentMetadata = {
+          id: fetchedDocument.document.id,
+          title: fetchedDocument.document.title,
+          year: fetchedDocument.document.year,
+          category: fetchedDocument.document.category,
+          created_at: fetchedDocument.document.processing_date || new Date().toISOString(), // Use processing_date or current date
+          official_url: fetchedDocument.document.official_url,
+          archive_url: fetchedDocument.document.archive_url,
+          verification_status: fetchedDocument.document.verification_status || 'unverified',
+          sha256_hash: fetchedDocument.document.sha256_hash || 'N/A',
+          size_bytes: fetchedDocument.document.size_mb ? fetchedDocument.document.size_mb * 1024 * 1024 : undefined, // Convert MB to bytes
+          markdown_path: fetchedDocument.document.markdown_path,
+          data_sources: fetchedDocument.document.data_sources,
+        };
+        setDocument(mappedDocument);
+        // Load initial content based on default source
+        loadDocumentContent(mappedDocument, contentSource);
+      } else {
+        setError('Document not found.');
+        setDocument(null);
+      }
     } catch (err) {
       console.error('Error loading document:', err);
       setError('No se pudo cargar el documento. Por favor, intente nuevamente.');
+      setDocument(null);
     } finally {
       setIsLoading(false);
     }
@@ -71,61 +83,9 @@ const DocumentDetail: React.FC = () => {
 
       switch (source) {
         case 'processed':
-          try {
-            // Try to load processed markdown content
-            contentToDisplay = `# 📄 Documento: ${doc.title}
-
-`;
-            contentToDisplay += `## 🛡️ Verificación SHA256
-\`${doc.sha256_hash}\`
-
-`;
-            contentToDisplay += `Este es el contenido procesado del documento. En una implementación real, aquí se mostraría el texto extraído del documento PDF.
-
-`;
-            contentToDisplay += `## Contenido de ejemplo
-
-`;
-            contentToDisplay += `1. Introducción
-`;
-            contentToDisplay += `   - Descripción general del documento
-`;
-            contentToDisplay += `   - Propósito y alcance
-
-`;
-            contentToDisplay += `2. Sección principal
-`;
-            contentToDisplay += `   - Detalles financieros
-`;
-            contentToDisplay += `   - Análisis de datos
-`;
-            contentToDisplay += `   - Tablas y gráficos
-
-`;
-            contentToDisplay += `3. Conclusiones
-`;
-            contentToDisplay += `   - Resumen de hallazgos
-`;
-            contentToDisplay += `   - Recomendaciones
-
-`;
-            contentToDisplay += `---
-
-`;
-            contentToDisplay += `*Este es un ejemplo de contenido procesado. En una implementación real, se mostraría el contenido extraído del documento original.*`;
-          } catch (e) {
-            console.log('Processed document not available:', e);
-            contentToDisplay = `# 📄 Documento: ${doc.title}
-
-`;
-            contentToDisplay += `## 🛡️ Verificación SHA256
-\`${doc.sha256_hash}\`
-
-`;
-            contentToDisplay += `> **Nota**: Contenido procesado no disponible.
-
-`;
-          }
+          contentToDisplay = `# 📄 Contenido Procesado (No Disponible)\n\n`;
+          contentToDisplay += `## 🛡️ Verificación SHA256\n${doc.sha256_hash}\n\n`;
+          contentToDisplay += `> **Nota**: El contenido procesado de este documento no está disponible actualmente. Por favor, consulte la fuente oficial o el archivo web.\n\n`;
           break;
 
         case 'official':
@@ -136,36 +96,25 @@ const DocumentDetail: React.FC = () => {
 
 `;
           if (doc.official_url) {
-            contentToDisplay += `**Enlace oficial**: [Ver documento](${doc.official_url})
-
-`;
-            contentToDisplay += `Haga clic en el enlace para acceder al documento en el sitio oficial del municipio.
-
-`;
+            const isPdf = doc.official_url.toLowerCase().endsWith('.pdf');
+            if (isPdf) {
+              contentToDisplay += `<iframe src="https://docs.google.com/viewer?url=${encodeURIComponent(doc.official_url)}&embedded=true" width="100%" height="600px" style="border: none;"></iframe>\n\n`;
+              contentToDisplay += `**Enlace oficial**: [Abrir en nueva pestaña](${doc.official_url})\n\n`;
+            } else {
+              contentToDisplay += `**Enlace oficial**: [Ver documento](${doc.official_url})\n\n`;
+              contentToDisplay += `Haga clic en el enlace para acceder al documento en el sitio oficial del municipio.\n\n`;
+            }
           } else {
-            contentToDisplay += `**Enlace oficial**: No disponible
-
-`;
+            contentToDisplay += `**Enlace oficial**: No disponible\n\n`;
           }
-          contentToDisplay += `**Estado de verificación**: ${doc.verification_status === 'verified' ? '✅ Verificado' : doc.verification_status === 'partial' ? '⚠️ Parcialmente verificado' : '❌ No verificado'}
-
-`;
-          contentToDisplay += `---
-
-`;
-          contentToDisplay += `## Información del Documento
-
-`;
-          contentToDisplay += `- **Nombre**: ${doc.title}
-`;
-          contentToDisplay += `- **Año**: ${doc.year}
-`;
-          contentToDisplay += `- **Categoría**: ${doc.category}
-`;
-          contentToDisplay += `- **Estado de Verificación**: ${doc.verification_status}
-`;
-          contentToDisplay += `- **Fecha de Procesamiento**: ${new Date(doc.created_at).toLocaleDateString('es-AR')}
-`;
+          contentToDisplay += `**Estado de verificación**: ${doc.verification_status === 'verified' ? '✅ Verificado' : doc.verification_status === 'partial' ? '⚠️ Parcialmente verificado' : '❌ No verificado'}\n\n`;
+          contentToDisplay += `---\n\n`;
+          contentToDisplay += `## Información del Documento\n\n`;
+          contentToDisplay += `- **Nombre**: ${doc.title}\n`;
+          contentToDisplay += `- **Año**: ${doc.year}\n`;
+          contentToDisplay += `- **Categoría**: ${doc.category}\n`;
+          contentToDisplay += `- **Estado de Verificación**: ${doc.verification_status}\n`;
+          contentToDisplay += `- **Fecha de Procesamiento**: ${new Date(doc.created_at).toLocaleDateString('es-AR')}\n`;
           break;
 
         case 'archive':
@@ -176,20 +125,18 @@ const DocumentDetail: React.FC = () => {
 
 `;
           if (doc.archive_url) {
-            contentToDisplay += `**Enlace al archivo**: [Ver en Wayback Machine](${doc.archive_url})
-
-`;
-            contentToDisplay += `Este enlace lleva a una copia histórica del documento preservada en el Archive.org.
-
-`;
+            const isPdf = doc.archive_url.toLowerCase().endsWith('.pdf');
+            if (isPdf) {
+              contentToDisplay += `<iframe src="https://docs.google.com/viewer?url=${encodeURIComponent(doc.archive_url)}&embedded=true" width="100%" height="600px" style="border: none;"></iframe>\n\n`;
+              contentToDisplay += `**Enlace al archivo**: [Abrir en nueva pestaña](${doc.archive_url})\n\n`;
+            } else {
+              contentToDisplay += `**Enlace al archivo**: [Ver en Wayback Machine](${doc.archive_url})\n\n`;
+              contentToDisplay += `Este enlace lleva a una copia histórica del documento preservada en el Archive.org.\n\n`;
+            }
           } else {
-            contentToDisplay += `**Enlace al archivo**: No disponible
-
-`;
+            contentToDisplay += `**Enlace al archivo**: No disponible\n\n`;
           }
-          contentToDisplay += `**Fecha de procesamiento**: ${new Date(doc.created_at).toLocaleDateString('es-AR')}
-
-`;
+          contentToDisplay += `**Fecha de procesamiento**: ${new Date(doc.created_at).toLocaleDateString('es-AR')}\n\n`;
           contentToDisplay += `---
 
 `;
@@ -320,6 +267,21 @@ Por favor intente nuevamente.`);
     }
   };
 
+  const handleDownload = async () => {
+    if (document && document.official_url) {
+      try {
+        // Use unifiedDataService for document downloads
+        // Or, if the backend serves the file directly, just open the URL
+        window.open(document.official_url, '_blank');
+      } catch (error) {
+        console.error('Error downloading document:', error);
+        alert('No se pudo descargar el documento.');
+      }
+    } else {
+      alert('No hay URL oficial disponible para descargar este documento.');
+    }
+  };
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -429,7 +391,10 @@ Por favor intente nuevamente.`);
                     Fuente oficial
                   </a>
                 )}
-                <button className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 flex items-center text-sm">
+                <button 
+                  onClick={handleDownload}
+                  className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 flex items-center text-sm"
+                >
                   <Download className="w-4 h-4 mr-1" />
                   Descargar
                 </button>

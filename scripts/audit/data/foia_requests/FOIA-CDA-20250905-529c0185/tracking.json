@@ -1,0 +1,12 @@
+{
+  "request_id": "FOIA-CDA-20250905-529c0185",
+  "submission_date": "2025-09-05T21:16:40.962049",
+  "legal_deadline": "2025-09-20T21:16:40.962050",
+  "status": "draft",
+  "follow_up_actions": [
+    "Envío inicial: 2025-09-05T21:16:40.962049",
+    "Seguimiento programado: 2025-09-20T21:16:40.962050",
+    "Recurso administrativo si no hay respuesta en 30 días",
+    "Escalamiento a AAIP si persiste silencio administrativo"
+  ]
+}

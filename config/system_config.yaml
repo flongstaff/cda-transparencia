@@ -1,0 +1,235 @@
+# Carmen de Areco Transparency System Configuration
+
+# System Information
+system:
+  name: "Carmen de Areco Transparency Monitoring System"
+  version: "2.0.0"
+  description: "Automated transparency monitoring for Carmen de Areco municipality"
+  target_municipality: "Carmen de Areco"
+  province: "Buenos Aires"
+  country: "Argentina"
+
+# Data Directories
+directories:
+  data: "data"
+  processed: "data/processed"
+  logs: "data/logs"
+  cache: "data/cache"
+  reports: "data/reports"
+  backups: "data/backups"
+
+# Database Configuration
+database:
+  type: "postgresql"
+  host: "localhost"
+  port: 5432
+  name: "transparency_portal"
+  user: "transparency"
+  password: "${DB_PASSWORD}"  # Environment variable
+  schemas:
+    - transparency
+    - archive
+    - metadata
+
+# Data Sources
+sources:
+  municipal:
+    name: "Municipal Website"
+    base_url: "https://carmendeareco.gob.ar"
+    paths:
+      - "/transparencia"
+      - "/presupuesto"
+      - "/licitaciones"
+      - "/gobierno/boletin-oficial"
+    document_types:
+      - "pdf"
+      - "xlsx"
+      - "docx"
+      - "csv"
+  
+  bora:
+    nacional:
+      name: "BORA Nacional"
+      base_url: "https://www.boletinoficial.gob.ar"
+      search_endpoint: "/busqueda/avanzada"
+    provincial:
+      name: "BORA Provincial"
+      base_url: "https://www.gba.gob.ar/boletin_oficial"
+  
+  apis:
+    datos_gob_ar:
+      name: "Datos Argentina"
+      base_url: "https://datos.gob.ar/api/3/action"
+      endpoints:
+        search: "/package_search"
+        show: "/package_show"
+    
+    presupuesto_abierto:
+      name: "Presupuesto Abierto"
+      base_url: "https://www.presupuestoabierto.gob.ar/sici/api"
+      endpoints:
+        jurisdiction: "/jurisdiction"
+        data: "/data"
+    
+    indec:
+      name: "INDEC"
+      base_url: "https://apis.datos.gob.ar/series/api"
+      endpoints:
+        series: "/series"
+        metadata: "/meta"
+  
+  comparative:
+    peer_municipalities:
+      - name: "Chacabuco"
+        url: "https://chacabuco.gob.ar"
+      - name: "Chivilcoy"
+        url: "https://chivilcoy.gob.ar"
+      - name: "San Antonio de Areco"
+        url: "https://www.sanantoniodeareco.gob.ar"
+      - name: "San Andrés de Giles"
+        url: "https://www.sag.gob.ar"
+      - name: "Capitán Sarmiento"
+        url: "https://capitansarmiento.gob.ar"
+    
+    best_practice_models:
+      - name: "Bahía Blanca"
+        url: "https://transparencia.bahia.gob.ar"
+      - name: "Mar del Plata"
+        url: "https://www.mardelplata.gob.ar/datos-abiertos"
+      - name: "Pilar"
+        url: "https://datosabiertos.pilar.gov.ar"
+      - name: "San Isidro"
+        url: "https://www.sanisidro.gob.ar/transparencia"
+      - name: "Rafaela"
+        url: "https://rafaela-gob-ar.github.io"
+
+# Document Processing
+document_processing:
+  pdf:
+    engines:
+      - "tabula"
+      - "pdfplumber"
+      - "camelot"
+      - "pymupdf"
+    preferences:
+      budget_execution: ["tabula", "camelot"]
+      balance_sheet: ["pdfplumber", "tabula"]
+      salary_report: ["tabula", "pdfplumber"]
+      contract: ["camelot", "tabula"]
+      unknown: ["tabula", "pdfplumber", "camelot"]
+  
+  classification:
+    categories:
+      budget_execution:
+        keywords: ["ejecucion", "presupuesto", "devengado", "pagado", "comprometido"]
+        headers: ["partida", "denominacion", "credito", "devengado", "pagado"]
+      balance_sheet:
+        keywords: ["balance", "activo", "pasivo", "patrimonio"]
+        headers: ["concepto", "ejercicio", "anterior", "actual"]
+      salary_report:
+        keywords: ["sueldo", "salario", "remuneracion", "personal"]
+        headers: ["apellido", "nombre", "cargo", "basico", "adicionales", "total"]
+      contract:
+        keywords: ["contrato", "licitacion", "adjudicacion", "proveedor"]
+        headers: ["proveedor", "objeto", "monto", "fecha", "numero"]
+      ordinance:
+        keywords: ["ordenanza", "decreto", "resolucion"]
+        headers: ["numero", "fecha", "titulo"]
+
+# Anomaly Detection
+anomaly_detection:
+  thresholds:
+    vendor_concentration:
+      high_risk: 0.6
+      medium_risk: 0.4
+      low_risk: 0.25
+    
+    amount_clustering:
+      round_number_threshold: 0.3
+      duplicate_amount_threshold: 0.15
+      just_under_threshold: 0.05
+    
+    timing_patterns:
+      year_end_rush: 0.4
+      weekend_payments: 0.05
+      holiday_payments: 0.02
+    
+    relationship_patterns:
+      circular_payments: 2
+      vendor_employee_overlap: 0.1
+      new_vendor_large_contract: 100000
+  
+  statistical:
+    z_score_threshold: 3.0
+    iqr_multiplier: 1.5
+    benford_deviation: 0.1
+
+# Monitoring
+monitoring:
+  frequency:
+    primary_sources: "hourly"
+    apis: "daily"
+    comparative: "weekly"
+    document_processing: "as_needed"
+  
+  alert_triggers:
+    - "new_pdf_documents"
+    - "budget_updates"
+    - "contract_announcements"
+    - "missing_quarterly_reports"
+    - "suspicious_payment_patterns"
+  
+  change_detection:
+    tools:
+      - "changedetection.io"
+      - "custom_monitoring"
+
+# OSINT
+osint:
+  tools:
+    - "whois"
+    - "dns"
+    - "selenium"
+  data_sources:
+    official:
+      - "https://www.argentina.gob.ar/interior/municipios"
+      - "https://www.boletinoficial.gob.ar"
+      - "https://seti.afip.gob.ar/padron-puc-constancia-internet"
+    transparency_portals:
+      - "https://www.argentina.gob.ar/jefatura/transparencia"
+      - "https://www.gba.gob.ar/transparencia_fiscal"
+    financial:
+      - "https://www.presupuestoabierto.gob.ar"
+      - "https://pbac.cgp.gba.gov.ar"
+
+# Reporting
+reporting:
+  formats:
+    - "json"
+    - "csv"
+    - "html"
+    - "pdf"
+  schedule:
+    daily_summary: "02:00"
+    weekly_report: "monday 03:00"
+    monthly_analysis: "01 04:00"
+  dashboard:
+    update_frequency: "hourly"
+    public_access: true
+
+# Security
+security:
+  data_encryption: true
+  access_control: true
+  audit_logging: true
+  backup_retention_days: 90
+
+# Performance
+performance:
+  caching:
+    enabled: true
+    ttl_seconds: 3600
+  parallel_processing:
+    max_workers: 4
+  rate_limiting:
+    requests_per_second: 1

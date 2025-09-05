@@ -20,7 +20,7 @@ const PowerBIEmbed: React.FC<PowerBIEmbedProps> = ({
   className = ''
 }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const [isFullscreen, setIsFullscreen] = React.useState(false);
+  const [isFullscreen, setIsFullscreen] = React.useState<boolean>(false);
   const navigate = useNavigate();
 
   const openInNewTab = () => {

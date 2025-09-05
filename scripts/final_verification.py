@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 def verify_components():
-    \"\"\"Verify all Power BI integration components\"\"\"
+    """Verify all Power BI integration components"""
     print("🔍 Final Verification of Power BI Integration")
     print("=" * 50)
     
@@ -26,7 +26,7 @@ def verify_components():
     }
     
     def add_result(name, status, details=""):
-        \"\"\"Add a verification result\"\"\"
+        """Add a verification result"""
         results["components"].append({
             "name": name,
             "status": status,

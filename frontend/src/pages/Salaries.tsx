@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Download, Search, Calendar, FileText, Eye, TrendingUp, Users, DollarSign, BarChart3, AlertCircle, CheckCircle, Info, Database, ExternalLink } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import PageYearSelector from '../components/PageYearSelector';
-import { robustDataService } from '../services/RobustDataService';
+import SalaryAnalysisChart from '../components/charts/SalaryAnalysisChart';
+import ValidatedChart from '../components/ValidatedChart';
+import { unifiedDataService } from '../services/UnifiedDataService';
 
 interface Employee {
   id: string;
@@ -34,7 +37,8 @@ const formatCurrency = (amount: number): string => {
 };
 
 const Salaries: React.FC = () => {
-  const [selectedYear, setSelectedYear] = useState(2024);
+  const navigate = useNavigate();
+  const [selectedYear, setSelectedYear] = useState<number>(2025);
   const [activeTab, setActiveTab] = useState('overview');
   const [searchTerm, setSearchTerm] = useState('');
   const [employees, setEmployees] = useState<Employee[]>([]);
@@ -44,9 +48,8 @@ const Salaries: React.FC = () => {
 
   const loadEmployeeData = async (year: number) => {
     try {
-      // Load real salary data from API service
-      const { default: ApiService } = await import('../services/ApiService');
-      const salaryData = await ApiService.getSalaries(year);
+      // Load real salary data from UnifiedDataService
+      const salaryData = await unifiedDataService.getSalaries(year);
       
       // Transform API data to match our interface
       const transformedEmployees: Employee[] = salaryData.map((salary: any, index: number) => ({
@@ -67,7 +70,7 @@ const Salaries: React.FC = () => {
       
       // Try RobustDataService as intermediate fallback
       try {
-        const municipalData = await robustDataService.getMunicipalData(year);
+        const municipalData = await unifiedDataService.getMunicipalData(year);
         const robustEmployees: Employee[] = municipalData.salaries.departments.flatMap((dept, deptIndex) => 
           Array.from({ length: dept.employees }, (_, empIndex) => ({
             id: `robust-${year}-${deptIndex}-${empIndex}`,
@@ -185,47 +188,30 @@ const Salaries: React.FC = () => {
     return lastNames[Math.floor(Math.random() * lastNames.length)];
   };
 
-  const generateDocuments = (year: number): SalaryDocument[] => {
-    return [
-      {
-        id: `doc-${year}-1`,
-        title: `Escala Salarial Municipal ${year}`,
-        year: year,
-        category: 'Escala Salarial',
-        url: '#',
-        size: '2.1 MB'
-      },
-      {
-        id: `doc-${year}-2`,
-        title: `Ordenanza de Sueldos ${year}`,
-        year: year,
-        category: 'Ordenanza',
-        url: '#',
-        size: '1.8 MB'
-      },
-      {
-        id: `doc-${year}-3`,
-        title: `Convenio Colectivo de Trabajo ${year}`,
-        year: year,
-        category: 'Convenio',
-        url: '#',
-        size: '3.2 MB'
-      },
-      {
-        id: `doc-${year}-4`,
-        title: `Resolución Ajuste Salarial ${year}`,
-        year: year,
-        category: 'Resolución',
-        url: '#',
-        size: '1.4 MB'
-      }
-    ];
-  };
+  
 
   useEffect(() => {
     const yearNum = selectedYear;
     loadEmployeeData(yearNum);
-    setDocuments(generateDocuments(yearNum));
+    // Fetch real salary documents
+    const fetchSalaryDocuments = async () => {
+      try {
+        const apiDocuments = await unifiedDataService.getTransparencyDocuments(yearNum); // Or a more specific endpoint if available
+        const mappedDocuments = apiDocuments.map(doc => ({
+          id: String(doc.id),
+          title: doc.title,
+          year: doc.year,
+          category: doc.category,
+          url: `/documents/${doc.id}`, // Link to DocumentDetail page
+          size: 'N/A' // Size not available from this API
+        }));
+        setDocuments(mappedDocuments);
+      } catch (error) {
+        console.error("Failed to fetch salary documents:", error);
+        setDocuments([]); // Clear documents on error
+      }
+    };
+    fetchSalaryDocuments();
   }, [selectedYear]);
 
   // Filtered data for display
@@ -268,6 +254,12 @@ const Salaries: React.FC = () => {
             <p className="text-purple-100">
               Carmen de Areco - Análisis Integral de Nómina Pública {selectedYear}
             </p>
+            <div className="flex items-center mt-3 space-x-2 text-xs">
+              <div className="px-2 py-1 bg-white/20 text-purple-100 rounded">👥 Recursos Humanos</div>
+              <div className="px-2 py-1 bg-white/20 text-purple-100 rounded">💼 Escalas Salariales</div>
+              <div className="px-2 py-1 bg-white/20 text-purple-100 rounded">🏛️ Nómina Municipal</div>
+              <div className="px-2 py-1 bg-white/20 text-purple-100 rounded">📊 Decretos Salariales</div>
+            </div>
           </div>
           <div className="text-right">
             <div className="text-4xl font-bold">{employees.length}</div>
@@ -454,6 +446,45 @@ const Salaries: React.FC = () => {
               </div>
             </div>
           </div>
+          
+          {/* Salary Analysis Charts */}
+          <div className="space-y-8">
+            <SalaryAnalysisChart 
+              year={selectedYear}
+              showDepartments={true}
+              showTrends={true}
+            />
+            
+            <ValidatedChart
+              data={Object.entries(departmentStats).map(([dept, stats]) => ({
+                department: dept,
+                empleados: stats.count,
+                total: stats.total,
+                promedio: Math.round(stats.total / stats.count)
+              }))}
+              title={`Distribución Salarial por Departamento ${selectedYear}`}
+              chartType="bar"
+              dataKey="promedio"
+              nameKey="department"
+              sources={['Carmen de Areco - Portal de Transparencia']}
+              height={400}
+            />
+            
+            <ValidatedChart
+              data={[
+                { name: 'Hasta $500K', empleados: employees.filter(e => e.netSalary <= 500000).length },
+                { name: '$500K - $1M', empleados: employees.filter(e => e.netSalary > 500000 && e.netSalary <= 1000000).length },
+                { name: '$1M - $1.5M', empleados: employees.filter(e => e.netSalary > 1000000 && e.netSalary <= 1500000).length },
+                { name: 'Más de $1.5M', empleados: employees.filter(e => e.netSalary > 1500000).length }
+              ]}
+              title={`Distribución de Empleados por Rango Salarial ${selectedYear}`}
+              chartType="pie"
+              dataKey="empleados"
+              nameKey="name"
+              sources={['Carmen de Areco - Portal de Transparencia']}
+              height={350}
+            />
+          </div>
         </div>
       )}
 
@@ -574,7 +605,7 @@ const Salaries: React.FC = () => {
                     
                     <div className="flex items-center space-x-2 ml-4">
                       <button
-                        onClick={() => window.open(document.url, '_blank')}
+                        onClick={() => navigate(document.url)}
                         className="p-2 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-lg"
                         title="Ver documento"
                       >
@@ -582,7 +613,7 @@ const Salaries: React.FC = () => {
                       </button>
                       
                       <button
-                        onClick={() => window.open(document.url, '_blank')}
+                        onClick={() => navigate(document.url)}
                         className="p-2 text-green-600 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-900/30 rounded-lg"
                         title="Enlace oficial"
                       >

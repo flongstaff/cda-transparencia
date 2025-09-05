@@ -197,135 +197,6 @@ def run_master_system():
     except Exception as e:
         print(f"❌ Master system failed: {e}")
         return {"success": False, "error": str(e)}
-    
-    try:
-        from audit.carmen_areco_enhanced_auditor import EnhancedCarmenArecoAuditor
-        auditor = EnhancedCarmenArecoAuditor()
-        results = auditor.run_complete_audit()
-        return {"success": True, "type": "enhanced", "result": results}
-    except Exception as e:
-        print(f"❌ Enhanced audit failed: {e}")
-        return {"success": False, "error": str(e)}
-
-def run_financial_irregularity_audit():
-    """Run financial irregularity tracking"""
-    print("💰 Starting Financial Irregularity Audit (10-15 minutes)")
-    print("=" * 60)
-    
-    try:
-        from audit.financial_irregularity_tracker import FinancialIrregularityTracker
-        tracker = FinancialIrregularityTracker()
-        results = tracker.run_full_audit()
-        return {"success": True, "type": "financial_irregularity", "result": results}
-    except Exception as e:
-        print(f"❌ Financial irregularity audit failed: {e}")
-        return {"success": False, "error": str(e)}
-
-def run_infrastructure_audit():
-    """Run infrastructure project tracking"""
-    print("🏗️ Starting Infrastructure Project Audit (15-20 minutes)")
-    print("=" * 60)
-    
-    try:
-        from audit.infrastructure_project_tracker import InfrastructureProjectTracker
-        tracker = InfrastructureProjectTracker()
-        results = tracker.run_full_tracking()
-        return {"success": True, "type": "infrastructure", "result": results}
-    except Exception as e:
-        print(f"❌ Infrastructure audit failed: {e}")
-        return {"success": False, "error": str(e)}
-
-def run_complete_audit():
-    """Run complete unified audit dashboard"""
-    print("📊 Starting Complete Unified Audit Dashboard (20-30 minutes)")
-    print("=" * 60)
-    
-    try:
-        from audit.unified_audit_dashboard import UnifiedAuditDashboard
-        dashboard = UnifiedAuditDashboard()
-        results = dashboard.run_complete_dashboard()
-        return {"success": True, "type": "complete", "result": results}
-    except Exception as e:
-        print(f"❌ Complete audit failed: {e}")
-        return {"success": False, "error": str(e)}
-    
-    try:
-        from carmen_areco_enhanced_auditor import EnhancedCarmenArecoAuditor
-        
-        auditor = EnhancedCarmenArecoAuditor()
-        result = auditor.run_complete_audit()
-        
-        return {"success": True, "type": "enhanced", "result": result}
-    except Exception as e:
-        print(f"❌ Enhanced audit failed: {e}")
-        import traceback
-        traceback.print_exc()
-        return {"success": False, "error": str(e)}
-
-def run_osint_analysis():
-    """Run OSINT reconnaissance analysis"""
-    print("🕵️ Starting OSINT Analysis (45-90 minutes)")
-    print("=" * 60)
-    
-    try:
-        from municipality_osint_framework import MunicipalityOSINTFramework
-        
-        osint = MunicipalityOSINTFramework("Carmen de Areco")
-        result = osint.run_complete_osint_analysis()
-        
-        return {"success": True, "type": "osint", "result": result}
-    except Exception as e:
-        print(f"❌ OSINT analysis failed: {e}")
-        import traceback
-        traceback.print_exc()
-        return {"success": False, "error": str(e)}
-
-def run_pdf_extraction():
-    """Run comprehensive PDF extraction"""
-    print("📄 Starting PDF Data Extraction")
-    print("=" * 60)
-    
-    try:
-        from pdf_extractor import ArgentinePDFProcessor
-        
-        processor = ArgentinePDFProcessor()
-        
-        # Discover and process PDFs
-        pdf_documents = processor.discover_pdf_documents()
-        if pdf_documents:
-            result = processor.process_pdf_batch(pdf_documents)
-            processor.save_extraction_results(result)
-            
-            return {"success": True, "type": "pdf_extraction", "result": result}
-        else:
-            return {"success": False, "error": "No PDF documents found"}
-            
-    except Exception as e:
-        print(f"❌ PDF extraction failed: {e}")
-        return {"success": False, "error": str(e)}
-
-def run_bora_scraping():
-    """Run BORA (Boletín Oficial) scraping"""
-    print("📰 Starting BORA Scraping")
-    print("=" * 60)
-    
-    try:
-        from bora_scraper import BORAScraperCarmenDeAreco
-        
-        scraper = BORAScraperCarmenDeAreco()
-        
-        # Comprehensive scrape for recent years
-        current_year = datetime.now().year
-        years = list(range(2020, current_year + 1))
-        
-        result = scraper.comprehensive_scrape(years)
-        scraper.save_results(result)
-        
-        return {"success": True, "type": "bora_scraping", "result": result}
-        
-    except Exception as e:
-        print(f"❌ BORA scraping failed: {e}")
-        return {"success": False, "error": str(e)}
 
 def check_dependencies():
     """Check if required dependencies are installed"""
@@ -405,10 +276,45 @@ def display_menu():
     print("   • Historical data collection")
     print("   • Cross-reference analysis")
     print()
-    print("6. 🎯 Complete Audit Suite (2-4 hours)")
-    print("   • All analysis methods")
-    print("   • Comprehensive reporting")
-    print("   • Maximum coverage")
+    print("6. 💰 Financial Irregularity Tracking")
+    print("   • Salary analysis")
+    print("   • Budget discrepancy detection")
+    print("   • Project delay monitoring")
+    print()
+    print("7. 🏗️ Infrastructure Project Tracking")
+    print("   • Project status monitoring")
+    print("   • Budget vs actual spending")
+    print("   • Timeline analysis")
+    print()
+    print("8. 🔍 Enhanced Document Discovery")
+    print("   • Advanced web scraping")
+    print("   • Deep document search")
+    print("   • Metadata extraction")
+    print()
+    print("9. 🔓 PowerBI Data Extraction")
+    print("   • Government dashboard access")
+    print("   • Data integration")
+    print("   • Visualization preparation")
+    print()
+    print("10. 🏷️ Data Categorization System")
+    print("    • Document classification")
+    print("    • Content analysis")
+    print("    • Tagging system")
+    print()
+    print("11. 📊 Complete Audit Dashboard")
+    print("    • Unified analytics")
+    print("    • Cross-component analysis")
+    print("    • Reporting dashboard")
+    print()
+    print("12. 🎯 Master Data System")
+    print("    • Complete solution")
+    print("    • All components integrated")
+    print("    • Final reporting")
+    print()
+    print("13. 🚀 Run All Components")
+    print("    • Complete audit suite")
+    print("    • Maximum coverage")
+    print("    • Comprehensive analysis")
     print()
     print("0. Exit")
 
@@ -642,9 +548,6 @@ def main():
     else:
         print("\n🎉 All audit components completed successfully!")
         return 0
-
-if __name__ == "__main__":
-    exit(main())
 
 if __name__ == "__main__":
     exit_code = main()

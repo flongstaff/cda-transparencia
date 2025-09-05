@@ -18,15 +18,15 @@ export const documentSources: DocumentSource[] = [
   {
     document: 'Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf',
     sources: {
-      local: '/data/source_materials/2023/Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf',
+      local: '/data/pdf_extracts/2023/Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf',
       web_archive: [
-        '/data/source_materials/web_archives/web_archive/carmendeareco.gob.ar_transparencia/snapshot_20241111014916/',
-        '/data/source_materials/web_archives/web_archive/carmendeareco.gob.ar_transparencia/snapshot_20241212115813/'
+        '/data/pdf_extracts/web_archives/web_archive/carmendeareco.gob.ar_transparencia/snapshot_20241111014916/',
+        '/data/pdf_extracts/web_archives/web_archive/carmendeareco.gob.ar_transparencia/snapshot_20241212115813/'
       ],
       official_website: 'https://carmendeareco.gob.ar/transparencia/',
       backup_locations: [
-        '/data/source_materials/financial_data/',
-        '/data/source_materials/general/'
+        '/data/pdf_extracts/financial_data/',
+        '/data/pdf_extracts/general/'
       ]
     },
     verified: true,
@@ -35,14 +35,14 @@ export const documentSources: DocumentSource[] = [
   {
     document: 'LICITACION-PUBLICA-N°10.pdf',
     sources: {
-      local: '/data/source_materials/2025/LICITACION-PUBLICA-N°10.pdf',
+      local: '/data/pdf_extracts/2025/LICITACION-PUBLICA-N°10.pdf',
       web_archive: [
-        '/data/source_materials/web_archives/web_archive/carmendeareco.gob.ar_transparencia/snapshot_20241111014916/'
+        '/data/pdf_extracts/web_archives/web_archive/carmendeareco.gob.ar_transparencia/snapshot_20241111014916/'
       ],
       official_website: 'https://carmendeareco.gob.ar/transparencia/',
       backup_locations: [
-        '/data/source_materials/tenders/',
-        '/data/source_materials/financial_data/'
+        '/data/pdf_extracts/tenders/',
+        '/data/pdf_extracts/financial_data/'
       ]
     },
     verified: true,
@@ -51,10 +51,10 @@ export const documentSources: DocumentSource[] = [
   {
     document: 'ORDENANZA-3200-24-PRESUPUESTO-2024.pdf',
     sources: {
-      local: '/data/source_materials/2024/ORDENANZA-3200-24-PRESUPUESTO-2024.pdf',
+      local: '/data/pdf_extracts/2024/ORDENANZA-3200-24-PRESUPUESTO-2024.pdf',
       official_website: 'https://carmendeareco.gob.ar/transparencia/',
       backup_locations: [
-        '/data/source_materials/financial_data/'
+        '/data/pdf_extracts/financial_data/'
       ]
     },
     verified: true,
@@ -63,9 +63,9 @@ export const documentSources: DocumentSource[] = [
   {
     document: 'MODULO-FISCAL.xlsx',
     sources: {
-      local: '/data/source_materials/2023/MODULO-FISCAL.xlsx',
+      local: '/data/pdf_extracts/2023/MODULO-FISCAL.xlsx',
       web_archive: [
-        '/data/source_materials/web_archives/web_archive/carmendeareco.gob.ar_transparencia/snapshot_20241111014916/'
+        '/data/pdf_extracts/web_archives/web_archive/carmendeareco.gob.ar_transparencia/snapshot_20241111014916/'
       ],
       official_website: 'https://carmendeareco.gob.ar/transparencia/'
     },
@@ -78,14 +78,14 @@ export const webArchiveSnapshots = {
   carmendeareco_transparencia: [
     {
       date: '2024-11-11T01:49:16Z',
-      path: '/data/source_materials/web_archives/web_archive/carmendeareco.gob.ar_transparencia/snapshot_20241111014916/',
+      path: '/data/pdf_extracts/web_archives/web_archive/carmendeareco.gob.ar_transparencia/snapshot_20241111014916/',
       documents: 89,
       size: '2.1GB',
       verified: true
     },
     {
       date: '2024-12-12T11:58:13Z', 
-      path: '/data/source_materials/web_archives/web_archive/carmendeareco.gob.ar_transparencia/snapshot_20241212115813/',
+      path: '/data/pdf_extracts/web_archives/web_archive/carmendeareco.gob.ar_transparencia/snapshot_20241212115813/',
       documents: 7,
       size: '156MB',
       verified: true,
@@ -95,7 +95,7 @@ export const webArchiveSnapshots = {
   alternative_archive: [
     {
       date: '2024-11-11T01:49:16Z',
-      path: '/data/source_materials/web_archives/web_archive_carmendeareco/snapshot_20241111014916/',
+      path: '/data/pdf_extracts/web_archives/web_archive_carmendeareco/snapshot_20241111014916/',
       documents: 36,
       size: '890MB',
       verified: true,

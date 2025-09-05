@@ -1,0 +1,88 @@
+{
+  "timestamp": "2025-09-05T21:25:08.273537",
+  "projects": [
+    {
+      "project_name": "Pavimentación Avenida Principal",
+      "project_type": "Road Construction",
+      "budgeted_amount": 25000000,
+      "contractor": "Constructora ABC S.A.",
+      "award_date": "2024-03-15",
+      "scheduled_completion": "2024-12-15",
+      "status": "In Progress",
+      "location": "Centro de la ciudad",
+      "description": "Pavimentación de 3 km de avenida principal",
+      "source": "document_analysis",
+      "scraped_date": "2025-09-05T21:25:08.271695"
+    },
+    {
+      "project_name": "Parque Municipal Nuevo",
+      "project_type": "Park Development",
+      "budgeted_amount": 18000000,
+      "contractor": "Obras Verdes S.R.L.",
+      "award_date": "2023-11-20",
+      "scheduled_completion": "2024-08-30",
+      "status": "Delayed",
+      "location": "Barrio Norte",
+      "description": "Desarrollo de parque con canchas y áreas verdes",
+      "source": "document_analysis",
+      "scraped_date": "2025-09-05T21:25:08.271701"
+    },
+    {
+      "project_name": "Reparación Red Cloacal Sector Sur",
+      "project_type": "Infrastructure Repair",
+      "budgeted_amount": 32000000,
+      "contractor": "Sistemas Hidráulicos S.A.",
+      "award_date": "2024-01-10",
+      "scheduled_completion": "2024-10-10",
+      "status": "In Progress",
+      "location": "Sector Sur",
+      "description": "Reparación y ampliación de red cloacal",
+      "source": "document_analysis",
+      "scraped_date": "2025-09-05T21:25:08.271702"
+    }
+  ],
+  "contractor_analysis": [
+    {
+      "contractor_name": "Constructora ABC S.A.",
+      "total_projects": 1,
+      "total_amount": 25000000,
+      "completion_rate": 0.0,
+      "delay_rate": 0.0,
+      "first_project_date": "2024-03-15T00:00:00",
+      "last_project_date": "2024-03-15T00:00:00"
+    },
+    {
+      "contractor_name": "Obras Verdes S.R.L.",
+      "total_projects": 1,
+      "total_amount": 18000000,
+      "completion_rate": 0.0,
+      "delay_rate": 1.0,
+      "first_project_date": "2023-11-20T00:00:00",
+      "last_project_date": "2023-11-20T00:00:00"
+    },
+    {
+      "contractor_name": "Sistemas Hidráulicos S.A.",
+      "total_projects": 1,
+      "total_amount": 32000000,
+      "completion_rate": 0.0,
+      "delay_rate": 0.0,
+      "first_project_date": "2024-01-10T00:00:00",
+      "last_project_date": "2024-01-10T00:00:00"
+    }
+  ],
+  "flags": [
+    {
+      "project_name": "Parque Municipal Nuevo",
+      "flag_type": "delayed_completion",
+      "description": "Project awarded 2023-11-20 but still not completed after 655 days",
+      "severity": "high",
+      "budgeted_amount": 18000000
+    }
+  ],
+  "summary": {
+    "total_projects": 3,
+    "total_contractors": 3,
+    "flagged_projects": 1,
+    "total_budget": 75000000
+  }
+}

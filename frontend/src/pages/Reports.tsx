@@ -173,7 +173,7 @@ const Reports: React.FC = () => {
     setLoading(true);
     try {
       // Try to get real reports from backend API
-      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001';
       
       try {
         const response = await fetch(`${API_BASE}/api/reports`, {

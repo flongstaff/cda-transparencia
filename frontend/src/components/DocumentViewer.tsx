@@ -88,6 +88,12 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
     });
   };
 
+  // Function to get the direct path to the document file
+  const getDocumentFilePath = (filename: string): string => {
+    // Documents are served from the /documents endpoint
+    return `/documents/${filename}`;
+  };
+
   if (loading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -216,9 +222,15 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
                       <FileText className="w-4 h-4 text-green-600 mr-2" />
                       <span className="text-sm text-gray-700">Copia Local</span>
                     </div>
-                    <span className="text-sm text-gray-500">
-                      Disponible para acceso garantizado
-                    </span>
+                    <a
+                      href={getDocumentFilePath(doc.filename)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-green-600 hover:text-green-800 text-sm"
+                    >
+                      <ExternalLink className="w-3 h-3 mr-1" />
+                      Ver Documento
+                    </a>
                   </div>
                 )}
               </div>
@@ -274,13 +286,15 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({
               )}
               
               {doc.local_path && (
-                <button
-                  onClick={() => console.log('Access local copy:', doc.local_path)}
+                <a
+                  href={getDocumentFilePath(doc.filename)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center px-4 py-2 border border-green-300 text-green-600 rounded-lg hover:bg-green-50 transition-colors text-sm"
                 >
                   <FileText className="w-4 h-4 mr-2" />
-                  Copia Local
-                </button>
+                  Ver Copia Local
+                </a>
               )}
             </div>
           </div>

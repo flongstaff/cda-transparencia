@@ -85,7 +85,7 @@ const DataCategorizationDashboard: React.FC = () => {
       setLoading(true);
       
       // Try to load real categorization data from API
-      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001';
       
       try {
         const response = await fetch(`${API_BASE}/api/data/categorization`, {

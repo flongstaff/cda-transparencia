@@ -15,8 +15,8 @@ import {
   ReferenceLine
 } from 'recharts';
 import { motion } from 'framer-motion';
-import { TrendingUp, TrendingDown, Users, DollarSign, AlertTriangle, Loader2 } from 'lucide-react';
-import ApiService from '../../services/ApiService';
+import { TrendingUp, TrendingDown, Users, DollarSign, AlertTriangle, Loader2, Database, Layers } from 'lucide-react';
+import { chartDataIntegrationService } from '../../services/ChartDataIntegrationService';
 import { formatCurrencyARS } from '../../utils/formatters';
 
 interface Props {
@@ -69,7 +69,18 @@ const SalaryAnalysisChart: React.FC<Props> = ({ year }) => {
     setError(null);
     
     try {
-      const salaries = await ApiService.getSalaries(year);
+      console.log(`🔄 Loading salary data for year ${year}...`);
+      
+      const response = await chartDataIntegrationService.getChartData({
+        year,
+        type: 'salaries',
+        includeComparisons: true,
+        includePowerBI: true,
+        includeDocuments: true
+      });
+
+      const salaries = response.data || [];
+      console.log(`📊 Loaded ${salaries.length} salary records from integrated services`);
       
       if (salaries.length === 0) {
         setError('No hay datos de salarios disponibles para este año');

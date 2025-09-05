@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Shield, Database, Search, TrendingUp, Users, FileText, CheckCircle, Globe, ExternalLink } from 'lucide-react';
+import { Shield, Users, FileText, CheckCircle, Globe, ExternalLink } from 'lucide-react';
 import OfficialDataService from '../services/OfficialDataService';
 
 const About: React.FC = () => {
-  const { t } = useLanguage();
   // Get real metrics from OfficialDataService
   const officialStats = OfficialDataService.getSummaryStats();
   const transparencyMetrics = OfficialDataService.getTransparencyMetrics();
@@ -25,7 +24,7 @@ const About: React.FC = () => {
   useEffect(() => {
     const fetchTransparencyData = async () => {
       try {
-        const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+        const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
         const [integrityResponse, analyticsResponse] = await Promise.all([
           fetch(`${API_BASE}/data-integrity`),
           fetch(`${API_BASE}/analytics/dashboard`)
@@ -46,7 +45,7 @@ const About: React.FC = () => {
             lastUpdated: officialStats.last_updated
           });
         }
-      } catch (error) {
+      } catch {
         console.log('API not available, using OfficialDataService data only');
         // Keep official data from OfficialDataService
       } finally {
@@ -55,7 +54,7 @@ const About: React.FC = () => {
     };
 
     fetchTransparencyData();
-  }, []);
+  }, [officialStats.total_documents, officialStats.verified_documents, officialStats.last_updated, transparencyMetrics.score, transparencyMetrics.website_response_time, transparencyMetrics.ssl_enabled]);
 
   return (
     <div className="space-y-8">

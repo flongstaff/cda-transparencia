@@ -1,0 +1,41 @@
+{
+  "report_date": "2025-09-05T21:25:08.275737",
+  "executive_summary": {
+    "overview": "\nCARMEN DE ARECO FINANCIAL AUDIT EXECUTIVE SUMMARY\n\nThis comprehensive audit identified 1 \nkey areas of concern in municipal financial operations, including high salary discrepancies, \nbudget execution issues, and infrastructure project delays.\n                ",
+    "key_metrics": {
+      "high_salary_cases": 0,
+      "budget_discrepancies": 0,
+      "delayed_projects": 1,
+      "total_tracked_budget": "ARS 75,000,000",
+      "high_risk_contractors": 1
+    },
+    "major_findings": [
+      "Identified 0 officials with salaries significantly above peers",
+      "Found 0 significant budget execution discrepancies",
+      "Flagged 1 infrastructure projects with concerning delays",
+      "1 contractors identified with high risk profiles"
+    ],
+    "recommendations": [
+      "Implement salary benchmarking against peer municipalities",
+      "Establish project milestone-based payment schedules",
+      "Create contractor performance dashboard with public access",
+      "Require detailed justification for budget variances exceeding 10%",
+      "Conduct annual infrastructure project completion audits"
+    ],
+    "high_risk_entities": [
+      {
+        "type": "contractor",
+        "name": "Obras Verdes S.R.L.",
+        "risk_score": 80.18,
+        "description": "High delay rate (100.0%) and 1 projects"
+      }
+    ],
+    "significant_findings": [
+      {
+        "description": "Project awarded 2023-11-20 but still not completed after 655 days",
+        "amount": "ARS 18,000,000",
+        "type": "Project Delay"
+      }
+    ]
+  }
+}

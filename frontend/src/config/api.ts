@@ -100,7 +100,7 @@ export const API_CONFIG = {
 } as const;
 
 // API Base URL - supports local development and production deployment
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
 // Build API URL with proper configuration
 export const buildApiUrl = (endpoint: string, params?: Record<string, string>): string => {

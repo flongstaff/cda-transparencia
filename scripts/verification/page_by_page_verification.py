@@ -12,7 +12,7 @@ def test_page_data_completeness():
     print("🔍 PAGE-BY-PAGE DATA COMPLETENESS VERIFICATION")
     print("=" * 70)
     
-    base_url = "http://localhost:3000/api"
+    base_url = "http://localhost:3001/api"
     test_years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018]
     
     # Define pages and their corresponding API endpoints

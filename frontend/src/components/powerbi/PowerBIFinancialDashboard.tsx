@@ -59,7 +59,7 @@ const PowerBIFinancialDashboard: React.FC = () => {
   const [extracting, setExtracting] = useState(false);
 
   // Available years for filtering
-  const availableYears = [2025, 2024, 2023, 2022, 2021, 2020, 2019];
+  const availableYears = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
   const availableDepartments = [
     'Salud', 'Educación', 'Infraestructura', 'Servicios Públicos', 
     'Administración General', 'Desarrollo Social', 'Seguridad', 'Cultura'

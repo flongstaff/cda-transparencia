@@ -139,7 +139,7 @@ DB_USER=postgres
 DB_PASSWORD=your_password
 
 # API
-PORT=3000
+PORT=1
 NODE_ENV=development
 
 # Security

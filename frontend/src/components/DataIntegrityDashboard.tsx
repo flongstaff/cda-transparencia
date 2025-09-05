@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { 
   Shield, 
   CheckCircle, 
-  AlertTriangle, 
   Globe, 
   Database,
   Search,
   TrendingUp,
   Users,
-  FileText,
-  Calendar
+  FileText
 } from 'lucide-react';
 
 interface DataSource {

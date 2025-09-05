@@ -10,7 +10,7 @@ https://flongstaff.github.io/cda-transparencia/api
 
 For local development:
 ```
-http://localhost:3000/api
+http://localhost:3001/api
 ```
 
 ## Authentication
@@ -189,7 +189,7 @@ fetch('/api/contracts?amount_min=100000&status=open')
 import requests
 
 # Get salary data
-response = requests.get('http://localhost:3000/api/salaries', params={'year': 2024})
+response = requests.get('http://localhost:3001/api/salaries', params={'year': 2024})
 data = response.json()
 print(data)
 ```

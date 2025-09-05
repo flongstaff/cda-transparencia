@@ -22,7 +22,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 class EnhancedDocumentDiscovery:
-    \"\"\"Enhanced discovery system to find all municipal documents\"\"\"
+    """Enhanced discovery system to find all municipal documents"""
     
     def __init__(self, output_dir="data/enhanced_discovery"):
         self.output_dir = Path(output_dir)
@@ -62,7 +62,7 @@ class EnhancedDocumentDiscovery:
         self._initialize_database()
     
     def _initialize_database(self):
-        \"\"\"Initialize SQLite database for document tracking\"\"\"
+        """Initialize SQLite database for document tracking"""
         import sqlite3
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
@@ -107,7 +107,7 @@ class EnhancedDocumentDiscovery:
         conn.close()
     
     def discover_documents_from_uploads(self) -> List[Dict]:
-        \"\"\"Discover documents from wp-content/uploads directory\"\"\"
+        """Discover documents from wp-content/uploads directory"""
         logger.info("🔍 Discovering documents from uploads directory")
         
         discovered_docs = []
@@ -156,19 +156,19 @@ class EnhancedDocumentDiscovery:
         return discovered_docs
     
     def _is_document_url(self, url: str) -> bool:
-        \"\"\"Check if URL points to a document\"\"\"
+        """Check if URL points to a document"""
         document_extensions = ['.pdf', '.xlsx', '.xls', '.docx', '.doc', '.csv', '.txt']
         return any(url.lower().endswith(ext) for ext in document_extensions)
     
     def _is_directory_url(self, url: str) -> bool:
-        \"\"\"Check if URL points to a directory\"\"\"
+        """Check if URL points to a directory"""
         # Directories typically end with '/' or don't have extensions
         parsed = urlparse(url)
         path = parsed.path
         return path.endswith('/') or '.' not in path.split('/')[-1]
     
     def _explore_directory(self, dir_url: str, depth: int = 0) -> List[Dict]:
-        \"\"\"Recursively explore directory for documents\"\"\"
+        """Recursively explore directory for documents"""
         if depth > 5:  # Limit recursion depth
             return []
         
@@ -213,7 +213,7 @@ class EnhancedDocumentDiscovery:
         return documents
     
     def _extract_document_info(self, url: str) -> Optional[Dict]:
-        \"\"\"Extract document information from URL\"\"\"
+        """Extract document information from URL"""
         try:
             # Parse URL to get filename
             parsed = urlparse(url)
@@ -245,7 +245,7 @@ class EnhancedDocumentDiscovery:
             return None
     
     def _get_file_size(self, url: str) -> Optional[int]:
-        \"\"\"Get file size without downloading entire file\"\"\"
+        """Get file size without downloading entire file"""
         try:
             response = self.session.head(url, timeout=10)
             if 'content-length' in response.headers:
@@ -255,7 +255,7 @@ class EnhancedDocumentDiscovery:
         return None
     
     def _categorize_document(self, filename: str) -> str:
-        \"\"\"Categorize document based on filename\"\"\"
+        """Categorize document based on filename"""
         filename_lower = filename.lower()
         
         for category, patterns in self.document_patterns.items():
@@ -268,7 +268,7 @@ class EnhancedDocumentDiscovery:
         return 'general'
     
     def discover_documents_from_site_crawling(self) -> List[Dict]:
-        \"\"\"Discover documents by crawling the main website\"\"\"
+        """Discover documents by crawling the main website"""
         logger.info("🕷️ Crawling main website for documents")
         
         discovered_docs = []
@@ -323,7 +323,7 @@ class EnhancedDocumentDiscovery:
         return discovered_docs
     
     def _should_follow_link(self, url: str, referring_url: str) -> bool:
-        \"\"\"Determine if we should follow a link during crawling\"\"\"
+        """Determine if we should follow a link during crawling"""
         try:
             # Only follow links on the same domain
             referring_domain = urlparse(referring_url).netloc
@@ -348,7 +348,7 @@ class EnhancedDocumentDiscovery:
             return False
     
     def bypass_powerbi_limitations(self) -> List[Dict]:
-        \"\"\"Attempt to bypass PowerBI data access limitations\"\"\"
+        """Attempt to bypass PowerBI data access limitations"""
         logger.info("🔓 Attempting to bypass PowerBI limitations")
         
         # This is a placeholder for more sophisticated PowerBI bypass techniques
@@ -385,7 +385,7 @@ class EnhancedDocumentDiscovery:
         return bypass_docs
     
     def _extract_documents_from_json(self, data: Dict, base_url: str) -> List[Dict]:
-        \"\"\"Extract document links from JSON data\"\"\"
+        """Extract document links from JSON data"""
         documents = []
         
         def search_dict(d, path=""):
@@ -409,7 +409,7 @@ class EnhancedDocumentDiscovery:
         return documents
     
     def save_discovered_documents(self, documents: List[Dict]) -> int:
-        \"\"\"Save discovered documents to database\"\"\"
+        """Save discovered documents to database"""
         import sqlite3
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
@@ -451,7 +451,7 @@ class EnhancedDocumentDiscovery:
         return new_documents
     
     def generate_discovery_report(self, total_found: int, new_documents: int) -> Dict:
-        \"\"\"Generate discovery report\"\"\"
+        """Generate discovery report"""
         import sqlite3
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
@@ -500,7 +500,7 @@ class EnhancedDocumentDiscovery:
         return report
     
     def run_complete_discovery(self):
-        \"\"\"Run complete document discovery process\"\"\"
+        """Run complete document discovery process"""
         logger.info("🔍 Starting Enhanced Document Discovery for Carmen de Areco")
         
         all_documents = []

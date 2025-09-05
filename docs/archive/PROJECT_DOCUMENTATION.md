@@ -516,13 +516,13 @@ psql -U postgres -d transparency_portal -f init.sql
 ### Example API Usage
 ```bash
 # Get all property declarations
-curl http://localhost:3000/api/declarations
+curl http://localhost:3001/api/declarations
 
 # Get declarations for a specific year
-curl http://localhost:3000/api/declarations/year/2024
+curl http://localhost:3001/api/declarations/year/2024
 
 # Get declarations for a specific official
-curl http://localhost:3000/api/declarations/official/"John Doe"
+curl http://localhost:3001/api/declarations/official/"John Doe"
 ```
 
 ## 🖥️ Frontend Integration
@@ -550,7 +550,7 @@ const budgetData2024 = await response.json();
 #### 2. Environment Configuration
 Update `/frontend/.env`:
 ```env
-VITE_API_URL=http://localhost:3000/api
+VITE_API_URL=http://localhost:3001/api
 ```
 
 #### 3. API Service Implementation

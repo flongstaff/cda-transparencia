@@ -2,20 +2,17 @@ require('dotenv').config();
 // Database configuration using Sequelize
 const { Sequelize } = require('sequelize');
 
-// Validate environment variables
-if (!process.env.DB_NAME || !process.env.DB_USER || !process.env.DB_PASSWORD || !process.env.DB_HOST || !process.env.DB_PORT) {
-  throw new Error('Database configuration environment variables are not set.');
-}
+// Environment variables are optional - fallback to default values if not set
 
 const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
+  process.env.DB_NAME || 'transparency_portal',
+  process.env.DB_USER || 'postgres',
+  process.env.DB_PASSWORD || 'postgres',
   {
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
+    host: process.env.DB_HOST || 'localhost',
+    port: process.env.DB_PORT || 5432,
     dialect: 'postgres',
-    logging: console.log, // Enable SQL query logging for debugging
+    logging: false, // Disable SQL query logging for cleaner output
     pool: {
       max: 5,
       min: 0,

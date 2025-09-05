@@ -45,7 +45,7 @@ DB_PORT=5432
 DB_NAME=$DB_NAME
 DB_USER=$DB_USER
 DB_PASSWORD=$DB_PASSWORD
-PORT=3000
+PORT=3001
 NODE_ENV=development
 EOF
     echo "✅ .env file created successfully"

@@ -7,7 +7,43 @@ on:
     - cron: '0 6 * * *'  # Daily at 6 AM
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: transparency_test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
+          
+      - name: Run Python tests
+        run: pytest scripts/tests -v
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/transparency_test
+
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     
     services:
@@ -45,7 +81,7 @@ jobs:
         run: cd frontend && npm run build
         
       - name: Run live data scraper
-        run: python3 src/live_scrape.py
+        run: python3 scripts/scraping/live_scrape.py
         
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

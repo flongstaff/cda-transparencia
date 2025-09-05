@@ -28,6 +28,11 @@ help:
 	@echo "  data-process         - Run data processing pipeline"
 	@echo "  data-test            - Run data processing tests"
 	@echo ""
+	@echo "Cloudflare Workers:"
+	@echo "  cf-setup             - Install Cloudflare Workers CLI (wrangler)"
+	@echo "  cf-dev               - Start Cloudflare Workers development server"
+	@echo "  cf-deploy            - Deploy Cloudflare Workers to production"
+	@echo ""
 	@echo "Project-wide:"
 	@echo "  install              - Install all dependencies"
 	@echo "  test                 - Run all tests"
@@ -97,6 +102,22 @@ data-process:
 data-test:
 	@echo "Running data processing tests..."
 	cd $(SCRIPTS_DIR) && python -m pytest
+
+# Cloudflare Workers targets
+.PHONY: cf-setup
+cf-setup:
+	@echo "Installing Cloudflare Workers CLI (wrangler)..."
+	npm install -g wrangler
+
+.PHONY: cf-dev
+cf-dev:
+	@echo "Starting Cloudflare Workers development server..."
+	wrangler dev
+
+.PHONY: cf-deploy
+cf-deploy:
+	@echo "Deploying Cloudflare Workers to production..."
+	wrangler deploy
 
 # Project-wide targets
 .PHONY: install

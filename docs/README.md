@@ -1,115 +1,73 @@
-# 📚 Carmen de Areco Transparency Portal - Documentation
+# 📚 Documentación del Portal de Transparencia
 
-Welcome to the comprehensive documentation for the Carmen de Areco Transparency Portal project.
+Esta documentación complementa el README principal del proyecto.
 
-## 📖 Documentation Structure
+## 📖 Estructura de Documentación
 
-### 🚀 Getting Started
-- [Introduction](getting-started/introduction.md) - Overview of the transparency portal
-- [Quick Start Guide](getting-started/quick-start.md) - Get up and running quickly
+### 🚀 Inicio Rápido
+- [Guía de Inicio Rápido](getting-started/quick-start.md) - Configuración e instalación
+- [Introducción](getting-started/introduction.md) - Visión general del portal
 
-### 🏗️ Architecture & System Design
-- [System Overview](architecture/overview.md) - High-level architecture
-- [System Architecture](architecture/system-architecture.md) - Detailed technical architecture
+### 🏗️ Arquitectura
+- [Visión General del Sistema](architecture/overview.md) - Arquitectura de alto nivel
+- [Arquitectura Detallada](architecture/system-architecture.md) - Detalles técnicos
 
-### 🛠️ Development
-- [Development Guide](development/guide.md) - Complete development setup and workflows
+### 🛠️ Desarrollo
+- [Guía de Desarrollo](development/guide.md) - Configuración completa de desarrollo
 
-### 🌐 Deployment
-- [Deployment Guide](deployment/DEPLOYMENT_GUIDE.md) - Complete deployment instructions using Cloudflare Workers
-- [SSL Setup](deployment/SSL_SETUP.md) - SSL certificate configuration
-- [Domain Configuration](deployment/DOMAIN_CONFIGURATION.md) - Domain setup for cda-transparencia.org
+### 🌐 Despliegue
+- [Guía de Despliegue](deployment/DEPLOYMENT_GUIDE.md) - Instrucciones completas usando Cloudflare Workers
+- [Configuración SSL](deployment/SSL_SETUP.md) - Configuración de certificados SSL
+- [Configuración de Dominio](deployment/DOMAIN_CONFIGURATION.md) - Setup para cda-transparencia.org
 
-### 📊 Data Management
-- [Data Management](data/management.md) - Comprehensive data handling guide
-- [Data Sources](data/) - Various data source integrations
+### 📊 Gestión de Datos
+- [Gestión de Datos](data/management.md) - Guía completa de manejo de datos
+- [Fuentes de Datos](data/) - Integraciones de varias fuentes
 
-### 🤝 Contributing
-- [Contributing Guide](contributing/contributing-guide.md) - How to contribute to the project
+### 📡 Referencia de API
+- [Documentación de API](api/api-reference.md) - Referencia completa de la API
+- [Endpoints](api/endpoints.md) - Endpoints disponibles
 
-### 📡 API Reference
-- [API Documentation](api/api-reference.md) - Complete API reference
-- [Endpoints](api/endpoints.md) - Available API endpoints
+### 🤝 Contribución
+- [Guía de Contribución](contributing/contributing-guide.md) - Cómo contribuir al proyecto
 
-### 📋 Project Information
-- [Project Overview](PROJECT.md) - Project goals and scope
-- [Features](FEATURES.md) - Detailed feature documentation
-- [Base Information](BASE.md) - Core project information
-- [Data Information](DATA.md) - Data structure and organization
-- [Sites & Pages](SITES.md) - Website structure overview
-- [TODO List](TODO.md) - Current tasks and roadmap
-- [Documentation Structure](DOCUMENTATION_STRUCTURE.md) - This documentation organization
+### 📋 Información Histórica
+- [Archivo](archive/) - Documentación histórica y consolidada
 
-### 🎯 Additional Resources
-- [GEMINI Analysis](GEMINI.md) - AI-powered analysis and insights
-- [Archive](archive/) - Historical documentation and consolidated information
-- [Old Archive](archive_old/) - Legacy documentation files
+## 🔗 Enlaces Rápidos
 
-## 🔗 Quick Links
-
-### Essential Documentation
-| Document | Description |
+### Documentación Esencial
+| Documento | Descripción |
 |----------|-------------|
-| [Deployment Guide](deployment/DEPLOYMENT_GUIDE.md) | **Start here** for deployment |
-| [Development Guide](development/guide.md) | **Start here** for development |
-| [API Reference](api/api-reference.md) | **Start here** for API usage |
+| [Guía de Despliegue](deployment/DEPLOYMENT_GUIDE.md) | **Empezar aquí** para despliegue |
+| [Guía de Desarrollo](development/guide.md) | **Empezar aquí** para desarrollo |
+| [Referencia de API](api/api-reference.md) | **Empezar aquí** para uso de API |
 
-### Project Status
-| Component | Status |
+### Estado del Proyecto
+| Componente | Estado |
 |-----------|---------|
-| 🌐 Frontend | ✅ Complete |
-| ⚙️ Backend | ✅ Complete |
-| 🗄️ Database | ✅ Complete |
-| 🚀 Deployment | ✅ Complete |
-| 📚 Documentation | ✅ Complete |
+| 🌐 Frontend | ✅ Completo |
+| ⚙️ Backend | ✅ Completo |
+| 🗄️ Base de Datos | ✅ Completo |
+| 🚀 Despliegue | ✅ Completo |
+| 📚 Documentación | ✅ Completo |
 
-## 📂 Repository Structure
+## 🛡️ Seguridad y Privacidad
 
-```
-cda-transparencia/
-├── 📁 frontend/           # React TypeScript application
-├── 📁 backend/            # Node.js Express API
-├── 📁 docs/               # 📚 This documentation
-│   ├── 📁 deployment/     # Deployment guides
-│   ├── 📁 development/    # Development setup
-│   ├── 📁 api/            # API documentation
-│   ├── 📁 data/           # Data management
-│   └── 📁 ...             # Other documentation
-├── 📁 data/               # Official data and organization
-├── 📁 scripts/            # Automation and utility scripts
-├── 📁 worker/             # Cloudflare Worker deployment
-└── 📁 tools/              # Development tools and utilities
-```
+- ✅ **Anonimización de Datos**: Datos personales debidamente anonimizados
+- ✅ **HTTPS Everywhere**: Todas las comunicaciones encriptadas
+- ✅ **Controles de Acceso**: Autenticación y autorización adecuadas
+- ✅ **Cumplimiento de Privacidad**: Adherencia a regulaciones de privacidad
+- ✅ **Headers de Seguridad**: Implementación completa de headers de seguridad
 
-## 🛡️ Security & Privacy
+## 🌍 Entornos de Despliegue
 
-This project implements robust security and privacy measures:
-
-- ✅ **Data Anonymization**: Personal data is properly anonymized
-- ✅ **HTTPS Everywhere**: All communications encrypted
-- ✅ **Access Controls**: Proper authentication and authorization
-- ✅ **Privacy Compliance**: Adherence to privacy regulations
-- ✅ **Security Headers**: Comprehensive security header implementation
-
-## 🌍 Deployment Environments
-
-| Environment | URL | Purpose |
+| Entorno | URL | Propósito |
 |-------------|-----|---------|
-| **Production** | `https://cda-transparencia.org` | Live site |
-| **Staging** | `https://staging.cda-transparencia.org` | Testing |
-| **Development** | `https://dev-cda-transparencia.workers.dev` | Development |
-
-## 🆘 Support
-
-- 📧 **Issues**: Report bugs via GitHub Issues
-- 💬 **Discussions**: Community discussions
-- 📖 **Documentation**: This comprehensive documentation
-- 🔧 **Development**: See [Development Guide](development/guide.md)
-
-## 📄 License
-
-This project is developed for transparency and public accountability purposes in Carmen de Areco, Buenos Aires, Argentina.
+| **Producción** | `https://cda-transparencia.org` | Sitio en vivo |
+| **Staging** | `https://staging.cda-transparencia.org` | Pruebas |
+| **Desarrollo** | `https://dev-cda-transparencia.workers.dev` | Desarrollo |
 
 ---
 
-**🚀 Ready to get started? Check out our [Quick Start Guide](getting-started/quick-start.md)!**
+**🚀 ¿Listo para empezar? ¡Consulta nuestra [Guía de Inicio Rápido](getting-started/quick-start.md)!**

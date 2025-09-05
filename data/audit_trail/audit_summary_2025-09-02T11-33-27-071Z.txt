@@ -1,0 +1,41 @@
+CARMEN DE ARECO - COMPREHENSIVE TRANSPARENCY AUDIT REPORT
+Generated: 2025-09-02T11:33:24.411Z
+Session: audit_2025-09-02T11-32-15-608Z_2a23fe44
+
+EXECUTIVE SUMMARY
+================
+Years Analyzed: 3
+Overall Risk Level: LOW
+Highest Risk Year: null
+Lowest Transparency Year: 2024
+Total Recommendations: 1
+
+CRITICAL FINDINGS
+================
+
+
+TRANSPARENCY TRENDS
+==================
+Trend Direction: DECLINING
+Improvement Rate: -8 points
+
+LEGAL COMPLIANCE
+================
+Overall Status: FULLY_COMPLIANT
+Ley 27.275 Compliance: COMPLIANT
+Compliant Years: 2022, 2023, 2024
+Non-compliant Years: 
+
+TOP RECOMMENDATIONS
+==================
+1. [CRITICAL] Implement transparency improvement program
+   Transparency scores are declining (-8 points). Immediate systemic intervention required.
+
+DATA VERIFICATION
+================
+Status: VERIFIED
+Sources Checked: 5
+Issues Found: 0
+
+For detailed analysis and complete findings, refer to the full JSON report.
+Report Integrity Hash: 74d7740a3211bdf25454fa5a567f394912f2ecec9ea84fdfbdbe510e79f6b13d

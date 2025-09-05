@@ -1,0 +1,14 @@
+{
+  "check_frequency": "daily",
+  "automated_actions": {
+    "day_15": "send_followup_email",
+    "day_30": "prepare_administrative_appeal",
+    "day_45": "escalate_to_aaip",
+    "day_60": "consider_judicial_action"
+  },
+  "notification_channels": [
+    "email_alerts",
+    "dashboard_updates",
+    "status_reports"
+  ]
+}

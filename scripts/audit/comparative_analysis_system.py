@@ -471,8 +471,8 @@ class ComparativeAnalysisSystem:
             }
             
             # Generate recommendations
-            peer_avg = by_type.get("peer", {}).get("average", 0)
-            best_practice_avg = by_type.get("best_practice", {}).get("average", 0)
+            peer_avg = summary.get("category_averages", {}).get("peer", {}).get("average", 0)
+            best_practice_avg = summary.get("category_averages", {}).get("best_practice", {}).get("average", 0)
             
             if carmen_score["score"] < peer_avg:
                 summary["recommendations"].append("Below peer municipality average - focus on basic transparency requirements")

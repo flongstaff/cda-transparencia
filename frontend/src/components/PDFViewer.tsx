@@ -157,7 +157,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
       const loadDocument = async () => {
         try {
           // Try to get document metadata from API
-          const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+          const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001';
           
           if (documentId) {
             const response = await fetch(`${API_BASE}/api/documentos/${documentId}`, {

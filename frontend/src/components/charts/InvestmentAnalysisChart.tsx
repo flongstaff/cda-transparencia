@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, Cell, LineChart, Line } from 'recharts';
 import { motion } from 'framer-motion';
-import { TrendingUp, TrendingDown, PieChart as PieIcon, BarChart3, Activity, AlertTriangle, Loader2 } from 'lucide-react';
-import ApiService from '../../services/ApiService';
+import { TrendingUp, TrendingDown, PieChart as PieIcon, BarChart3, Activity, AlertTriangle, Loader2, Database, Layers } from 'lucide-react';
+import { chartDataIntegrationService } from '../../services/ChartDataIntegrationService';
 import { formatCurrencyARS } from '../../utils/formatters';
 
 interface Props {
@@ -51,7 +51,18 @@ const InvestmentAnalysisChart: React.FC<Props> = ({ year }) => {
     setError(null);
     
     try {
-      const investmentData = await ApiService.getInvestmentsAssets(year);
+      console.log(`🔄 Loading investment data for year ${year}...`);
+      
+      const response = await chartDataIntegrationService.getChartData({
+        year,
+        type: 'investments',
+        includeComparisons: true,
+        includePowerBI: true,
+        includeDocuments: true
+      });
+
+      const investmentData = response.data || [];
+      console.log(`📊 Loaded ${investmentData.length} investment records from integrated services`);
       
       if (investmentData.length === 0) {
         setError('No hay datos de inversiones disponibles para este año');

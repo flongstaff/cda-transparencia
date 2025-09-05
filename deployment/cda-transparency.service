@@ -1,0 +1,14 @@
+[Unit]
+Description=Carmen de Areco Transparency Monitoring System
+After=network.target
+
+[Service]
+Type=simple
+User=transparency
+WorkingDirectory=/opt/cda-transparencia
+ExecStart=/opt/cda-transparencia/automation.py continuous
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

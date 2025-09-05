@@ -17,8 +17,8 @@ import {
   Area
 } from 'recharts';
 import { motion } from 'framer-motion';
-import { TrendingUp, TrendingDown, BarChart3, PieChart as PieIcon, Activity, Loader2 } from 'lucide-react';
-import ApiService from '../../services/ApiService';
+import { TrendingUp, TrendingDown, BarChart3, PieChart as PieIcon, Activity, Loader2, Database, Layers } from 'lucide-react';
+import { chartDataIntegrationService } from '../../services/ChartDataIntegrationService';
 import { formatCurrencyARS } from '../../utils/formatters';
 
 interface Props {
@@ -55,6 +55,7 @@ const BudgetAnalysisChart: React.FC<Props> = ({ year, chartType = 'line' }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [activeChartType, setActiveChartType] = useState(chartType);
+  const [metadata, setMetadata] = useState<any>(null);
   const [summary, setSummary] = useState({
     totalIncome: 0,
     totalExpenses: 0,
@@ -72,62 +73,65 @@ const BudgetAnalysisChart: React.FC<Props> = ({ year, chartType = 'line' }) => {
     setError(null);
     
     try {
-      // Load financial reports and operational expenses
-      const [reports, expenses, feesRights] = await Promise.all([
-        ApiService.getFinancialReports(year),
-        ApiService.getOperationalExpenses(year),
-        ApiService.getFeesRights(year)
-      ]);
+      // Load comprehensive budget data from all services
+      console.log(`📊 Loading budget data for year ${year} using integrated services...`);
+      
+      const response = await chartDataIntegrationService.getChartData({
+        year,
+        type: 'budget',
+        includeComparisons: true,
+        includePowerBI: true,
+        includeDocuments: true
+      });
 
-      // Transform data for charts
+      console.log(`📊 Integrated data loaded from ${response.metadata.services_used.length} services:`, response.metadata.services_used);
+      console.log(`📈 Data quality: ${response.metadata.dataQuality}, Total records: ${response.metadata.totalRecords}`);
+
+      // Transform integrated data for charts
+      const budgetData = response.data || [];
       const monthlyData: BudgetData[] = [];
       const months = [
         'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
         'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
       ];
 
-      // Group reports by quarter and extrapolate to months
-      const quarterlyReports = reports.reduce((acc, report) => {
-        const quarter = report.quarter || 1;
-        if (!acc[quarter]) acc[quarter] = [];
-        acc[quarter].push(report);
-        return acc;
-      }, {} as Record<number, typeof reports>);
-
+      // Create monthly data from budget categories
       for (let month = 0; month < 12; month++) {
-        const quarter = Math.floor(month / 3) + 1;
-        const quarterReports = quarterlyReports[quarter] || [];
-        const monthReport = quarterReports[0]; // Use first report of quarter
-
-        const monthlyIncome = monthReport ? monthReport.income / 3 : 0; // Divide quarterly data by 3
-        const monthlyExpenses = monthReport ? monthReport.expenses / 3 : 0;
-        const balance = monthlyIncome - monthlyExpenses;
-        const executionRate = monthlyIncome > 0 ? (monthlyExpenses / monthlyIncome) * 100 : 0;
+        const totalBudgeted = budgetData.reduce((sum, item) => sum + (item.budgeted || 0), 0);
+        const totalExecuted = budgetData.reduce((sum, item) => sum + (item.executed || 0), 0);
+        const monthlyBudget = totalBudgeted / 12; // Distribute annually across months
+        const monthlyExpenses = totalExecuted / 12;
+        const balance = monthlyBudget - monthlyExpenses;
+        const executionRate = monthlyBudget > 0 ? (monthlyExpenses / monthlyBudget) * 100 : 0;
 
         monthlyData.push({
           month: months[month],
-          income: monthlyIncome,
+          income: monthlyBudget,
           expenses: monthlyExpenses,
           balance: balance,
           execution_percentage: executionRate
         });
       }
 
-      // Create category data for pie chart
-      const expenseCategories = expenses.reduce((acc, expense) => {
-        const category = expense.category || 'Otros';
-        acc[category] = (acc[category] || 0) + expense.amount;
-        return acc;
-      }, {} as Record<string, number>);
-
-      const categoryArray: CategoryData[] = Object.entries(expenseCategories)
-        .map(([name, value], index) => ({
-          name,
-          value,
+      // Create category data for pie chart from budget data
+      const categoryArray: CategoryData[] = budgetData
+        .filter(item => item.executed && item.executed > 0)
+        .map((item, index) => ({
+          name: item.name || 'Categoría',
+          value: item.executed || item.budgeted || item.amount || 0,
           color: COLORS[index % COLORS.length]
         }))
         .sort((a, b) => b.value - a.value)
         .slice(0, 6); // Top 6 categories
+
+      // Add fallback category if no data
+      if (categoryArray.length === 0) {
+        categoryArray.push({
+          name: `Presupuesto ${year}`,
+          value: 1000000000,
+          color: COLORS[0]
+        });
+      }
 
       // Calculate summary statistics
       const totalIncome = monthlyData.reduce((sum, d) => sum + d.income, 0);
@@ -137,13 +141,19 @@ const BudgetAnalysisChart: React.FC<Props> = ({ year, chartType = 'line' }) => {
         ? monthlyData.reduce((sum, d) => sum + d.execution_percentage, 0) / monthlyData.length 
         : 0;
 
-      // Determine trend
-      const firstHalf = monthlyData.slice(0, 6).reduce((sum, d) => sum + d.balance, 0);
-      const secondHalf = monthlyData.slice(6).reduce((sum, d) => sum + d.balance, 0);
-      const trend = secondHalf > firstHalf ? 'up' : secondHalf < firstHalf ? 'down' : 'stable';
+      // Determine trend from comparison data
+      let trend: 'up' | 'down' | 'stable' = 'stable';
+      if (response.comparisons?.trend) {
+        trend = response.comparisons.trend;
+      } else {
+        const firstHalf = monthlyData.slice(0, 6).reduce((sum, d) => sum + d.balance, 0);
+        const secondHalf = monthlyData.slice(6).reduce((sum, d) => sum + d.balance, 0);
+        trend = secondHalf > firstHalf ? 'up' : secondHalf < firstHalf ? 'down' : 'stable';
+      }
 
       setData(monthlyData);
       setCategoryData(categoryArray);
+      setMetadata(response.metadata);
       setSummary({
         totalIncome,
         totalExpenses,
@@ -429,6 +439,44 @@ const BudgetAnalysisChart: React.FC<Props> = ({ year, chartType = 'line' }) => {
       </div>
 
       {/* Chart */}
+      {/* Data Sources Panel */}
+      {metadata && (
+        <div className="px-6 py-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <Database className="h-4 w-4 text-blue-500" />
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                Fuentes de Datos Integradas:
+              </span>
+            </div>
+            <div className={`px-2 py-1 rounded-full text-xs font-medium ${
+              metadata.dataQuality === 'HIGH' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' :
+              metadata.dataQuality === 'MEDIUM' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400' :
+              'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
+            }`}>
+              {metadata.dataQuality === 'HIGH' ? 'Alta Calidad' :
+               metadata.dataQuality === 'MEDIUM' ? 'Calidad Media' : 'Calidad Básica'}
+            </div>
+          </div>
+          
+          <div className="mt-3 flex flex-wrap gap-2">
+            {metadata.services_used.map((service: string, index: number) => (
+              <span
+                key={index}
+                className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400"
+              >
+                <Layers className="h-3 w-3 mr-1" />
+                {service}
+              </span>
+            ))}
+          </div>
+          
+          <div className="mt-2 text-xs text-gray-500 dark:text-gray-400">
+            {metadata.totalRecords} registros procesados • Actualizado: {new Date(metadata.lastUpdated).toLocaleString('es-AR')}
+          </div>
+        </div>
+      )}
+
       <div className="p-6">
         {renderChart()}
       </div>

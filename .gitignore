@@ -135,14 +135,6 @@ docker-compose.override.yml
 *.docx
 *.zip
 
-# Sensitive data
-cold_storage/
-source_materials/
-raw_data/
-internal_docs/
-data/documents/
-data/processed/
-
 # Backup files
 *.bak
 *.backup

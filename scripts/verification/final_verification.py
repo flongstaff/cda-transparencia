@@ -20,7 +20,7 @@ def verify_complete_system():
     # 1. Backend API Health
     print("\n🔧 Backend API Verification:")
     try:
-        response = requests.get("http://localhost:3000/", timeout=5)
+        response = requests.get("http://localhost:3001/", timeout=5)
         print(f"   ✅ Backend Health: {response.status_code} - {response.json().get('message', '')}")
         results["verification_results"]["backend_health"] = True
     except Exception as e:
@@ -41,7 +41,7 @@ def verify_complete_system():
     total_records = 0
     for name, endpoint in data_types:
         try:
-            response = requests.get(f"http://localhost:3000{endpoint}", timeout=5)
+            response = requests.get(f"http://localhost:3001{endpoint}", timeout=5)
             if response.status_code == 200:
                 data = response.json()
                 count = len(data)
@@ -66,7 +66,7 @@ def verify_complete_system():
     print("\n📅 Yearly Data Coverage:")
     try:
         # Check salary years as representative sample
-        response = requests.get("http://localhost:3000/api/salaries", timeout=5)
+        response = requests.get("http://localhost:3001/api/salaries", timeout=5)
         if response.status_code == 200:
             salaries = response.json()
             years_available = sorted(set(salary['year'] for salary in salaries))
@@ -112,7 +112,7 @@ def verify_complete_system():
     
     for name, endpoint in advanced_endpoints:
         try:
-            response = requests.get(f"http://localhost:3000{endpoint}", timeout=5)
+            response = requests.get(f"http://localhost:3001{endpoint}", timeout=5)
             if response.status_code == 200:
                 print(f"   ✅ {name}: Active")
                 results["verification_results"][f"{name.lower().replace(' ', '_')}_feature"] = True

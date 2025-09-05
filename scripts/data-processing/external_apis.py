@@ -11,7 +11,9 @@ from typing import Dict, List, Optional, Any
 import time
 import csv
 import io
+import urllib3
 
+urllib3.disable_warnings()
 class ExternalAPIsClient:
     def __init__(self):
         self.session = requests.Session()

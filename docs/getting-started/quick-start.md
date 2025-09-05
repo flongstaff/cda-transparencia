@@ -51,7 +51,7 @@ npm install
 npm start
 ```
 
-The API will be available at `http://localhost:3000/api`
+The API will be available at `http://localhost:3001/api`
 
 ### 4. Database Setup
 

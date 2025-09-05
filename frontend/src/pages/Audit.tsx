@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { 
-  AlertTriangle, 
   DollarSign, 
   Building, 
-  Users, 
-  FileText, 
-  TrendingUp,
-  Calendar,
-  MapPin,
-  Clock,
-  BarChart3,
-  Hammer,
   FolderOpen
 } from 'lucide-react';
 import FinancialAuditDashboard from '../components/audit/FinancialAuditDashboard';

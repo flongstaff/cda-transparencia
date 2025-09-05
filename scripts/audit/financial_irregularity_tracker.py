@@ -27,7 +27,7 @@ class FinancialIrregularityTracker:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
         # API endpoints
-        self.api_base = "http://localhost:3000/api"
+        self.api_base = "http://localhost:3001/api"
         
         # Thresholds for irregularity detection
         self.thresholds = {

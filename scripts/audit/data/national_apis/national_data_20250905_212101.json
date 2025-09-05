@@ -1,0 +1,144 @@
+{
+  "timestamp": "2025-09-05T21:19:33.277717",
+  "municipality": "Carmen de Areco",
+  "collections": {
+    "dataset_search": {
+      "timestamp": "2025-09-05T21:19:33.277750",
+      "municipality": "Carmen de Areco",
+      "searches": {
+        "datos_gob_ar": {
+          "found": 0,
+          "datasets": [],
+          "success": true
+        }
+      }
+    },
+    "geographic_data": {
+      "success": true,
+      "municipality": {
+        "centroide": {
+          "lat": -34.4067977840705,
+          "lon": -59.884413320764
+        },
+        "id": "060161",
+        "nombre": "Carmen de Areco",
+        "provincia": {
+          "id": "06",
+          "nombre": "Buenos Aires"
+        }
+      },
+      "province": {
+        "centroide": {
+          "lat": -36.6773920760823,
+          "lon": -60.5584771084959
+        },
+        "id": "06",
+        "nombre": "Buenos Aires"
+      },
+      "source": "Georef API"
+    },
+    "budget_transfers": {
+      "transfers_by_year": {
+        "2022": {
+          "year": 2022,
+          "transfers": {
+            "coparticipacion": {
+              "error": "HTTP 404"
+            },
+            "transferencias": {
+              "error": "HTTP 404"
+            },
+            "aportes-tesoro-nacional": {
+              "error": "HTTP 404"
+            },
+            "recursos-provinciales": {
+              "error": "HTTP 404"
+            }
+          }
+        },
+        "2023": {
+          "year": 2023,
+          "transfers": {
+            "coparticipacion": {
+              "error": "HTTP 404"
+            },
+            "transferencias": {
+              "error": "HTTP 404"
+            },
+            "aportes-tesoro-nacional": {
+              "error": "HTTP 404"
+            },
+            "recursos-provinciales": {
+              "error": "HTTP 404"
+            }
+          }
+        },
+        "2024": {
+          "year": 2024,
+          "transfers": {
+            "coparticipacion": {
+              "error": "HTTP 404"
+            },
+            "transferencias": {
+              "error": "HTTP 404"
+            },
+            "aportes-tesoro-nacional": {
+              "error": "HTTP 404"
+            },
+            "recursos-provinciales": {
+              "error": "HTTP 404"
+            }
+          }
+        }
+      },
+      "errors": []
+    },
+    "public_works": {
+      "success": true,
+      "works_found": 1,
+      "works_data": [
+        {
+          "data": {
+            "contrato_numero": "46-0193-CON22",
+            "contrato_numero_gedo": "",
+            "procedimiento_numero": "46-0160-LPU21",
+            "procedimiento_nombre": "OBRA AUTOPISTA RN NÂ° 7 DUPLICACIÃN CARMEN DE ARECO (KM 138,35 A KM 141,00)",
+            "uoc_codigo": "46/000",
+            "uoc_descripcion": "46/000 - CoordinaciÃ³n de Licitaciones y Contrataciones - DNV",
+            "organismo_codigo_saf": "604",
+            "organismo_nombre": "604 - DirecciÃ³n Nacional de Vialidad",
+            "expediente_procedimiento_numero": "EX-2022-117556937-   -APN-DBA#DNV",
+            "numero_obra": "",
+            "nombre_obra": "",
+            "contrato_perfeccionamiento_fecha": "",
+            "contratista_cuit": "30717457729",
+            "contratista_razon_social": "CONSTRUCTORA DOS ARROYOS S.A. ? SEMISA INFRAESTRUCTURA S.A. ? HOMAQ S.A. - UT",
+            "contratista_ute_si_no": "SI",
+            "contrato_monto": "199099999.99",
+            "contrato_moneda": "ARS",
+            "funcionario_contratante_nombre": "PABLO CAFFARO",
+            "funcionario_contratante_cargo": "Coordinador"
+          },
+          "source_url": "https://infra.datos.gob.ar/catalog/jgm/dataset/30/distribution/30.4/download/onc-contratar-contratos.csv",
+          "found_at": "2025-09-05T21:20:35.890875"
+        }
+      ],
+      "municipality_id": "060161",
+      "source": "National Public Works Portal"
+    },
+    "economic_indicators": {
+      "indicators": {},
+      "errors": []
+    },
+    "provincial_transparency": {
+      "provincial_sources": {},
+      "errors": []
+    }
+  },
+  "summary": {
+    "successful_collections": 6,
+    "total_collections": 6,
+    "success_rate": "100.0%",
+    "collection_timestamp": "2025-09-05T21:21:01.296275"
+  }
+}

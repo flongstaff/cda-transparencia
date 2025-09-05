@@ -208,7 +208,7 @@ def get_production_status():
     
     # Check backend API
     try:
-        response = requests.get("http://localhost:3000/api/salaries", timeout=5)
+        response = requests.get("http://localhost:3001/api/salaries", timeout=5)
         status["services"]["backend_api"] = {
             "status": "active" if response.status_code == 200 else "error",
             "response_time": response.elapsed.total_seconds()

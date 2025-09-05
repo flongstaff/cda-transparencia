@@ -1,0 +1,220 @@
+{
+  "category": "Recursos Humanos",
+  "total_documents": 8,
+  "years": {
+    "2024": [
+      {
+        "id": "pdf-32",
+        "title": "ESCALA SALARIAL OCTUBRE 2024",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALA-SALARIAL-OCTUBRE-2024.pdf",
+        "year": 2024,
+        "category": "Recursos Humanos",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALA-SALARIAL-OCTUBRE-2024.pdf",
+        "size_mb": 0.41,
+        "last_modified": ""
+      },
+      {
+        "id": "pdf-167",
+        "title": "ESCALAS SALARIALES FEBRERO 2024",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALAS-SALARIALES-FEBRERO-2024.pdf",
+        "year": 2024,
+        "category": "Recursos Humanos",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALAS-SALARIALES-FEBRERO-2024.pdf",
+        "size_mb": 0.41,
+        "last_modified": ""
+      }
+    ],
+    "2023": [
+      {
+        "id": "pdf-13",
+        "title": "SUELDOS MAYO 2023",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-MAYO-2023.pdf",
+        "year": 2023,
+        "category": "Recursos Humanos",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-MAYO-2023.pdf",
+        "size_mb": 0.41,
+        "last_modified": ""
+      },
+      {
+        "id": "pdf-20",
+        "title": "SUELDOS JULIO 2023",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-JULIO-2023.pdf",
+        "year": 2023,
+        "category": "Recursos Humanos",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-JULIO-2023.pdf",
+        "size_mb": 0.4,
+        "last_modified": ""
+      },
+      {
+        "id": "pdf-51",
+        "title": "SUELDOS JUNIO 2023",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-JUNIO-2023.pdf",
+        "year": 2023,
+        "category": "Recursos Humanos",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-JUNIO-2023.pdf",
+        "size_mb": 0.4,
+        "last_modified": ""
+      },
+      {
+        "id": "pdf-54",
+        "title": "SUELDOS ENERO 2023",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-ENERO-2023.pdf",
+        "year": 2023,
+        "category": "Recursos Humanos",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-ENERO-2023.pdf",
+        "size_mb": 0.4,
+        "last_modified": ""
+      },
+      {
+        "id": "pdf-98",
+        "title": "SUELDOS SEPTIEMBRE 2023",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-SEPTIEMBRE-2023.pdf",
+        "year": 2023,
+        "category": "Recursos Humanos",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-SEPTIEMBRE-2023.pdf",
+        "size_mb": 0.41,
+        "last_modified": ""
+      },
+      {
+        "id": "pdf-140",
+        "title": "SUELDOS MARZO 2023",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-MARZO-2023.pdf",
+        "year": 2023,
+        "category": "Recursos Humanos",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-MARZO-2023.pdf",
+        "size_mb": 0.4,
+        "last_modified": ""
+      }
+    ]
+  },
+  "documents": [
+    {
+      "id": "pdf-32",
+      "title": "ESCALA SALARIAL OCTUBRE 2024",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALA-SALARIAL-OCTUBRE-2024.pdf",
+      "year": 2024,
+      "category": "Recursos Humanos",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALA-SALARIAL-OCTUBRE-2024.pdf",
+      "size_mb": 0.41,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-167",
+      "title": "ESCALAS SALARIALES FEBRERO 2024",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALAS-SALARIALES-FEBRERO-2024.pdf",
+      "year": 2024,
+      "category": "Recursos Humanos",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALAS-SALARIALES-FEBRERO-2024.pdf",
+      "size_mb": 0.41,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-13",
+      "title": "SUELDOS MAYO 2023",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-MAYO-2023.pdf",
+      "year": 2023,
+      "category": "Recursos Humanos",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-MAYO-2023.pdf",
+      "size_mb": 0.41,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-20",
+      "title": "SUELDOS JULIO 2023",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-JULIO-2023.pdf",
+      "year": 2023,
+      "category": "Recursos Humanos",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-JULIO-2023.pdf",
+      "size_mb": 0.4,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-51",
+      "title": "SUELDOS JUNIO 2023",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-JUNIO-2023.pdf",
+      "year": 2023,
+      "category": "Recursos Humanos",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-JUNIO-2023.pdf",
+      "size_mb": 0.4,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-54",
+      "title": "SUELDOS ENERO 2023",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-ENERO-2023.pdf",
+      "year": 2023,
+      "category": "Recursos Humanos",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-ENERO-2023.pdf",
+      "size_mb": 0.4,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-98",
+      "title": "SUELDOS SEPTIEMBRE 2023",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-SEPTIEMBRE-2023.pdf",
+      "year": 2023,
+      "category": "Recursos Humanos",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-SEPTIEMBRE-2023.pdf",
+      "size_mb": 0.41,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-140",
+      "title": "SUELDOS MARZO 2023",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-MARZO-2023.pdf",
+      "year": 2023,
+      "category": "Recursos Humanos",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/SUELDOS-MARZO-2023.pdf",
+      "size_mb": 0.4,
+      "last_modified": ""
+    }
+  ]
+}

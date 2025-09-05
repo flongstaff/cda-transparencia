@@ -1,0 +1,1353 @@
+{
+  "acquisition_started": "2025-09-02T21:04:12.338715",
+  "sources": {
+    "municipal_website": "found 191 documents",
+    "bora_nacional": "found 0 documents",
+    "datos_gob_ar": "found 0 datasets",
+    "presupuesto_abierto": "completed"
+  },
+  "documents": [
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671065"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671083"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671094"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671103"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671113"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671123"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671132"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671142"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+      "title": "Estado de Ejecución de Gastos con Perspectiva de Género",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671150"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Situacion-Economico-Financiera-Marzo.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671159"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671168"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671176"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671185"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671194"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671202"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671211"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671220"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671229"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671238"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+      "title": "Estado de Ejecución de Gastos con Perspectiva de Género",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671247"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Situacion-Economico-Financiera-Junio.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671254"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671274"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Recursos-4toTrimestres.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671282"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+      "title": "",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671289"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671299"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671308"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671317"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671326"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671334"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671343"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671352"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf",
+      "title": "Estado de Ejecución de Gastos con Perspectiva de Género",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671361"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/03/Situacion-Economico-Financiera-4to-Trimestre.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671369"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+      "title": "",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671376"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Cuenta-Ahorro-Inversion-Financiamiento-4to-Trimestre.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671385"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-AL-31-12-2024.xlsx",
+      "title": "Stock de Deuda y Perfil de Vencimientos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671392"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Recursos-3er-Trimestres.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671400"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+      "title": "",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671404"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671414"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671423"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671433"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671443"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671452"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671462"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671471"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf",
+      "title": "Estado de Ejecución de Gastos con Perspectiva de Género",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671481"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Situacion-Economico-Financiera-3er-Trimestre.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671490"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+      "title": "",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671495"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Cuenta-Ahorro-Inversion-Financiamiento-3er-Trimestre.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671505"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-9-2024.xlsx",
+      "title": "Stock de Deuda y Perfil de Vencimientos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671511"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671519"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+      "title": "",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671524"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671533"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671543"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671553"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671563"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671573"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671582"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671593"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+      "title": "Estado de Ejecución de Gastos con Perspectiva de Género",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671603"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Situacion-Economico-Financiera-Junio.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671612"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+      "title": "",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671616"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-6-2024.xlsx",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671626"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-6-2020.xlsx",
+      "title": "Stock de Deuda y Perfil de Vencimientos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671633"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671642"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671659"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671668"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671678"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671687"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671696"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671705"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671714"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+      "title": "Estado de Ejecución de Gastos con Perspectiva de Género",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671724"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Situacion-Economico-Financiera-Marzo.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671732"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671741"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671749"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671757"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671764"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671771"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671778"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671785"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671791"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671798"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+      "title": "Estado de Ejecución de Gastos por Perspectiva de Género",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671805"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671812"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671819"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671827"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671837"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671846"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671856"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671865"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671876"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671887"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671896"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+      "title": "Estado de Ejecución de Gastos con Perspectiva de Género",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671906"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671914"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/CAIF-3°TRIMESTRE.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671923"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/EJECUCION-PRESUPUESTARIA-DE-RECURSOS.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671932"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+      "title": "",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671936"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/RECURSOS-POR-PROCEDENCIA.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671945"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671954"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671963"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/EJECUCION-DE-GASTOS.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671972"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671981"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/GASTOS-POR-CARACTER-ECONOMICO.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671990"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.671999"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/GASTOS-CON-PERSPECTIVA-DE-GENERO.pdf",
+      "title": "Estado de Ejecución de Gastos con Perspectiva de Género",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672008"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SITUACION-ECONOMICO-FINANCIERA.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672016"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+      "title": "",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672020"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/CAIF.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672030"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672038"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672047"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672056"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672065"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672074"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672084"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672093"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672102"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+      "title": "Estado de Ejecución de Gastos con Perspectiva de Género",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672112"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672120"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/CAIF-3.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672129"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672139"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672149"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672159"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672168"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672178"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672188"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672197"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672207"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672216"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/CAIF-4°TRE-2022.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672226"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672236"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672245"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672255"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672264"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672281"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672290"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672299"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672308"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672318"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/CAIF-3°TRI-2022.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672327"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672336"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672345"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672354"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672363"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-1.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672372"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672411"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672420"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672429"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SITUACION-ECONOMICA-FINANCIERA-1.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672438"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/CAIF-2.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672447"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+      "title": "Estado de Ejecución de Recursos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672464"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+      "title": "",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672468"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+      "title": "Estado de Ejecución de Recursos por Procedencia",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672477"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+      "title": "Estado de Ejecución de Recursos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672486"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "title": "Estado de Ejecución de Recursos Afectados Vs Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672495"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS.pdf",
+      "title": "Estado de Ejecución de Gastos",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672504"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+      "title": "Estado de Ejecución de Gastos por Fuente de Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672512"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+      "title": "Estado de Ejecución de Gastos por Carácter Económico",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672521"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+      "title": "Estado de Ejecución de Gastos por Finalidad y Función",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672530"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SITUACION-ECONOMICA-FINANCIERA.pdf",
+      "title": "Situación Económica Financiera",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672538"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+      "title": "",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672542"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/CAIF-1.pdf",
+      "title": "Cuenta Ahorro Inversión Financiamiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672551"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+      "title": "Presupuesto público 2025",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672560"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-FISCAL-3198-23.pdf",
+      "title": "Ordenanza Fiscal Vigente 3198/23",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672569"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/ORDENANZA-IMPOSITIVA-3282-25.pdf",
+      "title": "Ordenanza Impositiva vigente 3282/24",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672575"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/02/ANEXO-II-ZONAS-IMPOSITIVAS.pdf",
+      "title": "Anexo II Zonas",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672583"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/MODULO-FISCAL.xlsx",
+      "title": "Evolución del Módulo Fiscal",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672590"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-3200-24-PRESUPUESTO-2024.pdf",
+      "title": "Presupuesto público 2024",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672598"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-FISCAL-3198-23.pdf",
+      "title": "Ordenanza Fiscal 3198/23",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672603"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-IMPOSITIVA-3202-24.pdf",
+      "title": "Ordenanza Impositiva 3202/24",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672610"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/02/ANEXO-II-ZONAS-IMPOSITIVAS.pdf",
+      "title": "Anexo II Zonas",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672616"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/CONSULTA-IMPOSITIVA-VIGENTE-.xlsx",
+      "title": "Consulta Ordenanza Impositiva con valores 2024",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672624"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/MODULO-FISCAL.xlsx",
+      "title": "Evolución del Módulo Fiscal 2024",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672631"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°11.pdf",
+      "title": "Ver",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672643"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°10.pdf",
+      "title": "Ver",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672650"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°9.pdf",
+      "title": "Ver",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672657"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°8.pdf",
+      "title": "Ver",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672663"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf",
+      "title": "Ver",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672670"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/ESCALA-SALARIAL-OCTUBRE-2024.pdf",
+      "title": "Octubre 2024",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672679"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/02/ESCALAS-SALARIALES-FEBRERO-2024.pdf",
+      "title": "Febrero 2024",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672685"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-SEPTIEMBRE-2023.pdf",
+      "title": "Septiembre 2023",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672693"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-JULIO-2023.pdf",
+      "title": "Julio de 2023",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672699"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-JUNIO-2023.pdf",
+      "title": "Junio de 2023",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672706"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-MAYO-2023.pdf",
+      "title": "Mayo de 2023",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672712"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-MARZO-2023.pdf",
+      "title": "Marzo de 2023",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672727"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-ENERO-2023.pdf",
+      "title": "Enero de 2023",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672734"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/DDJJ-2024.pdf",
+      "title": "Funcionarios en Cumplimiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672743"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ddjj-2023.pdf",
+      "title": "Funcionarios en Cumplimiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672750"
+    },
+    {
+      "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ddjj-2022.pdf",
+      "title": "Funcionarios en Cumplimiento",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672757"
+    },
+    {
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/ORGANIGRAMA-2025.pdf",
+      "title": "Organigrama",
+      "source": "municipal_website",
+      "path": "/transparencia",
+      "discovered_at": "2025-09-02T21:04:14.672775"
+    }
+  ],
+  "datasets": [],
+  "api_data": {
+    "presupuesto_abierto": {}
+  },
+  "acquisition_completed": "2025-09-02T21:04:27.777713"
+}

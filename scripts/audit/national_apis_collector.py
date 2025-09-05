@@ -15,6 +15,8 @@ import time
 import logging
 from bs4 import BeautifulSoup
 import pandas as pd
+import urllib3
+urllib3.disable_warnings()
 
 class NationalAPIsCollector:
     def __init__(self):

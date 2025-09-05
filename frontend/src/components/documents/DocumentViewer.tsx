@@ -79,7 +79,7 @@ const DocumentViewer: React.FC<DocumentViewerProps> = ({ documents, selectedSour
         case 'processed':
           try {
             // Try to load processed markdown content
-            const response = await fetch(`http://localhost:3000/api/documents/${document.category}/${document.filename}/content`);
+            const response = await fetch(`http://localhost:3001/api/documents/${document.category}/${document.filename}/content`);
             if (response.ok) {
               const data = await response.json();
               contentToDisplay = `# 📄 Documento Procesado: ${document.filename}\n\n`;
