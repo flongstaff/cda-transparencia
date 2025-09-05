@@ -27,7 +27,7 @@
     "@luma.gl/core": "^9.1.9",
     "@msrvida/sanddance": "^4.0.6",
     "@msrvida/sanddance-react": "^4.0.2",
-    "@types/recharts": "^1.8.29",
+    "@types/recharts": "^2.0.1",
     "@types/uuid": "^10.0.0",
     "chart.js": "^4.5.0",
     "framer-motion": "^10.17.9",
