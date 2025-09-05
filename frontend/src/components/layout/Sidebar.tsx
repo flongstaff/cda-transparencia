@@ -45,6 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
     { to: '/contact', label: t('sidebar.contact'), icon: <Mail size={20} /> },
     { to: '/whistleblower', label: t('sidebar.whistleblower'), icon: <AlertTriangle size={20} /> },
     { to: '/data-integrity', label: 'Integridad de Datos', icon: <Database size={20} /> },
+    { to: '/all-documents', label: 'Todos los Documentos', icon: <FolderOpen size={20} /> },
   ];
 
   return (
