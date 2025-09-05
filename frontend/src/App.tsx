@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import AnomalyDashboard from './components/anomaly/AnomalyDashboard';
 import About from './pages/About';
@@ -21,8 +21,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 
 function AppContent() {
   // Update document title - using current year as default
-  const [selectedYear] = useState(new Date().getFullYear());
-  
   useEffect(() => {
     document.title = `Portal de Transparencia | Carmen de Areco`;
   }, []);

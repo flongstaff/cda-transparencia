@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FileText, Download, Eye, Search, Filter, Calendar, ExternalLink, CheckCircle, AlertCircle, Loader2, FolderOpen } from 'lucide-react';
+import { FileText, Download, Search, Calendar, ExternalLink, CheckCircle, AlertCircle, Loader2, FolderOpen } from 'lucide-react';
 import { unifiedDataService } from '../services/UnifiedDataService';
 import SimpleDocumentViewer from '../components/documents/SimpleDocumentViewer';
 
@@ -32,7 +32,6 @@ const AllDocuments: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedYear, setSelectedYear] = useState<string>('all');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedType, setSelectedType] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'date' | 'name' | 'size' | 'status'>('date');
   const [selectedDocument, setSelectedDocument] = useState<Document | null>(null);
 
@@ -40,22 +39,6 @@ const AllDocuments: React.FC = () => {
   useEffect(() => {
     loadDocuments();
   }, []);
-
-  const loadDocuments = async () => {
-    setLoading(true);
-    setError(null);
-    
-    try {
-      const documents = await unifiedDataService.getAllDocuments();
-      setDocuments(documents);
-      setFilteredDocuments(documents);
-    } catch (err) {
-      console.error('Error loading documents:', err);
-      setError('Error al cargar los documentos. Por favor, intente nuevamente.');
-    } finally {
-      setLoading(false);
-    }
-  };
 
   // Filter and sort documents
   useEffect(() => {
@@ -78,10 +61,6 @@ const AllDocuments: React.FC = () => {
       filtered = filtered.filter(doc => doc.category === selectedCategory);
     }
     
-    if (selectedType !== 'all') {
-      filtered = filtered.filter(doc => doc.document_type === selectedType);
-    }
-    
     // Apply sorting
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -99,12 +78,11 @@ const AllDocuments: React.FC = () => {
     });
     
     setFilteredDocuments(filtered);
-  }, [documents, searchTerm, selectedYear, selectedCategory, selectedType, sortBy]);
+  }, [documents, searchTerm, selectedYear, selectedCategory, sortBy]);
 
   // Get unique years, categories, and types for filters
   const availableYears = [...new Set(documents.map(doc => doc.year))].sort((a, b) => b - a);
   const availableCategories = [...new Set(documents.map(doc => doc.category))].sort();
-  const availableTypes = [...new Set(documents.map(doc => doc.document_type))].sort();
 
   const getVerificationIcon = (status: string) => {
     switch (status) {
@@ -192,7 +170,7 @@ const AllDocuments: React.FC = () => {
 
         {/* Filters and Search */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
             <div className="lg:col-span-2">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -233,17 +211,19 @@ const AllDocuments: React.FC = () => {
                 ))}
               </select>
             </div>
-            
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             <div>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                <option value="date">Fecha</option>
-                <option value="name">Nombre</option>
-                <option value="size">Tamaño</option>
-                <option value="status">Estado</option>
+                <option value="date">Ordenar por Fecha</option>
+                <option value="name">Ordenar por Nombre</option>
+                <option value="size">Ordenar por Tamaño</option>
+                <option value="status">Ordenar por Estado</option>
               </select>
             </div>
           </div>
