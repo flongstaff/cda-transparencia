@@ -30,7 +30,7 @@
     "@types/recharts": "^1.8.29",
     "@types/uuid": "^10.0.0",
     "chart.js": "^4.5.0",
-    "framer-motion": "^10.17.9",
+    "framer-motion": "^12.23.12",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.3.0",
