@@ -19,9 +19,7 @@ import {
 import PageYearSelector from '../components/PageYearSelector';
 import ValidatedChart from '../components/ValidatedChart';
 import CriticalIssues from '../components/audit/CriticalIssues';
-import { unifiedDataService } from '../services/UnifiedDataService';
-import { municipalDataService } from '../lib/municipalData';
-import { chartDataIntegrationService } from '../services/ChartDataIntegrationService';
+import { unifiedDataService } from '../services';
 import { formatCurrencyARS } from '../utils/formatters';
 
 const PublicSpending: React.FC = () => {

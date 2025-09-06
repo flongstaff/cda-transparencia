@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import YearlyFinancialDashboard from '../components/yearly/YearlyFinancialDashboard';
-import YearlyDataService from '../services/YearlyDataService';
+import { unifiedDataService } from '../services';
 import { Loader } from 'lucide-react';
 
 const FinancialHistory: React.FC = () => {
@@ -15,7 +15,7 @@ const FinancialHistory: React.FC = () => {
   const loadAvailableYears = async () => {
     try {
       setLoading(true);
-      const years = await YearlyDataService.fetchAvailableYears();
+      const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019]; // Static years for now
       setAvailableYears(years);
       if (years.length > 0) {
         setSelectedYear(years[0]);

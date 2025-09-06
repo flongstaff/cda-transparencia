@@ -29,6 +29,10 @@ const antiCorruptionDashboardRoutes = require('./antiCorruptionDashboardRoutes')
 const advancedFraudDetectionRoutes = require('./advancedFraudDetectionRoutes');
 const anomalyDetectionRoutes = require('./anomalyDetectionRoutes');
 const financialAuditRoutes = require('./financialAuditRoutes');
+const vendorRelationshipRoutes = require('./vendorRelationshipRoutes');
+
+// Import comprehensive transparency routes for citizen access
+const comprehensiveTransparencyRoutes = require('./comprehensiveTransparencyRoutes');
 
 // Use all routes
 router.use('/declarations', propertyDeclarationsRoutes);
@@ -48,6 +52,9 @@ router.use('/years', yearsRoutes);
 router.use('/budget-data', budgetRoutes);
 router.use('/salary-data', salaryRoutes);
 
+// Register comprehensive transparency routes for full citizen access
+router.use('/transparency', comprehensiveTransparencyRoutes);
+
 // Original salary route (keep for backward compatibility)
 router.use('/salaries', salariesRoutes);
 
@@ -60,6 +67,21 @@ router.use('/advanced-fraud', advancedFraudDetectionRoutes);
 
 // Financial audit routes
 router.use('/financial-audit', financialAuditRoutes);
+
+// Vendor relationship routes
+router.use('/vendor-relationships', vendorRelationshipRoutes);
+
+// Conflict of interest routes  
+const conflictOfInterestRoutes = require('./conflictOfInterestRoutes');
+router.use('/conflicts', conflictOfInterestRoutes);
+
+// Salary benchmarking routes
+const salaryBenchmarkingRoutes = require('./salaryBenchmarkingRoutes');
+router.use('/salary-benchmarking', salaryBenchmarkingRoutes);
+
+// Contractor performance dashboard routes
+const contractorPerformanceDashboardRoutes = require('./contractorPerformanceDashboardRoutes');
+router.use('/contractor-performance', contractorPerformanceDashboardRoutes);
 
 // Anomaly detection routes
 router.use('/anomaly-detection', anomalyDetectionRoutes);

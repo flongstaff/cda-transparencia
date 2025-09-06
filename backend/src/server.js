@@ -24,7 +24,8 @@ const powerBIService = new PowerBIService();
 
 // Initialize Yearly Data Service
 const YearlyDataService = require('./services/YearlyDataService');
-const yearlyDataService = new YearlyDataService();
+const PostgreSQLDataService = require('./services/PostgreSQLDataService');
+const pgDataService = new PostgreSQLDataService();
 
 // Initialize Unified Data Service (combines CSV and mock data)
 const UnifiedDataService = require('./services/UnifiedDataService');
@@ -416,7 +417,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 // Yearly Data API Endpoints
 app.get('/api/years', async (req, res) => {
   try {
-    const years = await yearlyDataService.getAvailableYears();
+    const years = await pgDataService.getAvailableYears();
     res.json({ years });
   } catch (error) {
     res.status(500).json({ 
@@ -433,7 +434,7 @@ app.get('/api/years/:year', async (req, res) => {
       return res.status(400).json({ error: 'Invalid year parameter' });
     }
     
-    const data = await yearlyDataService.getYearlyData(year);
+    const data = await pgDataService.getYearlyData(year);
     res.json(data);
   } catch (error) {
     res.status(500).json({ 

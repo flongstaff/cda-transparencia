@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, AlertTriangle, Loader2 } from 'lucide-react';
-import { integratedBackendService } from '../services/IntegratedBackendService';
-import { unifiedDataService } from '../services/UnifiedDataService';
+import { unifiedDataService } from '../services';
 import { logError, logSuccess, logWarning } from '../utils/errorLogger';
 
 interface TestResult {

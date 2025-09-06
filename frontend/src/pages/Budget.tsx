@@ -31,10 +31,7 @@ import IntegratedChart from '../components/charts/IntegratedChart';
 import CriticalIssues from '../components/audit/CriticalIssues';
 
 // Import our data services
-import { unifiedDataService } from '../services/UnifiedDataService';
-import { municipalDataService } from '../lib/municipalData';
-import { chartDataIntegrationService } from '../services/ChartDataIntegrationService';
-import { integratedBackendService } from '../services/IntegratedBackendService';
+import { unifiedDataService } from '../services';
 import { formatCurrencyARS } from '../utils/formatters';
 
 interface BudgetMetric {

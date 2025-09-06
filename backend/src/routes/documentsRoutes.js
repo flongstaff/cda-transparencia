@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const DocumentService = require('../services/DocumentService');
+const PostgreSQLDataService = require('../services/PostgreSQLDataService');
 
-const documentService = new DocumentService();
+const dataService = new PostgreSQLDataService();
 
 /**
  * @swagger
@@ -125,7 +125,7 @@ router.get('/', async (req, res) => {
       type: req.query.type
     };
     
-    const documents = await documentService.getAllDocuments(filters);
+    const documents = await dataService.getAllDocuments();
     
     res.json({
       documents: documents,

@@ -8,6 +8,8 @@ import pathlib
 import json
 import pandas as pd
 import sqlite3
+import asyncio
+from datetime import datetime
 from .data_extraction import scrape_live_sync, scrape_wayback_sync
 from .processing import (
     convert_docx_to_txt,
@@ -21,12 +23,55 @@ from .database import (
     insert_metadata,
     load_from_csv,
 )
+from .system import IntegratedTransparencySystem
 
 # Main CLI group
 @click.group()
 def cli() -> None:
     """Carmen de Areco Transparency Document Scraper and Processor."""
     pass
+
+@cli.command()
+def run_analysis():
+    """
+    Run the complete, integrated transparency analysis.
+    """
+    click.secho("🚀 Starting comprehensive transparency analysis...", fg="blue")
+    
+    system = IntegratedTransparencySystem()
+    
+    try:
+        results = asyncio.run(system.run_comprehensive_analysis())
+        
+        click.secho("\n📊 ANALYSIS COMPLETED", fg="green", bold=True)
+        click.secho(f"🏛️  Municipality: Carmen de Areco", fg="green")
+        click.secho(f"⚠️  Risk Level: {results['overall_risk_level'].upper()}", fg="yellow")
+        click.secho(f"📋 Corruption Cases Tracked: {results['corruption_cases_tracked']}", fg="green")
+        
+        # Generate and save report
+        report = system.generate_transparency_report(results)
+        
+        report_path = system.data_dir / f"transparency_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+        with open(report_path, 'w', encoding='utf-8') as f:
+            f.write(report)
+        
+        results_path = system.data_dir / f"analysis_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        with open(results_path, 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=2, ensure_ascii=False, default=str)
+        
+        click.secho(f"\n📄 Report generated: {report_path}", fg="cyan")
+        click.secho(f"📈 Detailed results (JSON): {results_path}", fg="cyan")
+
+        if results['overall_risk_level'] in ['critical', 'high']:
+            click.secho(f"\n🚨 ALERTA {results['overall_risk_level'].upper()}", fg="red", bold=True)
+            click.secho("Recomendaciones prioritarias:", fg="red")
+            for i, rec in enumerate(results.get('recommendations', [])[:5], 1):
+                click.secho(f"{i}. {rec}", fg="red")
+
+    except Exception as e:
+        click.secho(f"❌ Error during analysis: {e}", fg="red", bold=True)
+        raise click.ClickException(f"Comprehensive analysis failed: {e}")
+
 
 # Scrape commands
 @cli.group()
@@ -256,7 +301,9 @@ def from_csv(csv_path: str, table_name: str):
 @click.option("--checksums", type=click.Path(exists=True), help="JSON file with expected checksums.")
 @click.option("--report", type=click.Path(), help="JSON file to write the validation report.")
 def validate(directory: str, checksums: str, report: str):
-    """Validate all documents in a directory."""
+    """
+    Validate all documents in a directory.
+    """
     directory = pathlib.Path(directory)
     
     if checksums:

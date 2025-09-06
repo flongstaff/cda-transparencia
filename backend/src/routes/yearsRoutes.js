@@ -1,5 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const PostgreSQLDataService = require('../services/PostgreSQLDataService');
+
+// Initialize the PostgreSQL service
+const pgService = new PostgreSQLDataService();
 
 // Mock data for years
 const mockYearsData = {
@@ -157,11 +161,12 @@ const mockYearsData = {
 };
 
 // Get available years
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    const years = Object.keys(mockYearsData).map(year => parseInt(year)).sort((a, b) => b - a);
+    const years = await pgService.getAvailableYears();
     res.json({ years });
   } catch (error) {
+    console.error('Error fetching available years:', error);
     res.status(500).json({ error: 'Error fetching available years' });
   }
 });
@@ -175,7 +180,7 @@ router.get('/:year', async (req, res) => {
       return res.status(400).json({ error: 'Invalid year parameter' });
     }
     
-    const yearData = mockYearsData[year];
+    const yearData = await pgService.getYearlyData(year);
     
     if (!yearData) {
       return res.status(404).json({ 
@@ -184,42 +189,7 @@ router.get('/:year', async (req, res) => {
       });
     }
     
-    // Format the response to match frontend expectations
-    const formattedData = {
-      year: year,
-      total_documents: yearData.total_documents,
-      categories: Object.entries(yearData.categories).reduce((acc, [category, count]) => {
-        acc[category] = Array(count).fill().map((_, i) => ({
-          id: `doc-${year}-${category}-${i}`,
-          title: `${category} - Documento ${i + 1}`,
-          year: year,
-          category: category,
-          size_mb: Math.random() * 2 + 0.5,
-          official_url: "https://carmendeareco.gob.ar/transparencia/",
-          archive_url: "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/",
-          verification_status: "verified",
-          processing_date: new Date().toISOString(),
-          data_sources: ["official_site", "web_archive"],
-          file_size: Math.random() * 2 + 0.5
-        }));
-        return acc;
-      }, {}),
-      documents: yearData.documents.map(doc => ({
-        id: doc.id,
-        title: doc.title,
-        year: doc.year,
-        category: doc.category,
-        size_mb: doc.size_mb,
-        official_url: doc.official_url,
-        archive_url: "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/",
-        verification_status: "verified",
-        processing_date: doc.last_modified,
-        data_sources: [doc.source],
-        file_size: doc.size_mb
-      }))
-    };
-    
-    res.json(formattedData);
+    res.json(yearData);
   } catch (error) {
     console.error('Error loading yearly data:', error);
     res.status(500).json({ 
