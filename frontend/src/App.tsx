@@ -38,12 +38,15 @@ import ComprehensiveDashboard from './pages/ComprehensiveDashboard';
 import ComprehensiveFinancialAnalysis from './pages/ComprehensiveFinancialAnalysis';
 import FinancialHistory from './pages/FinancialHistory';
 import PowerBIData from './pages/PowerBIData';
-import VisualizationTestPage from './pages/VisualizationTestPage';
 import AllPages from './pages/AllPages';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Whistleblower from './pages/Whistleblower';
 import SystemDiagnostic from './pages/SystemDiagnostic';
+import DataDashboard from './pages/DataDashboard';
+import ApiTestPage from './pages/ApiTestPage';
+import CitizenTransparency from './pages/CitizenTransparency';
+import TransparencyPortal from './pages/TransparencyPortal';
 import ErrorBoundary from './components/ErrorBoundary';
 
 // Navigation items with improved organization and icons
@@ -53,7 +56,9 @@ const navigationSections = [
     items: [
       { path: '/', label: '🏠 Inicio', icon: <HomeIcon className="w-4 h-4" /> },
       { path: '/comprehensive', label: '📊 Dashboard', icon: <BarChart className="w-4 h-4" /> },
-      { path: '/system-diagnostic', label: '🔧 Diagnóstico', icon: <Activity className="w-4 h-4" /> }
+      { path: '/system-diagnostic', label: '🔧 Diagnóstico', icon: <Activity className="w-4 h-4" /> },
+      { path: '/data-dashboard', label: '📊 Data Dashboard', icon: <BarChart className="w-4 h-4" /> },
+      { path: '/api-test', label: '🧪 API Test', icon: <Activity className="w-4 h-4" /> }
     ]
   },
   {
@@ -69,6 +74,8 @@ const navigationSections = [
   {
     title: 'Transparencia',
     items: [
+      { path: '/citizen-transparency', label: '🏛️ Portal Ciudadano', icon: <Eye className="w-4 h-4" /> },
+      { path: '/transparency-portal', label: '🔍 Anticorrupción', icon: <Shield className="w-4 h-4" /> },
       { path: '/contracts', label: '📋 Contratos', icon: <FileText className="w-4 h-4" /> },
       { path: '/salaries', label: '👥 Salarios', icon: <Users className="w-4 h-4" /> },
       { path: '/declarations', label: '🏛️ Declaraciones', icon: <Building className="w-4 h-4" /> },
@@ -202,16 +209,24 @@ const App: React.FC = () => {
               {/* Quick Actions */}
               <div className="hidden sm:flex items-center space-x-3">
                 <Link 
-                  to="/budget" 
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  to="/citizen-transparency" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center space-x-1"
                 >
-                  Ver Presupuesto
+                  <Eye className="w-4 h-4" />
+                  <span>Portal Ciudadano</span>
                 </Link>
                 <Link 
-                  to="/documents" 
+                  to="/transparency-portal" 
+                  className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center space-x-1"
+                >
+                  <Shield className="w-4 h-4" />
+                  <span>Anticorrupción</span>
+                </Link>
+                <Link 
+                  to="/budget" 
                   className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
-                  Documentos
+                  Presupuesto
                 </Link>
               </div>
             </div>
@@ -293,6 +308,8 @@ const App: React.FC = () => {
                   <Route path="/investments" element={<Investments />} />
                   
                   {/* Transparency Routes */}
+                  <Route path="/citizen-transparency" element={<CitizenTransparency />} />
+                  <Route path="/transparency-portal" element={<TransparencyPortal />} />
                   <Route path="/contracts" element={<Contracts />} />
                   <Route path="/salaries" element={<Salaries />} />
                   <Route path="/declarations" element={<PropertyDeclarations />} />
@@ -309,10 +326,11 @@ const App: React.FC = () => {
                   <Route path="/financial-analysis" element={<ComprehensiveFinancialAnalysis />} />
                   <Route path="/financial-history" element={<FinancialHistory />} />
                   <Route path="/powerbi" element={<PowerBIData />} />
-                  <Route path="/visualization-test" element={<VisualizationTestPage />} />
                   <Route path="/all-pages" element={<AllPages />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="/data-dashboard" element={<DataDashboard />} />
+                  <Route path="/api-test" element={<ApiTestPage />} />
                 </Routes>
               </ErrorBoundary>
             </div>
