@@ -20,6 +20,8 @@ import {
 } from 'lucide-react';
 
 // Import ALL pages - comprehensive coverage
+import HomePage from './pages/HomePage';
+import UnifiedDashboard from './pages/UnifiedDashboard';
 import HomeIntegrated from './pages/HomeIntegrated';
 import Budget from './pages/Budget';
 import PublicSpending from './pages/PublicSpending';
@@ -296,7 +298,8 @@ const App: React.FC = () => {
               <ErrorBoundary>
                 <Routes>
                   {/* Main Routes */}
-                  <Route path="/" element={<HomeIntegrated />} />
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/dashboard" element={<UnifiedDashboard />} />
                   <Route path="/comprehensive" element={<ComprehensiveDashboard />} />
                   <Route path="/system-diagnostic" element={<SystemDiagnostic />} />
                   
