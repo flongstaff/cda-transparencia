@@ -1,32 +1,16 @@
 # Dependencies
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-yarn.lock
 
-# Production
-/build
-/dist
-/.vite
-/coverage
+# Build outputs
+/dist/
+/build/
+/out/
 
-# Environment files
-.env*
-!.env.example
-
-# IDEs and editors
-/.idea
-/.vscode
+# IDEs
+.vscode/
+.idea/
 *.swp
 *.swo
-*~
-.DS_Store
-Thumbs.db
-
-# Git
-/.git
 
 # OS generated files
 .DS_Store
@@ -37,160 +21,83 @@ Thumbs.db
 ehthumbs.db
 Thumbs.db
 
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
 # Logs
 *.log
 
-# Python
+# Data files (excluding organized data)
+data/acquired/
+data/audit_irregularities/
+data/audit_trail/
+data/comparison_reports/
+data/csv_exports/
+data/cycle_results/
+data/enhanced_audit_data/
+data/optimized/
+data/pdf_extracts/
+data/preserved/
+data/processed/
+data/visualizations/
+data/web_sources.json
+data/*_data_*.json
+data/budget_data_*.json
+data/salary_data_*.json
+data/debt_data_*.json
+data/anomaly_data_*.json
+
+# Database files
+database/postgres-data/
+!database/init/
+
+# Backend data
+backend/data/
+
+# Frontend service files
+frontend/src/services/frontend/
+
+# Python cache
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
+*.pyo
+*.pyd
 .Python
+*.so
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.gitignore
+.tox
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
-
-# PyInstaller
 *.manifest
 *.spec
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# pipenv
-Pipfile.lock
-
-# PEP 582
-__pypackages__/
-
-# Celery
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
+pip-log.txt
+pip-delete-this-directory.txt
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+pytestdebug.log
 .pyre/
-
-# Docker
-docker-compose.override.yml
-
-# Database
-*.sqlite
-*.sqlite3
-*.db
+.pytype/
 
 # Temporary files
 *.tmp
 *.temp
-
-# Large files
-*.pdf
-*.xlsx
-*.docx
-*.zip
-
-# Backup files
-*.bak
-*.backup
-
-# Compiled files
-*.exe
-*.dll
-*.so
-*.dylib
-
-# Test coverage
-.coverage
-htmlcov/
-.nyc_output
-
-# Documentation
-docs/_build/
-
-# VS Code
-.vscode/settings.json
-!.vscode/settings.example.json
-
-# Codacy
-.codacy/
-
-# Scripts cache
-scripts/__pycache__/
-scripts/*.pyc
-
-# Frontend build artifacts
-frontend/dist/
-frontend/node_modules/
-frontend/.vite/
-frontend/coverage/
-
-# Backend build artifacts
-backend/node_modules/
-backend/.env
-backend/*.log
-backend/coverage/
-
-# Data files that shouldn't be committed
-data/source_materials/*.*
-data/temp/
-
-# Generated data from external_apis.py
-external_apis_data_*.json
-
-# Generated data directories
-data/master_execution_report.json
-data/bora_scrape/
-data/infrastructure_tracking/
-data/organized_data/
-data/osint/
-data/powerbi_extraction/
-data/reports/
-
-# Production configuration file
-production.config.js
+*~
