@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { FileText, Download, ExternalLink, Calendar, Hash, CheckCircle, Eye, Database, ArrowLeft } from 'lucide-react';
 import MarkdownRenderer from '../components/documents/MarkdownRenderer';
-import { unifiedDataService } from '../services/UnifiedDataService';
+import { consolidatedApiService } from '../services/ConsolidatedApiService';
 
 interface DocumentMetadata {
   id: number;

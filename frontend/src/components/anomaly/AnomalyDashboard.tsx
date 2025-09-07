@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AlertTriangle, DollarSign, FileText, TrendingDown } from 'lucide-react';
-import { unifiedDataService } from '../../services/UnifiedDataService';
+import { consolidatedApiService } from '../../services/ConsolidatedApiService';
 
 interface Anomaly {
   id: string;

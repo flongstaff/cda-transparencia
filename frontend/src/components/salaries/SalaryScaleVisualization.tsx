@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 import { Users, DollarSign, TrendingUp, Calculator } from 'lucide-react';
-import { unifiedDataService } from '../../services/UnifiedDataService';
+import { consolidatedApiService } from '../../services/ConsolidatedApiService';
 
 interface SalaryPosition {
   code: string;

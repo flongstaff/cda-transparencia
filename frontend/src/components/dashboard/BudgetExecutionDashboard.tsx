@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend, LineChart, Line } from 'recharts';
 import { DollarSign, TrendingUp, TrendingDown, PieChart as PieChartIcon, BarChart3, Calendar, AlertTriangle, CheckCircle } from 'lucide-react';
-import { unifiedDataService } from '../../services/UnifiedDataService';
+import { consolidatedApiService } from '../../services/ConsolidatedApiService';
 
 interface BudgetCategory {
   name: string;

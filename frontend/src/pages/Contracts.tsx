@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Download, Search, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, Building, DollarSign, ShieldCheck, Users, BarChart3 } from 'lucide-react';
+import { Download, Search, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, Building, DollarSign, ShieldCheck, Users, BarChart3, Loader2 } from 'lucide-react';
 import PageYearSelector from '../components/PageYearSelector';
-import { unifiedDataService } from '../services/UnifiedDataService';
-import { useYear } from '../contexts/YearContext'; // Import useYear hook
+import { consolidatedApiService } from '../services';
 
 interface Contract {
   id: string;
@@ -20,35 +19,62 @@ interface Contract {
 }
 
 const Contracts: React.FC = () => {
-  const { selectedYear, setSelectedYear } = useYear(); // Use YearContext
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [selectedContract, setSelectedContract] = useState<Contract | null>(null);
   const [activeTab, setActiveTab] = useState('overview');
   const [sortBy, setSortBy] = useState('budget');
   const [filterStatus, setFilterStatus] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [contractsData, setContractsData] = useState<Contract[]>([]);
+  const [availableYears, setAvailableYears] = useState<number[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
-  const availableYears = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017];
+  useEffect(() => {
+    loadAvailableYears();
+  }, []);
+
+  useEffect(() => {
+    if (selectedYear) {
+      loadContractsData(selectedYear);
+    }
+  }, [selectedYear]);
+
+  const loadAvailableYears = async () => {
+    try {
+      const years = await consolidatedApiService.getAvailableYears();
+      setAvailableYears(years);
+      if (years.length > 0) {
+        setSelectedYear(years[0]);
+      }
+    } catch (error) {
+      console.error('Error loading available years:', error);
+      // Fallback to current and previous years
+      const currentYear = new Date().getFullYear();
+      setAvailableYears([currentYear, currentYear - 1, currentYear - 2, currentYear - 3]);
+      setSelectedYear(currentYear);
+    }
+  };
 
   const loadContractsData = async (year: number) => {
+    setLoading(true);
     try {
-      // Use unified data service - ONE simple call
-      const contracts = await unifiedDataService.getPublicTenders(year);
+      // Use consolidated API service - ONE simple call
+      const contracts = await consolidatedApiService.getPublicTenders(year);
       
       // Transform API data to match our interface
       const transformedContracts: Contract[] = contracts.map((tender: any, index: number) => ({
         id: tender.id || `contract-${year}-${index}`,
         year: year,
-        title: tender.title || tender.description || 'Sin título',
-        description: tender.description || 'Sin descripción disponible',
-        budget: tender.amount || tender.budget || 0,
-        awarded_to: tender.awarded_to || tender.winner || 'No adjudicado',
-        award_date: tender.award_date || tender.date || new Date().toISOString(),
+        title: tender.title || tender.description || tender.name || 'Sin título',
+        description: tender.description || tender.details || 'Sin descripción disponible',
+        budget: tender.amount || tender.budget || tender.value || 0,
+        awarded_to: tender.awarded_to || tender.winner || tender.vendor || 'No adjudicado',
+        award_date: tender.award_date || tender.date || tender.created_at || new Date().toISOString(),
         execution_status: getExecutionStatus(tender),
-        delay_analysis: tender.delay_analysis || undefined,
+        delay_analysis: tender.delay_analysis || tender.notes || undefined,
         status: getContractStatus(tender),
         type: getContractType(tender),
-        category: tender.category || 'General'
+        category: tender.category || tender.type || 'General'
       }));
       
       setContractsData(transformedContracts);
@@ -57,6 +83,8 @@ const Contracts: React.FC = () => {
       // Generate fallback data based on real municipal patterns
       const fallbackData = generateContractsDataFallback(year);
       setContractsData(fallbackData);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -68,16 +96,16 @@ const Contracts: React.FC = () => {
 
   const getContractStatus = (tender: any): 'active' | 'awarded' | 'closed' | 'bidding' => {
     if (tender.status === 'closed' || tender.status === 'completed') return 'closed';
-    if (tender.status === 'awarded' || tender.winner) return 'awarded';
+    if (tender.status === 'awarded' || tender.winner || tender.awarded_to) return 'awarded';
     if (tender.status === 'bidding' || tender.status === 'open') return 'bidding';
     return 'active';
   };
 
   const getContractType = (tender: any): 'public_works' | 'services' | 'supplies' | 'consulting' => {
     const category = (tender.category || tender.type || '').toLowerCase();
-    if (category.includes('obra') || category.includes('construc')) return 'public_works';
+    if (category.includes('obra') || category.includes('construc') || category.includes('obra')) return 'public_works';
     if (category.includes('consultor') || category.includes('asesor')) return 'consulting';
-    if (category.includes('suminist') || category.includes('bien')) return 'supplies';
+    if (category.includes('suminist') || category.includes('bien') || category.includes('equip')) return 'supplies';
     return 'services';
   };
 
@@ -125,10 +153,6 @@ const Contracts: React.FC = () => {
 
     return contracts;
   };
-
-  useEffect(() => {
-    loadContractsData(selectedYear);
-  }, [selectedYear]);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('es-AR', {
@@ -242,6 +266,17 @@ const Contracts: React.FC = () => {
       averageCompletion: contractsData.length > 0 ? Math.round((contractsData.filter(c => c.execution_status === 'completed').length / contractsData.length) * 100) : 0
     }
   };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-center">
+          <Loader2 className="w-8 h-8 animate-spin mx-auto mb-2 text-blue-600" />
+          <p className="text-gray-600 dark:text-gray-400">Cargando contratos y licitaciones...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-8">

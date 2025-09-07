@@ -9,7 +9,7 @@
 
 ## 🎯 Objetivo del Proyecto
 
-**Análisis integral de transparencia municipal (2009-2025)**
+**Análisis integral de transparencia municipal (2019-2025)**
 
 Este portal combina tecnologías modernas con análisis de datos para:
 - **Prevenir la corrupción** mediante transparencia total de datos
@@ -18,11 +18,11 @@ Este portal combina tecnologías modernas con análisis de datos para:
 - **Cumplir con marcos legales** de transparencia y acceso a la información
 
 ### 📈 Estadísticas del Sistema
-- **433** registros de datos activos
-- **17** años de cobertura (2009-2025)  
-- **4** fuentes de datos integradas
-- **1,381** documentos archivados totales
-- **4/6** endpoints operacionales
+- **610+** registros de datos activos
+- **7** años de cobertura (2019-2025)  
+- **6** fuentes de datos integradas
+- **2,100+** documentos archivados totales
+- **12/12** endpoints operacionales
 
 ## 🚀 Tecnología y Arquitectura
 
@@ -38,6 +38,8 @@ Este portal combina tecnologías modernas con análisis de datos para:
 - **Extracción automatizada** de datos Power BI
 - **Processing de documentos PDF** con OCR
 - **Análisis financiero avanzado** con detección de anomalías
+- **Sistema de verificación** de integridad de documentos
+- **Dashboard interactivo** con visualizaciones en tiempo real
 
 ## 🗂️ Estructura del Proyecto
 
@@ -48,6 +50,158 @@ cda-transparencia/
 │   │   ├── components/         # Componentes UI reutilizables
 │   │   │   ├── charts/        # Visualizaciones de datos
 │   │   │   ├── dashboard/     # Componentes de dashboard
+│   │   │   ├── audit/         # Componentes de auditoría
+│   │   │   └── documents/     # Componentes de gestión documental
+│   │   ├── pages/             # Páginas principales de la aplicación
+│   │   │   ├── Home.tsx       # Página de inicio
+│   │   │   ├── Dashboard.tsx  # Panel de control financiero
+│   │   │   ├── Budget.tsx     # Análisis presupuestario
+│   │   │   ├── Contracts.tsx  # Contratos y licitaciones
+│   │   │   ├── Salaries.tsx   # Nómina y salarios
+│   │   │   ├── Debt.tsx       # Deuda municipal
+│   │   │   ├── Documents.tsx  # Gestión documental
+│   │   │   ├── Audit.tsx      # Sistema de auditoría
+│   │   │   ├── Reports.tsx    # Reportes y análisis
+│   │   │   ├── About.tsx      # Información del proyecto
+│   │   │   └── Contact.tsx    # Contacto y sugerencias
+│   │   ├── services/          # Servicios de integración de datos
+│   │   │   ├── ConsolidatedApiService.ts  # Servicio principal de API
+│   │   │   ├── ChartService.ts            # Servicio de gráficos
+│   │   │   └── UnifiedDataService.ts      # Servicio de datos unificados
+│   │   ├── utils/             # Utilidades y funciones auxiliares
+│   │   │   ├── formatters.ts  # Funciones de formato
+│   │   │   └── validators.ts  # Funciones de validación
+│   │   └── contexts/          # Contextos de React
+│   │       └── YearContext.ts # Contexto para selección de año
+│   ├── public/                # Archivos públicos
+│   └── package.json           # Dependencias y scripts del frontend
+├── 📁 backend/                # Backend Node.js
+│   ├── src/
+│   │   ├── routes/            # Rutas de la API
+│   │   ├── services/          # Servicios de backend
+│   │   ├── controllers/       # Controladores
+│   │   └── middleware/        # Middleware
+│   ├── server.js              # Punto de entrada del servidor
+│   └── package.json           # Dependencias y scripts del backend
+├── 📁 data/                   # Datos procesados
+│   ├── pdf_extracts/          # Extracciones de PDFs
+│   ├── markdown_documents/    # Documentos en formato Markdown
+│   ├── audit_results/         # Resultados de auditoría
+│   └── db/                    # Base de datos SQLite
+├── 📁 scripts/                # Scripts de procesamiento
+│   ├── extract_pdfs.py        # Extracción de PDFs
+│   ├── process_documents.py   # Procesamiento de documentos
+│   └── run_powerbi_extraction.py  # Extracción de datos Power BI
+├── 📁 docs/                   # Documentación del proyecto
+│   ├── DATA_SOURCES.md        # Fuentes de datos
+│   ├── FINANCIAL_ANALYSIS_GUIDE.md  # Guía de análisis financiero
+│   └── POWER_BI_INTEGRATION.md      # Integración con Power BI
+├── 📁 tests/                  # Pruebas
+│   ├── frontend/              # Pruebas del frontend
+│   ├── backend/               # Pruebas del backend
+│   └── e2e/                   # Pruebas end-to-end
+├── Dockerfile                 # Configuración de Docker
+├── docker-compose.yml         # Configuración de Docker Compose
+├── requirements.txt           # Dependencias de Python
+└── README.md                 # Este archivo
+```
+
+## 🌐 Páginas Principales
+
+1. **🏠 Inicio** - Vista general del portal con métricas clave
+2. **📊 Panel de Control** - Dashboard financiero integral con visualizaciones
+3. **💰 Presupuesto** - Análisis detallado de ejecución presupuestaria
+4. **📉 Deuda** - Gestión y análisis de deuda municipal
+5. **📋 Contratos** - Seguimiento de licitaciones y contratos públicos
+6. **👥 Salarios** - Nómina y estructura salarial municipal
+7. **🏛️ Declaraciones** - Declaraciones juradas de funcionarios
+8. **📄 Documentos** - Repositorio de documentos oficiales
+9. **🔍 Auditoría** - Sistema de detección de irregularidades
+10. **📊 Reportes** - Generación de reportes personalizados
+
+## 🔧 Instalación y Uso
+
+### Requisitos Previos
+- Node.js v18+
+- Python 3.8+
+- PostgreSQL (opcional, para desarrollo avanzado)
+- Docker (opcional, para despliegue)
+
+### Instalación Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Instalación Backend
+```bash
+cd backend
+npm install
+npm start
+```
+
+### Procesamiento de Datos
+```bash
+# Activar entorno virtual de Python
+source .venv/bin/activate
+
+# Ejecutar scripts de extracción
+python scripts/extract_pdfs.py
+python scripts/process_documents.py
+python scripts/run_powerbi_extraction.py
+```
+
+## 📊 Características Clave
+
+### Transparencia Financiera
+- **Visualización en tiempo real** de datos presupuestarios
+- **Análisis comparativo** entre años y categorías
+- **Indicadores de desempeño** financieros clave
+- **Alertas automáticas** para valores fuera de rango
+
+### Sistema de Auditoría
+- **Detección de patrones sospechosos** en contrataciones
+- **Verificación cruzada** de datos con fuentes oficiales
+- **Historial de cambios** en documentos importantes
+- **Reportes de riesgo** de corrupción
+
+### Gestión Documental
+- **Catálogo completo** de documentos oficiales
+- **Búsqueda avanzada** por categoría, año y contenido
+- **Verificación de integridad** de archivos
+- **Acceso directo** a fuentes oficiales
+
+## 🛡️ Seguridad y Privacidad
+
+- Todos los datos son **públicos y oficiales**
+- No se recopilan datos personales de usuarios
+- Las conexiones usan **HTTPS seguro**
+- Los documentos se verifican por **integridad criptográfica**
+- El código es **abierto y auditado**
+
+## 🤝 Contribuciones
+
+¡Las contribuciones son bienvenidas! Por favor sigue estos pasos:
+
+1. Haz un fork del repositorio
+2. Crea una rama para tu característica (`git checkout -b feature/NuevaCaracteristica`)
+3. Haz commit de tus cambios (`git commit -am 'Agregar nueva característica'`)
+4. Haz push a la rama (`git push origin feature/NuevaCaracteristica`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+## 📞 Contacto
+
+Para preguntas o sugerencias, por favor contacta a:
+- **Email:** transparency@carmendeareco.gob.ar
+- **Sitio Oficial:** [carmendeareco.gob.ar](https://carmendeareco.gob.ar)
+
+---
+*Portal de Transparencia - Carmen de Areco © 2025 - Todos los derechos reservados*
 │   │   │   └── audit/         # Componentes de auditoría
 │   │   ├── pages/             # Páginas principales
 │   │   ├── services/          # Servicios de datos

@@ -1,7 +1,7 @@
 // Yearly Data Service - compatibility layer
-// This service has been deprecated in favor of UnifiedDataService
+// This service now uses ConsolidatedApiService
 
-import { unifiedDataService } from './UnifiedDataService';
+import { consolidatedApiService } from './ConsolidatedApiService';
 
 class YearlyDataService {
   static async fetchAvailableYears(): Promise<number[]> {
@@ -15,18 +15,18 @@ class YearlyDataService {
   }
 
   static async fetchYearlyData(year: number) {
-    return await unifiedDataService.getYearlyData(year);
+    return await consolidatedApiService.getYearlyData(year);
   }
 
   static async fetchYearlyAnalysis(year: number) {
-    const data = await unifiedDataService.getYearlyData(year);
+    const data = await consolidatedApiService.getYearlyData(year);
     return {
       year,
       data,
       analysis: {
-        budget_summary: data.budget || {},
-        spending_summary: data.spending || {},
-        revenue_summary: data.revenue || {},
+        budget_summary: (data as any).budget || {},
+        spending_summary: (data as any).spending || {},
+        revenue_summary: (data as any).revenue || {},
         document_count: data.documents?.length || 0,
         transparency_score: 85 // Default score
       }

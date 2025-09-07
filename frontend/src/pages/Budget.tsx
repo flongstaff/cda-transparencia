@@ -30,8 +30,8 @@ import UnifiedDashboardChart from '../components/charts/UnifiedDashboardChart';
 import IntegratedChart from '../components/charts/IntegratedChart';
 import CriticalIssues from '../components/audit/CriticalIssues';
 
-// Import our data services
-import { unifiedDataService } from '../services';
+// Import our consolidated data service
+import { consolidatedApiService } from '../services';
 import { formatCurrencyARS } from '../utils/formatters';
 
 interface BudgetMetric {
@@ -54,152 +54,112 @@ interface ServiceStatus {
 }
 
 const Budget: React.FC = () => {
-  const [selectedYear, setSelectedYear] = useState<number>(2024);
-  const [availableYears] = useState<number[]>([2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018]);
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [loading, setLoading] = useState(true);
   const [budgetData, setBudgetData] = useState<any>(null);
   const [transparencyScore, setTransparencyScore] = useState<any>(null);
   const [serviceStatus, setServiceStatus] = useState<ServiceStatus[]>([]);
-  const [integratedData, setIntegratedData] = useState<any>(null);
-  const [corruptionAnalysis, setCorruptionAnalysis] = useState<any>(null);
+  const [availableYears, setAvailableYears] = useState<number[]>([]);
 
   useEffect(() => {
-    fetchComprehensiveBudgetData();
+    loadAvailableYears();
+  }, []);
+
+  useEffect(() => {
+    if (selectedYear) {
+      fetchBudgetData();
+    }
   }, [selectedYear]);
 
-  const fetchComprehensiveBudgetData = async () => {
+  const loadAvailableYears = async () => {
+    try {
+      const years = await consolidatedApiService.getAvailableYears();
+      setAvailableYears(years);
+      if (years.length > 0) {
+        setSelectedYear(years[0]);
+      }
+    } catch (error) {
+      console.error('Error loading available years:', error);
+      // Fallback to current and previous years
+      const currentYear = new Date().getFullYear();
+      setAvailableYears([currentYear, currentYear - 1, currentYear - 2, currentYear - 3]);
+      setSelectedYear(currentYear);
+    }
+  };
+
+  const fetchBudgetData = async () => {
     setLoading(true);
-    console.log(`🔄 Loading comprehensive budget data for ${selectedYear}...`);
+    console.log(`🔄 Loading budget data for ${selectedYear}...`);
     
     try {
-      // Load data from ALL sources in parallel - this is the full integration!
-      const [
-        municipalData,
-        realBudgetData,
-        transparencyData,
-        chartIntegrationData,
-        documents,
-        integratedYearlyData,
-        integratedTransparencyScore,
-        integratedCorruptionData
-      ] = await Promise.allSettled([
-        unifiedDataService.getMunicipalData(selectedYear),
-        municipalDataService.getBudgetData(selectedYear),
-        unifiedDataService.getTransparencyScore(selectedYear),
-        chartDataIntegrationService.getChartData({
-          year: selectedYear,
-          type: 'budget',
-          includeComparisons: true,
-          includePowerBI: true,
-          includeDocuments: true
-        }),
-        unifiedDataService.getTransparencyDocuments(selectedYear),
-        integratedBackendService.getYearlyData(selectedYear),
-        integratedBackendService.getTransparencyScore(selectedYear),
-        integratedBackendService.getCorruptionAnalysis(selectedYear)
+      // Load data from the actual working API
+      const [municipalData, budgetData, transparencyData, documents] = await Promise.all([
+        consolidatedApiService.getMunicipalData(selectedYear),
+        consolidatedApiService.getBudgetData(selectedYear),
+        consolidatedApiService.getTransparencyScore(selectedYear),
+        consolidatedApiService.getDocuments(selectedYear)
       ]);
 
-      console.log(`✅ All data sources loaded successfully for ${selectedYear}`);
+      console.log(`✅ Data loaded successfully for ${selectedYear}`);
 
-      // Get critical issues and unexecuted works data
-      const criticalIssues = municipalDataService.getCriticalIssues();
-      const unexecutedWorks = municipalDataService.getUnexecutedWorksBreakdown();
-
-      // Process Promise.allSettled results for integrated backend data
-      const processedResults = [
-        municipalData, realBudgetData, transparencyData, chartIntegrationData, documents
-      ].map((result, index) => result.status === 'fulfilled' ? result.value : null);
-      
-      const integratedResults = [
-        integratedYearlyData, integratedTransparencyScore, integratedCorruptionData
-      ].map((result) => result.status === 'fulfilled' ? result.value : null);
-
-      // Filter budget-related documents
-      const budgetDocuments = (processedResults[4] || documents).filter((doc: any) => 
-        doc.type === 'budget_execution' || 
-        doc.category?.toLowerCase().includes('presupuesto') ||
-        doc.title?.toLowerCase().includes('presupuesto') ||
-        doc.title?.toLowerCase().includes('rafam')
-      );
-
-      // Set comprehensive budget data combining ALL sources
+      // Set budget data
       setBudgetData({
         year: selectedYear,
-        // Real data from municipal data service (your PDF analysis)
-        totalBudget: realBudgetData.total,
-        executedBudget: realBudgetData.executed,
-        executionPercentage: realBudgetData.executionRate,
-        categories: realBudgetData.categories.map(cat => ({
-          ...cat,
-          percentage: cat.executionRate // Map executionRate to percentage for UI compatibility
+        totalBudget: budgetData.total_budgeted,
+        executedBudget: budgetData.total_executed,
+        executionPercentage: parseFloat(budgetData.execution_rate) || 0,
+        categories: Object.entries(budgetData.categories).map(([name, data]: [string, any]) => ({
+          name,
+          budgeted: data.budgeted,
+          executed: data.executed,
+          percentage: parseFloat(data.execution_rate) || 0
         })),
-        // Unified service data
-        unifiedData: municipalData,
-        // Critical findings
-        unexecutedWorks: unexecutedWorks,
-        criticalGap: unexecutedWorks.gap,
         // Document analysis
-        documentsProcessed: budgetDocuments.length,
-        totalDocuments: documents.length,
+        documentsProcessed: documents.length,
         // Integration metadata
-        servicesIntegrated: chartIntegrationData.metadata?.services_used?.length || 0,
-        dataQuality: chartIntegrationData.metadata?.dataQuality || 'MEDIUM',
         lastUpdated: new Date().toISOString()
       });
 
-      setTransparencyScore(processedResults[2] || transparencyData);
-      setIntegratedData(processedResults[3] || chartIntegrationData);
-      
-      // Set integrated backend data
-      if (integratedResults[0]) {
-        console.log('📊 Integrated yearly data loaded:', integratedResults[0]);
-      }
-      if (integratedResults[1]) {
-        console.log('🔍 Integrated transparency score loaded:', integratedResults[1]);  
-      }
-      if (integratedResults[2]) {
-        console.log('⚠️ Corruption analysis loaded:', integratedResults[2]);
-        setCorruptionAnalysis(integratedResults[2]);
-      }
+      setTransparencyScore(transparencyData);
 
       // Update service status
-      updateServiceStatus(chartIntegrationData, documents.length);
+      updateServiceStatus(municipalData, documents.length);
 
     } catch (error) {
-      console.error('Error loading comprehensive budget data:', error);
+      console.error('Error loading budget data:', error);
     } finally {
       setLoading(false);
     }
   };
 
-  const updateServiceStatus = (integrationData: any, docCount: number) => {
+  const updateServiceStatus = (municipalData: any, docCount: number) => {
     const services: ServiceStatus[] = [
       {
-        name: 'UnifiedDataService',
+        name: 'PostgreSQLDataService',
         status: 'active',
-        recordCount: integrationData.data?.length || 0,
-        dataQuality: integrationData.metadata?.dataQuality || 'HIGH',
+        recordCount: municipalData.total_documents || docCount,
+        dataQuality: 'HIGH',
         lastUpdated: new Date().toISOString()
       },
       {
-        name: 'MunicipalDataService',
+        name: 'Budget Analysis',
         status: 'active',
-        recordCount: 50, // Budget categories + salary positions
-        dataQuality: 'HIGH',
-        lastUpdated: '2024-09-04'
+        recordCount: municipalData.budget ? 1 : 0,
+        dataQuality: municipalData.budget ? 'HIGH' : 'LOW',
+        lastUpdated: new Date().toISOString()
       },
       {
-        name: 'Document Analysis',
+        name: 'Document Management',
         status: docCount > 0 ? 'active' : 'error',
         recordCount: docCount,
         dataQuality: docCount > 10 ? 'HIGH' : 'MEDIUM',
         lastUpdated: new Date().toISOString()
       },
       {
-        name: 'Chart Integration',
-        status: integrationData ? 'active' : 'error',
-        recordCount: integrationData?.metadata?.totalRecords || 0,
-        dataQuality: integrationData?.metadata?.dataQuality || 'MEDIUM',
+        name: 'Transparency System',
+        status: 'active',
+        recordCount: municipalData.verified_documents || 0,
+        dataQuality: 'HIGH',
         lastUpdated: new Date().toISOString()
       }
     ];
@@ -215,53 +175,34 @@ const Budget: React.FC = () => {
         title: 'Presupuesto Total',
         value: formatCurrencyARS(budgetData.totalBudget, true),
         icon: <DollarSign size={20} />,
-        description: `Presupuesto municipal ${selectedYear} (RAFAM)`,
+        description: `Presupuesto municipal ${selectedYear}`,
         trend: 'stable',
         transparency: transparencyScore?.overall || 85
       },
       {
-        title: 'Ejecución Integrada',
-        value: `${budgetData.executionPercentage}%`,
+        title: 'Ejecución',
+        value: `${budgetData.executionPercentage.toFixed(1)}%`,
         icon: <Target size={20} />,
-        description: 'Tasa de ejecución con análisis de transparencia',
+        description: 'Tasa de ejecución presupuestaria',
         trend: budgetData.executionPercentage >= 75 ? 'up' : 'down',
-        change: `${budgetData.executionPercentage}%`,
+        change: `${budgetData.executionPercentage.toFixed(1)}%`,
         transparency: transparencyScore?.execution || 78
       },
       {
         title: 'Índice Transparencia',
         value: `${transparencyScore?.score || 82}/100`,
         icon: <Shield size={20} />,
-        description: 'Puntuación de transparencia integrada',
+        description: 'Puntuación de transparencia',
         trend: transparencyScore?.score > 80 ? 'up' : 'stable',
         transparency: transparencyScore?.score || 82
       },
       {
-        title: 'Riesgo de Corrupción',
-        value: corruptionAnalysis?.riskLevel || 'BAJO',
-        icon: <AlertTriangle size={20} />,
-        description: 'Evaluación de riesgo basada en patrones',
-        trend: 'stable',
-        alert: corruptionAnalysis?.riskLevel === 'ALTO',
-        transparency: corruptionAnalysis?.transparency || 88
-      },
-      {
-        title: 'Obras No Ejecutadas',
-        value: formatCurrencyARS(budgetData.criticalGap, true),
-        icon: <Construction size={20} />,
-        description: 'Gap crítico en obras públicas',
-        trend: 'down',
-        alert: true,
-        change: 'Problema crítico',
-        transparency: 45
-      },
-      {
-        title: 'Servicios Integrados',
-        value: budgetData.servicesIntegrated.toString(),
-        icon: <Database size={20} />,
-        description: `Calidad de datos: ${budgetData.dataQuality}`,
+        title: 'Documentos Procesados',
+        value: budgetData.documentsProcessed.toString(),
+        icon: <FileText size={20} />,
+        description: 'Documentos de transparencia analizados',
         trend: 'up',
-        transparency: budgetData.dataQuality === 'HIGH' ? 95 : 80
+        transparency: 90
       }
     ];
   };
@@ -274,10 +215,10 @@ const Budget: React.FC = () => {
             <div className="text-center">
               <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-blue-600" />
               <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                Cargando Presupuesto Integral
+                Cargando Datos Presupuestarios
               </h2>
               <p className="text-gray-500 dark:text-gray-400">
-                Integrando datos de transparencia y análisis de corrupción...
+                Obteniendo información de transparencia...
               </p>
             </div>
           </div>
@@ -300,10 +241,10 @@ const Budget: React.FC = () => {
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
             <div>
               <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                Presupuesto Municipal Integral
+                Presupuesto Municipal
               </h1>
               <p className="text-lg text-gray-600 dark:text-gray-400">
-                Carmen de Areco - Análisis completo con datos reales
+                Carmen de Areco - Análisis de Ejecución Presupuestaria {selectedYear}
               </p>
             </div>
             
@@ -323,19 +264,19 @@ const Budget: React.FC = () => {
                 <Activity className="text-green-600" size={24} />
                 <div>
                   <h3 className="font-semibold text-green-800 dark:text-green-200">
-                    Sistema Totalmente Integrado
+                    Sistema de Transparencia Activo
                   </h3>
                   <p className="text-sm text-green-600 dark:text-green-300">
-                    Datos reales de {budgetData?.servicesIntegrated} fuentes | {budgetData?.documentsProcessed} documentos procesados
+                    Datos actualizados | {budgetData?.documentsProcessed} documentos procesados
                   </p>
                 </div>
               </div>
               <div className="text-right">
                 <div className="text-2xl font-bold text-green-700 dark:text-green-300">
-                  {budgetData?.dataQuality}
+                  OPERATIVO
                 </div>
                 <div className="text-xs text-green-600 dark:text-green-400">
-                  Calidad de Datos
+                  Estado del Sistema
                 </div>
               </div>
             </div>
@@ -347,7 +288,7 @@ const Budget: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
         >
           {budgetMetrics.map((metric, index) => (
             <div
@@ -418,16 +359,6 @@ const Budget: React.FC = () => {
           ))}
         </motion.div>
 
-        {/* Critical Issues */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mb-8"
-        >
-          <CriticalIssues />
-        </motion.div>
-
         {/* Service Status Dashboard */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -437,7 +368,7 @@ const Budget: React.FC = () => {
         >
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-              Estado de Integración de Servicios
+              Estado de los Servicios de Datos
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -469,52 +400,6 @@ const Budget: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Comprehensive Charts */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8"
-        >
-          {/* Budget Analysis Chart */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Análisis Presupuestario Detallado
-            </h3>
-            <BudgetAnalysisChart year={selectedYear} />
-          </div>
-
-          {/* Unified Dashboard */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Dashboard Unificado
-            </h3>
-            <UnifiedDashboardChart year={selectedYear} showAllSources={true} />
-          </div>
-        </motion.div>
-
-        {/* Integrated Backend Chart */}
-        {corruptionAnalysis && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.45 }}
-            className="mb-8"
-          >
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Análisis Integrado de Transparencia y Corrupción
-              </h3>
-              <IntegratedChart 
-                year={selectedYear}
-                budgetData={budgetData}
-                transparencyScore={transparencyScore}
-                corruptionAnalysis={corruptionAnalysis}
-              />
-            </div>
-          </motion.div>
-        )}
-
         {/* Execution Categories Breakdown */}
         {budgetData?.categories && (
           <motion.div
@@ -525,7 +410,7 @@ const Budget: React.FC = () => {
           >
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
               <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-                Ejecución por Categorías - Datos Reales {selectedYear}
+                Ejecución por Categorías - {selectedYear}
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -533,7 +418,7 @@ const Budget: React.FC = () => {
                   <div
                     key={index}
                     className={`p-4 rounded-lg border ${
-                      (category.percentage || 0) < 80 
+                      category.percentage < 80 
                         ? 'border-red-200 bg-red-50 dark:border-red-700 dark:bg-red-900/20'
                         : 'border-gray-200 bg-gray-50 dark:border-gray-600 dark:bg-gray-700/50'
                     }`}
@@ -559,50 +444,15 @@ const Budget: React.FC = () => {
                       <div className="flex justify-between text-sm">
                         <span className="text-gray-600 dark:text-gray-400">Porcentaje:</span>
                         <span className={`font-medium ${
-                          (category.percentage || 0) >= 90 ? 'text-green-600' :
-                          (category.percentage || 0) >= 80 ? 'text-yellow-600' : 'text-red-600'
+                          category.percentage >= 90 ? 'text-green-600' :
+                          category.percentage >= 80 ? 'text-yellow-600' : 'text-red-600'
                         }`}>
-                          {(category.percentage || 0).toFixed(1)}%
+                          {category.percentage.toFixed(1)}%
                         </span>
                       </div>
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-          </motion.div>
-        )}
-
-        {/* Alert if corruption analysis shows high risk */}
-        {corruptionAnalysis?.riskLevel === 'ALTO' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="mb-8"
-          >
-            <div className="bg-red-50 dark:bg-red-900/10 border border-red-200 dark:border-red-800 rounded-xl p-6">
-              <div className="flex items-start gap-4">
-                <div className="p-2 bg-red-100 dark:bg-red-900/20 rounded-lg">
-                  <AlertTriangle className="w-6 h-6 text-red-600 dark:text-red-400" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-red-900 dark:text-red-400 mb-2">
-                    Alerta de Riesgo Alto
-                  </h3>
-                  <p className="text-red-700 dark:text-red-300 mb-4">
-                    El análisis integral detectó patrones que requieren atención inmediata en la gestión presupuestaria.
-                  </p>
-                  <ul className="text-sm text-red-600 dark:text-red-400 space-y-1">
-                    {corruptionAnalysis.alerts?.map((alert: string, index: number) => (
-                      <li key={index}>• {alert}</li>
-                    )) || [
-                      '• Variaciones significativas en ejecución presupuestaria',
-                      '• Concentración de contratos en proveedores específicos',
-                      '• Desvíos en categorías de alto impacto social'
-                    ]}
-                  </ul>
-                </div>
               </div>
             </div>
           </motion.div>
@@ -616,7 +466,7 @@ const Budget: React.FC = () => {
           className="text-center bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4"
         >
           <p className="text-sm text-blue-700 dark:text-blue-400">
-            🏛️ Presupuesto Integral Operativo | 📊 Datos RAFAM Reales | ✅ {serviceStatus.filter(s => s.status === 'active').length} Servicios Activos
+            🏛️ Presupuesto Municipal | 📊 Datos en tiempo real | ✅ {serviceStatus.filter(s => s.status === 'active').length} Servicios Activos
           </p>
           <p className="text-xs text-blue-600 dark:text-blue-500 mt-1">
             Última actualización: {budgetData?.lastUpdated ? new Date(budgetData.lastUpdated).toLocaleDateString() : 'Hoy'}

@@ -10,6 +10,12 @@
     "cf-deploy": "wrangler deploy"
   },
   "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/mongoose": "^5.11.96",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.0",
     "vite": "^5.0.0",
     "wrangler": "^3.0.0"
   }

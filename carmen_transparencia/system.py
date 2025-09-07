@@ -128,7 +128,7 @@ class IntegratedTransparencySystem:
             },
             DataSource.DATOS_BUENOS_AIRES: {
                 "base_url": "https://data.buenosaires.gob.ar/",
-                "api_url": "https://data.buenosaires.gob.ar/api/3/",
+                "api_url": "https://data.buenosaires.gob.ar/api/3/action/package_search",
                 "github_repo": "https://github.com/datosgcba"
             },
             DataSource.HTC_BUENOS_AIRES: {
@@ -155,7 +155,7 @@ class IntegratedTransparencySystem:
                 "github_repo": "https://github.com/datosgobar/georef-ar-api"
             },
             DataSource.CONTRATACIONES_PUBLICAS: {
-                "base_url": "https://contrataciones-abiertas.obrapublica.gob.ar/api/v2/",
+                "base_url": "https://contrataciones-abiertas.obrapublica.gob.ar/api/v2/contracts",
                 "docs": "https://contrataciones-abiertas.obrapublica.gob.ar/docs/api/v2/"
             },
             DataSource.OBRAS_PUBLICAS: {
@@ -533,7 +533,7 @@ class IntegratedTransparencySystem:
         """
         logger.info("Querying Buenos Aires open data portal")
         
-        api_url = "https://data.buenosaires.gob.ar/api/3/action/package_search"
+        api_url = self.data_sources[DataSource.DATOS_BUENOS_AIRES]["api_url"]
         search_queries = [
             "municipio",
             "presupuesto",
@@ -542,7 +542,7 @@ class IntegratedTransparencySystem:
         ]
         
         results = []
-        
+        headers = {'User-Agent': 'Mozilla/5.0'}
         async with aiohttp.ClientSession() as session:
             for query in search_queries:
                 try:
@@ -551,24 +551,27 @@ class IntegratedTransparencySystem:
                         'rows': 50
                     }
                     
-                    async with session.get(api_url, params=params) as response:
+                    async with session.get(api_url, params=params, headers=headers) as response:
                         if response.status == 200:
-                            data = await response.json()
-                            
-                            if data.get('success') and data.get('result'):
-                                for package in data['result']['results']:
-                                    # Filter for relevant municipal data
-                                    if any(keyword in package.get('title', '').lower() 
-                                          for keyword in ['municipio', 'presupuesto', 'transparencia']):
-                                        results.append({
-                                            'id': package.get('id'),
-                                            'title': package.get('title'),
-                                            'description': package.get('notes'),
-                                            'resources': package.get('resources', []),
-                                            'url': f"https://data.buenosaires.gob.ar/dataset/{package.get('name')}",
-                                            'source': DataSource.DATOS_BUENOS_AIRES.value
-                                        })
-                
+                            # The API returns text/html on error, so we need to check content type
+                            if 'application/json' in response.headers.get('Content-Type', ''):
+                                data = await response.json()
+                                if data.get('success') and data.get('result'):
+                                    for package in data['result']['results']:
+                                        # Filter for relevant municipal data
+                                        if any(keyword in package.get('title', '').lower() 
+                                              for keyword in ['municipio', 'presupuesto', 'transparencia']):
+                                            results.append({
+                                                'id': package.get('id'),
+                                                'title': package.get('title'),
+                                                'description': package.get('notes'),
+                                                'resources': package.get('resources', []),
+                                                'url': f"https://data.buenosaires.gob.ar/dataset/{package.get('name')}",
+                                                'source': DataSource.DATOS_BUENOS_AIRES.value
+                                            })
+                            else:
+                                logger.error(f"BA API returned non-JSON response for query '{query}': {await response.text()[:200]}")
+
                 except Exception as e:
                     logger.error(f"Error querying Buenos Aires data for '{query}': {e}")
         
@@ -576,10 +579,38 @@ class IntegratedTransparencySystem:
         return results
 
     async def query_contrataciones_publicas(self) -> List[Dict]:
-        """Query the national public procurement API."""
+        """Query the national public procurement API for Carmen de Areco."""
         logger.info("Querying National Public Procurement API")
-        # Placeholder for future implementation
-        return []
+        api_url = self.data_sources[DataSource.CONTRATACIONES_PUBLICAS]["base_url"]
+        results = []
+        headers = {'User-Agent': 'Mozilla/5.0'}
+        params = {
+            'buyer_name': 'Carmen de Areco' # Assuming the parameter is buyer_name, might need adjustment
+        }
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(api_url, params=params, headers=headers) as response:
+                    if response.status == 200:
+                        data = await response.json()
+                        # The actual data structure will depend on the API's response
+                        # This is a placeholder for the real parsing logic
+                        for contract in data.get('results', []):
+                             results.append({
+                                'id': contract.get('id'),
+                                'title': contract.get('title'),
+                                'description': contract.get('description'),
+                                'amount': contract.get('value', {}).get('amount'),
+                                'status': contract.get('status'),
+                                'url': f"https://contrataciones-abiertas.obrapublica.gob.ar/contrataciones/{contract.get('id')}",
+                                'source': DataSource.CONTRATaciones_PUBLICAS.value
+                            })
+                    else:
+                        logger.error(f"Failed to fetch data from Public Contracts API. Status: {response.status}")
+        except Exception as e:
+            logger.error(f"Error querying Public Contracts API: {e}")
+        
+        logger.info(f"Found {len(results)} results from the Public Contracts API.")
+        return results
 
     async def query_obras_publicas(self) -> List[Dict]:
         """Query the national public works API."""
@@ -1345,110 +1376,153 @@ class IntegratedTransparencySystem:
         """Generate comprehensive transparency report"""
         report_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
-        lines = []
-        lines.append("# REPORTE INTEGRAL DE TRANSPARENCIA Y ANTICORRUPCIÓN")
-        lines.append(f"## Municipalidad de Carmen de Areco")
-        lines.append(f"### Fecha del Análisis: {report_date}")
-        lines.append("\n---\n")
-        lines.append("## RESUMEN EJECUTIVO")
-        lines.append(f"**NIVEL DE RIESGO GENERAL: {analysis_results.get('overall_risk_level', 'UNKNOWN').upper()}**")
-        lines.append(f"- **Casos de Corrupción Confirmados**: {len([c for c in self.corruption_cases if 'Confirmed' in c.status])}")
-        lines.append(f"- **Casos Bajo Investigación**: {len([c for c in self.corruption_cases if 'investigation' in c.status.lower()])}")
-        lines.append(f"- **Fuentes de Datos Analizadas**: {len(analysis_results.get('data_sources_analyzed', []))}")
-        lines.append(f"- **Documentos Procesados**: {analysis_results.get('documents_processed', 0)}")
-        lines.append("\n---\n")
-        lines.append("## CASOS CONFIRMADOS DE CORRUPCIÓN (HTC)")
+        report = f"""
+# REPORTE INTEGRAL DE TRANSPARENCIA Y ANTICORRUPCIÓN
+## Municipalidad de Carmen de Areco
+### Fecha del Análisis: {report_date}
 
+---
+
+## RESUMEN EJECUTIVO
+
+**NIVEL DE RIESGO GENERAL: {analysis_results.get('overall_risk_level', 'UNKNOWN').upper()} """
+
+        report += f"- **Casos de Corrupción Confirmados**: {len([c for c in self.corruption_cases if 'Confirmed' in c.status])}
+- **Casos Bajo Investigación**: {len([c for c in self.corruption_cases if 'investigation' in c.status.lower()])}
+- **Fuentes de Datos Analizadas**: {len(analysis_results.get('data_sources_analyzed', []))}
+- **Documentos Procesados**: {analysis_results.get('documents_processed', 0)}
+
+---
+
+## CASOS CONFIRMADOS DE CORRUPCIÓN (HTC)
+
+"
+        
+        # Add confirmed corruption cases
         confirmed_cases = [case for case in self.corruption_cases if "Confirmed" in case.status]
         total_confirmed_amount = sum(case.amount for case in confirmed_cases if case.amount)
         
-        total_amount_str = f"{total_confirmed_amount:,.2f} ARS" if total_confirmed_amount is not None else "N/A"
-        lines.append(f"**IMPACTO ECONÓMICO TOTAL CONFIRMADO: {total_amount_str}**\n")
-
+        report += f"**IMPACTO ECONÓMICO TOTAL CONFIRMADO: {total_confirmed_amount:,.2f} ARS**\n\n"
+        
         for case in confirmed_cases:
-            amount_str = f"{case.amount:,.2f} ARS" if case.amount is not None else "N/A"
-            lines.append(f"### {case.title}")
-            lines.append(f"- **Monto**: {amount_str}")
-            lines.append(f"- **Responsables**: {', '.join(case.responsible_parties)}")
-            lines.append(f"- **Período**: {case.date}")
-            lines.append(f"- **Categoría**: {case.category}")
-            lines.append(f"- **Fuente**: {case.source}")
-            lines.append(f"- **Estado**: {case.status}\n")
+            report += f"""
 
+### {case.title}
+- **Monto**: {case.amount:,.2f} ARS
+- **Responsables**: {', '.join(case.responsible_parties)}
+- **Período**: {case.date}
+- **Categoría**: {case.category}
+- **Fuente**: {case.source}
+- **Estado**: {case.status}
+
+"""
+        
+        # Add cases under investigation
         investigation_cases = [case for case in self.corruption_cases if "investigation" in case.status.lower()]
         if investigation_cases:
-            lines.append("## CASOS BAJO INVESTIGACIÓN\n")
+            report += "## CASOS BAJO INVESTIGACIÓN\n\n"
             for case in investigation_cases:
-                lines.append(f"### {case.title}")
-                lines.append(f"- **Descripción**: {case.description}")
-                lines.append(f"- **Involucrados**: {', '.join(case.responsible_parties)}")
-                lines.append(f"- **Período**: {case.date}")
-                lines.append(f"- **Estado**: {case.status}\n")
+                report += f"""
 
-        lines.append("## ANÁLISIS DE FUENTES DE DATOS\n")
+### {case.title}
+- **Descripción**: {case.description}
+- **Involucrados**: {', '.join(case.responsible_parties)}
+- **Período**: {case.date}
+- **Estado**: {case.status}
+
+"""
+        
+        # Add data source analysis
+        report += "## ANÁLISIS DE FUENTES DE DATOS\n\n"
+        
         for source in analysis_results.get('data_sources_analyzed', []):
             findings = analysis_results.get('detailed_findings', {}).get(source, {})
             if findings:
-                lines.append(f"### {source.replace('_', ' ').title()}")
+                report += f"### {source.replace('_', ' ').title()}
+"
+                
                 if isinstance(findings, list):
-                    lines.append(f"- **Registros encontrados**: {len(findings)}")
+                    report += f"- **Registros encontrados**: {len(findings)}\n"
                 elif isinstance(findings, dict):
                     if 'documents_found' in findings:
-                        lines.append(f"- **Documentos encontrados**: {len(findings['documents_found'])}")
+                        report += f"- **Documentos encontrados**: {len(findings['documents_found'])}\n"
                     if 'integrity_issues' in findings:
-                        lines.append(f"- **Problemas de integridad**: {len(findings['integrity_issues'])}")
+                        report += f"- **Problemas de integridad**: {len(findings['integrity_issues'])}\n"
                     if 'missing_documents' in findings:
-                        lines.append(f"- **Documentos faltantes**: {len(findings['missing_documents'])}")
-                lines.append("")
-
-        lines.append("## RECOMENDACIONES PRIORITARIAS\n")
+                        report += f"- **Documentos faltantes**: {len(findings['missing_documents'])}\n"
+                
+                report += "\n"
+        
+        # Add recommendations
+        report += "## RECOMENDACIONES PRIORITARIAS\n\n"
+        
         for i, recommendation in enumerate(analysis_results.get('recommendations', []), 1):
-            lines.append(f"{i}. {recommendation}")
+            report += f"{i}. {recommendation}\n"
+        
+        # Add technical details
+        report += f"""
 
-        lines.append("\n---\n")
-        lines.append("## DETALLES TÉCNICOS")
-        lines.append("### Fuentes de Datos Integradas:")
+---
+
+## DETALLES TÉCNICOS
+
+### Fuentes de Datos Integradas:
+"""
+        
         for source_name, source_config in self.data_sources.items():
-            lines.append(f"- **{source_name.value}**: {source_config.get('base_url', 'N/A')}")
+            report += f"- **{source_name.value}**: {source_config.get('base_url', 'N/A')}\n"
         
-        lines.append("\n### Proyectos Open Source Utilizados:")
-        lines.append("- **tommanzur/scraper_boletin_oficial**: Scraping del Boletín Oficial")
-        lines.append("- **datosgobar**: APIs oficiales del gobierno argentino")
-        lines.append("- **datosgcba**: Datos abiertos de Buenos Aires")
-        lines.append("- **reingart/pyafipws**: Integración con servicios AFIP")
-        lines.append("- **PyPDF2**: Análisis de documentos PDF")
-        lines.append("- **BeautifulSoup**: Web scraping")
+        # Add GitHub projects used
+        report += """
 
-        lines.append("\n---\n")
-        lines.append("## MARCO LEGAL Y FUENTES")
-        lines.append("### Legislación Aplicable:")
-        lines.append("- Ley de Acceso a la Información Pública (Ley 27.275)")
-        lines.append("- Decreto 206/2017 (Reglamentación de la Ley de Acceso)")
-        lines.append("- Ley de Ética Pública (Ley 25.188)")
-        lines.append("- Código Penal Argentino (Delitos contra la Administración Pública)")
+### Proyectos Open Source Utilizados:
+- **tommanzur/scraper_boletin_oficial**: Scraping del Boletín Oficial
+- **datosgobar**: APIs oficiales del gobierno argentino
+- **datosgcba**: Datos abiertos de Buenos Aires
+- **reingart/pyafipws**: Integración con servicios AFIP
+- **PyPDF2**: Análisis de documentos PDF
+- **BeautifulSoup**: Web scraping
 
-        lines.append("\n### Fuentes de Verificación:")
-        lines.append("- Honorable Tribunal de Cuentas de la Provincia de Buenos Aires")
-        lines.append("- Portal de Transparencia Municipal Carmen de Areco")
-        lines.append("- Boletín Oficial de la República Argentina")
-        lines.append("- Sistema de Boletín Oficial Municipal (SIBOM)")
-        lines.append("- Datos.gob.ar (Portal Nacional de Datos Abiertos)")
-
-        lines.append("\n---\n")
-        lines.append("## CONTACTOS ÚTILES PARA DENUNCIAS")
-        lines.append("### Autoridades de Control:")
-        lines.append("- **HTC Buenos Aires**: info @htc.gba.gov.ar | Tel: (0221) 429-5588")
-        lines.append("- **Defensoría del Pueblo BA**: consultas @defensor.gba.gob.ar")
-        lines.append("- **Ministerio Público Fiscal**: mpf @mpf.gob.ar")
-        lines.append("- **AAIP (Acceso a Información)**: consultas @aaip.gob.ar")
-
-        lines.append("\n### Organizaciones de la Sociedad Civil:")
-        lines.append("- **Poder Ciudadano**: info @poderciudadano.org")
-        lines.append("- **ACIJ**: info @acij.org.ar")
-        lines.append("- **CIPPEC**: comunicacion @cippec.org")
-
-        lines.append("\n---\n")
-        lines.append("*Este reporte fue generado automáticamente utilizando datos públicos oficiales y herramientas de código abierto para promover la transparencia y la rendición de cuentas en la gestión pública.*")
-        lines.append("\n**Disclaimer Legal**: Toda la información contenida en este reporte proviene de fuentes oficiales públicas. Los casos marcados como \"bajo investigación\" no implican culpabilidad hasta resolución judicial definitiva. Este análisis tiene fines de transparencia ciudadana y accountability democrático.")
+"""
         
-        return "\n".join(lines)
+        report += f"""
+---
+
+## MARCO LEGAL Y FUENTES
+
+### Legislación Aplicable:
+- Ley de Acceso a la Información Pública (Ley 27.275)
+- Decreto 206/2017 (Reglamentación de la Ley de Acceso)
+- Ley de Ética Pública (Ley 25.188)
+- Código Penal Argentino (Delitos contra la Administración Pública)
+
+### Fuentes de Verificación:
+- Honorable Tribunal de Cuentas de la Provincia de Buenos Aires
+- Portal de Transparencia Municipal Carmen de Areco
+- Boletín Oficial de la República Argentina
+- Sistema de Boletín Oficial Municipal (SIBOM)
+- Datos.gob.ar (Portal Nacional de Datos Abiertos)
+
+---
+
+## CONTACTOS ÚTILES PARA DENUNCIAS
+
+### Autoridades de Control:
+- **HTC Buenos Aires**: info @htc.gba.gov.ar | Tel: (0221) 429-5588
+- **Defensoría del Pueblo BA**: consultas @defensor.gba.gob.ar
+- **Ministerio Público Fiscal**: mpf @mpf.gob.ar
+- **AAIP (Acceso a Información)**: consultas @aaip.gob.ar
+
+### Organizaciones de la Sociedad Civil:
+- **Poder Ciudadano**: info @poderciudadano.org
+- **ACIJ**: info @acij.org.ar
+- **CIPPEC**: comunicacion @cippec.org
+
+---
+
+*Este reporte fue generado automáticamente utilizando datos públicos oficiales y herramientas de código abierto para promover la transparencia y la rendición de cuentas en la gestión pública.*
+
+**Disclaimer Legal**: Toda la información contenida en este reporte proviene de fuentes oficiales públicas. Los casos marcados como "bajo investigación" no implican culpabilidad hasta resolución judicial definitiva. Este análisis tiene fines de transparencia ciudadana y accountability democrático.
+"""
+        
+        return report

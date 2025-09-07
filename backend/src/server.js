@@ -18,18 +18,18 @@ const PORT = process.env.PORT || 3001;
 const realDataLoader = new RealDataLoader();
 let realDataCache = null;
 
-// Initialize Power BI Service
-const PowerBIService = require('./services/PowerBIService');
-const powerBIService = new PowerBIService();
-
-// Initialize Yearly Data Service
-const YearlyDataService = require('./services/YearlyDataService');
+// Initialize working services only
 const PostgreSQLDataService = require('./services/PostgreSQLDataService');
 const pgDataService = new PostgreSQLDataService();
 
-// Initialize Unified Data Service (combines CSV and mock data)
-const UnifiedDataService = require('./services/UnifiedDataService');
-const unifiedDataService = new UnifiedDataService();
+const ComprehensiveTransparencyService = require('./services/ComprehensiveTransparencyService');
+const comprehensiveTransparencyService = new ComprehensiveTransparencyService();
+
+const EnhancedAuditService = require('./services/EnhancedAuditService');
+const enhancedAuditService = new EnhancedAuditService();
+
+const DocumentService = require('./services/DocumentService');
+const documentService = new DocumentService();
 
 // Security and Performance Middleware
 app.use(helmet());
@@ -264,91 +264,7 @@ app.get('/api/real-documents/document/:id', async (req, res) => {
   }
 });
 
-// Power BI Data API Endpoints
-app.get('/api/powerbi/status', async (req, res) => {
-  try {
-    const isAvailable = await powerBIService.isDataAvailable();
-    res.json({ available: isAvailable });
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error checking Power BI data status',
-      details: error.message 
-    });
-  }
-});
-
-app.get('/api/powerbi/data', async (req, res) => {
-  try {
-    const data = await powerBIService.getPowerBIData();
-    res.json(data);
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error loading Power BI data',
-      details: error.message 
-    });
-  }
-});
-
-app.get('/api/powerbi/datasets', async (req, res) => {
-  try {
-    const datasets = await powerBIService.getDatasets();
-    res.json({ datasets });
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error loading Power BI datasets',
-      details: error.message 
-    });
-  }
-});
-
-app.get('/api/powerbi/tables', async (req, res) => {
-  try {
-    const tables = await powerBIService.getTables();
-    res.json({ tables });
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error loading Power BI tables',
-      details: error.message 
-    });
-  }
-});
-
-app.get('/api/powerbi/records', async (req, res) => {
-  try {
-    const limit = parseInt(req.query.limit) || 100;
-    const records = await powerBIService.getRecords(limit);
-    res.json({ records });
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error loading Power BI records',
-      details: error.message 
-    });
-  }
-});
-
-app.get('/api/powerbi/report', async (req, res) => {
-  try {
-    const report = await powerBIService.getExtractionReport();
-    res.json({ report });
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error loading Power BI extraction report',
-      details: error.message 
-    });
-  }
-});
-
-app.get('/api/powerbi/financial-data', async (req, res) => {
-  try {
-    const financialData = await powerBIService.getFinancialDataForAudit();
-    res.json({ financialData });
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error loading Power BI financial data',
-      details: error.message 
-    });
-  }
-});
+// Power BI endpoints removed - service not available
 
 // Endpoint to trigger Power BI data extraction
 app.post('/api/powerbi/extract', async (req, res) => {
@@ -451,7 +367,7 @@ app.get('/api/years/:year/documents', async (req, res) => {
       return res.status(400).json({ error: 'Invalid year parameter' });
     }
     
-    const documents = await yearlyDataService.getDocumentsForYear(year);
+    const documents = await pgDataService.getDocumentsForYear(year);
     res.json({ documents });
   } catch (error) {
     res.status(500).json({ 
@@ -468,7 +384,7 @@ app.get('/api/years/:year/categories', async (req, res) => {
       return res.status(400).json({ error: 'Invalid year parameter' });
     }
     
-    const categories = await yearlyDataService.getCategoriesForYear(year);
+    const categories = await pgDataService.getCategoriesForYear(year);
     res.json({ categories });
   } catch (error) {
     res.status(500).json({ 
@@ -478,100 +394,7 @@ app.get('/api/years/:year/categories', async (req, res) => {
   }
 });
 
-// Unified Data Service API Endpoints (prioritizes real CSV data)
-app.get('/api/unified/years', async (req, res) => {
-  try {
-    const years = await unifiedDataService.getAvailableYears();
-    res.json({ years, source: 'unified' });
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error loading available years from unified service',
-      details: error.message 
-    });
-  }
-});
-
-app.get('/api/unified/years/:year', async (req, res) => {
-  try {
-    const year = parseInt(req.params.year);
-    if (isNaN(year)) {
-      return res.status(400).json({ error: 'Invalid year parameter' });
-    }
-    
-    const data = await unifiedDataService.getYearlyData(year);
-    res.json({ ...data, source: 'unified' });
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error loading yearly data from unified service',
-      details: error.message 
-    });
-  }
-});
-
-app.get('/api/unified/years/:year/documents', async (req, res) => {
-  try {
-    const year = parseInt(req.params.year);
-    if (isNaN(year)) {
-      return res.status(400).json({ error: 'Invalid year parameter' });
-    }
-    
-    const documents = await unifiedDataService.getDocumentsForYear(year);
-    res.json({ documents, total: documents.length, year, source: 'unified' });
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error loading documents for year from unified service',
-      details: error.message 
-    });
-  }
-});
-
-app.get('/api/unified/search', async (req, res) => {
-  try {
-    const { q: query, year, category } = req.query;
-    
-    const results = await unifiedDataService.searchDocuments(
-      query, 
-      year ? parseInt(year) : null, 
-      category
-    );
-    
-    res.json({ 
-      results, 
-      total: results.length, 
-      query: { query, year, category },
-      source: 'unified' 
-    });
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error searching documents',
-      details: error.message 
-    });
-  }
-});
-
-app.get('/api/unified/statistics', async (req, res) => {
-  try {
-    const stats = await unifiedDataService.getStatistics();
-    res.json({ ...stats, source: 'unified' });
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error loading statistics from unified service',
-      details: error.message 
-    });
-  }
-});
-
-app.get('/api/unified/health', async (req, res) => {
-  try {
-    const health = await unifiedDataService.getDataHealth();
-    res.json(health);
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Error checking unified service health',
-      details: error.message 
-    });
-  }
-});
+// Unified service endpoints removed - using PostgreSQL service instead
 
 // Routes - Anti-corruption system routes handled by modular controllers
 const apiRoutes = require('./routes');

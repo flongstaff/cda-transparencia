@@ -15,7 +15,7 @@ import {
   Loader
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import YearlyDataService, { YearlyData, Document } from '../../services/YearlyDataService';
+import YearlyDataService from '../../services/YearlyDataService';
 
 const YearlyFinancialDashboard: React.FC<{ year: number }> = ({ year }) => {
   const [yearlyData, setYearlyData] = useState<YearlyData | null>(null);

@@ -66,4 +66,4 @@ def get_project_by_id(project_id):
         return jsonify({"error": "Project not found"}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=3002)

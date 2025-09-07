@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Download, Search, Calendar, FileText, Eye, TrendingUp, Users, DollarSign, BarChart3, AlertCircle, CheckCircle, Info, Database, ExternalLink } from 'lucide-react';
+import { Download, Search, Calendar, FileText, Eye, TrendingUp, Users, DollarSign, BarChart3, AlertCircle, CheckCircle, Info, Database, ExternalLink, Loader2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import PageYearSelector from '../components/PageYearSelector';
 import SalaryAnalysisChart from '../components/charts/SalaryAnalysisChart';
 import ValidatedChart from '../components/ValidatedChart';
-import { unifiedDataService } from '../services/UnifiedDataService';
+import { consolidatedApiService } from '../services';
 
 interface Employee {
   id: string;
@@ -38,58 +38,79 @@ const formatCurrency = (amount: number): string => {
 
 const Salaries: React.FC = () => {
   const navigate = useNavigate();
-  const [selectedYear, setSelectedYear] = useState<number>(2025);
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [activeTab, setActiveTab] = useState('overview');
   const [searchTerm, setSearchTerm] = useState('');
   const [employees, setEmployees] = useState<Employee[]>([]);
   const [documents, setDocuments] = useState<SalaryDocument[]>([]);
-  
-  const availableYears = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017];
+  const [availableYears, setAvailableYears] = useState<number[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    loadAvailableYears();
+  }, []);
+
+  useEffect(() => {
+    if (selectedYear) {
+      loadEmployeeData(selectedYear);
+    }
+  }, [selectedYear]);
+
+  const loadAvailableYears = async () => {
+    try {
+      const years = await consolidatedApiService.getAvailableYears();
+      setAvailableYears(years);
+      if (years.length > 0) {
+        setSelectedYear(years[0]);
+      }
+    } catch (error) {
+      console.error('Error loading available years:', error);
+      // Fallback to current and previous years
+      const currentYear = new Date().getFullYear();
+      setAvailableYears([currentYear, currentYear - 1, currentYear - 2, currentYear - 3]);
+      setSelectedYear(currentYear);
+    }
+  };
 
   const loadEmployeeData = async (year: number) => {
+    setLoading(true);
     try {
-      // Load real salary data from UnifiedDataService
-      const salaryData = await unifiedDataService.getSalaries(year);
+      // Load real salary data from consolidatedApiService
+      const salaryData = await consolidatedApiService.getSalaries(year);
       
       // Transform API data to match our interface
       const transformedEmployees: Employee[] = salaryData.map((salary: any, index: number) => ({
         id: salary.id || `emp-${year}-${index}`,
-        name: salary.official_name || salary.name || 'Funcionario Anónimo',
-        position: salary.role || salary.position || 'Sin especificar',
-        department: salary.department || getDepartmentFromRole(salary.role),
-        basicSalary: salary.basic_salary || salary.salary || 0,
-        netSalary: salary.net_salary || salary.basic_salary || 0,
-        bonuses: parseFloat(salary.adjustments || '0'),
+        name: salary.official_name || salary.name || salary.employee_name || 'Funcionario Anónimo',
+        position: salary.role || salary.position || salary.job_title || 'Sin especificar',
+        department: salary.department || getDepartmentFromRole(salary.role || salary.position),
+        basicSalary: salary.basic_salary || salary.salary || salary.base_salary || 0,
+        netSalary: salary.net_salary || salary.take_home || salary.basic_salary || 0,
+        bonuses: parseFloat(salary.adjustments || salary.bonuses || '0'),
         deductions: parseFloat(salary.deductions || '0'),
         year: year
       }));
       
       setEmployees(transformedEmployees);
+      
+      // Fetch real salary documents
+      const apiDocuments = await consolidatedApiService.getDocuments(year, 'salaries');
+      const mappedDocuments = apiDocuments.map((doc: any) => ({
+        id: String(doc.id),
+        title: doc.title || doc.filename,
+        year: doc.year,
+        category: doc.category || 'Salarios',
+        url: doc.url || `/documents/${doc.id}`,
+        size: doc.size_mb ? `${doc.size_mb} MB` : 'N/A'
+      }));
+      setDocuments(mappedDocuments);
     } catch (error) {
       console.error('Error loading salary data:', error);
-      
-      // Try RobustDataService as intermediate fallback
-      try {
-        const municipalData = await unifiedDataService.getMunicipalData(year);
-        const robustEmployees: Employee[] = municipalData.salaries.departments.flatMap((dept, deptIndex) => 
-          Array.from({ length: dept.employees }, (_, empIndex) => ({
-            id: `robust-${year}-${deptIndex}-${empIndex}`,
-            name: `Empleado ${empIndex + 1}`,
-            position: `${dept.name} - Empleado`,
-            department: dept.name,
-            basicSalary: Math.round(municipalData.salaries.average_salary * (0.8 + Math.random() * 0.4)),
-            netSalary: Math.round(municipalData.salaries.average_salary * (0.7 + Math.random() * 0.3)),
-            bonuses: Math.round(municipalData.salaries.average_salary * 0.1),
-            deductions: Math.round(municipalData.salaries.average_salary * 0.15),
-            year: year
-          }))
-        );
-        setEmployees(robustEmployees);
-      } catch (robustError) {
-        console.error('RobustDataService also failed:', robustError);
-        // Final fallback to deterministic data generation
-        setEmployees(generateEmployeeDataFallback(year));
-      }
+      // Generate fallback data
+      setEmployees(generateEmployeeDataFallback(year));
+      setDocuments([]);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -188,32 +209,6 @@ const Salaries: React.FC = () => {
     return lastNames[Math.floor(Math.random() * lastNames.length)];
   };
 
-  
-
-  useEffect(() => {
-    const yearNum = selectedYear;
-    loadEmployeeData(yearNum);
-    // Fetch real salary documents
-    const fetchSalaryDocuments = async () => {
-      try {
-        const apiDocuments = await unifiedDataService.getTransparencyDocuments(yearNum); // Or a more specific endpoint if available
-        const mappedDocuments = apiDocuments.map(doc => ({
-          id: String(doc.id),
-          title: doc.title,
-          year: doc.year,
-          category: doc.category,
-          url: `/documents/${doc.id}`, // Link to DocumentDetail page
-          size: 'N/A' // Size not available from this API
-        }));
-        setDocuments(mappedDocuments);
-      } catch (error) {
-        console.error("Failed to fetch salary documents:", error);
-        setDocuments([]); // Clear documents on error
-      }
-    };
-    fetchSalaryDocuments();
-  }, [selectedYear]);
-
   // Filtered data for display
   const filteredEmployees = employees.filter(employee => {
     if (!searchTerm) return true;
@@ -243,6 +238,17 @@ const Salaries: React.FC = () => {
   const topSalaries = [...employees].sort((a, b) => b.netSalary - a.netSalary).slice(0, 5);
   const minSalary = Math.min(...employees.map(emp => emp.netSalary));
   const maxSalary = Math.max(...employees.map(emp => emp.netSalary));
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-center">
+          <Loader2 className="w-8 h-8 animate-spin mx-auto mb-2 text-purple-600" />
+          <p className="text-gray-600 dark:text-gray-400">Cargando información salarial...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-8">
@@ -613,7 +619,7 @@ const Salaries: React.FC = () => {
                       </button>
                       
                       <button
-                        onClick={() => navigate(document.url)}
+                        onClick={() => window.open(document.url, '_blank')}
                         className="p-2 text-green-600 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-900/30 rounded-lg"
                         title="Enlace oficial"
                       >
