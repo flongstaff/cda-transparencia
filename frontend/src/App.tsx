@@ -50,6 +50,7 @@ import ApiTestPage from './pages/ApiTestPage';
 import CitizenTransparency from './pages/CitizenTransparency';
 import TransparencyPortal from './pages/TransparencyPortal';
 import DashboardVisualization from './pages/DashboardVisualization';
+import UnifiedDataVisualizationDashboard from './pages/UnifiedDataVisualizationDashboard';
 import ErrorBoundary from './components/ErrorBoundary';
 import DebugErrorBoundary from './components/DebugErrorBoundary';
 
@@ -59,11 +60,10 @@ const navigationSections = [
     title: 'Principal',
     items: [
       { path: '/', label: '🏠 Inicio', icon: <HomeIcon className="w-4 h-4" /> },
-      { path: '/comprehensive', label: '📊 Dashboard', icon: <BarChart className="w-4 h-4" /> },
-      { path: '/data-visualization', label: '📈 Visualización de Datos', icon: <BarChart className="w-4 h-4" /> },
-      { path: '/system-diagnostic', label: '🔧 Diagnóstico', icon: <Activity className="w-4 h-4" /> },
-      { path: '/data-dashboard', label: '📊 Data Dashboard', icon: <BarChart className="w-4 h-4" /> },
-      { path: '/api-test', label: '🧪 API Test', icon: <Activity className="w-4 h-4" /> }
+      { path: '/comprehensive', label: '📊 Dashboard General', icon: <BarChart className="w-4 h-4" /> },
+      { path: '/unified-visualization', label: '📈 Dashboard Unificado', icon: <TrendingUp className="w-4 h-4" /> },
+      { path: '/system-diagnostic', label: '🔧 Diagnóstico Sistema', icon: <Activity className="w-4 h-4" /> },
+      { path: '/api-test', label: '🧪 Prueba API', icon: <Activity className="w-4 h-4" /> }
     ]
   },
   {
@@ -214,18 +214,18 @@ const App: React.FC = () => {
               {/* Quick Actions */}
               <div className="hidden sm:flex items-center space-x-3">
                 <Link 
-                  to="/citizen-transparency" 
+                  to="/unified-visualization" 
                   className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center space-x-1"
                 >
-                  <Eye className="w-4 h-4" />
-                  <span>Portal Ciudadano</span>
+                  <TrendingUp className="w-4 h-4" />
+                  <span>Dashboard</span>
                 </Link>
                 <Link 
-                  to="/transparency-portal" 
-                  className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center space-x-1"
+                  to="/citizen-transparency" 
+                  className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center space-x-1"
                 >
-                  <Shield className="w-4 h-4" />
-                  <span>Anticorrupción</span>
+                  <Eye className="w-4 h-4" />
+                  <span>Portal</span>
                 </Link>
                 <Link 
                   to="/budget" 
@@ -302,11 +302,12 @@ const App: React.FC = () => {
                 <ErrorBoundary>
                   <Routes>
                     {/* Main Routes */}
-                    <Route path="/" element={<HomePage />} />
+                    <Route path="/" element={<HomeIntegrated />} />
                     <Route path="/dashboard" element={<UnifiedDashboard />} />
                     <Route path="/comprehensive" element={<ComprehensiveDashboard />} />
                     <Route path="/system-diagnostic" element={<SystemDiagnostic />} />
                     <Route path="/data-visualization" element={<DashboardVisualization />} />
+                    <Route path="/unified-visualization" element={<UnifiedDataVisualizationDashboard />} />
                     
                     {/* Financial Analysis Routes */}
                     <Route path="/budget" element={<Budget />} />
