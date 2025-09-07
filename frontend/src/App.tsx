@@ -6,8 +6,8 @@ import {
   BarChart, 
   FileText, 
   Search, 
-  AlertTriangle, 
-  Eye, 
+  AlertTriangle,
+  Eye,
   DollarSign,
   Users,
   Building,
@@ -49,7 +49,9 @@ import DataDashboard from './pages/DataDashboard';
 import ApiTestPage from './pages/ApiTestPage';
 import CitizenTransparency from './pages/CitizenTransparency';
 import TransparencyPortal from './pages/TransparencyPortal';
+import DashboardVisualization from './pages/DashboardVisualization';
 import ErrorBoundary from './components/ErrorBoundary';
+import DebugErrorBoundary from './components/DebugErrorBoundary';
 
 // Navigation items with improved organization and icons
 const navigationSections = [
@@ -58,6 +60,7 @@ const navigationSections = [
     items: [
       { path: '/', label: '🏠 Inicio', icon: <HomeIcon className="w-4 h-4" /> },
       { path: '/comprehensive', label: '📊 Dashboard', icon: <BarChart className="w-4 h-4" /> },
+      { path: '/data-visualization', label: '📈 Visualización de Datos', icon: <BarChart className="w-4 h-4" /> },
       { path: '/system-diagnostic', label: '🔧 Diagnóstico', icon: <Activity className="w-4 h-4" /> },
       { path: '/data-dashboard', label: '📊 Data Dashboard', icon: <BarChart className="w-4 h-4" /> },
       { path: '/api-test', label: '🧪 API Test', icon: <Activity className="w-4 h-4" /> }
@@ -295,47 +298,50 @@ const App: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
               <Breadcrumb />
               
-              <ErrorBoundary>
-                <Routes>
-                  {/* Main Routes */}
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/dashboard" element={<UnifiedDashboard />} />
-                  <Route path="/comprehensive" element={<ComprehensiveDashboard />} />
-                  <Route path="/system-diagnostic" element={<SystemDiagnostic />} />
-                  
-                  {/* Financial Analysis Routes */}
-                  <Route path="/budget" element={<Budget />} />
-                  <Route path="/revenue" element={<Revenue />} />
-                  <Route path="/spending" element={<PublicSpending />} />
-                  <Route path="/debt" element={<Debt />} />
-                  <Route path="/investments" element={<Investments />} />
-                  
-                  {/* Transparency Routes */}
-                  <Route path="/citizen-transparency" element={<CitizenTransparency />} />
-                  <Route path="/transparency-portal" element={<TransparencyPortal />} />
-                  <Route path="/contracts" element={<Contracts />} />
-                  <Route path="/salaries" element={<Salaries />} />
-                  <Route path="/declarations" element={<PropertyDeclarations />} />
-                  <Route path="/documents" element={<Documents />} />
-                  <Route path="/documents/:id" element={<DocumentDetail />} />
-                  
-                  {/* Tools Routes */}
-                  <Route path="/audit" element={<Audit />} />
-                  <Route path="/reports" element={<Reports />} />
-                  <Route path="/whistleblower" element={<Whistleblower />} />
-                  <Route path="/financial-dashboard" element={<FinancialDashboard />} />
-                  
-                  {/* Additional Routes */}
-                  <Route path="/financial-analysis" element={<ComprehensiveFinancialAnalysis />} />
-                  <Route path="/financial-history" element={<FinancialHistory />} />
-                  <Route path="/powerbi" element={<PowerBIData />} />
-                  <Route path="/all-pages" element={<AllPages />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/data-dashboard" element={<DataDashboard />} />
-                  <Route path="/api-test" element={<ApiTestPage />} />
-                </Routes>
-              </ErrorBoundary>
+              <DebugErrorBoundary>
+                <ErrorBoundary>
+                  <Routes>
+                    {/* Main Routes */}
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/dashboard" element={<UnifiedDashboard />} />
+                    <Route path="/comprehensive" element={<ComprehensiveDashboard />} />
+                    <Route path="/system-diagnostic" element={<SystemDiagnostic />} />
+                    <Route path="/data-visualization" element={<DashboardVisualization />} />
+                    
+                    {/* Financial Analysis Routes */}
+                    <Route path="/budget" element={<Budget />} />
+                    <Route path="/revenue" element={<Revenue />} />
+                    <Route path="/spending" element={<PublicSpending />} />
+                    <Route path="/debt" element={<Debt />} />
+                    <Route path="/investments" element={<Investments />} />
+                    
+                    {/* Transparency Routes */}
+                    <Route path="/citizen-transparency" element={<CitizenTransparency />} />
+                    <Route path="/transparency-portal" element={<TransparencyPortal />} />
+                    <Route path="/contracts" element={<Contracts />} />
+                    <Route path="/salaries" element={<Salaries />} />
+                    <Route path="/declarations" element={<PropertyDeclarations />} />
+                    <Route path="/documents" element={<Documents />} />
+                    <Route path="/documents/:id" element={<DocumentDetail />} />
+                    
+                    {/* Tools Routes */}
+                    <Route path="/audit" element={<Audit />} />
+                    <Route path="/reports" element={<Reports />} />
+                    <Route path="/whistleblower" element={<Whistleblower />} />
+                    <Route path="/financial-dashboard" element={<FinancialDashboard />} />
+                    
+                    {/* Additional Routes */}
+                    <Route path="/financial-analysis" element={<ComprehensiveFinancialAnalysis />} />
+                    <Route path="/financial-history" element={<FinancialHistory />} />
+                    <Route path="/powerbi" element={<PowerBIData />} />
+                    <Route path="/all-pages" element={<AllPages />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/data-dashboard" element={<DataDashboard />} />
+                    <Route path="/api-test" element={<ApiTestPage />} />
+                  </Routes>
+                </ErrorBoundary>
+              </DebugErrorBoundary>
             </div>
           </main>
         </div>
