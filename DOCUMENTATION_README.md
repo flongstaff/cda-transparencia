@@ -1,12 +1,33 @@
 # Carmen de Areco Transparency Portal - Document Structure Documentation
 
-This directory contains documentation that maps and organizes all financial and administrative documents from the Carmen de Areco Municipal Website's transparency portal.
+This directory contains documentation that maps and organizes all financial and administrative documents from the Carmen de Areco Municipal Website's transparency portal, as presented in the Transparency Portal.
 
 ## Files Overview
 
-1. **DOCUMENT_STRUCTURE.md** - High-level overview of the document organization system
+1. **DOCUMENT_STRUCTURE.md** - High-level overview of the document organization system and portal structure
 2. **DETAILED_DOCUMENT_STRUCTURE.md** - Comprehensive listing of all documents by year and category
 3. **DOCUMENT_INVENTORY_SUMMARY.md** - Statistical summary of document counts by year and category
+
+## Portal Structure
+
+The transparency portal consolidates municipal data into the following main sections:
+
+### 1. Financial Management (Financial.tsx)
+- **Ejecución Presupuestaria** (Budget Execution)
+- **Deuda Pública** (Public Debt)
+- **Estados Financieros** (Financial Statements)
+
+### 2. Human Resources (Salaries.tsx)
+- **Recursos Humanos** (Human Resources)
+
+### 3. Procurement (Contracts.tsx)
+- **Contrataciones** (Public Procurement)
+
+### 4. Governance (PropertyDeclarations.tsx)
+- **Declaraciones Patrimoniales** (Asset Declarations)
+
+### 5. Document Repository (Documents.tsx)
+- **Documentos Generales** (General Documents)
 
 ## Document Organization
 
@@ -20,7 +41,7 @@ Documents are organized using two different structures:
 
 The documents span from 2018-2025, with documents organized by:
 - **Year** (2018-2025)
-- **Category** (9 main categories based on document type and purpose)
+- **Category** (5 main categories based on the portal structure)
 
 ## Data Index Files
 
@@ -61,15 +82,12 @@ Examples:
 
 ## Categories
 
-1. **Ejecución de Gastos** (Expense Execution)
-2. **Ejecución de Recursos** (Revenue Execution)
-3. **Estados Financieros** (Financial Statements)
-4. **Presupuesto Municipal** (Municipal Budget)
-5. **Recursos Humanos** (Human Resources)
-6. **Contrataciones** (Procurement)
-7. **Declaraciones Patrimoniales** (Asset Declarations)
-8. **Salud Pública** (Public Health)
-9. **Documentos Generales** (General Documents)
+1. **Ejecución Presupuestaria** (Budget Execution)
+2. **Estados Financieros** (Financial Statements)
+3. **Recursos Humanos** (Human Resources)
+4. **Contrataciones** (Procurement)
+5. **Declaraciones Patrimoniales** (Asset Declarations)
+6. **Documentos Generales** (General Documents)
 
 ## Contributing
 

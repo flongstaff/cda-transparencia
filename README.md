@@ -53,17 +53,19 @@ cda-transparencia/
 │   │   │   ├── audit/         # Componentes de auditoría
 │   │   │   └── documents/     # Componentes de gestión documental
 │   │   ├── pages/             # Páginas principales de la aplicación
-│   │   │   ├── Home.tsx       # Página de inicio
-│   │   │   ├── Dashboard.tsx  # Panel de control financiero
-│   │   │   ├── Budget.tsx     # Análisis presupuestario
-│   │   │   ├── Contracts.tsx  # Contratos y licitaciones
-│   │   │   ├── Salaries.tsx   # Nómina y salarios
-│   │   │   ├── Debt.tsx       # Deuda municipal
-│   │   │   ├── Documents.tsx  # Gestión documental
-│   │   │   ├── Audit.tsx      # Sistema de auditoría
-│   │   │   ├── Reports.tsx    # Reportes y análisis
-│   │   │   ├── About.tsx      # Información del proyecto
-│   │   │   └── Contact.tsx    # Contacto y sugerencias
+│   │   │   ├── Home.tsx           # Página de inicio
+│   │   │   ├── Dashboard.tsx      # Panel de control financiero
+│   │   │   ├── LiveDataDashboard.tsx  # Datos en vivo
+│   │   │   ├── Financial.tsx      # Panel financiero consolidado (Presupuesto + Deuda + Estados Financieros)
+│   │   │   ├── Contracts.tsx      # Contratos y licitaciones
+│   │   │   ├── Salaries.tsx       # Nómina y salarios
+│   │   │   ├── PropertyDeclarations.tsx  # Declaraciones patrimoniales
+│   │   │   ├── Documents.tsx      # Gestión documental
+│   │   │   ├── DocumentDetail.tsx # Vista detallada de documento
+│   │   │   ├── Audit.tsx          # Sistema de auditoría
+│   │   │   ├── Reports.tsx        # Reportes y análisis
+│   │   │   ├── About.tsx          # Información del proyecto
+│   │   │   └── Contact.tsx        # Contacto y sugerencias
 │   │   ├── services/          # Servicios de integración de datos
 │   │   │   ├── ConsolidatedApiService.ts  # Servicio principal de API
 │   │   │   ├── ChartService.ts            # Servicio de gráficos
@@ -110,8 +112,8 @@ cda-transparencia/
 
 1. **🏠 Inicio** - Vista general del portal con métricas clave
 2. **📊 Panel de Control** - Dashboard financiero integral con visualizaciones
-3. **💰 Presupuesto** - Análisis detallado de ejecución presupuestaria
-4. **📉 Deuda** - Gestión y análisis de deuda municipal
+3. **🔴 Datos en Vivo** - Visualización en tiempo real de documentos nuevos
+4. **💰 Panel Financiero** - Análisis consolidado de presupuesto, deuda y estados financieros
 5. **📋 Contratos** - Seguimiento de licitaciones y contratos públicos
 6. **👥 Salarios** - Nómina y estructura salarial municipal
 7. **🏛️ Declaraciones** - Declaraciones juradas de funcionarios

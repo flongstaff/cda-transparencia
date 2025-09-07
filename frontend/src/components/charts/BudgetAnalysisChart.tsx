@@ -18,7 +18,7 @@ import {
 } from 'recharts';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, BarChart3, PieChart as PieIcon, Activity, Loader2, Database, Layers } from 'lucide-react';
-import { chartDataIntegrationService } from '../../services/ChartDataIntegrationService';
+import { consolidatedApiService } from '../../services/ConsolidatedApiService';
 import { formatCurrencyARS } from '../../utils/formatters';
 
 interface Props {
@@ -76,13 +76,7 @@ const BudgetAnalysisChart: React.FC<Props> = ({ year, chartType = 'line' }) => {
       // Load comprehensive budget data from all services
       console.log(`📊 Loading budget data for year ${year} using integrated services...`);
       
-      const response = await chartDataIntegrationService.getChartData({
-        year,
-        type: 'budget',
-        includeComparisons: true,
-        includePowerBI: true,
-        includeDocuments: true
-      });
+      const response = await consolidatedApiService.getBudgetData(year);
 
       console.log(`📊 Integrated data loaded from ${response.metadata.services_used.length} services:`, response.metadata.services_used);
       console.log(`📈 Data quality: ${response.metadata.dataQuality}, Total records: ${response.metadata.totalRecords}`);

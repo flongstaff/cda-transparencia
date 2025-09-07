@@ -33,7 +33,7 @@ import {
   CheckCircle,
   AlertCircle
 } from 'lucide-react';
-import { chartDataIntegrationService } from '../../services/ChartDataIntegrationService';
+import { consolidatedApiService } from '../../services/ConsolidatedApiService';
 import { formatCurrencyARS } from '../../utils/formatters';
 
 interface Props {
@@ -84,34 +84,10 @@ const UnifiedDashboardChart: React.FC<Props> = ({ year, showAllSources = true })
       
       // Load all data types in parallel using the integration service
       const [budgetResponse, revenueResponse, expenseResponse, investmentResponse] = await Promise.all([
-        chartDataIntegrationService.getChartData({ 
-          year, 
-          type: 'budget', 
-          includeComparisons: true, 
-          includePowerBI: true, 
-          includeDocuments: true 
-        }),
-        chartDataIntegrationService.getChartData({ 
-          year, 
-          type: 'revenue', 
-          includeComparisons: true, 
-          includePowerBI: true, 
-          includeDocuments: true 
-        }),
-        chartDataIntegrationService.getChartData({ 
-          year, 
-          type: 'expenses', 
-          includeComparisons: true, 
-          includePowerBI: true, 
-          includeDocuments: true 
-        }),
-        chartDataIntegrationService.getChartData({ 
-          year, 
-          type: 'investments', 
-          includeComparisons: true, 
-          includePowerBI: true, 
-          includeDocuments: true 
-        })
+        consolidatedApiService.getBudgetData(year),
+        consolidatedApiService.getFinancialReports(), // Placeholder for revenue data
+        consolidatedApiService.getTreasuryMovements(), // Placeholder for expense data
+        consolidatedApiService.getFinancialReports() // Placeholder for investment data
       ]);
 
       console.log(`✅ All data loaded successfully for year ${year}`);

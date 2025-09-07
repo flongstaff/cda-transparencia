@@ -59,12 +59,8 @@ const DocumentAnalysisChart: React.FC<DocumentAnalysisChartProps> = ({
     setLoading(true);
     try {
       // Load real document analysis data from comprehensive data service
-      const [comprehensiveService, powerbiService, markdownService] = await Promise.all([
-        import('../../services/ComprehensiveDataService').then(m => new m.default()),
-        import('../../services/PowerBIDataService').then(m => new m.default()),
-        import('../../services/MarkdownDataService').then(m => new m.default())
-      ]);
-      
+      const comprehensiveService = await import('../../services/ConsolidatedApiService').then(m => m.consolidatedApiService);
+      // Use consolidatedApiService for all data needs
       const years = Array.from({ length: endYear - startYear + 1 }, (_, i) => startYear + i);
       const analysisData: DocumentData[] = [];
       

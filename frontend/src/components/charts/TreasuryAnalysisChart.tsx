@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar, AreaChart, Area } from 'recharts';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, PieChart, BarChart3, Activity, AlertTriangle, Loader2 } from 'lucide-react';
-import { chartDataIntegrationService } from '../../services/ChartDataIntegrationService';
+import { consolidatedApiService } from '../../services/ConsolidatedApiService';
 import { formatCurrencyARS } from '../../utils/formatters';
 
 interface Props {

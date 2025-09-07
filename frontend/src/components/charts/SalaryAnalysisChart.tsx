@@ -16,7 +16,7 @@ import {
 } from 'recharts';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, Users, DollarSign, AlertTriangle, Loader2, Database, Layers } from 'lucide-react';
-import { chartDataIntegrationService } from '../../services/ChartDataIntegrationService';
+import { consolidatedApiService } from '../../services/ConsolidatedApiService';
 import { formatCurrencyARS } from '../../utils/formatters';
 
 interface Props {
@@ -71,15 +71,8 @@ const SalaryAnalysisChart: React.FC<Props> = ({ year }) => {
     try {
       console.log(`🔄 Loading salary data for year ${year}...`);
       
-      const response = await chartDataIntegrationService.getChartData({
-        year,
-        type: 'salaries',
-        includeComparisons: true,
-        includePowerBI: true,
-        includeDocuments: true
-      });
-
-      const salaries = response.data || [];
+      const response = await consolidatedApiService.getSalaries(year);
+      const salaries = response || [];
       console.log(`📊 Loaded ${salaries.length} salary records from integrated services`);
       
       if (salaries.length === 0) {

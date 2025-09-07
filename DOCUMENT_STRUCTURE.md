@@ -1,6 +1,27 @@
 # Carmen de Areco Transparency Portal - Document Structure
 
-This document provides a comprehensive mapping of all available documents from the [Carmen de Areco Municipal Website](https://carmendeareco.gob.ar/transparencia/), organized by year and category.
+This document provides a comprehensive mapping of all available documents from the [Carmen de Areco Municipal Website](https://carmendeareco.gob.ar/transparencia/), organized by year and category, as presented in the Transparency Portal.
+
+## Portal Structure
+
+The transparency portal consolidates municipal data into the following main sections:
+
+### 1. Financial Management (Financial.tsx)
+- **Ejecución Presupuestaria** (Budget Execution)
+- **Deuda Pública** (Public Debt)
+- **Estados Financieros** (Financial Statements)
+
+### 2. Human Resources (Salaries.tsx)
+- **Recursos Humanos** (Human Resources)
+
+### 3. Procurement (Contracts.tsx)
+- **Contrataciones** (Public Procurement)
+
+### 4. Governance (PropertyDeclarations.tsx)
+- **Declaraciones Patrimoniales** (Asset Declarations)
+
+### 5. Document Repository (Documents.tsx)
+- **Documentos Generales** (General Documents)
 
 ## Document Storage Structure
 
@@ -29,53 +50,37 @@ Example: `http://carmendeareco.gob.ar/wp-content/uploads/2024/07/Situacion-Econo
 
 ## Document Categories
 
-### 1. Ejecución de Gastos (Expense Execution)
-Financial reports detailing the execution of municipal expenses, often including:
+### 1. Ejecución Presupuestaria (Budget Execution)
+Financial reports detailing the execution of municipal expenses and revenues:
 - Monthly and quarterly execution reports
 - Execution by economic classification
 - Gender perspective spending analysis
 - Finalidad y Funcion (Purpose and Function) breakdowns
 - Fuente de Financiamiento (Funding Source) analysis
 
-### 2. Ejecución de Recursos (Revenue Execution)
-Financial reports detailing the execution of municipal revenues, including:
-- Revenue collection reports
-- Execution by source
-- Procedencia (Origin) breakdowns
-- Comparisons between affected resources and actual spending
-
-### 3. Estados Financieros (Financial Statements)
+### 2. Estados Financieros (Financial Statements)
 Comprehensive financial statements including:
 - Balance sheets
 - Income statements
 - Cash flow statements
 - Notes to financial statements
 
-### 4. Presupuesto Municipal (Municipal Budget)
-Annual budget documents including:
-- Budget proposals
-- Budget modifications
-- Budget execution comparisons
-
-### 5. Recursos Humanos (Human Resources)
+### 3. Recursos Humanos (Human Resources)
 Personnel-related documents including:
 - Salary scales
 - Payroll reports
 - Staffing levels
 
-### 6. Contrataciones (Procurement)
+### 4. Contrataciones (Procurement)
 Public bidding and contracting documents including:
 - Tender announcements
 - Contract awards
 - Procurement procedures
 
-### 7. Declaraciones Patrimoniales (Asset Declarations)
+### 5. Declaraciones Patrimoniales (Asset Declarations)
 Sworn asset declarations from municipal officials as required by law.
 
-### 8. Salud Pública (Public Health)
-Health-related reports, primarily focused on CAIF (Centro de Atención e Integración Familiar) programs.
-
-### 9. Documentos Generales (General Documents)
+### 6. Documentos Generales (General Documents)
 Miscellaneous documents that don't fit into other categories, including:
 - Fiscal and tax ordinances
 - Administrative resolutions

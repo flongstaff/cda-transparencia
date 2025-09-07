@@ -5,7 +5,6 @@
 
 // Primary service - all API calls go through this
 export { consolidatedApiService } from './ConsolidatedApiService';
-export { default as consolidatedApiService } from './ConsolidatedApiService';
 
 // Essential supporting services
 export { default as yearlyDataService } from './YearlyDataService';

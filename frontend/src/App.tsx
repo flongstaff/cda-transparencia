@@ -26,11 +26,10 @@ import {
 // Import essential pages - focused approach
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
-import Budget from './pages/Budget';
+import Financial from './pages/Financial';
 import Contracts from './pages/Contracts';
 import Salaries from './pages/Salaries';
 import PropertyDeclarations from './pages/PropertyDeclarations';
-import Debt from './pages/Debt';
 import Documents from './pages/Documents';
 import DocumentDetail from './pages/DocumentDetail';
 import Audit from './pages/Audit';
@@ -52,8 +51,7 @@ const navigationSections = [
   {
     title: 'Finanzas',
     items: [
-      { path: '/budget', label: '💰 Presupuesto', icon: <DollarSign className="w-4 h-4" /> },
-      { path: '/debt', label: '📉 Deuda', icon: <Coins className="w-4 h-4" /> }
+      { path: '/financial', label: '💰 Panel Financiero', icon: <DollarSign className="w-4 h-4" /> }
     ]
   },
   {
@@ -284,8 +282,7 @@ const App: React.FC = () => {
                 <Route path="/live-data" element={<LiveDataDashboard />} />
                 
                 {/* Financial Analysis Routes */}
-                <Route path="/budget" element={<Budget />} />
-                <Route path="/debt" element={<Debt />} />
+                <Route path="/financial" element={<Financial />} />
                 
                 {/* Transparency Routes */}
                 <Route path="/contracts" element={<Contracts />} />
