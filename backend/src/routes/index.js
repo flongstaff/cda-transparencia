@@ -1,12 +1,13 @@
 const express = require('express');
-const budgetRoutes = require('./budgetRoutes');
-const salaryRoutes = require('./salaryRoutes');
 const router = express.Router();
 
-const fs = require('fs');
-const path = require('path');
+// Core routes that work with real data
+const budgetRoutes = require('./budgetRoutes');
+const salaryRoutes = require('./salaryRoutes');
+const documentsRoutes = require('./documentsRoutes');
+const yearsRoutes = require('./yearsRoutes');
 
-// Import all route files
+// Essential financial routes
 const propertyDeclarationsRoutes = require('./propertyDeclarationsRoutes');
 const salariesRoutes = require('./salariesRoutes');
 const publicTendersRoutes = require('./publicTendersRoutes');
@@ -17,25 +18,25 @@ const operationalExpensesRoutes = require('./operationalExpensesRoutes');
 const municipalDebtRoutes = require('./municipalDebtRoutes');
 const investmentsAssetsRoutes = require('./investmentsAssetsRoutes');
 const financialIndicatorsRoutes = require('./financialIndicatorsRoutes');
-const documentsRoutes = require('./documentsRoutes');
-const powerbiRoutes = require('./powerbiRoutes');
-const yearsRoutes = require('./yearsRoutes');
 
-// Import new anti-corruption system routes
-const corruptionDetectionRoutes = require('./corruptionDetectionRoutes');
-const transparencyMetricsRoutes = require('./transparencyMetricsRoutes');
-const auditTrailRoutes = require('./auditTrailRoutes');
+// Anti-corruption dashboard (works with real data)
 const antiCorruptionDashboardRoutes = require('./antiCorruptionDashboardRoutes');
-const advancedFraudDetectionRoutes = require('./advancedFraudDetectionRoutes');
-const anomalyDetectionRoutes = require('./anomalyDetectionRoutes');
-const financialAuditRoutes = require('./financialAuditRoutes');
-const vendorRelationshipRoutes = require('./vendorRelationshipRoutes');
 
-// Import comprehensive transparency routes for citizen access
+// Comprehensive transparency system (our main citizen portal)
 const comprehensiveTransparencyRoutes = require('./comprehensiveTransparencyRoutes');
 
-// Use all routes
+// Enhanced audit system (our new system that works with system.py data)
+const enhancedAuditRoutes = require('./enhancedAuditRoutes');
+
+// Core financial and transparency routes
+router.use('/budget', budgetRoutes);
+router.use('/salary', salaryRoutes);
+router.use('/documents', documentsRoutes);
+router.use('/years', yearsRoutes);
+
+// Essential municipal data routes
 router.use('/declarations', propertyDeclarationsRoutes);
+router.use('/salaries', salariesRoutes);
 router.use('/tenders', publicTendersRoutes);
 router.use('/reports', financialReportsRoutes);
 router.use('/treasury', treasuryMovementsRoutes);
@@ -44,46 +45,30 @@ router.use('/expenses', operationalExpensesRoutes);
 router.use('/debt', municipalDebtRoutes);
 router.use('/investments', investmentsAssetsRoutes);
 router.use('/indicators', financialIndicatorsRoutes);
-router.use('/documents', documentsRoutes);
-router.use('/powerbi', powerbiRoutes);
-router.use('/years', yearsRoutes);
 
-// Updated routes to avoid conflicts with existing salary route
-router.use('/budget-data', budgetRoutes);
-router.use('/salary-data', salaryRoutes);
-
-// Register comprehensive transparency routes for full citizen access
+// Main transparency portal for citizens (works with PostgreSQL and real documents)
 router.use('/transparency', comprehensiveTransparencyRoutes);
 
-// Original salary route (keep for backward compatibility)
-router.use('/salaries', salariesRoutes);
+// Enhanced audit system (works with system.py and all local audit data)
+router.use('/audit', enhancedAuditRoutes);
 
-// Anti-corruption system routes (priority routes)
-router.use('/corruption', corruptionDetectionRoutes);
-router.use('/transparency', transparencyMetricsRoutes);
-router.use('/audit', auditTrailRoutes);
+// Anti-corruption dashboard (existing system that works)
 router.use('/anti-corruption', antiCorruptionDashboardRoutes);
-router.use('/advanced-fraud', advancedFraudDetectionRoutes);
 
-// Financial audit routes
-router.use('/financial-audit', financialAuditRoutes);
-
-// Vendor relationship routes
-router.use('/vendor-relationships', vendorRelationshipRoutes);
-
-// Conflict of interest routes  
-const conflictOfInterestRoutes = require('./conflictOfInterestRoutes');
-router.use('/conflicts', conflictOfInterestRoutes);
-
-// Salary benchmarking routes
-const salaryBenchmarkingRoutes = require('./salaryBenchmarkingRoutes');
-router.use('/salary-benchmarking', salaryBenchmarkingRoutes);
-
-// Contractor performance dashboard routes
-const contractorPerformanceDashboardRoutes = require('./contractorPerformanceDashboardRoutes');
-router.use('/contractor-performance', contractorPerformanceDashboardRoutes);
-
-// Anomaly detection routes
-router.use('/anomaly-detection', anomalyDetectionRoutes);
+// Health check endpoint
+router.get('/health', (req, res) => {
+  res.json({
+    status: 'success',
+    message: 'Carmen de Areco Transparency API is operational',
+    services: {
+      transparency_portal: 'active',
+      enhanced_audit: 'active',
+      anti_corruption_dashboard: 'active',
+      document_management: 'active'
+    },
+    version: '2.0.0',
+    timestamp: new Date().toISOString()
+  });
+});
 
 module.exports = router;

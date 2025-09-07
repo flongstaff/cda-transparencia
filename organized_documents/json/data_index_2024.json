@@ -1,0 +1,118 @@
+{
+  "year": 2024,
+  "total_documents": 4,
+  "categories": {
+    "Declaraciones Patrimoniales": [
+      {
+        "id": "pdf-25",
+        "title": "DDJJ 2024",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/DDJJ-2024.pdf",
+        "year": 2024,
+        "category": "Declaraciones Patrimoniales",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Declaraciones Patrimoniales",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/DDJJ-2024.pdf",
+        "size_mb": 0.43,
+        "last_modified": ""
+      }
+    ],
+    "Recursos Humanos": [
+      {
+        "id": "pdf-32",
+        "title": "ESCALA SALARIAL OCTUBRE 2024",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALA-SALARIAL-OCTUBRE-2024.pdf",
+        "year": 2024,
+        "category": "Recursos Humanos",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALA-SALARIAL-OCTUBRE-2024.pdf",
+        "size_mb": 0.41,
+        "last_modified": ""
+      },
+      {
+        "id": "pdf-167",
+        "title": "ESCALAS SALARIALES FEBRERO 2024",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALAS-SALARIALES-FEBRERO-2024.pdf",
+        "year": 2024,
+        "category": "Recursos Humanos",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALAS-SALARIALES-FEBRERO-2024.pdf",
+        "size_mb": 0.41,
+        "last_modified": ""
+      }
+    ],
+    "Presupuesto Municipal": [
+      {
+        "id": "pdf-27",
+        "title": "ORDENANZA 3200 24 PRESUPUESTO 2024",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ORDENANZA-3200-24-PRESUPUESTO-2024.pdf",
+        "year": 2024,
+        "category": "Presupuesto Municipal",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Presupuesto Municipal",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ORDENANZA-3200-24-PRESUPUESTO-2024.pdf",
+        "size_mb": 69.59,
+        "last_modified": ""
+      }
+    ]
+  },
+  "documents": [
+    {
+      "id": "pdf-25",
+      "title": "DDJJ 2024",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/DDJJ-2024.pdf",
+      "year": 2024,
+      "category": "Declaraciones Patrimoniales",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Declaraciones Patrimoniales",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/DDJJ-2024.pdf",
+      "size_mb": 0.43,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-32",
+      "title": "ESCALA SALARIAL OCTUBRE 2024",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALA-SALARIAL-OCTUBRE-2024.pdf",
+      "year": 2024,
+      "category": "Recursos Humanos",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALA-SALARIAL-OCTUBRE-2024.pdf",
+      "size_mb": 0.41,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-167",
+      "title": "ESCALAS SALARIALES FEBRERO 2024",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALAS-SALARIALES-FEBRERO-2024.pdf",
+      "year": 2024,
+      "category": "Recursos Humanos",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Recursos Humanos",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ESCALAS-SALARIALES-FEBRERO-2024.pdf",
+      "size_mb": 0.41,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-27",
+      "title": "ORDENANZA 3200 24 PRESUPUESTO 2024",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ORDENANZA-3200-24-PRESUPUESTO-2024.pdf",
+      "year": 2024,
+      "category": "Presupuesto Municipal",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Presupuesto Municipal",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/ORDENANZA-3200-24-PRESUPUESTO-2024.pdf",
+      "size_mb": 69.59,
+      "last_modified": ""
+    }
+  ]
+}

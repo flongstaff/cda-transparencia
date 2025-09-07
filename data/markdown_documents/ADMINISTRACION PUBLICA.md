@@ -1,0 +1,404 @@
+# ADMINISTRACION PUBLICA.pdf
+
+## Información del Documento
+
+- **Archivo Original**: ADMINISTRACION PUBLICA.pdf
+- **Fecha de Conversión**: 2025-08-26 11:41:06
+- **Fuente Oficial**: [Carmen de Areco Portal](https://carmendeareco.gob.ar/transparencia/)
+- **Archivo Web**: [Wayback Machine](https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/)
+
+## Contenido
+
+ADMINISTRACION PUBLICA
+PERMANENTES
+TEMPORARIOS
+PERMANENTES
+TEMPORARIOS
+2022
+213
+101
+67.83
+32.17
+314
+Fuente de Información: Datos recolectados desde RAFAM de la Municipalidad de Carmen de Areco.
+PLANTEL DE PERSONAL MUNICIPAL PERMANENTES Y TEMPORARIOS
+PERIODO
+CANTIDAD
+PORCENTAJES
+TOTAL
+213
+101
+PERMANENTES
+TEMPORARIOS
+PLANTEL DE PERSONAL GENERAL 2022
+(PERMANENTES Y TEMPORARIOS)
+Municipalidad de Carmen de Areco
+PERMANENTES
+TEMPORARIOS
+PERMANENTES
+68%
+TEMPORARIOS
+32%
+PLANTEL DE PERSONAL GENERAL 2022
+(PERMANENTES Y TEMPORARIOS)
+Municipalidad de Carmen de Areco
+PERMANENTES
+TEMPORARIOS
+ADMINISTRACION PUBLICA
+ADMINISTRACION PUBLICA
+PERMANENTES
+TEMPORARIOS
+PERMANENTES
+TEMPORARIOS
+Conduccion Superior
+5
+4
+2.43
+4.40
+9
+Secretaria de Hacienda y Finanzas
+21
+8
+10.19
+8.79
+29
+Secretaría de Gobierno
+23
+28
+11.17
+30.77
+51
+Secretaría de Planificación Urbana
+91
+34
+44.17
+37.36
+125
+Secretaría de Derechos Humanos
+56
+27
+27.18
+29.67
+83
+H.C.D.
+17
+0
+8.25
+0.00
+17
+TOTAL
+213
+101
+103
+111
+314
+Fuente de Información: Datos recolectados desde RAFAM de la Municipalidad de Carmen de Areco.
+PLANTEL DE PERSONAL MUNICIPAL POR JURISDICCIÓN
+JURISDICCIÓN
+CANTIDAD
+PORCENTAJES
+TOTAL
+5
+21
+23
+91
+56
+17
+4
+8
+28
+34
+27
+9
+29
+51
+125
+83
+17
+Conduccion Superior
+Secretaria de Hacienda y
+Finanzas
+Secretaría de Gobierno
+Secretaría de Planificación
+Urbana
+Secretaría de Derechos
+Humanos
+H.C.D.
+PLANTEL GENERAL DESAGREGADO POR JURISDICCIÓN
+(PERMANENTES Y TEMPORARIOS)
+Municipalidad de Carmen de Areco
+PERMANENTES
+TEMPORARIOS
+TOTAL
+Conduccion Superior
+2%
+Secretaria de Hacienda y Finanzas
+10%
+Secretaría de Gobierno
+11%
+Secretaría de Planificación Urbana
+43%
+Secretaría de Derechos Humanos
+26%
+H.C.D.
+8%
+PLANTEL GENERAL DESAGREGADO POR JURISDICCIÓN
+(PERMANENTES)
+Municipalidad de Carmen de Areco
+Conduccion Superior
+Secretaria de Hacienda y Finanzas
+Secretaría de Gobierno
+Secretaría de Planificación Urbana
+Secretaría de Derechos Humanos
+H.C.D.
+Conduccion Superior
+4%
+Secretaria de Hacienda y Finanzas
+8%
+Secretaría de Gobierno
+28%
+Secretaría de Planificación Urbana
+33%
+Secretaría de Derechos Humanos
+27%
+PLANTEL GENERAL DESAGREGADO POR JURISDICCIÓN
+(TEMPORARIOS)
+Municipalidad de Carmen de Areco
+Conduccion Superior
+Secretaria de Hacienda y Finanzas
+Secretaría de Gobierno
+Secretaría de Planificación Urbana
+Secretaría de Derechos Humanos
+H.C.D.
+ADMINISTRACION PUBLICA
+ADMINISTRACION PUBLICA
+FEMENINO
+MASCULINO
+FEMENINO
+MASCULINO
+2022
+213
+101
+67.83
+32.17
+314
+Fuente de Información: Datos recolectados desde RAFAM de la Municipalidad de Carmen de Areco.
+PERIODO
+CANTIDAD
+PORCENTAJES
+TOTAL
+PLANTEL DEL PERSONAL DESAGREGADO SEGÚN GÉNERO
+PLANTA PERMANENTE-TEMPORARIO-COOPERATIVA
+213
+101
+FEMENINO
+MASCULINO
+PLANTEL GENERAL DESAGREGADO SEGÚN SEXO
+(PERMANENTES-TEMPORARIOS)
+Municipalidad de Carmen de Areco
+FEMENINO
+MASCULINO
+FEMENINO
+68%
+MASCULINO
+32%
+PLANTEL GENERAL DESAGREGADO SEGÚN SEXO
+(PERMANENTES-TEMPORARIOS)
+Municipalidad de Carmen de Areco
+FEMENINO
+MASCULINO
+Planta:
+1 - Permanente
+AÑO
+CARGOS DISPONIBLES CARGOS OCUPADOS
+DIFERENCIA
+2012
+192
+165
+27
+2013
+238
+173
+65
+2014
+275
+178
+97
+2015
+281
+180
+101
+2016
+284
+181
+103
+2017
+268
+184
+84
+2018
+244
+173
+71
+2019
+289
+192
+97
+2020
+313
+179
+134
+2021
+268
+212
+56
+TOTAL
+2652
+1817
+835
+Planta:
+2 - Temporaria
+AÑO
+CARGOS DISPONIBLES CARGOS OCUPADOS
+DIFERENCIA
+2012
+66
+59
+7
+2013
+89
+56
+33
+2014
+101
+64
+37
+2015
+116
+78
+38
+2016
+116
+73
+43
+2017
+110
+70
+40
+2018
+103
+72
+31
+2019
+147
+102
+45
+2020
+153
+90
+63
+2021
+125
+84
+41
+TOTAL
+1126
+748
+378
+192
+238
+275
+281
+284
+268
+244
+289
+313
+268
+165
+173
+178
+180
+181
+184
+173
+192
+179
+212
+27
+65
+97
+101
+103
+84
+71
+97
+134
+56
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+CARGOS DISPONIBLES Y OCUPADOS
+PERSONAL PERMANENTE
+CARGOS DISPONIBLES
+CARGOS OCUPADOS
+DIFERENCIA
+66
+89
+101
+116
+116
+110
+103
+147
+153
+125
+59
+56
+64
+78
+73
+70
+72
+102
+90
+84
+7
+33
+37
+38
+43
+40
+31
+45
+63
+41
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+CARGOS DISPONIBLES Y OCUPADOS
+PERSONAL TEMPORARIO
+CARGOS DISPONIBLES
+CARGOS OCUPADOS
+DIFERENCIA
+ADMINISTRACION PUBLICA
+
+
+---
+
+*Documento extraído y verificado mediante sistema automatizado de transparencia.*
+*Para obtener el documento oficial, visite: https://carmendeareco.gob.ar/transparencia/*
