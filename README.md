@@ -1,63 +1,11 @@
-# Portal de Transparencia Carmen de Areco
+# 🏛️ Portal de Transparencia - Carmen de Areco
 
-Este proyecto implementa un portal de transparencia integral para el municipio de Carmen de Areco, permitiendo a los ciudadanos acceder fácilmente a información financiera, presupuestaria y de rendición de cuentas.
+**Portal oficial de transparencia financiera y datos abiertos del municipio**
 
-## Estado del Proyecto
-
-✅ **COMPLETADO** - Portal completamente funcional y desplegado
-
-## Características
-
-- ✅ Visualización de datos financieros municipales con gráficos interactivos
-- ✅ Acceso completo a documentos oficiales organizados por año y categoría
-- ✅ Análisis presupuestario detallado con comparaciones año-a-año
-- ✅ Herramientas de auditoría y detección de irregularidades
-- ✅ Informes de transparencia actualizados regularmente
-- ✅ Interfaz intuitiva y amigable para ciudadanos sin conocimiento financiero
-- ✅ Búsqueda y filtrado avanzado de documentos
-- ✅ Acceso móvil y responsive design
-
-## Tecnologías
-
-- Frontend: React con TypeScript y Tailwind CSS
-- Backend: Python Flask
-- Base de Datos: SQLite/PostgreSQL
-- Visualización: Recharts, D3.js
-- Documentación: Markdown
-
-## Acceso al Portal
-
-El portal está disponible públicamente en: https://flongstaff.github.io/cda-transparencia/
-
-## Documentación
-
-### Para Usuarios
-- [Guía de Usuario](USER_GUIDE.md) - Instrucciones completas para usar el portal
-- [Estructura del Portal](PORTAL_STRUCTURE.md) - Organización y navegación
-
-### Para Desarrolladores
-- [Documentación Técnica](docs/) - Detalles de la arquitectura y componentes
-- [API Reference](docs/api/) - Documentación de la API
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. Por favor, lea `CONTRIBUTING.md` para más detalles.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - vea el archivo `LICENSE` para más detalles.
-
-## Impacto
-
-Este portal proporciona transparencia sin precedentes en las finanzas municipales, permitiendo a los ciudadanos:
-- Entender cómo se gasta su dinero en impuestos
-- Seguir el desempeño y responsabilidad del gobierno
-- Participar en un compromiso cívico informado
-- Verificar la autenticidad de la información financiera
-
----
-
-*Desarrollado para mejorar la transparencia gubernamental y el acceso ciudadano a la información pública.*
+[![Frontend CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/frontend-ci.yml)
+[![Backend CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/backend-ci.yml)
+[![Python CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/python-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/python-ci.yml)
+[![Deploy](https://github.com/flongstaff/cda-transparencia/actions/workflows/deploy.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/deploy.yml)
 
 ## 🎯 Objetivo del Proyecto
 
@@ -68,13 +16,6 @@ Este portal combina tecnologías modernas con análisis de datos para:
 - **Facilitar el acceso ciudadano** a información financiera municipal
 - **Garantizar la integridad** de datos a través de tecnologías seguras
 - **Cumplir con marcos legales** de transparencia y acceso a la información
-
-### 📈 Estadísticas del Sistema
-- **610+** registros de datos activos
-- **7** años de cobertura (2019-2025)  
-- **6** fuentes de datos integradas
-- **2,100+** documentos archivados totales
-- **12/12** endpoints operacionales
 
 ## 🚀 Tecnología y Arquitectura
 
@@ -93,120 +34,31 @@ Este portal combina tecnologías modernas con análisis de datos para:
 - **Sistema de verificación** de integridad de documentos
 - **Dashboard interactivo** con visualizaciones en tiempo real
 
-## 🗂️ Estructura del Proyecto
-
-```
-cda-transparencia/
-├── 📁 frontend/                 # Dashboard interactivo React
-│   ├── src/
-│   │   ├── components/         # Componentes UI reutilizables
-│   │   │   ├── charts/        # Visualizaciones de datos
-│   │   │   ├── dashboard/     # Componentes de dashboard
-│   │   │   ├── audit/         # Componentes de auditoría
-│   │   │   └── documents/     # Componentes de gestión documental
-│   │   ├── pages/             # Páginas principales de la aplicación
-│   │   │   ├── Home.tsx           # Página de inicio
-│   │   │   ├── Dashboard.tsx      # Panel de control financiero
-│   │   │   ├── LiveDataDashboard.tsx  # Datos en vivo
-│   │   │   ├── Financial.tsx      # Panel financiero consolidado (Presupuesto + Deuda + Estados Financieros)
-│   │   │   ├── Contracts.tsx      # Contratos y licitaciones
-│   │   │   ├── Salaries.tsx       # Nómina y salarios
-│   │   │   ├── PropertyDeclarations.tsx  # Declaraciones patrimoniales
-│   │   │   ├── Documents.tsx      # Gestión documental
-│   │   │   ├── DocumentDetail.tsx # Vista detallada de documento
-│   │   │   ├── Audit.tsx          # Sistema de auditoría
-│   │   │   ├── Reports.tsx        # Reportes y análisis
-│   │   │   ├── About.tsx          # Información del proyecto
-│   │   │   └── Contact.tsx        # Contacto y sugerencias
-│   │   ├── services/          # Servicios de integración de datos
-│   │   │   ├── ConsolidatedApiService.ts  # Servicio principal de API
-│   │   │   ├── ChartService.ts            # Servicio de gráficos
-│   │   │   └── UnifiedDataService.ts      # Servicio de datos unificados
-│   │   ├── utils/             # Utilidades y funciones auxiliares
-│   │   │   ├── formatters.ts  # Funciones de formato
-│   │   │   └── validators.ts  # Funciones de validación
-│   │   └── contexts/          # Contextos de React
-│   │       └── YearContext.ts # Contexto para selección de año
-│   ├── public/                # Archivos públicos
-│   └── package.json           # Dependencias y scripts del frontend
-├── 📁 backend/                # Backend Node.js
-│   ├── src/
-│   │   ├── routes/            # Rutas de la API
-│   │   ├── services/          # Servicios de backend
-│   │   ├── controllers/       # Controladores
-│   │   └── middleware/        # Middleware
-│   ├── server.js              # Punto de entrada del servidor
-│   └── package.json           # Dependencias y scripts del backend
-├── 📁 data/                   # Datos procesados
-│   ├── pdf_extracts/          # Extracciones de PDFs
-│   ├── markdown_documents/    # Documentos en formato Markdown
-│   ├── audit_results/         # Resultados de auditoría
-│   └── db/                    # Base de datos SQLite
-├── 📁 scripts/                # Scripts de procesamiento
-│   ├── extract_pdfs.py        # Extracción de PDFs
-│   ├── process_documents.py   # Procesamiento de documentos
-│   └── run_powerbi_extraction.py  # Extracción de datos Power BI
-├── 📁 docs/                   # Documentación del proyecto
-│   ├── DATA_SOURCES.md        # Fuentes de datos
-│   ├── FINANCIAL_ANALYSIS_GUIDE.md  # Guía de análisis financiero
-│   └── POWER_BI_INTEGRATION.md      # Integración con Power BI
-├── 📁 tests/                  # Pruebas
-│   ├── frontend/              # Pruebas del frontend
-│   ├── backend/               # Pruebas del backend
-│   └── e2e/                   # Pruebas end-to-end
-├── Dockerfile                 # Configuración de Docker
-├── docker-compose.yml         # Configuración de Docker Compose
-├── requirements.txt           # Dependencias de Python
-└── README.md                 # Este archivo
-```
-
-## 🌐 Páginas Principales
-
-1. **🏠 Inicio** - Vista general del portal con métricas clave
-2. **📊 Panel de Control** - Dashboard financiero integral con visualizaciones
-3. **🔴 Datos en Vivo** - Visualización en tiempo real de documentos nuevos
-4. **💰 Panel Financiero** - Análisis consolidado de presupuesto, deuda y estados financieros
-5. **📋 Contratos** - Seguimiento de licitaciones y contratos públicos
-6. **👥 Salarios** - Nómina y estructura salarial municipal
-7. **🏛️ Declaraciones** - Declaraciones juradas de funcionarios
-8. **📄 Documentos** - Repositorio de documentos oficiales
-9. **🔍 Auditoría** - Sistema de detección de irregularidades
-10. **📊 Reportes** - Generación de reportes personalizados
-
-## 🔧 Instalación y Uso
-
-### Requisitos Previos
-- Node.js v18+
-- Python 3.8+
-- PostgreSQL (opcional, para desarrollo avanzado)
-- Docker (opcional, para despliegue)
-
-### Instalación Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### Instalación Backend
-```bash
-cd backend
-npm install
-npm start
-```
-
-### Procesamiento de Datos
-```bash
-# Activar entorno virtual de Python
-source .venv/bin/activate
-
-# Ejecutar scripts de extracción
-python scripts/extract_pdfs.py
-python scripts/process_documents.py
-python scripts/run_powerbi_extraction.py
-```
 
 ## 📊 Características Clave
+
+### 🌐 Portal Web
+- **Dashboard financiero** con visualizaciones interactivas
+- **Navegación por años** (2009-2025) con datos históricos
+- **Visualización de documentos** con viewer PDF integrado
+- **Búsqueda avanzada** por categoría, año y tipo de documento
+- **Análisis comparativo** entre períodos administrativos
+
+### 🔍 Análisis y Auditoría
+- **Detección de anomalías** en gastos públicos
+- **Auditoría financiera automatizada** 
+- **Seguimiento de contratos** y licitaciones
+- **Análisis salarial** y benchmarking
+- **Alertas de transparencia** por irregularidades
+
+### 📈 Dashboards Disponibles
+- **Presupuesto Municipal:** Ejecución y análisis
+- **Gastos Públicos:** Categorización y seguimiento
+- **Ingresos y Recursos:** Fuentes y procedencia
+- **Salarios:** Escalas y evolución histórica
+- **Contratos:** Licitaciones y adjudicaciones
+- **Inversiones:** Proyectos de infraestructura
+- **Deuda Pública:** Estado y evolución
 
 ### Transparencia Financiera
 - **Visualización en tiempo real** de datos presupuestarios
@@ -254,104 +106,7 @@ Para preguntas o sugerencias, por favor contacta a:
 - **Email:** transparency@carmendeareco.gob.ar
 - **Sitio Oficial:** [carmendeareco.gob.ar](https://carmendeareco.gob.ar)
 
----
-*Portal de Transparencia - Carmen de Areco © 2025 - Todos los derechos reservados*
-│   │   │   └── audit/         # Componentes de auditoría
-│   │   ├── pages/             # Páginas principales
-│   │   ├── services/          # Servicios de datos
-│   │   └── hooks/             # React hooks personalizados
-│   └── public/data/           # Datos estáticos
-├── 📁 backend/                  # API REST Node.js
-│   ├── src/
-│   │   ├── controllers/       # Controladores API
-│   │   ├── services/          # Lógica de negocio
-│   │   ├── routes/           # Rutas de la API
-│   │   └── config/           # Configuración
-│   └── data/                 # Base de datos y migraciones
-├── 📁 scripts/                  # Scripts de automatización
-│   ├── audit/                # Scripts de auditoría
-│   ├── data-processing/      # Procesamiento de datos
-│   └── verification/         # Scripts de verificación
-├── 📁 data/                     # Repositorio de datos
-│   ├── source_materials/     # PDFs originales por año
-│   ├── preserved/           # Datos estructurados (JSON/CSV)
-│   └── markdown_documents/  # Documentos procesados
-├── 📁 docs/                     # Documentación
-└── 📁 database/                 # Configuración de BD
-```
 
-## 🛠️ Desarrollo Local
-
-### Requisitos Previos
-- Node.js 18+
-- Python 3.8+
-- Docker & Docker Compose
-- Git
-
-### Instalación Rápida
-
-1. **Clonar el repositorio:**
-```bash
-git clone https://github.com/flongstaff/cda-transparencia.git
-cd cda-transparencia
-```
-
-2. **Instalar dependencias:**
-```bash
-# Frontend
-cd frontend && npm install && cd ..
-
-# Backend  
-cd backend && npm install && cd ..
-
-# Python dependencies
-pip install -r requirements.txt
-```
-
-3. **Configurar base de datos:**
-```bash
-cd backend
-docker-compose up -d
-```
-
-4. **Iniciar servicios:**
-```bash
-# Terminal 1: Backend API
-cd backend && npm start
-
-# Terminal 2: Frontend dev server
-cd frontend && npm run dev
-```
-
-### URLs de Acceso
-- **Frontend:** http://localhost:5173
-- **Backend API:** http://localhost:3001/api
-- **Documentación API:** http://localhost:3001/api-docs
-
-## 📊 Funcionalidades Principales
-
-### 🌐 Portal Web
-- **Dashboard financiero** con visualizaciones interactivas
-- **Navegación por años** (2009-2025) con datos históricos
-- **Visualización de documentos** con viewer PDF integrado
-- **Búsqueda avanzada** por categoría, año y tipo de documento
-- **Análisis comparativo** entre períodos administrativos
-
-### 🔍 Análisis y Auditoría
-- **Detección de anomalías** en gastos públicos
-- **Auditoría financiera automatizada** 
-- **Seguimiento de contratos** y licitaciones
-- **Análisis salarial** y benchmarking
-- **Alertas de transparencia** por irregularidades
-
-### 📈 Dashboards Disponibles
-- **Presupuesto Municipal:** Ejecución y análisis
-- **Gastos Públicos:** Categorización y seguimiento
-- **Ingresos y Recursos:** Fuentes y procedencia
-- **Salarios:** Escalas y evolución histórica
-- **Contratos:** Licitaciones y adjudicaciones
-- **Inversiones:** Proyectos de infraestructura
-- **Deuda Pública:** Estado y evolución
 
 ## 📡 API REST
 
