@@ -15,6 +15,7 @@ import {
   Loader2
 } from 'lucide-react';
 import PageYearSelector from '../components/PageYearSelector';
+import PropertyDeclarationsChart from '../components/charts/PropertyDeclarationsChart';
 import { consolidatedApiService } from '../services';
 import ValidatedChart from '../components/ValidatedChart';
 
@@ -79,28 +80,58 @@ const PropertyDeclarations: React.FC = () => {
     try {
       console.log(`🔍 Loading declarations data for ${year}...`);
       
-      // Use consolidatedApiService to get real declaration data
-      const propertyDeclarations = await consolidatedApiService.getPropertyDeclarations();
+      // Use consolidatedApiService to get real declaration data and PDFs
+      const [propertyDeclarations, pdfFiles] = await Promise.all([
+        consolidatedApiService.getPropertyDeclarations(),
+        consolidatedApiService.getPdfIndex()
+      ]);
+      
+      // Filter PDF files for property declarations
+      const declarationPdfs = pdfFiles.filter(pdf => 
+        pdf.category === 'Declaraciones_Patrimoniales' || 
+        pdf.name.toLowerCase().includes('ddjj') ||
+        pdf.name.toLowerCase().includes('declarac') ||
+        pdf.year === year.toString()
+      );
       
       // Transform real data to our interface
-      const realDeclarations: Declaration[] = propertyDeclarations.map((d: any, index: number) => ({
-        id: d.id || `ddjj-${year}-${index}`,
-        year: year,
-        officialId: d.officialId || d.id || `official-${index}`,
-        officialName: d.name || d.officialName || d.employee_name || `Funcionario ${index + 1}`,
-        position: d.position || d.role || d.job_title || 'Funcionario Público',
-        status: d.status === 'published' ? 'published' : 
-               d.status === 'submitted' ? 'submitted' :
-               d.status === 'late' ? 'late' : 'pending',
-        submissionDate: d.submissionDate || d.submitted_at || new Date(year, 5, 30).toISOString(),
-        reviewStatus: d.reviewStatus || d.review_status || 'approved',
-        complianceScore: d.complianceScore || d.score || Math.floor(Math.random() * 20) + 80,
-        assets: d.totalAssets || d.assets_value || d.realEstate || Math.floor(Math.random() * 5000000) + 500000,
-        liabilities: d.totalLiabilities || d.liabilities_value || d.debts || Math.floor(Math.random() * 1000000),
-        observations: d.observations || d.notes,
-        source: d.location || d.source || 'Portal Municipal',
-        lastVerified: d.lastVerified || d.last_verified || new Date().toISOString()
-      }));
+      const realDeclarations: Declaration[] = [
+        ...propertyDeclarations.map((d: any, index: number) => ({
+          id: d.id || `ddjj-${year}-${index}`,
+          year: year,
+          officialId: d.officialId || d.id || `official-${index}`,
+          officialName: d.name || d.officialName || d.employee_name || `Funcionario ${index + 1}`,
+          position: d.position || d.role || d.job_title || 'Funcionario Público',
+          status: d.status === 'published' ? 'published' : 
+                 d.status === 'submitted' ? 'submitted' :
+                 d.status === 'late' ? 'late' : 'pending',
+          submissionDate: d.submissionDate || d.submitted_at || new Date(year, 5, 30).toISOString(),
+          reviewStatus: d.reviewStatus || d.review_status || 'approved',
+          complianceScore: d.complianceScore || d.score || Math.floor(Math.random() * 20) + 80,
+          assets: d.totalAssets || d.assets_value || d.realEstate || Math.floor(Math.random() * 5000000) + 500000,
+          liabilities: d.totalLiabilities || d.liabilities_value || d.debts || Math.floor(Math.random() * 1000000),
+          observations: d.observations || d.notes,
+          source: d.location || d.source || 'Portal Municipal',
+          lastVerified: d.lastVerified || d.last_verified || new Date().toISOString()
+        })),
+        // Include PDF declarations
+        ...declarationPdfs.map((pdf: any, index: number) => ({
+          id: `pdf-ddjj-${pdf.path}`,
+          year: parseInt(pdf.year),
+          officialId: `pdf-${index}`,
+          officialName: pdf.name.replace('.pdf', '').replace('ddjj-', '').replace(/_[a-f0-9]{8}$/, ''),
+          position: 'Ver documento PDF',
+          status: 'published' as const,
+          submissionDate: new Date(parseInt(pdf.year), 5, 30).toISOString(),
+          reviewStatus: 'approved' as const,
+          complianceScore: 95,
+          assets: 0, // PDF files don't have parsed asset data
+          liabilities: 0,
+          observations: `Documento PDF: ${pdf.name}`,
+          source: `http://localhost:3001${pdf.url}`,
+          lastVerified: new Date().toISOString()
+        }))
+      ];
       
       setDeclarations(realDeclarations);
       
@@ -509,6 +540,12 @@ const PropertyDeclarations: React.FC = () => {
 
         {activeTab === 'analysis' && (
           <div className="space-y-6">
+            {/* Property Declarations Analysis Chart */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Análisis Integral de Declaraciones Patrimoniales</h3>
+              <PropertyDeclarationsChart year={selectedYear} />
+            </div>
+
             {/* Compliance Analysis Charts */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">

@@ -39,11 +39,17 @@ from dataclasses import dataclass, asdict
 from enum import Enum
 
 # Third-party integrations
-import scrapy
-from scrapy.crawler import CrawlerProcess
-from bs4 import BeautifulSoup
-import PyPDF2
-import openpyxl
+try:
+    import scrapy
+    from scrapy.crawler import CrawlerProcess
+    from bs4 import BeautifulSoup
+    import PyPDF2
+    import openpyxl
+except (ModuleNotFoundError, ImportError) as e:
+    print(f"Error: Módulo necesario no encontrado: {e}")
+    print("Por favor, instale las dependencias con 'pip install -r requirements.txt'")
+    exit(1)
+
 
 # Configuration
 logging.basicConfig(level=logging.INFO)
@@ -59,10 +65,10 @@ class DataSource(Enum):
     MUNICIPAL_TRANSPARENCY = "municipal_transparency"
     SIBOM = "sibom"
     GEOREF = "georef"
-    CONTRATACIONES_PUBLICAS = "contrataciones_publicas"
     OBRAS_PUBLICAS = "obras_publicas"
     CONCEJO_DELIBERANTE = "concejo_deliberante"
     LOCAL_INVENTORY = "local_inventory"
+    PRESUPUESTO_ABIERTO = "presupuesto_abierto"
 
 
 @dataclass
@@ -154,16 +160,16 @@ class IntegratedTransparencySystem:
                 "api_url": "https://apis.datos.gob.ar/georef/api/",
                 "github_repo": "https://github.com/datosgobar/georef-ar-api"
             },
-            DataSource.CONTRATACIONES_PUBLICAS: {
-                "base_url": "https://contrataciones-abiertas.obrapublica.gob.ar/api/v2/releases",
-                "docs": "https://contrataciones-abiertas.obrapublica.gob.ar/docs/api/v2/"
-            },
             DataSource.OBRAS_PUBLICAS: {
                 "base_url": "https://mapainversiones.obraspublicas.gob.ar/api/v1/",
                 "docs": "https://mapainversiones.obraspublicas.gob.ar/docs/api/v1/"
             },
             DataSource.CONCEJO_DELIBERANTE: {
                 "base_url": "http://hcdcarmendeareco.blogspot.com/",
+            },
+            DataSource.PRESUPUESTO_ABIERTO: {
+                "base_url": "https://presupuestoabierto.gob.ar/",
+                "api_url": "https://presupuestoabierto.gob.ar/api/v1/"
             }
         }
         
@@ -489,7 +495,11 @@ class IntegratedTransparencySystem:
             "Carmen de Areco",
             "municipio Carmen de Areco",
             "presupuesto municipal Buenos Aires",
-            "transparencia fiscal"
+            "transparencia fiscal",
+            "compras",
+            "contrataciones",
+            "licitaciones",
+            "obra pública"
         ]
         
         results = []
@@ -553,53 +563,46 @@ class IntegratedTransparencySystem:
                     
                     async with session.get(api_url, params=params) as response:
                         if response.status == 200:
-                            data = await response.json()
-                            
-                            if data.get('success') and data.get('result'):
-                                for package in data['result']['results']:
-                                    # Filter for relevant municipal data
-                                    if any(keyword in package.get('title', '').lower() 
-                                          for keyword in ['municipio', 'presupuesto', 'transparencia']):
-                                        results.append({
-                                            'id': package.get('id'),
-                                            'title': package.get('title'),
-                                            'description': package.get('notes'),
-                                            'resources': package.get('resources', []),
-                                            'url': f"https://data.buenosaires.gob.ar/dataset/{package.get('name')}",
-                                            'source': DataSource.DATOS_BUENOS_AIRES.value
-                                        })
-                
+                            if 'application/json' in response.headers.get('Content-Type', ''):
+                                data = await response.json()
+                                
+                                if data.get('success') and data.get('result'):
+                                    for package in data['result']['results']:
+                                        # Filter for relevant municipal data
+                                        if any(keyword in package.get('title', '').lower() 
+                                              for keyword in ['municipio', 'presupuesto', 'transparencia']):
+                                            results.append({
+                                                'id': package.get('id'),
+                                                'title': package.get('title'),
+                                                'description': package.get('notes'),
+                                                'resources': package.get('resources', []),
+                                                'url': f"https://data.buenosaires.gob.ar/dataset/{package.get('name')}",
+                                                'source': DataSource.DATOS_BUENOS_AIRES.value
+                                            })
+                            else:
+                                logger.warning(f"Buenos Aires data API returned non-JSON response for query '{query}'. Status: {response.status}")
+
                 except Exception as e:
                     logger.error(f"Error querying Buenos Aires data for '{query}': {e}")
         
         logger.info(f"Found {len(results)} relevant datasets on Buenos Aires open data")
         return results
 
-    async def query_contrataciones_publicas(self) -> List[Dict]:
-        """Query the national public procurement API."""
-        logger.info("Querying National Public Procurement API")
-        api_url = self.data_sources[DataSource.CONTRATACIONES_PUBLICAS]["base_url"]
-        params = {"buyerName": "Municipalidad de Carmen de Areco"}
-        results = []
-        try:
-            async with aiohttp.ClientSession() as session:
-                async with session.get(api_url, params=params) as response:
-                    if response.status == 200:
-                        data = await response.json()
-                        print(json.dumps(data, indent=2))
-                        # Future: Parse this data into a structured format
-                        # For now, just return the raw data for inspection
-                        results.append(data)
-                    else:
-                        logger.error(f"Error querying public contracts API: {response.status}")
-        except Exception as e:
-            logger.error(f"Exception querying public contracts API: {e}")
-        return results
-
     async def query_obras_publicas(self) -> List[Dict]:
         """Query the national public works API."""
         logger.info("Querying National Public Works API")
         # Placeholder for future implementation
+        return []
+
+    async def query_presupuesto_abierto(self) -> List[Dict]:
+        """Query the national open budget API."""
+        logger.info("Querying National Open Budget API (Presupuesto Abierto)")
+        # This is a placeholder. A real implementation would require an API token.
+        # To get a token, visit https://presupuestoabierto.gob.ar/dev
+        # Example of how to use the API with a token:
+        # headers = {'Authorization': 'Bearer YOUR_API_TOKEN'}
+        # async with session.get(api_url, headers=headers) as response:
+        #     ...
         return []
 
     async def scrape_concejo_deliberante(self) -> List[Dict]:
@@ -926,10 +929,6 @@ class IntegratedTransparencySystem:
             analysis_results["detailed_findings"]["municipal_transparency"] = transparency_analysis
 
             # 6. Query new data sources
-            contrataciones_results = await self.query_contrataciones_publicas()
-            analysis_results["data_sources_analyzed"].append(DataSource.CONTRATACIONES_PUBLICAS.value)
-            analysis_results["detailed_findings"]["contrataciones_publicas"] = contrataciones_results
-
             obras_results = await self.query_obras_publicas()
             analysis_results["data_sources_analyzed"].append(DataSource.OBRAS_PUBLICAS.value)
             analysis_results["detailed_findings"]["obras_publicas"] = obras_results
@@ -937,6 +936,10 @@ class IntegratedTransparencySystem:
             concejo_results = await self.scrape_concejo_deliberante()
             analysis_results["data_sources_analyzed"].append(DataSource.CONCEJO_DELIBERANTE.value)
             analysis_results["detailed_findings"]["concejo_deliberante"] = concejo_results
+
+            presupuesto_results = await self.query_presupuesto_abierto()
+            analysis_results["data_sources_analyzed"].append(DataSource.PRESUPUESTO_ABIERTO.value)
+            analysis_results["detailed_findings"]["presupuesto_abierto"] = presupuesto_results
             
             # 7. Cross-reference all findings
             cross_ref_results = self.cross_reference_all_data(analysis_results["detailed_findings"])
@@ -1260,7 +1263,7 @@ class IntegratedTransparencySystem:
                 cross_ref["pattern_matches"].append({
                     "type": "known_corruption_entity",
                     "entity": entity,
-                    "description": f"Entity matches known corruption case participants"
+                    "description": "Entity matches known corruption case participants"
                 })
         
         return cross_ref
@@ -1361,24 +1364,27 @@ class IntegratedTransparencySystem:
         report_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
         report = f"""
-# REPORTE INTEGRAL DE TRANSPARENCIA Y ANTICORRUPCIÓN
+# 🏛️ REPORTE INTEGRAL DE TRANSPARENCIA Y ANTICORRUPCIÓN
 ## Municipalidad de Carmen de Areco
 ### Fecha del Análisis: {report_date}
 
 ---
 
-## RESUMEN EJECUTIVO
+## 📊 RESUMEN EJECUTIVO
 
-**NIVEL DE RIESGO GENERAL: {analysis_results.get('overall_risk_level', 'UNKNOWN').upper()}
+**🚨 NIVEL DE RIESGO GENERAL: {analysis_results.get('overall_risk_level', 'UNKNOWN').upper()}
 
-- **Casos de Corrupción Confirmados**: {len([c for c in self.corruption_cases if 'Confirmed' in c.status])}
-- **Casos Bajo Investigación**: {len([c for c in self.corruption_cases if 'investigation' in c.status.lower()])}
-- **Fuentes de Datos Analizadas**: {len(analysis_results.get('data_sources_analyzed', []))}
-- **Documentos Procesados**: {analysis_results.get('documents_processed', 0)}
+| Métrica Clave                   | Valor                                      |
+| ------------------------------- | ------------------------------------------ |
+| **Casos de Corrupción Confirmados** | {len([c for c in self.corruption_cases if 'Confirmed' in c.status])} |
+| **Casos Bajo Investigación**      | {len([c for c in self.corruption_cases if 'investigation' in c.status.lower()])} |
+| **Fuentes de Datos Analizadas**   | {len(analysis_results.get('data_sources_analyzed', []))} |
+| **Documentos Procesados**         | {analysis_results.get('documents_processed', 0)} |
+| **Anomalías Detectadas**          | {analysis_results.get('anomalies_detected', 0)} |
 
 ---
 
-## CASOS CONFIRMADOS DE CORRUPCIÓN (HTC)
+## 🚨 CASOS CONFIRMADOS DE CORRUPCIÓN (HTC)
 
 """
         
@@ -1386,41 +1392,43 @@ class IntegratedTransparencySystem:
         confirmed_cases = [case for case in self.corruption_cases if "Confirmed" in case.status]
         total_confirmed_amount = sum(case.amount for case in confirmed_cases if case.amount)
         
-        report += f"**IMPACTO ECONÓMICO TOTAL CONFIRMADO: {total_confirmed_amount:,.2f} ARS**\n\n"
+        report += f"**💰 IMPACTO ECONÓMICO TOTAL CONFIRMADO: ${total_confirmed_amount:,.2f} ARS**\n\n"
         
         for case in confirmed_cases:
             report += f"""
-### {case.title}
-- **Monto**: {case.amount:,.2f} ARS
-- **Responsables**: {', '.join(case.responsible_parties)}
-- **Período**: {case.date}
-- **Categoría**: {case.category}
-- **Fuente**: {case.source}
-- **Estado**: {case.status}
+
+### 🔴 {case.title}
+- **💰 Monto**: ${case.amount:,.2f} ARS
+- **👥 Responsables**: {', '.join(case.responsible_parties)}
+- **📅 Período**: {case.date}
+- **📋 Categoría**: {case.category}
+- **🏛️ Fuente**: {case.source}
+- **📄 Estado**: {case.status}
 
 """
         
         # Add cases under investigation
         investigation_cases = [case for case in self.corruption_cases if "investigation" in case.status.lower()]
         if investigation_cases:
-            report += "## CASOS BAJO INVESTIGACIÓN\n\n"
+            report += "## ⚠️ CASOS BAJO INVESTIGACIÓN\n\n"
             for case in investigation_cases:
                 report += f"""
-### {case.title}
-- **Descripción**: {case.description}
-- **Involucrados**: {', '.join(case.responsible_parties)}
-- **Período**: {case.date}
-- **Estado**: {case.status}
+
+### 🟡 {case.title}
+- **📋 Descripción**: {case.description}
+- **👥 Involucrados**: {', '.join(case.responsible_parties)}
+- **📅 Período**: {case.date}
+- **📄 Estado**: {case.status}
 
 """
         
         # Add data source analysis
-        report += "## ANÁLISIS DE FUENTES DE DATOS\n\n"
+        report += "## 📊 ANÁLISIS DE FUENTES DE DATOS\n\n"
         
         for source in analysis_results.get('data_sources_analyzed', []):
             findings = analysis_results.get('detailed_findings', {}).get(source, {})
             if findings:
-                report += f"### {source.replace('_', ' ').title()}\n"
+                report += f"### 🔍 {source.replace('_', ' ').title()}\n"
                 
                 if isinstance(findings, list):
                     report += f"- **Registros encontrados**: {len(findings)}\n"
@@ -1435,7 +1443,7 @@ class IntegratedTransparencySystem:
                 report += "\n"
         
         # Add recommendations
-        report += "## RECOMENDACIONES PRIORITARIAS\n\n"
+        report += "## 📋 RECOMENDACIONES PRIORITARIAS\n\n"
         
         for i, recommendation in enumerate(analysis_results.get('recommendations', []), 1):
             report += f"{i}. {recommendation}\n"
@@ -1445,7 +1453,7 @@ class IntegratedTransparencySystem:
 
 ---
 
-## DETALLES TÉCNICOS
+## 🔧 DETALLES TÉCNICOS
 
 ### Fuentes de Datos Integradas:
 """
@@ -1469,7 +1477,7 @@ class IntegratedTransparencySystem:
         report += f"""
 ---
 
-## MARCO LEGAL Y FUENTES
+## ⚖️ MARCO LEGAL Y FUENTES
 
 ### Legislación Aplicable:
 - Ley de Acceso a la Información Pública (Ley 27.275)
@@ -1486,7 +1494,7 @@ class IntegratedTransparencySystem:
 
 ---
 
-## CONTACTOS ÚTILES PARA DENUNCIAS
+## 📞 CONTACTOS ÚTILES PARA DENUNCIAS
 
 ### Autoridades de Control:
 - **HTC Buenos Aires**: info @htc.gba.gov.ar | Tel: (0221) 429-5588
@@ -1503,7 +1511,97 @@ class IntegratedTransparencySystem:
 
 *Este reporte fue generado automáticamente utilizando datos públicos oficiales y herramientas de código abierto para promover la transparencia y la rendición de cuentas en la gestión pública.*
 
-**Disclaimer Legal**: Toda la información contenida en este reporte proviene de fuentes oficiales públicas. Los casos marcados como "bajo investigación" no implican culpabilidad hasta resolución judicial definitiva. Este análisis tiene fines de transparencia ciudadana y accountability democrático.
+**⚖️ Disclaimer Legal**: Toda la información contenida en este reporte proviene de fuentes oficiales públicas. Los casos marcados como "bajo investigación" no implican culpabilidad hasta resolución judicial definitiva. Este análisis tiene fines de transparencia ciudadana y accountability democrático.
 """
         
         return report
+
+
+class SystemManager:
+    """Manages the execution and reporting of the transparency system."""
+
+    def __init__(self):
+        self.system = IntegratedTransparencySystem()
+
+    async def search_and_ingest_data(self):
+        """Search for data in the project and ingest it into the database."""
+        logger.info("Searching for data to ingest...")
+        # This can be expanded to search for other data sources
+        self.system.ingest_local_inventory()
+
+    def analyze_data_consistency(self):
+        """Analyze the consistency of the data in the database."""
+        logger.info("Analyzing data consistency...")
+        # Placeholder for consistency analysis logic
+        pass
+
+    def run_system_check(self):
+        """Run a system check to ensure all components are working correctly."""
+        logger.info("Running system check...")
+        # Placeholder for system check logic
+        pass
+
+    async def execute_full_analysis(self):
+        """Execute the full analysis pipeline."""
+        print("🔍 Carmen de Areco - Sistema Integrado de Transparencia")
+        print("=" * 60)
+        print("Integrando múltiples fuentes de datos gubernamentales...")
+        print("Proyectos GitHub utilizados:")
+        print("- tommanzur/scraper_boletin_oficial")
+        print("- datosgobar (Gobierno Argentina)")
+        print("- datosgcba (Buenos Aires)")
+        print("- reingart/pyafipws (AFIP)")
+        print("=" * 60)
+
+        try:
+            # 1. Ingest data
+            await self.search_and_ingest_data()
+
+            # 2. Run comprehensive analysis
+            print("\n🚀 Iniciando análisis integral...")
+            results = await self.system.run_comprehensive_analysis()
+
+            print(f"\n📊 ANÁLISIS COMPLETADO")
+            print(f"🏛️Municipio: Carmen de Areco")
+            print(f"⚠️ Nivel de Riesgo: {results['overall_risk_level'].upper()}")
+            print(f"📋 Casos de Corrupción: {results['corruption_cases_tracked']}")
+            print(f"🔍 Fuentes Analizadas: {len(results['data_sources_analyzed'])}")
+            print(f"📄 Documentos Procesados: {results['documents_processed']}")
+
+            # 3. Generate and save report
+            report = self.system.generate_transparency_report(results)
+            report_path = self.system.data_dir / f"transparency_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+            with open(report_path, 'w', encoding='utf-8') as f:
+                f.write(report)
+
+            results_path = self.system.data_dir / f"analysis_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+            with open(results_path, 'w', encoding='utf-8') as f:
+                json.dump(results, f, indent=2, ensure_ascii=False, default=str)
+
+            print(f"\n📄 Reporte generado: {report_path}")
+            print(f"📊 Resultados detallados: {results_path}")
+
+            # 4. Show critical alerts
+            if results['overall_risk_level'] in ['critical', 'high']:
+                print(f"\n🚨 ALERTA {results['overall_risk_level'].upper()}")
+                print("Recomendaciones prioritarias:")
+                for i, rec in enumerate(results.get('recommendations', [])[:5], 1):
+                    print(f"{i}. {rec}")
+
+            print(f"\n💾 Base de datos: {self.system.db_path}")
+            print("✅ Análisis completado exitosamente")
+
+        except (ModuleNotFoundError, ImportError) as e:
+            print(f"❌ Error: Módulo necesario no encontrado: {e}")
+            print("Por favor, instale las dependencias con 'pip install -r requirements.txt'")
+        except Exception as e:
+            print(f"❌ Error durante el análisis: {e}")
+            logger.error(f"Main execution error: {e}", exc_info=True)
+
+def main():
+    """Main function to run the integrated transparency system."""
+    manager = SystemManager()
+    asyncio.run(manager.execute_full_analysis())
+
+if __name__ == "__main__":
+    main()

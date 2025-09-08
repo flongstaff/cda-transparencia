@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { 
   Shield, 
-  BarChart, 
   FileText, 
-  Search, 
-  AlertTriangle,
-  Eye,
   DollarSign,
   Users,
   Building,
@@ -19,14 +15,12 @@ import {
   BookOpen,
   Calculator,
   Briefcase,
-  Coins,
   LayoutDashboard
 } from 'lucide-react';
 
 // Import essential pages - consolidated approach
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
-import Financial from './pages/Financial';
 import Contracts from './pages/Contracts';
 import Salaries from './pages/Salaries';
 import PropertyDeclarations from './pages/PropertyDeclarations';
@@ -36,43 +30,39 @@ import Audit from './pages/Audit';
 import Reports from './pages/Reports';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import CategoryPage from './pages/CategoryPage';
 
-// Consolidated navigation - all dashboards integrated into main pages
+// Simple navigation for citizens
 const navigationSections = [
   {
-    title: 'Inicio',
+    title: 'Principal',
     items: [
-      { path: '/', label: '🏠 Inicio', icon: <HomeIcon className="w-4 h-4" /> },
-      { path: '/dashboard', label: '📊 Panel de Control', icon: <LayoutDashboard className="w-4 h-4" /> }
+      { path: '/', label: 'Inicio', icon: <HomeIcon className="w-4 h-4" /> },
+      { path: '/dashboard', label: 'Resumen General', icon: <LayoutDashboard className="w-4 h-4" /> }
     ]
   },
   {
-    title: 'Finanzas',
+    title: 'Finanzas Municipales',
     items: [
-      { path: '/financial', label: '💰 Panel Financiero', icon: <DollarSign className="w-4 h-4" /> }
+      { path: '/budget', label: 'Presupuesto Anual', icon: <DollarSign className="w-4 h-4" /> },
+      { path: '/expenses', label: 'Gastos y Erogaciones', icon: <Calculator className="w-4 h-4" /> },
+      { path: '/revenue', label: 'Ingresos y Recursos', icon: <TrendingUp className="w-4 h-4" /> }
     ]
   },
   {
-    title: 'Transparencia',
+    title: 'Información Pública',
     items: [
-      { path: '/contracts', label: '📋 Contratos', icon: <Briefcase className="w-4 h-4" /> },
-      { path: '/salaries', label: '👥 Salarios', icon: <Users className="w-4 h-4" /> },
-      { path: '/declarations', label: '🏛️ Declaraciones', icon: <Building className="w-4 h-4" /> },
-      { path: '/documents', label: '📄 Documentos', icon: <FileText className="w-4 h-4" /> }
+      { path: '/salaries', label: 'Sueldos de Empleados', icon: <Users className="w-4 h-4" /> },
+      { path: '/contracts', label: 'Contratos y Licitaciones', icon: <Briefcase className="w-4 h-4" /> },
+      { path: '/declarations', label: 'Declaraciones de Funcionarios', icon: <Building className="w-4 h-4" /> },
+      { path: '/documents', label: 'Todos los Documentos', icon: <FileText className="w-4 h-4" /> }
     ]
   },
   {
-    title: 'Herramientas',
+    title: 'Contacto',
     items: [
-      { path: '/audit', label: '🔍 Auditoría', icon: <Search className="w-4 h-4" /> },
-      { path: '/reports', label: '📊 Reportes', icon: <BarChart className="w-4 h-4" /> }
-    ]
-  },
-  {
-    title: 'Información',
-    items: [
-      { path: '/about', label: '📖 Acerca de', icon: <BookOpen className="w-4 h-4" /> },
-      { path: '/contact', label: '📞 Contacto', icon: <Activity className="w-4 h-4" /> }
+      { path: '/about', label: 'Sobre este sitio', icon: <BookOpen className="w-4 h-4" /> },
+      { path: '/contact', label: 'Contactar al Municipio', icon: <Activity className="w-4 h-4" /> }
     ]
   }
 ];
@@ -85,8 +75,8 @@ const Breadcrumb: React.FC = () => {
   if (pathSegments.length === 0) return null;
   
   return (
-    <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-4">
-      <Link to="/" className="hover:text-blue-600 flex items-center">
+    <nav className="flex items-center space-x-2 text-sm bg-white rounded-xl px-4 py-3 mb-6 shadow-sm border border-gray-100">
+      <Link to="/" className="hover:text-blue-600 flex items-center text-gray-600 hover:bg-blue-50 px-2 py-1 rounded-lg transition-all">
         <HomeIcon className="w-4 h-4 mr-1" />
         Inicio
       </Link>
@@ -97,11 +87,11 @@ const Breadcrumb: React.FC = () => {
         
         return (
           <React.Fragment key={path}>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
+            <ChevronRight className="w-4 h-4 text-orange-400" />
             {isLast ? (
-              <span className="text-gray-900 font-medium">{label}</span>
+              <span className="text-blue-600 font-semibold bg-blue-50 px-2 py-1 rounded-lg">{label}</span>
             ) : (
-              <Link to={path} className="hover:text-blue-600">{label}</Link>
+              <Link to={path} className="hover:text-blue-600 text-gray-600 hover:bg-blue-50 px-2 py-1 rounded-lg transition-all">{label}</Link>
             )}
           </React.Fragment>
         );
@@ -110,101 +100,80 @@ const Breadcrumb: React.FC = () => {
   );
 };
 
+// System Status interface
+interface SystemStatus {
+  riskLevel: 'BAJO' | 'MEDIO' | 'ALTO';
+  transparency: number;
+  dataQuality: 'BAJO' | 'MEDIO' | 'ALTO';
+}
+
 // Main App component
 const App: React.FC = () => {
-  const [systemStatus, setSystemStatus] = useState<any>(null);
+  const [systemStatus, setSystemStatus] = useState<SystemStatus | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     document.title = 'Portal de Transparencia | Carmen de Areco';
     
-    // Fetch system status
-    const fetchSystemStatus = async () => {
-      try {
-        const response = await fetch('http://localhost:3001/api/health');
-        if (response.ok) {
-          const data = await response.json();
-          setSystemStatus({
-            riskLevel: 'BAJO',
-            transparency: 85,
-            dataQuality: 'ALTO'
-          });
-        }
-      } catch (error) {
-        console.log('Backend not available - using fallback status');
-        setSystemStatus({
-          riskLevel: 'BAJO',
-          transparency: 85,
-          dataQuality: 'ALTO'
-        });
-      }
-    };
-
-    fetchSystemStatus();
+    // Set simple system status for citizens
+    setSystemStatus({
+      riskLevel: 'BAJO',
+      transparency: 85,
+      dataQuality: 'ALTO'
+    });
   }, []);
 
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
-        {/* Modern Header */}
-        <header className="bg-white shadow-sm border-b border-gray-200">
+      <div className="min-h-screen bg-white">
+        {/* Modern Header - Enhanced with new color scheme */}
+        <header className="bg-white shadow-md border-b-2 border-orange-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
+            <div className="flex justify-between items-center h-18">
               {/* Logo and Title */}
               <div className="flex items-center">
                 <button
                   onClick={() => setSidebarOpen(!sidebarOpen)}
-                  className="md:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 mr-2"
+                  className="md:hidden p-2 rounded-lg text-gray-500 hover:text-orange-500 hover:bg-orange-50 mr-2 transition-colors"
                 >
                   {sidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                 </button>
-                <Link to="/" className="flex items-center">
-                  <Shield className="w-8 h-8 text-blue-600 mr-3" />
+                <Link to="/" className="flex items-center group">
+                  <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-2 rounded-xl shadow-md group-hover:from-blue-600 group-hover:to-blue-700 transition-all mr-4">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
                   <div>
-                    <h1 className="text-xl font-bold text-gray-900">Portal de Transparencia</h1>
-                    <p className="text-sm text-gray-500">Carmen de Areco</p>
+                    <h1 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                      Portal de Transparencia
+                    </h1>
+                    <p className="text-sm text-orange-600 font-medium">Carmen de Areco</p>
                   </div>
                 </Link>
               </div>
 
-              {/* System Status Indicators */}
+              {/* Simple Status - Citizens focused */}
               {systemStatus && (
-                <div className="hidden md:flex items-center space-x-4">
-                  <div className="flex items-center space-x-2">
-                    <div className={`w-2 h-2 rounded-full ${
-                      systemStatus.riskLevel === 'BAJO' ? 'bg-green-400' :
-                      systemStatus.riskLevel === 'MEDIO' ? 'bg-yellow-400' : 'bg-red-400'
-                    }`}></div>
-                    <span className="text-sm text-gray-600">
-                      Riesgo: {systemStatus.riskLevel}
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Eye className="w-4 h-4 text-blue-500" />
-                    <span className="text-sm text-gray-600">
-                      Transparencia: {systemStatus.transparency}%
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Activity className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">
-                      Calidad: {systemStatus.dataQuality}
+                <div className="hidden md:flex items-center">
+                  <div className="flex items-center space-x-2 bg-green-50 px-4 py-2 rounded-xl border border-green-200">
+                    <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                    <span className="text-sm font-semibold text-green-700">
+                      Sistema Activo
                     </span>
                   </div>
                 </div>
               )}
 
-              {/* Quick Actions */}
+              {/* Simple Actions */}
               <div className="hidden sm:flex items-center space-x-3">
                 <Link 
                   to="/dashboard" 
                   className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
-                  Panel de Control
+                  Ver Resumen
                 </Link>
                 <Link 
                   to="/documents" 
-                  className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="text-gray-700 hover:text-blue-600 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
                   Documentos
                 </Link>
@@ -214,29 +183,31 @@ const App: React.FC = () => {
         </header>
 
         <div className="flex">
-          {/* Sidebar Navigation */}
+          {/* Sidebar Navigation - Enhanced */}
           <aside className={`
             ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
-            md:translate-x-0 fixed md:static inset-y-0 left-0 z-50 w-64 bg-white shadow-lg border-r border-gray-200 transition-transform duration-300 ease-in-out
+            md:translate-x-0 fixed md:static inset-y-0 left-0 z-50 w-64 bg-white shadow-xl border-r-2 border-orange-100 transition-transform duration-300 ease-in-out
           `}>
             <div className="flex flex-col h-full">
-              <div className="flex-1 overflow-y-auto pt-5 pb-4">
-                <nav className="px-3 space-y-6">
+              <div className="flex-1 overflow-y-auto pt-6 pb-4">
+                <nav className="px-4 space-y-8">
                   {navigationSections.map((section, sectionIndex) => (
                     <div key={sectionIndex}>
-                      <h3 className="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                      <h3 className="px-3 text-xs font-bold text-orange-600 uppercase tracking-wider mb-3">
                         {section.title}
                       </h3>
-                      <div className="mt-2 space-y-1">
+                      <div className="space-y-1">
                         {section.items.map((item, itemIndex) => (
                           <Link
                             key={itemIndex}
                             to={item.path}
                             onClick={() => setSidebarOpen(false)}
-                            className="group flex items-center px-3 py-2 text-sm font-medium text-gray-600 rounded-lg hover:text-gray-900 hover:bg-gray-100 transition-colors"
+                            className="group flex items-center px-3 py-3 text-sm font-medium text-gray-700 rounded-xl hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 transform hover:translate-x-1"
                           >
-                            {item.icon}
-                            <span className="ml-3">{item.label}</span>
+                            <div className="mr-3 text-gray-500 group-hover:text-blue-600 transition-colors">
+                              {item.icon}
+                            </div>
+                            <span className="truncate">{item.label}</span>
                           </Link>
                         ))}
                       </div>
@@ -245,15 +216,17 @@ const App: React.FC = () => {
                 </nav>
               </div>
               
-              {/* Footer */}
-              <div className="flex-shrink-0 border-t border-gray-200 p-4">
+              {/* Footer - Enhanced */}
+              <div className="flex-shrink-0 border-t-2 border-orange-100 p-4 bg-gradient-to-r from-orange-50 to-blue-50">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <Shield className="w-8 h-8 text-blue-600" />
+                    <div className="bg-gradient-to-br from-orange-400 to-orange-500 p-2 rounded-lg shadow-sm">
+                      <Shield className="w-6 h-6 text-white" />
+                    </div>
                   </div>
                   <div className="ml-3">
-                    <p className="text-xs font-medium text-gray-900">Carmen de Areco</p>
-                    <p className="text-xs text-gray-500">Municipalidad</p>
+                    <p className="text-sm font-semibold text-gray-900">Carmen de Areco</p>
+                    <p className="text-xs text-orange-600 font-medium">Municipalidad</p>
                   </div>
                 </div>
               </div>
@@ -268,9 +241,9 @@ const App: React.FC = () => {
             />
           )}
 
-          {/* Main Content */}
-          <main className="flex-1 min-w-0">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          {/* Main Content - Enhanced */}
+          <main className="flex-1 min-w-0 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
               <Breadcrumb />
               
               <Routes>
@@ -278,8 +251,11 @@ const App: React.FC = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 
-                {/* Financial Analysis Routes */}
-                <Route path="/financial" element={<Financial />} />
+                {/* Financial Analysis Routes - Using unified category page */}
+                <Route path="/budget" element={<CategoryPage category="budget" title="Presupuesto" icon="💰" />} />
+                <Route path="/expenses" element={<CategoryPage category="expenses" title="Gastos" icon="💸" />} />
+                <Route path="/revenue" element={<CategoryPage category="revenue" title="Ingresos" icon="📈" />} />
+                <Route path="/debt" element={<CategoryPage category="debt" title="Deuda" icon="💳" />} />
                 
                 {/* Transparency Routes */}
                 <Route path="/contracts" element={<Contracts />} />

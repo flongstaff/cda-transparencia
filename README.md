@@ -1,11 +1,63 @@
-# 🏛️ Portal de Transparencia - Carmen de Areco
+# Portal de Transparencia Carmen de Areco
 
-**Portal oficial de transparencia financiera y datos abiertos del municipio**
+Este proyecto implementa un portal de transparencia integral para el municipio de Carmen de Areco, permitiendo a los ciudadanos acceder fácilmente a información financiera, presupuestaria y de rendición de cuentas.
 
-[![Frontend CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/frontend-ci.yml)
-[![Backend CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/backend-ci.yml)
-[![Python CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/python-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/python-ci.yml)
-[![Deploy](https://github.com/flongstaff/cda-transparencia/actions/workflows/deploy.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/deploy.yml)
+## Estado del Proyecto
+
+✅ **COMPLETADO** - Portal completamente funcional y desplegado
+
+## Características
+
+- ✅ Visualización de datos financieros municipales con gráficos interactivos
+- ✅ Acceso completo a documentos oficiales organizados por año y categoría
+- ✅ Análisis presupuestario detallado con comparaciones año-a-año
+- ✅ Herramientas de auditoría y detección de irregularidades
+- ✅ Informes de transparencia actualizados regularmente
+- ✅ Interfaz intuitiva y amigable para ciudadanos sin conocimiento financiero
+- ✅ Búsqueda y filtrado avanzado de documentos
+- ✅ Acceso móvil y responsive design
+
+## Tecnologías
+
+- Frontend: React con TypeScript y Tailwind CSS
+- Backend: Python Flask
+- Base de Datos: SQLite/PostgreSQL
+- Visualización: Recharts, D3.js
+- Documentación: Markdown
+
+## Acceso al Portal
+
+El portal está disponible públicamente en: https://flongstaff.github.io/cda-transparencia/
+
+## Documentación
+
+### Para Usuarios
+- [Guía de Usuario](USER_GUIDE.md) - Instrucciones completas para usar el portal
+- [Estructura del Portal](PORTAL_STRUCTURE.md) - Organización y navegación
+
+### Para Desarrolladores
+- [Documentación Técnica](docs/) - Detalles de la arquitectura y componentes
+- [API Reference](docs/api/) - Documentación de la API
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, lea `CONTRIBUTING.md` para más detalles.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - vea el archivo `LICENSE` para más detalles.
+
+## Impacto
+
+Este portal proporciona transparencia sin precedentes en las finanzas municipales, permitiendo a los ciudadanos:
+- Entender cómo se gasta su dinero en impuestos
+- Seguir el desempeño y responsabilidad del gobierno
+- Participar en un compromiso cívico informado
+- Verificar la autenticidad de la información financiera
+
+---
+
+*Desarrollado para mejorar la transparencia gubernamental y el acceso ciudadano a la información pública.*
 
 ## 🎯 Objetivo del Proyecto
 

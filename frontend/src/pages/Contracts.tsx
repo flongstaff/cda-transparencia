@@ -61,24 +61,53 @@ const Contracts: React.FC = () => {
   const loadContractsData = async (year: number) => {
     setLoading(true);
     try {
-      // Use consolidated API service - ONE simple call
-      const contracts = await consolidatedApiService.getPublicTenders(year);
+      // Load contracts and related PDF documents
+      const [contracts, pdfFiles] = await Promise.all([
+        consolidatedApiService.getPublicTenders(year),
+        consolidatedApiService.getPdfIndex()
+      ]);
+
+      // Filter PDF files for contract-related documents
+      const contractPdfs = pdfFiles.filter(pdf => 
+        pdf.category === 'Contrataciones' || 
+        pdf.category === 'Licitaciones' ||
+        pdf.name.toLowerCase().includes('licitac') ||
+        pdf.name.toLowerCase().includes('contrat') ||
+        pdf.year === year.toString()
+      );
       
       // Transform API data to match our interface
-      const transformedContracts: Contract[] = contracts.map((tender: any, index: number) => ({
-        id: tender.id || `contract-${year}-${index}`,
-        year: year,
-        title: tender.title || tender.description || tender.name || 'Sin título',
-        description: tender.description || tender.details || 'Sin descripción disponible',
-        budget: tender.amount || tender.budget || tender.value || 0,
-        awarded_to: tender.awarded_to || tender.winner || tender.vendor || 'No adjudicado',
-        award_date: tender.award_date || tender.date || tender.created_at || new Date().toISOString(),
-        execution_status: getExecutionStatus(tender),
-        delay_analysis: tender.delay_analysis || tender.notes || undefined,
-        status: getContractStatus(tender),
-        type: getContractType(tender),
-        category: tender.category || tender.type || 'General'
-      }));
+      const transformedContracts: Contract[] = [
+        ...contracts.map((tender: any, index: number) => ({
+          id: tender.id || `contract-${year}-${index}`,
+          year: year,
+          title: tender.title || tender.description || tender.name || 'Sin título',
+          description: tender.description || tender.details || 'Sin descripción disponible',
+          budget: tender.amount || tender.budget || tender.value || 0,
+          awarded_to: tender.awarded_to || tender.winner || tender.vendor || 'No adjudicado',
+          award_date: tender.award_date || tender.date || tender.created_at || new Date().toISOString(),
+          execution_status: getExecutionStatus(tender),
+          delay_analysis: tender.delay_analysis || tender.notes || undefined,
+          status: getContractStatus(tender),
+          type: getContractType(tender),
+          category: tender.category || tender.type || 'General'
+        })),
+        // Include contract PDFs as contract records
+        ...contractPdfs.map((pdf: any, index: number) => ({
+          id: `pdf-contract-${pdf.path}`,
+          year: parseInt(pdf.year),
+          title: pdf.name.replace('.pdf', '').replace(/_[a-f0-9]{8}$/, ''),
+          description: `Licitación Pública - ${pdf.category.replace('_', ' ')}`,
+          budget: 0, // PDF files don't have budget info
+          awarded_to: 'Ver documento',
+          award_date: new Date(parseInt(pdf.year), 0, 1).toISOString(),
+          execution_status: 'completed' as const,
+          delay_analysis: undefined,
+          status: 'closed' as const,
+          type: 'public_works' as const,
+          category: pdf.category.replace('_', ' ')
+        }))
+      ];
       
       setContractsData(transformedContracts);
     } catch (error) {

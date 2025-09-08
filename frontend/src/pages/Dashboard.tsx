@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   DollarSign, 
@@ -170,54 +171,91 @@ const Dashboard: React.FC = () => {
   const getDashboardMetrics = (): DashboardMetric[] => {
     if (!financialSummary) return [];
 
+    const totalCategories = Object.keys(financialSummary.categories || {}).length;
+    const avgExecutionRate = Object.values(financialSummary.categories || {})
+      .reduce((sum: number, cat: any) => sum + parseFloat(cat.execution_rate || '0'), 0) / totalCategories || 0;
+
     return [
       {
-        title: 'Presupuesto Total',
+        title: '💰 Presupuesto Total',
         value: formatCurrencyARS(financialSummary.totalBudget, true),
         icon: <DollarSign size={20} />,
-        description: `Presupuesto municipal ${selectedYear}`,
+        description: `Presupuesto total asignado para el año ${selectedYear} (${totalCategories} categorías)`,
         trend: 'stable',
         transparency: transparencyScore
       },
       {
-        title: 'Ejecución Presupuestaria',
+        title: '📊 Ejecución Presupuestaria',
         value: `${financialSummary.executionRate.toFixed(1)}%`,
         icon: <Target size={20} />,
-        description: 'Tasa de ejecución real',
+        description: `Porcentaje del presupuesto ejecutado (promedio: ${avgExecutionRate.toFixed(1)}%)`,
         trend: financialSummary.executionRate >= 80 ? 'up' : 'down',
         change: `${financialSummary.executionRate.toFixed(1)}%`,
         transparency: transparencyScore
       },
       {
-        title: 'Deuda Total',
+        title: '💸 Total Ejecutado',
+        value: formatCurrencyARS(financialSummary.totalExecuted, true),
+        icon: <TrendingUp size={20} />,
+        description: `Monto total ya ejecutado del presupuesto`,
+        trend: financialSummary.totalExecuted > financialSummary.totalBudget ? 'up' : 'stable',
+        transparency: transparencyScore
+      },
+      {
+        title: '📈 Variación Presupuestaria',
+        value: formatCurrencyARS(Math.abs(financialSummary.totalExecuted - financialSummary.totalBudget), true),
+        icon: <Activity size={20} />,
+        description: financialSummary.totalExecuted > financialSummary.totalBudget ? 
+          'Sobreejecución presupuestaria' : 'Subejecución presupuestaria',
+        trend: financialSummary.totalExecuted > financialSummary.totalBudget ? 'up' : 'down',
+        transparency: transparencyScore
+      },
+      {
+        title: '🏛️ Documentos Disponibles',
+        value: documentCount.toString(),
+        icon: <FileText size={20} />,
+        description: `Total de documentos de transparencia disponibles`,
+        trend: 'stable',
+        transparency: transparencyScore
+      },
+      {
+        title: '🎯 Índice de Transparencia',
+        value: `${transparencyScore}/100`,
+        icon: <Shield size={20} />,
+        description: `Calificación de transparencia municipal`,
+        trend: transparencyScore >= 80 ? 'up' : 'stable',
+        transparency: transparencyScore
+      },
+      {
+        title: '🏦 Lo que Debemos',
         value: formatCurrencyARS(financialSummary.totalDebt, true),
         icon: <Coins size={20} />,
-        description: 'Deuda municipal acumulada',
+        description: 'Deudas que tiene que pagar el municipio',
         trend: financialSummary.debtToBudgetRatio > 50 ? 'down' : 'stable',
         alert: financialSummary.debtToBudgetRatio > 50,
         transparency: transparencyScore
       },
       {
-        title: 'Gastos en Salarios',
+        title: '👥 Sueldos',
         value: formatCurrencyARS(financialSummary.totalSalaries, true),
         icon: <Users size={20} />,
-        description: `Representa ${financialSummary.salaryToBudgetRatio.toFixed(1)}% del presupuesto`,
+        description: `Sueldos de empleados municipales (${financialSummary.salaryToBudgetRatio.toFixed(1)}% del total)`,
         trend: 'stable',
         transparency: transparencyScore
       },
       {
-        title: 'Contratos Públicos',
+        title: '📋 Compras y Obras',
         value: financialSummary.totalContracts.toString(),
         icon: <Briefcase size={20} />,
-        description: `Valor total: ${formatCurrencyARS(financialSummary.contractValue, true)}`,
+        description: `Contratos por ${formatCurrencyARS(financialSummary.contractValue, true)}`,
         trend: 'up',
         transparency: transparencyScore
       },
       {
-        title: 'Documentos Verificados',
+        title: '📄 Info Disponible',
         value: `${documentCount}`,
         icon: <CheckCircle size={20} />,
-        description: `Transparencia: ${transparencyScore}%`,
+        description: `${transparencyScore}% de toda la información está publicada`,
         trend: transparencyScore >= 80 ? 'up' : 'down',
         transparency: transparencyScore
       }
@@ -229,7 +267,7 @@ const Dashboard: React.FC = () => {
       <div className="flex items-center justify-center h-64">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-400">Cargando panel de control...</p>
+          <p className="text-gray-600">⏳ Buscando la info más nueva...</p>
         </div>
       </div>
     );
@@ -238,166 +276,174 @@ const Dashboard: React.FC = () => {
   const dashboardMetrics = getDashboardMetrics();
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-6 py-8">
+        {/* Header - Enhanced */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
+          className="mb-10"
         >
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                Panel de Control Financiero
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
+            <div className="mb-4 md:mb-0">
+              <h1 className="text-4xl font-bold text-gray-900 mb-3">
+                💰 Finanzas Municipales
               </h1>
-              <p className="text-gray-600 dark:text-gray-400">
-                Visión integral de la situación financiera de Carmen de Areco
+              <p className="text-lg text-gray-600 max-w-2xl">
+                Información financiera transparente de la administración municipal de Carmen de Areco
               </p>
             </div>
-            <PageYearSelector
-              selectedYear={selectedYear}
-              onYearChange={setSelectedYear}
-              availableYears={availableYears}
-              label="Año"
-            />
+            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-1">
+              <PageYearSelector
+                selectedYear={selectedYear}
+                onYearChange={setSelectedYear}
+                availableYears={availableYears}
+                label="Año"
+              />
+            </div>
           </div>
 
-          {/* Status Banner */}
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-700">
+          {/* Simple Status */}
+          <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <Activity className="text-blue-600" size={24} />
-                <div>
-                  <h3 className="font-semibold text-blue-800 dark:text-blue-200">
-                    Sistema de Transparencia Activo
-                  </h3>
-                  <p className="text-sm text-blue-600 dark:text-blue-300">
-                    Datos actualizados en tiempo real | {documentCount} documentos procesados
-                  </p>
-                </div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                <span className="text-lg font-semibold text-gray-900">
+                  Información actualizada - {documentCount} documentos disponibles
+                </span>
               </div>
               <div className="text-right">
-                <div className="text-2xl font-bold text-blue-700 dark:text-blue-300">
+                <div className="text-2xl font-bold text-gray-900">
                   {transparencyScore}%
                 </div>
-                <div className="text-xs text-blue-600 dark:text-blue-400">
-                  Transparencia
+                <div className="text-sm text-gray-600">
+                  Información completa
                 </div>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Dashboard Navigation Tabs */}
-        <div className="flex justify-center mb-8">
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-2 inline-flex flex-wrap gap-2">
+        {/* Simple Navigation */}
+        <div className="flex justify-center mb-10">
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-2 inline-flex flex-wrap gap-2">
             {[
-              { key: 'overview', label: '📊 Resumen', icon: <BarChart3 className="w-4 h-4" /> },
-              { key: 'financial', label: '💰 Financiero', icon: <DollarSign className="w-4 h-4" /> },
-              { key: 'documents', label: '📄 Documentos', icon: <FileText className="w-4 h-4" /> },
-              { key: 'audit', label: '🔍 Auditoría', icon: <Shield className="w-4 h-4" /> },
-              { key: 'powerbi', label: '⚡ PowerBI', icon: <Activity className="w-4 h-4" /> },
-              { key: 'comprehensive', label: '🚀 Completo', icon: <Layers className="w-4 h-4" /> }
+              { key: 'overview', label: '📊 Lo Básico', icon: <BarChart3 className="w-4 h-4" /> },
+              { key: 'financial', label: '💰 Plata', icon: <DollarSign className="w-4 h-4" /> },
+              { key: 'documents', label: '📋 Papeles', icon: <FileText className="w-4 h-4" /> }
             ].map((tab) => (
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key as any)}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all ${
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors font-medium ${
                   activeTab === tab.key
-                    ? 'bg-blue-500 text-white shadow-md'
-                    : 'text-gray-600 dark:text-gray-300 hover:text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700'
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
                 }`}
               >
                 {tab.icon}
-                <span className="font-medium">{tab.label}</span>
+                <span>{tab.label}</span>
               </button>
             ))}
           </div>
         </div>
 
-        {/* Overview Tab - Key Metrics Grid */}
+        {/* Overview Tab - Key Metrics Grid - Enhanced */}
         {activeTab === 'overview' && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
         >
           {dashboardMetrics.map((metric, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`p-6 rounded-xl shadow-sm border ${
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 * index }}
+              className={`p-6 rounded-2xl border-2 transform hover:scale-105 transition-all duration-300 cursor-pointer group ${
                 metric.alert 
-                  ? 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-700'
-                  : 'bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700'
+                  ? 'bg-gradient-to-br from-red-50 to-red-100 border-red-300 shadow-lg hover:shadow-xl hover:border-red-400'
+                  : 'bg-white border-gray-200 shadow-md hover:shadow-xl hover:border-blue-300'
               }`}
+              onMouseEnter={() => {
+                // Add gentle pulse animation on hover
+              }}
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center space-x-3">
-                  {metric.icon}
-                  <h3 className="font-medium text-gray-900 dark:text-white">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-xl text-white shadow-md">
+                    {metric.icon}
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-lg">
                     {metric.title}
                   </h3>
-                  {metric.alert && <AlertTriangle size={16} className="text-red-500" />}
+                  {metric.alert && (
+                    <div className="bg-red-100 p-2 rounded-lg">
+                      <AlertTriangle size={20} className="text-red-600" />
+                    </div>
+                  )}
                 </div>
                 
                 {metric.trend && (
-                  <div className={`flex items-center ${
-                    metric.trend === 'up' ? 'text-green-600' :
-                    metric.trend === 'down' ? 'text-red-600' : 'text-blue-600'
+                  <div className={`p-2 rounded-lg ${
+                    metric.trend === 'up' ? 'bg-green-100 text-green-600' :
+                    metric.trend === 'down' ? 'bg-red-100 text-red-600' : 'bg-blue-100 text-blue-600'
                   }`}>
-                    {metric.trend === 'up' && <TrendingUp size={16} />}
-                    {metric.trend === 'down' && <TrendingDown size={16} />}
+                    {metric.trend === 'up' && <TrendingUp size={20} />}
+                    {metric.trend === 'down' && <TrendingDown size={20} />}
                   </div>
                 )}
               </div>
               
-              <div className="mb-2">
-                <p className={`text-2xl font-bold ${
-                  metric.alert ? 'text-red-700 dark:text-red-300' : 'text-gray-900 dark:text-white'
+              <div className="mb-4">
+                <p className={`text-3xl font-bold mb-2 ${
+                  metric.alert ? 'text-red-700' : 'text-gray-900'
                 }`}>
                   {metric.value}
                 </p>
                 {metric.change && (
-                  <p className={`text-sm font-medium ${
-                    metric.trend === 'up' ? 'text-green-600' :
-                    metric.trend === 'down' ? 'text-red-600' : 'text-blue-600'
+                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${
+                    metric.trend === 'up' ? 'bg-green-100 text-green-700' :
+                    metric.trend === 'down' ? 'bg-red-100 text-red-700' : 'bg-blue-100 text-blue-700'
                   }`}>
                     {metric.change}
-                  </p>
+                  </span>
                 )}
               </div>
               
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-gray-600 font-medium mb-4 leading-relaxed">
                 {metric.description}
               </p>
               
-              {/* Transparency Bar */}
+              {/* Transparency Bar - Enhanced */}
               {metric.transparency && (
-                <div className="mt-3">
-                  <div className="flex items-center justify-between text-xs text-gray-500 mb-1">
+                <div className="mt-4 p-3 bg-gray-50 rounded-xl">
+                  <div className="flex items-center justify-between text-sm font-medium text-gray-700 mb-2">
                     <span>Transparencia</span>
-                    <span>{metric.transparency}%</span>
+                    <span className="text-lg font-bold text-gray-900">{metric.transparency}%</span>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
                     <div 
-                      className={`h-2 rounded-full ${
-                        metric.transparency >= 80 ? 'bg-green-500' :
-                        metric.transparency >= 60 ? 'bg-yellow-500' : 'bg-red-500'
+                      className={`h-3 rounded-full transition-all duration-500 ${
+                        metric.transparency >= 80 ? 'bg-gradient-to-r from-green-400 to-green-500' :
+                        metric.transparency >= 60 ? 'bg-gradient-to-r from-orange-400 to-orange-500' : 
+                        'bg-gradient-to-r from-red-400 to-red-500'
                       }`}
                       style={{ width: `${metric.transparency}%` }}
                     ></div>
                   </div>
                 </div>
               )}
-            </div>
+            </motion.div>
           ))}
         </motion.div>
+      )}
 
-            {/* Financial Ratios */}
-            {financialSummary && (
-          <motion.div
+      {/* Financial Ratios */}
+      {financialSummary && (
+        <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -466,29 +512,35 @@ const Dashboard: React.FC = () => {
                 </div>
               </div>
             </div>
-            </motion.div>
+          </motion.div>
             )}
-        )}
 
         {/* Financial Tab */}
         {activeTab === 'financial' && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="space-y-6"
+            className="space-y-8"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📊 Análisis Presupuestario</h3>
-                <BudgetAnalysisChart year={selectedYear} />
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">💰 La Plata del {selectedYear}</h3>
+              <p className="text-gray-600 mb-4">En qué cosas se gasta la plata de todos los vecinos</p>
+              <div className="bg-blue-50 p-3 rounded-lg mb-4">
+                <p className="text-sm text-blue-700">
+                  💡 <strong>Tip:</strong> Pasá el mouse sobre el gráfico para ver más detalles
+                </p>
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📉 Análisis de Deuda</h3>
-                <DebtAnalysisChart year={selectedYear} />
-              </div>
+              <BudgetAnalysisChart year={selectedYear} />
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📈 Dashboard Financiero Unificado</h3>
+            
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">📊 Todo Junto</h3>
+              <p className="text-gray-600 mb-4">Cómo entra y sale la plata del municipio</p>
+              <div className="bg-green-50 p-3 rounded-lg mb-4">
+                <p className="text-sm text-green-700">
+                  ✅ <strong>Bueno:</strong> Podés ver todo de una manera fácil
+                </p>
+              </div>
               <UnifiedDashboardChart year={selectedYear} />
             </div>
           </motion.div>
@@ -499,108 +551,72 @@ const Dashboard: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="space-y-6"
+            className="space-y-8"
           >
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📄 Análisis de Documentos</h3>
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">📄 Todos los Papeles</h3>
+              <p className="text-gray-600 mb-4">Acá están todos los papeles oficiales que podés ver</p>
+              <div className="bg-orange-50 p-3 rounded-lg mb-4">
+                <p className="text-sm text-orange-700">
+                  📂 <strong>Fácil:</strong> Hacé clic en cualquier documento para verlo
+                </p>
+              </div>
               <DocumentAnalysisChart year={selectedYear} />
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📊 Datos Anuales</h3>
+            
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">📊 Por Años</h3>
+              <p className="text-gray-600 mb-4">Comparar cómo cambió todo de un año a otro</p>
+              <div className="bg-purple-50 p-3 rounded-lg mb-4">
+                <p className="text-sm text-purple-700">
+                  📈 <strong>Interesante:</strong> Mirá cómo cambiaron las cosas cada año
+                </p>
+              </div>
               <YearlyDataChart year={selectedYear} />
             </div>
-          </motion.div>
-        )}
 
-        {/* Audit Tab */}
-        {activeTab === 'audit' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="space-y-6"
-          >
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🔍 Auditoría Financiera</h3>
-              <FinancialAuditDashboard />
-            </div>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🏗️ Seguimiento de Infraestructura</h3>
-              <InfrastructureTracker />
-            </div>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📂 Categorización de Datos</h3>
-              <DataCategorizationDashboard />
-            </div>
-          </motion.div>
-        )}
-
-        {/* PowerBI Tab */}
-        {activeTab === 'powerbi' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="space-y-6"
-          >
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">⚡ Dashboard PowerBI</h3>
-              <PowerBIDataDashboard />
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">💰 PowerBI Financiero</h3>
-                <PowerBIFinancialDashboard />
-              </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📊 Comparación PowerBI</h3>
-                <PowerBIComparisonDashboard />
+            <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-6 border-2 border-blue-200 hover:border-blue-300 transition-all duration-300">
+              <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                💬 ¿Te ayudamos?
+              </h4>
+              <p className="text-gray-700 mb-4">
+                Si no entendés algo o necesitás ayuda para encontrar información, escribinos. 
+                <strong> Estamos para ayudarte.</strong>
+              </p>
+              <div className="flex space-x-3">
+                <Link 
+                  to="/contact" 
+                  className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                >
+                  💌 Escribinos
+                </Link>
+                <Link 
+                  to="/about" 
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium border border-blue-200 px-4 py-2 rounded-lg hover:bg-blue-50 transition-all"
+                >
+                  📖 Más info
+                </Link>
               </div>
             </div>
           </motion.div>
         )}
 
-        {/* Comprehensive Tab */}
-        {activeTab === 'comprehensive' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="space-y-6"
-          >
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🚀 Visualización Comprehensiva</h3>
-              <ComprehensiveVisualization />
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">💰 Visualización Financiera Municipal</h3>
-                <MunicipalFinancialVisualization year={selectedYear} />
-              </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📈 Análisis de Inversiones</h3>
-                <InvestmentAnalysisChart year={selectedYear} />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🏦 Análisis de Tesorería</h3>
-                <TreasuryAnalysisChart year={selectedYear} />
-              </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">👥 Análisis de Salarios</h3>
-                <SalaryAnalysisChart year={selectedYear} />
-              </div>
-            </div>
-          </motion.div>
-        )}
 
-        {/* System Status */}
+        {/* Footer Status - Modern */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-center bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4"
+          className="text-center bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200 rounded-xl p-6 mt-8"
         >
-          <p className="text-sm text-blue-700 dark:text-blue-400">
-            🏛️ Sistema de Transparencia Municipal | ✅ Datos integrados de Carmen de Areco | 📊 Nivel de Transparencia: {transparencyScore}%
+          <div className="flex items-center justify-center space-x-2 mb-2">
+            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            <p className="text-lg font-bold text-gray-900">
+              🏛️ Portal Transparente de Carmen de Areco
+            </p>
+          </div>
+          <p className="text-gray-600">
+            ✅ Toda la información está actualizada • 📊 {transparencyScore}% de transparencia • 🤝 Hecho para vos
           </p>
         </motion.div>
       </div>

@@ -131,16 +131,40 @@ const Salaries: React.FC = () => {
       
       setEmployees(transformedEmployees);
       
-      // Fetch real salary documents
-      const apiDocuments = await consolidatedApiService.getDocuments(year, 'salaries');
-      const mappedDocuments = apiDocuments.map((doc: any) => ({
-        id: String(doc.id),
-        title: doc.title || doc.filename,
-        year: doc.year,
-        category: doc.category || 'Salarios',
-        url: doc.url || `/documents/${doc.id}`,
-        size: doc.size_mb ? `${doc.size_mb} MB` : 'N/A'
-      }));
+      // Fetch real salary documents from database and PDFs
+      const [apiDocuments, pdfFiles] = await Promise.all([
+        consolidatedApiService.getDocuments(year, 'Recursos_Humanos'),
+        consolidatedApiService.getPdfIndex()
+      ]);
+      
+      // Filter PDF files for salary-related documents
+      const salaryPdfs = pdfFiles.filter(pdf => 
+        pdf.category === 'Recursos_Humanos' || 
+        pdf.name.toLowerCase().includes('sueldo') ||
+        pdf.name.toLowerCase().includes('salario') ||
+        pdf.name.toLowerCase().includes('escala') ||
+        pdf.year === year.toString()
+      );
+      
+      const mappedDocuments = [
+        ...apiDocuments.map((doc: any) => ({
+          id: String(doc.id),
+          title: doc.title || doc.filename,
+          year: doc.year,
+          category: doc.category || 'Recursos Humanos',
+          url: doc.url || `/documents/${doc.id}`,
+          size: doc.size_mb ? `${doc.size_mb} MB` : 'N/A'
+        })),
+        ...salaryPdfs.map((pdf: any) => ({
+          id: `pdf-${pdf.path}`,
+          title: pdf.name.replace('.pdf', '').replace(/_[a-f0-9]{8}$/, ''),
+          year: parseInt(pdf.year),
+          category: 'Escalas Salariales',
+          url: `http://localhost:3001${pdf.url}`,
+          size: `${(pdf.size / (1024 * 1024)).toFixed(1)} MB`
+        }))
+      ];
+      
       setDocuments(mappedDocuments);
     } catch (error) {
       console.error('Error loading salary data:', error);

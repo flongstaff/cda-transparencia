@@ -46,6 +46,7 @@ interface DocumentStats {
 
 const Documents: React.FC = () => {
   const [documents, setDocuments] = useState<Document[]>([]);
+  const [pdfFiles, setPdfFiles] = useState<any[]>([]);
   const [filteredDocuments, setFilteredDocuments] = useState<Document[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -72,9 +73,34 @@ const Documents: React.FC = () => {
     setError(null);
 
     try {
-      const docs = await consolidatedApiService.getDocuments();
-      setDocuments(docs);
-      calculateStats(docs);
+      const [docs, pdfs] = await Promise.all([
+        consolidatedApiService.getDocuments(),
+        consolidatedApiService.getPdfIndex()
+      ]);
+      
+      setPdfFiles(pdfs);
+      
+      // Combine database documents with PDF files for comprehensive view
+      const combinedDocs = [
+        ...docs,
+        ...pdfs.map(pdf => ({
+          id: `pdf-${pdf.path}`,
+          title: pdf.name.replace('.pdf', '').replace(/_[a-f0-9]{8}\.pdf$/, ''),
+          category: pdf.category.replace('_', ' '),
+          year: parseInt(pdf.year) || new Date().getFullYear(),
+          size_mb: (pdf.size / (1024 * 1024)).toFixed(2),
+          url: `http://localhost:3001${pdf.url}`,
+          file_type: 'pdf',
+          document_type: 'PDF',
+          verification_status: 'pending',
+          processing_date: new Date().toISOString().split('T')[0],
+          integrity_verified: false,
+          filename: pdf.name
+        }))
+      ];
+      
+      setDocuments(combinedDocs);
+      calculateStats(combinedDocs);
     } catch (err) {
       console.error('Error loading documents:', err);
       setError('Error cargando documentos. Por favor intente nuevamente.');
@@ -159,6 +185,7 @@ const Documents: React.FC = () => {
 
   const tabs = [
     { id: 'documents', label: 'Documentos', icon: <FileText className="w-5 h-5" /> },
+    { id: 'pdfs', label: 'Archivos PDF', icon: <Database className="w-5 h-5" /> },
     { id: 'analytics', label: 'Análisis', icon: <BarChart3 className="w-5 h-5" /> },
     { id: 'statistics', label: 'Estadísticas', icon: <TrendingUp className="w-5 h-5" /> }
   ];
@@ -352,6 +379,113 @@ const Documents: React.FC = () => {
               defaultView={viewMode}
               className="bg-white border border-gray-200 rounded-lg shadow-sm"
             />
+          </motion.div>
+        )}
+
+        {/* PDFs Tab */}
+        {activeTab === 'pdfs' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-6"
+          >
+            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                <Database className="w-5 h-5 mr-2" />
+                Archivos PDF Organizados ({pdfFiles.length} archivos)
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                {pdfFiles.slice(0, 20).map((pdf, index) => (
+                  <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div className="flex items-start space-x-3">
+                      <FileText className="w-8 h-8 text-red-500 flex-shrink-0 mt-1" />
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-sm font-medium text-gray-900 truncate">
+                          {pdf.name.replace('.pdf', '').replace(/_[a-f0-9]{8}$/, '')}
+                        </h4>
+                        <p className="text-xs text-gray-500 mt-1">{pdf.category.replace('_', ' ')}</p>
+                        <p className="text-xs text-gray-400">{pdf.year}</p>
+                        <p className="text-xs text-gray-400">{(pdf.size / (1024 * 1024)).toFixed(1)} MB</p>
+                        <a
+                          href={`http://localhost:3001${pdf.url}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-xs text-blue-600 hover:text-blue-800 mt-2"
+                        >
+                          <Eye className="w-3 h-3 mr-1" />
+                          Ver PDF
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {pdfFiles.length > 20 && (
+                <div className="mt-6 text-center">
+                  <p className="text-sm text-gray-600">
+                    Mostrando los primeros 20 de {pdfFiles.length} archivos PDF organizados
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* PDF Statistics */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Por Año</h4>
+                <div className="space-y-2">
+                  {Object.entries(
+                    pdfFiles.reduce((acc: any, pdf) => {
+                      acc[pdf.year] = (acc[pdf.year] || 0) + 1;
+                      return acc;
+                    }, {})
+                  )
+                    .sort(([a], [b]) => parseInt(b) - parseInt(a))
+                    .slice(0, 5)
+                    .map(([year, count]) => (
+                    <div key={year} className="flex justify-between text-sm">
+                      <span className="text-gray-600">{year}</span>
+                      <span className="font-medium text-gray-900">{count}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Por Categoría</h4>
+                <div className="space-y-2">
+                  {Object.entries(
+                    pdfFiles.reduce((acc: any, pdf) => {
+                      const cat = pdf.category.replace('_', ' ');
+                      acc[cat] = (acc[cat] || 0) + 1;
+                      return acc;
+                    }, {})
+                  )
+                    .sort(([,a], [,b]) => (b as number) - (a as number))
+                    .slice(0, 5)
+                    .map(([category, count]) => (
+                    <div key={category} className="flex justify-between text-sm">
+                      <span className="text-gray-600 truncate">{category}</span>
+                      <span className="font-medium text-gray-900 ml-2">{count}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Tamaño Total</h4>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600">
+                    {(pdfFiles.reduce((total, pdf) => total + pdf.size, 0) / (1024 * 1024 * 1024)).toFixed(1)} GB
+                  </div>
+                  <div className="text-sm text-gray-500 mt-1">
+                    {pdfFiles.length} archivos PDF
+                  </div>
+                </div>
+              </div>
+            </div>
           </motion.div>
         )}
 

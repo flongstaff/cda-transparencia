@@ -56,9 +56,9 @@ class ChartService {
     let sortedData = [...data];
     
     if (sortBy === 'value') {
-      sortedData.sort((a, b) => b.value - a.value);
+      sortedData = sortedData.sort((a, b) => b.value - a.value);
     } else if (sortBy === 'name') {
-      sortedData.sort((a, b) => a.category.localeCompare(b.category));
+      sortedData = sortedData.sort((a, b) => a.category.localeCompare(b.category));
     }
 
     return sortedData.map(item => ({

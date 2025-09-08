@@ -13,7 +13,9 @@ const PORT = process.env.PORT || 3001;
 
 // Initialize services using real SQLite data
 const DocumentService = require('./services/DocumentService');
+const FinancialDataParser = require('./services/FinancialDataParser');
 const documentService = new DocumentService();
+const financialParser = new FinancialDataParser();
 
 console.log('🚀 Initializing server with real data services...');
 
@@ -199,7 +201,7 @@ app.get('/api/categories', async (req, res) => {
 
 // ==== FINANCIAL DATA ENDPOINTS ====
 
-// Get financial data
+// Get financial data - Enhanced with real parsed data
 app.get('/api/financial', async (req, res) => {
   try {
     const filters = {
@@ -207,18 +209,40 @@ app.get('/api/financial', async (req, res) => {
       category: req.query.category
     };
     
-    const financialData = await documentService.getFinancialData(filters);
+    // Get both database and parsed financial data
+    const [dbFinancialData, parsedFinancialData] = await Promise.all([
+      documentService.getFinancialData(filters),
+      financialParser.getFinancialSummary()
+    ]);
     
     res.json({
-      financial_data: financialData,
-      total: financialData.length,
+      financial_data: dbFinancialData,
+      parsed_financial_summary: parsedFinancialData,
+      total: dbFinancialData.length,
       filters_applied: filters,
-      source: 'transparency.db'
+      source: 'transparency.db + parsed_pdfs'
     });
   } catch (error) {
     console.error('Error loading financial data:', error);
     res.status(500).json({ 
       error: 'Error loading financial data',
+      details: error.message 
+    });
+  }
+});
+
+// New endpoint for detailed financial summary
+app.get('/api/financial-summary', async (req, res) => {
+  try {
+    const summary = await financialParser.getFinancialSummary();
+    res.json({
+      summary,
+      source: 'parsed_budget_execution_documents'
+    });
+  } catch (error) {
+    console.error('Error loading financial summary:', error);
+    res.status(500).json({ 
+      error: 'Error loading financial summary',
       details: error.message 
     });
   }
@@ -396,6 +420,51 @@ app.get('/api/declarations/:year', async (req, res) => {
     console.error('Error loading declaration data:', error);
     res.status(500).json({ 
       error: 'Error loading declaration data',
+      details: error.message 
+    });
+  }
+});
+
+// Static PDF serving  
+const pdfPath = path.join(__dirname, '../../organized_pdfs');
+app.use('/api/pdfs', express.static(pdfPath));
+
+// Get PDF files by year and category
+app.get('/api/pdfs-index', async (req, res) => {
+  try {
+    const fs = require('fs');
+    const walkDir = (dir, fileList = []) => {
+      const files = fs.readdirSync(dir);
+      files.forEach(file => {
+        const filePath = path.join(dir, file);
+        if (fs.statSync(filePath).isDirectory()) {
+          walkDir(filePath, fileList);
+        } else if (file.endsWith('.pdf')) {
+          const relativePath = path.relative(pdfPath, filePath);
+          const parts = relativePath.split(path.sep);
+          fileList.push({
+            name: file,
+            path: relativePath.replace(/\\/g, '/'),
+            year: parts[0],
+            category: parts[1] || 'Sin categoría',
+            url: `/api/pdfs/${relativePath.replace(/\\/g, '/')}`,
+            size: fs.statSync(filePath).size
+          });
+        }
+      });
+      return fileList;
+    };
+
+    const pdfFiles = walkDir(pdfPath);
+    res.json({
+      pdfs: pdfFiles,
+      total: pdfFiles.length,
+      source: 'organized_pdfs'
+    });
+  } catch (error) {
+    console.error('Error getting PDF index:', error);
+    res.status(500).json({ 
+      error: 'Error loading PDF index',
       details: error.message 
     });
   }
