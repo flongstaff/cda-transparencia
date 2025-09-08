@@ -26,6 +26,32 @@ import PageYearSelector from '../components/PageYearSelector';
 import { consolidatedApiService } from '../services';
 import { formatCurrencyARS } from '../utils/formatters';
 
+// Import ALL dashboard components for consolidated view
+import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
+import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
+import SalaryAnalysisChart from '../components/charts/SalaryAnalysisChart';
+import DebtAnalysisChart from '../components/charts/DebtAnalysisChart';
+import UnifiedDashboardChart from '../components/charts/UnifiedDashboardChart';
+import IntegratedChart from '../components/charts/IntegratedChart';
+import YearlyDataChart from '../components/charts/YearlyDataChart';
+import InvestmentAnalysisChart from '../components/charts/InvestmentAnalysisChart';
+import TreasuryAnalysisChart from '../components/charts/TreasuryAnalysisChart';
+import MunicipalFinancialVisualization from '../components/charts/MunicipalFinancialVisualization';
+import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
+
+// PowerBI Integration Components
+import PowerBIDataDashboard from '../components/powerbi/PowerBIDataDashboard';
+import PowerBIFinancialDashboard from '../components/powerbi/PowerBIFinancialDashboard';
+import PowerBIComparisonDashboard from '../components/powerbi/PowerBIComparisonDashboard';
+import FinancialMindMap from '../components/powerbi/FinancialMindMap';
+import DataComparisonDashboard from '../components/powerbi/DataComparisonDashboard';
+
+// Audit and Analysis Components
+import AuditDashboard from '../components/audit/AuditDashboard';
+import FinancialAuditDashboard from '../components/audit/FinancialAuditDashboard';
+import InfrastructureTracker from '../components/audit/InfrastructureTracker';
+import DataCategorizationDashboard from '../components/audit/DataCategorizationDashboard';
+
 interface DashboardMetric {
   title: string;
   value: string;
@@ -56,6 +82,7 @@ const Dashboard: React.FC = () => {
   const [availableYears, setAvailableYears] = useState<number[]>([]);
   const [transparencyScore, setTransparencyScore] = useState<number>(0);
   const [documentCount, setDocumentCount] = useState<number>(0);
+  const [activeTab, setActiveTab] = useState<'overview' | 'financial' | 'documents' | 'audit' | 'powerbi' | 'comprehensive'>('overview');
 
   useEffect(() => {
     loadAvailableYears();
@@ -262,7 +289,35 @@ const Dashboard: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Key Metrics Grid */}
+        {/* Dashboard Navigation Tabs */}
+        <div className="flex justify-center mb-8">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-2 inline-flex flex-wrap gap-2">
+            {[
+              { key: 'overview', label: '📊 Resumen', icon: <BarChart3 className="w-4 h-4" /> },
+              { key: 'financial', label: '💰 Financiero', icon: <DollarSign className="w-4 h-4" /> },
+              { key: 'documents', label: '📄 Documentos', icon: <FileText className="w-4 h-4" /> },
+              { key: 'audit', label: '🔍 Auditoría', icon: <Shield className="w-4 h-4" /> },
+              { key: 'powerbi', label: '⚡ PowerBI', icon: <Activity className="w-4 h-4" /> },
+              { key: 'comprehensive', label: '🚀 Completo', icon: <Layers className="w-4 h-4" /> }
+            ].map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => setActiveTab(tab.key as any)}
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all ${
+                  activeTab === tab.key
+                    ? 'bg-blue-500 text-white shadow-md'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700'
+                }`}
+              >
+                {tab.icon}
+                <span className="font-medium">{tab.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Overview Tab - Key Metrics Grid */}
+        {activeTab === 'overview' && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -340,8 +395,8 @@ const Dashboard: React.FC = () => {
           ))}
         </motion.div>
 
-        {/* Financial Ratios */}
-        {financialSummary && (
+            {/* Financial Ratios */}
+            {financialSummary && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -409,6 +464,129 @@ const Dashboard: React.FC = () => {
                     {documentCount}
                   </span>
                 </div>
+              </div>
+            </div>
+            </motion.div>
+            )}
+        )}
+
+        {/* Financial Tab */}
+        {activeTab === 'financial' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-6"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📊 Análisis Presupuestario</h3>
+                <BudgetAnalysisChart year={selectedYear} />
+              </div>
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📉 Análisis de Deuda</h3>
+                <DebtAnalysisChart year={selectedYear} />
+              </div>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📈 Dashboard Financiero Unificado</h3>
+              <UnifiedDashboardChart year={selectedYear} />
+            </div>
+          </motion.div>
+        )}
+
+        {/* Documents Tab */}
+        {activeTab === 'documents' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-6"
+          >
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📄 Análisis de Documentos</h3>
+              <DocumentAnalysisChart year={selectedYear} />
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📊 Datos Anuales</h3>
+              <YearlyDataChart year={selectedYear} />
+            </div>
+          </motion.div>
+        )}
+
+        {/* Audit Tab */}
+        {activeTab === 'audit' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-6"
+          >
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🔍 Auditoría Financiera</h3>
+              <FinancialAuditDashboard />
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🏗️ Seguimiento de Infraestructura</h3>
+              <InfrastructureTracker />
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📂 Categorización de Datos</h3>
+              <DataCategorizationDashboard />
+            </div>
+          </motion.div>
+        )}
+
+        {/* PowerBI Tab */}
+        {activeTab === 'powerbi' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-6"
+          >
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">⚡ Dashboard PowerBI</h3>
+              <PowerBIDataDashboard />
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">💰 PowerBI Financiero</h3>
+                <PowerBIFinancialDashboard />
+              </div>
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📊 Comparación PowerBI</h3>
+                <PowerBIComparisonDashboard />
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        {/* Comprehensive Tab */}
+        {activeTab === 'comprehensive' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-6"
+          >
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🚀 Visualización Comprehensiva</h3>
+              <ComprehensiveVisualization />
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">💰 Visualización Financiera Municipal</h3>
+                <MunicipalFinancialVisualization year={selectedYear} />
+              </div>
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📈 Análisis de Inversiones</h3>
+                <InvestmentAnalysisChart year={selectedYear} />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">🏦 Análisis de Tesorería</h3>
+                <TreasuryAnalysisChart year={selectedYear} />
+              </div>
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">👥 Análisis de Salarios</h3>
+                <SalaryAnalysisChart year={selectedYear} />
               </div>
             </div>
           </motion.div>

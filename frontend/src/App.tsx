@@ -23,7 +23,7 @@ import {
   LayoutDashboard
 } from 'lucide-react';
 
-// Import essential pages - focused approach
+// Import essential pages - consolidated approach
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Financial from './pages/Financial';
@@ -36,22 +36,14 @@ import Audit from './pages/Audit';
 import Reports from './pages/Reports';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import LiveDataDashboard from './pages/LiveDataDashboard';
-import ComprehensiveDashboard from './pages/ComprehensiveDashboard';
-import ReactiveComprehensiveDashboard from './pages/ReactiveComprehensiveDashboard';
-import PowerBIIntegrationDashboard from './components/dashboards/PowerBIIntegrationDashboard';
 
-// Simplified navigation with clear purpose
+// Consolidated navigation - all dashboards integrated into main pages
 const navigationSections = [
   {
     title: 'Inicio',
     items: [
       { path: '/', label: '🏠 Inicio', icon: <HomeIcon className="w-4 h-4" /> },
-      { path: '/dashboard', label: '📊 Panel de Control', icon: <LayoutDashboard className="w-4 h-4" /> },
-      { path: '/comprehensive', label: '🔍 Dashboard Integral', icon: <TrendingUp className="w-4 h-4" /> },
-      { path: '/reactive-dashboard', label: '⚡ Dashboard Reactivo', icon: <Activity className="w-4 h-4" /> },
-      { path: '/live-data', label: '🔴 Datos en Vivo', icon: <Activity className="w-4 h-4" /> },
-      { path: '/powerbi-comparison', label: '📈 Comparación PowerBI', icon: <AlertTriangle className="w-4 h-4" /> }
+      { path: '/dashboard', label: '📊 Panel de Control', icon: <LayoutDashboard className="w-4 h-4" /> }
     ]
   },
   {
@@ -282,13 +274,9 @@ const App: React.FC = () => {
               <Breadcrumb />
               
               <Routes>
-                {/* Main Routes */}
+                {/* Main Routes - All dashboards consolidated into main pages */}
                 <Route path="/" element={<Home />} />
                 <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/comprehensive" element={<ComprehensiveDashboard />} />
-                <Route path="/reactive-dashboard" element={<ReactiveComprehensiveDashboard />} />
-                <Route path="/live-data" element={<LiveDataDashboard />} />
-                <Route path="/powerbi-comparison" element={<PowerBIIntegrationDashboard />} />
                 
                 {/* Financial Analysis Routes */}
                 <Route path="/financial" element={<Financial />} />

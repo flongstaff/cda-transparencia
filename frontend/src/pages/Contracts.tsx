@@ -3,6 +3,8 @@ import { Download, Search, Eye, FileText, TrendingUp, Calendar, AlertTriangle, C
 import PageYearSelector from '../components/PageYearSelector';
 import { consolidatedApiService } from '../services';
 import ValidatedChart from '../components/ValidatedChart';
+import ContractAnalysisChart from '../components/charts/ContractAnalysisChart';
+import UnifiedDashboardChart from '../components/charts/UnifiedDashboardChart';
 
 interface Contract {
   id: string;
@@ -22,7 +24,7 @@ interface Contract {
 const Contracts: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [selectedContract, setSelectedContract] = useState<Contract | null>(null);
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'analytics' | 'contracts' | 'performance'>('overview');
   const [sortBy, setSortBy] = useState('budget');
   const [filterStatus, setFilterStatus] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');

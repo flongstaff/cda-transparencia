@@ -155,7 +155,7 @@ class IntegratedTransparencySystem:
                 "github_repo": "https://github.com/datosgobar/georef-ar-api"
             },
             DataSource.CONTRATACIONES_PUBLICAS: {
-                "base_url": "https://contrataciones-abiertas.obrapublica.gob.ar/api/v2/",
+                "base_url": "https://contrataciones-abiertas.obrapublica.gob.ar/api/v2/releases",
                 "docs": "https://contrataciones-abiertas.obrapublica.gob.ar/docs/api/v2/"
             },
             DataSource.OBRAS_PUBLICAS: {
@@ -578,8 +578,23 @@ class IntegratedTransparencySystem:
     async def query_contrataciones_publicas(self) -> List[Dict]:
         """Query the national public procurement API."""
         logger.info("Querying National Public Procurement API")
-        # Placeholder for future implementation
-        return []
+        api_url = self.data_sources[DataSource.CONTRATACIONES_PUBLICAS]["base_url"]
+        params = {"buyerName": "Municipalidad de Carmen de Areco"}
+        results = []
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(api_url, params=params) as response:
+                    if response.status == 200:
+                        data = await response.json()
+                        print(json.dumps(data, indent=2))
+                        # Future: Parse this data into a structured format
+                        # For now, just return the raw data for inspection
+                        results.append(data)
+                    else:
+                        logger.error(f"Error querying public contracts API: {response.status}")
+        except Exception as e:
+            logger.error(f"Exception querying public contracts API: {e}")
+        return results
 
     async def query_obras_publicas(self) -> List[Dict]:
         """Query the national public works API."""
