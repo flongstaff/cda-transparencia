@@ -128,7 +128,7 @@ class IntegratedTransparencySystem:
             },
             DataSource.DATOS_BUENOS_AIRES: {
                 "base_url": "https://data.buenosaires.gob.ar/",
-                "api_url": "https://data.buenosaires.gob.ar/api/3/action/package_search",
+                "api_url": "https://data.buenosaires.gob.ar/api/3/",
                 "github_repo": "https://github.com/datosgcba"
             },
             DataSource.HTC_BUENOS_AIRES: {
@@ -155,7 +155,7 @@ class IntegratedTransparencySystem:
                 "github_repo": "https://github.com/datosgobar/georef-ar-api"
             },
             DataSource.CONTRATACIONES_PUBLICAS: {
-                "base_url": "https://contrataciones-abiertas.obrapublica.gob.ar/api/v2/contracts",
+                "base_url": "https://contrataciones-abiertas.obrapublica.gob.ar/api/v2/",
                 "docs": "https://contrataciones-abiertas.obrapublica.gob.ar/docs/api/v2/"
             },
             DataSource.OBRAS_PUBLICAS: {
@@ -533,7 +533,7 @@ class IntegratedTransparencySystem:
         """
         logger.info("Querying Buenos Aires open data portal")
         
-        api_url = self.data_sources[DataSource.DATOS_BUENOS_AIRES]["api_url"]
+        api_url = "https://data.buenosaires.gob.ar/api/3/action/package_search"
         search_queries = [
             "municipio",
             "presupuesto",
@@ -542,7 +542,7 @@ class IntegratedTransparencySystem:
         ]
         
         results = []
-        headers = {'User-Agent': 'Mozilla/5.0'}
+        
         async with aiohttp.ClientSession() as session:
             for query in search_queries:
                 try:
@@ -551,27 +551,24 @@ class IntegratedTransparencySystem:
                         'rows': 50
                     }
                     
-                    async with session.get(api_url, params=params, headers=headers) as response:
+                    async with session.get(api_url, params=params) as response:
                         if response.status == 200:
-                            # The API returns text/html on error, so we need to check content type
-                            if 'application/json' in response.headers.get('Content-Type', ''):
-                                data = await response.json()
-                                if data.get('success') and data.get('result'):
-                                    for package in data['result']['results']:
-                                        # Filter for relevant municipal data
-                                        if any(keyword in package.get('title', '').lower() 
-                                              for keyword in ['municipio', 'presupuesto', 'transparencia']):
-                                            results.append({
-                                                'id': package.get('id'),
-                                                'title': package.get('title'),
-                                                'description': package.get('notes'),
-                                                'resources': package.get('resources', []),
-                                                'url': f"https://data.buenosaires.gob.ar/dataset/{package.get('name')}",
-                                                'source': DataSource.DATOS_BUENOS_AIRES.value
-                                            })
-                            else:
-                                logger.error(f"BA API returned non-JSON response for query '{query}': {await response.text()[:200]}")
-
+                            data = await response.json()
+                            
+                            if data.get('success') and data.get('result'):
+                                for package in data['result']['results']:
+                                    # Filter for relevant municipal data
+                                    if any(keyword in package.get('title', '').lower() 
+                                          for keyword in ['municipio', 'presupuesto', 'transparencia']):
+                                        results.append({
+                                            'id': package.get('id'),
+                                            'title': package.get('title'),
+                                            'description': package.get('notes'),
+                                            'resources': package.get('resources', []),
+                                            'url': f"https://data.buenosaires.gob.ar/dataset/{package.get('name')}",
+                                            'source': DataSource.DATOS_BUENOS_AIRES.value
+                                        })
+                
                 except Exception as e:
                     logger.error(f"Error querying Buenos Aires data for '{query}': {e}")
         
@@ -579,38 +576,10 @@ class IntegratedTransparencySystem:
         return results
 
     async def query_contrataciones_publicas(self) -> List[Dict]:
-        """Query the national public procurement API for Carmen de Areco."""
+        """Query the national public procurement API."""
         logger.info("Querying National Public Procurement API")
-        api_url = self.data_sources[DataSource.CONTRATACIONES_PUBLICAS]["base_url"]
-        results = []
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        params = {
-            'buyer_name': 'Carmen de Areco' # Assuming the parameter is buyer_name, might need adjustment
-        }
-        try:
-            async with aiohttp.ClientSession() as session:
-                async with session.get(api_url, params=params, headers=headers) as response:
-                    if response.status == 200:
-                        data = await response.json()
-                        # The actual data structure will depend on the API's response
-                        # This is a placeholder for the real parsing logic
-                        for contract in data.get('results', []):
-                             results.append({
-                                'id': contract.get('id'),
-                                'title': contract.get('title'),
-                                'description': contract.get('description'),
-                                'amount': contract.get('value', {}).get('amount'),
-                                'status': contract.get('status'),
-                                'url': f"https://contrataciones-abiertas.obrapublica.gob.ar/contrataciones/{contract.get('id')}",
-                                'source': DataSource.CONTRATaciones_PUBLICAS.value
-                            })
-                    else:
-                        logger.error(f"Failed to fetch data from Public Contracts API. Status: {response.status}")
-        except Exception as e:
-            logger.error(f"Error querying Public Contracts API: {e}")
-        
-        logger.info(f"Found {len(results)} results from the Public Contracts API.")
-        return results
+        # Placeholder for future implementation
+        return []
 
     async def query_obras_publicas(self) -> List[Dict]:
         """Query the national public works API."""
@@ -1385,9 +1354,9 @@ class IntegratedTransparencySystem:
 
 ## RESUMEN EJECUTIVO
 
-**NIVEL DE RIESGO GENERAL: {analysis_results.get('overall_risk_level', 'UNKNOWN').upper()} """
+**NIVEL DE RIESGO GENERAL: {analysis_results.get('overall_risk_level', 'UNKNOWN').upper()}
 
-        report += f"- **Casos de Corrupción Confirmados**: {len([c for c in self.corruption_cases if 'Confirmed' in c.status])}
+- **Casos de Corrupción Confirmados**: {len([c for c in self.corruption_cases if 'Confirmed' in c.status])}
 - **Casos Bajo Investigación**: {len([c for c in self.corruption_cases if 'investigation' in c.status.lower()])}
 - **Fuentes de Datos Analizadas**: {len(analysis_results.get('data_sources_analyzed', []))}
 - **Documentos Procesados**: {analysis_results.get('documents_processed', 0)}
@@ -1396,7 +1365,7 @@ class IntegratedTransparencySystem:
 
 ## CASOS CONFIRMADOS DE CORRUPCIÓN (HTC)
 
-"
+"""
         
         # Add confirmed corruption cases
         confirmed_cases = [case for case in self.corruption_cases if "Confirmed" in case.status]
@@ -1406,7 +1375,6 @@ class IntegratedTransparencySystem:
         
         for case in confirmed_cases:
             report += f"""
-
 ### {case.title}
 - **Monto**: {case.amount:,.2f} ARS
 - **Responsables**: {', '.join(case.responsible_parties)}
@@ -1423,7 +1391,6 @@ class IntegratedTransparencySystem:
             report += "## CASOS BAJO INVESTIGACIÓN\n\n"
             for case in investigation_cases:
                 report += f"""
-
 ### {case.title}
 - **Descripción**: {case.description}
 - **Involucrados**: {', '.join(case.responsible_parties)}
@@ -1438,8 +1405,7 @@ class IntegratedTransparencySystem:
         for source in analysis_results.get('data_sources_analyzed', []):
             findings = analysis_results.get('detailed_findings', {}).get(source, {})
             if findings:
-                report += f"### {source.replace('_', ' ').title()}
-"
+                report += f"### {source.replace('_', ' ').title()}\n"
                 
                 if isinstance(findings, list):
                     report += f"- **Registros encontrados**: {len(findings)}\n"

@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import { 
   DollarSign, 
   Building, 
-  FolderOpen
+  FolderOpen,
+  AlertTriangle,
+  Eye,
+  Target
 } from 'lucide-react';
 import FinancialAuditDashboard from '../components/audit/FinancialAuditDashboard';
 import InfrastructureTracker from '../components/audit/InfrastructureTracker';
 import DataCategorizationDashboard from '../components/audit/DataCategorizationDashboard';
+import AuditAnomaliesExplainer from '../components/audit/AuditAnomaliesExplainer';
 
 const Audit: React.FC = () => {
-  const [activeSection, setActiveSection] = useState('financial');
+  const [activeSection, setActiveSection] = useState('anomalies');
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -41,10 +45,22 @@ const Audit: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-wrap gap-2">
           <button
+            onClick={() => setActiveSection('anomalies')}
+            className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              activeSection === 'anomalies'
+                ? 'bg-red-600 text-white'
+                : 'bg-white dark:bg-gray-800 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
+            }`}
+          >
+            <AlertTriangle className="h-4 w-4 mr-2" />
+            Anomalías y Multas
+          </button>
+
+          <button
             onClick={() => setActiveSection('financial')}
             className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeSection === 'financial'
-                ? 'bg-primary-500 text-white'
+                ? 'bg-blue-600 text-white'
                 : 'bg-white dark:bg-gray-800 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
           >
@@ -56,7 +72,7 @@ const Audit: React.FC = () => {
             onClick={() => setActiveSection('infrastructure')}
             className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeSection === 'infrastructure'
-                ? 'bg-primary-500 text-white'
+                ? 'bg-green-600 text-white'
                 : 'bg-white dark:bg-gray-800 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
           >
@@ -68,7 +84,7 @@ const Audit: React.FC = () => {
             onClick={() => setActiveSection('categorization')}
             className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeSection === 'categorization'
-                ? 'bg-primary-500 text-white'
+                ? 'bg-purple-600 text-white'
                 : 'bg-white dark:bg-gray-800 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
           >
@@ -80,6 +96,7 @@ const Audit: React.FC = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        {activeSection === 'anomalies' && <AuditAnomaliesExplainer />}
         {activeSection === 'financial' && <FinancialAuditDashboard />}
         {activeSection === 'infrastructure' && <InfrastructureTracker />}
         {activeSection === 'categorization' && <DataCategorizationDashboard />}

@@ -13,7 +13,7 @@ import {
   Filler,
 } from 'chart.js';
 import { Line, Bar, Doughnut } from 'react-chartjs-2';
-import { integratedBackendService } from '../../services/IntegratedBackendService';
+import integratedBackendService from '../../services/IntegratedBackendService';
 import { Loader2, TrendingUp, AlertTriangle, BarChart3, PieChart, Activity } from 'lucide-react';
 
 ChartJS.register(

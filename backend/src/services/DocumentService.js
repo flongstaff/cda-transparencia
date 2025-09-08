@@ -4,7 +4,8 @@ const fs = require('fs');
 
 class DocumentService {
   constructor() {
-    this.dbPath = path.join(__dirname, '../../../data/documents.db');
+    // Use the actual transparency database that contains 367 documents
+    this.dbPath = path.join(__dirname, '../../../transparency_data/transparency.db');
     this.markdownPath = path.join(__dirname, '../../../data/markdown_documents');
     this.init();
   }
@@ -12,7 +13,9 @@ class DocumentService {
   init() {
     // Ensure database exists
     if (!fs.existsSync(this.dbPath)) {
-      console.log('Document database not found. Please run enhanced_document_processor.py first.');
+      console.log('Document database not found at:', this.dbPath);
+    } else {
+      console.log('✅ DocumentService initialized with transparency.db containing real data');
     }
   }
 
@@ -21,56 +24,60 @@ class DocumentService {
     return new sqlite3.Database(this.dbPath);
   }
 
-  // Get all documents with metadata
+  // Get all documents with metadata (adapted to real schema)
   async getAllDocuments(filters = {}) {
     return new Promise((resolve, reject) => {
       const db = this.getConnection();
       
       let query = `
-        SELECT d.*, COUNT(dc.id) as content_pages,
-               COUNT(va.id) as verification_count
-        FROM documents d
-        LEFT JOIN document_content dc ON d.id = dc.document_id
-        LEFT JOIN verification_audit va ON d.id = va.document_id
+        SELECT doc_id as id, title, url, file_size, document_type, 
+               integrity_status as verification_status, content,
+               download_date, file_hash, source, financial_data
+        FROM documents
       `;
       
       const conditions = [];
       const params = [];
       
-      if (filters.category) {
-        conditions.push('d.category = ?');
-        params.push(filters.category);
-      }
-      
-      if (filters.year) {
-        conditions.push('d.year = ?');
-        params.push(parseInt(filters.year));
-      }
-      
-      if (filters.type) {
-        conditions.push('d.document_type = ?');
+      if (filters.type && filters.type !== 'all') {
+        conditions.push('document_type = ?');
         params.push(filters.type);
+      }
+      
+      if (filters.search) {
+        conditions.push('(title LIKE ? OR content LIKE ?)');
+        params.push(`%${filters.search}%`, `%${filters.search}%`);
       }
       
       if (conditions.length > 0) {
         query += ' WHERE ' + conditions.join(' AND ');
       }
       
-      query += ' GROUP BY d.id ORDER BY d.year DESC, d.filename';
+      query += ' ORDER BY download_date DESC';
       
       db.all(query, params, (err, rows) => {
         if (err) {
+          console.error('Error fetching documents:', err);
           reject(err);
         } else {
-          // Enhance with additional metadata
+          // Transform data to match expected frontend format
           const enhancedRows = rows.map(row => ({
-            ...row,
-            official_download: row.official_url,
-            archive_download: row.archive_url,
-            markdown_available: this.hasMarkdownFile(row.filename),
-            verification_status_badge: this.getVerificationBadge(row.verification_status),
-            display_category: this.getDisplayCategory(row.category),
-            file_size_formatted: this.formatFileSize(row.file_size)
+            id: row.id,
+            filename: row.title,
+            title: row.title,
+            url: row.url,
+            file_size: row.file_size || 0,
+            size_bytes: String(row.file_size || 0),
+            file_type: row.document_type,
+            document_type: row.document_type,
+            category: this.extractCategory(row.title),
+            year: this.extractYear(row.title, row.download_date),
+            verification_status: row.verification_status || 'pending',
+            integrity_verified: row.verification_status === 'verified',
+            processing_date: row.download_date,
+            sha256_hash: row.file_hash || '',
+            content: row.content,
+            financial_data: row.financial_data
           }));
           resolve(enhancedRows);
         }
@@ -84,8 +91,7 @@ class DocumentService {
     return new Promise((resolve, reject) => {
       const db = this.getConnection();
       
-      // Get document metadata
-      db.get('SELECT * FROM documents WHERE id = ?', [id], (err, doc) => {
+      db.get('SELECT * FROM documents WHERE doc_id = ?', [id], (err, doc) => {
         if (err) {
           db.close();
           reject(err);
@@ -98,53 +104,25 @@ class DocumentService {
           return;
         }
         
-        // Get document content
-        db.all(
-          'SELECT * FROM document_content WHERE document_id = ? ORDER BY page_number',
-          [id],
-          (err, content) => {
-            if (err) {
-              db.close();
-              reject(err);
-              return;
-            }
-            
-            // Get financial data
-            db.all(
-              'SELECT * FROM budget_data WHERE document_id = ?',
-              [id],
-              (err, financialData) => {
-                if (err) {
-                  db.close();
-                  reject(err);
-                  return;
-                }
-                
-                // Get verification audit
-                db.all(
-                  'SELECT * FROM verification_audit WHERE document_id = ? ORDER BY verification_date DESC',
-                  [id],
-                  (err, audit) => {
-                    db.close();
-                    
-                    if (err) {
-                      reject(err);
-                      return;
-                    }
-                    
-                    resolve({
-                      ...doc,
-                      content: content,
-                      financial_data: financialData,
-                      verification_audit: audit,
-                      markdown_content: this.getMarkdownContent(doc.filename)
-                    });
-                  }
-                );
-              }
-            );
-          }
-        );
+        // Transform to expected format
+        const transformedDoc = {
+          id: doc.doc_id,
+          filename: doc.title,
+          title: doc.title,
+          url: doc.url,
+          file_size: doc.file_size,
+          document_type: doc.document_type,
+          category: this.extractCategory(doc.title),
+          year: this.extractYear(doc.title, doc.download_date),
+          content: doc.content,
+          financial_data: doc.financial_data ? JSON.parse(doc.financial_data) : null,
+          integrity_status: doc.integrity_status,
+          created_at: doc.created_at,
+          download_date: doc.download_date
+        };
+        
+        db.close();
+        resolve(transformedDoc);
       });
     });
   }
@@ -155,80 +133,20 @@ class DocumentService {
       const db = this.getConnection();
       
       let searchQuery = `
-        SELECT DISTINCT d.*, 
-               snippet(document_content_fts, -1, '<mark>', '</mark>', '...', 32) as snippet
-        FROM documents d
-        JOIN document_content dc ON d.id = dc.document_id
-        JOIN document_content_fts ON dc.id = document_content_fts.rowid
-        WHERE document_content_fts MATCH ?
+        SELECT doc_id as id, title, url, file_size, document_type, 
+               integrity_status, content, download_date
+        FROM documents
+        WHERE (title LIKE ? OR content LIKE ?)
       `;
       
-      const conditions = [];
-      const params = [query];
-      
-      if (filters.category) {
-        conditions.push('d.category = ?');
-        params.push(filters.category);
-      }
-      
-      if (filters.year) {
-        conditions.push('d.year = ?');
-        params.push(parseInt(filters.year));
-      }
-      
-      if (conditions.length > 0) {
-        searchQuery += ' AND ' + conditions.join(' AND ');
-      }
-      
-      searchQuery += ' ORDER BY rank LIMIT 50';
-      
-      db.all(searchQuery, params, (err, rows) => {
-        db.close();
-        
-        if (err) {
-          // Fallback to simple text search if FTS not available
-          this.simpleSearch(query, filters).then(resolve).catch(reject);
-        } else {
-          resolve(rows.map(row => ({
-            ...row,
-            relevance_score: 0.9, // High relevance for full-text matches
-            search_snippet: row.snippet
-          })));
-        }
-      });
-    });
-  }
-
-  // Simple search fallback
-  async simpleSearch(query, filters = {}) {
-    return new Promise((resolve, reject) => {
-      const db = this.getConnection();
-      
-      let searchQuery = `
-        SELECT DISTINCT d.*
-        FROM documents d
-        JOIN document_content dc ON d.id = dc.document_id
-        WHERE (dc.searchable_text LIKE ? OR d.filename LIKE ?)
-      `;
-      
-      const conditions = [];
       const params = [`%${query}%`, `%${query}%`];
       
-      if (filters.category) {
-        conditions.push('d.category = ?');
-        params.push(filters.category);
+      if (filters.type && filters.type !== 'all') {
+        searchQuery += ' AND document_type = ?';
+        params.push(filters.type);
       }
       
-      if (filters.year) {
-        conditions.push('d.year = ?');
-        params.push(parseInt(filters.year));
-      }
-      
-      if (conditions.length > 0) {
-        searchQuery += ' AND ' + conditions.join(' AND ');
-      }
-      
-      searchQuery += ' ORDER BY d.year DESC LIMIT 50';
+      searchQuery += ' ORDER BY download_date DESC LIMIT 50';
       
       db.all(searchQuery, params, (err, rows) => {
         db.close();
@@ -236,58 +154,77 @@ class DocumentService {
         if (err) {
           reject(err);
         } else {
-          resolve(rows.map(row => ({
-            ...row,
-            relevance_score: 0.7, // Lower relevance for simple matches
-            search_snippet: `...${query}...`
-          })));
+          const results = rows.map(row => ({
+            id: row.id,
+            filename: row.title,
+            title: row.title,
+            document_type: row.document_type,
+            category: this.extractCategory(row.title),
+            year: this.extractYear(row.title, row.download_date),
+            relevance_score: 0.8,
+            search_snippet: this.extractSnippet(row.content, query)
+          }));
+          resolve(results);
         }
       });
     });
   }
 
-  // Get financial data
+  // Get financial data from documents
   async getFinancialData(filters = {}) {
     return new Promise((resolve, reject) => {
       const db = this.getConnection();
       
       let query = `
-        SELECT bd.*, d.filename, d.category, d.year as doc_year
-        FROM budget_data bd
-        JOIN documents d ON bd.document_id = d.id
+        SELECT doc_id, title, financial_data, document_type
+        FROM documents
+        WHERE financial_data IS NOT NULL AND financial_data != ''
       `;
       
-      const conditions = [];
-      const params = [];
-      
-      if (filters.year) {
-        conditions.push('bd.year = ?');
-        params.push(parseInt(filters.year));
-      }
-      
-      if (filters.category) {
-        conditions.push('d.category = ?');
-        params.push(filters.category);
-      }
-      
-      if (conditions.length > 0) {
-        query += ' WHERE ' + conditions.join(' AND ');
-      }
-      
-      query += ' ORDER BY bd.year DESC, bd.budgeted_amount DESC';
-      
-      db.all(query, params, (err, rows) => {
+      db.all(query, [], (err, rows) => {
         db.close();
         
         if (err) {
           reject(err);
         } else {
-          resolve(rows.map(row => ({
-            ...row,
-            execution_percentage: this.calculateExecutionPercentage(row.budgeted_amount, row.executed_amount),
-            formatted_budget: this.formatCurrency(row.budgeted_amount),
-            formatted_executed: this.formatCurrency(row.executed_amount)
-          })));
+          const financialData = rows.map(row => {
+            try {
+              const data = JSON.parse(row.financial_data);
+              return {
+                document_id: row.doc_id,
+                document_title: row.title,
+                document_type: row.document_type,
+                ...data
+              };
+            } catch (e) {
+              return null;
+            }
+          }).filter(Boolean);
+          resolve(financialData);
+        }
+      });
+    });
+  }
+
+  // Get available years from documents
+  async getAvailableYears() {
+    return new Promise((resolve, reject) => {
+      const db = this.getConnection();
+      
+      db.all('SELECT DISTINCT title, download_date FROM documents ORDER BY download_date DESC', [], (err, rows) => {
+        db.close();
+        
+        if (err) {
+          reject(err);
+        } else {
+          const years = new Set();
+          rows.forEach(row => {
+            const year = this.extractYear(row.title, row.download_date);
+            if (year) years.add(year);
+          });
+          
+          const sortedYears = Array.from(years).sort((a, b) => b - a);
+          resolve(sortedYears);
         }
       });
     });
@@ -298,108 +235,104 @@ class DocumentService {
     return new Promise((resolve, reject) => {
       const db = this.getConnection();
       
-      db.all(`
-        SELECT category, COUNT(*) as document_count, 
-               MIN(year) as earliest_year, MAX(year) as latest_year
-        FROM documents 
-        WHERE category IS NOT NULL 
-        GROUP BY category 
-        ORDER BY document_count DESC
-      `, (err, rows) => {
+      db.all('SELECT title, document_type FROM documents', [], (err, rows) => {
         db.close();
         
         if (err) {
           reject(err);
         } else {
-          resolve(rows.map(row => ({
-            ...row,
-            display_name: this.getDisplayCategory(row.category),
-            year_range: `${row.earliest_year}-${row.latest_year}`
-          })));
+          const categories = {};
+          rows.forEach(row => {
+            const category = this.extractCategory(row.title);
+            categories[category] = (categories[category] || 0) + 1;
+          });
+          
+          const categoryList = Object.entries(categories).map(([category, count]) => ({
+            category,
+            document_count: count,
+            display_name: this.getDisplayCategory(category)
+          }));
+          
+          resolve(categoryList);
         }
       });
     });
   }
 
-  // Get verification status
-  async getVerificationStatus() {
+  // Get corruption cases
+  async getCorruptionCases() {
     return new Promise((resolve, reject) => {
       const db = this.getConnection();
       
-      db.get(`
-        SELECT 
-          COUNT(*) as total_documents,
-          COUNT(CASE WHEN verification_status = 'verified' THEN 1 END) as verified_documents,
-          COUNT(CASE WHEN verification_status = 'pending' THEN 1 END) as pending_documents,
-          COUNT(CASE WHEN verification_status = 'failed' THEN 1 END) as failed_documents
-        FROM documents
-      `, (err, stats) => {
-        if (err) {
-          db.close();
-          reject(err);
-          return;
-        }
+      db.all('SELECT * FROM corruption_cases ORDER BY created_at DESC', [], (err, rows) => {
+        db.close();
         
-        db.all(`
-          SELECT verification_method, COUNT(*) as count
-          FROM verification_audit
-          GROUP BY verification_method
-        `, (err, methods) => {
-          db.close();
-          
-          if (err) {
-            reject(err);
-          } else {
-            resolve({
-              ...stats,
-              verification_rate: ((stats.verified_documents / stats.total_documents) * 100).toFixed(1),
-              methods: methods,
-              last_updated: new Date().toISOString()
-            });
-          }
-        });
+        if (err) {
+          reject(err);
+        } else {
+          resolve(rows);
+        }
       });
     });
   }
 
   // Helper methods
-  hasMarkdownFile(filename) {
-    const markdownFile = path.join(this.markdownPath, filename.replace(/\.[^/.]+$/, '.md'));
-    return fs.existsSync(markdownFile);
-  }
-
-  getMarkdownContent(filename) {
-    const markdownFile = path.join(this.markdownPath, filename.replace(/\.[^/.]+$/, '.md'));
-    try {
-      if (fs.existsSync(markdownFile)) {
-        return fs.readFileSync(markdownFile, 'utf8');
-      }
-    } catch (err) {
-      console.error(`Error reading markdown file for ${filename}:`, err);
+  extractYear(title, downloadDate) {
+    // Try to extract year from title first
+    const yearMatch = title.match(/\b(20\d{2})\b/);
+    if (yearMatch) {
+      return parseInt(yearMatch[1]);
     }
-    return null;
+    
+    // Fallback to download date
+    if (downloadDate) {
+      const date = new Date(downloadDate);
+      if (!isNaN(date.getTime())) {
+        return date.getFullYear();
+      }
+    }
+    
+    // Default to current year
+    return new Date().getFullYear();
   }
 
-  getVerificationBadge(status) {
-    const badges = {
-      'verified': '✅ Verificado',
-      'pending': '⚠️ Pendiente',
-      'failed': '❌ Error',
-      'partial': '🔄 Parcial'
-    };
-    return badges[status] || '❓ Desconocido';
+  extractCategory(title) {
+    const titleLower = title.toLowerCase();
+    
+    if (titleLower.includes('decreto')) return 'Decretos';
+    if (titleLower.includes('resolución') || titleLower.includes('resolucion')) return 'Resoluciones';
+    if (titleLower.includes('licitación') || titleLower.includes('licitacion')) return 'Licitaciones';
+    if (titleLower.includes('presupuesto')) return 'Presupuesto Municipal';
+    if (titleLower.includes('declaración') || titleLower.includes('declaracion')) return 'Declaraciones Patrimoniales';
+    if (titleLower.includes('salario') || titleLower.includes('sueldo')) return 'Información Salarial';
+    if (titleLower.includes('contrat')) return 'Contratos';
+    if (titleLower.includes('ordenanza')) return 'Ordenanzas';
+    
+    return 'Documentos Generales';
+  }
+
+  extractSnippet(content, query) {
+    if (!content) return '...';
+    
+    const index = content.toLowerCase().indexOf(query.toLowerCase());
+    if (index === -1) return content.substring(0, 100) + '...';
+    
+    const start = Math.max(0, index - 50);
+    const end = Math.min(content.length, index + query.length + 50);
+    return '...' + content.substring(start, end) + '...';
   }
 
   getDisplayCategory(category) {
     const displayNames = {
-      'Licitaciones': '📋 Licitaciones Públicas',
-      'Presupuesto': '💰 Presupuesto Municipal',
-      'Ejecución Presupuestaria': '📊 Ejecución Presupuestaria',
+      'Decretos': '📜 Decretos',
+      'Resoluciones': '📋 Resoluciones',
+      'Licitaciones': '💼 Licitaciones',
+      'Presupuesto Municipal': '💰 Presupuesto Municipal',
       'Declaraciones Patrimoniales': '🏛️ Declaraciones Patrimoniales',
-      'Información Salarial': '💼 Información Salarial',
-      'Resoluciones': '📜 Resoluciones Oficiales',
-      'Informes': '📈 Informes y Reportes',
-      'General': '📄 Documentos Generales'
+      'Información Salarial': '👥 Información Salarial',
+      'Contratos': '📝 Contratos',
+      'Ordenanzas': '⚖️ Ordenanzas',
+      'Documentos Generales': '📄 Documentos Generales'
     };
     return displayNames[category] || category;
   }
@@ -409,21 +342,6 @@ class DocumentService {
     const sizes = ['B', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(1024));
     return `${(bytes / Math.pow(1024, i)).toFixed(1)} ${sizes[i]}`;
-  }
-
-  formatCurrency(amount) {
-    if (!amount) return '-';
-    return new Intl.NumberFormat('es-AR', {
-      style: 'currency',
-      currency: 'ARS',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    }).format(amount);
-  }
-
-  calculateExecutionPercentage(budgeted, executed) {
-    if (!budgeted || budgeted === 0) return null;
-    return ((executed / budgeted) * 100).toFixed(1);
   }
 }
 

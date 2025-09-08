@@ -159,6 +159,25 @@ const PropertyDeclarations: React.FC = () => {
     return lastNames[Math.floor(Math.random() * lastNames.length)];
   };
 
+  const getComplianceScoreDistribution = () => {
+    if (declarations.length === 0) return [];
+
+    // Create score ranges
+    const ranges = [
+      { min: 0, max: 60, label: '0-60' },
+      { min: 60, max: 70, label: '60-70' },
+      { min: 70, max: 80, label: '70-80' },
+      { min: 80, max: 90, label: '80-90' },
+      { min: 90, max: 100, label: '90-100' }
+    ];
+
+    return ranges.map(range => ({
+      range: range.label,
+      count: declarations.filter(d => d.complianceScore >= range.min && d.complianceScore < range.max).length,
+      percentage: (declarations.filter(d => d.complianceScore >= range.min && d.complianceScore < range.max).length / declarations.length) * 100
+    }));
+  };
+
   const handleYearChange = (year: number) => {
     setSelectedYear(year);
   };

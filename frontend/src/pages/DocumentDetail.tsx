@@ -1,285 +1,134 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { FileText, Download, ExternalLink, Calendar, Hash, CheckCircle, Eye, Database, ArrowLeft } from 'lucide-react';
-import MarkdownRenderer from '../components/documents/MarkdownRenderer';
+import { motion } from 'framer-motion';
+import { 
+  ArrowLeft, 
+  FileText, 
+  Calendar, 
+  Hash, 
+  CheckCircle, 
+  AlertTriangle,
+  Database,
+  ExternalLink,
+  Download,
+  Eye,
+  Share2,
+  BookOpen,
+  Activity,
+  Clock
+} from 'lucide-react';
+import UnifiedDocumentViewer from '../components/viewers/UnifiedDocumentViewer';
 import { consolidatedApiService } from '../services/ConsolidatedApiService';
 
-interface DocumentMetadata {
-  id: number;
+interface Document {
+  id: string;
   title: string;
-  year: number;
+  filename: string;
   category: string;
-  created_at: string;
-  official_url?: string;
-  archive_url?: string;
-  verification_status: 'verified' | 'partial' | 'unverified';
-  sha256_hash: string;
-  size_bytes?: number;
-  content?: string; // Processed content
-  markdown_path?: string; // Path to markdown content if available
-  data_sources?: string[]; // Array of data sources
+  year: number;
+  size_mb: string;
+  url?: string;
+  verification_status: string;
+  processing_date: string;
+  file_type?: string;
+  document_type?: string;
+  content?: string;
+  financial_data?: any;
+  integrity_verified: boolean;
+  sha256_hash?: string;
+  data_sources?: string[];
 }
 
 const DocumentDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const [document, setDocument] = useState<DocumentMetadata | null>(null);
-  const [documentContent, setDocumentContent] = useState<string>('');
+  const [document, setDocument] = useState<Document | null>(null);
+  const [relatedDocuments, setRelatedDocuments] = useState<Document[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [contentSource, setContentSource] = useState<'processed' | 'official' | 'archive' | 'metadata'>('processed');
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (id) {
-      loadDocument(parseInt(id));
+      loadDocumentData();
     }
   }, [id]);
 
-  const loadDocument = async (documentId: number) => {
+  const loadDocumentData = async () => {
+    if (!id) return;
+    
     setIsLoading(true);
     setError(null);
 
     try {
-      // Use UnifiedDataService for all document data
-      const fetchedDocument = await apiService.getRealDocumentById(String(documentId));
-      if (fetchedDocument && fetchedDocument.document) {
-        // Map fetched data to DocumentMetadata interface
-        const mappedDocument: DocumentMetadata = {
-          id: fetchedDocument.document.id,
-          title: fetchedDocument.document.title,
-          year: fetchedDocument.document.year,
-          category: fetchedDocument.document.category,
-          created_at: fetchedDocument.document.processing_date || new Date().toISOString(), // Use processing_date or current date
-          official_url: fetchedDocument.document.official_url,
-          archive_url: fetchedDocument.document.archive_url,
-          verification_status: fetchedDocument.document.verification_status || 'unverified',
-          sha256_hash: fetchedDocument.document.sha256_hash || 'N/A',
-          size_bytes: fetchedDocument.document.size_mb ? fetchedDocument.document.size_mb * 1024 * 1024 : undefined, // Convert MB to bytes
-          markdown_path: fetchedDocument.document.markdown_path,
-          data_sources: fetchedDocument.document.data_sources,
-        };
-        setDocument(mappedDocument);
-        // Load initial content based on default source
-        loadDocumentContent(mappedDocument, contentSource);
-      } else {
-        setError('Document not found.');
-        setDocument(null);
+      const [allDocuments] = await Promise.all([
+        consolidatedApiService.getDocuments()
+      ]);
+
+      // Find the specific document
+      const foundDocument = allDocuments.find(doc => doc.id === id);
+      
+      if (!foundDocument) {
+        setError('Documento no encontrado');
+        return;
       }
+
+      setDocument(foundDocument);
+
+      // Get related documents (same category or year)
+      const related = allDocuments.filter(doc => 
+        doc.id !== id && (
+          doc.category === foundDocument.category || 
+          doc.year === foundDocument.year
+        )
+      ).slice(0, 6);
+
+      setRelatedDocuments(related);
+
     } catch (err) {
       console.error('Error loading document:', err);
-      setError('No se pudo cargar el documento. Por favor, intente nuevamente.');
-      setDocument(null);
+      setError('Error cargando el documento. Por favor intente nuevamente.');
     } finally {
       setIsLoading(false);
     }
   };
 
-  const loadDocumentContent = async (doc: DocumentMetadata, source: 'processed' | 'official' | 'archive' | 'metadata' = 'processed') => {
-    setIsLoading(true);
-    setContentSource(source);
-    
-    try {
-      let contentToDisplay = '';
-
-      switch (source) {
-        case 'processed':
-          contentToDisplay = `# 📄 Contenido Procesado (No Disponible)\n\n`;
-          contentToDisplay += `## 🛡️ Verificación SHA256\n${doc.sha256_hash}\n\n`;
-          contentToDisplay += `> **Nota**: El contenido procesado de este documento no está disponible actualmente. Por favor, consulte la fuente oficial o el archivo web.\n\n`;
-          break;
-
-        case 'official':
-          contentToDisplay = `# 🌐 Fuente Oficial
-
-`;
-          contentToDisplay += `**Documento**: ${doc.title}
-
-`;
-          if (doc.official_url) {
-            const isPdf = doc.official_url.toLowerCase().endsWith('.pdf');
-            if (isPdf) {
-              contentToDisplay += `<iframe src="https://docs.google.com/viewer?url=${encodeURIComponent(doc.official_url)}&embedded=true" width="100%" height="600px" style="border: none;"></iframe>\n\n`;
-              contentToDisplay += `**Enlace oficial**: [Abrir en nueva pestaña](${doc.official_url})\n\n`;
-            } else {
-              contentToDisplay += `**Enlace oficial**: [Ver documento](${doc.official_url})\n\n`;
-              contentToDisplay += `Haga clic en el enlace para acceder al documento en el sitio oficial del municipio.\n\n`;
-            }
-          } else {
-            contentToDisplay += `**Enlace oficial**: No disponible\n\n`;
-          }
-          contentToDisplay += `**Estado de verificación**: ${doc.verification_status === 'verified' ? '✅ Verificado' : doc.verification_status === 'partial' ? '⚠️ Parcialmente verificado' : '❌ No verificado'}\n\n`;
-          contentToDisplay += `---\n\n`;
-          contentToDisplay += `## Información del Documento\n\n`;
-          contentToDisplay += `- **Nombre**: ${doc.title}\n`;
-          contentToDisplay += `- **Año**: ${doc.year}\n`;
-          contentToDisplay += `- **Categoría**: ${doc.category}\n`;
-          contentToDisplay += `- **Estado de Verificación**: ${doc.verification_status}\n`;
-          contentToDisplay += `- **Fecha de Procesamiento**: ${new Date(doc.created_at).toLocaleDateString('es-AR')}\n`;
-          break;
-
-        case 'archive':
-          contentToDisplay = `# 🗄️ Archivo Web (Wayback Machine)
-
-`;
-          contentToDisplay += `**Documento**: ${doc.title}
-
-`;
-          if (doc.archive_url) {
-            const isPdf = doc.archive_url.toLowerCase().endsWith('.pdf');
-            if (isPdf) {
-              contentToDisplay += `<iframe src="https://docs.google.com/viewer?url=${encodeURIComponent(doc.archive_url)}&embedded=true" width="100%" height="600px" style="border: none;"></iframe>\n\n`;
-              contentToDisplay += `**Enlace al archivo**: [Abrir en nueva pestaña](${doc.archive_url})\n\n`;
-            } else {
-              contentToDisplay += `**Enlace al archivo**: [Ver en Wayback Machine](${doc.archive_url})\n\n`;
-              contentToDisplay += `Este enlace lleva a una copia histórica del documento preservada en el Archive.org.\n\n`;
-            }
-          } else {
-            contentToDisplay += `**Enlace al archivo**: No disponible\n\n`;
-          }
-          contentToDisplay += `**Fecha de procesamiento**: ${new Date(doc.created_at).toLocaleDateString('es-AR')}\n\n`;
-          contentToDisplay += `---
-
-`;
-          contentToDisplay += `## Información del Documento
-
-`;
-          contentToDisplay += `- **Nombre**: ${doc.title}
-`;
-          contentToDisplay += `- **Año**: ${doc.year}
-`;
-          contentToDisplay += `- **Categoría**: ${doc.category}
-`;
-          contentToDisplay += `- **Hash SHA256**: \`${doc.sha256_hash}\`
-`;
-          break;
-
-        case 'metadata':
-          contentToDisplay = `# 💾 Metadatos del Documento
-
-`;
-          contentToDisplay += `## Información Detallada
-
-`;
-          contentToDisplay += `- **ID**: ${doc.id}
-`;
-          contentToDisplay += `- **Nombre del archivo**: ${doc.title}
-`;
-          contentToDisplay += `- **Año**: ${doc.year}
-`;
-          contentToDisplay += `- **Categoría**: ${doc.category}
-`;
-          if (doc.size_bytes) {
-            contentToDisplay += `- **Tamaño**: ${(doc.size_bytes / 1024).toFixed(2)} KB (${doc.size_bytes} bytes)
-`;
-          }
-          contentToDisplay += `- **Estado de verificación**: ${doc.verification_status}
-`;
-          contentToDisplay += `- **Hash SHA256**: \`${doc.sha256_hash}\`
-`;
-          contentToDisplay += `- **Fecha de procesamiento**: ${new Date(doc.created_at).toLocaleString('es-AR')}
-`;
-          if (doc.official_url) {
-            contentToDisplay += `- **Fuente oficial**: [Enlace](${doc.official_url})
-`;
-          }
-          if (doc.archive_url) {
-            contentToDisplay += `- **Archivo web**: [Enlace](${doc.archive_url})
-`;
-          }
-          break;
-      }
-
-      setDocumentContent(contentToDisplay);
-    } catch (error) {
-      console.error('Error loading document content:', error);
-      setDocumentContent(`# ⚠️ Error de carga
-
-## ${doc.title}
-
-**No se pudo cargar el contenido del documento.**
-
-Por favor intente nuevamente.`);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const formatFileSize = (bytes: number | undefined): string => {
-    if (!bytes) return 'Desconocido';
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  };
-
-  const getVerificationIcon = (status: string) => {
-    switch (status) {
-      case 'verified':
-        return <CheckCircle className="w-4 h-4 text-green-500" />;
-      case 'partial':
-        return <CheckCircle className="w-4 h-4 text-yellow-500" />;
-      default:
-        return <CheckCircle className="w-4 h-4 text-gray-400" />;
-    }
-  };
-
-  const getCategoryColor = (category: string) => {
-    const colors: Record<string, string> = {
-      'financial_data': 'bg-blue-100 text-blue-800',
-      'tenders': 'bg-green-100 text-green-800',
-      'salaries': 'bg-purple-100 text-purple-800',
-      'reports': 'bg-orange-100 text-orange-800',
-      'declarations': 'bg-pink-100 text-pink-800',
-      'budget': 'bg-indigo-100 text-indigo-800',
-      'default': 'bg-gray-100 text-gray-800'
-    };
-    return colors[category] || colors.default;
-  };
-
-  const getSourceIcon = (source: string) => {
-    switch (source) {
-      case 'processed':
-        return <Eye className="w-4 h-4" />;
-      case 'official':
-        return <ExternalLink className="w-4 h-4" />;
-      case 'archive':
-        return <Database className="w-4 h-4" />;
-      case 'metadata':
-        return <Hash className="w-4 h-4" />;
-      default:
-        return <FileText className="w-4 h-4" />;
-    }
-  };
-
-  const getSourceLabel = (source: string) => {
-    switch (source) {
-      case 'processed':
-        return 'Contenido Procesado';
-      case 'official':
-        return 'Fuente Oficial';
-      case 'archive':
-        return 'Archivo Web';
-      case 'metadata':
-        return 'Metadatos';
-      default:
-        return 'Documento';
-    }
-  };
-
-  const handleDownload = async () => {
-    if (document && document.official_url) {
-      try {
-        // Use unifiedDataService for document downloads
-        // Or, if the backend serves the file directly, just open the URL
-        window.open(document.official_url, '_blank');
-      } catch (error) {
-        console.error('Error downloading document:', error);
-        alert('No se pudo descargar el documento.');
-      }
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: document?.title || 'Documento de Transparencia',
+        text: `Documento: ${document?.title || 'Sin título'}`,
+        url: window.location.href
+      });
     } else {
-      alert('No hay URL oficial disponible para descargar este documento.');
+      navigator.clipboard.writeText(window.location.href);
     }
+  };
+
+  const formatFileSize = (sizeStr: string): string => {
+    const size = parseFloat(sizeStr || '0');
+    if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
+    return `${size.toFixed(1)} MB`;
+  };
+
+  const getVerificationIcon = (status: string, verified: boolean) => {
+    if (verified || status === 'verified') {
+      return <CheckCircle className="w-5 h-5 text-green-500" />;
+    }
+    return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
+  };
+
+  const getVerificationText = (status: string, verified: boolean) => {
+    if (verified || status === 'verified') {
+      return 'Documento Verificado';
+    }
+    return 'Verificación Pendiente';
+  };
+
+  const getVerificationColor = (status: string, verified: boolean) => {
+    if (verified || status === 'verified') {
+      return 'bg-green-100 text-green-800';
+    }
+    return 'bg-yellow-100 text-yellow-800';
   };
 
   if (isLoading) {
@@ -293,49 +142,20 @@ Por favor intente nuevamente.`);
     );
   }
 
-  if (error) {
+  if (error || !document) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="max-w-md p-6 bg-white rounded-lg shadow-md text-center">
-          <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100">
-            <svg className="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </div>
-          <h3 className="text-lg font-medium text-gray-900 mt-4">Error</h3>
-          <p className="text-gray-500 mt-2">{error}</p>
-          <div className="mt-6">
-            <button
-              onClick={() => navigate(-1)}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-            >
-              Volver a Documentos
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (!document) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="max-w-md p-6 bg-white rounded-lg shadow-md text-center">
-          <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-yellow-100">
-            <svg className="h-6 w-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-            </svg>
-          </div>
-          <h3 className="text-lg font-medium text-gray-900 mt-4">Documento no encontrado</h3>
-          <p className="text-gray-500 mt-2">El documento solicitado no existe o no está disponible.</p>
-          <div className="mt-6">
-            <button
-              onClick={() => navigate(-1)}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-            >
-              Volver a Documentos
-            </button>
-          </div>
+        <div className="text-center">
+          <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Error</h2>
+          <p className="text-gray-600 mb-6">{error || 'Documento no encontrado'}</p>
+          <button
+            onClick={() => navigate('/documents')}
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Volver a Documentos
+          </button>
         </div>
       </div>
     );
@@ -343,196 +163,233 @@ Por favor intente nuevamente.`);
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
-        <div className="mb-6">
-          <button 
-            onClick={() => navigate(-1)}
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4"
-          >
-            <ArrowLeft className="w-4 h-4 mr-1" />
-            Volver a Documentos
-          </button>
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between">
-              <div className="flex-1">
-                <h1 className="text-2xl font-bold text-gray-900 mb-2">{document.title}</h1>
-                <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
-                  <div className="flex items-center">
+      {/* Header */}
+      <div className="bg-white shadow-sm border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={() => navigate(-1)}
+                className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg transition-colors"
+                title="Volver"
+              >
+                <ArrowLeft className="w-5 h-5" />
+              </button>
+              
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900 truncate">
+                  {document.title}
+                </h1>
+                <div className="flex items-center space-x-4 mt-2 text-sm text-gray-500">
+                  <span className="flex items-center">
                     <Calendar className="w-4 h-4 mr-1" />
-                    <span>{document.year}</span>
-                  </div>
-                  <span className={`px-2 py-1 rounded-full text-xs ${getCategoryColor(document.category)}`}>
+                    {document.year}
+                  </span>
+                  <span className="flex items-center">
+                    <Database className="w-4 h-4 mr-1" />
                     {document.category}
                   </span>
-                  <div className="flex items-center">
-                    {getVerificationIcon(document.verification_status)}
-                    <span className="ml-1">
-                      {document.verification_status === 'verified' ? 'Verificado' : 
-                       document.verification_status === 'partial' ? 'Parcialmente verificado' : 'No verificado'}
-                    </span>
-                  </div>
-                  {document.size_bytes && (
-                    <div>
-                      Tamaño: {formatFileSize(document.size_bytes)}
-                    </div>
-                  )}
+                  <span className="flex items-center">
+                    <FileText className="w-4 h-4 mr-1" />
+                    {formatFileSize(document.size_mb)}
+                  </span>
                 </div>
               </div>
-              <div className="mt-4 md:mt-0 flex space-x-2">
-                {document.official_url && (
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={handleShare}
+                className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg"
+                title="Compartir documento"
+              >
+                <Share2 className="w-5 h-5" />
+              </button>
+
+              {document.url && (
+                <>
                   <a
-                    href={document.official_url}
+                    href={document.url}
+                    download={document.filename}
+                    className="p-2 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded-lg"
+                    title="Descargar documento"
+                  >
+                    <Download className="w-5 h-5" />
+                  </a>
+
+                  <a
+                    href={document.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 flex items-center text-sm"
+                    className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg"
+                    title="Abrir en nueva ventana"
                   >
-                    <ExternalLink className="w-4 h-4 mr-1" />
-                    Fuente oficial
+                    <ExternalLink className="w-5 h-5" />
                   </a>
-                )}
-                <button 
-                  onClick={handleDownload}
-                  className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 flex items-center text-sm"
-                >
-                  <Download className="w-4 h-4 mr-1" />
-                  Descargar
-                </button>
-              </div>
+                </>
+              )}
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="flex flex-col lg:flex-row gap-6">
-          {/* Document Content */}
-          <div className="flex-1">
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              {/* Content Source Selector */}
-              <div className="bg-gray-100 border-b border-gray-200 p-3">
-                <div className="flex flex-wrap gap-2">
-                  {(['processed', 'official', 'archive', 'metadata'] as const).map((source) => (
-                    <button
-                      key={source}
-                      className={`flex items-center space-x-1 py-1.5 px-3 rounded text-sm ${
-                        contentSource === source
-                          ? 'bg-white border border-gray-300 text-gray-900'
-                          : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                      }`}
-                      onClick={() => loadDocumentContent(document, source)}
-                    >
-                      {getSourceIcon(source)}
-                      <span>{getSourceLabel(source)}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Document Content Display */}
-              <div className="p-6 min-h-[500px]">
-                {isLoading ? (
-                  <div className="flex items-center justify-center h-64">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                  </div>
-                ) : (
-                  <MarkdownRenderer content={documentContent} />
-                )}
-              </div>
-            </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Main Document Viewer */}
+          <div className="lg:col-span-3">
+            <UnifiedDocumentViewer
+              documentId={document.id}
+              documents={[document]}
+              showList={false}
+              className="mb-8"
+            />
           </div>
 
-          {/* Document Metadata Sidebar */}
-          <div className="w-full lg:w-80">
-            <div className="bg-white rounded-lg shadow-sm p-6 sticky top-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Información del Documento</h2>
-              
+          {/* Sidebar */}
+          <div className="lg:col-span-1 space-y-6">
+            {/* Document Metadata */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"
+            >
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                Información del Documento
+              </h3>
+
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-sm font-medium text-gray-500">ID</h3>
-                  <p className="mt-1 text-sm text-gray-900">{document.id}</p>
-                </div>
-                
-                <div>
-                  <h3 className="text-sm font-medium text-gray-500">Nombre del archivo</h3>
-                  <p className="mt-1 text-sm text-gray-900">{document.title}</p>
-                </div>
-                
-                <div>
-                  <h3 className="text-sm font-medium text-gray-500">Año</h3>
-                  <p className="mt-1 text-sm text-gray-900">{document.year}</p>
-                </div>
-                
-                <div>
-                  <h3 className="text-sm font-medium text-gray-500">Categoría</h3>
-                  <p className="mt-1 text-sm text-gray-900">
-                    <span className={`px-2 py-1 rounded-full text-xs ${getCategoryColor(document.category)}`}>
-                      {document.category}
+                  <dt className="text-sm font-medium text-gray-500">Estado de Verificación</dt>
+                  <dd className="mt-1">
+                    <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getVerificationColor(document.verification_status, document.integrity_verified)}`}>
+                      {getVerificationIcon(document.verification_status, document.integrity_verified)}
+                      <span className="ml-2">{getVerificationText(document.verification_status, document.integrity_verified)}</span>
                     </span>
-                  </p>
+                  </dd>
                 </div>
-                
+
                 <div>
-                  <h3 className="text-sm font-medium text-gray-500">Estado de verificación</h3>
-                  <div className="mt-1 flex items-center text-sm">
-                    {getVerificationIcon(document.verification_status)}
-                    <span className="ml-1 text-gray-900">
-                      {document.verification_status === 'verified' ? 'Verificado' : 
-                       document.verification_status === 'partial' ? 'Parcialmente verificado' : 'No verificado'}
-                    </span>
-                  </div>
+                  <dt className="text-sm font-medium text-gray-500">Categoría</dt>
+                  <dd className="mt-1 text-sm text-gray-900">{document.category}</dd>
                 </div>
-                
+
                 <div>
-                  <h3 className="text-sm font-medium text-gray-500">Hash SHA256</h3>
-                  <p className="mt-1 text-sm text-gray-900 font-mono break-words">
-                    {document.sha256_hash}
-                  </p>
+                  <dt className="text-sm font-medium text-gray-500">Año</dt>
+                  <dd className="mt-1 text-sm text-gray-900">{document.year}</dd>
                 </div>
-                
-                {document.size_bytes && (
+
+                <div>
+                  <dt className="text-sm font-medium text-gray-500">Tipo de Archivo</dt>
+                  <dd className="mt-1 text-sm text-gray-900 capitalize">
+                    {document.file_type || document.document_type || 'No especificado'}
+                  </dd>
+                </div>
+
+                <div>
+                  <dt className="text-sm font-medium text-gray-500">Tamaño</dt>
+                  <dd className="mt-1 text-sm text-gray-900">{formatFileSize(document.size_mb)}</dd>
+                </div>
+
+                {document.processing_date && (
                   <div>
-                    <h3 className="text-sm font-medium text-gray-500">Tamaño</h3>
-                    <p className="mt-1 text-sm text-gray-900">{formatFileSize(document.size_bytes)}</p>
+                    <dt className="text-sm font-medium text-gray-500">Fecha de Procesamiento</dt>
+                    <dd className="mt-1 text-sm text-gray-900 flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {new Date(document.processing_date).toLocaleDateString('es-ES')}
+                    </dd>
                   </div>
                 )}
-                
-                <div>
-                  <h3 className="text-sm font-medium text-gray-500">Fecha de procesamiento</h3>
-                  <p className="mt-1 text-sm text-gray-900">
-                    {new Date(document.created_at).toLocaleString('es-AR')}
-                  </p>
-                </div>
-                
-                {document.official_url && (
+
+                {document.sha256_hash && (
                   <div>
-                    <h3 className="text-sm font-medium text-gray-500">Fuente oficial</h3>
-                    <a
-                      href={document.official_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-1 text-sm text-blue-600 hover:text-blue-800 flex items-center"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-1" />
-                      Ver documento
-                    </a>
+                    <dt className="text-sm font-medium text-gray-500">Hash SHA256</dt>
+                    <dd className="mt-1 text-xs text-gray-700 font-mono break-all">
+                      {document.sha256_hash}
+                    </dd>
                   </div>
                 )}
-                
-                {document.archive_url && (
+
+                {document.data_sources && document.data_sources.length > 0 && (
                   <div>
-                    <h3 className="text-sm font-medium text-gray-500">Archivo web</h3>
-                    <a
-                      href={document.archive_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-1 text-sm text-blue-600 hover:text-blue-800 flex items-center"
-                    >
-                      <Database className="w-4 h-4 mr-1" />
-                      Ver en Wayback Machine
-                    </a>
+                    <dt className="text-sm font-medium text-gray-500">Fuentes de Datos</dt>
+                    <dd className="mt-1">
+                      {document.data_sources.map((source, index) => (
+                        <span
+                          key={index}
+                          className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full mr-2 mb-1"
+                        >
+                          {source}
+                        </span>
+                      ))}
+                    </dd>
                   </div>
                 )}
               </div>
-            </div>
+            </motion.div>
+
+            {/* Financial Data */}
+            {document.financial_data && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 }}
+                className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                  <Activity className="w-5 h-5 mr-2" />
+                  Datos Financieros
+                </h3>
+                <pre className="text-xs text-gray-600 bg-gray-50 p-3 rounded-lg overflow-x-auto">
+                  {JSON.stringify(document.financial_data, null, 2)}
+                </pre>
+              </motion.div>
+            )}
+
+            {/* Related Documents */}
+            {relatedDocuments.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                  <BookOpen className="w-5 h-5 mr-2" />
+                  Documentos Relacionados
+                </h3>
+                <div className="space-y-3">
+                  {relatedDocuments.map((relDoc) => (
+                    <motion.div
+                      key={relDoc.id}
+                      whileHover={{ x: 4 }}
+                      className="p-3 border border-gray-200 rounded-lg hover:shadow-md transition-all cursor-pointer"
+                      onClick={() => navigate(`/documents/${relDoc.id}`)}
+                    >
+                      <div className="flex items-start space-x-3">
+                        <FileText className="w-4 h-4 text-gray-500 mt-1 flex-shrink-0" />
+                        <div className="min-w-0 flex-1">
+                          <h4 className="text-sm font-medium text-gray-900 truncate">
+                            {relDoc.title}
+                          </h4>
+                          <p className="text-xs text-gray-500 mt-1">
+                            {relDoc.category} • {relDoc.year}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+
+                <div className="mt-4 pt-4 border-t border-gray-200">
+                  <button
+                    onClick={() => navigate('/documents')}
+                    className="w-full text-center text-sm text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Ver todos los documentos →
+                  </button>
+                </div>
+              </motion.div>
+            )}
           </div>
         </div>
       </div>

@@ -12,9 +12,27 @@ import {
   Calendar,
   Target,
   CheckCircle,
-  XCircle
+  XCircle,
+  Database,
+  LineChart,
+  PieChart as LucidePieChart,
+  BarChart,
+  TrendingUp as LucideTrendingUp,
+  Wallet,
+  Coins,
+  CreditCard,
+  FileSpreadsheet,
+  Eye,
+  Download,
+  Search,
+  Filter
 } from 'lucide-react';
 import { consolidatedApiService } from '../services';
+import ValidatedChart from '../components/ValidatedChart';
+import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
+import DebtAnalysisChart from '../components/charts/DebtAnalysisChart';
+import UnifiedDashboardChart from '../components/charts/UnifiedDashboardChart';
+import BudgetExecution from '../components/BudgetExecution';
 
 interface BudgetData {
   total_budgeted: number;
@@ -38,14 +56,25 @@ interface FinancialDocument {
   processing_date: string;
 }
 
+interface DebtData {
+  total_debt: number;
+  debt_by_type: Record<string, number>;
+  interest_rate: string;
+  due_date: string;
+}
+
 const Financial: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(2024);
   const [budgetData, setBudgetData] = useState<BudgetData | null>(null);
+  const [debtData, setDebtData] = useState<DebtData | null>(null);
   const [financialDocs, setFinancialDocs] = useState<FinancialDocument[]>([]);
   const [budgetDocs, setBudgetDocs] = useState<FinancialDocument[]>([]);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'overview' | 'budget' | 'debt' | 'statements'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'budget' | 'debt' | 'statements' | 'analytics'>('overview');
   const [availableYears] = useState([2024, 2023, 2022, 2021, 2020]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [documentView, setDocumentView] = useState<'grid' | 'list'>('grid');
 
   useEffect(() => {
     loadFinancialData();
@@ -75,6 +104,18 @@ const Financial: React.FC = () => {
         );
         setBudgetDocs(budget);
       }
+
+      // Load debt data (placeholder for now)
+      setDebtData({
+        total_debt: 1500000000,
+        debt_by_type: {
+          'Deuda Pública': 1000000000,
+          'Deuda Comercial': 300000000,
+          'Otras Obligaciones': 200000000
+        },
+        interest_rate: '8.5',
+        due_date: '2025-12-31'
+      });
     } catch (error) {
       console.error('Error loading financial data:', error);
     } finally {
@@ -160,17 +201,19 @@ const Financial: React.FC = () => {
 
         {/* Tabs */}
         <div className="flex justify-center mb-8">
-          <div className="bg-white rounded-xl shadow-lg p-2 inline-flex">
+          <div className="bg-white rounded-xl shadow-lg p-2 inline-flex flex-wrap gap-2">
             {[
               { key: 'overview', label: '📊 Resumen', icon: <BarChart3 className="w-4 h-4" /> },
               { key: 'budget', label: '💰 Presupuesto', icon: <DollarSign className="w-4 h-4" /> },
               { key: 'debt', label: '📉 Deuda', icon: <TrendingDown className="w-4 h-4" /> },
-              { key: 'statements', label: '📋 Estados', icon: <FileText className="w-4 h-4" /> }
+              { key: 'statements', label: '📋 Estados', icon: <FileText className="w-4 h-4" /> },
+              { key: 'analytics', label: '📈 Análisis', icon: <LucideTrendingUp className="w-4 h-4" /> },
+              { key: 'execution', label: '⚡ Ejecución', icon: <Activity className="w-4 h-4" /> }
             ].map((tab) => (
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key as any)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-all ${
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all ${
                   activeTab === tab.key
                     ? 'bg-blue-500 text-white shadow-md'
                     : 'text-gray-600 hover:text-blue-500 hover:bg-blue-50'
@@ -191,7 +234,7 @@ const Financial: React.FC = () => {
             className="space-y-8"
           >
             {/* Key Metrics */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
                 <div className="flex items-center justify-between">
                   <div>
@@ -224,6 +267,33 @@ const Financial: React.FC = () => {
                   </div>
                   <Activity className="h-12 w-12 text-purple-500" />
                 </div>
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-500">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-700 mb-2">Deuda Total</h3>
+                    <p className="text-3xl font-bold text-red-600">
+                      {debtData ? formatCurrency(debtData.total_debt) : 'N/A'}
+                    </p>
+                  </div>
+                  <Coins className="h-12 w-12 text-red-500" />
+                </div>
+              </div>
+            </div>
+
+            {/* Charts Section */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* Budget Execution Chart */}
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">📊 Ejecución Presupuestaria</h2>
+                <BudgetAnalysisChart year={selectedYear} />
+              </div>
+              
+              {/* Debt Analysis Chart */}
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">📉 Análisis de Deuda</h2>
+                <DebtAnalysisChart year={selectedYear} />
               </div>
             </div>
 
@@ -371,13 +441,108 @@ const Financial: React.FC = () => {
             className="space-y-8"
           >
             <div className="bg-white rounded-xl shadow-lg p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">📉 Información de Deuda</h2>
-              <div className="text-center py-12 text-gray-500">
-                <TrendingDown className="w-16 h-16 mx-auto mb-4 text-gray-300" />
-                <p className="text-lg mb-2">Datos de deuda en desarrollo</p>
-                <p className="text-sm">Los datos de deuda municipal se mostrarán aquí cuando estén disponibles</p>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">📉 Análisis de Deuda</h2>
+              <DebtAnalysisChart year={selectedYear} />
+              
+              {/* Debt Summary Cards */}
+              {debtData && (
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <div className="flex items-center">
+                      <Coins className="w-8 h-8 text-red-500 mr-3" />
+                      <div>
+                        <p className="text-sm font-medium text-red-700">Deuda Total</p>
+                        <p className="text-xl font-bold text-red-900">{formatCurrency(debtData.total_debt)}</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                    <div className="flex items-center">
+                      <TrendingUp className="w-8 h-8 text-orange-500 mr-3" />
+                      <div>
+                        <p className="text-sm font-medium text-orange-700">Tasa de Interés</p>
+                        <p className="text-xl font-bold text-orange-900">{debtData.interest_rate}%</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <div className="flex items-center">
+                      <Calendar className="w-8 h-8 text-yellow-500 mr-3" />
+                      <div>
+                        <p className="text-sm font-medium text-yellow-700">Vencimiento</p>
+                        <p className="text-xl font-bold text-yellow-900">{debtData.due_date}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        )}
+
+        {/* Analytics Tab */}
+        {activeTab === 'analytics' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-8"
+          >
+            <div className="bg-white rounded-xl shadow-lg p-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">📈 Análisis Financiero Completo</h2>
+              <UnifiedDashboardChart year={selectedYear} />
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Debt Composition */}
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">📋 Composición de la Deuda</h3>
+                {debtData && (
+                  <ValidatedChart
+                    data={Object.entries(debtData.debt_by_type).map(([type, amount]) => ({
+                      name: type,
+                      value: amount
+                    }))}
+                    title="Composición de la Deuda"
+                    chartType="pie"
+                    dataKey="value"
+                    nameKey="name"
+                    sources={['Portal de Transparencia - Carmen de Areco']}
+                  />
+                )}
+              </div>
+              
+              {/* Budget vs Execution */}
+              <div className="bg-white rounded-xl shadow-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">💰 Presupuesto vs Ejecutado</h3>
+                {budgetData && (
+                  <ValidatedChart
+                    data={Object.entries(budgetData.categories || {}).map(([category, data]) => ({
+                      name: category,
+                      presupuestado: data.budgeted,
+                      ejecutado: data.executed
+                    }))}
+                    title="Comparativa Presupuesto vs Ejecutado"
+                    chartType="bar"
+                    dataKey="ejecutado"
+                    nameKey="name"
+                    sources={['Portal de Transparencia - Carmen de Areco']}
+                  />
+                )}
               </div>
             </div>
+          </motion.div>
+        )}
+
+        {/* Execution Tab */}
+        {activeTab === 'execution' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-8"
+          >
+            <BudgetExecution />
           </motion.div>
         )}
       </div>

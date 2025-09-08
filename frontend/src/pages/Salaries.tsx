@@ -27,14 +27,52 @@ interface SalaryDocument {
   size: string;
 }
 
-const formatCurrency = (amount: number): string => {
-  return new Intl.NumberFormat('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
-};
+  const formatCurrency = (amount: number): string => {
+    return new Intl.NumberFormat('es-AR', {
+      style: 'currency',
+      currency: 'ARS',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(amount);
+  };
+
+  const getSalaryDistributionData = () => {
+    if (employees.length === 0) return [];
+
+    // Create salary ranges
+    const ranges = [
+      { min: 0, max: 500000, label: 'Menos de $500K' },
+      { min: 500000, max: 1000000, label: '$500K - $1M' },
+      { min: 1000000, max: 1500000, label: '$1M - $1.5M' },
+      { min: 1500000, max: 2000000, label: '$1.5M - $2M' },
+      { min: 2000000, max: Infinity, label: 'Más de $2M' }
+    ];
+
+    return ranges.map(range => ({
+      range: range.label,
+      count: employees.filter(emp => emp.netSalary >= range.min && emp.netSalary < range.max).length,
+      percentage: (employees.filter(emp => emp.netSalary >= range.min && emp.netSalary < range.max).length / employees.length) * 100
+    }));
+  };
+
+  const getDepartmentSalaryData = () => {
+    if (employees.length === 0) return [];
+
+    const departmentStats = employees.reduce((acc, emp) => {
+      if (!acc[emp.department]) {
+        acc[emp.department] = { totalSalary: 0, count: 0 };
+      }
+      acc[emp.department].totalSalary += emp.netSalary;
+      acc[emp.department].count++;
+      return acc;
+    }, {} as Record<string, { totalSalary: number; count: number }>);
+
+    return Object.entries(departmentStats).map(([department, stats]) => ({
+      department,
+      averageSalary: stats.totalSalary / stats.count,
+      employeeCount: stats.count
+    })).sort((a, b) => b.averageSalary - a.averageSalary);
+  };
 
 const Salaries: React.FC = () => {
   const navigate = useNavigate();
@@ -360,136 +398,87 @@ const Salaries: React.FC = () => {
 
       {/* Tab Content */}
       {activeTab === 'overview' && (
-        <div className="space-y-8">
-          {/* Key Metrics */}
+        <div className="space-y-6">
+          {/* Summary Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border-l-4 border-blue-500">
               <div className="flex items-center">
-                <div className="p-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
-                  <DollarSign className="h-6 w-6 text-purple-600 dark:text-purple-400" />
-                </div>
+                <Users className="h-10 w-10 text-blue-500" />
                 <div className="ml-4">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Masa Salarial Total</p>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Total Empleados</p>
+                  <p className="text-2xl font-bold text-gray-900 dark:text-white">{employees.length}</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border-l-4 border-green-500">
+              <div className="flex items-center">
+                <DollarSign className="h-10 w-10 text-green-500" />
+                <div className="ml-4">
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Masa Salarial</p>
                   <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                    {formatCurrency(totalPayroll)}
+                    {formatCurrency(employees.reduce((sum, emp) => sum + emp.netSalary, 0))}
                   </p>
                 </div>
               </div>
             </div>
-
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
+            
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border-l-4 border-purple-500">
               <div className="flex items-center">
-                <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg">
-                  <Users className="h-6 w-6 text-green-600 dark:text-green-400" />
-                </div>
+                <TrendingUp className="h-10 w-10 text-purple-500" />
                 <div className="ml-4">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Empleados</p>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Salario Promedio</p>
                   <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                    {employees.length}
+                    {employees.length > 0 ? formatCurrency(employees.reduce((sum, emp) => sum + emp.netSalary, 0) / employees.length) : '$0'}
                   </p>
                 </div>
               </div>
             </div>
-
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
+            
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border-l-4 border-orange-500">
               <div className="flex items-center">
-                <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
-                  <BarChart3 className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-                </div>
+                <AlertCircle className="h-10 w-10 text-orange-500" />
                 <div className="ml-4">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Salario Promedio</p>
-                  <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                    {formatCurrency(Math.round(averageSalary))}
-                  </p>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Documentos</p>
+                  <p className="text-2xl font-bold text-gray-900 dark:text-white">{documents.length}</p>
                 </div>
-              </div>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center">
-                <div className="p-2 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg">
-                  <FileText className="h-6 w-6 text-yellow-600 dark:text-yellow-400" />
-                </div>
-                <div className="ml-4">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Documentos</p>
-                  <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                    {documents.length}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Salary Ranges */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">Rangos Salariales</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600 dark:text-gray-400">Salario Mínimo</span>
-                  <span className="font-semibold text-gray-900 dark:text-white">{formatCurrency(minSalary)}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600 dark:text-gray-400">Salario Máximo</span>
-                  <span className="font-semibold text-gray-900 dark:text-white">{formatCurrency(maxSalary)}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600 dark:text-gray-400">Promedio</span>
-                  <span className="font-semibold text-gray-900 dark:text-white">{formatCurrency(Math.round(averageSalary))}</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">Top 5 Salarios</h3>
-              <div className="space-y-2">
-                {topSalaries.map((emp, index) => (
-                  <div key={emp.id} className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600 dark:text-gray-400">{emp.name}</span>
-                    <span className="font-semibold text-gray-900 dark:text-white">{formatCurrency(emp.netSalary)}</span>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
           
-          {/* Salary Analysis Charts */}
-          <div className="space-y-8">
-            <SalaryAnalysisChart 
-              year={selectedYear}
-              showDepartments={true}
-              showTrends={true}
-            />
+          {/* Salary Analysis Chart */}
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Análisis Salarial Detallado</h3>
+            <SalaryAnalysisChart year={selectedYear} />
+          </div>
+          
+          {/* Charts Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Salary Distribution */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Distribución Salarial</h3>
+              <ValidatedChart
+                data={getSalaryDistributionData()}
+                title="Distribución de Salarios"
+                chartType="bar"
+                dataKey="count"
+                nameKey="range"
+                sources={['Portal de Transparencia - Carmen de Areco']}
+              />
+            </div>
             
-            <ValidatedChart
-              data={Object.entries(departmentStats).map(([dept, stats]) => ({
-                department: dept,
-                empleados: stats.count,
-                total: stats.total,
-                promedio: Math.round(stats.total / stats.count)
-              }))}
-              title={`Distribución Salarial por Departamento ${selectedYear}`}
-              chartType="bar"
-              dataKey="promedio"
-              nameKey="department"
-              sources={['Carmen de Areco - Portal de Transparencia']}
-              height={400}
-            />
-            
-            <ValidatedChart
-              data={[
-                { name: 'Hasta $500K', empleados: employees.filter(e => e.netSalary <= 500000).length },
-                { name: '$500K - $1M', empleados: employees.filter(e => e.netSalary > 500000 && e.netSalary <= 1000000).length },
-                { name: '$1M - $1.5M', empleados: employees.filter(e => e.netSalary > 1000000 && e.netSalary <= 1500000).length },
-                { name: 'Más de $1.5M', empleados: employees.filter(e => e.netSalary > 1500000).length }
-              ]}
-              title={`Distribución de Empleados por Rango Salarial ${selectedYear}`}
-              chartType="pie"
-              dataKey="empleados"
-              nameKey="name"
-              sources={['Carmen de Areco - Portal de Transparencia']}
-              height={350}
-            />
+            {/* Departments Comparison */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Comparación por Departamento</h3>
+              <ValidatedChart
+                data={getDepartmentSalaryData()}
+                title="Salarios por Departamento"
+                chartType="pie"
+                dataKey="averageSalary"
+                nameKey="department"
+                sources={['Portal de Transparencia - Carmen de Areco']}
+              />
+            </div>
           </div>
         </div>
       )}

@@ -7,6 +7,9 @@ const salaryRoutes = require('./salaryRoutes');
 const documentsRoutes = require('./documentsRoutes');
 const yearsRoutes = require('./yearsRoutes');
 
+// Budget data routes (new)
+const budgetDataRoutes = require('./budgetDataRoutes');
+
 // Essential financial routes
 const propertyDeclarationsRoutes = require('./propertyDeclarationsRoutes');
 const salariesRoutes = require('./salariesRoutes');
@@ -33,6 +36,9 @@ router.use('/budget', budgetRoutes);
 router.use('/salary', salaryRoutes);
 router.use('/documents', documentsRoutes);
 router.use('/years', yearsRoutes);
+
+// Budget data routes (new)
+router.use('/budget-data', budgetDataRoutes);
 
 // Essential municipal data routes
 router.use('/declarations', propertyDeclarationsRoutes);

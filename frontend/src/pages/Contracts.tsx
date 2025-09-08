@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Download, Search, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, Building, DollarSign, ShieldCheck, Users, BarChart3, Loader2 } from 'lucide-react';
 import PageYearSelector from '../components/PageYearSelector';
 import { consolidatedApiService } from '../services';
+import ValidatedChart from '../components/ValidatedChart';
 
 interface Contract {
   id: string;
@@ -107,6 +108,25 @@ const Contracts: React.FC = () => {
     if (category.includes('consultor') || category.includes('asesor')) return 'consulting';
     if (category.includes('suminist') || category.includes('bien') || category.includes('equip')) return 'supplies';
     return 'services';
+  };
+
+  const getContractTypeName = (type: 'public_works' | 'services' | 'supplies' | 'consulting'): string => {
+    switch (type) {
+      case 'public_works': return 'Obras Públicas';
+      case 'services': return 'Servicios';
+      case 'supplies': return 'Suministros';
+      case 'consulting': return 'Consultoría';
+      default: return 'Otros';
+    }
+  };
+
+  const getExecutionStatusName = (status: 'completed' | 'in_progress' | 'delayed'): string => {
+    switch (status) {
+      case 'completed': return 'Completado';
+      case 'in_progress': return 'En Progreso';
+      case 'delayed': return 'Demorado';
+      default: return 'Desconocido';
+    }
   };
 
   const generateContractsDataFallback = (year: number): Contract[] => {
@@ -379,74 +399,136 @@ const Contracts: React.FC = () => {
       </div>
 
       {/* Tab Content */}
-      {activeTab === 'overview' && (
+            {activeTab === 'overview' && (
         <div className="space-y-6">
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+          {/* Summary Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border-l-4 border-blue-500">
               <div className="flex items-center">
-                <div className="p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-500 dark:text-blue-400 rounded-lg mr-4">
-                  <FileText size={24} />
+                <FileText className="h-10 w-10 text-blue-500" />
+                <div className="ml-4">
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Total Contratos</p>
+                  <p className="text-2xl font-bold text-gray-900 dark:text-white">{contractsData.length}</p>
                 </div>
-                <div>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Contratos Activos
-                  </p>
-                  <p className="text-2xl font-bold text-gray-800 dark:text-white">
-                    {aggregatedData.totalContracts}
+              </div>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border-l-4 border-green-500">
+              <div className="flex items-center">
+                <DollarSign className="h-10 w-10 text-green-500" />
+                <div className="ml-4">
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Inversión Total</p>
+                  <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                    {formatCurrency(contractsData.reduce((sum, contract) => sum + contract.budget, 0))}
                   </p>
                 </div>
               </div>
             </div>
-
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+            
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border-l-4 border-yellow-500">
               <div className="flex items-center">
-                <div className="p-3 bg-green-100 dark:bg-green-900/30 text-green-500 dark:text-green-400 rounded-lg mr-4">
-                  <DollarSign size={24} />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Monto Total Contratado
-                  </p>
-                  <p className="text-2xl font-bold text-gray-800 dark:text-white">
-                    {formatCurrency(aggregatedData.totalAmount)}
+                <Clock className="h-10 w-10 text-yellow-500" />
+                <div className="ml-4">
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">En Progreso</p>
+                  <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                    {contractsData.filter(c => c.execution_status === 'in_progress').length}
                   </p>
                 </div>
               </div>
             </div>
-
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+            
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border-l-4 border-red-500">
               <div className="flex items-center">
-                <div className="p-3 bg-purple-100 dark:bg-purple-900/30 text-purple-500 dark:text-purple-400 rounded-lg mr-4">
-                  <TrendingUp size={24} />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Tasa de Finalización
-                  </p>
-                  <p className="text-2xl font-bold text-gray-800 dark:text-white">
-                    {aggregatedData.executionStats.averageCompletion}%
+                <AlertTriangle className="h-10 w-10 text-red-500" />
+                <div className="ml-4">
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Demorados</p>
+                  <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                    {contractsData.filter(c => c.execution_status === 'delayed').length}
                   </p>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Contract Types Distribution */}
+          
+          {/* Charts Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Contracts by Type */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Distribución por Tipo de Contrato</h3>
+              <ValidatedChart
+                data={Object.entries(
+                  contractsData.reduce((acc, contract) => {
+                    acc[contract.type] = (acc[contract.type] || 0) + 1;
+                    return acc;
+                  }, {} as Record<string, number>)
+                ).map(([type, count]) => ({
+                  name: getContractTypeName(type as any),
+                  value: count
+                }))}
+                title="Tipos de Contrato"
+                chartType="pie"
+                dataKey="value"
+                nameKey="name"
+                sources={['Portal de Transparencia - Carmen de Areco']}
+              />
+            </div>
+            
+            {/* Contracts by Status */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Estado de Ejecución</h3>
+              <ValidatedChart
+                data={Object.entries(
+                  contractsData.reduce((acc, contract) => {
+                    acc[contract.execution_status] = (acc[contract.execution_status] || 0) + 1;
+                    return acc;
+                  }, {} as Record<string, number>)
+                ).map(([status, count]) => ({
+                  name: getExecutionStatusName(status as any),
+                  value: count
+                }))}
+                title="Estado de Contratos"
+                chartType="bar"
+                dataKey="value"
+                nameKey="name"
+                sources={['Portal de Transparencia - Carmen de Areco']}
+              />
+            </div>
+          </div>
+          
+          {/* Top Contractors */}
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
-            <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
-              Distribución por Tipo de Contrato
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {aggregatedData.contractsByType.map((type, index) => (
-                <div key={index} className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                  <div className="text-2xl font-bold" style={{ color: type.color }}>
-                    {type.value}
-                  </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">{type.name}</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-500">{formatCurrency(type.amount)}</div>
-                </div>
-              ))}
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Principales Contratistas</h3>
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                <thead className="bg-gray-50 dark:bg-gray-700">
+                  <tr>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Contratista</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Contratos</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">Inversión Total</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+                  {Object.entries(
+                    contractsData.reduce((acc, contract) => {
+                      if (!acc[contract.awarded_to]) {
+                        acc[contract.awarded_to] = { count: 0, total: 0 };
+                      }
+                      acc[contract.awarded_to].count++;
+                      acc[contract.awarded_to].total += contract.budget;
+                      return acc;
+                    }, {} as Record<string, { count: number; total: number }>)
+                  )
+                    .sort((a, b) => b[1].total - a[1].total)
+                    .slice(0, 5)
+                    .map(([contractor, stats]) => (
+                      <tr key={contractor}>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">{contractor}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">{stats.count}</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">{formatCurrency(stats.total)}</td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
