@@ -82,9 +82,6 @@ jobs:
         env:
           VITE_API_URL: https://api.cda-transparencia.org/api/transparency
         
-      - name: Run live data scraper
-        run: python3 scripts/scraping/live_scrape.py
-        
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
