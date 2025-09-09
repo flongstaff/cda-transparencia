@@ -69,6 +69,7 @@ class DataSource(Enum):
     CONCEJO_DELIBERANTE = "concejo_deliberante"
     LOCAL_INVENTORY = "local_inventory"
     PRESUPUESTO_ABIERTO = "presupuesto_abierto"
+    BOLETIN_OFICIAL_PROVINCIA = "boletin_oficial_provincia"
 
 
 @dataclass
@@ -127,6 +128,9 @@ class IntegratedTransparencySystem:
                     "https://github.com/chrishein/bora_crawler"
                 ]
             },
+            DataSource.BOLETIN_OFICIAL_PROVINCIA: {
+                "base_url": "https://www.boletinoficial.gba.gob.ar/",
+            },
             DataSource.DATOS_GOB_AR: {
                 "base_url": "https://datos.gob.ar/",
                 "api_url": "https://datos.gob.ar/api/3/",
@@ -161,7 +165,7 @@ class IntegratedTransparencySystem:
                 "github_repo": "https://github.com/datosgobar/georef-ar-api"
             },
             DataSource.OBRAS_PUBLICAS: {
-                "base_url": "https://mapainversiones.obraspublicas.gob.ar/api/v1/",
+                "base_url": "https://mapainversiones.obraspublicas.gob.ar/datos-abiertos",
                 "docs": "https://mapainversiones.obraspublicas.gob.ar/docs/api/v1/"
             },
             DataSource.CONCEJO_DELIBERANTE: {
@@ -483,6 +487,14 @@ class IntegratedTransparencySystem:
         logger.info(f"Found {len(results)} Boletín Oficial entries for Carmen de Areco")
         return results
 
+    async def scrape_boletin_oficial_provincia(self, search_terms: List[str] = None) -> List[Dict]:
+        """Scrape the Official Gazette of the Province of Buenos Aires."""
+        logger.info("Scraping Boletín Oficial de la Provincia de Buenos Aires")
+        # This is a placeholder. A real implementation would use a library like BeautifulSoup
+        # to parse the HTML of the website and extract the links to the gazettes.
+        # It would also need to handle pagination and date-based searches.
+        return []
+
     async def query_datos_gob_ar(self) -> List[Dict]:
         """
         Query datos.gob.ar for Carmen de Areco related datasets
@@ -590,8 +602,10 @@ class IntegratedTransparencySystem:
 
     async def query_obras_publicas(self) -> List[Dict]:
         """Query the national public works API."""
-        logger.info("Querying National Public Works API")
-        # Placeholder for future implementation
+        logger.info("Querying National Public Works data")
+        # The data is available as a downloadable CSV file, not a direct API.
+        # See: https://mapainversiones.obraspublicas.gob.ar/datos-abiertos
+        # A real implementation would download and parse the CSV file.
         return []
 
     async def query_presupuesto_abierto(self) -> List[Dict]:
@@ -607,8 +621,10 @@ class IntegratedTransparencySystem:
 
     async def scrape_concejo_deliberante(self) -> List[Dict]:
         """Scrape the local council blog for resolutions and ordinances."""
-        logger.info("Scraping local council blog")
-        # Placeholder for future implementation
+        logger.info("Scraping local council blog (http://hcdcarmendeareco.blogspot.com/)")
+        # This is a placeholder. A real implementation would use a library like BeautifulSoup
+        # to parse the HTML of the blog and extract the links to the resolutions and ordinances.
+        # It would also need to handle pagination if there are multiple pages.
         return []
 
     def integrate_afip_data(self) -> Dict:
@@ -827,60 +843,93 @@ class IntegratedTransparencySystem:
         
         return min(total_score, 1.0)  # Cap at 1.0
 
-    def cross_reference_data(self, new_data: Dict) -> Dict:
-        """
-        Cross-reference new data with known corruption cases and patterns
-        """
-        logger.info("Cross-referencing data with known corruption patterns")
-        
-        cross_ref_results = {
-            "matches": [],
-            "suspicious_patterns": [],
-            "recommendations": [],
-            "risk_assessment": "low"
+    def cross_reference_all_data(self, detailed_findings: Dict) -> Dict:
+        """Cross-reference findings across all data sources"""
+        logger.info("Performing advanced cross-referencing of all data sources...")
+        cross_ref = {
+            "entity_correlations": [],
+            "temporal_correlations": [],
+            "amount_correlations": [],
+            "pattern_matches": [],
+            "risk_indicators": []
         }
-        
-        # Check against known corruption cases
+
+        # 1. Entity Correlation
+        all_entities = set()
+        entity_sources = {}
+        for source, findings in detailed_findings.items():
+            if isinstance(findings, list):
+                for finding in findings:
+                    entities = []
+                    if 'title' in finding:
+                        entities.extend(re.findall(r'\b[A-Z][a-z]+\s+[A-Z][a-z]+\b', finding['title']))
+                    if 'description' in finding and finding['description']:
+                         entities.extend(re.findall(r'\b[A-Z][a-z]+\s+[A-Z][a-z]+\b', finding['description']))
+                    if 'responsible_parties' in finding and finding['responsible_parties']:
+                        entities.extend(finding['responsible_parties'])
+                    
+                    for entity in set(entities):
+                        all_entities.add(entity)
+                        if entity not in entity_sources:
+                            entity_sources[entity] = set()
+                        entity_sources[entity].add(source)
+
+        for entity, sources in entity_sources.items():
+            if len(sources) > 1:
+                cross_ref["entity_correlations"].append({
+                    "entity": entity,
+                    "sources": list(sources),
+                    "correlation_strength": len(sources)
+                })
+
+        # 2. Known Corruption Entities Check
+        known_corruption_entities = []
         for case in self.corruption_cases:
-            # Amount matching
-            if case.amount and new_data.get('amount'):
-                deviation = abs(new_data['amount'] - case.amount) / case.amount
-                if deviation < 0.1:  # Within 10%
-                    cross_ref_results["matches"].append({
-                        "type": "amount_match",
-                        "case_id": case.case_id,
-                        "description": f"Amount closely matches known case: {case.title}",
-                        "deviation": deviation
-                    })
-            
-            # Name/entity matching
-            if new_data.get('responsible_parties'):
-                for party in new_data['responsible_parties']:
-                    if any(known_party in party for known_party in case.responsible_parties):
-                        cross_ref_results["matches"].append({
-                            "type": "entity_match",
-                            "case_id": case.case_id,
-                            "description": f"Responsible party matches known case: {party}",
-                            "case_title": case.title
-                        })
-            
-            # Temporal correlation
-            if new_data.get('date') and case.date:
-                if new_data['date'] == case.date:
-                    cross_ref_results["suspicious_patterns"].append({
-                        "type": "temporal_correlation",
-                        "description": f"Same time period as known case: {case.title}"
-                    })
+            known_corruption_entities.extend(case.responsible_parties)
         
-        # Assess overall risk
-        if cross_ref_results["matches"]:
-            cross_ref_results["risk_assessment"] = "high"
-            cross_ref_results["recommendations"].append("Immediate investigation recommended")
-        elif cross_ref_results["suspicious_patterns"]:
-            cross_ref_results["risk_assessment"] = "medium"
-            cross_ref_results["recommendations"].append("Enhanced monitoring recommended")
-        
-        return cross_ref_results
+        for entity in all_entities:
+            for known_entity in known_corruption_entities:
+                if known_entity in entity:
+                    cross_ref["pattern_matches"].append({
+                        "type": "known_corruption_entity",
+                        "entity": entity,
+                        "description": f"Entity '{entity}' matches known corruption case participant: '{known_entity}'"
+                    })
+
+        # 3. Temporal and Amount Correlation (Example)
+        # This is a simplified example. A real implementation would require more sophisticated logic.
+        for source1, findings1 in detailed_findings.items():
+            for source2, findings2 in detailed_findings.items():
+                if source1 >= source2: continue # Avoid duplicates and self-comparison
+                if isinstance(findings1, list) and isinstance(findings2, list):
+                    for f1 in findings1:
+                        for f2 in findings2:
+                            # Temporal correlation
+                            if f1.get('date') and f1.get('date') == f2.get('date'):
+                                cross_ref["temporal_correlations"].append({
+                                    "source1": source1,
+                                    "source2": source2,
+                                    "item1": f1.get('title'),
+                                    "item2": f2.get('title'),
+                                    "date": f1.get('date')
+                                })
+                            # Amount correlation
+                            if f1.get('amount') and f1.get('amount') == f2.get('amount'):
+                                cross_ref["amount_correlations"].append({
+                                    "source1": source1,
+                                    "source2": source2,
+                                    "item1": f1.get('title'),
+                                    "item2": f2.get('title'),
+                                    "amount": f1.get('amount')
+                                })
+
+        # 4. Risk Indicators
+        if len(cross_ref["entity_correlations"]) > 5:
+            cross_ref["risk_indicators"].append("High number of entity correlations across different data sources.")
+        if len(cross_ref["pattern_matches"]) > 0:
+            cross_ref["risk_indicators"].append("Entities matching known corruption case participants found.")
+
+        return cross_ref
 
     async def run_comprehensive_analysis(self) -> Dict:
         """
@@ -908,6 +957,10 @@ class IntegratedTransparencySystem:
             boletin_results = await self.scrape_boletin_oficial()
             analysis_results["data_sources_analyzed"].append(DataSource.BOLETIN_OFICIAL.value)
             analysis_results["detailed_findings"]["boletin_oficial"] = boletin_results
+
+            boletin_provincia_results = await self.scrape_boletin_oficial_provincia()
+            analysis_results["data_sources_analyzed"].append(DataSource.BOLETIN_OFICIAL_PROVINCIA.value)
+            analysis_results["detailed_findings"]["boletin_oficial_provincia"] = boletin_provincia_results
             
             # 2. Query government data portals
             datos_gob_results = await self.query_datos_gob_ar()
@@ -987,286 +1040,6 @@ class IntegratedTransparencySystem:
             analysis_results["error"] = str(e)
         
         return analysis_results
-
-    async def analyze_municipal_transparency(self) -> Dict:
-        """
-        Analyze Carmen de Areco's municipal transparency portal
-        Download and verify financial documents
-        """
-        logger.info("Analyzing municipal transparency portal")
-        
-        transparency_analysis = {
-            "portal_url": "https://carmendeareco.gob.ar/transparencia/",
-            "documents_found": [],
-            "documents_analyzed": 0,
-            "integrity_issues": [],
-            "financial_anomalies": [],
-            "missing_documents": [],
-            "risk_assessment": "low"
-        }
-        
-        try:
-            # Scrape transparency portal for documents
-            async with aiohttp.ClientSession() as session:
-                async with session.get(transparency_analysis["portal_url"]) as response:
-                    if response.status == 200:
-                        content = await response.text()
-                        soup = BeautifulSoup(content, 'html.parser')
-                        
-                        # Find all document links
-                        document_links = []
-                        for link in soup.find_all('a', href=True):
-                            href = link['href']
-                            if any(ext in href.lower() for ext in ['.pdf', '.xlsx', '.xls']):
-                                title = link.text.strip() or link.get('title', 'Unknown Document')
-                                document_links.append({
-                                    'title': title,
-                                    'url': href,
-                                    'type': 'pdf' if '.pdf' in href else 'excel'
-                                })
-                        
-                        transparency_analysis["documents_found"] = document_links
-                        
-                        # Analyze key financial documents
-                        priority_documents = [
-                            "Estado de Ejecución de Recursos",
-                            "Estado de Ejecución de Gastos", 
-                            "Situación Económico Financiera",
-                            "Stock de Deuda"
-                        ]
-                        
-                        for doc in document_links:
-                            if any(priority in doc['title'] for priority in priority_documents):
-                                # Download and analyze document
-                                doc_analysis = await self.download_and_analyze_document(session, doc)
-                                
-                                if doc_analysis:
-                                    transparency_analysis["documents_analyzed"] += 1
-                                    
-                                    if doc_analysis.get("integrity_issues"):
-                                        transparency_analysis["integrity_issues"].extend(doc_analysis["integrity_issues"])
-                                    
-                                    if doc_analysis.get("financial_anomalies"):
-                                        transparency_analysis["financial_anomalies"].extend(doc_analysis["financial_anomalies"])
-            
-            # Check for missing required documents
-            required_documents = [
-                "Estado de Ejecución de Recursos - 2025",
-                "Estado de Ejecución de Gastos - 2025",
-                "Situación Económico Financiera - 2025",
-                "Presupuesto 2025"
-            ]
-            
-            found_titles = [doc['title'] for doc in transparency_analysis["documents_found"]]
-            for required_doc in required_documents:
-                if not any(required_doc.split(' - ')[0] in title for title in found_titles):
-                    transparency_analysis["missing_documents"].append(required_doc)
-            
-            # Calculate risk assessment
-            risk_score = 0
-            if transparency_analysis["integrity_issues"]:
-                risk_score += len(transparency_analysis["integrity_issues"]) * 0.3
-            if transparency_analysis["financial_anomalies"]:
-                risk_score += len(transparency_analysis["financial_anomalies"]) * 0.4
-            if transparency_analysis["missing_documents"]:
-                risk_score += len(transparency_analysis["missing_documents"]) * 0.2
-            
-            if risk_score >= 1.5:
-                transparency_analysis["risk_assessment"] = "critical"
-            elif risk_score >= 1.0:
-                transparency_analysis["risk_assessment"] = "high"
-            elif risk_score >= 0.5:
-                transparency_analysis["risk_assessment"] = "medium"
-            else:
-                transparency_analysis["risk_assessment"] = "low"
-        
-        except Exception as e:
-            logger.error(f"Error analyzing municipal transparency: {e}")
-            transparency_analysis["error"] = str(e)
-        
-        return transparency_analysis
-
-    async def download_and_analyze_document(self, session: aiohttp.ClientSession, doc_info: Dict) -> Dict:
-        """Download and analyze a specific document"""
-        try:
-            url = doc_info['url']
-            if not url.startswith('http'):
-                url = f"https://carmendeareco.gob.ar{url}"
-            
-            async with session.get(url) as response:
-                if response.status == 200:
-                    # Save document temporarily
-                    filename = f"temp_{hashlib.md5(url.encode()).hexdigest()}.{doc_info['type']}"
-                    temp_path = self.data_dir / filename
-                    
-                    content = await response.read()
-                    with open(temp_path, 'wb') as f:
-                        f.write(content)
-                    
-                    # Analyze document integrity
-                    integrity_analysis = self.analyze_document_integrity(str(temp_path))
-                    
-                    # Extract financial data if possible
-                    financial_data = {}
-                    if doc_info['type'] == 'pdf':
-                        financial_data = self.extract_financial_data_from_pdf(str(temp_path))
-                    
-                    # Clean up temporary file
-                    temp_path.unlink()
-                    
-                    return {
-                        "document_info": doc_info,
-                        "integrity_analysis": integrity_analysis,
-                        "financial_data": financial_data,
-                        "integrity_issues": integrity_analysis.get("anomalies", []),
-                        "financial_anomalies": self.detect_financial_anomalies(financial_data)
-                    }
-        
-        except Exception as e:
-            logger.error(f"Error downloading/analyzing document {doc_info['url']}: {e}")
-            return None
-
-    def extract_financial_data_from_pdf(self, pdf_path: str) -> Dict:
-        """Extract financial data from PDF documents"""
-        financial_data = {
-            "total_revenue": None,
-            "total_expenses": None,
-            "balance": None,
-            "period": None,
-            "extraction_confidence": 0.0
-        }
-        
-        try:
-            with open(pdf_path, 'rb') as file:
-                pdf_reader = PyPDF2.PdfReader(file)
-                text = ""
-                for page in pdf_reader.pages:
-                    text += page.extract_text()
-            
-            # Extract financial figures using regex patterns
-            patterns = {
-                "total_revenue": [
-                    r"TOTAL.*RECURSOS.*?(\d{1,3}(?:[.,]\d{3})*[.,]\d{2})",
-                    r"RECURSOS.*TOTALES.*?(\d{1,3}(?:[.,]\d{3})*[.,]\d{2})"
-                ],
-                "total_expenses": [
-                    r"TOTAL.*GASTOS.*?(\d{1,3}(?:[.,]\d{3})*[.,]\d{2})",
-                    r"GASTOS.*TOTALES.*?(\d{1,3}(?:[.,]\d{3})*[.,]\d{2})"
-                ],
-                "balance": [
-                    r"SALDO.*?([+-]?\d{1,3}(?:[.,]\d{3})*[.,]\d{2})",
-                    r"BALANCE.*?([+-]?\d{1,3}(?:[.,]\d{3})*[.,]\d{2})"
-                ]
-            }
-            
-            extractions = 0
-            for field, field_patterns in patterns.items():
-                for pattern in field_patterns:
-                    match = re.search(pattern, text, re.IGNORECASE)
-                    if match and not financial_data[field]:
-                        amount_str = match.group(1).replace(',', '').replace('.', '')
-                        # Assume last two digits are decimals
-                        financial_data[field] = float(amount_str[:-2] + '.' + amount_str[-2:])
-                        extractions += 1
-                        break
-            
-            # Extract period information
-            period_match = re.search(r"(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{4}).*?(\d{1,2}[\/\-]\d{1,2}[\/\-]\d{4})", text)
-            if period_match:
-                financial_data["period"] = f"{period_match.group(1)} to {period_match.group(2)}"
-                extractions += 1
-            
-            # Calculate confidence based on successful extractions
-            financial_data["extraction_confidence"] = extractions / 4.0  # 4 possible fields
-        
-        except Exception as e:
-            logger.error(f"Error extracting financial data from PDF: {e}")
-        
-        return financial_data
-
-    def detect_financial_anomalies(self, financial_data: Dict) -> List[str]:
-        """Detect anomalies in financial data"""
-        anomalies = []
-        
-        if not financial_data or financial_data.get("extraction_confidence", 0) < 0.5:
-            return anomalies
-        
-        revenue = financial_data.get("total_revenue")
-        expenses = financial_data.get("total_expenses")
-        balance = financial_data.get("balance")
-        
-        # Check for unrealistic figures
-        if revenue and revenue > 50000000000:  # 50 billion ARS seems unrealistic for Carmen de Areco
-            anomalies.append(f"Unrealistically high revenue: {revenue:,.2f} ARS")
-        
-        if expenses and revenue:
-            expense_ratio = expenses / revenue
-            if expense_ratio > 1.2:  # Expenses more than 120% of revenue
-                anomalies.append(f"High expense ratio: {expense_ratio:.2%} (expenses/revenue)")
-        
-        # Check balance calculation
-        if revenue and expenses and balance:
-            calculated_balance = revenue - expenses
-            if abs(calculated_balance - balance) > revenue * 0.01:  # More than 1% discrepancy
-                anomalies.append(f"Balance calculation discrepancy: reported {balance:,.2f}, calculated {calculated_balance:,.2f}")
-        
-        # Cross-reference with known corruption case amounts
-        for case in self.corruption_cases:
-            if case.amount and revenue:
-                if abs(revenue - case.amount) / revenue < 0.05:  # Within 5%
-                    anomalies.append(f"Revenue amount suspiciously close to known corruption case: {case.title}")
-        
-        return anomalies
-
-    def cross_reference_all_data(self, detailed_findings: Dict) -> Dict:
-        """Cross-reference findings across all data sources"""
-        cross_ref = {
-            "entity_correlations": [],
-            "temporal_correlations": [],
-            "amount_correlations": [],
-            "pattern_matches": [],
-            "risk_indicators": []
-        }
-        
-        # Extract entities mentioned across sources
-        all_entities = set()
-        entity_sources = {}
-        
-        for source, findings in detailed_findings.items():
-            if isinstance(findings, list):
-                for finding in findings:
-                    if 'title' in finding:
-                        # Extract potential entity names
-                        entities = re.findall(r'\b[A-Z][a-z]+\s+[A-Z][a-z]+\b', finding['title'])
-                        for entity in entities:
-                            all_entities.add(entity)
-                            if entity not in entity_sources:
-                                entity_sources[entity] = []
-                            entity_sources[entity].append(source)
-        
-        # Find entities mentioned in multiple sources
-        for entity, sources in entity_sources.items():
-            if len(sources) > 1:
-                cross_ref["entity_correlations"].append({
-                    "entity": entity,
-                    "sources": sources,
-                    "correlation_strength": len(sources)
-                })
-        
-        # Check for known corruption entities
-        known_entities = []
-        for case in self.corruption_cases:
-            known_entities.extend(case.responsible_parties)
-        
-        for entity in all_entities:
-            if any(known_entity in entity for known_entity in known_entities):
-                cross_ref["pattern_matches"].append({
-                    "type": "known_corruption_entity",
-                    "entity": entity,
-                    "description": "Entity matches known corruption case participants"
-                })
-        
-        return cross_ref
 
     def generate_recommendations(self, analysis_results: Dict) -> List[str]:
         """Generate recommendations based on analysis results"""
@@ -1509,7 +1282,7 @@ class IntegratedTransparencySystem:
 
 ---
 
-*Este reporte fue generado automáticamente utilizando datos públicos oficiales y herramientas de código abierto para promover la transparencia y la rendición de cuentas en la gestión pública.*
+*Este reporte fue generated automáticamente utilizando datos públicos oficiales y herramientas de código abierto para promover la transparencia y la rendición de cuentas en la gestión pública.*
 
 **⚖️ Disclaimer Legal**: Toda la información contenida en este reporte proviene de fuentes oficiales públicas. Los casos marcados como "bajo investigación" no implican culpabilidad hasta resolución judicial definitiva. Este análisis tiene fines de transparencia ciudadana y accountability democrático.
 """

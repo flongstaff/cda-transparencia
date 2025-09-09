@@ -189,7 +189,6 @@
 - [ ] Advanced search functionality
 - [ ] Data export capabilities (CSV/JSON)
 - [ ] Comparative analysis tools
-- [ ] Mobile app development
 - [ ] AI-powered document analysis
 - [ ] Blockchain verification system
 

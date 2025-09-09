@@ -1,129 +1,68 @@
-import React, { useEffect, useRef } from 'react';
-import { ExternalLink, Maximize2, Minimize2, Database } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Database, AlertTriangle, ExternalLink } from 'lucide-react';
 
 interface PowerBIEmbedProps {
-  title: string;
-  reportUrl?: string;
+  title?: string;
   height?: number;
-  showFullscreen?: boolean;
   showDataDashboardLink?: boolean;
-  className?: string;
 }
 
 const PowerBIEmbed: React.FC<PowerBIEmbedProps> = ({
-  title,
-  reportUrl = 'https://app.powerbi.com/view?r=eyJrIjoiYzhjNWNhNmItOWY5Zi00OWExLTliMzAtMjYxZTM0NjM1Y2Y2IiwidCI6Ijk3MDQwMmVmLWNhZGMtNDcyOC05MjI2LTk3ZGRlODY4ZDg2ZCIsImMiOjR9&pageName=ReportSection',
+  title = 'Panel de Datos',
   height = 600,
-  showFullscreen = true,
-  showDataDashboardLink = true,
-  className = ''
+  showDataDashboardLink = false
 }) => {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-  const [isFullscreen, setIsFullscreen] = React.useState<boolean>(false);
-  const navigate = useNavigate();
-
-  const openInNewTab = () => {
-    window.open(reportUrl, '_blank', 'noopener,noreferrer');
-  };
-
-  const toggleFullscreen = () => {
-    setIsFullscreen(!isFullscreen);
-  };
-
-  const goToDataDashboard = () => {
-    navigate('/powerbi-data');
-  };
-
-  useEffect(() => {
-    // Ensure iframe is responsive
-    const handleResize = () => {
-      if (iframeRef.current) {
-        iframeRef.current.style.width = '100%';
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
-    <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden ${className}`}>
-      <div className="p-4 border-b border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            {title}
-          </h3>
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            Datos oficiales en tiempo real - Carmen de Areco
-          </p>
-        </div>
-        
-        <div className="flex items-center space-x-2">
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div className="px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <Database className="h-5 w-5 text-blue-500 mr-2" />
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{title}</h3>
+          </div>
           {showDataDashboardLink && (
-            <button
-              onClick={goToDataDashboard}
-              className="flex items-center px-3 py-2 bg-primary-500 text-white rounded-md hover:bg-primary-600 transition-colors text-sm"
+            <a 
+              href="/data-dashboard" 
+              className="inline-flex items-center text-sm text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
             >
-              <Database className="h-4 w-4 mr-2" />
-              Datos Extraídos
-            </button>
-          )}
-          
-          <button
-            onClick={openInNewTab}
-            className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-            title="Abrir en nueva ventana"
-          >
-            <ExternalLink size={18} />
-          </button>
-          
-          {showFullscreen && (
-            <button
-              onClick={toggleFullscreen}
-              className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
-              title={isFullscreen ? "Minimizar" : "Pantalla completa"}
-            >
-              {isFullscreen ? <Minimize2 size={18} /> : <Maximize2 size={18} />}
-            </button>
+              <ExternalLink className="h-4 w-4 mr-1" />
+              Ir al Dashboard
+            </a>
           )}
         </div>
       </div>
-
-      <div className={`relative ${isFullscreen ? 'fixed inset-0 z-50 bg-white dark:bg-gray-900' : ''}`}>
-        {isFullscreen && (
-          <div className="absolute top-4 right-4 z-10">
-            <button
-              onClick={toggleFullscreen}
-              className="p-2 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            >
-              <Minimize2 size={20} />
-            </button>
+      
+      <div className="p-6">
+        <div className="flex flex-col items-center justify-center text-center py-12 bg-gray-50 dark:bg-gray-700/30 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-600">
+          <Database className="h-12 w-12 text-gray-400 dark:text-gray-500 mb-4" />
+          <h3 className="text-lg font-medium text-gray-800 dark:text-white mb-2">
+            Integración con Power BI
+          </h3>
+          <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
+            Los datos se visualizan mediante paneles interactivos de Power BI para un análisis avanzado.
+          </p>
+          <div className="inline-flex items-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors">
+            <ExternalLink className="h-4 w-4 mr-2" />
+            Acceder a Power BI
           </div>
-        )}
-        
-        <iframe
-          ref={iframeRef}
-          src={reportUrl}
-          width="100%"
-          height={isFullscreen ? '100vh' : height}
-          frameBorder="0"
-          allowFullScreen={true}
-          className="border-0"
-          title={title}
-          loading="lazy"
-          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-          style={{
-            border: 'none',
-            minHeight: isFullscreen ? '100vh' : `${height}px`
-          }}
-        />
-        
-        {!isFullscreen && (
-          <div className="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white text-xs px-3 py-1 rounded-lg">
-            Carmen de Areco - PowerBI
+          
+          <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg max-w-md">
+            <div className="flex items-start">
+              <AlertTriangle className="h-5 w-5 text-yellow-500 mt-0.5 mr-2 flex-shrink-0" />
+              <p className="text-sm text-yellow-700 dark:text-yellow-300">
+                <span className="font-medium">Nota:</span> Esta es una integración de demostración. 
+                En un entorno de producción, se conectaría directamente a los servicios de Power BI.
+              </p>
+            </div>
           </div>
-        )}
+        </div>
+      </div>
+      
+      <div className="px-6 py-4 bg-gray-50 dark:bg-gray-700/20 border-t border-gray-200 dark:border-gray-700">
+        <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+          <span>Última actualización: {new Date().toLocaleDateString('es-AR')}</span>
+          <span>Power BI Embedded</span>
+        </div>
       </div>
     </div>
   );

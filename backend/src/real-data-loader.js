@@ -9,7 +9,7 @@ const path = require('path');
 class RealDataLoader {
   constructor() {
     // Path to the organized data directory
-    this.dataPath = path.join(__dirname, '../../data/pdf_extracts');
+    this.dataPath = path.join(__dirname, '../../../organized_pdfs/');
     this.lastLoaded = null;
   }
 

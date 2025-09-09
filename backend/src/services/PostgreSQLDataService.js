@@ -54,6 +54,44 @@ class PostgreSQLDataService {
         }
     }
 
+    async getFullYearData(year) {
+        try {
+            // Fetch all relevant data in parallel
+            const [documents, budgetData, salariesData, contractsData, summary] = await Promise.all([
+                this.getDocumentsByYear(year),
+                this.getBudgetDataByYear(year),
+                this.getSalariesData(year),
+                this.getContractsData(year),
+                this.getYearlySummary(year)
+            ]);
+
+            // Process categories for the dashboard
+            const categories = {};
+            documents.forEach(doc => {
+                const category = doc.category || 'Sin Categoría';
+                if (!categories[category]) {
+                    categories[category] = 0;
+                }
+                categories[category]++;
+            });
+
+            return {
+                year: parseInt(year),
+                documents,
+                budget: budgetData,
+                salaries: salariesData,
+                contracts: contractsData,
+                summary,
+                categories,
+                total_documents: documents.length,
+                verified_documents: documents.filter(d => d.verification_status === 'verified').length
+            };
+        } catch (error) {
+            console.error('Error fetching full year data:', error);
+            throw error;
+        }
+    }
+
     async getDocumentsByYear(year) {
         try {
             const query = `

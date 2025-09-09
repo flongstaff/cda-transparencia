@@ -8,21 +8,50 @@ const controller = new ComprehensiveTransparencyController();
  * @swagger
  * components:
  *   schemas:
- *     CitizenFinancialOverview:
+ *     ComprehensiveTransparencyData:
  *       type: object
  *       properties:
  *         year:
  *           type: integer
  *           description: The year being analyzed
- *         overview:
+ *         financialOverview:
  *           type: object
  *           description: Citizen-friendly financial summary
- *         transparency_score:
- *           type: number
- *           description: Overall transparency score (0-100)
- *         spending_efficiency:
+ *         budgetBreakdown:
+ *           type: array
+ *           items:
+ *             type: object
+ *           description: Detailed budget breakdown by category
+ *         documents:
+ *           type: array
+ *           items:
+ *             type: object
+ *           description: All documents for the year
+ *         dashboard:
  *           type: object
- *           description: Budget execution analysis
+ *           description: Transparency dashboard data
+ *         spendingEfficiency:
+ *           type: object
+ *           description: Spending efficiency analysis
+ *         auditOverview:
+ *           type: object
+ *           description: Audit system overview
+ *         antiCorruption:
+ *           type: object
+ *           description: Anti-corruption dashboard data
+ *         generated_at:
+ *           type: string
+ *           format: date-time
+ *           description: Timestamp when data was generated
+ *         data_sources:
+ *           type: object
+ *           description: Information about data sources
+ *         consistency_check:
+ *           type: object
+ *           description: Data consistency verification
+ *         errors:
+ *           type: object
+ *           description: Any errors that occurred during data fetching
  */
 
 /**
@@ -32,11 +61,38 @@ const controller = new ComprehensiveTransparencyController();
  *   description: Complete transparency API for citizen access to municipal data
  */
 
-// === CITIZEN-FOCUSED ENDPOINTS ===
+/**
+ * @swagger
+ * /api/transparency/year/{year}:
+ *   get:
+ *     summary: Get ALL transparency data for a specific year in one call
+ *     tags: [Comprehensive Transparency]
+ *     parameters:
+ *       - in: path
+ *         name: year
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: Year to analyze (e.g., 2024)
+ *     responses:
+ *       200:
+ *         description: Complete transparency data for the specified year
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ComprehensiveTransparencyData'
+ *       400:
+ *         description: Invalid year parameter
+ *       500:
+ *         description: Internal server error
+ */
+router.get('/year/:year', (req, res) => {
+    controller.getYearData(req, res);
+});
 
 /**
  * @swagger
- * /api/transparency/citizen/financial/{year}:
+ * /api/transparency/financial/{year}:
  *   get:
  *     summary: Get citizen-focused financial overview for a specific year
  *     tags: [Comprehensive Transparency]
@@ -49,19 +105,32 @@ const controller = new ComprehensiveTransparencyController();
  *         description: Year to analyze (e.g., 2024)
  *     responses:
  *       200:
- *         description: Comprehensive financial overview with citizen explanations
+ *         description: Financial overview with citizen explanations
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/CitizenFinancialOverview'
+ *               type: object
+ *               properties:
+ *                 year:
+ *                   type: integer
+ *                 overview:
+ *                   type: object
+ *                 categories:
+ *                   type: object
+ *                 transparency_score:
+ *                   type: number
+ *                 spending_efficiency:
+ *                   type: object
+ *                 document_accessibility:
+ *                   type: object
  */
-router.get('/citizen/financial/:year', (req, res) => {
+router.get('/financial/:year', (req, res) => {
     controller.getCitizenFinancialOverview(req, res);
 });
 
 /**
  * @swagger
- * /api/transparency/citizen/budget/{year}:
+ * /api/transparency/budget/{year}:
  *   get:
  *     summary: Get detailed budget breakdown with citizen explanations
  *     tags: [Comprehensive Transparency]
@@ -75,33 +144,55 @@ router.get('/citizen/financial/:year', (req, res) => {
  *     responses:
  *       200:
  *         description: Detailed budget breakdown with citizen-friendly explanations
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 year:
+ *                   type: integer
+ *                 budget_breakdown:
+ *                   type: array
+ *                   items:
+ *                     type: object
  */
-router.get('/citizen/budget/:year', (req, res) => {
+router.get('/budget/:year', (req, res) => {
     controller.getBudgetBreakdownForCitizens(req, res);
 });
 
 /**
  * @swagger
- * /api/transparency/citizen/efficiency/{year}:
+ * /api/transparency/documents:
  *   get:
- *     summary: Get spending efficiency analysis for citizens
+ *     summary: Get all documents with optional filtering
  *     tags: [Comprehensive Transparency]
  *     parameters:
- *       - in: path
+ *       - in: query
  *         name: year
- *         required: true
  *         schema:
  *           type: integer
- *         description: Year for efficiency analysis
+ *         description: Filter by year
+ *       - in: query
+ *         name: category
+ *         schema:
+ *           type: string
+ *         description: Filter by category
  *     responses:
  *       200:
- *         description: Spending efficiency analysis with citizen insights
+ *         description: List of documents
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 documents:
+ *                   type: array
+ *                   items:
+ *                     type: object
  */
-router.get('/citizen/efficiency/:year', (req, res) => {
-    controller.getSpendingEfficiencyAnalysis(req, res);
+router.get('/documents', (req, res) => {
+    controller.getDocumentsWithFilters(req, res);
 });
-
-// === DOCUMENT ACCESS ENDPOINTS ===
 
 /**
  * @swagger
@@ -114,11 +205,24 @@ router.get('/citizen/efficiency/:year', (req, res) => {
  *         name: id
  *         required: true
  *         schema:
- *           type: integer
+ *           type: string
  *         description: Document ID
  *     responses:
  *       200:
  *         description: Document with access methods, financial impact, and citizen relevance
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 document:
+ *                   type: object
+ *                 access_methods:
+ *                   type: object
+ *                 financial_impact:
+ *                   type: object
+ *                 citizen_relevance:
+ *                   type: object
  */
 router.get('/documents/:id', (req, res) => {
     controller.getDocumentWithAccess(req, res);
@@ -135,7 +239,7 @@ router.get('/documents/:id', (req, res) => {
  *         name: id
  *         required: true
  *         schema:
- *           type: integer
+ *           type: string
  *         description: Document ID
  *     responses:
  *       200:
@@ -161,7 +265,7 @@ router.get('/documents/:id/file', (req, res) => {
  *         name: id
  *         required: true
  *         schema:
- *           type: integer
+ *           type: string
  *         description: Document ID
  *     responses:
  *       200:
@@ -174,8 +278,6 @@ router.get('/documents/:id/file', (req, res) => {
 router.get('/documents/:id/view', (req, res) => {
     controller.getDocumentViewer(req, res);
 });
-
-// === ANALYSIS AND COMPARISON ENDPOINTS ===
 
 /**
  * @swagger
@@ -198,7 +300,11 @@ router.get('/documents/:id/view', (req, res) => {
  *         description: End year for comparison
  *     responses:
  *       200:
- *         description: Comprehensive comparative analysis with trends and recommendations
+ *         description: Comparative analysis with trends and recommendations
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
  */
 router.get('/compare/:startYear/:endYear', (req, res) => {
     controller.getComparativeAnalysis(req, res);
@@ -213,26 +319,28 @@ router.get('/compare/:startYear/:endYear', (req, res) => {
  *     responses:
  *       200:
  *         description: Real-time dashboard with overview, recent additions, and key metrics
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
  */
 router.get('/dashboard', (req, res) => {
     controller.getTransparencyDashboard(req, res);
 });
 
-// === SEARCH ENDPOINTS ===
-
 /**
  * @swagger
- * /api/transparency/search/{query}:
+ * /api/transparency/search:
  *   get:
  *     summary: Search documents with citizen-friendly results
  *     tags: [Comprehensive Transparency]
  *     parameters:
- *       - in: path
- *         name: query
+ *       - in: query
+ *         name: q
  *         required: true
  *         schema:
  *           type: string
- *         description: Search query (minimum 2 characters)
+ *         description: Search query
  *       - in: query
  *         name: category
  *         schema:
@@ -243,21 +351,17 @@ router.get('/dashboard', (req, res) => {
  *         schema:
  *           type: integer
  *         description: Filter by year
- *       - in: query
- *         name: limit
- *         schema:
- *           type: integer
- *           default: 50
- *         description: Maximum number of results
  *     responses:
  *       200:
  *         description: Search results with citizen-friendly formatting and access methods
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
  */
-router.get('/search/:query', (req, res) => {
+router.get('/search', (req, res) => {
     controller.searchDocumentsForCitizens(req, res);
 });
-
-// === HEALTH AND STATUS ENDPOINTS ===
 
 /**
  * @swagger
@@ -268,42 +372,18 @@ router.get('/search/:query', (req, res) => {
  *     responses:
  *       200:
  *         description: System health metrics and data availability status
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
  */
 router.get('/health', async (req, res) => {
     try {
-        const controller_instance = new ComprehensiveTransparencyController();
-        const dashboard = await controller_instance.service.getTransparencyDashboard();
-        
-        res.json({
-            status: 'healthy',
-            system: 'Carmen de Areco Transparency Portal',
-            database: 'connected',
-            total_documents: dashboard.overview.total_documents,
-            verified_documents: dashboard.overview.verified_documents,
-            years_available: dashboard.overview.years_covered,
-            categories_available: dashboard.overview.categories_covered,
-            last_update: dashboard.overview.last_update,
-            transparency_score: Math.round((dashboard.overview.verified_documents / dashboard.overview.total_documents) * 100),
-            citizen_services: {
-                document_access: 'available',
-                pdf_viewer: 'available',
-                financial_analysis: 'available',
-                comparative_analysis: 'available',
-                search: 'available'
-            },
-            api_endpoints: {
-                citizen_financial_overview: '/api/transparency/citizen/financial/{year}',
-                document_viewer: '/api/transparency/documents/{id}/view',
-                comparative_analysis: '/api/transparency/compare/{startYear}/{endYear}',
-                dashboard: '/api/transparency/dashboard',
-                search: '/api/transparency/search/{query}'
-            },
-            generated_at: new Date().toISOString()
-        });
+        const health = await controller.getSystemHealth();
+        res.json(health);
     } catch (error) {
         res.status(500).json({
-            status: 'error',
-            error: 'Health check failed',
+            error: 'Failed to get system health',
             details: error.message
         });
     }

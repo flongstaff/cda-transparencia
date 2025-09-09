@@ -75,11 +75,6 @@ jest.mock('../components/charts/UnifiedDashboardChart', () => {
   };
 });
 
-jest.mock('../components/charts/IntegratedChart', () => {
-  return function MockIntegratedChart() {
-    return <div data-testid="integrated-chart">IntegratedChart</div>;
-  };
-});
 
 jest.mock('../components/audit/CriticalIssues', () => {
   return function MockCriticalIssues() {

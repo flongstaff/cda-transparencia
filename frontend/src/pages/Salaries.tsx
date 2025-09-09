@@ -3,7 +3,7 @@ import { Download, Search, Calendar, FileText, Eye, TrendingUp, Users, DollarSig
 import { useNavigate } from 'react-router-dom';
 import PageYearSelector from '../components/PageYearSelector';
 import SalaryAnalysisChart from '../components/charts/SalaryAnalysisChart';
-import ValidatedChart from '../components/ValidatedChart';
+import ValidatedChart from '../components/charts/ValidatedChart';
 import { consolidatedApiService } from '../services';
 
 interface Employee {

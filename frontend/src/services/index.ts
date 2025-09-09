@@ -8,9 +8,7 @@ export { consolidatedApiService } from './ConsolidatedApiService';
 
 // Essential supporting services
 export { default as yearlyDataService } from './YearlyDataService';
-export { default as chartService } from './ChartService';
 export { default as markdownService } from './MarkdownDataService';
-export { default as apiClient } from './ApiClient';
 
 // Backward compatibility aliases - all point to ConsolidatedApiService
 export { consolidatedApiService as apiService } from './ConsolidatedApiService';

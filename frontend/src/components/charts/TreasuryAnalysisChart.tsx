@@ -51,7 +51,7 @@ const TreasuryAnalysisChart: React.FC<Props> = ({ year }) => {
     setError(null);
     
     try {
-      const treasuryData = await ApiService.getTreasuryMovements();
+      const treasuryData = await consolidatedApiService.getTreasuryMovements();
       
       if (treasuryData.length === 0) {
         setError('No hay datos de tesorería disponibles');

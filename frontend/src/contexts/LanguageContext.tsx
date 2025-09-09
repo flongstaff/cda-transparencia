@@ -1,55 +1,131 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
+// Define the shape of our translations
+interface Translations {
+  [key: string]: string | Translations;
+}
+
+// Define the context type
 interface LanguageContextType {
   language: string;
-  setLanguage: (language: string) => void;
+  setLanguage: (lang: string) => void;
   t: (key: string) => string;
 }
 
+// Default translations
+const defaultTranslations: Record<string, Translations> = {
+  es: {
+    contact: {
+      title: 'Contáctanos',
+      description: '¿Tienes preguntas sobre transparencia municipal? Estamos aquí para ayudarte.',
+      info: {
+        title: 'Información de Contacto',
+        address: {
+          title: 'Dirección',
+          value: 'Calle Principal 123, Carmen de Areco, Buenos Aires'
+        },
+        phone: {
+          title: 'Teléfono',
+          value: '+54 11 1234-5678'
+        },
+        email: {
+          title: 'Correo Electrónico',
+          value: 'transparencia@carmendeareco.gob.ar'
+        },
+        hours: {
+          title: 'Horario de Atención',
+          value: 'Lunes a Viernes, 8:00 AM - 4:00 PM'
+        }
+      },
+      follow: {
+        title: 'Síguenos'
+      },
+      form: {
+        title: 'Envíanos un Mensaje',
+        name: 'Nombre',
+        email: 'Correo Electrónico',
+        subject: 'Asunto',
+        message: 'Mensaje',
+        send: 'Enviar Mensaje',
+        success: '¡Gracias por tu mensaje! Te contactaremos pronto.'
+      }
+    }
+  },
+  en: {
+    contact: {
+      title: 'Contact Us',
+      description: 'Do you have questions about municipal transparency? We are here to help you.',
+      info: {
+        title: 'Contact Information',
+        address: {
+          title: 'Address',
+          value: 'Main Street 123, Carmen de Areco, Buenos Aires'
+        },
+        phone: {
+          title: 'Phone',
+          value: '+54 11 1234-5678'
+        },
+        email: {
+          title: 'Email',
+          value: 'transparency@carmendeareco.gob.ar'
+        },
+        hours: {
+          title: 'Office Hours',
+          value: 'Monday to Friday, 8:00 AM - 4:00 PM'
+        }
+      },
+      follow: {
+        title: 'Follow Us'
+      },
+      form: {
+        title: 'Send Us a Message',
+        name: 'Name',
+        email: 'Email',
+        subject: 'Subject',
+        message: 'Message',
+        send: 'Send Message',
+        success: 'Thank you for your message! We will contact you soon.'
+      }
+    }
+  }
+};
+
+// Create the context
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// Simple translation function that just returns default Spanish text or the key
-const translations: Record<string, string> = {
-  'header.title': 'Portal de Transparencia',
-  'header.subtitle': 'Carmen de Areco',
-  'home.title': 'Portal de Transparencia',
-  'home.description': 'Acceso a información pública municipal',
-  'header.nav.home': 'Inicio',
-  'header.nav.about': 'Acerca de',
-  'home.viewMore': 'Ver más'
-};
+// Provider component
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = useState('es');
 
-export const useLanguage = (): LanguageContextType => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    // Fallback context to prevent crashes
-    return {
-      language: 'es',
-      setLanguage: () => {},
-      t: (key: string) => translations[key] || key
-    };
-  }
-  return context;
-};
-
-interface LanguageProviderProps {
-  children: ReactNode;
-}
-
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const t = (key: string): string => {
-    return translations[key] || key;
-  };
-
-  const value = {
-    language: 'es',
-    setLanguage: () => {}, // No-op function
-    t
+    const keys = key.split('.');
+    let value: string | Translations = defaultTranslations[language];
+    
+    for (const k of keys) {
+      if (typeof value === 'object' && value !== null && k in value) {
+        value = (value as Translations)[k];
+      } else {
+        return key; // Return the key if translation not found
+      }
+    }
+    
+    return typeof value === 'string' ? value : key;
   };
 
   return (
-    <LanguageContext.Provider value={value}>
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );
 };
+
+// Custom hook to use the language context
+export const useLanguage = () => {
+  const context = useContext(LanguageContext);
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+};
+
+export default LanguageContext;

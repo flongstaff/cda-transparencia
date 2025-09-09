@@ -176,7 +176,7 @@ const Reports: React.FC = () => {
       const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001';
       
       try {
-        const response = await fetch(`${API_BASE}/api/reports`, {
+        const response = await fetch(`${API_BASE}/api/transparency/documents`, {
           headers: { 'Accept': 'application/json' }
         });
         if (response.ok) {

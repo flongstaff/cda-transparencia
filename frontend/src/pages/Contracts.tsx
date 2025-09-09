@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Download, Search, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, Building, DollarSign, ShieldCheck, Users, BarChart3, Loader2 } from 'lucide-react';
 import PageYearSelector from '../components/PageYearSelector';
 import { consolidatedApiService } from '../services';
-import ValidatedChart from '../components/ValidatedChart';
+import ValidatedChart from '../components/charts/ValidatedChart';
 import ContractAnalysisChart from '../components/charts/ContractAnalysisChart';
 import UnifiedDashboardChart from '../components/charts/UnifiedDashboardChart';
 

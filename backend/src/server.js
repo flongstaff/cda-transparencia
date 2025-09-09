@@ -24,11 +24,11 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 
-// Rate limiting
+// Rate limiting - Increased for development
 const rateLimit = require('express-rate-limit');
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
+  max: 1000, // Increased limit for development
   message: { error: 'Too many requests, please try again later.' }
 });
 app.use(limiter);
@@ -444,10 +444,10 @@ app.get('/api/pdfs-index', async (req, res) => {
           const parts = relativePath.split(path.sep);
           fileList.push({
             name: file,
-            path: relativePath.replace(/\\/g, '/'),
+            path: relativePath.replace(/\\\\/g, '/'),
             year: parts[0],
             category: parts[1] || 'Sin categoría',
-            url: `/api/pdfs/${relativePath.replace(/\\/g, '/')}`,
+            url: `/api/pdfs/${relativePath.replace(/\\\\/g, '/')}`,
             size: fs.statSync(filePath).size
           });
         }

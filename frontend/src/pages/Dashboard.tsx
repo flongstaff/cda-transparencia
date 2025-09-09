@@ -28,27 +28,16 @@ import { consolidatedApiService } from '../services';
 import { formatCurrencyARS } from '../utils/formatters';
 
 // Import ALL dashboard components for consolidated view
-import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
+import UniversalChart from '../components/charts/UniversalChart';
+import ValidatedChart from '../components/charts/ValidatedChart';
 import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
-import SalaryAnalysisChart from '../components/charts/SalaryAnalysisChart';
-import DebtAnalysisChart from '../components/charts/DebtAnalysisChart';
-import UnifiedDashboardChart from '../components/charts/UnifiedDashboardChart';
-import IntegratedChart from '../components/charts/IntegratedChart';
+// Removed problematic UnifiedDashboardChart
+import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
 import YearlyDataChart from '../components/charts/YearlyDataChart';
-import InvestmentAnalysisChart from '../components/charts/InvestmentAnalysisChart';
-import TreasuryAnalysisChart from '../components/charts/TreasuryAnalysisChart';
-import MunicipalFinancialVisualization from '../components/charts/MunicipalFinancialVisualization';
-import ComprehensiveVisualization from '../components/charts/ComprehensiveVisualization';
 
-// PowerBI Integration Components
-import PowerBIDataDashboard from '../components/powerbi/PowerBIDataDashboard';
-import PowerBIFinancialDashboard from '../components/powerbi/PowerBIFinancialDashboard';
-import PowerBIComparisonDashboard from '../components/powerbi/PowerBIComparisonDashboard';
-import FinancialMindMap from '../components/powerbi/FinancialMindMap';
-import DataComparisonDashboard from '../components/powerbi/DataComparisonDashboard';
+// PowerBI Integration Components (removed unused imports)
 
 // Audit and Analysis Components
-import AuditDashboard from '../components/audit/AuditDashboard';
 import FinancialAuditDashboard from '../components/audit/FinancialAuditDashboard';
 import InfrastructureTracker from '../components/audit/InfrastructureTracker';
 import DataCategorizationDashboard from '../components/audit/DataCategorizationDashboard';
@@ -74,6 +63,11 @@ interface FinancialSummary {
   salaryToBudgetRatio: number;
   totalContracts: number;
   contractValue: number;
+  categories?: Record<string, {
+    budgeted: number;
+    executed: number;
+    execution_rate: string;
+  }>;
 }
 
 const Dashboard: React.FC = () => {
@@ -152,7 +146,8 @@ const Dashboard: React.FC = () => {
         totalSalaries,
         salaryToBudgetRatio,
         totalContracts,
-        contractValue
+        contractValue,
+        categories: budgetData.categories || {}
       });
       
       // Calculate transparency score
@@ -534,14 +529,31 @@ const Dashboard: React.FC = () => {
             </div>
             
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">📊 Todo Junto</h3>
-              <p className="text-gray-600 mb-4">Cómo entra y sale la plata del municipio</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">📊 Ejecución por Categorías</h3>
+              <p className="text-gray-600 mb-4">Ver cómo se ejecuta el presupuesto por área</p>
               <div className="bg-green-50 p-3 rounded-lg mb-4">
                 <p className="text-sm text-green-700">
-                  ✅ <strong>Bueno:</strong> Podés ver todo de una manera fácil
+                  ✅ <strong>Bueno:</strong> Podés ver el detalle por cada área
                 </p>
               </div>
-              <UnifiedDashboardChart year={selectedYear} />
+              {financialSummary && (
+                <UniversalChart
+                  data={Object.entries(financialSummary.categories || {}).map(([name, data]) => ({
+                    name: name.replace(/_/g, ' '),
+                    budgeted: data.budgeted || 0,
+                    executed: data.executed || 0,
+                    execution_rate: parseFloat(data.execution_rate || '0')
+                  }))}
+                  chartType="bar"
+                  title={`Ejecución Presupuestaria por Categoría - ${selectedYear}`}
+                  height={400}
+                  showControls={true}
+                  additionalSeries={[
+                    { dataKey: 'budgeted', name: 'Presupuestado', color: '#3b82f6' },
+                    { dataKey: 'executed', name: 'Ejecutado', color: '#10b981' }
+                  ]}
+                />
+              )}
             </div>
           </motion.div>
         )}

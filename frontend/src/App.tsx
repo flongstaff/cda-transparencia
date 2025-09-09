@@ -15,7 +15,8 @@ import {
   BookOpen,
   Calculator,
   Briefcase,
-  LayoutDashboard
+  LayoutDashboard,
+  Calendar
 } from 'lucide-react';
 
 // Import essential pages - consolidated approach
@@ -31,6 +32,15 @@ import Reports from './pages/Reports';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import CategoryPage from './pages/CategoryPage';
+import Spending from './pages/Spending';
+import Investments from './pages/Investments';
+import Treasury from './pages/Treasury';
+import Database from './pages/Database';
+import Whistleblower from './pages/Whistleblower';
+
+// Import yearly components
+import YearDashboard from './components/yearly/YearDashboard';
+import TransparencyDashboard from './components/dashboard/TransparencyDashboard';
 
 // Simple navigation for citizens
 const navigationSections = [
@@ -46,7 +56,11 @@ const navigationSections = [
     items: [
       { path: '/budget', label: 'Presupuesto Anual', icon: <DollarSign className="w-4 h-4" /> },
       { path: '/expenses', label: 'Gastos y Erogaciones', icon: <Calculator className="w-4 h-4" /> },
-      { path: '/revenue', label: 'Ingresos y Recursos', icon: <TrendingUp className="w-4 h-4" /> }
+      { path: '/spending', label: 'Gastos Públicos', icon: <TrendingUp className="w-4 h-4" /> },
+      { path: '/investments', label: 'Inversiones', icon: <Building className="w-4 h-4" /> },
+      { path: '/treasury', label: 'Tesorería', icon: <DollarSign className="w-4 h-4" /> },
+      { path: '/revenue', label: 'Ingresos y Recursos', icon: <TrendingUp className="w-4 h-4" /> },
+      { path: '/year/2025', label: 'Datos por Año', icon: <Calendar className="w-4 h-4" /> }
     ]
   },
   {
@@ -55,7 +69,17 @@ const navigationSections = [
       { path: '/salaries', label: 'Sueldos de Empleados', icon: <Users className="w-4 h-4" /> },
       { path: '/contracts', label: 'Contratos y Licitaciones', icon: <Briefcase className="w-4 h-4" /> },
       { path: '/declarations', label: 'Declaraciones de Funcionarios', icon: <Building className="w-4 h-4" /> },
-      { path: '/documents', label: 'Todos los Documentos', icon: <FileText className="w-4 h-4" /> }
+      { path: '/documents', label: 'Todos los Documentos', icon: <FileText className="w-4 h-4" /> },
+      { path: '/database', label: 'Base de Datos', icon: <FileText className="w-4 h-4" /> }
+    ]
+  },
+  {
+    title: 'Herramientas',
+    items: [
+      { path: '/audit', label: 'Auditoría y Análisis', icon: <Activity className="w-4 h-4" /> },
+      { path: '/reports', label: 'Reportes', icon: <FileText className="w-4 h-4" /> },
+      { path: '/transparency', label: 'Transparency Dashboard', icon: <LayoutDashboard className="w-4 h-4" /> },
+      { path: '/whistleblower', label: 'Canal de Denuncias', icon: <Shield className="w-4 h-4" /> }
     ]
   },
   {
@@ -251,11 +275,13 @@ const App: React.FC = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 
-                {/* Financial Analysis Routes - Using unified category page */}
-                <Route path="/budget" element={<CategoryPage category="budget" title="Presupuesto" icon="💰" />} />
-                <Route path="/expenses" element={<CategoryPage category="expenses" title="Gastos" icon="💸" />} />
-                <Route path="/revenue" element={<CategoryPage category="revenue" title="Ingresos" icon="📈" />} />
-                <Route path="/debt" element={<CategoryPage category="debt" title="Deuda" icon="💳" />} />
+                {/* Financial Analysis Routes - Using specific category pages */}
+              <Route path="/budget" element={<CategoryPage category="budget" title="Presupuesto" icon="💰" />} />
+              <Route path="/expenses" element={<CategoryPage category="expenses" title="Gastos" icon="💸" />} />
+              <Route path="/spending" element={<Spending />} />
+              <Route path="/investments" element={<Investments />} />
+              <Route path="/revenue" element={<CategoryPage category="revenue" title="Ingresos" icon="📈" />} />
+              <Route path="/debt" element={<CategoryPage category="debt" title="Deuda" icon="💳" />} />
                 
                 {/* Transparency Routes */}
                 <Route path="/contracts" element={<Contracts />} />
@@ -267,10 +293,17 @@ const App: React.FC = () => {
                 {/* Tools Routes */}
                 <Route path="/audit" element={<Audit />} />
                 <Route path="/reports" element={<Reports />} />
+                <Route path="/treasury" element={<Treasury />} />
+                <Route path="/database" element={<Database />} />
+                <Route path="/whistleblower" element={<Whistleblower />} />
                 
                 {/* Information Routes */}
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                
+                {/* Yearly Dashboard Route */}
+                <Route path="/year/:year" element={<YearDashboard />} />
+                <Route path="/transparency" element={<TransparencyDashboard />} />
               </Routes>
             </div>
           </main>

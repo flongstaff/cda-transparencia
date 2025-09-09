@@ -69,11 +69,8 @@ const SalaryAnalysisChart: React.FC<Props> = ({ year }) => {
     setError(null);
     
     try {
-      console.log(`🔄 Loading salary data for year ${year}...`);
-      
       const response = await consolidatedApiService.getSalaries(year);
       const salaries = response || [];
-      console.log(`📊 Loaded ${salaries.length} salary records from integrated services`);
       
       if (salaries.length === 0) {
         setError('No hay datos de salarios disponibles para este año');

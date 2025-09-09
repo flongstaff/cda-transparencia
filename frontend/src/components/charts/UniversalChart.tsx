@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { 
   ResponsiveContainer, 
   BarChart, 
@@ -35,7 +35,9 @@ import {
   PieChart as PieChartIcon,
   Activity,
   Database,
-  Layers
+  Layers,
+  RefreshCw,
+  AlertCircle
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -61,9 +63,11 @@ interface UniversalChartProps {
   timeRange?: string;
   metadata?: any;
   onChartTypeChange?: (type: string) => void;
+  onRetry?: () => void;
+  error?: string | null;
 }
 
-const COLORS = ['#0056b3', '#28a745', '#ffc107', '#dc3545', '#20c997', '#6f42c1', '#fd7e14', '#e83e8c', '#6c757d', '#17a2b8'];
+const COLORS = ['#0056b3', '#28a745', '#ff8c00', '#ffffff', '#20c997', '#fd7e14', '#6f42c1', '#e83e8c', '#6c757d', '#17a2b8'];
 
 const CHART_TYPES = [
   { key: 'bar', label: 'Barras', icon: <BarChart3 size={16} /> },
@@ -89,7 +93,9 @@ const UniversalChart: React.FC<UniversalChartProps> = ({
   showControls = true,
   timeRange = '2018-2025',
   metadata,
-  onChartTypeChange
+  onChartTypeChange,
+  onRetry,
+  error
 }) => {
   const [activeChartType, setActiveChartType] = useState(chartType);
   const [showTrends, setShowTrends] = useState(true);
@@ -111,14 +117,21 @@ const UniversalChart: React.FC<UniversalChartProps> = ({
     }).format(value);
   };
 
-  // Calculate statistics
-  const totalValue = data.reduce((sum, item) => sum + (item[yAxisDataKey] || item[dataKey] || 0), 0);
-  const avgValue = data.length > 0 ? totalValue / data.length : 0;
-  const maxValue = Math.max(...data.map(d => d[yAxisDataKey] || d[dataKey] || 0));
-  const minValue = Math.min(...data.map(d => d[yAxisDataKey] || d[dataKey] || 0));
+  // Calculate statistics with memoization for performance
+  const statistics = useMemo(() => {
+    const values = data.map(d => d[yAxisDataKey] || d[dataKey] || 0);
+    const totalValue = values.reduce((sum, value) => sum + value, 0);
+    const avgValue = data.length > 0 ? totalValue / data.length : 0;
+    const maxValue = Math.max(...values);
+    const minValue = Math.min(...values);
+    
+    return { totalValue, avgValue, maxValue, minValue };
+  }, [data, yAxisDataKey, dataKey]);
 
-  // Custom tooltip component
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  const { totalValue, avgValue, maxValue, minValue } = statistics;
+
+  // Custom tooltip component with memoization
+  const CustomTooltip = useCallback(({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white dark:bg-gray-800 p-4 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg">
@@ -137,7 +150,35 @@ const UniversalChart: React.FC<UniversalChartProps> = ({
       );
     }
     return null;
-  };
+  }, []);
+
+  // Handle error state
+  if (error) {
+    return (
+      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{title}</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Período: {timeRange} • {data.length} elementos</p>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center h-80 text-center">
+          <AlertCircle className="h-12 w-12 text-red-500 mb-4" />
+          <h3 className="text-lg font-medium text-gray-800 dark:text-white mb-2">Error al cargar los datos</h3>
+          <p className="text-gray-500 dark:text-gray-400 mb-4">{error}</p>
+          {onRetry && (
+            <button
+              onClick={onRetry}
+              className="inline-flex items-center px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg transition-colors"
+            >
+              <RefreshCw className="h-4 w-4 mr-2" />
+              {STRINGS.retry}
+            </button>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   // Render appropriate chart based on type
   const renderChart = () => {

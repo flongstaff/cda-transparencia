@@ -17,7 +17,7 @@ import {
 import PageYearSelector from '../components/PageYearSelector';
 import PropertyDeclarationsChart from '../components/charts/PropertyDeclarationsChart';
 import { consolidatedApiService } from '../services';
-import ValidatedChart from '../components/ValidatedChart';
+import ValidatedChart from '../components/charts/ValidatedChart';
 
 interface Declaration {
   id: string;
