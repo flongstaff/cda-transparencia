@@ -540,6 +540,124 @@ class ComprehensiveTransparencyController {
     }
 
     /**
+     * Get transparency system health status
+     */
+    async getSystemHealth(req, res) {
+        try {
+            const health = await this.service.getSystemHealth();
+            
+            res.json({
+                ...health,
+                api_info: {
+                    endpoint: 'system_health',
+                    purpose: 'Provide transparency system health status and data availability',
+                    generated_at: new Date().toISOString()
+                }
+            });
+        } catch (error) {
+            console.error('Error in getSystemHealth:', error);
+            res.status(500).json({
+                error: 'Failed to get system health',
+                details: error.message
+            });
+        }
+    }
+
+    /**
+     * Get unified data for a specific year
+     */
+    async getYearData(req, res) {
+        try {
+            const { year } = req.params;
+            const yearInt = parseInt(year);
+
+            if (!yearInt || isNaN(yearInt)) {
+                return res.status(400).json({ error: 'Invalid year parameter' });
+            }
+
+            console.log(`📥 Fetching unified data for year ${yearInt}...`);
+
+            // Fetch ALL data in parallel
+            const [
+                financialOverview,
+                budgetBreakdown,
+                spendingEfficiency,
+                documents,
+                dashboard,
+                auditOverview,
+                antiCorruptionData
+            ] = await Promise.allSettled([
+                this.service.getCitizenFinancialOverview(yearInt),
+                this.service.getBudgetBreakdownForCitizens(yearInt),
+                this.getSpendingEfficiencyAnalysis ? this.getSpendingEfficiencyAnalysis.bind(this)({ params: { year: yearInt.toString() } }, { json: () => {} }) : Promise.resolve(null),
+                this.service.getAllDocuments({ year: yearInt }),
+                this.service.getTransparencyDashboard(),
+                // Assuming access to audit service
+                this.service.getAuditData ? this.service.getAuditData(yearInt) : Promise.resolve(null),
+                // Assuming access to anti-corruption service
+                this.service.getAntiCorruptionData ? this.service.getAntiCorruptionData(yearInt) : Promise.resolve(null)
+            ]);
+
+            // Process results
+            const processedResults = [
+                financialOverview,
+                budgetBreakdown,
+                spendingEfficiency,
+                documents,
+                dashboard,
+                auditOverview,
+                antiCorruptionData
+            ].reduce((acc, result) => {
+                if (result.status === 'fulfilled') {
+                    // Merge the result data into our accumulator
+                    Object.assign(acc.data, result.value);
+                } else {
+                    acc.errors.push(result.reason);
+                }
+                return acc;
+            }, { data: {}, errors: [] });
+
+            // Build final response
+            const fullData = {
+                year: yearInt,
+                financialOverview: processedResults.data.financialOverview || processedResults.data.overview,
+                budgetBreakdown: processedResults.data.budgetBreakdown || processedResults.data.budget_breakdown,
+                spendingEfficiency: processedResults.data.spendingEfficiency || processedResults.data.spending_efficiency,
+                documents: processedResults.data.documents || [],
+                dashboard: processedResults.data.dashboard,
+                auditOverview: processedResults.data.auditOverview || processedResults.data.audit_overview,
+                antiCorruption: processedResults.data.antiCorruption || processedResults.data.anti_corruption,
+                generated_at: new Date().toISOString()
+            };
+
+            // Add consistency checks
+            const docCount = fullData.documents.length;
+            const expectedDocs = fullData.financialOverview?.total_documents || 0;
+            const dataComplete = docCount >= expectedDocs * 0.8;
+
+            if (expectedDocs > 0 && docCount < expectedDocs * 0.8) {
+                console.warn(`⚠️ Data mismatch: Expected ~${expectedDocs} docs, got ${docCount}`);
+            }
+
+            res.json({
+                ...fullData,
+                consistency_check: {
+                    documents_expected: expectedDocs,
+                    documents_received: docCount,
+                    data_complete: dataComplete
+                }
+            });
+
+        } catch (error) {
+            console.error('Error in getYearData:', error);
+            res.status(500).json({
+                error: 'Failed to get comprehensive year data',
+                details: error.message
+            });
+        }
+    }
+
+    /**
      * Clear API cache
      */
     async clearCache(req, res) {

@@ -382,16 +382,8 @@ router.get('/search', (req, res) => {
  *             schema:
  *               type: object
  */
-router.get('/health', async (req, res) => {
-    try {
-        const health = await controller.getSystemHealth();
-        res.json(health);
-    } catch (error) {
-        res.status(500).json({
-            error: 'Failed to get system health',
-            details: error.message
-        });
-    }
+router.get('/health', (req, res) => {
+    controller.getSystemHealth(req, res);
 });
 
 /**
@@ -446,7 +438,7 @@ router.get('/available-years', (req, res) => {
     controller.getAvailableYears(req, res);
 });
 
-module.exports = router;/** @swagger
+/** @swagger
  * /api/transparency/external/{year}:
  *   get:
  *     summary: Get external financial data from government APIs
@@ -700,3 +692,5 @@ router.post('/cache/clear', (req, res) => {
 router.get('/cache/stats', (req, res) => {
     controller.getCacheStats(req, res);
 });
+
+module.exports = router;

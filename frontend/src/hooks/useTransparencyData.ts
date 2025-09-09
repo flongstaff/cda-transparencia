@@ -1,18 +1,17 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api/transparency';
 
 export interface TransparencyData {
   // Complete data payload from backend
   year: number | null;
+  financialOverview: any | null;
+  budgetBreakdown: any[] | null;
   documents: any[] | null;
-  categories: Record<string, number> | null;
-  budget: any | null;
-  salaries: any | null;
-  contracts: any | null;
-  summary: any | null;
-  metrics: any | null;
-  audit: any | null;
+  dashboard: any | null;
+  spendingEfficiency: any | null;
+  auditOverview: any | null;
+  antiCorruption: any | null;
   // Loading & error states
   loading: boolean;
   error: string | null;
@@ -23,17 +22,26 @@ export interface TransparencyData {
   actualDocCount: number | null;
 }
 
+export interface InvestmentAnalytics {
+  totalInvestment: number;
+  totalDepreciation: number;
+  netInvestmentValue: number;
+  investmentByType: Array<{ name: string; value: number; color: string }>;
+  topInvestments: any[];
+}
+
+const COLORS = ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6', '#EC4899', '#6B7280'];
+
 export const useTransparencyData = (year: number) => {
   const [data, setData] = useState<TransparencyData>({
     year: null,
+    financialOverview: null,
+    budgetBreakdown: null,
     documents: null,
-    categories: null,
-    budget: null,
-    salaries: null,
-    contracts: null,
-    summary: null,
-    metrics: null,
-    audit: null,
+    dashboard: null,
+    spendingEfficiency: null,
+    auditOverview: null,
+    antiCorruption: null,
     loading: false,
     error: null,
     generated_at: null,
@@ -42,69 +50,46 @@ export const useTransparencyData = (year: number) => {
   });
 
   const fetchData = useCallback(async () => {
-    setData(prev => ({ ...prev, loading: true, error: null }));
+    setData(prev => ({ ...prev, loading: true, error: null, year }));
 
     try {
       // Fetch complete data payload from the new consolidated endpoint
-      const response = await fetch(`${API_BASE}/years/${year}`);
+      const response = await fetch(`${API_BASE}/year/${year}`);
       
       if (!response.ok) {
-        throw new Error(`Failed to fetch data for year ${year}`);
+        throw new Error(`Failed to fetch data: ${response.statusText}`);
       }
 
       const fullData = await response.json();
 
-      // Extract data from the payload
-      const {
-        documents,
-        categories,
-        budget,
-        salaries,
-        contracts,
-        summary,
-        metrics,
-        audit,
-        generated_at
-      } = fullData;
-
-      // Calculate document counts for sanity check
-      const expectedDocCount = categories ? Object.values(categories).reduce((a: number, b: number) => a + b, 0) : 0;
-      const actualDocCount = documents?.length || 0;
-
-      // Log warning if there's a mismatch
-      if (expectedDocCount > 0 && actualDocCount < expectedDocCount) {
-        console.warn(`⚠️ Showing ${actualDocCount} of ${expectedDocCount} documents for ${year}`);
-      }
-
       setData({
-        year,
-        documents: documents || [],
-        categories: categories || null,
-        budget: budget || null,
-        salaries: salaries || null,
-        contracts: contracts || null,
-        summary: summary || null,
-        metrics: metrics || null,
-        audit: audit || null,
+        financialOverview: fullData.financialOverview,
+        budgetBreakdown: fullData.budgetBreakdown,
+        documents: fullData.documents || [],
+        auditOverview: fullData.auditOverview,
+        spendingEfficiency: fullData.spendingEfficiency,
+        dashboard: fullData.dashboard,
+        antiCorruption: fullData.antiCorruption,
         loading: false,
         error: null,
-        generated_at: generated_at || null,
-        expectedDocCount,
-        actualDocCount,
+        year,
+        generated_at: fullData.generated_at || null,
+        expectedDocCount: fullData.consistency_check?.documents_expected || null,
+        actualDocCount: fullData.consistency_check?.documents_received || null,
       });
+
     } catch (err: any) {
       setData({
-        year: null,
+        financialOverview: null,
+        budgetBreakdown: null,
         documents: null,
-        categories: null,
-        budget: null,
-        salaries: null,
-        contracts: null,
-        summary: null,
-        metrics: null,
-        audit: null,
+        auditOverview: null,
+        spendingEfficiency: null,
+        dashboard: null,
+        antiCorruption: null,
         loading: false,
-        error: err.message || `Failed to load transparency data for year ${year}`,
+        error: err.message || 'Failed to load transparency data',
+        year,
         generated_at: null,
         expectedDocCount: null,
         actualDocCount: null,
@@ -119,4 +104,43 @@ export const useTransparencyData = (year: number) => {
   }, [year, fetchData]);
 
   return { ...data, refetch: fetchData };
+};
+
+// Memoized analytics calculation to prevent expensive recalculations on every render
+export const useInvestmentAnalytics = (data: any[]) => {
+  const analytics = useMemo<InvestmentAnalytics | null>(() => {
+    if (data.length === 0) return null;
+
+    const totalInvestment = data.reduce((sum, inv) => sum + inv.value, 0);
+    const totalDepreciation = data.reduce((sum, inv) => sum + (inv.depreciation || 0), 0);
+    const netInvestmentValue = totalInvestment - totalDepreciation;
+
+    const investmentByType = data.reduce((acc, inv) => {
+      const type = inv.asset_type || 'Otros';
+      acc[type] = (acc[type] || 0) + inv.value;
+      return acc;
+    }, {} as Record<string, number>);
+
+    const investmentByTypeArray = Object.entries(investmentByType)
+      .map(([name, value], index) => ({
+        name,
+        value,
+        color: COLORS[index % COLORS.length]
+      }))
+      .sort((a, b) => b.value - a.value);
+
+    const topInvestments = [...data]
+      .sort((a, b) => b.value - a.value)
+      .slice(0, 5);
+
+    return {
+      totalInvestment,
+      totalDepreciation,
+      netInvestmentValue,
+      investmentByType: investmentByTypeArray,
+      topInvestments
+    };
+  }, [data]);
+
+  return analytics;
 };

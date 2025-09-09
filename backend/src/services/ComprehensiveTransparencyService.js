@@ -1245,6 +1245,113 @@ class ComprehensiveTransparencyService {
             cache_keys: Array.from(this.apiCache.keys())
         };
     }
+
+    /**
+     * Get transparency dashboard data
+     */
+    async getTransparencyDashboard() {
+        try {
+            // Get recent documents
+            const recentDocs = await this.getAllDocuments({ limit: 10 });
+            
+            // Get available years
+            const years = await this.getAvailableYears();
+            
+            // Get document categories
+            const categoriesResult = await this.pool.query(`
+                SELECT category, COUNT(*) as count 
+                FROM documents 
+                GROUP BY category
+                ORDER BY count DESC
+            `);
+            
+            const categories = categoriesResult.rows.reduce((acc, row) => {
+                acc[row.category] = parseInt(row.count);
+                return acc;
+            }, {});
+            
+            // Get document statistics
+            const statsResult = await this.pool.query(`
+                SELECT 
+                    COUNT(*) as total_documents,
+                    COUNT(CASE WHEN verification_status = 'verified' THEN 1 END) as verified_documents,
+                    ROUND(AVG(CAST(size_mb AS numeric)), 2) as avg_size_mb
+                FROM documents
+            `);
+            
+            const stats = statsResult.rows[0];
+            
+            return {
+                overview: {
+                    total_documents: parseInt(stats.total_documents),
+                    verified_documents: parseInt(stats.verified_documents),
+                    transparency_score: Math.round((parseInt(stats.verified_documents) / parseInt(stats.total_documents)) * 100),
+                    average_document_size: parseFloat(stats.avg_size_mb)
+                },
+                recent_documents: recentDocs,
+                category_distribution: categories,
+                available_years: years,
+                generated_at: new Date().toISOString()
+            };
+        } catch (error) {
+            console.error('Error getting transparency dashboard:', error);
+            return {
+                overview: {
+                    total_documents: 0,
+                    verified_documents: 0,
+                    transparency_score: 0,
+                    average_document_size: 0
+                },
+                recent_documents: [],
+                category_distribution: {},
+                available_years: [],
+                error: error.message
+            };
+        }
+    }
+
+    /**
+     * Get system health status
+     */
+    async getSystemHealth() {
+        try {
+            // Check database connection
+            const dbCheck = await this.pool.query('SELECT 1');
+            const dbHealthy = dbCheck.rowCount === 1;
+            
+            // Check local data availability
+            let localDataAvailable = true;
+            try {
+                await fs.access(this.documentPaths.organized_pdfs);
+            } catch (error) {
+                localDataAvailable = false;
+            }
+            
+            // Get available years
+            const years = await this.getAvailableYears();
+            
+            return {
+                status: 'operational',
+                services: {
+                    database: dbHealthy ? 'healthy' : 'unhealthy',
+                    local_data: localDataAvailable ? 'available' : 'unavailable',
+                    api_endpoints: 'operational'
+                },
+                data_coverage: {
+                    available_years: years,
+                    total_years: years.length
+                },
+                timestamp: new Date().toISOString()
+            };
+        } catch (error) {
+            console.error('Error checking system health:', error);
+            return {
+                status: 'degraded',
+                error: error.message,
+                timestamp: new Date().toISOString()
+            };
+        }
+    }
 }
 
 module.exports = ComprehensiveTransparencyService;
