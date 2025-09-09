@@ -26,11 +26,11 @@ The service now integrates with multiple external data sources:
 The service now incorporates multiple local data sources:
 
 #### Document Repositories
-- **Source Materials**: `data/source_materials`
-- **PDF Extracts**: `data/pdf_extracts`
+- **Source Materials**: ``
+- **PDF Extracts**: ``
 - **Preserved Documents**: `data/preserved`
 - **Markdown Documents**: `data/markdown_documents`
-- **Organized PDFs**: `organized_pdfs`
+- **Organized PDFs**: ``
 - **Transparency Data**: `transparency_data`
 
 #### Fallback Mechanisms
