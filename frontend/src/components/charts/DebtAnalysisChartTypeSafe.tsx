@@ -19,7 +19,7 @@ import {
 } from 'recharts';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, TrendingDown, PieChart as PieIcon, BarChart3, Activity, AlertTriangle, Loader2 } from 'lucide-react';
-import { consolidatedApiService } from '../../services/ConsolidatedApiService';
+import { useDebtData } from '../../hooks/useUnifiedData';
 import { formatCurrencyARS } from '../../utils/formatters';
 import BaseChart from './BaseChart';
 import type { ChartTooltipProps, DebtItem, DebtAnalytics } from '../../types/chart';
@@ -187,55 +187,8 @@ const DebtAnalysisChart: React.FC<Props> = ({
   const abortControllerRef = useRef<AbortController | null>(null);
 
   // React Query with proper typing and caching
-  const {
-    data: rawDebtData,
-    isLoading,
-    error,
-    refetch,
-    isError,
-    isFetched
-  } = useQuery<DebtDataResponse, Error>({
-    queryKey: ['debt-analysis', year, locale],
-    queryFn: async ({ signal }) => {
-      try {
-        // Cancel previous request
-        if (abortControllerRef.current) {
-          abortControllerRef.current.abort();
-        }
-
-        abortControllerRef.current = new AbortController();
-        
-        const rawData = await consolidatedApiService.getMunicipalDebt(year);
-        
-        // Validate data with Zod
-        const validatedData = DebtDataResponseSchema.parse(rawData);
-        
-        console.log('✅ Debt data validation passed:', {
-          totalRecords: validatedData.debt_data.length,
-          totalDebt: validatedData.total_debt,
-          year: validatedData.metadata.year
-        });
-
-        return validatedData;
-      } catch (err) {
-        if (err instanceof z.ZodError) {
-          const validationError = new Error(
-            `Debt data validation failed: ${err.errors.map(e => `${e.path.join('.')}: ${e.message}`).join(', ')}`
-          );
-          console.error('❌ Zod validation errors:', err.errors);
-          throw validationError;
-        }
-        throw err;
-      }
-    },
-    staleTime: enableCache ? 5 * 60 * 1000 : 0, // 5 minutes
-    gcTime: enableCache ? 10 * 60 * 1000 : 0, // 10 minutes
-    retry: (failureCount, error) => {
-      if (error.message.includes('validation')) return false; // Don't retry validation errors
-      return failureCount < 3;
-    },
-    retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000), // Exponential backoff
-  });
+  // Use unified data hook with React Query
+  const { data: debtData, isLoading, error, refetch } = useDebtData(year);
 
   // Memoized analytics calculation
   const analytics = useMemo<DebtAnalytics | null>(() => {

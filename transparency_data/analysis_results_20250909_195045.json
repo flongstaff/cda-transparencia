@@ -1,0 +1,1544 @@
+{
+  "analysis_timestamp": "2025-09-09T19:50:10.908747",
+  "municipality": "Carmen de Areco",
+  "data_sources_analyzed": [
+    "boletin_oficial",
+    "boletin_oficial_provincia",
+    "datos_gob_ar",
+    "datos_buenos_aires",
+    "afip"
+  ],
+  "corruption_cases_tracked": 4,
+  "documents_processed": 0,
+  "anomalies_detected": 0,
+  "overall_risk_level": "unknown",
+  "detailed_findings": {
+    "boletin_oficial": [],
+    "boletin_oficial_provincia": [],
+    "datos_gob_ar": [
+      {
+        "id": "transporte_f87b93d4-ade2-44fc-a409-d3736ba9f3ba",
+        "title": "Recorridos de Líneas de Transporte de Región Metropolitana de Buenos Aires (RMBA)",
+        "description": "Recorridos de Líneas de Transporte de Región Metropolitana de Buenos Aires (RMBA).-",
+        "organization": " Secretaría de Transporte",
+        "tags": [
+          "AMBA",
+          "BUENOS AIRES",
+          "BUS",
+          "FFCC",
+          "Movilidad Urbana",
+          "RMBA",
+          "SUBTE",
+          "Transporte Automotor",
+          "Transporte Ferroviario",
+          "Transporte General"
+        ],
+        "resources": 20,
+        "url": "https://datos.gob.ar/dataset/transporte-recorridos-lineas-transporte-region-metropolitana-buenos-aires-rmba",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "ambiente_2.0",
+        "title": "Monitoreo de calidad del agua",
+        "description": "Muestra los monitoreos de calidad del agua en el Río de la Plata en la Red de Intercambio de Información de los Gobiernos Locales (RIIGLO) y de de las lagunas Chascomús, Adela y Chis Chis",
+        "organization": "Subsecretaría de Ambiente",
+        "tags": [
+          "Agua",
+          "Monitoreo de calidad del agua"
+        ],
+        "resources": 29,
+        "url": "https://datos.gob.ar/dataset/ambiente-monitoreo-calidad-agua",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "justicia_4680199f-6234-4262-8a2a-8f7993bf784d",
+        "title": "Declaraciones Juradas Patrimoniales Integrales de carácter público",
+        "description": "Declaraciones Juradas Patrimoniales Integrales presentadas por los sujetos obligados conforme lo normado en la Ley de Ética Pública 25.188 modificada por la Ley 26.857.\r\n",
+        "organization": " Ministerio de Justicia",
+        "tags": [
+          "DDJJ",
+          "Ley 25188",
+          "Ley 26857",
+          "Transparencia y anticorrupción",
+          "anticorrupción",
+          "año fiscal",
+          "bienes",
+          "deudas",
+          "funcionarios",
+          "grupo familiar",
+          "patrimonio",
+          "transparencia",
+          "ética pública"
+        ],
+        "resources": 12,
+        "url": "https://datos.gob.ar/dataset/justicia-declaraciones-juradas-patrimoniales-integrales-caracter-publico",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "salud_0d4413f1-5b95-49f3-b684-ddf090a2f4d5",
+        "title": "Compras COVID-19",
+        "description": "Detalle de las compras y contrataciones tramitadas por el Ministerio de Salud de la Nación en el marco de la Pandemia por COVID-19.",
+        "organization": "Ministerio de Salud",
+        "tags": [
+          "COVID-19",
+          "compras",
+          "contrataciones",
+          "vacunas"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/salud-compras-covid-19",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "jgm_24",
+        "title": "Compras emergencia COVID19",
+        "description": "Información remitida por los organismos sobre los procedimientos de compras y contrataciones realizados en el marco de la emergencia sanitaria según lo establecido en la normativa de emergencia (DNU 260/2020, Decisión Administrativa 409/2020 y Disposición ONC 48/2020).",
+        "organization": " Jefatura de Gabinete de Ministros",
+        "tags": [
+          "Economía y finanzas",
+          "Gobierno y sector público",
+          "compras",
+          "contrataciones",
+          "coronavirus",
+          "covid19"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/jgm-compras-emergencia-covid19",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "defensa_bbfd1341-843b-43ff-9250-39d8b67712a6",
+        "title": "Compras y contrataciones Ministerio de Defensa",
+        "description": "Listado de las compras y contrataciones efectuadas en el marco COVID-19 por el Ministerio de Defensa.",
+        "organization": " Ministerio de Defensa",
+        "tags": [
+          "COVID-19",
+          "compras",
+          "contrataciones",
+          "covid"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/defensa-compras-contrataciones-ministerio-defensa",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "salud_744f3ed1-2267-438c-a855-f5153b207fbc",
+        "title": "Contrataciones, Compras y Licitaciones de la Superintendencia de Servicios de Salud (SSS)",
+        "description": "Listado de contrataciones, compras y licitaciones de la Superintendencia de Servicios de Salud",
+        "organization": "Ministerio de Salud",
+        "tags": [
+          "Gestión en Salud",
+          "SSS",
+          "compras",
+          "contrataciones",
+          "licitacion"
+        ],
+        "resources": 5,
+        "url": "https://datos.gob.ar/dataset/salud-contrataciones-compras-licitaciones-superintendencia-servicios-salud-sss",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "otros_siep_2",
+        "title": "Ahora 12 - Discontinuado",
+        "description": "Cantidad de operaciones y valor corriente de las ventas del programa Ahora 12, clasificadas por provincia y rubro.",
+        "organization": "Otros organismos",
+        "tags": [
+          "Ahora 12",
+          "Consumo",
+          "Economía y finanzas",
+          "compras",
+          "consumo",
+          "cuotas",
+          "operaciones",
+          "provincias",
+          "rubro"
+        ],
+        "resources": 4,
+        "url": "https://datos.gob.ar/dataset/otros-ahora-12---discontinuado",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "energia_bada5328-3e7d-47b7-8fdc-85dbe2bc748e",
+        "title": "Compras de GLP",
+        "description": "Detalle mensual de compras de GLP por volumen y tipo de cliente. (Pesos y toneladas).\r\n",
+        "organization": "Secretaría de Energía",
+        "tags": [
+          "Comercialización de Hidrocarburos Líquidos",
+          "Compras",
+          "GLP",
+          "Hidrocarburos"
+        ],
+        "resources": 8,
+        "url": "https://datos.gob.ar/dataset/energia-compras-glp",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "desarrollo-social_061c8da2-dc88-4774-b55e-5a3e04b00f59",
+        "title": "Compras COVID-19",
+        "description": "Detalle de las compras y contrataciones tramitadas por el Ministerio de Desarrollo Social de la Nación en el marco de la Pandemia por COVID-19.\r\n\r\n",
+        "organization": "Secretaría Nacional de Niñez, Adolescencia y Familia",
+        "tags": [
+          "covid-19"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/desarrollo-social-compras-covid-19",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "acumar_b54dcccd-5efa-4908-b24e-a8c837b4e55d",
+        "title": "Compras y Contrataciones de ACUMAR",
+        "description": "Datos correspondientes a los procesos de compras y contrataciones realizados por ACUMAR, desde 2018 hasta la fecha.",
+        "organization": "Autoridad de Cuenca Matanza Riachuelo",
+        "tags": [
+          "COMPR.AR",
+          "Compras y Contrataciones",
+          "Información Pública",
+          "Transparencia"
+        ],
+        "resources": 8,
+        "url": "https://datos.gob.ar/dataset/acumar-compras-contrataciones-acumar",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "pami_7e63e63b-e3b9-4386-8782-38b22f4bf95b",
+        "title": "Compras y contrataciones de Nivel Central- 2017",
+        "description": "Listado de compras y contrataciones de 2017 ",
+        "organization": " Instituto Nacional de Servicios Sociales para Jubilados y Pensionados (PAMI)",
+        "tags": [],
+        "resources": 4,
+        "url": "https://datos.gob.ar/dataset/pami-compras-contrataciones-nivel-central--2017",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "sspm_37",
+        "title": "Ventas en centros de compras (DISCONTINUADO)",
+        "description": "Ventas totales en Centros de Compras o Shopping Centers en millones de pesos y evolución por grupos de artículos, según la base 2008",
+        "organization": "Subsecretaría de Programación Macroeconómica",
+        "tags": [
+          "Actividad",
+          "actividad",
+          "centros de compras",
+          "comercio",
+          "consumo",
+          "shoppings",
+          "ventas"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/sspm-ventas-centros-compras-discontinuado",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "pami_a39bb1a9-c061-47fe-bd24-a3173ebf7652",
+        "title": "Compras y contrataciones de Nivel Central 2020",
+        "description": "Compras y contrataciones de Nivel Central 2020",
+        "organization": " Instituto Nacional de Servicios Sociales para Jubilados y Pensionados (PAMI)",
+        "tags": [],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/pami-compras-contrataciones-nivel-central-2020",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "pami_58543eed-9efe-4e0b-a86c-84887404d062",
+        "title": "Compras y contrataciones de Nivel Central 2021",
+        "description": "Compras y contrataciones de Nivel Central 2021",
+        "organization": " Instituto Nacional de Servicios Sociales para Jubilados y Pensionados (PAMI)",
+        "tags": [],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/pami-compras-contrataciones-nivel-central-2021",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "pami_4696820f-ad31-40b7-9d49-fa96050c138e",
+        "title": "Compras y contrataciones de Nivel Central- 2019",
+        "description": "Listado de compras y contrataciones de 2019",
+        "organization": " Instituto Nacional de Servicios Sociales para Jubilados y Pensionados (PAMI)",
+        "tags": [],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/pami-compras-contrataciones-nivel-central--2019",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "mineria_19",
+        "title": "Compras Realizadas por Empresas Mineras (SIACAM)",
+        "description": "Datos correspondientes al tablero de Proveedores del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM). Elaborado por el CEP-XXI en base a AFIP.",
+        "organization": "Secretaría de Minería",
+        "tags": [
+          "Compras"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/mineria-compras-realizadas-por-empresas-mineras-siacam",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "sspm_458",
+        "title": "Ventas en centros de compras nacional",
+        "description": "Ventas totales nacionales en Centros de Compras en millones de pesos, valores corrientes y constantes (base abril 2016) y evolución por grupos de artículos (valores corrientes)",
+        "organization": "Subsecretaría de Programación Macroeconómica",
+        "tags": [
+          "Actividad",
+          "actividad",
+          "centros de compras",
+          "comercio",
+          "consumo",
+          "datos historicos",
+          "shoppings",
+          "ventas"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/sspm-ventas-centros-compras-nacional",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "pami_f312a9f9-01d4-4ecc-851a-1e7a363312ce",
+        "title": "Compras y contrataciones de Nivel Central ABRIL 2022",
+        "description": "Compras y contrataciones de Nivel Central ABRIL 2022",
+        "organization": " Instituto Nacional de Servicios Sociales para Jubilados y Pensionados (PAMI)",
+        "tags": [],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/pami-compras-contrataciones-nivel-central-abril-2022",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "sspm_120",
+        "title": "Poder de compra de las exportaciones de bienes y ganancia del intercambio",
+        "description": "Poder de compra de las exportaciones de bienes y ganancia (o pérdida) del intercambio (Base 1993)",
+        "organization": "Subsecretaría de Programación Macroeconómica",
+        "tags": [
+          "Sector Externo",
+          "comercio exterior",
+          "externo",
+          "ganancia del intercambio"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/sspm-poder-compra-exportaciones-bienes-ganancia-intercambio",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "sspm_83",
+        "title": "Poder de compra de las exportaciones de bienes y ganancia del intercambio. Base 2004",
+        "description": "Índice del poder de compra de las exportaciones de bienes y ganancia (o pérdida) del intercambio (Base 2004)",
+        "organization": "Subsecretaría de Programación Macroeconómica",
+        "tags": [
+          "Sector Externo",
+          "comercio exterior",
+          "externo",
+          "ganancia del intercambio",
+          "poder de compra"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/sspm-poder-compra-exportaciones-bienes-ganancia-intercambio-base-2004",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "acumar_2e4de507-5a60-4156-9212-424d00f165c9",
+        "title": "Régimen Especial de Compras y Contrataciones a Proveedores Sociales y MiPyMEs",
+        "description": "Datos correspondientes a los procesos de compras y contrataciones realizados por ACUMAR a través del Régimen Especial de Compras y Contrataciones a Proveedores Sociales y MiPyMEs. Aplicable para la contratación de obras, bienes y servicios, que por sus características, condiciones u objeto puedan ser satisfechos por personas humanas y/o jurídicas inscriptas en el Registro de Proveedores Sociales y MiPyMEs de ACUMAR.",
+        "organization": "Autoridad de Cuenca Matanza Riachuelo",
+        "tags": [
+          "Compras y Contrataciones",
+          "Información Pública",
+          "Transparencia"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/acumar-regimen-especial-compras-contrataciones-proveedores-sociales-mipymes",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "arsat_ab89104c-1a04-4c9d-b31e-66a92e4b6d16",
+        "title": "Finanzas",
+        "description": "Datos de administración y finanzas que incluyen compras, contrataciones, proveedores, etc.    ",
+        "organization": "Empresa Argentina de Soluciones Satelitales",
+        "tags": [
+          "Compras",
+          "Finanzas",
+          "Proveedores",
+          "Transparencia"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/arsat-finanzas",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "transporte_1c8c3a4b-ecdc-4e3d-9771-a3bf0a11e546",
+        "title": "COVID-19",
+        "description": "Las acciones realizadas por el Ministerio de transporte en el marco de la pandemia COVID-19.-",
+        "organization": " Secretaría de Transporte",
+        "tags": [
+          "Covid-19",
+          "Transparencia",
+          "Transporte General"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/transporte-covid-19",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "agroindustria_9b8396dc-e22f-4a2d-988b-496909c5d7e5",
+        "title": "Tabaco - Acopio",
+        "description": "La información está conformada por la compra de tabaco a nivel nacional (sin procesar). Estas compras son efectuadas por los Acopiadores de Tabaco habilitados que están distribuidos dentro de las 7 provincias tabacaleras. Se encuentran clasificados en 3 tipos de tabaco a nivel general: Virginia - Burley - Criollos.",
+        "organization": "Secretaría de Agricultura, Ganadería y Pesca",
+        "tags": [
+          "Catamarca",
+          "Chaco",
+          "Corrientes",
+          "Jujuy",
+          "Misiones",
+          "Salta",
+          "Tucumán",
+          "acopio",
+          "burley",
+          "criollo",
+          "criollo argentino",
+          "criollo chaqueño",
+          "criollo correntino",
+          "criollo misionero",
+          "criollos",
+          "nacional",
+          "produccion",
+          "tabacalera",
+          "tabaco",
+          "virginia"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/agroindustria-tabaco---acopio",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "agroindustria_19c2c34b-1f77-4893-afb0-3821d62891fa",
+        "title": "SIO Carnes",
+        "description": "Sistema unificado de información de operaciones de compra venta de ganado con destino a faena. Surge de los datos obtenidos de las liquidaciones electrónicas presentadas a la AFIP (Resolución General No. 3964/2016 y modificatoria), junto con los Documentos de Tránsito Electrónicos (DTE) obtenidos del SENASA.",
+        "organization": "Secretaría de Agricultura, Ganadería y Pesca",
+        "tags": [
+          "SIO",
+          "SIO Carnes",
+          "bovino",
+          "bueyes",
+          "cabeza",
+          "carne vacuna",
+          "carnes",
+          "cebu",
+          "faena",
+          "ganado",
+          "ganado para faena",
+          "kg vivo",
+          "mercado de carnes",
+          "movimiento de ganado",
+          "novillito",
+          "novillo",
+          "precio",
+          "precio de carne",
+          "raza",
+          "ternera",
+          "ternero",
+          "torito",
+          "toro",
+          "vaca",
+          "vaquillona"
+        ],
+        "resources": 4,
+        "url": "https://datos.gob.ar/dataset/agroindustria-sio-carnes",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+        "title": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+        "description": "Tablas Dinámicas SESCO Downstream.",
+        "organization": "Secretaría de Energía",
+        "tags": [
+          "Comercialización de Hidrocarburos Líquidos",
+          "Comercio Exterior",
+          "Downstream",
+          "Gas",
+          "Petróleo",
+          "Refinación",
+          "Refinación de Hidrocarburos",
+          "Resolución 319",
+          "SESCO"
+        ],
+        "resources": 38,
+        "url": "https://datos.gob.ar/dataset/energia-refinacion-comercializacion-petroleo-gas-derivados-tablas-dinamicas",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "sspm_355",
+        "title": "Salario real y poder adquisitivo en la Industria.",
+        "description": "Salario real y poder adquisitivo en la industria. Salario horario normal desde 1985",
+        "organization": "Subsecretaría de Programación Macroeconómica",
+        "tags": [
+          "Empleo e Ingresos",
+          "datos historicos",
+          "industria",
+          "ingresos",
+          "poder de compra",
+          "salario"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/sspm-salario-real-poder-adquisitivo-industria",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "agroindustria_175f48c6-312c-486a-b533-91f80de4ebbe",
+        "title": "SIO Carnes - Índice Novillo INSC",
+        "description": "Permite encontrar valores representativos de mercado para la hacienda que se comercializa en Argentina. Surge del precio promedio ponderado diario de las liquidaciones registradas en kg. vivo, de todas las categorías de Novillo en las Zonas 1 a 6 del SIO Carnes (Sistema unificado de información de operaciones de compra venta de ganado con destino a faena).",
+        "organization": "Secretaría de Agricultura, Ganadería y Pesca",
+        "tags": [
+          "Carne Vacuna",
+          "Indice novillo",
+          "Mercado de carnes",
+          "SIO Carnes",
+          "carne",
+          "novillo",
+          "precio de carne",
+          "precio del novillo"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/agroindustria-sio-carnes---indice-novillo-insc",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "agroindustria_0ed0d23f-d295-4991-b80b-745b5080d0ea",
+        "title": "Ganadería - Indicadores económicos bovinos",
+        "description": "Precios de los siguientes insumos y productos ganaderos bovinos: ternero, novillo, maíz, vaca conserva, vaquillona, dólar, Indice de precios mayoristas. También se incluyen relaciones insumo/producto y márgenes brutos de las principales actividades ganaderas bovinas.",
+        "organization": "Secretaría de Agricultura, Ganadería y Pesca",
+        "tags": [
+          "bovina",
+          "bovinos",
+          "cria",
+          "feed lot",
+          "ganaderia",
+          "invernada",
+          "novillo",
+          "ternero",
+          "vaquillona"
+        ],
+        "resources": 5,
+        "url": "https://datos.gob.ar/dataset/agroindustria-ganaderia---indicadores-economicos-bovinos",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "jgm_4",
+        "title": "Sistema de Contrataciones Electrónicas",
+        "description": "Datos correspondiente al Sistema de Contrataciones Electrónicas, incluyendo las contrataciones de bienes y servicios, el Sistema de Información de Proveedores (SIPRO) y el Catálogo de Bienes y Servicios (SIByS)",
+        "organization": " Jefatura de Gabinete de Ministros",
+        "tags": [
+          "Adjudicaciones",
+          "Bienes",
+          "Catálogo",
+          "Compras",
+          "Concursos",
+          "Contrataciones",
+          "Convocatorias",
+          "Economía y finanzas",
+          "Finanzas Públicas",
+          "Gastos",
+          "Gobierno y sector público",
+          "Presupuesto",
+          "Proveedores",
+          "Servicios"
+        ],
+        "resources": 20,
+        "url": "https://datos.gob.ar/dataset/jgm-sistema-contrataciones-electronicas",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "defensa_bbfd1341-843b-43ff-9250-39d8b67712a6",
+        "title": "Compras y contrataciones Ministerio de Defensa",
+        "description": "Listado de las compras y contrataciones efectuadas en el marco COVID-19 por el Ministerio de Defensa.",
+        "organization": " Ministerio de Defensa",
+        "tags": [
+          "COVID-19",
+          "compras",
+          "contrataciones",
+          "covid"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/defensa-compras-contrataciones-ministerio-defensa",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "salud_744f3ed1-2267-438c-a855-f5153b207fbc",
+        "title": "Contrataciones, Compras y Licitaciones de la Superintendencia de Servicios de Salud (SSS)",
+        "description": "Listado de contrataciones, compras y licitaciones de la Superintendencia de Servicios de Salud",
+        "organization": "Ministerio de Salud",
+        "tags": [
+          "Gestión en Salud",
+          "SSS",
+          "compras",
+          "contrataciones",
+          "licitacion"
+        ],
+        "resources": 5,
+        "url": "https://datos.gob.ar/dataset/salud-contrataciones-compras-licitaciones-superintendencia-servicios-salud-sss",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "jgm_24",
+        "title": "Compras emergencia COVID19",
+        "description": "Información remitida por los organismos sobre los procedimientos de compras y contrataciones realizados en el marco de la emergencia sanitaria según lo establecido en la normativa de emergencia (DNU 260/2020, Decisión Administrativa 409/2020 y Disposición ONC 48/2020).",
+        "organization": " Jefatura de Gabinete de Ministros",
+        "tags": [
+          "Economía y finanzas",
+          "Gobierno y sector público",
+          "compras",
+          "contrataciones",
+          "coronavirus",
+          "covid19"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/jgm-compras-emergencia-covid19",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "salud_0d4413f1-5b95-49f3-b684-ddf090a2f4d5",
+        "title": "Compras COVID-19",
+        "description": "Detalle de las compras y contrataciones tramitadas por el Ministerio de Salud de la Nación en el marco de la Pandemia por COVID-19.",
+        "organization": "Ministerio de Salud",
+        "tags": [
+          "COVID-19",
+          "compras",
+          "contrataciones",
+          "vacunas"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/salud-compras-covid-19",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "jgm_4",
+        "title": "Sistema de Contrataciones Electrónicas",
+        "description": "Datos correspondiente al Sistema de Contrataciones Electrónicas, incluyendo las contrataciones de bienes y servicios, el Sistema de Información de Proveedores (SIPRO) y el Catálogo de Bienes y Servicios (SIByS)",
+        "organization": " Jefatura de Gabinete de Ministros",
+        "tags": [
+          "Adjudicaciones",
+          "Bienes",
+          "Catálogo",
+          "Compras",
+          "Concursos",
+          "Contrataciones",
+          "Convocatorias",
+          "Economía y finanzas",
+          "Finanzas Públicas",
+          "Gastos",
+          "Gobierno y sector público",
+          "Presupuesto",
+          "Proveedores",
+          "Servicios"
+        ],
+        "resources": 20,
+        "url": "https://datos.gob.ar/dataset/jgm-sistema-contrataciones-electronicas",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "acumar_b54dcccd-5efa-4908-b24e-a8c837b4e55d",
+        "title": "Compras y Contrataciones de ACUMAR",
+        "description": "Datos correspondientes a los procesos de compras y contrataciones realizados por ACUMAR, desde 2018 hasta la fecha.",
+        "organization": "Autoridad de Cuenca Matanza Riachuelo",
+        "tags": [
+          "COMPR.AR",
+          "Compras y Contrataciones",
+          "Información Pública",
+          "Transparencia"
+        ],
+        "resources": 8,
+        "url": "https://datos.gob.ar/dataset/acumar-compras-contrataciones-acumar",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "pami_7e63e63b-e3b9-4386-8782-38b22f4bf95b",
+        "title": "Compras y contrataciones de Nivel Central- 2017",
+        "description": "Listado de compras y contrataciones de 2017 ",
+        "organization": " Instituto Nacional de Servicios Sociales para Jubilados y Pensionados (PAMI)",
+        "tags": [],
+        "resources": 4,
+        "url": "https://datos.gob.ar/dataset/pami-compras-contrataciones-nivel-central--2017",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "pami_a39bb1a9-c061-47fe-bd24-a3173ebf7652",
+        "title": "Compras y contrataciones de Nivel Central 2020",
+        "description": "Compras y contrataciones de Nivel Central 2020",
+        "organization": " Instituto Nacional de Servicios Sociales para Jubilados y Pensionados (PAMI)",
+        "tags": [],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/pami-compras-contrataciones-nivel-central-2020",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "pami_58543eed-9efe-4e0b-a86c-84887404d062",
+        "title": "Compras y contrataciones de Nivel Central 2021",
+        "description": "Compras y contrataciones de Nivel Central 2021",
+        "organization": " Instituto Nacional de Servicios Sociales para Jubilados y Pensionados (PAMI)",
+        "tags": [],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/pami-compras-contrataciones-nivel-central-2021",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "pami_4696820f-ad31-40b7-9d49-fa96050c138e",
+        "title": "Compras y contrataciones de Nivel Central- 2019",
+        "description": "Listado de compras y contrataciones de 2019",
+        "organization": " Instituto Nacional de Servicios Sociales para Jubilados y Pensionados (PAMI)",
+        "tags": [],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/pami-compras-contrataciones-nivel-central--2019",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "pami_f312a9f9-01d4-4ecc-851a-1e7a363312ce",
+        "title": "Compras y contrataciones de Nivel Central ABRIL 2022",
+        "description": "Compras y contrataciones de Nivel Central ABRIL 2022",
+        "organization": " Instituto Nacional de Servicios Sociales para Jubilados y Pensionados (PAMI)",
+        "tags": [],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/pami-compras-contrataciones-nivel-central-abril-2022",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "acumar_2e4de507-5a60-4156-9212-424d00f165c9",
+        "title": "Régimen Especial de Compras y Contrataciones a Proveedores Sociales y MiPyMEs",
+        "description": "Datos correspondientes a los procesos de compras y contrataciones realizados por ACUMAR a través del Régimen Especial de Compras y Contrataciones a Proveedores Sociales y MiPyMEs. Aplicable para la contratación de obras, bienes y servicios, que por sus características, condiciones u objeto puedan ser satisfechos por personas humanas y/o jurídicas inscriptas en el Registro de Proveedores Sociales y MiPyMEs de ACUMAR.",
+        "organization": "Autoridad de Cuenca Matanza Riachuelo",
+        "tags": [
+          "Compras y Contrataciones",
+          "Información Pública",
+          "Transparencia"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/acumar-regimen-especial-compras-contrataciones-proveedores-sociales-mipymes",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "jgm_30",
+        "title": "Procesos de Contratación de la Obra Pública gestionados en la Plataforma CONTRATAR",
+        "description": "Datos correspondientes a los procesos de contratación de la obra pública de la Administración Pública Nacional, publicados según el Estándar de Datos para las Contrataciones Abiertas (EDCA). La plataforma CONTRATAR permite a entidades contratantes, empresas constructoras y ciudadanía, consultar, gestionar y controlar los procesos de Contratración de la obra pública, garantizando el acceso de forma transparente, ágil y segura. El presente Dataset se encuentra en Etapa 1, ver más en el Documento metodológico.",
+        "organization": " Jefatura de Gabinete de Ministros",
+        "tags": [
+          "CONTRATAR",
+          "Contrat.ar",
+          "Contrataciones",
+          "Contrataciones abiertas",
+          "Gobierno y sector público",
+          "Licitaciones",
+          "ONC",
+          "Obra Pública",
+          "Oficina Nacional de Contrataciones",
+          "Open Contracting"
+        ],
+        "resources": 9,
+        "url": "https://datos.gob.ar/dataset/jgm-procesos-contratacion-obra-publica-gestionados-plataforma-contratar",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "arsat_ab89104c-1a04-4c9d-b31e-66a92e4b6d16",
+        "title": "Finanzas",
+        "description": "Datos de administración y finanzas que incluyen compras, contrataciones, proveedores, etc.    ",
+        "organization": "Empresa Argentina de Soluciones Satelitales",
+        "tags": [
+          "Compras",
+          "Finanzas",
+          "Proveedores",
+          "Transparencia"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/arsat-finanzas",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "jgm_23",
+        "title": "Acord.Ar - Acuerdos Nacionales",
+        "description": "Contrataciones realizadas a través de la plataforma Acord.Ar en el marco de los Acuerdos Nacionales Emergencia COVID19.",
+        "organization": " Jefatura de Gabinete de Ministros",
+        "tags": [
+          "Economía y finanzas",
+          "Gobierno y sector público",
+          "acordar",
+          "acuerdos nacionales",
+          "coronavirus",
+          "covid19"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/jgm-acordar---acuerdos-nacionales",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "jgm_12",
+        "title": "Contratar (histórico)",
+        "description": "Datos correspondiente al Portal Electrónico de Contratación de Obra Pública (CONTRAT.AR) por Decreto N° 1169/2018. Incluye los procedimientos de selección y ejecución de contrataciones de Obra Pública y concesiones de Obra Pública incorporados en el Sistema de Gestión Electrónica CONTRAT.AR",
+        "organization": " Jefatura de Gabinete de Ministros",
+        "tags": [
+          "BAPIN",
+          "Contrat.ar",
+          "Contrataciones",
+          "Gobierno y sector público",
+          "Licitaciones",
+          "ONC",
+          "Obra Pública",
+          "Obras"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/jgm-contratar-historico",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "transporte_1c8c3a4b-ecdc-4e3d-9771-a3bf0a11e546",
+        "title": "COVID-19",
+        "description": "Las acciones realizadas por el Ministerio de transporte en el marco de la pandemia COVID-19.-",
+        "organization": " Secretaría de Transporte",
+        "tags": [
+          "Covid-19",
+          "Transparencia",
+          "Transporte General"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/transporte-covid-19",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "desarrollo-social_061c8da2-dc88-4774-b55e-5a3e04b00f59",
+        "title": "Compras COVID-19",
+        "description": "Detalle de las compras y contrataciones tramitadas por el Ministerio de Desarrollo Social de la Nación en el marco de la Pandemia por COVID-19.\r\n\r\n",
+        "organization": "Secretaría Nacional de Niñez, Adolescencia y Familia",
+        "tags": [
+          "covid-19"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/desarrollo-social-compras-covid-19",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "salud_9d6315aa-6ba3-4ac2-acfd-f26233cba241",
+        "title": "Facturación de Hospitales Públicos de Gestión Descentralizada",
+        "description": "Facturas pagas por prestaciones Brindadas a Beneficiarios de Obras Sociales\r\n",
+        "organization": "Ministerio de Salud",
+        "tags": [
+          "Gestión en Salud",
+          "SSS",
+          "contratacion",
+          "facturacion",
+          "hospitales públicos"
+        ],
+        "resources": 5,
+        "url": "https://datos.gob.ar/dataset/salud-facturacion-hospitales-publicos-gestion-descentralizada",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "salud_744f3ed1-2267-438c-a855-f5153b207fbc",
+        "title": "Contrataciones, Compras y Licitaciones de la Superintendencia de Servicios de Salud (SSS)",
+        "description": "Listado de contrataciones, compras y licitaciones de la Superintendencia de Servicios de Salud",
+        "organization": "Ministerio de Salud",
+        "tags": [
+          "Gestión en Salud",
+          "SSS",
+          "compras",
+          "contrataciones",
+          "licitacion"
+        ],
+        "resources": 5,
+        "url": "https://datos.gob.ar/dataset/salud-contrataciones-compras-licitaciones-superintendencia-servicios-salud-sss",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "energia_66044d22-6657-47d1-b0bb-ecc7c1d37a44",
+        "title": "Exploración de hidrocarburos - Permisos de Exploración",
+        "description": "Ubicación y polígonos de permisos de exploración. ISO 19126: Extraction, Este subgrupo se compone de conceptos que se refieren a la extracción de materias primas y la excavación del suelo.",
+        "organization": "Secretaría de Energía",
+        "tags": [
+          "Exploración",
+          "Exploración y Producción de Hidrocarburos",
+          "Información Geográfica",
+          "Información geográfica",
+          "Planos base"
+        ],
+        "resources": 4,
+        "url": "https://datos.gob.ar/dataset/energia-exploracion-hidrocarburos---permisos-exploracion",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "arsat_ab89104c-1a04-4c9d-b31e-66a92e4b6d16",
+        "title": "Finanzas",
+        "description": "Datos de administración y finanzas que incluyen compras, contrataciones, proveedores, etc.    ",
+        "organization": "Empresa Argentina de Soluciones Satelitales",
+        "tags": [
+          "Compras",
+          "Finanzas",
+          "Proveedores",
+          "Transparencia"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/arsat-finanzas",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "jgm_30",
+        "title": "Procesos de Contratación de la Obra Pública gestionados en la Plataforma CONTRATAR",
+        "description": "Datos correspondientes a los procesos de contratación de la obra pública de la Administración Pública Nacional, publicados según el Estándar de Datos para las Contrataciones Abiertas (EDCA). La plataforma CONTRATAR permite a entidades contratantes, empresas constructoras y ciudadanía, consultar, gestionar y controlar los procesos de Contratración de la obra pública, garantizando el acceso de forma transparente, ágil y segura. El presente Dataset se encuentra en Etapa 1, ver más en el Documento metodológico.",
+        "organization": " Jefatura de Gabinete de Ministros",
+        "tags": [
+          "CONTRATAR",
+          "Contrat.ar",
+          "Contrataciones",
+          "Contrataciones abiertas",
+          "Gobierno y sector público",
+          "Licitaciones",
+          "ONC",
+          "Obra Pública",
+          "Oficina Nacional de Contrataciones",
+          "Open Contracting"
+        ],
+        "resources": 9,
+        "url": "https://datos.gob.ar/dataset/jgm-procesos-contratacion-obra-publica-gestionados-plataforma-contratar",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "jgm_12",
+        "title": "Contratar (histórico)",
+        "description": "Datos correspondiente al Portal Electrónico de Contratación de Obra Pública (CONTRAT.AR) por Decreto N° 1169/2018. Incluye los procedimientos de selección y ejecución de contrataciones de Obra Pública y concesiones de Obra Pública incorporados en el Sistema de Gestión Electrónica CONTRAT.AR",
+        "organization": " Jefatura de Gabinete de Ministros",
+        "tags": [
+          "BAPIN",
+          "Contrat.ar",
+          "Contrataciones",
+          "Gobierno y sector público",
+          "Licitaciones",
+          "ONC",
+          "Obra Pública",
+          "Obras"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/jgm-contratar-historico",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_16",
+        "title": "Actividad económica, empleo y pobreza - Estimador del Empleo en la Obra Pública",
+        "description": "Actividad económica, empleo y pobreza - Estimador del Empleo en la Obra Pública",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Economia",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "sector"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/obras-actividad-economica-empleo-pobreza---estimador-empleo-obra-publica",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_1",
+        "title": "Mapa de inversiones Argentina",
+        "description": "Datos sobre el presupuesto y la ejecución de las obras del Ministerio de Obras Públicas de la Repúblia Argentina.",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Obras",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "sector"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/obras-mapa-inversiones-argentina",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_17",
+        "title": "Actividad económica, empleo y pobreza - Ingresos y desigualdad",
+        "description": "Actividad económica, empleo y pobreza - Ingresos y desigualdad",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Economia",
+          "departamento",
+          "desigualdad",
+          "ejecucion",
+          "estado",
+          "ingresos",
+          "obra",
+          "provincia",
+          "sector"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/obras-actividad-economica-empleo-pobreza---ingresos-desigualdad",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_14",
+        "title": "PMyE - Indices Multidimensionales",
+        "description": "Indices multidimensionales para la localización de obras y proyectos del Ministerio de Obras Publicas",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Obras",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "sector"
+        ],
+        "resources": 7,
+        "url": "https://datos.gob.ar/dataset/obras-pmye---indices-multidimensionales",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_12",
+        "title": "Sistema sociodemográfico - Grupos poblacionales e inequidades",
+        "description": "Sistema sociodemográfico - Grupos poblacionales e inequidades",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Sociedad",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "grupos poblacionales",
+          "inequidades",
+          "obra",
+          "provincia",
+          "sector"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/obras-sistema-sociodemografico---grupos-poblacionales-e-inequidades",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_31",
+        "title": "Asentamientos humanos, sistemas de ciudades e infraestructuras - Equipamiento educativo",
+        "description": "Asentamientos humanos, sistemas de ciudades e infraestructuras - Equipamiento educativo",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Ciudades",
+          "departamento",
+          "educacion",
+          "ejecucion",
+          "equipamiento",
+          "estado",
+          "obra",
+          "provincia",
+          "sector"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/obras-asentamientos-humanos-sistemas-ciudades-e-infraestructuras---equipamiento-educativo",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_37",
+        "title": "Infraestructura de salud, cuidados y géneros - Equipamiento sanitario",
+        "description": "Infraestructura de salud, cuidados y géneros -Equipamiento sanitario",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Cuidado",
+          "cuidades",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "generos",
+          "infraestructura",
+          "obra",
+          "provincia",
+          "salud",
+          "sanitario",
+          "sector"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/obras-infraestructura-salud-cuidados-generos---equipamiento-sanitario",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_22",
+        "title": "Conectividad multimodal e infraestructura del transporte - Modo vial",
+        "description": "Conectividad multimodal e infraestructura del transporte - Modo vial",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Conectividad",
+          "conectividad",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "sector",
+          "transporte",
+          "vial",
+          "vialidad"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/obras-conectividad-multimodal-e-infraestructura-transporte---modo-vial",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_2",
+        "title": "PMyE - Indicadores sociodemograficos",
+        "description": "Indicadores sociodemograficos",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Obras",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "sector"
+        ],
+        "resources": 6,
+        "url": "https://datos.gob.ar/dataset/obras-pmye---indicadores-sociodemograficos",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_6",
+        "title": "PMyE - Indicadores de contexto -  Educación",
+        "description": "Indicadores de contexto - Educación",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Obras",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "sector"
+        ],
+        "resources": 4,
+        "url": "https://datos.gob.ar/dataset/obras-pmye---indicadores-contexto---educacion",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_5",
+        "title": "Ambiente y demarcación - Gestión de residuos",
+        "description": "Ambiente y demarcación - Gestión de residuos",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Ambiente",
+          "ambiente",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "residuos",
+          "sector"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/obras-ambiente-demarcacion---gestion-residuos",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_7",
+        "title": "Sistema sociodemográfico - Población",
+        "description": "Sistema sociodemográfico - Población",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Sociedad",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "poblacion",
+          "provincia",
+          "sector",
+          "sociedad"
+        ],
+        "resources": 6,
+        "url": "https://datos.gob.ar/dataset/obras-sistema-sociodemografico---poblacion",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_28",
+        "title": "Asentamientos humanos, sistemas de ciudades e infraestructuras - Urbanización y ruralidad",
+        "description": "Asentamientos humanos, sistemas de ciudades e infraestructuras - Urbanización y ruralidad",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Ciudades",
+          "barrios populares",
+          "cuidades",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "infraestructura",
+          "obra",
+          "provincia",
+          "sector",
+          "urbanización"
+        ],
+        "resources": 4,
+        "url": "https://datos.gob.ar/dataset/obras-asentamientos-humanos-sistemas-ciudades-e-infraestructuras---urbanizacion-ruralidad",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_9",
+        "title": "Sistema sociodemográfico - Salud",
+        "description": "Sistema sociodemográfico - Salud",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Sociedad",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "salud",
+          "sector",
+          "sociedad"
+        ],
+        "resources": 4,
+        "url": "https://datos.gob.ar/dataset/obras-sistema-sociodemografico---salud",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_8",
+        "title": "Sistema sociodemográfico - Educación",
+        "description": "Sistema sociodemográfico - Educación",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Sociedad",
+          "departamento",
+          "educacion",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "sector",
+          "sociedad"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/obras-sistema-sociodemografico---educacion",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_4",
+        "title": "PMyE - Indicadores de contexto - Agua Potable y Saneamiento 2",
+        "description": "Indicadores de contexto - Agua Potable y Saneamiento 2",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Obras",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "sector"
+        ],
+        "resources": 5,
+        "url": "https://datos.gob.ar/dataset/obras-pmye---indicadores-contexto---agua-potable-saneamiento-2",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_10",
+        "title": "Sistema sociodemográfico - Cuidados",
+        "description": "Sistema sociodemográfico - Cuidados",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Sociedad",
+          "cuidados",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "sector",
+          "sociedad"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/obras-sistema-sociodemografico---cuidados",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_13",
+        "title": "Actividad económica, empleo y pobreza - Mercado de trabajo",
+        "description": "Actividad económica, empleo y pobreza - Mercado de trabajo",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Economia",
+          "departamento",
+          "ejecucion",
+          "empleo",
+          "estado",
+          "obra",
+          "obra publica",
+          "provincia",
+          "sector"
+        ],
+        "resources": 12,
+        "url": "https://datos.gob.ar/dataset/obras-actividad-economica-empleo-pobreza---mercado-trabajo",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_11",
+        "title": "Sistema sociodemográfico - Condiciones habitacionales",
+        "description": "Sistema sociodemográfico - Condiciones habitacionales",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Sociedad",
+          "condiciones habitacionales",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "sector",
+          "vivienda"
+        ],
+        "resources": 13,
+        "url": "https://datos.gob.ar/dataset/obras-sistema-sociodemografico---condiciones-habitacionales",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_3",
+        "title": "PMyE - Indicadores de contexto - Agua Potable y Saneamiento 1",
+        "description": "Indicadores de contexto - Agua Potable y Saneamiento 1",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Obras",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "sector"
+        ],
+        "resources": 14,
+        "url": "https://datos.gob.ar/dataset/obras-pmye---indicadores-contexto---agua-potable-saneamiento-1",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "obras_21",
+        "title": "Agua, saneamiento e infraestructura hídrica - Agua y saneamiento",
+        "description": "Agua, saneamiento e infraestructura hídrica - Agua y saneamiento",
+        "organization": "Secretaría de Obras Públicas",
+        "tags": [
+          "Agua",
+          "agua",
+          "departamento",
+          "ejecucion",
+          "estado",
+          "obra",
+          "provincia",
+          "saneamiento",
+          "sector"
+        ],
+        "resources": 23,
+        "url": "https://datos.gob.ar/dataset/obras-agua-saneamiento-e-infraestructura-hidrica---agua-saneamiento",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "jgm_30",
+        "title": "Procesos de Contratación de la Obra Pública gestionados en la Plataforma CONTRATAR",
+        "description": "Datos correspondientes a los procesos de contratación de la obra pública de la Administración Pública Nacional, publicados según el Estándar de Datos para las Contrataciones Abiertas (EDCA). La plataforma CONTRATAR permite a entidades contratantes, empresas constructoras y ciudadanía, consultar, gestionar y controlar los procesos de Contratración de la obra pública, garantizando el acceso de forma transparente, ágil y segura. El presente Dataset se encuentra en Etapa 1, ver más en el Documento metodológico.",
+        "organization": " Jefatura de Gabinete de Ministros",
+        "tags": [
+          "CONTRATAR",
+          "Contrat.ar",
+          "Contrataciones",
+          "Contrataciones abiertas",
+          "Gobierno y sector público",
+          "Licitaciones",
+          "ONC",
+          "Obra Pública",
+          "Oficina Nacional de Contrataciones",
+          "Open Contracting"
+        ],
+        "resources": 9,
+        "url": "https://datos.gob.ar/dataset/jgm-procesos-contratacion-obra-publica-gestionados-plataforma-contratar",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "otros_1",
+        "title": "Solicitudes de Acceso a la Información Pública (2015 y 2016)",
+        "description": "Pedidos de acceso a la información que se realizaron en 2015 y 2016 en el marco del Decreto 1172/2003. Entre otras cosas, se detallan la fecha del pedido, el estado del trámite y una síntesis del objeto de la solicitud. A partir de la reglamentación de la Ley de Acceso a la Información Pública (03/2017), la publicación de estos datos corresponde a la Agencia de Acceso a la Información Pública. Este dataset se publica cubriendo el período anterior a la reglamentación de la ley.",
+        "organization": "Otros organismos",
+        "tags": [
+          "Acceso",
+          "Decretos",
+          "Gobierno y sector público",
+          "Pedidos",
+          "Registros",
+          "Solicitudes",
+          "Trámites"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/otros-solicitudes-acceso-informacion-publica-2015-2016",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "jgm_16",
+        "title": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+        "description": "Indicadores de seguimiento de sobre los catálogos de datos abiertos que forman parte de la política de apertura de datos de la Administración Pública Nacional.",
+        "organization": " Jefatura de Gabinete de Ministros",
+        "tags": [
+          "Gobierno y sector público",
+          "catalogos",
+          "datos abiertos",
+          "indicadores",
+          "nodos"
+        ],
+        "resources": 43,
+        "url": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "jgm_12",
+        "title": "Contratar (histórico)",
+        "description": "Datos correspondiente al Portal Electrónico de Contratación de Obra Pública (CONTRAT.AR) por Decreto N° 1169/2018. Incluye los procedimientos de selección y ejecución de contrataciones de Obra Pública y concesiones de Obra Pública incorporados en el Sistema de Gestión Electrónica CONTRAT.AR",
+        "organization": " Jefatura de Gabinete de Ministros",
+        "tags": [
+          "BAPIN",
+          "Contrat.ar",
+          "Contrataciones",
+          "Gobierno y sector público",
+          "Licitaciones",
+          "ONC",
+          "Obra Pública",
+          "Obras"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/jgm-contratar-historico",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "habitat_1",
+        "title": "Listado de participantes de los Sorteos Mi Pieza",
+        "description": "Nómina de las mujeres participantes de la Línea Mi Pieza del Fondo de Integración Socio Urbana (FISU)",
+        "organization": "Subsecretaría de Integración Socio Urbana",
+        "tags": [
+          "fisu",
+          "integracion socio urbana",
+          "mi pieza",
+          "renabap",
+          "sisu"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/habitat-listado-participantes-sorteos-mi-pieza",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "habitat_5",
+        "title": "Relevamiento Nacional de Zonas Estratégicas de Producción de Alimentos",
+        "description": "Mapa de los sectores de las zonas estratégicas de Argentina relevados entre febrero y noviembre de 2023.",
+        "organization": "Subsecretaría de Integración Socio Urbana",
+        "tags": [
+          "integracion socio urbana",
+          "renabap"
+        ],
+        "resources": 4,
+        "url": "https://datos.gob.ar/dataset/habitat-relevamiento-nacional-zonas-estrategicas-produccion-alimentos",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "habitat_4",
+        "title": "Factores de Riesgo en Barrios Populares del Gran Buenos Aires",
+        "description": "Es un análisis de la información recogida por el Registro Nacional de Barrios Populares sobre factores de riesgo. Contiene datos sobre el emplazamiento de barrios populares cercanos a factores de riesgo, recogidos por los Diagnósticos Urbanos realizados en 2019.",
+        "organization": "Subsecretaría de Integración Socio Urbana",
+        "tags": [
+          "integracion socio urbana",
+          "renabap"
+        ],
+        "resources": 1,
+        "url": "https://datos.gob.ar/dataset/habitat-factores-riesgo-barrios-populares-gran-buenos-aires",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "habitat_2",
+        "title": "Proyectos de integración socio urbana",
+        "description": "Listado de proyectos de integración socio urbana desarrollados en barrios populares.",
+        "organization": "Subsecretaría de Integración Socio Urbana",
+        "tags": [
+          "integracion socio urbana",
+          "renabap",
+          "sisu"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/habitat-proyectos-integracion-socio-urbana",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "habitat_3",
+        "title": "Registro Nacional de Barrios Populares",
+        "description": "Mapa de los barrios populares de Argentina.",
+        "organization": "Subsecretaría de Integración Socio Urbana",
+        "tags": [
+          "barrios populares",
+          "integracion socio urbana",
+          "renabap"
+        ],
+        "resources": 4,
+        "url": "https://datos.gob.ar/dataset/habitat-registro-nacional-barrios-populares",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "arsat_ab89104c-1a04-4c9d-b31e-66a92e4b6d16",
+        "title": "Finanzas",
+        "description": "Datos de administración y finanzas que incluyen compras, contrataciones, proveedores, etc.    ",
+        "organization": "Empresa Argentina de Soluciones Satelitales",
+        "tags": [
+          "Compras",
+          "Finanzas",
+          "Proveedores",
+          "Transparencia"
+        ],
+        "resources": 3,
+        "url": "https://datos.gob.ar/dataset/arsat-finanzas",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "otros_10",
+        "title": "Registro Único de Audiencias de Gestión de Intereses",
+        "description": "Información sobre las Audiencias solicitadas a Funcionarios Públicos. La misma surge del Registro Único de Audiencias de Gestión de Intereses del Poder Ejecutivo Nacional, establecido por el Decreto 1172/2003.",
+        "organization": "Otros organismos",
+        "tags": [
+          "Agendas",
+          "Audiencias",
+          "Funcionarios",
+          "Gobierno y sector público",
+          "Registros",
+          "Reuniones"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/otros-registro-unico-audiencias-gestion-intereses",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "acumar_2e4de507-5a60-4156-9212-424d00f165c9",
+        "title": "Régimen Especial de Compras y Contrataciones a Proveedores Sociales y MiPyMEs",
+        "description": "Datos correspondientes a los procesos de compras y contrataciones realizados por ACUMAR a través del Régimen Especial de Compras y Contrataciones a Proveedores Sociales y MiPyMEs. Aplicable para la contratación de obras, bienes y servicios, que por sus características, condiciones u objeto puedan ser satisfechos por personas humanas y/o jurídicas inscriptas en el Registro de Proveedores Sociales y MiPyMEs de ACUMAR.",
+        "organization": "Autoridad de Cuenca Matanza Riachuelo",
+        "tags": [
+          "Compras y Contrataciones",
+          "Información Pública",
+          "Transparencia"
+        ],
+        "resources": 2,
+        "url": "https://datos.gob.ar/dataset/acumar-regimen-especial-compras-contrataciones-proveedores-sociales-mipymes",
+        "source": "datos_gob_ar"
+      },
+      {
+        "id": "otros_2",
+        "title": "Nombres de personas físicas",
+        "description": "Nombres registrados en el Registro Nacional de las Personas agrupados por año. La información surge de los puestos de toma de trámites del DNI en todo el país, incluyendo argentinos y extranjeros nacionalizados.",
+        "organization": "Otros organismos",
+        "tags": [
+          "Población y sociedad",
+          "REGISTRO",
+          "RENAPER"
+        ],
+        "resources": 21,
+        "url": "https://datos.gob.ar/dataset/otros-nombres-personas-fisicas",
+        "source": "datos_gob_ar"
+      }
+    ],
+    "buenos_aires_data": [],
+    "afip_data": {
+      "municipality_cuit": "30-99999999-9",
+      "taxpayer_status": "active",
+      "electronic_invoicing": {
+        "enabled": true,
+        "last_invoice": null,
+        "compliance_status": "compliant"
+      },
+      "contractors_verification": [],
+      "source": "afip"
+    }
+  },
+  "recommendations": [],
+  "error": "'IntegratedTransparencySystem' object has no attribute 'analyze_municipal_transparency'"
+}

@@ -58,6 +58,7 @@ logger = logging.getLogger(__name__)
 class DataSource(Enum):
     """Enumeration of data sources"""
     BOLETIN_OFICIAL = "boletin_oficial"
+    BOLETIN_OFICIAL_PROVINCIA = "boletin_oficial_provincia"
     DATOS_GOB_AR = "datos_gob_ar"
     DATOS_BUENOS_AIRES = "datos_buenos_aires"
     HTC_BUENOS_AIRES = "htc_buenos_aires"
@@ -69,7 +70,6 @@ class DataSource(Enum):
     CONCEJO_DELIBERANTE = "concejo_deliberante"
     LOCAL_INVENTORY = "local_inventory"
     PRESUPUESTO_ABIERTO = "presupuesto_abierto"
-    BOLETIN_OFICIAL_PROVINCIA = "boletin_oficial_provincia"
 
 
 @dataclass
@@ -1145,7 +1145,7 @@ class IntegratedTransparencySystem:
 
 ## 📊 RESUMEN EJECUTIVO
 
-**🚨 NIVEL DE RIESGO GENERAL: {analysis_results.get('overall_risk_level', 'UNKNOWN').upper()}
+**🚨 NIVEL DE RIESGO GENERAL: {analysis_results.get('overall_risk_level', 'UNKNOWN').upper()}**
 
 | Métrica Clave                   | Valor                                      |
 | ------------------------------- | ------------------------------------------ |

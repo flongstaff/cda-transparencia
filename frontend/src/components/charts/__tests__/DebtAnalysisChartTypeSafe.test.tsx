@@ -1,3 +1,48 @@
+// Mock the unified data hook
+const mockDebtData = {
+  debt_data: [
+    {
+      debt_type: 'Deuda Pública',
+      description: 'Bonos municipales',
+      amount: 1000000000,
+      interest_rate: 8.5,
+      due_date: '2025-12-31',
+      status: 'active'
+    },
+    {
+      debt_type: 'Deuda Comercial',
+      description: 'Proveedores',
+      amount: 300000000,
+      interest_rate: 12.0,
+      due_date: '2024-06-30',
+      status: 'active'
+    }
+  ],
+  total_debt: 1300000000,
+  average_interest_rate: 9.5,
+  long_term_debt: 1000000000,
+  short_term_debt: 300000000,
+  debt_by_type: {
+    'Deuda Pública': 1000000000,
+    'Deuda Comercial': 300000000
+  },
+  metadata: {
+    year: 2024,
+    last_updated: new Date().toISOString(),
+    source: 'mock_data'
+  }
+};
+
+// Mock the unified data hook
+jest.mock('../../hooks/useUnifiedData', () => ({
+  useDebtData: jest.fn().mockReturnValue({
+    data: mockDebtData,
+    isLoading: false,
+    error: null,
+    refetch: jest.fn()
+  }),
+  transformDebtData: jest.fn().mockImplementation((data) => data)
+}));
 import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { I18nextProvider } from 'react-i18next';

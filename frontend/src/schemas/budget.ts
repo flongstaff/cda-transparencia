@@ -1,23 +1,38 @@
+// src/schemas/budget.ts
+// Zod schemas for budget data validation
+
 import { z } from 'zod';
+
+export const BudgetCategorySchema = z.object({
+  budgeted: z.number().optional(),
+  executed: z.number().optional(),
+  execution_rate: z.string().optional(),
+  description: z.string().optional(),
+});
 
 export const BudgetDataSchema = z.object({
   total_budgeted: z.number(),
   total_executed: z.number(),
   execution_rate: z.string(),
-  categories: z.record(z.object({
-    budgeted: z.number().optional(),
-    executed: z.number().optional(),
-    execution_rate: z.string().optional()
-  })).optional()
+  categories: z.record(BudgetCategorySchema).optional(),
+  metadata: z.object({
+    year: z.number(),
+    last_updated: z.string(),
+    source: z.string(),
+  }).optional(),
 });
 
-export const BudgetItemSchema = z.object({
-  name: z.string(),
-  value: z.number(),
-  budgeted: z.number().optional(),
-  executed: z.number().optional(),
-  source: z.string().optional()
+export const BudgetApiResponseSchema = z.object({
+  year: z.number(),
+  budget_data: BudgetDataSchema,
+  comparison_data: z.object({
+    previous_year: z.number().optional(),
+    current_year: z.number(),
+    budget_change: z.number().optional(),
+    execution_change: z.number().optional(),
+  }).optional(),
 });
 
+export type BudgetCategory = z.infer<typeof BudgetCategorySchema>;
 export type BudgetData = z.infer<typeof BudgetDataSchema>;
-export type BudgetItem = z.infer<typeof BudgetItemSchema>;
+export type BudgetApiResponse = z.infer<typeof BudgetApiResponseSchema>;

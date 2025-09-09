@@ -3,7 +3,7 @@ import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Toolti
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, PieChart as PieIcon, BarChart3, Activity, AlertTriangle, Loader2 } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
-import { consolidatedApiService } from '../../services/ConsolidatedApiService';
+import { useDebtData } from '../../hooks/useUnifiedData';
 import { formatCurrencyARS } from '../../utils/formatters';
 import BaseChart from './BaseChart';
 
@@ -41,15 +41,8 @@ const CHART_TYPES = [
 const DebtAnalysisChart: React.FC<Props> = ({ year }) => {
   const [activeChartType, setActiveChartType] = useState<'line' | 'bar' | 'pie'>('bar');
 
-  const { data: debtData, isLoading, error, refetch } = useQuery<DebtData[], Error>({
-    queryKey: ['debt', year],
-    queryFn: async () => {
-      const rawData = await consolidatedApiService.getMunicipalDebt(year);
-      return rawData;
-    },
-    staleTime: 10 * 60 * 1000, // 10 minutes
-    retry: 2,
-  });
+  // Use unified data hook with React Query
+  const { data: debtData, isLoading, error, refetch } = useDebtData(year);
 
   const analytics = useMemo<DebtAnalytics | null>(() => {
     if (!debtData || debtData.length === 0) return null;

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, PieChart as PieIcon, BarChart3, Activity, AlertTriangle, Loader2, RotateCcw } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { z } from 'zod';
-import { consolidatedApiService } from '../../services/ConsolidatedApiService';
+import { useBudgetData } from '../../hooks/useUnifiedData';
 import { formatCurrencyARS } from '../../utils/formatters';
 import { BudgetDataSchema } from '../../schemas/budget';
 
@@ -49,51 +49,8 @@ const BudgetAnalysisChart: React.FC<BudgetAnalysisChartProps> = ({ year }) => {
   const [activeChartType, setActiveChartType] = useState<'line' | 'bar' | 'pie'>('bar');
   const debouncedYear = useDebounce(year, 300);
 
-  // Use React Query for data fetching
-  const { data, isLoading, error, refetch } = useQuery({
-    queryKey: ['budget', debouncedYear],
-    queryFn: async () => {
-      try {
-        const budgetData = await consolidatedApiService.getBudgetData(debouncedYear);
-        
-        // Validate data with Zod
-        const parsed = BudgetDataSchema.safeParse(budgetData);
-        if (!parsed.success) {
-          throw new Error("Invalid budget data structure");
-        }
-        
-        const chartData = [
-          {
-            name: 'Presupuesto Total',
-            value: parsed.data.total_budgeted,
-            budgeted: parsed.data.total_budgeted,
-            executed: parsed.data.total_executed,
-            source: 'Datos oficiales del municipio'
-          },
-          ...(parsed.data.categories 
-            ? Object.entries(parsed.data.categories)
-                .slice(0, 6)
-                .map(([name, cat]) => ({
-                  name,
-                  value: cat.executed || 0,
-                  budgeted: cat.budgeted || 0,
-                  executed: cat.executed || 0,
-                  source: 'Datos de categorías presupuestarias'
-                }))
-            : []
-          )
-        ];
-
-        return chartData;
-      } catch (err) {
-        console.error('Error loading budget data:', err);
-        throw err;
-      }
-    },
-    staleTime: 5 * 60 * 1000, // 5 minutes
-    retry: 2,
-    refetchOnWindowFocus: false,
-  });
+  // Use unified data hook with React Query
+  const { data: budgetData, isLoading, error, refetch } = useBudgetData(debouncedYear);
 
   if (isLoading) {
     return (

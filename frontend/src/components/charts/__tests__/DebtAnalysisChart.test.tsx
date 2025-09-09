@@ -1,8 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import DebtAnalysisChart from './DebtAnalysisChart';
-
-// Mock the consolidated API service
+// Mock the unified data hook
 const mockDebtData = {
   debt_data: [
     {
@@ -29,27 +25,28 @@ const mockDebtData = {
   debt_by_type: {
     'Deuda Pública': 1000000000,
     'Deuda Comercial': 300000000
+  },
+  metadata: {
+    year: 2024,
+    last_updated: new Date().toISOString(),
+    source: 'mock_data'
   }
 };
 
-// Create a query client for testing
-const createTestQueryClient = () => {
-  return new QueryClient({
-    defaultOptions: {
-      queries: {
-        retry: false,
-        cacheTime: 0
-      }
-    }
-  });
-};
-
-// Mock the consolidated API service
-jest.mock('../../services/ConsolidatedApiService', () => ({
-  consolidatedApiService: {
-    getMunicipalDebt: jest.fn().mockResolvedValue(mockDebtData)
-  }
+// Mock the unified data hook
+jest.mock('../../hooks/useUnifiedData', () => ({
+  useDebtData: jest.fn().mockReturnValue({
+    data: mockDebtData,
+    isLoading: false,
+    error: null,
+    refetch: jest.fn()
+  }),
+  transformDebtData: jest.fn().mockImplementation((data) => data)
 }));
+import { render, screen, waitFor } from '@testing-library/react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import DebtAnalysisChart from './DebtAnalysisChart';
+
 
 // Wrapper component with React Query provider
 const wrapper = ({ children }: { children: React.ReactNode }) => {
