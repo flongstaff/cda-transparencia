@@ -126,4 +126,23 @@ describe('DebtAnalysisChart', () => {
       expect(screen.getByText('Error al cargar datos de deuda')).toBeInTheDocument();
     });
   });
+
+  test('switches between chart types', async () => {
+    render(<DebtAnalysisChart year={2024} />, { wrapper });
+    
+    // Wait for data to load
+    await waitFor(() => {
+      expect(screen.getByText('Análisis de Deuda 2024')).toBeInTheDocument();
+    });
+    
+    // Check that bar chart is displayed by default
+    expect(screen.getByLabelText('Cambiar a gráfico de barras')).toHaveAttribute('aria-pressed', 'true');
+    
+    // Switch to pie chart
+    const pieButton = screen.getByLabelText('Cambiar a gráfico circular');
+    pieButton.click();
+    
+    // Check that pie chart button is now active
+    expect(pieButton).toHaveAttribute('aria-pressed', 'true');
+  });
 });

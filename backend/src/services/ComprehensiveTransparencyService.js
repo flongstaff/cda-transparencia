@@ -1,14 +1,14 @@
-        const { Pool } = require('pg');
-        const fs = require('fs').promises;
-        const path = require('path');
+const { Pool } = require('pg');
+const fs = require('fs').promises;
+const path = require('path');
 
-        /**
-         * Comprehensive Transparency Service for Carmen de Areco
-         * Provides complete financial transparency, document access, and citizen-focused analysis
-         */
-        class ComprehensiveTransparencyService {
-            constructor() {
-                this.pool = new Pool({
+/**
+ * Comprehensive Transparency Service for Carmen de Areco
+ * Provides complete financial transparency, document access, and citizen-focused analysis
+ */
+class ComprehensiveTransparencyService {
+    constructor() {
+        this.pool = new Pool({
                     host: process.env.DB_HOST || 'localhost',
                     port: process.env.DB_PORT || 5433,
                     database: process.env.DB_NAME || 'transparency_portal',

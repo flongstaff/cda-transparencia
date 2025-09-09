@@ -23,9 +23,10 @@ import {
   Briefcase,
   Coins
 } from 'lucide-react';
-import PageYearSelector from '../components/PageYearSelector';
+import PageYearSelector from '../components/selectors/PageYearSelector';
 import { consolidatedApiService } from '../services';
 import { formatCurrencyARS } from '../utils/formatters';
+import UnifiedFinancialDashboard from '../components/dashboard/UnifiedFinancialDashboard';
 
 // Import ALL dashboard components for consolidated view
 import UniversalChart from '../components/charts/UniversalChart';
@@ -77,7 +78,7 @@ const Dashboard: React.FC = () => {
   const [availableYears, setAvailableYears] = useState<number[]>([]);
   const [transparencyScore, setTransparencyScore] = useState<number>(0);
   const [documentCount, setDocumentCount] = useState<number>(0);
-  const [activeTab, setActiveTab] = useState<'overview' | 'financial' | 'documents' | 'audit' | 'powerbi' | 'comprehensive'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'financial' | 'documents' | 'audit' | 'powerbi' | 'comprehensive'>('comprehensive');
 
   useEffect(() => {
     loadAvailableYears();
@@ -323,6 +324,7 @@ const Dashboard: React.FC = () => {
         <div className="flex justify-center mb-10">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-2 inline-flex flex-wrap gap-2">
             {[
+              { key: 'comprehensive', label: '🎯 Unificado', icon: <Layers className="w-4 h-4" /> },
               { key: 'overview', label: '📊 Lo Básico', icon: <BarChart3 className="w-4 h-4" /> },
               { key: 'financial', label: '💰 Plata', icon: <DollarSign className="w-4 h-4" /> },
               { key: 'documents', label: '📋 Papeles', icon: <FileText className="w-4 h-4" /> }
@@ -342,6 +344,17 @@ const Dashboard: React.FC = () => {
             ))}
           </div>
         </div>
+
+        {/* Comprehensive Unified Dashboard Tab */}
+        {activeTab === 'comprehensive' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+          >
+            <UnifiedFinancialDashboard year={selectedYear} />
+          </motion.div>
+        )}
 
         {/* Overview Tab - Key Metrics Grid - Enhanced */}
         {activeTab === 'overview' && (

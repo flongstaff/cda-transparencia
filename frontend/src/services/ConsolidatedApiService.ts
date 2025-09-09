@@ -414,18 +414,30 @@ class ConsolidatedApiService {
   async getMunicipalDebt(year: number) {
     try {
       // Use the comprehensive transparency controller method
-      const data = await this.fetchApi<any>(`/municipal-debt/${year}`);
+      const data = await this.fetchApi<any>(`/transparency/debt/${year}`);
       
       // Transform to expected format for charts
       if (data.debt_data && Array.isArray(data.debt_data)) {
-        return data.debt_data;
+        return data;
       }
       
       return data;
     } catch (error) {
       console.error(`Error getting municipal debt data for year ${year}:`, error);
       // Return fallback data
-      return [];
+      return {
+        debt_data: [],
+        total_debt: 0,
+        average_interest_rate: 0,
+        long_term_debt: 0,
+        short_term_debt: 0,
+        debt_by_type: {},
+        metadata: {
+          year: year,
+          last_updated: new Date().toISOString(),
+          source: 'error_fallback'
+        }
+      };
     }
   }
 }

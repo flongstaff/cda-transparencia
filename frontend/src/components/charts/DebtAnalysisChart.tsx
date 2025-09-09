@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, Cell, LineChart, Line } from 'recharts';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, PieChart as PieIcon, BarChart3, Activity, AlertTriangle, Loader2, RotateCcw } from 'lucide-react';
@@ -21,16 +21,36 @@ const CHART_TYPES = [
   { key: 'pie', label: 'Circular', icon: <PieIcon size={16} /> }
 ];
 
+// Debounce hook for year changes
+const useDebounce = (value: any, delay: number) => {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+};
+
 const DebtAnalysisChart: React.FC<Props> = ({ year }) => {
   const [activeChartType, setActiveChartType] = useState<'line' | 'bar' | 'pie'>('bar');
+  
+  // Debounce year changes to prevent excessive API calls
+  const debouncedYear = useDebounce(year, 300);
 
   // Use React Query for data fetching with automatic retries and caching
   const { data, isLoading, error, refetch } = useQuery<DebtApiResponse, Error>({
-    queryKey: ['debt', year],
+    queryKey: ['debt', debouncedYear],
     queryFn: async () => {
       try {
         // Try to get debt data from the new endpoint
-        const debtData = await consolidatedApiService.getMunicipalDebt(year);
+        const debtData = await consolidatedApiService.getMunicipalDebt(debouncedYear);
         return debtData;
       } catch (error) {
         console.warn('Failed to fetch debt data from new endpoint, using fallback:', error);
@@ -72,7 +92,7 @@ const DebtAnalysisChart: React.FC<Props> = ({ year }) => {
             'Otras Obligaciones': 200000000
           },
           metadata: {
-            year: year,
+            year: debouncedYear,
             last_updated: new Date().toISOString(),
             source: 'mock_data_fallback'
           }
@@ -226,7 +246,7 @@ const DebtAnalysisChart: React.FC<Props> = ({ year }) => {
       );
     }
 
-    const customTooltip = ({ active, payload, label }: any) => {
+    const customTooltip = ({ active, payload, label }: { active?: boolean; payload?: any[]; label?: string }) => {
       if (active && payload && payload.length) {
         return (
           <div className="bg-white dark:bg-gray-800 p-3 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg">
@@ -387,6 +407,8 @@ const DebtAnalysisChart: React.FC<Props> = ({ year }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
+        role="region"
+        aria-label={`Cargando análisis de deuda para el año ${debouncedYear}`}
       >
         {/* Header skeleton */}
         <div className="p-6 border-b border-gray-200 dark:border-gray-700">
@@ -419,6 +441,11 @@ const DebtAnalysisChart: React.FC<Props> = ({ year }) => {
         <div className="p-6 h-96">
           <div className="h-full bg-gray-200 dark:bg-gray-700 rounded animate-pulse"></div>
         </div>
+        
+        {/* Live region for accessibility */}
+        <div aria-live="polite" className="sr-only">
+          Cargando análisis de deuda para el año {debouncedYear}
+        </div>
       </motion.div>
     );
   }
@@ -430,6 +457,8 @@ const DebtAnalysisChart: React.FC<Props> = ({ year }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
+        role="region"
+        aria-label={`Error en el análisis de deuda para el año ${debouncedYear}`}
       >
         <div className="p-6">
           <div className="flex items-center justify-center h-64">
@@ -448,6 +477,11 @@ const DebtAnalysisChart: React.FC<Props> = ({ year }) => {
               </button>
             </div>
           </div>
+        </div>
+        
+        {/* Live region for accessibility */}
+        <div aria-live="assertive" className="sr-only">
+          Error al cargar datos de deuda para el año {debouncedYear}: {error.message}
         </div>
       </motion.div>
     );
