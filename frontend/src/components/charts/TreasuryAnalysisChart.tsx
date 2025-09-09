@@ -6,12 +6,12 @@ interface Props {
   className?: string;
 }
 
-const DebtAnalysisChart: React.FC<Props> = ({ year, className }) => {
+const TreasuryAnalysisChart: React.FC<Props> = ({ year, className }) => {
   return (
     <ComprehensiveChart
-      type="debt"
+      type="treasury"
       year={year}
-      title={`Análisis de Deuda ${year}`}
+      title={`Análisis de Tesorería ${year}`}
       className={className}
       variant="bar"
       showControls={true}
@@ -19,4 +19,4 @@ const DebtAnalysisChart: React.FC<Props> = ({ year, className }) => {
   );
 };
 
-export default DebtAnalysisChart;
+export default TreasuryAnalysisChart;

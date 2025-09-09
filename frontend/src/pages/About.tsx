@@ -1,58 +1,107 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Users, FileText, CheckCircle, Globe, ExternalLink } from 'lucide-react';
+import { Shield, Users, FileText, CheckCircle, Globe, ExternalLink, BarChart3, TrendingUp, PieChart, DollarSign, Award } from 'lucide-react';
+import { AdvancedChartsShowcase } from '../components/charts';
+import { documentVerification } from '../data/document-sources';
+import { consolidatedApiService } from '../services/ConsolidatedApiService';
+import PageYearSelector from '../components/selectors/PageYearSelector';
 
 const About: React.FC = () => {
-  // Static metrics for now
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
+  const [availableYears, setAvailableYears] = useState<number[]>([new Date().getFullYear()]);
   const [metrics, setMetrics] = useState({
-    totalDocuments: 173,
-    verifiedDocuments: 156,
-    transparencyScore: 85,
-    dataSources: 5, // OSINT sources verified
-    responseTime: "0.45s",
-    sslEnabled: true,
-    osintCompliance: 100,
-    lastUpdated: new Date().toISOString()
+    totalDocuments: 0,
+    verifiedDocuments: 0,
+    transparencyScore: 0,
+    dataSources: 0,
+    budgetTotal: 0,
+    budgetExecuted: 0,
+    executionRate: '0%',
+    treasuryBalance: 0,
+    osintCompliance: 95,
+    responseTime: '<1s',
+    lastUpdated: 'Justo ahora',
   });
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchTransparencyData = async () => {
-      try {
-        const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
-        const [integrityResponse, analyticsResponse] = await Promise.all([
-          fetch(`${API_BASE}/data-integrity`),
-          fetch(`${API_BASE}/analytics/dashboard`)
-        ]);
-        
-        if (integrityResponse.ok && analyticsResponse.ok) {
-          const integrityData = await integrityResponse.json();
-          const analyticsData = await analyticsResponse.json();
-          
-          setMetrics({
-            totalDocuments: integrityData.total_documents || officialStats.total_documents,
-            verifiedDocuments: integrityData.verified_documents || officialStats.verified_documents,
-            transparencyScore: analyticsData?.transparency_score || 85,
-            dataSources: integrityData.data_sources?.length || 5,
-            responseTime: "0.45s",
-            sslEnabled: true,
-            osintCompliance: 100,
-            lastUpdated: new Date().toISOString()
-          });
-        }
-      } catch {
-        console.log('API not available, using OfficialDataService data only');
-        // Keep official data from OfficialDataService
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchTransparencyData();
+    loadAvailableYears();
   }, []);
+
+  useEffect(() => {
+    if (selectedYear) {
+      loadTransparencyData();
+    }
+  }, [selectedYear]);
+
+  const loadAvailableYears = async () => {
+    try {
+      const years = await consolidatedApiService.getAvailableYears();
+      setAvailableYears(years);
+    } catch (error) {
+      console.error('Error loading available years:', error);
+      const currentYear = new Date().getFullYear();
+      setAvailableYears([currentYear, currentYear - 1]);
+    }
+  };
+
+  const loadTransparencyData = async () => {
+    setLoading(true);
+    setError(null);
+
+    try {
+      const [municipalData, treasuryData] = await Promise.all([
+        consolidatedApiService.getYearlyData(selectedYear),
+        consolidatedApiService.getTreasuryMovements()
+      ]);
+
+      // Calculate treasury balance from movements
+      const currentBalance = treasuryData.length > 0 
+        ? treasuryData[treasuryData.length - 1].balance 
+        : 0;
+
+      setMetrics({
+        totalDocuments: municipalData.total_documents || documentVerification.total_documents,
+        verifiedDocuments: municipalData.verified_documents || documentVerification.official_website_coverage,
+        transparencyScore: municipalData.summary.transparency_score || 85,
+        dataSources: municipalData.documents?.length || 5,
+        budgetTotal: municipalData.budget.total_budgeted || 0,
+        budgetExecuted: municipalData.budget.total_executed || 0,
+        executionRate: municipalData.budget.execution_rate || '0%',
+        treasuryBalance: currentBalance,
+        osintCompliance: 95,
+        responseTime: '<1s',
+        lastUpdated: 'Justo ahora',
+      });
+
+    } catch (err) {
+      console.error('Error loading transparency data:', err);
+      setError('No se pudieron cargar los datos de transparencia');
+      
+      // Fallback to static data if API fails
+      setMetrics({
+        totalDocuments: 173,
+        verifiedDocuments: 156,
+        transparencyScore: 85,
+        dataSources: 5,
+        budgetTotal: 1024500000, // Based on your sample data
+        budgetExecuted: 950000000, // Based on your sample data  
+        executionRate: '92.7%',
+        treasuryBalance: 150000000,
+        osintCompliance: 95,
+        responseTime: '<1s',
+        lastUpdated: 'Justo ahora',
+      });
+
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="space-y-8">
+      {/* Hero Section */}
       <motion.section
         className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
@@ -63,13 +112,26 @@ const About: React.FC = () => {
           <h1 className="font-heading text-3xl font-bold text-gray-800 dark:text-white mb-6">
             Portal de Transparencia - Carmen de Areco
           </h1>
-          
+
           <div className="prose prose-gray dark:prose-invert max-w-none">
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
               El Portal de Transparencia de Carmen de Areco es una plataforma integral que proporciona acceso público a información gubernamental verificada, 
               cumpliendo con los más altos estándares de transparencia y rendición de cuentas.
             </p>
-            
+
+            <div className="flex flex-wrap gap-4 mb-6">
+              <PageYearSelector
+                years={availableYears}
+                selectedYear={selectedYear}
+                onYearChange={setSelectedYear}
+                className="flex-shrink-0"
+              />
+
+              <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium">
+                Datos actualizados para {selectedYear}
+              </span>
+            </div>
+
             <h2 className="font-heading text-2xl font-bold text-gray-800 dark:text-white mt-8 mb-4">
               Nuestra Misión
             </h2>
@@ -77,7 +139,7 @@ const About: React.FC = () => {
               Facilitar el acceso ciudadano a información pública de calidad mediante tecnologías avanzadas de verificación y procesamiento de datos, 
               promoviendo la participación informada y el control ciudadano sobre la gestión municipal.
             </p>
-            
+
             <h2 className="font-heading text-2xl font-bold text-gray-800 dark:text-white mt-8 mb-4">
               Compromiso con la Transparencia
             </h2>
@@ -85,7 +147,7 @@ const About: React.FC = () => {
               Operamos bajo estricto cumplimiento de la legislación argentina, utilizando metodologías OSINT (Open Source Intelligence) éticas 
               para recopilar, verificar y presentar información de manera confiable y accesible las 24 horas del día.
             </p>
-            
+
             <div className="bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800 rounded-lg p-6 my-6">
               <h3 className="font-heading text-xl font-bold text-primary-800 dark:text-primary-200 mb-3">
                 Marco Legal y Cumplimiento
@@ -97,60 +159,9 @@ const About: React.FC = () => {
                 <li><strong>Ley 27.275</strong> - Derecho de Acceso a la Información Pública</li>
                 <li><strong>Ley 25.326</strong> - Protección de Datos Personales</li>
                 <li><strong>Código Penal Argentino</strong> - Artículos 153-255 (Protección de datos)</li>
-                <li><strong>Estándares Internacionales</strong> - Convenciones ONU y OEA contra la corrupción</li>
               </ul>
             </div>
             
-            <h2 className="font-heading text-2xl font-bold text-gray-800 dark:text-white mt-8 mb-4">
-              Tecnología y Verificación de Datos
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Utilizamos tecnologías avanzadas de procesamiento y verificación de documentos para garantizar la integridad, 
-              autenticidad y trazabilidad de toda la información publicada.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-                <h4 className="font-semibold text-blue-800 dark:text-blue-300 mb-2">Verificación SHA-256</h4>
-                <p className="text-sm text-blue-700 dark:text-blue-400">Cada documento incluye hash criptográfico para verificar integridad</p>
-              </div>
-              <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-                <h4 className="font-semibold text-green-800 dark:text-green-300 mb-2">Multifuente</h4>
-                <p className="text-sm text-green-700 dark:text-green-400">Validación cruzada con múltiples fuentes oficiales</p>
-              </div>
-              <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
-                <h4 className="font-semibold text-purple-800 dark:text-purple-300 mb-2">Archivo Web</h4>
-                <p className="text-sm text-purple-700 dark:text-purple-400">Integración con Wayback Machine para acceso histórico</p>
-              </div>
-              <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg">
-                <h4 className="font-semibold text-orange-800 dark:text-orange-300 mb-2">Búsqueda Avanzada</h4>
-                <p className="text-sm text-orange-700 dark:text-orange-400">Búsqueda de texto completo en todos los documentos</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.section>
-      
-      <motion.section
-        className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-      >
-        <div className="p-6 md:p-8">
-          <h2 className="font-heading text-2xl font-bold text-gray-800 dark:text-white mb-6">
-            Métricas de Transparencia en Tiempo Real
-          </h2>
-          
-          {loading ? (
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              {[1,2,3,4].map(i => (
-                <div key={i} className="animate-pulse">
-                  <div className="bg-gray-200 dark:bg-gray-700 rounded-lg h-32"></div>
-                </div>
-              ))}
-            </div>
-          ) : (
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg">
                 <div className="w-16 h-16 bg-blue-500 text-white rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -212,7 +223,7 @@ const About: React.FC = () => {
                 </p>
               </div>
             </div>
-          )}
+          </div>
         </div>
       </motion.section>
       
@@ -373,6 +384,68 @@ const About: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+      </motion.section>
+      
+      {/* Advanced Charts Showcase Section */}
+      <motion.section
+        className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        <div className="p-6 md:p-8">
+          <div className="text-center mb-8">
+            <h2 className="font-heading text-2xl font-bold text-gray-800 dark:text-white mb-4">
+              Visualizaciones Avanzadas de Datos
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Explora nuestros gráficos interactivos avanzados que proporcionan análisis profundos de datos presupuestarios, 
+              flujos de fondos y métricas de transparencia municipal.
+            </p>
+          </div>
+          
+          {/* Chart Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+              <div className="w-12 h-12 bg-blue-500 text-white rounded-full mx-auto mb-3 flex items-center justify-center">
+                <BarChart3 size={20} />
+              </div>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">
+                Análisis Jerárquico
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Treemaps y diagramas de flujo para explorar presupuestos por departamentos
+              </p>
+            </div>
+            
+            <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+              <div className="w-12 h-12 bg-green-500 text-white rounded-full mx-auto mb-3 flex items-center justify-center">
+                <TrendingUp size={20} />
+              </div>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">
+                Evolución Temporal
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Gráficos waterfall que muestran cambios presupuestarios secuenciales
+              </p>
+            </div>
+            
+            <div className="text-center p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+              <div className="w-12 h-12 bg-purple-500 text-white rounded-full mx-auto mb-3 flex items-center justify-center">
+                <PieChart size={20} />
+              </div>
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">
+                Análisis de Procesos
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Gráficos funnel para seguimiento de licitaciones y contratos
+              </p>
+            </div>
+          </div>
+          
+          {/* Advanced Charts Showcase */}
+          <AdvancedChartsShowcase />
         </div>
       </motion.section>
     </div>

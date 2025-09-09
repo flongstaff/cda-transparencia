@@ -3,20 +3,21 @@ import ComprehensiveChart from './ComprehensiveChart';
 
 interface Props {
   year: number;
+  type?: 'budget' | 'debt' | 'revenue' | 'investment';
   className?: string;
 }
 
-const DebtAnalysisChart: React.FC<Props> = ({ year, className }) => {
+const YearlyDataChart: React.FC<Props> = ({ year, type = 'budget', className }) => {
   return (
     <ComprehensiveChart
-      type="debt"
+      type={type}
       year={year}
-      title={`Análisis de Deuda ${year}`}
+      title={`Datos Anuales ${year}`}
       className={className}
-      variant="bar"
+      variant="line"
       showControls={true}
     />
   );
 };
 
-export default DebtAnalysisChart;
+export default YearlyDataChart;
