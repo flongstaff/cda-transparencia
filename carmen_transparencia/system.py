@@ -1145,7 +1145,7 @@ class IntegratedTransparencySystem:
 
 ## 📊 RESUMEN EJECUTIVO
 
-**🚨 NIVEL DE RIESGO GENERAL: {analysis_results.get('overall_risk_level', 'UNKNOWN').upper()}**
+**🚨 NIVEL DE RIESGO GENERAL: {analysis_results.get('overall_risk_level', 'UNKNOWN').upper()}
 
 | Métrica Clave                   | Valor                                      |
 | ------------------------------- | ------------------------------------------ |
@@ -1215,6 +1215,21 @@ class IntegratedTransparencySystem:
                 
                 report += "\n"
         
+        # Add cross-referencing analysis
+        cross_ref_analysis = analysis_results.get('cross_reference_analysis', {})
+        if cross_ref_analysis:
+            report += "## 🔗 ANÁLISIS DE CRUCE DE DATOS\n\n"
+            if cross_ref_analysis.get('entity_correlations'):
+                report += "### Correlaciones de Entidades\n"
+                for corr in cross_ref_analysis['entity_correlations']:
+                    report += f"- **Entidad:** {corr['entity']} (encontrada en {corr['correlation_strength']} fuentes: { ', '.join(corr['sources']) })\n"
+                report += "\n"
+            if cross_ref_analysis.get('pattern_matches'):
+                report += "### Coincidencias con Patrones de Corrupción\n"
+                for match in cross_ref_analysis['pattern_matches']:
+                    report += f"- **{match['description']}\n"
+                report += "\n"
+
         # Add recommendations
         report += "## 📋 RECOMENDACIONES PRIORITARIAS\n\n"
         
