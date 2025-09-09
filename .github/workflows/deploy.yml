@@ -80,7 +80,7 @@ jobs:
       - name: Build frontend
         run: cd frontend && npm run build
         env:
-          VITE_API_URL: https://cda-transparency-api.fly.dev/api/transparency
+          VITE_API_URL: https://api.cda-transparency.pages.dev/api/transparency
         
       - name: Run live data scraper
         run: python3 scripts/scraping/live_scrape.py

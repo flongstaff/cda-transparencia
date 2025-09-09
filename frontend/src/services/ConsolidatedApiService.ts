@@ -6,7 +6,7 @@
 // Default to localhost for development, but allow environment variable override
 const API_BASE = import.meta.env.VITE_API_URL || 
                  (typeof process !== 'undefined' && process.env.NODE_ENV === 'production' 
-                   ? 'https://cda-transparency-api.fly.dev/api/transparency' 
+                   ? 'https://api.cda-transparency.pages.dev/api/transparency' 
                    : 'http://localhost:3001/api/transparency');
 
 interface BudgetData {

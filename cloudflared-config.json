@@ -1,0 +1,13 @@
+{
+  "tunnel": "314e8f1a-890f-4e5e-bfeb-87749228da8c",
+  "credentials-file": "/Users/flong/.cloudflared/314e8f1a-890f-4e5e-bfeb-87749228da8c.json",
+  "ingress": [
+    {
+      "hostname": "api.cda-transparency.pages.dev",
+      "service": "http://localhost:3001"
+    },
+    {
+      "service": "http_status:404"
+    }
+  ]
+}
