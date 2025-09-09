@@ -370,6 +370,42 @@ class ComprehensiveTransparencyController {
     }
 
     /**
+     * Get investment data for a specific year
+     */
+    async getInvestmentData(req, res) {
+        try {
+            const { year } = req.params;
+            const yearInt = parseInt(year);
+
+            if (!yearInt || isNaN(yearInt)) {
+                return res.status(400).json({
+                    error: 'Invalid year parameter',
+                    message: 'Year must be a valid number'
+                });
+            }
+
+            const investmentData = await this.service.getInvestmentData(yearInt);
+            
+            res.json({
+                year: yearInt,
+                investments: investmentData,
+                api_info: {
+                    endpoint: 'investment_data',
+                    purpose: 'Provide investment data for transparency',
+                    year: yearInt,
+                    generated_at: new Date().toISOString()
+                }
+            });
+        } catch (error) {
+            console.error('Error in getInvestmentData:', error);
+            res.status(500).json({
+                error: 'Failed to get investment data',
+                details: error.message
+            });
+        }
+    }
+
+    /**
      * Get available years for transparency data
      */
     async getAvailableYears(req, res) {
@@ -534,30 +570,6 @@ class ComprehensiveTransparencyController {
             console.error('Error in getLocalTransparencyData:', error);
             res.status(500).json({
                 error: 'Failed to get local transparency data',
-                details: error.message
-            });
-        }
-    }
-
-    /**
-     * Get transparency system health status
-     */
-    async getSystemHealth(req, res) {
-        try {
-            const health = await this.service.getSystemHealth();
-            
-            res.json({
-                ...health,
-                api_info: {
-                    endpoint: 'system_health',
-                    purpose: 'Provide transparency system health status and data availability',
-                    generated_at: new Date().toISOString()
-                }
-            });
-        } catch (error) {
-            console.error('Error in getSystemHealth:', error);
-            res.status(500).json({
-                error: 'Failed to get system health',
                 details: error.message
             });
         }

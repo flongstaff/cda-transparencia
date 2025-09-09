@@ -1247,6 +1247,57 @@ class ComprehensiveTransparencyService {
     }
 
     /**
+     * Get investment data for a specific year
+     */
+    async getInvestmentData(year) {
+        try {
+            // For now, return sample data that matches our Zod schema
+            // In a real implementation, this would fetch from database or external sources
+            const sampleInvestments = [
+                {
+                    asset_type: "Infraestructura",
+                    description: "Reparación de caminos principales",
+                    value: 45000000,
+                    depreciation: 5000000,
+                    location: "Centro y sur del municipio",
+                    net_value: 40000000,
+                    age_years: 2
+                },
+                {
+                    asset_type: "Edificios Públicos",
+                    description: "Renovación del edificio municipal",
+                    value: 25000000,
+                    depreciation: 2000000,
+                    location: "Calle principal 123",
+                    net_value: 23000000,
+                    age_years: 1
+                },
+                {
+                    asset_type: "Equipamiento",
+                    description: "Sistema de alumbrado LED",
+                    value: 18000000,
+                    depreciation: 1000000,
+                    location: "Todo el municipio",
+                    net_value: 17000000,
+                    age_years: 0
+                },
+                {
+                    asset_type: "Deportes y Recreación",
+                    description: "Equipamiento deportivo",
+                    value: 12000000,
+                    location: "Parque principal",
+                    net_value: 12000000
+                }
+            ];
+
+            return sampleInvestments;
+        } catch (error) {
+            console.error(`Error getting investment data for year ${year}:`, error);
+            throw error;
+        }
+    }
+
+    /**
      * Get transparency dashboard data
      */
     async getTransparencyDashboard() {

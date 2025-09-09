@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { TrendingUp, DollarSign, Building, Calendar, Search, Filter, BarChart3 } from 'lucide-react';
 import { consolidatedApiService } from '../services';
 import { formatCurrencyARS } from '../utils/formatters';
-import PageYearSelector from '../components/PageYearSelector';
+import PageYearSelector from '../components/selectors/PageYearSelector';
 import UniversalChart from '../components/charts/UniversalChart';
+import { InvestmentDataSchema, type InvestmentData } from '../schemas/investment';
+import { z } from 'zod';
 
-interface InvestmentData {
+interface InvestmentDataItem {
   project_name: string;
   amount: number;
   category: string;
@@ -13,14 +15,21 @@ interface InvestmentData {
   start_date: string;
   expected_completion: string;
   progress: number;
+  asset_type?: string;
+  description?: string;
+  location?: string;
+  depreciation?: number;
+  net_value?: number;
+  age_years?: number;
 }
 
 const Investments: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-  const [investmentData, setInvestmentData] = useState<InvestmentData[]>([]);
+  const [investmentData, setInvestmentData] = useState<InvestmentDataItem[]>([]);
   const [totalInvestment, setTotalInvestment] = useState<number>(0);
   const [availableYears, setAvailableYears] = useState<number[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -51,13 +60,49 @@ const Investments: React.FC = () => {
   const loadInvestmentData = async (year: number) => {
     try {
       setLoading(true);
+      setError(null);
       
-      // Load investment data from budget and documents
+      // Try to load investment data from the new endpoint
+      let rawData: any;
+      try {
+        rawData = await consolidatedApiService.getInvestmentData(year);
+        // Validate the data using Zod schema
+        const validated = InvestmentDataSchema.parse(rawData);
+        // Transform validated data to our format
+        const transformedData = validated.map(item => ({
+          project_name: item.description,
+          amount: item.value,
+          category: item.asset_type,
+          status: 'En Progreso', // Default status
+          start_date: `${year}-01-01`, // Default date
+          expected_completion: `${year + 1}-12-31`, // Default date
+          progress: 50, // Default progress
+          asset_type: item.asset_type,
+          description: item.description,
+          location: item.location,
+          depreciation: item.depreciation,
+          net_value: item.net_value,
+          age_years: item.age_years
+        }));
+        setInvestmentData(transformedData);
+        setTotalInvestment(transformedData.reduce((sum, project) => sum + project.amount, 0));
+        return;
+      } catch (validationError) {
+        if (validationError instanceof z.ZodError) {
+          console.error("Investment data validation failed:", validationError.errors);
+          setError("Datos de inversión con formato inválido");
+        } else {
+          console.error("Error loading investment data:", validationError);
+          setError("Error al cargar datos de inversiones");
+        }
+      }
+      
+      // Fallback to budget-based investment data
       const budgetData = await consolidatedApiService.getBudgetData(year);
       const documents = await consolidatedApiService.getDocuments(year);
       
       // Create investment projects from budget categories related to investments
-      const investmentProjects: InvestmentData[] = [
+      const investmentProjects: InvestmentDataItem[] = [
         {
           project_name: 'Infraestructura Vial',
           amount: 45000000,
@@ -103,6 +148,7 @@ const Investments: React.FC = () => {
       
     } catch (error) {
       console.error('Error loading investment data:', error);
+      setError('Error al cargar datos de inversiones');
       // Keep fallback data above
       setTotalInvestment(100000000);
     } finally {
@@ -124,7 +170,7 @@ const Investments: React.FC = () => {
   }));
 
   const categoryData = filteredInvestments.reduce((acc, item) => {
-    const existing = acc.find(x => x.name === item.category);
+    const existing = acc.find((x: any) => x.name === item.category);
     if (existing) {
       existing.value += item.amount;
     } else {
@@ -192,6 +238,13 @@ const Investments: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Error message */}
+      {error && (
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+          <p className="text-red-700">{error}</p>
+        </div>
+      )}
 
       {/* Search and Controls */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">

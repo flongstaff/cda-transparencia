@@ -439,9 +439,9 @@ router.get('/available-years', (req, res) => {
 });
 
 /** @swagger
- * /api/transparency/external/{year}:
+ * /api/transparency/investments/{year}:
  *   get:
- *     summary: Get external financial data from government APIs
+ *     summary: Get investment data for a specific year
  *     tags: [Comprehensive Transparency]
  *     parameters:
  *       - in: path
@@ -452,7 +452,7 @@ router.get('/available-years', (req, res) => {
  *         description: Year to analyze (e.g., 2024)
  *     responses:
  *       200:
- *         description: External financial data from government APIs
+ *         description: Investment data with analytics
  *         content:
  *           application/json:
  *             schema:
@@ -460,18 +460,17 @@ router.get('/available-years', (req, res) => {
  *               properties:
  *                 year:
  *                   type: integer
- *                 external_data:
+ *                 investments:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                 api_info:
  *                   type: object
- *                 source:
- *                   type: string
- *                 generated_at:
- *                   type: string
- *                   format: date-time
  *       500:
  *         description: Internal server error
  */
-router.get('/external/:year', (req, res) => {
-    controller.getExternalFinancialData(req, res);
+router.get('/investments/:year', (req, res) => {
+    controller.getInvestmentData(req, res);
 });
 
 /** @swagger

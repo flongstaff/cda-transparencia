@@ -440,6 +440,17 @@ class ConsolidatedApiService {
       };
     }
   }
+
+  // Get investment data
+  async getInvestmentData(year: number) {
+    try {
+      const data = await this.fetchApi<any>(`/transparency/investments/${year}`);
+      return data;
+    } catch (error) {
+      console.error(`Error getting investment data for year ${year}:`, error);
+      throw error;
+    }
+  }
 }
 
 // Export singleton instance
