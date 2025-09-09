@@ -90,6 +90,11 @@ router.get('/year/:year', (req, res) => {
     controller.getYearData(req, res);
 });
 
+// Alias for year data (used by frontend)
+router.get('/year-data/:year', (req, res) => {
+    controller.getYearData(req, res);
+});
+
 /**
  * @swagger
  * /api/transparency/financial/{year}:
@@ -387,6 +392,58 @@ router.get('/health', async (req, res) => {
             details: error.message
         });
     }
+});
+
+/**
+ * @swagger
+ * /api/transparency/debt/{year}:
+ *   get:
+ *     summary: Get municipal debt data for a specific year
+ *     tags: [Comprehensive Transparency]
+ *     parameters:
+ *       - in: path
+ *         name: year
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: Year to analyze (e.g., 2024)
+ *     responses:
+ *       200:
+ *         description: Municipal debt data with analytics
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 debt_data:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                 total_debt:
+ *                   type: number
+ *                 average_interest_rate:
+ *                   type: number
+ *                 long_term_debt:
+ *                   type: number
+ *                 short_term_debt:
+ *                   type: number
+ *                 debt_by_type:
+ *                   type: object
+ *       500:
+ *         description: Internal server error
+ */
+router.get('/debt/:year', (req, res) => {
+    controller.getMunicipalDebtByYear(req, res);
+});
+
+// Alias for municipal debt (used by frontend)
+router.get('/municipal-debt/:year', (req, res) => {
+    controller.getMunicipalDebtByYear(req, res);
+});
+
+// Available years endpoint
+router.get('/available-years', (req, res) => {
+    controller.getAvailableYears(req, res);
 });
 
 module.exports = router;

@@ -377,6 +377,59 @@ class PostgreSQLDataService {
         }
     }
 
+    async searchDocuments(query, filters = {}) {
+        try {
+            let sqlQuery = `
+                SELECT 
+                    id, filename, title, year, category, document_type,
+                    size_bytes, verification_status, created_at
+                FROM transparency.documents 
+                WHERE (title ILIKE $1 OR content ILIKE $1)
+            `;
+            
+            const params = [`%${query}%`];
+            
+            if (filters.type && filters.type !== 'all') {
+                sqlQuery += ` AND document_type = ${params.length + 1}`;
+                params.push(filters.type);
+            }
+            
+            if (filters.category) {
+                sqlQuery += ` AND category = ${params.length + 1}`;
+                params.push(filters.category);
+            }
+            
+            sqlQuery += ` ORDER BY created_at DESC LIMIT 50`;
+            
+            const result = await this.pool.query(sqlQuery, params);
+            
+            return result.rows.map(row => ({
+                id: row.id,
+                filename: row.filename,
+                title: row.title,
+                document_type: row.document_type,
+                category: row.category,
+                year: row.year,
+                relevance_score: 0.8,
+                search_snippet: this.extractSnippet(row.content, query)
+            }));
+        } catch (error) {
+            console.error('Error searching documents:', error);
+            return [];
+        }
+    }
+
+    extractSnippet(content, query) {
+        if (!content) return '...';
+        
+        const index = content.toLowerCase().indexOf(query.toLowerCase());
+        if (index === -1) return content.substring(0, 100) + '...';
+        
+        const start = Math.max(0, index - 50);
+        const end = Math.min(content.length, index + query.length + 50);
+        return '...' + content.substring(start, end) + '...';
+    }
+
     async getHealthStatus() {
         try {
             const query = `
@@ -433,6 +486,45 @@ class PostgreSQLDataService {
         } catch (error) {
             console.error('Error fetching documents by category:', error);
             return [];
+        }
+    }
+
+    async getDocumentById(id) {
+        try {
+            const query = `
+                SELECT 
+                    id, filename, title, year, file_type, size_bytes,
+                    category, document_type, url, official_url,
+                    verification_status, created_at, content
+                FROM transparency.documents 
+                WHERE id = $1
+            `;
+            
+            const result = await this.pool.query(query, [id]);
+            const doc = result.rows[0];
+            
+            if (!doc) return null;
+            
+            return {
+                id: doc.id,
+                title: doc.title || doc.filename,
+                filename: doc.filename,
+                year: doc.year,
+                category: doc.category,
+                type: doc.document_type,
+                size_mb: (doc.size_bytes / (1024 * 1024)).toFixed(2),
+                url: doc.url,
+                official_url: doc.official_url || `https://carmendeareco.gob.ar/transparencia/${doc.filename}`,
+                archive_url: `https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/${doc.filename}`,
+                verification_status: doc.verification_status,
+                processing_date: doc.created_at,
+                data_sources: ['official_site'],
+                file_size: (doc.size_bytes / (1024 * 1024)).toFixed(2),
+                content: doc.content
+            };
+        } catch (error) {
+            console.error('Error fetching document by ID:', error);
+            return null;
         }
     }
 }

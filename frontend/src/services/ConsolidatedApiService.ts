@@ -3,7 +3,7 @@
  * Uses only the endpoints that actually exist and work with real data
  */
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api/transparency';
 
 interface BudgetData {
   total_budgeted: number;
@@ -77,8 +77,8 @@ class ConsolidatedApiService {
   // Get available years
   async getAvailableYears(): Promise<number[]> {
     try {
-      const response = await this.fetchApi<{ years: number[] }>('/years');
-      return response.years;
+      const response = await this.fetchApi<number[]>('/available-years');
+      return response;
     } catch (error) {
       console.error('Error getting available years:', error);
       // Return fallback years
@@ -90,26 +90,44 @@ class ConsolidatedApiService {
   // Get yearly data
   async getYearlyData(year: number): Promise<MunicipalData> {
     try {
-      const data = await this.fetchApi<any>(`/years/${year}`);
-      return data.summary ? data : {
+      const data = await this.fetchApi<any>(`/year-data/${year}`);
+      
+      // Transform comprehensive transparency data to expected format
+      return {
         year,
         documents: data.documents || [],
-        budget: {
+        budget: data.budgetBreakdown ? {
+          total_budgeted: data.budgetBreakdown.reduce((sum: number, item: any) => sum + (item.budgeted_amount || 0), 0),
+          total_executed: data.budgetBreakdown.reduce((sum: number, item: any) => sum + (item.executed_amount || 0), 0),
+          execution_rate: data.financialOverview?.overview?.execution_rate || '0',
+          categories: data.budgetBreakdown?.reduce((acc: any, item: any) => {
+            acc[item.category] = {
+              budgeted: item.budgeted_amount || 0,
+              executed: item.executed_amount || 0,
+              execution_rate: item.execution_rate || 0
+            };
+            return acc;
+          }, {}) || {}
+        } : {
           total_budgeted: 0,
           total_executed: 0,
           execution_rate: '0',
           categories: {}
         },
         summary: {
-          total_documents: data.total_documents || 0,
-          total_categories: 1,
+          total_documents: data.documents?.length || 0,
+          total_categories: data.dashboard?.category_distribution?.length || 1,
           total_size_mb: '0',
-          verified_documents: 0,
-          transparency_score: 85
+          verified_documents: data.financialOverview?.overview?.verified_documents || 0,
+          transparency_score: data.financialOverview?.overview?.transparency_score || 85
         },
-        categories: {},
-        total_documents: data.total_documents || 0,
-        verified_documents: 0
+        categories: data.documents ? data.documents.reduce((acc: any, doc: any) => {
+          if (!acc[doc.category]) acc[doc.category] = [];
+          acc[doc.category].push(doc);
+          return acc;
+        }, {}) : {},
+        total_documents: data.documents?.length || 0,
+        verified_documents: data.financialOverview?.overview?.verified_documents || 0
       };
     } catch (error) {
       console.error(`Error getting data for year ${year}:`, error);
@@ -389,6 +407,25 @@ class ConsolidatedApiService {
         overall: 0,
         execution: 0
       };
+    }
+  }
+
+  // Get municipal debt data
+  async getMunicipalDebt(year: number) {
+    try {
+      // Use the comprehensive transparency controller method
+      const data = await this.fetchApi<any>(`/municipal-debt/${year}`);
+      
+      // Transform to expected format for charts
+      if (data.debt_data && Array.isArray(data.debt_data)) {
+        return data.debt_data;
+      }
+      
+      return data;
+    } catch (error) {
+      console.error(`Error getting municipal debt data for year ${year}:`, error);
+      // Return fallback data
+      return [];
     }
   }
 }

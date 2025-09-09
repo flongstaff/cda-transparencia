@@ -1,5 +1,5 @@
 // services/ComprehensiveTransparencyService.js
-const PostgreSQLDataService = require('./PostgreSQLDataService');
+const ComprehensiveTransparencyService = require('../services/ComprehensiveTransparencyService');
 const path = require('path');
 const fs = require('fs').promises;
 
@@ -7,10 +7,10 @@ const fs = require('fs').promises;
  * Comprehensive Transparency Service for Carmen de Areco
  * Provides complete financial transparency, document access, and citizen-focused analysis
  */
-class ComprehensiveTransparencyService {
+class ComprehensiveTransparencyController {
     constructor() {
-        this.pgService = new PostgreSQLDataService();
-        console.log('✅ ComprehensiveTransparencyService: Using real PostgreSQL data');
+        this.service = new ComprehensiveTransparencyService();
+        console.log('✅ ComprehensiveTransparencyController: Using comprehensive transparency service');
     }
 
     /**
@@ -35,7 +35,7 @@ class ComprehensiveTransparencyService {
                 ORDER BY COUNT(*) DESC
             `;
             
-            const result = await this.pgService.pool.query(query, [year]);
+            const result = await this.service.pool.query(query, [year]);
             
             return {
                 year: parseInt(year),
@@ -128,7 +128,7 @@ class ComprehensiveTransparencyService {
                 ORDER BY bd.budgeted_amount DESC
             `;
             
-            const result = await this.pgService.pool.query(query, [year]);
+            const result = await this.service.pool.query(query, [year]);
             
             return result.rows.map(row => ({
                 category: row.category,
@@ -239,9 +239,9 @@ class ComprehensiveTransparencyService {
 
         // Check for local copies
         const localPaths = [
-            path.join(this.pgService.documentPaths.source_materials, doc.year?.toString() || '2024', doc.filename),
-            path.join(this.pgService.documentPaths.source_materials, doc.filename),
-            path.join(this.pgService.documentPaths.preserved, 'pdf', doc.filename)
+            path.join(this.service.documentPaths.source_materials, doc.year?.toString() || '2024', doc.filename),
+            path.join(this.service.documentPaths.source_materials, doc.filename),
+            path.join(this.service.documentPaths.preserved, 'pdf', doc.filename)
         ];
 
         for (const localPath of localPaths) {
@@ -257,7 +257,7 @@ class ComprehensiveTransparencyService {
         }
 
         // Check for markdown version
-        const markdownPath = path.join(this.pgService.documentPaths.pdf_extracts, 
+        const markdownPath = path.join(this.service.documentPaths.pdf_extracts, 
             doc.filename.replace('.pdf', '.md'));
         try {
             await fs.access(markdownPath);
@@ -349,10 +349,10 @@ class ComprehensiveTransparencyService {
             };
 
             const results = await Promise.all([
-                this.pgService.pool.query(queries.overview),
-                this.pgService.pool.query(queries.recent_additions),
-                this.pgService.pool.query(queries.budget_summary),
-                this.pgService.pool.query(queries.category_distribution)
+                this.service.pool.query(queries.overview),
+                this.service.pool.query(queries.recent_additions),
+                this.service.pool.query(queries.budget_summary),
+                this.service.pool.query(queries.category_distribution)
             ]);
 
             const [overviewResult, recentResult, budgetResult, categoryResult] = results;
@@ -768,7 +768,7 @@ class ComprehensiveTransparencyService {
                 ORDER BY created_at DESC
             `;
             
-            const result = await this.pgService.pool.query(query, [year]);
+            const result = await this.service.pool.query(query, [year]);
             
             return result.rows.map(doc => ({
                 id: doc.id,
@@ -849,7 +849,7 @@ class ComprehensiveTransparencyService {
                 WHERE year = $1
             `;
             
-            const result = await this.pgService.pool.query(query, [year]);
+            const result = await this.service.pool.query(query, [year]);
             const row = result.rows[0];
             
             return {
@@ -888,7 +888,7 @@ class ComprehensiveTransparencyService {
                 ORDER BY bd.category, bd.created_at DESC
             `;
             
-            const result = await this.pgService.pool.query(query, [year]);
+            const result = await this.service.pool.query(query, [year]);
             
             // If no budget data, generate realistic data based on Carmen de Areco's actual scale
             if (result.rows.length === 0) {
@@ -1003,7 +1003,7 @@ class ComprehensiveTransparencyService {
                 ORDER BY sd.year DESC, sd.month DESC
             `;
             
-            const result = await this.pgService.pool.query(query, [year]);
+            const result = await this.service.pool.query(query, [year]);
             return result.rows;
         } catch (error) {
             console.error('Error fetching salary data:', error);
@@ -1027,7 +1027,7 @@ class ComprehensiveTransparencyService {
                 ORDER BY c.tender_date DESC
             `;
             
-            const result = await this.pgService.pool.query(query, [year]);
+            const result = await this.service.pool.query(query, [year]);
             return result.rows;
         } catch (error) {
             console.error('Error fetching contracts data:', error);
@@ -1067,6 +1067,175 @@ class ComprehensiveTransparencyService {
                 database: 'disconnected',
                 error: error.message
             };
+        }
+    }
+
+    /**
+     * Get municipal debt data by year
+     */
+    async getMunicipalDebtByYear(req, res) {
+        try {
+            const { year } = req.params;
+            const yearInt = parseInt(year);
+
+            if (!yearInt || isNaN(yearInt)) {
+                return res.status(400).json({
+                    error: 'Invalid year parameter',
+                    message: 'Year must be a valid number'
+                });
+            }
+
+            const debtData = await this._getMunicipalDebtData(yearInt);
+            
+            res.json({
+                ...debtData,
+                api_info: {
+                    endpoint: 'municipal_debt_analysis',
+                    purpose: 'Provide comprehensive debt analysis for municipal transparency',
+                    year: yearInt,
+                    generated_at: new Date().toISOString()
+                }
+            });
+        } catch (error) {
+            console.error('Error in getMunicipalDebtByYear:', error);
+            res.status(500).json({
+                error: 'Failed to get municipal debt data',
+                details: error.message
+            });
+        }
+    }
+
+    async _getMunicipalDebtData(year) {
+        try {
+            // First, try to get debt data from the municipal_debt table
+            const debtQuery = `
+                SELECT 
+                    id,
+                    year,
+                    debt_type,
+                    description,
+                    amount,
+                    interest_rate,
+                    due_date,
+                    status
+                FROM transparency.municipal_debt
+                WHERE year = $1
+                ORDER BY amount DESC
+            `;
+            
+            const debtResult = await this.service.pool.query(debtQuery, [year]);
+            
+            // If no debt data found, return empty structure
+            if (debtResult.rows.length === 0) {
+                return {
+                    debt_data: [],
+                    total_debt: 0,
+                    average_interest_rate: 0,
+                    long_term_debt: 0,
+                    short_term_debt: 0,
+                    debt_by_type: {},
+                    metadata: {
+                        year: parseInt(year),
+                        last_updated: new Date().toISOString(),
+                        source: 'no_data_available'
+                    }
+                };
+            }
+            
+            // Calculate debt analytics
+            const debtData = debtResult.rows.map(row => ({
+                debt_type: row.debt_type,
+                description: row.description,
+                amount: parseFloat(row.amount),
+                interest_rate: parseFloat(row.interest_rate),
+                due_date: row.due_date ? row.due_date.toISOString().split('T')[0] : null,
+                status: row.status,
+                principal_amount: parseFloat(row.amount), // Simplified - in a real system this would be separate
+                accrued_interest: 0 // Simplified - in a real system this would be calculated
+            }));
+            
+            const totalDebt = debtData.reduce((sum, debt) => sum + debt.amount, 0);
+            const averageInterestRate = debtData.length > 0 
+                ? debtData.reduce((sum, debt) => sum + debt.interest_rate, 0) / debtData.length 
+                : 0;
+            
+            // Classify debt as short-term or long-term based on due date
+            const currentDate = new Date();
+            let shortTermDebt = 0;
+            let longTermDebt = 0;
+            
+            const debtByType = {};
+            
+            debtData.forEach(debt => {
+                // Group by type
+                if (!debtByType[debt.debt_type]) {
+                    debtByType[debt.debt_type] = 0;
+                }
+                debtByType[debt.debt_type] += debt.amount;
+                
+                // Classify as short-term or long-term
+                if (debt.due_date) {
+                    const dueDate = new Date(debt.due_date);
+                    const diffTime = dueDate.getTime() - currentDate.getTime();
+                    const diffDays = diffTime / (1000 * 60 * 60 * 24);
+                    
+                    if (diffDays <= 365) {
+                        shortTermDebt += debt.amount;
+                    } else {
+                        longTermDebt += debt.amount;
+                    }
+                } else {
+                    // If no due date, classify as long-term by default
+                    longTermDebt += debt.amount;
+                }
+            });
+            
+            return {
+                debt_data: debtData,
+                total_debt: totalDebt,
+                average_interest_rate: parseFloat(averageInterestRate.toFixed(2)),
+                long_term_debt: longTermDebt,
+                short_term_debt: shortTermDebt,
+                debt_by_type: debtByType,
+                metadata: {
+                    year: parseInt(year),
+                    last_updated: new Date().toISOString(),
+                    source: 'postgresql_database'
+                }
+            };
+        } catch (error) {
+            console.error('Error fetching municipal debt data:', error);
+            // Return fallback data
+            return {
+                debt_data: [],
+                total_debt: 0,
+                average_interest_rate: 0,
+                long_term_debt: 0,
+                short_term_debt: 0,
+                debt_by_type: {},
+                metadata: {
+                    year: parseInt(year),
+                    last_updated: new Date().toISOString(),
+                    source: 'error_fallback',
+                    error: error.message
+                }
+            };
+        }
+    }
+
+    /**
+     * Get available years for transparency data
+     */
+    async getAvailableYears(req, res) {
+        try {
+            const years = await this.service.getAvailableYears();
+            res.json(years);
+        } catch (error) {
+            console.error('Error in getAvailableYears:', error);
+            res.status(500).json({
+                error: 'Failed to get available years',
+                details: error.message
+            });
         }
     }
 }

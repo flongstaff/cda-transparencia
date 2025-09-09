@@ -1,0 +1,116 @@
+{
+  "es": {
+    "budget": {
+      "title": "Análisis Presupuestario {{year}}",
+      "subtitle": "Comparación entre presupuesto planificado y ejecutado",
+      "loading": "Cargando análisis presupuestario...",
+      "loadingValidation": "Validando datos presupuestarios...",
+      "genericError": "Error al cargar datos del presupuesto",
+      "cancelled": "Solicitud cancelada",
+      "timeout": "Tiempo de carga agotado",
+      "validationError": "Error de validación de datos",
+      "networkError": "Error de conexión",
+      "errorTitle": "Error en el análisis presupuestario",
+      "errorFallback": "{{error}} - usando datos del caché",
+      "retry": "Reintentar",
+      "retrying": "Reintentando...",
+      "retryCount": "Intento {{count}} de {{total}}",
+      "retryLabel": "Reintentar carga de datos presupuestarios",
+      "refreshData": "Actualizar datos",
+      "noData": "Sin datos",
+      "errorSource": "Error de carga",
+      "offlineMode": "Modo sin conexión - datos del caché",
+      "noConnection": "Sin conexión y sin datos en caché",
+      "offlineWarning": "Actualmente sin conexión. Los datos pueden estar desactualizados.",
+      "offline": "sin conexión",
+      "lastUpdated": "Última actualización",
+      
+      "totalBudget": "Presupuesto Total",
+      "totalBudgeted": "Total Presupuestado",
+      "totalExecuted": "Total Ejecutado",
+      "budgeted": "Presupuestado",
+      "executed": "Ejecutado",
+      "executionRate": "Tasa de Ejecución",
+      "efficiency": "Eficiencia",
+      
+      "officialSource": "Datos oficiales del municipio",
+      "categorySource": "Datos de categorías presupuestarias",
+      "source": "Portal de Transparencia - Carmen de Areco",
+      
+      "efficiency": {
+        "excellent": "Excelente",
+        "good": "Bueno",
+        "needs_improvement": "Necesita Mejora"
+      },
+      
+      "category": {
+        "Gastos en Personal": "Gastos en Personal",
+        "Servicios no Personales": "Servicios no Personales",
+        "Bienes de Consumo": "Bienes de Consumo",
+        "Transferencias": "Transferencias",
+        "Obras Públicas": "Obras Públicas",
+        "Inversión": "Inversión",
+        "Deuda Pública": "Deuda Pública"
+      },
+      
+      "chartAriaLabel": "Gráfico de análisis presupuestario para el año {{year}}"
+    }
+  },
+  "en": {
+    "budget": {
+      "title": "Budget Analysis {{year}}",
+      "subtitle": "Comparison between planned and executed budget",
+      "loading": "Loading budget analysis...",
+      "loadingValidation": "Validating budget data...",
+      "genericError": "Error loading budget data",
+      "cancelled": "Request cancelled",
+      "timeout": "Loading timeout",
+      "validationError": "Data validation error",
+      "networkError": "Network connection error",
+      "errorTitle": "Error in budget analysis",
+      "errorFallback": "{{error}} - using cached data",
+      "retry": "Retry",
+      "retrying": "Retrying...",
+      "retryCount": "Attempt {{count}} of {{total}}",
+      "retryLabel": "Retry loading budget data",
+      "refreshData": "Refresh data",
+      "noData": "No data",
+      "errorSource": "Loading error",
+      "offlineMode": "Offline mode - cached data",
+      "noConnection": "No connection and no cached data",
+      "offlineWarning": "Currently offline. Data may be outdated.",
+      "offline": "offline",
+      "lastUpdated": "Last updated",
+      
+      "totalBudget": "Total Budget",
+      "totalBudgeted": "Total Budgeted",
+      "totalExecuted": "Total Executed",
+      "budgeted": "Budgeted",
+      "executed": "Executed",
+      "executionRate": "Execution Rate",
+      "efficiency": "Efficiency",
+      
+      "officialSource": "Official municipal data",
+      "categorySource": "Budget category data",
+      "source": "Transparency Portal - Carmen de Areco",
+      
+      "efficiency": {
+        "excellent": "Excellent",
+        "good": "Good",
+        "needs_improvement": "Needs Improvement"
+      },
+      
+      "category": {
+        "Gastos en Personal": "Personnel Expenses",
+        "Servicios no Personales": "Non-Personnel Services",
+        "Bienes de Consumo": "Consumer Goods",
+        "Transferencias": "Transfers",
+        "Obras Públicas": "Public Works",
+        "Inversión": "Investment",
+        "Deuda Pública": "Public Debt"
+      },
+      
+      "chartAriaLabel": "Budget analysis chart for year {{year}}"
+    }
+  }
+}
