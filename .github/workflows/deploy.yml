@@ -46,8 +46,18 @@ jobs:
         env:
           VITE_API_URL: https://api.cda-transparencia.org/api/transparency
           
+      - name: Verify build output
+        run: |
+          cd frontend
+          if [ ! -d "dist" ] || [ -z "$(ls -A dist)" ]; then
+            echo "Build failed or dist directory is empty"
+            exit 1
+          fi
+          echo "Build successful, dist directory contains:"
+          ls -la dist
+          
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           publish_dir: ./frontend/dist
