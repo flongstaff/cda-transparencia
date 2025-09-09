@@ -1,158 +1,86 @@
-# 🏛️ Portal de Transparencia - Carmen de Areco
+# Carmen de Areco Transparency Portal
 
-**Portal oficial de transparencia financiera y datos abiertos del municipio**
+This is the transparency portal for Carmen de Areco, providing citizens with access to municipal financial data and documents.
 
-[![Frontend CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/frontend-ci.yml)
-[![Backend CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/backend-ci.yml)
-[![Python CI](https://github.com/flongstaff/cda-transparencia/actions/workflows/python-ci.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/python-ci.yml)
-[![Deploy](https://github.com/flongstaff/cda-transparencia/actions/workflows/deploy.yml/badge.svg)](https://github.com/flongstaff/cda-transparencia/actions/workflows/deploy.yml)
+## Features
 
-## 🎯 Objetivo del Proyecto
+- Financial overview with citizen-friendly explanations
+- Budget breakdown by category
+- Document search and access
+- Investment tracking
+- Municipal debt analysis
+- Comparative analysis between years
+- Real-time transparency dashboard
 
-**Análisis integral de transparencia municipal (2019-2025)**
+## Technology Stack
 
-Este portal combina tecnologías modernas con análisis de datos para:
-- **Prevenir la corrupción** mediante transparencia total de datos
-- **Facilitar el acceso ciudadano** a información financiera municipal
-- **Garantizar la integridad** de datos a través de tecnologías seguras
-- **Cumplir con marcos legales** de transparencia y acceso a la información
+- **Frontend**: React with TypeScript, Vite for build tooling, Recharts for data visualization, Lucide React for icons, Tailwind CSS for styling
+- **Backend**: Node.js with Express, PostgreSQL database
+- **Deployment**: GitHub Pages for frontend, Cloudflare Tunnel for backend API
 
-## 🚀 Tecnología y Arquitectura
+## API Integration
 
-### Stack Principal
-- **Frontend:** React + TypeScript + Vite
-- **Backend:** Node.js + Express + PostgreSQL
-- **Data Processing:** Python 3.8+ con múltiples librerías
-- **Deployment:** Docker + GitHub Actions + Cloudflare Workers
+The frontend connects to our comprehensive transparency API at `https://api.cda-transparencia.org/api/transparency/` via Cloudflare Tunnel.
 
-### Características Técnicas
-- **API REST** completa con documentación Swagger
-- **Base de datos PostgreSQL** con Docker Compose
-- **Extracción automatizada** de datos Power BI
-- **Processing de documentos PDF** con OCR
-- **Análisis financiero avanzado** con detección de anomalías
-- **Sistema de verificación** de integridad de documentos
-- **Dashboard interactivo** con visualizaciones en tiempo real
+## Deployment
 
+### Automated Deployment (Manual)
 
-## 📊 Características Clave
+To deploy the site, run the deployment script:
 
-### 🌐 Portal Web
-- **Dashboard financiero** con visualizaciones interactivas
-- **Navegación por años** (2009-2025) con datos históricos
-- **Visualización de documentos** con viewer PDF integrado
-- **Búsqueda avanzada** por categoría, año y tipo de documento
-- **Análisis comparativo** entre períodos administrativos
+```bash
+./deploy.sh
+```
 
-### 🔍 Análisis y Auditoría
-- **Detección de anomalías** en gastos públicos
-- **Auditoría financiera automatizada** 
-- **Seguimiento de contratos** y licitaciones
-- **Análisis salarial** y benchmarking
-- **Alertas de transparencia** por irregularidades
+This script will:
+1. Build the frontend using Vite
+2. Deploy the built files to GitHub Pages using gh-pages
 
-### 📈 Dashboards Disponibles
-- **Presupuesto Municipal:** Ejecución y análisis
-- **Gastos Públicos:** Categorización y seguimiento
-- **Ingresos y Recursos:** Fuentes y procedencia
-- **Salarios:** Escalas y evolución histórica
-- **Contratos:** Licitaciones y adjudicaciones
-- **Inversiones:** Proyectos de infraestructura
-- **Deuda Pública:** Estado y evolución
+### Backend API
 
-### Transparencia Financiera
-- **Visualización en tiempo real** de datos presupuestarios
-- **Análisis comparativo** entre años y categorías
-- **Indicadores de desempeño** financieros clave
-- **Alertas automáticas** para valores fuera de rango
+The backend API is exposed to the internet using Cloudflare Tunnel. To start the tunnel, run:
 
-### Sistema de Auditoría
-- **Detección de patrones sospechosos** en contrataciones
-- **Verificación cruzada** de datos con fuentes oficiales
-- **Historial de cambios** en documentos importantes
-- **Reportes de riesgo** de corrupción
+```bash
+cloudflared tunnel --config cloudflared-config.json run cda-transparency-api
+```
 
-### Gestión Documental
-- **Catálogo completo** de documentos oficiales
-- **Búsqueda avanzada** por categoría, año y contenido
-- **Verificación de integridad** de archivos
-- **Acceso directo** a fuentes oficiales
+The tunnel configuration is in `cloudflared-config.json` and routes requests from `api.cda-transparencia.org` to `localhost:3001`.
 
-## 🛡️ Seguridad y Privacidad
+### Prerequisites
 
-- Todos los datos son **públicos y oficiales**
-- No se recopilan datos personales de usuarios
-- Las conexiones usan **HTTPS seguro**
-- Los documentos se verifican por **integridad criptográfica**
-- El código es **abierto y auditado**
+- Node.js and npm
+- cloudflared CLI tool
+- GitHub account with permissions to deploy to GitHub Pages
 
-## 🎯 Implementación de Sistemas de Auditoría
+### Environment Variables
 
-### Sistemas Implementados
-- **Detección de anomalías** en patrones de gasto
-- **Auditoría de registros financieros** automatizada
-- **Screening de conflictos de interés** 
-- **Mapeo de relaciones con proveedores**
-- **Supervisión de contratos** y umbrales de licitación
-- **Benchmarking salarial** con municipios pares
-- **Dashboard de performance** de contratistas
-- **Auditorías anuales** de proyectos de infraestructura
+The frontend uses the following environment variables:
 
-### Métricas de Éxito
-- Reducción del 50% en tiempo de auditoría manual
-- Mejora en precisión de detección de anomalías
-- Mayor transparencia en procesos financieros
-- Mejor cumplimiento de umbrales presupuestarios
+- `VITE_API_URL`: The URL of the backend API (defaults to `https://api.cda-transparencia.org/api/transparency/` in production)
 
+## Development
 
-## 🔍 Extracción y Procesamiento de Datos
+To run the frontend locally:
 
-### Fuentes de Datos
-- **Portal oficial municipal:** Web scraping automatizado
-- **Power BI:** Extracción de dashboards oficiales
-- **Documentos PDF:** OCR y procesamiento automático
-- **APIs externas:** Datos de comparación regional
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
+To run the backend locally:
 
-## ⚖️ Compliance y Marco Legal
+```bash
+cd backend
+npm install
+npm start
+```
 
-Este proyecto cumple con:
-- **Ley 27.275** - Acceso a la Información Pública
-- **Ley 25.326** - Protección de Datos Personales  
-- **Decreto 434/2016** - Plan de Apertura de Datos
-- **Normativa municipal** de transparencia
-- **Estándares internacionales** de datos abiertos
+## Contributing
 
-## 🛡️ Seguridad y Privacidad
-
-- ✅ **Datos anonimizados** según normativa
-- ✅ **HTTPS en toda comunicación**
-- ✅ **Headers de seguridad** implementados
-- ✅ **Validación de inputs** en toda la API
-- ✅ **Logs de auditoría** para acceso a datos sensibles
-
-
-## 🤝 Contribuciones
-
-¡Las contribuciones son bienvenidas! Por favor sigue estos pasos:
-
-1. Haz un fork del repositorio
-2. Crea una rama para tu característica (`git checkout -b feature/NuevaCaracteristica`)
-3. Haz commit de tus cambios (`git commit -am 'Agregar nueva característica'`)
-4. Haz push a la rama (`git push origin feature/NuevaCaracteristica`)
-5. Abre un Pull Request
-
-## 📄 Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
-## 📞 Soporte y Contacto
-
-- **Issues:** [GitHub Issues](https://github.com/flongstaff/cda-transparencia/issues)
-- **Documentación:** Ver carpeta `/docs/`
-- **Portal Oficial:** [carmendeareco.gob.ar/transparencia](https://carmendeareco.gob.ar/transparencia/)
-
----
-
-**🏛️ Transparencia Municipal • 📊 Datos Abiertos • 🔍 Análisis Integral**  
-*Última actualización: Septiembre 2025*
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Commit your changes
+5. Push to the branch
+6. Create a pull request
