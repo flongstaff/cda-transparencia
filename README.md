@@ -86,111 +86,6 @@ Este portal combina tecnologías modernas con análisis de datos para:
 - Los documentos se verifican por **integridad criptográfica**
 - El código es **abierto y auditado**
 
-## 🤝 Contribuciones
-
-¡Las contribuciones son bienvenidas! Por favor sigue estos pasos:
-
-1. Haz un fork del repositorio
-2. Crea una rama para tu característica (`git checkout -b feature/NuevaCaracteristica`)
-3. Haz commit de tus cambios (`git commit -am 'Agregar nueva característica'`)
-4. Haz push a la rama (`git push origin feature/NuevaCaracteristica`)
-5. Abre un Pull Request
-
-## 📄 Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
-## 📞 Contacto
-
-Para preguntas o sugerencias, por favor contacta a:
-- **Email:** transparency@carmendeareco.gob.ar
-- **Sitio Oficial:** [carmendeareco.gob.ar](https://carmendeareco.gob.ar)
-
-
-
-## 📡 API REST
-
-### Endpoints Principales
-```
-GET  /api/yearly-data/:year          # Datos financieros por año
-GET  /api/documents                  # Listado de documentos
-GET  /api/budget/:year              # Presupuesto específico
-GET  /api/salaries/:year            # Datos salariales
-GET  /api/contracts/:year           # Contratos y licitaciones
-GET  /api/audit/anomalies           # Detección de anomalías
-```
-
-### Documentación
-- **Swagger UI:** `/api-docs` (en servidor local)
-- **Postman Collection:** Disponible en `/docs/api/`
-
-## 🚀 Despliegue
-
-### Producción
-- **GitHub Pages:** [https://flongstaff.github.io/cda-transparencia/](https://flongstaff.github.io/cda-transparencia/)
-- **CI/CD:** Automatizado con GitHub Actions
-- **Cloudflare Workers:** Soporte para edge computing
-
-### Docker
-```bash
-# Build completo
-docker-compose up --build
-
-# Solo base de datos
-docker-compose up postgres -d
-```
-
-## 🔍 Extracción y Procesamiento de Datos
-
-### Fuentes de Datos
-- **Portal oficial municipal:** Web scraping automatizado
-- **Power BI:** Extracción de dashboards oficiales
-- **Documentos PDF:** OCR y procesamiento automático
-- **APIs externas:** Datos de comparación regional
-
-### Scripts de Procesamiento
-```bash
-# Procesar documentos PDF
-python scripts/scrapers/pdf_extractor.py
-
-# Extraer datos de Power BI
-python scripts/scrapers/power_bi.py
-
-# Verificar integridad de datos
-python scripts/verification/integrity_checker.py
-```
-
-## ⚖️ Compliance y Marco Legal
-
-Este proyecto cumple con:
-- **Ley 27.275** - Acceso a la Información Pública
-- **Ley 25.326** - Protección de Datos Personales  
-- **Decreto 434/2016** - Plan de Apertura de Datos
-- **Normativa municipal** de transparencia
-- **Estándares internacionales** de datos abiertos
-
-## 🛡️ Seguridad y Privacidad
-
-- ✅ **Datos anonimizados** según normativa
-- ✅ **HTTPS en toda comunicación**
-- ✅ **Headers de seguridad** implementados
-- ✅ **Validación de inputs** en toda la API
-- ✅ **Logs de auditoría** para acceso a datos sensibles
-
-## 🤝 Contribución
-
-1. Fork del repositorio
-2. Crear rama feature: `git checkout -b feature/nueva-funcionalidad`
-3. Commit cambios: `git commit -m 'Agregar nueva funcionalidad'`
-4. Push a la rama: `git push origin feature/nueva-funcionalidad`
-5. Abrir Pull Request
-
-### Estándares de Código
-- **Frontend:** ESLint + Prettier para TypeScript/React
-- **Backend:** ESLint para Node.js
-- **Python:** Black + flake8 para scripts
-- **Testing:** Jest (Frontend), Mocha (Backend), pytest (Python)
-
 ## 🎯 Implementación de Sistemas de Auditoría
 
 ### Sistemas Implementados
@@ -209,15 +104,53 @@ Este proyecto cumple con:
 - Mayor transparencia en procesos financieros
 - Mejor cumplimiento de umbrales presupuestarios
 
+
+## 🔍 Extracción y Procesamiento de Datos
+
+### Fuentes de Datos
+- **Portal oficial municipal:** Web scraping automatizado
+- **Power BI:** Extracción de dashboards oficiales
+- **Documentos PDF:** OCR y procesamiento automático
+- **APIs externas:** Datos de comparación regional
+
+
+## ⚖️ Compliance y Marco Legal
+
+Este proyecto cumple con:
+- **Ley 27.275** - Acceso a la Información Pública
+- **Ley 25.326** - Protección de Datos Personales  
+- **Decreto 434/2016** - Plan de Apertura de Datos
+- **Normativa municipal** de transparencia
+- **Estándares internacionales** de datos abiertos
+
+## 🛡️ Seguridad y Privacidad
+
+- ✅ **Datos anonimizados** según normativa
+- ✅ **HTTPS en toda comunicación**
+- ✅ **Headers de seguridad** implementados
+- ✅ **Validación de inputs** en toda la API
+- ✅ **Logs de auditoría** para acceso a datos sensibles
+
+
+## 🤝 Contribuciones
+
+¡Las contribuciones son bienvenidas! Por favor sigue estos pasos:
+
+1. Haz un fork del repositorio
+2. Crea una rama para tu característica (`git checkout -b feature/NuevaCaracteristica`)
+3. Haz commit de tus cambios (`git commit -am 'Agregar nueva característica'`)
+4. Haz push a la rama (`git push origin feature/NuevaCaracteristica`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
 ## 📞 Soporte y Contacto
 
 - **Issues:** [GitHub Issues](https://github.com/flongstaff/cda-transparencia/issues)
 - **Documentación:** Ver carpeta `/docs/`
 - **Portal Oficial:** [carmendeareco.gob.ar/transparencia](https://carmendeareco.gob.ar/transparencia/)
-
-## 📄 Licencia
-
-Proyecto desarrollado para fines de transparencia y rendición de cuentas públicas en Carmen de Areco, Buenos Aires, Argentina.
 
 ---
 
