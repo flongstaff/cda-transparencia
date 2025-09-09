@@ -11,6 +11,7 @@ node_modules/
 .idea/
 *.swp
 *.swo
+.roo/
 
 # OS generated files
 .DS_Store

@@ -5,7 +5,7 @@ import { formatCurrencyARS } from '../utils/formatters';
 import ValidatedChart from '../components/charts/ValidatedChart';
 import DocumentViewer from '../components/DocumentViewer';
 import PageYearSelector from '../components/selectors/PageYearSelector';
-import UnifiedFinancialDashboard from '../components/financial/UnifiedFinancialDashboard';
+import UnifiedFinancialDashboard from '../components/dashboard/UnifiedFinancialDashboard';
 
 interface Document {
   id: string;

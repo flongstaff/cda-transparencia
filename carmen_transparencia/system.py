@@ -931,7 +931,7 @@ class IntegratedTransparencySystem:
 
         return cross_ref
 
-    async def run_comprehensive_analysis(self) -> Dict:
+    async def run_comprehensive_analysis(self):
         """
         Run comprehensive analysis across all data sources
         """
@@ -1145,7 +1145,7 @@ class IntegratedTransparencySystem:
 
 ## 📊 RESUMEN EJECUTIVO
 
-**🚨 NIVEL DE RIESGO GENERAL: {analysis_results.get('overall_risk_level', 'UNKNOWN').upper()}
+**🚨 NIVEL DE RIESGO GENERAL: {analysis_results.get('overall_risk_level', 'UNKNOWN').upper()}**
 
 | Métrica Clave                   | Valor                                      |
 | ------------------------------- | ------------------------------------------ |

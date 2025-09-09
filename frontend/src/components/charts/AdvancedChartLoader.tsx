@@ -1,12 +1,13 @@
 import React, { Suspense, lazy, ComponentType } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
-import { Loader2, AlertTriangle, RefreshCw, BarChart3, PieChart, TrendingUp, Filter } from 'lucide-react';
+import { Loader2, AlertTriangle, RefreshCw, BarChart3, PieChart, TrendingUp, Filter, Share2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 // Lazy load advanced chart components
 const TreemapChart = lazy(() => import('./TreemapChart'));
 const WaterfallChart = lazy(() => import('./WaterfallChart'));
 const FunnelChart = lazy(() => import('./FunnelChart'));
+const SankeyDiagram = lazy(() => import('./SankeyDiagram'));
 const DebtAnalysisChart = lazy(() => import('./DebtAnalysisChart'));
 const BudgetAnalysisChartEnhanced = lazy(() => import('./BudgetAnalysisChartEnhanced'));
 
@@ -15,6 +16,7 @@ export type AdvancedChartType =
   | 'treemap' 
   | 'waterfall' 
   | 'funnel' 
+  | 'sankey'
   | 'debt' 
   | 'budget';
 
@@ -22,6 +24,7 @@ const ChartRegistry: Record<AdvancedChartType, ComponentType<any>> = {
   treemap: TreemapChart,
   waterfall: WaterfallChart,
   funnel: FunnelChart,
+  sankey: SankeyDiagram,
   debt: DebtAnalysisChart,
   budget: BudgetAnalysisChartEnhanced,
 };
@@ -30,6 +33,7 @@ const ChartIcons: Record<AdvancedChartType, ComponentType<any>> = {
   treemap: BarChart3,
   waterfall: TrendingUp,
   funnel: Filter,
+  sankey: Share2,
   debt: PieChart,
   budget: BarChart3,
 };
@@ -38,6 +42,7 @@ const ChartDescriptions: Record<AdvancedChartType, string> = {
   treemap: 'Visualización jerárquica de distribución presupuestaria',
   waterfall: 'Análisis de evolución secuencial del presupuesto',
   funnel: 'Embudo de procesos con tasas de conversión',
+  sankey: 'Diagrama de flujo de fondos entre áreas',
   debt: 'Análisis comprehensivo de deuda municipal',
   budget: 'Análisis presupuestario con métricas avanzadas',
 };
@@ -313,6 +318,8 @@ export const preloadAdvancedChart = async (chartType: AdvancedChartType): Promis
         return (await import('./WaterfallChart')).default;
       case 'funnel':
         return (await import('./FunnelChart')).default;
+      case 'sankey':
+        return (await import('./SankeyDiagram')).default;
       case 'debt':
         return (await import('./DebtAnalysisChart')).default;
       case 'budget':

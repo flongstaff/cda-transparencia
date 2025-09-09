@@ -228,14 +228,16 @@ class ComprehensiveTransparencyController {
         // Official URL
         if (doc.official_url) {
             accessMethods.official_url = doc.official_url;
-            accessMethods.availability_score += 25;
         } else {
-            // Generate likely official URL
-            accessMethods.official_url = `https://carmendeareco.gob.ar/transparencia/${doc.filename}`;
+            // Generate likely official URL with year/month structure
+            const date = new Date(doc.created_at || Date.now());
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            accessMethods.official_url = `http://carmendeareco.gob.ar/wp-content/uploads/${year}/${month}/${doc.filename}`;
         }
 
         // Wayback Machine URL
-        accessMethods.archive_url = `https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/${doc.filename}`;
+        accessMethods.archive_url = `https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/`;
 
         // Check for local copies
         const localPaths = [
@@ -779,8 +781,8 @@ class ComprehensiveTransparencyController {
                 type: doc.document_type,
                 size_mb: (doc.size_bytes / (1024 * 1024)).toFixed(2),
                 url: doc.url,
-                official_url: doc.official_url || `https://carmendeareco.gob.ar/transparencia/${doc.filename}`,
-                archive_url: `https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/${doc.filename}`,
+                official_url: doc.official_url || `http://carmendeareco.gob.ar/wp-content/uploads/${doc.year}/${String(doc.month || '01').padStart(2, '0')}/${doc.filename}`,
+                archive_url: `https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/`,
                 verification_status: doc.verification_status,
                 processing_date: doc.created_at,
                 data_sources: ['official_site'],
@@ -1085,7 +1087,8 @@ class ComprehensiveTransparencyController {
                 });
             }
 
-            const debtData = await this._getMunicipalDebtData(yearInt);
+            // Use the enhanced service method that includes all data sources
+            const debtData = await this.service.getMunicipalDebtByYear(yearInt);
             
             res.json({
                 ...debtData,
@@ -1102,124 +1105,6 @@ class ComprehensiveTransparencyController {
                 error: 'Failed to get municipal debt data',
                 details: error.message
             });
-        }
-    }
-
-    async _getMunicipalDebtData(year) {
-        try {
-            // First, try to get debt data from the municipal_debt table
-            const debtQuery = `
-                SELECT 
-                    id,
-                    year,
-                    debt_type,
-                    description,
-                    amount,
-                    interest_rate,
-                    due_date,
-                    status
-                FROM transparency.municipal_debt
-                WHERE year = $1
-                ORDER BY amount DESC
-            `;
-            
-            const debtResult = await this.service.pool.query(debtQuery, [year]);
-            
-            // If no debt data found, return empty structure
-            if (debtResult.rows.length === 0) {
-                return {
-                    debt_data: [],
-                    total_debt: 0,
-                    average_interest_rate: 0,
-                    long_term_debt: 0,
-                    short_term_debt: 0,
-                    debt_by_type: {},
-                    metadata: {
-                        year: parseInt(year),
-                        last_updated: new Date().toISOString(),
-                        source: 'no_data_available'
-                    }
-                };
-            }
-            
-            // Calculate debt analytics
-            const debtData = debtResult.rows.map(row => ({
-                debt_type: row.debt_type,
-                description: row.description,
-                amount: parseFloat(row.amount),
-                interest_rate: parseFloat(row.interest_rate),
-                due_date: row.due_date ? row.due_date.toISOString().split('T')[0] : null,
-                status: row.status,
-                principal_amount: parseFloat(row.amount), // Simplified - in a real system this would be separate
-                accrued_interest: 0 // Simplified - in a real system this would be calculated
-            }));
-            
-            const totalDebt = debtData.reduce((sum, debt) => sum + debt.amount, 0);
-            const averageInterestRate = debtData.length > 0 
-                ? debtData.reduce((sum, debt) => sum + debt.interest_rate, 0) / debtData.length 
-                : 0;
-            
-            // Classify debt as short-term or long-term based on due date
-            const currentDate = new Date();
-            let shortTermDebt = 0;
-            let longTermDebt = 0;
-            
-            const debtByType = {};
-            
-            debtData.forEach(debt => {
-                // Group by type
-                if (!debtByType[debt.debt_type]) {
-                    debtByType[debt.debt_type] = 0;
-                }
-                debtByType[debt.debt_type] += debt.amount;
-                
-                // Classify as short-term or long-term
-                if (debt.due_date) {
-                    const dueDate = new Date(debt.due_date);
-                    const diffTime = dueDate.getTime() - currentDate.getTime();
-                    const diffDays = diffTime / (1000 * 60 * 60 * 24);
-                    
-                    if (diffDays <= 365) {
-                        shortTermDebt += debt.amount;
-                    } else {
-                        longTermDebt += debt.amount;
-                    }
-                } else {
-                    // If no due date, classify as long-term by default
-                    longTermDebt += debt.amount;
-                }
-            });
-            
-            return {
-                debt_data: debtData,
-                total_debt: totalDebt,
-                average_interest_rate: parseFloat(averageInterestRate.toFixed(2)),
-                long_term_debt: longTermDebt,
-                short_term_debt: shortTermDebt,
-                debt_by_type: debtByType,
-                metadata: {
-                    year: parseInt(year),
-                    last_updated: new Date().toISOString(),
-                    source: 'postgresql_database'
-                }
-            };
-        } catch (error) {
-            console.error('Error fetching municipal debt data:', error);
-            // Return fallback data
-            return {
-                debt_data: [],
-                total_debt: 0,
-                average_interest_rate: 0,
-                long_term_debt: 0,
-                short_term_debt: 0,
-                debt_by_type: {},
-                metadata: {
-                    year: parseInt(year),
-                    last_updated: new Date().toISOString(),
-                    source: 'error_fallback',
-                    error: error.message
-                }
-            };
         }
     }
 
@@ -1240,4 +1125,103 @@ class ComprehensiveTransparencyController {
     }
 }
 
-module.exports = ComprehensiveTransparencyController;
+module.exports = ComprehensiveTransparencyController;                error: 'Failed to get local markdown documents',
+                details: error.message
+            });
+        }
+    }
+
+    /**
+     * Get organized PDF documents
+     */
+    async getOrganizedPdfDocuments(req, res) {
+        try {
+            const { year, category } = req.params;
+            const yearInt = parseInt(year);
+
+            const documents = await this.service.getOrganizedPdfDocuments(yearInt, category || null);
+            
+            res.json({
+                year: yearInt,
+                category: category || 'all',
+                documents: documents,
+                count: documents.length,
+                source: 'organized_pdf_documents',
+                generated_at: new Date().toISOString()
+            });
+        } catch (error) {
+            console.error('Error in getOrganizedPdfDocuments:', error);
+            res.status(500).json({
+                error: 'Failed to get organized PDF documents',
+                details: error.message
+            });
+        }
+    }
+
+    /**
+     * Get local transparency data analysis
+     */
+    async getLocalTransparencyData(req, res) {
+        try {
+            const transparencyData = await this.service.getLocalTransparencyData();
+            
+            if (!transparencyData) {
+                return res.status(404).json({
+                    error: 'No local transparency data available',
+                    message: 'No analysis results found in local storage'
+                });
+            }
+            
+            res.json({
+                data: transparencyData,
+                source: 'local_analysis_results',
+                generated_at: new Date().toISOString()
+            });
+        } catch (error) {
+            console.error('Error in getLocalTransparencyData:', error);
+            res.status(500).json({
+                error: 'Failed to get local transparency data',
+                details: error.message
+            });
+        }
+    }
+
+    /**
+     * Clear API cache
+     */
+    async clearCache(req, res) {
+        try {
+            this.service.clearCache();
+            
+            res.json({
+                message: 'API cache cleared successfully',
+                timestamp: new Date().toISOString()
+            });
+        } catch (error) {
+            console.error('Error in clearCache:', error);
+            res.status(500).json({
+                error: 'Failed to clear cache',
+                details: error.message
+            });
+        }
+    }
+
+    /**
+     * Get cache statistics
+     */
+    async getCacheStats(req, res) {
+        try {
+            const stats = this.service.getCacheStats();
+            
+            res.json({
+                cache_stats: stats,
+                timestamp: new Date().toISOString()
+            });
+        } catch (error) {
+            console.error('Error in getCacheStats:', error);
+            res.status(500).json({
+                error: 'Failed to get cache statistics',
+                details: error.message
+            });
+        }
+    }

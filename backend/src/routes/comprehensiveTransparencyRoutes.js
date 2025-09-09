@@ -446,4 +446,257 @@ router.get('/available-years', (req, res) => {
     controller.getAvailableYears(req, res);
 });
 
-module.exports = router;
+module.exports = router;/** @swagger
+ * /api/transparency/external/{year}:
+ *   get:
+ *     summary: Get external financial data from government APIs
+ *     tags: [Comprehensive Transparency]
+ *     parameters:
+ *       - in: path
+ *         name: year
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: Year to analyze (e.g., 2024)
+ *     responses:
+ *       200:
+ *         description: External financial data from government APIs
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 year:
+ *                   type: integer
+ *                 external_data:
+ *                   type: object
+ *                 source:
+ *                   type: string
+ *                 generated_at:
+ *                   type: string
+ *                   format: date-time
+ *       500:
+ *         description: Internal server error
+ */
+router.get('/external/:year', (req, res) => {
+    controller.getExternalFinancialData(req, res);
+});
+
+/** @swagger
+ * /api/transparency/github/{repo}:
+ *   get:
+ *     summary: Get data from public GitHub repositories
+ *     tags: [Comprehensive Transparency]
+ *     parameters:
+ *       - in: path
+ *         name: repo
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Repository name (e.g., clarius/normas)
+ *       - in: path
+ *         name: path
+ *         required: false
+ *         schema:
+ *           type: string
+ *         description: Optional path within repository
+ *     responses:
+ *       200:
+ *         description: Data from GitHub repository
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 repository:
+ *                   type: string
+ *                 path:
+ *                   type: string
+ *                 data:
+ *                   type: object
+ *                 source:
+ *                   type: string
+ *                 generated_at:
+ *                   type: string
+ *                   format: date-time
+ *       500:
+ *         description: Internal server error
+ */
+router.get('/github/:repo/:path?', (req, res) => {
+    controller.getGitHubData(req, res);
+});
+
+/** @swagger
+ * /api/transparency/local-markdown/{year}/{category}:
+ *   get:
+ *     summary: Get local markdown documents
+ *     tags: [Comprehensive Transparency]
+ *     parameters:
+ *       - in: path
+ *         name: year
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: Year to analyze (e.g., 2024)
+ *       - in: path
+ *         name: category
+ *         required: false
+ *         schema:
+ *           type: string
+ *         description: Optional document category
+ *     responses:
+ *       200:
+ *         description: Local markdown documents
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 year:
+ *                   type: integer
+ *                 category:
+ *                   type: string
+ *                 documents:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                 count:
+ *                   type: integer
+ *                 source:
+ *                   type: string
+ *                 generated_at:
+ *                   type: string
+ *                   format: date-time
+ *       500:
+ *         description: Internal server error
+ */
+router.get('/local-markdown/:year/:category?', (req, res) => {
+    controller.getLocalMarkdownDocuments(req, res);
+});
+
+/** @swagger
+ * /api/transparency/organized-pdfs/{year}/{category}:
+ *   get:
+ *     summary: Get organized PDF documents
+ *     tags: [Comprehensive Transparency]
+ *     parameters:
+ *       - in: path
+ *         name: year
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: Year to analyze (e.g., 2024)
+ *       - in: path
+ *         name: category
+ *         required: false
+ *         schema:
+ *           type: string
+ *         description: Optional document category
+ *     responses:
+ *       200:
+ *         description: Organized PDF documents
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 year:
+ *                   type: integer
+ *                 category:
+ *                   type: string
+ *                 documents:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                 count:
+ *                   type: integer
+ *                 source:
+ *                   type: string
+ *                 generated_at:
+ *                   type: string
+ *                   format: date-time
+ *       500:
+ *         description: Internal server error
+ */
+router.get('/organized-pdfs/:year/:category?', (req, res) => {
+    controller.getOrganizedPdfDocuments(req, res);
+});
+
+/** @swagger
+ * /api/transparency/local-analysis:
+ *   get:
+ *     summary: Get local transparency data analysis
+ *     tags: [Comprehensive Transparency]
+ *     responses:
+ *       200:
+ *         description: Local transparency data analysis
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 data:
+ *                   type: object
+ *                 source:
+ *                   type: string
+ *                 generated_at:
+ *                   type: string
+ *                   format: date-time
+ *       404:
+ *         description: No local transparency data available
+ *       500:
+ *         description: Internal server error
+ */
+router.get('/local-analysis', (req, res) => {
+    controller.getLocalTransparencyData(req, res);
+});
+
+/** @swagger
+ * /api/transparency/cache/clear:
+ *   post:
+ *     summary: Clear API cache
+ *     tags: [Comprehensive Transparency]
+ *     responses:
+ *       200:
+ *         description: API cache cleared successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                 timestamp:
+ *                   type: string
+ *                   format: date-time
+ *       500:
+ *         description: Internal server error
+ */
+router.post('/cache/clear', (req, res) => {
+    controller.clearCache(req, res);
+});
+
+/** @swagger
+ * /api/transparency/cache/stats:
+ *   get:
+ *     summary: Get cache statistics
+ *     tags: [Comprehensive Transparency]
+ *     responses:
+ *       200:
+ *         description: Cache statistics
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 cache_stats:
+ *                   type: object
+ *                 timestamp:
+ *                   type: string
+ *                   format: date-time
+ *       500:
+ *         description: Internal server error
+ */
+router.get('/cache/stats', (req, res) => {
+    controller.getCacheStats(req, res);
+});
