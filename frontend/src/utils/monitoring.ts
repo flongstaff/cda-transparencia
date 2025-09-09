@@ -38,8 +38,8 @@ class MonitoringService {
 
   constructor(config: MonitoringConfig = {}) {
     this.config = {
-      environment: process.env.NODE_ENV || 'development',
-      release: process.env.REACT_APP_VERSION || '1.0.0',
+      environment: import.meta.env.MODE || 'development',
+      release: import.meta.env.VITE_APP_VERSION || '1.0.0',
       sampleRate: 1.0,
       enablePerformanceMonitoring: true,
       enableErrorReporting: true,
@@ -529,10 +529,10 @@ class MonitoringService {
 
 // Create global monitoring instance
 const monitoring = new MonitoringService({
-  dsn: process.env.REACT_APP_SENTRY_DSN,
-  environment: process.env.NODE_ENV,
-  release: process.env.REACT_APP_VERSION,
-  enableErrorReporting: process.env.NODE_ENV === 'production',
+  dsn: import.meta.env.VITE_SENTRY_DSN,
+  environment: import.meta.env.MODE,
+  release: import.meta.env.VITE_APP_VERSION,
+  enableErrorReporting: import.meta.env.MODE === 'production',
   enablePerformanceMonitoring: true
 });
 
