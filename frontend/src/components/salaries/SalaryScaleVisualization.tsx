@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 import { Users, DollarSign, TrendingUp, Calculator } from 'lucide-react';
-import { consolidatedApiService } from '../../services/ConsolidatedApiService';
+import { useTransparencyData } from '../../hooks/useTransparencyData';
 
 interface SalaryPosition {
   code: string;
@@ -25,14 +25,10 @@ interface SalaryData {
 }
 
 const SalaryScaleVisualization: React.FC = () => {
-  const [salaryData, setSalaryData] = useState<SalaryData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
-
-  useEffect(() => {
-    loadSalaryData();
-  }, [selectedYear]);
+  
+  // Use unified data hook
+  const { loading, error } = useTransparencyData(selectedYear);
 
   const loadSalaryData = async () => {
     try {

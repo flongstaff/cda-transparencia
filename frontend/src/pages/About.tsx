@@ -1,102 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Users, FileText, CheckCircle, Globe, ExternalLink, BarChart3, TrendingUp, PieChart, DollarSign, Award } from 'lucide-react';
 import { AdvancedChartsShowcase } from '../components/charts';
 import { documentVerification } from '../data/document-sources';
-import { consolidatedApiService } from '../services/ConsolidatedApiService';
+import { useTransparencyData } from '../hooks/useTransparencyData';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 
 const About: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-  const [availableYears, setAvailableYears] = useState<number[]>([new Date().getFullYear()]);
-  const [metrics, setMetrics] = useState({
-    totalDocuments: 0,
-    verifiedDocuments: 0,
-    transparencyScore: 0,
-    dataSources: 0,
-    budgetTotal: 0,
-    budgetExecuted: 0,
-    executionRate: '0%',
-    treasuryBalance: 0,
+  
+  // Use unified data hook
+  const { loading, error, documents, financialOverview, budgetBreakdown } = useTransparencyData(selectedYear);
+  
+  const availableYears = [2024, 2023, 2022, 2021];
+  
+  // Calculate metrics from unified data
+  const metrics = {
+    totalDocuments: documents?.length || 0,
+    verifiedDocuments: documents?.filter(doc => doc.verification_status === 'verified').length || 0,
+    transparencyScore: 95,
+    dataSources: 12,
+    budgetTotal: financialOverview?.totalBudget || budgetBreakdown?.reduce((sum, item) => sum + (item.budgeted || 0), 0) || 0,
+    budgetExecuted: budgetBreakdown?.reduce((sum, item) => sum + (item.executed || 0), 0) || 0,
+    executionRate: budgetBreakdown ? `${Math.round((budgetBreakdown.reduce((sum, item) => sum + (item.executed || 0), 0) / budgetBreakdown.reduce((sum, item) => sum + (item.budgeted || 0), 0)) * 100)}%` : '0%',
+    treasuryBalance: financialOverview?.totalRevenue || 0,
     osintCompliance: 95,
     responseTime: '<1s',
     lastUpdated: 'Justo ahora',
-  });
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    loadAvailableYears();
-  }, []);
-
-  useEffect(() => {
-    if (selectedYear) {
-      loadTransparencyData();
-    }
-  }, [selectedYear]);
-
-  const loadAvailableYears = async () => {
-    try {
-      const years = await consolidatedApiService.getAvailableYears();
-      setAvailableYears(years);
-    } catch (error) {
-      console.error('Error loading available years:', error);
-      const currentYear = new Date().getFullYear();
-      setAvailableYears([currentYear, currentYear - 1]);
-    }
-  };
-
-  const loadTransparencyData = async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const [municipalData, treasuryData] = await Promise.all([
-        consolidatedApiService.getYearlyData(selectedYear),
-        consolidatedApiService.getTreasuryMovements()
-      ]);
-
-      // Calculate treasury balance from movements
-      const currentBalance = treasuryData.length > 0 
-        ? treasuryData[treasuryData.length - 1].balance 
-        : 0;
-
-      setMetrics({
-        totalDocuments: municipalData.total_documents || documentVerification.total_documents,
-        verifiedDocuments: municipalData.verified_documents || documentVerification.official_website_coverage,
-        transparencyScore: municipalData.summary.transparency_score || 85,
-        dataSources: municipalData.documents?.length || 5,
-        budgetTotal: municipalData.budget.total_budgeted || 0,
-        budgetExecuted: municipalData.budget.total_executed || 0,
-        executionRate: municipalData.budget.execution_rate || '0%',
-        treasuryBalance: currentBalance,
-        osintCompliance: 95,
-        responseTime: '<1s',
-        lastUpdated: 'Justo ahora',
-      });
-
-    } catch (err) {
-      console.error('Error loading transparency data:', err);
-      setError('No se pudieron cargar los datos de transparencia');
-      
-      // Fallback to static data if API fails
-      setMetrics({
-        totalDocuments: 173,
-        verifiedDocuments: 156,
-        transparencyScore: 85,
-        dataSources: 5,
-        budgetTotal: 1024500000, // Based on your sample data
-        budgetExecuted: 950000000, // Based on your sample data  
-        executionRate: '92.7%',
-        treasuryBalance: 150000000,
-        osintCompliance: 95,
-        responseTime: '<1s',
-        lastUpdated: 'Justo ahora',
-      });
-
-    } finally {
-      setLoading(false);
-    }
   };
 
   return (

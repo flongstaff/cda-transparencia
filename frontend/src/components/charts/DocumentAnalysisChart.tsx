@@ -1,5 +1,5 @@
 import React from 'react';
-import ComprehensiveChart from './ComprehensiveChart';
+import UnifiedChart from './UnifiedChart';
 
 interface Props {
   year: number;
@@ -8,10 +8,10 @@ interface Props {
 
 const DocumentAnalysisChart: React.FC<Props> = ({ year, className }) => {
   return (
-    <ComprehensiveChart
+    <UnifiedChart
       type="document"
       year={year}
-      title={`Análisis Documental ${year}`}
+      title={`Análisis de Documentos ${year}`}
       className={className}
       variant="pie"
       showControls={true}

@@ -37,6 +37,7 @@ import Investments from './pages/Investments';
 import Treasury from './pages/Treasury';
 import Database from './pages/Database';
 import Whistleblower from './pages/Whistleblower';
+import AntiCorruptionDashboard from './pages/AntiCorruptionDashboard';
 
 // Import yearly components
 import YearDashboard from './components/yearly/YearDashboard';
@@ -78,6 +79,7 @@ const navigationSections = [
     items: [
       { path: '/audit', label: 'Auditoría y Análisis', icon: <Activity className="w-4 h-4" /> },
       { path: '/reports', label: 'Reportes', icon: <FileText className="w-4 h-4" /> },
+      { path: '/anticorruption', label: 'Lucha contra la Corrupción', icon: <Shield className="w-4 h-4" /> },
       { path: '/transparency', label: 'Transparency Dashboard', icon: <LayoutDashboard className="w-4 h-4" /> },
       { path: '/whistleblower', label: 'Canal de Denuncias', icon: <Shield className="w-4 h-4" /> }
     ]
@@ -136,6 +138,13 @@ const App: React.FC = () => {
   const [systemStatus, setSystemStatus] = useState<SystemStatus | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  // Dynamic basename based on environment
+  const getBasename = () => {
+    const basePath = import.meta.env.VITE_BASE_PATH;
+    if (basePath && basePath !== '/') return basePath;
+    return import.meta.env.VITE_APP_ENV === 'github' ? '/cda-transparencia' : '';
+  };
+
   useEffect(() => {
     document.title = 'Portal de Transparencia | Carmen de Areco';
     
@@ -148,7 +157,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <Router>
+    <Router basename={getBasename()}>
       <div className="min-h-screen bg-white">
         {/* Modern Header - Enhanced with new color scheme */}
         <header className="bg-white shadow-md border-b-2 border-orange-200">
@@ -296,6 +305,7 @@ const App: React.FC = () => {
                 <Route path="/treasury" element={<Treasury />} />
                 <Route path="/database" element={<Database />} />
                 <Route path="/whistleblower" element={<Whistleblower />} />
+                <Route path="/anticorruption" element={<AntiCorruptionDashboard />} />
                 
                 {/* Information Routes */}
                 <Route path="/about" element={<About />} />

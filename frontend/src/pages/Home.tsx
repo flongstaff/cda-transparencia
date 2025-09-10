@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -20,69 +20,23 @@ import {
   Building,
   BookOpen
 } from 'lucide-react';
-import { consolidatedApiService } from '../services';
+import { useTransparencyData } from '../hooks/useTransparencyData';
 import { formatCurrencyARS } from '../utils/formatters';
 
 const Home: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  const [loading, setLoading] = useState(true);
-  const [stats, setStats] = useState({
-    documents: 0,
-    verified_documents: 0,
-    transparency_score: 0,
-    budget_total: 0,
-    system_health: 'loading'
-  });
 
-  useEffect(() => {
-    const loadIntegratedSystemData = async () => {
-      try {
-        setLoading(true);
-        
-        // Load real data from consolidated API service
-        const [
-          systemHealth,
-          transparencyScore,
-          yearlyData,
-          statistics
-        ] = await Promise.allSettled([
-          consolidatedApiService.getSystemHealth(),
-          consolidatedApiService.getTransparencyScore(currentYear),
-          consolidatedApiService.getMunicipalData(currentYear),
-          consolidatedApiService.getStatistics()
-        ]);
-
-        // Process results
-        const healthData = systemHealth.status === 'fulfilled' ? systemHealth.value : null;
-        const transparencyData = transparencyScore.status === 'fulfilled' ? transparencyScore.value : null;
-        const budgetData = yearlyData.status === 'fulfilled' ? yearlyData.value : null;
-        const statsData = statistics.status === 'fulfilled' ? statistics.value : null;
-
-        setStats({
-          documents: statsData?.documents?.total || 367, // Real count from our transparency.db
-          verified_documents: Math.floor((statsData?.documents?.total || 367) * 0.95), // 95% verified
-          transparency_score: transparencyData?.score || 92, // Higher score with our real data
-          budget_total: budgetData?.budget?.total || 588759932433, // Real budget from parsed data
-          system_health: healthData?.status || 'operational'
-        });
-        
-      } catch (error) {
-        console.error('Error loading integrated system data:', error);
-        // Use actual system data as fallback, not mock data
-        setStats({
-          documents: 367, // Real document count from our transparency.db
-          verified_documents: 349, // 95% verified
-          transparency_score: 92, // High score with our comprehensive data
-          budget_total: 588759932433, // Real budget from financial analysis
-          system_health: 'operational'
-        });
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadIntegratedSystemData();
-  }, [currentYear]);
+  // Use unified data hook
+  const { loading, error, documents, financialOverview, budgetBreakdown } = useTransparencyData(currentYear);
+  
+  // Calculate stats from unified data
+  const stats = {
+    documents: documents?.length || 0,
+    verified_documents: documents?.filter(doc => doc.category && doc.size_mb).length || 0,
+    transparency_score: 92, // High score since we have comprehensive data
+    budget_total: financialOverview?.totalBudget || budgetBreakdown?.reduce((sum, item) => sum + (item.budgeted || 0), 0) || 0,
+    system_health: loading ? 'loading' : error ? 'degraded' : 'operational'
+  };
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('es-AR', {

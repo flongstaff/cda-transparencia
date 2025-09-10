@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Search, Filter, Download, Calendar, Database as DatabaseIcon, FileText, Layers, Eye } from 'lucide-react';
-import { consolidatedApiService } from '../services';
+import { useTransparencyData } from '../hooks/useTransparencyData';
 import DocumentViewer from '../components/DocumentViewer';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 
@@ -21,91 +21,46 @@ const Database: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [loading, setLoading] = useState<boolean>(true);
-  const [documents, setDocuments] = useState<DatabaseDocument[]>([]);
-  const [availableYears, setAvailableYears] = useState<number[]>([]);
   const [selectedDocument, setSelectedDocument] = useState<DatabaseDocument | null>(null);
-  const [categories, setCategories] = useState<string[]>([]);
-  const [totalStats, setTotalStats] = useState<any>(null);
 
-  useEffect(() => {
-    loadAvailableYears();
-    loadAllDocuments();
-  }, []);
+  // Use unified data hook
+  const { loading, error, documents: rawDocuments } = useTransparencyData(selectedYear);
+  
+  const availableYears = [2024, 2023, 2022, 2021];
+  
+  // Transform documents to match DatabaseDocument interface
+  const documents: DatabaseDocument[] = (rawDocuments || []).map(doc => ({
+    id: doc.id || `doc-${doc.filename}`,
+    title: doc.title || doc.filename?.replace('.pdf', '') || 'Documento sin título',
+    filename: doc.filename || `documento-${doc.id}.pdf`,
+    year: selectedYear,
+    category: doc.category || 'general',
+    type: doc.type || 'pdf',
+    size_mb: doc.size_mb || 0,
+    url: doc.url || `/cda-transparencia/data/pdfs/${doc.filename}`,
+    processing_date: doc.processing_date || new Date().toISOString(),
+    verification_status: doc.verification_status || 'verified'
+  }));
 
-  useEffect(() => {
-    if (selectedYear) {
-      loadDocuments();
-    }
-  }, [selectedYear, selectedCategory]);
-
-  const loadAvailableYears = async () => {
-    try {
-      const years = await consolidatedApiService.getAvailableYears();
-      setAvailableYears(years);
-      if (years.length > 0) {
-        setSelectedYear(years[0]);
-      }
-    } catch (error) {
-      console.error('Error loading available years:', error);
-      const currentYear = new Date().getFullYear();
-      setAvailableYears([currentYear, currentYear - 1, currentYear - 2]);
-      setSelectedYear(currentYear);
-    }
+  // Extract unique categories
+  const categories = [...new Set(documents.map(doc => doc.category))].sort();
+  
+  // Calculate total stats
+  const totalStats = {
+    totalDocuments: documents.length,
+    totalSizeMB: documents.reduce((sum, doc) => sum + doc.size_mb, 0),
+    categories: categories.length,
+    verified: documents.filter(doc => doc.verification_status === 'verified').length
   };
 
-  const loadAllDocuments = async () => {
-    try {
-      const allDocs = await consolidatedApiService.getDocuments();
-      
-      // Extract unique categories
-      const uniqueCategories = [...new Set(allDocs.map(doc => doc.category))].sort();
-      setCategories(uniqueCategories);
-      
-      // Calculate total stats
-      const totalSize = allDocs.reduce((sum, doc) => sum + (parseFloat(doc.size_mb?.toString() || '0')), 0);
-      const yearCounts = allDocs.reduce((acc, doc) => {
-        acc[doc.year] = (acc[doc.year] || 0) + 1;
-        return acc;
-      }, {} as Record<number, number>);
-      
-      setTotalStats({
-        totalDocuments: allDocs.length,
-        totalSize: totalSize,
-        yearsSpanned: Object.keys(yearCounts).length,
-        categoriesCount: uniqueCategories.length,
-        yearCounts
-      });
-      
-    } catch (error) {
-      console.error('Error loading all documents:', error);
-    }
-  };
-
-  const loadDocuments = async () => {
-    setLoading(true);
-    
-    try {
-      let docs = await consolidatedApiService.getDocuments(selectedYear);
-      
-      if (selectedCategory !== 'all') {
-        docs = docs.filter(doc => doc.category === selectedCategory);
-      }
-      
-      setDocuments(docs);
-    } catch (error) {
-      console.error('Error loading documents:', error);
-      setDocuments([]);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const filteredDocuments = documents.filter(doc => 
-    doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    doc.filename.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    doc.type.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // Apply filters
+  const filteredDocuments = documents
+    .filter(doc => selectedCategory === 'all' || doc.category === selectedCategory)
+    .filter(doc => 
+      doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      doc.filename.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      doc.type.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
   return (
     <div className="space-y-6">

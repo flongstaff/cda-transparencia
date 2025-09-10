@@ -10,14 +10,18 @@ export { default as WaterfallChart } from './WaterfallChart';
 export { default as FunnelChart } from './FunnelChart';
 export { default as SankeyDiagram } from './SankeyDiagram';
 export { default as DebtAnalysisChart } from './DebtAnalysisChart';
-export { default as DebtAnalysisChartTypeSafe } from './DebtAnalysisChartTypeSafe';
 export { default as BudgetAnalysisChart } from './BudgetAnalysisChart';
 export { default as BudgetAnalysisChartEnhanced } from './BudgetAnalysisChartEnhanced';
 export { default as UniversalChart } from './UniversalChart';
-export { default as BaseChart } from './BaseChart';
+
+// Specialized Chart Components
+export { default as GanttChart } from './GanttChart';
+export { default as HeatmapCalendar } from './HeatmapCalendar';
+export { default as RadarChart } from './RadarChart';
 
 // Unified Chart System
 export { default as ComprehensiveChart } from './ComprehensiveChart';
+export { default as UnifiedChart } from './UnifiedChart';
 export { default as TreasuryAnalysisChart } from './TreasuryAnalysisChart';
 export { default as SalaryAnalysisChart } from './SalaryAnalysisChart';
 export { default as ContractAnalysisChart } from './ContractAnalysisChart';

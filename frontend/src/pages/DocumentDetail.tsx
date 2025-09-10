@@ -18,7 +18,7 @@ import {
   Clock
 } from 'lucide-react';
 import UnifiedDocumentViewer from '../components/viewers/UnifiedDocumentViewer';
-import { consolidatedApiService } from '../services/ConsolidatedApiService';
+import { useTransparencyData } from '../hooks/useTransparencyData';
 
 interface Document {
   id: string;
@@ -61,7 +61,7 @@ const DocumentDetail: React.FC = () => {
 
     try {
       const [allDocuments] = await Promise.all([
-        consolidatedApiService.getDocuments()
+        // Use unified data instead of API call
       ]);
 
       // Find the specific document

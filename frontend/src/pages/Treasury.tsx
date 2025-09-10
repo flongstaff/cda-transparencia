@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Search, Filter, Download, Calendar, DollarSign, TrendingUp, TrendingDown, Activity, Loader2 } from 'lucide-react';
-import { consolidatedApiService } from '../services';
+import React, { useState } from 'react';
+import { Search, Filter, Download, Calendar, DollarSign, TrendingUp, TrendingDown, Activity, Loader2, BarChart3, PieChart as PieIcon, AlertTriangle } from 'lucide-react';
 import { formatCurrencyARS } from '../utils/formatters';
+import { useTransparencyData } from '../hooks/useTransparencyData';
 import TreasuryAnalysisChart from '../components/charts/TreasuryAnalysisChart';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 
@@ -19,74 +19,24 @@ interface TreasuryMovement {
 const Treasury: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [searchTerm, setSearchTerm] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  const [treasuryMovements, setTreasuryMovements] = useState<TreasuryMovement[]>([]);
-  const [availableYears, setAvailableYears] = useState<number[]>([]);
   const [viewMode, setViewMode] = useState<'overview' | 'details' | 'charts'>('overview');
-  const [treasurySummary, setTreasurySummary] = useState<any>(null);
+  const [chartType, setChartType] = useState<'bar' | 'pie' | 'line'>('bar');
 
-  useEffect(() => {
-    loadAvailableYears();
-  }, []);
-
-  useEffect(() => {
-    if (selectedYear) {
-      loadTreasuryData();
-    }
-  }, [selectedYear]);
-
-  const loadAvailableYears = async () => {
-    try {
-      const years = await consolidatedApiService.getAvailableYears();
-      setAvailableYears(years);
-      if (years.length > 0) {
-        setSelectedYear(years[0]);
-      }
-    } catch (error) {
-      console.error('Error loading available years:', error);
-      const currentYear = new Date().getFullYear();
-      setAvailableYears([currentYear, currentYear - 1, currentYear - 2]);
-      setSelectedYear(currentYear);
-    }
-  };
-
-  const loadTreasuryData = async () => {
-    setLoading(true);
-    setError(null);
-    
-    try {
-      const movements = await consolidatedApiService.getTreasuryMovements(selectedYear);
-      setTreasuryMovements(movements);
-      
-      // Calculate summary
-      const totalIncome = movements
-        .filter(m => m.type === 'income')
-        .reduce((sum, m) => sum + m.amount, 0);
-      
-      const totalExpenses = movements
-        .filter(m => m.type === 'expense')
-        .reduce((sum, m) => sum + Math.abs(m.amount), 0);
-      
-      const currentBalance = movements.length > 0 ? movements[movements.length - 1].balance : 0;
-      
-      setTreasurySummary({
-        totalIncome,
-        totalExpenses,
-        netBalance: totalIncome - totalExpenses,
-        currentBalance,
-        movementCount: movements.length
-      });
-      
-    } catch (err) {
-      console.error('Error loading treasury data:', err);
-      setError('Error al cargar los datos de tesorería');
-      setTreasuryMovements([]);
-      setTreasurySummary(null);
-    } finally {
-      setLoading(false);
-    }
-  };
+  // Use unified data hook
+  const { loading, error, treasuryData, financialOverview } = useTransparencyData(selectedYear);
+  
+  // Generate available years dynamically to match available data
+  const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
+  const treasuryMovements = treasuryData?.movements || [];
+  
+  // Calculate summary from unified data
+  const treasurySummary = treasuryData ? {
+    totalIncome: treasuryData.totalIncome || 0,
+    totalExpenses: treasuryData.totalExpenses || 0,
+    netBalance: (treasuryData.totalIncome || 0) - (treasuryData.totalExpenses || 0),
+    currentBalance: treasuryData.currentBalance || 0,
+    movementCount: treasuryMovements.length
+  } : null;
 
   const filteredMovements = treasuryMovements.filter(movement => 
     movement.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -281,26 +231,26 @@ const Treasury: React.FC = () => {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
-                    {filteredMovements.slice(0, 50).map((movement) => (
-                      <tr key={movement.id} className="hover:bg-gray-50">
+                    {filteredMovements.slice(0, 50).map((movement, index) => (
+                      <tr key={movement.id || `movement-${index}`} className="hover:bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          {new Date(movement.date).toLocaleDateString('es-AR')}
+                          {movement.date ? new Date(movement.date).toLocaleDateString('es-AR') : 'N/A'}
                         </td>
                         <td className="px-6 py-4 text-sm text-gray-900">
-                          {movement.description}
+                          {movement.description || 'Sin descripción'}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          {movement.category}
+                          {movement.category || 'Sin categoría'}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm">
                           <span className={`font-medium ${
                             movement.type === 'income' ? 'text-green-600' : 'text-red-600'
                           }`}>
-                            {movement.type === 'income' ? '+' : '-'}{formatCurrencyARS(Math.abs(movement.amount))}
+                            {movement.type === 'income' ? '+' : '-'}{formatCurrencyARS(Math.abs(movement.amount || 0))}
                           </span>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                          {formatCurrencyARS(movement.balance)}
+                          {formatCurrencyARS(movement.balance || 0)}
                         </td>
                       </tr>
                     ))}
@@ -318,7 +268,108 @@ const Treasury: React.FC = () => {
 
           {viewMode === 'charts' && (
             <div>
-              <TreasuryAnalysisChart year={selectedYear} />
+              {/* Chart Type Selection */}
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  Análisis Gráfico de Tesorería
+                </h3>
+                <div className="flex items-center space-x-2">
+                  {[
+                    { key: 'bar', label: 'Barras', icon: <BarChart3 size={16} /> },
+                    { key: 'pie', label: 'Circular', icon: <PieIcon size={16} /> },
+                    { key: 'line', label: 'Líneas', icon: <Activity size={16} /> }
+                  ].map((type) => (
+                    <button
+                      key={type.key}
+                      onClick={() => setChartType(type.key)}
+                      className={`flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-colors focus:outline-none ${
+                        chartType === type.key
+                          ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+                          : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'
+                      }`}
+                    >
+                      {type.icon}
+                      <span className="ml-2">{type.label}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Chart Rendering */}
+              {chartType === 'bar' && (
+                <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+                  <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-4">
+                    Composición de Movimientos por Categoría
+                  </h4>
+                  <div className="h-96">
+                    {loading ? (
+                      <div className="flex items-center justify-center h-full">
+                        <Loader2 className="h-8 w-8 animate-spin text-blue-600" />
+                      </div>
+                    ) : error ? (
+                      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg p-6 text-center">
+                        <AlertTriangle className="h-6 w-6 text-red-500 mx-auto mb-2" />
+                        <p className="text-red-700 dark:text-red-300">{error}</p>
+                      </div>
+                    ) : (
+                      <TreasuryAnalysisChart
+                        year={selectedYear}
+                        chartType="bar"
+                      />
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {chartType === 'pie' && (
+                <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+                  <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-4">
+                    Distribución de Movimientos por Categoría
+                  </h4>
+                  <div className="h-96">
+                    {loading ? (
+                      <div className="flex items-center justify-center h-full">
+                        <Loader2 className="h-8 w-8 animate-spin text-blue-600" />
+                      </div>
+                    ) : error ? (
+                      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg p-6 text-center">
+                        <AlertTriangle className="h-6 w-6 text-red-500 mx-auto mb-2" />
+                        <p className="text-red-700 dark:text-red-300">{error}</p>
+                      </div>
+                    ) : (
+                      <TreasuryAnalysisChart
+                        year={selectedYear}
+                        chartType="pie"
+                      />
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {chartType === 'line' && (
+                <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+                  <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-4">
+                    Evolución de Movimientos por Mes
+                  </h4>
+                  <div className="h-96">
+                    {loading ? (
+                      <div className="flex items-center justify-center h-full">
+                        <Loader2 className="h-8 w-8 animate-spin text-blue-600" />
+                      </div>
+                    ) : error ? (
+                      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg p-6 text-center">
+                        <AlertTriangle className="h-6 w-6 text-red-500 mx-auto mb-2" />
+                        <p className="text-red-700 dark:text-red-300">{error}</p>
+                      </div>
+                    ) : (
+                      <TreasuryAnalysisChart
+                        year={selectedYear}
+                        chartType="line"
+                      />
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>

@@ -1,55 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Search, Filter, Download, Calendar, FileText, BarChart3, Eye, DollarSign, TrendingUp, Coins, Users } from 'lucide-react';
-import { consolidatedApiService } from '../services';
+import React, { useState } from 'react';
+import { FileText } from 'lucide-react';
 import { formatCurrencyARS } from '../utils/formatters';
-import ValidatedChart from '../components/charts/ValidatedChart';
-import DocumentViewer from '../components/DocumentViewer';
 import PageYearSelector from '../components/selectors/PageYearSelector';
-import UnifiedFinancialDashboard from '../components/dashboard/UnifiedFinancialDashboard';
+import { useTransparencyData } from '../hooks/useTransparencyData';
 
-interface Document {
-  id: string;
-  title: string;
-  filename: string;
-  year: number;
-  category: string;
-  type: string;
-  size_mb: number;
-  url: string;
-  official_url: string;
-  verification_status: string;
-  processing_date: string;
-}
 
-interface FinancialData {
-  budgeted: number;
-  executed: number;
-  execution_rate: number;
-  category_breakdown: Array<{
-    name: string;
-    budgeted: number;
-    executed: number;
-    execution_rate: number;
-  }>;
-}
-
-interface CategoryData {
-  name: string;
-  total_documents: number;
-  total_size_mb: number;
-  financial_data: FinancialData;
-  documents: Document[];
-  // Debt-specific data
-  debt_data?: {
-    total_debt: number;
-    debt_breakdown: Array<{
-      type: string;
-      amount: number;
-      interest_rate: number;
-      due_date: string;
-    }>;
-  };
-}
 
 interface CategoryPageProps {
   category?: string;
@@ -59,104 +14,41 @@ interface CategoryPageProps {
 
 const CategoryPage: React.FC<CategoryPageProps> = ({ category = 'budget', title = 'Presupuesto', icon = '💰' }) => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  const [categoryData, setCategoryData] = useState<CategoryData | null>(null);
-  const [availableYears, setAvailableYears] = useState<number[]>([]);
-  const [viewMode, setViewMode] = useState<'overview' | 'documents' | 'data' | 'charts' | 'debt'>('overview');
+  
+  // Use unified data hook
+  const {
+    loading,
+    error,
+    financialOverview,
+    documents
+  } = useTransparencyData(selectedYear);
+  
+  // Generate available years dynamically to match available data
+  const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
 
-  // Category definitions
-  const categories = [
-    { id: 'budget', name: 'Presupuesto', icon: '💰' },
-    { id: 'expenses', name: 'Gastos', icon: '💸' },
-    { id: 'revenue', name: 'Ingresos', icon: '📈' },
-    { id: 'debt', name: 'Deuda', icon: '💳' },
-    { id: 'salaries', name: 'Salarios', icon: '👥' },
-    { id: 'contracts', name: 'Contratos', icon: '📋' },
-    { id: 'infrastructure', name: 'Infraestructura', icon: '🏗️' },
-    { id: 'services', name: 'Servicios', icon: '公共服务' }
-  ];
-
-  useEffect(() => {
-    loadAvailableYears();
-  }, []);
-
-  useEffect(() => {
-    if (selectedYear) {
-      loadCategoryData();
-    }
-  }, [selectedYear, category]);
-
-  const loadAvailableYears = async () => {
-    try {
-      const years = await consolidatedApiService.getAvailableYears();
-      setAvailableYears(years);
-      if (years.length > 0) {
-        setSelectedYear(years[0]);
-      }
-    } catch (error) {
-      console.error('Error loading available years:', error);
-      // Fallback to recent years
-      const currentYear = new Date().getFullYear();
-      setAvailableYears([currentYear, currentYear - 1, currentYear - 2, currentYear - 3]);
-      setSelectedYear(currentYear);
-    }
-  };
-
-  const loadCategoryData = async () => {
-    setLoading(true);
-    setError(null);
+  // Generate category data from unified data
+  const categoryData = React.useMemo(() => {
+    if (!financialOverview || !documents) return null;
     
-    try {
-      // Create category data from consolidated API service
-      let documents: Document[] = [];
-      let financial_data: FinancialData = {
-        budgeted: 0,
-        executed: 0,
-        execution_rate: 0,
-        category_breakdown: []
-      };
-
-      // Load documents for this category
-      documents = await consolidatedApiService.getDocuments(selectedYear, category);
-      
-      // Load financial data based on category
-      if (category === 'budget' || category === 'expenses' || category === 'revenue') {
-        const budgetData = await consolidatedApiService.getBudgetData(selectedYear);
-        financial_data = {
-          budgeted: budgetData.total_budgeted,
-          executed: budgetData.total_executed,
-          execution_rate: parseFloat(budgetData.execution_rate) || 0,
-          category_breakdown: Object.entries(budgetData.categories || {}).map(([name, data]) => ({
-            name,
-            budgeted: data.budgeted || 0,
-            executed: data.executed || 0,
-            execution_rate: parseFloat(data.execution_rate) || 0
-          }))
-        };
-      }
-
-      const data: CategoryData = {
-        name: title,
-        total_documents: documents.length,
-        total_size_mb: documents.reduce((sum, doc) => sum + (parseFloat(doc.size_mb?.toString() || '0')), 0),
-        financial_data,
-        documents
-      };
-      setCategoryData(data);
-    } catch (err) {
-      console.error('Error loading category data:', err);
-      setError('Error al cargar los datos de la categoría');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const filteredDocuments = categoryData?.documents.filter(doc => 
-    doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    doc.filename.toLowerCase().includes(searchTerm.toLowerCase())
-  ) || [];
+    // Filter documents by category if needed
+    const categoryDocuments = documents.filter(doc => 
+      doc.category?.toLowerCase().includes(category.toLowerCase()) ||
+      doc.type?.toLowerCase().includes(category.toLowerCase())
+    );
+    
+    return {
+      name: title,
+      total_documents: categoryDocuments.length,
+      total_size_mb: categoryDocuments.reduce((sum, doc) => sum + (parseFloat(doc.size_mb?.toString() || '0')), 0),
+      financial_data: {
+        budgeted: financialOverview.totalBudget || 0,
+        executed: financialOverview.totalExecuted || 0,
+        execution_rate: financialOverview.executionRate || 0,
+        category_breakdown: financialOverview.categoryBreakdown || []
+      },
+      documents: categoryDocuments
+    };
+  }, [financialOverview, documents, category, title]);
 
   if (loading) {
     return (
@@ -191,17 +83,19 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category = 'budget', title 
     );
   }
 
-  if (!categoryData) {
+  if (!categoryData && !loading) {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="text-center py-12">
-          <FileText className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-          <h3 className="text-lg font-medium text-gray-800 dark:text-white mb-2">
-            No hay datos disponibles
-          </h3>
-          <p className="text-gray-600 dark:text-gray-400">
-            Los datos para esta categoría aún no han sido cargados.
-          </p>
+      <div className="space-y-6">
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <div className="text-center py-12">
+            <FileText className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-lg font-medium text-gray-800 mb-2">
+              No hay datos disponibles
+            </h3>
+            <p className="text-gray-600">
+              Los datos para esta categoría aún no han sido cargados.
+            </p>
+          </div>
         </div>
       </div>
     );
@@ -221,7 +115,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category = 'budget', title 
             </p>
           </div>
           <PageYearSelector
-            years={availableYears}
+            availableYears={availableYears}
             selectedYear={selectedYear}
             onYearChange={setSelectedYear}
           />

@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Search, Filter, Download, Calendar, TrendingDown, DollarSign, BarChart3, Eye } from 'lucide-react';
-import { consolidatedApiService } from '../services';
 import { formatCurrencyARS } from '../utils/formatters';
+import { useTransparencyData } from '../hooks/useTransparencyData';
 import ValidatedChart from '../components/charts/ValidatedChart';
 import PageYearSelector from '../components/PageYearSelector';
-import EnhancedFinancialDashboard from '../components/financial/EnhancedFinancialDashboard';
 import UniversalChart from '../components/charts/UniversalChart';
 
 interface SpendingData {
@@ -17,92 +16,28 @@ interface SpendingData {
 
 const Spending: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-  const [spendingData, setSpendingData] = useState<SpendingData[]>([]);
-  const [totalSpending, setTotalSpending] = useState<number>(0);
-  const [availableYears, setAvailableYears] = useState<number[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [activeTab, setActiveTab] = useState('overview');
 
-  useEffect(() => {
-    loadAvailableYears();
-  }, []);
+  // Use unified data hook
+  const { loading, error, budgetBreakdown, documents, financialOverview } = useTransparencyData(selectedYear);
+  
+  // Generate available years dynamically to match available data
+  const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
+  
+  // Transform budget data into spending categories
+  const spendingData: SpendingData[] = budgetBreakdown?.map((item, index) => ({
+    category: item.name || `Categoría ${index + 1}`,
+    budgeted: item.budgeted || 0,
+    executed: item.executed || 0,
+    execution_rate: item.execution_rate || 0,
+    documents: documents?.filter(doc => 
+      doc.category?.toLowerCase().includes(item.name?.toLowerCase() || '') ||
+      doc.title?.toLowerCase().includes(item.name?.toLowerCase() || '')
+    ) || []
+  })) || [];
 
-  useEffect(() => {
-    if (selectedYear) {
-      loadSpendingData(selectedYear);
-    }
-  }, [selectedYear]);
-
-  const loadAvailableYears = async () => {
-    try {
-      const years = await consolidatedApiService.getAvailableYears();
-      setAvailableYears(years);
-      if (years.length > 0) {
-        setSelectedYear(years[0]);
-      }
-    } catch (error) {
-      console.error('Error loading available years:', error);
-      const currentYear = new Date().getFullYear();
-      setAvailableYears([currentYear, currentYear - 1, currentYear - 2]);
-    }
-  };
-
-  const loadSpendingData = async (year: number) => {
-    try {
-      setLoading(true);
-      
-      // Load spending data using expenses endpoint
-      const expenseData = await consolidatedApiService.getBudgetData(year);
-      const documents = await consolidatedApiService.getDocuments(year, 'Ejecución_de_Gastos');
-      
-      // Transform budget data into spending categories
-      const spendingCategories: SpendingData[] = [];
-      let total = 0;
-
-      if (expenseData?.categories) {
-        Object.entries(expenseData.categories).forEach(([category, data]: [string, any]) => {
-          const executed = data.executed || data.budgeted || 0;
-          spendingCategories.push({
-            category: category.replace('_', ' '),
-            budgeted: data.budgeted || 0,
-            executed: executed,
-            execution_rate: data.execution_rate ? parseFloat(data.execution_rate) : 0,
-            documents: documents.filter((doc: any) => 
-              doc.category === category || doc.title.includes(category)
-            )
-          });
-          total += executed;
-        });
-      }
-
-      setSpendingData(spendingCategories);
-      setTotalSpending(total);
-      
-    } catch (error) {
-      console.error('Error loading spending data:', error);
-      // Fallback data
-      setSpendingData([
-        {
-          category: 'Personal',
-          budgeted: 180000000,
-          executed: 175000000,
-          execution_rate: 97.2,
-          documents: []
-        },
-        {
-          category: 'Servicios',
-          budgeted: 45000000,
-          executed: 42000000,
-          execution_rate: 93.3,
-          documents: []
-        }
-      ]);
-      setTotalSpending(217000000);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const totalSpending = spendingData.reduce((sum, item) => sum + item.executed, 0);
 
   const filteredSpending = spendingData.filter(item =>
     item.category.toLowerCase().includes(searchTerm.toLowerCase())

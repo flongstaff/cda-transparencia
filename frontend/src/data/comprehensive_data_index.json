@@ -1,171 +1,35 @@
 {
-  "metadata": {
-    "project": "Carmen de Areco Transparency Portal",
-    "purpose": "Comprehensive data index for all years and sources",
-    "created": "2025-08-29",
-    "last_updated": "2025-08-29",
-    "years_covered": [2022, 2023, 2024, 2025]
-  },
-  "live_data_sources": {
-    "api_endpoints": {
-      "primary_apis": {
-        "carmendeareco_api": "https://api.carmendeareco.gob.ar",
-        "boletin_oficial_ba": "https://www.gba.gob.ar/boletin_oficial",
-        "provincia_ba_api": "https://www.gba.gob.ar/transparencia/datos_abiertos",
-        "sinba_api": "https://sinba.gba.gov.ar/api"
-      },
-      "municipal_endpoints": {
-        "presupuesto": "/api/presupuesto",
-        "gastos": "/api/gastos",
-        "ingresos": "/api/ingresos",
-        "contratos": "/api/contratos",
-        "salarios": "/api/salarios",
-        "documentos": "/api/documentos"
-      },
-      "validation_endpoints": {
-        "cross_reference": "/api/cross-reference",
-        "integrity_check": "/api/integrity"
-      }
+  "year": 2024,
+  "municipality": "Carmen de Areco",
+  "data_sources": {
+    "debt_analysis": {
+      "type": "debt_management",
+      "description": "Análisis de Deuda y Perfil de Vencimientos",
+      "periods": ["Junio", "Septiembre", "Diciembre"],
+      "documents": []
     },
-    "web_sources": {
-      "official_portals": {
-        "carmen_de_areco_oficial": "https://carmendeareco.gob.ar",
-        "transparencia_portal": "https://carmendeareco.gob.ar/transparencia",
-        "boletin_oficial": "https://carmendeareco.gob.ar/boletin-oficial"
-      },
-      "historical_archives": {
-        "wayback_main": "https://web.archive.org/web/20250000000000*/https://carmendeareco.gob.ar",
-        "wayback_transparencia": "https://web.archive.org/web/20250000000000*/https://carmendeareco.gob.ar/transparencia/"
-      },
-      "reference_municipalities": {
-        "bahia_blanca": "https://transparencia.bahia.gob.ar/",
-        "mar_del_plata": "https://www.mardelplata.gob.ar/datos-abiertos",
-        "pilar": "https://datosabiertos.pilar.gov.ar/",
-        "san_isidro": "https://www.sanisidro.gob.ar/transparencia"
-      }
+    "salary_scales": {
+      "type": "salary_scale_update",
+      "description": "Escalas Salariales Actualizadas",
+      "updates": ["Febrero", "Octubre"],
+      "documents": []
     }
   },
-  "document_sources": {
-    "static_data_files": {
-      "yearly_indices": {
-        "2022": "/src/data/data_index_2022.json",
-        "2023": "/src/data/data_index_2023.json",
-        "2024": "/src/data/data_index_2024.json", 
-        "2025": "/src/data/data_index_2025.json"
-      },
-      "typescript_data": {
-        "2022": "/src/data/data-2022.ts",
-        "2023": "/src/data/data-2023.ts",
-        "2024": "/src/data/data-2024.ts",
-        "2025": "/src/data/data-2025.ts"
-      },
-      "extracted_data": {
-        "enhanced_audit_results": "/enhanced_audit_data/enhanced_audit_results.json",
-        "powerbi_latest": "/data/powerbi_extraction/powerbi_data_latest.json",
-        "powerbi_report": "/data/powerbi_extraction/powerbi_extraction_report_20250829_122204.json",
-        "transparency_report": "/static-site/data/transparency_report.json",
-        "database_export": "/carmen_transparencia/database_export.json"
-      }
+  "summary": {
+    "total_documents": 42,
+    "formats": {
+      "pdf": 35,
+      "excel": 7
     },
-    "documentation": {
-      "data_sources": "/docs/DATA_SOURCES.md",
-      "financial_analysis": "/docs/FINANCIAL_ANALYSIS_GUIDE.md",
-      "power_bi_integration": "/docs/POWER_BI_INTEGRATION.md",
-      "audit_system": "/docs/AUDIT_SYSTEM_README.md",
-      "audit_data_summary": "/docs/AUDIT_DATA_SOURCES_SUMMARY.md",
-      "live_scraping": "/docs/LIVE_SCRAPING_README.md",
-      "deployment_guide": "/docs/deployment/DEPLOYMENT_GUIDE.md",
-      "api_reference": "/docs/api/api-reference.md",
-      "quick_start": "/docs/getting-started/quick-start.md"
+    "categories": {
+      "debt_analysis": 5,
+      "salary_scales": 2,
+      "quarterly_execution": 20,
+      "gender_perspective": 4,
+      "caif": 3,
+      "resolutions": 4,
+      "dispositions": 1,
+      "budget_ordinance": 1
     }
-  },
-  "services_available": {
-    "primary_services": [
-      "ApiService",
-      "EnhancedApiService", 
-      "RealDataService",
-      "LocalDataService"
-    ],
-    "specialized_services": [
-      "ComprehensiveDataService",
-      "FinancialDataService",
-      "YearlyDataService",
-      "OfficialDataService"
-    ],
-    "powerbi_services": [
-      "PowerBIDataService",
-      "PowerBIIntegrationService",
-      "CarmenArecoPowerBIService"
-    ],
-    "validation_services": [
-      "DataValidationService",
-      "CrossValidationService",
-      "OSINTComplianceService",
-      "DataAnonymizationService"
-    ],
-    "external_services": [
-      "CarmenArecoWebScraper",
-      "MarkdownDataService"
-    ]
-  },
-  "data_categories": {
-    "financial": {
-      "budget_documents": ["presupuesto", "ordenanzas_presupuestarias"],
-      "execution_reports": ["ejecucion_trimestral", "caif_data"],
-      "debt_analysis": ["stock_deuda", "perfil_vencimientos"],
-      "gender_perspective": ["gastos_perspectiva_genero"]
-    },
-    "administrative": {
-      "resolutions": ["resoluciones_ministeriales", "resoluciones_provinciales"],
-      "dispositions": ["disposiciones_administrativas"],
-      "contracts": ["licitaciones_publicas", "contratos_municipales"]
-    },
-    "personnel": {
-      "salary_data": ["sueldos_mensuales", "escalas_salariales"],
-      "declarations": ["declaraciones_juradas"],
-      "officials": ["funcionarios_municipales"]
-    },
-    "statistics": {
-      "municipal_services": ["servicios_publicos", "monitoreo_municipal"],
-      "demographic_data": ["mujeres_diversidades", "caps_data"],
-      "permits": ["habilitaciones_municipales", "reportes_ciudadanos"]
-    }
-  },
-  "years_summary": {
-    "2022": {
-      "total_documents": 23,
-      "main_categories": ["caif", "budget_execution", "statistics", "resolutions", "municipal_services", "gender_perspective"],
-      "formats": {"pdf": 21, "excel": 0, "other": 2}
-    },
-    "2023": {
-      "total_documents": 25,
-      "main_categories": ["salary_data", "budget_execution", "fiscal_module", "resolutions", "caif_data", "budget_categories", "gender_perspective"],
-      "formats": {"pdf": 23, "excel": 2}
-    },
-    "2024": {
-      "total_documents": 42,
-      "main_categories": ["debt_analysis", "salary_scales", "quarterly_execution", "gender_perspective", "caif", "resolutions", "dispositions", "budget_ordinance"],
-      "formats": {"pdf": 35, "excel": 7}
-    },
-    "2025": {
-      "total_documents": 13,
-      "main_categories": ["public_tenders", "tax_ordinances", "tax_zones", "contracts", "dispositions", "declarations", "provincial"],
-      "formats": {"pdf": 13}
-    }
-  },
-  "investigation_timeframe": {
-    "start_year": 2009,
-    "end_year": 2025,
-    "critical_periods": [
-      {"start": "2009-01-01", "end": "2015-12-31", "label": "Período Crítico 1"},
-      {"start": "2016-01-01", "end": "2019-12-31", "label": "Período Crítico 2"}, 
-      {"start": "2020-01-01", "end": "2023-12-31", "label": "Período Crítico 3"},
-      {"start": "2024-01-01", "end": "2025-12-31", "label": "Período Actual"}
-    ]
-  },
-  "data_access_methods": {
-    "real_time": ["API endpoints", "Web scraping", "Live document feeds"],
-    "cached": ["Local data files", "Processed JSON", "Database exports"],
-    "historical": ["Wayback Machine", "Archive documents", "Historical databases"]
   }
 }

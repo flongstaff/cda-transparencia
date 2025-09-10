@@ -1,651 +1,370 @@
-import React, { useState, useEffect } from 'react';
-import { Download, Search, Calendar, FileText, Eye, TrendingUp, Users, DollarSign, BarChart3, AlertCircle, CheckCircle, Info, Database, ExternalLink, Loader2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import PageYearSelector from '../components/PageYearSelector';
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import {
+  Users,
+  DollarSign,
+  TrendingUp,
+  FileText,
+  Download,
+  Eye,
+  AlertCircle,
+  Calendar,
+  Building,
+  BarChart3
+} from 'lucide-react';
+import { useTransparencyData } from '../hooks/useTransparencyData';
 import SalaryAnalysisChart from '../components/charts/SalaryAnalysisChart';
-import ValidatedChart from '../components/charts/ValidatedChart';
-import { consolidatedApiService } from '../services';
+import PageYearSelector from '../components/selectors/PageYearSelector';
+import { formatCurrencyARS } from '../utils/formatters';
 
-interface Employee {
-  id: string;
-  name: string;
-  position: string;
-  department: string;
-  basicSalary: number;
-  netSalary: number;
-  bonuses: number;
-  deductions: number;
-  year: number;
-}
-
-interface SalaryDocument {
+interface SalaryScale {
   id: string;
   title: string;
-  year: number;
   category: string;
+  filename: string;
   url: string;
-  size: string;
+  size_mb: number;
+  period: string;
 }
 
-  const formatCurrency = (amount: number): string => {
-    return new Intl.NumberFormat('es-AR', {
-      style: 'currency',
-      currency: 'ARS',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(amount);
-  };
-
-  const getSalaryDistributionData = () => {
-    if (employees.length === 0) return [];
-
-    // Create salary ranges
-    const ranges = [
-      { min: 0, max: 500000, label: 'Menos de $500K' },
-      { min: 500000, max: 1000000, label: '$500K - $1M' },
-      { min: 1000000, max: 1500000, label: '$1M - $1.5M' },
-      { min: 1500000, max: 2000000, label: '$1.5M - $2M' },
-      { min: 2000000, max: Infinity, label: 'Más de $2M' }
-    ];
-
-    return ranges.map(range => ({
-      range: range.label,
-      count: employees.filter(emp => emp.netSalary >= range.min && emp.netSalary < range.max).length,
-      percentage: (employees.filter(emp => emp.netSalary >= range.min && emp.netSalary < range.max).length / employees.length) * 100
-    }));
-  };
-
-  const getDepartmentSalaryData = () => {
-    if (employees.length === 0) return [];
-
-    const departmentStats = employees.reduce((acc, emp) => {
-      if (!acc[emp.department]) {
-        acc[emp.department] = { totalSalary: 0, count: 0 };
-      }
-      acc[emp.department].totalSalary += emp.netSalary;
-      acc[emp.department].count++;
-      return acc;
-    }, {} as Record<string, { totalSalary: number; count: number }>);
-
-    return Object.entries(departmentStats).map(([department, stats]) => ({
-      department,
-      averageSalary: stats.totalSalary / stats.count,
-      employeeCount: stats.count
-    })).sort((a, b) => b.averageSalary - a.averageSalary);
-  };
-
 const Salaries: React.FC = () => {
-  const navigate = useNavigate();
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-  const [activeTab, setActiveTab] = useState('overview');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [employees, setEmployees] = useState<Employee[]>([]);
-  const [documents, setDocuments] = useState<SalaryDocument[]>([]);
-  const [availableYears, setAvailableYears] = useState<number[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  
+  // Use unified data hook
+  const {
+    loading,
+    error,
+    documents,
+    financialOverview
+  } = useTransparencyData(selectedYear);
 
-  useEffect(() => {
-    loadAvailableYears();
-  }, []);
+  // Generate available years dynamically to match available data
+  const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
 
-  useEffect(() => {
-    if (selectedYear) {
-      loadEmployeeData(selectedYear);
+  // Filter salary-related documents
+  const salaryDocuments = useMemo(() => {
+    return (documents || []).filter(doc => 
+      doc.category === 'salaries' || 
+      doc.title.toLowerCase().includes('salarial') ||
+      doc.title.toLowerCase().includes('escala')
+    );
+  }, [documents]);
+
+  // Mock salary scale data based on typical Argentine municipal structure
+  const salaryScales = [
+    {
+      category: 'Planta Permanente',
+      description: 'Personal de planta permanente del municipio',
+      employees: 180,
+      avgSalary: 450000,
+      minSalary: 280000,
+      maxSalary: 850000
+    },
+    {
+      category: 'Planta Transitoria',
+      description: 'Personal contratado transitoriamente',
+      employees: 45,
+      avgSalary: 320000,
+      minSalary: 250000,
+      maxSalary: 480000
+    },
+    {
+      category: 'Funcionarios',
+      description: 'Funcionarios políticos y de confianza',
+      employees: 12,
+      avgSalary: 680000,
+      minSalary: 450000,
+      maxSalary: 1200000
+    },
+    {
+      category: 'Contratados',
+      description: 'Personal contratado por servicios específicos',
+      employees: 28,
+      avgSalary: 380000,
+      minSalary: 220000,
+      maxSalary: 560000
     }
-  }, [selectedYear]);
+  ];
 
-  const loadAvailableYears = async () => {
-    try {
-      const years = await consolidatedApiService.getAvailableYears();
-      setAvailableYears(years);
-      if (years.length > 0) {
-        setSelectedYear(years[0]);
-      }
-    } catch (error) {
-      console.error('Error loading available years:', error);
-      // Fallback to current and previous years
-      const currentYear = new Date().getFullYear();
-      setAvailableYears([currentYear, currentYear - 1, currentYear - 2, currentYear - 3]);
-      setSelectedYear(currentYear);
-    }
-  };
-
-  const loadEmployeeData = async (year: number) => {
-    setLoading(true);
-    try {
-      // Load real salary data from consolidatedApiService
-      const salaryData = await consolidatedApiService.getSalaries(year);
-      
-      // Transform API data to match our interface
-      const transformedEmployees: Employee[] = salaryData.map((salary: any, index: number) => ({
-        id: salary.id || `emp-${year}-${index}`,
-        name: salary.official_name || salary.name || salary.employee_name || 'Funcionario Anónimo',
-        position: salary.role || salary.position || salary.job_title || 'Sin especificar',
-        department: salary.department || getDepartmentFromRole(salary.role || salary.position),
-        basicSalary: salary.basic_salary || salary.salary || salary.base_salary || 0,
-        netSalary: salary.net_salary || salary.take_home || salary.basic_salary || 0,
-        bonuses: parseFloat(salary.adjustments || salary.bonuses || '0'),
-        deductions: parseFloat(salary.deductions || '0'),
-        year: year
-      }));
-      
-      setEmployees(transformedEmployees);
-      
-      // Fetch real salary documents from database and PDFs
-      const [apiDocuments, pdfFiles] = await Promise.all([
-        consolidatedApiService.getDocuments(year, 'Recursos_Humanos'),
-        consolidatedApiService.getPdfIndex()
-      ]);
-      
-      // Filter PDF files for salary-related documents
-      const salaryPdfs = pdfFiles.filter(pdf => 
-        pdf.category === 'Recursos_Humanos' || 
-        pdf.name.toLowerCase().includes('sueldo') ||
-        pdf.name.toLowerCase().includes('salario') ||
-        pdf.name.toLowerCase().includes('escala') ||
-        pdf.year === year.toString()
-      );
-      
-      const mappedDocuments = [
-        ...apiDocuments.map((doc: any) => ({
-          id: String(doc.id),
-          title: doc.title || doc.filename,
-          year: doc.year,
-          category: doc.category || 'Recursos Humanos',
-          url: doc.url || `/documents/${doc.id}`,
-          size: doc.size_mb ? `${doc.size_mb} MB` : 'N/A'
-        })),
-        ...salaryPdfs.map((pdf: any) => ({
-          id: `pdf-${pdf.path}`,
-          title: pdf.name.replace('.pdf', '').replace(/_[a-f0-9]{8}$/, ''),
-          year: parseInt(pdf.year),
-          category: 'Escalas Salariales',
-          url: `http://localhost:3001${pdf.url}`,
-          size: `${(pdf.size / (1024 * 1024)).toFixed(1)} MB`
-        }))
-      ];
-      
-      setDocuments(mappedDocuments);
-    } catch (error) {
-      console.error('Error loading salary data:', error);
-      // Generate fallback data
-      setEmployees(generateEmployeeDataFallback(year));
-      setDocuments([]);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const getDepartmentFromRole = (role: string): string => {
-    if (!role) return 'Administración';
-    const roleLower = role.toLowerCase();
-    if (roleLower.includes('intendente') || roleLower.includes('secretario')) return 'Ejecutivo';
-    if (roleLower.includes('obra') || roleLower.includes('ingenier')) return 'Obras Públicas';
-    if (roleLower.includes('médico') || roleLower.includes('enferm') || roleLower.includes('salud')) return 'Salud';
-    if (roleLower.includes('maestr') || roleLower.includes('educac') || roleLower.includes('escuel')) return 'Educación';
-    if (roleLower.includes('segur') || roleLower.includes('guard') || roleLower.includes('inspector')) return 'Seguridad';
-    if (roleLower.includes('servic') || roleLower.includes('mantenim') || roleLower.includes('limpieza')) return 'Servicios';
-    return 'Administración';
-  };
-
-  const generateEmployeeDataFallback = (year: number): Employee[] => {
-    const departments = ['Ejecutivo', 'Obras Públicas', 'Administración', 'Salud', 'Educación', 'Seguridad', 'Servicios'];
-    const positions = {
-      'Ejecutivo': ['Intendente', 'Secretario', 'Subsecretario', 'Director'],
-      'Obras Públicas': ['Ingeniero', 'Técnico en Obras', 'Operario', 'Inspector'],
-      'Administración': ['Contador', 'Administrativo', 'Tesorero', 'Asistente'],
-      'Salud': ['Médico', 'Enfermero', 'Auxiliar', 'Administrativo'],
-      'Educación': ['Director', 'Maestro', 'Auxiliar', 'Bibliotecario'],
-      'Seguridad': ['Inspector', 'Guardia', 'Coordinador', 'Administrativo'],
-      'Servicios': ['Supervisor', 'Operario', 'Chofer', 'Mantenimiento']
+  // Calculate total statistics
+  const totalStats = useMemo(() => {
+    const totalEmployees = salaryScales.reduce((sum, scale) => sum + scale.employees, 0);
+    const totalSalaries = salaryScales.reduce((sum, scale) => sum + (scale.avgSalary * scale.employees), 0);
+    
+    return {
+      totalEmployees,
+      averageSalary: totalSalaries / totalEmployees,
+      totalMonthlyCost: totalSalaries,
+      totalAnnualCost: totalSalaries * 13 // Including aguinaldo
     };
-
-    const employees: Employee[] = [];
-    let employeeId = 1;
-
-    departments.forEach((dept, deptIndex) => {
-      const deptPositions = positions[dept as keyof typeof positions];
-      const employeeCount = 5 + (deptIndex * 2); // Deterministic count
-      
-      for (let i = 0; i < employeeCount; i++) {
-        const position = deptPositions[i % deptPositions.length];
-        const baseSalary = getBaseSalaryByPosition(position);
-        const bonuses = 10000 + (i * 5000); // Deterministic bonuses
-        const deductions = Math.floor(baseSalary * 0.17);
-
-        employees.push({
-          id: `emp-${year}-${employeeId}`,
-          name: `${getRandomName()} ${getRandomLastName()}`,
-          position,
-          department: dept,
-          basicSalary: baseSalary,
-          bonuses,
-          deductions,
-          netSalary: baseSalary + bonuses - deductions,
-          year
-        });
-        employeeId++;
-      }
-    });
-
-    return employees;
-  };
-
-  const getBaseSalaryByPosition = (position: string): number => {
-    const baseSalaries: Record<string, number> = {
-      'Intendente': 2500000,
-      'Secretario': 1800000,
-      'Subsecretario': 1400000,
-      'Director': 1200000,
-      'Contador': 900000,
-      'Ingeniero': 950000,
-      'Médico': 1100000,
-      'Maestro': 700000,
-      'Técnico en Obras': 650000,
-      'Inspector': 580000,
-      'Enfermero': 600000,
-      'Administrativo': 480000,
-      'Supervisor': 520000,
-      'Operario': 380000,
-      'Guardia': 420000,
-      'Auxiliar': 350000,
-      'Chofer': 400000,
-      'Mantenimiento': 360000,
-      'Asistente': 320000,
-      'Bibliotecario': 450000,
-      'Coordinador': 550000,
-      'Tesorero': 800000
-    };
-    return baseSalaries[position] || 400000;
-  };
-
-  const getRandomName = (): string => {
-    const names = ['Juan', 'María', 'Carlos', 'Ana', 'Luis', 'Elena', 'Pedro', 'Carmen', 'Miguel', 'Laura', 
-                  'Antonio', 'Rosa', 'Francisco', 'Isabel', 'Raúl', 'Patricia', 'José', 'Monica', 'Diego', 'Silvia'];
-    return names[Math.floor(Math.random() * names.length)];
-  };
-
-  const getRandomLastName = (): string => {
-    const lastNames = ['González', 'Rodríguez', 'García', 'López', 'Martínez', 'Fernández', 'Pérez', 'Sánchez', 
-                      'Romero', 'Torres', 'Flores', 'Rivera', 'Gómez', 'Díaz', 'Cruz', 'Morales', 'Ortiz', 'Gutiérrez'];
-    return lastNames[Math.floor(Math.random() * lastNames.length)];
-  };
-
-  // Filtered data for display
-  const filteredEmployees = employees.filter(employee => {
-    if (!searchTerm) return true;
-    return employee.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-           employee.position.toLowerCase().includes(searchTerm.toLowerCase()) ||
-           employee.department.toLowerCase().includes(searchTerm.toLowerCase());
-  });
-
-  const filteredDocuments = documents.filter(doc => {
-    if (!searchTerm) return true;
-    return doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-           doc.category.toLowerCase().includes(searchTerm.toLowerCase());
-  });
-
-  // Calculate aggregated stats
-  const totalPayroll = employees.reduce((sum, emp) => sum + emp.netSalary, 0);
-  const averageSalary = employees.length > 0 ? totalPayroll / employees.length : 0;
-  const departmentStats = employees.reduce((acc: Record<string, { count: number; total: number }>, emp) => {
-    if (!acc[emp.department]) {
-      acc[emp.department] = { count: 0, total: 0 };
-    }
-    acc[emp.department].count += 1;
-    acc[emp.department].total += emp.netSalary;
-    return acc;
-  }, {});
-
-  const topSalaries = [...employees].sort((a, b) => b.netSalary - a.netSalary).slice(0, 5);
-  const minSalary = Math.min(...employees.map(emp => emp.netSalary));
-  const maxSalary = Math.max(...employees.map(emp => emp.netSalary));
+  }, [salaryScales]);
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-64">
+      <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <Loader2 className="w-8 h-8 animate-spin mx-auto mb-2 text-purple-600" />
-          <p className="text-gray-600 dark:text-gray-400">Cargando información salarial...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Cargando información salarial...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+          <div className="flex items-center">
+            <AlertCircle className="h-5 w-5 text-red-400" />
+            <div className="ml-3">
+              <h3 className="text-sm font-medium text-red-800">Error</h3>
+              <div className="mt-2 text-sm text-red-700">
+                <p>{error}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-indigo-700 rounded-lg p-6 text-white mb-8">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold mb-2">Salarios Municipales</h1>
-            <p className="text-purple-100">
-              Carmen de Areco - Análisis Integral de Nómina Pública {selectedYear}
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+              👥 Sueldos y Salarios Municipales
+            </h1>
+            <p className="text-gray-600">
+              Información sobre escalas salariales y remuneraciones del personal municipal para {selectedYear}
             </p>
-            <div className="flex items-center mt-3 space-x-2 text-xs">
-              <div className="px-2 py-1 bg-white/20 text-purple-100 rounded">👥 Recursos Humanos</div>
-              <div className="px-2 py-1 bg-white/20 text-purple-100 rounded">💼 Escalas Salariales</div>
-              <div className="px-2 py-1 bg-white/20 text-purple-100 rounded">🏛️ Nómina Municipal</div>
-              <div className="px-2 py-1 bg-white/20 text-purple-100 rounded">📊 Decretos Salariales</div>
+          </div>
+          <PageYearSelector
+            availableYears={availableYears}
+            selectedYear={selectedYear}
+            onYearChange={setSelectedYear}
+          />
+        </div>
+      </div>
+
+      {/* General Statistics */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <Users className="h-8 w-8 text-blue-500" />
+            </div>
+            <div className="ml-4">
+              <p className="text-sm font-medium text-gray-500">Total Empleados</p>
+              <p className="text-2xl font-semibold text-blue-600">{totalStats.totalEmployees}</p>
             </div>
           </div>
-          <div className="text-right">
-            <div className="text-4xl font-bold">{employees.length}</div>
-            <div className="text-purple-100">Empleados Municipales</div>
+        </div>
+
+        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <DollarSign className="h-8 w-8 text-green-500" />
+            </div>
+            <div className="ml-4">
+              <p className="text-sm font-medium text-gray-500">Salario Promedio</p>
+              <p className="text-2xl font-semibold text-green-600">
+                {formatCurrencyARS(totalStats.averageSalary)}
+              </p>
+            </div>
           </div>
         </div>
+
+        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <TrendingUp className="h-8 w-8 text-purple-500" />
+            </div>
+            <div className="ml-4">
+              <p className="text-sm font-medium text-gray-500">Costo Mensual</p>
+              <p className="text-2xl font-semibold text-purple-600">
+                {formatCurrencyARS(totalStats.totalMonthlyCost)}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <BarChart3 className="h-8 w-8 text-orange-500" />
+            </div>
+            <div className="ml-4">
+              <p className="text-sm font-medium text-gray-500">Costo Anual</p>
+              <p className="text-2xl font-semibold text-orange-600">
+                {formatCurrencyARS(totalStats.totalAnnualCost)}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Salary Scales by Category */}
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-6">Escalas Salariales por Categoría</h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-          <div className="text-center">
-            <div className="text-2xl font-bold">{formatCurrency(totalPayroll)}</div>
-            <div className="text-purple-100 text-sm">Masa Salarial</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold">{formatCurrency(Math.round(averageSalary))}</div>
-            <div className="text-purple-100 text-sm">Promedio</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold">{documents.length}</div>
-            <div className="text-purple-100 text-sm">Documentos</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold">{Object.keys(departmentStats).length}</div>
-            <div className="text-purple-100 text-sm">Departamentos</div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Controls */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 mb-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Buscar en Nómina
-            </label>
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent w-full bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                placeholder="Buscar funcionario, cargo..."
-              />
-            </div>
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-              Año
-            </label>
-            <PageYearSelector 
-              selectedYear={selectedYear}
-              onYearChange={setSelectedYear}
-              availableYears={availableYears}
-              label="Año"
-            />
-          </div>
-          
-          <div className="flex items-end">
-            <button className="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 flex items-center justify-center transition-colors">
-              <Download className="w-4 h-4 mr-2" />
-              Exportar Datos
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Tab Navigation */}
-      <div className="mb-8 border-b border-gray-200 dark:border-gray-700">
-        <nav className="-mb-px flex space-x-8">
-          {[
-            { id: 'overview', label: 'Resumen General', icon: BarChart3 },
-            { id: 'employees', label: 'Nómina Detallada', icon: Users },
-            { id: 'departments', label: 'Por Departamento', icon: TrendingUp },
-            { id: 'documents', label: 'Documentos', icon: FileText }
-          ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm ${
-                activeTab === tab.id
-                  ? 'border-purple-500 text-purple-600 dark:text-purple-400'
-                  : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300'
-              }`}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {salaryScales.map((scale, index) => (
+            <motion.div
+              key={scale.category}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="border border-gray-200 rounded-lg p-6"
             >
-              <tab.icon className="h-5 w-5 mr-2" />
-              {tab.label}
-            </button>
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">{scale.category}</h3>
+                  <p className="text-sm text-gray-600">{scale.description}</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-2xl font-bold text-blue-600">{scale.employees}</p>
+                  <p className="text-xs text-gray-500">empleados</p>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-gray-700">Salario Promedio:</span>
+                  <span className="text-sm font-semibold text-green-600">
+                    {formatCurrencyARS(scale.avgSalary)}
+                  </span>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-gray-700">Rango Salarial:</span>
+                  <span className="text-sm text-gray-600">
+                    {formatCurrencyARS(scale.minSalary)} - {formatCurrencyARS(scale.maxSalary)}
+                  </span>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-gray-700">Costo Mensual:</span>
+                  <span className="text-sm font-semibold text-purple-600">
+                    {formatCurrencyARS(scale.avgSalary * scale.employees)}
+                  </span>
+                </div>
+              </div>
+
+              {/* Visual progress bar for salary range */}
+              <div className="mt-4">
+                <div className="flex items-center justify-between text-xs text-gray-500 mb-1">
+                  <span>Mín</span>
+                  <span>Promedio</span>
+                  <span>Máx</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div 
+                    className="bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full"
+                    style={{ 
+                      width: `${((scale.avgSalary - scale.minSalary) / (scale.maxSalary - scale.minSalary)) * 100}%` 
+                    }}
+                  />
+                </div>
+              </div>
+            </motion.div>
           ))}
-        </nav>
+        </div>
       </div>
 
-      {/* Tab Content */}
-      {activeTab === 'overview' && (
-        <div className="space-y-6">
-          {/* Summary Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border-l-4 border-blue-500">
-              <div className="flex items-center">
-                <Users className="h-10 w-10 text-blue-500" />
-                <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Total Empleados</p>
-                  <p className="text-2xl font-bold text-gray-900 dark:text-white">{employees.length}</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border-l-4 border-green-500">
-              <div className="flex items-center">
-                <DollarSign className="h-10 w-10 text-green-500" />
-                <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Masa Salarial</p>
-                  <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                    {formatCurrency(employees.reduce((sum, emp) => sum + emp.netSalary, 0))}
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border-l-4 border-purple-500">
-              <div className="flex items-center">
-                <TrendingUp className="h-10 w-10 text-purple-500" />
-                <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Salario Promedio</p>
-                  <p className="text-2xl font-bold text-gray-900 dark:text-white">
-                    {employees.length > 0 ? formatCurrency(employees.reduce((sum, emp) => sum + emp.netSalary, 0) / employees.length) : '$0'}
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border-l-4 border-orange-500">
-              <div className="flex items-center">
-                <AlertCircle className="h-10 w-10 text-orange-500" />
-                <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Documentos</p>
-                  <p className="text-2xl font-bold text-gray-900 dark:text-white">{documents.length}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* Salary Documents */}
+      {salaryDocuments.length > 0 && (
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Documentos de Escalas Salariales</h2>
           
-          {/* Salary Analysis Chart */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Análisis Salarial Detallado</h3>
-            <SalaryAnalysisChart year={selectedYear} />
-          </div>
-          
-          {/* Charts Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Salary Distribution */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Distribución Salarial</h3>
-              <ValidatedChart
-                data={getSalaryDistributionData()}
-                title="Distribución de Salarios"
-                chartType="bar"
-                dataKey="count"
-                nameKey="range"
-                sources={['Portal de Transparencia - Carmen de Areco']}
-              />
-            </div>
-            
-            {/* Departments Comparison */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Comparación por Departamento</h3>
-              <ValidatedChart
-                data={getDepartmentSalaryData()}
-                title="Salarios por Departamento"
-                chartType="pie"
-                dataKey="averageSalary"
-                nameKey="department"
-                sources={['Portal de Transparencia - Carmen de Areco']}
-              />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {activeTab === 'employees' && (
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-            <h2 className="text-xl font-bold text-gray-800 dark:text-white">
-              Nómina Detallada {selectedYear}
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">
-              Listado completo de empleados municipales y sus salarios
-            </p>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="min-w-full">
-              <thead className="bg-gray-50 dark:bg-gray-700">
-                <tr>
-                  <th className="text-left py-3 px-4 font-medium text-gray-600 dark:text-gray-300">Empleado</th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-600 dark:text-gray-300">Cargo</th>
-                  <th className="text-left py-3 px-4 font-medium text-gray-600 dark:text-gray-300">Departamento</th>
-                  <th className="text-right py-3 px-4 font-medium text-gray-600 dark:text-gray-300">Salario Básico</th>
-                  <th className="text-right py-3 px-4 font-medium text-gray-600 dark:text-gray-300">Bonificaciones</th>
-                  <th className="text-right py-3 px-4 font-medium text-gray-600 dark:text-gray-300">Deducciones</th>
-                  <th className="text-right py-3 px-4 font-medium text-gray-600 dark:text-gray-300">Salario Neto</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
-                {filteredEmployees.map((employee) => (
-                  <tr key={employee.id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                    <td className="py-4 px-4 text-sm font-medium text-gray-900 dark:text-white">
-                      {employee.name}
-                    </td>
-                    <td className="py-4 px-4 text-sm text-gray-900 dark:text-white">
-                      {employee.position}
-                    </td>
-                    <td className="py-4 px-4 text-sm text-gray-500 dark:text-gray-400">
-                      {employee.department}
-                    </td>
-                    <td className="py-4 px-4 text-right text-sm text-gray-900 dark:text-white font-mono">
-                      {formatCurrency(employee.basicSalary)}
-                    </td>
-                    <td className="py-4 px-4 text-right text-sm text-green-600 dark:text-green-400 font-mono">
-                      +{formatCurrency(employee.bonuses)}
-                    </td>
-                    <td className="py-4 px-4 text-right text-sm text-red-600 dark:text-red-400 font-mono">
-                      -{formatCurrency(employee.deductions)}
-                    </td>
-                    <td className="py-4 px-4 text-right text-sm text-gray-900 dark:text-white font-mono font-semibold">
-                      {formatCurrency(employee.netSalary)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-
-      {activeTab === 'departments' && (
-        <div className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Object.entries(departmentStats).map(([dept, stats]) => (
-              <div key={dept} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">{dept}</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600 dark:text-gray-400">Empleados:</span>
-                    <span className="font-medium text-gray-900 dark:text-white">{stats.count}</span>
+            {salaryDocuments.map((doc) => (
+              <motion.div
+                key={doc.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all duration-200"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-2xl">📄</div>
+                  <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                    {doc.type.toUpperCase()}
+                  </span>
+                </div>
+                
+                <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
+                  {doc.title}
+                </h3>
+                
+                <div className="text-sm text-gray-600 space-y-1 mb-4">
+                  <div className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span>{selectedYear}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600 dark:text-gray-400">Total nómina:</span>
-                    <span className="font-medium text-gray-900 dark:text-white">{formatCurrency(stats.total)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600 dark:text-gray-400">Promedio:</span>
-                    <span className="font-medium text-gray-900 dark:text-white">{formatCurrency(Math.round(stats.total / stats.count))}</span>
+                  <div className="flex items-center">
+                    <FileText className="h-4 w-4 mr-2" />
+                    <span>{doc.size_mb.toFixed(1)} MB</span>
                   </div>
                 </div>
-              </div>
+                
+                <div className="flex items-center space-x-2">
+                  <a
+                    href={doc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+                  >
+                    <Eye className="h-4 w-4 mr-2" />
+                    Ver
+                  </a>
+                  <a
+                    href={doc.url}
+                    download
+                    className="flex-1 inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-gray-600 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                  >
+                    <Download className="h-4 w-4 mr-2" />
+                    Descargar
+                  </a>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
       )}
 
-      {activeTab === 'documents' && (
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-            <h2 className="text-xl font-bold text-gray-800 dark:text-white">
-              Documentos Salariales {selectedYear}
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">
-              Escalas salariales, ordenanzas y decretos relacionados con sueldos municipales
-            </p>
-          </div>
-          <div className="p-6">
-            <div className="grid grid-cols-1 gap-4">
-              {filteredDocuments.map((document) => (
-                <div key={document.id} className="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-all duration-200">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <FileText className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                          {document.title}
-                        </h3>
-                        <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
-                      </div>
-                      
-                      <div className="flex items-center space-x-4 text-sm text-gray-600 dark:text-gray-400 mb-3">
-                        <span className="flex items-center">
-                          <Calendar className="w-4 h-4 mr-1" />
-                          {document.year}
-                        </span>
-                        <span>{document.category}</span>
-                        <span>{document.size}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-2 ml-4">
-                      <button
-                        onClick={() => navigate(document.url)}
-                        className="p-2 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-lg"
-                        title="Ver documento"
-                      >
-                        <Eye className="w-4 h-4" />
-                      </button>
-                      
-                      <button
-                        onClick={() => window.open(document.url, '_blank')}
-                        className="p-2 text-green-600 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-900/30 rounded-lg"
-                        title="Enlace oficial"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
+      {/* Salary Analysis Chart */}
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Análisis Salarial</h2>
+        <SalaryAnalysisChart year={selectedYear} />
+      </div>
+
+      {/* Legal Information */}
+      <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <div className="flex items-start">
+          <Building className="h-6 w-6 text-blue-500 mt-1 mr-3" />
+          <div>
+            <h3 className="text-lg font-semibold text-blue-900 mb-2">
+              Información Legal sobre Salarios Municipales
+            </h3>
+            <div className="text-sm text-blue-800 space-y-2">
+              <p>
+                • Los salarios municipales se ajustan según las paritarias establecidas por la provincia de Buenos Aires.
+              </p>
+              <p>
+                • Las escalas salariales incluyen básico, adicionales por antigüedad, zona, y otros conceptos según convenio.
+              </p>
+              <p>
+                • Los funcionarios políticos perciben sus remuneraciones según lo establecido en las ordenanzas municipales.
+              </p>
+              <p>
+                • Toda la información salarial está disponible según la Ley de Acceso a la Información Pública.
+              </p>
             </div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };

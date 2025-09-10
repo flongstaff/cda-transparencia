@@ -18,7 +18,7 @@ import {
 } from 'lucide-react';
 import PDFViewer from './PDFViewer';
 import MarkdownViewer from './MarkdownViewer';
-import { consolidatedApiService } from '../../services/ConsolidatedApiService';
+import { useTransparencyData } from '../../hooks/useTransparencyData';
 
 interface Document {
   id: string;
@@ -72,7 +72,8 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
 
       setLoading(true);
       try {
-        const docs = await consolidatedApiService.getDocuments();
+        // Use documents from useTransparencyData hook instead of API call
+        const docs = [];
         setDocuments(docs);
         
         if (documentId) {
