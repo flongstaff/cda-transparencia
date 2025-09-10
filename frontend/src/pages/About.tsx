@@ -3,27 +3,31 @@ import { motion } from 'framer-motion';
 import { Shield, Users, FileText, CheckCircle, Globe, ExternalLink, BarChart3, TrendingUp, PieChart, DollarSign, Award } from 'lucide-react';
 import { AdvancedChartsShowcase } from '../components/charts';
 import { documentVerification } from '../data/document-sources';
-import { useTransparencyData } from '../hooks/useTransparencyData';
+import { useComprehensiveData, useDocumentAnalysis, useBudgetAnalysis } from '../hooks/useComprehensiveData';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 
 const About: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   
-  // Use unified data hook
-  const { loading, error, documents, financialOverview, budgetBreakdown } = useTransparencyData(selectedYear);
+  // Use comprehensive data hooks
+  const { documents, metrics: docMetrics, loading: docsLoading, error: docsError } = useDocumentAnalysis({ year: selectedYear });
+  const { budgetData, categories, loading: budgetLoading, error: budgetError } = useBudgetAnalysis(selectedYear);
+  
+  const loading = docsLoading || budgetLoading;
+  const error = docsError || budgetError;
   
   const availableYears = [2024, 2023, 2022, 2021];
   
-  // Calculate metrics from unified data
+  // Calculate metrics from comprehensive data
   const metrics = {
     totalDocuments: documents?.length || 0,
-    verifiedDocuments: documents?.filter(doc => doc.verification_status === 'verified').length || 0,
-    transparencyScore: 95,
+    verifiedDocuments: documents?.filter(doc => doc.verification_status === 'verified' || doc.verified === true).length || 0,
+    transparencyScore: docMetrics?.transparencyScore || 95,
     dataSources: 12,
-    budgetTotal: financialOverview?.totalBudget || budgetBreakdown?.reduce((sum, item) => sum + (item.budgeted || 0), 0) || 0,
-    budgetExecuted: budgetBreakdown?.reduce((sum, item) => sum + (item.executed || 0), 0) || 0,
-    executionRate: budgetBreakdown ? `${Math.round((budgetBreakdown.reduce((sum, item) => sum + (item.executed || 0), 0) / budgetBreakdown.reduce((sum, item) => sum + (item.budgeted || 0), 0)) * 100)}%` : '0%',
-    treasuryBalance: financialOverview?.totalRevenue || 0,
+    budgetTotal: budgetData?.totalBudget || budgetData?.total_budget || categories?.reduce((sum, item) => sum + (item.budgeted || 0), 0) || 0,
+    budgetExecuted: categories?.reduce((sum, item) => sum + (item.executed || 0), 0) || 0,
+    executionRate: categories ? `${Math.round((categories.reduce((sum, item) => sum + (item.executed || 0), 0) / categories.reduce((sum, item) => sum + (item.budgeted || 0), 0)) * 100)}%` : '0%',
+    treasuryBalance: budgetData?.totalRevenue || budgetData?.total_revenue || 0,
     osintCompliance: 95,
     responseTime: '<1s',
     lastUpdated: 'Justo ahora',

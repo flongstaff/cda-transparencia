@@ -20,21 +20,25 @@ import {
   Building,
   BookOpen
 } from 'lucide-react';
-import { useTransparencyData } from '../hooks/useTransparencyData';
+import { useComprehensiveData, useDocumentAnalysis, useFinancialOverview } from '../hooks/useComprehensiveData';
 import { formatCurrencyARS } from '../utils/formatters';
 
 const Home: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  // Use unified data hook
-  const { loading, error, documents, financialOverview, budgetBreakdown } = useTransparencyData(currentYear);
+  // Use comprehensive data hooks
+  const { documents, loading: docsLoading, error: docsError } = useDocumentAnalysis({ year: currentYear });
+  const { budget, loading: budgetLoading, error: budgetError } = useFinancialOverview(currentYear);
   
-  // Calculate stats from unified data
+  const loading = docsLoading || budgetLoading;
+  const error = docsError || budgetError;
+  
+  // Calculate stats from comprehensive data
   const stats = {
     documents: documents?.length || 0,
-    verified_documents: documents?.filter(doc => doc.category && doc.size_mb).length || 0,
+    verified_documents: documents?.filter(doc => doc.verification_status === 'verified' || doc.verified === true).length || 0,
     transparency_score: 92, // High score since we have comprehensive data
-    budget_total: financialOverview?.totalBudget || budgetBreakdown?.reduce((sum, item) => sum + (item.budgeted || 0), 0) || 0,
+    budget_total: budget?.totalBudget || budget?.total_budget || 0,
     system_health: loading ? 'loading' : error ? 'degraded' : 'operational'
   };
 

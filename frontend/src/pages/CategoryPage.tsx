@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FileText } from 'lucide-react';
 import { formatCurrencyARS } from '../utils/formatters';
 import PageYearSelector from '../components/selectors/PageYearSelector';
-import { useTransparencyData } from '../hooks/useTransparencyData';
+import { useComprehensiveData, useDocumentAnalysis, useFinancialOverview } from '../hooks/useComprehensiveData';
 
 
 
@@ -15,20 +15,22 @@ interface CategoryPageProps {
 const CategoryPage: React.FC<CategoryPageProps> = ({ category = 'budget', title = 'Presupuesto', icon = '💰' }) => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   
-  // Use unified data hook
-  const {
-    loading,
-    error,
-    financialOverview,
-    documents
-  } = useTransparencyData(selectedYear);
+  // Use comprehensive data hooks
+  const { documents, loading: docsLoading, error: docsError } = useDocumentAnalysis({ 
+    year: selectedYear, 
+    category: category 
+  });
+  const { budget, loading: budgetLoading, error: budgetError } = useFinancialOverview(selectedYear);
+  
+  const loading = docsLoading || budgetLoading;
+  const error = docsError || budgetError;
   
   // Generate available years dynamically to match available data
   const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
 
-  // Generate category data from unified data
+  // Generate category data from comprehensive data
   const categoryData = React.useMemo(() => {
-    if (!financialOverview || !documents) return null;
+    if (!budget || !documents) return null;
     
     // Filter documents by category if needed
     const categoryDocuments = documents.filter(doc => 
@@ -41,14 +43,14 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ category = 'budget', title 
       total_documents: categoryDocuments.length,
       total_size_mb: categoryDocuments.reduce((sum, doc) => sum + (parseFloat(doc.size_mb?.toString() || '0')), 0),
       financial_data: {
-        budgeted: financialOverview.totalBudget || 0,
-        executed: financialOverview.totalExecuted || 0,
-        execution_rate: financialOverview.executionRate || 0,
-        category_breakdown: financialOverview.categoryBreakdown || []
+        budgeted: budget?.totalBudget || budget?.total_budget || 0,
+        executed: budget?.totalExecuted || budget?.total_executed || 0,
+        execution_rate: budget?.executionRate || budget?.execution_rate || 0,
+        category_breakdown: budget?.categoryBreakdown || budget?.categories || []
       },
       documents: categoryDocuments
     };
-  }, [financialOverview, documents, category, title]);
+  }, [budget, documents, category, title]);
 
   if (loading) {
     return (

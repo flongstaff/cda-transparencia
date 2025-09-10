@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search, Filter, Download, Calendar, Database as DatabaseIcon, FileText, Layers, Eye } from 'lucide-react';
-import { useTransparencyData } from '../hooks/useTransparencyData';
+import { useDocumentAnalysis } from '../hooks/useComprehensiveData';
 import DocumentViewer from '../components/DocumentViewer';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 
@@ -23,8 +23,8 @@ const Database: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedDocument, setSelectedDocument] = useState<DatabaseDocument | null>(null);
 
-  // Use unified data hook
-  const { loading, error, documents: rawDocuments } = useTransparencyData(selectedYear);
+  // Use comprehensive data hook
+  const { documents: rawDocuments, loading, error } = useDocumentAnalysis({ year: selectedYear });
   
   const availableYears = [2024, 2023, 2022, 2021];
   
@@ -48,8 +48,9 @@ const Database: React.FC = () => {
   // Calculate total stats
   const totalStats = {
     totalDocuments: documents.length,
-    totalSizeMB: documents.reduce((sum, doc) => sum + doc.size_mb, 0),
-    categories: categories.length,
+    totalSize: documents.reduce((sum, doc) => sum + doc.size_mb, 0),
+    yearsSpanned: new Set(documents.map(doc => doc.year)).size,
+    categoriesCount: categories.length,
     verified: documents.filter(doc => doc.verification_status === 'verified').length
   };
 

@@ -10,100 +10,127 @@ import {
   AlertCircle,
   Calendar,
   Building,
-  BarChart3
+  BarChart3,
+  Loader2
 } from 'lucide-react';
-import { useTransparencyData } from '../hooks/useTransparencyData';
+import { useComprehensiveData, useDocumentAnalysis, useFinancialOverview } from '../hooks/useComprehensiveData';
 import SalaryAnalysisChart from '../components/charts/SalaryAnalysisChart';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 import { formatCurrencyARS } from '../utils/formatters';
 
-interface SalaryScale {
-  id: string;
-  title: string;
+interface SalaryPosition {
+  code: string;
+  name: string;
   category: string;
-  filename: string;
-  url: string;
-  size_mb: number;
-  period: string;
+  modules: number;
+  grossSalary: number;
+  somaDeduction: number;
+  ipsDeduction: number;
+  netSalary: number;
+  employeeCount: number;
+}
+
+interface SalaryData {
+  year: number;
+  month: number;
+  moduleValue: number;
+  totalPayroll: number;
+  employeeCount: number;
+  positions: SalaryPosition[];
 }
 
 const Salaries: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   
-  // Use unified data hook
-  const {
-    loading,
-    error,
-    documents,
-    financialOverview
-  } = useTransparencyData(selectedYear);
+  // Use comprehensive data hooks
+  const { loading, error } = useComprehensiveData({ year: selectedYear });
+  const documentData = useDocumentAnalysis({ category: 'Recursos_Humanos' });
+  const financialData = useFinancialOverview(selectedYear);
+
+  // Extract salary data from comprehensive sources
+  const salaryData: SalaryData | null = financialData?.analysis?.salaryData || null;
 
   // Generate available years dynamically to match available data
   const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
 
-  // Filter salary-related documents
+  // Filter salary-related documents from comprehensive data
   const salaryDocuments = useMemo(() => {
-    return (documents || []).filter(doc => 
-      doc.category === 'salaries' || 
-      doc.title.toLowerCase().includes('salarial') ||
-      doc.title.toLowerCase().includes('escala')
+    return (documentData.documents || []).filter(doc => 
+      doc.category === 'Recursos_Humanos' || 
+      doc.title?.toLowerCase().includes('salarial') ||
+      doc.title?.toLowerCase().includes('escala') ||
+      doc.title?.toLowerCase().includes('sueldo') ||
+      doc.category === 'salaries'
     );
-  }, [documents]);
+  }, [documentData.documents]);
 
-  // Mock salary scale data based on typical Argentine municipal structure
-  const salaryScales = [
-    {
-      category: 'Planta Permanente',
-      description: 'Personal de planta permanente del municipio',
-      employees: 180,
-      avgSalary: 450000,
-      minSalary: 280000,
-      maxSalary: 850000
-    },
-    {
-      category: 'Planta Transitoria',
-      description: 'Personal contratado transitoriamente',
-      employees: 45,
-      avgSalary: 320000,
-      minSalary: 250000,
-      maxSalary: 480000
-    },
-    {
-      category: 'Funcionarios',
-      description: 'Funcionarios políticos y de confianza',
-      employees: 12,
-      avgSalary: 680000,
-      minSalary: 450000,
-      maxSalary: 1200000
-    },
-    {
-      category: 'Contratados',
-      description: 'Personal contratado por servicios específicos',
-      employees: 28,
-      avgSalary: 380000,
-      minSalary: 220000,
-      maxSalary: 560000
-    }
-  ];
+  // Process salary data from organized files
+  const processedSalaryData = useMemo(() => {
+    if (!salaryData) return null;
 
-  // Calculate total statistics
+    // Group positions by category
+    const categoryGroups = salaryData.positions.reduce((acc, position) => {
+      if (!acc[position.category]) {
+        acc[position.category] = {
+          category: position.category,
+          positions: [],
+          totalEmployees: 0,
+          totalGross: 0,
+          avgSalary: 0,
+          minSalary: Number.MAX_SAFE_INTEGER,
+          maxSalary: 0
+        };
+      }
+      
+      acc[position.category].positions.push(position);
+      acc[position.category].totalEmployees += position.employeeCount;
+      acc[position.category].totalGross += (position.grossSalary * position.employeeCount);
+      acc[position.category].minSalary = Math.min(acc[position.category].minSalary, position.grossSalary);
+      acc[position.category].maxSalary = Math.max(acc[position.category].maxSalary, position.grossSalary);
+      
+      return acc;
+    }, {} as Record<string, any>);
+
+    // Calculate averages
+    Object.values(categoryGroups).forEach((group: any) => {
+      group.avgSalary = group.totalGross / group.totalEmployees;
+    });
+
+    return {
+      ...salaryData,
+      categoryGroups: Object.values(categoryGroups)
+    };
+  }, [salaryData]);
+
+  // Calculate total statistics from real data
   const totalStats = useMemo(() => {
-    const totalEmployees = salaryScales.reduce((sum, scale) => sum + scale.employees, 0);
-    const totalSalaries = salaryScales.reduce((sum, scale) => sum + (scale.avgSalary * scale.employees), 0);
+    if (!processedSalaryData) {
+      return {
+        totalEmployees: 0,
+        averageSalary: 0,
+        totalMonthlyCost: 0,
+        totalAnnualCost: 0,
+        moduleValue: 0
+      };
+    }
+
+    const totalEmployees = processedSalaryData.employeeCount;
+    const averageSalary = processedSalaryData.totalPayroll / totalEmployees;
     
     return {
       totalEmployees,
-      averageSalary: totalSalaries / totalEmployees,
-      totalMonthlyCost: totalSalaries,
-      totalAnnualCost: totalSalaries * 13 // Including aguinaldo
+      averageSalary,
+      totalMonthlyCost: processedSalaryData.totalPayroll,
+      totalAnnualCost: processedSalaryData.totalPayroll * 13, // Including aguinaldo
+      moduleValue: processedSalaryData.moduleValue
     };
-  }, [salaryScales]);
+  }, [processedSalaryData]);
 
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <Loader2 className="animate-spin h-12 w-12 text-blue-600 mx-auto mb-4" />
           <p className="text-gray-600">Cargando información salarial...</p>
         </div>
       </div>
@@ -139,6 +166,11 @@ const Salaries: React.FC = () => {
             </h1>
             <p className="text-gray-600">
               Información sobre escalas salariales y remuneraciones del personal municipal para {selectedYear}
+              {processedSalaryData && (
+                <span className="ml-2 text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                  Datos reales de {processedSalaryData.year}/{processedSalaryData.month}
+                </span>
+              )}
             </p>
           </div>
           <PageYearSelector
@@ -206,73 +238,179 @@ const Salaries: React.FC = () => {
         </div>
       </div>
 
-      {/* Salary Scales by Category */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-6">Escalas Salariales por Categoría</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {salaryScales.map((scale, index) => (
-            <motion.div
-              key={scale.category}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="border border-gray-200 rounded-lg p-6"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">{scale.category}</h3>
-                  <p className="text-sm text-gray-600">{scale.description}</p>
-                </div>
-                <div className="text-right">
-                  <p className="text-2xl font-bold text-blue-600">{scale.employees}</p>
-                  <p className="text-xs text-gray-500">empleados</p>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700">Salario Promedio:</span>
-                  <span className="text-sm font-semibold text-green-600">
-                    {formatCurrencyARS(scale.avgSalary)}
-                  </span>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700">Rango Salarial:</span>
-                  <span className="text-sm text-gray-600">
-                    {formatCurrencyARS(scale.minSalary)} - {formatCurrencyARS(scale.maxSalary)}
-                  </span>
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700">Costo Mensual:</span>
-                  <span className="text-sm font-semibold text-purple-600">
-                    {formatCurrencyARS(scale.avgSalary * scale.employees)}
-                  </span>
-                </div>
-              </div>
-
-              {/* Visual progress bar for salary range */}
-              <div className="mt-4">
-                <div className="flex items-center justify-between text-xs text-gray-500 mb-1">
-                  <span>Mín</span>
-                  <span>Promedio</span>
-                  <span>Máx</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div 
-                    className="bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full"
-                    style={{ 
-                      width: `${((scale.avgSalary - scale.minSalary) / (scale.maxSalary - scale.minSalary)) * 100}%` 
-                    }}
-                  />
-                </div>
-              </div>
-            </motion.div>
-          ))}
+      {/* Module Value Information */}
+      {totalStats.moduleValue > 0 && (
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <BarChart3 className="h-5 w-5 text-blue-500 mr-2" />
+              <span className="font-medium text-blue-900">Valor del Módulo</span>
+            </div>
+            <span className="text-lg font-semibold text-blue-700">
+              ${totalStats.moduleValue.toFixed(2)}
+            </span>
+          </div>
+          <p className="text-sm text-blue-700 mt-1">
+            Base de cálculo para las remuneraciones municipales
+          </p>
         </div>
-      </div>
+      )}
+
+      {/* Salary Scales by Category - Real Data */}
+      {processedSalaryData && (
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Escalas Salariales por Categoría</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {processedSalaryData.categoryGroups.map((group: any, index: number) => (
+              <motion.div
+                key={group.category}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="border border-gray-200 rounded-lg p-6"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">{group.category}</h3>
+                    <p className="text-sm text-gray-600">
+                      {group.positions.length} cargo{group.positions.length !== 1 ? 's' : ''}
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-2xl font-bold text-blue-600">{group.totalEmployees}</p>
+                    <p className="text-xs text-gray-500">empleados</p>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-gray-700">Salario Promedio:</span>
+                    <span className="text-sm font-semibold text-green-600">
+                      {formatCurrencyARS(group.avgSalary)}
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-gray-700">Rango Salarial:</span>
+                    <span className="text-sm text-gray-600">
+                      {formatCurrencyARS(group.minSalary)} - {formatCurrencyARS(group.maxSalary)}
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-gray-700">Costo Mensual:</span>
+                    <span className="text-sm font-semibold text-purple-600">
+                      {formatCurrencyARS(group.totalGross)}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Visual progress bar for salary range */}
+                <div className="mt-4">
+                  <div className="flex items-center justify-between text-xs text-gray-500 mb-1">
+                    <span>Mín</span>
+                    <span>Promedio</span>
+                    <span>Máx</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div 
+                      className="bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full"
+                      style={{ 
+                        width: `${((group.avgSalary - group.minSalary) / (group.maxSalary - group.minSalary)) * 100}%` 
+                      }}
+                    />
+                  </div>
+                </div>
+
+                {/* Individual Positions */}
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <h4 className="text-sm font-medium text-gray-700 mb-2">Cargos:</h4>
+                  <div className="space-y-2">
+                    {group.positions.map((position: SalaryPosition) => (
+                      <div key={position.code} className="flex justify-between items-center text-sm">
+                        <div>
+                          <span className="font-medium">{position.name}</span>
+                          <span className="text-gray-500 ml-2">({position.employeeCount})</span>
+                        </div>
+                        <span className="text-green-600 font-semibold">
+                          {formatCurrencyARS(position.grossSalary)}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Detailed Position Information */}
+      {processedSalaryData && (
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Detalle de Cargos y Remuneraciones</h2>
+          
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Código
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Cargo
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Categoría
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Cantidad
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Sueldo Bruto
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Sueldo Neto
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Módulos
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {processedSalaryData.positions.map((position) => (
+                  <tr key={position.code} className="hover:bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-500">
+                      {position.code}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      {position.name}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                        {position.category}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                      {position.employeeCount}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-600">
+                      {formatCurrencyARS(position.grossSalary)}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                      {formatCurrencyARS(position.netSalary)}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {position.modules.toFixed(1)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       {/* Salary Documents */}
       {salaryDocuments.length > 0 && (
@@ -282,7 +420,7 @@ const Salaries: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {salaryDocuments.map((doc) => (
               <motion.div
-                key={doc.id}
+                key={doc.id || doc.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all duration-200"
@@ -290,7 +428,7 @@ const Salaries: React.FC = () => {
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-2xl">📄</div>
                   <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                    {doc.type.toUpperCase()}
+                    {doc.type?.toUpperCase() || 'DOC'}
                   </span>
                 </div>
                 
@@ -303,10 +441,12 @@ const Salaries: React.FC = () => {
                     <Calendar className="h-4 w-4 mr-2" />
                     <span>{selectedYear}</span>
                   </div>
-                  <div className="flex items-center">
-                    <FileText className="h-4 w-4 mr-2" />
-                    <span>{doc.size_mb.toFixed(1)} MB</span>
-                  </div>
+                  {doc.size_mb && (
+                    <div className="flex items-center">
+                      <FileText className="h-4 w-4 mr-2" />
+                      <span>{doc.size_mb.toFixed(1)} MB</span>
+                    </div>
+                  )}
                 </div>
                 
                 <div className="flex items-center space-x-2">
@@ -360,6 +500,9 @@ const Salaries: React.FC = () => {
               </p>
               <p>
                 • Toda la información salarial está disponible según la Ley de Acceso a la Información Pública.
+              </p>
+              <p>
+                • Las deducciones incluyen aportes jubilatorios (IPS) y obra social municipal (SOMA).
               </p>
             </div>
           </div>

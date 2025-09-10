@@ -8,7 +8,7 @@ import {
   Activity,
   BarChart3
 } from 'lucide-react';
-import { useTransparencyData } from '../hooks/useTransparencyData';
+import { useComprehensiveData } from '../hooks/useComprehensiveData';
 
 interface AntiCorruptionData {
   risk_level: 'BAJO' | 'MEDIO' | 'ALTO';
@@ -19,10 +19,11 @@ interface AntiCorruptionData {
 }
 
 const AntiCorruptionDashboard: React.FC = () => {
-  const { antiCorruption, loading } = useTransparencyData(2024);
+  const comprehensiveData = useComprehensiveData({ year: 2024 });
+  const { loading } = comprehensiveData;
 
   // Use the data from the hook, or provide defaults
-  const data: AntiCorruptionData = antiCorruption || {
+  const data: AntiCorruptionData = (comprehensiveData as any)?.data?.antiCorruption || {
     risk_level: 'BAJO',
     investigations: 3,
     transparency_measures: 15,

@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 import { formatCurrencyARS, formatPercentageARS } from '../utils/formatters';
-import { useTransparencyData } from '../hooks/useTransparencyData';
+import { useComprehensiveData, useFinancialOverview, useDocumentAnalysis } from '../hooks/useComprehensiveData';
 
 // Import unified chart components
 import ComprehensiveChart from '../components/charts/ComprehensiveChart';
@@ -40,21 +40,23 @@ interface DashboardMetric {
 
 const Dashboard: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-  const [activeTab, setActiveTab] = useState<'overview' | 'financial' | 'documents' | 'audit'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'financial' | 'documents' | 'audit' | 'comprehensive'>('overview');
 
-  // Use unified data hooks
-  const {
-    financialOverview,
-    budgetBreakdown,
-    documents,
-    dashboard,
-    auditOverview,
-    loading,
-    error,
-    generated_at,
-    actualDocCount,
-    expectedDocCount
-  } = useTransparencyData(selectedYear);
+  // Use comprehensive data hooks
+  const comprehensiveData = useComprehensiveData({ year: selectedYear });
+  const financialData = useFinancialOverview(selectedYear);
+  const documentData = useDocumentAnalysis({ year: selectedYear });
+  
+  // Extract data from comprehensive hooks
+  const { loading, error } = comprehensiveData;
+  const budgetBreakdown = financialData.budgetBreakdown || [];
+  const financialOverview = financialData.data;
+  const documents = documentData.documents || [];
+  const dashboard = comprehensiveData.data?.dashboard;
+  const auditOverview = comprehensiveData.data?.audit_overview;
+  const generated_at = comprehensiveData.generated_at;
+  const actualDocCount = documents.length;
+  const expectedDocCount = 100; // Default expectation
 
   // Generate available years
   const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
@@ -207,6 +209,7 @@ const Dashboard: React.FC = () => {
             <nav className="-mb-px flex space-x-8 px-6">
               {[
                 { key: 'overview', label: 'Resumen General', icon: <BarChart3 className="w-4 h-4" /> },
+                { key: 'comprehensive', label: 'Datos Completos', icon: <Database className="w-4 h-4" /> },
                 { key: 'financial', label: 'Información Financiera', icon: <DollarSign className="w-4 h-4" /> },
                 { key: 'documents', label: 'Documentos', icon: <FileText className="w-4 h-4" /> },
                 { key: 'audit', label: 'Auditoría', icon: <Shield className="w-4 h-4" /> }
@@ -445,6 +448,229 @@ const Dashboard: React.FC = () => {
               >
                 <Shield className="w-5 h-5 mr-2" />
                 Ver Auditorías
+              </Link>
+            </div>
+          </motion.div>
+        )}
+
+        {/* Comprehensive Data Tab */}
+        {activeTab === 'comprehensive' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                📊 Datos Completos - Análisis Integral
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400">
+                Acceso completo a toda la información municipal disponible, incluyendo análisis de auditoría, 
+                datos históricos y métricas de transparencia.
+              </p>
+            </div>
+
+            {/* Data Sources Overview */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl p-6 border border-blue-200 dark:border-blue-700">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100">
+                      Documentos Totales
+                    </h3>
+                    <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                      {comprehensiveData.documents?.length || 0}
+                    </p>
+                    <p className="text-sm text-blue-700 dark:text-blue-300">
+                      En base de datos y archivos organizados
+                    </p>
+                  </div>
+                  <FileText className="w-12 h-12 text-blue-500" />
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl p-6 border border-green-200 dark:border-green-700">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-green-900 dark:text-green-100">
+                      Score de Transparencia
+                    </h3>
+                    <p className="text-3xl font-bold text-green-600 dark:text-green-400">
+                      {comprehensiveData.transparencyMetrics?.transparencyScore || 0}%
+                    </p>
+                    <p className="text-sm text-green-700 dark:text-green-300">
+                      Basado en disponibilidad de datos
+                    </p>
+                  </div>
+                  <Activity className="w-12 h-12 text-green-500" />
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-xl p-6 border border-orange-200 dark:border-orange-700">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-orange-900 dark:text-orange-100">
+                      Última Actualización
+                    </h3>
+                    <p className="text-sm font-bold text-orange-600 dark:text-orange-400">
+                      {comprehensiveData.lastUpdated ? 
+                        new Date(comprehensiveData.lastUpdated).toLocaleDateString('es-AR') : 
+                        'Cargando...'
+                      }
+                    </p>
+                    <p className="text-sm text-orange-700 dark:text-orange-300">
+                      Datos sincronizados automáticamente
+                    </p>
+                  </div>
+                  <Calendar className="w-12 h-12 text-orange-500" />
+                </div>
+              </div>
+            </div>
+
+            {/* Budget Analysis from Comprehensive Data */}
+            {financialData.budget && (
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 mb-8">
+                <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    💰 Análisis Presupuestario Completo
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    Datos del presupuesto municipal con análisis detallado por categorías
+                  </p>
+                </div>
+                <div className="p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                      <h4 className="font-semibold text-blue-900 dark:text-blue-100">Presupuesto Total</h4>
+                      <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                        {formatCurrencyARS(financialData.budget?.totalBudget || 0)}
+                      </p>
+                    </div>
+                    <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                      <h4 className="font-semibold text-green-900 dark:text-green-100">Ejecutado</h4>
+                      <p className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        {formatCurrencyARS(financialData.budget?.totalExecuted || 0)}
+                      </p>
+                    </div>
+                    <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+                      <h4 className="font-semibold text-purple-900 dark:text-purple-100">% Ejecución</h4>
+                      <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                        {financialData.budget?.executionPercentage || 0}%
+                      </p>
+                    </div>
+                    <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg">
+                      <h4 className="font-semibold text-orange-900 dark:text-orange-100">Score Transparencia</h4>
+                      <p className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+                        {financialData.budget?.transparencyScore || 0}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Document Categories Analysis */}
+            {documentData.byCategory && Object.keys(documentData.byCategory).length > 0 && (
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 mb-8">
+                <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    📂 Documentos por Categoría
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    Distribución de documentos disponibles en el sistema
+                  </p>
+                </div>
+                <div className="p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {Object.entries(documentData.byCategory).map(([category, docs]) => (
+                      <div key={category} className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                        <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">{category}</h4>
+                        <div className="flex justify-between items-center">
+                          <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                            {Array.isArray(docs) ? docs.length : 0}
+                          </span>
+                          <Link 
+                            to={`/documents?category=${encodeURIComponent(category)}`}
+                            className="text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                          >
+                            Ver documentos →
+                          </Link>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Quick Actions */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link
+                to="/documents"
+                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow group"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                      Todos los Documentos
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      Explorar archivo completo
+                    </p>
+                  </div>
+                  <FileText className="w-8 h-8 text-gray-400 group-hover:text-blue-500" />
+                </div>
+              </Link>
+
+              <Link
+                to="/treasury"
+                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow group"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                      Análisis Financiero
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      Tesorería y presupuesto
+                    </p>
+                  </div>
+                  <DollarSign className="w-8 h-8 text-gray-400 group-hover:text-blue-500" />
+                </div>
+              </Link>
+
+              <Link
+                to="/salaries"
+                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow group"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                      Recursos Humanos
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      Sueldos y personal
+                    </p>
+                  </div>
+                  <Users className="w-8 h-8 text-gray-400 group-hover:text-blue-500" />
+                </div>
+              </Link>
+
+              <Link
+                to="/contracts"
+                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-shadow group"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                      Contrataciones
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      Licitaciones y contratos
+                    </p>
+                  </div>
+                  <Briefcase className="w-8 h-8 text-gray-400 group-hover:text-blue-500" />
+                </div>
               </Link>
             </div>
           </motion.div>
