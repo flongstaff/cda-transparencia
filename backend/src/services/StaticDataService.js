@@ -16,7 +16,9 @@ class StaticDataService {
     async readJSONFile(filePath) {
         try {
             const data = await fs.readFile(filePath, 'utf8');
-            return JSON.parse(data);
+            // Replace NaN values with null to make valid JSON
+            const cleanedData = data.replace(/:\s*NaN/g, ': null');
+            return JSON.parse(cleanedData);
         } catch (error) {
             console.warn(`Failed to read ${filePath}:`, error.message);
             return null;
@@ -99,7 +101,7 @@ class StaticDataService {
     // Comparison and Analysis Reports
     async getComparisonReport() {
         const files = await fs.readdir(path.join(this.dataFolders.frontendDist, 'organized_analysis/data_analysis/comparisons')).catch(() => []);
-        const comparisonFile = files.find(f => f.includes('comparison_report'));
+        const comparisonFile = files.find(f => f.includes('comparison_report') && f.endsWith('.json'));
         
         if (comparisonFile) {
             return await this.getFileWithCache(

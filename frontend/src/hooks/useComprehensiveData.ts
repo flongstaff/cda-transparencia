@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002/api';
-const USE_API = true; // Always use API for comprehensive data
+const USE_API = import.meta.env.VITE_USE_API !== 'false'; // Use API by default, disable with VITE_USE_API=false
 
 export interface ComprehensiveDataState {
   // Core data

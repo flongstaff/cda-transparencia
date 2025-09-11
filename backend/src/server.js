@@ -50,7 +50,7 @@ app.use((req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Carmen de Areco Comprehensive Transparency API running on port ${PORT}`);
-  console.log(`📊 Using comprehensive PostgreSQL transparency system`);
+  console.log(`📊 Using comprehensive ${process.env.DB_TYPE || 'SQLite'} transparency system`);
   console.log(`🔗 API available at http://localhost:${PORT}/api/transparency/`);
   console.log(`❤️  Health check: http://localhost:${PORT}/api/health`);
   console.log(`🏛️  Citizen portal: Full municipal transparency with document access`);
