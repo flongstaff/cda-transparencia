@@ -1,0 +1,15 @@
+name = "cda-transparency-api"
+main = "src/server.js"
+compatibility_date = "2023-10-01"
+
+[vars]
+PORT = "8080"
+
+[build]
+command = "npm install"
+
+[env.production]
+name = "cda-transparency-api"
+
+[observability]
+enabled = true

@@ -593,32 +593,21 @@ class ComprehensiveTransparencyController {
             const [
                 financialOverview,
                 budgetBreakdown,
-                spendingEfficiency,
                 documents,
-                dashboard,
-                auditOverview,
-                antiCorruptionData
+                dashboard
             ] = await Promise.allSettled([
                 this.service.getCitizenFinancialOverview(yearInt),
                 this.service.getBudgetBreakdownForCitizens(yearInt),
-                this.getSpendingEfficiencyAnalysis ? this.getSpendingEfficiencyAnalysis.bind(this)({ params: { year: yearInt.toString() } }, { json: () => {} }) : Promise.resolve(null),
                 this.service.getAllDocuments({ year: yearInt }),
-                this.service.getTransparencyDashboard(),
-                // Assuming access to audit service
-                this.service.getAuditData ? this.service.getAuditData(yearInt) : Promise.resolve(null),
-                // Assuming access to anti-corruption service
-                this.service.getAntiCorruptionData ? this.service.getAntiCorruptionData(yearInt) : Promise.resolve(null)
+                this.service.getTransparencyDashboard()
             ]);
 
             // Process results
             const processedResults = [
                 financialOverview,
                 budgetBreakdown,
-                spendingEfficiency,
                 documents,
-                dashboard,
-                auditOverview,
-                antiCorruptionData
+                dashboard
             ].reduce((acc, result) => {
                 if (result.status === 'fulfilled') {
                     // Merge the result data into our accumulator

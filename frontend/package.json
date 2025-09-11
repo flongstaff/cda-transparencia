@@ -44,6 +44,7 @@
     "@types/d3-sankey": "^0.12.4",
     "@types/recharts": "^1.8.29",
     "@types/uuid": "^10.0.0",
+    "@vitest/ui": "^3.2.4",
     "chart.js": "^4.5.0",
     "d3-sankey": "^0.12.3",
     "framer-motion": "^10.17.9",
@@ -101,5 +102,5 @@
     "vite": "^7.1.4",
     "vitest": "^3.2.4"
   },
-  "homepage": "https://flongstaff.github.io/cda-transparencia"
+  "homepage": "https://cda-transparencia.org"
 }

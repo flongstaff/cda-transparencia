@@ -203,7 +203,7 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
                 stroke="#6b7280"
                 tickFormatter={(value) => {
                   if (type === 'salary') return value.toString();
-                  return value > 1000000 ? `$${(value / 1000000).toFixed(1)}M` : `$${(value / 1000).toFixed(0)}K`;
+                  return formatCurrencyARS(Number(value));
                 }}
               />
               <Tooltip 

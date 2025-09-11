@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Search, Filter, Download, Calendar, Database as DatabaseIcon, FileText, Layers, Eye } from 'lucide-react';
 import { useDocumentAnalysis } from '../hooks/useComprehensiveData';
-import DocumentViewer from '../components/DocumentViewer';
+import DocumentViewer from '../components/viewers/DocumentViewer';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 
 interface DatabaseDocument {

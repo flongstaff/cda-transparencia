@@ -1,0 +1,58 @@
+{
+  "timestamp": "2025-09-05T21:02:30.042581",
+  "summary": {
+    "total_documents": 158,
+    "processed_documents": 158,
+    "irregularities_found": 0,
+    "processing_completion": 100.0
+  },
+  "irregularities": [],
+  "document_categories": [
+    {
+      "category": "Ejecución de Gastos",
+      "count": 63
+    },
+    {
+      "category": "Ejecución de Recursos",
+      "count": 34
+    },
+    {
+      "category": "Documentos Generales",
+      "count": 30
+    },
+    {
+      "category": "Estados Financieros",
+      "count": 11
+    },
+    {
+      "category": "Salud Pública",
+      "count": 7
+    },
+    {
+      "category": "Recursos Humanos",
+      "count": 6
+    },
+    {
+      "category": "Contrataciones",
+      "count": 5
+    },
+    {
+      "category": "Declaraciones Patrimoniales",
+      "count": 2
+    }
+  ],
+  "document_years": [
+    {
+      "year": 2023,
+      "count": 136
+    },
+    {
+      "year": 2022,
+      "count": 21
+    },
+    {
+      "year": 2020,
+      "count": 1
+    }
+  ]
+}

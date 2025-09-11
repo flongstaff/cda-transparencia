@@ -564,7 +564,7 @@ if (require.main === module) {
   db.initialize()
     .then(async () => {
       // Add default data sources
-      await db.addDataSource('Carmen de Areco Official', 'https://carmendeareco.gob.ar/transparencia/', 'live');
+      await db.addDataSource('Carmen de Areco Official', 'https://cda-transparencia.org/', 'live');
       await db.addDataSource('Web Archive', 'https://web.archive.org/', 'archive');
       await db.addDataSource('Local Backup', null, 'cold');
       

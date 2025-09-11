@@ -11,7 +11,7 @@ const execAsync = promisify(exec);
 
 class TransparencyDataCollector {
   constructor() {
-    this.officialSite = 'https://carmendeareco.gob.ar/transparencia/';
+    this.officialSite = 'https://cda-transparencia.org/';
     this.webArchiveBase = 'https://web.archive.org/web/';
     this.outputDir = path.join(__dirname, '../src/data/collected');
     this.backupDir = path.join(__dirname, '../data/backups');
@@ -19,7 +19,7 @@ class TransparencyDataCollector {
     this.sources = [
       {
         name: 'Carmen de Areco Official',
-        url: 'https://carmendeareco.gob.ar/transparencia/',
+        url: 'https://cda-transparencia.org/transparencia/',
         type: 'live',
         selectors: {
           documents: 'a[href$=".pdf"]',

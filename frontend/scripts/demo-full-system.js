@@ -108,7 +108,7 @@ class FullSystemDemo {
 
     console.log('🔍 Running targeted web spider...');
     const spider = new TransparencySpider({
-      startUrl: 'https://carmendeareco.gob.ar/transparencia/',
+      startUrl: 'https://cda-transparencia.org/',
       maxDepth: 2,
       maxPages: 10
     });
@@ -126,7 +126,7 @@ class FullSystemDemo {
 
   async demonstrateDatabaseOperations() {
     console.log('📝 Adding sample data sources...');
-    await this.database.addDataSource('Official Portal', 'https://carmendeareco.gob.ar/transparencia/', 'live');
+    await this.database.addDataSource('Official Portal', 'https://cda-transparencia.org/', 'live');
     await this.database.addDataSource('Web Archive', 'https://web.archive.org/', 'archive');
     await this.database.addDataSource('Local Backup', null, 'cold');
     
@@ -134,7 +134,7 @@ class FullSystemDemo {
     const sampleDocs = [
       {
         title: 'Presupuesto Municipal 2024',
-        url: 'https://carmendeareco.gob.ar/transparencia/presupuesto-2024.pdf',
+        url: 'https://cda-transparencia.org/presupuesto-2024.pdf',
         type: 'budget',
         category: 'Presupuesto General',
         year: 2024,
@@ -146,7 +146,7 @@ class FullSystemDemo {
       },
       {
         title: 'Ejecución Presupuestaria Q4 2024',
-        url: 'https://carmendeareco.gob.ar/transparencia/ejecucion-q4-2024.pdf',
+        url: 'https://cda-transparencia.org/ejecucion-q4-2024.pdf',
         type: 'budget',
         category: 'Ejecución Trimestral',
         year: 2024,

@@ -396,7 +396,7 @@ class TransparencySpider {
 // CLI execution
 if (require.main === module) {
   const spider = new TransparencySpider({
-    startUrl: process.argv[2] || 'https://carmendeareco.gob.ar/transparencia/',
+    startUrl: process.argv[2] || process.env.SPIDER_START_URL || 'https://carmendeareco.gob.ar/transparencia/', // This should point to the official site
     maxDepth: parseInt(process.argv[3]) || 3,
     maxPages: parseInt(process.argv[4]) || 50
   });

@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api/transparency';
-const USE_API = import.meta.env.VITE_USE_API === 'true';
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002/api';
+const USE_API = true; // Always use API for comprehensive data
 
 export interface ComprehensiveDataState {
   // Core data
@@ -81,112 +81,125 @@ export const useComprehensiveData = (filters: DataFilters = {}) => {
     setData(prev => ({ ...prev, loading: true, error: null }));
 
     try {
-      // Load real data from organized files and data indexes
-      const year = memoizedFilters.year || 2024;
+      // Load comprehensive data from new unified API
+      const response = await fetch(`${API_BASE}/data/dashboard`);
       
-      // Load budget data from organized analysis
-      let budgetData = null;
-      try {
-        const budgetResponse = await fetch('/data/organized_analysis/financial_oversight/budget_analysis/budget_data_2024.json');
-        if (budgetResponse.ok) {
-          budgetData = await budgetResponse.json();
-        }
-      } catch (error) {
-        console.warn('Budget data not available, using fallback');
+      if (!response.ok) {
+        throw new Error(`API error: ${response.status}`);
       }
 
-      // Load salary data from organized analysis
-      let salaryData = null;
-      try {
-        const salaryResponse = await fetch('/data/organized_analysis/financial_oversight/salary_oversight/salary_data_2024.json');
-        if (salaryResponse.ok) {
-          salaryData = await salaryResponse.json();
-        }
-      } catch (error) {
-        console.warn('Salary data not available, using fallback');
+      const result = await response.json();
+      
+      if (!result.success) {
+        throw new Error(result.error || 'Failed to fetch comprehensive data');
       }
 
-      // Load debt data
-      let debtData = null;
-      try {
-        const debtResponse = await fetch('/data/organized_analysis/financial_oversight/debt_monitoring/debt_data_2024.json');
-        if (debtResponse.ok) {
-          debtData = await debtResponse.json();
-        }
-      } catch (error) {
-        console.warn('Debt data not available, using fallback');
+      const apiData = result.data;
+      
+      // Transform API data to match our interface
+      const documents = [
+        ...(apiData.documents?.carmen_export?.documents || []).map((doc: any) => ({
+          ...doc,
+          category: 'Documentos Oficiales',
+          type: 'Carmen Export',
+          verified: true,
+          year: new Date(doc.created_at || '2024-01-01').getFullYear()
+        }))
+      ];
+
+      // Add markdown documents as searchable items
+      if (apiData.documents?.markdown_index) {
+        Object.entries(apiData.documents.markdown_index).forEach(([year, docs]: [string, any[]]) => {
+          docs.forEach(doc => {
+            documents.push({
+              id: `md-${year}-${doc.filename}`,
+              filename: doc.filename,
+              title: doc.title,
+              category: 'Documentos Digitalizados',
+              type: 'Markdown',
+              year: parseInt(year),
+              path: doc.path,
+              verified: true,
+              size: 0,
+              created_at: `${year}-01-01`
+            });
+          });
+        });
       }
-
-      // Load data index for the specific year - try known files
-      let yearDataIndex = null;
-      const knownYears = [2022, 2023, 2024, 2025];
-      if (knownYears.includes(year)) {
-        try {
-          const module = await import(`../data/data_index_${year}.js`);
-          yearDataIndex = module.default;
-        } catch (error) {
-          console.warn(`Year ${year} data index not available from assets`);
-        }
-      }
-
-      // Create comprehensive data with real values or smart fallbacks
-      const baseBudgetData = budgetData || {
-        year,
-        totalBudget: 5000000000,
-        totalExecuted: 3750000000,
-        executionPercentage: 75,
-        categories: [
-          { name: 'Gastos Corrientes', budgeted: 3000000000, executed: 2250000000, percentage: 75 },
-          { name: 'Gastos de Capital', budgeted: 1250000000, executed: 937500000, percentage: 75 },
-          { name: 'Servicio de Deuda', budgeted: 500000000, executed: 375000000, percentage: 75 }
-        ]
-      };
-
-      const baseSalaryData = salaryData || {
-        year,
-        monthlyPayroll: 2150670000,
-        employeeCount: 298,
-        positions: [
-          { name: 'INTENDENTE', grossSalary: 1151404.8, employeeCount: 1 },
-          { name: 'CONCEJALES/AS', grossSalary: 239876, employeeCount: 10 },
-          { name: 'DIRECTOR', grossSalary: 467758.2, employeeCount: 15 }
-        ]
-      };
-
-      // Generate documents from year data index if available
-      const documents = yearDataIndex?.data_sources ? 
-        Object.values(yearDataIndex.data_sources).flatMap((source: any) => 
-          source.documents || []
-        ) : [];
       
       const newData = {
         documents,
-        budgetData: baseBudgetData,
-        salaryData: baseSalaryData,
-        debtData: debtData,
-        auditResults: null,
-        financialAnalysis: budgetData || baseBudgetData,
+        budgetData: apiData.financial?.budget || null,
+        salaryData: apiData.financial?.salaries || null,
+        debtData: apiData.financial?.debt || null,
+        auditResults: apiData.governance?.audit_results || null,
+        financialAnalysis: apiData.financial?.budget || null,
         transparencyMetrics: { 
-          score: 85, 
-          total_documents: documents.length || 33,
-          year_coverage: yearDataIndex ? 1 : 0
+          score: apiData.financial?.budget?.transparencyScore || 85,
+          total_documents: documents.length,
+          year_coverage: Object.keys(apiData.documents?.markdown_index || {}).length,
+          anomalies_detected: apiData.analysis?.anomalies?.criticalIssues?.length || 0,
+          data_sources_integrated: apiData.metadata?.data_sources || 3
         },
-        anomalyDetection: [],
+        anomalyDetection: apiData.analysis?.anomalies?.criticalIssues || [],
         contractsData: documents.filter((doc: any) => 
           doc.category?.toLowerCase().includes('contrat') || 
-          doc.type?.toLowerCase().includes('contrat')),
+          doc.filename?.toLowerCase().includes('contrat') ||
+          doc.title?.toLowerCase().includes('contrat')),
         declarationsData: documents.filter((doc: any) => 
           doc.category?.toLowerCase().includes('declaracion') || 
-          doc.type?.toLowerCase().includes('declaracion')),
+          doc.filename?.toLowerCase().includes('declaracion') ||
+          doc.title?.toLowerCase().includes('declaracion')),
         executionData: documents.filter((doc: any) => 
           doc.category?.toLowerCase().includes('ejecuci') || 
-          doc.type?.toLowerCase().includes('ejecuci')),
+          doc.filename?.toLowerCase().includes('ejecuci') ||
+          doc.title?.toLowerCase().includes('ejecuci')),
         resourcesData: documents.filter((doc: any) => 
           doc.category?.toLowerCase().includes('recurso') || 
-          doc.type?.toLowerCase().includes('recurso')),
+          doc.filename?.toLowerCase().includes('recurso') ||
+          doc.title?.toLowerCase().includes('recurso')),
         loading: false,
         error: null,
         lastUpdated: new Date()
+      };
+
+      // Apply filters if any
+      if (memoizedFilters.year) {
+        newData.documents = newData.documents.filter((doc: any) => doc.year === memoizedFilters.year);
+        newData.contractsData = newData.contractsData.filter((doc: any) => doc.year === memoizedFilters.year);
+        newData.declarationsData = newData.declarationsData.filter((doc: any) => doc.year === memoizedFilters.year);
+        newData.executionData = newData.executionData.filter((doc: any) => doc.year === memoizedFilters.year);
+        newData.resourcesData = newData.resourcesData.filter((doc: any) => doc.year === memoizedFilters.year);
+      }
+
+      if (memoizedFilters.category) {
+        const categoryFilter = (doc: any) => 
+          doc.category?.toLowerCase().includes(memoizedFilters.category!.toLowerCase());
+        newData.documents = newData.documents.filter(categoryFilter);
+        newData.contractsData = newData.contractsData.filter(categoryFilter);
+        newData.declarationsData = newData.declarationsData.filter(categoryFilter);
+        newData.executionData = newData.executionData.filter(categoryFilter);
+        newData.resourcesData = newData.resourcesData.filter(categoryFilter);
+      }
+
+      if (memoizedFilters.searchTerm) {
+        const searchFilter = (doc: any) =>
+          doc.title?.toLowerCase().includes(memoizedFilters.searchTerm!.toLowerCase()) ||
+          doc.filename?.toLowerCase().includes(memoizedFilters.searchTerm!.toLowerCase()) ||
+          doc.category?.toLowerCase().includes(memoizedFilters.searchTerm!.toLowerCase());
+        newData.documents = newData.documents.filter(searchFilter);
+        newData.contractsData = newData.contractsData.filter(searchFilter);
+        newData.declarationsData = newData.declarationsData.filter(searchFilter);
+        newData.executionData = newData.executionData.filter(searchFilter);
+        newData.resourcesData = newData.resourcesData.filter(searchFilter);
+      }
+
+      // Update transparency metrics based on filtered data
+      newData.transparencyMetrics = {
+        ...newData.transparencyMetrics,
+        total_documents: newData.documents.length,
+        verified_documents: newData.documents.filter((doc: any) => doc.verified).length,
+        categories_covered: new Set(newData.documents.map((doc: any) => doc.category)).size
       };
 
       // Cache the result
@@ -198,7 +211,7 @@ export const useComprehensiveData = (filters: DataFilters = {}) => {
       setData(prev => ({
         ...prev,
         loading: false,
-        error: error instanceof Error ? error.message : 'Error loading data'
+        error: error instanceof Error ? error.message : 'Error loading comprehensive data'
       }));
     }
   }, [memoizedFilters]);

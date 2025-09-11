@@ -3,9 +3,13 @@ const router = express.Router();
 
 // Comprehensive transparency system (our main and only system)
 const comprehensiveTransparencyRoutes = require('./comprehensiveTransparencyRoutes');
+const staticDataRoutes = require('./staticDataRoutes');
 
 // Main transparency portal for citizens (consolidated PostgreSQL and real documents system)
 router.use('/transparency', comprehensiveTransparencyRoutes);
+
+// Static data integration from all three data folders
+router.use('/data', staticDataRoutes);
 
 // Health check endpoint
 router.get('/health', (req, res) => {

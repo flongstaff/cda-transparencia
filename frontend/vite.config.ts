@@ -8,9 +8,9 @@ export default defineConfig(({ mode }) => {
   // Determine base path based on environment
   const getBasePath = () => {
     if (mode === 'development') return '/';
-    if (mode === 'github') return '/cda-transparencia/';
+    if (mode === 'github') return '/'; // Changed: custom domain uses root path
     if (mode === 'production') return '/';
-    return '/cda-transparencia/'; // default fallback
+    return '/'; // default fallback
   };
 
   return {
@@ -49,6 +49,13 @@ export default defineConfig(({ mode }) => {
       port: 5173,
       host: true,
       cors: true,
+      proxy: {
+        '/api': {
+          target: 'http://localhost:3001',
+          changeOrigin: true,
+          secure: false,
+        }
+      }
     },
     preview: {
       port: 4173,

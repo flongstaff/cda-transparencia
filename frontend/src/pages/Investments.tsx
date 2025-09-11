@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, DollarSign, Building, Calendar, Search, Filter, BarChart3, Eye, FileText, Loader2, AlertTriangle, MapPin, Clock, Users } from 'lucide-react';
 import { formatCurrencyARS } from '../utils/formatters';
-import PageYearSelector from '../components/PageYearSelector';
+import PageYearSelector from '../components/selectors/PageYearSelector';
 import ValidatedChart from '../components/charts/ValidatedChart';
 import { useComprehensiveData, useBudgetAnalysis, useDocumentAnalysis } from '../hooks/useComprehensiveData';
 

@@ -1,0 +1,34 @@
+Category,Description,Filename,Relative Path,Size (bytes),Extension
+data_analysis,Data analysis outputs,all_documents.csv,data_analysis/csv_exports/all_documents.csv,129884,.csv
+data_analysis,Data analysis outputs,budget_vs_execution_20250829_175206.png,data_analysis/visualizations/budget_vs_execution_20250829_175206.png,236071,.png
+data_analysis,Data analysis outputs,budget_vs_execution_20250905_210621.png,data_analysis/visualizations/budget_vs_execution_20250905_210621.png,235960,.png
+data_analysis,Data analysis outputs,category_Contrataciones.csv,data_analysis/csv_exports/category_Contrataciones.csv,1640,.csv
+data_analysis,Data analysis outputs,category_Declaraciones_Patrimoniales.csv,data_analysis/csv_exports/category_Declaraciones_Patrimoniales.csv,967,.csv
+data_analysis,Data analysis outputs,category_Documentos_Generales.csv,data_analysis/csv_exports/category_Documentos_Generales.csv,12735,.csv
+data_analysis,Data analysis outputs,category_Ejecución_de_Gastos.csv,data_analysis/csv_exports/category_Ejecución_de_Gastos.csv,26801,.csv
+data_analysis,Data analysis outputs,category_Ejecución_de_Recursos.csv,data_analysis/csv_exports/category_Ejecución_de_Recursos.csv,14151,.csv
+data_analysis,Data analysis outputs,category_Estados_Financieros.csv,data_analysis/csv_exports/category_Estados_Financieros.csv,4023,.csv
+data_analysis,Data analysis outputs,category_Presupuesto_Municipal.csv,data_analysis/csv_exports/category_Presupuesto_Municipal.csv,811,.csv
+data_analysis,Data analysis outputs,category_Recursos_Humanos.csv,data_analysis/csv_exports/category_Recursos_Humanos.csv,2557,.csv
+data_analysis,Data analysis outputs,category_Salud_Pública.csv,data_analysis/csv_exports/category_Salud_Pública.csv,1988,.csv
+data_analysis,Data analysis outputs,comparison_report_20250829_174537.csv,data_analysis/comparisons/comparison_report_20250829_174537.csv,349,.csv
+data_analysis,Data analysis outputs,comparison_report_20250829_174537.json,data_analysis/comparisons/comparison_report_20250829_174537.json,1567,.json
+data_analysis,Data analysis outputs,documents_2018.csv,data_analysis/csv_exports/documents_2018.csv,2138,.csv
+data_analysis,Data analysis outputs,documents_2019.csv,data_analysis/csv_exports/documents_2019.csv,492,.csv
+data_analysis,Data analysis outputs,documents_2020.csv,data_analysis/csv_exports/documents_2020.csv,398,.csv
+data_analysis,Data analysis outputs,documents_2021.csv,data_analysis/csv_exports/documents_2021.csv,1154,.csv
+data_analysis,Data analysis outputs,documents_2022.csv,data_analysis/csv_exports/documents_2022.csv,8257,.csv
+data_analysis,Data analysis outputs,documents_2023.csv,data_analysis/csv_exports/documents_2023.csv,53040,.csv
+data_analysis,Data analysis outputs,documents_2024.csv,data_analysis/csv_exports/documents_2024.csv,1406,.csv
+data_analysis,Data analysis outputs,documents_2025.csv,data_analysis/csv_exports/documents_2025.csv,754,.csv
+data_analysis,Data analysis outputs,execution_percentage_20250829_175206.png,data_analysis/visualizations/execution_percentage_20250829_175206.png,164140,.png
+data_analysis,Data analysis outputs,execution_percentage_20250905_210621.png,data_analysis/visualizations/execution_percentage_20250905_210621.png,164039,.png
+governance_review,Governance and transparency review,web_sources.json,governance_review/transparency_reports/web_sources.json,1237,.json
+audit_cycles,Audit cycles and enhanced audits,anomaly_data_2024.json,audit_cycles/anomaly_detection/anomaly_data_2024.json,1119,.json
+audit_cycles,Audit cycles and enhanced audits,cycle_20250902_205947.json,audit_cycles/cycle_reports/cycle_20250902_205947.json,128749,.json
+audit_cycles,Audit cycles and enhanced audits,cycle_20250902_210739.json,audit_cycles/cycle_reports/cycle_20250902_210739.json,128749,.json
+audit_cycles,Audit cycles and enhanced audits,enhanced_audit_results.json,audit_cycles/enhanced_audits/enhanced_audit_results.json,6580,.json
+audit_cycles,Audit cycles and enhanced audits,transparency_data.db,audit_cycles/cycle_reports/transparency_data.db,0,.db
+financial_oversight,Financial oversight data,budget_data_2024.json,financial_oversight/budget_analysis/budget_data_2024.json,672,.json
+financial_oversight,Financial oversight data,debt_data_2024.json,financial_oversight/debt_monitoring/debt_data_2024.json,1423,.json
+financial_oversight,Financial oversight data,salary_data_2024.json,financial_oversight/salary_oversight/salary_data_2024.json,951,.json

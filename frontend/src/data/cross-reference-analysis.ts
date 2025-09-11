@@ -25,8 +25,8 @@ export const crossReferenceAnalysis: DocumentCrossReference[] = [
       official_website: true
     },
     locations: [
-      '/data/source_materials/2023/',
-      '/data/source_materials/financial_data/',
+      '/data/organized_pdfs/2023/',
+      '/data/organized_pdfs/financial_data/',
       '/web_archives/snapshot_20241111014916/',
       '/web_archives/snapshot_20241212115813/'
     ],
@@ -43,9 +43,9 @@ export const crossReferenceAnalysis: DocumentCrossReference[] = [
       official_website: true
     },
     locations: [
-      '/data/source_materials/2025/',
-      '/data/source_materials/tenders/',
-      '/data/source_materials/financial_data/',
+      '/data/organized_pdfs/2025/',
+      '/data/organized_pdfs/tenders/',
+      '/data/organized_pdfs/financial_data/',
       '/web_archives/snapshot_20241111014916/'
     ],
     duplicates: 4,
@@ -61,7 +61,7 @@ export const crossReferenceAnalysis: DocumentCrossReference[] = [
       official_website: true
     },
     locations: [
-      '/data/source_materials/2023/',
+      '/data/organized_pdfs/2023/',
       '/web_archives/snapshot_20241111014916/'
     ],
     duplicates: 2,
@@ -77,7 +77,7 @@ export const crossReferenceAnalysis: DocumentCrossReference[] = [
       official_website: true
     },
     locations: [
-      '/data/source_materials/2025/'
+      '/data/organized_pdfs/2025/'
     ],
     duplicates: 1,
     latest_version: '2025-01-01',
@@ -92,10 +92,10 @@ export const crossReferenceAnalysis: DocumentCrossReference[] = [
       official_website: true
     },
     locations: [
-      '/data/source_materials/2024/',
-      '/data/source_materials/Salarios-DDJ/DDJ/CDA/',
-      '/data/source_materials/declarations/',
-      '/data/source_materials/2018/' // Duplicate
+      '/data/organized_pdfs/2024/',
+      '/data/organized_pdfs/Salarios-DDJ/DDJ/CDA/',
+      '/data/organized_pdfs/declarations/',
+      '/data/organized_pdfs/2018/' // Duplicate
     ],
     duplicates: 4,
     latest_version: '2024-02-15',

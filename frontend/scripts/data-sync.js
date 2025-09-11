@@ -236,7 +236,7 @@ class DataSyncManager {
     // Create new source
     const result = await this.db.addDataSource(
       sourceConfig.name,
-      sourceType === 'official_site' ? 'https://carmendeareco.gob.ar/transparencia/' : null,
+      sourceType === 'official_site' ? 'https://cda-transparencia.org/' : null,
       sourceConfig.type
     );
 

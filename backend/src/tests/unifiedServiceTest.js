@@ -1,10 +1,10 @@
-const UnifiedDataService = require('../services/UnifiedDataService');
+const ComprehensiveTransparencyService = require('../services/ComprehensiveTransparencyService');
 
 // Test the unified data service
 async function testUnifiedService() {
-    const service = new UnifiedDataService();
+    const service = new ComprehensiveTransparencyService();
     
-    console.log('Testing UnifiedDataService...');
+    console.log('Testing ComprehensiveTransparencyService...');
     
     try {
         // Test system health

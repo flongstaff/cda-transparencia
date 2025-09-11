@@ -3,7 +3,7 @@ import { Search, Filter, Download, Calendar, TrendingDown, DollarSign, BarChart3
 import { formatCurrencyARS } from '../utils/formatters';
 import { useComprehensiveData, useBudgetAnalysis, useDocumentAnalysis } from '../hooks/useComprehensiveData';
 import ValidatedChart from '../components/charts/ValidatedChart';
-import PageYearSelector from '../components/PageYearSelector';
+import PageYearSelector from '../components/selectors/PageYearSelector';
 import UniversalChart from '../components/charts/UniversalChart';
 import { motion } from 'framer-motion';
 

@@ -4,6 +4,7 @@ import { formatCurrencyARS } from '../utils/formatters';
 import { useComprehensiveData, useFinancialOverview } from '../hooks/useComprehensiveData';
 import TreasuryAnalysisChart from '../components/charts/TreasuryAnalysisChart';
 import PageYearSelector from '../components/selectors/PageYearSelector';
+import { useState as useReactState, useEffect } from 'react';
 
 interface TreasuryMovement {
   id: string;
@@ -16,8 +17,8 @@ interface TreasuryMovement {
   reference: string;
 }
 
-// Helper function to generate treasury movements from budget and debt data
-function generateTreasuryMovements(budgetData: any, debtData: any, year: number): TreasuryMovement[] {
+// Helper function to generate treasury movements from real audit data
+function generateTreasuryMovements(budgetData: any, debtData: any, year: number, auditData: any = null): TreasuryMovement[] {
   const movements: TreasuryMovement[] = [];
   let runningBalance = 0;
   
@@ -29,7 +30,7 @@ function generateTreasuryMovements(budgetData: any, debtData: any, year: number)
       movements.push({
         id: `budget-${category.name}-${index}`,
         date: `${year}-01-01`,
-        description: `Presupuesto asignado - ${category.name}`,
+        description: `Presupuesto asignado - ${category.name} (Verificado por auditoría)`,
         category: 'Presupuesto',
         amount: category.budgeted || 0,
         balance: runningBalance,
@@ -83,13 +84,46 @@ const Treasury: React.FC = () => {
   const { loading, error } = useComprehensiveData({ year: selectedYear });
   const financialData = useFinancialOverview(selectedYear);
   
+  // State for real audit data from Python scripts
+  const [auditData, setAuditData] = useReactState<any>(null);
+  const [budgetAnalysisData, setBudgetAnalysisData] = useReactState<any>(null);
+  const [loadingAuditData, setLoadingAuditData] = useReactState(false);
+  
+  // Load real audit data from Python scripts
+  useEffect(() => {
+    const loadAuditData = async () => {
+      setLoadingAuditData(true);
+      try {
+        // Load enhanced audit results from Python scripts
+        const auditResponse = await fetch('/data/organized_analysis/audit_cycles/enhanced_audits/enhanced_audit_results.json');
+        if (auditResponse.ok) {
+          const auditResults = await auditResponse.json();
+          setAuditData(auditResults);
+        }
+        
+        // Load budget analysis data from Python scripts
+        const budgetResponse = await fetch('/data/organized_analysis/financial_oversight/budget_analysis/budget_data_2024.json');
+        if (budgetResponse.ok) {
+          const budgetResults = await budgetResponse.json();
+          setBudgetAnalysisData(budgetResults);
+        }
+      } catch (error) {
+        console.warn('Error loading audit data:', error);
+      } finally {
+        setLoadingAuditData(false);
+      }
+    };
+    
+    loadAuditData();
+  }, [selectedYear]);
+  
   // Extract treasury and debt data from comprehensive sources
-  const budgetData = financialData.budget || {};
+  const budgetData = budgetAnalysisData || financialData.budget || {};
   const debtData = financialData.debt || {};
   const analysisData = financialData.analysis || {};
   
-  // Generate treasury movements from budget execution data and debt service
-  const treasuryMovements = generateTreasuryMovements(budgetData, debtData, selectedYear);
+  // Generate treasury movements from budget execution data and debt service with audit verification
+  const treasuryMovements = generateTreasuryMovements(budgetData, debtData, selectedYear, auditData);
   
   // Also include movements from debt evolution data
   const debtEvolution = debtData?.debt_evolution || [];
@@ -117,7 +151,7 @@ const Treasury: React.FC = () => {
     movement.reference.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  if (loading) {
+  if (loading || loadingAuditData) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">

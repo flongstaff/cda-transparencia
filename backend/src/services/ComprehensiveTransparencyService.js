@@ -1,7 +1,8 @@
-const { Pool } = require('pg');
+const UnifiedDatabaseAdapter = require('./UnifiedDatabaseAdapter');
 const fs = require('fs').promises;
 const path = require('path');
 const axios = require('axios');
+const DataService = require('./DataService');
 
 /**
  * Comprehensive Transparency Service for Carmen de Areco
@@ -10,13 +11,8 @@ const axios = require('axios');
  */
 class ComprehensiveTransparencyService {
     constructor() {
-        this.pool = new Pool({
-            host: process.env.DB_HOST || 'localhost',
-            port: process.env.DB_PORT || 5433,
-            database: process.env.DB_NAME || 'transparency_portal',
-            user: process.env.DB_USER || 'postgres',
-            password: process.env.DB_PASSWORD || 'postgres',
-        });
+        this.dbAdapter = null;
+        this.dataService = new DataService();
         
         // Local document paths
         this.documentPaths = {
@@ -53,37 +49,25 @@ class ComprehensiveTransparencyService {
         console.log('✅ ComprehensiveTransparencyService initialized with full data source integration');
     }
 
-    /**
-     * Get comprehensive financial overview for citizens
-     */
+    async initialize() {
+        if (!this.dbAdapter) {
+            this.dbAdapter = await UnifiedDatabaseAdapter.getInstance();
+        }
+    }
+
     async getCitizenFinancialOverview(year) {
+        await this.initialize();
         try {
-            const query = `
-                SELECT 
-                    d.year,
-                    d.category,
-                    COUNT(*) as document_count,
-                    SUM(d.size_bytes) as total_size_bytes,
-                    COUNT(CASE WHEN d.verification_status = 'verified' THEN 1 END) as verified_count,
-                    bd.budgeted_amount,
-                    bd.executed_amount,
-                    bd.execution_rate
-                FROM transparency.documents d
-                LEFT JOIN transparency.budget_data bd ON d.id = bd.document_id
-                WHERE d.year = $1
-                GROUP BY d.year, d.category, bd.budgeted_amount, bd.executed_amount, bd.execution_rate
-                ORDER BY COUNT(*) DESC
-            `;
-            
-            const result = await this.pool.query(query, [year]);
+            const summary = await this.dbAdapter.getYearlySummary(year);
+            const documents = await this.dbAdapter.getDocumentsByYear(year);
             
             return {
                 year: parseInt(year),
-                overview: this.generateCitizenSummary(result.rows, year),
-                categories: this.processCategoryDataBasic(result.rows),
-                transparency_score: this.calculateTransparencyScore(result.rows),
-                spending_efficiency: this.analyzeBudgetExecution(result.rows),
-                document_accessibility: this.assessDocumentAccessibility(result.rows)
+                overview: this.generateCitizenSummary(summary, documents, year),
+                categories: this.processCategoryDataBasic(documents),
+                transparency_score: summary.transparency_score,
+                spending_efficiency: this.analyzeBudgetExecution(documents),
+                document_accessibility: this.assessDocumentAccessibility(documents)
             };
         } catch (error) {
             console.error('Error getting citizen financial overview:', error);
@@ -91,9 +75,6 @@ class ComprehensiveTransparencyService {
         }
     }
 
-    /**
-     * Process category data in basic format
-     */
     processCategoryDataBasic(data) {
         const categories = {};
         data.forEach(row => {
@@ -105,21 +86,16 @@ class ComprehensiveTransparencyService {
                     total_executed: 0
                 };
             }
-            categories[category].document_count += parseInt(row.document_count) || 0;
+            categories[category].document_count++;
             categories[category].total_budget += parseFloat(row.budgeted_amount) || 0;
             categories[category].total_executed += parseFloat(row.executed_amount) || 0;
         });
         return categories;
     }
 
-    /**
-     * Generate citizen-friendly financial summary
-     */
-    generateCitizenSummary(data, year) {
-        const totalDocuments = data.reduce((sum, row) => sum + parseInt(row.document_count), 0);
-        const verifiedDocuments = data.reduce((sum, row) => sum + parseInt(row.verified_count), 0);
-        const totalBudgeted = data.reduce((sum, row) => sum + (parseFloat(row.budgeted_amount) || 0), 0);
-        const totalExecuted = data.reduce((sum, row) => sum + (parseFloat(row.executed_amount) || 0), 0);
+    generateCitizenSummary(summary, documents, year) {
+        const totalBudgeted = documents.reduce((sum, row) => sum + (parseFloat(row.budgeted_amount) || 0), 0);
+        const totalExecuted = documents.reduce((sum, row) => sum + (parseFloat(row.executed_amount) || 0), 0);
 
         // Carmen de Areco population estimate
         const estimatedPopulation = 15000; // approx population
@@ -133,9 +109,9 @@ class ComprehensiveTransparencyService {
             budget_per_citizen: budgetPerCitizen.toFixed(2),
             executed_per_citizen: executedPerCitizen.toFixed(2),
             unexecuted_amount: totalBudgeted - totalExecuted,
-            documents_available: totalDocuments,
-            verified_documents: verifiedDocuments,
-            transparency_level: totalDocuments > 0 ? ((verifiedDocuments / totalDocuments) * 100).toFixed(2) : 0,
+            documents_available: summary.total_documents,
+            verified_documents: summary.verified_documents,
+            transparency_level: summary.transparency_score,
             citizen_impact: {
                 yearly_tax_contribution_estimate: budgetPerCitizen,
                 services_delivered_value: executedPerCitizen,
@@ -144,107 +120,40 @@ class ComprehensiveTransparencyService {
         };
     }
 
-    /**
-     * Get detailed budget breakdown by category with citizen explanations
-     */
-    async getBudgetBreakdownForCitizens(year) {
-        try {
-            const query = `
-                SELECT 
-                    d.category,
-                    d.document_type,
-                    COUNT(*) as document_count,
-                    bd.budgeted_amount,
-                    bd.executed_amount,
-                    bd.execution_rate,
-                    bd.subcategory,
-                    bd.funding_source,
-                    STRING_AGG(d.filename, ', ') as source_documents
-                FROM transparency.documents d
-                LEFT JOIN transparency.budget_data bd ON d.id = bd.document_id
-                WHERE d.year = $1 AND bd.budgeted_amount IS NOT NULL
-                GROUP BY d.category, d.document_type, bd.budgeted_amount, bd.executed_amount, 
-                        bd.execution_rate, bd.subcategory, bd.funding_source
-                ORDER BY bd.budgeted_amount DESC
-            `;
-            
-            const result = await this.pool.query(query, [year]);
-            
-            return result.rows.map(row => ({
-                category: row.category,
-                citizen_description: this.getCitizenDescription(row.category),
-                budgeted_amount: parseFloat(row.budgeted_amount) || 0,
-                executed_amount: parseFloat(row.executed_amount) || 0,
-                execution_rate: parseFloat(row.execution_rate) || 0,
-                impact_description: this.getImpactDescription(row.category, row.executed_amount),
-                funding_source: row.funding_source,
-                transparency_status: {
-                    documents_available: parseInt(row.document_count),
-                    source_documents: row.source_documents,
-                    verification_level: 'verified'
-                },
-                citizen_services: this.getCitizenServices(row.category)
-            }));
-        } catch (error) {
-            console.error('Error getting budget breakdown for citizens:', error);
-            throw error;
-        }
-    }
-
-    /**
-     * Get document with full access options (PDF viewer, links, etc.)
-     */
     async getDocumentWithAccess(documentId) {
+        await this.initialize();
         try {
-            const query = `
-                SELECT 
-                    d.*,
-                    bd.budgeted_amount,
-                    bd.executed_amount,
-                    bd.execution_rate,
-                    sd.net_salary,
-                    c.contract_amount,
-                    c.contractor_name
-                FROM transparency.documents d
-                LEFT JOIN transparency.budget_data bd ON d.id = bd.document_id
-                LEFT JOIN transparency.salary_data sd ON d.id = sd.document_id
-                LEFT JOIN transparency.contracts c ON d.id = c.document_id
-                WHERE d.id = $1
-            `;
-            
-            const result = await this.pool.query(query, [documentId]);
-            
-            if (result.rows.length === 0) {
+            const doc = await this.dbAdapter.query(`SELECT * FROM ${this.dbAdapter.getSchema().table} WHERE id = ${this.dbAdapter.dbType === 'postgresql' ? '$1' : '?'}`, [documentId]);
+
+            if (doc.rows.length === 0) {
                 throw new Error('Document not found');
             }
 
-            const doc = result.rows[0];
-            
-            // Generate access methods for the document
-            const accessMethods = await this.generateDocumentAccess(doc);
+            const document = doc.rows[0];
+            const accessMethods = await this.generateDocumentAccess(document);
             
             return {
                 document: {
-                    id: doc.id,
-                    title: doc.title || doc.filename,
-                    filename: doc.filename,
-                    year: doc.year,
-                    category: doc.category,
-                    type: doc.document_type,
-                    size_mb: (doc.size_bytes / (1024 * 1024)).toFixed(2),
-                    verification_status: doc.verification_status
+                    id: document.id,
+                    title: document.title || document.filename,
+                    filename: document.filename,
+                    year: document.year,
+                    category: document.category,
+                    type: document.document_type,
+                    size_mb: this.dbAdapter.convertSizeToMB(document[this.dbAdapter.getSchema().sizeColumn]),
+                    verification_status: document.verification_status
                 },
                 access_methods: accessMethods,
                 financial_impact: {
-                    budget_amount: doc.budgeted_amount,
-                    executed_amount: doc.executed_amount,
-                    execution_rate: doc.execution_rate,
-                    salary_amount: doc.net_salary,
-                    contract_amount: doc.contract_amount,
-                    contractor: doc.contractor_name
+                    budget_amount: document.budgeted_amount,
+                    executed_amount: document.executed_amount,
+                    execution_rate: document.execution_rate,
+                    salary_amount: document.net_salary,
+                    contract_amount: document.contract_amount,
+                    contractor: document.contractor_name
                 },
-                citizen_relevance: this.assessCitizenRelevance(doc),
-                transparency_metrics: this.getDocumentTransparencyMetrics(doc)
+                citizen_relevance: this.assessCitizenRelevance(document),
+                transparency_metrics: this.getDocumentTransparencyMetrics(document)
             };
         } catch (error) {
             console.error('Error getting document with access:', error);
@@ -252,9 +161,6 @@ class ComprehensiveTransparencyService {
         }
     }
 
-    /**
-     * Generate all possible access methods for a document
-     */
     async generateDocumentAccess(doc) {
         const accessMethods = {
             official_url: null,
@@ -274,11 +180,11 @@ class ComprehensiveTransparencyService {
             const date = new Date(doc.created_at || Date.now());
             const year = date.getFullYear();
             const month = String(date.getMonth() + 1).padStart(2, '0');
-            accessMethods.official_url = `http://carmendeareco.gob.ar/wp-content/uploads/${year}/${month}/${doc.filename}`;
+            accessMethods.official_url = `http://cda-transparencia.org/wp-content/uploads/${year}/${month}/${doc.filename}`;
         }
 
         // Wayback Machine URL
-        accessMethods.archive_url = `https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/`;
+        accessMethods.archive_url = `https://web.archive.org/web/*/cda-transparencia.org/transparencia/`;
 
         // Local copy availability
         try {
@@ -313,147 +219,27 @@ class ComprehensiveTransparencyService {
         return accessMethods;
     }
 
-    /**
-     * Get all documents with filters
-     */
     async getAllDocuments(filters = {}) {
-        try {
-            let query = `
-                SELECT 
-                    d.id,
-                    d.filename,
-                    d.title,
-                    d.year,
-                    d.category,
-                    d.document_type,
-                    d.size_bytes,
-                    d.verification_status,
-                    d.created_at,
-                    bd.budgeted_amount,
-                    bd.executed_amount,
-                    bd.execution_rate
-                FROM transparency.documents d
-                LEFT JOIN transparency.budget_data bd ON d.id = bd.document_id
-            `;
-            
-            const conditions = [];
-            const params = [];
-            let paramIndex = 1;
-            
-            if (filters.year) {
-                conditions.push(`d.year = $${paramIndex}`);
-                params.push(filters.year);
-                paramIndex++;
-            }
-            
-            if (filters.category) {
-                conditions.push(`d.category = $${paramIndex}`);
-                params.push(filters.category);
-                paramIndex++;
-            }
-            
-            if (filters.type) {
-                conditions.push(`d.document_type = $${paramIndex}`);
-                params.push(filters.type);
-                paramIndex++;
-            }
-            
-            if (filters.search) {
-                conditions.push(`(d.title ILIKE $${paramIndex} OR d.filename ILIKE $${paramIndex})`);
-                params.push(`%${filters.search}%`);
-                paramIndex++;
-            }
-            
-            if (conditions.length > 0) {
-                query += ' WHERE ' + conditions.join(' AND ');
-            }
-            
-            query += ' ORDER BY d.year DESC, d.created_at DESC';
-            
-            if (filters.limit) {
-                query += ` LIMIT $${paramIndex}`;
-                params.push(filters.limit);
-            }
-            
-            const result = await this.pool.query(query, params);
-            
-            return result.rows.map(row => ({
-                id: row.id,
-                title: row.title || row.filename,
-                filename: row.filename,
-                year: row.year,
-                category: row.category,
-                type: row.document_type,
-                size_mb: (row.size_bytes / (1024 * 1024)).toFixed(2),
-                verification_status: row.verification_status,
-                created_at: row.created_at,
-                budgeted_amount: row.budgeted_amount,
-                executed_amount: row.executed_amount,
-                execution_rate: row.execution_rate
-            }));
-        } catch (error) {
-            console.error('Error getting all documents:', error);
-            throw error;
-        }
+        await this.initialize();
+        return await this.dbAdapter.getAllDocuments(filters);
     }
 
-    /**
-     * Search documents with advanced filtering
-     */
     async searchDocuments(query, filters = {}) {
-        try {
-            const searchQuery = `
-                SELECT 
-                    d.id,
-                    d.filename,
-                    d.title,
-                    d.year,
-                    d.category,
-                    d.document_type,
-                    d.size_bytes,
-                    d.verification_status,
-                    d.created_at,
-                    d.content,
-                    bd.budgeted_amount,
-                    bd.executed_amount,
-                    bd.execution_rate,
-                    ts_rank(to_tsvector('spanish', d.content), plainto_tsquery('spanish', $1)) as rank
-                FROM transparency.documents d
-                LEFT JOIN transparency.budget_data bd ON d.id = bd.document_id
-                WHERE to_tsvector('spanish', d.content) @@ plainto_tsquery('spanish', $1)
-                ORDER BY rank DESC, d.year DESC
-                LIMIT 50
-            `;
-            
-            const result = await this.pool.query(searchQuery, [query]);
-            
-            return result.rows.map(row => ({
-                id: row.id,
-                title: row.title || row.filename,
-                filename: row.filename,
-                year: row.year,
-                category: row.category,
-                type: row.document_type,
-                size_mb: (row.size_bytes / (1024 * 1024)).toFixed(2),
-                verification_status: row.verification_status,
-                created_at: row.created_at,
-                snippet: this.extractContentSnippet(row.content, query),
-                relevance_score: parseFloat(row.rank),
-                budgeted_amount: row.budgeted_amount,
-                executed_amount: row.executed_amount,
-                execution_rate: row.execution_rate
-            }));
-        } catch (error) {
-            console.error('Error searching documents:', error);
-            throw error;
-        }
+        await this.initialize();
+        // This method now only supports basic search, as advanced search is not in the adapter
+        const documents = await this.dbAdapter.getAllDocuments();
+        const lowerCaseQuery = query.toLowerCase();
+        return documents.filter(doc => {
+            const titleMatch = doc.title && doc.title.toLowerCase().includes(lowerCaseQuery);
+            const filenameMatch = doc.filename && doc.filename.toLowerCase().includes(lowerCaseQuery);
+            return titleMatch || filenameMatch;
+        });
     }
 
-    /**
-     * Extract content snippet around search terms
-     */
     extractContentSnippet(content, searchTerm) {
-        if (!content) return '...';
+        // Type checking to prevent type confusion
+        if (!content || typeof content !== 'string') return '...';
+        if (!searchTerm || typeof searchTerm !== 'string') return content.substring(0, 100) + '...';
         
         const index = content.toLowerCase().indexOf(searchTerm.toLowerCase());
         if (index === -1) return content.substring(0, 100) + '...';
@@ -463,312 +249,28 @@ class ComprehensiveTransparencyService {
         return '...' + content.substring(start, end) + '...';
     }
 
-    /**
-     * Get municipal debt data by year
-     */
-    async getMunicipalDebtByYear(year) {
-        try {
-            // First, try to get debt data from the municipal_debt table
-            const debtQuery = `
-                SELECT 
-                    id,
-                    year,
-                    debt_type,
-                    description,
-                    amount,
-                    interest_rate,
-                    due_date,
-                    status
-                FROM transparency.municipal_debt
-                WHERE year = $1
-                ORDER BY amount DESC
-            `;
-            
-            const debtResult = await this.pool.query(debtQuery, [year]);
-            
-            // If no debt data found, return empty structure
-            if (debtResult.rows.length === 0) {
-                return {
-                    debt_data: [],
-                    total_debt: 0,
-                    average_interest_rate: 0,
-                    long_term_debt: 0,
-                    short_term_debt: 0,
-                    debt_by_type: {},
-                    metadata: {
-                        year: parseInt(year),
-                        last_updated: new Date().toISOString(),
-                        source: 'no_data_available'
-                    }
-                };
-            }
-            
-            // Calculate debt analytics
-            const debtData = debtResult.rows.map(row => ({
-                debt_type: row.debt_type,
-                description: row.description,
-                amount: parseFloat(row.amount),
-                interest_rate: parseFloat(row.interest_rate),
-                due_date: row.due_date ? row.due_date.toISOString().split('T')[0] : null,
-                status: row.status,
-                principal_amount: parseFloat(row.amount), // Simplified - in a real system this would be separate
-                accrued_interest: 0 // Simplified - in a real system this would be calculated
-            }));
-            
-            const totalDebt = debtData.reduce((sum, debt) => sum + debt.amount, 0);
-            const averageInterestRate = debtData.length > 0 
-                ? debtData.reduce((sum, debt) => sum + debt.interest_rate, 0) / debtData.length 
-                : 0;
-            
-            // Classify debt as short-term or long-term based on due date
-            const currentDate = new Date();
-            let shortTermDebt = 0;
-            let longTermDebt = 0;
-            
-            const debtByType = {};
-            
-            debtData.forEach(debt => {
-                // Group by type
-                if (!debtByType[debt.debt_type]) {
-                    debtByType[debt.debt_type] = 0;
-                }
-                debtByType[debt.debt_type] += debt.amount;
-                
-                // Classify as short-term or long-term
-                if (debt.due_date) {
-                    const dueDate = new Date(debt.due_date);
-                    const diffTime = dueDate.getTime() - currentDate.getTime();
-                    const diffDays = diffTime / (1000 * 60 * 60 * 24);
-                    
-                    if (diffDays <= 365) {
-                        shortTermDebt += debt.amount;
-                    } else {
-                        longTermDebt += debt.amount;
-                    }
-                } else {
-                    // If no due date, classify as long-term by default
-                    longTermDebt += debt.amount;
-                }
-            });
-            
-            return {
-                debt_data: debtData,
-                total_debt: totalDebt,
-                average_interest_rate: parseFloat(averageInterestRate.toFixed(2)),
-                long_term_debt: longTermDebt,
-                short_term_debt: shortTermDebt,
-                debt_by_type: debtByType,
-                metadata: {
-                    year: parseInt(year),
-                    last_updated: new Date().toISOString(),
-                    source: 'postgresql_database'
-                }
-            };
-        } catch (error) {
-            console.error('Error fetching municipal debt data:', error);
-            // Return fallback data
-            return {
-                debt_data: [],
-                total_debt: 0,
-                average_interest_rate: 0,
-                long_term_debt: 0,
-                short_term_debt: 0,
-                debt_by_type: {},
-                metadata: {
-                    year: parseInt(year),
-                    last_updated: new Date().toISOString(),
-                    source: 'error_fallback',
-                    error: error.message
-                }
-            };
-        }
-    }
-
-    /**
-     * Get corruption cases
-     */
-    async getCorruptionCases() {
-        try {
-            const query = `
-                SELECT *
-                FROM transparency.corruption_cases
-                ORDER BY created_at DESC
-            `;
-            
-            const result = await this.pool.query(query);
-            return result.rows;
-        } catch (error) {
-            console.error('Error fetching corruption cases:', error);
-            return [];
-        }
-    }
-
-    /**
-     * Get available years from documents
-     */
     async getAvailableYears() {
-        try {
-            const query = `
-                SELECT DISTINCT year 
-                FROM transparency.documents 
-                WHERE year IS NOT NULL 
-                ORDER BY year DESC
-            `;
-            
-            const result = await this.pool.query(query);
-            return result.rows.map(row => row.year);
-        } catch (error) {
-            console.error('Error fetching available years:', error);
-            // Fallback to hardcoded years
-            const currentYear = new Date().getFullYear();
-            return [currentYear, currentYear - 1, currentYear - 2, currentYear - 3, currentYear - 4, currentYear - 5];
-        }
+        await this.initialize();
+        return this.dbAdapter.getAvailableYears();
     }
 
-    /**
-     * Get categories
-     */
     async getCategories() {
-        try {
-            const query = `
-                SELECT DISTINCT category 
-                FROM transparency.documents 
-                WHERE category IS NOT NULL 
-                ORDER BY category
-            `;
-            
-            const result = await this.pool.query(query);
-            return result.rows.map(row => row.category);
-        } catch (error) {
-            console.error('Error fetching categories:', error);
-            return [];
-        }
+        await this.initialize();
+        const documents = await this.dbAdapter.getAllDocuments();
+        const categories = new Set(documents.map(doc => doc.category));
+        return Array.from(categories).sort();
     }
 
-    /**
-     * Get system health status
-     */
     async getSystemHealth() {
-        try {
-            const query = `
-                SELECT 
-                    COUNT(*) as total_documents,
-                    COUNT(CASE WHEN verification_status = 'verified' THEN 1 END) as verified_documents,
-                    MAX(created_at) as last_update
-                FROM transparency.documents
-            `;
-            
-            const result = await this.pool.query(query);
-            const row = result.rows[0];
-            
-            return {
-                status: 'healthy',
-                database: 'connected',
-                total_documents: parseInt(row.total_documents),
-                verified_documents: parseInt(row.verified_documents),
-                last_update: row.last_update,
-                transparency_score: parseInt(row.total_documents) > 0 ? 
-                    Math.round((row.verified_documents / row.total_documents) * 100) : 0
-            };
-        } catch (error) {
-            console.error('Error fetching health status:', error);
-            return {
-                status: 'error',
-                database: 'disconnected',
-                error: error.message
-            };
-        }
+        await this.initialize();
+        return this.dbAdapter.getHealthStatus();
     }
 
-    /**
-     * Get yearly data (documents, budget, summary)
-     */
     async getYearlyData(year) {
-        try {
-            // Get documents for the year
-            const documentsQuery = `
-                SELECT 
-                    d.id,
-                    d.filename,
-                    d.title,
-                    d.year,
-                    d.category,
-                    d.document_type,
-                    d.size_bytes,
-                    d.verification_status,
-                    d.created_at,
-                    bd.budgeted_amount,
-                    bd.executed_amount,
-                    bd.execution_rate
-                FROM transparency.documents d
-                LEFT JOIN transparency.budget_data bd ON d.id = bd.document_id
-                WHERE d.year = $1
-                ORDER BY d.created_at DESC
-            `;
-            
-            const [documentsResult, budgetResult] = await Promise.all([
-                this.pool.query(documentsQuery, [year]),
-                // Get budget summary
-                this.pool.query(`
-                    SELECT 
-                        SUM(bd.budgeted_amount) as total_budgeted,
-                        SUM(bd.executed_amount) as total_executed,
-                        AVG(bd.execution_rate) as avg_execution_rate
-                    FROM transparency.budget_data bd
-                    JOIN transparency.documents d ON bd.document_id = d.id
-                    WHERE d.year = $1
-                `, [year])
-            ]);
-            
-            const documents = documentsResult.rows.map(row => ({
-                id: row.id,
-                title: row.title || row.filename,
-                filename: row.filename,
-                year: row.year,
-                category: row.category,
-                type: row.document_type,
-                size_mb: (row.size_bytes / (1024 * 1024)).toFixed(2),
-                verification_status: row.verification_status,
-                created_at: row.created_at,
-                budgeted_amount: row.budgeted_amount,
-                executed_amount: row.executed_amount,
-                execution_rate: row.execution_rate
-            }));
-            
-            const budgetSummary = budgetResult.rows[0];
-            
-            // Create yearly summary
-            const summary = {
-                year: parseInt(year),
-                total_documents: documents.length,
-                categories: this.categorizeDocuments(documents),
-                document_types: [...new Set(documents.map(doc => doc.type))],
-                file_sizes_total: documents.reduce((total, doc) => total + (parseFloat(doc.size_mb) || 0), 0),
-                total_budgeted: parseFloat(budgetSummary.total_budgeted) || 0,
-                total_executed: parseFloat(budgetSummary.total_executed) || 0,
-                execution_rate: parseFloat(budgetSummary.avg_execution_rate) || 0
-            };
-            
-            return {
-                summary,
-                documents,
-                budget: {
-                    total_budgeted: summary.total_budgeted,
-                    total_executed: summary.total_executed,
-                    execution_rate: summary.execution_rate,
-                    categories: this.categorizeBudgetByCategory(documents)
-                },
-                source: 'transparency.db'
-            };
-        } catch (error) {
-            console.error('Error loading yearly data:', error);
-            throw error;
-        }
+        await this.initialize();
+        return this.dataService.getYearlyData(year);
     }
 
-    /**
-     * Categorize documents by category
-     */
     categorizeDocuments(documents) {
         const categories = {};
         documents.forEach(doc => {
@@ -789,9 +291,6 @@ class ComprehensiveTransparencyService {
         return categories;
     }
 
-    /**
-     * Categorize budget by category
-     */
     categorizeBudgetByCategory(documents) {
         const categories = {};
         documents.forEach(doc => {
@@ -821,8 +320,81 @@ class ComprehensiveTransparencyService {
     }
 
     /**
-     * Get financial data from external APIs
+     * Get budget breakdown for citizens - Citizen-friendly budget analysis
      */
+    async getBudgetBreakdownForCitizens(year) {
+        try {
+            await this.initialize();
+            const documents = await this.getAllDocuments({ year });
+            const budgetBreakdown = this.categorizeBudgetByCategory(documents);
+            
+            // Transform for citizen presentation
+            const citizenBreakdown = Object.keys(budgetBreakdown).map(category => ({
+                name: category,
+                budgeted: budgetBreakdown[category].budgeted,
+                executed: budgetBreakdown[category].executed,
+                execution_rate: budgetBreakdown[category].execution_rate.toFixed(2),
+                count: budgetBreakdown[category].count,
+                citizen_impact: this.assessCitizenRelevance({ category, budgeted_amount: budgetBreakdown[category].budgeted })
+            }));
+            
+            return {
+                year,
+                categories: citizenBreakdown,
+                total_budgeted: citizenBreakdown.reduce((sum, cat) => sum + cat.budgeted, 0),
+                total_executed: citizenBreakdown.reduce((sum, cat) => sum + cat.executed, 0),
+                overall_execution_rate: citizenBreakdown.length > 0 
+                    ? ((citizenBreakdown.reduce((sum, cat) => sum + cat.executed, 0) / 
+                       citizenBreakdown.reduce((sum, cat) => sum + cat.budgeted, 0)) * 100).toFixed(2)
+                    : '0.00'
+            };
+        } catch (error) {
+            console.error('Error getting budget breakdown for citizens:', error);
+            throw error;
+        }
+    }
+
+    /**
+     * Get transparency dashboard data
+     */
+    async getTransparencyDashboard() {
+        try {
+            await this.initialize();
+            
+            // Get available years
+            const availableYears = await this.getAvailableYears();
+            
+            // Get categories
+            const categories = await this.getCategories();
+            
+            // Get system health
+            const systemHealth = await this.getSystemHealth();
+            
+            // Get document analysis
+            const latestYear = Math.max(...availableYears);
+            const latestDocuments = await this.getAllDocuments({ year: latestYear });
+            
+            // Calculate transparency metrics
+            const totalDocuments = latestDocuments.length;
+            const verifiedDocuments = latestDocuments.filter(doc => doc.verification_status === 'verified').length;
+            const transparencyScore = totalDocuments > 0 ? Math.round((verifiedDocuments / totalDocuments) * 100) : 0;
+            
+            return {
+                years: availableYears,
+                categories: categories,
+                total_documents: totalDocuments,
+                verified_documents: verifiedDocuments,
+                transparency_score: transparencyScore,
+                system_health: systemHealth,
+                latest_year: latestYear,
+                generated_at: new Date().toISOString()
+            };
+        } catch (error) {
+            console.error('Error getting transparency dashboard:', error);
+            throw error;
+        }
+    }
+
     async getExternalFinancialData(year) {
         try {
             // Check cache first
@@ -872,11 +444,25 @@ class ComprehensiveTransparencyService {
         }
     }
 
-    /**
-     * Get GitHub data from public repositories
-     */
     async getGitHubData(repoName, path = '') {
         try {
+            // Validate inputs to prevent SSRF
+            if (!repoName || typeof repoName !== 'string') {
+                throw new Error('Invalid repository name');
+            }
+            
+            // Sanitize path to prevent directory traversal
+            if (path && typeof path !== 'string') {
+                throw new Error('Invalid path');
+            }
+            
+            // Prevent SSRF by ensuring we only access GitHub domains
+            const allowedRepos = Object.keys(this.githubRepos);
+            if (!allowedRepos.includes(repoName) && !Object.values(this.githubRepos).some(repo => repo === repoName)) {
+                console.warn(`Attempted to access unauthorized GitHub repository: ${repoName}`);
+                return null;
+            }
+            
             // Check cache first
             const cacheKey = `github_${repoName}_${path}`;
             if (this.apiCache.has(cacheKey)) {
@@ -888,13 +474,30 @@ class ComprehensiveTransparencyService {
             
             // Fetch from GitHub API
             const repoFullName = this.githubRepos[repoName] || repoName;
-            const url = `https://api.github.com/repos/${repoFullName}/contents/${path}`;
+            
+            // Validate repo name format (owner/repo)
+            const repoParts = repoFullName.split('/');
+            if (repoParts.length !== 2 || !repoParts[0] || !repoParts[1]) {
+                throw new Error('Invalid repository name format');
+            }
+            
+            // Sanitize path to prevent directory traversal
+            const sanitizedPath = path ? path.replace(/(\.\.[\/\\])+/, '') : '';
+            
+            const url = `https://api.github.com/repos/${repoFullName}/contents/${sanitizedPath}`;
+            
+            // Validate URL to prevent SSRF
+            const parsedUrl = new URL(url);
+            if (parsedUrl.hostname !== 'api.github.com') {
+                throw new Error('Unauthorized domain access attempt');
+            }
             
             const response = await axios.get(url, {
                 headers: {
                     'User-Agent': 'Carmen-de-Areco-Transparency-Portal',
                     'Accept': 'application/vnd.github.v3+json'
-                }
+                },
+                timeout: 10000 // 10 second timeout
             });
             
             const data = response.data;
@@ -912,11 +515,31 @@ class ComprehensiveTransparencyService {
         }
     }
 
-    /**
-     * Fetch data from external API with error handling
-     */
     async fetchFromApi(baseUrl, params = {}) {
         try {
+            // Validate inputs
+            if (!baseUrl || typeof baseUrl !== 'string') {
+                throw new Error('Invalid base URL');
+            }
+            
+            if (params && typeof params !== 'object') {
+                throw new Error('Invalid params object');
+            }
+            
+            // Validate URL to prevent SSRF
+            const parsedUrl = new URL(baseUrl);
+            const allowedDomains = [
+                'datos.gob.ar',
+                'apis.datos.gob.ar',
+                'www.presupuestoabierto.gob.ar',
+                'www.argentina.gob.ar',
+                'api.estadisticasbcra.com'
+            ];
+            
+            if (!allowedDomains.includes(parsedUrl.hostname)) {
+                throw new Error('Unauthorized domain access attempt');
+            }
+            
             // Create cache key from URL and params
             const cacheKey = `${baseUrl}?${new URLSearchParams(params).toString()}`;
             
@@ -929,8 +552,16 @@ class ComprehensiveTransparencyService {
             }
             
             // Make API request
-            const response = await axios.get(baseUrl, { params });
+            const response = await axios.get(baseUrl, { 
+                params,
+                timeout: 15000 // 15 second timeout
+            });
             const data = response.data;
+            
+            // Type checking for response data
+            if (data && typeof data !== 'object') {
+                throw new Error('Unexpected response data type');
+            }
             
             // Cache the result
             this.apiCache.set(cacheKey, {
@@ -945,9 +576,6 @@ class ComprehensiveTransparencyService {
         }
     }
 
-    /**
-     * Get Wayback Machine archive URLs for documents
-     */
     async getWaybackArchiveUrls(urls) {
         try {
             const archiveUrls = {};
@@ -977,9 +605,6 @@ class ComprehensiveTransparencyService {
         }
     }
 
-    /**
-     * Get local markdown documents by year and category
-     */
     async getLocalMarkdownDocuments(year, category = null) {
         try {
             const basePath = path.join(this.documentPaths.markdown_documents, String(year));
@@ -1021,9 +646,6 @@ class ComprehensiveTransparencyService {
         }
     }
 
-    /**
-     * Get organized PDF documents by year and category
-     */
     async getOrganizedPdfDocuments(year, category = null) {
         try {
             let basePath = path.join(this.documentPaths.organized_pdfs, String(year));
@@ -1089,9 +711,6 @@ class ComprehensiveTransparencyService {
         }
     }
 
-    /**
-     * Get transparency data from local analysis results
-     */
     async getLocalTransparencyData() {
         try {
             // Get the most recent analysis results file
@@ -1116,9 +735,6 @@ class ComprehensiveTransparencyService {
         }
     }
 
-    /**
-     * Utility methods for citizen descriptions and impact analysis
-     */
     getCitizenDescription(category) {
         const descriptions = {
             'Recursos Humanos': 'Gastos en personal municipal, incluyendo sueldos, jubilaciones y beneficios',
@@ -1210,8 +826,8 @@ class ComprehensiveTransparencyService {
     }
 
     assessDocumentAccessibility(data) {
-        const totalDocs = data.reduce((sum, row) => sum + parseInt(row.document_count), 0);
-        const accessibleDocs = data.filter(row => row.official_url).reduce((sum, row) => sum + parseInt(row.document_count), 0);
+        const totalDocs = data.length;
+        const accessibleDocs = data.filter(row => row.url || row.official_url).length;
         
         return {
             accessible_documents: accessibleDocs,
@@ -1228,180 +844,16 @@ class ComprehensiveTransparencyService {
         return 'Baja';
     }
 
-    /**
-     * Clear API cache
-     */
     clearCache() {
         this.apiCache.clear();
         console.log('✅ API cache cleared');
     }
 
-    /**
-     * Get cache statistics
-     */
     getCacheStats() {
         return {
             cache_size: this.apiCache.size,
             cache_keys: Array.from(this.apiCache.keys())
         };
-    }
-
-    /**
-     * Get investment data for a specific year
-     */
-    async getInvestmentData(year) {
-        try {
-            // For now, return sample data that matches our Zod schema
-            // In a real implementation, this would fetch from database or external sources
-            const sampleInvestments = [
-                {
-                    asset_type: "Infraestructura",
-                    description: "Reparación de caminos principales",
-                    value: 45000000,
-                    depreciation: 5000000,
-                    location: "Centro y sur del municipio",
-                    net_value: 40000000,
-                    age_years: 2
-                },
-                {
-                    asset_type: "Edificios Públicos",
-                    description: "Renovación del edificio municipal",
-                    value: 25000000,
-                    depreciation: 2000000,
-                    location: "Calle principal 123",
-                    net_value: 23000000,
-                    age_years: 1
-                },
-                {
-                    asset_type: "Equipamiento",
-                    description: "Sistema de alumbrado LED",
-                    value: 18000000,
-                    depreciation: 1000000,
-                    location: "Todo el municipio",
-                    net_value: 17000000,
-                    age_years: 0
-                },
-                {
-                    asset_type: "Deportes y Recreación",
-                    description: "Equipamiento deportivo",
-                    value: 12000000,
-                    location: "Parque principal",
-                    net_value: 12000000
-                }
-            ];
-
-            return sampleInvestments;
-        } catch (error) {
-            console.error(`Error getting investment data for year ${year}:`, error);
-            throw error;
-        }
-    }
-
-    /**
-     * Get transparency dashboard data
-     */
-    async getTransparencyDashboard() {
-        try {
-            // Get recent documents
-            const recentDocs = await this.getAllDocuments({ limit: 10 });
-            
-            // Get available years
-            const years = await this.getAvailableYears();
-            
-            // Get document categories
-            const categoriesResult = await this.pool.query(`
-                SELECT category, COUNT(*) as count 
-                FROM documents 
-                GROUP BY category
-                ORDER BY count DESC
-            `);
-            
-            const categories = categoriesResult.rows.reduce((acc, row) => {
-                acc[row.category] = parseInt(row.count);
-                return acc;
-            }, {});
-            
-            // Get document statistics
-            const statsResult = await this.pool.query(`
-                SELECT 
-                    COUNT(*) as total_documents,
-                    COUNT(CASE WHEN verification_status = 'verified' THEN 1 END) as verified_documents,
-                    ROUND(AVG(CAST(size_mb AS numeric)), 2) as avg_size_mb
-                FROM documents
-            `);
-            
-            const stats = statsResult.rows[0];
-            
-            return {
-                overview: {
-                    total_documents: parseInt(stats.total_documents),
-                    verified_documents: parseInt(stats.verified_documents),
-                    transparency_score: Math.round((parseInt(stats.verified_documents) / parseInt(stats.total_documents)) * 100),
-                    average_document_size: parseFloat(stats.avg_size_mb)
-                },
-                recent_documents: recentDocs,
-                category_distribution: categories,
-                available_years: years,
-                generated_at: new Date().toISOString()
-            };
-        } catch (error) {
-            console.error('Error getting transparency dashboard:', error);
-            return {
-                overview: {
-                    total_documents: 0,
-                    verified_documents: 0,
-                    transparency_score: 0,
-                    average_document_size: 0
-                },
-                recent_documents: [],
-                category_distribution: {},
-                available_years: [],
-                error: error.message
-            };
-        }
-    }
-
-    /**
-     * Get system health status
-     */
-    async getSystemHealth() {
-        try {
-            // Check database connection
-            const dbCheck = await this.pool.query('SELECT 1');
-            const dbHealthy = dbCheck.rowCount === 1;
-            
-            // Check local data availability
-            let localDataAvailable = true;
-            try {
-                await fs.access(this.documentPaths.organized_pdfs);
-            } catch (error) {
-                localDataAvailable = false;
-            }
-            
-            // Get available years
-            const years = await this.getAvailableYears();
-            
-            return {
-                status: 'operational',
-                services: {
-                    database: dbHealthy ? 'healthy' : 'unhealthy',
-                    local_data: localDataAvailable ? 'available' : 'unavailable',
-                    api_endpoints: 'operational'
-                },
-                data_coverage: {
-                    available_years: years,
-                    total_years: years.length
-                },
-                timestamp: new Date().toISOString()
-            };
-        } catch (error) {
-            console.error('Error checking system health:', error);
-            return {
-                status: 'degraded',
-                error: error.message,
-                timestamp: new Date().toISOString()
-            };
-        }
     }
 }
 

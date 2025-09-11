@@ -1,63 +1,55 @@
-name: Deploy Carmen de Areco Transparency Portal
+name: Deploy to GitHub Pages and Cloudflare Workers
 
 on:
   push:
-    branches: [ main ]
-  schedule:
-    - cron: '0 6 * * *'  # Daily at 6 AM
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  deploy:
+  deploy-frontend:
     runs-on: ubuntu-latest
-    
-    services:
-      postgres:
-        image: postgres:15
-        env:
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: transparency_portal
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-    
     steps:
-      - uses: actions/checkout@v3
-      
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-          
+          node-version: '20'
+
       - name: Install dependencies
-        run: |
-          cd frontend && npm install
-          cd ../backend && npm install
-          pip install -r requirements.txt
-          
+        run: npm install
+        working-directory: frontend
+
       - name: Build frontend
-        run: cd frontend && npm run build
-        env:
-          VITE_API_URL: https://api.cda-transparencia.org/api/transparency
-          
-      - name: Verify build output
-        run: |
-          cd frontend
-          if [ ! -d "dist" ] || [ -z "$(ls -A dist)" ]; then
-            echo "Build failed or dist directory is empty"
-            exit 1
-          fi
-          echo "Build successful, dist directory contains:"
-          ls -la dist
-          
+        run: npm run build:github
+        working-directory: frontend
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./frontend/dist
+          cname: cda-transparencia.org
+
+  deploy-worker:
+    runs-on: ubuntu-latest
+    needs: deploy-frontend
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Wrangler
+        run: npm install -g wrangler
+
+      - name: Publish Cloudflare Worker
+        run: wrangler publish
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
