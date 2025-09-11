@@ -3,11 +3,11 @@ import { render, screen } from '@testing-library/react';
 import CategoryPage from '../pages/CategoryPage';
 
 // Mock the necessary modules
-jest.mock('../services/ConsolidatedApiService', () => ({
+vi.mock('../services/ConsolidatedApiService', () => ({
   consolidatedApiService: {
-    getAvailableYears: jest.fn().mockResolvedValue([2023, 2022, 2021]),
-    getDocuments: jest.fn().mockResolvedValue([]),
-    getBudgetData: jest.fn().mockResolvedValue({
+    getAvailableYears: vi.fn().mockResolvedValue([2023, 2022, 2021]),
+    getDocuments: vi.fn().mockResolvedValue([]),
+    getBudgetData: vi.fn().mockResolvedValue({
       budgeted: 1000000,
       executed: 800000,
       execution_rate: 80,
@@ -16,19 +16,19 @@ jest.mock('../services/ConsolidatedApiService', () => ({
   }
 }));
 
-jest.mock('../components/ValidatedChart', () => {
+vi.mock('../components/ValidatedChart', () => {
   return function MockValidatedChart() {
     return <div data-testid="validated-chart">Chart Component</div>;
   };
 });
 
-jest.mock('../components/DocumentViewer', () => {
+vi.mock('../components/DocumentViewer', () => {
   return function MockDocumentViewer() {
     return <div>Document Viewer Component</div>;
   };
 });
 
-jest.mock('../components/PageYearSelector', () => {
+vi.mock('../components/PageYearSelector', () => {
   return function MockPageYearSelector() {
     return <div>Year Selector Component</div>;
   };

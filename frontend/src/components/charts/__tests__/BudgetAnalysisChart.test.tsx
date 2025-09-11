@@ -44,9 +44,9 @@ const createTestQueryClient = () => {
 };
 
 // Mock the consolidated API service
-jest.mock('../../../services/ConsolidatedApiService', () => ({
+vi.mock('../../../services/ConsolidatedApiService', () => ({
   consolidatedApiService: {
-    getBudgetData: jest.fn().mockResolvedValue(mockBudgetData)
+    getBudgetData: vi.fn().mockResolvedValue(mockBudgetData)
   }
 }));
 
@@ -62,7 +62,7 @@ const wrapper = ({ children }: { children: React.ReactNode }) => {
 
 describe('BudgetAnalysisChart', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   test('renders budget chart with summary stats', async () => {
@@ -81,7 +81,7 @@ describe('BudgetAnalysisChart', () => {
   test('handles loading state', () => {
     // Mock loading state by making the API call pending
     const mockConsolidatedApiService = require('../../../services/ConsolidatedApiService');
-    mockConsolidatedApiService.consolidatedApiService.getBudgetData = jest.fn(() => 
+    mockConsolidatedApiService.consolidatedApiService.getBudgetData = vi.fn(() => 
       new Promise(() => {}) // Never resolves
     );
     
@@ -94,7 +94,7 @@ describe('BudgetAnalysisChart', () => {
   test('handles error state', async () => {
     // Mock error state
     const mockConsolidatedApiService = require('../../../services/ConsolidatedApiService');
-    mockConsolidatedApiService.consolidatedApiService.getBudgetData = jest.fn(() => 
+    mockConsolidatedApiService.consolidatedApiService.getBudgetData = vi.fn(() => 
       Promise.reject(new Error('Failed to fetch budget data'))
     );
     

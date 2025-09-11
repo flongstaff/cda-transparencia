@@ -4,20 +4,11 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  plugins: [
-    react({
-      // Enable React Fast Refresh in tests
-      fastRefresh: true,
-      // Include .jsx files
-      include: '**/*.{jsx,tsx}',
-    }),
-  ],
+  plugins: [react()],
   
   test: {
-    // Test environment setup
-    setupFiles: ['./src/vitest.setup.ts'],
     environment: 'jsdom',
-    setupFiles: ['./src/test-setup.ts'],
+    setupFiles: ['./src/vitest.setup.tsx'],
     
     // Global test configuration
     globals: true,
@@ -36,7 +27,6 @@ export default defineConfig({
         '**/*.config.*',
         '**/test-setup.ts',
         '**/__tests__/**',
-        '**/*.test.{ts,tsx,js,jsx}',
         '**/coverage/**',
         '**/build/**',
         '**/.next/**',

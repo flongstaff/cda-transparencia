@@ -4,10 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 import Budget from '../pages/Budget';
 
 // Mock the consolidated API service
-jest.mock('../services/ConsolidatedApiService', () => ({
+vi.mock('../services/ConsolidatedApiService', () => ({
   consolidatedApiService: {
-    getAvailableYears: jest.fn().mockResolvedValue([2025, 2024, 2023, 2022]),
-    getYearlyData: jest.fn().mockResolvedValue({
+    getAvailableYears: vi.fn().mockResolvedValue([2025, 2024, 2023, 2022, 2021, 2020, 2019]),
+    getYearlyData: vi.fn().mockResolvedValue({
       year: 2024,
       budget: {
         total: 5000000000,
@@ -22,21 +22,21 @@ jest.mock('../services/ConsolidatedApiService', () => ({
         ]
       },
       summary: {
-        total_documents: 173,
+        total_documents: 336,
         total_categories: 5,
         total_size_mb: '57.30',
-        verified_documents: 156,
-        transparency_score: 85
+        verified_documents: 336,
+        transparency_score: 100
       },
       categories: {
         'Ejecución Presupuestaria': [
           { id: 'doc-1', title: 'Estado de Ejecución de Gastos', year: 2024, category: 'Ejecución Presupuestaria', type: 'budget_execution', size_mb: '2.5', url: '/documents/1', official_url: 'https://carmendeareco.gob.ar/transparencia/document1.pdf', verification_status: 'verified', processing_date: '2024-06-30' }
         ]
       },
-      total_documents: 173,
-      verified_documents: 156
+      total_documents: 336,
+      verified_documents: 336
     }),
-    getBudgetData: jest.fn().mockResolvedValue({
+    getBudgetData: vi.fn().mockResolvedValue({
       total_budgeted: 5000000000,
       total_executed: 4250000000,
       execution_rate: '85.0',
@@ -48,35 +48,35 @@ jest.mock('../services/ConsolidatedApiService', () => ({
         'Transferencias': { budgeted: 350000000, executed: 297500000, execution_rate: '85.0' }
       }
     }),
-    getTransparencyScore: jest.fn().mockResolvedValue({
-      score: 85,
-      overall: 85,
-      execution: 85
+    getTransparencyScore: vi.fn().mockResolvedValue({
+      score: 100,
+      overall: 100,
+      execution: 100
     })
   }
 }));
 
 // Mock other components
-jest.mock('../components/PageYearSelector', () => {
+vi.mock('../components/PageYearSelector', () => {
   return function MockPageYearSelector(props: any) {
     return <div data-testid="page-year-selector">PageYearSelector</div>;
   };
 });
 
-jest.mock('../components/charts/BudgetAnalysisChart', () => {
+vi.mock('../components/charts/BudgetAnalysisChart', () => {
   return function MockBudgetAnalysisChart() {
     return <div data-testid="budget-analysis-chart">BudgetAnalysisChart</div>;
   };
 });
 
-jest.mock('../components/charts/UnifiedDashboardChart', () => {
+vi.mock('../components/charts/UnifiedDashboardChart', () => {
   return function MockUnifiedDashboardChart() {
     return <div data-testid="unified-dashboard-chart">UnifiedDashboardChart</div>;
   };
 });
 
 
-jest.mock('../components/audit/CriticalIssues', () => {
+vi.mock('../components/audit/CriticalIssues', () => {
   return function MockCriticalIssues() {
     return <div data-testid="critical-issues">CriticalIssues</div>;
   };
@@ -84,7 +84,7 @@ jest.mock('../components/audit/CriticalIssues', () => {
 
 describe('Budget Page', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   test('renders budget page with loading state initially', () => {

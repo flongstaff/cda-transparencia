@@ -34,14 +34,14 @@ const mockDebtData = {
 };
 
 // Mock the unified data hook
-jest.mock('../../hooks/useUnifiedData', () => ({
-  useDebtData: jest.fn().mockReturnValue({
+vi.mock('../../hooks/useUnifiedData', () => ({
+  useDebtData: vi.fn().mockReturnValue({
     data: mockDebtData,
     isLoading: false,
     error: null,
-    refetch: jest.fn()
+    refetch: vi.fn()
   }),
-  transformDebtData: jest.fn().mockImplementation((data) => data)
+  transformDebtData: vi.fn().mockImplementation((data) => data)
 }));
 import { render, screen, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -60,7 +60,7 @@ const wrapper = ({ children }: { children: React.ReactNode }) => {
 
 describe('DebtAnalysisChart', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   test('renders debt chart with summary stats', async () => {
@@ -99,7 +99,7 @@ describe('DebtAnalysisChart', () => {
   test('handles loading state', () => {
     // Mock loading state by making the API call pending
     const mockConsolidatedApiService = require('../../services/ConsolidatedApiService');
-    mockConsolidatedApiService.consolidatedApiService.getMunicipalDebt = jest.fn(() => 
+    mockConsolidatedApiService.consolidatedApiService.getMunicipalDebt = vi.fn(() => 
       new Promise(() => {}) // Never resolves
     );
     
@@ -112,7 +112,7 @@ describe('DebtAnalysisChart', () => {
   test('handles error state', async () => {
     // Mock error state
     const mockConsolidatedApiService = require('../../services/ConsolidatedApiService');
-    mockConsolidatedApiService.consolidatedApiService.getMunicipalDebt = jest.fn(() => 
+    mockConsolidatedApiService.consolidatedApiService.getMunicipalDebt = vi.fn(() => 
       Promise.reject(new Error('Failed to fetch debt data'))
     );
     

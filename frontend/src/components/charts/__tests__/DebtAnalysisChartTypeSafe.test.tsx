@@ -34,14 +34,14 @@ const mockDebtData = {
 };
 
 // Mock the unified data hook
-jest.mock('../../hooks/useUnifiedData', () => ({
-  useDebtData: jest.fn().mockReturnValue({
+vi.mock('../../hooks/useUnifiedData', () => ({
+  useDebtData: vi.fn().mockReturnValue({
     data: mockDebtData,
     isLoading: false,
     error: null,
-    refetch: jest.fn()
+    refetch: vi.fn()
   }),
-  transformDebtData: jest.fn().mockImplementation((data) => data)
+  transformDebtData: vi.fn().mockImplementation((data) => data)
 }));
 import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';

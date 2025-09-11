@@ -1,0 +1,24 @@
+{
+  "report_date": "2025-09-11T17:20:12.941968",
+  "summary": {
+    "total_documents_found": 237,
+    "new_documents_discovered": 237,
+    "categories": {
+      "financial": 147,
+      "general": 73,
+      "salaries": 9,
+      "contracts": 5,
+      "declarations": 3
+    },
+    "file_types": {
+      ".pdf": 228,
+      ".xlsx": 7,
+      ".doc": 2
+    }
+  },
+  "methodology": [
+    "Direct uploads directory exploration",
+    "Website crawling",
+    "PowerBI limitation bypass attempts"
+  ]
+}

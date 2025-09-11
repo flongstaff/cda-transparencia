@@ -1,0 +1,1236 @@
+{
+  "timestamp": "2025-09-11T17:20:46.441574",
+  "statistics": {
+    "total_documents": 237,
+    "categorized_documents": 179,
+    "uncategorized_documents": 58,
+    "categories": {
+      "infrastructure_and_public_works": 2,
+      "contracts_and_procurement": 8,
+      "transparency_and_reports": 2,
+      "salaries_and_personnel": 12,
+      "municipal_governance": 8,
+      "budget_and_financial": 147
+    },
+    "years": {
+      "unknown": 159,
+      "2021": 14,
+      "2016": 1,
+      "2012": 3,
+      "2022": 30,
+      "2023": 18,
+      "2019": 1,
+      "2024": 7,
+      "2025": 2,
+      "2020": 2
+    },
+    "file_types": {
+      ".pdf": 228,
+      ".doc": 2,
+      ".xlsx": 7
+    }
+  },
+  "category_hierarchy": {
+    "infrastructure_and_public_works": {
+      "name": "Infraestructura y Obras Públicas",
+      "count": 2,
+      "subcategories": {
+        "construction_projects": {
+          "name": "Proyectos de Construcción",
+          "count": 2,
+          "sample_documents": [
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2020/03/proyecto_Rivas_Ecopolis.pdf",
+              "filename": "proyecto_Rivas_Ecopolis.pdf",
+              "file_size": 4515293,
+              "file_type": ".pdf",
+              "initial_category": "general",
+              "discovered_date": "2025-09-11T17:19:02.074828",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "infrastructure_and_public_works"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2020/03/proyectoECOPOLIS2020.pdf",
+              "filename": "proyectoECOPOLIS2020.pdf",
+              "file_size": 16453663,
+              "file_type": ".pdf",
+              "initial_category": "general",
+              "discovered_date": "2025-09-11T17:19:01.719452",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "infrastructure_and_public_works"
+            }
+          ]
+        }
+      }
+    },
+    "contracts_and_procurement": {
+      "name": "Contratos y Compras",
+      "count": 8,
+      "subcategories": {
+        "public_tenders": {
+          "name": "Licitaciones Públicas",
+          "count": 5,
+          "sample_documents": [
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf",
+              "filename": "LICITACION-PUBLICA-N°7.pdf",
+              "file_size": 808836,
+              "file_type": ".pdf",
+              "initial_category": "contracts",
+              "discovered_date": "2025-09-11T17:18:07.699849",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "contracts_and_procurement"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°8.pdf",
+              "filename": "LICITACION-PUBLICA-N°8.pdf",
+              "file_size": 809403,
+              "file_type": ".pdf",
+              "initial_category": "contracts",
+              "discovered_date": "2025-09-11T17:18:07.235790",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "contracts_and_procurement"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°9.pdf",
+              "filename": "LICITACION-PUBLICA-N°9.pdf",
+              "file_size": 735593,
+              "file_type": ".pdf",
+              "initial_category": "contracts",
+              "discovered_date": "2025-09-11T17:18:06.881140",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "contracts_and_procurement"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°10.pdf",
+              "filename": "LICITACION-PUBLICA-N°10.pdf",
+              "file_size": 722391,
+              "file_type": ".pdf",
+              "initial_category": "contracts",
+              "discovered_date": "2025-09-11T17:18:06.480221",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "contracts_and_procurement"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°11.pdf",
+              "filename": "LICITACION-PUBLICA-N°11.pdf",
+              "file_size": 769278,
+              "file_type": ".pdf",
+              "initial_category": "contracts",
+              "discovered_date": "2025-09-11T17:18:06.119884",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "contracts_and_procurement"
+            }
+          ]
+        },
+        "supplier_database": {
+          "name": "Base de Proveedores",
+          "count": 3,
+          "sample_documents": [
+            {
+              "url": "https://carmendeareco.gob.ar/download/Proveedores-Formulario-35.doc",
+              "filename": "Proveedores-Formulario-35.doc",
+              "file_size": 24576,
+              "file_type": ".doc",
+              "initial_category": "general",
+              "discovered_date": "2025-09-11T17:18:55.419764",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "contracts_and_procurement"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/download/Proveedores-Formulario-33.doc",
+              "filename": "Proveedores-Formulario-33.doc",
+              "file_size": 28160,
+              "file_type": ".doc",
+              "initial_category": "general",
+              "discovered_date": "2025-09-11T17:18:54.953012",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "contracts_and_procurement"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/download/Proveedores-requisitos.pdf",
+              "filename": "Proveedores-requisitos.pdf",
+              "file_size": 134722,
+              "file_type": ".pdf",
+              "initial_category": "general",
+              "discovered_date": "2025-09-11T17:18:54.189839",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "contracts_and_procurement"
+            }
+          ]
+        }
+      }
+    },
+    "transparency_and_reports": {
+      "name": "Transparencia e Informes",
+      "count": 2,
+      "subcategories": {
+        "transparency_reports": {
+          "name": "Informes de Transparencia",
+          "count": 2,
+          "sample_documents": [
+            {
+              "url": "https://carmendeareco.gob.ar/estadisticas/2021/2021%20REPORTES%20DE%20CIUDADANOS.pdf",
+              "filename": "2021%20REPORTES%20DE%20CIUDADANOS.pdf",
+              "file_size": 565999,
+              "file_type": ".pdf",
+              "initial_category": "general",
+              "discovered_date": "2025-09-11T17:18:50.470142",
+              "source": "discovery",
+              "year": 2021,
+              "category": "transparency_and_reports"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/estadisticas/2022/REPORTES CIUDADANOS 2022.pdf",
+              "filename": "REPORTES CIUDADANOS 2022.pdf",
+              "file_size": 491568,
+              "file_type": ".pdf",
+              "initial_category": "general",
+              "discovered_date": "2025-09-11T17:18:41.287325",
+              "source": "discovery",
+              "year": 2022,
+              "category": "transparency_and_reports"
+            }
+          ]
+        }
+      }
+    },
+    "salaries_and_personnel": {
+      "name": "Sueldos y Personal",
+      "count": 12,
+      "subcategories": {
+        "salary_scales": {
+          "name": "Escalas Salariales",
+          "count": 8,
+          "sample_documents": [
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-ENERO-2023.pdf",
+              "filename": "SUELDOS-ENERO-2023.pdf",
+              "file_size": 423903,
+              "file_type": ".pdf",
+              "initial_category": "salaries",
+              "discovered_date": "2025-09-11T17:18:10.936575",
+              "source": "discovery",
+              "year": 2023,
+              "category": "salaries_and_personnel"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-MARZO-2023.pdf",
+              "filename": "SUELDOS-MARZO-2023.pdf",
+              "file_size": 424532,
+              "file_type": ".pdf",
+              "initial_category": "salaries",
+              "discovered_date": "2025-09-11T17:18:10.579511",
+              "source": "discovery",
+              "year": 2023,
+              "category": "salaries_and_personnel"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-MAYO-2023.pdf",
+              "filename": "SUELDOS-MAYO-2023.pdf",
+              "file_size": 426361,
+              "file_type": ".pdf",
+              "initial_category": "salaries",
+              "discovered_date": "2025-09-11T17:18:10.111368",
+              "source": "discovery",
+              "year": 2023,
+              "category": "salaries_and_personnel"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-JUNIO-2023.pdf",
+              "filename": "SUELDOS-JUNIO-2023.pdf",
+              "file_size": 423887,
+              "file_type": ".pdf",
+              "initial_category": "salaries",
+              "discovered_date": "2025-09-11T17:18:09.747795",
+              "source": "discovery",
+              "year": 2023,
+              "category": "salaries_and_personnel"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-JULIO-2023.pdf",
+              "filename": "SUELDOS-JULIO-2023.pdf",
+              "file_size": 423892,
+              "file_type": ".pdf",
+              "initial_category": "salaries",
+              "discovered_date": "2025-09-11T17:18:09.338543",
+              "source": "discovery",
+              "year": 2023,
+              "category": "salaries_and_personnel"
+            }
+          ]
+        },
+        "declarations": {
+          "name": "Declaraciones Juradas",
+          "count": 3,
+          "sample_documents": [
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ddjj-2022.pdf",
+              "filename": "ddjj-2022.pdf",
+              "file_size": 430957,
+              "file_type": ".pdf",
+              "initial_category": "declarations",
+              "discovered_date": "2025-09-11T17:18:12.102276",
+              "source": "discovery",
+              "year": 2022,
+              "category": "salaries_and_personnel"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ddjj-2023.pdf",
+              "filename": "ddjj-2023.pdf",
+              "file_size": 431004,
+              "file_type": ".pdf",
+              "initial_category": "declarations",
+              "discovered_date": "2025-09-11T17:18:11.694184",
+              "source": "discovery",
+              "year": 2023,
+              "category": "salaries_and_personnel"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/DDJJ-2024.pdf",
+              "filename": "DDJJ-2024.pdf",
+              "file_size": 446399,
+              "file_type": ".pdf",
+              "initial_category": "declarations",
+              "discovered_date": "2025-09-11T17:18:11.292124",
+              "source": "discovery",
+              "year": 2024,
+              "category": "salaries_and_personnel"
+            }
+          ]
+        },
+        "personnel_structure": {
+          "name": "Estructura de Personal",
+          "count": 1,
+          "sample_documents": [
+            {
+              "url": "https://carmendeareco.gob.ar/estadisticas/2021/2021%20ADMINISTRACION%20DE%20PERSONAL.pdf",
+              "filename": "2021%20ADMINISTRACION%20DE%20PERSONAL.pdf",
+              "file_size": 648650,
+              "file_type": ".pdf",
+              "initial_category": "salaries",
+              "discovered_date": "2025-09-11T17:18:48.351780",
+              "source": "discovery",
+              "year": 2021,
+              "category": "salaries_and_personnel"
+            }
+          ]
+        }
+      }
+    },
+    "municipal_governance": {
+      "name": "Gobierno Municipal",
+      "count": 8,
+      "subcategories": {
+        "ordinances": {
+          "name": "Ordenanzas",
+          "count": 8,
+          "sample_documents": [
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2022/07/Anexo-II-Ordenanza-Impositiva-3135-2022.pdf",
+              "filename": "Anexo-II-Ordenanza-Impositiva-3135-2022.pdf",
+              "file_size": 684888,
+              "file_type": ".pdf",
+              "initial_category": "general",
+              "discovered_date": "2025-09-11T17:18:35.448316",
+              "source": "discovery",
+              "year": 2022,
+              "category": "municipal_governance"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2022/07/Ordenanza-Impositiva-3135-2022.pdf",
+              "filename": "Ordenanza-Impositiva-3135-2022.pdf",
+              "file_size": 4164541,
+              "file_type": ".pdf",
+              "initial_category": "general",
+              "discovered_date": "2025-09-11T17:18:35.039384",
+              "source": "discovery",
+              "year": 2022,
+              "category": "municipal_governance"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2022/07/Ordenanza-Fiscal-3112-2022.pdf",
+              "filename": "Ordenanza-Fiscal-3112-2022.pdf",
+              "file_size": 6002608,
+              "file_type": ".pdf",
+              "initial_category": "general",
+              "discovered_date": "2025-09-11T17:18:34.630990",
+              "source": "discovery",
+              "year": 2022,
+              "category": "municipal_governance"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/download/Ordenanza-Impositiva-3059-2021.pdf",
+              "filename": "Ordenanza-Impositiva-3059-2021.pdf",
+              "file_size": 809293,
+              "file_type": ".pdf",
+              "initial_category": "general",
+              "discovered_date": "2025-09-11T17:18:34.219989",
+              "source": "discovery",
+              "year": 2021,
+              "category": "municipal_governance"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/download/Ordenanza-Fiscal-3057-2021.pdf",
+              "filename": "Ordenanza-Fiscal-3057-2021.pdf",
+              "file_size": 669986,
+              "file_type": ".pdf",
+              "initial_category": "general",
+              "discovered_date": "2025-09-11T17:18:33.810194",
+              "source": "discovery",
+              "year": 2021,
+              "category": "municipal_governance"
+            }
+          ]
+        }
+      }
+    },
+    "budget_and_financial": {
+      "name": "Presupuesto y Finanzas",
+      "count": 147,
+      "subcategories": {
+        "budget_planning": {
+          "name": "Planificación Presupuestaria",
+          "count": 2,
+          "sample_documents": [
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-3200-24-PRESUPUESTO-2024.pdf",
+              "filename": "ORDENANZA-3200-24-PRESUPUESTO-2024.pdf",
+              "file_size": 72968256,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:18:03.890012",
+              "source": "discovery",
+              "year": 2024,
+              "category": "budget_and_financial"
+            },
+            {
+              "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+              "filename": "PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+              "file_size": null,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:18:01.811488",
+              "source": "discovery",
+              "year": 2025,
+              "category": "budget_and_financial"
+            }
+          ]
+        },
+        "budget_execution": {
+          "name": "Ejecución Presupuestaria",
+          "count": 120,
+          "sample_documents": [
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+              "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+              "file_size": 102105,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:17:59.908486",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "budget_and_financial"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+              "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+              "file_size": 109662,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:17:59.555008",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "budget_and_financial"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+              "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+              "file_size": 67548,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:17:59.200875",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "budget_and_financial"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS.pdf",
+              "filename": "ESTADO-DE-EJECUCION-DE-GASTOS.pdf",
+              "file_size": 1173473,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:17:58.790377",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "budget_and_financial"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+              "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+              "file_size": 121409,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:17:58.380694",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "budget_and_financial"
+            }
+          ]
+        },
+        "financial_statements": {
+          "name": "Estados Financieros",
+          "count": 1,
+          "sample_documents": [
+            {
+              "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+              "filename": "BALANCE-GENERAL-2020.pdf",
+              "file_size": 395513,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:17:06.284895",
+              "source": "discovery",
+              "year": 2020,
+              "category": "budget_and_financial"
+            }
+          ]
+        },
+        "revenue": {
+          "name": "Ingresos",
+          "count": 54,
+          "sample_documents": [
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+              "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+              "file_size": 121409,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:17:58.380694",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "budget_and_financial"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+              "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+              "file_size": 102664,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:17:57.957792",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "budget_and_financial"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+              "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+              "file_size": 85712,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:17:57.603028",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "budget_and_financial"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+              "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+              "file_size": 151544,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:17:56.889521",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "budget_and_financial"
+            },
+            {
+              "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+              "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+              "file_size": 118244,
+              "file_type": ".pdf",
+              "initial_category": "financial",
+              "discovered_date": "2025-09-11T17:17:54.181549",
+              "source": "discovery",
+              "year": "unknown",
+              "category": "budget_and_financial"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "yearly_analysis": {
+    "2021": {
+      "total_documents": 14,
+      "by_category": {
+        "uncategorized": 9,
+        "transparency_and_reports": 1,
+        "salaries_and_personnel": 1,
+        "municipal_governance": 2,
+        "budget_and_financial": 1
+      },
+      "by_file_type": {
+        ".pdf": 14
+      },
+      "data_completeness": {
+        "score": 60.0,
+        "missing_categories": [
+          "contracts_and_procurement",
+          "infrastructure_and_public_works"
+        ],
+        "available_categories": [
+          "salaries_and_personnel",
+          "budget_and_financial",
+          "municipal_governance",
+          "transparency_and_reports"
+        ]
+      }
+    },
+    "2016": {
+      "total_documents": 1,
+      "by_category": {
+        "uncategorized": 1
+      },
+      "by_file_type": {
+        ".pdf": 1
+      },
+      "data_completeness": {
+        "score": 0.0,
+        "missing_categories": [
+          "salaries_and_personnel",
+          "infrastructure_and_public_works",
+          "municipal_governance",
+          "contracts_and_procurement",
+          "budget_and_financial"
+        ],
+        "available_categories": []
+      }
+    },
+    "2012": {
+      "total_documents": 3,
+      "by_category": {
+        "uncategorized": 3
+      },
+      "by_file_type": {
+        ".pdf": 3
+      },
+      "data_completeness": {
+        "score": 0.0,
+        "missing_categories": [
+          "salaries_and_personnel",
+          "infrastructure_and_public_works",
+          "municipal_governance",
+          "contracts_and_procurement",
+          "budget_and_financial"
+        ],
+        "available_categories": []
+      }
+    },
+    "2022": {
+      "total_documents": 30,
+      "by_category": {
+        "uncategorized": 10,
+        "transparency_and_reports": 1,
+        "municipal_governance": 3,
+        "budget_and_financial": 15,
+        "salaries_and_personnel": 1
+      },
+      "by_file_type": {
+        ".pdf": 30
+      },
+      "data_completeness": {
+        "score": 60.0,
+        "missing_categories": [
+          "contracts_and_procurement",
+          "infrastructure_and_public_works"
+        ],
+        "available_categories": [
+          "municipal_governance",
+          "budget_and_financial",
+          "salaries_and_personnel",
+          "transparency_and_reports"
+        ]
+      }
+    },
+    "2023": {
+      "total_documents": 18,
+      "by_category": {
+        "budget_and_financial": 10,
+        "salaries_and_personnel": 7,
+        "uncategorized": 1
+      },
+      "by_file_type": {
+        ".pdf": 18
+      },
+      "data_completeness": {
+        "score": 40.0,
+        "missing_categories": [
+          "municipal_governance",
+          "infrastructure_and_public_works",
+          "contracts_and_procurement"
+        ],
+        "available_categories": [
+          "salaries_and_personnel",
+          "budget_and_financial"
+        ]
+      }
+    },
+    "2019": {
+      "total_documents": 1,
+      "by_category": {
+        "budget_and_financial": 1
+      },
+      "by_file_type": {
+        ".pdf": 1
+      },
+      "data_completeness": {
+        "score": 20.0,
+        "missing_categories": [
+          "salaries_and_personnel",
+          "infrastructure_and_public_works",
+          "municipal_governance",
+          "contracts_and_procurement"
+        ],
+        "available_categories": [
+          "budget_and_financial"
+        ]
+      }
+    },
+    "2024": {
+      "total_documents": 7,
+      "by_category": {
+        "salaries_and_personnel": 3,
+        "budget_and_financial": 1,
+        "uncategorized": 3
+      },
+      "by_file_type": {
+        ".pdf": 4,
+        ".xlsx": 3
+      },
+      "data_completeness": {
+        "score": 40.0,
+        "missing_categories": [
+          "municipal_governance",
+          "infrastructure_and_public_works",
+          "contracts_and_procurement"
+        ],
+        "available_categories": [
+          "salaries_and_personnel",
+          "budget_and_financial"
+        ]
+      }
+    },
+    "2025": {
+      "total_documents": 2,
+      "by_category": {
+        "budget_and_financial": 1,
+        "uncategorized": 1
+      },
+      "by_file_type": {
+        ".pdf": 2
+      },
+      "data_completeness": {
+        "score": 20.0,
+        "missing_categories": [
+          "salaries_and_personnel",
+          "infrastructure_and_public_works",
+          "municipal_governance",
+          "contracts_and_procurement"
+        ],
+        "available_categories": [
+          "budget_and_financial"
+        ]
+      }
+    },
+    "2020": {
+      "total_documents": 2,
+      "by_category": {
+        "uncategorized": 1,
+        "budget_and_financial": 1
+      },
+      "by_file_type": {
+        ".xlsx": 1,
+        ".pdf": 1
+      },
+      "data_completeness": {
+        "score": 20.0,
+        "missing_categories": [
+          "salaries_and_personnel",
+          "infrastructure_and_public_works",
+          "municipal_governance",
+          "contracts_and_procurement"
+        ],
+        "available_categories": [
+          "budget_and_financial"
+        ]
+      }
+    }
+  },
+  "sample_documents": {
+    "recent": [],
+    "by_category": {
+      "infrastructure_and_public_works": [
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2020/03/proyecto_Rivas_Ecopolis.pdf",
+          "filename": "proyecto_Rivas_Ecopolis.pdf",
+          "file_size": 4515293,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:19:02.074828",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "infrastructure_and_public_works"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2020/03/proyectoECOPOLIS2020.pdf",
+          "filename": "proyectoECOPOLIS2020.pdf",
+          "file_size": 16453663,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:19:01.719452",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "infrastructure_and_public_works"
+        }
+      ],
+      "contracts_and_procurement": [
+        {
+          "url": "https://carmendeareco.gob.ar/download/Proveedores-Formulario-35.doc",
+          "filename": "Proveedores-Formulario-35.doc",
+          "file_size": 24576,
+          "file_type": ".doc",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:55.419764",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "contracts_and_procurement"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/Proveedores-Formulario-33.doc",
+          "filename": "Proveedores-Formulario-33.doc",
+          "file_size": 28160,
+          "file_type": ".doc",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:54.953012",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "contracts_and_procurement"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/Proveedores-requisitos.pdf",
+          "filename": "Proveedores-requisitos.pdf",
+          "file_size": 134722,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:54.189839",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "contracts_and_procurement"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf",
+          "filename": "LICITACION-PUBLICA-N°7.pdf",
+          "file_size": 808836,
+          "file_type": ".pdf",
+          "initial_category": "contracts",
+          "discovered_date": "2025-09-11T17:18:07.699849",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "contracts_and_procurement"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°8.pdf",
+          "filename": "LICITACION-PUBLICA-N°8.pdf",
+          "file_size": 809403,
+          "file_type": ".pdf",
+          "initial_category": "contracts",
+          "discovered_date": "2025-09-11T17:18:07.235790",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "contracts_and_procurement"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°9.pdf",
+          "filename": "LICITACION-PUBLICA-N°9.pdf",
+          "file_size": 735593,
+          "file_type": ".pdf",
+          "initial_category": "contracts",
+          "discovered_date": "2025-09-11T17:18:06.881140",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "contracts_and_procurement"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°10.pdf",
+          "filename": "LICITACION-PUBLICA-N°10.pdf",
+          "file_size": 722391,
+          "file_type": ".pdf",
+          "initial_category": "contracts",
+          "discovered_date": "2025-09-11T17:18:06.480221",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "contracts_and_procurement"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°11.pdf",
+          "filename": "LICITACION-PUBLICA-N°11.pdf",
+          "file_size": 769278,
+          "file_type": ".pdf",
+          "initial_category": "contracts",
+          "discovered_date": "2025-09-11T17:18:06.119884",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "contracts_and_procurement"
+        }
+      ],
+      "transparency_and_reports": [
+        {
+          "url": "https://carmendeareco.gob.ar/estadisticas/2021/2021%20REPORTES%20DE%20CIUDADANOS.pdf",
+          "filename": "2021%20REPORTES%20DE%20CIUDADANOS.pdf",
+          "file_size": 565999,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:50.470142",
+          "source": "discovery",
+          "year": 2021,
+          "category": "transparency_and_reports"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/estadisticas/2022/REPORTES CIUDADANOS 2022.pdf",
+          "filename": "REPORTES CIUDADANOS 2022.pdf",
+          "file_size": 491568,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:41.287325",
+          "source": "discovery",
+          "year": 2022,
+          "category": "transparency_and_reports"
+        }
+      ],
+      "salaries_and_personnel": [
+        {
+          "url": "https://carmendeareco.gob.ar/estadisticas/2021/2021%20ADMINISTRACION%20DE%20PERSONAL.pdf",
+          "filename": "2021%20ADMINISTRACION%20DE%20PERSONAL.pdf",
+          "file_size": 648650,
+          "file_type": ".pdf",
+          "initial_category": "salaries",
+          "discovered_date": "2025-09-11T17:18:48.351780",
+          "source": "discovery",
+          "year": 2021,
+          "category": "salaries_and_personnel"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ddjj-2022.pdf",
+          "filename": "ddjj-2022.pdf",
+          "file_size": 430957,
+          "file_type": ".pdf",
+          "initial_category": "declarations",
+          "discovered_date": "2025-09-11T17:18:12.102276",
+          "source": "discovery",
+          "year": 2022,
+          "category": "salaries_and_personnel"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ddjj-2023.pdf",
+          "filename": "ddjj-2023.pdf",
+          "file_size": 431004,
+          "file_type": ".pdf",
+          "initial_category": "declarations",
+          "discovered_date": "2025-09-11T17:18:11.694184",
+          "source": "discovery",
+          "year": 2023,
+          "category": "salaries_and_personnel"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/DDJJ-2024.pdf",
+          "filename": "DDJJ-2024.pdf",
+          "file_size": 446399,
+          "file_type": ".pdf",
+          "initial_category": "declarations",
+          "discovered_date": "2025-09-11T17:18:11.292124",
+          "source": "discovery",
+          "year": 2024,
+          "category": "salaries_and_personnel"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-ENERO-2023.pdf",
+          "filename": "SUELDOS-ENERO-2023.pdf",
+          "file_size": 423903,
+          "file_type": ".pdf",
+          "initial_category": "salaries",
+          "discovered_date": "2025-09-11T17:18:10.936575",
+          "source": "discovery",
+          "year": 2023,
+          "category": "salaries_and_personnel"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-MARZO-2023.pdf",
+          "filename": "SUELDOS-MARZO-2023.pdf",
+          "file_size": 424532,
+          "file_type": ".pdf",
+          "initial_category": "salaries",
+          "discovered_date": "2025-09-11T17:18:10.579511",
+          "source": "discovery",
+          "year": 2023,
+          "category": "salaries_and_personnel"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-MAYO-2023.pdf",
+          "filename": "SUELDOS-MAYO-2023.pdf",
+          "file_size": 426361,
+          "file_type": ".pdf",
+          "initial_category": "salaries",
+          "discovered_date": "2025-09-11T17:18:10.111368",
+          "source": "discovery",
+          "year": 2023,
+          "category": "salaries_and_personnel"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-JUNIO-2023.pdf",
+          "filename": "SUELDOS-JUNIO-2023.pdf",
+          "file_size": 423887,
+          "file_type": ".pdf",
+          "initial_category": "salaries",
+          "discovered_date": "2025-09-11T17:18:09.747795",
+          "source": "discovery",
+          "year": 2023,
+          "category": "salaries_and_personnel"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-JULIO-2023.pdf",
+          "filename": "SUELDOS-JULIO-2023.pdf",
+          "file_size": 423892,
+          "file_type": ".pdf",
+          "initial_category": "salaries",
+          "discovered_date": "2025-09-11T17:18:09.338543",
+          "source": "discovery",
+          "year": 2023,
+          "category": "salaries_and_personnel"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/SUELDOS-SEPTIEMBRE-2023.pdf",
+          "filename": "SUELDOS-SEPTIEMBRE-2023.pdf",
+          "file_size": 428996,
+          "file_type": ".pdf",
+          "initial_category": "salaries",
+          "discovered_date": "2025-09-11T17:18:08.930511",
+          "source": "discovery",
+          "year": 2023,
+          "category": "salaries_and_personnel"
+        }
+      ],
+      "municipal_governance": [
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2022/07/Anexo-II-Ordenanza-Impositiva-3135-2022.pdf",
+          "filename": "Anexo-II-Ordenanza-Impositiva-3135-2022.pdf",
+          "file_size": 684888,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:35.448316",
+          "source": "discovery",
+          "year": 2022,
+          "category": "municipal_governance"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2022/07/Ordenanza-Impositiva-3135-2022.pdf",
+          "filename": "Ordenanza-Impositiva-3135-2022.pdf",
+          "file_size": 4164541,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:35.039384",
+          "source": "discovery",
+          "year": 2022,
+          "category": "municipal_governance"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2022/07/Ordenanza-Fiscal-3112-2022.pdf",
+          "filename": "Ordenanza-Fiscal-3112-2022.pdf",
+          "file_size": 6002608,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:34.630990",
+          "source": "discovery",
+          "year": 2022,
+          "category": "municipal_governance"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/Ordenanza-Impositiva-3059-2021.pdf",
+          "filename": "Ordenanza-Impositiva-3059-2021.pdf",
+          "file_size": 809293,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:34.219989",
+          "source": "discovery",
+          "year": 2021,
+          "category": "municipal_governance"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/Ordenanza-Fiscal-3057-2021.pdf",
+          "filename": "Ordenanza-Fiscal-3057-2021.pdf",
+          "file_size": 669986,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:33.810194",
+          "source": "discovery",
+          "year": 2021,
+          "category": "municipal_governance"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-IMPOSITIVA-3202-24.pdf",
+          "filename": "ORDENANZA-IMPOSITIVA-3202-24.pdf",
+          "file_size": 22469309,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:04.630399",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "municipal_governance"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/ORDENANZA-IMPOSITIVA-3282-25.pdf",
+          "filename": "ORDENANZA-IMPOSITIVA-3282-25.pdf",
+          "file_size": null,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:02.684752",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "municipal_governance"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-FISCAL-3198-23.pdf",
+          "filename": "ORDENANZA-FISCAL-3198-23.pdf",
+          "file_size": 44626056,
+          "file_type": ".pdf",
+          "initial_category": "general",
+          "discovered_date": "2025-09-11T17:18:02.272055",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "municipal_governance"
+        }
+      ],
+      "budget_and_financial": [
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/07/Situacion-Economico-Financiera-al-30-06-24-1.pdf",
+          "filename": "Situacion-Economico-Financiera-al-30-06-24-1.pdf",
+          "file_size": 1206488,
+          "file_type": ".pdf",
+          "initial_category": "financial",
+          "discovered_date": "2025-09-11T17:18:33.401929",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "budget_and_financial"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/SITUACION-ECONOMICO-FINANCIERA-DEL-02-01-2023-AL-31-12-2023.pdf",
+          "filename": "SITUACION-ECONOMICO-FINANCIERA-DEL-02-01-2023-AL-31-12-2023.pdf",
+          "file_size": 2488128,
+          "file_type": ".pdf",
+          "initial_category": "financial",
+          "discovered_date": "2025-09-11T17:18:32.992226",
+          "source": "discovery",
+          "year": 2023,
+          "category": "budget_and_financial"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/07/Situacion-Economica-Financiera-al-30-06-23.pdf",
+          "filename": "Situacion-Economica-Financiera-al-30-06-23.pdf",
+          "file_size": 271646,
+          "file_type": ".pdf",
+          "initial_category": "financial",
+          "discovered_date": "2025-09-11T17:18:32.620794",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "budget_and_financial"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/07/Situacion-Economica-Financiera-al-31-12-22.pdf",
+          "filename": "Situacion-Economica-Financiera-al-31-12-22.pdf",
+          "file_size": 1365467,
+          "file_type": ".pdf",
+          "initial_category": "financial",
+          "discovered_date": "2025-09-11T17:18:31.912182",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "budget_and_financial"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2022/10/SIT-ECONOMICO-FINANCIERA-TERCER-TRIMESTRE.pdf",
+          "filename": "SIT-ECONOMICO-FINANCIERA-TERCER-TRIMESTRE.pdf",
+          "file_size": 985093,
+          "file_type": ".pdf",
+          "initial_category": "financial",
+          "discovered_date": "2025-09-11T17:18:31.558188",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "budget_and_financial"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2022/07/SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022.pdf",
+          "filename": "SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022.pdf",
+          "file_size": 968124,
+          "file_type": ".pdf",
+          "initial_category": "financial",
+          "discovered_date": "2025-09-11T17:18:31.152059",
+          "source": "discovery",
+          "year": 2022,
+          "category": "budget_and_financial"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2022/03/SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021...pdf",
+          "filename": "SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021...pdf",
+          "file_size": 1191098,
+          "file_type": ".pdf",
+          "initial_category": "financial",
+          "discovered_date": "2025-09-11T17:18:30.702969",
+          "source": "discovery",
+          "year": 2021,
+          "category": "budget_and_financial"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2021/07/Situacion-financiera.pdf",
+          "filename": "Situacion-financiera.pdf",
+          "file_size": 695638,
+          "file_type": ".pdf",
+          "initial_category": "financial",
+          "discovered_date": "2025-09-11T17:18:30.349155",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "budget_and_financial"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2021/03/SITUACIÓN-ECONÓMICO-FINANCIERA.pdf",
+          "filename": "SITUACIÓN-ECONÓMICO-FINANCIERA.pdf",
+          "file_size": 988198,
+          "file_type": ".pdf",
+          "initial_category": "financial",
+          "discovered_date": "2025-09-11T17:18:29.978111",
+          "source": "discovery",
+          "year": "unknown",
+          "category": "budget_and_financial"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2020/05/2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+          "filename": "2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+          "file_size": 1135686,
+          "file_type": ".pdf",
+          "initial_category": "financial",
+          "discovered_date": "2025-09-11T17:18:29.270241",
+          "source": "discovery",
+          "year": 2019,
+          "category": "budget_and_financial"
+        }
+      ]
+    }
+  }
+}

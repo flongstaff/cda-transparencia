@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-104557672-3"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'UA-104557672-3');
+	</script>
+      
+<style>
+@font-face {
+  font-family: "Roboto script=all rev=2";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://fonts.gstatic.com/l/font?kit=_3of8ywLEpmdcJBd-QqMwpq2_oImrIbIXRVNiie__o_G7VffaUiHUOb-2xT80FuQ0q8D79ib0EJgaPPWcXoolg&skey=c06e7213f788649e&v=v16") format("woff2");
+}
+
+.cuadrado{
+
+	background: #BD3030;
+	box-shadow: rgba(0, 0, 0, 0.4) 0.05em 0.05em 0.15em 0em;
+	border-radius: 0.03em;
+	width: 216px;
+	height: 216px;
+}
+
+a{
+	color: #0695d6;
+	text-decoration: none;
+	font-size: 0.8em;
+}
+
+body{
+	color: #505050;
+}
+
+html{
+	background: #FAFAFA;
+	font-size: 36px;
+	font-family: 'Roboto script=all rev=2', sans-serif;
+	font-weight: 700;
+	font-style: bold;
+}
+
+@media (max-width: 699px) {
+body{
+	padding: 1em 0em;
+    margin: 1em 0em;
+}
+
+.center {
+    margin: auto;
+    width: 6em;
+	height: 9.5em;
+    padding: 0em 1em;
+	position: relative;
+}
+
+.cuadrado{
+	#margin: 0px auto;
+    #width: 2em;
+	#height: 1em;
+	#padding: 0.9em 0.5em 1.1em 0.5em;
+    #border: 0px solid red;
+	#font-size: 2em;
+	position: fixed;
+}
+
+.texto{
+	position: absolute;
+	top: 6.25em;
+	right: 0em;
+	margin-top: 0em;
+	padding: 0.5em;
+	text-align: center;
+}
+
+p{
+	margin: 0em;
+	font-size: 0.7em;
+}
+
+a{
+	font-size: 0.5em;
+}
+
+}
+
+@media (min-width: 700px) {
+body{
+	padding: 5em 0em;
+    margin: 0em;
+}
+
+.center {
+    margin: auto;
+    width: 17em;
+	height: 4em;
+    padding: 1em 1em;
+	position: relative;
+}
+
+.cuadrado{
+    width: 216px;
+	height: 216px;
+	#padding: 0.9em 0.5em 1.1em 0.5em;
+    #border: 0px solid red;
+	position: absolute;
+	#font-size: 2em;
+	top: 0em;
+	left: 0em;
+}
+
+.texto{
+	position: absolute;
+	left: 6.5em;
+	right: 0.5em;
+	margin-top: 0.8em;
+	padding: 0em;
+	width: 13em;
+}
+
+p{
+	margin: 0em;
+	font-size: 1.25em;
+	padding: 0;
+	margin-top: -0.75em;
+	margin-bottom: 0.5em;
+}
+
+a{
+	font-size: 0.5em;
+}
+
+}
+
+</style>
+</head>
+<body>
+<div class="center">
+	<div class="cuadrado">
+	<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="216px" height="216px" viewBox="-25 -25 290 290" enable-background="new 0 0 216 216" xml:space="preserve">
+		<g>
+			<path fill="#FFFFFF" d="M50.947,164.347v-24.074H7.905V128.6l38.811-59.091h21.156v57.194h12.256v13.569H67.872v24.074H50.947z
+				 M50.947,126.703v-25.824c0-5.399,0.292-10.798,0.583-16.488h-0.583c-2.918,5.982-5.398,10.796-8.316,16.049l-17.509,25.972v0.291
+				H50.947z"/>
+			<path fill="#FFFFFF" d="M156.582,116.198c0,30.64-11.964,49.753-34.726,49.753c-21.74,0-33.412-19.843-33.558-48.731
+				c0-29.619,12.548-49.316,34.725-49.316C145.931,67.904,156.582,88.331,156.582,116.198z M106.39,117.074
+				c0,23.198,6.274,35.162,16.05,35.162c10.651,0,16.049-12.84,16.049-35.601c0-22.031-5.106-35.017-15.903-35.017
+				C113.102,81.619,106.39,93.438,106.39,117.074z"/>
+			<path fill="#FFFFFF" d="M207.355,164.347v-24.074h-43.042V128.6l38.811-59.091h21.156v57.194h12.256v13.569H224.28v24.074H207.355z
+				 M207.355,126.703v-25.824c0-5.399,0.292-10.798,0.583-16.488h-0.583c-2.918,5.982-5.398,10.796-8.316,16.049l-17.509,25.972v0.291
+				H207.355z"/>
+		</g>
+	</svg>
+	</div>
+	<div class="texto">
+		<p>P&Aacute;GINA<br/>NO ENCONTRADA</p>
+		<p style="font-size: 0.6em;"></p>
+		<a href="/sici">VOLVER AL INICIO</a>
+	</div>
+</div>
+</body>
+</html>
