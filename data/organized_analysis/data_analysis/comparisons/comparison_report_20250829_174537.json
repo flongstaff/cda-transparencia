@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-08-29T17:45:37.079163",
+  "powerbi_record_count": 24,
+  "pdf_document_count": 25,
+  "comparison_points": [
+    {
+      "category": "Salud",
+      "powerbi_budgeted": 270351170,
+      "powerbi_executed": 261956774,
+      "pdf_document_count": 0,
+      "status": "analyzed"
+    },
+    {
+      "category": "Educación",
+      "powerbi_budgeted": 151855824,
+      "powerbi_executed": 140092846,
+      "pdf_document_count": 0,
+      "status": "analyzed"
+    },
+    {
+      "category": "Infraestructura",
+      "powerbi_budgeted": 96397241,
+      "powerbi_executed": 89846020,
+      "pdf_document_count": 0,
+      "status": "analyzed"
+    },
+    {
+      "category": "Servicios Públicos",
+      "powerbi_budgeted": 130583007,
+      "powerbi_executed": 124459248,
+      "pdf_document_count": 0,
+      "status": "analyzed"
+    },
+    {
+      "category": "Administración General",
+      "powerbi_budgeted": 96171278,
+      "powerbi_executed": 89339433,
+      "pdf_document_count": 0,
+      "status": "analyzed"
+    },
+    {
+      "category": "Desarrollo Social",
+      "powerbi_budgeted": 104144336,
+      "powerbi_executed": 99402727,
+      "pdf_document_count": 0,
+      "status": "analyzed"
+    },
+    {
+      "category": "Seguridad",
+      "powerbi_budgeted": 103595619,
+      "powerbi_executed": 94082695,
+      "pdf_document_count": 0,
+      "status": "analyzed"
+    },
+    {
+      "category": "Cultura",
+      "powerbi_budgeted": 92423081,
+      "powerbi_executed": 95409044,
+      "pdf_document_count": 0,
+      "status": "analyzed"
+    }
+  ]
+}
