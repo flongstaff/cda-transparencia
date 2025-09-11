@@ -1,8 +1,26 @@
 import React, { useState, useMemo } from 'react';
-import { Download, Search, Eye, FileText, TrendingUp, Calendar, AlertTriangle, CheckCircle, Clock, Building, DollarSign, ShieldCheck, Users, BarChart3, Loader2 } from 'lucide-react';
-import PageYearSelector from '../components/selectors/PageYearSelector';
+import { motion } from 'framer-motion';
+import {
+  Download,
+  Search,
+  Eye,
+  FileText,
+  TrendingUp,
+  Calendar,
+  AlertTriangle,
+  CheckCircle,
+  Clock,
+  Building,
+  DollarSign,
+  ShieldCheck,
+  Users,
+  BarChart3,
+  Loader2
+} from 'lucide-react';
 import { useComprehensiveData, useDocumentAnalysis } from '../hooks/useComprehensiveData';
+import ContractAnalysisChart from '../components/charts/ContractAnalysisChart';
 import ValidatedChart from '../components/charts/ValidatedChart';
+import PageYearSelector from '../components/selectors/PageYearSelector';
 import { formatCurrencyARS } from '../utils/formatters';
 
 interface Contract {
@@ -501,6 +519,12 @@ const Contracts: React.FC = () => {
                 sources={['Portal de Transparencia - Carmen de Areco']}
               />
             </div>
+          </div>
+          
+          {/* Contract Analysis Chart */}
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Análisis de Contratos</h3>
+            <ContractAnalysisChart year={selectedYear} />
           </div>
           
           {/* Top Contractors */}

@@ -28,6 +28,9 @@ import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
 import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
 import YearlyDataChart from '../components/charts/YearlyDataChart';
 
+// Import advanced chart components
+import { TreemapChart, WaterfallChart, FunnelChart, SankeyDiagram } from '../components/charts';
+
 interface DashboardMetric {
   title: string;
   value: string;
@@ -60,6 +63,58 @@ const Dashboard: React.FC = () => {
 
   // Generate available years
   const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
+
+  // Sample data for advanced charts
+  const treemapData = [
+    {
+      name: 'Presupuesto Municipal',
+      children: [
+        { name: 'Educación', value: 650000000 },
+        { name: 'Salud', value: 450000000 },
+        { name: 'Infraestructura', value: 380000000 },
+        { name: 'Seguridad', value: 320000000 },
+        { name: 'Administración', value: 280000000 }
+      ]
+    }
+  ];
+
+  const waterfallData = [
+    { name: 'Presupuesto Inicial', value: 2500000000, type: 'start' },
+    { name: 'Ajustes Positivos', value: 150000000, type: 'increase' },
+    { name: 'Recortes', value: -100000000, type: 'decrease' },
+    { name: 'Ejecución Adicional', value: 200000000, type: 'increase' },
+    { name: 'Total Ejecutado', value: 2750000000, type: 'end' }
+  ];
+
+  const funnelData = [
+    { id: 'Propuestas', value: 120, label: 'Propuestas Iniciales' },
+    { id: 'Aprobadas', value: 85, label: 'Aprobadas por Comisión' },
+    { id: 'Adjudicadas', value: 65, label: 'Adjudicadas' },
+    { id: 'En Ejecución', value: 50, label: 'En Ejecución' },
+    { id: 'Finalizadas', value: 42, label: 'Finalizadas' }
+  ];
+
+  const sankeyData = {
+    nodes: [
+      { id: 'Presupuesto General' },
+      { id: 'Obras Públicas' },
+      { id: 'Educación' },
+      { id: 'Salud' },
+      { id: 'Proyecto A' },
+      { id: 'Proyecto B' },
+      { id: 'Proveedor X' },
+      { id: 'Proveedor Y' }
+    ],
+    links: [
+      { source: 'Presupuesto General', target: 'Obras Públicas', value: 500000000 },
+      { source: 'Presupuesto General', target: 'Educación', value: 450000000 },
+      { source: 'Presupuesto General', target: 'Salud', value: 320000000 },
+      { source: 'Obras Públicas', target: 'Proyecto A', value: 300000000 },
+      { source: 'Obras Públicas', target: 'Proyecto B', value: 200000000 },
+      { source: 'Proyecto A', target: 'Proveedor X', value: 300000000 },
+      { source: 'Proyecto B', target: 'Proveedor Y', value: 200000000 }
+    ]
+  };
 
   // Calculate derived metrics from unified data
   const transparencyScore = actualDocCount && expectedDocCount 
@@ -602,6 +657,42 @@ const Dashboard: React.FC = () => {
                 </div>
               </div>
             )}
+
+            {/* Advanced Charts Section */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 mb-8">
+              <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  📊 Visualizaciones Avanzadas
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  Análisis detallado mediante visualizaciones avanzadas de datos
+                </p>
+              </div>
+              <div className="p-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  <TreemapChart 
+                    data={treemapData}
+                    title="🌳 Distribución Presupuestaria"
+                    height={300}
+                  />
+                  <WaterfallChart 
+                    data={waterfallData}
+                    title="💧 Evolución del Presupuesto"
+                    height={300}
+                  />
+                  <FunnelChart 
+                    data={funnelData}
+                    title="漏 Proceso de Contratación"
+                    height={300}
+                  />
+                  <SankeyDiagram 
+                    data={sankeyData}
+                    title="🔗 Flujo de Fondos"
+                    height={300}
+                  />
+                </div>
+              </div>
+            </div>
 
             {/* Quick Actions */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

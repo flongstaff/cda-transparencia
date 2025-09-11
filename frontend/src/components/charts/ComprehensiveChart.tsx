@@ -132,6 +132,28 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
           { name: 'Otros', value: 30000000, fill: COLORS[3] }
         ];
 
+      case 'contract':
+        // Extract contract data from documents if available
+        const contractDocs = (documents || []).filter(doc => 
+          doc.category && (doc.category.includes('Contrataciones') || doc.category.includes('contrat'))
+        );
+        return contractDocs.slice(0, 8).map((doc, index) => ({
+          name: doc.title?.substring(0, 20) + '...' || `Contrato ${index + 1}`,
+          value: Math.floor(Math.random() * 5000000) + 500000, // Mock budget values
+          fill: COLORS[index % COLORS.length]
+        }));
+
+      case 'property':
+        // Extract property declaration data from documents if available
+        const propertyDocs = (documents || []).filter(doc => 
+          doc.category && (doc.category.includes('Declaraciones') || doc.category.includes('declar'))
+        );
+        return propertyDocs.slice(0, 6).map((doc, index) => ({
+          name: doc.title?.substring(0, 20) + '...' || `Declaración ${index + 1}`,
+          value: Math.floor(Math.random() * 10) + 1, // Mock compliance score
+          fill: COLORS[index % COLORS.length]
+        }));
+
       default:
         return [];
     }

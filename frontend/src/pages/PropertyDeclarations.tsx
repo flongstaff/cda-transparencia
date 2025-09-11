@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  FileText, 
-  Download, 
-  Calendar, 
-  TrendingUp, 
-  Users, 
-  AlertTriangle,
-  ShieldCheck,
+import {
   Search,
   Filter,
+  Download,
+  Calendar,
   Eye,
-  ExternalLink,
+  AlertTriangle,
+  CheckCircle,
+  Clock,
+  FileText,
+  Users,
+  Building,
+  TrendingUp,
+  BarChart3,
   Loader2
 } from 'lucide-react';
-import PageYearSelector from '../components/PageYearSelector';
 import { useComprehensiveData, useDocumentAnalysis } from '../hooks/useComprehensiveData';
-import ValidatedChart from '../components/charts/ValidatedChart';
+import PropertyDeclarationsChart from '../components/charts/PropertyDeclarationsChart';
+import PageYearSelector from '../components/selectors/PageYearSelector';
+import { formatCurrencyARS } from '../utils/formatters';
 
 interface Declaration {
   id: string;
@@ -312,6 +315,11 @@ const PropertyDeclarations: React.FC = () => {
               </span>
             </div>
           </div>
+        </div>
+
+        {/* Property Declarations Chart */}
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-8 border border-gray-200 dark:border-gray-700">
+          <PropertyDeclarationsChart year={selectedYear} />
         </div>
 
         {/* Navigation Tabs */}
