@@ -80,8 +80,7 @@ describe('BudgetAnalysisChart', () => {
 
   test('handles loading state', () => {
     // Mock loading state by making the API call pending
-    const mockConsolidatedApiService = require('../../../services/ConsolidatedApiService');
-    mockConsolidatedApiService.consolidatedApiService.getBudgetData = vi.fn(() => 
+    vi.spyOn(consolidatedApiService.consolidatedApiService, 'getBudgetData').mockImplementation(() => 
       new Promise(() => {}) // Never resolves
     );
     
@@ -93,8 +92,7 @@ describe('BudgetAnalysisChart', () => {
 
   test('handles error state', async () => {
     // Mock error state
-    const mockConsolidatedApiService = require('../../../services/ConsolidatedApiService');
-    mockConsolidatedApiService.consolidatedApiService.getBudgetData = vi.fn(() => 
+    vi.spyOn(consolidatedApiService.consolidatedApiService, 'getBudgetData').mockImplementation(() => 
       Promise.reject(new Error('Failed to fetch budget data'))
     );
     

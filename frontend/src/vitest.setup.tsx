@@ -29,6 +29,9 @@ vi.mock('lucide-react', () => {
     Info: (props) => <svg {...props} data-testid="info-icon" />,
     AlertTriangle: (props) => <svg {...props} data-testid="alert-triangle-icon" />,
     AlertCircle: (props) => <svg {...props} data-testid="alert-circle-icon" />,
+    BarChart3: (props) => <svg {...props} data-testid="bar-chart-3-icon" />,
+    Activity: (props) => <svg {...props} data-testid="activity-icon" />,
+    PieChart: (props) => <svg {...props} data-testid="pie-chart-icon" />,
   };
 });
 

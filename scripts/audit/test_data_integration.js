@@ -12,8 +12,8 @@ const backendPath = path.join(__dirname, '../backend/src');
 process.env.NODE_PATH = backendPath;
 require('module').Module._initPaths();
 
-const DataService = require('../backend/src/services/DataService');
-const ComprehensiveTransparencyService = require('../backend/src/services/ComprehensiveTransparencyService');
+const DataService = require('../../backend/src/services/DataService');
+const ComprehensiveTransparencyService = require('../../backend/src/services/ComprehensiveTransparencyService');
 
 async function testDataIntegration() {
   console.log('🧪 Testing Carmen de Areco Data Integration');

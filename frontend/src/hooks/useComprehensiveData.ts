@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002/api';
 const USE_API = import.meta.env.VITE_USE_API !== 'false'; // Use API by default, disable with VITE_USE_API=false
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/flongstaff/cda-transparencia/main';
 
 export interface ComprehensiveDataState {
   // Core data
@@ -81,20 +82,27 @@ export const useComprehensiveData = (filters: DataFilters = {}) => {
     setData(prev => ({ ...prev, loading: true, error: null }));
 
     try {
-      // Load comprehensive data from new unified API
-      const response = await fetch(`${API_BASE}/data/dashboard`);
+      let apiData = {};
       
-      if (!response.ok) {
-        throw new Error(`API error: ${response.status}`);
+      if (USE_API) {
+        // Try API first
+        try {
+          const response = await fetch(`${API_BASE}/data/dashboard`);
+          if (response.ok) {
+            const result = await response.json();
+            if (result.success) {
+              apiData = result.data;
+            }
+          }
+        } catch (apiError) {
+          console.warn('API unavailable, falling back to GitHub repository data');
+        }
       }
-
-      const result = await response.json();
       
-      if (!result.success) {
-        throw new Error(result.error || 'Failed to fetch comprehensive data');
+      // If no API data, load directly from GitHub repository
+      if (!apiData || Object.keys(apiData).length === 0) {
+        apiData = await fetchFromGitHubRepository();
       }
-
-      const apiData = result.data;
       
       // Transform API data to match our interface
       const documents = [
@@ -720,4 +728,91 @@ function groupByYear(documents: any[]): Record<string, any[]> {
     acc[year].push(doc);
     return acc;
   }, {} as Record<string, any[]>);
+}
+
+// Fetch data directly from GitHub repository
+async function fetchFromGitHubRepository() {
+  const dataUrls = {
+    comprehensive: `${GITHUB_RAW_BASE}/frontend/src/data/comprehensive_data_index.json`,
+    inventory: `${GITHUB_RAW_BASE}/data/organized_analysis/inventory_summary.json`,
+    detailedInventory: `${GITHUB_RAW_BASE}/data/organized_analysis/detailed_inventory.json`,
+    budgetData: `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/budget_analysis/budget_data_2024.json`,
+    salaryData: `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/salary_oversight/salary_data_2024.json`,
+    auditResults: `${GITHUB_RAW_BASE}/data/organized_analysis/audit_cycles/enhanced_audits/enhanced_audit_results.json`
+  };
+
+  const results = {} as any;
+  
+  // Fetch data concurrently
+  const fetchPromises = Object.entries(dataUrls).map(async ([key, url]) => {
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = await response.json();
+        results[key] = data;
+      }
+    } catch (error) {
+      console.warn(`Failed to fetch ${key} from repository:`, error);
+    }
+  });
+
+  await Promise.all(fetchPromises);
+
+  // Transform repository data to match expected API structure
+  return {
+    documents: {
+      carmen_export: {
+        documents: results.detailedInventory?.documents || []
+      },
+      markdown_index: generateMarkdownIndex(results.comprehensive)
+    },
+    financial: {
+      budget: results.budgetData || results.comprehensive?.financialOverview || null,
+      salaries: results.salaryData || null,
+      debt: results.comprehensive?.debtData || null
+    },
+    governance: {
+      audit_results: results.auditResults || null
+    },
+    analysis: {
+      anomalies: {
+        criticalIssues: []
+      }
+    },
+    metadata: {
+      data_sources: 6,
+      last_updated: new Date().toISOString(),
+      repository_based: true
+    }
+  };
+}
+
+function generateMarkdownIndex(comprehensiveData: any) {
+  if (!comprehensiveData) return {};
+  
+  // Generate markdown documents index from comprehensive data
+  const years = ['2022', '2023', '2024', '2025'];
+  const markdownIndex = {} as any;
+  
+  years.forEach(year => {
+    markdownIndex[year] = [
+      {
+        filename: `presupuesto_${year}.md`,
+        title: `Presupuesto Municipal ${year}`,
+        path: `/docs/presupuesto/${year}/presupuesto_${year}.md`
+      },
+      {
+        filename: `ejecucion_gastos_${year}.md`,
+        title: `Ejecución de Gastos ${year}`,
+        path: `/docs/gastos/${year}/ejecucion_gastos_${year}.md`
+      },
+      {
+        filename: `recursos_${year}.md`,
+        title: `Ejecución de Recursos ${year}`,
+        path: `/docs/recursos/${year}/recursos_${year}.md`
+      }
+    ];
+  });
+  
+  return markdownIndex;
 }

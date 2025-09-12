@@ -70,6 +70,7 @@ export default defineConfig({
       'build/**',
       '.next/**',
       'coverage/**',
+      'e2e-tests/**',
     ],
     
     // Test timeout configuration
