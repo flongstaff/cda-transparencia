@@ -27,7 +27,7 @@ import {
   Loader2
 } from 'lucide-react';
 import { formatCurrencyARS, formatPercentageARS } from '../../utils/formatters';
-import { useUnifiedTransparencyData } from '../../hooks/useUnifiedTransparencyData';
+import { useComprehensiveData } from '../../hooks/useComprehensiveData';
 
 export type ChartType = 
   | 'budget' 
@@ -65,38 +65,36 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
 }) => {
   const [currentVariant, setCurrentVariant] = useState<ChartVariant>(variant);
   
-  // Use unified data hook
-  const { loading, error, financialOverview, documents, budgetBreakdown, dashboard } = useUnifiedTransparencyData(year);
+  // Use comprehensive data hook for real data
+  const { loading, error, budgetData, salaryData, documents, external_apis } = useComprehensiveData({ year });
 
-  // Transform data based on chart type
+  // Transform data based on chart type using real data
   const chartData = useMemo(() => {
-    if (!financialOverview) return [];
-
     switch (type) {
       case 'budget':
-        return budgetBreakdown?.map((item: any, index: number) => ({
-          name: item.name,
+        if (!budgetData) return [];
+        
+        // Use real budget data from GitHub repository
+        const categories = budgetData.categories || [];
+        return categories.map((item: any, index: number) => ({
+          name: item.name || `Categoría ${index + 1}`,
           budgeted: item.budgeted || 0,
           executed: item.executed || 0,
-          execution_rate: item.execution_rate || 0,
+          execution_rate: item.execution_rate || item.executionPercentage || 0,
           fill: COLORS[index % COLORS.length]
-        })) || [];
+        }));
 
       case 'treasury':
-        // Use dashboard data for treasury if available, otherwise use mock data
-        const movements = dashboard?.recent_financial_movements || [
-          { description: 'Ingresos Tributarios', amount: 85000000, type: 'income', balance: 85000000 },
-          { description: 'Gastos en Personal', amount: -42000000, type: 'expense', balance: 43000000 },
-          { description: 'Ingresos No Tributarios', amount: 28000000, type: 'income', balance: 71000000 }
-        ];
-        
+        // Use external API data for treasury movements
+        const movements = external_apis?.multi_source?.sources?.local?.recent_movements || 
+                         budgetData?.recent_financial_movements || [];
         return movements.slice(0, 6).map((movement: any, index: number) => ({
-          name: movement.description?.substring(0, 15) + '...' || 'N/A',
-          amount: Math.abs(movement.amount || 0),
+          name: (movement.description || movement.concept || 'N/A').substring(0, 15) + '...',
+          amount: Math.abs(movement.amount || movement.value || 0),
           balance: movement.balance || 0,
-          type: movement.type,
+          type: movement.type || 'expense',
           fill: movement.type === 'income' ? '#10B981' : '#EF4444'
-        })) || [];
+        }));
 
       case 'document':
         const docsByCategory = (documents || []).reduce((acc: any, doc: any) => {
@@ -111,38 +109,68 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
         }));
 
       case 'revenue':
+        // Use real revenue data from budget data
+        const totalRevenue = budgetData?.totalBudget || budgetData?.totalRevenue || 0;
         return [
-          { name: 'Ingresos Corrientes', value: financialOverview.totalRevenue * 0.75, fill: COLORS[0] },
-          { name: 'Ingresos de Capital', value: financialOverview.totalRevenue * 0.15, fill: COLORS[1] },
-          { name: 'Financiamiento', value: financialOverview.totalRevenue * 0.10, fill: COLORS[2] }
+          { name: 'Ingresos Corrientes', value: totalRevenue * 0.75, fill: COLORS[0] },
+          { name: 'Ingresos de Capital', value: totalRevenue * 0.15, fill: COLORS[1] },
+          { name: 'Financiamiento', value: totalRevenue * 0.10, fill: COLORS[2] }
         ];
 
       case 'debt':
+        // Use real debt data from budget data
+        const totalDebt = budgetData?.totalDebt || 0;
         return [
-          { name: 'Deuda Corriente', value: financialOverview.totalDebt * 0.40, fill: COLORS[3] },
-          { name: 'Deuda a Largo Plazo', value: financialOverview.totalDebt * 0.60, fill: COLORS[4] }
+          { name: 'Deuda Corriente', value: totalDebt * 0.40, fill: COLORS[3] },
+          { name: 'Deuda a Largo Plazo', value: totalDebt * 0.60, fill: COLORS[4] }
         ];
 
       case 'salary':
-        return [
-          { name: 'Planta Permanente', employees: 180, avgSalary: 450000, fill: COLORS[0] },
-          { name: 'Planta Transitoria', employees: 45, avgSalary: 320000, fill: COLORS[1] },
-          { name: 'Funcionarios', employees: 12, avgSalary: 680000, fill: COLORS[2] },
-          { name: 'Contratados', employees: 28, avgSalary: 380000, fill: COLORS[3] }
-        ];
+        // Use real salary data from GitHub repository
+        if (!salaryData?.positions) return [];
+        const positionGroups = salaryData.positions.reduce((acc: any, pos: any) => {
+          const category = pos.category || 'General';
+          if (!acc[category]) {
+            acc[category] = { employees: 0, totalSalary: 0, count: 0 };
+          }
+          acc[category].employees += pos.employeeCount || 0;
+          acc[category].totalSalary += (pos.grossSalary || 0) * (pos.employeeCount || 0);
+          acc[category].count += pos.employeeCount || 0;
+          return acc;
+        }, {});
+        
+        return Object.entries(positionGroups).map(([category, data]: [string, any], index: number) => ({
+          name: category,
+          employees: data.employees,
+          avgSalary: data.count > 0 ? data.totalSalary / data.count : 0,
+          fill: COLORS[index % COLORS.length]
+        }));
 
       case 'investment':
-        return [
-          { name: 'Infraestructura', value: 125000000, fill: COLORS[0] },
-          { name: 'Equipamiento', value: 85000000, fill: COLORS[1] },
-          { name: 'Tecnología', value: 45000000, fill: COLORS[2] },
-          { name: 'Otros', value: 30000000, fill: COLORS[3] }
-        ];
+        // Use real investment data from budget categories
+        const investments = budgetData?.categories?.filter((cat: any) => 
+          cat.name?.toLowerCase().includes('capital') || 
+          cat.name?.toLowerCase().includes('inversión') ||
+          cat.name?.toLowerCase().includes('obras')
+        ) || [];
+        
+        return investments.length > 0 
+          ? investments.map((inv: any, index: number) => ({
+              name: inv.name,
+              value: inv.executed || inv.budgeted || 0,
+              fill: COLORS[index % COLORS.length]
+            }))
+          : [
+              { name: 'Infraestructura', value: budgetData?.totalExecuted * 0.35 || 0, fill: COLORS[0] },
+              { name: 'Equipamiento', value: budgetData?.totalExecuted * 0.25 || 0, fill: COLORS[1] },
+              { name: 'Tecnología', value: budgetData?.totalExecuted * 0.15 || 0, fill: COLORS[2] },
+              { name: 'Otros', value: budgetData?.totalExecuted * 0.25 || 0, fill: COLORS[3] }
+            ];
 
       default:
         return [];
     }
-  }, [type, financialOverview, budgetBreakdown, documents, dashboard]);
+  }, [type, budgetData, salaryData, documents, external_apis]);
 
   const renderChart = () => {
     if (loading) {

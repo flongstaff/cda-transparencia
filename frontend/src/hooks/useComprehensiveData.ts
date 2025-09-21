@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
+import { getDataUrls, getFallbackYear, hasDataType, DEFAULT_YEAR, isYearSupported } from '../utils/yearConfig';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3002/api';
 const USE_API = import.meta.env.VITE_USE_API !== 'false'; // Use API by default, disable with VITE_USE_API=false
@@ -22,6 +23,35 @@ export interface ComprehensiveDataState {
   declarationsData: any[];
   executionData: any[];
   resourcesData: any[];
+  
+  // New comprehensive data sources
+  external_apis?: {
+    web_sources?: any;
+    multi_source?: any;
+  };
+  analysis?: {
+    anomalies?: any;
+    comparisons?: any;
+    inventory_summary?: any;
+  };
+  governance?: {
+    audit_results?: any;
+    web_sources?: any;
+    transparency_reports?: any[];
+  };
+  metadata?: {
+    data_sources?: number;
+    last_updated?: string;
+    repository_based?: boolean;
+    total_documents?: number;
+    document_types?: {
+      pdf?: number;
+      json?: number;
+      markdown?: number;
+      csv?: number;
+      analysis?: number;
+    };
+  };
   
   // State management
   loading: boolean;
@@ -101,7 +131,9 @@ export const useComprehensiveData = (filters: DataFilters = {}) => {
       
       // If no API data, load directly from GitHub repository
       if (!apiData || Object.keys(apiData).length === 0) {
-        apiData = await fetchFromGitHubRepository();
+        const requestedYear = memoizedFilters.year || DEFAULT_YEAR;
+        const effectiveYear = isYearSupported(requestedYear) ? requestedYear : DEFAULT_YEAR;
+        apiData = await fetchFromGitHubRepository(effectiveYear);
       }
       
       // Transform API data to match our interface
@@ -166,6 +198,11 @@ export const useComprehensiveData = (filters: DataFilters = {}) => {
           doc.category?.toLowerCase().includes('recurso') || 
           doc.filename?.toLowerCase().includes('recurso') ||
           doc.title?.toLowerCase().includes('recurso')),
+        // Add new data sources
+        external_apis: apiData.external_apis || undefined,
+        analysis: apiData.analysis || undefined,
+        governance: apiData.governance || undefined,
+        metadata: apiData.metadata || undefined,
         loading: false,
         error: null,
         lastUpdated: new Date()
@@ -731,14 +768,25 @@ function groupByYear(documents: any[]): Record<string, any[]> {
 }
 
 // Fetch data directly from GitHub repository
-async function fetchFromGitHubRepository() {
+async function fetchFromGitHubRepository(year: number = DEFAULT_YEAR) {
+  // Use smart year configuration to get appropriate data URLs
+  const yearDataUrls = getDataUrls(year);
+  
   const dataUrls = {
     comprehensive: `${GITHUB_RAW_BASE}/frontend/src/data/comprehensive_data_index.json`,
-    inventory: `${GITHUB_RAW_BASE}/data/organized_analysis/inventory_summary.json`,
+    inventory: yearDataUrls.inventory,
     detailedInventory: `${GITHUB_RAW_BASE}/data/organized_analysis/detailed_inventory.json`,
-    budgetData: `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/budget_analysis/budget_data_2024.json`,
-    salaryData: `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/salary_oversight/salary_data_2024.json`,
-    auditResults: `${GITHUB_RAW_BASE}/data/organized_analysis/audit_cycles/enhanced_audits/enhanced_audit_results.json`
+    budgetData: yearDataUrls.budget,
+    salaryData: yearDataUrls.salary,
+    debtData: yearDataUrls.debt,
+    auditResults: yearDataUrls.auditResults,
+    anomalyData: hasDataType(year, 'budget') 
+      ? `${GITHUB_RAW_BASE}/data/organized_analysis/audit_cycles/anomaly_detection/anomaly_data_${year}.json`
+      : `${GITHUB_RAW_BASE}/data/organized_analysis/audit_cycles/anomaly_detection/anomaly_data_${getFallbackYear(year, 'budget')}.json`,
+    webSources: `${GITHUB_RAW_BASE}/data/organized_analysis/governance_review/transparency_reports/web_sources.json`,
+    multiSourceReport: yearDataUrls.multiSource,
+    comparisonReport: `${GITHUB_RAW_BASE}/data/organized_analysis/data_analysis/comparisons/comparison_report_20250829_174537.json`,
+    dataIndex: yearDataUrls.dataIndex
   };
 
   const results = {} as any;
@@ -758,33 +806,128 @@ async function fetchFromGitHubRepository() {
 
   await Promise.all(fetchPromises);
 
+  // Combine documents from all sources including PDFs, JSONs, and Markdown
+  const allDocuments = [];
+  
+  // Add detailed inventory documents
+  if (results.detailedInventory?.documents) {
+    allDocuments.push(...results.detailedInventory.documents.map((doc: any) => ({
+      ...doc,
+      source: 'detailed_inventory',
+      type: 'analysis'
+    })));
+  }
+
+  // Add PDF documents from comprehensive data
+  if (results.comprehensive?.documents) {
+    allDocuments.push(...results.comprehensive.documents.map((doc: any) => ({
+      ...doc,
+      source: 'comprehensive_data',
+      type: 'pdf'
+    })));
+  }
+
+  // Add markdown documents
+  const markdownDocs = generateMarkdownDocuments(results.comprehensive);
+  allDocuments.push(...markdownDocs);
+
+  // Add analysis files as documents
+  if (results.detailedInventory?.data_analysis?.files) {
+    allDocuments.push(...results.detailedInventory.data_analysis.files.map((file: any) => ({
+      id: `analysis-${file.name}`,
+      title: file.name,
+      filename: file.name,
+      category: 'Análisis de Datos',
+      type: file.extension.substring(1),
+      size: file.size_bytes,
+      path: file.path,
+      source: 'data_analysis',
+      verified: true,
+      created_at: new Date().toISOString()
+    })));
+  }
+
   // Transform repository data to match expected API structure
   return {
     documents: {
       carmen_export: {
-        documents: results.detailedInventory?.documents || []
+        documents: allDocuments
       },
-      markdown_index: generateMarkdownIndex(results.comprehensive)
+      markdown_index: generateMarkdownIndex(results.comprehensive),
+      pdf_documents: allDocuments.filter((doc: any) => doc.type === 'pdf'),
+      json_documents: allDocuments.filter((doc: any) => doc.type === 'json'),
+      analysis_files: allDocuments.filter((doc: any) => doc.source === 'data_analysis')
     },
     financial: {
       budget: results.budgetData || results.comprehensive?.financialOverview || null,
-      salaries: results.salaryData || null,
-      debt: results.comprehensive?.debtData || null
+      salaries: results.salaryData || results.comprehensive?.analysis?.salaryData || null,
+      debt: results.debtData || results.comprehensive?.debtData || null,
+      multi_source_report: results.multiSourceReport || null
     },
     governance: {
-      audit_results: results.auditResults || null
+      audit_results: results.auditResults || null,
+      web_sources: results.webSources || null,
+      transparency_reports: results.webSources?.transparency_reports || []
     },
     analysis: {
-      anomalies: {
-        criticalIssues: []
-      }
+      anomalies: results.anomalyData || { criticalIssues: [] },
+      comparisons: results.comparisonReport || null,
+      inventory_summary: results.inventory || null
+    },
+    external_apis: {
+      web_sources: results.webSources || null,
+      multi_source: results.multiSourceReport || null
     },
     metadata: {
-      data_sources: 6,
+      data_sources: Object.keys(dataUrls).length,
       last_updated: new Date().toISOString(),
-      repository_based: true
+      repository_based: true,
+      total_documents: allDocuments.length,
+      document_types: {
+        pdf: allDocuments.filter((doc: any) => doc.type === 'pdf').length,
+        json: allDocuments.filter((doc: any) => doc.type === 'json').length,
+        markdown: allDocuments.filter((doc: any) => doc.type === 'markdown').length,
+        csv: allDocuments.filter((doc: any) => doc.type === 'csv').length,
+        analysis: allDocuments.filter((doc: any) => doc.source === 'data_analysis').length
+      }
     }
   };
+}
+
+function generateMarkdownDocuments(comprehensiveData: any): any[] {
+  const markdownDocs = [];
+  const years = ['2022', '2023', '2024', '2025'];
+  
+  // Generate markdown documents based on known document structure
+  const markdownCategories = [
+    'ESTADO-DE-EJECUCION-DE-GASTOS',
+    'ESTADO-DE-EJECUCION-DE-RECURSOS', 
+    'ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO',
+    'ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION',
+    'ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO',
+    'Resolución',
+    'NOTAS MONITOREO'
+  ];
+  
+  years.forEach(year => {
+    markdownCategories.forEach(category => {
+      markdownDocs.push({
+        id: `md-${year}-${category}`,
+        title: `${category} ${year}`,
+        filename: `${category}-${year}.md`,
+        category: 'Documentos Digitalizados',
+        type: 'markdown',
+        year: parseInt(year),
+        path: `/data/markdown_documents/${year}/${category}-${year}.md`,
+        source: 'markdown_documents',
+        verified: true,
+        created_at: `${year}-01-01`,
+        size: 0
+      });
+    });
+  });
+  
+  return markdownDocs;
 }
 
 function generateMarkdownIndex(comprehensiveData: any) {
@@ -799,20 +942,49 @@ function generateMarkdownIndex(comprehensiveData: any) {
       {
         filename: `presupuesto_${year}.md`,
         title: `Presupuesto Municipal ${year}`,
-        path: `/docs/presupuesto/${year}/presupuesto_${year}.md`
+        path: `/data/markdown_documents/${year}/presupuesto_${year}.md`
       },
       {
         filename: `ejecucion_gastos_${year}.md`,
         title: `Ejecución de Gastos ${year}`,
-        path: `/docs/gastos/${year}/ejecucion_gastos_${year}.md`
+        path: `/data/markdown_documents/${year}/ejecucion_gastos_${year}.md`
       },
       {
         filename: `recursos_${year}.md`,
         title: `Ejecución de Recursos ${year}`,
-        path: `/docs/recursos/${year}/recursos_${year}.md`
+        path: `/data/markdown_documents/${year}/recursos_${year}.md`
       }
     ];
   });
   
   return markdownIndex;
+}
+
+// Function to fetch and parse external API data
+async function fetchExternalAPIData() {
+  try {
+    const externalSources = [
+      `${GITHUB_RAW_BASE}/data/organized_analysis/governance_review/transparency_reports/web_sources.json`,
+      `${GITHUB_RAW_BASE}/data/multi_source_report.json`
+    ];
+    
+    const externalData = {};
+    for (const url of externalSources) {
+      try {
+        const response = await fetch(url);
+        if (response.ok) {
+          const data = await response.json();
+          const key = url.split('/').pop()?.replace('.json', '') || 'external';
+          externalData[key] = data;
+        }
+      } catch (error) {
+        console.warn(`Failed to fetch external API data from ${url}:`, error);
+      }
+    }
+    
+    return externalData;
+  } catch (error) {
+    console.warn('Error fetching external API data:', error);
+    return {};
+  }
 }

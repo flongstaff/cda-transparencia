@@ -5,6 +5,7 @@ import { useComprehensiveData, useFinancialOverview } from '../hooks/useComprehe
 import TreasuryAnalysisChart from '../components/charts/TreasuryAnalysisChart';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 import { useState as useReactState, useEffect } from 'react';
+import { getBestYearForPage, getAvailableYears } from '../utils/yearConfig';
 
 interface TreasuryMovement {
   id: string;
@@ -75,7 +76,9 @@ function generateTreasuryMovements(budgetData: any, debtData: any, year: number,
 }
 
 const Treasury: React.FC = () => {
-  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
+  const [selectedYear, setSelectedYear] = useState<number>(
+    getBestYearForPage(new Date().getFullYear(), ['budget'])
+  );
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [viewMode, setViewMode] = useState<'overview' | 'details' | 'charts'>('overview');
   const [chartType, setChartType] = useState<'bar' | 'pie' | 'line'>('bar');
@@ -130,7 +133,7 @@ const Treasury: React.FC = () => {
   const currentYearDebt = debtEvolution.find(d => d.year === selectedYear) || {};
   
   // Generate available years dynamically to match available data
-  const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
+  const availableYears = getAvailableYears();
   
   // Calculate treasury summary from comprehensive data
   const treasurySummary = {
@@ -176,7 +179,7 @@ const Treasury: React.FC = () => {
             </p>
           </div>
           <PageYearSelector
-            years={availableYears}
+            availableYears={availableYears}
             selectedYear={selectedYear}
             onYearChange={setSelectedYear}
           />

@@ -1,7 +1,9 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
+import { documentDataService } from '../services/DocumentDataService';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api/transparency';
 const USE_API = import.meta.env.VITE_USE_API === 'true';
+const USE_LOCAL_FALLBACK = true;
 
 // Data transformation functions
 const transformFinancialData = (yearData: any) => {
@@ -279,6 +281,7 @@ export const useTransparencyData = (year: number) => {
 
     try {
       let yearData;
+      let isUsingLocalFallback = false;
       
       if (USE_API) {
         try {
@@ -317,6 +320,49 @@ export const useTransparencyData = (year: number) => {
           // Fallback to comprehensive data if year-specific file doesn't exist
           const comprehensiveModule = await import('../data/comprehensive_data_index.json');
           yearData = comprehensiveModule.default;
+        }
+      }
+
+      // If we still don't have enough documents, try our DocumentDataService
+      if (USE_LOCAL_FALLBACK && (!yearData.documents || yearData.documents.length < 5)) {
+        try {
+          console.log(`Attempting to fetch data from local document service for year ${year}...`);
+          const localYearlyData = await documentDataService.getYearlyData(year);
+          
+          // Transform the local data to match our expected format
+          if (localYearlyData.totalDocuments > 0) {
+            console.log(`Found ${localYearlyData.totalDocuments} documents from local service`);
+            
+            // Create a synthetic yearData object with the local data
+            const localDocuments = Object.values(localYearlyData.categories)
+              .flatMap(category => category.documents)
+              .map((doc, index) => ({
+                id: doc.id || `local-${index}`,
+                title: doc.title,
+                category: doc.category,
+                type: doc.type,
+                filename: doc.filename,
+                size_mb: doc.size_mb,
+                url: doc.url,
+                verification_status: doc.verification_status,
+                processing_date: doc.processing_date
+              }));
+            
+            yearData = {
+              ...yearData,
+              documents: localDocuments,
+              summary: {
+                ...yearData.summary,
+                total_documents: localYearlyData.totalDocuments,
+                verified_documents: localYearlyData.verifiedDocuments
+              },
+              categories: localYearlyData.categories
+            };
+            
+            isUsingLocalFallback = true;
+          }
+        } catch (localServiceError) {
+          console.warn('Local document service fallback failed:', localServiceError);
         }
       }
 

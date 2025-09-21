@@ -22,6 +22,7 @@ import PageYearSelector from '../components/selectors/PageYearSelector';
 import { formatCurrencyARS, formatPercentageARS } from '../utils/formatters';
 import { useComprehensiveData, useFinancialOverview, useDocumentAnalysis } from '../hooks/useComprehensiveData';
 import { crossReferenceAnalysis, documentCoverage, dataQualityAssessment } from '../data/cross-reference-analysis';
+import { getBestYearForPage, getAvailableYears, DEFAULT_YEAR } from '../utils/yearConfig';
 
 // Import unified chart components
 import ComprehensiveChart from '../components/charts/ComprehensiveChart';
@@ -43,11 +44,14 @@ interface DashboardMetric {
 }
 
 const Dashboard: React.FC = () => {
-  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
+  const [selectedYear, setSelectedYear] = useState<number>(
+    getBestYearForPage(new Date().getFullYear(), ['budget', 'salary', 'documents'])
+  );
   const [activeTab, setActiveTab] = useState<'overview' | 'financial' | 'documents' | 'audit' | 'comprehensive'>('overview');
 
-  // Use comprehensive data hooks
-  const comprehensiveData = useComprehensiveData({ year: selectedYear });
+  // Use comprehensive data hooks with smart year handling
+  const effectiveYear = getBestYearForPage(selectedYear, ['budget', 'salary', 'documents']);
+  const comprehensiveData = useComprehensiveData({ year: effectiveYear });
   const financialData = useFinancialOverview(selectedYear);
   const documentData = useDocumentAnalysis({ year: selectedYear });
   
@@ -62,8 +66,8 @@ const Dashboard: React.FC = () => {
   const actualDocCount = Math.max(documents.length, 192); // Real document count across MD, JSON, PDF formats
   const expectedDocCount = 192; // Realistic document count including all formats
 
-  // Generate available years
-  const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
+  // Use configured available years
+  const availableYears = getAvailableYears();
 
   // Dynamic data for advanced charts based on selected year
   const treemapData = useMemo(() => {

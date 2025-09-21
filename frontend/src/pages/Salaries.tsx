@@ -15,8 +15,10 @@ import {
 } from 'lucide-react';
 import { useComprehensiveData, useDocumentAnalysis, useFinancialOverview } from '../hooks/useComprehensiveData';
 import SalaryAnalysisChart from '../components/charts/SalaryAnalysisChart';
+import SalaryScaleVisualization from '../components/salaries/SalaryScaleVisualization';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 import { formatCurrencyARS } from '../utils/formatters';
+import { getBestYearForPage, getAvailableYears } from '../utils/yearConfig';
 
 interface SalaryPosition {
   code: string;
@@ -40,10 +42,13 @@ interface SalaryData {
 }
 
 const Salaries: React.FC = () => {
-  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
+  const [selectedYear, setSelectedYear] = useState<number>(
+    getBestYearForPage(new Date().getFullYear(), ['salary'])
+  );
   
-  // Use comprehensive data hooks
-  const { loading, error } = useComprehensiveData({ year: selectedYear });
+  // Use comprehensive data hooks with effective year
+  const effectiveYear = getBestYearForPage(selectedYear, ['salary']);
+  const { loading, error } = useComprehensiveData({ year: effectiveYear });
   const documentData = useDocumentAnalysis({ category: 'Recursos_Humanos' });
   const financialData = useFinancialOverview(selectedYear);
 
@@ -51,7 +56,7 @@ const Salaries: React.FC = () => {
   const salaryData: SalaryData | null = financialData?.analysis?.salaryData || null;
 
   // Generate available years dynamically to match available data
-  const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
+  const availableYears = getAvailableYears();
 
   // Filter salary-related documents from comprehensive data
   const salaryDocuments = useMemo(() => {
@@ -478,6 +483,11 @@ const Salaries: React.FC = () => {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Análisis Salarial</h2>
         <SalaryAnalysisChart year={selectedYear} />
+      </div>
+
+      {/* Advanced Salary Scale Visualization with Real Data */}
+      <div className="space-y-8">
+        <SalaryScaleVisualization />
       </div>
 
       {/* Legal Information */}

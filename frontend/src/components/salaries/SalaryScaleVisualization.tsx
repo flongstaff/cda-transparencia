@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 import { Users, DollarSign, TrendingUp, Calculator } from 'lucide-react';
-import { useTransparencyData } from '../../hooks/useTransparencyData';
+import { useComprehensiveData } from '../../hooks/useComprehensiveData';
 
 interface SalaryPosition {
   code: string;
@@ -26,123 +26,28 @@ interface SalaryData {
 
 const SalaryScaleVisualization: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
+  const [salaryData, setSalaryData] = useState<SalaryData | null>(null);
   
-  // Use unified data hook
-  const { loading, error } = useTransparencyData(selectedYear);
+  // Use comprehensive data hook for real data
+  const { loading, error, salaryData: realSalaryData } = useComprehensiveData({ year: selectedYear });
 
-  const loadSalaryData = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      
-      // In a real implementation, this would fetch from your API
-      // For now, using simulated data based on your PDF analysis
-      const mockData: SalaryData = {
-        year: selectedYear,
-        month: 9, // September
-        moduleValue: 257.01,
-        totalPayroll: 2150670000,
-        averageSalary: 1300000,
-        positions: [
-          {
-            code: "01.59.01",
-            name: "INTENDENTE",
-            category: "SUPERIOR",
-            modules: 4480,
-            grossSalary: 1151404.80,
-            netSalary: 946454.75,
-            somaDeduction: 55267.43,
-            ipsDeduction: 149682.62,
-            employeeCount: 1
-          },
-          {
-            code: "01.50.09",
-            name: "CONCEJALES/AS",
-            category: "SUPERIOR",
-            modules: 933.3,
-            grossSalary: 239876.00,
-            netSalary: 197178.07,
-            somaDeduction: 11514.05,
-            ipsDeduction: 31183.88,
-            employeeCount: 10
-          },
-          {
-            code: "02.53.10",
-            name: "DIRECTOR",
-            category: "JERARQUICO",
-            modules: 1820,
-            grossSalary: 467758.20,
-            netSalary: 384497.24,
-            somaDeduction: 22452.39,
-            ipsDeduction: 60808.57,
-            employeeCount: 15
-          },
-          {
-            code: "02.45.05",
-            name: "SECRETARIO/A",
-            category: "JERARQUICO",
-            modules: 1540,
-            grossSalary: 395805.40,
-            netSalary: 325362.43,
-            somaDeduction: 19000.00,
-            ipsDeduction: 51454.97,
-            employeeCount: 8
-          },
-          {
-            code: "03.30.15",
-            name: "COORDINADOR/A",
-            category: "ADMINISTRATIVO",
-            modules: 1120,
-            grossSalary: 287851.20,
-            netSalary: 236858.02,
-            somaDeduction: 13816.86,
-            ipsDeduction: 37420.32,
-            employeeCount: 12
-          },
-          {
-            code: "04.25.20",
-            name: "JEFE/A DE SECTOR",
-            category: "ADMINISTRATIVO",
-            modules: 840,
-            grossSalary: 215888.40,
-            netSalary: 177643.51,
-            somaDeduction: 10362.64,
-            ipsDeduction: 28066.75,
-            employeeCount: 20
-          },
-          {
-            code: "05.20.25",
-            name: "AGENTE ADMINISTRATIVO",
-            category: "GENERAL",
-            modules: 560,
-            grossSalary: 143925.60,
-            netSalary: 118419.01,
-            somaDeduction: 6908.43,
-            ipsDeduction: 18710.15,
-            employeeCount: 45
-          },
-          {
-            code: "06.15.30",
-            name: "AUXILIAR ADMINISTRATIVO",
-            category: "GENERAL",
-            modules: 420,
-            grossSalary: 107944.20,
-            netSalary: 88814.26,
-            somaDeduction: 5181.32,
-            ipsDeduction: 14032.62,
-            employeeCount: 35
-          }
-        ]
+  // Transform real salary data from GitHub repository
+  useEffect(() => {
+    if (realSalaryData) {
+      const transformedData: SalaryData = {
+        year: realSalaryData.year || selectedYear,
+        month: realSalaryData.month || 9,
+        moduleValue: realSalaryData.moduleValue || 257.01,
+        totalPayroll: realSalaryData.totalPayroll || 0,
+        averageSalary: realSalaryData.averageSalary || 
+          (realSalaryData.totalPayroll && realSalaryData.employeeCount 
+            ? realSalaryData.totalPayroll / realSalaryData.employeeCount 
+            : 0),
+        positions: realSalaryData.positions || []
       };
-
-      setSalaryData(mockData);
-    } catch (err) {
-      setError('Error al cargar datos salariales');
-      console.error('Salary data load error:', err);
-    } finally {
-      setLoading(false);
+      setSalaryData(transformedData);
     }
-  };
+  }, [realSalaryData, selectedYear]);
 
   const formatCurrency = (value: number): string => {
     return new Intl.NumberFormat('es-AR', {
@@ -174,12 +79,9 @@ const SalaryScaleVisualization: React.FC = () => {
           <h3 className="text-lg font-medium text-red-800">Error</h3>
         </div>
         <p className="mt-2 text-red-700">{error}</p>
-        <button 
-          onClick={loadSalaryData}
-          className="mt-4 px-4 py-2 bg-red-100 text-red-700 rounded-md hover:bg-red-200"
-        >
-          Reintentar
-        </button>
+        <p className="mt-4 text-red-600">
+          Por favor, verifique la conexión de datos.
+        </p>
       </div>
     );
   }
