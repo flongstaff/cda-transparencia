@@ -194,7 +194,8 @@ const App: React.FC = () => {
   const getBasename = () => {
     const basePath = import.meta.env.VITE_BASE_PATH;
     if (basePath && basePath !== '/') return basePath;
-    return import.meta.env.VITE_APP_ENV === 'github' ? '/cda-transparencia' : '';
+    // For custom domain with GitHub Pages, use root path
+    return '/';
   };
 
   useEffect(() => {
