@@ -50,7 +50,7 @@
     "@vitest/ui": "^3.2.4",
     "chart.js": "^4.5.0",
     "d3-sankey": "^0.12.3",
-    "framer-motion": "^10.17.9",
+    "framer-motion": "^12.23.18",
     "frappe-gantt-react": "^0.0.8",
     "i18next": "^25.5.2",
     "i18next-browser-languagedetector": "^8.2.0",
