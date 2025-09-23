@@ -1,0 +1,1 @@
+import{j as s,C as a}from"./index-B1kdLJg7.js";import"./vendor-Cl6RO7v0.js";import"./icons-D6N2ORUk.js";import"./animations-NNJU9UPy.js";import"./charts-Cm0N-HMJ.js";const t=({year:t,className:o})=>s.jsx(a,{type:"budget",year:t,title:`Análisis Presupuestario Avanzado ${t}`,className:o,variant:"bar",showControls:!0});export{t as default};
