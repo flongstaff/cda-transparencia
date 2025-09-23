@@ -386,6 +386,7 @@ const App: React.FC = () => {
                       <Route path="/test/github-resources" element={<GitHubResourcesTestPage />} />
                       <Route path="/test/implementation" element={<ImplementationVerificationPage />} />
                       <Route path="/test/real-github" element={<RealGitHubResourceTestPage />} />
+                      <Route path="/test/github-integration" element={<GitHubIntegrationTestPage />} />
                     </Routes>
                   </div>
                 </main>
