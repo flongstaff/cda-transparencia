@@ -119,7 +119,7 @@ const GitHubIntegrationTestPage: React.FC = () => {
                   : 'bg-blue-600 hover:bg-blue-700 text-white'
               }`}
             >
-              <Play className="w-4 h-4" />
+              <PlayIcon className="w-4 h-4" />
               {isRunning ? 'Ejecutando...' : 'Ejecutar pruebas'}
             </button>
             
@@ -127,7 +127,7 @@ const GitHubIntegrationTestPage: React.FC = () => {
               onClick={resetTests}
               className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg font-medium transition-colors flex items-center gap-2"
             >
-              <RotateCcw className="w-4 h-4" />
+              <RefreshIcon className="w-4 h-4" />
               Reiniciar
             </button>
             
@@ -277,13 +277,13 @@ const GitHubIntegrationTestPage: React.FC = () => {
 };
 
 // Icons for buttons
-const Play: React.FC<{ className?: string }> = ({ className = '' }) => (
+const PlayIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <polygon points="5 3 19 12 5 21 5 3"></polygon>
   </svg>
 );
 
-const RotateCcw: React.FC<{ className?: string }> = ({ className = '' }) => (
+const RefreshIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <polyline points="1 4 1 10 7 10"></polyline>
     <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>

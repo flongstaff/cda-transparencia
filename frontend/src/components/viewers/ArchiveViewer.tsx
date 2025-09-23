@@ -4,18 +4,17 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { 
-  Archive, 
-  Download, 
+import {
+  Archive,
+  Download,
   ExternalLink,
-  Eye, 
+  Eye,
   AlertCircle,
   Loader2,
   Share2,
   FileText,
   FileImage,
   FileSpreadsheet,
-  FileText,
   Presentation,
   Braces,
   Code,

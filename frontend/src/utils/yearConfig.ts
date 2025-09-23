@@ -36,21 +36,57 @@ export const AVAILABLE_YEARS: YearDataConfig[] = [
   },
   {
     year: 2023,
-    hasDetailedBudget: false, // Changed to false since no organized budget data exists
-    hasSalaryData: false, // Changed to false since no organized salary data exists
-    hasDebtData: false, // Changed to false since no organized debt data exists
+    hasDetailedBudget: false,
+    hasSalaryData: false,
+    hasDebtData: false,
     hasDocuments: true,
     dataIndex: '/frontend/src/data/data_index_2023.json',
     label: '2023 (Histórico)'
   },
   {
     year: 2022,
-    hasDetailedBudget: false, // Changed to false since no organized budget data exists
-    hasSalaryData: false, // Changed to false since no organized salary data exists
-    hasDebtData: false, // Changed to false since no organized debt data exists
+    hasDetailedBudget: false,
+    hasSalaryData: false,
+    hasDebtData: false,
     hasDocuments: true,
     dataIndex: '/frontend/src/data/data_index_2022.json',
     label: '2022 (Histórico)'
+  },
+  {
+    year: 2021,
+    hasDetailedBudget: false,
+    hasSalaryData: false,
+    hasDebtData: false,
+    hasDocuments: true,
+    dataIndex: '/frontend/src/data/data_index_2021.json',
+    label: '2021 (Histórico)'
+  },
+  {
+    year: 2020,
+    hasDetailedBudget: false,
+    hasSalaryData: false,
+    hasDebtData: false,
+    hasDocuments: true,
+    dataIndex: '/frontend/src/data/data_index_2020.json',
+    label: '2020 (Histórico)'
+  },
+  {
+    year: 2019,
+    hasDetailedBudget: false,
+    hasSalaryData: false,
+    hasDebtData: false,
+    hasDocuments: true,
+    dataIndex: '/frontend/src/data/data_index_2019.json',
+    label: '2019 (Histórico)'
+  },
+  {
+    year: 2018,
+    hasDetailedBudget: false,
+    hasSalaryData: false,
+    hasDebtData: false,
+    hasDocuments: true,
+    dataIndex: '/frontend/src/data/data_index_2018.json',
+    label: '2018 (Histórico)'
   }
 ];
 

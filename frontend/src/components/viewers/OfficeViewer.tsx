@@ -4,17 +4,16 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { 
-  FileText, 
-  FileSpreadsheet, 
+import {
+  FileText,
+  FileSpreadsheet,
   Presentation,
-  Download, 
+  Download,
   ExternalLink,
-  Eye, 
+  Eye,
   AlertCircle,
   Loader2,
-  Share2,
-  FileText
+  Share2
 } from 'lucide-react';
 import { DocumentMetadata, SupportedFileType } from '../../types/documents';
 

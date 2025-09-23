@@ -3,11 +3,11 @@ import click
 import pytest
 from click.testing import CliRunner
 from unittest.mock import patch, MagicMock
-from carmen_transparencia import cli
+from carmen_transparencia.cli import cli as cli_command
 
 def test_cli_exists():
     """Test that the CLI object exists"""
-    assert cli is not None
+    assert cli_command is not None
 
 @patch('carmen_transparencia.cli.IntegratedTransparencySystem')
 def test_run_analysis_command(MockIntegratedSystem):
@@ -24,7 +24,7 @@ def test_run_analysis_command(MockIntegratedSystem):
     runner = CliRunner()
     
     # Act
-    result = runner.invoke(cli, ["run-analysis"])
+    result = runner.invoke(cli_command, ["run-analysis"])
     
     # Assert
     assert result.exit_code == 0

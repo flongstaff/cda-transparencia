@@ -4,9 +4,9 @@
  */
 
 import React from 'react';
-import { 
-  File, 
-  Download, 
+import {
+  File,
+  Download,
   ExternalLink,
   AlertCircle,
   Loader2,
@@ -16,8 +16,7 @@ import {
   Archive,
   Braces,
   FileSpreadsheet,
-  Presentation,
-  FileText
+  Presentation
 } from 'lucide-react';
 import { DocumentMetadata, SupportedFileType } from '../../types/documents';
 

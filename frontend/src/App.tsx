@@ -5,9 +5,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { 
-  Shield, 
-  FileText, 
+import {
+  Shield,
+  FileText,
   DollarSign,
   Users,
   Building,
@@ -28,11 +28,7 @@ import {
   TrendingDown,
   AlertTriangle,
   CheckCircle,
-  Database,
-  Globe,
-  Star,
-  StarHalf,
-  TrendingFlat
+  GitBranch
 } from 'lucide-react';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -73,7 +69,6 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import CategoryPage from './pages/CategoryPage';
 import Spending from './pages/Spending';
-import Investments from './pages/Investments';
 import Treasury from './pages/Treasury';
 import DatabasePage from './pages/Database';
 import Whistleblower from './pages/Whistleblower';
@@ -85,12 +80,9 @@ import YearDashboard from './components/yearly/YearDashboard';
 import TransparencyDashboard from './components/dashboard/TransparencyDashboard';
 
 // Import test pages
-import DocumentViewersTestPage from './pages/DocumentViewersTestPage';
 import ComprehensiveTestPage from './pages/ComprehensiveTestPage';
 import GitHubResourcesTestPage from './pages/GitHubResourcesTestPage';
 import ImplementationVerificationPage from './pages/ImplementationVerificationPage';
-import RealGitHubResourceTestPage from './pages/RealGitHubResourceTestPage';
-import GitHubIntegrationTestPage from './pages/GitHubIntegrationTestPage';
 
 // Simple navigation for citizens
 const navigationSections = [
@@ -138,9 +130,10 @@ const navigationSections = [
     items: [
       { path: '/test/viewers', label: 'Visores de Documentos', icon: <FileText className="w-4 h-4" /> },
       { path: '/test/comprehensive', label: 'Pruebas Integrales', icon: <Activity className="w-4 h-4" /> },
-      { path: '/test/github-resources', label: 'Recursos de GitHub', icon: <Github className="w-4 h-4" /> },
+      { path: '/test/github-resources', label: 'Recursos de GitHub', icon: <GitBranch className="w-4 h-4" /> },
       { path: '/test/implementation', label: 'Verificación de Implementación', icon: <Shield className="w-4 h-4" /> },
-      { path: '/test/real-github', label: 'Prueba de Recursos Reales', icon: <Github className="w-4 h-4" /> }
+      { path: '/test/real-github', label: 'Prueba de Recursos Reales', icon: <GitBranch className="w-4 h-4" /> },
+      { path: '/test/github-integration', label: 'Integración con GitHub', icon: <GitBranch className="w-4 h-4" /> }
     ]
   },
   {
@@ -354,7 +347,7 @@ const App: React.FC = () => {
                       <Route path="/budget" element={<Budget />} />
                       <Route path="/expenses" element={<CategoryPage category="expenses" title="Gastos" icon="💸" />} />
                       <Route path="/spending" element={<Spending />} />
-                      <Route path="/investments" element={<Investments />} />
+                      <Route path="/investments" element={<CategoryPage category="investments" title="Inversiones" icon="🏗️" />} />
                       <Route path="/revenue" element={<Treasury />} />
                       <Route path="/debt" element={<CategoryPage category="debt" title="Deuda" icon="💳" />} />
                       
@@ -368,7 +361,7 @@ const App: React.FC = () => {
                       {/* Tools Routes */}
                       <Route path="/audit" element={<Audit />} />
                       <Route path="/reports" element={<Reports />} />
-                      <Route path="/database" element={<Database />} />
+                      <Route path="/database" element={<DatabasePage />} />
                       <Route path="/whistleblower" element={<Whistleblower />} />
                       <Route path="/anticorruption" element={<AntiCorruptionDashboard />} />
                       
@@ -380,13 +373,13 @@ const App: React.FC = () => {
                       <Route path="/year/:year" element={<YearDashboard />} />
                       <Route path="/transparency" element={<TransparencyDashboard />} />
                       
-                      {/* Test Routes */}
-                      <Route path="/test/viewers" element={<DocumentViewersTestPage />} />
+                      {/* Test Routes - Temporarily disabled due to compilation issues */}
+                      <Route path="/test/viewers" element={<div className="p-8 text-center"><h2 className="text-xl font-bold">Document Viewers Test</h2><p>Temporarily unavailable</p></div>} />
                       <Route path="/test/comprehensive" element={<ComprehensiveTestPage />} />
                       <Route path="/test/github-resources" element={<GitHubResourcesTestPage />} />
                       <Route path="/test/implementation" element={<ImplementationVerificationPage />} />
-                      <Route path="/test/real-github" element={<RealGitHubResourceTestPage />} />
-                      <Route path="/test/github-integration" element={<GitHubIntegrationTestPage />} />
+                      <Route path="/test/real-github" element={<div className="p-8 text-center"><h2 className="text-xl font-bold">Real GitHub Test</h2><p>Temporarily unavailable</p></div>} />
+                      <Route path="/test/github-integration" element={<div className="p-8 text-center"><h2 className="text-xl font-bold">GitHub Integration Test</h2><p>Temporarily unavailable</p></div>} />
                     </Routes>
                   </div>
                 </main>

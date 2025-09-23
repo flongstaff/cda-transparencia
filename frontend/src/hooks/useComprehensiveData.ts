@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useUnifiedData } from './useUnifiedData';
 import { DataFilters } from './useUnifiedData';
+import { dataSyncService } from '../services/DataSyncService';
+import { externalDataService } from '../services/ExternalDataService';
 
 // -----------------------------------------------------------------------------
 // Helper types (kept minimal for the purposes of this project)
@@ -130,6 +132,97 @@ export const useBudgetAnalysis = (year: number) => {
 };
 
 // -----------------------------------------------------------------------------
+// External data integration hooks
+// -----------------------------------------------------------------------------
+export const useExternalBudgetData = (year: number) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const budgetData = await externalDataService.getBudgetData(year);
+        setData(budgetData);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch budget data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [year]);
+
+  return { data, loading, error };
+};
+
+export const useExternalContractData = () => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const contractData = await externalDataService.getContractData();
+        setData(contractData);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch contract data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return { data, loading, error };
+};
+
+export const useGitHubData = (year?: number) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [availableYears, setAvailableYears] = useState<number[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const [years, inventory, multiSource] = await Promise.all([
+          dataSyncService.getAvailableYears(),
+          dataSyncService.getDocumentInventory(),
+          dataSyncService.getMultiSourceReport()
+        ]);
+
+        setAvailableYears(years);
+
+        if (year) {
+          const yearData = await dataSyncService.getComprehensiveYearData(year);
+          setData({ yearData, inventory, multiSource, availableYears: years });
+        } else {
+          setData({ inventory, multiSource, availableYears: years });
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch GitHub data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [year]);
+
+  return { data, loading, error, availableYears };
+};
+
+// -----------------------------------------------------------------------------
 // Export all hooks together (kept for backward compatibility)
 // -----------------------------------------------------------------------------
 export default {
@@ -137,4 +230,7 @@ export default {
   useDocumentAnalysis,
   useFinancialOverview,
   useBudgetAnalysis,
+  useExternalBudgetData,
+  useExternalContractData,
+  useGitHubData,
 };

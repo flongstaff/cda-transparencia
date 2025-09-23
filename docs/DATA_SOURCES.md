@@ -802,3 +802,19 @@ Municipalidad de Capitán Sarmiento: <https://capitansarmiento.gob.ar/>
 ## Good reference how to display data
 
 <https://www.clearpointstrategy.com/blog/technology-local-government-transparency>
+
+MORE TO CHECK:
+https://publicapi.dev/open-government-argentina-api
+https://raw.githubusercontent.com/datosgobar/series-tiempo-ar-api/master/docs/open_api/spec/openapi.json
+https://www.argentina.gob.ar/innovacion-ciencia-y-tecnologia/gobierno-abierto/datos-abiertos/api-series-de-tiempo/referencia-completa-de-la-api-series-de-tiempo
+https://datosgobar.github.io/georef-ar-api/open-api/
+https://publicapis.io/open-government-argentina-api
+https://www.presupuestoabierto.gob.ar/api/
+https://datosgobar.github.io/georef-ar-api/download/
+https://datos.gob.ar/organizaciones
+https://datos.gob.ar/
+https://datosgobar.github.io/paquete-apertura-datos/datasets-especificaciones/contrataciones-publicas/
+https://datosgobar.github.io/georef-ar-api/quick-start/
+https://datosgobar.github.io/georef-ar-api/etl-data/
+https://datosgobar.github.io/georef-ar-api/
+https://datosgobar.github.io/series-tiempo-ar-api/

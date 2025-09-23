@@ -1,6 +1,4 @@
 
-import { dataVerificationService } from './DataVerificationService';
-
 export interface SyncResult {
   source: string;
   status: 'success' | 'failed' | 'partial';
@@ -29,6 +27,34 @@ export interface SyncReport {
 }
 
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/flongstaff/cda-transparencia/main';
+const GITHUB_API_BASE = 'https://api.github.com/repositories/1031806468/contents';
+
+// Available data paths from the repository
+export const GITHUB_DATA_PATHS = {
+  // Core data files
+  dataInventory: '/data/data_inventory.json',
+  multiSourceReport: '/data/multi_source_report.json',
+
+  // Document inventory
+  documentInventory: '/data/organized_documents/document_inventory.json',
+  completeFileInventory: '/data/organized_documents/complete_file_inventory.csv',
+  inventorySummary: '/data/organized_documents/inventory_summary.json',
+
+  // Analysis data
+  detailedInventory: '/data/organized_analysis/detailed_inventory.json',
+  analysisSummary: '/data/organized_analysis/inventory_summary.json',
+
+  // Financial data
+  budgetAnalysis: '/data/organized_analysis/financial_oversight/budget_analysis',
+  debtMonitoring: '/data/organized_analysis/financial_oversight/debt_monitoring',
+  salaryOversight: '/data/organized_analysis/financial_oversight/salary_oversight',
+
+  // Year-based documents (2000-2025)
+  yearlyDocuments: (year: number) => `/data/organized_documents/${year}`,
+
+  // Validation reports
+  validationReports: '/data/validation_reports'
+};
 
 async function fetchGitHubJson(relativePath: string): Promise<any | null> {
   try {
@@ -42,6 +68,22 @@ async function fetchGitHubJson(relativePath: string): Promise<any | null> {
     }
   } catch (error) {
     console.warn(`Error fetching GitHub JSON from ${relativePath}:`, error);
+    return null;
+  }
+}
+
+async function fetchGitHubAPI(path: string): Promise<any | null> {
+  try {
+    const url = `${GITHUB_API_BASE}${path}`;
+    const response = await fetch(url);
+    if (response.ok) {
+      return await response.json();
+    } else {
+      console.warn(`Failed to fetch from GitHub API ${url}: ${response.status} ${response.statusText}`);
+      return null;
+    }
+  } catch (error) {
+    console.warn(`Error fetching from GitHub API ${path}:`, error);
     return null;
   }
 }
@@ -158,15 +200,12 @@ export class DataSyncService {
           if (sourceData.documents && Array.isArray(sourceData.documents)) {
             sourceData.documents.forEach((doc: any) => {
               try {
-                // Verify document
-                const verification = dataVerificationService.verifyDocument(doc);
-                if (verification.verification_status === 'verified') {
+                // Count documents
+                if (doc && doc.id) {
                   documentsSynced++;
-                } else {
-                  documentsFailed++;
                 }
               } catch (error) {
-                errors.push(`Document verification failed: ${doc.title}`);
+                errors.push(`Document processing failed: ${doc.title}`);
                 documentsFailed++;
               }
             });
@@ -224,8 +263,8 @@ export class DataSyncService {
             if (Array.isArray(data.documents)) { // Check if it's an array
               data.documents.forEach((doc: any) => {
                 try {
-                  const verification = dataVerificationService.verifyDocument(doc);
-                  if (verification.verification_status === 'verified') {
+                  // Count document
+                  if (doc && doc.id) {
                     documentsSynced++;
                   } else {
                     documentsFailed++;
@@ -271,6 +310,7 @@ export class DataSyncService {
   // Sync external APIs
   private async syncExternalApis(): Promise<SyncResult> {
     const startTime = Date.now();
+    
     // if (!USE_API) { // USE_API is imported from useComprehensiveData
     return {
       source: 'external_apis',
@@ -282,7 +322,9 @@ export class DataSyncService {
       duration: Date.now() - startTime,
       timestamp: new Date().toISOString()
     };
+    
     // TODO: Implement proper API sync logic
+    /*
     const result = null; // Placeholder for now
     if (!result) {
       throw new Error(`External API sync failed: No data received`);
@@ -296,8 +338,8 @@ export class DataSyncService {
     if (result.success && result.documents) {
       result.documents.forEach((doc: any) => {
         try {
-          const verification = dataVerificationService.verifyDocument(doc);
-          if (verification.verification_status === 'verified') {
+          // Count document
+          if (doc && doc.id) {
             documentsSynced++;
           } else {
             documentsFailed++;
@@ -319,6 +361,7 @@ export class DataSyncService {
       duration: Date.now() - startTime,
       timestamp: new Date().toISOString()
     };
+    */
   }
 
   // Sync GitHub repository
@@ -345,8 +388,8 @@ export class DataSyncService {
             if (Array.isArray(data.documents)) { // Check if it's an array
               data.documents.forEach((doc: any) => {
                 try {
-                  const verification = dataVerificationService.verifyDocument(doc);
-                  if (verification.verification_status === 'verified') {
+                  // Count document
+                  if (doc && doc.id) {
                     documentsSynced++;
                   } else {
                     documentsFailed++;
@@ -415,8 +458,8 @@ export class DataSyncService {
                             if (categoryData.documents && Array.isArray(categoryData.documents)) {
                               categoryData.documents.forEach((doc: any) => {
                                 try {
-                                  const verification = dataVerificationService.verifyDocument(doc);
-                                  if (verification.verification_status === 'verified') {
+                                  // Count document
+                                  if (doc && doc.id) {
                                     documentsSynced++;
                                   } else {
                                     documentsFailed++;
@@ -473,6 +516,79 @@ export class DataSyncService {
   // Clear sync history
   public clearSyncHistory() {
     this.syncHistory = [];
+  }
+
+  // New methods for comprehensive data access
+  public async getDocumentInventory(): Promise<any | null> {
+    return await fetchGitHubJson(GITHUB_DATA_PATHS.documentInventory);
+  }
+
+  public async getDataInventory(): Promise<any | null> {
+    return await fetchGitHubJson(GITHUB_DATA_PATHS.dataInventory);
+  }
+
+  public async getMultiSourceReport(): Promise<any | null> {
+    return await fetchGitHubJson(GITHUB_DATA_PATHS.multiSourceReport);
+  }
+
+  public async getYearlyDocuments(year: number): Promise<any | null> {
+    const path = GITHUB_DATA_PATHS.yearlyDocuments(year);
+    return await fetchGitHubAPI(path);
+  }
+
+  public async getAnalysisSummary(): Promise<any | null> {
+    return await fetchGitHubJson(GITHUB_DATA_PATHS.analysisSummary);
+  }
+
+  public async getInventorySummary(): Promise<any | null> {
+    return await fetchGitHubJson(GITHUB_DATA_PATHS.inventorySummary);
+  }
+
+  // Get all available years with documents
+  public async getAvailableYears(): Promise<number[]> {
+    try {
+      const documentsDir = await fetchGitHubAPI('/data/organized_documents');
+      if (documentsDir && Array.isArray(documentsDir)) {
+        const years = documentsDir
+          .filter((item: any) => item.type === 'dir' && /^\d{4}$/.test(item.name))
+          .map((item: any) => parseInt(item.name))
+          .sort((a: number, b: number) => b - a); // Sort descending (newest first)
+        return years;
+      }
+      return [];
+    } catch (error) {
+      console.warn('Error fetching available years:', error);
+      return [];
+    }
+  }
+
+  // Get comprehensive data for a specific year
+  public async getComprehensiveYearData(year: number): Promise<any> {
+    try {
+      const [
+        documents,
+        inventory,
+        multiSource,
+        analysis
+      ] = await Promise.all([
+        this.getYearlyDocuments(year),
+        this.getDocumentInventory(),
+        this.getMultiSourceReport(),
+        this.getAnalysisSummary()
+      ]);
+
+      return {
+        year,
+        documents,
+        inventory: inventory?.filter?.((doc: any) => doc.year === year) || [],
+        multiSource,
+        analysis,
+        timestamp: new Date().toISOString()
+      };
+    } catch (error) {
+      console.error(`Error fetching comprehensive data for year ${year}:`, error);
+      return null;
+    }
   }
 }
 

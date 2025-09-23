@@ -4,15 +4,14 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { 
+import {
   File,
-  FileText, 
-  FileImage, 
-  Archive, 
-  Braces, 
+  FileText,
+  FileImage,
+  Archive,
+  Braces,
   FileSpreadsheet,
   Presentation,
-  FileText,
   Download,
   ExternalLink,
   Eye,

@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { 
+import {
   DollarSign,
   TrendingUp,
   Users,
@@ -25,6 +25,8 @@ import {
   Shield
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useGitHubData, useExternalBudgetData, useExternalContractData } from '../hooks/useComprehensiveData';
+import { FinancialHealthScoreCard, EnhancedMetricCard, TransparencyScore } from '../components/ui';
 
 // Mock data for dashboard
 const mockDashboardData = {
@@ -122,26 +124,33 @@ const mockDashboardData = {
 
 const Dashboard: React.FC = () => {
   const [dashboardData, setDashboardData] = useState<typeof mockDashboardData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+
+  // Use real data hooks
+  const { data: githubData, loading: githubLoading, error: githubError } = useGitHubData(2024);
+  const { data: budgetData, loading: budgetLoading, error: budgetError } = useExternalBudgetData(2024);
+  const { data: contractData, loading: contractLoading, error: contractError } = useExternalContractData();
+
+  const loading = githubLoading || budgetLoading || contractLoading;
+  const error = githubError || budgetError || contractError;
 
   useEffect(() => {
-    // Simulate loading data
-    const loadData = async () => {
-      setLoading(true);
-      try {
-        // In a real implementation, this would fetch from the API
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        setDashboardData(mockDashboardData);
-        setLoading(false);
-      } catch (err) {
-        setError('Error al cargar los datos del dashboard');
-        setLoading(false);
-      }
-    };
-
-    loadData();
-  }, []);
+    if (!loading && !error) {
+      // Combine data from different sources
+      const combinedData = {
+        financialOverview: {
+          totalBudget: budgetData?.totalBudget || mockDashboardData.financialOverview.totalBudget,
+          totalExecuted: budgetData?.totalExecuted || mockDashboardData.financialOverview.totalExecuted,
+          executionRate: budgetData?.executionPercentage || mockDashboardData.financialOverview.executionRate,
+          totalRevenue: mockDashboardData.financialOverview.totalRevenue, // From other sources
+          totalDebt: mockDashboardData.financialOverview.totalDebt, // From other sources
+          transparencyScore: mockDashboardData.financialOverview.transparencyScore
+        },
+        recentDocuments: githubData?.inventory?.recentDocuments || mockDashboardData.recentDocuments,
+        alerts: mockDashboardData.alerts // Keep mock alerts for now
+      };
+      setDashboardData(combinedData);
+    }
+  }, [githubData, budgetData, contractData, loading, error]);
 
   const formatCurrency = (amount: number): string => {
     return new Intl.NumberFormat('es-AR', {

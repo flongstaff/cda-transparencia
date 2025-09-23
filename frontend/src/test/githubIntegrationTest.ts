@@ -1,6 +1,6 @@
 /**
  * GitHub Integration Test
- * Test to verify integration with real GitHub resources
+ * Test script to verify our implementation works with real GitHub resources
  */
 
 import { unifiedResourceService } from '../services/UnifiedResourceService';
@@ -14,7 +14,7 @@ const TEST_CONFIG = {
 
 interface TestResult {
   name: string;
-  status: 'passed' | 'failed';
+  status: 'passed' | 'failed' | 'skipped';
   message?: string;
   duration: number;
 }
@@ -23,8 +23,9 @@ class GitHubIntegrationTest {
   private results: TestResult[] = [];
   private startTime: number = 0;
 
-  async runAllTests(): Promise<void> {
+  async runAllTests(): Promise<TestResult[]> {
     this.startTime = Date.now();
+    this.results = [];
     console.log('🚀 Starting GitHub integration tests...\n');
     
     try {
@@ -49,11 +50,15 @@ class GitHubIntegrationTest {
       // Test 7: Fetch binary data
       await this.testFetchBinary();
       
-      // Print results
+      // Test 8: Cache statistics
+      await this.testCacheStatistics();
+      
       this.printResults();
+      return this.results;
       
     } catch (error) {
-      console.error('❌ GitHub integration tests failed:', error);
+      console.error('\n❌ GitHub resource tests failed:', error);
+      throw error;
     }
   }
 
@@ -441,16 +446,50 @@ class GitHubIntegrationTest {
     }
   }
 
+  private async testCacheStatistics(): Promise<void> {
+    const startTime = Date.now();
+    const testName = 'Cache Statistics';
+    
+    try {
+      console.log(`🧪 Testing ${testName}...`);
+      
+      const cacheStats = unifiedResourceService.getCacheStats();
+      
+      console.log(`   ✅ Cache stats retrieved successfully`);
+      console.log(`   📊 Cache size: ${cacheStats.size}`);
+      console.log(`   📋 Cached keys: ${cacheStats.keys.length}`);
+      
+      this.results.push({
+        name: testName,
+        status: 'passed',
+        message: `Successfully retrieved cache statistics`,
+        duration: Date.now() - startTime
+      });
+      
+    } catch (error) {
+      this.results.push({
+        name: testName,
+        status: 'failed',
+        message: (error as Error).message,
+        duration: Date.now() - startTime
+      });
+      
+      console.log(`   ❌ ${testName} failed: ${(error as Error).message}\n`);
+    }
+  }
+
   private printResults(): void {
     const totalTime = Date.now() - this.startTime;
     const passedTests = this.results.filter(r => r.status === 'passed').length;
     const failedTests = this.results.filter(r => r.status === 'failed').length;
+    const skippedTests = this.results.filter(r => r.status === 'skipped').length;
     
     console.log('\n📊 GitHub Integration Test Results:');
     console.log('====================================');
     console.log(`⏱️  Total time: ${totalTime}ms`);
     console.log(`✅ Passed: ${passedTests}`);
     console.log(`❌ Failed: ${failedTests}`);
+    console.log(`⏭️  Skipped: ${skippedTests}`);
     console.log(`📋 Total: ${this.results.length}`);
     
     if (failedTests > 0) {

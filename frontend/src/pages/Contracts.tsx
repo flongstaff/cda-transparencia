@@ -53,8 +53,9 @@ const Contracts: React.FC = () => {
   const documentData = useDocumentAnalysis({ category: 'Contrataciones' });
   const contractDocuments = useDocumentAnalysis({ searchTerm: 'contrat' });
 
-  // Generate available years dynamically to match available data
-  const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
+  // Generate available years from 2018 to current year
+  const currentYear = new Date().getFullYear();
+  const availableYears = Array.from({ length: currentYear - 2018 + 1 }, (_, i) => currentYear - i);
   
   // Generate comprehensive contract data from all sources
   const contractsData: Contract[] = useMemo(() => {

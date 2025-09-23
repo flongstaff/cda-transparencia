@@ -4,11 +4,11 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { 
-  Github, 
-  CheckCircle, 
-  XCircle, 
-  AlertCircle, 
+import {
+  GitBranch,
+  CheckCircle,
+  XCircle,
+  AlertCircle,
   Loader2,
   FileText,
   FileImage,
@@ -16,7 +16,6 @@ import {
   Braces,
   FileSpreadsheet,
   Presentation,
-  FileText,
   ExternalLink,
   Download
 } from 'lucide-react';
@@ -193,7 +192,7 @@ const GitHubResourceTest: React.FC = () => {
       <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-6">
           <h1 className="text-2xl font-bold text-white flex items-center">
-            <Github className="w-6 h-6 mr-2" />
+            <GitBranch className="w-6 h-6 mr-2" />
             Prueba de Recursos de GitHub
           </h1>
           <p className="text-blue-100 mt-2">
@@ -278,7 +277,7 @@ const GitHubResourceTest: React.FC = () => {
           <div className="space-y-4">
             {testResults.length === 0 ? (
               <div className="text-center py-8 text-gray-500">
-                <Github className="w-12 h-12 mx-auto text-gray-300 mb-4" />
+                <GitBranch className="w-12 h-12 mx-auto text-gray-300 mb-4" />
                 <p>Haga clic en "Ejecutar pruebas" para comenzar</p>
               </div>
             ) : (

@@ -4,20 +4,19 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { 
-  Play, 
-  RotateCcw, 
-  CheckCircle, 
-  XCircle, 
-  AlertCircle, 
+import {
+  Play,
+  RotateCcw,
+  CheckCircle,
+  XCircle,
+  AlertCircle,
   Loader2,
   FileText,
   FileImage,
   Archive,
   Braces,
   FileSpreadsheet,
-  Presentation,
-  FileText
+  Presentation
 } from 'lucide-react';
 import { fileTypeTestSuite } from '../test/fileTypeTestSuite';
 import { DocumentMetadata, SupportedFileType } from '../types/documents';
