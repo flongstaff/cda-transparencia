@@ -417,7 +417,7 @@ export const useUnifiedData = (filters: DataFilters = {}) => {
       },
       verification: {
         report: verificationReport,
-        byDocument: verificationReport.by_document || {},
+        byDocument: (verificationReport as any).by_document || (verificationReport as any).byDocument || {},
         verification_rate: verificationReport.verification_rate || 0
       },
       sync: {

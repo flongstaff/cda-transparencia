@@ -23,7 +23,7 @@ import {
   Download,
   Eye
 } from 'lucide-react';
-import TestRunner from './TestRunner';
+import TestRunner from '../components/testing/TestRunner';
 
 const ComprehensiveTestPage: React.FC = () => {
   return (

@@ -59,9 +59,7 @@ const mockDocuments: DocumentMetadata[] = [
     verification_status: 'verified',
     processing_date: new Date().toISOString(),
     relative_path: 'data/organized_documents/informe-ejecucion.md',
-    content: '# Informe de Ejecución Presupuestaria
-
-Este informe detalla la ejecución presupuestaria del municipio...',
+    content: '# Informe de Ejecución Presupuestaria\n\nEste informe detalla la ejecución presupuestaria del municipio...',
     file_type: 'md'
   },
   {

@@ -162,7 +162,7 @@ const JSONViewer: React.FC<JSONViewerProps> = ({
             className="cursor-pointer text-gray-500 hover:text-gray-700"
             onClick={() => toggleExpandKey(path)}
           >
-            [{isExpanded ? '-' : '+'}] Object{{{keys.length}}}
+            [{isExpanded ? '-' : '+'}] Object{keys.length}
           </span>
           {isExpanded && (
             <div className="ml-4">

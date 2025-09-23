@@ -25,8 +25,8 @@ import {
 } from 'lucide-react';
 import { unifiedResourceService } from '../../services/UnifiedResourceService';
 import { DocumentMetadata, SupportedFileType } from '../../types/documents';
-import UniversalDocumentViewer from '../../components/viewers/UniversalDocumentViewer';
-import FallbackViewer from '../../components/viewers/FallbackViewer';
+import UniversalDocumentViewer from '@components/viewers/UniversalDocumentViewer.tsx';
+import FallbackViewer from '@components/viewers/FallbackViewer.tsx';
 
 const DocumentDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
