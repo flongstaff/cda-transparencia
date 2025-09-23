@@ -14,11 +14,21 @@ import {
   BookOpen,
   FileImage,
   FileX,
-  Archive
+  Archive,
+  Braces,
+  FileSpreadsheet,
+  Presentation,
+  FileWord
 } from 'lucide-react';
 import PDFViewer from './PDFViewer';
 import MarkdownViewer from './MarkdownViewer';
+import ImageViewer from './ImageViewer';
+import JSONViewer from './JSONViewer';
+import ArchiveViewer from './ArchiveViewer';
+import OfficeViewer from './OfficeViewer';
+import TextViewer from './TextViewer';
 import { useTransparencyData } from '../../hooks/useTransparencyData';
+import { DocumentMetadata } from '../../types/documents';
 
 interface Document {
   id: string;
@@ -85,7 +95,7 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
           }
         }
       } catch (err) {
-        setError(`Error cargando documentos: ${err.message}`);
+        setError(`Error cargando documentos: ${(err as Error).message}`);
       } finally {
         setLoading(false);
       }
@@ -114,15 +124,49 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
     const type = document.file_type?.toLowerCase() || '';
     const filename = document.filename?.toLowerCase() || '';
     
+    // PDF files
     if (type.includes('pdf') || filename.endsWith('.pdf')) {
       return <FileText className="w-8 h-8 text-red-500" />;
-    } else if (type.includes('markdown') || filename.endsWith('.md')) {
+    }
+    
+    // Markdown files
+    if (type.includes('markdown') || type.includes('md') || filename.endsWith('.md')) {
       return <BookOpen className="w-8 h-8 text-blue-500" />;
-    } else if (type.includes('image') || /\.(jpg|jpeg|png|gif|svg)$/.test(filename)) {
+    }
+    
+    // Image files
+    if (type.includes('image') || /\.(jpg|jpeg|png|gif|svg)$/.test(filename)) {
       return <FileImage className="w-8 h-8 text-green-500" />;
-    } else if (type.includes('archive') || /\.(zip|rar|7z)$/.test(filename)) {
+    }
+    
+    // Archive files
+    if (type.includes('archive') || /\.(zip|rar|7z)$/.test(filename)) {
       return <Archive className="w-8 h-8 text-purple-500" />;
     }
+    
+    // JSON files
+    if (type.includes('json') || filename.endsWith('.json')) {
+      return <Braces className="w-8 h-8 text-yellow-500" />;
+    }
+    
+    // Office files
+    if (['doc', 'docx'].includes(type) || /\.(doc|docx)$/.test(filename)) {
+      return <FileWord className="w-8 h-8 text-blue-500" />;
+    }
+    
+    if (['xls', 'xlsx'].includes(type) || /\.(xls|xlsx)$/.test(filename)) {
+      return <FileSpreadsheet className="w-8 h-8 text-green-500" />;
+    }
+    
+    if (['ppt', 'pptx'].includes(type) || /\.(ppt|pptx)$/.test(filename)) {
+      return <Presentation className="w-8 h-8 text-orange-500" />;
+    }
+    
+    // Text files
+    if (['txt', 'csv'].includes(type) || /\.(txt|csv)$/.test(filename)) {
+      return <FileText className="w-8 h-8 text-gray-500" />;
+    }
+    
     return <FileX className="w-8 h-8 text-gray-500" />;
   };
 
@@ -131,9 +175,14 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
     const filename = document.filename?.toLowerCase() || '';
     
     if (type.includes('pdf') || filename.endsWith('.pdf')) return 'Documento PDF';
-    if (type.includes('markdown') || filename.endsWith('.md')) return 'Documento Markdown';
-    if (type.includes('image')) return 'Imagen';
-    if (type.includes('archive')) return 'Archivo comprimido';
+    if (type.includes('markdown') || type.includes('md') || filename.endsWith('.md')) return 'Documento Markdown';
+    if (type.includes('image') || /\.(jpg|jpeg|png|gif|svg)$/.test(filename)) return 'Imagen';
+    if (type.includes('archive') || /\.(zip|rar|7z)$/.test(filename)) return 'Archivo comprimido';
+    if (type.includes('json') || filename.endsWith('.json')) return 'Documento JSON';
+    if (['doc', 'docx'].includes(type) || /\.(doc|docx)$/.test(filename)) return 'Documento Word';
+    if (['xls', 'xlsx'].includes(type) || /\.(xls|xlsx)$/.test(filename)) return 'Documento Excel';
+    if (['ppt', 'pptx'].includes(type) || /\.(ppt|pptx)$/.test(filename)) return 'Presentación';
+    if (['txt', 'csv'].includes(type) || /\.(txt|csv)$/.test(filename)) return 'Documento de texto';
     return 'Documento';
   };
 
@@ -156,6 +205,7 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
     const type = document.file_type?.toLowerCase() || '';
     const filename = document.filename?.toLowerCase() || '';
     
+    // PDF files
     if (type.includes('pdf') || filename.endsWith('.pdf')) {
       return (
         <PDFViewer
@@ -165,7 +215,10 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
           className="w-full"
         />
       );
-    } else if (type.includes('markdown') || filename.endsWith('.md')) {
+    }
+    
+    // Markdown files
+    else if (type.includes('markdown') || type.includes('md') || filename.endsWith('.md')) {
       return (
         <MarkdownViewer
           content={document.content}
@@ -175,7 +228,61 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
           className="w-full"
         />
       );
-    } else {
+    }
+    
+    // Image files
+    else if (type.includes('image') || /\.(jpg|jpeg|png|gif|svg)$/.test(filename)) {
+      return (
+        <ImageViewer
+          document={document as DocumentMetadata}
+          className="w-full"
+        />
+      );
+    }
+    
+    // JSON files
+    else if (type.includes('json') || filename.endsWith('.json')) {
+      return (
+        <JSONViewer
+          document={document as DocumentMetadata}
+          className="w-full"
+        />
+      );
+    }
+    
+    // Archive files
+    else if (type.includes('archive') || /\.(zip|rar|7z)$/.test(filename)) {
+      return (
+        <ArchiveViewer
+          document={document as DocumentMetadata}
+          className="w-full"
+        />
+      );
+    }
+    
+    // Office files
+    else if (['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx'].includes(type) || 
+             /\.(doc|docx|xls|xlsx|ppt|pptx)$/.test(filename)) {
+      return (
+        <OfficeViewer
+          document={document as DocumentMetadata}
+          className="w-full"
+        />
+      );
+    }
+    
+    // Text files
+    else if (['txt', 'csv'].includes(type) || /\.(txt|csv)$/.test(filename)) {
+      return (
+        <TextViewer
+          document={document as DocumentMetadata}
+          className="w-full"
+        />
+      );
+    }
+    
+    // Generic fallback
+    else {
       return (
         <div className="bg-white border border-gray-200 rounded-lg p-8 text-center">
           <div className="mb-4">

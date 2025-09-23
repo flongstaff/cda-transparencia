@@ -34,6 +34,22 @@ export function getDocumentFallbackUrls(filename: string, year?: number): string
 }
 
 /**
+ * Extract year from filename
+ */
+export function extractYearFromFilename(filename: string): number | null {
+  // Look for 4-digit years in the filename (2000-2099)
+  const yearMatch = filename.match(/(?:^|[-_ ])(20\d{2})(?:[-_ ]|$)/);
+  if (yearMatch) {
+    const year = parseInt(yearMatch[1]);
+    // Validate that it's a reasonable year (2000-2030)
+    if (year >= 2000 && year <= 2030) {
+      return year;
+    }
+  }
+  return null;
+}
+
+/**
  * Generate comprehensive document object with all URLs
  */
 export interface DocumentWithUrls {

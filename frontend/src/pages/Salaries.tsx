@@ -5,10 +5,8 @@ import {
   DollarSign,
   TrendingUp,
   FileText,
-  Download,
   Eye,
   AlertCircle,
-  Calendar,
   Building,
   BarChart3,
   Loader2
@@ -443,7 +441,7 @@ const Salaries: React.FC = () => {
                 
                 <div className="text-sm text-gray-600 space-y-1 mb-4">
                   <div className="flex items-center">
-                    <Calendar className="h-4 w-4 mr-2" />
+                    <Building className="h-4 w-4 mr-2" />
                     <span>{selectedYear}</span>
                   </div>
                   {doc.size_mb && (

@@ -105,3 +105,8 @@ pytestdebug.log
 *.tmp
 *.temp
 *~
+
+# Others
+Dockerfile
+Makefile
+./*.txt

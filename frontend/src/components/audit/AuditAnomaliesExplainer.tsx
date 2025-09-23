@@ -8,19 +8,12 @@ import {
   DollarSign,
   Users,
   FileX,
-  TrendingDown,
-  TrendingUp,
   Calendar,
   Target,
   Scale,
-  Eye,
   Zap,
   Clock,
-  MapPin,
   Building,
-  Phone,
-  Mail,
-  ExternalLink,
   Download,
   Share
 } from 'lucide-react';
@@ -68,7 +61,7 @@ interface DocumentImportance {
 
 const AuditAnomaliesExplainer: React.FC = () => {
   const [anomalies, setAnomalies] = useState<AuditAnomaly[]>([]);
-  const [documentImportance, setDocumentImportance] = useState<DocumentImportance[]>([]);
+  
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedAnomaly, setSelectedAnomaly] = useState<AuditAnomaly | null>(null);
@@ -218,26 +211,11 @@ const AuditAnomaliesExplainer: React.FC = () => {
     return anomalies;
   };
 
-  // Generate document importance scores
-  const generateDocumentImportanceScores = (documents: any[]): DocumentImportance[] => {
-    return documents.slice(0, 20).map(doc => ({
-      document_id: doc.id,
-      importance_score: Math.round(50 + Math.random() * 50),
-      legal_significance: ['low', 'medium', 'high', 'critical'][Math.floor(Math.random() * 4)] as any,
-      public_interest: ['low', 'medium', 'high'][Math.floor(Math.random() * 3)] as any,
-      financial_impact: Math.round(Math.random() * 1000000),
-      transparency_impact: Math.round(Math.random() * 100),
-      regulatory_compliance: Math.random() > 0.3,
-      council_decision_required: Math.random() > 0.6,
-      statutory_deadline: Math.random() > 0.7 ? '2024-12-31' : undefined,
-      penalties_for_non_compliance: Math.random() > 0.8 ? `Multa de $${Math.round(Math.random() * 500000)} ARS` : undefined,
-      public_disclosure_required: Math.random() > 0.4
-    }));
-  };
+
 
   useEffect(() => {
     loadAuditData();
-  }, []);
+  }, [loadAuditData]);
 
   // Filter and sort anomalies
   const filteredAnomalies = anomalies
@@ -249,10 +227,10 @@ const AuditAnomaliesExplainer: React.FC = () => {
       switch (sortBy) {
         case 'date':
           return new Date(b.created_date).getTime() - new Date(a.created_date).getTime();
-        case 'severity':
-          const severityOrder = { critical: 4, high: 3, medium: 2, low: 1 };
-          return severityOrder[b.severity] - severityOrder[a.severity];
-        case 'importance':
+                    case 'severity': {
+                      const severityOrder = { critical: 4, high: 3, medium: 2, low: 1 };
+                      return severityOrder[b.severity] - severityOrder[a.severity];
+                    }        case 'importance':
           return b.importance_score - a.importance_score;
         default:
           return 0;

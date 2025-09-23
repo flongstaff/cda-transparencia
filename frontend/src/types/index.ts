@@ -72,3 +72,6 @@ export interface PerformanceMetric {
   };
   period: string;
 }
+
+// Export document types
+export * from './documents';

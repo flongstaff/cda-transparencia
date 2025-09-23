@@ -1,22 +1,23 @@
 /**
  * ConsolidatedApiService - Works with our consolidated backend APIs
  * Uses only the endpoints that actually exist and work with real data
+ * Falls back to local data when API is not available
  */
 
 // Default to localhost for development, but allow environment variable override
 const API_BASE = import.meta.env.VITE_API_URL || 
-                 (typeof process !== 'undefined' && process.env.NODE_ENV === 'production' 
+                 (import.meta.env.PROD 
                    ? 'https://api.cda-transparencia.org/api/transparency' 
                    : 'http://localhost:3001/api/transparency');
 
 interface BudgetData {
   total_budgeted: number;
   total_executed: number;
-  execution_rate: string;
+  execution_rate: number; // Changed to number
   categories: Record<string, {
     budgeted: number;
     executed: number;
-    execution_rate: string;
+    execution_rate: number; // Changed to number
   }>;
 }
 
@@ -85,9 +86,8 @@ class ConsolidatedApiService {
       return response;
     } catch (error) {
       console.error('Error getting available years:', error);
-      // Return fallback years
-      const currentYear = new Date().getFullYear();
-      return [currentYear, currentYear - 1, currentYear - 2, currentYear - 3, currentYear - 4, currentYear - 5];
+      // If API fails, return empty array. Fallback logic is handled by useComprehensiveData.
+      return [];
     }
   }
 
@@ -103,7 +103,7 @@ class ConsolidatedApiService {
         budget: data.budgetBreakdown ? {
           total_budgeted: data.budgetBreakdown.reduce((sum: number, item: any) => sum + (item.budgeted_amount || 0), 0),
           total_executed: data.budgetBreakdown.reduce((sum: number, item: any) => sum + (item.executed_amount || 0), 0),
-          execution_rate: data.financialOverview?.overview?.execution_rate || '0',
+          execution_rate: parseFloat(data.financialOverview?.overview?.execution_rate || '0'), // Changed to number
           categories: data.budgetBreakdown?.reduce((acc: any, item: any) => {
             acc[item.category] = {
               budgeted: item.budgeted_amount || 0,
@@ -115,7 +115,7 @@ class ConsolidatedApiService {
         } : {
           total_budgeted: 0,
           total_executed: 0,
-          execution_rate: '0',
+          execution_rate: 0, // Changed to number
           categories: {}
         },
         summary: {
@@ -156,6 +156,7 @@ class ConsolidatedApiService {
       return response.documents;
     } catch (error) {
       console.error('Error getting documents:', error);
+      // If API fails, return empty array. Fallback logic is handled by useComprehensiveData.
       return [];
     }
   }
@@ -214,7 +215,7 @@ class ConsolidatedApiService {
         return {
           total_budgeted: summary.totalBudget,
           total_executed: summary.totalExecuted,
-          execution_rate: summary.executionRate.toFixed(1),
+          execution_rate: parseFloat(summary.executionRate.toFixed(1)), // Changed to number
           categories
         };
       }
@@ -226,12 +227,12 @@ class ConsolidatedApiService {
       return {
         total_budgeted: documents.length * 1000000,
         total_executed: documents.length * 800000,
-        execution_rate: '80.0',
+        execution_rate: 80.0, // Changed to number
         categories: {
           'Presupuesto Municipal': {
             budgeted: documents.length * 1000000,
             executed: documents.length * 800000,
-            execution_rate: '80.0'
+            execution_rate: 80.0 // Changed to number
           }
         }
       };
@@ -241,12 +242,12 @@ class ConsolidatedApiService {
       return {
         total_budgeted: 5000000,
         total_executed: 4000000,
-        execution_rate: '80.0',
+        execution_rate: 80.0, // Changed to number
         categories: {
           'Presupuesto General': {
             budgeted: 5000000,
             executed: 4000000,
-            execution_rate: '80.0'
+            execution_rate: 80.0 // Changed to number
           }
         }
       };
@@ -402,7 +403,7 @@ class ConsolidatedApiService {
       return {
         score: data.summary.transparency_score,
         overall: data.summary.transparency_score,
-        execution: Math.round(parseFloat(data.budget.execution_rate) || 0)
+        execution: Math.round(data.budget.execution_rate || 0) // Removed parseFloat
       };
     } catch (error) {
       console.error(`Error getting transparency score for year ${year}:`, error);
@@ -421,10 +422,6 @@ class ConsolidatedApiService {
       const data = await this.fetchApi<any>(`/transparency/debt/${year}`);
       
       // Transform to expected format for charts
-      if (data.debt_data && Array.isArray(data.debt_data)) {
-        return data;
-      }
-      
       return data;
     } catch (error) {
       console.error(`Error getting municipal debt data for year ${year}:`, error);

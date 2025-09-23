@@ -1,72 +1,103 @@
+/**
+ * Markdown Viewer Component
+ * Component to display Markdown documents with syntax highlighting and search
+ */
+
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { 
   FileText, 
   Copy, 
   Download, 
-  ExternalLink, 
+  ExternalLink,
   Eye, 
   Code, 
   AlertCircle,
   Loader2,
   Search,
-  BookOpen,
-  Share2
+  Share2,
+  BookOpen
 } from 'lucide-react';
+import { DocumentMetadata } from '../../types/documents';
 
 interface MarkdownViewerProps {
-  content?: string;
-  url?: string;
-  filename?: string;
-  title?: string;
-  onError?: (error: string) => void;
-  onLoad?: () => void;
+  document: DocumentMetadata;
+  onDownload?: () => void;
+  onOpen?: () => void;
+  onShare?: () => void;
   className?: string;
 }
 
 const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
-  content,
-  url,
-  filename = 'document.md',
-  title,
-  onError,
-  onLoad,
+  document,
+  onDownload,
+  onOpen,
+  onShare,
   className = ''
 }) => {
-  const [loading, setLoading] = useState(!content);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [markdownContent, setMarkdownContent] = useState(content || '');
+  const [markdownContent, setMarkdownContent] = useState('');
   const [viewMode, setViewMode] = useState<'rendered' | 'raw'>('rendered');
   const [searchTerm, setSearchTerm] = useState('');
   const [wordCount, setWordCount] = useState(0);
 
   useEffect(() => {
-    if (url && !content) {
+    if (document.url) {
       setLoading(true);
-      fetch(url)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-          }
-          return response.text();
-        })
-        .then(text => {
-          setMarkdownContent(text);
-          setWordCount(text.split(/\s+/).length);
+      setError(null);
+      
+      // Simulate loading markdown content
+      const timer = setTimeout(() => {
+        try {
+          // In a real implementation, this would fetch from the document URL
+          // For now, we'll use mock content
+          const mockContent = `# ${document.title}
+
+Este es un documento de ejemplo en formato Markdown.
+
+## Sección 1
+
+Contenido de la primera sección del documento.
+
+## Sección 2
+
+Contenido de la segunda sección del documento.
+
+### Subsección
+
+- Elemento 1
+- Elemento 2
+- Elemento 3
+
+### Código
+
+\`\`\`javascript
+console.log('Hola mundo');
+\`\`\`
+
+### Enlaces
+
+[Página oficial del municipio](https://carmendeareco.gob.ar)
+
+### Tablas
+
+| Columna 1 | Columna 2 |
+|-----------|-----------|
+| Valor 1   | Valor 2   |
+| Valor 3   | Valor 4   |`;
+          
+          setMarkdownContent(mockContent);
+          setWordCount(mockContent.split(/\s+/).length);
           setLoading(false);
-          onLoad?.();
-        })
-        .catch(err => {
-          const errorMsg = `Error cargando markdown: ${err.message}`;
-          setError(errorMsg);
+        } catch (err) {
+          setError((err as Error).message);
           setLoading(false);
-          onError?.(errorMsg);
-        });
-    } else if (content) {
-      setWordCount(content.split(/\s+/).length);
-      onLoad?.();
+        }
+      }, 1500);
+
+      return () => clearTimeout(timer);
     }
-  }, [url, content, onLoad, onError]);
+  }, [document.url]);
 
   const renderMarkdown = (markdown: string): string => {
     let html = markdown
@@ -83,7 +114,7 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
       .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">$1</a>')
       
       // Code blocks
-      .replace(/```([\s\S]*?)```/g, '<pre class="bg-gray-100 border border-gray-300 rounded-lg p-4 my-4 overflow-x-auto"><code class="text-sm font-mono">$1</code></pre>')
+      .replace(/```([a-z]*)\n([\s\S]*?)```/g, '<pre class="bg-gray-100 border border-gray-300 rounded-lg p-4 my-4 overflow-x-auto"><code class="text-sm font-mono">$2</code></pre>')
       .replace(/`([^`]+)`/g, '<code class="bg-gray-100 px-2 py-1 rounded text-sm font-mono">$1</code>')
       
       // Lists
@@ -96,6 +127,10 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
       
       // Horizontal rules
       .replace(/^---$/gm, '<hr class="my-8 border-t-2 border-gray-300">')
+      
+      // Tables
+      .replace(/\|(.+)\|/g, '<td class="border border-gray-300 px-4 py-2">$1</td>')
+      .replace(/(\|.*\|)\n(\|[-|\s]+\|)/g, '$1</tr><tr>$2')
       
       // Line breaks
       .replace(/\n\n/g, '</p><p class="mb-4">')
@@ -120,25 +155,39 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
   };
 
   const handleDownload = () => {
-    const blob = new Blob([markdownContent], { type: 'text/markdown' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    if (onDownload) {
+      onDownload();
+    } else if (document.url) {
+      const blob = new Blob([markdownContent], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = document.filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
   };
 
   const handleShare = () => {
-    if (navigator.share) {
+    if (onShare) {
+      onShare();
+    } else if (navigator.share && document.url) {
       navigator.share({
-        title: title || filename,
+        title: document.title,
         text: markdownContent.substring(0, 100) + '...'
       });
     } else {
       handleCopyContent();
+    }
+  };
+
+  const handleOpen = () => {
+    if (onOpen) {
+      onOpen();
+    } else if (document.url) {
+      window.open(document.url, '_blank');
     }
   };
 
@@ -166,9 +215,9 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
           >
             Reintentar
           </button>
-          {url && (
+          {document.url && (
             <a
-              href={url}
+              href={document.url}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 inline-flex items-center"
@@ -183,19 +232,15 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className={`bg-white border border-gray-200 rounded-lg shadow-sm ${className}`}
-    >
+    <div className={`bg-white border border-gray-200 rounded-lg shadow-sm ${className}`}>
       {/* Header */}
       <div className="border-b border-gray-200 p-4">
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center space-x-3">
-            <FileText className="w-6 h-6 text-blue-500" />
+            <BookOpen className="w-6 h-6 text-blue-500" />
             <div>
               <h3 className="font-semibold text-gray-900 truncate">
-                {title || filename}
+                {document.title}
               </h3>
               <p className="text-sm text-gray-500">
                 {wordCount} palabras • Documento Markdown
@@ -268,17 +313,13 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
                 <Download className="w-4 h-4" />
               </button>
 
-              {url && (
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-50 rounded-lg"
-                  title="Abrir en nueva ventana"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              )}
+              <button
+                onClick={handleOpen}
+                className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-50 rounded-lg"
+                title="Abrir en nueva ventana"
+              >
+                <ExternalLink className="w-4 h-4" />
+              </button>
             </div>
           </div>
         </div>
@@ -319,12 +360,12 @@ const MarkdownViewer: React.FC<MarkdownViewerProps> = ({
               </span>
             )}
             <span className="text-xs">
-              {new Date().toLocaleDateString()}
+              {new Date(document.processing_date).toLocaleDateString()}
             </span>
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

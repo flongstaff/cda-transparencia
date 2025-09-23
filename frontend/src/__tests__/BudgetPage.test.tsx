@@ -1,6 +1,8 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { vi, describe, test, expect, beforeEach } from 'vitest';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Budget from '../pages/Budget';
 
 // Mock the consolidated API service
@@ -57,52 +59,49 @@ vi.mock('../services/ConsolidatedApiService', () => ({
 }));
 
 // Mock other components
-vi.mock('../components/PageYearSelector', () => {
-  return function MockPageYearSelector(props: any) {
+vi.mock('../components/PageYearSelector', () => ({
+  default: (props: any) => {
     return <div data-testid="page-year-selector">PageYearSelector</div>;
-  };
-});
+  }
+}));
 
-vi.mock('../components/charts/BudgetAnalysisChart', () => {
-  return function MockBudgetAnalysisChart() {
-    return <div data-testid="budget-analysis-chart">BudgetAnalysisChart</div>;
-  };
-});
+vi.mock('../components/charts/BudgetAnalysisChart', () => ({
+  default: () => <div data-testid="budget-analysis-chart">BudgetAnalysisChart</div>
+}));
 
-vi.mock('../components/charts/UnifiedDashboardChart', () => {
-  return function MockUnifiedDashboardChart() {
-    return <div data-testid="unified-dashboard-chart">UnifiedDashboardChart</div>;
-  };
-});
+vi.mock('../components/charts/UnifiedDashboardChart', () => ({
+  default: () => <div data-testid="unified-dashboard-chart">UnifiedDashboardChart</div>
+}));
 
 
-vi.mock('../components/audit/CriticalIssues', () => {
-  return function MockCriticalIssues() {
-    return <div data-testid="critical-issues">CriticalIssues</div>;
-  };
-});
+vi.mock('../components/audit/CriticalIssues', () => ({
+  default: () => <div data-testid="critical-issues">CriticalIssues</div>
+}));
 
 describe('Budget Page', () => {
+  const queryClient = new QueryClient();
+
+  const renderWithProviders = (ui: React.ReactElement) => {
+    return render(
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>{ui}</BrowserRouter>
+      </QueryClientProvider>
+    );
+  };
+
   beforeEach(() => {
     vi.clearAllMocks();
+    queryClient.clear();
   });
 
   test('renders budget page with loading state initially', () => {
-    render(
-      <BrowserRouter>
-        <Budget />
-      </BrowserRouter>
-    );
+    renderWithProviders(<Budget />);
     
     expect(screen.getByText('Cargando datos del sistema integrado...')).toBeInTheDocument();
   });
 
   test('renders budget metrics after data loads', async () => {
-    render(
-      <BrowserRouter>
-        <Budget />
-      </BrowserRouter>
-    );
+    renderWithProviders(<Budget />);
     
     // Wait for loading to finish
     await waitFor(() => {
@@ -128,11 +127,7 @@ describe('Budget Page', () => {
   });
 
   test('renders navigation tabs', async () => {
-    render(
-      <BrowserRouter>
-        <Budget />
-      </BrowserRouter>
-    );
+    renderWithProviders(<Budget />);
     
     // Wait for loading to finish
     await waitFor(() => {

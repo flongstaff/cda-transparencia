@@ -3,7 +3,7 @@ import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 import WaterfallChart from '../WaterfallChart';
 import { useAccessibility } from '../../../utils/accessibility';
-import monitoring from '../../../utils/monitoring';
+import { monitoring } from '../../../utils/monitoring';
 
 // Mock dependencies
 vi.mock('../../../utils/accessibility', () => ({
@@ -15,7 +15,7 @@ vi.mock('../../../utils/accessibility', () => ({
 }));
 
 vi.mock('../../../utils/monitoring', () => ({
-  default: {
+  monitoring: {
     captureError: vi.fn(),
     captureMetric: vi.fn()
   }
@@ -31,18 +31,21 @@ vi.mock('framer-motion', () => ({
 vi.mock('recharts', () => ({
   ResponsiveContainer: ({ children }: any) => <div data-testid="responsive-container">{children}</div>,
   BarChart: ({ data, children, ...props }: any) => (
-    <div data-testid="bar-chart" data-props={JSON.stringify(props)}>
+    <div data-testid="bar-chart" data-props={JSON.stringify(props)} onClick={props.onClick}>
       {data?.map((item: any, index: number) => (
-        <div key={index} data-testid={`bar-${index}`} data-value={item.value}>
+        <div key={index} data-testid={`bar-${index}`} data-value={item.value} onClick={() => props.onClick({ activePayload: [{ payload: item }], activeTooltipIndex: index })}>
           {item.label}: {item.value}
         </div>
       ))}
       {children}
     </div>
   ),
-  Bar: ({ dataKey, stackId, fill }: any) => (
-    <div data-testid="bar" data-key={dataKey} data-stack={stackId} style={{ fill }} />
+  Bar: ({ dataKey, stackId, fill, children }: any) => (
+    <div data-testid="bar" data-key={dataKey} data-stack={stackId} style={{ fill }}>
+      {children}
+    </div>
   ),
+  Cell: ({ fill }: any) => <div data-testid="cell" style={{ fill }} />,
   XAxis: ({ dataKey }: any) => <div data-testid="x-axis" data-key={dataKey} />,
   YAxis: ({ tickFormatter }: any) => <div data-testid="y-axis" data-formatter={!!tickFormatter} />,
   CartesianGrid: () => <div data-testid="grid" />,

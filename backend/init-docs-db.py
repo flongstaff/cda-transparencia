@@ -93,6 +93,35 @@ def create_database():
         )
     """)
     
+    # Add financial data columns if they don't exist
+    try:
+        cursor.execute("ALTER TABLE documents ADD COLUMN budgeted REAL")
+        print("Added budgeted column to documents table")
+    except sqlite3.OperationalError as e:
+        if "duplicate column name" not in str(e).lower():
+            print(f"Warning: Could not add budgeted column: {e}")
+    
+    try:
+        cursor.execute("ALTER TABLE documents ADD COLUMN executed REAL")
+        print("Added executed column to documents table")
+    except sqlite3.OperationalError as e:
+        if "duplicate column name" not in str(e).lower():
+            print(f"Warning: Could not add executed column: {e}")
+    
+    try:
+        cursor.execute("ALTER TABLE documents ADD COLUMN execution_rate REAL")
+        print("Added execution_rate column to documents table")
+    except sqlite3.OperationalError as e:
+        if "duplicate column name" not in str(e).lower():
+            print(f"Warning: Could not add execution_rate column: {e}")
+    
+    try:
+        cursor.execute("ALTER TABLE documents ADD COLUMN financial_summary TEXT")
+        print("Added financial_summary column to documents table")
+    except sqlite3.OperationalError as e:
+        if "duplicate column name" not in str(e).lower():
+            print(f"Warning: Could not add financial_summary column: {e}")
+    
     conn.commit()
     conn.close()
     

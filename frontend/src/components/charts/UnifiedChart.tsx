@@ -52,6 +52,8 @@ interface UnifiedChartProps {
   height?: number;
 }
 
+import { useTheme } from '@mui/material/styles'; // Import useTheme hook
+
 const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#EC4899', '#6B7280', '#14B8A6'];
 
 const UnifiedChart: React.FC<UnifiedChartProps> = ({
@@ -63,6 +65,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
   showControls = false,
   height = 300
 }) => {
+  const theme = useTheme(); // Access the MUI theme
   const [currentVariant, setCurrentVariant] = useState<ChartVariant>(variant);
   
   // Use comprehensive data hook for real data
@@ -70,33 +73,50 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
 
   // Transform data based on chart type using real data
   const chartData = useMemo(() => {
+    // Update COLORS to use theme palette for consistency
+    const themedColors = [
+      theme.palette.primary.main,
+      theme.palette.secondary.main,
+      theme.palette.info.main, // Assuming info color exists or fallback
+      theme.palette.warning.main, // Assuming warning color exists or fallback
+      theme.palette.success.main, // Assuming success color exists or fallback
+      '#EC4899', '#6B7280', '#14B8A6' // Fallback for additional colors
+    ];
+
     switch (type) {
-      case 'budget':
+      case 'budget': {
         if (!budgetData) return [];
         
         // Use real budget data from GitHub repository
-        const categories = budgetData.categories || [];
+        const categories = budgetData.categories || budgetData.budgetBreakdown || [];
         return categories.map((item: any, index: number) => ({
           name: item.name || `Categoría ${index + 1}`,
           budgeted: item.budgeted || 0,
           executed: item.executed || 0,
           execution_rate: item.execution_rate || item.executionPercentage || 0,
+          fill: themedColors[index % themedColors.length] // Use themedColors
+        }));
+      }
+
+      case 'treasury': {
+        if (!treasuryData) return [];
+        // Assuming treasuryData has a structure suitable for a bar chart of categories
+        return treasuryData.categories.map((item: any, index: number) => ({
+          name: item.name || `Categoría ${index + 1}`,
+          value: item.amount || 0,
           fill: COLORS[index % COLORS.length]
         }));
+      }
+      case 'treasury-historical': {
+        if (!apiData?.dashboard?.recent_financial_movements) return [];
+        // Process recent_financial_movements for a line chart of balance over time
+        return apiData.dashboard.recent_financial_movements.map((item: any) => ({
+          date: item.date,
+          balance: item.balance
+        })).sort((a: any, b: any) => new Date(a.date).getTime() - new Date(b.date).getTime());
+      }
 
-      case 'treasury':
-        // Use external API data for treasury movements
-        const movements = external_apis?.multi_source?.sources?.local?.recent_movements || 
-                         budgetData?.recent_financial_movements || [];
-        return movements.slice(0, 6).map((movement: any, index: number) => ({
-          name: (movement.description || movement.concept || 'N/A').substring(0, 15) + '...',
-          amount: Math.abs(movement.amount || movement.value || 0),
-          balance: movement.balance || 0,
-          type: movement.type || 'expense',
-          fill: movement.type === 'income' ? '#10B981' : '#EF4444'
-        }));
-
-      case 'document':
+      case 'document': {
         const docsByCategory = (documents || []).reduce((acc: any, doc: any) => {
           acc[doc.category] = (acc[doc.category] || 0) + 1;
           return acc;
@@ -107,8 +127,9 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
           value: count,
           fill: COLORS[index % COLORS.length]
         }));
+      }
 
-      case 'revenue':
+      case 'revenue': {
         // Use real revenue data from budget data
         const totalRevenue = budgetData?.totalBudget || budgetData?.totalRevenue || 0;
         return [
@@ -116,16 +137,18 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
           { name: 'Ingresos de Capital', value: totalRevenue * 0.15, fill: COLORS[1] },
           { name: 'Financiamiento', value: totalRevenue * 0.10, fill: COLORS[2] }
         ];
+      }
 
-      case 'debt':
+      case 'debt': {
         // Use real debt data from budget data
         const totalDebt = budgetData?.totalDebt || 0;
         return [
           { name: 'Deuda Corriente', value: totalDebt * 0.40, fill: COLORS[3] },
           { name: 'Deuda a Largo Plazo', value: totalDebt * 0.60, fill: COLORS[4] }
         ];
+      }
 
-      case 'salary':
+      case 'salary': {
         // Use real salary data from GitHub repository
         if (!salaryData?.positions) return [];
         const positionGroups = salaryData.positions.reduce((acc: any, pos: any) => {
@@ -145,8 +168,9 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
           avgSalary: data.count > 0 ? data.totalSalary / data.count : 0,
           fill: COLORS[index % COLORS.length]
         }));
+      }
 
-      case 'investment':
+      case 'investment': {
         // Use real investment data from budget categories
         const investments = budgetData?.categories?.filter((cat: any) => 
           cat.name?.toLowerCase().includes('capital') || 
@@ -166,6 +190,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
               { name: 'Tecnología', value: budgetData?.totalExecuted * 0.15 || 0, fill: COLORS[2] },
               { name: 'Otros', value: budgetData?.totalExecuted * 0.25 || 0, fill: COLORS[3] }
             ];
+      }
 
       default:
         return [];
@@ -198,7 +223,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
     };
 
     switch (currentVariant) {
-      case 'bar':
+      case 'bar': {
         return (
           <ResponsiveContainer width="100%" height={height}>
             <BarChart {...commonProps}>
@@ -216,7 +241,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
                 stroke="#6b7280"
                 tickFormatter={(value) => {
                   if (type === 'salary') return value.toString();
-                  return value > 1000000 ? `$${(value / 1000000).toFixed(1)}M` : `$${(value / 1000).toFixed(0)}K`;
+                  return value > 1000000 ? `${(value / 1000000).toFixed(1)}M` : `${(value / 1000).toFixed(0)}K`;
                 }}
               />
               <Tooltip 
@@ -232,21 +257,21 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
               <Legend />
               {type === 'budget' ? (
                 <>
-                  <Bar dataKey="budgeted" name="Presupuestado" fill="#3B82F6" radius={[4, 4, 0, 0]} />
-                  <Bar dataKey="executed" name="Ejecutado" fill="#10B981" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="budgeted" name="Presupuestado" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="executed" name="Ejecutado" fill={theme.palette.secondary.main} radius={[4, 4, 0, 0]} />
                 </>
               ) : type === 'salary' ? (
-                <Bar dataKey="avgSalary" name="Salario Promedio" fill="#8B5CF6" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="avgSalary" name="Salario Promedio" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
               ) : type === 'treasury' ? (
-                <Bar dataKey="amount" name="Monto" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="value" name="Monto" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
               ) : (
-                <Bar dataKey="value" name="Valor" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="value" name="Valor" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
               )}
             </BarChart>
           </ResponsiveContainer>
         );
-
-      case 'pie':
+      } // Added closing curly brace
+      case 'pie': {
         return (
           <ResponsiveContainer width="100%" height={height}>
             <PieChart>
@@ -257,11 +282,11 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
                 labelLine={false}
                 label={({ name, percent }) => `${name} ${(percent * 100).toFixed(1)}%`}
                 outerRadius={80}
-                fill="#8884d8"
+                fill={theme.palette.primary.main} // Use primary color for default pie fill
                 dataKey="value"
               >
                 {chartData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.fill || COLORS[index % COLORS.length]} />
+                  <Cell key={`cell-${index}`} fill={entry.fill || themedColors[index % themedColors.length]} />
                 ))}
               </Pie>
               <Tooltip 
@@ -273,8 +298,8 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
             </PieChart>
           </ResponsiveContainer>
         );
-
-      case 'line':
+      } // Added closing curly brace
+      case 'line': {
         return (
           <ResponsiveContainer width="100%" height={height}>
             <LineChart {...commonProps}>
@@ -286,16 +311,16 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
               <Line 
                 type="monotone" 
                 dataKey="value" 
-                stroke="#3B82F6" 
+                stroke={theme.palette.primary.main} 
                 strokeWidth={3}
-                dot={{ fill: '#3B82F6', strokeWidth: 2, r: 4 }}
-                activeDot={{ r: 6, stroke: '#3B82F6', strokeWidth: 2, fill: '#fff' }}
+                dot={{ fill: theme.palette.primary.main, strokeWidth: 2, r: 4 }}
+                activeDot={{ r: 6, stroke: theme.palette.primary.main, strokeWidth: 2, fill: '#fff' }}
               />
             </LineChart>
           </ResponsiveContainer>
         );
-
-      case 'area':
+      } // Added closing curly brace
+      case 'area': {
         return (
           <ResponsiveContainer width="100%" height={height}>
             <AreaChart {...commonProps}>
@@ -306,17 +331,15 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
               <Area
                 type="monotone"
                 dataKey="value"
-                stroke="#3B82F6"
+                stroke={theme.palette.primary.main}
                 strokeWidth={2}
-                fill="rgba(59, 130, 246, 0.1)"
+                fill={theme.palette.primary.light} // Use a lighter shade for fill
                 fillOpacity={0.6}
               />
             </AreaChart>
           </ResponsiveContainer>
         );
-
-      default:
-        return null;
+      } // Added closing curly brace
     }
   };
 

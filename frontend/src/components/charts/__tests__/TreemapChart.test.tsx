@@ -3,7 +3,7 @@ import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 import TreemapChart from '../TreemapChart';
 import { useAccessibility } from '../../../utils/accessibility';
-import monitoring from '../../../utils/monitoring';
+import { monitoring } from '../../../utils/monitoring';
 
 // Mock dependencies
 vi.mock('../../../utils/accessibility', () => ({
@@ -15,7 +15,7 @@ vi.mock('../../../utils/accessibility', () => ({
 }));
 
 vi.mock('../../../utils/monitoring', () => ({
-  default: {
+  monitoring: {
     captureError: vi.fn(),
     captureMetric: vi.fn()
   }
@@ -27,20 +27,46 @@ vi.mock('framer-motion', () => ({
   }
 }));
 
-// Mock Recharts
+// Mock Nivo Treemap
+vi.mock('@nivo/treemap', () => ({
+  ResponsiveTreeMap: ({ data, onClick, onMouseMove, ...props }: any) => (
+    <div data-testid="treemap" data-props={JSON.stringify(props)}>
+      {data?.children?.map((item: any, index: number) => (
+        <div 
+          key={index} 
+          data-testid={`treemap-cell-${index}`} 
+          data-name={item.name}
+          onClick={() => onClick({ data: item })}
+          onMouseMove={(e) => onMouseMove({ data: item }, e)}
+        >
+          {item.name}: {item.value}
+        </div>
+      ))}
+    </div>
+  )
+}));
+
+// Mock Recharts (for other components that might use it)
 vi.mock('recharts', () => ({
   ResponsiveContainer: ({ children }: any) => <div data-testid="responsive-container">{children}</div>,
-  Treemap: ({ data, children, ...props }: any) => (
-    <div data-testid="treemap" data-props={JSON.stringify(props)}>
+  BarChart: ({ data, children, ...props }: any) => (
+    <div data-testid="bar-chart" data-props={JSON.stringify(props)}>
       {data?.map((item: any, index: number) => (
-        <div key={index} data-testid={`treemap-cell-${index}`} data-name={item.name}>
-          {item.name}: {item.value}
+        <div key={index} data-testid={`bar-${index}`} data-value={item.value}>
+          {item.label}: {item.value}
         </div>
       ))}
       {children}
     </div>
   ),
-  Cell: ({ fill }: any) => <div data-testid="treemap-cell" style={{ fill }} />
+  Bar: ({ dataKey, stackId, fill }: any) => (
+    <div data-testid="bar" data-key={dataKey} data-stack={stackId} style={{ fill }} />
+  ),
+  Cell: ({ fill }: any) => <div data-testid="cell" style={{ fill }} />,
+  XAxis: ({ dataKey }: any) => <div data-testid="x-axis" data-key={dataKey} />,
+  YAxis: ({ tickFormatter }: any) => <div data-testid="y-axis" data-formatter={!!tickFormatter} />,
+  CartesianGrid: () => <div data-testid="grid" />,
+  Tooltip: ({ content }: any) => <div data-testid="tooltip" data-custom={!!content} />
 }));
 
 const mockData = [

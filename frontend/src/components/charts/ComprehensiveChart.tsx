@@ -71,7 +71,7 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
   // Transform data based on chart type using real data
   const chartData = useMemo(() => {
     switch (type) {
-      case 'budget':
+      case 'budget': {
         if (!budgetData) return [];
         
         // Use real budget data from GitHub repository
@@ -83,8 +83,9 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
           execution_rate: item.execution_rate || item.executionPercentage || 0,
           fill: COLORS[index % COLORS.length]
         }));
+      }
 
-      case 'treasury':
+      case 'treasury': {
         // Use external API data for treasury movements
         const movements = external_apis?.multi_source?.sources?.local?.recent_movements || 
                          budgetData?.recent_financial_movements || [];
@@ -95,8 +96,9 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
           type: movement.type || 'expense',
           fill: movement.type === 'income' ? '#10B981' : '#EF4444'
         }));
+      }
 
-      case 'document':
+      case 'document': {
         const docsByCategory = (documents || []).reduce((acc, doc) => {
           acc[doc.category] = (acc[doc.category] || 0) + 1;
           return acc;
@@ -107,8 +109,9 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
           value: count,
           fill: COLORS[index % COLORS.length]
         }));
+      }
 
-      case 'revenue':
+      case 'revenue': {
         // Use real revenue data from budget data
         const totalRevenue = budgetData?.totalBudget || budgetData?.totalRevenue || 0;
         return [
@@ -116,16 +119,18 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
           { name: 'Ingresos de Capital', value: totalRevenue * 0.15, fill: COLORS[1] },
           { name: 'Financiamiento', value: totalRevenue * 0.10, fill: COLORS[2] }
         ];
+      }
 
-      case 'debt':
+      case 'debt': {
         // Use real debt data from budget data
         const totalDebt = budgetData?.totalDebt || 0;
         return [
           { name: 'Deuda Corriente', value: totalDebt * 0.40, fill: COLORS[3] },
           { name: 'Deuda a Largo Plazo', value: totalDebt * 0.60, fill: COLORS[4] }
         ];
+      }
 
-      case 'salary':
+      case 'salary': {
         // Use real salary data from GitHub repository
         if (!salaryData?.positions) return [];
         const positionGroups = salaryData.positions.reduce((acc, pos) => {
@@ -145,8 +150,9 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
           avgSalary: data.count > 0 ? data.totalSalary / data.count : 0,
           fill: COLORS[index % COLORS.length]
         }));
+      }
 
-      case 'investment':
+      case 'investment': {
         // Use real investment data from budget categories
         const investments = budgetData?.categories?.filter(cat => 
           cat.name?.toLowerCase().includes('capital') || 
@@ -166,8 +172,9 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
               { name: 'Tecnología', value: budgetData?.totalExecuted * 0.15 || 0, fill: COLORS[2] },
               { name: 'Otros', value: budgetData?.totalExecuted * 0.25 || 0, fill: COLORS[3] }
             ];
+      }
 
-      case 'contract':
+      case 'contract': {
         // Use real contract data from external APIs and documents
         const contractDocs = (documents || []).filter(doc => 
           doc.category && (
@@ -187,8 +194,9 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
           count: contractDocs.length,
           fill: COLORS[index % COLORS.length]
         }));
+      }
 
-      case 'property':
+      case 'property': {
         // Use real property declaration data from documents and external sources
         const propertyDocs = (documents || []).filter(doc => 
           doc.category && (
@@ -204,6 +212,7 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
           verified: doc.verified || false,
           fill: COLORS[index % COLORS.length]
         }));
+      }
 
       default:
         return [];
@@ -236,7 +245,7 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
     };
 
     switch (currentVariant) {
-      case 'bar':
+      case 'bar': {
         return (
           <ResponsiveContainer width="100%" height={height}>
             <BarChart {...commonProps}>
@@ -283,8 +292,9 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
             </BarChart>
           </ResponsiveContainer>
         );
+      }
 
-      case 'pie':
+      case 'pie': {
         return (
           <ResponsiveContainer width="100%" height={height}>
             <PieChart>
@@ -311,8 +321,8 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
             </PieChart>
           </ResponsiveContainer>
         );
-
-      case 'line':
+      } // Added closing curly brace
+      case 'line': {
         return (
           <ResponsiveContainer width="100%" height={height}>
             <LineChart {...commonProps}>
@@ -332,8 +342,8 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
             </LineChart>
           </ResponsiveContainer>
         );
-
-      case 'area':
+      } // Added closing curly brace
+      case 'area': {
         return (
           <ResponsiveContainer width="100%" height={height}>
             <AreaChart {...commonProps}>
@@ -352,7 +362,7 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
             </AreaChart>
           </ResponsiveContainer>
         );
-
+      } // Added closing curly brace
       default:
         return null;
     }

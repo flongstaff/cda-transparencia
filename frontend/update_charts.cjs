@@ -8,10 +8,10 @@ const fs = require('fs');
 const path = require('path');
 
 const chartFiles = [
-  '/Users/flong/Developer/cda-transparencia/frontend/src/components/charts/InvestmentAnalysisChart.tsx',
-  '/Users/flong/Developer/cda-transparencia/frontend/src/components/charts/SalaryAnalysisChart.tsx',
-  '/Users/flong/Developer/cda-transparencia/frontend/src/components/charts/TreasuryAnalysisChart.tsx',
-  '/Users/flong/Developer/cda-transparencia/frontend/src/components/charts/DebtAnalysisChart.tsx',
+  'frontend/src/components/charts/InvestmentAnalysisChart.tsx',
+  'frontend/src/components/charts/SalaryAnalysisChart.tsx',
+  'frontend/src/components/charts/TreasuryAnalysisChart.tsx',
+  'frontend/src/components/charts/DebtAnalysisChart.tsx',
 ];
 
 const replacements = [
@@ -27,8 +27,10 @@ const replacements = [
 
 async function updateFile(filePath) {
   try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`⚠️  File not found: ${filePath}`);
+    const absolutePath = path.resolve(filePath);
+    console.log(`Checking file: ${absolutePath}`);
+    if (!fs.existsSync(absolutePath)) {
+      console.log(`⚠️  File not found: ${absolutePath}`);
       return;
     }
 

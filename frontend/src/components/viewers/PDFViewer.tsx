@@ -1,34 +1,36 @@
+/**
+ * PDF Viewer Component
+ * Component to display PDF documents with zoom, rotation, and download controls
+ */
+
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { 
+  FileText, 
   Download, 
   ZoomIn, 
   ZoomOut, 
   RotateCw, 
-  FileText, 
   ExternalLink,
   AlertCircle,
   Loader2,
   Eye,
-  Share2,
-  Bookmark
+  Share2
 } from 'lucide-react';
+import { DocumentMetadata } from '../../types/documents';
 
 interface PDFViewerProps {
-  url?: string;
-  filename?: string;
-  title?: string;
-  onError?: (error: string) => void;
-  onLoad?: () => void;
+  document: DocumentMetadata;
+  onDownload?: () => void;
+  onOpen?: () => void;
+  onShare?: () => void;
   className?: string;
 }
 
 const PDFViewer: React.FC<PDFViewerProps> = ({
-  url,
-  filename = 'document.pdf',
-  title,
-  onError,
-  onLoad,
+  document,
+  onDownload,
+  onOpen,
+  onShare,
   className = ''
 }) => {
   const [loading, setLoading] = useState(true);
@@ -39,7 +41,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
-    if (url) {
+    if (document.url) {
       setLoading(true);
       setError(null);
       
@@ -47,12 +49,11 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
       const timer = setTimeout(() => {
         setLoading(false);
         setTotalPages(Math.floor(Math.random() * 20) + 1); // Simulate pages
-        onLoad?.();
       }, 1500);
 
       return () => clearTimeout(timer);
     }
-  }, [url, onLoad]);
+  }, [document.url]);
 
   const handleZoomIn = () => {
     setZoom(prev => Math.min(prev + 25, 300));
@@ -67,10 +68,12 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
   };
 
   const handleDownload = () => {
-    if (url) {
+    if (onDownload) {
+      onDownload();
+    } else if (document.url) {
       const link = document.createElement('a');
-      link.href = url;
-      link.download = filename;
+      link.href = document.url;
+      link.download = document.filename;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -78,24 +81,33 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
   };
 
   const handleShare = () => {
-    if (navigator.share && url) {
+    if (onShare) {
+      onShare();
+    } else if (navigator.share && document.url) {
       navigator.share({
-        title: title || filename,
-        url: url
+        title: document.title,
+        url: document.url
       });
     } else {
       // Fallback: copy to clipboard
-      navigator.clipboard.writeText(url || '');
+      navigator.clipboard.writeText(document.url || '');
+    }
+  };
+
+  const handleOpen = () => {
+    if (onOpen) {
+      onOpen();
+    } else if (document.url) {
+      window.open(document.url, '_blank');
     }
   };
 
   const handleError = (errorMsg: string) => {
     setError(errorMsg);
     setLoading(false);
-    onError?.(errorMsg);
   };
 
-  if (!url) {
+  if (!document.url) {
     return (
       <div className={`bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center ${className}`}>
         <FileText className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -105,11 +117,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className={`bg-white border border-gray-200 rounded-lg shadow-sm ${className}`}
-    >
+    <div className={`bg-white border border-gray-200 rounded-lg shadow-sm ${className}`}>
       {/* PDF Viewer Header */}
       <div className="border-b border-gray-200 p-4">
         <div className="flex items-center justify-between flex-wrap gap-4">
@@ -117,7 +125,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
             <FileText className="w-6 h-6 text-red-500" />
             <div>
               <h3 className="font-semibold text-gray-900 truncate">
-                {title || filename}
+                {document.title}
               </h3>
               {totalPages > 0 && (
                 <p className="text-sm text-gray-500">
@@ -198,15 +206,13 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
                 <Download className="w-4 h-4" />
               </button>
 
-              <a
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={handleOpen}
                 className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-50 rounded-lg"
                 title="Abrir en nueva ventana"
               >
                 <ExternalLink className="w-4 h-4" />
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -238,15 +244,13 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
                 >
                   Reintentar
                 </button>
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={handleOpen}
                   className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 inline-flex items-center"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Abrir directamente
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -264,9 +268,9 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
               }}
             >
               <iframe
-                src={`${url}#page=${currentPage}&zoom=${zoom}&rotate=${rotation}`}
+                src={`${document.url}#page=${currentPage}&zoom=${zoom}&rotate=${rotation}`}
                 className="w-full h-[600px] border-0"
-                title={title || filename}
+                title={document.title}
                 onLoad={() => setLoading(false)}
                 onError={() => handleError('No se pudo cargar el documento PDF')}
               />
@@ -281,14 +285,12 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
                     ¿No se visualiza correctamente?
                   </p>
                   <p className="text-sm text-blue-700">
-                    <a 
-                      href={url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
+                    <button 
+                      onClick={handleOpen}
                       className="underline hover:no-underline"
                     >
                       Haga clic aquí para abrir el documento en una nueva ventana
-                    </a>
+                    </button>
                   </p>
                 </div>
               </div>
@@ -316,12 +318,12 @@ const PDFViewer: React.FC<PDFViewerProps> = ({
               <Bookmark className="w-4 h-4" />
             </button>
             <span className="text-xs">
-              {new Date().toLocaleDateString()}
+              {new Date(document.processing_date).toLocaleDateString()}
             </span>
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { z } from 'zod';
 import ComprehensiveChart, { ChartType } from './ComprehensiveChart';
-import monitoring from '../../utils/monitoring';
+import { monitoring } from '../../utils/monitoring';
 
 // Validation schema for props
 const ChartPropsSchema = z.object({

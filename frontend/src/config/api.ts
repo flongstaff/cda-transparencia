@@ -99,37 +99,10 @@ export const API_CONFIG = {
   }
 } as const;
 
-// API Base URL - supports local development and production deployment
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-
-// Build API URL with proper configuration
-export const buildApiUrl = (endpoint: string, params?: Record<string, string>): string => {
-  let url = `${API_BASE_URL}${endpoint}`;
-  
-  if (params) {
-    const searchParams = new URLSearchParams(params);
-    url += `?${searchParams.toString()}`;
-  }
-  
-  return url;
-};
-
 // Get data for specific year range
 export const getYearRangeParams = (startYear?: number, endYear?: number) => {
   return {
     start_year: (startYear || INVESTIGATION_TIMEFRAME.START_YEAR).toString(),
     end_year: (endYear || INVESTIGATION_TIMEFRAME.CURRENT_YEAR).toString()
   };
-};
-
-// Validation for transparency investigation
-export const validateTransparencyData = (data: unknown): boolean => {
-  // Basic validation to ensure data integrity for investigation
-  if (!data || typeof data !== 'object') return false;
-  
-  const record = data as Record<string, unknown>;
-  
-  // Must have essential fields for transparency
-  const requiredFields = ['id', 'fecha', 'monto', 'descripcion'];
-  return requiredFields.some(field => field in record);
 };

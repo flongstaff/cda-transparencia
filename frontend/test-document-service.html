@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Data Service Test</title>
+</head>
+<body>
+    <h1>Document Data Service Test</h1>
+    <div id="output"></div>
+
+    <script type="module">
+        import { documentDataService } from './src/services/DocumentDataService.ts';
+        
+        async function runTest() {
+            const output = document.getElementById('output');
+            output.innerHTML = '<p>Testing DocumentDataService...</p>';
+            
+            try {
+                // Test getting available years
+                output.innerHTML += '<p>Getting available years...</p>';
+                const years = await documentDataService.getAvailableYears();
+                output.innerHTML += `<p>Available years: ${JSON.stringify(years)}</p>`;
+                
+                // Test getting categories for a specific year
+                if (years.length > 0) {
+                    const testYear = years[0];
+                    output.innerHTML += `<p>Getting categories for year ${testYear}...</p>`;
+                    const categories = await documentDataService.getCategoriesForYear(testYear);
+                    output.innerHTML += `<p>Categories for year ${testYear}: ${JSON.stringify(categories)}</p>`;
+                    
+                    // Test getting documents for a specific year and category
+                    if (categories.length > 0) {
+                        const testCategory = categories[0];
+                        output.innerHTML += `<p>Getting documents for year ${testYear} and category ${testCategory}...</p>`;
+                        const documents = await documentDataService.getDocumentsForYearAndCategory(testYear, testCategory);
+                        output.innerHTML += `<p>Found ${documents.length} documents</p>`;
+                        if (documents.length > 0) {
+                            output.innerHTML += `<p>First document: ${JSON.stringify(documents[0], null, 2)}</p>`;
+                        }
+                    }
+                    
+                    // Test getting yearly data
+                    output.innerHTML += `<p>Getting yearly data for year ${testYear}...</p>`;
+                    const yearlyData = await documentDataService.getYearlyData(testYear);
+                    output.innerHTML += `<p>Yearly data for ${testYear}: ${JSON.stringify({
+                        totalDocuments: yearlyData.totalDocuments,
+                        verifiedDocuments: yearlyData.verifiedDocuments,
+                        categories: Object.keys(yearlyData.categories)
+                    }, null, 2)}</p>`;
+                }
+                
+                // Test searching documents
+                output.innerHTML += '<p>Searching for documents with query "presupuesto"...</p>';
+                const searchResults = await documentDataService.searchDocuments('presupuesto');
+                output.innerHTML += `<p>Found ${searchResults.length} documents matching "presupuesto"</p>`;
+                
+                output.innerHTML += '<p style="color: green;">DocumentDataService test completed successfully!</p>';
+            } catch (error) {
+                output.innerHTML += `<p style="color: red;">Error testing DocumentDataService: ${error.message}</p>`;
+                console.error('Error testing DocumentDataService:', error);
+            }
+        }
+        
+        // Run the test when the page loads
+        runTest();
+    </script>
+</body>
+</html>

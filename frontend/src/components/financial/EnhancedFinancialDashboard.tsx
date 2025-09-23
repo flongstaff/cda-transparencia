@@ -167,7 +167,8 @@ const EnhancedFinancialDashboard: React.FC<EnhancedFinancialDashboardProps> = ({
                 presupuestado: Math.round(item.budgeted / 1000000),
                 ejecutado: Math.round(item.executed / 1000000)
               }))}
-              chartType="bar"
+              type="budget" // Changed from chartType
+              year={selectedYear} // Added year prop
               title={`${title} (Millones ARS)`}
               sources={['https://carmendeareco.gob.ar/transparencia/']}
               showValidation={true}
@@ -447,7 +448,8 @@ const EnhancedFinancialDashboard: React.FC<EnhancedFinancialDashboardProps> = ({
                 name: item.name,
                 value: Math.round(item.executed / 1000000)
               }))}
-              chartType="pie"
+              type="budget"
+              year={selectedYear}
               title={`Distribución de ${title} ${selectedYear} (Millones ARS)`}
               sources={['https://carmendeareco.gob.ar/transparencia/']}
               showValidation={true}
@@ -460,17 +462,17 @@ const EnhancedFinancialDashboard: React.FC<EnhancedFinancialDashboardProps> = ({
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
             Tasa de Ejecución por Categoría
           </h3>
-          <ValidatedChart
-            data={categoryData.financial_data.category_breakdown.map(item => ({
-              name: item.name,
-              value: item.execution_rate
-            }))}
-            chartType="bar"
-            title={`Tasa de Ejecución ${selectedYear} (%)`}
-            sources={['https://carmendeareco.gob.ar/transparencia/']}
-            showValidation={true}
-          />
-        </div>
+                      <ValidatedChart
+                        data={categoryData.financial_data.category_breakdown.map(item => ({
+                          name: item.name,
+                          value: item.execution_rate
+                        }))}
+                        type="budget"
+                        year={selectedYear}
+                        title={`Tasa de Ejecución ${selectedYear} (%)`}
+                        sources={['https://carmendeareco.gob.ar/transparencia/']}
+                        showValidation={true}
+                      />        </div>
       </div>
     );
   };
@@ -589,7 +591,8 @@ const EnhancedFinancialDashboard: React.FC<EnhancedFinancialDashboardProps> = ({
                 name: debt.type,
                 value: Math.round(debt.amount / 1000000)
               }))}
-              chartType="pie"
+              type="debt"
+              year={selectedYear}
               title={`Composición de la Deuda ${selectedYear} (Millones ARS)`}
               sources={['https://carmendeareco.gob.ar/transparencia/']}
               showValidation={true}
@@ -605,7 +608,8 @@ const EnhancedFinancialDashboard: React.FC<EnhancedFinancialDashboardProps> = ({
                 name: debt.type,
                 value: debt.interest_rate
               }))}
-              chartType="bar"
+              type="debt"
+              year={selectedYear}
               title={`Tasas de Interés por Tipo de Deuda (%)`}
               sources={['https://carmendeareco.gob.ar/transparencia/']}
               showValidation={true}

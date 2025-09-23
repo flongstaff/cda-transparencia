@@ -37,30 +37,46 @@ export interface DocumentIndex {
   [year: number]: YearlyData;
 }
 
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/flongstaff/cda-transparencia/main';
+
 class DocumentDataService {
   private basePath = '/data/organized_documents';
   private cache: Map<string, any> = new Map();
   private cacheTimeout = 5 * 60 * 1000; // 5 minutes
+  private documentInventory: any[] | null = null; // Cache for the document inventory
 
+  private async _loadDocumentInventory(): Promise<any[]> {
+    if (this.documentInventory) {
+      return this.documentInventory;
+    }
+    try {
+      const url = `${GITHUB_RAW_BASE}/data/organized_documents/document_inventory.json`;
+      const response = await fetch(url);
+      if (response.ok) {
+        this.documentInventory = await response.json();
+        return this.documentInventory;
+      } else {
+        throw new Error(`Failed to load document inventory: ${response.status} ${response.statusText}`);
+      }
+    } catch (error) {
+      console.error('Error loading document inventory:', error);
+      throw error;
+    }
+  }
   /**
    * Get all available years by scanning the organized_documents directory
    */
   async getAvailableYears(): Promise<number[]> {
     try {
       // Load the document inventory
-      const response = await fetch('/data/organized_documents/document_inventory.json');
-      if (response.ok) {
-        const documents = await response.json();
-        // Extract unique years from documents
-        const years = [...new Set(documents.map((doc: any) => parseInt(doc.year)))].sort((a, b) => b - a);
-        return years;
-      } else {
-        throw new Error('Failed to load document inventory');
-      }
+      const documents = await this._loadDocumentInventory();
+      // Extract unique years from documents
+      const years = [...new Set(documents.map((doc: any) => parseInt(doc.year)))].sort((a, b) => b - a);
+      return years;
     } catch (error) {
       console.error('Error getting available years:', error);
-      // Fallback to known years
-      return [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
+      // If loading fails, return an empty array. The calling component should handle the fallback.
+      return [];
     }
   }
 
@@ -78,41 +94,24 @@ class DocumentDataService {
       }
 
       // Load the document inventory
-      const response = await fetch('/data/organized_documents/document_inventory.json');
-      if (response.ok) {
-        const documents = await response.json();
-        // Filter documents by year and extract unique categories
-        const categories = [...new Set(
-          documents
-            .filter((doc: any) => parseInt(doc.year) === year)
-            .map((doc: any) => doc.category.replace(/_/g, ' '))
-        )].sort();
-        
-        this.cache.set(cacheKey, {
-          data: categories,
-          timestamp: Date.now()
-        });
-        
-        return categories;
-      } else {
-        throw new Error('Failed to load document inventory');
-      }
+      const documents = await this._loadDocumentInventory();
+      // Filter documents by year and extract unique categories
+      const categories = [...new Set(
+        documents
+          .filter((doc: any) => parseInt(doc.year) === year)
+          .map((doc: any) => doc.category.replace(/_/g, ' '))
+      )].sort();
+      
+      this.cache.set(cacheKey, {
+        data: categories,
+        timestamp: Date.now()
+      });
+      
+      return categories;
     } catch (error) {
       console.error(`Error getting categories for year ${year}:`, error);
-      // Fallback to common categories
-      const categories = [
-        'Documentos Generales',
-        'Ejecución de Gastos',
-        'Ejecución de Recursos',
-        'Estados Financieros',
-        'Recursos Humanos',
-        'Contrataciones',
-        'Declaraciones Patrimoniales',
-        'Salud Pública',
-        'Presupuesto Municipal'
-      ];
-
-      return categories;
+      // If loading fails, return an empty array. The calling component should handle the fallback.
+      return [];
     }
   }
 
@@ -130,27 +129,22 @@ class DocumentDataService {
       }
 
       // Load documents from the organized document inventory
-      const response = await fetch('/data/organized_documents/document_inventory.json');
-      if (response.ok) {
-        const allDocuments = await response.json();
-        
-        // Filter documents by year and category
-        const filteredDocuments = allDocuments
-          .filter((doc: any) => 
-            parseInt(doc.year) === year && 
-            doc.category.replace(/_/g, ' ') === category.replace(/_/g, ' ')
-          )
-          .map((doc: any) => this.transformDocumentData(doc, year, category));
-        
-        this.cache.set(cacheKey, {
-          data: filteredDocuments,
-          timestamp: Date.now()
-        });
-        
-        return filteredDocuments;
-      } else {
-        throw new Error('Failed to load document inventory');
-      }
+      const allDocuments = await this._loadDocumentInventory();
+      
+      // Filter documents by year and category
+      const filteredDocuments = allDocuments
+        .filter((doc: any) => 
+          parseInt(doc.year) === year && 
+          doc.category.replace(/_/g, ' ') === category.replace(/_/g, ' ')
+        )
+        .map((doc: any) => this.transformDocumentData(doc, year, category));
+      
+      this.cache.set(cacheKey, {
+        data: filteredDocuments,
+        timestamp: Date.now()
+      });
+      
+      return filteredDocuments;
     } catch (error) {
       console.error(`Error getting documents for year ${year} and category ${category}:`, error);
       return [];
@@ -231,23 +225,20 @@ class DocumentDataService {
 
       // Try to load the document from the document inventory
       try {
-        const response = await fetch(`/data/organized_documents/document_inventory.json`);
-        if (response.ok) {
-          const allDocuments = await response.json();
+        const allDocuments = await this._loadDocumentInventory();
+        
+        // Find the document by relative path
+        const document = allDocuments.find((doc: any) => doc.relative_path === relativePath);
+        
+        if (document) {
+          const transformedDoc = this.transformDocumentData(document, parseInt(document.year), document.category);
           
-          // Find the document by relative path
-          const document = allDocuments.find((doc: any) => doc.relative_path === relativePath);
+          this.cache.set(cacheKey, {
+            data: transformedDoc,
+            timestamp: Date.now()
+          });
           
-          if (document) {
-            const transformedDoc = this.transformDocumentData(document, parseInt(document.year), document.category);
-            
-            this.cache.set(cacheKey, {
-              data: transformedDoc,
-              timestamp: Date.now()
-            });
-            
-            return transformedDoc;
-          }
+          return transformedDoc;
         }
       } catch (error) {
         console.warn(`Could not load document by path ${relativePath}:`, error);
@@ -267,30 +258,27 @@ class DocumentDataService {
     try {
       // Load all documents and filter by query
       try {
-        const response = await fetch(`/data/organized_documents/document_inventory.json`);
-        if (response.ok) {
-          const allDocuments = await response.json();
-          
-          // Filter documents based on query and optional filters
-          const filteredDocuments = allDocuments
-            .filter((doc: any) => {
-              // Check if document matches query
-              const matchesQuery = 
-                (doc.filename && doc.filename.toLowerCase().includes(query.toLowerCase())) ||
-                (doc.title && doc.title.toLowerCase().includes(query.toLowerCase()));
-              
-              // Check if document matches year filter
-              const matchesYear = !year || parseInt(doc.year) === year;
-              
-              // Check if document matches category filter
-              const matchesCategory = !category || doc.category.replace(/_/g, ' ') === category.replace(/_/g, ' ');
-              
-              return matchesQuery && matchesYear && matchesCategory;
-            })
-            .map((doc: any) => this.transformDocumentData(doc, parseInt(doc.year), doc.category));
-          
-          return filteredDocuments;
-        }
+        const allDocuments = await this._loadDocumentInventory();
+        
+        // Filter documents based on query and optional filters
+        const filteredDocuments = allDocuments
+          .filter((doc: any) => {
+            // Check if document matches query
+            const matchesQuery = 
+              (doc.filename && doc.filename.toLowerCase().includes(query.toLowerCase())) ||
+              (doc.title && doc.title.toLowerCase().includes(query.toLowerCase()));
+            
+            // Check if document matches year filter
+            const matchesYear = !year || parseInt(doc.year) === year;
+            
+            // Check if document matches category filter
+            const matchesCategory = !category || doc.category.replace(/_/g, ' ') === category.replace(/_/g, ' ');
+            
+            return matchesQuery && matchesYear && matchesCategory;
+          })
+          .map((doc: any) => this.transformDocumentData(doc, parseInt(doc.year), doc.category));
+        
+        return filteredDocuments;
       } catch (error) {
         console.warn(`Could not search documents:`, error);
       }
@@ -327,15 +315,21 @@ class DocumentDataService {
     const filename = rawData.filename || 'Documento sin nombre';
     const title = filename.replace(/\.[^/.]+$/, ""); // Remove file extension
     
+    // Construct GitHub raw URL for the document
+    const documentUrl = rawData.url || rawData.file_path || rawData.official_url;
+    const githubRawUrl = documentUrl ? 
+      (documentUrl.startsWith('http') ? documentUrl : `${GITHUB_RAW_BASE}${documentUrl}`) : 
+      '';
+
     return {
-      id: rawData.id || `${year}_${category}_${filename}`,
+      id: rawData.id || `${rawData.year || year}_${rawData.category || category}_${filename}`, // Use rawData.year/category if available
       title: rawData.title || title || 'Documento sin título',
       filename: filename,
-      year: year,
-      category: category,
+      year: rawData.year || year, // Use rawData.year if available
+      category: rawData.category || category, // Use rawData.category if available
       type: rawData.type || rawData.document_type || rawData.file_type || 'Documento',
       size_mb: rawData.size_mb || rawData.file_size || '0',
-      url: rawData.url || rawData.file_path || rawData.official_url || '',
+      url: githubRawUrl, // Use the constructed GitHub raw URL
       official_url: rawData.official_url || '',
       verification_status: rawData.verification_status || 'verified',
       processing_date: rawData.processing_date || rawData.created_at || new Date().toISOString(),

@@ -1,6 +1,20 @@
-import React from 'react';
+import React, { useMemo, useState, useCallback, useEffect } from 'react';
 import { ResponsiveTreeMap } from '@nivo/treemap';
 import { motion } from 'framer-motion';
+import { useAccessibility } from '../../utils/accessibility';
+import { monitoring } from '../../utils/monitoring';
+import { chartAccessibility } from '../../utils/accessibility';
+import ChartSkeleton from '../skeletons/ChartSkeleton';
+
+// Data validation schema
+const dataNodeSchema = {
+  isValid: (item: any): item is TreemapDataNode => 
+    typeof item === 'object' &&
+    item !== null &&
+    typeof item.name === 'string' &&
+    (typeof item.value === 'number' || item.children !== undefined) &&
+    (item.children === undefined || Array.isArray(item.children)),
+};
 
 interface TreemapDataNode {
   name: string;
@@ -9,33 +23,139 @@ interface TreemapDataNode {
 }
 
 interface TreemapChartProps {
-  data: TreemapDataNode[];
+  data?: TreemapDataNode[];
   title?: string;
   height?: number;
   className?: string;
+  onNodeClick?: (node: any) => void;
+  onNodeHover?: (node: any, event: React.MouseEvent) => void;
+  colorScheme?: readonly string[];
 }
 
 const TreemapChart: React.FC<TreemapChartProps> = ({ 
-  data, 
-  title, 
+  data,
+  title,
   height = 400,
-  className = ''
+  className = '',
+  onNodeClick,
+  onNodeHover,
+  colorScheme = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444'],
 }) => {
-  // Format data for nivo treemap
-  const formattedData = {
-    name: 'root',
-    children: data
-  };
+  const { prefersReducedMotion, isScreenReader, language } = useAccessibility();
+  const [error, setError] = useState<Error | null>(null);
+  const [formattedData, setFormattedData] = useState<any>(null);
+
+  useEffect(() => {
+    const startTime = performance.now();
+    try {
+      if (data == null) {
+        if (data === null) {
+          const err = new Error("Data cannot be null.");
+          setError(err);
+          monitoring.captureError(err, { tags: { chartType: 'treemap' } });
+        }
+        setFormattedData(null);
+        return;
+      }
+
+      if (!Array.isArray(data)) {
+        throw new Error("Data must be an array.");
+      }
+
+      const validateData = (nodes: TreemapDataNode[]): TreemapDataNode[] => {
+        return nodes.filter(node => {
+          const isValid = dataNodeSchema.isValid(node);
+          if (!isValid) {
+            monitoring.captureError(new Error('Invalid data node detected'), {
+              tags: { chartType: 'treemap' },
+              extra: { node },
+            });
+            return false;
+          }
+          if (node.children) {
+            node.children = validateData(node.children);
+          }
+          return true;
+        });
+      };
+
+      const validatedData = validateData(data);
+
+      setFormattedData({ name: 'root', children: validatedData });
+      setError(null);
+
+      const renderTime = performance.now() - startTime;
+      monitoring.captureMetric({
+        name: 'chart_render_time',
+        value: renderTime,
+        unit: 'ms',
+        tags: { chartType: 'treemap' },
+      });
+
+    } catch (err) {
+      setError(err as Error);
+      monitoring.captureError(err as Error, { tags: { chartType: 'treemap' } });
+    }
+  }, [data]);
+
+  const handleExport = useCallback(() => {
+    if (!formattedData) return;
+    const csvContent = "data:text/csv;charset=utf-8," 
+      + "Path,Value\n"
+      + formattedData.children.map((d: any) => `${d.name},${d.value}`).join("\n");
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "treemap-data.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    monitoring.captureMetric({
+      name: 'chart_export',
+      value: 1,
+      unit: 'count',
+      tags: { chartType: 'treemap', exportFormat: 'csv' },
+    });
+  }, [formattedData]);
+
+  if (error) {
+    return (
+      <div className="flex items-center justify-center h-full bg-red-50 text-red-700 p-4 rounded-lg">
+        Error al cargar el gráfico.
+      </div>
+    );
+  }
+
+  if (data === undefined) {
+    return <ChartSkeleton data-testid="chart-skeleton" />;
+  }
+
+  if (!formattedData || formattedData.children.length === 0) {
+    return (
+      <div className="flex items-center justify-center h-full text-gray-500 p-4">
+        No hay datos disponibles
+      </div>
+    );
+  }
+
+  const chartDescription = chartAccessibility.generateChartDescription('treemap', title || 'Treemap chart', formattedData.children.length);
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}
+      transition={{ duration: prefersReducedMotion ? 0 : 0.5 }}
+      className={`bg-white rounded-lg shadow-sm border border-gray-200 ${className} ${prefersReducedMotion ? 'motion-reduce:animate-none' : ''}`}
+      role="img"
+      aria-label={chartDescription}
     >
       {title && (
-        <div className="p-4 border-b border-gray-100">
+        <div className="p-4 border-b border-gray-100 flex justify-between items-center">
           <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+          <button onClick={handleExport} className="text-sm text-gray-600 hover:text-gray-900">
+            Exportar
+          </button>
         </div>
       )}
       
@@ -44,9 +164,9 @@ const TreemapChart: React.FC<TreemapChartProps> = ({
           data={formattedData}
           identity="name"
           value="value"
-          valueFormat=".0s"
+          valueFormat={value => `${new Intl.NumberFormat(language).format(value)}`}
           margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
-          colors={{ scheme: 'blues' }}
+          colors={colorScheme}
           borderColor={{ from: 'color', modifiers: [['darker', 0.3]] }}
           labelSkipSize={12}
           labelTextColor={{
@@ -57,19 +177,26 @@ const TreemapChart: React.FC<TreemapChartProps> = ({
             from: 'color',
             modifiers: [['darker', 2]]
           }}
-          animate={true}
+          animate={!prefersReducedMotion}
           motionStiffness={90}
           motionDamping={15}
+          onClick={onNodeClick}
+          onMouseMove={onNodeHover}
           tooltip={({ node }) => (
             <div className="bg-white p-2 shadow-lg rounded border border-gray-200">
               <div className="font-semibold">{node.data.name}</div>
               <div className="text-sm text-gray-600">
-                Value: {node.value?.toLocaleString() || 'N/A'}
+                Value: {node.value?.toLocaleString(language) || 'N/A'}
               </div>
             </div>
           )}
         />
       </div>
+      {isScreenReader && (
+        <div data-testid="treemap-description" className="sr-only">
+          {chartDescription}
+        </div>
+      )}
     </motion.div>
   );
 };

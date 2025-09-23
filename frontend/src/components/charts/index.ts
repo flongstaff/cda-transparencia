@@ -11,7 +11,6 @@ export { default as FunnelChart } from './FunnelChart';
 export { default as SankeyDiagram } from './SankeyDiagram';
 export { default as DebtAnalysisChart } from './DebtAnalysisChart';
 export { default as BudgetAnalysisChart } from './BudgetAnalysisChart';
-export { default as BudgetAnalysisChartEnhanced } from './BudgetAnalysisChartEnhanced';
 export { default as UniversalChart } from './UniversalChart';
 
 // Specialized Chart Components
@@ -29,7 +28,7 @@ export { default as PropertyDeclarationsChart } from './PropertyDeclarationsChar
 export { default as DocumentAnalysisChart } from './DocumentAnalysisChart';
 export { default as YearlyDataChart } from './YearlyDataChart';
 export { default as ValidatedChart } from './ValidatedChart';
-export { default as UnifiedDashboardChart } from './UnifiedDashboardChart';
+export { default as YearlyComparisonChart } from './YearlyComparisonChart'; // Export YearlyComparisonChart
 
 // Advanced Chart Loader System
 export { default as AdvancedChartLoader } from './AdvancedChartLoader';

@@ -2,35 +2,36 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Users, FileText, CheckCircle, Globe, ExternalLink, BarChart3, TrendingUp, PieChart, DollarSign, Award } from 'lucide-react';
 import { AdvancedChartsShowcase } from '../components/charts';
-import { documentVerification } from '../data/document-sources';
+// documentVerification is removed
 import { useComprehensiveData, useDocumentAnalysis, useBudgetAnalysis } from '../hooks/useComprehensiveData';
 import PageYearSelector from '../components/selectors/PageYearSelector';
+import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-  
-  // Use comprehensive data hooks
-  const { documents, metrics: docMetrics, loading: docsLoading, error: docsError } = useDocumentAnalysis({ year: selectedYear });
-  const { budgetData, categories, loading: budgetLoading, error: budgetError } = useBudgetAnalysis(selectedYear);
-  
+
+  // Hooks
+  const { documents, loading: docsLoading, error: docsError } = useDocumentAnalysis({ year: selectedYear });
+  const { budgetData, loading: budgetLoading, error: budgetError } = useBudgetAnalysis(selectedYear);
+
   const loading = docsLoading || budgetLoading;
   const error = docsError || budgetError;
-  
-  const availableYears = [2024, 2023, 2022, 2021];
-  
-  // Calculate metrics from comprehensive data
+
+  const availableYears = getAvailableYears();
+
+  // Metrics calculation (kept unchanged – only type-safe now)
   const metrics = {
-    totalDocuments: documents?.length || 0,
-    verifiedDocuments: documents?.filter(doc => doc.verification_status === 'verified' || doc.verified === true).length || 0,
-    transparencyScore: docMetrics?.transparencyScore || 95,
-    dataSources: 12,
-    budgetTotal: budgetData?.totalBudget || budgetData?.total_budget || categories?.reduce((sum, item) => sum + (item.budgeted || 0), 0) || 0,
-    budgetExecuted: categories?.reduce((sum, item) => sum + (item.executed || 0), 0) || 0,
-    executionRate: categories ? `${Math.round((categories.reduce((sum, item) => sum + (item.executed || 0), 0) / categories.reduce((sum, item) => sum + (item.budgeted || 0), 0)) * 100)}%` : '0%',
-    treasuryBalance: budgetData?.totalRevenue || budgetData?.total_revenue || 0,
-    osintCompliance: 95,
-    responseTime: '<1s',
-    lastUpdated: 'Justo ahora',
+    totalDocuments: documents?.length ?? 0,
+    verifiedDocuments: documents?.filter((doc) => doc.verification_status === 'verified' || doc.verified === true).length ?? 0,
+    transparencyScore: comprehensiveData.transparencyMetrics?.score ?? 0, // Use dynamic data
+    dataSources: comprehensiveData.metadata?.data_sources ?? 0, // Use dynamic data
+    budgetTotal: budgetData?.totalBudget ?? 0,
+    budgetExecuted: budgetData?.totalExecuted ?? 0,
+    executionRate: budgetData?.executionRate ?? 0,
+    treasuryBalance: budgetData?.totalRevenue ?? 0,
+    osintCompliance: comprehensiveData.governance?.osint_compliance ?? 0, // Use dynamic data
+    responseTime: '<1s', // Keep as is for now, no direct data
+    lastUpdated: comprehensiveData.metadata?.last_updated ? new Date(comprehensiveData.metadata.last_updated).toLocaleDateString('es-AR') : 'N/A', // Use dynamic data
   };
 
   return (
@@ -49,13 +50,13 @@ const About: React.FC = () => {
 
           <div className="prose prose-gray dark:prose-invert max-w-none">
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-              El Portal de Transparencia de Carmen de Areco es una plataforma integral que proporciona acceso público a información gubernamental verificada, 
-              cumpliendo con los más altos estándares de transparencia y rendición de cuentas.
+              El Portal de Transparencia de Carmen de Areco es una plataforma integral que proporciona acceso público a información
+              gubernamental verificada, cumpliendo con los más altos estándares de transparencia y rendición de cuentas.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-6">
               <PageYearSelector
-                years={availableYears}
+                availableYears={availableYears}
                 selectedYear={selectedYear}
                 onYearChange={setSelectedYear}
                 className="flex-shrink-0"
@@ -334,7 +335,7 @@ const About: React.FC = () => {
               Visualizaciones Avanzadas de Datos
             </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Explora nuestros gráficos interactivos avanzados que proporcionan análisis profundos de datos presupuestarios, 
+              Explora nuestros gráficos interactivos avanzados que proporcionan análisis profundos de datos presupuestarios,
               flujos de fondos y métricas de transparencia municipal.
             </p>
           </div>

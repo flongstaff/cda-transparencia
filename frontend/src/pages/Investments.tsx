@@ -1,190 +1,117 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, DollarSign, Building, Calendar, Search, Filter, BarChart3, Eye, FileText, Loader2, AlertTriangle, MapPin, Clock, Users } from 'lucide-react';
-import { formatCurrencyARS } from '../utils/formatters';
+import {
+  Search,
+  Download,
+  Calendar,
+  Filter,
+  Eye,
+  FileText,
+  TrendingUp,
+  BarChart3,
+  PieChart as PieIcon,
+  DollarSign,
+  Users,
+  Building,
+  Clock,
+  AlertTriangle,
+  CheckCircle,
+  Loader2
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useComprehensiveData, useFinancialOverview, useBudgetAnalysis } from '../hooks/useComprehensiveData';
+// InvestmentChart is replaced by UniversalChart
+import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
+import UniversalChart from '../components/charts/UniversalChart'; // Import UniversalChart
 import PageYearSelector from '../components/selectors/PageYearSelector';
-import ValidatedChart from '../components/charts/ValidatedChart';
-import { useComprehensiveData, useBudgetAnalysis, useDocumentAnalysis } from '../hooks/useComprehensiveData';
+import { formatCurrencyARS } from '../utils/formatters';
 
-interface InvestmentProject {
+interface Investment {
   id: string;
   name: string;
-  category: string;
-  totalBudget: number;
-  executedAmount: number;
-  progress: number;
-  status: 'planning' | 'in-progress' | 'completed' | 'delayed';
-  startDate: string;
-  expectedEndDate: string;
   description: string;
-  location?: string;
-  contractor?: string;
-  documents: any[];
-  source: string;
+  category: string;
+  amount: number;
+  status: 'planned' | 'in_progress' | 'completed' | 'delayed';
+  startDate: string;
+  endDate: string;
+  progress: number;
+  documents: string[];
 }
 
 const Investments: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeTab, setActiveTab] = useState<'overview' | 'projects' | 'analysis' | 'progress'>('overview');
-  const [selectedProject, setSelectedProject] = useState<InvestmentProject | null>(null);
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');
+  const [viewMode, setViewMode] = useState<'overview' | 'list' | 'analysis'>('overview');
+  const [selectedInvestment, setSelectedInvestment] = useState<Investment | null>(null);
 
-  // Use comprehensive data hooks
-  const comprehensiveData = useComprehensiveData({ year: selectedYear });
-  const budgetData = useBudgetAnalysis(selectedYear);
-  const documentData = useDocumentAnalysis({ year: selectedYear });
-  
-  const { loading, error } = comprehensiveData;
-  const documents = documentData.documents || [];
+  // Unified data hooks
+  const { documents = [], loading: docsLoading, error: docsError } = useComprehensiveData({ 
+    year: selectedYear,
+    category: 'investment'
+  });
+  const { data: financial, loading: financialLoading, error: financialError } = useFinancialOverview(selectedYear);
+  const { budget, loading: budgetLoading, error: budgetError } = useBudgetAnalysis(selectedYear);
 
-  const handleYearChange = (year: number) => {
-    setSelectedYear(year);
+  const loading = docsLoading || financialLoading || budgetLoading;
+  const error = financialError || budgetError || docsError;
+
+  // Generate investment data from available sources
+  const investmentsData: Investment[] = useMemo(() => {
+    return financial.investmentData?.topInvestments || []; // Use actual investment data
+  }, [financial.investmentData]);
+
+  const availableYears = getAvailableYears(); // Use getAvailableYears()
+
+  const filteredInvestments = useMemo(() => {
+    return investmentsData.filter(inv => {
+      const matchesSearch = searchTerm === '' || 
+        inv.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        inv.description.toLowerCase().includes(searchTerm.toLowerCase());
+      
+      const matchesCategory = selectedCategory === 'all' || inv.category === selectedCategory;
+      const matchesStatus = selectedStatus === 'all' || inv.status === selectedStatus;
+      
+      return matchesSearch && matchesCategory && matchesStatus;
+    });
+  }, [investmentsData, searchTerm, selectedCategory, selectedStatus]);
+
+  const totalInvestment = useMemo(() => {
+    return financial.investmentData?.totalInvestment ?? 0; // Use actual investment data
+  }, [financial.investmentData]);
+
+  const investmentByCategory = useMemo(() => {
+    return financial.investmentData?.investmentByType || {}; // Use actual investment data
+  }, [financial.investmentData]);
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'completed': return 'text-green-600 bg-green-50';
+      case 'in_progress': return 'text-blue-600 bg-blue-50';
+      case 'planned': return 'text-yellow-600 bg-yellow-50';
+      case 'delayed': return 'text-red-600 bg-red-50';
+      default: return 'text-gray-600 bg-gray-50';
+    }
   };
 
-  // Generate available years
-  const currentYear = new Date().getFullYear();
-  const availableYears = Array.from({ length: 10 }, (_, i) => currentYear - i);
-  
-  // Generate comprehensive investment data from available sources
-  const generateInvestmentProjects = (): InvestmentProject[] => {
-    const projects: InvestmentProject[] = [];
-    
-    // Generate projects from budget analysis
-    const budgetCategories = budgetData.budgetBreakdown || [];
-    budgetCategories.forEach((category, index) => {
-      if (category.name?.toLowerCase().includes('obra') || 
-          category.name?.toLowerCase().includes('inversion') ||
-          category.name?.toLowerCase().includes('infraestructura')) {
-        projects.push({
-          id: `budget-${index}`,
-          name: `${category.name} - Proyecto ${selectedYear}`,
-          category: 'Infraestructura Pública',
-          totalBudget: category.budgeted || 0,
-          executedAmount: category.executed || 0,
-          progress: category.execution_rate || 0,
-          status: category.execution_rate > 90 ? 'completed' : category.execution_rate > 50 ? 'in-progress' : 'planning',
-          startDate: `${selectedYear}-03-01`,
-          expectedEndDate: `${selectedYear}-11-30`,
-          description: `Proyecto de ${category.name.toLowerCase()} municipal`,
-          documents: documents.filter(doc => 
-            doc.category?.toLowerCase().includes(category.name?.toLowerCase() || '')
-          ),
-          source: 'budget_analysis'
-        });
-      }
-    });
-    
-    // Add comprehensive municipal investment projects
-    const municipalProjects = [
-      {
-        name: 'Modernización de Infraestructura Vial',
-        category: 'Obras Públicas',
-        totalBudget: 2500000000,
-        executedAmount: 2100000000,
-        progress: 84,
-        status: 'in-progress' as const,
-        location: 'Centro urbano y accesos principales',
-        contractor: 'Consorcio Vial Carmen de Areco'
-      },
-      {
-        name: 'Ampliación del Hospital Municipal',
-        category: 'Salud Pública',
-        totalBudget: 1800000000,
-        executedAmount: 1620000000,
-        progress: 90,
-        status: 'completed' as const,
-        location: 'Av. San Martín 450',
-        contractor: 'Constructora Salud SA'
-      },
-      {
-        name: 'Parque Industrial Carmen de Areco',
-        category: 'Desarrollo Económico',
-        totalBudget: 3200000000,
-        executedAmount: 1600000000,
-        progress: 50,
-        status: 'in-progress' as const,
-        location: 'Zona industrial - Ruta 41',
-        contractor: 'Desarrollo Industrial SRL'
-      },
-      {
-        name: 'Sistema de Tratamiento de Efluentes',
-        category: 'Medio Ambiente',
-        totalBudget: 1500000000,
-        executedAmount: 1275000000,
-        progress: 85,
-        status: 'in-progress' as const,
-        location: 'Planta de tratamiento municipal',
-        contractor: 'EcoTrat Ambiental'
-      },
-      {
-        name: 'Digitalización de Servicios Municipales',
-        category: 'Modernización',
-        totalBudget: 450000000,
-        executedAmount: 405000000,
-        progress: 90,
-        status: 'completed' as const,
-        location: 'Palacio Municipal',
-        contractor: 'TechMun Digital'
-      },
-      {
-        name: 'Renovación de Espacios Verdes',
-        category: 'Espacio Público',
-        totalBudget: 680000000,
-        executedAmount: 544000000,
-        progress: 80,
-        status: 'in-progress' as const,
-        location: 'Plaza principal y parques',
-        contractor: 'Jardinería Municipal SA'
-      }
-    ];
-    
-    municipalProjects.forEach((project, index) => {
-      projects.push({
-        id: `municipal-${index + 1}`,
-        name: project.name,
-        category: project.category,
-        totalBudget: project.totalBudget,
-        executedAmount: project.executedAmount,
-        progress: project.progress,
-        status: project.status,
-        startDate: `${selectedYear}-01-${15 + index * 2}`,
-        expectedEndDate: `${selectedYear + (project.progress < 100 ? 1 : 0)}-${6 + index}-15`,
-        description: `Proyecto de inversión municipal en ${project.category.toLowerCase()}`,
-        location: project.location,
-        contractor: project.contractor,
-        documents: documents.filter(doc => 
-          doc.category?.toLowerCase().includes(project.category.toLowerCase()) ||
-          doc.title?.toLowerCase().includes(project.name.toLowerCase())
-        ),
-        source: 'municipal_investment_plan'
-      });
-    });
-    
-    return projects;
+  const getStatusText = (status: string) => {
+    switch (status) {
+      case 'completed': return 'Completado';
+      case 'in_progress': return 'En Progreso';
+      case 'planned': return 'Planificado';
+      case 'delayed': return 'Demorado';
+      default: return status;
+    }
   };
-  
-  const investmentProjects = generateInvestmentProjects();
-  
-  // Calculate aggregate metrics
-  const totalInvestment = investmentProjects.reduce((sum, project) => sum + project.totalBudget, 0);
-  const totalExecuted = investmentProjects.reduce((sum, project) => sum + project.executedAmount, 0);
-  const averageProgress = investmentProjects.length > 0 
-    ? investmentProjects.reduce((sum, project) => sum + project.progress, 0) / investmentProjects.length
-    : 0;
-  const activeProjects = investmentProjects.filter(p => p.status === 'in-progress').length;
-  const completedProjects = investmentProjects.filter(p => p.status === 'completed').length;
-  
-  const filteredProjects = investmentProjects.filter(project =>
-    project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    project.category.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-96">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <Loader2 className="animate-spin h-8 w-8 text-blue-500 mx-auto mb-4" />
-          <p className="text-gray-600 dark:text-gray-400">Cargando análisis integral de inversiones...</p>
+          <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-blue-600" />
+          <p className="text-gray-600">Cargando datos de inversiones...</p>
         </div>
       </div>
     );
@@ -192,557 +119,433 @@ const Investments: React.FC = () => {
 
   if (error) {
     return (
-      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-xl p-6">
-        <div className="flex items-center">
-          <AlertTriangle className="h-5 w-5 text-red-500 mr-2" />
-          <h3 className="text-lg font-medium text-red-800 dark:text-red-200">Error al cargar datos</h3>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <AlertTriangle className="w-8 h-8 text-red-500 mx-auto mb-4" />
+          <h2 className="text-lg font-semibold text-red-800 mb-2">Error</h2>
+          <p className="text-gray-600">{error}</p>
         </div>
-        <p className="mt-2 text-red-700 dark:text-red-300">{error}</p>
       </div>
     );
   }
 
   return (
-    <div className="space-y-8">
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        {/* Enhanced Header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
-          <div>
-            <h1 className="font-heading text-3xl font-bold text-gray-800 dark:text-white">
-              🏗️ Inversiones y Proyectos Públicos
-            </h1>
-            <p className="text-gray-600 dark:text-gray-300 mt-2">
-              Análisis integral de inversiones municipales • {selectedYear}
-            </p>
-          </div>
-          <div className="mt-4 md:mt-0">
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-8"
+        >
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 flex items-center">
+                <DollarSign className="w-8 h-8 mr-3 text-green-600" />
+                Inversiones Municipales
+              </h1>
+              <p className="text-gray-600 mt-2">
+                Gestión y seguimiento de proyectos de inversión pública para {selectedYear}
+              </p>
+            </div>
             <PageYearSelector
               selectedYear={selectedYear}
-              onYearChange={handleYearChange}
+              onYearChange={setSelectedYear}
               availableYears={availableYears}
-              label="Año"
+              label="Año de inversión"
             />
           </div>
-        </div>
+        </motion.div>
 
-        {/* Enhanced Investment Metrics */}
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-6 mb-8 border border-blue-200 dark:border-blue-700">
-          <h2 className="font-heading text-xl font-bold text-blue-800 dark:text-blue-200 mb-4">
-            📊 Panel de Inversiones {selectedYear}
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="bg-white/60 dark:bg-gray-800/60 rounded-lg p-4"
-            >
-              <div className="flex items-center">
-                <DollarSign className="h-8 w-8 text-green-500 mr-3" />
-                <div>
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Inversión Total</p>
-                  <p className="text-2xl font-bold text-green-600 dark:text-green-400">
-                    {formatCurrencyARS(totalInvestment)}
-                  </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-500">
-                    {investmentProjects.length} proyectos
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.1 }}
-              className="bg-white/60 dark:bg-gray-800/60 rounded-lg p-4"
-            >
-              <div className="flex items-center">
-                <Building className="h-8 w-8 text-blue-500 mr-3" />
-                <div>
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Proyectos Activos</p>
-                  <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                    {activeProjects}
-                  </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-500">
-                    En ejecución
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-              className="bg-white/60 dark:bg-gray-800/60 rounded-lg p-4"
-            >
-              <div className="flex items-center">
-                <TrendingUp className="h-8 w-8 text-purple-500 mr-3" />
-                <div>
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Progreso Promedio</p>
-                  <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
-                    {averageProgress.toFixed(1)}%
-                  </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-500">
-                    Avance general
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3 }}
-              className="bg-white/60 dark:bg-gray-800/60 rounded-lg p-4"
-            >
-              <div className="flex items-center">
-                <BarChart3 className="h-8 w-8 text-orange-500 mr-3" />
-                <div>
-                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Completados</p>
-                  <p className="text-2xl font-bold text-orange-600 dark:text-orange-400">
-                    {completedProjects}
-                  </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-500">
-                    Finalizados
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-          
-          <div className="mt-4 p-4 bg-white/60 dark:bg-gray-800/60 rounded-lg">
+        {/* Quick Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-600 dark:text-gray-400">Ejecución Presupuestal Total</span>
-              <span className="text-lg font-semibold text-blue-600 dark:text-blue-400">
-                {((totalExecuted / totalInvestment) * 100).toFixed(1)}%
-              </span>
-            </div>
-            <div className="mt-2 w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
-              <div 
-                className="bg-blue-500 h-2 rounded-full" 
-                style={{ width: `${(totalExecuted / totalInvestment) * 100}%` }}
-              ></div>
+              <div>
+                <p className="text-sm font-medium text-gray-600">Total Invertido</p>
+                <p className="text-2xl font-bold text-gray-900">
+                  {formatCurrencyARS(totalInvestment)}
+                </p>
+              </div>
+              <DollarSign className="w-8 h-8 text-blue-500" />
             </div>
           </div>
-        </div>
-        
-        {/* Comprehensive Data Source Information */}
-        <div className="bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 rounded-xl p-6 mb-8 border border-green-200 dark:border-green-700">
-          <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-3">
-            📋 Fuentes de Datos de Inversiones
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white/60 dark:bg-gray-800/60 rounded-lg p-4">
-              <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                {budgetData.budgetBreakdown?.length || 0}
+
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-gray-600">Proyectos</p>
+                <p className="text-2xl font-bold text-gray-900">
+                  {filteredInvestments.length}
+                </p>
               </div>
-              <div className="text-sm text-green-700 dark:text-green-300">Categorías Presupuestales</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Análisis presupuestal</div>
+              <FileText className="w-8 h-8 text-green-500" />
             </div>
-            <div className="bg-white/60 dark:bg-gray-800/60 rounded-lg p-4">
-              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                {documents.filter(doc => doc.category?.toLowerCase().includes('obra') || doc.category?.toLowerCase().includes('inversion')).length}
+          </div>
+
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-gray-600">Categorías</p>
+                <p className="text-2xl font-bold text-gray-900">
+                  {Object.keys(investmentByCategory).length}
+                </p>
               </div>
-              <div className="text-sm text-blue-700 dark:text-blue-300">Documentos Relacionados</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Obras e inversiones</div>
+              <Building className="w-8 h-8 text-purple-500" />
             </div>
-            <div className="bg-white/60 dark:bg-gray-800/60 rounded-lg p-4">
-              <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">
-                {Object.keys(comprehensiveData.data || {}).length}
+          </div>
+
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-gray-600">Tasa de Finalización</p>
+                <p className="text-2xl font-bold text-gray-900">
+                  {Math.round((filteredInvestments.filter(inv => inv.status === 'completed').length / filteredInvestments.length) * 100)}%
+                </p>
               </div>
-              <div className="text-sm text-purple-700 dark:text-purple-300">Fuentes de Datos</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Análisis integral</div>
+              <CheckCircle className="w-8 h-8 text-orange-500" />
             </div>
           </div>
         </div>
 
-        {/* Enhanced Navigation Tabs */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm mb-6">
-          <div className="border-b border-gray-200 dark:border-gray-700">
-            <nav className="flex space-x-8" aria-label="Tabs">
-              {[
-                { id: 'overview', name: 'Resumen General', icon: BarChart3 },
-                { id: 'projects', name: 'Proyectos Detalle', icon: Building },
-                { id: 'analysis', name: 'Análisis', icon: TrendingUp },
-                { id: 'progress', name: 'Seguimiento', icon: Clock }
-              ].map((tab) => {
-                const Icon = tab.icon;
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id as any)}
-                    className={`py-4 px-6 border-b-2 font-medium text-sm flex items-center transition-colors duration-200 ${
-                      activeTab === tab.id
-                        ? 'border-blue-500 text-blue-600 dark:text-blue-400'
-                        : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 hover:border-gray-300'
-                    }`}
-                  >
-                    <Icon size={18} className="mr-2" />
-                    {tab.name}
-                  </button>
-                );
-              })}
-            </nav>
-          </div>
-          
-          {/* Search Bar */}
-          <div className="p-6">
-            <div className="relative max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+        {/* Filters */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+          <div className="flex flex-col lg:flex-row gap-4">
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Buscar proyecto o categoría..."
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Buscar proyectos de inversión..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                aria-label="Buscar proyectos de inversión"
               />
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                aria-label="Filtrar por categoría de inversión"
+              >
+                <option value="all">Todas las categorías</option>
+                {Array.from(new Set(investmentsData.map(inv => inv.category))).map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
+
+              <select
+                value={selectedStatus}
+                onChange={(e) => setSelectedStatus(e.target.value)}
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                aria-label="Filtrar por estado del proyecto"
+              >
+                <option value="all">Todos los estados</option>
+                <option value="planned">Planificado</option>
+                <option value="in_progress">En Progreso</option>
+                <option value="completed">Completado</option>
+                <option value="delayed">Demorado</option>
+              </select>
+
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => setViewMode('overview')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium ${
+                    viewMode === 'overview' 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+                  }`}
+                  title="Vista general"
+                >
+                  Resumen
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium ${
+                    viewMode === 'list' 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+                  }`}
+                  title="Lista de proyectos"
+                >
+                  Lista
+                </button>
+                <button
+                  onClick={() => setViewMode('analysis')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium ${
+                    viewMode === 'analysis' 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
+                  }`}
+                  title="Análisis detallado"
+                >
+                  Análisis
+                </button>
+              </div>
+
+              <button
+                onClick={() => {
+                  // Export functionality
+                  const csvContent = [
+                    ['Nombre', 'Categoría', 'Monto', 'Estado', 'Progreso'],
+                    ...filteredInvestments.map(inv => [
+                      inv.name,
+                      inv.category,
+                      inv.amount,
+                      inv.status,
+                      inv.progress
+                    ])
+                  ].map(row => row.join(',')).join('\n');
+                  
+                  const blob = new Blob([csvContent], { type: 'text/csv' });
+                  const url = window.URL.createObjectURL(blob);
+                  const a = document.createElement('a');
+                  a.href = url;
+                  a.download = `inversiones-${selectedYear}.csv`;
+                  a.click();
+                  window.URL.revokeObjectURL(url);
+                }}
+                className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+                title="Exportar datos de inversiones"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Exportar
+              </button>
             </div>
           </div>
         </div>
 
-        {/* Tab Content */}
-        {activeTab === 'overview' && (
-          <div className="space-y-6">
-            {/* Investment Charts */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                  Inversión por Categoría
-                </h3>
-                <ValidatedChart
-                  data={Array.from(new Set(investmentProjects.map(p => p.category))).map(category => ({
-                    name: category,
-                    value: investmentProjects
-                      .filter(p => p.category === category)
-                      .reduce((sum, p) => sum + p.totalBudget, 0)
-                  }))}
-                  title="Distribución de Inversiones por Categoría"
-                  chartType="pie"
-                  dataKey="value"
-                  nameKey="name"
-                  sources={['Plan Municipal de Inversiones']}
-                />
-              </div>
-              
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                  Estado de Proyectos
-                </h3>
-                <ValidatedChart
-                  data={[
-                    { name: 'Completados', value: completedProjects },
-                    { name: 'En Progreso', value: activeProjects },
-                    { name: 'Planificación', value: investmentProjects.filter(p => p.status === 'planning').length },
-                    { name: 'Retrasados', value: investmentProjects.filter(p => p.status === 'delayed').length }
-                  ]}
-                  title="Estado de Proyectos de Inversión"
-                  chartType="bar"
-                  dataKey="value"
-                  nameKey="name"
-                  sources={['Seguimiento de proyectos municipales']}
-                />
-              </div>
+        {/* Content */}
+        {viewMode === 'overview' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="space-y-8"
+          >
+        {/* Investment breakdown chart */}
+        <div className="bg-white rounded-xl shadow-sm p-6">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">Distribución de Inversiones</h2>
+          <UniversalChart
+            data={financial.investmentData?.investmentByType || []} // Use actual investment data
+            chartType="pie"
+            title="Distribución de Inversiones"
+            height={400}
+            showControls={false}
+          />
+        </div>
+
+            {/* Budget Analysis */}
+            <div className="bg-white rounded-xl shadow-sm p-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-6">Ejecución Presupuestaria</h2>
+              <BudgetAnalysisChart year={selectedYear} />
             </div>
-            
-            {/* Top Projects Summary */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Principales Proyectos de Inversión {selectedYear}
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {investmentProjects.slice(0, 6).map((project, index) => (
-                  <div
-                    key={project.id}
-                    className="border border-gray-200 dark:border-gray-600 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
-                    onClick={() => {
-                      setSelectedProject(project);
-                      setActiveTab('projects');
-                    }}
-                  >
-                    <div className="flex items-start justify-between mb-2">
-                      <h4 className="font-semibold text-gray-900 dark:text-white text-sm">
-                        {project.name}
-                      </h4>
-                      <span className={`text-xs px-2 py-1 rounded-full ${
-                        project.status === 'completed' ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' :
-                        project.status === 'in-progress' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400' :
-                        project.status === 'planning' ? 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-400' :
-                        'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400'
-                      }`}>
-                        {project.status === 'completed' ? 'Completado' :
-                         project.status === 'in-progress' ? 'En Progreso' :
-                         project.status === 'planning' ? 'Planificación' : 'Retrasado'}
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                      {project.category}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
-                        {formatCurrencyARS(project.totalBudget)}
-                      </span>
-                      <div className="flex items-center">
-                        <div className="w-16 bg-gray-200 dark:bg-gray-600 rounded-full h-2 mr-2">
-                          <div 
-                            className="bg-blue-500 h-2 rounded-full" 
-                            style={{ width: `${project.progress}%` }}
-                          ></div>
-                        </div>
-                        <span className="text-xs text-gray-600 dark:text-gray-400">
-                          {project.progress}%
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          </motion.div>
         )}
 
-        {activeTab === 'projects' && (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-            <div className="grid grid-cols-1 lg:grid-cols-3">
-              {/* Projects List */}
-              <div className="lg:col-span-1 border-r border-gray-200 dark:border-gray-700">
-                <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-                  <h3 className="font-medium text-gray-800 dark:text-white">
-                    Proyectos ({filteredProjects.length})
-                  </h3>
-                </div>
-                
-                <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
-                  {filteredProjects.map((project) => (
-                    <div
-                      key={project.id}
-                      className={`p-4 border-b border-gray-200 dark:border-gray-700 cursor-pointer transition-colors ${
-                        selectedProject?.id === project.id
-                          ? 'bg-blue-50 dark:bg-blue-900/20 border-l-4 border-l-blue-500'
-                          : 'hover:bg-gray-50 dark:hover:bg-gray-700'
-                      }`}
-                      onClick={() => setSelectedProject(project)}
-                    >
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1 min-w-0">
-                          <h4 className="font-medium text-gray-800 dark:text-white truncate text-sm">
-                            {project.name}
-                          </h4>
-                          <p className="text-xs text-gray-600 dark:text-gray-400 truncate">
-                            {project.category}
-                          </p>
-                          <div className="flex items-center mt-2 space-x-2">
-                            <span className={`text-xs px-2 py-1 rounded-full ${
-                              project.status === 'completed' ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' :
-                              project.status === 'in-progress' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400' :
-                              'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-400'
-                            }`}>
-                              {project.status === 'completed' ? 'Completado' :
-                               project.status === 'in-progress' ? 'En Progreso' : 'Planificación'}
-                            </span>
-                            <span className="text-xs text-gray-500 dark:text-gray-500">
-                              {project.progress}%
-                            </span>
-                          </div>
+        {viewMode === 'list' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white rounded-xl shadow-sm overflow-hidden"
+          >
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Proyecto
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Categoría
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Monto
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Estado
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Progreso
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Acciones
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {filteredInvestments.map((investment) => (
+                  <tr key={investment.id} className="hover:bg-gray-50">
+                    <td className="px-6 py-4">
+                      <div>
+                        <div className="text-sm font-medium text-gray-900">
+                          {investment.name}
+                        </div>
+                        <div className="text-sm text-gray-500">
+                          {investment.description}
                         </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Project Detail */}
-              <div className="lg:col-span-2">
-                {selectedProject ? (
-                  <div className="p-6">
-                    <div className="flex items-start justify-between mb-6">
-                      <div>
-                        <h3 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
-                          {selectedProject.name}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          {selectedProject.category} • {selectedProject.progress}% completado
-                        </p>
-                      </div>
-                      
-                      <span className={`px-3 py-1 text-sm font-medium rounded-full ${
-                        selectedProject.status === 'completed' ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' :
-                        selectedProject.status === 'in-progress' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400' :
-                        'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-400'
-                      }`}>
-                        {selectedProject.status === 'completed' ? 'Completado' :
-                         selectedProject.status === 'in-progress' ? 'En Progreso' : 'Planificación'}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {investment.category}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      {formatCurrencyARS(investment.amount)}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(investment.status)}`}>
+                        {getStatusText(investment.status)}
                       </span>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                      <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                        <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
-                          Presupuesto Total
-                        </h4>
-                        <p className="text-2xl font-bold text-gray-800 dark:text-white">
-                          {formatCurrencyARS(selectedProject.totalBudget)}
-                        </p>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div
+                          className="bg-blue-600 h-2 rounded-full"
+                          style={{ width: `${investment.progress}%` }}
+                        ></div>
                       </div>
-                      
-                      <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                        <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
-                          Ejecutado
-                        </h4>
-                        <p className="text-2xl font-bold text-gray-800 dark:text-white">
-                          {formatCurrencyARS(selectedProject.executedAmount)}
-                        </p>
-                      </div>
+                      <span className="text-xs text-gray-500 mt-1">{investment.progress}%</span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                      <button
+                        onClick={() => setSelectedInvestment(investment)}
+                        className="text-blue-600 hover:text-blue-900 mr-4"
+                        title="Ver detalles del proyecto"
+                      >
+                        <Eye className="w-4 h-4 inline mr-1" />
+                        Ver
+                      </button>
+                      <a
+                        href={`/documents/${investment.documents[0]}`}
+                        className="text-green-600 hover:text-green-900"
+                        title="Descargar documentación"
+                      >
+                        <Download className="w-4 h-4 inline mr-1" />
+                        Docs
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </motion.div>
+        )}
+
+        {viewMode === 'analysis' && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white rounded-xl shadow-sm p-6"
+          >
+            <h2 className="text-xl font-bold text-gray-900 mb-6">Análisis de Inversiones</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="p-4 bg-blue-50 rounded-lg">
+                <h3 className="font-semibold text-blue-900 mb-2">Inversión Total por Categoría</h3>
+                <ul className="space-y-2">
+                  {Object.entries(investmentByCategory)
+                    .sort(([,a], [,b]) => b - a)
+                    .map(([category, amount]) => (
+                      <li key={category} className="flex justify-between text-sm">
+                        <span>{category}</span>
+                        <span className="font-medium">{formatCurrencyARS(amount)}</span>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+              <div className="p-4 bg-green-50 rounded-lg">
+                <h3 className="font-semibold text-green-900 mb-2">Estado de Proyectos</h3>
+                <ul className="space-y-2">
+                  {['planned', 'in_progress', 'completed', 'delayed'].map(status => {
+                    const count = filteredInvestments.filter(inv => inv.status === status).length;
+                    const percentage = (count / filteredInvestments.length) * 100;
+                    return (
+                      <li key={status} className="flex justify-between text-sm">
+                        <span>{getStatusText(status)}</span>
+                        <span className="font-medium">{count} ({percentage.toFixed(1)}%)</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        {/* Investment Detail Modal */}
+        {selectedInvestment && (
+          <div className="fixed inset-0 z-50 overflow-y-auto">
+            <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+              <div className="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+              </div>
+
+              <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+                <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-lg font-medium text-gray-900">{selectedInvestment.name}</h3>
+                    <button
+                      onClick={() => setSelectedInvestment(null)}
+                      className="text-gray-400 hover:text-gray-600"
+                      title="Cerrar detalles del proyecto"
+                    >
+                      ✕
+                    </button>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-sm font-medium text-gray-900">Descripción</h4>
+                      <p className="text-sm text-gray-600">{selectedInvestment.description}</p>
                     </div>
-                    
-                    <div className="space-y-6">
+
+                    <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <h4 className="font-medium text-gray-900 dark:text-white mb-2">
-                          Progreso del Proyecto
-                        </h4>
-                        <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-3 mb-2">
-                          <div 
-                            className="bg-blue-500 h-3 rounded-full" 
-                            style={{ width: `${selectedProject.progress}%` }}
+                        <h4 className="text-sm font-medium text-gray-900">Categoría</h4>
+                        <p className="text-sm text-gray-600">{selectedInvestment.category}</p>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-900">Monto</h4>
+                        <p className="text-sm text-gray-600">{formatCurrencyARS(selectedInvestment.amount)}</p>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-900">Estado</h4>
+                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(selectedInvestment.status)}`}>
+                          {getStatusText(selectedInvestment.status)}
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-900">Progreso</h4>
+                        <div className="w-full bg-gray-200 rounded-full h-2 mt-1">
+                          <div
+                            className="bg-blue-600 h-2 rounded-full"
+                            style={{ width: `${selectedInvestment.progress}%` }}
                           ></div>
                         </div>
-                        <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-                          <span>Inicio: {new Date(selectedProject.startDate).toLocaleDateString('es-AR')}</span>
-                          <span>Fin esperado: {new Date(selectedProject.expectedEndDate).toLocaleDateString('es-AR')}</span>
-                        </div>
-                      </div>
-                      
-                      <div>
-                        <h4 className="font-medium text-gray-900 dark:text-white mb-2">
-                          Descripción
-                        </h4>
-                        <p className="text-gray-600 dark:text-gray-400">
-                          {selectedProject.description}
-                        </p>
-                      </div>
-                      
-                      {selectedProject.location && (
-                        <div>
-                          <h4 className="font-medium text-gray-900 dark:text-white mb-2 flex items-center">
-                            <MapPin className="h-4 w-4 mr-2" />
-                            Ubicación
-                          </h4>
-                          <p className="text-gray-600 dark:text-gray-400">
-                            {selectedProject.location}
-                          </p>
-                        </div>
-                      )}
-                      
-                      {selectedProject.contractor && (
-                        <div>
-                          <h4 className="font-medium text-gray-900 dark:text-white mb-2 flex items-center">
-                            <Users className="h-4 w-4 mr-2" />
-                            Contratista
-                          </h4>
-                          <p className="text-gray-600 dark:text-gray-400">
-                            {selectedProject.contractor}
-                          </p>
-                        </div>
-                      )}
-                      
-                      <div>
-                        <h4 className="font-medium text-gray-900 dark:text-white mb-2 flex items-center">
-                          <FileText className="h-4 w-4 mr-2" />
-                          Documentación
-                        </h4>
-                        <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
-                          <FileText className="h-4 w-4 mr-1" />
-                          {selectedProject.documents.length} documentos relacionados
-                        </div>
-                        <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
-                          Fuente: {selectedProject.source}
-                        </p>
+                        <span className="text-xs text-gray-500">{selectedInvestment.progress}%</span>
                       </div>
                     </div>
-                  </div>
-                ) : (
-                  <div className="flex items-center justify-center h-96">
-                    <div className="text-center">
-                      <Building className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                      <h3 className="text-lg font-medium text-gray-800 dark:text-white mb-2">
-                        Seleccione un proyecto
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-400">
-                        Elija un proyecto de la lista para ver los detalles completos.
-                      </p>
+
+                    <div className="flex justify-end space-x-2 pt-4">
+                      <button
+                        onClick={() => setSelectedInvestment(null)}
+                        className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200"
+                      >
+                        Cerrar
+                      </button>
+                      <a
+                        href={`/documents/${selectedInvestment.documents[0]}`}
+                        className="px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100"
+                      >
+                        Ver Documentos
+                      </a>
                     </div>
                   </div>
-                )}
+                </div>
               </div>
             </div>
           </div>
         )}
-        
-        {activeTab === 'analysis' && (
-          <div className="space-y-6">
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Análisis de Eficiencia de Inversiones
-              </h3>
-              <ValidatedChart
-                data={investmentProjects.map(project => ({
-                  name: project.name.substring(0, 20) + (project.name.length > 20 ? '...' : ''),
-                  presupuesto: project.totalBudget,
-                  ejecutado: project.executedAmount,
-                  eficiencia: (project.executedAmount / project.totalBudget) * 100
-                }))}
-                title="Eficiencia Presupuestal por Proyecto"
-                chartType="bar"
-                dataKey="eficiencia"
-                nameKey="name"
-                sources={['Análisis de ejecución presupuestal']}
-              />
-            </div>
-          </div>
-        )}
-        
-        {activeTab === 'progress' && (
-          <div className="space-y-6">
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Seguimiento de Progreso de Proyectos
-              </h3>
-              <div className="space-y-4">
-                {investmentProjects.map((project) => (
-                  <div key={project.id} className="border border-gray-200 dark:border-gray-600 rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-medium text-gray-900 dark:text-white">
-                        {project.name}
-                      </h4>
-                      <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
-                        {project.progress}%
-                      </span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2 mb-2">
-                      <div 
-                        className={`h-2 rounded-full ${
-                          project.progress >= 90 ? 'bg-green-500' :
-                          project.progress >= 50 ? 'bg-blue-500' : 'bg-yellow-500'
-                        }`}
-                        style={{ width: `${project.progress}%` }}
-                      ></div>
-                    </div>
-                    <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400">
-                      <span>{project.category}</span>
-                      <span>{formatCurrencyARS(project.executedAmount)} / {formatCurrencyARS(project.totalBudget)}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-      </motion.section>
+      </div>
     </div>
   );
 };

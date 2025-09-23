@@ -4,7 +4,7 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { useCallback, useMemo } from 'react';
 import * as consolidatedApiService from '../services/ConsolidatedApiService';
-import monitoring from '../utils/monitoring';
+import { monitoring } from '../utils/monitoring';
 import { z } from 'zod';
 
 // Zod schemas for runtime validation
@@ -258,7 +258,7 @@ export const useDebtData = (year: number, options: {
 
     // Risk analysis
     let riskScore = 0;
-    let riskFactors: string[] = [];
+    const riskFactors: string[] = [];
 
     if (riskAnalysis) {
       // High interest rate risk

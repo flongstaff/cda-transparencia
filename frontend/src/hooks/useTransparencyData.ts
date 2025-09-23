@@ -9,10 +9,10 @@ const USE_LOCAL_FALLBACK = true;
 const transformFinancialData = (yearData: any) => {
   const summary = yearData.summary || {};
   const totalDocuments = summary.total_documents || 0;
-  
+
   // Extract actual financial data from the JSON if available, otherwise use defaults
   const financialData = yearData.financial_data || {};
-  
+
   return {
     totalBudget: financialData.total_budget || 2500000000, // Based on typical municipal budget for Carmen de Areco
     totalExecuted: financialData.total_executed || 1950000000,
@@ -35,7 +35,7 @@ const transformFinancialData = (yearData: any) => {
 const transformDocumentsData = (yearData: any) => {
   let docId = 1;
   const documents: any[] = [];
-  
+
   // Extract actual documents from the JSON data
   if (yearData.documents && Array.isArray(yearData.documents)) {
     // If the JSON already contains properly formatted documents, use them
@@ -44,19 +44,19 @@ const transformDocumentsData = (yearData: any) => {
       id: doc.id || `doc-${index + 1}`
     }));
   }
-  
+
   // Otherwise, extract documents from the categorized data structure
   const dataSources = yearData.data_sources || {};
-  
+
   // Helper function to process document entries
   const processDocumentEntries = (entries: any[], category: string) => {
     if (!Array.isArray(entries)) return;
-    
+
     entries.forEach((entry: any) => {
       if (entry.file) {
         documents.push({
           id: `doc-${docId++}`,
-          title: entry.title || entry.file.replace('.pdf', '').replace(/-/g, ' '),
+          title: entry.title || entry.file.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' '),
           category: category,
           type: entry.format || 'pdf',
           filename: entry.file,
@@ -67,12 +67,12 @@ const transformDocumentsData = (yearData: any) => {
           integrity_verified: true
         });
       }
-      
+
       if (entry.files && Array.isArray(entry.files)) {
         entry.files.forEach((file: string) => {
           documents.push({
             id: `doc-${docId++}`,
-            title: entry.title || file.replace('.pdf', '').replace(/-/g, ' '),
+            title: entry.title || file.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' '),
             category: category,
             type: entry.format || 'pdf',
             filename: file,
@@ -86,7 +86,7 @@ const transformDocumentsData = (yearData: any) => {
       }
     });
   };
-  
+
   // Process each category of documents
   Object.keys(dataSources).forEach(category => {
     const categoryData = dataSources[category];
@@ -94,66 +94,66 @@ const transformDocumentsData = (yearData: any) => {
       processDocumentEntries(categoryData.documents, category);
     }
   });
-  
+
   // If we still don't have documents, use the hardcoded list as fallback
   if (documents.length === 0) {
     const realPdfDocuments = [
       // Salary scales
       { filename: 'ESCALAS-SALARIALES-FEBRERO-2024.pdf', title: 'Escalas Salariales Febrero 2024', category: 'salaries', size_mb: 1.2 },
-      { filename: 'ESCALA-SALARIAL-OCTUBRE-2024.pdf', title: 'Escala Salarial Octubre 2024', category: 'salaries', size_mb: 0.8 }, 
-      
+      { filename: 'ESCALA-SALARIAL-OCTUBRE-2024.pdf', title: 'Escala Salarial Octubre 2024', category: 'salaries', size_mb: 0.8 },
+
       // Budget execution
       { filename: 'Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf', title: 'Ejecución de Gastos por Carácter Económico - Marzo', category: 'budget', size_mb: 2.1 },
       { filename: 'Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf', title: 'Ejecución de Gastos por Carácter Económico - Junio', category: 'budget', size_mb: 2.3 },
       { filename: 'Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf', title: 'Ejecución de Gastos por Carácter Económico - 3er Trimestre', category: 'budget', size_mb: 2.5 },
       { filename: 'Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf', title: 'Ejecución de Gastos por Carácter Económico - 4to Trimestre', category: 'budget', size_mb: 2.4 },
-      
+
       { filename: 'Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf', title: 'Ejecución de Gastos por Finalidad y Función - Marzo', category: 'budget', size_mb: 1.9 },
       { filename: 'Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf', title: 'Ejecución de Gastos por Finalidad y Función - Junio', category: 'budget', size_mb: 2.0 },
       { filename: 'Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf', title: 'Ejecución de Gastos por Finalidad y Función - 3er Trimestre', category: 'budget', size_mb: 2.2 },
       { filename: 'Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf', title: 'Ejecución de Gastos por Finalidad y Función - 4to Trimestre', category: 'budget', size_mb: 2.1 },
-      
+
       { filename: 'Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf', title: 'Ejecución de Gastos por Fuente de Financiamiento - Marzo', category: 'budget', size_mb: 1.7 },
       { filename: 'Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf', title: 'Ejecución de Gastos por Fuente de Financiamiento - Junio', category: 'budget', size_mb: 1.8 },
       { filename: 'Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf', title: 'Ejecución de Gastos por Fuente de Financiamiento - 3er Trimestre', category: 'budget', size_mb: 1.9 },
       { filename: 'Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf', title: 'Ejecución de Gastos por Fuente de Financiamiento - 4to Trimestre', category: 'budget', size_mb: 2.0 },
-      
-      // Resources execution  
+
+      // Resources execution
       { filename: 'Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf', title: 'Ejecución de Recursos por Carácter Económico - Marzo', category: 'revenue', size_mb: 1.5 },
       { filename: 'Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf', title: 'Ejecución de Recursos por Carácter Económico - Junio', category: 'revenue', size_mb: 1.6 },
       { filename: 'Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf', title: 'Ejecución de Recursos por Carácter Económico - 3er Trimestre', category: 'revenue', size_mb: 1.7 },
       { filename: 'Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf', title: 'Ejecución de Recursos por Carácter Económico - 4to Trimestre', category: 'revenue', size_mb: 1.8 },
-      
+
       { filename: 'Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf', title: 'Ejecución de Recursos por Procedencia - Marzo', category: 'revenue', size_mb: 1.4 },
       { filename: 'Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf', title: 'Ejecución de Recursos por Procedencia - Junio', category: 'revenue', size_mb: 1.5 },
       { filename: 'Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf', title: 'Ejecución de Recursos por Procedencia - 3er Trimestre', category: 'revenue', size_mb: 1.6 },
       { filename: 'Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf', title: 'Ejecución de Recursos por Procedencia - 4to Trimestre', category: 'revenue', size_mb: 1.7 },
-      
+
       // Gender perspective
       { filename: 'Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf', title: 'Ejecución de Gastos con Perspectiva de Género - Marzo', category: 'gender', size_mb: 1.3 },
       { filename: 'Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf', title: 'Ejecución de Gastos con Perspectiva de Género - Junio', category: 'gender', size_mb: 1.4 },
       { filename: 'Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf', title: 'Ejecución de Gastos con Perspectiva de Género - 3er Trimestre', category: 'gender', size_mb: 1.5 },
       { filename: 'Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf', title: 'Ejecución de Gastos con Perspectiva de Género - 4to Trimestre', category: 'gender', size_mb: 1.6 },
-      
+
       // CAIF (Investment, Savings, Financing)
       { filename: 'Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf', title: 'Cuenta de Ahorro, Inversión y Financiamiento - Marzo', category: 'treasury', size_mb: 1.1 },
       { filename: 'Cuenta-Ahorro-Inversion-Financiamiento-3er-Trimestre.pdf', title: 'Cuenta de Ahorro, Inversión y Financiamiento - 3er Trimestre', category: 'treasury', size_mb: 1.2 },
       { filename: 'Cuenta-Ahorro-Inversion-Financiamiento-4to-Trimestre.pdf', title: 'Cuenta de Ahorro, Inversión y Financiamiento - 4to Trimestre', category: 'treasury', size_mb: 1.3 },
-      
+
       // Property declarations
       { filename: 'DDJJ-2024.pdf', title: 'Declaraciones Juradas 2024', category: 'declarations', size_mb: 2.8 },
-      
+
       // Budget ordinance
       { filename: 'ORDENANZA-3200-24-PRESUPUESTO-2024.pdf', title: 'Ordenanza Presupuesto Municipal 2024', category: 'budget', size_mb: 3.2 },
-      
+
       // Financial balance
       { filename: 'BALANCE-GENERAL-2020.pdf', title: 'Balance General 2020', category: 'financial', size_mb: 2.9 },
-      
+
       // Municipal newsletters
       { filename: 'CARMEN_INFORMA_01_Oct2021.pdf', title: 'Carmen Informa - Octubre 2021', category: 'newsletter', size_mb: 4.2 },
       { filename: 'CARMEN_INFORMA_02_Oct2022.pdf', title: 'Carmen Informa - Octubre 2022', category: 'newsletter', size_mb: 5.1 }
     ];
-  
+
     // Transform real PDF documents
     realPdfDocuments.forEach((pdfDoc, index) => {
       documents.push({
@@ -177,7 +177,7 @@ const transformDocumentsData = (yearData: any) => {
 const transformTreasuryData = (yearData: any) => {
   // Extract actual treasury data from the JSON if available
   const treasuryData = yearData.treasury_data || {};
-  
+
   return {
     totalIncome: treasuryData.total_income || 2200000000,
     totalExpenses: treasuryData.total_expenses || 1950000000,
@@ -282,7 +282,7 @@ export const useTransparencyData = (year: number) => {
     try {
       let yearData;
       let isUsingLocalFallback = false;
-      
+
       if (USE_API) {
         try {
           // Try to fetch from API first
@@ -328,11 +328,11 @@ export const useTransparencyData = (year: number) => {
         try {
           console.log(`Attempting to fetch data from local document service for year ${year}...`);
           const localYearlyData = await documentDataService.getYearlyData(year);
-          
+
           // Transform the local data to match our expected format
           if (localYearlyData.totalDocuments > 0) {
             console.log(`Found ${localYearlyData.totalDocuments} documents from local service`);
-            
+
             // Create a synthetic yearData object with the local data
             const localDocuments = Object.values(localYearlyData.categories)
               .flatMap(category => category.documents)
@@ -347,7 +347,7 @@ export const useTransparencyData = (year: number) => {
                 verification_status: doc.verification_status,
                 processing_date: doc.processing_date
               }));
-            
+
             yearData = {
               ...yearData,
               documents: localDocuments,
@@ -358,7 +358,7 @@ export const useTransparencyData = (year: number) => {
               },
               categories: localYearlyData.categories
             };
-            
+
             isUsingLocalFallback = true;
           }
         } catch (localServiceError) {
@@ -378,7 +378,6 @@ export const useTransparencyData = (year: number) => {
           documents_received: yearData.summary?.total_documents || 0
         }
       };
-
 
       setData({
         financialOverview: fullData.financialOverview,
@@ -431,13 +430,13 @@ export const useInvestmentAnalytics = (data: any[]) => {
   const analytics = useMemo<InvestmentAnalytics | null>(() => {
     if (data.length === 0) return null;
 
-    const totalInvestment = data.reduce((sum, inv) => sum + inv.value, 0);
-    const totalDepreciation = data.reduce((sum, inv) => sum + (inv.depreciation || 0), 0);
+    const totalInvestment = data.reduce((sum, inv) => sum + (inv.value ?? 0), 0);
+    const totalDepreciation = data.reduce((sum, inv) => sum + (inv.depreciation ?? 0), 0);
     const netInvestmentValue = totalInvestment - totalDepreciation;
 
     const investmentByType = data.reduce((acc, inv) => {
       const type = inv.asset_type || 'Otros';
-      acc[type] = (acc[type] || 0) + inv.value;
+      acc[type] = (acc[type] || 0) + (inv.value ?? 0);
       return acc;
     }, {} as Record<string, number>);
 
@@ -450,7 +449,7 @@ export const useInvestmentAnalytics = (data: any[]) => {
       .sort((a, b) => b.value - a.value);
 
     const topInvestments = [...data]
-      .sort((a, b) => b.value - a.value)
+      .sort((a, b) => (b.value ?? 0) - (a.value ?? 0))
       .slice(0, 5);
 
     return {

@@ -8,7 +8,7 @@ export { statisticsData } from './statistics-comprehensive';
 
 // Municipal Officials and Personnel
 export { officials } from './officials';
-export { assetDeclarations } from './declarations-data';
+
 export { performanceMetrics } from './performance';
 
 // Documents and Transparency
@@ -21,7 +21,7 @@ export { tenders } from './tenders-data';
 
 // Timeline and Events
 export { timeline } from './timeline';
-export { cases } from './cases';
+
 
 // Yearly Data - TypeScript exports
 export * from './data-2022';
@@ -89,12 +89,7 @@ export const DATA_REGISTRY = {
     description: 'Municipal officials data',
     years: [2022, 2023, 2024, 2025]
   },
-  declarations: {
-    source: './declarations-data',
-    exports: ['assetDeclarations'],
-    description: 'Asset declarations from officials',
-    years: [2022, 2023, 2024, 2025]
-  },
+
   performance: {
     source: './performance',
     exports: ['performanceMetrics'],
@@ -137,12 +132,7 @@ export const DATA_REGISTRY = {
     description: 'Timeline of municipal events',
     years: [2022, 2023, 2024, 2025]
   },
-  cases: {
-    source: './cases',
-    exports: ['cases'],
-    description: 'Investigation cases and findings',
-    years: [2022, 2023, 2024, 2025]
-  },
+
   
   // Yearly Consolidated
   yearly: {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Contact: React.FC = () => {
   const { t } = useLanguage();
@@ -9,14 +10,14 @@ const Contact: React.FC = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -28,7 +29,7 @@ const Contact: React.FC = () => {
       name: '',
       email: '',
       subject: '',
-      message: ''
+      message: '',
     });
   };
 
@@ -42,12 +43,11 @@ const Contact: React.FC = () => {
         <h1 className="font-heading text-3xl font-bold text-gray-800 dark:text-white mb-2">
           {t('contact.title')}
         </h1>
-        <p className="text-gray-600 dark:text-gray-300 mb-6">
-          {t('contact.description')}
-        </p>
+        <p className="text-gray-600 dark:text-gray-300 mb-6">{t('contact.description')}</p>
       </motion.section>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Info panel */}
         <motion.section
           className="lg:col-span-1"
           initial={{ opacity: 0, x: -20 }}
@@ -58,8 +58,9 @@ const Contact: React.FC = () => {
             <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white mb-6">
               {t('contact.info.title')}
             </h2>
-            
+
             <div className="space-y-6">
+              {/* Address */}
               <div className="flex items-start">
                 <div className="flex-shrink-0 p-3 bg-primary-100 dark:bg-primary-900/30 text-primary-500 dark:text-primary-400 rounded-lg">
                   <MapPin size={20} />
@@ -68,12 +69,11 @@ const Contact: React.FC = () => {
                   <h3 className="font-medium text-gray-900 dark:text-white mb-1">
                     {t('contact.info.address.title')}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    {t('contact.info.address.value')}
-                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">{t('contact.info.address.value')}</p>
                 </div>
               </div>
-              
+
+              {/* Phone */}
               <div className="flex items-start">
                 <div className="flex-shrink-0 p-3 bg-primary-100 dark:bg-primary-900/30 text-primary-500 dark:text-primary-400 rounded-lg">
                   <Phone size={20} />
@@ -82,12 +82,11 @@ const Contact: React.FC = () => {
                   <h3 className="font-medium text-gray-900 dark:text-white mb-1">
                     {t('contact.info.phone.title')}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    {t('contact.info.phone.value')}
-                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">{t('contact.info.phone.value')}</p>
                 </div>
               </div>
-              
+
+              {/* Email */}
               <div className="flex items-start">
                 <div className="flex-shrink-0 p-3 bg-primary-100 dark:bg-primary-900/30 text-primary-500 dark:text-primary-400 rounded-lg">
                   <Mail size={20} />
@@ -96,12 +95,11 @@ const Contact: React.FC = () => {
                   <h3 className="font-medium text-gray-900 dark:text-white mb-1">
                     {t('contact.info.email.title')}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    {t('contact.info.email.value')}
-                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">{t('contact.info.email.value')}</p>
                 </div>
               </div>
-              
+
+              {/* Hours */}
               <div className="flex items-start">
                 <div className="flex-shrink-0 p-3 bg-primary-100 dark:bg-primary-900/30 text-primary-500 dark:text-primary-400 rounded-lg">
                   <Clock size={20} />
@@ -110,18 +108,18 @@ const Contact: React.FC = () => {
                   <h3 className="font-medium text-gray-900 dark:text-white mb-1">
                     {t('contact.info.hours.title')}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    {t('contact.info.hours.value')}
-                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">{t('contact.info.hours.value')}</p>
                 </div>
               </div>
             </div>
-            
+
+            {/* Social links */}
             <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
               <h3 className="font-heading text-lg font-bold text-gray-800 dark:text-white mb-4">
                 {t('contact.follow.title')}
               </h3>
               <div className="flex space-x-4">
+                {/* Social icons – keep as‑is (no lint issues) */}
                 <a href="#" className="p-2 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
                   <span className="sr-only">Facebook</span>
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -144,7 +142,8 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </motion.section>
-        
+
+        {/* Contact form */}
         <motion.section
           className="lg:col-span-2"
           initial={{ opacity: 0, x: 20 }}
@@ -155,9 +154,10 @@ const Contact: React.FC = () => {
             <h2 className="font-heading text-xl font-bold text-gray-800 dark:text-white mb-6">
               {t('contact.form.title')}
             </h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Name */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     {t('contact.form.name')}
@@ -172,7 +172,8 @@ const Contact: React.FC = () => {
                     className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white"
                   />
                 </div>
-                
+
+                {/* Email */}
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     {t('contact.form.email')}
@@ -188,7 +189,8 @@ const Contact: React.FC = () => {
                   />
                 </div>
               </div>
-              
+
+              {/* Subject */}
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   {t('contact.form.subject')}
@@ -203,7 +205,8 @@ const Contact: React.FC = () => {
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white"
                 />
               </div>
-              
+
+              {/* Message */}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   {t('contact.form.message')}
@@ -218,10 +221,12 @@ const Contact: React.FC = () => {
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white"
                 ></textarea>
               </div>
-              
+
+              {/* Submit */}
               <div>
                 <button
                   type="submit"
+                  title={t('contact.form.send')}
                   className="w-full py-3 px-4 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500"
                 >
                   {t('contact.form.send')}

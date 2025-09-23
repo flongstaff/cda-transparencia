@@ -344,6 +344,49 @@ class UnifiedDatabaseAdapter {
         }
     }
 
+    async updateDocumentWithFinancialData(documentId, financialData) {
+        const baseFields = ['budgeted', 'executed', 'execution_rate', 'financial_summary', 'updated_at'];
+        
+        let updates = [];
+        let params = [];
+        let paramIndex = 1;
+        
+        // Build update query with proper parameter binding for each database type
+        baseFields.forEach(field => {
+            if (financialData[field] !== undefined) {
+                updates.push(`${field} = ${this.dbType === 'postgresql' ? `${paramIndex}` : '?'}`);
+                params.push(financialData[field]);
+                paramIndex++;
+            }
+        });
+        
+        // Always update the timestamp
+        updates.push(`updated_at = ${this.dbType === 'postgresql' ? `${paramIndex}` : '?'}`);
+        params.push(new Date().toISOString());
+        paramIndex++;
+        
+        if (updates.length === 0) {
+            console.warn('No financial data to update for document:', documentId);
+            return;
+        }
+        
+        const query = `
+            UPDATE documents 
+            SET ${updates.join(', ')}
+            WHERE id = ${this.dbType === 'postgresql' ? `${paramIndex}` : '?'}
+        `;
+        
+        params.push(documentId);
+        
+        try {
+            await this.query(query, params);
+            console.log(`Successfully updated financial data for document ${documentId}`);
+        } catch (error) {
+            console.error(`Error updating financial data for document ${documentId}:`, error);
+            throw error;
+        }
+    }
+
     async getYearlySummary(year) {
         const schema = this.getSchema();
         

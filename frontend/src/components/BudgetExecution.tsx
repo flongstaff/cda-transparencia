@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TrendingUp, DollarSign, Percent, Calendar, FileText, Download } from 'lucide-react';
 import ComprehensiveChart from './charts/ComprehensiveChart';
-import { useTransparencyData } from '../hooks/useTransparencyData';
+import { useComprehensiveData } from '../hooks/useComprehensiveData';
 import { formatCurrencyARS, formatPercentage } from '../utils/formatters';
 
 interface BudgetExecutionProps {
@@ -14,23 +14,23 @@ const BudgetExecution: React.FC<BudgetExecutionProps> = ({
   className = '' 
 }) => {
   const [selectedYear, setSelectedYear] = useState(year);
-  const [selectedQuarter, setSelectedQuarter] = useState('2');
 
-  // Use unified data hook
+  // Use comprehensive data hook
   const {
-    budgetBreakdown,
-    financialOverview,
+    budgetData, // This will contain the budget data, including categories
+    financial, // This will contain financial overview (budget, debt, salaries)
     loading,
     error
-  } = useTransparencyData(selectedYear);
+  } = useComprehensiveData({ year: selectedYear });
+
+  // Extract budgetBreakdown and financialOverview from the new structure
+  const budgetBreakdown = budgetData?.categories || [];
+  const financialOverview = financial?.budget || {}; // Assuming financial.budget holds the overview
 
   const handleYearChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedYear(parseInt(event.target.value));
   };
 
-  const handleQuarterChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedQuarter(event.target.value);
-  };
 
   if (loading) {
     return (
@@ -71,30 +71,15 @@ const BudgetExecution: React.FC<BudgetExecutionProps> = ({
                 onChange={handleYearChange}
                 className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500"
               >
-                {Array.from({ length: 5 }, (_, i) => {
-                  const year = new Date().getFullYear() - i;
-                  return (
-                    <option key={year} value={year}>
-                      {year}
-                    </option>
-                  );
-                })}
+                {getAvailableYears().map((yearConfig) => (
+                  <option key={yearConfig.year} value={yearConfig.year}>
+                    {yearConfig.label}
+                  </option>
+                ))}
               </select>
             </div>
             
-            <div className="flex items-center space-x-2">
-              <FileText className="h-5 w-5 text-gray-500" />
-              <select
-                value={selectedQuarter}
-                onChange={handleQuarterChange}
-                className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="1">Q1 - Trimestre 1</option>
-                <option value="2">Q2 - Trimestre 2</option>
-                <option value="3">Q3 - Trimestre 3</option>
-                <option value="4">Q4 - Trimestre 4</option>
-              </select>
-            </div>
+
 
             <button
               type="button"

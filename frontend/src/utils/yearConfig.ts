@@ -36,18 +36,18 @@ export const AVAILABLE_YEARS: YearDataConfig[] = [
   },
   {
     year: 2023,
-    hasDetailedBudget: false,
-    hasSalaryData: false,
-    hasDebtData: false,
+    hasDetailedBudget: false, // Changed to false since no organized budget data exists
+    hasSalaryData: false, // Changed to false since no organized salary data exists
+    hasDebtData: false, // Changed to false since no organized debt data exists
     hasDocuments: true,
     dataIndex: '/frontend/src/data/data_index_2023.json',
     label: '2023 (Histórico)'
   },
   {
     year: 2022,
-    hasDetailedBudget: false,
-    hasSalaryData: false,
-    hasDebtData: false,
+    hasDetailedBudget: false, // Changed to false since no organized budget data exists
+    hasSalaryData: false, // Changed to false since no organized salary data exists
+    hasDebtData: false, // Changed to false since no organized debt data exists
     hasDocuments: true,
     dataIndex: '/frontend/src/data/data_index_2022.json',
     label: '2022 (Histórico)'
@@ -119,24 +119,26 @@ export function getFallbackYear(requestedYear: number, dataType: 'budget' | 'sal
  */
 export function getDataUrls(year: number) {
   const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/flongstaff/cda-transparencia/main';
-  const fallbackYear = getFallbackYear(year, 'budget');
+  
+  const hasOrganizedBudgetData = hasDataType(year, 'budget');
+  const hasOrganizedSalaryData = hasDataType(year, 'salary');
+  const hasOrganizedDebtData = hasDataType(year, 'debt');
   
   return {
-    // Use year-specific data if available, otherwise use fallback
-    budget: hasDataType(year, 'budget') 
+    // Use organized data if available (only for 2024), otherwise use data index to derive information
+    budget: hasOrganizedBudgetData
       ? `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/budget_analysis/budget_data_${year}.json`
-      : `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/budget_analysis/budget_data_${fallbackYear}.json`,
+      : `${GITHUB_RAW_BASE}/frontend/src/data/data_index_${year}.json`,
     
-    salary: hasDataType(year, 'salary')
+    salary: hasOrganizedSalaryData
       ? `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/salary_oversight/salary_data_${year}.json`
-      : `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/salary_oversight/salary_data_${fallbackYear}.json`,
+      : `${GITHUB_RAW_BASE}/frontend/src/data/data_index_${year}.json`,
     
-    debt: hasDataType(year, 'debt')
+    debt: hasOrganizedDebtData
       ? `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/debt_monitoring/debt_data_${year}.json`
-      : `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/debt_monitoring/debt_data_${fallbackYear}.json`,
+      : `${GITHUB_RAW_BASE}/frontend/src/data/data_index_${year}.json`,
     
-    // Data index always exists for all configured years
-    dataIndex: `${GITHUB_RAW_BASE}/frontend/src/data/data_index_${year}.json`,
+    dataIndex: isYearSupported(year) ? `${GITHUB_RAW_BASE}/frontend/src/data/data_index_${year}.json` : null,
     
     // Common data sources
     multiSource: `${GITHUB_RAW_BASE}/data/multi_source_report.json`,

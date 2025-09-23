@@ -7,6 +7,7 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "populate-db": "node src/populate-db.js",
+    "extract-financial": "node src/scripts/extract-financial-data.js",
     "test-api": "node src/test-api.js",
     "setup-db": "node src/setup-database.js",
     "sync-data": "node src/sync-live-data.js",

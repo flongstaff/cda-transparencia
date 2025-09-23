@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { 
-  DollarSign, 
-  Building, 
+import {
+  DollarSign,
+  Building,
   FolderOpen,
   AlertTriangle,
   Eye,
-  Target
 } from 'lucide-react';
 import FinancialAuditDashboard from '../components/audit/FinancialAuditDashboard';
 import InfrastructureTracker from '../components/audit/InfrastructureTracker';
@@ -51,6 +50,7 @@ const Audit: React.FC = () => {
                 ? 'bg-red-600 text-white'
                 : 'bg-white dark:bg-gray-800 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
+            title="Ver anomalías y multas"
           >
             <AlertTriangle className="h-4 w-4 mr-2" />
             Anomalías y Multas
@@ -63,11 +63,12 @@ const Audit: React.FC = () => {
                 ? 'bg-blue-600 text-white'
                 : 'bg-white dark:bg-gray-800 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
+            title="Auditoría financiera"
           >
             <DollarSign className="h-4 w-4 mr-2" />
             Auditoría Financiera
           </button>
-          
+
           <button
             onClick={() => setActiveSection('infrastructure')}
             className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -75,11 +76,12 @@ const Audit: React.FC = () => {
                 ? 'bg-green-600 text-white'
                 : 'bg-white dark:bg-gray-800 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
+            title="Infraestructura"
           >
             <Building className="h-4 w-4 mr-2" />
             Infraestructura
           </button>
-          
+
           <button
             onClick={() => setActiveSection('categorization')}
             className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -87,6 +89,7 @@ const Audit: React.FC = () => {
                 ? 'bg-purple-600 text-white'
                 : 'bg-white dark:bg-gray-800 text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700'
             }`}
+            title="Documentos"
           >
             <FolderOpen className="h-4 w-4 mr-2" />
             Documentos

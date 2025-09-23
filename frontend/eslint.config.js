@@ -7,7 +7,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config({ ignores: ['dist', 'node_modules', '*.config.js', '*.config.ts'] }, {
+export default tseslint.config({ ignores: ['dist', 'node_modules', '*.config.js', '*.config.ts', '.vite/deps'] }, {
   extends: [js.configs.recommended, ...tseslint.configs.recommended],
   files: ['**/*.{ts,tsx}'],
   languageOptions: {

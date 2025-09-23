@@ -1,6 +1,8 @@
 import { beforeAll, afterEach, afterAll, vi } from 'vitest';
 import { cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/vitest';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { I18nextProvider, i18n } from 'react-i18next'; // Import i18n
 
 // Mock ResizeObserver
 global.ResizeObserver = vi.fn(() => ({
@@ -266,9 +268,7 @@ export const createTestWrapper = (options: {
   i18n?: any;
   theme?: 'light' | 'dark';
 } = {}) => {
-  const { QueryClient, QueryClientProvider } = require('@tanstack/react-query');
-  const { I18nextProvider } = require('react-i18next');
-  const React = require('react');
+
   
   const queryClient = options.queryClient || new QueryClient({
     defaultOptions: {

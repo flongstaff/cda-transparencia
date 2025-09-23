@@ -3,7 +3,7 @@ import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 import FunnelChart from '../FunnelChart';
 import { useAccessibility } from '../../../utils/accessibility';
-import monitoring from '../../../utils/monitoring';
+import { monitoring } from '../../../utils/monitoring';
 
 // Mock dependencies
 vi.mock('../../../utils/accessibility', () => ({
@@ -15,7 +15,7 @@ vi.mock('../../../utils/accessibility', () => ({
 }));
 
 vi.mock('../../../utils/monitoring', () => ({
-  default: {
+  monitoring: {
     captureError: vi.fn(),
     captureMetric: vi.fn()
   }

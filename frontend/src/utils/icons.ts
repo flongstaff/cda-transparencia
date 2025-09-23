@@ -178,7 +178,7 @@ if (process.env.NODE_ENV === 'development') {
   const iconUsageTracker = new Map<string, number>();
   
   const originalCreateIcon = createIcon;
-  // @ts-ignore - Override for development tracking
+  // @ts-expect-error - Override for development tracking
   createIcon = (IconComponent: IconType, props: any) => {
     const iconName = IconComponent.displayName || IconComponent.name || 'UnknownIcon';
     iconUsageTracker.set(iconName, (iconUsageTracker.get(iconName) || 0) + 1);
