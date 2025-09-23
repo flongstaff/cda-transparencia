@@ -11,7 +11,7 @@ import {
   Braces, 
   FileSpreadsheet,
   Presentation,
-  FileWord,
+  FileText,
   Download,
   ExternalLink,
   AlertCircle,

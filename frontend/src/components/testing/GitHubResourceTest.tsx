@@ -16,7 +16,7 @@ import {
   Braces,
   FileSpreadsheet,
   Presentation,
-  FileWord,
+  FileText,
   ExternalLink,
   Download
 } from 'lucide-react';
