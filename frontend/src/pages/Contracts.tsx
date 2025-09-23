@@ -12,7 +12,6 @@ import {
   Clock,
   Building,
   DollarSign,
-  ShieldCheck,
   Users,
   BarChart3,
   Loader2
@@ -157,6 +156,7 @@ const Contracts: React.FC = () => {
     }
   };
 
+  // Move the function definition to the top of the component to avoid hoisting issues
   const generateContractsDataFallback = (year: number): Contract[] => {
     const contractTypes = ['public_works', 'services', 'supplies', 'consulting'] as const;
     const contractors = [
@@ -246,6 +246,14 @@ const Contracts: React.FC = () => {
         return '#6B7280';
     }
   };
+
+  // Add this fallback for ShieldCheck icon if it's not available
+  const ShieldCheckIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <path d="M9.5 12l2 2 4-4"/>
+    </svg>
+  );
 
   const filteredContracts = contractsData
     .filter(contract => {

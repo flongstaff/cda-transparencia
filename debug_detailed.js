@@ -1,18 +1,57 @@
-const express = require('express');
-const app = express();
+#!/usr/bin/env node
 
-// Initialize the comprehensive transparency system
-const routes = require('./backend/src/routes');
+/**
+ * Detailed debugging script to verify all endpoints are working
+ */
 
-console.log('Main routes:');
-console.log(routes.stack);
+const axios = require('axios');
 
-// Check transparency routes
-const transparencyRoutes = require('./backend/src/routes/comprehensiveTransparencyRoutes');
-console.log('\nTransparency routes:');
-console.log(transparencyRoutes.stack);
+const BASE_URL = 'https://cda-transparencia.org';
 
-// Check static data routes
-const staticDataRoutes = require('./backend/src/routes/staticDataRoutes');
-console.log('\nStatic data routes:');
-console.log(staticDataRoutes.stack);
+// Test key pages
+const PAGES = [
+  '/',
+  '/dashboard',
+  '/budget',
+  '/expenses',
+  '/documents',
+  '/about'
+];
+
+async function testPage(path) {
+  try {
+    const response = await axios.get(`${BASE_URL}${path}`, {
+      timeout: 10000
+    });
+    
+    console.log(`✅ ${path}: ${response.status} - ${response.headers['content-type']}`);
+    return response.status === 200;
+  } catch (error) {
+    console.log(`❌ ${path}: ${error.message}`);
+    return false;
+  }
+}
+
+async function runTests() {
+  console.log('🔍 Testing deployed site pages...\\n');
+  
+  let successCount = 0;
+  for (const page of PAGES) {
+    const success = await testPage(page);
+    if (success) successCount++;
+    // Brief pause between requests
+    await new Promise(resolve => setTimeout(resolve, 500));
+  }
+  
+  console.log(`\\n📊 Results: ${successCount}/${PAGES.length} pages loaded successfully`);
+  
+  if (successCount === PAGES.length) {
+    console.log('🎉 All pages are working correctly!');
+  } else {
+    console.log('⚠️  Some pages may have issues');
+  }
+}
+
+if (require.main === module) {
+  runTests().catch(console.error);
+}
