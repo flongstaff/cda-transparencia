@@ -75,7 +75,7 @@ import CategoryPage from './pages/CategoryPage';
 import Spending from './pages/Spending';
 import Investments from './pages/Investments';
 import Treasury from './pages/Treasury';
-import Database from './pages/Database';
+import DatabasePage from './pages/Database';
 import Whistleblower from './pages/Whistleblower';
 import AntiCorruptionDashboard from './pages/AntiCorruptionDashboard';
 import Budget from './pages/Budget';
@@ -90,6 +90,7 @@ import ComprehensiveTestPage from './pages/ComprehensiveTestPage';
 import GitHubResourcesTestPage from './pages/GitHubResourcesTestPage';
 import ImplementationVerificationPage from './pages/ImplementationVerificationPage';
 import RealGitHubResourceTestPage from './pages/RealGitHubResourceTestPage';
+import GitHubIntegrationTestPage from './pages/GitHubIntegrationTestPage';
 
 // Simple navigation for citizens
 const navigationSections = [
