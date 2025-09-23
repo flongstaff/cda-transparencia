@@ -5,10 +5,11 @@ addEventListener('fetch', event => {
 async function handleRequest(request) {
   const url = new URL(request.url);
   
-  // Rewrite the URL to point to the backend API
-  url.hostname = 'api.cda-transparencia.org'; 
-  url.port = '443'; 
-  url.protocol = 'https:';
+  // For local development, forward to local backend
+  // In production, this should point to your deployed backend server
+  url.hostname = 'localhost'; 
+  url.port = '3001'; 
+  url.protocol = 'http:';
   url.pathname = url.pathname.replace('/api', ''); // Remove /api prefix if your backend doesn't use it
 
   const newRequest = new Request(url.toString(), request);
