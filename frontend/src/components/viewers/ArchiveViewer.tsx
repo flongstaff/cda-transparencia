@@ -15,7 +15,7 @@ import {
   FileText,
   FileImage,
   FileSpreadsheet,
-  FileWord,
+  FileText,
   Presentation,
   Braces,
   Code,

@@ -20,7 +20,7 @@ import {
   ExternalLink,
   Download
 } from 'lucide-react';
-import { comprehensiveResourceLoader } from '../utils/comprehensiveResourceLoader';
+import { comprehensiveResourceLoader } from '@utils/comprehensiveResourceLoader';
 import { DocumentMetadata, SupportedFileType } from '../types/documents';
 
 interface TestResult {

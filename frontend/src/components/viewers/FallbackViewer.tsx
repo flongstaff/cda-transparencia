@@ -17,7 +17,7 @@ import {
   Braces,
   FileSpreadsheet,
   Presentation,
-  FileWord
+  FileText
 } from 'lucide-react';
 import { DocumentMetadata, SupportedFileType } from '../../types/documents';
 

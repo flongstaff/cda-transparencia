@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { 
-  FileWord, 
+  FileText, 
   FileSpreadsheet, 
   Presentation,
   Download, 
