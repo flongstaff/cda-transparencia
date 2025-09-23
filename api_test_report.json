@@ -1,0 +1,214 @@
+{
+  "working": [],
+  "broken": [
+    {
+      "name": "Health Check",
+      "endpoint": "/api/health",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 149,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/health</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Transparency Dashboard",
+      "endpoint": "/api/transparency/dashboard",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 165,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/transparency/dashboard</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Available Years",
+      "endpoint": "/api/transparency/available-years",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 171,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/transparency/available-years</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Financial Overview 2024",
+      "endpoint": "/api/transparency/financial/2024",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 170,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/transparency/financial/2024</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Budget Breakdown 2024",
+      "endpoint": "/api/transparency/budget/2024",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 167,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/transparency/budget/2024</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Municipal Debt 2024",
+      "endpoint": "/api/transparency/debt/2024",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 165,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/transparency/debt/2024</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Investments 2024",
+      "endpoint": "/api/transparency/investments/2024",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 172,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/transparency/investments/2024</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "All Documents",
+      "endpoint": "/api/transparency/documents",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 165,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/transparency/documents</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Document Search",
+      "endpoint": "/api/transparency/search?q=gastos",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 162,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/transparency/search</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Static Dashboard",
+      "endpoint": "/api/data/dashboard",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 157,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/dashboard</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Budget Data",
+      "endpoint": "/api/data/financial/budget/2024",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 169,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/financial/budget/2024</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Salary Data",
+      "endpoint": "/api/data/financial/salaries/2024",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 171,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/financial/salaries/2024</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Debt Data",
+      "endpoint": "/api/data/financial/debt/2024",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 167,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/financial/debt/2024</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Anomaly Data",
+      "endpoint": "/api/data/analysis/anomalies/2024",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 171,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/analysis/anomalies/2024</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Audit Results",
+      "endpoint": "/api/data/analysis/audit-results",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 170,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/analysis/audit-results</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Inventory Summary",
+      "endpoint": "/api/data/analysis/inventory",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 166,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/analysis/inventory</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Comparison Report",
+      "endpoint": "/api/data/analysis/comparison",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 167,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/analysis/comparison</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Carmen Export",
+      "endpoint": "/api/data/documents/carmen-export",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 171,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/documents/carmen-export</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Markdown Index",
+      "endpoint": "/api/data/documents/markdown-index",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 172,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/documents/markdown-index</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Web Sources",
+      "endpoint": "/api/data/governance/web-sources",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 170,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/governance/web-sources</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Audit Cycle",
+      "endpoint": "/api/data/governance/audit-cycle",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 170,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/governance/audit-cycle</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "Cache Stats",
+      "endpoint": "/api/data/cache/stats",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 159,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/data/cache/stats</pre>\\n</body>\\n</html>\\n\"..."
+    },
+    {
+      "name": "GitHub Data",
+      "endpoint": "/api/transparency/github/clarius/normas",
+      "status": 404,
+      "hasData": false,
+      "dataType": "string",
+      "dataSize": 177,
+      "sample": "\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n<meta charset=\\\"utf-8\\\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>Cannot GET /api/transparency/github/clarius/normas</pre>\\n</body>\\n</html>\\n\"..."
+    }
+  ],
+  "noData": [],
+  "errors": []
+}

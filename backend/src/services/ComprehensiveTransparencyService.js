@@ -216,6 +216,16 @@ class ComprehensiveTransparencyService {
             console.warn('Could not check markdown version:', error);
         }
 
+        // Get best available URL with fallback logic
+        const fallbackUrls = [];
+        if (doc.year) {
+            fallbackUrls.push(`http://carmendeareco.gob.ar/transparencia/documentos/${doc.year}/${doc.filename}`);
+        }
+        fallbackUrls.push(`http://carmendeareco.gob.ar/transparencia/documentos/${doc.filename}`);
+        fallbackUrls.push(`https://web.archive.org/web/20240101000000*/http://carmendeareco.gob.ar/transparencia/documentos/${doc.filename}`);
+
+        accessMethods.best_url = await this.getBestDocumentUrl(accessMethods.official_url, fallbackUrls);
+
         return accessMethods;
     }
 
@@ -413,7 +423,8 @@ class ComprehensiveTransparencyService {
                 // Try to get provincial data from Buenos Aires Data
                 const baData = await this.fetchFromApi(
                     `${this.externalApis.datos_gob_ar}/package_search`,
-                    { fq: `organization:carmen-de-areco AND year:${year}` }
+                    { fq: `organization:carmen-de-areco AND year:${year}` },
+                    [`${this.externalApis.datos_gob_ar.replace('api.3', 'api/v2')}/package_search`] // Fallback URL
                 );
                 externalData.ba_data = baData;
             } catch (error) {
@@ -424,7 +435,8 @@ class ComprehensiveTransparencyService {
                 // Try to get national budget data
                 const nationalData = await this.fetchFromApi(
                     this.externalApis.presupuesto_abierto,
-                    { year: year }
+                    { year: year },
+                    [`${this.externalApis.presupuesto_abierto.replace('sici', 'v1')}`] // Fallback URL
                 );
                 externalData.national_data = nationalData;
             } catch (error) {
@@ -515,7 +527,7 @@ class ComprehensiveTransparencyService {
         }
     }
 
-    async fetchFromApi(baseUrl, params = {}) {
+    async fetchFromApi(baseUrl, params = {}, fallbackUrls = []) {
         try {
             // Validate inputs
             if (!baseUrl || typeof baseUrl !== 'string') {
@@ -551,25 +563,62 @@ class ComprehensiveTransparencyService {
                 }
             }
             
-            // Make API request
-            const response = await axios.get(baseUrl, { 
-                params,
-                timeout: 15000 // 15 second timeout
-            });
-            const data = response.data;
-            
-            // Type checking for response data
-            if (data && typeof data !== 'object') {
-                throw new Error('Unexpected response data type');
+            // Try primary URL first
+            try {
+                const response = await axios.get(baseUrl, { 
+                    params,
+                    timeout: 15000 // 15 second timeout
+                });
+                const data = response.data;
+                
+                // Type checking for response data
+                if (data && typeof data !== 'object') {
+                    throw new Error('Unexpected response data type');
+                }
+                
+                // Cache the result
+                this.apiCache.set(cacheKey, {
+                    data: data,
+                    timestamp: Date.now()
+                });
+                
+                return data;
+            } catch (primaryError) {
+                console.warn(`Primary API request failed for ${baseUrl}:`, primaryError.message);
+                
+                // Try fallback URLs if provided
+                for (const fallbackUrl of fallbackUrls) {
+                    try {
+                        const fallbackParsedUrl = new URL(fallbackUrl);
+                        if (allowedDomains.includes(fallbackParsedUrl.hostname)) {
+                            const response = await axios.get(fallbackUrl, { 
+                                params,
+                                timeout: 15000 // 15 second timeout
+                            });
+                            const data = response.data;
+                            
+                            // Type checking for response data
+                            if (data && typeof data !== 'object') {
+                                throw new Error('Unexpected response data type');
+                            }
+                            
+                            // Cache the result
+                            this.apiCache.set(cacheKey, {
+                                data: data,
+                                timestamp: Date.now()
+                            });
+                            
+                            console.log(`Successfully fetched data from fallback URL: ${fallbackUrl}`);
+                            return data;
+                        }
+                    } catch (fallbackError) {
+                        console.warn(`Fallback API request failed for ${fallbackUrl}:`, fallbackError.message);
+                    }
+                }
+                
+                // If all attempts failed, throw the original error
+                throw primaryError;
             }
-            
-            // Cache the result
-            this.apiCache.set(cacheKey, {
-                data: data,
-                timestamp: Date.now()
-            });
-            
-            return data;
         } catch (error) {
             console.error(`Error fetching from API ${baseUrl}:`, error.message);
             throw error;
@@ -842,6 +891,38 @@ class ComprehensiveTransparencyService {
         if (ratio >= 0.7) return 'Aceptable';
         if (ratio >= 0.6) return 'Regular';
         return 'Baja';
+    }
+
+    /**
+     * Validate if a URL is accessible
+     */
+    async validateDocumentUrl(url) {
+        try {
+            const response = await axios.head(url, { timeout: 5000 });
+            return response.status >= 200 && response.status < 400;
+        } catch {
+            return false;
+        }
+    }
+
+    /**
+     * Get best available URL for a document with fallback logic
+     */
+    async getBestDocumentUrl(primaryUrl, fallbackUrls = []) {
+        // Try primary URL first
+        if (await this.validateDocumentUrl(primaryUrl)) {
+            return primaryUrl;
+        }
+        
+        // Try fallback URLs
+        for (const fallbackUrl of fallbackUrls) {
+            if (await this.validateDocumentUrl(fallbackUrl)) {
+                return fallbackUrl;
+            }
+        }
+        
+        // Return primary URL as last resort
+        return primaryUrl;
     }
 
     clearCache() {

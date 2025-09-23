@@ -1,5 +1,8 @@
 const express = require('express');
 const StaticDataService = require('../services/StaticDataService');
+const markdownpdf = require('markdown-pdf');
+const path = require('path');
+const fs = require('fs');
 
 const router = express.Router();
 const staticDataService = new StaticDataService();
@@ -326,6 +329,65 @@ router.post('/cache/clear', async (req, res) => {
         res.status(500).json({
             success: false,
             error: 'Failed to clear cache',
+            message: error.message
+        });
+    }
+});
+
+// PDF generation endpoint for markdown files
+router.get('/documents/markdown/:year/:filename/pdf', async (req, res) => {
+    try {
+        const { year, filename } = req.params;
+        
+        // Validate inputs
+        if (!year || !filename) {
+            return res.status(400).json({
+                success: false,
+                error: 'Year and filename are required'
+            });
+        }
+        
+        // Check if filename ends with .md
+        if (!filename.endsWith('.md')) {
+            return res.status(400).json({
+                success: false,
+                error: 'Filename must be a markdown file (.md)'
+            });
+        }
+        
+        // Construct the path to the markdown file
+        const markdownPath = path.join(__dirname, '../../../data/markdown_documents', year, filename);
+        
+        // Check if file exists
+        if (!fs.existsSync(markdownPath)) {
+            return res.status(404).json({
+                success: false,
+                error: 'Markdown file not found'
+            });
+        }
+        
+        // Set response headers for PDF
+        res.setHeader('Content-Type', 'application/pdf');
+        res.setHeader('Content-Disposition', `inline; filename="${filename.replace('.md', '.pdf')}"`);
+        
+        // Convert markdown to PDF and send as response
+        markdownpdf().from(markdownPath).to.buffer((err, buffer) => {
+            if (err) {
+                console.error('PDF generation error:', err);
+                return res.status(500).json({
+                    success: false,
+                    error: 'Failed to generate PDF',
+                    message: err.message
+                });
+            }
+            
+            res.send(buffer);
+        });
+    } catch (error) {
+        console.error('PDF generation error:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to generate PDF',
             message: error.message
         });
     }

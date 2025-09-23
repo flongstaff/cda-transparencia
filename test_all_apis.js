@@ -9,40 +9,43 @@ const axios = require('axios');
 const fs = require('fs');
 
 const BASE_URL = 'http://localhost:3001';
-const API_BASE = `${BASE_URL}/api`;
 
 // All API endpoints based on the routes structure
 const ENDPOINTS = {
-  // Core Data Endpoints
-  'Health Check': '/health',
-  'Years Available': '/api/years',
-  'Budget Data': '/api/budget-data',
-  'Salary Data': '/api/salary-data',
+  // Health and Core Endpoints
+  'Health Check': '/api/health',
   
-  // Financial Data
-  'Property Declarations': '/api/declarations',
-  'Public Tenders': '/api/tenders', 
-  'Financial Reports': '/api/reports',
-  'Treasury Movements': '/api/treasury',
-  'Fees & Rights': '/api/fees',
-  'Operational Expenses': '/api/expenses',
-  'Municipal Debt': '/api/debt',
-  'Investment Assets': '/api/investments',
-  'Financial Indicators': '/api/indicators',
-  'Documents': '/api/documents',
+  // Comprehensive Transparency System Endpoints
+  'Transparency Dashboard': '/api/transparency/dashboard',
+  'Available Years': '/api/transparency/available-years',
+  'Financial Overview 2024': '/api/transparency/financial/2024',
+  'Budget Breakdown 2024': '/api/transparency/budget/2024',
+  'Municipal Debt 2024': '/api/transparency/debt/2024',
+  'Investments 2024': '/api/transparency/investments/2024',
   
-  // PowerBI Integration
-  'PowerBI Data': '/api/powerbi',
+  // Document Endpoints
+  'All Documents': '/api/transparency/documents',
+  'Document Search': '/api/transparency/search?q=gastos',
   
-  // Anti-Corruption System
-  'Corruption Detection': '/api/corruption-detection',
-  'Transparency Metrics': '/api/transparency-metrics', 
-  'Audit Trail': '/api/audit-trail',
-  'Anti-Corruption Dashboard': '/api/anti-corruption-dashboard',
-  'Advanced Fraud Detection': '/api/advanced-fraud-detection',
-  'Anomaly Detection': '/api/anomaly-detection',
-  'Financial Audit': '/api/financial-audit',
-  'Vendor Relationships': '/api/vendor-relationships'
+  // Static Data Endpoints
+  'Static Dashboard': '/api/data/dashboard',
+  'Budget Data': '/api/data/financial/budget/2024',
+  'Salary Data': '/api/data/financial/salaries/2024',
+  'Debt Data': '/api/data/financial/debt/2024',
+  'Anomaly Data': '/api/data/analysis/anomalies/2024',
+  'Audit Results': '/api/data/analysis/audit-results',
+  'Inventory Summary': '/api/data/analysis/inventory',
+  'Comparison Report': '/api/data/analysis/comparison',
+  'Carmen Export': '/api/data/documents/carmen-export',
+  'Markdown Index': '/api/data/documents/markdown-index',
+  'Web Sources': '/api/data/governance/web-sources',
+  'Audit Cycle': '/api/data/governance/audit-cycle',
+  
+  // Cache Management
+  'Cache Stats': '/api/data/cache/stats',
+  
+  // GitHub Data Access
+  'GitHub Data': '/api/transparency/github/clarius/normas'
 };
 
 class APITester {

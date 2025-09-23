@@ -155,6 +155,7 @@ class StaticDataService {
                     documentIndex[year] = files.filter(f => f.endsWith('.md')).map(f => ({
                         filename: f,
                         path: `/data/markdown_documents/${year}/${f}`,
+                        pdf_path: `/api/data/documents/markdown/${year}/${f}/pdf`,
                         title: f.replace('.md', '').replace(/-/g, ' ')
                     }));
                 }
