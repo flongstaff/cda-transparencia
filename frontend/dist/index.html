@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Portal de Transparencia | Municipalidad de Carmen de Areco</title>
+    <meta name="description" content="Portal oficial de transparencia financiera de la Municipalidad de Carmen de Areco, Buenos Aires, Argentina." />
+    <script>
+      // Handle redirects from 404.html for SPA routing
+      (function() {
+        var location = window.location;
+        var query = location.search.slice(1);
+        if (query) {
+          var params = {};
+          query.split('&').forEach(function(part) {
+            var item = part.split('=');
+            params[item[0]] = decodeURIComponent(item[1]);
+          });
+          if (params.p) {
+            var path = params.p.replace(/~and~/g, '&');
+            var hash = params.q ? '#' + params.q.replace(/~and~/g, '&') : '';
+            window.history.replaceState(null, null, path + hash);
+          }
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-BzEAkh3L.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-CDnoQWfg.js">
+    <link rel="modulepreload" crossorigin href="/assets/icons-BygVFJcZ.js">
+    <link rel="modulepreload" crossorigin href="/assets/animations-DyjgXCUB.js">
+    <link rel="modulepreload" crossorigin href="/assets/charts-9rmGjnEM.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CGGLSUGF.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
