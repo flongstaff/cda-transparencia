@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Eye, Download } from 'lucide-react';
-import { useUnifiedData } from '../hooks/useUnifiedData';
+import { Search, Eye, Download, FileText } from 'lucide-react';
+import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 import { formatCurrencyARS } from '../utils/formatters';
+import { useMultiSourceReport } from '../hooks/useMultiSourceReport';
 
 const Reports: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [searchTerm, setSearchTerm] = useState<string>('');
 
-  const { documents, loading, error } = useUnifiedData({ year: selectedYear });
+  const { documents, loading, error } = useCompleteFinalData({ year: selectedYear });
+  const { report, bySource, metrics, loading: loadingMulti, error: errorMulti } = useMultiSourceReport();
 
   // Load reports data (placeholder – replace with real API call if needed)
   const loadReportsDataForYear = async (year: number) => {
@@ -28,6 +30,9 @@ const Reports: React.FC = () => {
   );
 
   const memoizedCount = useMemo(() => filtered?.length ?? 0, [filtered]);
+
+  if (loadingMulti) return <p className="text-center py-8">Cargando reporte…</p>;
+  if (errorMulti) return <p className="text-center text-red-600 py-8">Error: {errorMulti}</p>;
 
   return (
     <div className="space-y-8">
@@ -108,6 +113,61 @@ const Reports: React.FC = () => {
             </div>
           </>
         )}
+      </div>
+
+      {/* Reporte Consolidado */}
+      <div className="max-w-5xl mx-auto p-6">
+        <h1 className="text-3xl font-bold mb-4 flex items-center">
+          <FileText className="w-6 h-6 mr-2 text-indigo-600" />
+          Reporte Consolidado
+        </h1>
+
+        {/* Métricas rápidas */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <div className="bg-white rounded-xl shadow p-4 text-center">
+            <p className="text-sm text-gray-600">Documentos Totales</p>
+            <p className="text-2xl font-semibold">{metrics.totalDocuments}</p>
+          </div>
+          <div className="bg-white rounded-xl shadow p-4 text-center">
+            <p className="text-sm text-gray-600">Fuentes de Datos</p>
+            <p className="text-2xl font-semibold">{metrics.dataSources}</p>
+          </div>
+          <div className="bg-white rounded-xl shadow p-4 text-center">
+            <p className="text-sm text-gray-600">Años Cubiertos</p>
+            <p className="text-2xl font-semibold">{metrics.yearsCovered.join(', ')}</p>
+          </div>
+        </div>
+
+        {/* Lista de documentos principales */}
+        <ul className="space-y-4">
+          {report?.documents?.slice(0, 10).map((doc: any) => (
+            <li key={doc.id} className="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+              <div>
+                <p className="font-medium text-gray-900">{doc.title}</p>
+                <p className="text-sm text-gray-500">{doc.category}</p>
+              </div>
+              <div className="flex items-center space-x-3">
+                <a
+                  href={`/documents/${doc.id}`}
+                  className="text-blue-600 hover:underline flex items-center"
+                >
+                  <Eye className="w-4 h-4 mr-1" />
+                  Ver
+                </a>
+                {doc.url && (
+                  <a
+                    href={doc.url}
+                    download
+                    className="text-green-600 hover:underline flex items-center"
+                  >
+                    <Download className="w-4 h-4 mr-1" />
+                    Descargar
+                  </a>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

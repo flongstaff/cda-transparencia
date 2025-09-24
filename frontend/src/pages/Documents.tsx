@@ -1,92 +1,124 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
-  FileText,
-  BarChart3,
-  Activity,
+  Search,
   Download,
+  Calendar,
+  FileText,
   Eye,
-  Filter,
   Grid,
   List,
-  Search,
-  ExternalLink,
-  Calendar,
+  ChevronDown,
+  ChevronUp,
   CheckCircle,
   AlertCircle,
   Loader2,
-  Database,
-  Archive
 } from 'lucide-react';
-import { useUnifiedData } from '../hooks/useUnifiedData';
-import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
+import { Link } from 'react-router-dom';
+import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
+import DocumentViewer from '../components/viewers/DocumentViewer';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 import { formatFileSize } from '../utils/formatters';
-import { getDocumentIcon } from '../utils/documentUtils';
 
 const Documents: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedType, setSelectedType] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  
-  const { data, isLoading, isError, error } = useUnifiedData({ year: selectedYear });
+  const [sortField, setSortField] = useState<'title' | 'size' | 'date' | 'category'>('title');
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+
+  // 🚀 Use real Carmen de Areco data
+  const {
+    completeData,
+    currentYearData,
+    loading: isLoading,
+    error: error,
+    availableYears
+  } = useCompleteFinalData(selectedYear);
+
+  // Access documents from the new structure (CompleteFinalDataService)
+  const yearDocuments = useMemo(() => {
+    if (currentYearData && currentYearData.documents) {
+      return currentYearData.documents;
+    }
+    return [];
+  }, [currentYearData]);
+
+  const categories = useMemo(() => [...new Set(yearDocuments.map((doc) => doc.category))].sort(), [yearDocuments]);
+
+  const documentTypes = useMemo(() => [...new Set(yearDocuments.map((doc) => doc.type || 'unknown'))].sort(), [yearDocuments]);
+
+  const totalStats = useMemo(() => ({
+    totalDocuments: yearDocuments.length,
+    totalSize: yearDocuments.reduce((sum, doc) => sum + (doc.size_mb || 0), 0),
+    categoriesCount: categories.length,
+    verified: yearDocuments.filter((doc) => doc.verified).length,
+    integrityVerified: yearDocuments.filter((doc) => doc.audit_status === 'verified').length,
+  }), [yearDocuments, categories]);
 
   const filteredDocuments = useMemo(() => {
-    if (!data) return [];
-    return data.documents.filter(doc => {
-      const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            doc.filename.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            doc.category.toLowerCase().includes(searchTerm.toLowerCase());
+    const filtered = yearDocuments.filter((doc) => {
+      const matchesSearch =
+        searchTerm === '' ||
+        (doc.title?.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (doc.filename?.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (doc.category?.toLowerCase().includes(searchTerm.toLowerCase()));
+
       const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+      const matchesType = selectedType === 'all' || doc.type === selectedType;
+
+      return matchesSearch && matchesCategory && matchesType;
     });
-  }, [data, searchTerm, selectedCategory]);
 
-  const stats = useMemo(() => {
-    if (!data) return {
-      total: 0,
-      verified: 0,
-      verificationRate: 0,
-      totalSizeMB: 0,
-      categories: {},
-      uniqueCategories: 0,
-      averageSize: 0
-    };
+    filtered.sort((a, b) => {
+      let aValue: any, bValue: any;
+      switch (sortField) {
+        case 'title':
+          aValue = a.title?.toLowerCase() ?? '';
+          bValue = b.title?.toLowerCase() ?? '';
+          break;
+        case 'size':
+          aValue = a.size_mb ?? 0;
+          bValue = b.size_mb ?? 0;
+          break;
+        case 'date':
+          aValue = new Date(a.processing_date);
+          bValue = new Date(b.processing_date);
+          break;
+        case 'category':
+          aValue = a.category?.toLowerCase() ?? '';
+          bValue = b.category?.toLowerCase() ?? '';
+          break;
+        default:
+          return 0;
+      }
+      if (aValue < bValue) return sortDirection === 'asc' ? -1 : 1;
+      if (aValue > bValue) return sortDirection === 'asc' ? 1 : -1;
+      return 0;
+    });
 
-    const verified = data.documents.filter(doc => doc.verified).length;
-    const totalSize = data.documents.reduce((sum, doc) => sum + doc.size_mb, 0);
-    const categoryStats = data.documents.reduce((acc, doc) => {
-      acc[doc.category] = (acc[doc.category] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    return filtered;
+  }, [yearDocuments, searchTerm, selectedCategory, selectedType, sortField, sortDirection]);
 
-    return {
-      total: data.documents.length,
-      verified: verified,
-      verificationRate: data.documents.length > 0 ? Math.round((verified / data.documents.length) * 100) : 0,
-      totalSizeMB: totalSize,
-      categories: categoryStats,
-      uniqueCategories: Object.keys(categoryStats).length,
-      averageSize: data.documents.length > 0 ? totalSize / data.documents.length : 0
-    };
-  }, [data]);
+  const yearsToDisplay = availableYears.length > 0 
+    ? availableYears 
+    : [selectedYear];
 
-  const categories = useMemo(() => {
-    if (!data) return ['all'];
-    const cats = data.documents.map(doc => doc.category);
-    return ['all', ...Array.from(new Set(cats)).sort()];
-  }, [data]);
+  const handleSort = (field: typeof sortField) => {
+    if (sortField === field) {
+      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+    } else {
+      setSortField(field);
+      setSortDirection('asc');
+    }
+  };
 
-  const availableYears = useMemo(() => {
-    if (!data) return [];
-    return data.metadata.year_coverage;
-  }, [data]);
-
+  // Simple fallback icon function (keeps original behaviour)
   const getCategoryIcon = (category: string) => {
-    const normalizedCat = category.toLowerCase().replace(/[_\s]/g, '');
-    
-    switch (normalizedCat) {
+    const normalized = category.toLowerCase().replace(/[_\s]/g, '');
+    switch (normalized) {
       case 'contrataciones': return '📝';
       case 'declaracionespatrimoniales': return '💼';
       case 'documentosgenerales': return '📄';
@@ -104,42 +136,33 @@ const Documents: React.FC = () => {
       case 'declarations': return '📋';
       case 'financial': return '📊';
       case 'newsletter': return '📰';
-      case 'inversión': return '📈'; // Added for consistency with Investments page
+      case 'inversión': return '📈';
       default: return '📄';
     }
-  }
+  };
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
-          <Loader2 className="animate-spin h-12 w-12 text-blue-600 mx-auto mb-4" />
-          <p className="text-gray-600">Cargando documentos...</p>
+          <Loader2 className="w-8 h-8 animate-spin text-blue-600 mx-auto mb-4" />
+          <p className="text-gray-600">Cargando documentos…</p>
         </div>
       </div>
     );
   }
 
-  if (isError) {
+  if (error) {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-          <div className="flex items-center">
-            <AlertCircle className="h-5 w-5 text-red-400" />
-            <div className="ml-3">
-              <h3 className="text-sm font-medium text-red-800">Error</h3>
-              <div className="mt-2 text-sm text-red-700">
-                <p>{error?.message}</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <AlertCircle className="w-12 h-12 text-red-500 mr-4" />
+        <p className="text-red-600">{error?.message || 'Error al cargar los documentos'}</p>
       </div>
     );
   }
 
   return (
-    <div className="space-y-6">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
@@ -150,12 +173,12 @@ const Documents: React.FC = () => {
             <p className="text-gray-600">
               Accede a todos los documentos oficiales del municipio para el año {selectedYear}
               <span className="ml-2 text-sm bg-green-100 text-green-800 px-2 py-1 rounded">
-                {stats.total} documentos disponibles
+                {totalStats.totalDocuments} documentos disponibles
               </span>
             </p>
           </div>
           <PageYearSelector
-            availableYears={availableYears}
+            availableYears={yearsToDisplay}
             selectedYear={selectedYear}
             onYearChange={setSelectedYear}
           />
@@ -166,38 +189,36 @@ const Documents: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <FileText className="h-8 w-8 text-blue-500" />
-            </div>
+            <FileText className="h-8 w-8 text-blue-500" />
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-500">Total Documentos</p>
-              <p className="text-2xl font-semibold text-blue-600">{stats.total}</p>
-              <p className="text-xs text-gray-400">Promedio: {stats.averageSize.toFixed(1)} MB</p>
+              <p className="text-2xl font-semibold text-blue-600">{totalStats.totalDocuments}</p>
+              <p className="text-xs text-gray-400">
+                Promedio: {(totalStats.totalSize / Math.max(totalStats.totalDocuments, 1)).toFixed(1)} MB
+              </p>
             </div>
           </div>
         </div>
 
         <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <CheckCircle className="h-8 w-8 text-green-500" />
-            </div>
+            <CheckCircle className="h-8 w-8 text-green-500" />
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-500">Verificados</p>
-              <p className="text-2xl font-semibold text-green-600">{stats.verified}</p>
-              <p className="text-xs text-gray-400">{stats.verificationRate}% del total</p>
+              <p className="text-2xl font-semibold text-green-600">{totalStats.verified}</p>
+              <p className="text-xs text-gray-400">
+                {Math.round((totalStats.verified / Math.max(totalStats.totalDocuments, 1)) * 100)}% del total
+              </p>
             </div>
           </div>
         </div>
 
         <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <BarChart3 className="h-8 w-8 text-purple-500" />
-            </div>
+            <FileText className="h-8 w-8 text-purple-500" />
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-500">Categorías</p>
-              <p className="text-2xl font-semibold text-purple-600">{stats.uniqueCategories}</p>
+              <p className="text-2xl font-semibold text-purple-600">{totalStats.categoriesCount}</p>
               <p className="text-xs text-gray-400">Organizadas por tema</p>
             </div>
           </div>
@@ -205,12 +226,10 @@ const Documents: React.FC = () => {
 
         <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <Database className="h-8 w-8 text-orange-500" />
-            </div>
+            <FileText className="h-8 w-8 text-orange-500" />
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-500">Tamaño Total</p>
-              <p className="text-2xl font-semibold text-orange-600">{stats.totalSizeMB.toFixed(1)} MB</p>
+              <p className="text-2xl font-semibold text-orange-600">{totalStats.totalSize.toFixed(1)} MB</p>
               <p className="text-xs text-gray-400">Archivo digital</p>
             </div>
           </div>
@@ -221,25 +240,23 @@ const Documents: React.FC = () => {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Documentos por Categoría</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {Object.entries(stats.categories).slice(0, 8).map(([category, count]) => (
-            <div 
-              key={category} 
+          {categories.slice(0, 8).map((category) => (
+            <div
+              key={category}
               className="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
               onClick={() => setSelectedCategory(category)}
             >
               <span className="text-2xl mr-3">{getCategoryIcon(category)}</span>
               <div>
-                <p className="text-sm font-medium text-gray-900">
-                  {category.replace(/_/g, ' ')}
-                </p>
-                <p className="text-xs text-gray-500">{count} documentos</p>
+                <p className="text-sm font-medium text-gray-900">{category.replace(/_/g, ' ')}</p>
+                <p className="text-xs text-gray-500">{yearDocuments.filter(doc => doc.category === category).length} documentos</p>
               </div>
             </div>
           ))}
         </div>
-        {Object.keys(stats.categories).length > 8 && (
+        {categories.length > 8 && (
           <p className="text-sm text-gray-500 mt-4 text-center">
-            +{Object.keys(stats.categories).length - 8} categorías más disponibles
+            +{categories.length - 8} categorías más disponibles
           </p>
         )}
       </div>
@@ -258,15 +275,29 @@ const Documents: React.FC = () => {
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
-            
+
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
-              {categories.map(category => (
+              <option value="all">Todas las categorías</option>
+              {categories.map((category) => (
                 <option key={category} value={category}>
                   {category === 'all' ? 'Todas las categorías' : `${getCategoryIcon(category)} ${category.replace(/_/g, ' ')}`}
+                </option>
+              ))}
+            </select>
+
+            <select
+              value={selectedType}
+              onChange={(e) => setSelectedType(e.target.value)}
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="all">Todos los tipos</option>
+              {documentTypes.map((type) => (
+                <option key={type} value={type}>
+                  {type === 'all' ? 'Todos los tipos' : type.toUpperCase()}
                 </option>
               ))}
             </select>
@@ -274,7 +305,7 @@ const Documents: React.FC = () => {
 
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-500 mr-2">
-              {filteredDocuments.length} de {stats.total}
+              {filteredDocuments.length} de {totalStats.totalDocuments}
             </span>
             <button
               type="button"
@@ -308,27 +339,19 @@ const Documents: React.FC = () => {
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-2xl">{getCategoryIcon(doc.category)}</div>
                   <div className="flex items-center space-x-1">
-                    {doc.verified && (
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                    )}
+                    {doc.verified && <CheckCircle className="h-4 w-4 text-green-500" />}
                     <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                      {doc.type.toUpperCase()}
+                      {doc.type?.toUpperCase() || 'UNKNOWN'}
                     </span>
                   </div>
                 </div>
-                
-                <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
-                  {doc.title}
-                </h3>
-                
+
+                <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">{doc.title}</h3>
+
                 <div className="text-sm text-gray-600 space-y-1 mb-4">
                   <div className="flex items-center">
-                    <Archive className="h-4 w-4 mr-2" />
-                    <span className="capitalize">{doc.category.replace(/_/g, ' ')}</span>
-                  </div>
-                  <div className="flex items-center">
                     <FileText className="h-4 w-4 mr-2" />
-                    <span>{doc.size_mb.toFixed(1)} MB</span>
+                    <span>{formatFileSize(doc.size_mb * 1024 * 1024)}</span>
                   </div>
                   {doc.processing_date && (
                     <div className="flex items-center">
@@ -337,7 +360,7 @@ const Documents: React.FC = () => {
                     </div>
                   )}
                 </div>
-                
+
                 <div className="flex items-center justify-between">
                   <a
                     href={doc.url}
@@ -363,109 +386,93 @@ const Documents: React.FC = () => {
         </div>
       ) : (
         /* List View */
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200">
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Documento
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Categoría
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Tamaño
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Estado
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Fecha
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Acciones
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                {filteredDocuments.map((doc) => (
-                  <tr key={doc.id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4">
-                      <div className="flex items-center">
-                        <div className="text-xl mr-3">{getDocumentIcon(doc.type as any)}</div>
-                        <div>
-                          <div className="text-sm font-medium text-gray-900 max-w-xs truncate">
-                            {doc.title}
-                          </div>
-                          <div className="text-sm text-gray-500 max-w-xs truncate">
-                            {doc.filename}
-                          </div>
-                        </div>
+        <div className="bg-white rounded-xl-sm border border-gray-200 overflow-hidden">
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead className="bg-gray-50">
+              <tr>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Documento
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Categoría
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Tipo
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Tamaño
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Estado
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Acciones
+                </th>
+              </tr>
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-200">
+              {filteredDocuments.map((doc) => (
+                <tr key={doc.id} className="hover:bg-gray-50">
+                  <td className="px-6 py-4">
+                    <div className="flex items-center">
+                      <div className="text-xl mr-3">{getCategoryIcon(doc.category)}</div>
+                      <div>
+                        <div className="text-sm font-medium text-gray-900 max-w-xs truncate">{doc.title}</div>
+                        <div className="text-sm text-gray-500 max-xs truncate">{doc.filename}</div>
                       </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                        {doc.category.replace(/_/g, ' ')}
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{doc.category.replace(/_/g, ' ')}</td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800">
+                      {doc.type?.toUpperCase() || 'UNKNOWN'}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    {formatFileSize(doc.size_mb * 1024 * 1024)}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    {doc.verified ? (
+                      <span className="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
+                        <CheckCircle className="h-3 w-3 mr-1" />
+                        Verificado
                       </span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      {formatFileSize(doc.size_mb * 1024 * 1024)}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      {doc.verified ? (
-                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                          <CheckCircle className="h-3 w-3 mr-1" />
-                          Verificado
-                        </span>
-                      ) : (
-                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                          <AlertCircle className="h-3 w-3 mr-1" />
-                          Pendiente
-                        </span>
-                      )}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {doc.processing_date 
-                        ? new Date(doc.processing_date).toLocaleDateString('es-AR')
-                        : '-'
-                      }
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <div className="flex items-center space-x-2">
-                        <a
-                          href={doc.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-900"
-                          title="Ver documento"
-                        >
-                          <Eye className="h-4 w-4" />
-                        </a>
-                        <a
-                          href={doc.url}
-                          download
-                          className="text-gray-600 hover:text-gray-900"
-                          title="Descargar documento"
-                        >
-                          <Download className="h-4 w-4" />
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                    ) : (
+                      <span className="inline-flex items-center px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">
+                        <AlertCircle className="h-3 w-3 mr-1" />
+                        Pendiente
+                      </span>
+                    )}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <a
+                      href={doc.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-900 mr-4 flex items-center"
+                      title="Ver documento"
+                    >
+                      <Eye className="h-4 w-4 mr-1" />
+                      Ver
+                    </a>
+                    <a
+                      href={doc.url}
+                      download
+                      className="text-gray-600 hover:text-gray-900 flex items-center"
+                      title="Descargar documento"
+                    >
+                      <Download className="h-4 w-4 mr-1" />
+                      Descargar
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       )}
 
-      {/* Analytics */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Análisis de Documentos</h2>
-        <DocumentAnalysisChart year={selectedYear} />
-      </div>
-
+      {/* No results message */}
       {filteredDocuments.length === 0 && searchTerm && (
         <div className="text-center py-12">
           <FileText className="mx-auto h-12 w-12 text-gray-400" />
@@ -487,26 +494,16 @@ const Documents: React.FC = () => {
       )}
 
       {/* Data Sources Information */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+      <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">
         <div className="flex items-start">
-          <Database className="h-6 w-6 text-blue-500 mt-1 mr-3" />
+          <FileText className="h-6 w-6 text-blue-500 mt-1 mr-3" />
           <div>
-            <h3 className="text-lg font-semibold text-blue-900 mb-2">
-              Fuentes de Datos
-            </h3>
+            <h3 className="text-lg font-semibold text-blue-900 mb-2">Fuentes de Datos</h3>
             <div className="text-sm text-blue-800 space-y-2">
-              <p>
-                • <strong>Base de datos:</strong> Documentos verificados y procesados automáticamente
-              </p>
-              <p>
-                • <strong>Archivos organizados:</strong> Análisis por categorías y exportaciones CSV
-              </p>
-              <p>
-                • <strong>Portal oficial:</strong> Documentos públicos según Ley de Acceso a la Información
-              </p>
-              <p>
-                • <strong>Verificación:</strong> Todos los documentos pasan por controles de integridad
-              </p>
+              <p>• <strong>Base de datos:</strong> Documentos verificados y procesados automáticamente</p>
+              <p>• <strong>Archivos organizados:</strong> Análisis por categorías y exportaciones CSV</p>
+              <p>• <strong>Portal oficial:</strong> Documentos públicos según Ley de Acceso a la Información</p>
+              <p>• <strong>Verificación:</strong> Todos los documentos pasan por controles de integridad</p>
             </div>
           </div>
         </div>

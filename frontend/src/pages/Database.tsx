@@ -13,10 +13,12 @@ import {
   ChevronUp,
   CheckCircle,
   AlertCircle,
-  Loader2
+  Loader2,
+  DollarSign,
+  Users
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useUnifiedData } from '../hooks/useUnifiedData';
+import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
 import DocumentViewer from '../components/viewers/DocumentViewer';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 import { formatFileSize } from '../utils/formatters';
@@ -31,7 +33,7 @@ const Database: React.FC = () => {
   const [sortField, setSortField] = useState<'title' | 'size' | 'date' | 'category'>('title');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
 
-  const { data, isLoading, isError, error } = useUnifiedData({ year: selectedYear });
+  const { data, isLoading, isError, error } = useCompleteFinalData({ year: selectedYear });
 
   const documents = useMemo(() => {
     if (!data) return [];
@@ -150,6 +152,10 @@ const Database: React.FC = () => {
     );
   }
 
+  const totalDocs = data?.metadata?.total_documents ?? 0;
+  const sources = data?.metadata?.data_sources ?? 0;
+  const categoriesCount = new Set(data?.documents?.map((d) => d.category)).size;
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -173,52 +179,34 @@ const Database: React.FC = () => {
         </div>
 
         {/* Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-            <div className="flex items-center">
-              <FileText className="w-8 h-8 text-blue-500" />
-              <div className="ml-4">
-                <p className="text-sm font-medium text-gray-500">Total Documentos</p>
-                <p className="text-2xl font-semibold text-blue-600">
-                  {totalStats.totalDocuments.toLocaleString()}
-                </p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-white rounded-xl shadow p-4 flex items-center">
+            <FileText className="w-8 h-8 text-blue-500 mr-3" />
+            <div>
+              <p className="text-sm text-gray-600">Documentos Totales</p>
+              <p className="text-2xl font-semibold">
+                {totalDocs.toLocaleString()}
+              </p>
             </div>
           </div>
 
-          <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-            <div className="flex items-center">
-              <FileText className="w-8 h-8 text-green-500" />
-              <div className="ml-4">
-                <p className="text-sm font-medium text-gray-500">Tamaño Total</p>
-                <p className="text-2xl font-semibold text-green-600">
-                  {totalStats.totalSize.toFixed(1)} MB
-                </p>
-              </div>
+          <div className="bg-white rounded-xl shadow p-4 flex items-center">
+            <Users className="w-8 h-8 text-green-500 mr-3" />
+            <div>
+              <p className="text-sm text-gray-600">Categorías</p>
+              <p className="text-2xl font-semibold">
+                {categoriesCount}
+              </p>
             </div>
           </div>
 
-          <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-            <div className="flex items-center">
-              <Calendar className="w-8 h-8 text-purple-500" />
-              <div className="ml-4">
-                <p className="text-sm font-medium text-gray-500">Años Cubiertos</p>
-                <p className="text-2xl font-semibold text-purple-600">
-                  {totalStats.yearsCovered}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-            <div className="flex items-center">
-              <CheckCircle className="w-8 h-8 text-orange-500" />
-              <div className="ml-4">
-                <p className="text-sm font-medium text-gray-500">Verificados</p>
-                <p className="text-2xl font-semibold text-orange-600">
-                  {totalStats.verified}
-                </p>
-              </div>
+          <div className="bg-white rounded-xl shadow p-4 flex items-center">
+            <DollarSign className="w-8 h-8 text-purple-500 mr-3" />
+            <div>
+              <p className="text-sm text-gray-600">Fuentes de Datos</p>
+              <p className="text-2xl font-semibold">
+                {sources}
+              </p>
             </div>
           </div>
         </div>

@@ -346,46 +346,60 @@ budget execution issues, and infrastructure project delays.
         logger.info(f"📋 Executive summary generated: {summary_file}")
         return executive_summary
     
-    def run_complete_dashboard(self):
-        """Run complete unified audit dashboard"""
-        logger.info("🏛️ Starting Carmen de Areco Unified Financial Audit Dashboard")
+    def run_complete_dashboard(self, include_external_collection=True):
+        \"\"\"Run complete unified audit dashboard\"\"\"
+        logger.info(\"🏛️ Starting Carmen de Areco Unified Financial Audit Dashboard\")
         
         try:
             # 1. Consolidate all audit findings
             consolidated_data = self.consolidate_audit_findings()
             
-            # 2. Save to dashboard database
+            # 2. Enhanced external data collection if requested
+            if include_external_collection:
+                logger.info(\"🔄 Running enhanced external data collection...\")
+                from enhanced_external_data_collector import EnhancedExternalDataCollector
+                external_collector = EnhancedExternalDataCollector()
+                external_results = external_collector.run_complete_collection()
+                consolidated_data['external_data_collection'] = external_results
+            
+            # 3. Save to dashboard database
             self.save_to_dashboard_db(consolidated_data)
             
-            # 3. Export dashboard data
+            # 4. Export dashboard data
             dashboard_file = self.export_dashboard_data(consolidated_data)
             
-            # 4. Generate executive summary
+            # 5. Generate executive summary
             executive_summary = self.generate_executive_summary(consolidated_data)
             
-            # 5. Print dashboard summary
-            print("\n" + "="*80)
-            print("CARMEN DE ARECO UNIFIED FINANCIAL AUDIT DASHBOARD")
-            print("="*80)
-            print("EXECUTIVE SUMMARY:")
-            print("-"*80)
+            # 6. Print dashboard summary
+            print(\"\\n\" + \"=\"*80)
+            print(\"CARMEN DE ARECO UNIFIED FINANCIAL AUDIT DASHBOARD\")
+            print(\"=\"*80)
+            print(\"EXECUTIVE SUMMARY:\")
+            print(\"-\"*80)
             
             summary = executive_summary['executive_summary']
             metrics = summary['key_metrics']
             
-            print(f"High Salary Cases:     {metrics['high_salary_cases']}")
-            print(f"Budget Discrepancies:  {metrics['budget_discrepancies']}")
-            print(f"Delayed Projects:      {metrics['delayed_projects']}")
-            print(f"Total Tracked Budget:  {metrics['total_tracked_budget']}")
-            print(f"High-Risk Contractors: {metrics['high_risk_contractors']}")
+            print(f\"High Salary Cases:     {metrics['high_salary_cases']}\")
+            print(f\"Budget Discrepancies:  {metrics['budget_discrepancies']}\")
+            print(f\"Delayed Projects:      {metrics['delayed_projects']}\")
+            print(f\"Total Tracked Budget:  {metrics['total_tracked_budget']}\")
+            print(f\"High-Risk Contractors: {metrics['high_risk_contractors']}\")
             
-            print("\nKEY RECOMMENDATIONS:")
-            print("-"*80)
+            # Include external collection metrics if available
+            if include_external_collection and 'external_data_collection' in consolidated_data:
+                ext_results = consolidated_data['external_data_collection']
+                print(f\"External Records:      {ext_results.get('total_records', 0)}\")
+                print(f\"External Errors:       {ext_results.get('total_errors', 0)}\")
+            
+            print(\"\\nKEY RECOMMENDATIONS:\")
+            print(\"-\"*80)
             for i, rec in enumerate(summary['recommendations'][:5], 1):
-                print(f"{i}. {rec}")
+                print(f\"{i}. {rec}\")
             
-            print(f"\nDetailed dashboard data exported to: {dashboard_file}")
-            print("="*80)
+            print(f\"\\nDetailed dashboard data exported to: {dashboard_file}\")
+            print(\"=\"*80)
             
             return {
                 'consolidated_data': consolidated_data,
@@ -394,7 +408,7 @@ budget execution issues, and infrastructure project delays.
             }
             
         except Exception as e:
-            logger.error(f"Error running unified dashboard: {e}")
+            logger.error(f\"Error running unified dashboard: {e}\")
             raise
 
 if __name__ == "__main__":

@@ -160,26 +160,29 @@ export function getDataUrls(year: number) {
   const hasOrganizedSalaryData = hasDataType(year, 'salary');
   const hasOrganizedDebtData = hasDataType(year, 'debt');
   
+  // Use local paths for all data - this will work when serving from the public directory
+  const LOCAL_DATA_BASE = '/data/organized_analysis/financial_oversight';
+  
   return {
-    // Use organized data if available (only for 2024), otherwise use data index to derive information
+    // Use organized data if available, with local fallback
     budget: hasOrganizedBudgetData
-      ? `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/budget_analysis/budget_data_${year}.json`
+      ? `${LOCAL_DATA_BASE}/budget_analysis/budget_data_${year}.json`
       : `${GITHUB_RAW_BASE}/frontend/src/data/data_index_${year}.json`,
     
     salary: hasOrganizedSalaryData
-      ? `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/salary_oversight/salary_data_${year}.json`
+      ? `${LOCAL_DATA_BASE}/salary_oversight/salary_data_${year}.json`
       : `${GITHUB_RAW_BASE}/frontend/src/data/data_index_${year}.json`,
     
     debt: hasOrganizedDebtData
-      ? `${GITHUB_RAW_BASE}/data/organized_analysis/financial_oversight/debt_monitoring/debt_data_${year}.json`
+      ? `${LOCAL_DATA_BASE}/debt_monitoring/debt_data_${year}.json`
       : `${GITHUB_RAW_BASE}/frontend/src/data/data_index_${year}.json`,
     
     dataIndex: isYearSupported(year) ? `${GITHUB_RAW_BASE}/frontend/src/data/data_index_${year}.json` : null,
     
-    // Common data sources
-    multiSource: `${GITHUB_RAW_BASE}/data/multi_source_report.json`,
-    inventory: `${GITHUB_RAW_BASE}/data/organized_analysis/inventory_summary.json`,
-    auditResults: `${GITHUB_RAW_BASE}/data/organized_analysis/audit_cycles/enhanced_audits/enhanced_audit_results.json`
+    // Common data sources with local fallback
+    multiSource: `/data/multi_source_report.json`,
+    inventory: `/data/organized_analysis/inventory_summary.json`,
+    auditResults: `/data/organized_analysis/audit_cycles/enhanced_audits/enhanced_audit_results.json`
   };
 }
 

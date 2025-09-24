@@ -53,7 +53,7 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
     switch (fileType) {
       case 'doc':
       case 'docx':
-        return <FileWord className="w-12 h-12 text-blue-500" />;
+        return <FileText className="w-12 h-12 text-blue-500" />;
       case 'xls':
       case 'xlsx':
         return <FileSpreadsheet className="w-12 h-12 text-green-500" />;

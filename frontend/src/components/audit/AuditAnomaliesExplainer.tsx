@@ -75,21 +75,8 @@ const AuditAnomaliesExplainer: React.FC = () => {
     setError(null);
 
     try {
-      // Get documents and system health
-      const [documents, systemHealth] = await Promise.allSettled([
-        consolidatedApiService.getDocuments(),
-        consolidatedApiService.getSystemHealth()
-      ]);
-
-      const docs = documents.status === 'fulfilled' ? documents.value : [];
-      const health = systemHealth.status === 'fulfilled' ? systemHealth.value : {};
-
-      // Generate realistic audit anomalies
-      const generatedAnomalies = generateAuditAnomalies(docs, health);
-      const generatedImportance = generateDocumentImportanceScores(docs);
-
-      setAnomalies(generatedAnomalies);
-      setDocumentImportance(generatedImportance);
+      const anomaliesData = await consolidatedApiService.getAuditAnomalies();
+      setAnomalies(anomaliesData);
     } catch (err) {
       console.error('Error loading audit data:', err);
       setError(err instanceof Error ? err.message : 'Error loading audit data');
@@ -98,124 +85,9 @@ const AuditAnomaliesExplainer: React.FC = () => {
     }
   };
 
-  // Generate realistic audit anomalies
-  const generateAuditAnomalies = (documents: any[], health: any): AuditAnomaly[] => {
-    const anomalies: AuditAnomaly[] = [];
-    
-    // Missing critical budget documents
-    anomalies.push({
-      id: 'budget-missing-2024',
-      type: 'missing_document',
-      severity: 'critical',
-      title: 'Ejecución Presupuestaria 2024 - Documento Faltante',
-      description: 'No se encontró la ejecución presupuestaria completa del año 2024, requerida por la Ley de Transparencia.',
-      year: 2024,
-      category: 'Presupuesto Municipal',
-      fine_amount: 500000,
-      council_involved: true,
-      council_members: ['Concejal García', 'Concejal Martínez', 'Concejal López'],
-      legal_implications: 'Incumplimiento de la Ley 27.275 de Acceso a la Información Pública. Multa mínima: $500,000 ARS.',
-      importance_score: 95,
-      resolution_status: 'pending',
-      responsible_department: 'Secretaría de Hacienda',
-      created_date: '2024-11-15',
-      impact_assessment: 'Alto impacto en transparencia fiscal. Afecta la confianza ciudadana y el control democrático.',
-      recommended_actions: [
-        'Publicar inmediatamente la ejecución presupuestaria 2024',
-        'Implementar sistema de alerta para vencimientos',
-        'Capacitar al personal responsable',
-        'Establecer protocolo de revisión mensual'
-      ]
-    });
-
-    // Contract irregularity
-    anomalies.push({
-      id: 'contract-overpay-2024',
-      type: 'contract_irregularity',
-      severity: 'high',
-      title: 'Sobrepago en Contrato de Obra Pública',
-      description: 'Contrato de pavimentación muestra sobreprecio del 35% comparado con precios de mercado.',
-      document_id: 'Contrato_CGZzWR1.md',
-      document_name: 'Contrato de Pavimentación Avenida San Martín',
-      amount: 2500000,
-      year: 2024,
-      category: 'Contratos',
-      fine_amount: 1250000,
-      council_involved: true,
-      council_members: ['Concejal Rodríguez', 'Concejal Fernández'],
-      legal_implications: 'Posible violación al artículo 22 de la Ley de Obras Públicas. Multa del 50% del sobreprecio.',
-      importance_score: 88,
-      resolution_status: 'in_progress',
-      responsible_department: 'Secretaría de Obras Públicas',
-      created_date: '2024-10-22',
-      impact_assessment: 'Uso ineficiente de recursos públicos. Posible beneficio indebido a contratista.',
-      recommended_actions: [
-        'Auditoria externa del proceso licitatorio',
-        'Renegociación del contrato',
-        'Investigación administrativa',
-        'Implementar sistema de control de precios'
-      ]
-    });
-
-    // Salary anomaly
-    anomalies.push({
-      id: 'salary-ghost-employee',
-      type: 'salary_anomaly',
-      severity: 'critical',
-      title: 'Empleados Fantasma Detectados',
-      description: 'Se identificaron 3 empleados cobrando salarios sin registro de asistencia o funciones asignadas.',
-      amount: 180000,
-      year: 2024,
-      category: 'Información Salarial',
-      fine_amount: 2000000,
-      council_involved: false,
-      legal_implications: 'Malversación de fondos públicos. Pena de 2 a 6 años de prisión según Código Penal.',
-      importance_score: 92,
-      resolution_status: 'pending',
-      responsible_department: 'Recursos Humanos',
-      created_date: '2024-09-30',
-      impact_assessment: 'Fraude directo al erario público. Afecta credibilidad institucional.',
-      recommended_actions: [
-        'Suspensión inmediata de pagos',
-        'Denuncia penal correspondiente',
-        'Auditoría completa de nómina',
-        'Implementar sistema biométrico de control'
-      ]
-    });
-
-    // Transparency violation
-    anomalies.push({
-      id: 'transparency-delayed-publication',
-      type: 'transparency_issue',
-      severity: 'medium',
-      title: 'Retraso en Publicación de Decretos',
-      description: 'Decretos municipales publicados con 45 días de retraso, violando plazos legales.',
-      year: 2024,
-      category: 'Decretos',
-      fine_amount: 150000,
-      council_involved: false,
-      legal_implications: 'Incumplimiento del plazo de 15 días establecido en la Ordenanza Municipal 3245.',
-      importance_score: 65,
-      resolution_status: 'resolved',
-      resolution_date: '2024-11-01',
-      responsible_department: 'Secretaría Legal y Técnica',
-      created_date: '2024-08-15',
-      impact_assessment: 'Afecta el derecho ciudadano a la información oportuna.',
-      recommended_actions: [
-        'Establecer cronograma de publicaciones',
-        'Designar responsable específico',
-        'Implementar recordatorios automáticos'
-      ]
-    });
-
-    return anomalies;
-  };
-
-
-
   useEffect(() => {
     loadAuditData();
-  }, [loadAuditData]);
+  }, []);
 
   // Filter and sort anomalies
   const filteredAnomalies = anomalies

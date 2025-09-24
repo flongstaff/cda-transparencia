@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TrendingUp, TrendingDown, TrendingFlat } from 'lucide-react';
+import { TrendingUp, TrendingDown, Minus } from 'lucide-react';
 
 interface Category {
   id: string;
@@ -42,7 +42,7 @@ const FinancialCategoryNavigation: React.FC<FinancialCategoryNavigationProps> = 
   const getTrendIcon = (trend?: 'up' | 'down' | 'stable') => {
     if (trend === 'up') return <TrendingUp className="w-4 h-4 text-green-500" />;
     if (trend === 'down') return <TrendingDown className="w-4 h-4 text-red-500" />;
-    if (trend === 'stable') return <TrendingFlat className="w-4 h-4 text-gray-500" />;
+    if (trend === 'stable') return <Minus className="w-4 h-4 text-gray-500" />;
     return null;
   };
 

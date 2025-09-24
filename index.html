@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Transparencia - Carmen de Areco</title>
+    <meta name="description" content="Portal oficial de transparencia financiera de la Municipalidad de Carmen de Areco, Buenos Aires, Argentina.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c5282;
+            --secondary-color: #3182ce;
+            --accent-color: #e53e3e;
+            --light-color: #f7fafc;
+            --dark-color: #2d3748;
+            --success-color: #38a169;
+            --warning-color: #dd6b20;
+            --danger-color: #e53e3e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f8f9fa;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+        }
+        
+        .nav-link.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+        
+        main {
+            padding: 2rem 0;
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        
+        .card-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .card-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .card-content li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .card-content li:last-child {
+            border-bottom: none;
+        }
+        
+        .card-content a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .card-content a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: var(--success-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            transition: background 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #2f855a;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem 0;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            background: #2a4365;
+        }
+        
+        .data-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .data-table th,
+        .data-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .data-table th {
+            background-color: var(--light-color);
+            font-weight: 600;
+        }
+        
+        .data-table tr:hover {
+            background-color: var(--light-color);
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            margin: 1rem 0;
+        }
+        
+        .contact-info a {
+            color: #63b3ed;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-link {
+                text-align: center;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .stats {
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                padding: 0.75rem 1rem;
+            }
+            
+            .stat-number {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Portal de Transparencia</h1>
+                <p class="subtitle">Municipalidad de Carmen de Areco, Buenos Aires, Argentina</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Documentos Organizados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">9</span>
+                        <span class="stat-label">Años de Datos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Categorías</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#documentos" class="nav-link">Documentos</a>
+                <a href="#datos" class="nav-link">Datos Abiertos</a>
+                <a href="#visualizaciones" class="nav-link">Visualizaciones</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <section id="inicio">
+            <h2 class="section-title">Bienvenido al Portal de Transparencia</h2>
+            <div class="data-section">
+                <p>Este portal proporciona acceso público a documentos oficiales, informes financieros y datos de transparencia de la Municipalidad de Carmen de Areco. Todos los documentos han sido recolectados, organizados y categorizados para facilitar el acceso a la información pública.</p>
+                
+                <p>El portal contiene información financiera desde 2017 hasta 2025, incluyendo:</p>
+                
+                <ul>
+                    <li>Ejecución presupuestaria y estados financieros</li>
+                    <li>Informes de ejecución de gastos y recursos</li>
+                    <li>Documentos de personal y recursos humanos</li>
+                    <li>Contrataciones públicas y licitaciones</li>
+                    <li>Declaraciones patrimoniales</li>
+                    <li>Informes de salud pública y programas sociales</li>
+                </ul>
+                
+                <p>Todos los datos están disponibles en formatos abiertos y pueden ser descargados para análisis independiente.</p>
+                
+                <div style="text-align: center;">
+                    <a href="#documentos" class="btn-primary">Explorar Documentos</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="documentos">
+            <h2 class="section-title">Documentos Organizados por Categoría</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Documentos Generales</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-content">
+                            <p>Documentos administrativos, ordenanzas y resoluciones municipales.</p>
+                            <ul>
+                                <li><a href="frontend/public/data/organized_documents/2023/Documentos_Generales/markdown/">2023</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2022/Documentos_Generales/markdown/">2022</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2021/Documentos_Generales/markdown/">2021</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2020/Documentos_Generales/markdown/">2020</a></li>
+                            </ul>
+                            <a href="frontend/public/data/organized_documents/" class="download-btn">Explorar Todos</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Ejecución de Gastos</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-content">
+                            <p>Informes detallados de ejecución de gastos municipales por período.</p>
+                            <ul>
+                                <li><a href="frontend/public/data/organized_documents/2023/Ejecución_de_Gastos/markdown/">2023</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2022/Ejecución_de_Gastos/markdown/">2022</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2021/Ejecución_de_Gastos/markdown/">2021</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2020/Ejecución_de_Gastos/markdown/">2020</a></li>
+                            </ul>
+                            <a href="frontend/public/data/organized_documents/" class="download-btn">Ver Todos los Años</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Ejecución de Recursos</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-content">
+                            <p>Informes de ingresos y ejecución de recursos municipales.</p>
+                            <ul>
+                                <li><a href="frontend/public/data/organized_documents/2023/Ejecución_de_Recursos/markdown/">2023</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2022/Ejecución_de_Recursos/markdown/">2022</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2021/Ejecución_de_Recursos/markdown/">2021</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2020/Ejecución_de_Recursos/markdown/">2020</a></li>
+                            </ul>
+                            <a href="frontend/public/data/organized_documents/" class="download-btn">Explorar Datos</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Estados Financieros</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-content">
+                            <p>Balances generales y estados financieros completos.</p>
+                            <ul>
+                                <li><a href="frontend/public/data/organized_documents/2023/Estados_Financieros/markdown/">2023</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2022/Estados_Financieros/markdown/">2022</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2021/Estados_Financieros/markdown/">2021</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2020/Estados_Financieros/markdown/">2020</a></li>
+                            </ul>
+                            <a href="frontend/public/data/organized_documents/" class="download-btn">Ver Estados</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Declaraciones Patrimoniales</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-content">
+                            <p>Declaraciones juradas de funcionarios municipales.</p>
+                            <ul>
+                                <li><a href="frontend/public/data/organized_documents/2023/Declaraciones_Patrimoniales/markdown/">2023</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2022/Declaraciones_Patrimoniales/markdown/">2022</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2021/Declaraciones_Patrimoniales/markdown/">2021</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2020/Declaraciones_Patrimoniales/markdown/">2020</a></li>
+                            </ul>
+                            <a href="frontend/public/data/organized_documents/" class="download-btn">Acceder a DDJJ</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Salud Pública</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-content">
+                            <p>Informes de salud y programas de atención primaria.</p>
+                            <ul>
+                                <li><a href="frontend/public/data/organized_documents/2023/Salud_Pública/markdown/">2023</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2022/Salud_Pública/markdown/">2022</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2021/Salud_Pública/markdown/">2021</a></li>
+                                <li><a href="frontend/public/data/organized_documents/2020/Salud_Pública/markdown/">2020</a></li>
+                            </ul>
+                            <a href="frontend/public/data/organized_documents/" class="download-btn">Ver Informes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="datos">
+            <h2 class="section-title">Datos Abiertos</h2>
+            <div class="data-section">
+                <p>Todos los documentos y datos están disponibles en formatos abiertos para descarga y análisis independiente:</p>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Recurso</th>
+                            <th>Formato</th>
+                            <th>Descripción</th>
+                            <th>Enlace</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Inventario Completo de Documentos</td>
+                            <td>CSV, JSON</td>
+                            <td>Listado completo de todos los documentos organizados</td>
+                            <td><a href="frontend/public/data/organized_documents/document_inventory.csv">Descargar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Documentos en Texto Plano</td>
+                            <td>Markdown</td>
+                            <td>Versiones en texto de todos los documentos PDF</td>
+                            <td><a href="frontend/public/data/organized_documents/">Explorar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Datos Estructurados</td>
+                            <td>JSON</td>
+                            <td>Datos extraídos en formato estructurado</td>
+                            <td><a href="frontend/public/data/organized_documents/json/">Acceder</a></td>
+                        </tr>
+                        <tr>
+                            <td>Metadatos de Documentos</td>
+                            <td>JSON</td>
+                            <td>Información sobre cada documento (fecha, tipo, tamaño)</td>
+                            <td><a href="frontend/public/data/organized_documents/inventory_summary.json">Ver</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 style="margin-top: 2rem;">API de Datos</h3>
+                <p>Los datos también están disponibles a través de una API REST:</p>
+                <pre style="background: #f5f5f5; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+// Ejemplo de acceso a documentos por año
+GET /api/documents/2023
+GET /api/documents/category/execucion-gastos
+GET /api/documents/search?q=presupuesto</pre>
+                
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="#" class="btn-primary">Documentación de la API</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="visualizaciones">
+            <h2 class="section-title">Visualizaciones de Datos</h2>
+            <div class="data-section">
+                <p>Para acceder al portal de visualización interactiva con gráficos y análisis de datos:</p>
+                
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="frontend/dist/index.html" class="btn-primary" style="padding: 1rem 2rem; font-size: 1.2rem;">
+                        Acceder al Portal Interactivo
+                    </a>
+                </div>
+                
+                <p>El portal interactivo incluye:</p>
+                <ul>
+                    <li>Gráficos de evolución presupuestaria</li>
+                    <li>Análisis comparativo entre períodos</li>
+                    <li>Visualización de estructura de gastos</li>
+                    <li>Indicadores de transparencia financiera</li>
+                    <li>Herramientas de búsqueda y filtrado avanzado</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Portal de Transparencia - Carmen de Areco</h3>
+                <p>Este portal es una iniciativa ciudadana para facilitar el acceso a información pública municipal.</p>
+                
+                <div class="contact-info">
+                    <p><strong>Fuente Oficial:</strong> <a href="https://carmendeareco.gob.ar/transparencia" target="_blank">Municipalidad de Carmen de Areco - Transparencia</a></p>
+                    <p><strong>Repositorio en GitHub:</strong> <a href="https://github.com/flongstaff/cda-transparencia" target="_blank">flongstaff/cda-transparencia</a></p>
+                    <p><strong>Dominio:</strong> <a href="https://cda-transparencia.org" target="_blank">cda-transparencia.org</a></p>
+                </div>
+                
+                <p>© 2025 Portal de Transparencia Carmen de Areco. Los datos publicados son de acceso público y provienen de fuentes oficiales.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple navigation highlighting
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

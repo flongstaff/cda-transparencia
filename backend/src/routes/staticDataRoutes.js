@@ -1,11 +1,13 @@
 const express = require('express');
 const StaticDataService = require('../services/StaticDataService');
+const EnhancedAuditService = require('../services/EnhancedAuditService');
 const markdownpdf = require('markdown-pdf');
 const path = require('path');
 const fs = require('fs');
 
 const router = express.Router();
 const staticDataService = new StaticDataService();
+const enhancedAuditService = new EnhancedAuditService();
 
 // Dashboard endpoint - returns all integrated data
 router.get('/dashboard', async (req, res) => {
@@ -388,6 +390,79 @@ router.get('/documents/markdown/:year/:filename/pdf', async (req, res) => {
         res.status(500).json({
             success: false,
             error: 'Failed to generate PDF',
+            message: error.message
+        });
+    }
+});
+
+// Enhanced Audit endpoints
+router.get('/audit/comprehensive', async (req, res) => {
+    try {
+        const auditData = await enhancedAuditService.getComprehensiveAuditData();
+        
+        res.json({
+            success: true,
+            data: auditData,
+            timestamp: new Date().toISOString()
+        });
+    } catch (error) {
+        console.error('Comprehensive audit data error:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to load comprehensive audit data',
+            message: error.message
+        });
+    }
+});
+
+router.get('/audit/dashboard', async (req, res) => {
+    try {
+        const auditDashboard = await enhancedAuditService.getAuditDashboard();
+        
+        res.json({
+            success: true,
+            data: auditDashboard,
+            timestamp: new Date().toISOString()
+        });
+    } catch (error) {
+        console.error('Audit dashboard error:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to load audit dashboard',
+            message: error.message
+        });
+    }
+});
+
+router.get('/audit/cache/stats', async (req, res) => {
+    try {
+        const stats = enhancedAuditService.getCacheStats();
+        res.json({
+            success: true,
+            data: stats
+        });
+    } catch (error) {
+        console.error('Audit cache stats error:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to get audit cache stats',
+            message: error.message
+        });
+    }
+});
+
+router.post('/audit/cache/clear', async (req, res) => {
+    try {
+        enhancedAuditService.clearCache();
+        res.json({
+            success: true,
+            message: 'Audit cache cleared successfully'
+        });
+    } catch (error) {
+        console.error('Audit cache clear error:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to clear audit cache',
             message: error.message
         });
     }

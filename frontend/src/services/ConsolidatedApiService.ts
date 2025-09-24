@@ -452,6 +452,17 @@ class ConsolidatedApiService {
       throw error;
     }
   }
+
+  // Get audit anomalies
+  async getAuditAnomalies(): Promise<any[]> {
+    try {
+      const response = await this.fetchApi<any>('/analysis/audit-results');
+      return response.anomalies || [];
+    } catch (error) {
+      console.error('Error getting audit anomalies:', error);
+      return [];
+    }
+  }
 }
 
 // Export singleton instance

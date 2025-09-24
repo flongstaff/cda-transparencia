@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Filter, Download, Calendar, FileText, BarChart3, Eye, DollarSign, TrendingUp, Coins, Users, CreditCard, PieChart, Table, AlertTriangle } from 'lucide-react';
+import { Search, Filter, Download, Calendar, FileText, BarChart3, Eye, DollarSign, TrendingUp, Coins, Users, CreditCard, PieChart, Table, AlertTriangle, PiggyBank, Scale } from 'lucide-react';
 import ValidatedChart from '../charts/ValidatedChart';
 import DocumentViewer from '../viewers/DocumentViewer';
 import PageYearSelector from '../selectors/PageYearSelector';

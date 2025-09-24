@@ -931,7 +931,7 @@ class IntegratedTransparencySystem:
 
         return cross_ref
 
-    async def run_comprehensive_analysis(self):
+    async def run_comprehensive_analysis(self, include_external_collection=True):
         """
         Run comprehensive analysis across all data sources
         """
@@ -994,11 +994,17 @@ class IntegratedTransparencySystem:
             analysis_results["data_sources_analyzed"].append(DataSource.PRESUPUESTO_ABIERTO.value)
             analysis_results["detailed_findings"]["presupuesto_abierto"] = presupuesto_results
             
-            # 7. Cross-reference all findings
+            # 7. Enhanced external data collection if requested
+            if include_external_collection:
+                external_collection_results = await self.run_enhanced_external_collection()
+                analysis_results["detailed_findings"]["external_data_collection"] = external_collection_results
+                analysis_results["data_sources_analyzed"].append("enhanced_external_collection")
+            
+            # 8. Cross-reference all findings
             cross_ref_results = self.cross_reference_all_data(analysis_results["detailed_findings"])
             analysis_results["cross_reference_analysis"] = cross_ref_results
             
-            # 8. Calculate overall risk assessment
+            # 9. Calculate overall risk assessment
             risk_indicators = []
             
             # Count high-risk findings
@@ -1040,6 +1046,25 @@ class IntegratedTransparencySystem:
             analysis_results["error"] = str(e)
         
         return analysis_results
+
+    async def run_enhanced_external_collection(self):
+        """
+        Run enhanced external data collection to capture ALL available data from external sources
+        """
+        logger.info("Running enhanced external data collection...")
+        
+        # Import the enhanced collector
+        try:
+            from scripts.audit.enhanced_external_data_collector import EnhancedExternalDataCollector
+            collector = EnhancedExternalDataCollector()
+            results = collector.run_complete_collection()
+            return results
+        except ImportError:
+            logger.warning("Enhanced external data collector not found, skipping...")
+            return {"error": "EnhancedExternalDataCollector not found"}
+        except Exception as e:
+            logger.error(f"Error in enhanced external collection: {e}")
+            return {"error": str(e)}
 
     def generate_recommendations(self, analysis_results: Dict) -> List[str]:
         """Generate recommendations based on analysis results"""

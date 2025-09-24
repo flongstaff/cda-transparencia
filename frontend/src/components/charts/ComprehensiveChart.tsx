@@ -27,7 +27,7 @@ import {
   Loader2
 } from 'lucide-react';
 import { formatCurrencyARS, formatPercentageARS } from '../../utils/formatters';
-import { useComprehensiveData } from '../../hooks/useComprehensiveData';
+import { useCompleteFinalData } from '../../hooks/useCompleteFinalData';
 
 export type ChartType = 
   | 'budget' 
@@ -65,159 +65,236 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
 }) => {
   const [currentVariant, setCurrentVariant] = useState<ChartVariant>(variant);
   
-  // Use comprehensive data hook for real data
-  const { loading, error, budgetData, salaryData, documents, external_apis } = useComprehensiveData({ year });
+  // 🚀 Use the most comprehensive data service - CompleteFinalDataService
+  const { completeData, currentYearData, loading, error } = useCompleteFinalData(year);
 
   // Transform data based on chart type using real data
   const chartData = useMemo(() => {
+    if (!currentYearData) return [];
+
     switch (type) {
       case 'budget': {
+        const budgetData = currentYearData.budget;
         if (!budgetData) return [];
-        
-        // Use real budget data from GitHub repository
-        const categories = budgetData.categories || [];
-        return categories.map((item, index) => ({
-          name: item.name || `Categoría ${index + 1}`,
-          budgeted: item.budgeted || 0,
-          executed: item.executed || 0,
-          execution_rate: item.execution_rate || item.executionPercentage || 0,
-          fill: COLORS[index % COLORS.length]
-        }));
-      }
 
-      case 'treasury': {
-        // Use external API data for treasury movements
-        const movements = external_apis?.multi_source?.sources?.local?.recent_movements || 
-                         budgetData?.recent_financial_movements || [];
-        return movements.slice(0, 6).map((movement, index) => ({
-          name: (movement.description || movement.concept || 'N/A').substring(0, 15) + '...',
-          amount: Math.abs(movement.amount || movement.value || 0),
-          balance: movement.balance || 0,
-          type: movement.type || 'expense',
-          fill: movement.type === 'income' ? '#10B981' : '#EF4444'
-        }));
+        // Handle different possible data structures for budget
+        if (Array.isArray(budgetData.categories)) {
+          return budgetData.categories.map((item: any, index: number) => ({
+            name: item.name || item.descripcion || item.category || `Categoría ${index + 1}`,
+            budgeted: parseFloat(item.budgeted || item.presupuestado || item.budget || 0),
+            executed: parseFloat(item.executed || item.ejecutado || item.execution || 0),
+            execution_rate: parseFloat(item.execution_rate || item.porcentaje_ejecucion || 0),
+            fill: COLORS[index % COLORS.length]
+          }));
+        } else if (budgetData.categories) {
+          // If categories is an object instead of array
+          return Object.entries(budgetData.categories).map(([name, item]: [string, any], index: number) => ({
+            name: name,
+            budgeted: parseFloat(item.budgeted || item.presupuestado || item.budget || 0),
+            executed: parseFloat(item.executed || item.ejecutado || item.execution || 0),
+            execution_rate: parseFloat(item.execution_rate || item.porcentaje_ejecucion || 0),
+            fill: COLORS[index % COLORS.length]
+          }));
+        } else {
+          // If budget data is directly in budgetData object
+          return [{
+            name: budgetData.name || budgetData.descripcion || 'Presupuesto Total',
+            budgeted: parseFloat(budgetData.total_budget || budgetData.budget || 0),
+            executed: parseFloat(budgetData.total_executed || budgetData.executed || 0),
+            execution_rate: budgetData.total_budget > 0 ? parseFloat((budgetData.total_executed / budgetData.total_budget) * 100) : 0,
+            fill: COLORS[0]
+          }];
+        }
       }
 
       case 'document': {
-        const docsByCategory = (documents || []).reduce((acc, doc) => {
-          acc[doc.category] = (acc[doc.category] || 0) + 1;
-          return acc;
-        }, {} as Record<string, number>);
+        const allDocs = currentYearData.documents || [];
+        const docsByCategory: Record<string, number> = {};
         
+        allDocs.forEach((doc: any) => {
+          const category = doc.category || 'General';
+          docsByCategory[category] = (docsByCategory[category] || 0) + 1;
+        });
+
         return Object.entries(docsByCategory).map(([category, count], index) => ({
           name: category.charAt(0).toUpperCase() + category.slice(1),
-          value: count,
+          value: count as number,
           fill: COLORS[index % COLORS.length]
         }));
       }
 
       case 'revenue': {
-        // Use real revenue data from budget data
-        const totalRevenue = budgetData?.totalBudget || budgetData?.totalRevenue || 0;
-        return [
-          { name: 'Ingresos Corrientes', value: totalRevenue * 0.75, fill: COLORS[0] },
-          { name: 'Ingresos de Capital', value: totalRevenue * 0.15, fill: COLORS[1] },
-          { name: 'Financiamiento', value: totalRevenue * 0.10, fill: COLORS[2] }
-        ];
+        const revenueData = currentYearData.budget?.total_revenue || 0;
+        if (!revenueData) return [];
+
+        return [{
+          name: 'Ingresos',
+          value: revenueData,
+          fill: COLORS[0]
+        }];
       }
 
       case 'debt': {
-        // Use real debt data from budget data
-        const totalDebt = budgetData?.totalDebt || 0;
-        return [
-          { name: 'Deuda Corriente', value: totalDebt * 0.40, fill: COLORS[3] },
-          { name: 'Deuda a Largo Plazo', value: totalDebt * 0.60, fill: COLORS[4] }
-        ];
+        const debtData = currentYearData.budget?.debt || currentYearData.debt;
+        if (!debtData) return [];
+
+        if (Array.isArray(debtData)) {
+          return debtData.map((item: any, index: number) => ({
+            name: item.debt_type || item.descripcion || item.tipo || 'Deuda',
+            value: parseFloat(item.amount || item.monto || item.value || 0),
+            fill: COLORS[index % COLORS.length]
+          }));
+        } else {
+          // If debt data is a single object
+          return [{
+            name: debtData.debt_type || debtData.descripcion || 'Deuda Total',
+            value: parseFloat(debtData.amount || debtData.total || 0),
+            fill: COLORS[0]
+          }];
+        }
       }
 
       case 'salary': {
-        // Use real salary data from GitHub repository
-        if (!salaryData?.positions) return [];
-        const positionGroups = salaryData.positions.reduce((acc, pos) => {
-          const category = pos.category || 'General';
-          if (!acc[category]) {
-            acc[category] = { employees: 0, totalSalary: 0, count: 0 };
-          }
-          acc[category].employees += pos.employeeCount || 0;
-          acc[category].totalSalary += (pos.grossSalary || 0) * (pos.employeeCount || 0);
-          acc[category].count += pos.employeeCount || 0;
-          return acc;
-        }, {});
-        
-        return Object.entries(positionGroups).map(([category, data], index) => ({
-          name: category,
-          employees: data.employees,
-          avgSalary: data.count > 0 ? data.totalSalary / data.count : 0,
-          fill: COLORS[index % COLORS.length]
-        }));
+        const salaryData = currentYearData.salaries;
+        if (!salaryData) return [];
+
+        if (Array.isArray(salaryData)) {
+          const positionGroups: Record<string, any> = {};
+          salaryData.forEach((pos: any) => {
+            const category = pos.category || pos.area || pos.departamento || 'General';
+            if (!positionGroups[category]) {
+              positionGroups[category] = { employees: 0, totalSalary: 0, count: 0 };
+            }
+            const employees = parseFloat(pos.employeeCount || pos.cantidad || 1);
+            const salary = parseFloat(pos.grossSalary || pos.sueldo_bruto || pos.salario || 0);
+
+            positionGroups[category].employees += employees;
+            positionGroups[category].totalSalary += salary * employees;
+            positionGroups[category].count += employees;
+          });
+
+          return Object.entries(positionGroups).map(([category, data]: [string, any], index: number) => ({
+            name: category,
+            employees: data.employees,
+            avgSalary: data.count > 0 ? data.totalSalary / data.count : 0,
+            fill: COLORS[index % COLORS.length]
+          }));
+        } else if (salaryData.categories) {
+          // If salary data is grouped by category
+          return Object.entries(salaryData.categories).map(([name, item]: [string, any], index: number) => ({
+            name: name,
+            avgSalary: parseFloat(item.avg_salary || item.promedio || 0),
+            employees: parseInt(item.employee_count || item.cantidad || 0),
+            fill: COLORS[index % COLORS.length]
+          }));
+        } else {
+          // Single salary data
+          return [{
+            name: 'Salarios',
+            avgSalary: parseFloat(salaryData.avg_salary || salaryData.promedio || 0),
+            employees: parseInt(salaryData.employee_count || salaryData.total_employees || 0),
+            fill: COLORS[0]
+          }];
+        }
       }
 
       case 'investment': {
-        // Use real investment data from budget categories
-        const investments = budgetData?.categories?.filter(cat => 
-          cat.name?.toLowerCase().includes('capital') || 
-          cat.name?.toLowerCase().includes('inversión') ||
-          cat.name?.toLowerCase().includes('obras')
-        ) || [];
-        
-        return investments.length > 0 
-          ? investments.map((inv, index) => ({
-              name: inv.name,
-              value: inv.executed || inv.budgeted || 0,
-              fill: COLORS[index % COLORS.length]
-            }))
-          : [
-              { name: 'Infraestructura', value: budgetData?.totalExecuted * 0.35 || 0, fill: COLORS[0] },
-              { name: 'Equipamiento', value: budgetData?.totalExecuted * 0.25 || 0, fill: COLORS[1] },
-              { name: 'Tecnología', value: budgetData?.totalExecuted * 0.15 || 0, fill: COLORS[2] },
-              { name: 'Otros', value: budgetData?.totalExecuted * 0.25 || 0, fill: COLORS[3] }
-            ];
+        const investmentData = currentYearData.budget?.investment || currentYearData.investment;
+        if (!investmentData) return [];
+
+        if (Array.isArray(investmentData)) {
+          return investmentData.map((inv: any, index: number) => ({
+            name: inv.description || inv.name || 'Inversión',
+            value: parseFloat(inv.net_value || inv.value || 0),
+            fill: COLORS[index % COLORS.length]
+          }));
+        } else {
+          // If investment data is a single object
+          return [{
+            name: investmentData.description || investmentData.name || 'Inversión Total',
+            value: parseFloat(investmentData.net_value || investmentData.value || 0),
+            fill: COLORS[0]
+          }];
+        }
       }
 
       case 'contract': {
-        // Use real contract data from external APIs and documents
-        const contractDocs = (documents || []).filter(doc => 
-          doc.category && (
-            doc.category.toLowerCase().includes('contrat') ||
-            doc.category.toLowerCase().includes('licitaci') ||
-            doc.filename?.toLowerCase().includes('contrat') ||
-            doc.filename?.toLowerCase().includes('licitaci')
-          )
-        );
-        
-        // Use multi-source report for contract values
-        const contractData = external_apis?.multi_source?.sources?.contracting || {};
-        
-        return contractDocs.slice(0, 8).map((doc, index) => ({
-          name: (doc.title || doc.filename)?.substring(0, 20) + '...' || `Contrato ${index + 1}`,
-          value: contractData.total_contracted_value || budgetData?.totalContracts || 387425000,
-          count: contractDocs.length,
-          fill: COLORS[index % COLORS.length]
-        }));
+        const contractData = currentYearData.contracts;
+        if (!contractData) return [];
+
+        if (Array.isArray(contractData)) {
+          return contractData.map((item: any, index: number) => ({
+            name: item.title || item.description || `Contrato ${index + 1}`,
+            value: parseFloat(item.amount || 0),
+            fill: COLORS[index % COLORS.length]
+          }));
+        } else if (contractData.documents) {
+          // Handle contracts stored as documents
+          return (contractData.documents as any[]).map((item: any, index: number) => ({
+            name: item.title || item.description || `Contrato ${index + 1}`,
+            value: parseFloat(item.amount || item.budget || 0),
+            fill: COLORS[index % COLORS.length]
+          }));
+        } else {
+          // Single contract data
+          return [{
+            name: contractData.title || contractData.description || 'Contratos',
+            value: parseFloat(contractData.amount || contractData.total_amount || 0),
+            fill: COLORS[0]
+          }];
+        }
+      }
+
+      case 'treasury': {
+        const treasuryData = currentYearData.budget?.treasury || currentYearData.treasury;
+        if (!treasuryData) return [];
+
+        if (treasuryData.movements) {
+          const categories: Record<string, number> = {};
+          treasuryData.movements.forEach((movement: any) => {
+            const category = movement.category || movement.tipo || 'General';
+            categories[category] = (categories[category] || 0) + Math.abs(parseFloat(movement.amount || movement.monto || 0));
+          });
+
+          return Object.entries(categories).map(([name, amount], index) => ({
+            name: name,
+            value: amount,
+            fill: COLORS[index % COLORS.length]
+          }));
+        } else {
+          // Single treasury data
+          return [{
+            name: 'Tesorería',
+            value: parseFloat(treasuryData.amount || treasuryData.total || 0),
+            fill: COLORS[0]
+          }];
+        }
       }
 
       case 'property': {
-        // Use real property declaration data from documents and external sources
-        const propertyDocs = (documents || []).filter(doc => 
-          doc.category && (
-            doc.category.toLowerCase().includes('declaracion') ||
-            doc.category.toLowerCase().includes('patrimonial') ||
-            doc.filename?.toLowerCase().includes('declaracion')
-          )
-        );
-        
-        return propertyDocs.slice(0, 6).map((doc, index) => ({
-          name: (doc.title || doc.filename)?.substring(0, 20) + '...' || `Declaración ${index + 1}`,
-          value: propertyDocs.length, // Use actual document count
-          verified: doc.verified || false,
-          fill: COLORS[index % COLORS.length]
-        }));
+        const propertyData = currentYearData.contracts?.property_declarations || currentYearData.property_declarations;
+        if (!propertyData) return [];
+
+        if (Array.isArray(propertyData)) {
+          return propertyData.map((item: any, index: number) => ({
+            name: item.owner || `Declaración ${index + 1}`,
+            value: 1, // Just count the declarations
+            fill: COLORS[index % COLORS.length]
+          }));
+        } else {
+          // Single property data
+          return [{
+            name: 'Declaraciones Patrimoniales',
+            value: parseInt(propertyData.count || propertyData.total || 0),
+            fill: COLORS[0]
+          }];
+        }
       }
 
       default:
         return [];
     }
-  }, [type, budgetData, salaryData, documents, external_apis]);
+  }, [type, currentYearData]);
 
   const renderChart = () => {
     if (loading) {

@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, FileText, AlertTriangle, CheckCircle, Eye } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useUnifiedTransparencyData } from '../hooks/useUnifiedTransparencyData';
 
 const Whistleblower: React.FC = () => {
   const { t } = useLanguage();
+  const { antiCorruption, loading, error } = useUnifiedTransparencyData(new Date().getFullYear());
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [formData, setFormData] = useState({
     name: '',
@@ -36,6 +38,13 @@ const Whistleblower: React.FC = () => {
       category: 'corruption',
     });
   };
+
+  if (loading) return <p className="text-center py-8">Cargando datos…</p>;
+  if (error) return <p className="text-center text-red-600 py-8">Error: {error}</p>;
+
+  if (!antiCorruption) {
+    return <p className="text-center py-8">No hay datos de anti‑corrupción disponibles.</p>;
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -224,6 +233,46 @@ const Whistleblower: React.FC = () => {
               </button>
             </div>
           </motion.div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            Datos de Anti‑Corrupción
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-xl shadow p-4 flex items-center">
+              <AlertTriangle className="w-8 h-8 text-red-600 mr-3" />
+              <div>
+                <p className="text-sm text-gray-600">Riesgo</p>
+                <p className="text-xl font-semibold">{antiCorruption.risk_level ?? 'Desconocido'}</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow p-4 flex items-center">
+              <CheckCircle className="w-8 h-8 text-green-600 mr-3" />
+              <div>
+                <p className="text-sm text-gray-600">Investigaciones</p>
+                <p className="text-xl font-semibold">{antiCorruption.investigations ?? 0}</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow p-4 flex items-center">
+              <CheckCircle className="w-8 h-8 text-green-600 mr-3" />
+              <div>
+                <p className="text-sm text-gray-600">Denuncias</p>
+                <p className="text-xl font-semibold">{antiCorruption.whistleblower_reports ?? 0}</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow p-4 flex items-center">
+              <CheckCircle className="w-8 h-8 text-green-600 mr-3" />
+              <div>
+                <p className="text-sm text-gray-600">Medidas de Transparencia</p>
+                <p className="text-xl font-semibold">{antiCorruption.transparency_measures ?? 0}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

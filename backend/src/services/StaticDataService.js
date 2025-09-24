@@ -5,11 +5,12 @@ class StaticDataService {
     constructor() {
         this.cache = new Map();
         this.cacheExpiry = 30 * 60 * 1000; // 30 minutes
+        // Updated paths to work with GitHub Pages deployment
         this.dataFolders = {
             frontend: path.join(__dirname, '../../data'),
-            frontendDist: path.join(__dirname, '../../../frontend/dist/data'),
+            frontendDist: path.join(__dirname, '../../data'), // Use the data directory which contains organized_analysis
             carmen: path.join(__dirname, '../../../carmen_transparencia'),
-            audit: path.join(__dirname, '../../enhanced_audit_data')
+            audit: path.join(__dirname, '../../data/organized_analysis/audit_cycles/enhanced_audits') // Point to the enhanced audits directory
         };
     }
 

@@ -9,14 +9,15 @@ import {
   AlertCircle,
   Building,
   BarChart3,
-  Loader2
+  Loader2,
+  Download
 } from 'lucide-react';
-import { useComprehensiveData, useDocumentAnalysis, useFinancialOverview } from '../hooks/useComprehensiveData';
 import SalaryAnalysisChart from '../components/charts/SalaryAnalysisChart';
 import SalaryScaleVisualization from '../components/salaries/SalaryScaleVisualization';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 import { formatCurrencyARS } from '../utils/formatters';
-import { getBestYearForPage, getAvailableYears } from '../utils/yearConfig';
+import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
+import { Link } from 'react-router-dom';
 
 interface SalaryPosition {
   code: string;
@@ -40,32 +41,70 @@ interface SalaryData {
 }
 
 const Salaries: React.FC = () => {
-  const [selectedYear, setSelectedYear] = useState<number>(
-    getBestYearForPage(new Date().getFullYear(), ['salary'])
-  );
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   
-  // Use comprehensive data hooks with effective year
-  const effectiveYear = getBestYearForPage(selectedYear, ['salary']);
-  const { loading, error } = useComprehensiveData({ year: effectiveYear });
-  const documentData = useDocumentAnalysis({ category: 'Recursos_Humanos' });
-  const financialData = useFinancialOverview(selectedYear);
+  // 🚀 Use the most comprehensive data service - CompleteFinalDataService
+  const {
+    completeData,
+    currentYearData,
+    loading,
+    error,
+    availableYears: allAvailableYears
+  } = useCompleteFinalData(selectedYear);
 
-  // Extract salary data from comprehensive sources
-  const salaryData: SalaryData | null = financialData?.analysis?.salaryData || null;
+  // Process salary data from comprehensive data service
+  const salaryData: SalaryData | null = useMemo(() => {
+    const yearSalaryData = currentYearData?.salaries;
+    if (!yearSalaryData) return null;
 
-  // Generate available years dynamically to match available data
-  const availableYears = getAvailableYears();
+    // Extract data from real data structure
+    const totalPayroll = yearSalaryData.totalPayroll || 0;
+    const employeeCount = yearSalaryData.employeeCount || 0;
+    const moduleValue = yearSalaryData.moduleValue || 0;
+    const allPositions: SalaryPosition[] = [];
+
+    if (yearSalaryData.positions && Array.isArray(yearSalaryData.positions)) {
+      yearSalaryData.positions.forEach((pos: any) => {
+        const position: SalaryPosition = {
+          code: pos.code || pos.codigo || 'N/A',
+          name: pos.name || pos.nombre || pos.puesto || 'Posición sin nombre',
+          category: pos.category || pos.categoria || pos.area || 'General',
+          modules: parseFloat(pos.modules || pos.modulos || 0),
+          grossSalary: parseFloat(pos.grossSalary || pos.sueldo_bruto || pos.salario_bruto || 0),
+          somaDeduction: parseFloat(pos.somaDeduction || pos.descuento_soma || 0),
+          ipsDeduction: parseFloat(pos.ipsDeduction || pos.descuento_ips || 0),
+          netSalary: parseFloat(pos.netSalary || pos.sueldo_neto || pos.salario_neto || 0),
+          employeeCount: parseFloat(pos.employeeCount || pos.cantidad_empleados || pos.employees || 1)
+        };
+        allPositions.push(position);
+      });
+    }
+
+    return {
+      year: selectedYear,
+      month: yearSalaryData.month || new Date().getMonth() + 1,
+      moduleValue,
+      totalPayroll,
+      employeeCount,
+      positions: allPositions
+    };
+  }, [currentYearData, selectedYear]);
 
   // Filter salary-related documents from comprehensive data
   const salaryDocuments = useMemo(() => {
-    return (documentData.documents || []).filter(doc => 
-      doc.category === 'Recursos_Humanos' || 
+    if (!currentYearData?.documents) return [];
+    const allDocs = currentYearData.documents;
+    return allDocs.filter(doc =>
+      doc.category?.toLowerCase().includes('recursos') ||
+      doc.category?.toLowerCase().includes('humanos') ||
+      doc.category?.toLowerCase().includes('salario') ||
       doc.title?.toLowerCase().includes('salarial') ||
       doc.title?.toLowerCase().includes('escala') ||
+      doc.title?.toLowerCase().includes('salarios') ||
       doc.title?.toLowerCase().includes('sueldo') ||
       doc.category === 'salaries'
     );
-  }, [documentData.documents]);
+  }, [currentYearData]);
 
   // Process salary data from organized files
   const processedSalaryData = useMemo(() => {
@@ -105,7 +144,7 @@ const Salaries: React.FC = () => {
     };
   }, [salaryData]);
 
-  // Calculate total statistics from real data
+  // Calculate total statistics from comprehensive data
   const totalStats = useMemo(() => {
     if (!processedSalaryData) {
       return {
@@ -177,7 +216,7 @@ const Salaries: React.FC = () => {
             </p>
           </div>
           <PageYearSelector
-            availableYears={availableYears}
+            availableYears={allAvailableYears}
             selectedYear={selectedYear}
             onYearChange={setSelectedYear}
           />

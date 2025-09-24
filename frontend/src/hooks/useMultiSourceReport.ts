@@ -29,13 +29,13 @@ export interface MultiSourceReport {
 }
 
 export const useMultiSourceReport = () => {
-  // Use the unified data hook to get the multi‑source data
-  const { 
+  // Updated destructuring to match the unified hook’s return shape
+  const {
     data,
     refetch,
     isLoading,
     isError,
-    error
+    error,
   } = useUnifiedData();
 
   // Transform the data into a multi‑source report format
@@ -58,7 +58,7 @@ export const useMultiSourceReport = () => {
           dataSources: 0,
         },
         loading: isLoading,
-        error: isError ? error.message : null,
+        error: isError ? error?.message : null,
       };
     }
 
@@ -79,11 +79,11 @@ export const useMultiSourceReport = () => {
     }, {} as Record<string, number>);
 
     const yearsCovered = Array.from(
-      new Set(data.documents.map(doc => doc.year).filter(Boolean))
+      new Set(data.documents.map((doc: any) => doc.year).filter(Boolean))
     ).sort();
 
     const categoriesCovered = Array.from(
-      new Set(data.documents.map(doc => doc.category).filter(Boolean))
+      new Set(data.documents.map((doc: any) => doc.category).filter(Boolean))
     );
 
     return {
@@ -97,11 +97,10 @@ export const useMultiSourceReport = () => {
         dataSources: data.metadata.data_sources,
       },
       loading: isLoading,
-      error: isError ? error.message : null,
+      error: isError ? error?.message : null,
     };
   }, [data, isLoading, isError, error]);
 
-  // Method to refresh the report data
   const refreshReport = useCallback(() => {
     refetch();
     console.log('Refreshing multi-source report...');

@@ -1,0 +1,44 @@
+  /**
+   * Load yearly data for a specific data type with multiple fallback paths
+   */
+  private async loadYearlyDataMultiSource(year: number, dataType: string, target: Record<number, any>): Promise<void> {
+    // Define multiple search patterns for robust data discovery
+    const patterns = [
+      `/data/organized_analysis/financial_oversight/${dataType}_analysis/${dataType}_data_${year}.json`,
+      `/data/organized_analysis/financial_oversight/${dataType}_monitoring/${dataType}_data_${year}.json`,
+      `/data/organized_analysis/financial_oversight/${dataType}_oversight/${dataType}_data_${year}.json`,
+      `/data/organized_documents/json/${dataType}_data_${year}.json`,
+      `/data/organized_documents/json/${dataType}_data.json`,
+      `/data/organized_documents/json/${dataType.toUpperCase()}_DATA_${year}.json`,
+      `/data/organized_documents/json/${dataType.toLowerCase()}_${year}.json`
+    ];
+
+    // First try to load from local files (relative to public directory)
+    for (const path of patterns) {
+      try {
+        const response = await fetch(path);
+        if (response.ok) {
+          const data = await response.json();
+          target[year] = data;
+          return;
+        }
+      } catch (error) {
+        // Continue to next pattern
+      }
+    }
+
+    // Then try GitHub URLs as fallback
+    const githubPatterns = patterns.map(pattern => `${GITHUB_RAW_BASE}${pattern}`);
+    for (const path of githubPatterns) {
+      try {
+        const response = await fetch(path);
+        if (response.ok) {
+          const data = await response.json();
+          target[year] = data;
+          return;
+        }
+      } catch (error) {
+        // Continue to next pattern
+      }
+    }
+  }

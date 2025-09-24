@@ -14,10 +14,10 @@ import {
   FileText,
   BarChart3
 } from 'lucide-react';
-import { useFinancialOverview, useBudgetAnalysis, useDocumentAnalysis } from '../hooks/useComprehensiveData';
+import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
-// SpendingCategoryChart and ExecutionRateChart are replaced by UniversalChart
+import UniversalChart from '../components/charts/UnifiedChart'; // Updated to use the unified chart
 import { formatCurrencyARS, formatPercentageARS } from '../utils/formatters';
 
 interface SpendingData {
@@ -44,20 +44,18 @@ const Spending: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'overview' | 'categories' | 'trends'>('overview');
 
-  // Data hooks
-  const { data: financialData, loading: financialLoading, error: financialError } = useFinancialOverview(selectedYear);
-  const { budget: budgetData, loading: budgetLoading, error: budgetError } = useBudgetAnalysis(selectedYear);
-  const { documents, loading: docsLoading, error: docsError } = useDocumentAnalysis({ 
-    year: selectedYear, 
-    category: 'budget' 
-  });
+  // 🚀 Use the most comprehensive data service - CompleteFinalDataService
+  const {
+    completeData,
+    currentYearData,
+    loading,
+    error,
+    availableYears
+  } = useCompleteFinalData(selectedYear);
 
-  const loading = financialLoading || budgetLoading || docsLoading;
-  const error = financialError || budgetError || docsError;
-
-  // Process spending data
-  const spendingData = useMemo<SpendingData>(() => {
-    if (!financialData) {
+  // Process spending data from comprehensive data service
+  const spendingData = useMemo(() => {
+    if (!currentYearData) {
       return {
         totalBudget: 0,
         totalExecuted: 0,
@@ -67,40 +65,55 @@ const Spending: React.FC = () => {
       };
     }
 
+    const budgetData = currentYearData.budget;
+    
+    // Handle different possible data structures for budget
+    const totalBudget = budgetData?.total_budget || 
+                       budgetData?.totalBudget || 
+                       budgetData?.categories?.reduce((sum: number, cat: any) => sum + (cat.budgeted || 0), 0) || 0;
+    const totalExecuted = budgetData?.total_executed || 
+                         budgetData?.totalExecuted || 
+                         budgetData?.categories?.reduce((sum: number, cat: any) => sum + (cat.executed || 0), 0) || 0;
+    const executionRate = totalBudget > 0 ? (totalExecuted / totalBudget) * 100 : 0;
+
+    // Extract category breakdown if available
+    const categoryBreakdown = budgetData?.categories || [];
+
     return {
-      totalBudget: financialData.totalBudget || 0,
-      totalExecuted: financialData.totalExecuted || 0,
-      executionRate: financialData.executionRate || 0,
-      categoryBreakdown: financialData.categoryBreakdown?.map(cat => ({
-        name: cat.name,
-        budgeted: cat.budgeted || 0,
-        executed: cat.executed || 0,
-        executionRate: cat.execution_rate || 0,
-        variance: (cat.executed || 0) - (cat.budgeted || 0)
-      })) || [],
-      monthlyTrend: generateMonthlyTrendData()
+      totalBudget,
+      totalExecuted,
+      executionRate,
+      categoryBreakdown: categoryBreakdown.map((cat: any) => ({
+        name: cat.name || cat.category || cat.description || 'Categoría no identificada',
+        budgeted: cat.budgeted || cat.budget_amount || cat.budget || 0,
+        executed: cat.executed || cat.executed_amount || cat.executed || 0,
+        executionRate: cat.execution_rate || cat.executionRate || 0,
+        variance: (cat.executed || cat.executed_amount || cat.executed || 0) - 
+                  (cat.budgeted || cat.budget_amount || cat.budget || 0)
+      })),
+      monthlyTrend: [] // Add monthly trend data if available in completeData
     };
-  }, [financialData]);
+  }, [currentYearData]);
 
-  const generateMonthlyTrendData = () => {
-    return Array.from({ length: 12 }, (_, i) => ({
-      month: new Date(selectedYear, i, 1).toLocaleDateString('es-AR', { month: 'long' }),
-      budgeted: Math.floor(Math.random() * 200000000) + 100000000,
-      executed: Math.floor(Math.random() * 180000000) + 80000000
-    }));
-  };
-
-  const availableYears = Array.from({ length: 5 }, (_, i) => new Date().getFullYear() - i);
-
-  // Filter budget-related documents
-  const budgetDocuments = useMemo(() => {
-    return (documents || []).filter(doc => 
-      doc.category?.toLowerCase().includes('budget') ||
+  // Filter spending-related documents from complete data
+  const spendingDocuments = useMemo(() => {
+    if (!currentYearData?.documents) return [];
+    
+    return currentYearData.documents.filter(doc => 
+      doc.category?.toLowerCase().includes('gasto') ||
+      doc.category?.toLowerCase().includes('spending') ||
       doc.category?.toLowerCase().includes('presupuesto') ||
-      doc.title?.toLowerCase().includes('budget') ||
-      doc.title?.toLowerCase().includes('presupuesto')
+      doc.category?.toLowerCase().includes('budget') ||
+      doc.title?.toLowerCase().includes('gasto') ||
+      doc.title?.toLowerCase().includes('spending') ||
+      doc.title?.toLowerCase().includes('presupuesto') ||
+      doc.title?.toLowerCase().includes('budget')
     );
-  }, [documents]);
+  }, [currentYearData]);
+
+  // Spending efficiency and audit overview from comprehensive data
+  const spendingEfficiency = currentYearData?.budget?.spending_efficiency;
+  const auditOverview = currentYearData?.budget?.audit_overview;
 
   if (loading) {
     return (
@@ -261,22 +274,24 @@ const Spending: React.FC = () => {
               <div className="bg-white rounded-xl shadow-sm p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-6">Distribución por Categoría</h2>
                 <UniversalChart
-                  data={spendingData.categoryBreakdown.map(item => ({ name: item.name, value: item.executed }))}
-                  chartType="pie"
+                  type="budget"
+                  year={selectedYear}
                   title="Distribución de Gastos por Categoría"
-                  height={400}
+                  variant="pie"
                   showControls={false}
+                  height={400}
                 />
               </div>
 
               <div className="bg-white rounded-xl shadow-sm p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-6">Tasas de Ejecución</h2>
                 <UniversalChart
-                  data={spendingData.categoryBreakdown.map(item => ({ name: item.name, value: item.executionRate }))}
-                  chartType="bar"
+                  type="budget"
+                  year={selectedYear}
                   title="Tasas de Ejecución por Categoría"
-                  height={400}
+                  variant="bar"
                   showControls={false}
+                  height={400}
                 />
               </div>
             </motion.div>
@@ -334,7 +349,7 @@ const Spending: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {budgetDocuments.slice(0, 6).map((doc) => (
+            {spendingDocuments.slice(0, 6).map((doc) => (
               <div key={doc.id} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-gray-900 truncate">{doc.title}</span>
@@ -356,6 +371,49 @@ const Spending: React.FC = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </motion.div>
+
+        {/* Spending Efficiency and Audit Overview */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="bg-white rounded-xl shadow-sm p-6 mt-8"
+        >
+          <div className="mb-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <BarChart3 className="w-6 h-6 mr-2 text-purple-600" />
+              Eficiencia del Gasto
+            </h2>
+
+            {spendingEfficiency ? (
+              <div className="bg-white rounded-xl shadow p-4 mb-6">
+                <p className="text-sm text-gray-600">Puntuación de Eficiencia</p>
+                <p className="text-2xl font-semibold">{spendingEfficiency.efficiency_score ?? 'N/A'}</p>
+                <p className="mt-2 text-gray-600">{spendingEfficiency.recommendations?.join(', ')}</p>
+              </div>
+            ) : (
+              <p className="text-gray-600 mb-4">No hay datos de eficiencia de gasto.</p>
+            )}
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold mb-3 flex items-center">
+              <CheckCircle className="w-5 h-5 mr-2 text-green-600" />
+              Resumen de Auditoría
+            </h2>
+
+            {auditOverview ? (
+              <div className="bg-white rounded-xl shadow p-4">
+                <p className="text-sm text-gray-600">Hallazgos</p>
+                <p className="text-xl font-semibold">{auditOverview.findings}</p>
+                <p className="mt-2 text-sm text-gray-600">Recomendaciones: {auditOverview.recommendations}</p>
+                <p className="mt-2 text-sm text-gray-600">Puntuación de Cumplimiento: {auditOverview.compliance_score}</p>
+              </div>
+            ) : (
+              <p className="text-gray-600">No hay datos de auditoría disponibles.</p>
+            )}
           </div>
         </motion.div>
       </div>

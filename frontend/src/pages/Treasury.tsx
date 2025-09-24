@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -12,9 +11,10 @@ import {
   BarChart3,
   PiggyBank, 
   Landmark, 
-  Receipt
+  Receipt,
+  ArrowDownUp
 } from 'lucide-react';
-import { useFinancialOverview, useDocumentAnalysis } from '../hooks/useComprehensiveData';
+import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 import { formatCurrencyARS } from '../utils/formatters';
 
@@ -38,18 +38,19 @@ const Treasury: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [viewMode, setViewMode] = useState<'overview' | 'sources' | 'trends'>('overview');
 
-  // Data hooks
-  const { data: financialData, loading: financialLoading, error: financialError } = useFinancialOverview(selectedYear);
-  const { documents, loading: docsLoading, error: docsError } = useDocumentAnalysis({ 
-    year: selectedYear, 
-    category: 'revenue' 
-  });
+  // 🚀 Use the most comprehensive data service - CompleteFinalDataService
+  const {
+    completeData,
+    currentYearData,
+    loading,
+    error,
+    availableYears
+  } = useCompleteFinalData(selectedYear);
 
-  const loading = financialLoading || docsLoading;
-  const error = financialError || docsError;
-
-  // Process revenue data
+  // Process revenue data from comprehensive data service
   const revenueData = useMemo<RevenueData>(() => {
+    const financialData = currentYearData?.budget;
+
     if (!financialData) {
       return {
         totalRevenue: 0,
@@ -61,21 +62,26 @@ const Treasury: React.FC = () => {
       };
     }
 
+    const totalRevenue = financialData.total_revenue || financialData.ingresos_totales || 0;
+    const taxRevenue = financialData.tax_revenue || financialData.ingresos_tributarios || 0;
+    const nonTaxRevenue = financialData.non_tax_revenue || financialData.ingresos_no_tributarios || 0;
+    const transfers = financialData.transfers || financialData.transferencias || 0;
+
     const sourceBreakdown = [
-      { name: 'Ingresos Tributarios', amount: financialData.taxRevenue || 0 },
-      { name: 'Ingresos No Tributarios', amount: financialData.nonTaxRevenue || 0 },
-      { name: 'Transferencias', amount: financialData.transfers || 0 },
+      { name: 'Ingresos Tributarios', amount: taxRevenue },
+      { name: 'Ingresos No Tributarios', amount: nonTaxRevenue },
+      { name: 'Transferencias', amount: transfers },
     ];
 
     return {
-      totalRevenue: financialData.totalRevenue || 0,
-      taxRevenue: financialData.taxRevenue || 0,
-      nonTaxRevenue: financialData.nonTaxRevenue || 0,
-      transfers: financialData.transfers || 0,
+      totalRevenue,
+      taxRevenue,
+      nonTaxRevenue,
+      transfers,
       sourceBreakdown,
-      monthlyTrend: generateMonthlyTrendData(financialData.totalRevenue)
+      monthlyTrend: generateMonthlyTrendData(totalRevenue)
     };
-  }, [financialData]);
+  }, [currentYearData, selectedYear]);
 
   const generateMonthlyTrendData = (totalRevenue: number) => {
     if(!totalRevenue) return [];
@@ -85,16 +91,17 @@ const Treasury: React.FC = () => {
     }));
   };
 
-  const availableYears = Array.from({ length: 5 }, (_, i) => new Date().getFullYear() - i);
-
-  // Filter revenue-related documents
+  // Filter revenue-related documents from comprehensive data
   const revenueDocuments = useMemo(() => {
-    return (documents || []).filter(doc => 
+    if (!currentYearData?.documents) return [];
+    return currentYearData.documents.filter(doc => 
       doc.category?.toLowerCase().includes('revenue') ||
       doc.category?.toLowerCase().includes('ingresos') ||
-      doc.title?.toLowerCase().includes('recursos')
+      doc.title?.toLowerCase().includes('recursos') ||
+      doc.category?.toLowerCase().includes('tesorería') ||
+      doc.category?.toLowerCase().includes('treasury')
     );
-  }, [documents]);
+  }, [currentYearData]);
 
   if (loading) {
     return (

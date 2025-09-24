@@ -20,6 +20,7 @@ export interface VerificationReport {
   verification_rate: number;
   by_source: Record<string, VerificationResult[]>;
   by_category: Record<string, VerificationResult[]>;
+  by_document: Record<string, VerificationResult>;
   issues_summary: string[];
   last_verification: string;
 }
@@ -77,16 +78,23 @@ export class DataVerificationService {
         byCategory[result.category].push(result);
       }
 
+      // Group by document for easy lookup
+      const byDocument: Record<string, VerificationResult> = {};
+      verificationResults.forEach(result => {
+        byDocument[result.document_id] = result;
+      });
+
       // Generate report
       const report: VerificationReport = {
         total_documents: verificationResults.length,
         verified_documents: verificationResults.filter(r => r.verification_status === 'verified').length,
         pending_verification: verificationResults.filter(r => r.verification_status === 'pending').length,
         failed_verification: verificationResults.filter(r => r.verification_status === 'failed').length,
-        verification_rate: verificationResults.length > 0 ? 
+        verification_rate: verificationResults.length > 0 ?
           (verificationResults.filter(r => r.verification_status === 'verified').length / verificationResults.length) * 100 : 0,
         by_source: bySource,
         by_category: byCategory,
+        by_document: byDocument,
         issues_summary: this.generateIssuesSummary(verificationResults),
         last_verification: new Date().toISOString()
       };

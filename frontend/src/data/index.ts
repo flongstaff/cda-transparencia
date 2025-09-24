@@ -29,10 +29,13 @@ export * from './data-2023';
 export * from './data-2024';
 export * from './data-2025';
 
-// Yearly Data - JSON indices (async loading)
+// GitHub repository base URL for deployment
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/flongstaff/cda-transparencia/main';
+
+// Yearly Data - JSON indices (async loading from GitHub)
 export const loadYearlyIndex = async (year: number) => {
   try {
-    const response = await fetch(`/src/data/data_index_${year}.json`);
+    const response = await fetch(`${GITHUB_RAW_BASE}/frontend/src/data/data_index_${year}.json`);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (error) {
@@ -41,10 +44,10 @@ export const loadYearlyIndex = async (year: number) => {
   }
 };
 
-// Comprehensive Data Index (async loading)
+// Comprehensive Data Index (async loading from GitHub)
 export const loadComprehensiveIndex = async () => {
   try {
-    const response = await fetch('/src/data/comprehensive_data_index.json');
+    const response = await fetch(`${GITHUB_RAW_BASE}/frontend/src/data/comprehensive_data_index.json`);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (error) {

@@ -151,18 +151,8 @@ class EnhancedDocumentDataService {
       console.warn('Primary source failed, trying fallback:', error);
     }
     
-    // Try local fallback
-    try {
-      const localResponse = await fetch('/data/document_inventory.json');
-      if (localResponse.ok) {
-        const data = await localResponse.json();
-        this.documentInventory = data;
-        this.cache.set('document_inventory', data, 5 * 60 * 1000); // 5 minutes cache
-        return data;
-      }
-    } catch (error) {
-      console.warn('Local fallback failed:', error);
-    }
+    // No local fallback - deployment uses only GitHub repository data
+    console.warn('GitHub repository data not available, no local fallback configured for deployment');
     
     // Return empty array if all sources fail
     return [];

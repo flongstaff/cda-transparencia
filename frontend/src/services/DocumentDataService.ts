@@ -40,7 +40,7 @@ export interface DocumentIndex {
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/flongstaff/cda-transparencia/main';
 
 class DocumentDataService {
-  private basePath = '/data/organized_documents';
+  private basePath = `${GITHUB_RAW_BASE}/data/organized_documents`;
   private cache: Map<string, any> = new Map();
   private cacheTimeout = 5 * 60 * 1000; // 5 minutes
   private documentInventory: any[] | null = null; // Cache for the document inventory

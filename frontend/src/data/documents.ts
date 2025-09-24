@@ -1,5 +1,8 @@
 import { Document } from '../types';
 
+// GitHub repository base URL for deployment
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/flongstaff/cda-transparencia/main';
+
 export const documents: Document[] = [
   {
     id: 'doc-001',
@@ -9,7 +12,7 @@ export const documents: Document[] = [
     date: '2024-01-01',
     fileType: 'PDF',
     fileSize: '2.5 MB',
-    downloadUrl: '/data/pdf_extracts/2024/ORDENANZA-3200-24-PRESUPUESTO-2024.pdf',
+    downloadUrl: `${GITHUB_RAW_BASE}/data/pdf_extracts/2024/ORDENANZA-3200-24-PRESUPUESTO-2024.pdf`,
     tags: ['presupuesto', '2024', 'ordenanza', 'finanzas'],
     confidentiality: 'public'
   },
@@ -21,7 +24,7 @@ export const documents: Document[] = [
     date: '2024-12-31',
     fileType: 'PDF',
     fileSize: '1.8 MB',
-    downloadUrl: '/data/pdf_extracts/2024/Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf',
+    downloadUrl: `${GITHUB_RAW_BASE}/data/pdf_extracts/2024/Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf`,
     tags: ['ejecución', 'gastos', '2024', 'Q4'],
     confidentiality: 'public'
   },
@@ -33,7 +36,7 @@ export const documents: Document[] = [
     date: '2025-01-15',
     fileType: 'PDF',
     fileSize: '1.2 MB',
-    downloadUrl: '/data/pdf_extracts/2025/LICITACION-PUBLICA-N°10.pdf',
+    downloadUrl: `${GITHUB_RAW_BASE}/data/pdf_extracts/2025/LICITACION-PUBLICA-N°10.pdf`,
     tags: ['licitaciones', 'contratos', '2025', 'obras'],
     confidentiality: 'public'
   },
@@ -45,7 +48,7 @@ export const documents: Document[] = [
     date: '2024-02-15',
     fileType: 'PDF',
     fileSize: '3.2 MB',
-    downloadUrl: '/data/pdf_extracts/2024/DDJJ-2024.pdf',
+    downloadUrl: `${GITHUB_RAW_BASE}/data/pdf_extracts/2024/DDJJ-2024.pdf`,
     tags: ['declaraciones', 'funcionarios', '2024'],
     confidentiality: 'public'
   },
@@ -57,7 +60,7 @@ export const documents: Document[] = [
     date: '2025-01-01',
     fileType: 'PDF',
     fileSize: '2.1 MB',
-    downloadUrl: '/data/pdf_extracts/2025/ORDENANZA-IMPOSITIVA-3282-25.pdf',
+    downloadUrl: `${GITHUB_RAW_BASE}/data/pdf_extracts/2025/ORDENANZA-IMPOSITIVA-3282-25.pdf`,
     tags: ['impositiva', '2025', 'tributario'],
     confidentiality: 'public'
   },
@@ -69,7 +72,7 @@ export const documents: Document[] = [
     date: '2024-09-30',
     fileType: 'PDF',
     fileSize: '1.5 MB',
-    downloadUrl: '/data/pdf_extracts/2024/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-9-2024.pdf',
+    downloadUrl: `${GITHUB_RAW_BASE}/data/pdf_extracts/2024/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-9-2024.pdf`,
     tags: ['deuda', 'vencimientos', '2024', 'finanzas'],
     confidentiality: 'public'
   },
@@ -81,7 +84,7 @@ export const documents: Document[] = [
     date: '2024-10-01',
     fileType: 'PDF',
     fileSize: '0.8 MB',
-    downloadUrl: '/data/pdf_extracts/2024/ESCALA-SALARIAL-OCTUBRE-2024.pdf',
+    downloadUrl: `${GITHUB_RAW_BASE}/data/pdf_extracts/2024/ESCALA-SALARIAL-OCTUBRE-2024.pdf`,
     tags: ['salarios', 'personal', '2024'],
     confidentiality: 'public'
   },
@@ -93,7 +96,7 @@ export const documents: Document[] = [
     date: '2024-12-31',
     fileType: 'PDF',
     fileSize: '1.3 MB',
-    downloadUrl: '/data/pdf_extracts/2024/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf',
+    downloadUrl: `${GITHUB_RAW_BASE}/data/pdf_extracts/2024/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf`,
     tags: ['género', 'gastos', '2024', 'inclusión'],
     confidentiality: 'public'
   }

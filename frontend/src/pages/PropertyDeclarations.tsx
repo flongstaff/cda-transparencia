@@ -1,25 +1,23 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
   Search,
-  Filter,
   Download,
-  Calendar,
-  Eye,
   AlertTriangle,
   CheckCircle,
   Clock,
   FileText,
   Users,
-  Building,
   TrendingUp,
   BarChart3,
-  Loader2
+  Loader2,
+  ShieldCheck,
+  ExternalLink
 } from 'lucide-react';
 import { useComprehensiveData, useDocumentAnalysis } from '../hooks/useComprehensiveData';
 import PropertyDeclarationsChart from '../components/charts/PropertyDeclarationsChart';
 import PageYearSelector from '../components/selectors/PageYearSelector';
-import { formatCurrencyARS } from '../utils/formatters';
+import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
 
 interface Declaration {
   id: string;
@@ -48,107 +46,87 @@ const PropertyDeclarations: React.FC = () => {
   // Use comprehensive data hooks
   const comprehensiveData = useComprehensiveData({ year: selectedYear });
   const documentData = useDocumentAnalysis({ year: selectedYear });
-  
-  const { loading, error } = comprehensiveData;
-  const documents = documentData.documents || [];
-  
+  const { documents } = useCompleteFinalData({ category: 'declarations' });
+
+  const { loading: loadingComprehensive, error: errorComprehensive } = comprehensiveData;
+  const documentsComprehensive = documentData.documents || [];
+
   // Generate available years dynamically to match available data
   const availableYears = Array.from({ length: 10 }, (_, i) => new Date().getFullYear() - i);
-  
-  // Generate comprehensive declarations data from available sources
-  const generateDeclarationsFromData = () => {
+
+  // Load real declaration data from GitHub repository and external sources
+  const declarations = useMemo(() => {
     const declarations: Declaration[] = [];
-    
-    // Generate declarations based on salary data if available
-    const salaryData = comprehensiveData.data?.financial_oversight?.salary_data;
-    if (salaryData?.positions) {
-      salaryData.positions.forEach((position: any, index: number) => {
-        const baseAssets = position.grossSalary * 12 * 2.5; // Estimate 2.5 years of salary in assets
-        declarations.push({
-          id: `salary-${position.code || index}`,
-          year: selectedYear,
-          officialId: `SAL-${String(index + 1).padStart(3, '0')}`,
-          officialName: position.name === 'INTENDENTE' ? 'Dr. Carlos M. Cazón' : 
-                       position.name === 'CONCEJALES/AS' ? `Concejal ${index + 1}` :
-                       position.name === 'DIRECTOR' ? `Director ${index + 1}` :
-                       `Funcionario ${position.name}`,
-          position: position.name === 'INTENDENTE' ? 'Intendente Municipal' :
-                   position.name === 'CONCEJALES/AS' ? 'Concejal' :
-                   position.name === 'DIRECTOR' ? 'Director Ejecutivo' : 
-                   position.name,
-          status: Math.random() > 0.1 ? 'published' : Math.random() > 0.5 ? 'submitted' : 'pending',
-          submissionDate: new Date(selectedYear, 4, Math.floor(Math.random() * 30) + 1).toISOString(),
-          reviewStatus: 'approved' as const,
-          complianceScore: 85 + Math.floor(Math.random() * 15),
-          assets: Math.floor(baseAssets + Math.random() * baseAssets * 0.5),
-          liabilities: Math.floor(baseAssets * 0.15 + Math.random() * baseAssets * 0.1),
-          observations: undefined,
-          source: `salary_data_${selectedYear}`,
-          lastVerified: new Date().toISOString()
+
+    // Process documents that contain declaration data
+    if (documents && documents.length > 0) {
+      documents
+        .filter(doc =>
+          doc.category?.toLowerCase().includes('declaraciones') ||
+          doc.category?.toLowerCase().includes('patrimonio') ||
+          doc.title?.toLowerCase().includes('declaracion') ||
+          doc.filename?.toLowerCase().includes('ddjj') ||
+          doc.filename?.toLowerCase().includes('patrimonial')
+        )
+        .forEach((doc, index) => {
+          // Extract real data from document metadata
+          const officialId = doc.metadata?.official_id || `OFF-${String(index + 1).padStart(3, '0')}`;
+          const officialName = doc.metadata?.official_name ||
+                              doc.title?.match(/Declaración.*?de\s+(.+)/i)?.[1] ||
+                              `Funcionario ${index + 1}`;
+
+          declarations.push({
+            id: doc.id || `decl-${index}`,
+            year: doc.year || selectedYear,
+            officialId,
+            officialName: officialName.trim(),
+            position: doc.metadata?.position ||
+                     doc.category?.replace('Declaraciones', '').trim() ||
+                     'Funcionario Municipal',
+            status: doc.metadata?.status ||
+                   (doc.verified ? 'published' : 'submitted'),
+            submissionDate: doc.processing_date || doc.created_at || new Date().toISOString(),
+            reviewStatus: doc.verification?.status === 'verified' ? 'approved' :
+                         doc.verification?.status === 'pending' ? 'pending' : 'in-review',
+            complianceScore: doc.metadata?.compliance_score ||
+                           (doc.integrity_verified ? 95 : 75),
+            assets: doc.metadata?.assets || 0,
+            liabilities: doc.metadata?.liabilities || 0,
+            observations: doc.metadata?.observations ||
+                         (doc.verification?.notes ? doc.verification.notes : undefined),
+            source: doc.source || 'github_repository',
+            lastVerified: doc.verification?.last_verified || doc.processing_date || new Date().toISOString()
+          });
         });
-      });
     }
-    
-    // Add declarations based on document analysis
-    documents.filter(doc => 
-      doc.category?.toLowerCase().includes('personal') ||
-      doc.category?.toLowerCase().includes('administrativa') ||
-      doc.title?.toLowerCase().includes('funcionario')
-    ).forEach((doc, index) => {
-      declarations.push({
-        id: `doc-${doc.filename || index}`,
-        year: selectedYear,
-        officialId: `DOC-${String(index + 1).padStart(3, '0')}`,
-        officialName: `Funcionario Administrativo ${index + 1}`,
-        position: 'Personal Administrativo',
-        status: 'published' as const,
-        submissionDate: new Date(selectedYear, 4, 15).toISOString(),
-        reviewStatus: 'approved' as const,
-        complianceScore: 92,
-        assets: Math.floor(Math.random() * 25000000) + 8000000,
-        liabilities: Math.floor(Math.random() * 5000000) + 1000000,
-        observations: undefined,
-        source: doc.filename || 'documento_administrativo',
-        lastVerified: new Date().toISOString()
-      });
-    });
-    
-    // Add comprehensive municipal officials based on transparency data
-    const municipalOfficials = [
-      { name: 'Dr. Carlos M. Cazón', position: 'Intendente Municipal', salary: 1151404.8 },
-      { name: 'Lic. María Elena Vázquez', position: 'Secretaria de Hacienda', salary: 467758.2 },
-      { name: 'Ing. Roberto Fernández', position: 'Secretario de Obras Públicas', salary: 467758.2 },
-      { name: 'Dra. Ana Gabriela Morales', position: 'Secretaria de Desarrollo Social', salary: 350000 },
-      { name: 'Lic. Carlos Alberto Díaz', position: 'Director de Planificación', salary: 320000 },
-      { name: 'Cont. Silvia Patricia Herrera', position: 'Directora de Administración', salary: 310000 },
-      { name: 'Dr. Eduardo José Castro', position: 'Secretario de Salud', salary: 380000 },
-      { name: 'Prof. Carmen Rosa Silva', position: 'Directora de Educación', salary: 290000 }
-    ];
-    
-    municipalOfficials.forEach((official, index) => {
-      const baseAssets = official.salary * 12 * 3; // 3 years of salary in assets
-      declarations.push({
-        id: `official-${index + 1}`,
-        year: selectedYear,
-        officialId: `MUN-${String(index + 1).padStart(3, '0')}`,
-        officialName: official.name,
-        position: official.position,
-        status: Math.random() > 0.05 ? 'published' : 'submitted',
-        submissionDate: new Date(selectedYear, 4, Math.floor(Math.random() * 30) + 1).toISOString(),
-        reviewStatus: 'approved' as const,
-        complianceScore: 88 + Math.floor(Math.random() * 12),
-        assets: Math.floor(baseAssets + Math.random() * baseAssets * 0.4),
-        liabilities: Math.floor(baseAssets * 0.12 + Math.random() * baseAssets * 0.08),
-        observations: Math.random() > 0.9 ? 'Verificación adicional completada' : undefined,
-        source: 'sistema_transparencia_municipal',
-        lastVerified: new Date().toISOString()
-      });
-    });
-    
+
+    // Load from structured audit data if available
+    if (declarations.length === 0 && comprehensiveData.structured?.audit) {
+      const auditData = Object.values(comprehensiveData.structured.audit)[0] as any;
+      if (auditData?.declaraciones_patrimoniales) {
+        auditData.declaraciones_patrimoniales.forEach((decl: any, index: number) => {
+          declarations.push({
+            id: decl.id || `audit-${index}`,
+            year: decl.year || selectedYear,
+            officialId: decl.oficial_id || `AUD-${String(index + 1).padStart(3, '0')}`,
+            officialName: decl.nombre_oficial || `Funcionario ${index + 1}`,
+            position: decl.cargo || 'Funcionario Municipal',
+            status: decl.estado || 'published',
+            submissionDate: decl.fecha_presentacion || new Date().toISOString(),
+            reviewStatus: decl.estado_revision || 'approved',
+            complianceScore: decl.puntuacion_cumplimiento || 90,
+            assets: decl.activos || 0,
+            liabilities: decl.pasivos || 0,
+            observations: decl.observaciones,
+            source: 'audit_system',
+            lastVerified: decl.ultima_verificacion || new Date().toISOString()
+          });
+        });
+      }
+    }
+
     return declarations;
-  };
-  
-  const declarations = generateDeclarationsFromData();
+  }, [documents, comprehensiveData, selectedYear]);
 
   const getComplianceScoreDistribution = () => {
     if (declarations.length === 0) return [];
@@ -178,7 +156,7 @@ const PropertyDeclarations: React.FC = () => {
     pending: declarations.filter(d => d.status === 'pending').length,
     submitted: declarations.filter(d => d.status === 'submitted' || d.status === 'published').length,
     late: declarations.filter(d => d.status === 'late').length,
-    complianceRate: declarations.length > 0 
+    complianceRate: declarations.length > 0
       ? Math.round((declarations.filter(d => d.status === 'published').length / declarations.length) * 100)
       : 0,
     averageScore: declarations.length > 0
@@ -191,13 +169,26 @@ const PropertyDeclarations: React.FC = () => {
       late: Math.round(declarations.filter(d => d.status === 'published').length * 0.15),
       pending: declarations.length - declarations.filter(d => d.status === 'published').length,
       averageScore: Math.round(declarations.reduce((sum, d) => sum + d.complianceScore, 0) / (declarations.length || 1)),
-      complianceRate: declarations.length > 0 
+      complianceRate: declarations.length > 0
         ? Math.round((declarations.filter(d => d.status === 'published').length / declarations.length) * 100)
         : 0
     }
   };
 
-  if (loading) {
+  // Filter declarations based on search and status
+  const filteredDeclarations = useMemo(() => {
+    return declarations.filter(declaration => {
+      const matchesSearch = searchQuery === '' ||
+        declaration.officialName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        declaration.position.toLowerCase().includes(searchQuery.toLowerCase());
+
+      const matchesStatus = statusFilter === 'all' || declaration.status === statusFilter;
+
+      return matchesSearch && matchesStatus;
+    });
+  }, [declarations, searchQuery, statusFilter]);
+
+  if (loadingComprehensive) {
     return (
       <div className="flex items-center justify-center h-64">
         <div className="text-center">
@@ -208,15 +199,15 @@ const PropertyDeclarations: React.FC = () => {
     );
   }
 
-  if (error) {
+  if (errorComprehensive) {
     return (
       <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-xl p-6">
         <div className="flex items-center">
           <AlertTriangle className="h-5 w-5 text-red-500 mr-2" />
           <h3 className="text-lg font-medium text-red-800 dark:text-red-200">Error al cargar datos</h3>
         </div>
-        <p className="mt-2 text-red-700 dark:text-red-300">{error}</p>
-        <button 
+        <p className="mt-2 text-red-700 dark:text-red-300">{errorComprehensive?.message || 'Error desconocido'}</p>
+        <button
           onClick={() => window.location.reload()}
           className="mt-4 px-4 py-2 bg-red-100 dark:bg-red-800 text-red-700 dark:text-red-200 rounded-lg hover:bg-red-200 dark:hover:bg-red-700 transition-colors"
         >
@@ -264,7 +255,7 @@ const PropertyDeclarations: React.FC = () => {
           <h2 className="font-heading text-xl font-bold text-blue-800 dark:text-blue-200 mb-4">
             📊 Panel de Cumplimiento {selectedYear}
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="text-center">
               <div className="text-2xl font-bold text-blue-800 dark:text-blue-200">
@@ -275,7 +266,7 @@ const PropertyDeclarations: React.FC = () => {
                 {aggregatedData.complianceMetrics.submitted}/{aggregatedData.complianceMetrics.totalRequired} presentadas
               </div>
             </div>
-            
+
             <div className="text-center">
               <div className="text-2xl font-bold text-green-800 dark:text-green-200">
                 {aggregatedData.complianceMetrics.onTime}
@@ -285,7 +276,7 @@ const PropertyDeclarations: React.FC = () => {
                 de {aggregatedData.complianceMetrics.submitted} presentadas
               </div>
             </div>
-            
+
             <div className="text-center">
               <div className="text-2xl font-bold text-yellow-800 dark:text-yellow-200">
                 {aggregatedData.complianceMetrics.late}
@@ -295,498 +286,174 @@ const PropertyDeclarations: React.FC = () => {
                 Fuera de plazo
               </div>
             </div>
-            
+
             <div className="text-center">
               <div className="text-2xl font-bold text-red-800 dark:text-red-200">
                 {aggregatedData.complianceMetrics.pending}
               </div>
               <div className="text-xs text-red-600 dark:text-red-300">Pendientes</div>
-              <div className="text-xs text-red-600 dark:text-red-400">
+              <div className="text-xs text-gray-600 dark:text-gray-400">
                 Sin presentar
               </div>
             </div>
           </div>
-          
-          <div className="mt-4 p-4 bg-white/60 dark:bg-gray-800/60 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-gray-600 dark:text-gray-400">Puntuación Promedio de Cumplimiento</span>
-              <span className="text-lg font-semibold text-blue-600 dark:text-blue-400">
-                {aggregatedData.complianceMetrics.averageScore}/100
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Property Declarations Chart */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-8 border border-gray-200 dark:border-gray-700">
-          <PropertyDeclarationsChart year={selectedYear} />
         </div>
 
         {/* Navigation Tabs */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm mb-6">
-          <div className="border-b border-gray-200 dark:border-gray-700">
-            <nav className="flex space-x-8" aria-label="Tabs">
-              {[
-                { id: 'overview', name: 'Resumen General', icon: TrendingUp },
-                { id: 'declarations', name: 'Declaraciones', icon: FileText },
-                { id: 'analysis', name: 'Análisis', icon: TrendingUp },
-                { id: 'compliance', name: 'Cumplimiento', icon: ShieldCheck }
-              ].map((tab) => {
-                const Icon = tab.icon;
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`py-4 px-6 border-b-2 font-medium text-sm flex items-center transition-colors duration-200 ${
-                      activeTab === tab.id
-                        ? 'border-primary-500 text-primary-600 dark:text-primary-400'
-                        : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 hover:border-gray-300'
-                    }`}
-                  >
-                    <Icon size={18} className="mr-2" />
-                    {tab.name}
-                  </button>
-                );
-              })}
-            </nav>
-          </div>
+        <div className="flex flex-wrap gap-1 mb-6 bg-gray-100 dark:bg-gray-800 p-1 rounded-lg">
+          {[
+            { id: 'overview', label: 'Resumen', icon: BarChart3 },
+            { id: 'declarations', label: 'Declaraciones', icon: FileText },
+            { id: 'analysis', label: 'Análisis', icon: TrendingUp },
+            { id: 'compliance', label: 'Cumplimiento', icon: ShieldCheck }
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id as 'overview' | 'declarations' | 'analysis' | 'compliance')}
+              className={`flex items-center px-4 py-2 rounded-lg font-medium transition-colors ${
+                activeTab === tab.id
+                  ? 'bg-white dark:bg-gray-700 text-primary-600 dark:text-primary-400 shadow-sm'
+                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+              }`}
+            >
+              <tab.icon className="w-4 h-4 mr-2" />
+              {tab.label}
+            </button>
+          ))}
         </div>
 
         {/* Tab Content */}
         {activeTab === 'overview' && (
-          <>
-            {/* Key Metrics */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700"
-              >
-                <div className="flex items-center">
-                  <div className="p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-500 dark:text-blue-400 rounded-lg mr-4">
-                    <Users size={24} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Funcionarios Monitoreados</p>
-                    <p className="text-2xl font-bold text-gray-800 dark:text-white">{aggregatedData.totalOfficials}</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700"
-              >
-                <div className="flex items-center">
-                  <div className="p-3 bg-green-100 dark:bg-green-900/30 text-green-500 dark:text-green-400 rounded-lg mr-4">
-                    <FileText size={24} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Declaraciones Presentadas</p>
-                    <p className="text-2xl font-bold text-gray-800 dark:text-white">{aggregatedData.submitted}</p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700"
-              >
-                <div className="flex items-center">
-                  <div className="p-3 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-500 dark:text-yellow-400 rounded-lg mr-4">
-                    <AlertTriangle size={24} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Pendientes/Tardías</p>
-                    <p className="text-2xl font-bold text-gray-800 dark:text-white">{aggregatedData.pending + aggregatedData.late}</p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Compliance Rate Chart */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-8 border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-heading text-lg font-semibold text-gray-800 dark:text-white">
-                  Tasa de Cumplimiento por Mes
-                </h3>
-                <div className="flex items-center space-x-2">
-                  <span className="text-sm text-gray-600 dark:text-gray-400">95%</span>
-                  <div className="w-32 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                    <div 
-                      className="bg-green-500 h-2 rounded-full" 
-                      style={{ width: '95%' }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="h-64 flex items-end justify-between space-x-2">
-                {['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'].map((month, index) => (
-                  <div key={month} className="flex flex-col items-center flex-1">
-                    <div 
-                      className="w-full bg-gradient-to-t from-green-500 to-green-400 rounded-t-lg"
-                      style={{ height: `${85 - (index % 3) * 10}%` }}
-                    ></div>
-                    <span className="text-xs text-gray-600 dark:text-gray-400 mt-2">{month}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Recent Declarations */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-heading text-lg font-semibold text-gray-800 dark:text-white">
-                  Declaraciones Recientes
-                </h3>
-                <button 
-                  onClick={() => setActiveTab('declarations')}
-                  className="text-sm text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300"
-                >
-                  Ver todas
-                </button>
-              </div>
-              
-              <div className="space-y-4">
-                {declarations.slice(0, 3).map((declaration) => (
-                  <div 
-                    key={declaration.id} 
-                    className="flex items-center justify-between p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-                  >
-                    <div className="flex items-center">
-                      <div className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg mr-4">
-                        <FileText className="h-5 w-5 text-gray-600 dark:text-gray-400" />
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-gray-800 dark:text-white">
-                          {declaration.officialName}
-                        </h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                          {declaration.position} • {declaration.year}
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-4">
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-                        declaration.status === 'published' ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' :
-                        declaration.status === 'submitted' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400' :
-                        declaration.status === 'late' ? 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400' :
-                        'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-400'
-                      }`}>
-                        {declaration.status === 'published' ? 'Publicada' :
-                         declaration.status === 'submitted' ? 'Presentada' :
-                         declaration.status === 'late' ? 'Tardía' : 'Pendiente'}
-                      </span>
-                      <span className="text-sm font-medium text-gray-800 dark:text-white">
-                        {declaration.complianceScore}/100
-                      </span>
-                      <button 
-                        onClick={() => {
-                          setSelectedDeclaration(declaration);
-                          setActiveTab('declarations');
-                        }}
-                        className="p-2 text-gray-400 hover:text-primary-500 dark:hover:text-primary-400"
-                      >
-                        <Eye className="h-4 w-4" />
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </>
-        )}
-
-        {activeTab === 'analysis' && (
           <div className="space-y-6">
-            {/* Comprehensive Data Information */}
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl p-6 mb-6 border border-blue-200 dark:border-blue-700">
-              <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-3">📋 Fuentes de Datos Integradas</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-white/60 dark:bg-gray-800/60 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{documents.length}</div>
-                  <div className="text-sm text-blue-700 dark:text-blue-300">Documentos Analizados</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">Base documental municipal</div>
-                </div>
-                <div className="bg-white/60 dark:bg-gray-800/60 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                    {comprehensiveData.data?.financial_oversight?.salary_data?.positions?.length || 0}
+            {/* Summary Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                <div className="flex items-center">
+                  <Users className="h-8 w-8 text-blue-500" />
+                  <div className="ml-4">
+                    <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Total Funcionarios</p>
+                    <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                      {aggregatedData.totalOfficials}
+                    </p>
                   </div>
-                  <div className="text-sm text-green-700 dark:text-green-300">Cargos con Datos Salariales</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">Información financiera oficial</div>
                 </div>
-                <div className="bg-white/60 dark:bg-gray-800/60 rounded-lg p-4">
-                  <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">
-                    {Object.keys(comprehensiveData.data || {}).length}
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                <div className="flex items-center">
+                  <CheckCircle className="h-8 w-8 text-green-500" />
+                  <div className="ml-4">
+                    <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Presentadas</p>
+                    <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                      {aggregatedData.submitted}
+                    </p>
                   </div>
-                  <div className="text-sm text-purple-700 dark:text-purple-300">Categorías de Análisis</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">Análisis integral de transparencia</div>
                 </div>
               </div>
-            </div>
 
-            {/* Compliance Analysis Charts */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Distribución por Estado</h3>
-                <ValidatedChart
-                  data={[
-                    { name: 'Publicadas', value: declarations.filter(d => d.status === 'published').length },
-                    { name: 'Presentadas', value: declarations.filter(d => d.status === 'submitted').length },
-                    { name: 'Tardías', value: declarations.filter(d => d.status === 'late').length },
-                    { name: 'Pendientes', value: declarations.filter(d => d.status === 'pending').length }
-                  ]}
-                  title="Estado de Declaraciones"
-                  chartType="pie"
-                  dataKey="value"
-                  nameKey="name"
-                  sources={['Portal de Transparencia - Carmen de Areco']}
-                />
-              </div>
-
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Puntajes de Cumplimiento</h3>
-                <ValidatedChart
-                  data={declarations.map(d => ({
-                    name: d.officialName.split(' ').slice(0, 2).join(' '),
-                    puntaje: d.complianceScore
-                  }))}
-                  title="Puntajes por Funcionario"
-                  chartType="bar"
-                  dataKey="puntaje"
-                  nameKey="name"
-                  sources={['Portal de Transparencia - Carmen de Areco']}
-                />
-              </div>
-            </div>
-
-            {/* Asset Analysis */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Análisis Patrimonial</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-white mb-3">Activos Declarados</h4>
-                  <ValidatedChart
-                    data={declarations.map(d => ({
-                      name: d.officialName.split(' ').slice(0, 2).join(' '),
-                      activos: d.assets
-                    })).sort((a, b) => b.activos - a.activos).slice(0, 8)}
-                    title="Activos por Funcionario"
-                    chartType="bar"
-                    dataKey="activos"
-                    nameKey="name"
-                    sources={['Portal de Transparencia - Carmen de Areco']}
-                  />
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                <div className="flex items-center">
+                  <Clock className="h-8 w-8 text-yellow-500" />
+                  <div className="ml-4">
+                    <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Pendientes</p>
+                    <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                      {aggregatedData.pending}
+                    </p>
+                  </div>
                 </div>
-                
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-white mb-3">Distribución Patrimonial</h4>
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Activos Promedio</span>
-                      <span className="text-sm font-bold text-green-600 dark:text-green-400">
-                        ${Math.round(declarations.reduce((sum, d) => sum + d.assets, 0) / declarations.length).toLocaleString()}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Pasivos Promedio</span>
-                      <span className="text-sm font-bold text-red-600 dark:text-red-400">
-                        ${Math.round(declarations.reduce((sum, d) => sum + d.liabilities, 0) / declarations.length).toLocaleString()}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Patrimonio Neto Promedio</span>
-                      <span className="text-sm font-bold text-blue-600 dark:text-blue-400">
-                        ${Math.round(declarations.reduce((sum, d) => sum + (d.assets - d.liabilities), 0) / declarations.length).toLocaleString()}
-                      </span>
-                    </div>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                <div className="flex items-center">
+                  <BarChart3 className="h-8 w-8 text-purple-500" />
+                  <div className="ml-4">
+                    <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Puntaje Promedio</p>
+                    <p className="text-2xl font-bold text-gray-900 dark:text-white">
+                      {aggregatedData.averageScore}/100
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        )}
 
-        {activeTab === 'compliance' && (
-          <div className="space-y-6">
-            {/* Compliance Requirements */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Marco Normativo y Requisitos
+            {/* Charts Section */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-heading text-lg font-bold text-gray-800 dark:text-white mb-4">
+                Análisis de Declaraciones Patrimoniales
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  {
-                    category: 'Ley de Ética Pública',
-                    requirement: 'Declaración patrimonial anual obligatoria',
-                    frequency: 'Anual - hasta el 31 de mayo'
-                  },
-                  {
-                    category: 'Transparencia Activa',
-                    requirement: 'Publicación de declaraciones completas',
-                    frequency: 'Permanente'
-                  },
-                  {
-                    category: 'Verificación Cruzada',
-                    requirement: 'Control contra registros públicos',
-                    frequency: 'Trimestral'
-                  },
-                  {
-                    category: 'Actualización de Datos',
-                    requirement: 'Modificaciones en tiempo real',
-                    frequency: 'Continua'
-                  }
-                ].map((req, index) => (
-                  <div key={index} className="border border-gray-200 dark:border-gray-600 rounded-lg p-4">
-                    <h4 className="font-medium text-gray-900 dark:text-white mb-2">
-                      {req.category}
-                    </h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                      {req.requirement}
-                    </p>
-                    <p className="text-xs text-blue-600 dark:text-blue-400">
-                      Frecuencia: {req.frequency}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Compliance Scoring */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700">
-              <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  Puntuación de Cumplimiento Detallada
-                </h3>
-              </div>
-              <div className="p-6">
-                <div className="space-y-4">
-                  {declarations.slice(0, 8).map((declaration) => (
-                    <div key={declaration.id} className="flex items-center justify-between p-4 border border-gray-200 dark:border-gray-600 rounded-lg">
-                      <div className="flex items-center">
-                        <div className="flex-shrink-0 h-10 w-10">
-                          <div className="h-10 w-10 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center">
-                            <Users size={20} className="text-gray-600 dark:text-gray-300" />
-                          </div>
-                        </div>
-                        <div className="ml-4">
-                          <div className="text-sm font-medium text-gray-800 dark:text-white">
-                            {declaration.officialName}
-                          </div>
-                          <div className="text-sm text-gray-500 dark:text-gray-400">
-                            {declaration.position}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex items-center">
-                        <div className="w-32 h-2 bg-gray-200 dark:bg-gray-700 rounded-full mr-4">
-                          <div 
-                            className={`h-2 rounded-full ${
-                              declaration.complianceScore >= 90 ? 'bg-green-500' :
-                              declaration.complianceScore >= 75 ? 'bg-yellow-500' : 'bg-red-500'
-                            }`}
-                            style={{ width: `${declaration.complianceScore}%` }}
-                          ></div>
-                        </div>
-                        <span className={`text-lg font-semibold ${
-                          declaration.complianceScore >= 90 ? 'text-green-600 dark:text-green-400' :
-                          declaration.complianceScore >= 75 ? 'text-yellow-600 dark:text-yellow-400' : 'text-red-600 dark:text-red-400'
-                        }`}>
-                          {declaration.complianceScore}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <PropertyDeclarationsChart
+                data={declarations}
+                year={selectedYear}
+                complianceDistribution={getComplianceScoreDistribution()}
+              />
             </div>
           </div>
         )}
 
         {activeTab === 'declarations' && (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-            {/* Search and Filter Bar */}
-            <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <div className="relative flex-1 max-w-md">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-                  <input
-                    type="text"
-                    placeholder="Buscar por nombre de funcionario..."
-                    className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />
-                </div>
-                
-                <div className="flex items-center space-x-3">
+          <div className="space-y-6">
+            {/* Search and Filters */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1">
                   <div className="relative">
-                    <select
-                      className="appearance-none bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      value={statusFilter}
-                      onChange={(e) => setStatusFilter(e.target.value)}
-                    >
-                      <option value="all">Todos los estados</option>
-                      <option value="published">Publicadas</option>
-                      <option value="submitted">Presentadas</option>
-                      <option value="late">Tardías</option>
-                      <option value="pending">Pendientes</option>
-                    </select>
-                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 dark:text-gray-300">
-                      <Filter size={16} />
-                    </div>
+                    <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                    <input
+                      type="text"
+                      placeholder="Buscar por nombre o cargo..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    />
                   </div>
-                  
-                  <button className="inline-flex items-center py-2 px-4 bg-primary-500 text-white font-medium rounded-lg hover:bg-primary-600 transition duration-150">
-                    <Download size={18} className="mr-2" />
-                    Exportar
-                  </button>
+                </div>
+
+                <div className="md:w-48">
+                  <select
+                    value={statusFilter}
+                    onChange={(e) => setStatusFilter(e.target.value)}
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  >
+                    <option value="all">Todos los estados</option>
+                    <option value="published">Publicadas</option>
+                    <option value="submitted">Presentadas</option>
+                    <option value="pending">Pendientes</option>
+                    <option value="late">Tardías</option>
+                  </select>
                 </div>
               </div>
             </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-3">
-              {/* Declarations List */}
-              <div className="lg:col-span-1 border-r border-gray-200 dark:border-gray-700">
-                <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-                  <h3 className="font-medium text-gray-800 dark:text-white">
-                    Declaraciones ({declarations.length})
-                  </h3>
-                </div>
-                
-                <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
-                  {declarations
-                    .filter(declaration => {
-                      const matchesSearch = declaration.officialName.toLowerCase().includes(searchQuery.toLowerCase());
-                      const matchesStatus = statusFilter === 'all' || declaration.status === statusFilter;
-                      return matchesSearch && matchesStatus;
-                    })
-                    .map((declaration) => (
+
+            {/* Declarations List */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* List */}
+              <div className="lg:col-span-1">
+                <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 max-h-96 overflow-y-auto">
+                  <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+                    <h3 className="font-medium text-gray-900 dark:text-white">
+                      Declaraciones ({filteredDeclarations.length})
+                    </h3>
+                  </div>
+
+                  <div className="divide-y divide-gray-200 dark:divide-gray-700">
+                    {filteredDeclarations.map((declaration) => (
                       <div
                         key={declaration.id}
-                        className={`p-4 border-b border-gray-200 dark:border-gray-700 cursor-pointer transition-colors ${
-                          selectedDeclaration?.id === declaration.id
-                            ? 'bg-primary-50 dark:bg-primary-900/20 border-l-4 border-l-primary-500'
-                            : 'hover:bg-gray-50 dark:hover:bg-gray-700'
-                        }`}
                         onClick={() => setSelectedDeclaration(declaration)}
+                        className={`p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 ${
+                          selectedDeclaration?.id === declaration.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''
+                        }`}
                       >
-                        <div className="flex items-start justify-between">
+                        <div className="flex items-center justify-between">
                           <div className="flex-1 min-w-0">
-                            <h4 className="font-medium text-gray-800 dark:text-white truncate">
+                            <p className="text-sm font-medium text-gray-900 dark:text-white truncate">
                               {declaration.officialName}
-                            </h4>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 truncate">
+                            </p>
+                            <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
                               {declaration.position}
                             </p>
                             <div className="flex items-center mt-1 space-x-2">
-                              <span className={`text-xs px-2 py-1 rounded-full ${
+                              <span className={`px-2 py-1 text-xs font-medium rounded-full ${
                                 declaration.status === 'published' ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' :
                                 declaration.status === 'submitted' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400' :
                                 declaration.status === 'late' ? 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400' :
@@ -812,13 +479,14 @@ const PropertyDeclarations: React.FC = () => {
                         </div>
                       </div>
                     ))}
+                  </div>
                 </div>
               </div>
-              
+
               {/* Declaration Detail */}
               <div className="lg:col-span-2">
                 {selectedDeclaration ? (
-                  <div className="p-6">
+                  <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
                     <div className="flex items-start justify-between mb-6">
                       <div>
                         <h3 className="font-heading text-xl font-bold text-gray-800 dark:text-white">
@@ -828,7 +496,7 @@ const PropertyDeclarations: React.FC = () => {
                           {selectedDeclaration.position} • {selectedDeclaration.year}
                         </p>
                       </div>
-                      
+
                       <div className="flex items-center space-x-2">
                         <span className={`px-3 py-1 text-sm font-medium rounded-full ${
                           selectedDeclaration.status === 'published' ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400' :
@@ -842,7 +510,7 @@ const PropertyDeclarations: React.FC = () => {
                         </span>
                       </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                       <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                         <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
@@ -852,13 +520,13 @@ const PropertyDeclarations: React.FC = () => {
                           {selectedDeclaration.complianceScore}/100
                         </p>
                         <div className="mt-2 w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
-                          <div 
-                            className="bg-blue-500 h-2 rounded-full" 
+                          <div
+                            className="bg-blue-500 h-2 rounded-full"
                             style={{ width: `${selectedDeclaration.complianceScore}%` }}
                           ></div>
                         </div>
                       </div>
-                      
+
                       <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                         <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
                           Activos Declarados
@@ -867,7 +535,7 @@ const PropertyDeclarations: React.FC = () => {
                           ${selectedDeclaration.assets.toLocaleString()}
                         </p>
                       </div>
-                      
+
                       <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                         <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
                           Pasivos Declarados
@@ -877,24 +545,24 @@ const PropertyDeclarations: React.FC = () => {
                         </p>
                       </div>
                     </div>
-                    
+
                     <div className="mb-8">
                       <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
                         Información de la Declaración
                       </h3>
-                      
+
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                           <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
                             Fecha de Presentación
                           </h4>
                           <p className="text-gray-800 dark:text-white">
-                            {selectedDeclaration.submissionDate 
+                            {selectedDeclaration.submissionDate
                               ? new Date(selectedDeclaration.submissionDate).toLocaleDateString('es-AR')
                               : 'No presentada aún'}
                           </p>
                         </div>
-                        
+
                         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                           <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
                             Estado de Revisión
@@ -905,22 +573,20 @@ const PropertyDeclarations: React.FC = () => {
                              selectedDeclaration.reviewStatus === 'rejected' ? 'Rechazada' : 'Pendiente'}
                           </p>
                         </div>
-                        
+
                         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                           <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
                             Fuente
                           </h4>
-                          <a 
-                            href={selectedDeclaration.source} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
+                          <a
+                            href={`#${selectedDeclaration.source}`}
                             className="text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300 flex items-center"
                           >
                             <ExternalLink className="h-4 w-4 mr-1" />
                             Portal de Transparencia
                           </a>
                         </div>
-                        
+
                         <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                           <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
                             Última Verificación
@@ -931,47 +597,103 @@ const PropertyDeclarations: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    
-                    <div className="mb-8">
-                      <h3 className="font-semibold text-gray-900 dark:text-white mb-3">
-                        Análisis de Cumplimiento
-                      </h3>
-                      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4">
-                        <div className="flex items-center mb-3">
-                          <ShieldCheck className="h-5 w-5 text-blue-500 dark:text-blue-400 mr-2" />
-                          <span className="font-medium text-blue-800 dark:text-blue-200">
-                            Verificación Automática
-                          </span>
+
+                    {selectedDeclaration.observations && (
+                      <div className="mb-8">
+                        <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+                          Observaciones
+                        </h3>
+                        <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4">
+                          <p className="text-yellow-800 dark:text-yellow-200">
+                            {selectedDeclaration.observations}
+                          </p>
                         </div>
-                        <p className="text-sm text-blue-700 dark:text-blue-300">
-                          Esta declaración ha sido verificada automáticamente contra múltiples fuentes 
-                          para garantizar su autenticidad y disponibilidad. Todas las fuentes utilizadas 
-                          están activas y verifican continuamente la información.
-                        </p>
                       </div>
-                    </div>
-                    
-                    <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-600">
-                      <div className="flex justify-end items-center">
-                        <button className="px-4 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors">
-                          Descargar Declaración
-                        </button>
-                      </div>
-                    </div>
+                    )}
                   </div>
                 ) : (
-                  <div className="flex items-center justify-center h-96">
-                    <div className="text-center">
-                      <FileText className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                      <h3 className="text-lg font-medium text-gray-800 dark:text-white mb-2">
-                        Seleccione una declaración
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-400">
-                        Elija una declaración de la lista para ver los detalles completos.
+                  <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-12 text-center">
+                    <FileText className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+                    <p className="text-gray-500 dark:text-gray-400">
+                      Selecciona una declaración para ver los detalles
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'analysis' && (
+          <div className="space-y-6">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-heading text-lg font-bold text-gray-800 dark:text-white mb-4">
+                Análisis Detallado de Declaraciones Patrimoniales
+              </h3>
+              <PropertyDeclarationsChart
+                data={declarations}
+                year={selectedYear}
+                complianceDistribution={getComplianceScoreDistribution()}
+              />
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'compliance' && (
+          <div className="space-y-6">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+              <h3 className="font-heading text-lg font-bold text-gray-800 dark:text-white mb-4">
+                Panel de Cumplimiento Normativo
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border border-green-200 dark:border-green-700">
+                  <div className="flex items-center">
+                    <CheckCircle className="h-8 w-8 text-green-500" />
+                    <div className="ml-4">
+                      <p className="text-sm font-medium text-green-600 dark:text-green-400">Cumplimiento General</p>
+                      <p className="text-2xl font-bold text-green-900 dark:text-green-200">
+                        {aggregatedData.complianceRate}%
                       </p>
                     </div>
                   </div>
-                )}
+                </div>
+
+                <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-700">
+                  <div className="flex items-center">
+                    <BarChart3 className="h-8 w-8 text-blue-500" />
+                    <div className="ml-4">
+                      <p className="text-sm font-medium text-blue-600 dark:text-blue-400">Puntaje Promedio</p>
+                      <p className="text-2xl font-bold text-blue-900 dark:text-blue-200">
+                        {aggregatedData.averageScore}/100
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-6 border border-yellow-200 dark:border-yellow-700">
+                  <div className="flex items-center">
+                    <Clock className="h-8 w-8 text-yellow-500" />
+                    <div className="ml-4">
+                      <p className="text-sm font-medium text-yellow-600 dark:text-yellow-400">Pendientes</p>
+                      <p className="text-2xl font-bold text-yellow-900 dark:text-yellow-200">
+                        {aggregatedData.pending}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Compliance Distribution Chart */}
+              <div className="mt-8">
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
+                  Distribución de Puntajes de Cumplimiento
+                </h4>
+                <PropertyDeclarationsChart
+                  data={declarations}
+                  year={selectedYear}
+                  complianceDistribution={getComplianceScoreDistribution()}
+                />
               </div>
             </div>
           </div>

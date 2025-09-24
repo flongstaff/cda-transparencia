@@ -49,9 +49,20 @@ export interface ExternalOfficialData {
   content: string;
 }
 
+// Audit trail interface
+export interface AuditEvent {
+  id: string;
+  timestamp: string;
+  event_type: string;
+  source: string;
+  details: any;
+  user_id?: string;
+}
+
 class ExternalDataService {
   private cache: Map<string, any> = new Map();
   private cacheTimeout = 10 * 60 * 1000; // 10 minutes
+  private auditLog: AuditEvent[] = [];
 
   // External API endpoints
   private readonly API_ENDPOINTS = {
@@ -101,46 +112,51 @@ class ExternalDataService {
         console.warn(`GitHub API fetch failed for year ${year}:`, githubError);
       }
 
-      // Fallback to mock data with realistic values based on Carmen de Areco's size
-      const budgetData: ExternalBudgetData = {
-        year,
-        totalBudget: year >= 2024 ? 8000000000 : 5000000000, // Adjusted for inflation
-        totalExecuted: year >= 2024 ? 6400000000 : 3750000000, // 80% execution rate
-        executionPercentage: 80,
-        categories: [
-          {
-            name: "Gastos Corrientes",
-            budgeted: year >= 2024 ? 4800000000 : 3000000000,
-            executed: year >= 2024 ? 3840000000 : 2250000000,
-            percentage: 80
-          },
-          {
-            name: "Gastos de Capital",
-            budgeted: year >= 2024 ? 2000000000 : 1250000000,
-            executed: year >= 2024 ? 1600000000 : 937500000,
-            percentage: 80
-          },
-          {
-            name: "Servicio de Deuda",
-            budgeted: year >= 2024 ? 800000000 : 500000000,
-            executed: year >= 2024 ? 640000000 : 375000000,
-            percentage: 80
-          },
-          {
-            name: "Transferencias",
-            budgeted: year >= 2024 ? 400000000 : 250000000,
-            executed: year >= 2024 ? 320000000 : 187500000,
-            percentage: 80
+      // Try to fetch from external API
+      try {
+        const response = await fetch(`${this.API_ENDPOINTS.presupuestoAbierto}/presupuesto/${year}`, {
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
           }
-        ]
-      };
+        });
 
-      this.cache.set(cacheKey, {
-        data: budgetData,
-        timestamp: Date.now()
-      });
+        if (response.ok) {
+          const apiData = await response.json();
+          const budgetData: ExternalBudgetData = {
+            year,
+            totalBudget: apiData.totalBudget || 0,
+            totalExecuted: apiData.totalExecuted || 0,
+            executionPercentage: apiData.executionPercentage || 0,
+            categories: apiData.categories || []
+          };
 
-      return budgetData;
+          this.cache.set(cacheKey, {
+            data: budgetData,
+            timestamp: Date.now()
+          });
+
+          // Log audit trail
+          this.logAuditEvent('budget_data_fetched', {
+            source: 'external_api',
+            year,
+            success: true,
+            recordCount: apiData.categories?.length || 0
+          });
+
+          return budgetData;
+        }
+      } catch (apiError) {
+        this.logAuditEvent('budget_data_fetch_failed', {
+          source: 'external_api',
+          year,
+          error: apiError instanceof Error ? apiError.message : 'Unknown error'
+        });
+        console.warn(`External API fetch failed for year ${year}:`, apiError);
+      }
+
+      // Return null if no real data available - no fallback
+      return null;
     } catch (error) {
       console.error(`Error fetching budget data for year ${year}:`, error);
       return null;
@@ -328,6 +344,44 @@ class ExternalDataService {
       size: this.cache.size,
       keys: Array.from(this.cache.keys())
     };
+  }
+
+  /**
+   * Log audit events for external data operations
+   */
+  private logAuditEvent(eventType: string, details: any): void {
+    const auditEvent: AuditEvent = {
+      id: `audit-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      timestamp: new Date().toISOString(),
+      event_type: eventType,
+      source: 'ExternalDataService',
+      details,
+      user_id: 'system'
+    };
+
+    this.auditLog.push(auditEvent);
+
+    // Keep only last 1000 audit events to prevent memory issues
+    if (this.auditLog.length > 1000) {
+      this.auditLog = this.auditLog.slice(-1000);
+    }
+
+    // In a real implementation, you would send this to your audit service
+    console.log('[AUDIT]', auditEvent);
+  }
+
+  /**
+   * Get audit log
+   */
+  getAuditLog(): AuditEvent[] {
+    return [...this.auditLog];
+  }
+
+  /**
+   * Clear audit log
+   */
+  clearAuditLog(): void {
+    this.auditLog = [];
   }
 }
 

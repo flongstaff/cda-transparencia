@@ -1,5 +1,8 @@
 import { filterDocumentsByYear } from './documentProcessor';
 
+// GitHub repository base URL for deployment
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/flongstaff/cda-transparencia/main';
+
 // Define types for our data structure
 export interface MultiSourceData {
   sources?: Record<string, any>;
@@ -130,8 +133,8 @@ export class EnhancedUnifiedDataLoader {
   // Load multi-source report (main hub)
   private async loadMultiSourceReport(): Promise<MultiSourceData | null> {
     try {
-      // Load from GitHub or local file
-      const response = await fetch('/data/multi_source_report.json');
+      // Load from GitHub repository
+      const response = await fetch(`${GITHUB_RAW_BASE}/data/multi_source_report.json`);
       if (response.ok) {
         const data = await response.json();
         return {
@@ -173,7 +176,7 @@ export class EnhancedUnifiedDataLoader {
 
       for (const fileName of jsonFiles) {
         try {
-          const response = await fetch(`/data/organized_documents/json/${fileName}`);
+          const response = await fetch(`${GITHUB_RAW_BASE}/data/organized_documents/json/${fileName}`);
           if (response.ok) {
             const data = await response.json();
             
@@ -212,7 +215,7 @@ export class EnhancedUnifiedDataLoader {
 
       // Load detailed inventory if available
       try {
-        const inventoryResponse = await fetch('/data/organized_analysis/detailed_inventory.json');
+        const inventoryResponse = await fetch(`${GITHUB_RAW_BASE}/data/organized_analysis/detailed_inventory.json`);
         if (inventoryResponse.ok) {
           const inventory = await inventoryResponse.json();
           if (inventory && inventory.documents) {

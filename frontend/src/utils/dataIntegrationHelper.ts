@@ -46,3 +46,4 @@ export const getDataMetadata = async (year?: number): Promise<UnifiedData['metad
   const data = await enhancedUnifiedDataLoader.loadUnifiedData(year);
   return data.metadata;
 };
+

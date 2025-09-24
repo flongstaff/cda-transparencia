@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -15,7 +14,7 @@ import {
   FileText,
   BarChart3
 } from 'lucide-react';
-import { useFinancialOverview, useBudgetAnalysis, useDocumentAnalysis } from '../hooks/useComprehensiveData';
+import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
 import PageYearSelector from '../components/selectors/PageYearSelector';
 import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
 import { formatCurrencyARS, formatPercentageARS } from '../utils/formatters';
@@ -44,20 +43,18 @@ const Budget: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'overview' | 'categories' | 'trends'>('overview');
 
-  // Data hooks
-  const { data: financialData, loading: financialLoading, error: financialError } = useFinancialOverview(selectedYear);
-  const { budget: budgetData, loading: budgetLoading, error: budgetError } = useBudgetAnalysis(selectedYear);
-  const { documents, loading: docsLoading, error: docsError } = useDocumentAnalysis({ 
-    year: selectedYear, 
-    category: 'budget' 
-  });
+  // 🚀 Use real Carmen de Areco data
+  const {
+    completeData,
+    currentYearData,
+    loading,
+    error,
+    availableYears: allAvailableYears
+  } = useCompleteFinalData(selectedYear);
 
-  const loading = financialLoading || budgetLoading || docsLoading;
-  const error = financialError || budgetError || docsError;
-
-  // Process budget data
+  // Process budget data from the comprehensive data service
   const budgetPageData = useMemo<BudgetData>(() => {
-    if (!financialData) {
+    if (!currentYearData) {
       return {
         totalBudget: 0,
         totalExecuted: 0,
@@ -67,40 +64,54 @@ const Budget: React.FC = () => {
       };
     }
 
+    const budgetData = currentYearData.budget;
+    
+    // Handle different data structures that may be present
+    const totalBudget = budgetData?.total_budget || 
+                       budgetData?.totalBudget || 
+                       budgetData?.categories?.reduce((sum: number, cat: any) => sum + (cat.budgeted || 0), 0) || 0;
+    const totalExecuted = budgetData?.total_executed || 
+                         budgetData?.totalExecuted || 
+                         budgetData?.categories?.reduce((sum: number, cat: any) => sum + (cat.executed || 0), 0) || 0;
+    const executionRate = totalBudget > 0 ? (totalExecuted / totalBudget) * 100 : 0;
+
+    // Extract category breakdown if available
+    const categoryBreakdown = budgetData?.categories || [];
+
     return {
-      totalBudget: financialData.totalBudget || 0,
-      totalExecuted: financialData.totalExecuted || 0,
-      executionRate: financialData.executionRate || 0,
-      categoryBreakdown: financialData.categoryBreakdown?.map(cat => ({
-        name: cat.name,
-        budgeted: cat.budgeted || 0,
-        executed: cat.executed || 0,
-        executionRate: cat.execution_rate || 0,
-        variance: (cat.executed || 0) - (cat.budgeted || 0)
-      })) || [],
-      monthlyTrend: generateMonthlyTrendData()
+      totalBudget,
+      totalExecuted,
+      executionRate,
+      categoryBreakdown: categoryBreakdown.map((cat: any) => ({
+        name: cat.name || cat.category || cat.description || 'Categoría no identificada',
+        budgeted: cat.budgeted || cat.budget_amount || cat.budget || 0,
+        executed: cat.executed || cat.executed_amount || cat.executed || 0,
+        executionRate: cat.execution_rate || cat.executionRate || 0,
+        variance: (cat.executed || cat.executed_amount || cat.executed || 0) - 
+                  (cat.budgeted || cat.budget_amount || cat.budget || 0)
+      })),
+      monthlyTrend: [] // Add monthly trend data if available in completeData
     };
-  }, [financialData]);
+  }, [currentYearData]);
 
-  const generateMonthlyTrendData = () => {
-    return Array.from({ length: 12 }, (_, i) => ({
-      month: new Date(selectedYear, i, 1).toLocaleDateString('es-AR', { month: 'long' }),
-      budgeted: Math.floor(Math.random() * 200000000) + 100000000,
-      executed: Math.floor(Math.random() * 180000000) + 80000000
-    }));
-  };
-
-  const availableYears = Array.from({ length: 5 }, (_, i) => new Date().getFullYear() - i);
-
-  // Filter budget-related documents
+  // Filter budget-related documents from complete data
   const budgetDocuments = useMemo(() => {
-    return (documents || []).filter(doc => 
+    if (!currentYearData?.documents) return [];
+    
+    return currentYearData.documents.filter(doc => 
       doc.category?.toLowerCase().includes('budget') ||
       doc.category?.toLowerCase().includes('presupuesto') ||
+      doc.category?.toLowerCase().includes('ejecución') ||
+      doc.category?.toLowerCase().includes('gastos') ||
+      doc.category?.toLowerCase().includes('recursos') ||
       doc.title?.toLowerCase().includes('budget') ||
-      doc.title?.toLowerCase().includes('presupuesto')
+      doc.title?.toLowerCase().includes('presupuesto') ||
+      doc.title?.toLowerCase().includes('gastos') ||
+      doc.title?.toLowerCase().includes('recursos') ||
+      doc.filename?.toLowerCase().includes('budget') ||
+      doc.filename?.toLowerCase().includes('presupuesto')
     );
-  }, [documents]);
+  }, [currentYearData]);
 
   if (loading) {
     return (
@@ -147,7 +158,7 @@ const Budget: React.FC = () => {
             <PageYearSelector
               selectedYear={selectedYear}
               onYearChange={setSelectedYear}
-              availableYears={availableYears}
+              availableYears={allAvailableYears}
               label="Año fiscal"
             />
           </div>

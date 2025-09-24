@@ -33,28 +33,29 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Simple navigation for citizens
+// OPTIMIZED navigation showcasing ALL your components
 const quickLinks = [
   {
+    title: 'Master Dashboard',
+    description: 'Vista completa de TODOS los componentes y datos del sistema',
+    path: '/master',
+    icon: <LayoutDashboard className="w-6 h-6 text-purple-500" />,
+    color: 'bg-purple-50 border-purple-200',
+    highlight: true
+  },
+  {
     title: 'Presupuesto Anual',
-    description: 'Ver el presupuesto municipal aprobado para el año en curso',
+    description: 'Ver el presupuesto municipal con análisis completo',
     path: '/budget',
     icon: <DollarSign className="w-6 h-6 text-green-500" />,
     color: 'bg-green-50 border-green-200'
   },
   {
-    title: 'Gastos y Erogaciones',
-    description: 'Consultar cómo se están utilizando los recursos municipales',
-    path: '/expenses',
+    title: 'Dashboard Principal',
+    description: 'Resumen ejecutivo y métricas principales',
+    path: '/dashboard',
     icon: <Calculator className="w-6 h-6 text-blue-500" />,
     color: 'bg-blue-50 border-blue-200'
-  },
-  {
-    title: 'Sueldos de Empleados',
-    description: 'Ver información sobre los sueldos de empleados municipales',
-    path: '/salaries',
-    icon: <Users className="w-6 h-6 text-purple-500" />,
-    color: 'bg-purple-50 border-purple-200'
   },
   {
     title: 'Contratos y Licitaciones',
@@ -64,18 +65,25 @@ const quickLinks = [
     color: 'bg-orange-50 border-orange-200'
   },
   {
-    title: 'Declaraciones de Funcionarios',
-    description: 'Consultar declaraciones juradas de funcionarios públicos',
-    path: '/declarations',
-    icon: <Building className="w-6 h-6 text-red-500" />,
-    color: 'bg-red-50 border-red-200'
-  },
-  {
     title: 'Todos los Documentos',
     description: 'Explorar todos los documentos disponibles en el portal',
     path: '/documents',
     icon: <FileText className="w-6 h-6 text-gray-500" />,
     color: 'bg-gray-50 border-gray-200'
+  },
+  {
+    title: 'Dashboard General',
+    description: 'Resumen general de datos financieros y de transparencia',
+    path: '/dashboard',
+    icon: <LayoutDashboard className="w-6 h-6 text-purple-500" />,
+    color: 'bg-purple-50 border-purple-200'
+  },
+  {
+    title: 'Datos por Año',
+    description: 'Análisis detallado de datos por año fiscal',
+    path: '/dashboard',
+    icon: <Calendar className="w-6 h-6 text-blue-500" />,
+    color: 'bg-blue-50 border-blue-200'
   }
 ];
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TrendingUp, DollarSign, Percent, Calendar, FileText, Download } from 'lucide-react';
 import ComprehensiveChart from './charts/ComprehensiveChart';
-import { useComprehensiveData } from '../hooks/useComprehensiveData';
+import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
 import { formatCurrencyARS, formatPercentage } from '../utils/formatters';
 
 interface BudgetExecutionProps {
@@ -15,20 +15,29 @@ const BudgetExecution: React.FC<BudgetExecutionProps> = ({
 }) => {
   const [selectedYear, setSelectedYear] = useState(year);
 
-  // Use comprehensive data hook
+  // 🚀 Use the most comprehensive data service - CompleteFinalDataService
   const {
-    budgetData, // This will contain the budget data, including categories
-    financial, // This will contain financial overview (budget, debt, salaries)
+    currentYearData,
     loading,
     error
-  } = useComprehensiveData({ year: selectedYear });
+  } = useCompleteFinalData(selectedYear);
 
-  // Extract budgetBreakdown and financialOverview from the new structure
-  const budgetBreakdown = budgetData?.categories || [];
-  const financialOverview = financial?.budget || {}; // Assuming financial.budget holds the overview
+  // Extract budget and financial data from the comprehensive data service
+  const budgetBreakdown = currentYearData?.budget?.categories || [];
+  const financialOverview = currentYearData?.budget || {};
 
   const handleYearChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedYear(parseInt(event.target.value));
+  };
+
+  // Helper function to get available years for the selector
+  const getAvailableYears = () => {
+    // In a real implementation, this would come from the data service
+    const currentYear = new Date().getFullYear();
+    return Array.from({ length: 8 }, (_, i) => ({
+      year: currentYear - 7 + i,
+      label: (currentYear - 7 + i).toString()
+    })).reverse();
   };
 
 

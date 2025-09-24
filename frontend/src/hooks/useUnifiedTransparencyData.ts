@@ -81,17 +81,15 @@ interface ConsistencyCheck {
 }
 
 export const useUnifiedTransparencyData = (year: number) => {
-  // Use the unified data hook as the source of truth
-  const { 
-    multi_source, 
-    structured, 
-    documents, 
-    metadata, 
-    loading, 
-    error 
+  const {
+    multi_source,
+    structured,
+    documents,
+    metadata,
+    loading,
+    error,
   } = useUnifiedData({ year });
 
-  // Transform the unified data into the transparency interface
   const transparencyData = useMemo<UnifiedTransparencyData>(() => {
     if (!year || loading) {
       return {
@@ -141,8 +139,9 @@ export const useUnifiedTransparencyData = (year: number) => {
     // Audit Overview from structured data
     const auditOverview: AuditOverview = structured.audit || null; // structured.audit should contain the overall audit overview
 
-    // Anti‑corruption data from multi‑source
-    const antiCorruption: AntiCorruptionData = multi_source?.governance?.anti_corruption ?? null;
+    // Correct path to anti‑corruption data
+    const antiCorruption: AntiCorruptionData =
+      multi_source?.external_apis?.governance?.anti_corruption ?? null;
 
     // Consistency check
     const consistency_check: ConsistencyCheck = {

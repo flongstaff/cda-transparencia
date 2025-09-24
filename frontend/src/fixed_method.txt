@@ -1,0 +1,39 @@
+  /**
+   * Load yearly data for a specific data type with multiple fallback paths
+   */
+  private async loadYearlyDataByPattern(year: number, dataType: string, target: Record<number, any>): Promise<void> {
+    // Define multiple search patterns for robust data discovery
+    const patterns = [
+      `/data/organized_analysis/financial_oversight/${dataType}_analysis/${dataType}_data_${year}.json`,
+      `/data/organized_analysis/financial_oversight/${dataType}_oversight/${dataType}_data_${year}.json`,
+      `/data/organized_analysis/financial_oversight/${dataType}_monitoring/${dataType}_data_${year}.json`,
+      `/data/organized_documents/json/${dataType}_data_${year}.json`,
+      `/data/organized_documents/json/${dataType}_data.json`,
+      `/frontend/src/data/${dataType}_data_${year}.json`,
+      `/data/organized_documents/json/${dataType.toUpperCase()}_DATA_${year}.json`,
+      `/data/organized_documents/json/${dataType.toLowerCase()}_${year}.json`
+    ];
+
+    // Try each pattern with local paths first, then GitHub as fallback
+    for (const path of patterns) {
+      try {
+        // First try local path directly
+        let response = await fetch(path);
+        if (response.ok) {
+          const data = await response.json();
+          target[year] = data;
+          return;
+        }
+        
+        // If local fails, try GitHub URL
+        response = await fetch(`${GITHUB_RAW_BASE}${path}`);
+        if (response.ok) {
+          const data = await response.json();
+          target[year] = data;
+          return;
+        }
+      } catch (error) {
+        // Continue to next pattern
+      }
+    }
+  }
