@@ -1,0 +1,28 @@
+{
+  "name": "Carmen de Areco Transparency Portal",
+  "description": "Financial transparency data for Carmen de Areco, Buenos Aires, Argentina",
+  "years": [
+    "2017",
+    "2018", 
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+  ],
+  "categories": [
+    "Ejecución de Gastos",
+    "Ejecución de Recursos",
+    "Estados Financieros",
+    "Documentos Generales",
+    "Declaraciones Patrimoniales",
+    "Salud Pública",
+    "Recursos Humanos",
+    "Contrataciones",
+    "Presupuesto Municipal"
+  ],
+  "total_documents": 500,
+  "last_updated": "2025-09-24"
+}

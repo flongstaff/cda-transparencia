@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Data Access</title>
+</head>
+<body>
+    <h1>Test Data Access</h1>
+    <div id="results"></div>
+
+    <script>
+        // Test accessing local data files
+        async function testDataAccess() {
+            const resultsDiv = document.getElementById('results');
+            const testFiles = [
+                '/data/organized_analysis/financial_oversight/budget_analysis/budget_data_2024.json',
+                '/data/organized_analysis/financial_oversight/salary_oversight/salary_data_2024.json',
+                '/data/organized_analysis/financial_oversight/debt_monitoring/debt_data_2024.json'
+            ];
+
+            for (const file of testFiles) {
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        const data = await response.json();
+                        resultsDiv.innerHTML += `<p style="color: green;">✓ Successfully loaded ${file}</p>`;
+                        resultsDiv.innerHTML += `<p style="margin-left: 20px;">Data: ${JSON.stringify(data).substring(0, 100)}...</p>`;
+                    } else {
+                        resultsDiv.innerHTML += `<p style="color: red;">✗ Failed to load ${file}: ${response.status} ${response.statusText}</p>`;
+                    }
+                } catch (error) {
+                    resultsDiv.innerHTML += `<p style="color: red;">✗ Error loading ${file}: ${error.message}</p>`;
+                }
+            }
+        }
+
+        // Run the test
+        testDataAccess();
+    </script>
+</body>
+</html>

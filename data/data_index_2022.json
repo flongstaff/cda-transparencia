@@ -1,0 +1,25 @@
+{
+  "year": 2022,
+  "financial_data": {
+    "total_budget": 0,
+    "total_executed": 0,
+    "execution_rate": 0,
+    "total_revenue": 0,
+    "total_debt": 0
+  },
+  "documents": [],
+  "treasury_data": {
+    "total_income": 0,
+    "total_expenses": 0,
+    "current_balance": 0,
+    "movements": []
+  },
+  "budget_breakdown": [],
+  "json_files": {},
+  "markdown_files": {},
+  "salary_data": [],
+  "contract_data": [],
+  "investment_data": [],
+  "audit_anomalies": [],
+  "property_data": []
+}

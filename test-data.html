@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Access Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .loading { background-color: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+    </style>
+</head>
+<body>
+    <h1>Data Access Test</h1>
+    <div id="results"></div>
+
+    <script>
+        // Test accessing local data files
+        async function testDataAccess() {
+            const resultsDiv = document.getElementById('results');
+            
+            // Clear previous results
+            resultsDiv.innerHTML = '';
+            
+            const testFiles = [
+                '/data/organized_analysis/financial_oversight/budget_analysis/budget_data_2024.json',
+                '/data/organized_analysis/financial_oversight/salary_oversight/salary_data_2024.json',
+                '/data/organized_analysis/financial_oversight/debt_monitoring/debt_data_2024.json'
+            ];
+
+            for (const file of testFiles) {
+                const resultElement = document.createElement('div');
+                resultElement.className = 'result loading';
+                resultElement.innerHTML = `Testing ${file}...`;
+                resultsDiv.appendChild(resultElement);
+                
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        const data = await response.json();
+                        resultElement.className = 'result success';
+                        resultElement.innerHTML = `✓ Successfully loaded ${file}<br>Data: ${JSON.stringify(data).substring(0, 200)}...`;
+                    } else {
+                        resultElement.className = 'result error';
+                        resultElement.innerHTML = `✗ Failed to load ${file}: ${response.status} ${response.statusText}`;
+                    }
+                } catch (error) {
+                    resultElement.className = 'result error';
+                    resultElement.innerHTML = `✗ Error loading ${file}: ${error.message}`;
+                }
+            }
+        }
+
+        // Run the test when page loads
+        window.addEventListener('DOMContentLoaded', testDataAccess);
+    </script>
+</body>
+</html>

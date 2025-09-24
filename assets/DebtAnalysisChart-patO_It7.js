@@ -1,0 +1,1 @@
+import{j as s,U as a}from"./index-5vlOvqhd.js";import"./vendor-Cdsf-4wt.js";import"./icons-COJXH-M4.js";import"./animations-ByyCGB8C.js";import"./charts-bDVe7dlS.js";const t=({year:t,className:e})=>s.jsx(a,{type:"debt",year:t,title:`Análisis de Deuda ${t}`,className:e,variant:"pie",showControls:!0});export{t as default};
