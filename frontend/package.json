@@ -61,7 +61,7 @@
     "d3": "^7.9.0",
     "d3-sankey": "^0.12.3",
     "date-fns": "^4.1.0",
-    "framer-motion": "^10.17.9",
+    "framer-motion": "^12.23.22",
     "frappe-gantt-react": "^0.0.8",
     "fuse.js": "^7.1.0",
     "i18next": "^25.5.2",
