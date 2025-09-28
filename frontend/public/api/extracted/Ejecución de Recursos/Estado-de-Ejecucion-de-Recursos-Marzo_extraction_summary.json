@@ -1,0 +1,22 @@
+{
+  "document_info": {
+    "filename": "Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+    "category": "Ejecución de Recursos",
+    "year": null,
+    "quarter": null
+  },
+  "extraction_stats": {
+    "text_pages": 11,
+    "tables_found": 5,
+    "methods_used": [
+      "pdfplumber",
+      "tabula"
+    ],
+    "output_files_count": 7
+  },
+  "financial_summary": {
+    "amounts_found": 0,
+    "dates_found": 55,
+    "percentages_found": 4
+  }
+}

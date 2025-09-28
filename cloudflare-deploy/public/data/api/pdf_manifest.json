@@ -1,0 +1,580 @@
+{
+  "last_updated": "2025-09-26T20:34:54.242741",
+  "total_categories": 10,
+  "total_documents": 87,
+  "categories": {
+    "2022": {
+      "name": "2022",
+      "document_count": 0,
+      "documents": []
+    },
+    "2025": {
+      "name": "2025",
+      "document_count": 0,
+      "documents": []
+    },
+    "2024": {
+      "name": "2024",
+      "document_count": 0,
+      "documents": []
+    },
+    "2023": {
+      "name": "2023",
+      "document_count": 0,
+      "documents": []
+    },
+    "2017": {
+      "name": "2017",
+      "document_count": 0,
+      "documents": []
+    },
+    "2019": {
+      "name": "2019",
+      "document_count": 0,
+      "documents": []
+    },
+    "2021": {
+      "name": "2021",
+      "document_count": 0,
+      "documents": []
+    },
+    "2020": {
+      "name": "2020",
+      "document_count": 0,
+      "documents": []
+    },
+    "2018": {
+      "name": "2018",
+      "document_count": 0,
+      "documents": []
+    },
+    "pdfs": {
+      "name": "pdfs",
+      "document_count": 87,
+      "documents": [
+        {
+          "filename": "ANEXO-II-ZONAS-IMPOSITIVAS.pdf",
+          "size": 312765,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ANEXO-II-ZONAS-IMPOSITIVAS.pdf"
+        },
+        {
+          "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+          "size": 294922,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf"
+        },
+        {
+          "filename": "Situacion-Economica-Financiera-al-30-06-23.pdf",
+          "size": 271646,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Situacion-Economica-Financiera-al-30-06-23.pdf"
+        },
+        {
+          "filename": "GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+          "size": 277260,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+          "size": 102829,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+          "size": 86333,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf",
+          "size": 110199,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+          "size": 119210,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+          "size": 85219,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+          "size": 109553,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+          "size": 101639,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+          "size": 102641,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf"
+        },
+        {
+          "filename": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+          "size": 361665,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf"
+        },
+        {
+          "filename": "Situacion-Economico-Financiera-Junio.pdf",
+          "size": 224328,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Situacion-Economico-Financiera-Junio.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf",
+          "size": 66761,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+          "size": 67534,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+          "size": 151544,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+          "size": 102727,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf"
+        },
+        {
+          "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+          "size": 275027,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+          "size": 66180,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf"
+        },
+        {
+          "filename": "CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023.pdf",
+          "size": 93817,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023.pdf"
+        },
+        {
+          "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+          "size": 276006,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf"
+        },
+        {
+          "filename": "2021 ADMINISTRACION DE PERSONAL.pdf",
+          "size": 648650,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/2021 ADMINISTRACION DE PERSONAL.pdf"
+        },
+        {
+          "filename": "SITUACION-ECONOMICO-FINANCIERA.pdf",
+          "size": 227255,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/SITUACION-ECONOMICO-FINANCIERA.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+          "size": 102665,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+          "size": 143218,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf"
+        },
+        {
+          "filename": "CAIF-1.pdf",
+          "size": 93387,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/CAIF-1.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+          "size": 109812,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf"
+        },
+        {
+          "filename": "CAIF-3°TRIMESTRE.pdf",
+          "size": 94706,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/CAIF-3°TRIMESTRE.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+          "size": 69801,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+          "size": 140098,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+          "size": 85386,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf"
+        },
+        {
+          "filename": "Cuenta-Ahorro-Inversion-Financiamiento-4to-Trimestre.pdf",
+          "size": 370357,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Cuenta-Ahorro-Inversion-Financiamiento-4to-Trimestre.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+          "size": 101071,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf"
+        },
+        {
+          "filename": "CAIF-2.pdf",
+          "size": 93906,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/CAIF-2.pdf"
+        },
+        {
+          "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+          "size": 115864,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+          "size": 109758,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf"
+        },
+        {
+          "filename": "SITUACION-ECONOMICA-FINANCIERA.pdf",
+          "size": 71806,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/SITUACION-ECONOMICA-FINANCIERA.pdf"
+        },
+        {
+          "filename": "CAIF-3.pdf",
+          "size": 93841,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/CAIF-3.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+          "size": 99892,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+          "size": 67548,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf"
+        },
+        {
+          "filename": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+          "size": 362628,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf"
+        },
+        {
+          "filename": "CAIF-3°TRI-2022.pdf",
+          "size": 94144,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/CAIF-3°TRI-2022.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+          "size": 101956,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+          "size": 125901,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+          "size": 68205,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+          "size": 85022,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+          "size": 114620,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf"
+        },
+        {
+          "filename": "SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+          "size": 88878,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf"
+        },
+        {
+          "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+          "size": 278896,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+          "size": 118244,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+          "size": 119224,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+          "size": 85712,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+          "size": 85431,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf"
+        },
+        {
+          "filename": "SITUACION-ECONOMICA-FINANCIERA-1.pdf",
+          "size": 72005,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/SITUACION-ECONOMICA-FINANCIERA-1.pdf"
+        },
+        {
+          "filename": "Situacion-Economico-Financiera-3er-Trimestre.pdf",
+          "size": 226061,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Situacion-Economico-Financiera-3er-Trimestre.pdf"
+        },
+        {
+          "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+          "size": 85366,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf"
+        },
+        {
+          "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+          "size": 102876,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+          "size": 102105,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf"
+        },
+        {
+          "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+          "size": 294085,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+          "size": 84880,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+          "size": 111422,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf"
+        },
+        {
+          "filename": "SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+          "size": 72410,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/SITUACION-ECONOMICA-FINANCIERA-2.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+          "size": 119668,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf"
+        },
+        {
+          "filename": "Situacion-Economico-Financiera-4to-Trimestre.pdf",
+          "size": 305831,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Situacion-Economico-Financiera-4to-Trimestre.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+          "size": 154286,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+          "size": 141931,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+          "size": 147280,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+          "size": 67723,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+          "size": 87336,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf"
+        },
+        {
+          "filename": "SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+          "size": 72452,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+          "size": 101611,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf"
+        },
+        {
+          "filename": "SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+          "size": 89080,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf"
+        },
+        {
+          "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+          "size": 278043,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+          "size": 102506,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf"
+        },
+        {
+          "filename": "2021 SERVICIOS PUBLICOS.pdf",
+          "size": 651610,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/2021 SERVICIOS PUBLICOS.pdf"
+        },
+        {
+          "filename": "SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+          "size": 72061,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf"
+        },
+        {
+          "filename": "CAIF-4°TRE-2022.pdf",
+          "size": 93600,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/CAIF-4°TRE-2022.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+          "size": 109662,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+          "size": 85281,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+          "size": 121409,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+          "size": 102839,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf"
+        },
+        {
+          "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+          "size": 142229,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf"
+        },
+        {
+          "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+          "size": 102664,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf"
+        },
+        {
+          "filename": "Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+          "size": 372895,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf"
+        },
+        {
+          "filename": "RECURSOS-POR-PROCEDENCIA.pdf",
+          "size": 362991,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/RECURSOS-POR-PROCEDENCIA.pdf"
+        },
+        {
+          "filename": "Situacion-Economico-Financiera-Marzo.pdf",
+          "size": 224229,
+          "modified": "2025-09-12T10:19:24",
+          "url": "data/organized_pdfs/pdfs/Situacion-Economico-Financiera-Marzo.pdf"
+        }
+      ]
+    }
+  }
+}

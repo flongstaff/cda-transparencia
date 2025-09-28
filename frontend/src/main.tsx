@@ -18,7 +18,7 @@ const queryClient = new QueryClient({
   },
 });
 
-console.log('🔥 Loading main.tsx - Unified Application starting...'); // Force re-compile
+    // // console.log('🔥 Loading main.tsx - Unified Application starting...'); // Force re-compile
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

@@ -20,23 +20,30 @@ import {
   BarChart3
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useTransparencyData } from '../hooks/useTransparencyData';
-import PageYearSelector from '../components/selectors/PageYearSelector';
+import { useMasterData } from '../hooks/useMasterData';
+import PageYearSelector from '../components/forms/PageYearSelector';
 
 const UnifiedDashboard: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
 
-  // 🚀 SINGLE SOURCE OF TRUTH - Unified transparency data
+  // 🚀 Use unified master data service
   const {
-    completeData,
-    currentYearData,
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
+    currentDebt,
     loading,
     error,
-    metrics,
-    formatCurrency,
-    formatPercentage,
-    refetch
-  } = useTransparencyData(selectedYear);
+    totalDocuments,
+    availableYears,
+    categories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
 
   if (loading) {
     return (

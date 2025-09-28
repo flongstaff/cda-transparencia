@@ -1,0 +1,26 @@
+[
+  {
+    "year": 2021,
+    "documents_count": 2,
+    "tables_count": 53,
+    "revenue_mentions": 0,
+    "expense_mentions": 0,
+    "last_updated": "2025-09-27T17:11:06.856900"
+  },
+  {
+    "year": 2022,
+    "documents_count": 4,
+    "tables_count": 53,
+    "revenue_mentions": 10,
+    "expense_mentions": 11,
+    "last_updated": "2025-09-27T17:11:06.859581"
+  },
+  {
+    "year": 2023,
+    "documents_count": 3,
+    "tables_count": 10,
+    "revenue_mentions": 4,
+    "expense_mentions": 10,
+    "last_updated": "2025-09-27T17:11:06.860248"
+  }
+]

@@ -5,6 +5,8 @@ on:
     branches:
       - main
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly Sundays
 
 jobs:
   deploy-frontend:
@@ -25,6 +27,18 @@ jobs:
       - name: Build frontend
         run: npm run build:github
         working-directory: frontend
+
+      - name: Run Audits
+        run: |
+          cd scripts
+          npm install axios
+          node fetch-external.js
+          # python audit_asap.py  # Install Python in Actions if needed
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add ../data/audit_results.json
+          git commit -m "Auto-update audits" || echo "No changes"
+          git push
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

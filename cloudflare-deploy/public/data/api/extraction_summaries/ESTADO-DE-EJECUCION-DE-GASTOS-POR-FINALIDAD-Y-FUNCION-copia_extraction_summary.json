@@ -1,0 +1,22 @@
+{
+  "document_info": {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+    "category": "Ejecución de Gastos",
+    "year": null,
+    "quarter": null
+  },
+  "extraction_stats": {
+    "text_pages": 2,
+    "tables_found": 2,
+    "methods_used": [
+      "pdfplumber",
+      "tabula"
+    ],
+    "output_files_count": 4
+  },
+  "financial_summary": {
+    "amounts_found": 0,
+    "dates_found": 10,
+    "percentages_found": 0
+  }
+}

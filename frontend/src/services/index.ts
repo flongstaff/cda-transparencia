@@ -1,36 +1,40 @@
 /**
- * Services Index - Consolidated exports for all services
- * All API calls now go through ConsolidatedApiService for consistency
+ * Services Index - Export all services for easy importing
+ * Provides unified access to all data services in the application
  */
 
-// Primary service - all API calls go through this
-export { consolidatedApiService } from './ConsolidatedApiService';
+// Main data services
+export { default as dataService, productionDataService } from './dataService';
+export { default as EnhancedDataService } from './EnhancedDataService';
+export { default as githubDataService } from './GitHubDataService';
+export { default as externalAPIsService } from './ExternalAPIsService';
+export { default as AuditService } from './AuditService';
+export { default as masterDataService } from './MasterDataService';
+export { default as RealDataService, realDataService } from './RealDataService';
+export { dataSyncService } from './DataSyncService';
+export { default as UnifiedTransparencyService } from './UnifiedTransparencyService';
 
-// Document data services for organizing and fetching data from Markdown/JSON files
-export { documentDataService } from './DocumentDataService';
-export { enhancedDocumentDataService } from './EnhancedDocumentDataService';
-export { unifiedResourceService } from './UnifiedResourceService';
-
-// Essential supporting services
-//export { default as yearlyDataService } from './YearlyDataService';
-//export { default as markdownService } from './MarkdownDataService';
-
-// Backward compatibility aliases - all point to ConsolidatedApiService
-export { consolidatedApiService as apiService } from './ConsolidatedApiService';
-export { consolidatedApiService as dataService } from './ConsolidatedApiService';
-export { consolidatedApiService as unifiedDataService } from './ConsolidatedApiService';
-
-// Type exports
-export type { MunicipalData, BudgetData, Document } from './ConsolidatedApiService';
-export type { DocumentMetadata, CategoryData, YearlyData } from './DocumentDataService';
+// Service interfaces and types
 export type { 
-  DocumentMetadata as EnhancedDocumentMetadata,
-  CategoryData as EnhancedCategoryData,
-  YearlyData as EnhancedYearlyData,
-  DocumentServiceError,
-  SupportedFileType
-} from './EnhancedDocumentDataService';
+  UnifiedTransparencyData 
+} from './UnifiedTransparencyService';
 export type { 
-  DocumentMetadata as UnifiedDocumentMetadata,
-  DocumentServiceError as UnifiedDocumentServiceError
-} from './UnifiedResourceService';
+  ExternalDataResponse, 
+  DataSource 
+} from './ExternalAPIsService';
+export type { 
+  GitHubDataResponse, 
+  RepositoryConfig 
+} from './GitHubDataService';
+export type { 
+  SyncResult, 
+  SyncReport 
+} from './DataSyncService';
+export type { 
+  Document, 
+  UnifiedDataState 
+} from './MasterDataService';
+export type { 
+  RealDataResponse, 
+  RealDataSources 
+} from './RealDataService';

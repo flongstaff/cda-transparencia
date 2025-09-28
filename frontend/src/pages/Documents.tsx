@@ -8,16 +8,12 @@ import {
   Eye,
   Grid,
   List,
-  ChevronDown,
-  ChevronUp,
   CheckCircle,
   AlertCircle,
   Loader2,
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
-import DocumentViewer from '../components/viewers/DocumentViewer';
-import PageYearSelector from '../components/selectors/PageYearSelector';
+import { useMasterData } from '../hooks/useMasterData';
+import YearSelector from '../components/navigation/YearSelector';
 import { formatFileSize } from '../utils/formatters';
 
 const Documents: React.FC = () => {
@@ -29,24 +25,41 @@ const Documents: React.FC = () => {
   const [sortField, setSortField] = useState<'title' | 'size' | 'date' | 'category'>('title');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
 
-  // 🚀 Use real Carmen de Areco data
+  // 🚀 Use unified master data service
   const {
-    completeData,
-    currentYearData,
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
+    currentDebt,
     loading: isLoading,
-    error: error,
-    availableYears
-  } = useCompleteFinalData(selectedYear);
+    error,
+    totalDocuments,
+    availableYears,
+    categories: documentCategories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
 
-  // Access documents from the new structure (CompleteFinalDataService)
+  // Access documents from the master data service
   const yearDocuments = useMemo(() => {
-    if (currentYearData && currentYearData.documents) {
-      return currentYearData.documents;
+    if (currentDocuments && Array.isArray(currentDocuments)) {
+      return currentDocuments;
     }
     return [];
-  }, [currentYearData]);
+  }, [currentDocuments]);
 
-  const categories = useMemo(() => [...new Set(yearDocuments.map((doc) => doc.category))].sort(), [yearDocuments]);
+  // Use documentCategories from the master data if available, otherwise extract from documents
+  const categories = useMemo(() => {
+    if (documentCategories && documentCategories.length > 0) {
+      return documentCategories;
+    }
+    // Fallback: extract categories from documents themselves
+    return [...new Set(yearDocuments.map((doc) => doc.category))].sort();
+  }, [documentCategories, yearDocuments]);
 
   const documentTypes = useMemo(() => [...new Set(yearDocuments.map((doc) => doc.type || 'unknown'))].sort(), [yearDocuments]);
 
@@ -106,7 +119,7 @@ const Documents: React.FC = () => {
     ? availableYears 
     : [selectedYear];
 
-  const handleSort = (field: typeof sortField) => {
+  const _handleSort = (field: typeof sortField) => {
     if (sortField === field) {
       setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
     } else {
@@ -156,7 +169,7 @@ const Documents: React.FC = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <AlertCircle className="w-12 h-12 text-red-500 mr-4" />
-        <p className="text-red-600">{error?.message || 'Error al cargar los documentos'}</p>
+        <p className="text-red-600">{error || 'Error al cargar los documentos'}</p>
       </div>
     );
   }
@@ -177,9 +190,9 @@ const Documents: React.FC = () => {
               </span>
             </p>
           </div>
-          <PageYearSelector
+          <YearSelector
             availableYears={yearsToDisplay}
-            selectedYear={selectedYear}
+            currentYear={selectedYear}
             onYearChange={setSelectedYear}
           />
         </div>

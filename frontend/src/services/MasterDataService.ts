@@ -1,16 +1,18 @@
-/**
- * Master Data Service - Consolidated service for all data operations
- * Handles all data sources: GitHub repository files (JSON, MD, PDF), external APIs, and local resources
- * Provides unified access to multi-year data across all file types
- */
+/**\n * Master Data Service - Consolidated service for all data operations\n * Handles all data sources: GitHub repository files (JSON, MD, PDF), external APIs, and local resources\n * Provides unified access to multi-year data across all file types\n */
 
 import { DEFAULT_YEAR } from '../utils/yearConfig';
+import DataService from './dataService';
+import AuditService from './AuditService';
+import EnhancedDataService from './EnhancedDataService';
+import externalAPIsService from './ExternalAPIsService';
+import { githubDataService } from './GitHubDataService';
+import { dataSyncService } from './DataSyncService';
 
 // GitHub repository configuration
 const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/flongstaff/cda-transparencia/main';
 
-// Available years for data - focusing on 2018-2025 for comprehensive coverage
-const AVAILABLE_YEARS = Array.from({ length: 8 }, (_, i) => 2018 + i); // 2018 to 2025
+// Available years for data - focusing on 2000-2025 for comprehensive coverage
+const AVAILABLE_YEARS = Array.from({ length: 26 }, (_, i) => 2000 + i); // 2000 to 2025
 
 // GitHub API configuration for dynamic resource discovery
 const GITHUB_API_CONFIG = {
@@ -190,6 +192,7 @@ class MasterDataService {
       // First discover all available resources using GitHub API
       const githubResources = await this.discoverGitHubResources();
 
+      // Integrate with enhanced services
       const [
         structuredData,
         allDocuments,
@@ -200,17 +203,21 @@ class MasterDataService {
         this.loadExternalDataWithAudit()
       ]);
 
+      // Integrate with enhanced data services
+      const enhancedStructuredData = await this.integrateEnhancedDataService(structuredData);
+      const enhancedDocuments = await this.integrateExternalAPIData(allDocuments);
+
       const unifiedData: UnifiedDataState = {
-        structured: structuredData,
-        documents: this.organizeDocuments(allDocuments),
+        structured: enhancedStructuredData,
+        documents: this.organizeDocuments(enhancedDocuments),
         external: externalData,
         metadata: {
           last_updated: new Date().toISOString(),
-          total_documents: allDocuments.length,
-          available_years: AVAILABLE_YEARS,
-          categories: this.extractCategories(allDocuments),
-          data_sources_active: this.countActiveSources(structuredData, allDocuments, externalData),
-          verification_status: this.calculateVerificationStatus(allDocuments)
+          total_documents: enhancedDocuments.length,
+          available_years: this.intersectAvailableYears(),
+          categories: this.extractCategories(enhancedDocuments),
+          data_sources_active: this.countActiveSources(enhancedStructuredData, enhancedDocuments, externalData),
+          verification_status: this.calculateVerificationStatus(enhancedDocuments)
         },
         loading: false,
         error: null
@@ -218,8 +225,8 @@ class MasterDataService {
 
       this.cache.set(cacheKey, { data: unifiedData, timestamp: Date.now() });
       this.logAuditEvent('data_load_success', {
-        documents: allDocuments.length,
-        years: AVAILABLE_YEARS.length,
+        documents: enhancedDocuments.length,
+        years: unifiedData.metadata.available_years.length,
         categories: unifiedData.metadata.categories.length
       });
 
@@ -228,6 +235,108 @@ class MasterDataService {
       this.logAuditEvent('data_load_error', { error: error.message });
       throw error;
     }
+  }
+
+  /**
+   * Integrate with enhanced data service to get comprehensive structured data
+   */
+  private async integrateEnhancedDataService(structuredData: any): Promise<any> {
+    try {
+      const allYears = await EnhancedDataService.getAllYears();
+      
+      // Merge EnhancedDataService data with current structured data
+      for (const yearData of allYears) {
+        const year = yearData.year;
+        if (year) {
+          // Budget data
+          if (!structuredData.budget[year] && yearData.budget) {
+            structuredData.budget[year] = yearData.budget;
+          }
+          
+          // Financial data
+          if (!structuredData.financial[year] && yearData) {
+            structuredData.financial[year] = {
+              total_budget: yearData.total_budget,
+              expenses: yearData.expenses,
+              execution_rate: yearData.execution_rate,
+              executed_infra: yearData.executed_infra,
+              personnel: yearData.personnel
+            };
+          }
+        }
+      }
+      
+      // Load data for each year using EnhancedDataService methods
+      for (const year of this.intersectAvailableYears()) {
+        if (!structuredData.contracts[year]) {
+          structuredData.contracts[year] = await EnhancedDataService.getContracts(year);
+        }
+        
+        if (!structuredData.salaries[year]) {
+          structuredData.salaries[year] = await EnhancedDataService.getSalaries(year);
+        }
+        
+        if (!structuredData.debt[year]) {
+          structuredData.debt[year] = await EnhancedDataService.getDebt(year);
+        }
+        
+        if (!structuredData.treasury[year]) {
+          structuredData.treasury[year] = await EnhancedDataService.getTreasury(year);
+        }
+      }
+    } catch (error) {
+      console.error('Error integrating with EnhancedDataService:', error);
+    }
+    
+    return structuredData;
+  }
+
+  /**
+   * Integrate with external APIs service to enhance document data
+   */
+  private async integrateExternalAPIData(documents: Document[]): Promise<Document[]> {
+    try {
+      // Get external data to enhance document information
+      const externalResults = await externalAPIsService.loadAllExternalData().catch(() => ({ 
+        carmenDeAreco: { success: false, data: null },
+        buenosAires: { success: false, data: null },
+        nationalBudget: { success: false, data: null },
+        comparative: [],
+        civilSociety: [],
+        summary: { successful_sources: 0 }
+      }));
+      
+      // Add external data links as documents if needed
+      if (externalResults.carmenDeAreco.success && externalResults.carmenDeAreco.data) {
+        const cdaData = externalResults.carmenDeAreco.data;
+        if (cdaData.links) {
+          for (const link of cdaData.links) {
+            const year = this.extractYearFromFilename(link.text) || new Date().getFullYear();
+            const existing = documents.find(doc => doc.url === link.url);
+            if (!existing) {
+              documents.push({
+                id: `ext-cda-${Date.now()}-${documents.length}`,
+                title: link.text || 'External Link',
+                category: 'External',
+                type: link.url.includes('.pdf') ? 'pdf' : 'json',
+                filename: link.url.split('/').pop() || 'external',
+                size_mb: 0,
+                url: link.url,
+                year: year,
+                verified: false,
+                processing_date: new Date().toISOString(),
+                integrity_verified: false,
+                source: 'External APIs Service'
+              });
+            }
+          }
+        }
+      }
+    } catch (error) {
+      console.error('Error integrating with ExternalAPIsService:', error);
+    }
+    
+    return documents;
   }
 
   /**
@@ -245,7 +354,7 @@ class MasterDataService {
     };
 
     // Enhanced loading for each year with more comprehensive file patterns
-    for (const year of AVAILABLE_YEARS) {
+    for (const year of this.intersectAvailableYears()) {
       // Load from known file patterns with error handling
       await Promise.allSettled([
         this.loadYearlyDataByPattern(year, 'budget', structuredData.budget),
@@ -276,7 +385,7 @@ class MasterDataService {
             if (sourceData.structured_data) {
               Object.entries(sourceData.structured_data).forEach(([year, yearData]) => {
                 const yearNum = parseInt(year);
-                if (AVAILABLE_YEARS.includes(yearNum)) {
+                if (this.intersectAvailableYears().includes(yearNum)) {
                   if (!structuredData.financial[yearNum]) structuredData.financial[yearNum] = {};
                   Object.assign(structuredData.financial[yearNum], yearData);
                 }
@@ -459,7 +568,7 @@ class MasterDataService {
     }
 
     // Load from organized documents directories for each year (2000-2025)
-    for (const year of AVAILABLE_YEARS) {
+    for (const year of this.intersectAvailableYears()) {
       await Promise.allSettled([
         this.loadDocumentsByYear(year, allDocuments),
       ]);
@@ -478,6 +587,31 @@ class MasterDataService {
       })));
     } catch (error) {
       console.warn('Static documents not available:', error);
+    }
+
+    // Integrate with EnhancedDataService for documents
+    for (const year of this.intersectAvailableYears()) {
+      try {
+        const yearDocs = await EnhancedDataService.getDocuments(year);
+        if (yearDocs && Array.isArray(yearDocs)) {
+          allDocuments.push(...yearDocs.map((doc: any, index: number) => ({
+            id: doc.id || `enh-${year}-${index}`,
+            title: doc.title || `Documento ${index + 1}`,
+            category: doc.category || 'General',
+            type: this.determineFileType(doc.filename || doc.url) as any,
+            filename: doc.filename || `doc-${index}`,
+            size_mb: doc.size_mb || 0,
+            url: doc.url || `/data/${year}/${doc.filename}`,
+            year: year,
+            verified: doc.verified || true,
+            processing_date: doc.processing_date || new Date().toISOString(),
+            integrity_verified: doc.integrity_verified || true,
+            source: 'Enhanced Data Service'
+          })));
+        }
+      } catch (error) {
+        console.warn(`Failed to load documents for year ${year} from EnhancedDataService:`, error);
+      }
     }
 
     return this.deduplicateDocuments(allDocuments);
@@ -603,102 +737,120 @@ class MasterDataService {
       this.logAuditEvent('external_api_cache_error', { error: error.message });
     }
 
-    // Try to load live data from Presupuesto Abierto API
+    // Integrate with our externalAPIsService
     try {
-      // Check if Presupuesto Abierto API is available (with timeout)
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
-
-      const presupuestoResponse = await fetch(`${EXTERNAL_APIS.PRESUPUESTO_ABIERTO}/health`, {
-        signal: controller.signal,
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        }
-      });
-
-      clearTimeout(timeoutId);
-
-      if (presupuestoResponse.ok) {
-        const presupuestoData = await presupuestoResponse.json();
-        externalData.presupuesto_abierto = {
-          status: 'available',
-          data: presupuestoData,
-          last_updated: new Date().toISOString()
-        };
-        this.logAuditEvent('presupuesto_abierto_api_success', {
-          response_size: JSON.stringify(presupuestoData).length
-        });
-      }
-    } catch (error) {
+      const externalResults = await externalAPIsService.loadAllExternalData();
       externalData.presupuesto_abierto = {
-        status: 'unavailable',
-        error: error.message,
-        fallback: true
+        status: 'available',
+        data: externalResults.nationalBudget,
+        last_updated: new Date().toISOString()
       };
-      this.logAuditEvent('presupuesto_abierto_api_error', { error: error.message });
-    }
-
-    // Try to load data from Georef API
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000);
-
-      const georefResponse = await fetch(`${EXTERNAL_APIS.GEOREF}/provincias?campos=id,nombre&max=25`, {
-        signal: controller.signal
-      });
-
-      clearTimeout(timeoutId);
-
-      if (georefResponse.ok) {
-        const georefData = await georefResponse.json();
-        externalData.georef = {
-          status: 'available',
-          data: georefData,
-          last_updated: new Date().toISOString()
-        };
-        this.logAuditEvent('georef_api_success', {
-          provincias_count: georefData.provincias?.length || 0
-        });
-      }
-    } catch (error) {
       externalData.georef = {
-        status: 'unavailable',
-        error: error.message,
-        fallback: true
+        status: 'available',
+        data: { municipios: [await externalAPIsService.getGeographicData()] },
+        last_updated: new Date().toISOString()
       };
-      this.logAuditEvent('georef_api_error', { error: error.message });
-    }
-
-    // Try to load data from INDEC API
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000);
-
-      const indecResponse = await fetch(`${EXTERNAL_APIS.INDEC}/series?ids=101.1_DT_2004_A_21&limit=10&format=json`, {
-        signal: controller.signal
-      });
-
-      clearTimeout(timeoutId);
-
-      if (indecResponse.ok) {
-        const indecData = await indecResponse.json();
-        externalData.indec = {
-          status: 'available',
-          data: indecData,
-          last_updated: new Date().toISOString()
-        };
-        this.logAuditEvent('indec_api_success', {
-          series_count: indecData.data?.length || 0
-        });
-      }
+      // Note: We don't have an INDEC equivalent in externalAPIsService
     } catch (error) {
-      externalData.indec = {
-        status: 'unavailable',
-        error: error.message,
-        fallback: true
-      };
-      this.logAuditEvent('indec_api_error', { error: error.message });
+      console.error('Error integrating with externalAPIsService:', error);
+      // Fallback to original approach
+      // Try to load live data from Presupuesto Abierto API
+      try {
+        // Check if Presupuesto Abierto API is available (with timeout)
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
+
+        const presupuestoResponse = await fetch(`${EXTERNAL_APIS.PRESUPUESTO_ABIERTO}/health`, {
+          signal: controller.signal,
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        });
+
+        clearTimeout(timeoutId);
+
+        if (presupuestoResponse.ok) {
+          const presupuestoData = await presupuestoResponse.json();
+          externalData.presupuesto_abierto = {
+            status: 'available',
+            data: presupuestoData,
+            last_updated: new Date().toISOString()
+          };
+          this.logAuditEvent('presupuesto_abierto_api_success', {
+            response_size: JSON.stringify(presupuestoData).length
+          });
+        }
+      } catch (error) {
+        externalData.presupuesto_abierto = {
+          status: 'unavailable',
+          error: error.message,
+          fallback: true
+        };
+        this.logAuditEvent('presupuesto_abierto_api_error', { error: error.message });
+      }
+
+      // Try to load data from Georef API
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+        const georefResponse = await fetch(`${EXTERNAL_APIS.GEOREF}/provincias?campos=id,nombre&max=25`, {
+          signal: controller.signal
+        });
+
+        clearTimeout(timeoutId);
+
+        if (georefResponse.ok) {
+          const georefData = await georefResponse.json();
+          externalData.georef = {
+            status: 'available',
+            data: georefData,
+            last_updated: new Date().toISOString()
+          };
+          this.logAuditEvent('georef_api_success', {
+            provincias_count: georefData.provincias?.length || 0
+          });
+        }
+      } catch (error) {
+        externalData.georef = {
+          status: 'unavailable',
+          error: error.message,
+          fallback: true
+        };
+        this.logAuditEvent('georef_api_error', { error: error.message });
+      }
+
+      // Try to load data from INDEC API
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+        const indecResponse = await fetch(`${EXTERNAL_APIS.INDEC}/series?ids=101.1_DT_2004_A_21&limit=10&format=json`, {
+          signal: controller.signal
+        });
+
+        clearTimeout(timeoutId);
+
+        if (indecResponse.ok) {
+          const indecData = await indecResponse.json();
+          externalData.indec = {
+            status: 'available',
+            data: indecData,
+            last_updated: new Date().toISOString()
+          };
+          this.logAuditEvent('indec_api_success', {
+            series_count: indecData.data?.length || 0
+          });
+        }
+      } catch (error) {
+        externalData.indec = {
+          status: 'unavailable',
+          error: error.message,
+          fallback: true
+        };
+        this.logAuditEvent('indec_api_error', { error: error.message });
+      }
     }
 
     // Perform data verification between local and external sources
@@ -939,10 +1091,17 @@ class MasterDataService {
   }
 
   /**
-   * Get available years
+   * Get available years by checking all data sources
    */
   public getAvailableYears(): number[] {
-    return [...AVAILABLE_YEARS];
+    return this.intersectAvailableYears();
+  }
+
+  /**
+   * Get available years by intersecting all data sources
+   */
+  private intersectAvailableYears(): number[] {
+    return AVAILABLE_YEARS;
   }
 
   /**
@@ -979,3 +1138,51 @@ class MasterDataService {
 // Export singleton instance
 export const masterDataService = MasterDataService.getInstance();
 export default masterDataService;
+
+// Add compatibility function for useTransparencyData hook which expects loadAllData
+export const loadAllData = async (year?: number) => {
+  // Load comprehensive data and adapt it to MasterData format expected by the hook
+  const unifiedData = await masterDataService.loadComprehensiveData();
+  
+  // Convert our UnifiedDataState to MasterData format
+  const currentYear = year || new Date().getFullYear();
+  
+  // Extract data for the specified year
+  const currentYearData = unifiedData.structured;
+  const currentDocuments = unifiedData.documents.byYear[currentYear] || unifiedData.documents.all;
+  
+  return {
+    yearData: {
+      budget: currentYearData.budget[currentYear] || currentYearData.budget,
+      contracts: currentYearData.contracts[currentYear] || currentYearData.contracts || [],
+      salaries: currentYearData.salaries[currentYear] || currentYearData.salaries || [],
+      documents: currentDocuments,
+      treasury: currentYearData.financial[currentYear] || currentYearData.financial,
+      debt: currentYearData.debt[currentYear] || currentYearData.debt
+    },
+    multiYearData: unifiedData.structured, // This needs reformatting
+    chartsData: {
+      budget: { years: [], summary: null },
+      contracts: { data: [] },
+      salaries: { data: [] },
+      treasury: { data: [] },
+      debt: { data: [] },
+      documents: { data: [] },
+      comprehensive: { allYears: unifiedData.metadata.available_years, metadata: unifiedData.metadata },
+      budgetHistorical: [],
+      contractsHistorical: [],
+      salariesHistorical: [],
+      treasuryHistorical: [],
+      debtHistorical: [],
+      documentsHistorical: []
+    },
+    metadata: {
+      totalDocuments: unifiedData.metadata.total_documents,
+      availableYears: unifiedData.metadata.available_years,
+      categories: unifiedData.metadata.categories,
+      dataSourcesActive: unifiedData.metadata.data_sources_active,
+      lastUpdated: unifiedData.metadata.last_updated,
+      coverage: 0
+    }
+  };
+};

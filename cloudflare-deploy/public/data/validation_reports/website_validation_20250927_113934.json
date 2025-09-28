@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-09-27T11:39:34.798644",
+  "validation_results": {
+    "data_structure": {
+      "directories_check": {
+        "data/organized_documents/json": {
+          "exists": false,
+          "file_count": 0
+        },
+        "data/organized_pdfs": {
+          "exists": false,
+          "file_count": 0
+        },
+        "data/markdown_documents": {
+          "exists": false,
+          "file_count": 0
+        },
+        "data/pdfs": {
+          "exists": false,
+          "file_count": 0
+        }
+      },
+      "json_files_check": {},
+      "data_integrity": {}
+    },
+    "processing_completeness": {
+      "pdf_extraction": {
+        "count": 0,
+        "files": []
+      },
+      "document_analysis": {
+        "count": 0,
+        "files": []
+      },
+      "verification_reports": {
+        "count": 0,
+        "files": []
+      },
+      "consolidated_data": {
+        "count": 0,
+        "files": []
+      }
+    },
+    "website_ready_data": {
+      "financial_reports": [
+        "data/extracted_data/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_financial_data.json",
+        "data/extracted_data/SITUACION-ECONOMICA-FINANCIERA-4\u00b0TRIMESTRE_financial_data.json",
+        "data/extracted_data/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4\u00b0TRI_financial_data.json"
+      ],
+      "documents_metadata": [
+        "data/whistleblower_reports/WB-20250926-C62663F3/report_metadata.json",
+        "data/whistleblower_reports/WB-20250926-6FEAF4A3/report_metadata.json"
+      ],
+      "analysis_results": [],
+      "verification_summary": []
+    }
+  },
+  "assessment": "NOT_READY",
+  "recommendations": [
+    "\u274c Data is not ready for website display",
+    "   - Critical data missing or incomplete",
+    "   - Process all missing files and complete pipeline"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "year": 2019,
+  "total_documents": 1,
+  "categories": {
+    "Documentos Generales": [
+      {
+        "id": "pdf-38",
+        "title": "2019 Situacion Economico Financiero Carmen de Areco",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2019/2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+        "year": 2019,
+        "category": "Documentos Generales",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Documentos Generales",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2019/2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+        "size_mb": 1.08,
+        "last_modified": ""
+      }
+    ]
+  },
+  "documents": [
+    {
+      "id": "pdf-38",
+      "title": "2019 Situacion Economico Financiero Carmen de Areco",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2019/2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+      "year": 2019,
+      "category": "Documentos Generales",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Documentos Generales",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2019/2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+      "size_mb": 1.08,
+      "last_modified": ""
+    }
+  ]
+}

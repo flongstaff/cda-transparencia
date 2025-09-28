@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cronología de Licitaciones 2023 - Carmen de Areco</title>
+    <meta charset="utf-8">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .chart-container { width: 100%; height: 500px; }
+        .alert { background: #fee; border: 1px solid #fcc; padding: 15px; margin: 10px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🚩 Análisis: Concentración de Licitaciones Noviembre 2023</h1>
+
+    <div class="alert">
+        <strong>Bandera Roja Detectada:</strong> 5 licitaciones concentradas en 15 días de noviembre.
+        <br><strong>Investigar:</strong> ¿Urgencia operativa o necesidad de gastar antes de fin de ejercicio?
+    </div>
+
+    <div id="chart" class="chart-container"></div>
+
+    <script>
+        const data = [{
+            x: ['2023-11-13', '2023-11-13', '2023-11-17', '2023-11-17', '2023-11-27'],
+            y: ['Equipo de Nefrología', 'Combi Mini Bus', 'Camioneta Utilitaria', 'Compactador', 'Sistema de Producción'],
+            text: ['$15M', '$8M', '$6M', '$12M', '$20M'],
+            mode: 'markers',
+            type: 'scatter',
+            marker: {
+                size: [15, 8, 6, 12, 20],
+                color: ['red', 'orange', 'yellow', 'orange', 'red'],
+                sizemode: 'diameter',
+                sizeref: 2
+            }
+        }];
+
+        const layout = {
+            title: 'Licitaciones Noviembre 2023: ¿Por qué todas juntas?',
+            xaxis: { title: 'Fecha' },
+            yaxis: { title: 'Equipamiento' }
+        };
+
+        Plotly.newPlot('chart', data, layout);
+    </script>
+
+    <h3>Licitaciones Detectadas:</h3>
+    <ul>
+        <li><strong>13 Nov:</strong> Equipo Nefrología ($15M) + Combi Mini Bus ($8M)</li>
+        <li><strong>17 Nov:</strong> Camioneta ($6M) + Compactador ($12M)</li>
+        <li><strong>27 Nov:</strong> Sistema de Producción ($20M)</li>
+        <li><strong>Total:</strong> $61M en 15 días</li>
+    </ul>
+</body>
+</html>

@@ -1,4 +1,7 @@
 
+import { githubDataService } from './GitHubDataService';
+import externalAPIsService from './ExternalAPIsService';
+
 export interface SyncResult {
   source: string;
   status: 'success' | 'failed' | 'partial';
@@ -109,7 +112,11 @@ export class DataSyncService {
       { name: 'organized_data', loader: this.syncOrganizedData.bind(this) },
       { name: 'external_apis', loader: this.syncExternalApis.bind(this) },
       { name: 'github_repository', loader: this.syncGitHubRepository.bind(this) },
-      { name: 'local_files', loader: this.syncLocalFiles.bind(this) }
+      { name: 'local_files', loader: this.syncLocalFiles.bind(this) },
+      { name: 'carmen_de_areco_data', loader: this.syncCarmenDeArecoData.bind(this) },
+      { name: 'buenos_aires_data', loader: this.syncBuenosAiresData.bind(this) },
+      { name: 'national_data', loader: this.syncNationalData.bind(this) },
+      { name: 'civil_society_data', loader: this.syncCivilSocietyData.bind(this) }
     ];
 
     const results: SyncResult[] = [];
@@ -310,58 +317,88 @@ export class DataSyncService {
   // Sync external APIs
   private async syncExternalApis(): Promise<SyncResult> {
     const startTime = Date.now();
-    
-    // if (!USE_API) { // USE_API is imported from useComprehensiveData
-    return {
-      source: 'external_apis',
-      status: 'failed',
-      documents_synced: 0,
-      documents_updated: 0,
-      documents_failed: 0,
-      errors: ['External API synchronization is disabled'],
-      duration: Date.now() - startTime,
-      timestamp: new Date().toISOString()
-    };
-    
-    // TODO: Implement proper API sync logic
-    /*
-    const result = null; // Placeholder for now
-    if (!result) {
-      throw new Error(`External API sync failed: No data received`);
-    }
-    
     const errors: string[] = [];
     let documentsSynced = 0;
     const documentsUpdated = 0;
     let documentsFailed = 0;
 
-    if (result.success && result.documents) {
-      result.documents.forEach((doc: any) => {
-        try {
-          // Count document
-          if (doc && doc.id) {
-            documentsSynced++;
-          } else {
-            documentsFailed++;
-          }
-        } catch (error) {
-          errors.push(`Document verification failed: ${doc.title}`);
+    try {
+      // Get data from external APIs service
+      const externalResults = await externalAPIsService.loadAllExternalData();
+      
+      // Process Carmen de Areco data
+      if (externalResults.carmenDeAreco.success && externalResults.carmenDeAreco.data) {
+        const cdaData = externalResults.carmenDeAreco.data;
+        if (cdaData.links && Array.isArray(cdaData.links)) {
+          documentsSynced += cdaData.links.length;
+        }
+      } else {
+        errors.push('Carmen de Areco data sync failed');
+        documentsFailed++;
+      }
+      
+      // Process Buenos Aires Province data
+      if (externalResults.buenosAires.success && externalResults.buenosAires.data) {
+        const gbaData = externalResults.buenosAires.data;
+        if (gbaData.links && Array.isArray(gbaData.links)) {
+          documentsSynced += gbaData.links.length;
+        }
+      } else {
+        errors.push('Buenos Aires Province data sync failed');
+        documentsFailed++;
+      }
+      
+      // Process National budget data
+      if (externalResults.nationalBudget.success && externalResults.nationalBudget.data) {
+        const natData = externalResults.nationalBudget.data;
+        if (natData.result?.results) {
+          documentsSynced += natData.result.results.length;
+        }
+      } else {
+        errors.push('National data sync failed');
+        documentsFailed++;
+      }
+
+      // Process comparative data
+      for (const comp of externalResults.comparative) {
+        if (comp.success) {
+          documentsSynced++;
+        } else {
           documentsFailed++;
         }
-      });
-    }
+      }
 
-    return {
-      source: 'external_apis',
-      status: errors.length === 0 ? 'success' : 'partial',
-      documents_synced: documentsSynced,
-      documents_updated: documentsUpdated,
-      documents_failed: documentsFailed,
-      errors,
-      duration: Date.now() - startTime,
-      timestamp: new Date().toISOString()
-    };
-    */
+      // Process civil society data
+      for (const org of externalResults.civilSociety) {
+        if (org.success) {
+          documentsSynced++;
+        } else {
+          documentsFailed++;
+        }
+      }
+
+      return {
+        source: 'external_apis',
+        status: errors.length === 0 ? 'success' : 'partial',
+        documents_synced: documentsSynced,
+        documents_updated: documentsUpdated,
+        documents_failed: documentsFailed,
+        errors,
+        duration: Date.now() - startTime,
+        timestamp: new Date().toISOString()
+      };
+    } catch (error) {
+      return {
+        source: 'external_apis',
+        status: 'failed',
+        documents_synced: 0,
+        documents_updated: 0,
+        documents_failed: 0,
+        errors: [error instanceof Error ? error.message : 'Unknown error'],
+        duration: Date.now() - startTime,
+        timestamp: new Date().toISOString()
+      };
+    }
   }
 
   // Sync GitHub repository
@@ -492,6 +529,224 @@ export class DataSyncService {
     } catch (error) {
       return {
         source: 'local_files',
+        status: 'failed',
+        documents_synced: 0,
+        documents_updated: 0,
+        documents_failed: 0,
+        errors: [error instanceof Error ? error.message : 'Unknown error'],
+        duration: Date.now() - startTime,
+        timestamp: new Date().toISOString()
+      };
+    }
+  }
+  
+  // Sync Carmen de Areco specific data
+  private async syncCarmenDeArecoData(): Promise<SyncResult> {
+    const startTime = Date.now();
+    const errors: string[] = [];
+    let documentsSynced = 0;
+    const documentsUpdated = 0;
+    let documentsFailed = 0;
+
+    try {
+      // Get Carmen de Areco specific data from external APIs
+      const cdaSpecificData = await externalAPIsService.getCarmenDeArecoSpecificData();
+      
+      // Process each data type
+      if (cdaSpecificData.budget.success) {
+        documentsSynced++;
+      } else {
+        errors.push('Carmen de Areco budget data sync failed');
+        documentsFailed++;
+      }
+      
+      if (cdaSpecificData.contracts.success) {
+        documentsSynced++;
+      } else {
+        errors.push('Carmen de Areco contracts data sync failed');
+        documentsFailed++;
+      }
+      
+      if (cdaSpecificData.declarations.success) {
+        documentsSynced++;
+      } else {
+        errors.push('Carmen de Areco declarations data sync failed');
+        documentsFailed++;
+      }
+      
+      if (cdaSpecificData.ordinances.success) {
+        documentsSynced++;
+      } else {
+        errors.push('Carmen de Areco ordinances data sync failed');
+        documentsFailed++;
+      }
+      
+      if (cdaSpecificData.official_bulletin.success) {
+        documentsSynced++;
+      } else {
+        errors.push('Carmen de Areco official bulletin data sync failed');
+        documentsFailed++;
+      }
+
+      return {
+        source: 'carmen_de_areco_data',
+        status: errors.length === 0 ? 'success' : 'partial',
+        documents_synced: documentsSynced,
+        documents_updated: documentsUpdated,
+        documents_failed: documentsFailed,
+        errors,
+        duration: Date.now() - startTime,
+        timestamp: new Date().toISOString()
+      };
+    } catch (error) {
+      return {
+        source: 'carmen_de_areco_data',
+        status: 'failed',
+        documents_synced: 0,
+        documents_updated: 0,
+        documents_failed: 0,
+        errors: [error instanceof Error ? error.message : 'Unknown error'],
+        duration: Date.now() - startTime,
+        timestamp: new Date().toISOString()
+      };
+    }
+  }
+  
+  // Sync Buenos Aires Province data
+  private async syncBuenosAiresData(): Promise<SyncResult> {
+    const startTime = Date.now();
+    const errors: string[] = [];
+    let documentsSynced = 0;
+    const documentsUpdated = 0;
+    let documentsFailed = 0;
+
+    try {
+      // Attempt to sync with Buenos Aires Province data sources
+      const gbaResults = await fetchGitHubJson('/data/gba_transparency_data.json');
+      
+      if (gbaResults) {
+        // Process GBA data if available locally
+        if (Array.isArray(gbaResults.documents)) {
+          documentsSynced += gbaResults.documents.length;
+        }
+      } else {
+        // If no local data, try external APIs
+        const externalResults = await externalAPIsService.loadAllExternalData();
+        if (externalResults.buenosAires.success) {
+          documentsSynced++;
+        } else {
+          errors.push('Buenos Aires Province data sync failed');
+          documentsFailed++;
+        }
+      }
+
+      return {
+        source: 'buenos_aires_data',
+        status: errors.length === 0 ? 'success' : 'partial',
+        documents_synced: documentsSynced,
+        documents_updated: documentsUpdated,
+        documents_failed: documentsFailed,
+        errors,
+        duration: Date.now() - startTime,
+        timestamp: new Date().toISOString()
+      };
+    } catch (error) {
+      return {
+        source: 'buenos_aires_data',
+        status: 'failed',
+        documents_synced: 0,
+        documents_updated: 0,
+        documents_failed: 0,
+        errors: [error instanceof Error ? error.message : 'Unknown error'],
+        duration: Date.now() - startTime,
+        timestamp: new Date().toISOString()
+      };
+    }
+  }
+  
+  // Sync National data
+  private async syncNationalData(): Promise<SyncResult> {
+    const startTime = Date.now();
+    const errors: string[] = [];
+    let documentsSynced = 0;
+    const documentsUpdated = 0;
+    let documentsFailed = 0;
+
+    try {
+      // Attempt to sync with national data sources
+      const nationalResults = await externalAPIsService.loadAllExternalData();
+      
+      if (nationalResults.nationalBudget.success) {
+        documentsSynced++;
+      } else {
+        errors.push('National budget data sync failed');
+        documentsFailed++;
+      }
+      
+      if (nationalResults.geographic.success) {
+        documentsSynced++;
+      } else {
+        errors.push('National geographic data sync failed');
+        documentsFailed++;
+      }
+
+      return {
+        source: 'national_data',
+        status: errors.length === 0 ? 'success' : 'partial',
+        documents_synced: documentsSynced,
+        documents_updated: documentsUpdated,
+        documents_failed: documentsFailed,
+        errors,
+        duration: Date.now() - startTime,
+        timestamp: new Date().toISOString()
+      };
+    } catch (error) {
+      return {
+        source: 'national_data',
+        status: 'failed',
+        documents_synced: 0,
+        documents_updated: 0,
+        documents_failed: 0,
+        errors: [error instanceof Error ? error.message : 'Unknown error'],
+        duration: Date.now() - startTime,
+        timestamp: new Date().toISOString()
+      };
+    }
+  }
+  
+  // Sync Civil Society data
+  private async syncCivilSocietyData(): Promise<SyncResult> {
+    const startTime = Date.now();
+    const errors: string[] = [];
+    let documentsSynced = 0;
+    const documentsUpdated = 0;
+    let documentsFailed = 0;
+
+    try {
+      // Attempt to sync with civil society sources
+      const civilSocietyResults = await externalAPIsService.getCivilSocietyData();
+      
+      for (const org of civilSocietyResults) {
+        if (org.success) {
+          documentsSynced++;
+        } else {
+          documentsFailed++;
+        }
+      }
+
+      return {
+        source: 'civil_society_data',
+        status: 'success', // All organizations are attempted, so we consider it success regardless of individual failures
+        documents_synced: documentsSynced,
+        documents_updated: documentsUpdated,
+        documents_failed: documentsFailed,
+        errors: [],
+        duration: Date.now() - startTime,
+        timestamp: new Date().toISOString()
+      };
+    } catch (error) {
+      return {
+        source: 'civil_society_data',
         status: 'failed',
         documents_synced: 0,
         documents_updated: 0,

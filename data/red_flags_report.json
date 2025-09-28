@@ -1,0 +1,99 @@
+{
+  "generated_at": "2025-09-27T22:31:25.705765",
+  "total_flags": 6,
+  "severity_breakdown": {
+    "high": 5,
+    "medium": 1
+  },
+  "flags_by_type": {
+    "procurement_clustering": 1,
+    "programmatic_gap": 3,
+    "gender_tokenism": 2
+  },
+  "all_flags": [
+    {
+      "type": "procurement_clustering",
+      "severity": "high",
+      "message": "5 licitaciones concentradas en Noviembre 2023 - posible gasto de fin de ejercicio",
+      "recommendation": "Investigar las razones de la concentración temporal de licitaciones",
+      "source": "procurement_analysis",
+      "timestamp": "2025-09-27T22:31:25.705316",
+      "metadata": {
+        "month": 11,
+        "count": 5,
+        "total_value": 61000000
+      }
+    },
+    {
+      "type": "programmatic_gap",
+      "severity": "medium",
+      "message": "Cámaras de Seguridad: +100 vs. planificado (+50.5%) - sobreinversión significativo",
+      "recommendation": "Evaluar justificación de sobreinversión",
+      "source": "programmatic_analysis",
+      "timestamp": "2025-09-27T22:31:25.705351",
+      "metadata": {
+        "indicator": "Cámaras de Seguridad",
+        "planned": 198,
+        "executed": 298,
+        "gap": 100,
+        "gap_percentage": 50.505050505050505
+      }
+    },
+    {
+      "type": "programmatic_gap",
+      "severity": "high",
+      "message": "Familias Asistidas: -595 vs. planificado (-25.3%) - déficit significativo",
+      "recommendation": "Evaluar causas de la desviación y ajustar planificación futura",
+      "source": "programmatic_analysis",
+      "timestamp": "2025-09-27T22:31:25.705356",
+      "metadata": {
+        "indicator": "Familias Asistidas",
+        "planned": 2350,
+        "executed": 1755,
+        "gap": -595,
+        "gap_percentage": -25.319148936170212
+      }
+    },
+    {
+      "type": "programmatic_gap",
+      "severity": "high",
+      "message": "Programas Sociales: -2 vs. planificado (-25.0%) - déficit significativo",
+      "recommendation": "Evaluar causas de la desviación y ajustar planificación futura",
+      "source": "programmatic_analysis",
+      "timestamp": "2025-09-27T22:31:25.705360",
+      "metadata": {
+        "indicator": "Programas Sociales",
+        "planned": 8,
+        "executed": 6,
+        "gap": -2,
+        "gap_percentage": -25.0
+      }
+    },
+    {
+      "type": "gender_tokenism",
+      "severity": "high",
+      "message": "Presupuesto con Perspectiva de Género: $50M presupuestado, $0 ejecutado - posible cumplimiento simbólico",
+      "recommendation": "Verificar si es cumplimiento simbólico o error de reporte en ejecución",
+      "source": "gender_analysis",
+      "timestamp": "2025-09-27T22:31:25.705590",
+      "metadata": {
+        "category": "Presupuesto con Perspectiva de Género",
+        "budgeted": 50000000,
+        "executed": 0
+      }
+    },
+    {
+      "type": "gender_tokenism",
+      "severity": "high",
+      "message": "Violencia de Género: $15M presupuestado, $0 ejecutado - posible cumplimiento simbólico",
+      "recommendation": "Verificar si es cumplimiento simbólico o error de reporte en ejecución",
+      "source": "gender_analysis",
+      "timestamp": "2025-09-27T22:31:25.705596",
+      "metadata": {
+        "category": "Violencia de Género",
+        "budgeted": 15000000,
+        "executed": 0
+      }
+    }
+  ]
+}

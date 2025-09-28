@@ -4,7 +4,7 @@ import { FinancialHealthScoreCard, EnhancedMetricCard, DataVerificationBadge, Tr
 
 const ComponentDemo: React.FC = () => {
   const handleCategoryChange = (categoryId: string) => {
-    console.log('Category changed to:', categoryId);
+    // // console.log('Category changed to:', categoryId);
   };
 
   return (
@@ -35,7 +35,7 @@ const ComponentDemo: React.FC = () => {
           <FinancialHealthScoreCard 
             score={85}
             title="Overall Financial Health"
-            onClick={() => console.log('Financial health card clicked')}
+    // // onClick={() => console.log('Financial health card clicked')}
           />
         </div>
       </div>
@@ -47,7 +47,7 @@ const ComponentDemo: React.FC = () => {
           <TransparencyScore 
             score={4.2}
             documentCount={24}
-            onClick={() => console.log('Transparency score clicked')}
+    // // onClick={() => console.log('Transparency score clicked')}
           />
         </div>
       </div>
@@ -62,7 +62,7 @@ const ComponentDemo: React.FC = () => {
             icon={PieChart}
             trend={{ value: 12, isPositive: true }}
             updatedAt="Jan 15, 2025"
-            onClick={() => console.log('Budget execution card clicked')}
+    // // onClick={() => console.log('Budget execution card clicked')}
           />
           
           <EnhancedMetricCard
@@ -71,7 +71,7 @@ const ComponentDemo: React.FC = () => {
             icon={Coins}
             trend={{ value: 8, isPositive: true }}
             updatedAt="Jan 15, 2025"
-            onClick={() => console.log('Revenue collection card clicked')}
+    // // onClick={() => console.log('Revenue collection card clicked')}
           />
           
           <EnhancedMetricCard
@@ -80,7 +80,7 @@ const ComponentDemo: React.FC = () => {
             icon={CreditCard}
             trend={{ value: 3, isPositive: false }}
             updatedAt="Jan 15, 2025"
-            onClick={() => console.log('Debt ratio card clicked')}
+    // // onClick={() => console.log('Debt ratio card clicked')}
           />
         </div>
       </div>

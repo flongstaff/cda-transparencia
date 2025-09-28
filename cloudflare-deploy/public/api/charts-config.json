@@ -1,0 +1,15 @@
+{
+  "available_charts": [
+    "budget_vs_execution_2019.html",
+    "procurement_timeline_2023.html",
+    "red_flags_overview.html"
+  ],
+  "chart_types": [
+    "budget-execution",
+    "procurement-timeline",
+    "programmatic-indicators",
+    "gender-perspective"
+  ],
+  "interactive_charts": true,
+  "static_fallbacks": true
+}

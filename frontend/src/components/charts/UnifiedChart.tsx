@@ -26,8 +26,8 @@ import {
   AlertTriangle, 
   Loader2
 } from 'lucide-react';
-import { formatCurrencyARS, formatPercentageARS } from '../../utils/formatters';
-import { useCompleteFinalData } from '../../hooks/useCompleteFinalData';
+import { formatCurrencyARS } from '../../utils/formatters';
+import { useMasterData } from '../../hooks/useMasterData';
 
 export type ChartType = 
   | 'budget' 
@@ -38,7 +38,13 @@ export type ChartType =
   | 'property' 
   | 'document'
   | 'investment'
-  | 'revenue';
+  | 'revenue'
+  | 'budget-trend'  // For historical budget trends
+  | 'contract-trend'  // For historical contract trends
+  | 'salary-trend'  // For historical salary trends
+  | 'document-trend'  // For historical document trends
+  | 'debt-trend'  // For historical debt trends
+  | 'treasury-trend'; // For historical treasury trends
 
 export type ChartVariant = 'bar' | 'pie' | 'line' | 'area';
 
@@ -68,8 +74,44 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
   const theme = useTheme(); // Access the MUI theme
   const [currentVariant, setCurrentVariant] = useState<ChartVariant>(variant);
   
-  // 🚀 Use the most comprehensive data service - CompleteFinalDataService
-  const { completeData, currentYearData, loading, error } = useCompleteFinalData(year);
+  // 🚀 Use the new comprehensive master data service that includes historical data
+  const { 
+    masterData, 
+    currentBudget,
+    currentContracts,
+    currentSalaries,
+    currentDocuments,
+    currentTreasury,
+    currentDebt,
+    multiYearData,
+    budgetHistoricalData,
+    contractsHistoricalData,
+    salariesHistoricalData,
+    documentsHistoricalData,
+    debtHistoricalData,
+    treasuryHistoricalData,
+    loading,
+    error 
+  } = useMasterData(year);
+
+  // Determine current year data based on the type
+  const currentYearData = useMemo(() => {
+    if (!masterData) return null;
+    
+    if (type.includes('-trend')) {
+      // For trend charts, we don't use current year data but historical
+      return null;
+    }
+    
+    return {
+      budget: currentBudget,
+      contracts: currentContracts,
+      salaries: currentSalaries,
+      documents: currentDocuments,
+      treasury: currentTreasury,
+      debt: currentDebt
+    };
+  }, [masterData, currentBudget, currentContracts, currentSalaries, currentDocuments, currentTreasury, currentDebt, type]);
 
   // Update COLORS to use theme palette for consistency
   const themedColors = useMemo(() => [
@@ -83,6 +125,63 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
 
   // Transform data based on chart type using real data
   const chartData = useMemo(() => {
+    // Handle historical trend charts first
+    if (type === 'budget-trend' && budgetHistoricalData.length > 0) {
+      return budgetHistoricalData.map((item: Record<string, unknown>) => ({
+        year: item.year,
+        budget_total: item.budget_total,
+        executed_total: item.executed_total,
+        execution_rate: item.execution_rate,
+        fill: themedColors[0]
+      }));
+    }
+    
+    if (type === 'contract-trend' && contractsHistoricalData.length > 0) {
+      return contractsHistoricalData.map((item: Record<string, unknown>) => ({
+        year: item.year,
+        total_contracts: item.total_contracts,
+        total_amount: item.total_amount,
+        fill: themedColors[0]
+      }));
+    }
+    
+    if (type === 'salary-trend' && salariesHistoricalData.length > 0) {
+      return salariesHistoricalData.map((item: Record<string, unknown>) => ({
+        year: item.year,
+        total_employees: item.total_employees,
+        average_salary: item.average_salary,
+        total_payroll: item.total_payroll,
+        fill: themedColors[0]
+      }));
+    }
+    
+    if (type === 'document-trend' && documentsHistoricalData.length > 0) {
+      return documentsHistoricalData.map((item: Record<string, unknown>) => ({
+        year: item.year,
+        total_documents: item.total_documents,
+        fill: themedColors[0]
+      }));
+    }
+    
+    if (type === 'debt-trend' && debtHistoricalData.length > 0) {
+      return debtHistoricalData.map((item: Record<string, unknown>) => ({
+        year: item.year,
+        total_debt: item.total_debt,
+        fill: themedColors[0]
+      }));
+    }
+    
+    if (type === 'treasury-trend' && treasuryHistoricalData.length > 0) {
+      return treasuryHistoricalData.map((item: Record<string, unknown>) => ({
+        year: item.year,
+        total_revenue: item.total_revenue,
+        total_expenses: item.total_expenses,
+        balance: item.balance,
+        fill: themedColors[0]
+      }));
+    }
+
+    // Handle current year charts
     if (!currentYearData) return [];
 
     switch (type) {
@@ -124,7 +223,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
         const allDocs = currentYearData.documents || [];
         const docsByCategory: Record<string, number> = {};
         
-        allDocs.forEach((doc: any) => {
+        allDocs.forEach((doc: Record<string, unknown>) => {
           const category = doc.category || 'General';
           docsByCategory[category] = (docsByCategory[category] || 0) + 1;
         });
@@ -173,7 +272,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
 
         if (Array.isArray(salaryData)) {
           const positionGroups: Record<string, any> = {};
-          salaryData.forEach((pos: any) => {
+          salaryData.forEach((pos: Record<string, unknown>) => {
             const category = pos.category || pos.area || pos.departamento || 'General';
             if (!positionGroups[category]) {
               positionGroups[category] = { employees: 0, totalSalary: 0, count: 0 };
@@ -237,7 +336,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
 
         if (treasuryData.movements) {
           const categories: Record<string, number> = {};
-          treasuryData.movements.forEach((movement: any) => {
+          treasuryData.movements.forEach((movement: Record<string, unknown>) => {
             const category = movement.category || movement.tipo || 'General';
             categories[category] = (categories[category] || 0) + Math.abs(parseFloat(movement.amount || movement.monto || 0));
           });
@@ -300,7 +399,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       default:
         return [];
     }
-  }, [type, currentYearData, themedColors]);
+  }, [type, currentYearData, themedColors, budgetHistoricalData, contractsHistoricalData, salariesHistoricalData, documentsHistoricalData, debtHistoricalData, treasuryHistoricalData]);
 
   const renderChart = () => {
     if (loading) {
@@ -334,24 +433,24 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
             <BarChart {...commonProps}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
               <XAxis 
-                dataKey="name" 
+                dataKey={type.includes('-trend') ? "year" : "name"} 
                 tick={{ fontSize: 12 }} 
                 stroke="#6b7280"
-                angle={-45}
-                textAnchor="end"
-                height={60}
+                angle={type.includes('-trend') ? 0 : -45}
+                textAnchor={type.includes('-trend') ? "middle" : "end"}
+                height={type.includes('-trend') ? 40 : 60}
               />
               <YAxis 
                 tick={{ fontSize: 12 }} 
                 stroke="#6b7280"
                 tickFormatter={(value) => {
-                  if (type === 'salary') return value.toString();
+                  if (type === 'salary' || type === 'salary-trend') return value.toString();
                   return value > 1000000 ? `${(value / 1000000).toFixed(1)}M` : `${(value / 1000).toFixed(0)}K`;
                 }}
               />
               <Tooltip 
                 formatter={(value, name) => {
-                  if (type === 'salary') {
+                  if (type === 'salary' || type === 'salary-trend') {
                     return [value, name];
                   }
                   return [formatCurrencyARS(Number(value)), name];
@@ -365,10 +464,34 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
                   <Bar dataKey="budgeted" name="Presupuestado" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
                   <Bar dataKey="executed" name="Ejecutado" fill={theme.palette.secondary.main} radius={[4, 4, 0, 0]} />
                 </>
+              ) : type === 'budget-trend' ? (
+                <>
+                  <Bar dataKey="budget_total" name="Presupuesto Total" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="executed_total" name="Ejecutado Total" fill={theme.palette.secondary.main} radius={[4, 4, 0, 0]} />
+                </>
               ) : type === 'salary' ? (
                 <Bar dataKey="avgSalary" name="Salario Promedio" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
+              ) : type === 'salary-trend' ? (
+                <>
+                  <Bar dataKey="total_employees" name="Total Empleados" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="average_salary" name="Salario Promedio" fill={theme.palette.secondary.main} radius={[4, 4, 0, 0]} />
+                </>
               ) : type === 'treasury' ? (
                 <Bar dataKey="value" name="Monto" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
+              ) : type === 'treasury-trend' ? (
+                <>
+                  <Bar dataKey="total_revenue" name="Ingresos Totales" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="total_expenses" name="Gastos Totales" fill={theme.palette.secondary.main} radius={[4, 4, 0, 0]} />
+                </>
+              ) : type === 'contract-trend' ? (
+                <>
+                  <Bar dataKey="total_contracts" name="Total Contratos" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="total_amount" name="Monto Total" fill={theme.palette.secondary.main} radius={[4, 4, 0, 0]} />
+                </>
+              ) : type === 'debt-trend' ? (
+                <Bar dataKey="total_debt" name="Deuda Total" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
+              ) : type === 'document-trend' ? (
+                <Bar dataKey="total_documents" name="Total Documentos" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
               ) : (
                 <Bar dataKey="value" name="Valor" fill={theme.palette.primary.main} radius={[4, 4, 0, 0]} />
               )}
@@ -409,18 +532,135 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
           <ResponsiveContainer width="100%" height={height}>
             <LineChart {...commonProps}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
-              <XAxis dataKey="name" tick={{ fontSize: 12 }} stroke="#6b7280" />
-              <YAxis tick={{ fontSize: 12 }} stroke="#6b7280" />
-              <Tooltip formatter={(value) => [formatCurrencyARS(Number(value)), 'Valor']} />
-              <Legend />
-              <Line 
-                type="monotone" 
-                dataKey="value" 
-                stroke={theme.palette.primary.main} 
-                strokeWidth={3}
-                dot={{ fill: theme.palette.primary.main, strokeWidth: 2, r: 4 }}
-                activeDot={{ r: 6, stroke: theme.palette.primary.main, strokeWidth: 2, fill: '#fff' }}
+              <XAxis 
+                dataKey={type.includes('-trend') ? "year" : "name"} 
+                tick={{ fontSize: 12 }} 
+                stroke="#6b7280" 
               />
+              <YAxis tick={{ fontSize: 12 }} stroke="#6b7280" />
+              <Tooltip 
+                formatter={(value, name) => {
+                  if (type === 'salary' || type === 'salary-trend') {
+                    return [value, name];
+                  }
+                  return [formatCurrencyARS(Number(value)), name];
+                }} 
+              />
+              <Legend />
+              {type === 'budget-trend' ? (
+                <>
+                  <Line 
+                    type="monotone" 
+                    dataKey="budget_total" 
+                    name="Presupuesto Total"
+                    stroke={theme.palette.primary.main} 
+                    strokeWidth={3}
+                    dot={{ fill: theme.palette.primary.main, strokeWidth: 2, r: 4 }}
+                    activeDot={{ r: 6, stroke: theme.palette.primary.main, strokeWidth: 2, fill: '#fff' }}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="executed_total" 
+                    name="Ejecutado Total"
+                    stroke={theme.palette.secondary.main} 
+                    strokeWidth={3}
+                    dot={{ fill: theme.palette.secondary.main, strokeWidth: 2, r: 4 }}
+                    activeDot={{ r: 6, stroke: theme.palette.secondary.main, strokeWidth: 2, fill: '#fff' }}
+                  />
+                </>
+              ) : type === 'salary-trend' ? (
+                <>
+                  <Line 
+                    type="monotone" 
+                    dataKey="average_salary" 
+                    name="Salario Promedio"
+                    stroke={theme.palette.primary.main} 
+                    strokeWidth={3}
+                    dot={{ fill: theme.palette.primary.main, strokeWidth: 2, r: 4 }}
+                    activeDot={{ r: 6, stroke: theme.palette.primary.main, strokeWidth: 2, fill: '#fff' }}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="total_employees" 
+                    name="Total Empleados"
+                    stroke={theme.palette.secondary.main} 
+                    strokeWidth={3}
+                    dot={{ fill: theme.palette.secondary.main, strokeWidth: 2, r: 4 }}
+                    activeDot={{ r: 6, stroke: theme.palette.secondary.main, strokeWidth: 2, fill: '#fff' }}
+                  />
+                </>
+              ) : type === 'treasury-trend' ? (
+                <>
+                  <Line 
+                    type="monotone" 
+                    dataKey="total_revenue" 
+                    name="Ingresos Totales"
+                    stroke={theme.palette.primary.main} 
+                    strokeWidth={3}
+                    dot={{ fill: theme.palette.primary.main, strokeWidth: 2, r: 4 }}
+                    activeDot={{ r: 6, stroke: theme.palette.primary.main, strokeWidth: 2, fill: '#fff' }}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="total_expenses" 
+                    name="Gastos Totales"
+                    stroke={theme.palette.secondary.main} 
+                    strokeWidth={3}
+                    dot={{ fill: theme.palette.secondary.main, strokeWidth: 2, r: 4 }}
+                    activeDot={{ r: 6, stroke: theme.palette.secondary.main, strokeWidth: 2, fill: '#fff' }}
+                  />
+                </>
+              ) : type === 'contract-trend' ? (
+                <>
+                  <Line 
+                    type="monotone" 
+                    dataKey="total_contracts" 
+                    name="Total Contratos"
+                    stroke={theme.palette.primary.main} 
+                    strokeWidth={3}
+                    dot={{ fill: theme.palette.primary.main, strokeWidth: 2, r: 4 }}
+                    activeDot={{ r: 6, stroke: theme.palette.primary.main, strokeWidth: 2, fill: '#fff' }}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="total_amount" 
+                    name="Monto Total"
+                    stroke={theme.palette.secondary.main} 
+                    strokeWidth={3}
+                    dot={{ fill: theme.palette.secondary.main, strokeWidth: 2, r: 4 }}
+                    activeDot={{ r: 6, stroke: theme.palette.secondary.main, strokeWidth: 2, fill: '#fff' }}
+                  />
+                </>
+              ) : type === 'debt-trend' ? (
+                <Line 
+                  type="monotone" 
+                  dataKey="total_debt" 
+                  name="Deuda Total"
+                  stroke={theme.palette.primary.main} 
+                  strokeWidth={3}
+                  dot={{ fill: theme.palette.primary.main, strokeWidth: 2, r: 4 }}
+                  activeDot={{ r: 6, stroke: theme.palette.primary.main, strokeWidth: 2, fill: '#fff' }}
+                />
+              ) : type === 'document-trend' ? (
+                <Line 
+                  type="monotone" 
+                  dataKey="total_documents" 
+                  name="Total Documentos"
+                  stroke={theme.palette.primary.main} 
+                  strokeWidth={3}
+                  dot={{ fill: theme.palette.primary.main, strokeWidth: 2, r: 4 }}
+                  activeDot={{ r: 6, stroke: theme.palette.primary.main, strokeWidth: 2, fill: '#fff' }}
+                />
+              ) : (
+                <Line 
+                  type="monotone" 
+                  dataKey="value" 
+                  stroke={theme.palette.primary.main} 
+                  strokeWidth={3}
+                  dot={{ fill: theme.palette.primary.main, strokeWidth: 2, r: 4 }}
+                  activeDot={{ r: 6, stroke: theme.palette.primary.main, strokeWidth: 2, fill: '#fff' }}
+                />
+              )}
             </LineChart>
           </ResponsiveContainer>
         );
@@ -430,17 +670,134 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
           <ResponsiveContainer width="100%" height={height}>
             <AreaChart {...commonProps}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
-              <XAxis dataKey="name" tick={{ fontSize: 12 }} stroke="#6b7280" />
-              <YAxis tick={{ fontSize: 12 }} stroke="#6b7280" />
-              <Tooltip formatter={(value) => [formatCurrencyARS(Number(value)), 'Valor']} />
-              <Area
-                type="monotone"
-                dataKey="value"
-                stroke={theme.palette.primary.main}
-                strokeWidth={2}
-                fill={theme.palette.primary.light} // Use a lighter shade for fill
-                fillOpacity={0.6}
+              <XAxis 
+                dataKey={type.includes('-trend') ? "year" : "name"} 
+                tick={{ fontSize: 12 }} 
+                stroke="#6b7280" 
               />
+              <YAxis tick={{ fontSize: 12 }} stroke="#6b7280" />
+              <Tooltip 
+                formatter={(value, name) => {
+                  if (type === 'salary' || type === 'salary-trend') {
+                    return [value, name];
+                  }
+                  return [formatCurrencyARS(Number(value)), name];
+                }}
+              />
+              {type === 'budget-trend' ? (
+                <>
+                  <Area
+                    type="monotone"
+                    dataKey="budget_total"
+                    name="Presupuesto Total"
+                    stroke={theme.palette.primary.main}
+                    strokeWidth={2}
+                    fill={theme.palette.primary.light} 
+                    fillOpacity={0.6}
+                  />
+                  <Area
+                    type="monotone"
+                    dataKey="executed_total"
+                    name="Ejecutado Total"
+                    stroke={theme.palette.secondary.main}
+                    strokeWidth={2}
+                    fill={theme.palette.secondary.light} 
+                    fillOpacity={0.6}
+                  />
+                </>
+              ) : type === 'salary-trend' ? (
+                <>
+                  <Area
+                    type="monotone"
+                    dataKey="average_salary"
+                    name="Salario Promedio"
+                    stroke={theme.palette.primary.main}
+                    strokeWidth={2}
+                    fill={theme.palette.primary.light} 
+                    fillOpacity={0.6}
+                  />
+                  <Area
+                    type="monotone"
+                    dataKey="total_employees"
+                    name="Total Empleados"
+                    stroke={theme.palette.secondary.main}
+                    strokeWidth={2}
+                    fill={theme.palette.secondary.light} 
+                    fillOpacity={0.6}
+                  />
+                </>
+              ) : type === 'treasury-trend' ? (
+                <>
+                  <Area
+                    type="monotone"
+                    dataKey="total_revenue"
+                    name="Ingresos Totales"
+                    stroke={theme.palette.primary.main}
+                    strokeWidth={2}
+                    fill={theme.palette.primary.light} 
+                    fillOpacity={0.6}
+                  />
+                  <Area
+                    type="monotone"
+                    dataKey="total_expenses"
+                    name="Gastos Totales"
+                    stroke={theme.palette.secondary.main}
+                    strokeWidth={2}
+                    fill={theme.palette.secondary.light} 
+                    fillOpacity={0.6}
+                  />
+                </>
+              ) : type === 'contract-trend' ? (
+                <>
+                  <Area
+                    type="monotone"
+                    dataKey="total_contracts"
+                    name="Total Contratos"
+                    stroke={theme.palette.primary.main}
+                    strokeWidth={2}
+                    fill={theme.palette.primary.light} 
+                    fillOpacity={0.6}
+                  />
+                  <Area
+                    type="monotone"
+                    dataKey="total_amount"
+                    name="Monto Total"
+                    stroke={theme.palette.secondary.main}
+                    strokeWidth={2}
+                    fill={theme.palette.secondary.light} 
+                    fillOpacity={0.6}
+                  />
+                </>
+              ) : type === 'debt-trend' ? (
+                <Area
+                  type="monotone"
+                  dataKey="total_debt"
+                  name="Deuda Total"
+                  stroke={theme.palette.primary.main}
+                  strokeWidth={2}
+                  fill={theme.palette.primary.light} 
+                  fillOpacity={0.6}
+                />
+              ) : type === 'document-trend' ? (
+                <Area
+                  type="monotone"
+                  dataKey="total_documents"
+                  name="Total Documentos"
+                  stroke={theme.palette.primary.main}
+                  strokeWidth={2}
+                  fill={theme.palette.primary.light} 
+                  fillOpacity={0.6}
+                />
+              ) : (
+                <Area
+                  type="monotone"
+                  dataKey="value"
+                  stroke={theme.palette.primary.main}
+                  strokeWidth={2}
+                  fill={theme.palette.primary.light} 
+                  fillOpacity={0.6}
+                />
+              )}
             </AreaChart>
           </ResponsiveContainer>
         );
@@ -501,7 +858,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
         <div className="px-4 py-3 bg-gray-50 border-t border-gray-100 rounded-b-lg">
           <div className="flex items-center justify-between text-sm text-gray-600">
             <span>
-              {chartData.length} elemento{chartData.length !== 1 ? 's' : ''} • Año {year}
+              {chartData.length} elemento{chartData.length !== 1 ? 's' : ''} • {type.includes('-trend') ? 'Serie Histórica' : `Año ${year}`}
             </span>
             <span className="flex items-center">
               <Activity className="h-4 w-4 mr-1" />

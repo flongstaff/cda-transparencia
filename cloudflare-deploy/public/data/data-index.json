@@ -1,0 +1,1794 @@
+{
+  "generatedAt": "2025-09-27T14:44:25.121Z",
+  "dataSources": {
+    "csv": [
+      {
+        "path": "raw/csv/programmatic_indicators.csv",
+        "name": "programmatic_indicators.csv",
+        "size": 948
+      },
+      {
+        "path": "raw/csv/licitaciones_licitaciones_2023.csv",
+        "name": "licitaciones_licitaciones_2023.csv",
+        "size": 981
+      },
+      {
+        "path": "raw/csv/licitaciones_2023_enhanced.csv",
+        "name": "licitaciones_2023_enhanced.csv",
+        "size": 1253
+      },
+      {
+        "path": "raw/csv/licitaciones_2023.csv",
+        "name": "licitaciones_2023.csv",
+        "size": 1109
+      },
+      {
+        "path": "raw/csv/category_caif.csv",
+        "name": "category_caif.csv",
+        "size": 31632
+      },
+      {
+        "path": "raw/csv/budget_execution_2021.csv",
+        "name": "budget_execution_2021.csv",
+        "size": 178
+      },
+      {
+        "path": "raw/csv/budget_execution_2019.csv",
+        "name": "budget_execution_2019.csv",
+        "size": 382
+      },
+      {
+        "path": "raw/csv/Revenue_Sources_2025_table_0.csv",
+        "name": "Revenue_Sources_2025_table_0.csv",
+        "size": 190
+      },
+      {
+        "path": "raw/csv/Revenue_Sources_2024_table_0.csv",
+        "name": "Revenue_Sources_2024_table_0.csv",
+        "size": 190
+      },
+      {
+        "path": "raw/csv/Revenue_Sources_2023_table_0.csv",
+        "name": "Revenue_Sources_2023_table_0.csv",
+        "size": 190
+      },
+      {
+        "path": "raw/csv/Revenue_Sources_2022_table_0.csv",
+        "name": "Revenue_Sources_2022_table_0.csv",
+        "size": 190
+      },
+      {
+        "path": "raw/csv/Revenue_Sources_2021_table_0.csv",
+        "name": "Revenue_Sources_2021_table_0.csv",
+        "size": 190
+      },
+      {
+        "path": "raw/csv/Revenue_Sources_2020_table_0.csv",
+        "name": "Revenue_Sources_2020_table_0.csv",
+        "size": 190
+      },
+      {
+        "path": "raw/csv/Revenue_Sources_2019_table_0.csv",
+        "name": "Revenue_Sources_2019_table_0.csv",
+        "size": 190
+      },
+      {
+        "path": "raw/csv/Revenue_Report_2025_table_0.csv",
+        "name": "Revenue_Report_2025_table_0.csv",
+        "size": 233
+      },
+      {
+        "path": "raw/csv/Revenue_Report_2024_table_0.csv",
+        "name": "Revenue_Report_2024_table_0.csv",
+        "size": 233
+      },
+      {
+        "path": "raw/csv/Revenue_Report_2023_table_0.csv",
+        "name": "Revenue_Report_2023_table_0.csv",
+        "size": 233
+      },
+      {
+        "path": "raw/csv/Revenue_Report_2022_table_0.csv",
+        "name": "Revenue_Report_2022_table_0.csv",
+        "size": 233
+      },
+      {
+        "path": "raw/csv/Revenue_Report_2021_table_0.csv",
+        "name": "Revenue_Report_2021_table_0.csv",
+        "size": 233
+      },
+      {
+        "path": "raw/csv/Revenue_Report_2020_table_0.csv",
+        "name": "Revenue_Report_2020_table_0.csv",
+        "size": 233
+      },
+      {
+        "path": "raw/csv/Revenue_Report_2019_table_0.csv",
+        "name": "Revenue_Report_2019_table_0.csv",
+        "size": 233
+      },
+      {
+        "path": "raw/csv/Personnel_Expenses_2025_table_0.csv",
+        "name": "Personnel_Expenses_2025_table_0.csv",
+        "size": 215
+      },
+      {
+        "path": "raw/csv/Personnel_Expenses_2024_table_0.csv",
+        "name": "Personnel_Expenses_2024_table_0.csv",
+        "size": 215
+      },
+      {
+        "path": "raw/csv/Personnel_Expenses_2023_table_0.csv",
+        "name": "Personnel_Expenses_2023_table_0.csv",
+        "size": 215
+      },
+      {
+        "path": "raw/csv/Personnel_Expenses_2022_table_0.csv",
+        "name": "Personnel_Expenses_2022_table_0.csv",
+        "size": 215
+      },
+      {
+        "path": "raw/csv/Personnel_Expenses_2021_table_0.csv",
+        "name": "Personnel_Expenses_2021_table_0.csv",
+        "size": 215
+      },
+      {
+        "path": "raw/csv/Personnel_Expenses_2020_table_0.csv",
+        "name": "Personnel_Expenses_2020_table_0.csv",
+        "size": 215
+      },
+      {
+        "path": "raw/csv/Personnel_Expenses_2019_table_0.csv",
+        "name": "Personnel_Expenses_2019_table_0.csv",
+        "size": 215
+      },
+      {
+        "path": "raw/csv/Investment_Report_2025_table_0.csv",
+        "name": "Investment_Report_2025_table_0.csv",
+        "size": 248
+      },
+      {
+        "path": "raw/csv/Investment_Report_2024_table_0.csv",
+        "name": "Investment_Report_2024_table_0.csv",
+        "size": 248
+      },
+      {
+        "path": "raw/csv/Investment_Report_2023_table_0.csv",
+        "name": "Investment_Report_2023_table_0.csv",
+        "size": 248
+      },
+      {
+        "path": "raw/csv/Investment_Report_2022_table_0.csv",
+        "name": "Investment_Report_2022_table_0.csv",
+        "size": 248
+      },
+      {
+        "path": "raw/csv/Investment_Report_2021_table_0.csv",
+        "name": "Investment_Report_2021_table_0.csv",
+        "size": 248
+      },
+      {
+        "path": "raw/csv/Investment_Report_2020_table_0.csv",
+        "name": "Investment_Report_2020_table_0.csv",
+        "size": 248
+      },
+      {
+        "path": "raw/csv/Investment_Report_2019_table_0.csv",
+        "name": "Investment_Report_2019_table_0.csv",
+        "size": 248
+      },
+      {
+        "path": "raw/csv/Infrastructure_Projects_2025_table_0.csv",
+        "name": "Infrastructure_Projects_2025_table_0.csv",
+        "size": 244
+      },
+      {
+        "path": "raw/csv/Infrastructure_Projects_2024_table_0.csv",
+        "name": "Infrastructure_Projects_2024_table_0.csv",
+        "size": 244
+      },
+      {
+        "path": "raw/csv/Infrastructure_Projects_2023_table_0.csv",
+        "name": "Infrastructure_Projects_2023_table_0.csv",
+        "size": 244
+      },
+      {
+        "path": "raw/csv/Infrastructure_Projects_2022_table_0.csv",
+        "name": "Infrastructure_Projects_2022_table_0.csv",
+        "size": 244
+      },
+      {
+        "path": "raw/csv/Infrastructure_Projects_2021_table_0.csv",
+        "name": "Infrastructure_Projects_2021_table_0.csv",
+        "size": 244
+      },
+      {
+        "path": "raw/csv/Infrastructure_Projects_2020_table_0.csv",
+        "name": "Infrastructure_Projects_2020_table_0.csv",
+        "size": 244
+      },
+      {
+        "path": "raw/csv/Infrastructure_Projects_2019_table_0.csv",
+        "name": "Infrastructure_Projects_2019_table_0.csv",
+        "size": 244
+      },
+      {
+        "path": "raw/csv/Health_Statistics_2025_table_0.csv",
+        "name": "Health_Statistics_2025_table_0.csv",
+        "size": 187
+      },
+      {
+        "path": "raw/csv/Health_Statistics_2024_table_0.csv",
+        "name": "Health_Statistics_2024_table_0.csv",
+        "size": 187
+      },
+      {
+        "path": "raw/csv/Health_Statistics_2023_table_0.csv",
+        "name": "Health_Statistics_2023_table_0.csv",
+        "size": 187
+      },
+      {
+        "path": "raw/csv/Health_Statistics_2022_table_0.csv",
+        "name": "Health_Statistics_2022_table_0.csv",
+        "size": 187
+      },
+      {
+        "path": "raw/csv/Health_Statistics_2021_table_0.csv",
+        "name": "Health_Statistics_2021_table_0.csv",
+        "size": 187
+      },
+      {
+        "path": "raw/csv/Health_Statistics_2020_table_0.csv",
+        "name": "Health_Statistics_2020_table_0.csv",
+        "size": 187
+      },
+      {
+        "path": "raw/csv/Health_Statistics_2019_table_0.csv",
+        "name": "Health_Statistics_2019_table_0.csv",
+        "size": 187
+      },
+      {
+        "path": "raw/csv/Fiscal_Balance_Report_2025_table_0.csv",
+        "name": "Fiscal_Balance_Report_2025_table_0.csv",
+        "size": 250
+      },
+      {
+        "path": "raw/csv/Fiscal_Balance_Report_2024_table_0.csv",
+        "name": "Fiscal_Balance_Report_2024_table_0.csv",
+        "size": 250
+      },
+      {
+        "path": "raw/csv/Fiscal_Balance_Report_2023_table_0.csv",
+        "name": "Fiscal_Balance_Report_2023_table_0.csv",
+        "size": 250
+      },
+      {
+        "path": "raw/csv/Fiscal_Balance_Report_2022_table_0.csv",
+        "name": "Fiscal_Balance_Report_2022_table_0.csv",
+        "size": 250
+      },
+      {
+        "path": "raw/csv/Fiscal_Balance_Report_2021_table_0.csv",
+        "name": "Fiscal_Balance_Report_2021_table_0.csv",
+        "size": 250
+      },
+      {
+        "path": "raw/csv/Fiscal_Balance_Report_2020_table_0.csv",
+        "name": "Fiscal_Balance_Report_2020_table_0.csv",
+        "size": 250
+      },
+      {
+        "path": "raw/csv/Fiscal_Balance_Report_2019_table_0.csv",
+        "name": "Fiscal_Balance_Report_2019_table_0.csv",
+        "size": 250
+      },
+      {
+        "path": "raw/csv/Financial_Reserves_2025_table_0.csv",
+        "name": "Financial_Reserves_2025_table_0.csv",
+        "size": 326
+      },
+      {
+        "path": "raw/csv/Financial_Reserves_2024_table_0.csv",
+        "name": "Financial_Reserves_2024_table_0.csv",
+        "size": 326
+      },
+      {
+        "path": "raw/csv/Financial_Reserves_2023_table_0.csv",
+        "name": "Financial_Reserves_2023_table_0.csv",
+        "size": 326
+      },
+      {
+        "path": "raw/csv/Financial_Reserves_2022_table_0.csv",
+        "name": "Financial_Reserves_2022_table_0.csv",
+        "size": 326
+      },
+      {
+        "path": "raw/csv/Financial_Reserves_2021_table_0.csv",
+        "name": "Financial_Reserves_2021_table_0.csv",
+        "size": 326
+      },
+      {
+        "path": "raw/csv/Financial_Reserves_2020_table_0.csv",
+        "name": "Financial_Reserves_2020_table_0.csv",
+        "size": 326
+      },
+      {
+        "path": "raw/csv/Financial_Reserves_2019_table_0.csv",
+        "name": "Financial_Reserves_2019_table_0.csv",
+        "size": 326
+      },
+      {
+        "path": "raw/csv/Expenditure_Report_2025_table_0.csv",
+        "name": "Expenditure_Report_2025_table_0.csv",
+        "size": 237
+      },
+      {
+        "path": "raw/csv/Expenditure_Report_2024_table_0.csv",
+        "name": "Expenditure_Report_2024_table_0.csv",
+        "size": 237
+      },
+      {
+        "path": "raw/csv/Expenditure_Report_2023_table_0.csv",
+        "name": "Expenditure_Report_2023_table_0.csv",
+        "size": 237
+      },
+      {
+        "path": "raw/csv/Expenditure_Report_2022_table_0.csv",
+        "name": "Expenditure_Report_2022_table_0.csv",
+        "size": 237
+      },
+      {
+        "path": "raw/csv/Expenditure_Report_2021_table_0.csv",
+        "name": "Expenditure_Report_2021_table_0.csv",
+        "size": 237
+      },
+      {
+        "path": "raw/csv/Expenditure_Report_2020_table_0.csv",
+        "name": "Expenditure_Report_2020_table_0.csv",
+        "size": 237
+      },
+      {
+        "path": "raw/csv/Expenditure_Report_2019_table_0.csv",
+        "name": "Expenditure_Report_2019_table_0.csv",
+        "size": 237
+      },
+      {
+        "path": "raw/csv/Education_Data_2025_table_0.csv",
+        "name": "Education_Data_2025_table_0.csv",
+        "size": 173
+      },
+      {
+        "path": "raw/csv/Education_Data_2024_table_0.csv",
+        "name": "Education_Data_2024_table_0.csv",
+        "size": 173
+      },
+      {
+        "path": "raw/csv/Education_Data_2023_table_0.csv",
+        "name": "Education_Data_2023_table_0.csv",
+        "size": 173
+      },
+      {
+        "path": "raw/csv/Education_Data_2022_table_0.csv",
+        "name": "Education_Data_2022_table_0.csv",
+        "size": 173
+      },
+      {
+        "path": "raw/csv/Education_Data_2021_table_0.csv",
+        "name": "Education_Data_2021_table_0.csv",
+        "size": 173
+      },
+      {
+        "path": "raw/csv/Education_Data_2020_table_0.csv",
+        "name": "Education_Data_2020_table_0.csv",
+        "size": 173
+      },
+      {
+        "path": "raw/csv/Education_Data_2019_table_0.csv",
+        "name": "Education_Data_2019_table_0.csv",
+        "size": 173
+      },
+      {
+        "path": "raw/csv/Economic_Report_2025_table_0.csv",
+        "name": "Economic_Report_2025_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Economic_Report_2024_table_0.csv",
+        "name": "Economic_Report_2024_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Economic_Report_2023_table_0.csv",
+        "name": "Economic_Report_2023_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Economic_Report_2022_table_0.csv",
+        "name": "Economic_Report_2022_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Economic_Report_2021_table_0.csv",
+        "name": "Economic_Report_2021_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Economic_Report_2020_table_0.csv",
+        "name": "Economic_Report_2020_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Economic_Report_2019_table_0.csv",
+        "name": "Economic_Report_2019_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_9.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_9.csv",
+        "size": 283
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_6.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_6.csv",
+        "size": 265
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_5.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_5.csv",
+        "size": 1138
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_4.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_4.csv",
+        "size": 368
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_3.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_3.csv",
+        "size": 336
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_2.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_2.csv",
+        "size": 1022
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_15.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_15.csv",
+        "size": 227
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_14.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_14.csv",
+        "size": 265
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_13.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_13.csv",
+        "size": 265
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_12.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_12.csv",
+        "size": 265
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_11.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_11.csv",
+        "size": 1843
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_10.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_10.csv",
+        "size": 231
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_1.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_1.csv",
+        "size": 227
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI_tabula_table_2.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI_tabula_table_2.csv",
+        "size": 212
+      },
+      {
+        "path": "raw/csv/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI_tabula_table_1.csv",
+        "name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI_tabula_table_1.csv",
+        "size": 212
+      },
+      {
+        "path": "raw/csv/Debt_Report_2025_table_0.csv",
+        "name": "Debt_Report_2025_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Debt_Report_2024_table_0.csv",
+        "name": "Debt_Report_2024_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Debt_Report_2023_table_0.csv",
+        "name": "Debt_Report_2023_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Debt_Report_2022_table_0.csv",
+        "name": "Debt_Report_2022_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Debt_Report_2021_table_0.csv",
+        "name": "Debt_Report_2021_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Debt_Report_2020_table_0.csv",
+        "name": "Debt_Report_2020_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Debt_Report_2019_table_0.csv",
+        "name": "Debt_Report_2019_table_0.csv",
+        "size": 197
+      },
+      {
+        "path": "raw/csv/Budget_Execution_2025_table_0.csv",
+        "name": "Budget_Execution_2025_table_0.csv",
+        "size": 227
+      },
+      {
+        "path": "raw/csv/Budget_Execution_2024_table_0.csv",
+        "name": "Budget_Execution_2024_table_0.csv",
+        "size": 227
+      },
+      {
+        "path": "raw/csv/Budget_Execution_2023_table_0.csv",
+        "name": "Budget_Execution_2023_table_0.csv",
+        "size": 227
+      },
+      {
+        "path": "raw/csv/Budget_Execution_2022_table_0.csv",
+        "name": "Budget_Execution_2022_table_0.csv",
+        "size": 227
+      },
+      {
+        "path": "raw/csv/Budget_Execution_2021_table_0.csv",
+        "name": "Budget_Execution_2021_table_0.csv",
+        "size": 227
+      },
+      {
+        "path": "raw/csv/Budget_Execution_2020_table_0.csv",
+        "name": "Budget_Execution_2020_table_0.csv",
+        "size": 227
+      },
+      {
+        "path": "raw/csv/Budget_Execution_2019_table_0.csv",
+        "name": "Budget_Execution_2019_table_0.csv",
+        "size": 227
+      },
+      {
+        "path": "raw/csv/2019_treasury_movements.csv",
+        "name": "2019_treasury_movements.csv",
+        "size": 251
+      },
+      {
+        "path": "raw/csv/2019_summary.csv",
+        "name": "2019_summary.csv",
+        "size": 6289
+      },
+      {
+        "path": "raw/csv/2019_statement_of_financial_position.csv",
+        "name": "2019_statement_of_financial_position.csv",
+        "size": 658
+      },
+      {
+        "path": "raw/csv/2019_revenue_sources_evolution.csv",
+        "name": "2019_revenue_sources_evolution.csv",
+        "size": 98
+      },
+      {
+        "path": "raw/csv/2019_revenue_by_type.csv",
+        "name": "2019_revenue_by_type.csv",
+        "size": 75
+      },
+      {
+        "path": "raw/csv/2019_revenue_by_source_structured.csv",
+        "name": "2019_revenue_by_source_structured.csv",
+        "size": 1766
+      },
+      {
+        "path": "raw/csv/2019_revenue.csv",
+        "name": "2019_revenue.csv",
+        "size": 563
+      },
+      {
+        "path": "raw/csv/2019_personnel_expenses.csv",
+        "name": "2019_personnel_expenses.csv",
+        "size": 118
+      },
+      {
+        "path": "raw/csv/2019_investment_by_area.csv",
+        "name": "2019_investment_by_area.csv",
+        "size": 87
+      },
+      {
+        "path": "raw/csv/2019_fiscal_balance.csv",
+        "name": "2019_fiscal_balance.csv",
+        "size": 430
+      },
+      {
+        "path": "raw/csv/2019_financial_summary_structured.csv",
+        "name": "2019_financial_summary_structured.csv",
+        "size": 1771
+      },
+      {
+        "path": "raw/csv/2019_financial_reserves.csv",
+        "name": "2019_financial_reserves.csv",
+        "size": 90
+      },
+      {
+        "path": "raw/csv/2019_expenditure_by_program_structured.csv",
+        "name": "2019_expenditure_by_program_structured.csv",
+        "size": 1849
+      },
+      {
+        "path": "raw/csv/2019_expenditure_by_program.csv",
+        "name": "2019_expenditure_by_program.csv",
+        "size": 2341
+      },
+      {
+        "path": "raw/csv/2019_expenditure_by_object.csv",
+        "name": "2019_expenditure_by_object.csv",
+        "size": 884
+      },
+      {
+        "path": "raw/csv/2019_expenditure_by_function.csv",
+        "name": "2019_expenditure_by_function.csv",
+        "size": 195
+      },
+      {
+        "path": "raw/csv/2019_expenditure_admin_level.csv",
+        "name": "2019_expenditure_admin_level.csv",
+        "size": 142
+      },
+      {
+        "path": "raw/csv/2019_expenditure.csv",
+        "name": "2019_expenditure.csv",
+        "size": 293
+      },
+      {
+        "path": "raw/csv/2019_debt_status.csv",
+        "name": "2019_debt_status.csv",
+        "size": 94
+      },
+      {
+        "path": "raw/csv/2019_capital_current_expenditure.csv",
+        "name": "2019_capital_current_expenditure.csv",
+        "size": 86
+      },
+      {
+        "path": "raw/csv/2019_budget_execution_quarterly.csv",
+        "name": "2019_budget_execution_quarterly.csv",
+        "size": 103
+      },
+      {
+        "path": "raw/csv/2019_balance_demonstration.csv",
+        "name": "2019_balance_demonstration.csv",
+        "size": 941
+      },
+      {
+        "path": "raw/csv/2019_article_44_result.csv",
+        "name": "2019_article_44_result.csv",
+        "size": 382
+      },
+      {
+        "path": "processed/budget_execution_2019.csv",
+        "name": "budget_execution_2019.csv",
+        "size": 156
+      }
+    ],
+    "json": [
+      {
+        "path": "red_flags_report.json",
+        "name": "red_flags_report.json",
+        "size": 3326
+      },
+      {
+        "path": "master_index.json",
+        "name": "master_index.json",
+        "size": 15270
+      },
+      {
+        "path": "api_routes.json",
+        "name": "api_routes.json",
+        "size": 1274
+      },
+      {
+        "path": "processed/2025/consolidated_data.json",
+        "name": "consolidated_data.json",
+        "size": 11304
+      },
+      {
+        "path": "processed/2024/consolidated_data.json",
+        "name": "consolidated_data.json",
+        "size": 11304
+      },
+      {
+        "path": "processed/2023/consolidated_data.json",
+        "name": "consolidated_data.json",
+        "size": 36715
+      },
+      {
+        "path": "processed/2022/consolidated_data.json",
+        "name": "consolidated_data.json",
+        "size": 11304
+      },
+      {
+        "path": "processed/2021/consolidated_data.json",
+        "name": "consolidated_data.json",
+        "size": 11304
+      },
+      {
+        "path": "processed/2020/consolidated_data.json",
+        "name": "consolidated_data.json",
+        "size": 11304
+      },
+      {
+        "path": "processed/2019/consolidated_data.json",
+        "name": "consolidated_data.json",
+        "size": 38185
+      }
+    ]
+  },
+  "dataDirectoryStructure": {
+    ".": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "api_routes.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 1274
+        },
+        {
+          "name": "master_index.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 15270
+        },
+        {
+          "name": "red_flags_report.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 3326
+        }
+      ]
+    },
+    "cleaned": {
+      "type": "directory",
+      "contents": []
+    },
+    "consolidated": {
+      "type": "directory",
+      "contents": []
+    },
+    "external": {
+      "type": "directory",
+      "contents": []
+    },
+    "metadata": {
+      "type": "directory",
+      "contents": []
+    },
+    "ocr_extracted": {
+      "type": "directory",
+      "contents": []
+    },
+    "ocr_extracted/csv": {
+      "type": "directory",
+      "contents": []
+    },
+    "ocr_extracted/images": {
+      "type": "directory",
+      "contents": []
+    },
+    "ocr_extracted/json": {
+      "type": "directory",
+      "contents": []
+    },
+    "ocr_extracted/pdfs": {
+      "type": "directory",
+      "contents": []
+    },
+    "ocr_extracted/text": {
+      "type": "directory",
+      "contents": []
+    },
+    "ocr_processing": {
+      "type": "directory",
+      "contents": []
+    },
+    "ocr_processing/input": {
+      "type": "directory",
+      "contents": []
+    },
+    "ocr_processing/logs": {
+      "type": "directory",
+      "contents": []
+    },
+    "ocr_processing/output": {
+      "type": "directory",
+      "contents": []
+    },
+    "ocr_processing/temp": {
+      "type": "directory",
+      "contents": []
+    },
+    "processed": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "budget_execution_2019.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 156
+        }
+      ]
+    },
+    "processed/2017": {
+      "type": "directory",
+      "contents": []
+    },
+    "processed/2018": {
+      "type": "directory",
+      "contents": []
+    },
+    "processed/2019": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "consolidated_data.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 38185
+        }
+      ]
+    },
+    "processed/2020": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "consolidated_data.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 11304
+        }
+      ]
+    },
+    "processed/2021": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "consolidated_data.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 11304
+        }
+      ]
+    },
+    "processed/2022": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "consolidated_data.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 11304
+        }
+      ]
+    },
+    "processed/2023": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "consolidated_data.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 36715
+        }
+      ]
+    },
+    "processed/2024": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "consolidated_data.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 11304
+        }
+      ]
+    },
+    "processed/2025": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "consolidated_data.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 11304
+        }
+      ]
+    },
+    "raw": {
+      "type": "directory",
+      "contents": []
+    },
+    "raw/csv": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "2019_article_44_result.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 382
+        },
+        {
+          "name": "2019_balance_demonstration.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 941
+        },
+        {
+          "name": "2019_budget_execution_quarterly.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 103
+        },
+        {
+          "name": "2019_capital_current_expenditure.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 86
+        },
+        {
+          "name": "2019_debt_status.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 94
+        },
+        {
+          "name": "2019_expenditure.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 293
+        },
+        {
+          "name": "2019_expenditure_admin_level.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 142
+        },
+        {
+          "name": "2019_expenditure_by_function.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 195
+        },
+        {
+          "name": "2019_expenditure_by_object.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 884
+        },
+        {
+          "name": "2019_expenditure_by_program.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 2341
+        },
+        {
+          "name": "2019_expenditure_by_program_structured.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 1849
+        },
+        {
+          "name": "2019_financial_reserves.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 90
+        },
+        {
+          "name": "2019_financial_summary_structured.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 1771
+        },
+        {
+          "name": "2019_fiscal_balance.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 430
+        },
+        {
+          "name": "2019_investment_by_area.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 87
+        },
+        {
+          "name": "2019_personnel_expenses.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 118
+        },
+        {
+          "name": "2019_revenue.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 563
+        },
+        {
+          "name": "2019_revenue_by_source_structured.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 1766
+        },
+        {
+          "name": "2019_revenue_by_type.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 75
+        },
+        {
+          "name": "2019_revenue_sources_evolution.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 98
+        },
+        {
+          "name": "2019_statement_of_financial_position.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 658
+        },
+        {
+          "name": "2019_summary.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 6289
+        },
+        {
+          "name": "2019_treasury_movements.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 251
+        },
+        {
+          "name": "Budget_Execution_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 227
+        },
+        {
+          "name": "Budget_Execution_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 227
+        },
+        {
+          "name": "Budget_Execution_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 227
+        },
+        {
+          "name": "Budget_Execution_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 227
+        },
+        {
+          "name": "Budget_Execution_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 227
+        },
+        {
+          "name": "Budget_Execution_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 227
+        },
+        {
+          "name": "Budget_Execution_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 227
+        },
+        {
+          "name": "Debt_Report_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Debt_Report_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Debt_Report_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Debt_Report_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Debt_Report_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Debt_Report_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Debt_Report_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI_tabula_table_1.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 212
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI_tabula_table_2.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 212
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_1.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 227
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_10.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 231
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_11.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 1843
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_12.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 265
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_13.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 265
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_14.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 265
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_15.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 227
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_2.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 1022
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_3.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 336
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_4.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 368
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_5.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 1138
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_6.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 265
+        },
+        {
+          "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_9.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 283
+        },
+        {
+          "name": "Economic_Report_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Economic_Report_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Economic_Report_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Economic_Report_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Economic_Report_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Economic_Report_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Economic_Report_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 197
+        },
+        {
+          "name": "Education_Data_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 173
+        },
+        {
+          "name": "Education_Data_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 173
+        },
+        {
+          "name": "Education_Data_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 173
+        },
+        {
+          "name": "Education_Data_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 173
+        },
+        {
+          "name": "Education_Data_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 173
+        },
+        {
+          "name": "Education_Data_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 173
+        },
+        {
+          "name": "Education_Data_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 173
+        },
+        {
+          "name": "Expenditure_Report_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 237
+        },
+        {
+          "name": "Expenditure_Report_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 237
+        },
+        {
+          "name": "Expenditure_Report_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 237
+        },
+        {
+          "name": "Expenditure_Report_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 237
+        },
+        {
+          "name": "Expenditure_Report_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 237
+        },
+        {
+          "name": "Expenditure_Report_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 237
+        },
+        {
+          "name": "Expenditure_Report_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 237
+        },
+        {
+          "name": "Financial_Reserves_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 326
+        },
+        {
+          "name": "Financial_Reserves_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 326
+        },
+        {
+          "name": "Financial_Reserves_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 326
+        },
+        {
+          "name": "Financial_Reserves_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 326
+        },
+        {
+          "name": "Financial_Reserves_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 326
+        },
+        {
+          "name": "Financial_Reserves_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 326
+        },
+        {
+          "name": "Financial_Reserves_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 326
+        },
+        {
+          "name": "Fiscal_Balance_Report_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 250
+        },
+        {
+          "name": "Fiscal_Balance_Report_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 250
+        },
+        {
+          "name": "Fiscal_Balance_Report_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 250
+        },
+        {
+          "name": "Fiscal_Balance_Report_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 250
+        },
+        {
+          "name": "Fiscal_Balance_Report_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 250
+        },
+        {
+          "name": "Fiscal_Balance_Report_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 250
+        },
+        {
+          "name": "Fiscal_Balance_Report_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 250
+        },
+        {
+          "name": "Health_Statistics_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 187
+        },
+        {
+          "name": "Health_Statistics_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 187
+        },
+        {
+          "name": "Health_Statistics_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 187
+        },
+        {
+          "name": "Health_Statistics_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 187
+        },
+        {
+          "name": "Health_Statistics_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 187
+        },
+        {
+          "name": "Health_Statistics_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 187
+        },
+        {
+          "name": "Health_Statistics_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 187
+        },
+        {
+          "name": "Infrastructure_Projects_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 244
+        },
+        {
+          "name": "Infrastructure_Projects_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 244
+        },
+        {
+          "name": "Infrastructure_Projects_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 244
+        },
+        {
+          "name": "Infrastructure_Projects_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 244
+        },
+        {
+          "name": "Infrastructure_Projects_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 244
+        },
+        {
+          "name": "Infrastructure_Projects_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 244
+        },
+        {
+          "name": "Infrastructure_Projects_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 244
+        },
+        {
+          "name": "Investment_Report_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 248
+        },
+        {
+          "name": "Investment_Report_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 248
+        },
+        {
+          "name": "Investment_Report_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 248
+        },
+        {
+          "name": "Investment_Report_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 248
+        },
+        {
+          "name": "Investment_Report_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 248
+        },
+        {
+          "name": "Investment_Report_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 248
+        },
+        {
+          "name": "Investment_Report_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 248
+        },
+        {
+          "name": "Personnel_Expenses_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 215
+        },
+        {
+          "name": "Personnel_Expenses_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 215
+        },
+        {
+          "name": "Personnel_Expenses_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 215
+        },
+        {
+          "name": "Personnel_Expenses_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 215
+        },
+        {
+          "name": "Personnel_Expenses_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 215
+        },
+        {
+          "name": "Personnel_Expenses_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 215
+        },
+        {
+          "name": "Personnel_Expenses_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 215
+        },
+        {
+          "name": "Revenue_Report_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 233
+        },
+        {
+          "name": "Revenue_Report_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 233
+        },
+        {
+          "name": "Revenue_Report_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 233
+        },
+        {
+          "name": "Revenue_Report_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 233
+        },
+        {
+          "name": "Revenue_Report_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 233
+        },
+        {
+          "name": "Revenue_Report_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 233
+        },
+        {
+          "name": "Revenue_Report_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 233
+        },
+        {
+          "name": "Revenue_Sources_2019_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 190
+        },
+        {
+          "name": "Revenue_Sources_2020_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 190
+        },
+        {
+          "name": "Revenue_Sources_2021_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 190
+        },
+        {
+          "name": "Revenue_Sources_2022_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 190
+        },
+        {
+          "name": "Revenue_Sources_2023_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 190
+        },
+        {
+          "name": "Revenue_Sources_2024_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 190
+        },
+        {
+          "name": "Revenue_Sources_2025_table_0.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 190
+        },
+        {
+          "name": "budget_execution_2019.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 382
+        },
+        {
+          "name": "budget_execution_2021.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 178
+        },
+        {
+          "name": "category_caif.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 31632
+        },
+        {
+          "name": "licitaciones_2023.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 1109
+        },
+        {
+          "name": "licitaciones_2023_enhanced.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 1253
+        },
+        {
+          "name": "licitaciones_licitaciones_2023.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 981
+        },
+        {
+          "name": "programmatic_indicators.csv",
+          "type": "file",
+          "extension": ".csv",
+          "size": 948
+        }
+      ]
+    },
+    "raw/pdf": {
+      "type": "directory",
+      "contents": []
+    },
+    "web_accessible": {
+      "type": "directory",
+      "contents": []
+    },
+    "web_accessible/2017": {
+      "type": "directory",
+      "contents": []
+    },
+    "web_accessible/2018": {
+      "type": "directory",
+      "contents": []
+    },
+    "web_accessible/2019": {
+      "type": "directory",
+      "contents": []
+    },
+    "web_accessible/2020": {
+      "type": "directory",
+      "contents": []
+    },
+    "web_accessible/2021": {
+      "type": "directory",
+      "contents": []
+    },
+    "web_accessible/2022": {
+      "type": "directory",
+      "contents": []
+    },
+    "web_accessible/2023": {
+      "type": "directory",
+      "contents": []
+    },
+    "web_accessible/2024": {
+      "type": "directory",
+      "contents": []
+    },
+    "web_accessible/2025": {
+      "type": "directory",
+      "contents": []
+    }
+  }
+}

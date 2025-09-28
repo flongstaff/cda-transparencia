@@ -1,87 +1,221 @@
-import { useState, useEffect } from 'react';
-import { useUnifiedData } from './useUnifiedData';
-import { filterDocumentsByYear } from '../utils/documentProcessor';
+/**
+ * Enhanced Year Data Hook
+ *
+ * Provides optimized year-specific data loading with caching,
+ * preloading, and comprehensive statistics
+ */
 
-export interface YearData {
-  categories: Record<string, number> | null;
-  documents: Document[] | null;
-  total_documents: number | null;
-  loading: boolean;
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import YearDataService, { YearData, YearDataSummary } from '../services/yearDataService';
+
+export interface UseYearDataOptions {
+  preloadAdjacentYears?: boolean;
+  cacheTimeout?: number;
+  onYearChange?: (year: number, data: YearData) => void;
+  onError?: (error: Error) => void;
+}
+
+export interface UseYearDataReturn {
+  // Core data
+  yearData: YearData | null;
+  summary: YearDataSummary | null;
+
+  // State management
+  selectedYear: number;
+  setSelectedYear: (year: number) => void;
+  availableYears: number[];
+
+  // Loading states
+  isLoading: boolean;
+  isPreloading: boolean;
   error: string | null;
+
+  // Data access helpers
+  getFinancialData: () => any[];
+  getChartData: () => any[];
+  getAuditData: () => any[];
+  getContractData: () => any[];
+  getBudgetData: () => any[];
+  getExpenseData: () => any[];
+  getRevenueData: () => any[];
+
+  // Utility functions
+  refreshData: () => Promise<void>;
+  preloadYear: (year: number) => Promise<void>;
+  clearCache: () => void;
+  getCacheStatus: () => any[];
 }
 
-interface Document {
-  id: string;
-  title: string;
-  category: string;
-  year: number;
-  filename: string;
-  type: string;
-  url: string;
-  size_mb: number;
-  verified: boolean;
-  processing_date: string;
-  integrity_verified: boolean;
-}
+export function useYearData(
+  initialYear?: number,
+  options: UseYearDataOptions = {}
+): UseYearDataReturn {
+  const {
+    preloadAdjacentYears = true,
+    cacheTimeout = 60 * 60 * 1000, // 1 hour
+    onYearChange,
+    onError
+  } = options;
 
-export const useYearData = (selectedYear: number | null) => {
-  // Use the unified data hook as the source of truth
-  const { 
-    documents: allDocuments, 
-    structured, 
-    loading: unifiedLoading, 
-    error: unifiedError 
-  } = useUnifiedData({ year: selectedYear }); // Pass selectedYear here
+  const [selectedYear, setSelectedYearState] = useState<number>(
+    initialYear || new Date().getFullYear()
+  );
+  const [yearData, setYearData] = useState<YearData | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isPreloading, setIsPreloading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
 
-  // Transform the unified data into the YearData interface
-  const [data, setData] = useState<YearData>({
-    categories: null,
-    documents: null,
-    total_documents: null,
-    loading: unifiedLoading,
-    error: unifiedError ? unifiedError.message : null,
-  });
+  // Calculate summary statistics
+  const summary = useMemo<YearDataSummary | null>(() => {
+    if (!yearData) return null;
+    return YearDataService.getYearSummary(yearData);
+  }, [yearData]);
 
+  // Get available years
+  const availableYears = useMemo(() => {
+    const years = YearDataService.getAvailableYears();
+    const currentYear = new Date().getFullYear();
+
+    // Ensure we have at least the current year and previous 3 years
+    const defaultYears = [
+      currentYear,
+      currentYear - 1,
+      currentYear - 2,
+      currentYear - 3
+    ];
+
+    return Array.from(new Set([...years, ...defaultYears])).sort((a, b) => b - a);
+  }, [yearData]); // Recalculate when data changes
+
+  // Load data for a specific year
+  const loadYearData = useCallback(async (year: number) => {
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const data = await YearDataService.getYearData(year);
+      setYearData(data);
+
+      if (onYearChange) {
+        onYearChange(year, data);
+      }
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : 'Error loading year data';
+      setError(errorMessage);
+
+      if (onError) {
+        onError(err instanceof Error ? err : new Error(errorMessage));
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  }, [onYearChange, onError]);
+
+  // Preload adjacent years for better UX
+  const preloadAdjacentData = useCallback(async (currentYear: number) => {
+    if (!preloadAdjacentYears) return;
+
+    setIsPreloading(true);
+    try {
+      const yearsToPreload = [currentYear - 1, currentYear + 1].filter(year =>
+        year >= 2019 && year <= new Date().getFullYear() + 1
+      );
+
+      await YearDataService.preloadYears(yearsToPreload);
+    } catch (err) {
+      // Preloading errors are non-critical
+      console.warn('Failed to preload adjacent years:', err);
+    } finally {
+      setIsPreloading(false);
+    }
+  }, [preloadAdjacentYears]);
+
+  // Set selected year with data loading
+  const setSelectedYear = useCallback(async (year: number) => {
+    if (year === selectedYear) return;
+
+    setSelectedYearState(year);
+    await loadYearData(year);
+
+    // Preload adjacent years in background
+    preloadAdjacentData(year);
+  }, [selectedYear, loadYearData, preloadAdjacentData]);
+
+  // Refresh current year data
+  const refreshData = useCallback(async () => {
+    YearDataService.clearYearCache(selectedYear);
+    await loadYearData(selectedYear);
+  }, [selectedYear, loadYearData]);
+
+  // Preload specific year
+  const preloadYear = useCallback(async (year: number) => {
+    try {
+      await YearDataService.getYearData(year);
+    } catch (err) {
+      console.warn(`Failed to preload year ${year}:`, err);
+    }
+  }, []);
+
+  // Clear all cache
+  const clearCache = useCallback(() => {
+    YearDataService.clearAllCache();
+    setYearData(null);
+  }, []);
+
+  // Get cache status
+  const getCacheStatus = useCallback(() => {
+    return YearDataService.getCacheStatus();
+  }, []);
+
+  // Data access helpers
+  const getFinancialData = useCallback(() => yearData?.financial || [], [yearData]);
+  const getChartData = useCallback(() => yearData?.charts || [], [yearData]);
+  const getAuditData = useCallback(() => yearData?.audits || [], [yearData]);
+  const getContractData = useCallback(() => yearData?.contracts || [], [yearData]);
+  const getBudgetData = useCallback(() => yearData?.budget || [], [yearData]);
+  const getExpenseData = useCallback(() => yearData?.expenses || [], [yearData]);
+  const getRevenueData = useCallback(() => yearData?.revenue || [], [yearData]);
+
+  // Load initial data
   useEffect(() => {
-    if (!selectedYear || !allDocuments) {
-      setData({
-        categories: null,
-        documents: null,
-        total_documents: null,
-        loading: false,
-        error: null,
-      });
-      return;
+    loadYearData(selectedYear);
+  }, []); // Only run on mount
+
+  // Preload adjacent years when year changes
+  useEffect(() => {
+    if (yearData) {
+      preloadAdjacentData(selectedYear);
     }
+  }, [selectedYear, yearData, preloadAdjacentData]);
 
-    // Documents are already filtered by useUnifiedData
-    const yearDocuments = allDocuments; // No need to filter again
+  return {
+    // Core data
+    yearData,
+    summary,
 
-    // Calculate categories from the filtered documents
-    const categories = yearDocuments.reduce((acc, doc) => {
-      const category = doc.category || 'general';
-      acc[category] = (acc[category] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    // State management
+    selectedYear,
+    setSelectedYear,
+    availableYears,
 
-    // Use structured budget data if available for enhanced categories
-    const enhancedCategories = { ...categories };
-    if (structured.budget && structured.budget.categories) { // Access categories directly
-      // Add budget-specific categories
-      Object.entries(structured.budget.categories).forEach(([name, categoryData]: [string, any]) => {
-        const budgetKey = `budget_${name.toLowerCase().replace(/\s+/g, '_')}`;
-        enhancedCategories[budgetKey] = categoryData.document_count || 0;
-      });
-    }
+    // Loading states
+    isLoading,
+    isPreloading,
+    error,
 
-    setData({
-      categories: enhancedCategories,
-      documents: yearDocuments,
-      total_documents: yearDocuments.length,
-      loading: false,
-      error: null,
-    });
-  }, [selectedYear, allDocuments, structured]);
+    // Data access helpers
+    getFinancialData,
+    getChartData,
+    getAuditData,
+    getContractData,
+    getBudgetData,
+    getExpenseData,
+    getRevenueData,
 
-  return data;
-};
+    // Utility functions
+    refreshData,
+    preloadYear,
+    clearCache,
+    getCacheStatus
+  };
+}

@@ -51,9 +51,9 @@ const quickLinks = [
     color: 'bg-green-50 border-green-200'
   },
   {
-    title: 'Dashboard Principal',
+    title: 'Página Principal',
     description: 'Resumen ejecutivo y métricas principales',
-    path: '/dashboard',
+    path: '/',
     icon: <Calculator className="w-6 h-6 text-blue-500" />,
     color: 'bg-blue-50 border-blue-200'
   },
@@ -72,16 +72,16 @@ const quickLinks = [
     color: 'bg-gray-50 border-gray-200'
   },
   {
-    title: 'Dashboard General',
+    title: 'Dashboard Completo',
     description: 'Resumen general de datos financieros y de transparencia',
-    path: '/dashboard',
+    path: '/completo',
     icon: <LayoutDashboard className="w-6 h-6 text-purple-500" />,
     color: 'bg-purple-50 border-purple-200'
   },
   {
     title: 'Datos por Año',
     description: 'Análisis detallado de datos por año fiscal',
-    path: '/dashboard',
+    path: '/database',
     icon: <Calendar className="w-6 h-6 text-blue-500" />,
     color: 'bg-blue-50 border-blue-200'
   }
@@ -113,11 +113,11 @@ const Home: React.FC = () => {
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link 
-                  to="/dashboard" 
+                  to="/" 
                   className="px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
                 >
                   <LayoutDashboard className="w-5 h-5 mr-2" />
-                  Ver Resumen General
+                  Ver Página Principal
                 </Link>
                 <Link 
                   to="/documents" 

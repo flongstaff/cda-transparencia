@@ -1,0 +1,5 @@
+Debt Type,Amount,Interest Rate,Maturity
+Municipal Bonds,"$100,000,000",7.5%,5 years
+Bank Loans,"$50,000,000",8.0%,7 years
+Development Bank,"$30,000,000",6.5%,10 years
+Total Debt,"$180,000,000",-,-

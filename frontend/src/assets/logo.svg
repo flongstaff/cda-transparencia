@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart">
-  <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
-  <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Shield icon matching the site design -->
+  <path d="M12 1.75C12 1.75 17.25 3.25 17.25 3.25C17.25 3.25 17.25 8.5 17.25 8.5C17.25 14.75 12 18.25 12 18.25C12 18.25 6.75 14.75 6.75 8.5C6.75 8.5 6.75 3.25 6.75 3.25C6.75 3.25 12 1.75 12 1.75Z"/>
+  <path d="M9 10L11 12L15 8"/>
 </svg>

@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import { useAccessibility } from '../../utils/accessibility';
 import { monitoring } from '../../utils/monitoring';
 import { chartAccessibility } from '../../utils/accessibility';
-import ChartSkeleton from '../skeletons/ChartSkeleton';
+import ChartSkeleton from '../ui/ChartSkeleton';
 
 // Data validation schema
 const dataPointSchema = {
-  isValid: (item: any) => 
+  isValid: (props: Record<string, unknown>) => 
     typeof item === 'object' &&
     item !== null &&
     typeof item.label === 'string' &&

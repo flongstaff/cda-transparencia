@@ -1,7 +1,18 @@
 /* Import Design System */
 @import './styles/design-system.css';
+@import './styles/government-design.css';
 @import './styles/reset.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Hide scrollbars for sidebar */
+.sidebar-nav {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  display: none; /* WebKit */
+}

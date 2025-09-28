@@ -221,7 +221,7 @@ export class UnifiedDataLoader {
 
   // Load external API data
   private async loadExternalApiData(): Promise<MultiSourceData | null> {
-    const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api/transparency';
+    const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
     const USE_API = import.meta.env.VITE_USE_API === 'true';
 
     if (!USE_API) {
@@ -229,18 +229,16 @@ export class UnifiedDataLoader {
     }
 
     try {
-      // Assuming /data/dashboard is an API endpoint, not a static JSON file on GitHub
-      // If it's a static JSON, use fetchGitHubJson('/data/dashboard.json')
-      const response = await fetch(`${API_BASE}/data/dashboard`); 
+      // Load comprehensive transparency data from backend API
+      const response = await fetch(`${API_BASE}/transparency/dashboard`); 
       if (response.ok) {
         const result = await response.json();
-        if (result.success) {
-          return {
-            ...result.data,
-            source: 'external_api',
-            last_updated: new Date().toISOString()
-          };
-        }
+        
+        return {
+          ...result,
+          source: 'external_api',
+          last_updated: new Date().toISOString()
+        };
       }
     } catch (error) {
       console.warn('External API not available:', error);

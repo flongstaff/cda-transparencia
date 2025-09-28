@@ -405,7 +405,7 @@ export const chartAccessibility = {
   // Generate accessible description for chart data
   generateChartDescription: (
     chartType: string,
-    data: any[],
+    data: unknown[],
     language: string = 'es'
   ): string => {
     const translations = {
@@ -445,7 +445,7 @@ export const chartAccessibility = {
   },
 
   // Create accessible table alternative for chart data
-  createDataTable: (data: any[], headers: string[]): HTMLTableElement => {
+  createDataTable: (data: unknown[], headers: string[]): _HTMLTableElement => {
     const table = document.createElement('table');
     table.className = 'sr-only'; // Screen reader only
     table.setAttribute('role', 'table');

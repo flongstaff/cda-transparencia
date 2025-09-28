@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal de Transparencia - Carmen de Areco</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>📊 Portal de Transparencia</h1>
+    <p>Municipio de Carmen de Areco — Datos abiertos y presupuesto ejecutado</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Presupuesto 2019</h2>
+      <p>Datos de ejecución presupuestaria para 2019</p>
+      <iframe src="/charts/budget_2019.html" width="100%" height="500"></iframe>
+    </section>
+
+    <section>
+      <h2>Ejecución Trimestral 2021</h2>
+      <p>Tendencias de ejecución presupuestaria por trimestre en 2021</p>
+      <iframe src="/charts/budget_2021_quarterly.html" width="100%" height="500"></iframe>
+    </section>
+
+    <section>
+      <h2>Cámaras de Seguridad (2022–2025)</h2>
+      <p>Instalación de cámaras de monitoreo por programa</p>
+      <iframe src="/charts/cameras_timeline.html" width="100%" height="500"></iframe>
+    </section>
+
+    <section>
+      <h2>Familias Asistidas</h2>
+      <p>Asistencia a vecinos por programa</p>
+      <iframe src="/charts/families_timeline.html" width="100%" height="500"></iframe>
+    </section>
+
+    <section>
+      <h2>Dashboard Interactivo</h2>
+      <p>Visualización interactiva de datos de transparencia</p>
+      <iframe src="https://yourname-cda-transparencia.streamlit.app" 
+              width="100%" height="800" style="border:none;"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>Datos públicos del Municipio de Carmen de Areco. 
+       Fuente: <a href="https://carmendeareco.gob.ar/transparencia/">Portal de Transparencia</a></p>
+  </footer>
+</body>
+</html>

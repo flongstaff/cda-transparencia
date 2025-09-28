@@ -14,8 +14,8 @@ import {
   FileText,
   BarChart3
 } from 'lucide-react';
-import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
-import PageYearSelector from '../components/selectors/PageYearSelector';
+import { useMasterData } from '../hooks/useMasterData';
+import PageYearSelector from '../components/forms/PageYearSelector';
 import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
 import UniversalChart from '../components/charts/UnifiedChart'; // Updated to use the unified chart
 import { formatCurrencyARS, formatPercentageARS } from '../utils/formatters';
@@ -44,18 +44,27 @@ const Spending: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'overview' | 'categories' | 'trends'>('overview');
 
-  // 🚀 Use the most comprehensive data service - CompleteFinalDataService
+  // 🚀 Use master data service that includes all sources (JSON/MD/PDF/External)
   const {
-    completeData,
-    currentYearData,
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
     loading,
     error,
-    availableYears
-  } = useCompleteFinalData(selectedYear);
+    totalDocuments,
+    availableYears,
+    categories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
 
-  // Process spending data from comprehensive data service
+  // Process spending data from master data service
   const spendingData = useMemo(() => {
-    if (!currentYearData) {
+    if (!currentBudget) {
       return {
         totalBudget: 0,
         totalExecuted: 0,
@@ -65,41 +74,39 @@ const Spending: React.FC = () => {
       };
     }
 
-    const budgetData = currentYearData.budget;
-    
     // Handle different possible data structures for budget
-    const totalBudget = budgetData?.total_budget || 
-                       budgetData?.totalBudget || 
-                       budgetData?.categories?.reduce((sum: number, cat: any) => sum + (cat.budgeted || 0), 0) || 0;
-    const totalExecuted = budgetData?.total_executed || 
-                         budgetData?.totalExecuted || 
-                         budgetData?.categories?.reduce((sum: number, cat: any) => sum + (cat.executed || 0), 0) || 0;
+    const totalBudget = currentBudget?.total_budget || 
+                       currentBudget?.totalBudget || 
+                       currentBudget?.budget_total || 0;
+    const totalExecuted = currentBudget?.total_executed || 
+                         currentBudget?.totalExecuted || 
+                         currentBudget?.executed_total || 0;
     const executionRate = totalBudget > 0 ? (totalExecuted / totalBudget) * 100 : 0;
 
     // Extract category breakdown if available
-    const categoryBreakdown = budgetData?.categories || [];
+    const categoryBreakdown = currentBudget?.categories || [];
 
     return {
       totalBudget,
       totalExecuted,
       executionRate,
-      categoryBreakdown: categoryBreakdown.map((cat: any) => ({
+      categoryBreakdown: categoryBreakdown.map((props: Record<string, unknown>) => ({
         name: cat.name || cat.category || cat.description || 'Categoría no identificada',
         budgeted: cat.budgeted || cat.budget_amount || cat.budget || 0,
         executed: cat.executed || cat.executed_amount || cat.executed || 0,
-        executionRate: cat.execution_rate || cat.executionRate || 0,
+        executionRate: cat.execution_rate || cat.executionRate || cat.execution_percentage || 0,
         variance: (cat.executed || cat.executed_amount || cat.executed || 0) - 
                   (cat.budgeted || cat.budget_amount || cat.budget || 0)
       })),
-      monthlyTrend: [] // Add monthly trend data if available in completeData
+      monthlyTrend: [] // Add monthly trend data if available in masterData
     };
-  }, [currentYearData]);
+  }, [currentBudget]);
 
-  // Filter spending-related documents from complete data
+  // Filter spending-related documents from master data
   const spendingDocuments = useMemo(() => {
-    if (!currentYearData?.documents) return [];
+    if (!currentDocuments) return [];
     
-    return currentYearData.documents.filter(doc => 
+    return currentDocuments.filter(doc => 
       doc.category?.toLowerCase().includes('gasto') ||
       doc.category?.toLowerCase().includes('spending') ||
       doc.category?.toLowerCase().includes('presupuesto') ||
@@ -109,11 +116,11 @@ const Spending: React.FC = () => {
       doc.title?.toLowerCase().includes('presupuesto') ||
       doc.title?.toLowerCase().includes('budget')
     );
-  }, [currentYearData]);
+  }, [currentDocuments]);
 
   // Spending efficiency and audit overview from comprehensive data
-  const spendingEfficiency = currentYearData?.budget?.spending_efficiency;
-  const auditOverview = currentYearData?.budget?.audit_overview;
+  const spendingEfficiency = masterData?.chartsData?.budget?.spending_efficiency;
+  const auditOverview = masterData?.chartsData?.budget?.audit_overview;
 
   if (loading) {
     return (
@@ -159,7 +166,7 @@ const Spending: React.FC = () => {
             </div>
             <PageYearSelector
               selectedYear={selectedYear}
-              onYearChange={setSelectedYear}
+              onYearChange={switchYear}
               availableYears={availableYears}
               label="Año fiscal"
             />
@@ -303,12 +310,15 @@ const Spending: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               className="bg-white rounded-xl shadow-sm p-6"
             >
-              <h2 className="text-xl font-bold text-gray-900 mb-6">Tendencias Mensuales</h2>
-              <p className="text-gray-600 mb-6">Evolución del gasto durante el año</p>
-              {/* Monthly trend chart would go here */}
-              <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
-                <p className="text-gray-500">Gráfico de tendencias mensuales</p>
-              </div>
+              <h2 className="text-xl font-bold text-gray-900 mb-6">Tendencias Anuales</h2>
+              <p className="text-gray-600 mb-6">Evolución del gasto a lo largo de los años</p>
+              <UniversalChart
+                type="budget-trend"
+                year={selectedYear}
+                title={`Evolución del Gasto - ${selectedYear}`}
+                variant="line"
+                className="h-80"
+              />
             </motion.div>
           )}
         </div>

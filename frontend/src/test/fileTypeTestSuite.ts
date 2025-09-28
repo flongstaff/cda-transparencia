@@ -129,21 +129,23 @@ class FileTypeTestSuite {
           
         case 'md':
         case 'txt':
-        case 'csv':
+        case 'csv': {
           // For text-based files, fetch and verify content
           const textContent = await unifiedResourceService.fetchText(metadata.relative_path);
           if (!textContent || textContent.length === 0) {
             throw new Error('Empty text content');
           }
           break;
+        }
           
-        case 'json':
+        case 'json': {
           // For JSON files, fetch and parse
           const jsonData = await unifiedResourceService.fetchJSON(metadata.relative_path);
           if (!jsonData) {
             throw new Error('Empty JSON data');
           }
           break;
+        }
           
         case 'jpg':
         case 'jpeg':

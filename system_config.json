@@ -1,0 +1,24 @@
+{
+  "project_root": "/Users/flong/Developer/cda-transparencia",
+  "data_directories": {
+    "main_data": "/Users/flong/Developer/cda-transparencia/data",
+    "frontend_data": "/Users/flong/Developer/cda-transparencia/frontend/dist/data",
+    "organized_pdfs": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/organized_pdfs",
+    "local_pdfs": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local",
+    "extracted_data": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/extracted_comprehensive",
+    "audit_results": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/audit_results"
+  },
+  "database": {
+    "main_db": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/unified_transparency.db"
+  },
+  "external_sources": {
+    "asap_url": "https://asap.org.ar/img_informes/12111441_InformeTransparenciaFiscalMunicipalBA2024.11.pdf",
+    "municipal_portal": "https://carmendeareco.gob.ar",
+    "transparency_portal": "https://carmendeareco.gob.ar/transparencia"
+  },
+  "processing_options": {
+    "default_limit": 50,
+    "batch_size": 10,
+    "timeout_seconds": 30
+  }
+}

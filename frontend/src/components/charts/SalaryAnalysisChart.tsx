@@ -1,5 +1,5 @@
 import React from 'react';
-import UnifiedChart from './UnifiedChart';
+import UnifiedChart from '../charts/UnifiedChart';
 
 interface Props {
   year: number;

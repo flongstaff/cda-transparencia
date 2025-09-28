@@ -20,7 +20,7 @@ import {
   Code,
   File
 } from 'lucide-react';
-import { DocumentMetadata, SupportedFileType } from '../../types/documents';
+import { DocumentMetadata } from '../../types/documents';
 
 interface ArchiveEntry {
   name: string;

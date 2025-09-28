@@ -1,0 +1,27 @@
+{
+  "name": "Carmen de Areco Transparency Portal",
+  "version": "1.0.0",
+  "deployment_date": "2025-09-28T04:47:20.920Z",
+  "structure": "cloudflare-optimized",
+  "features": [
+    "red-flag-detection",
+    "interactive-charts",
+    "static-fallbacks",
+    "api-endpoints",
+    "mobile-responsive"
+  ],
+  "deployment_checklist": [
+    "✅ Frontend build copied",
+    "✅ Data structure prepared",
+    "✅ Static charts generated",
+    "✅ API endpoints created",
+    "✅ Configuration files copied",
+    "✅ Redirects configured"
+  ],
+  "deployment_commands": [
+    "1. cd cloudflare-deploy",
+    "2. Connect to Cloudflare Pages",
+    "3. Deploy from /public directory",
+    "4. Configure custom domain (optional)"
+  ]
+}

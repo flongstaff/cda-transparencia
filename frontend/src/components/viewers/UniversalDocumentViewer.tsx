@@ -319,7 +319,7 @@ const UniversalDocumentViewer: React.FC<UniversalDocumentViewerProps> = ({
 };
 
 // Helper function to get file icon
-const getFileIcon = (fileType: SupportedFileType) => {
+const _getFileIcon = (fileType: SupportedFileType) => {
   switch (fileType) {
     case 'pdf':
       return <FileText className="w-5 h-5 text-red-500" />;
@@ -355,7 +355,7 @@ const getFileIcon = (fileType: SupportedFileType) => {
 };
 
 // Helper function to get file type description
-const getFileTypeDescription = (fileType: SupportedFileType) => {
+const _getFileTypeDescription = (fileType: SupportedFileType) => {
   switch (fileType) {
     case 'pdf':
       return 'Documento PDF';

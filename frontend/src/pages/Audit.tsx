@@ -6,10 +6,10 @@ import {
   AlertTriangle,
   Eye,
 } from 'lucide-react';
-import FinancialAuditDashboard from '../components/audit/FinancialAuditDashboard';
-import InfrastructureTracker from '../components/audit/InfrastructureTracker';
-import DataCategorizationDashboard from '../components/audit/DataCategorizationDashboard';
-import AuditAnomaliesExplainer from '../components/audit/AuditAnomaliesExplainer';
+import FinancialAuditDashboard from './FinancialAuditDashboard';
+import InfrastructureTracker from './InfrastructureTracker';
+import DataCategorizationDashboard from './DataCategorizationDashboard';
+import AuditAnomaliesExplainer from './AuditAnomaliesExplainer';
 
 const Audit: React.FC = () => {
   const [activeSection, setActiveSection] = useState('anomalies');

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Shield,
   AlertTriangle,
@@ -8,7 +8,7 @@ import {
   Activity,
   BarChart3,
 } from 'lucide-react';
-import { useComprehensiveData } from '../hooks/useComprehensiveData';
+import { useMasterData } from '../hooks/useMasterData';
 
 interface AntiCorruptionData {
   risk_level: 'BAJO' | 'MEDIO' | 'ALTO';
@@ -19,16 +19,36 @@ interface AntiCorruptionData {
 }
 
 const AntiCorruptionDashboard: React.FC = () => {
-  const { loading } = useComprehensiveData({ year: 2024 });
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
+  
+  const { 
+    masterData, 
+    currentBudget, 
+    currentDocuments,
+    currentTreasury, 
+    currentContracts, 
+    currentSalaries,
+    loading, 
+    error,
+    totalDocuments,
+    availableYears,
+    categories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
 
-  const data: AntiCorruptionData =
-    (useComprehensiveData as any)?.data?.antiCorruption || {
-      risk_level: 'BAJO',
-      investigations: 3,
-      transparency_measures: 15,
-      whistleblower_reports: 2,
-      compliance_rate: 83,
-    };
+  // Safely access antiCorruption data with fallback defaults
+  const antiCorruptionData = masterData?.completeData?.antiCorruption;
+  
+  const data: AntiCorruptionData = {
+    risk_level: antiCorruptionData?.transparency_index && antiCorruptionData.transparency_index > 80 ? 'BAJO' : 
+                antiCorruptionData?.transparency_index && antiCorruptionData.transparency_index > 50 ? 'MEDIO' : 'ALTO',
+    investigations: antiCorruptionData?.investigations || 3,
+    transparency_measures: antiCorruptionData?.accountability_measures || 15,
+    whistleblower_reports: antiCorruptionData?.whistleblower_reports || 2,
+    compliance_rate: antiCorruptionData?.transparency_index || 83,
+  };
 
   const getRiskColor = (level: string) => {
     switch (level) {
@@ -58,16 +78,60 @@ const AntiCorruptionDashboard: React.FC = () => {
     );
   }
 
+  if (error) {
+    return (
+      <div className="p-8">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+          <AlertTriangle className="w-12 h-12 text-red-500 mx-auto mb-4" />
+          <h3 className="text-lg font-semibold text-red-800 mb-2">Error de Carga</h3>
+          <p className="text-red-600">{error}</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700"
+          >
+            Reintentar
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="p-8">
+    <div className="p-4 md:p-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 flex items-center">
-          <Shield className="w-8 h-8 mr-3 text-blue-600" />
-          Panel Anti‑Corrupción
-        </h1>
-        <p className="text-gray-600 mt-2">
-          Detección automática y análisis de transparencia con auditoría continua
-        </p>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h1 className="text-xl md:text-2xl font-bold text-gray-900">
+              Panel Anti-Corrupción {selectedYear}
+            </h1>
+            <p className="text-gray-600 mt-1 text-sm">
+              Detección automática y análisis de transparencia con auditoría continua
+            </p>
+          </div>
+          <div className="w-full md:w-auto">
+            <div className="bg-white rounded-lg border border-gray-200 p-3 shadow-sm">
+              <label className="block text-xs font-medium text-gray-700 mb-1">
+                Seleccionar Año
+              </label>
+              <select
+                value={selectedYear}
+                onChange={(e) => switchYear(Number(e.target.value))}
+                className="w-full md:w-40 px-3 py-2 text-sm font-medium border border-gray-300 rounded-md
+                         bg-white text-gray-900 focus:ring-1 focus:ring-blue-500 focus:border-blue-500
+                         transition-colors"
+              >
+                {availableYears.map((year) => (
+                  <option key={year} value={year}>
+                    {year} {year === new Date().getFullYear() && '(Actual)'}
+                  </option>
+                ))}
+              </select>
+              <div className="mt-1 text-xs text-gray-500">
+                Datos {selectedYear}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Status Cards */}

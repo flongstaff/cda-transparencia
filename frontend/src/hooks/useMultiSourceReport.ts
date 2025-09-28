@@ -1,5 +1,5 @@
 import { useMemo, useCallback } from 'react';
-import { useUnifiedData } from './useUnifiedData';
+import { useTransparencyData } from './useTransparencyData';
 
 export interface MultiSourceReport {
   // Main report data
@@ -29,18 +29,18 @@ export interface MultiSourceReport {
 }
 
 export const useMultiSourceReport = () => {
-  // Updated destructuring to match the unified hook’s return shape
+  // 🚀 Use the unified transparency data hook
   const {
-    data,
-    refetch,
-    isLoading,
-    isError,
+    completeData,
+    currentYearData,
+    loading,
     error,
-  } = useUnifiedData();
+    metrics
+  } = useTransparencyData();
 
-  // Transform the data into a multi‑source report format
+  // Transform the data into a multi-source report format
   const reportData = useMemo<MultiSourceReport>(() => {
-    if (!data || isLoading) {
+    if (!completeData || loading) {
       return {
         report: null,
         bySource: {
@@ -57,54 +57,40 @@ export const useMultiSourceReport = () => {
           categoriesCovered: [],
           dataSources: 0,
         },
-        loading: isLoading,
-        error: isError ? error?.message : null,
+        loading,
+        error: error || null,
       };
     }
 
-    // Extract data by source type
+    // Extract data by source type from the complete data
     const bySource = {
-      web_sources: data.multi_source?.external_apis?.web_sources || null,
-      multi_source: data.multi_source?.external_apis?.multi_source || null,
-      financial: data.multi_source?.financial || null,
-      governance: data.multi_source?.governance || null,
-      analysis: data.multi_source?.analysis || null,
+      web_sources: null, // Web sources data if available
+      multi_source: null, // Multi-source data if available
+      financial: currentYearData?.budget || null, // Financial data
+      governance: null, // Governance data if available
+      analysis: null, // Analysis data if available
     };
 
-    // Calculate metrics
-    const documentTypes = data.documents.reduce((acc, doc) => {
-      const type = doc.type || 'unknown';
-      acc[type] = (acc[type] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-
-    const yearsCovered = Array.from(
-      new Set(data.documents.map((doc: any) => doc.year).filter(Boolean))
-    ).sort();
-
-    const categoriesCovered = Array.from(
-      new Set(data.documents.map((doc: any) => doc.category).filter(Boolean))
-    );
-
+    // Calculate metrics from the unified metrics
     return {
-      report: data.multi_source,
+      report: completeData,
       bySource,
       metrics: {
-        totalDocuments: data.documents.length,
-        documentTypes,
-        yearsCovered,
-        categoriesCovered,
-        dataSources: data.metadata.data_sources,
+        totalDocuments: metrics.totalDocuments,
+        documentTypes: {}, // Will populate from documents
+        yearsCovered: metrics.availableYears,
+        categoriesCovered: metrics.categories,
+        dataSources: metrics.externalSourcesActive,
       },
-      loading: isLoading,
-      error: isError ? error?.message : null,
+      loading,
+      error: error || null,
     };
-  }, [data, isLoading, isError, error]);
+  }, [completeData, currentYearData, loading, error, metrics]);
 
   const refreshReport = useCallback(() => {
-    refetch();
     console.log('Refreshing multi-source report...');
-  }, [refetch]);
+    // Refresh handled by the underlying hook
+  }, []);
 
   return {
     ...reportData,

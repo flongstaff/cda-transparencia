@@ -1,0 +1,180 @@
+#!/usr/bin/env python3
+"""
+Extract programmatic indicators (families assisted, cameras, etc.) from all years of data
+"""
+import pandas as pd
+import os
+import re
+from pathlib import Path
+
+def clean_number(value):
+    """Clean numeric values from various formats"""
+    if pd.isna(value) or value == \"\" or value == \"0\":
+        return None
+    
+    # Convert to string
+    s = str(value)
+    
+    # Handle Argentinian number format: \"1.234,56\" → 1234.56
+    # Remove dots (thousands separator) and replace comma with dot (decimal separator)
+    s = s.replace(\".\", \"\").replace(\",\", \".\") 
+    
+    try:
+        return float(s)
+    except:
+        return None
+
+def extract_indicators_from_caif():
+    """Extract indicators from category_caif.csv"""
+    try:
+        # Read the CAIF data
+        caif_files = list(Path(\"data/raw/csv\").glob(\"category_caif.csv\"))
+        if not caif_files:
+            caif_files = list(Path(\"frontend/public/data/csv\").glob(\"category_caif.csv\"))
+        
+        if not caif_files:
+            print(\"⚠️  No category_caif.csv file found\")
+            return []
+        
+        df = pd.read_csv(caif_files[0])
+        print(f\"✅ Loaded CAIF data with {len(df)} rows\")
+        
+        records = []
+        
+        for _, row in df.iterrows():
+            desc = str(row.get(\"col_2\", \"\"))
+            source = row.get(\"source_file\", \"unknown\")
+            
+            # Extract year from source filename
+            year = 2023  # Default year
+            year_match = re.search(r'(20\\d{2})', source)
+            if year_match:
+                year = int(year_match.group(1))
+            
+            # Extract quarter from source filename
+            quarter = \"Q4\"  # Default quarter
+            if any(term in source.lower() for term in [\"marzo\", \"ene-mar\", \"1er\", \"q1\", \"jan-mar\"]):
+                quarter = \"Q1\"
+            elif any(term in source.lower() for term in [\"junio\", \"abr-jun\", \"ene-jun\", \"2do\", \"q2\", \"apr-jun\"]):
+                quarter = \"Q2\"
+            elif any(term in source.lower() for term in [\"3er\", \"jul-sep\", \"q3\", \"jul-sep\"]):
+                quarter = \"Q3\"
+            elif any(term in source.lower() for term in [\"4to\", \"oct-dic\", \"q4\", \"oct-dec\"]):
+                quarter = \"Q4\"
+            
+            # Families assisted
+            if \"asistencias a vecinos\" in desc.lower() or \"familias asistidas\" in desc.lower():
+                planned = clean_number(row.get(\"col_3\"))
+                executed = clean_number(row.get(\"col_4\"))
+                if executed is not None:
+                    records.append({
+                        \"indicator\": \"families_assisted\",
+                        \"year\": year,
+                        \"quarter\": quarter,
+                        \"source_file\": source,
+                        \"description\": desc,
+                        \"planned\": planned,
+                        \"executed\": executed
+                    })
+            
+            # Security cameras
+            elif \"cámaras\" in desc.lower() or \"centro operativo\" in desc.lower():
+                planned = clean_number(row.get(\"col_3\"))
+                executed = clean_number(row.get(\"col_4\"))
+                if executed is not None:
+                    records.append({
+                        \"indicator\": \"security_cameras\",
+                        \"year\": year,
+                        \"quarter\": quarter,
+                        \"source_file\": source,
+                        \"description\": desc,
+                        \"planned\": planned,
+                        \"executed\": executed
+                    })
+        
+        print(f\"✅ Extracted {len(records)} indicators from CAIF data\")
+        return records
+    
+    except Exception as e:
+        print(f\"❌ Error extracting indicators from CAIF: {e}\")
+        return []
+
+def extract_indicators_from_budget_data():
+    """Extract indicators from budget execution data"""
+    try:
+        records = []
+        
+        # Look for processed budget data
+        budget_files = list(Path(\"data/processed/cleaned\").glob(\"budget_execution_*.csv\"))
+        
+        for file_path in budget_files:
+            if \"all_years\" in file_path.name:
+                continue  # Skip combined file
+                
+            df = pd.read_csv(file_path)
+            year = df['year'].iloc[0] if 'year' in df.columns else 2023
+            
+            print(f\"✅ Processing budget data for year {year}\")
+            
+            # Add basic budget execution records
+            for _, row in df.iterrows():
+                if 'Budgeted' in row and 'Executed' in row:
+                    records.append({
+                        \"indicator\": \"budget_execution\",
+                        \"year\": year,
+                        \"quarter\": row.get('Quarter', 'Annual'),
+                        \"source_file\": f\"budget_{year}.csv\",
+                        \"description\": row.get('sector', row.get('Category', 'General')),
+                        \"planned\": row.get('Budgeted'),
+                        \"executed\": row.get('Executed'),
+                        \"percentage\": row.get('Percentage', None)
+                    })
+        
+        print(f\"✅ Extracted {len(records)} budget indicators\")
+        return records
+    
+    except Exception as e:
+        print(f\"❌ Error extracting budget indicators: {e}\")
+        return []
+
+def main():
+    """Main function to extract all indicators"""
+    print(\"📊 Starting indicator extraction...\")
+    
+    # Create processed directory
+    os.makedirs(\"data/processed\", exist_ok=True)
+    
+    # Extract indicators from CAIF data
+    caif_indicators = extract_indicators_from_caif()
+    
+    # Extract indicators from budget data
+    budget_indicators = extract_indicators_from_budget_data()
+    
+    # Combine all indicators
+    all_indicators = caif_indicators + budget_indicators
+    
+    if all_indicators:
+        # Convert to DataFrame and save
+        df_indicators = pd.DataFrame(all_indicators)
+        
+        # Save to CSV
+        output_path = \"data/processed/indicators_all_years.csv\"
+        df_indicators.to_csv(output_path, index=False)
+        print(f\"💾 Saved indicators to {output_path}\")
+        
+        # Also save to JSON for better structure
+        json_output_path = \"data/processed/indicators_all_years.json\"
+        df_indicators.to_json(json_output_path, orient='records', indent=2)
+        print(f\"💾 Saved indicators to {json_output_path}\")
+        
+        # Show summary
+        print(f\"\\n📊 Summary:\")
+        print(f\"   • Total indicators: {len(all_indicators)}\")
+        indicator_types = df_indicators['indicator'].value_counts()
+        for ind_type, count in indicator_types.items():
+            print(f\"   • {ind_type}: {count}\")
+    else:
+        print(\"❌ No indicators were extracted\")
+
+if __name__ == \"__main__\":
+    main()

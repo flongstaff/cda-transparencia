@@ -12,7 +12,7 @@
 | Métrica Clave                   | Valor                                      |
 | ------------------------------- | ------------------------------------------ |
 | **Casos de Corrupción Confirmados** | 2 |
-| **Casos Bajo Investigación**      | 2 |
+| **Casos Bajo Investigación**      | 1 |
 | **Fuentes de Datos Analizadas**   | 5 |
 | **Documentos Procesados**         | 0 |
 | **Anomalías Detectadas**          | 0 |
@@ -44,14 +44,6 @@
 - **📄 Estado**: Confirmed by HTC
 
 ## ⚠️ CASOS BAJO INVESTIGACIÓN
-
-
-
-### 🟡 Licitación Fraudulenta - Consejero
-- **📋 Descripción**: Presidente del Consejo Honorable licitó para su propia empresa con el municipio
-- **👥 Involucrados**: Carlos Alfredo Camallo (Presidente Consejo Honorable)
-- **📅 Período**: 2025
-- **📄 Estado**: Under judicial investigation
 
 
 

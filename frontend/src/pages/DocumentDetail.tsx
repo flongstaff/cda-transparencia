@@ -1,17 +1,12 @@
-/**
- * Document Detail Page
- * Page to display detailed information about a specific document
- */
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Download, Eye } from 'lucide-react';
-import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
-import DocumentViewer from '../components/viewers/DocumentViewer';
+import { useMasterData } from '../hooks/useMasterData';
+import DocumentViewer from '../components/viewers/DocumentViewer2';
 
 const DocumentDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const { data, isLoading, isError, error } = useCompleteFinalData();
+  const { data, isLoading, isError, error } = useMasterData();
 
   if (isLoading) return <p className="text-center py-8">Cargando documento…</p>;
   if (isError) return <p className="text-center text-red-600 py-8">Error: {error}</p>;

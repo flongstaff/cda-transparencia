@@ -1,9 +1,4 @@
-/**
- * Notification System
- * Toast notifications for user feedback
- */
-
-import React, { useState, useEffect, createContext, useContext, useCallback } from 'react';
+import React, { useState, createContext, useContext, useCallback } from 'react';
 import { X, CheckCircle, Info, AlertTriangle, AlertCircle } from 'lucide-react';
 
 // Notification types
@@ -74,6 +69,7 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
       clearNotifications
     }}>
       {children}
+      <NotificationContainer />
     </NotificationContext.Provider>
   );
 };
@@ -112,7 +108,7 @@ interface NotificationItemProps {
   onDismiss: () => void;
 }
 
-const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onDismiss }) => {
+export const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onDismiss }) => {
   const getIcon = () => {
     switch (notification.type) {
       case 'success':
@@ -225,6 +221,3 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onDis
     </div>
   );
 };
-
-// Export default context provider
-export default NotificationProvider;

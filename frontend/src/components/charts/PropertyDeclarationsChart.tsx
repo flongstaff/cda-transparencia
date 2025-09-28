@@ -1,5 +1,5 @@
 import React from 'react';
-import ComprehensiveChart from './ComprehensiveChart';
+import ComprehensiveChart from '../charts/ComprehensiveChart';
 
 interface Props {
   year: number;

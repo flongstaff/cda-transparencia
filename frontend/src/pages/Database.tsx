@@ -17,10 +17,9 @@ import {
   DollarSign,
   Users
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
-import DocumentViewer from '../components/viewers/DocumentViewer';
-import PageYearSelector from '../components/selectors/PageYearSelector';
+import { useMasterData } from '../hooks/useMasterData';
+import DocumentViewer from '../components/viewers/DocumentViewer2';
+import PageYearSelector from '../components/forms/PageYearSelector';
 import { formatFileSize } from '../utils/formatters';
 
 const Database: React.FC = () => {
@@ -28,30 +27,40 @@ const Database: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedType, setSelectedType] = useState<string>('all');
-  const [selectedDocument, setSelectedDocument] = useState<any | null>(null);
+  const [selectedDocument, setSelectedDocument] = useState<unknown | null>(null);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortField, setSortField] = useState<'title' | 'size' | 'date' | 'category'>('title');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
 
-  const { data, isLoading, isError, error } = useCompleteFinalData({ year: selectedYear });
+  // Use unified master data service
+  const {
+    masterData,
+    currentDocuments,
+    loading,
+    error,
+    totalDocuments,
+    availableYears,
+    categories: dataCategories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
 
   const documents = useMemo(() => {
-    if (!data) return [];
-    return data.documents;
-  }, [data]);
+    return currentDocuments || [];
+  }, [currentDocuments]);
 
   const categories = useMemo(() => {
-    if (!data) return [];
-    return [...new Set(documents.map((doc) => doc.category))].sort();
-  }, [documents]);
+    return dataCategories || [];
+  }, [dataCategories]);
 
   const documentTypes = useMemo(() => {
-    if (!data) return [];
-    return [...new Set(documents.map((doc) => doc.type))].sort();
+    if (!documents || documents.length === 0) return [];
+    return [...new Set(documents.map((props: Record<string, unknown>) => doc.type || 'Documento'))].sort();
   }, [documents]);
 
   const totalStats = useMemo(() => {
-    if (!data) return {
+    if (!documents || documents.length === 0) return {
       totalDocuments: 0,
       totalSize: 0,
       yearsCovered: 0,
@@ -61,10 +70,10 @@ const Database: React.FC = () => {
     };
     return {
       totalDocuments: documents.length,
-      totalSize: documents.reduce((sum, doc) => sum + doc.size_mb, 0),
-      yearsCovered: new Set(documents.map((doc) => doc.year)).size,
+      totalSize: documents.reduce((sum: number, doc: any) => sum + (doc.size_mb || 0), 0),
+      yearsCovered: new Set(documents.map((props: Record<string, unknown>) => doc.year)).size,
       categoriesCount: categories.length,
-      verified: documents.filter((doc) => doc.verified).length,
+      verified: documents.filter((props: Record<string, unknown>) => doc.verified).length,
       integrityVerified: documents.filter((doc) => doc.integrity_verified).length
     };
   }, [documents, categories]);
@@ -115,10 +124,7 @@ const Database: React.FC = () => {
     return filtered;
   }, [documents, searchTerm, selectedCategory, selectedType, sortField, sortDirection]);
 
-  const availableYears = useMemo(() => {
-    if (!data) return [];
-    return data.metadata.year_coverage;
-  }, [data]);
+  // availableYears already comes from useMasterData hook
 
   const handleSort = (field: 'title' | 'size' | 'date' | 'category') => {
     if (sortField === field) {
@@ -129,7 +135,7 @@ const Database: React.FC = () => {
     }
   };
 
-  if (isLoading) {
+  if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
@@ -140,21 +146,21 @@ const Database: React.FC = () => {
     );
   }
 
-  if (isError) {
+  if (error) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
           <h2 className="text-lg font-semibold text-red-800 mb-2">Error</h2>
-          <p className="text-gray-600">{error?.message}</p>
+          <p className="text-gray-600">{error}</p>
         </div>
       </div>
     );
   }
 
-  const totalDocs = data?.metadata?.total_documents ?? 0;
-  const sources = data?.metadata?.data_sources ?? 0;
-  const categoriesCount = new Set(data?.documents?.map((d) => d.category)).size;
+  const totalDocs = totalDocuments ?? 0;
+  const sources = dataSourcesActive ?? 0;
+  const categoriesCount = categories.length;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -540,12 +546,7 @@ const Database: React.FC = () => {
                   </div>
 
                   <DocumentViewer
-                    document={{
-                      id: selectedDocument.id,
-                      title: selectedDocument.title,
-                      url: selectedDocument.url,
-                      type: selectedDocument.type,
-                    }}
+                    documents={[selectedDocument]}
                   />
                 </div>
               </div>

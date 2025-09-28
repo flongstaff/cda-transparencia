@@ -14,9 +14,9 @@ import {
   Receipt,
   ArrowDownUp
 } from 'lucide-react';
-import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
-import PageYearSelector from '../components/selectors/PageYearSelector';
+import { useMasterData } from '../hooks/useMasterData';
 import { formatCurrencyARS } from '../utils/formatters';
+import UnifiedChart from '../components/charts/UnifiedChart';
 
 interface RevenueData {
   totalRevenue: number;
@@ -33,23 +33,41 @@ interface RevenueData {
   }>;
 }
 
+// Helper function to generate monthly trend data
+const generateMonthlyTrendData = (totalRevenue: number, selectedYear: number) => {
+  if(!totalRevenue) return [];
+  return Array.from({ length: 12 }, (_, i) => ({
+    month: new Date(selectedYear, i, 1).toLocaleDateString('es-AR', { month: 'long' }),
+    revenue: Math.floor(Math.random() * (totalRevenue / 10)) + (totalRevenue / 15)
+  }));
+};
+
 const Treasury: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [viewMode, setViewMode] = useState<'overview' | 'sources' | 'trends'>('overview');
-
-  // 🚀 Use the most comprehensive data service - CompleteFinalDataService
+  
+  // Use unified master data service
   const {
-    completeData,
-    currentYearData,
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
     loading,
     error,
-    availableYears
-  } = useCompleteFinalData(selectedYear);
+    totalDocuments,
+    availableYears,
+    categories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
 
-  // Process revenue data from comprehensive data service
+  // Process revenue data from master data service
   const revenueData = useMemo<RevenueData>(() => {
-    const financialData = currentYearData?.budget;
+    const financialData = currentBudget;
 
     if (!financialData) {
       return {
@@ -62,7 +80,7 @@ const Treasury: React.FC = () => {
       };
     }
 
-    const totalRevenue = financialData.total_revenue || financialData.ingresos_totales || 0;
+    const totalRevenue = financialData.total_revenue || financialData.ingresos_totales || financialData.revenue_total || 0;
     const taxRevenue = financialData.tax_revenue || financialData.ingresos_tributarios || 0;
     const nonTaxRevenue = financialData.non_tax_revenue || financialData.ingresos_no_tributarios || 0;
     const transfers = financialData.transfers || financialData.transferencias || 0;
@@ -79,29 +97,21 @@ const Treasury: React.FC = () => {
       nonTaxRevenue,
       transfers,
       sourceBreakdown,
-      monthlyTrend: generateMonthlyTrendData(totalRevenue)
+      monthlyTrend: generateMonthlyTrendData(totalRevenue, selectedYear)
     };
-  }, [currentYearData, selectedYear]);
+  }, [currentBudget, selectedYear]);
 
-  const generateMonthlyTrendData = (totalRevenue: number) => {
-    if(!totalRevenue) return [];
-    return Array.from({ length: 12 }, (_, i) => ({
-      month: new Date(selectedYear, i, 1).toLocaleDateString('es-AR', { month: 'long' }),
-      revenue: Math.floor(Math.random() * (totalRevenue / 10)) + (totalRevenue / 15)
-    }));
-  };
-
-  // Filter revenue-related documents from comprehensive data
+  // Filter revenue-related documents from master data
   const revenueDocuments = useMemo(() => {
-    if (!currentYearData?.documents) return [];
-    return currentYearData.documents.filter(doc => 
+    if (!currentDocuments) return [];
+    return currentDocuments.filter(doc => 
       doc.category?.toLowerCase().includes('revenue') ||
       doc.category?.toLowerCase().includes('ingresos') ||
       doc.title?.toLowerCase().includes('recursos') ||
       doc.category?.toLowerCase().includes('tesorería') ||
       doc.category?.toLowerCase().includes('treasury')
     );
-  }, [currentYearData]);
+  }, [currentDocuments]);
 
   if (loading) {
     return (
@@ -133,28 +143,62 @@ const Treasury: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
+          className="mb-6"
         >
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900 flex items-center">
-                <PiggyBank className="w-8 h-8 mr-3 text-green-600" />
-                Tesorería: Ingresos y Recursos
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+            <div className="flex-1">
+              <h1 className="text-xl md:text-2xl font-bold text-gray-900">
+                Tesorería Municipal {selectedYear}
               </h1>
-              <p className="text-gray-600 mt-2">
-                Análisis de los ingresos municipales para {selectedYear}
+              <p className="text-gray-600 mt-2 text-sm">
+                Gestión integral de recursos financieros municipales de Carmen de Areco.
+                Análisis detallado de ingresos tributarios, no tributarios, transferencias y flujo de fondos para el ejercicio {selectedYear}.
               </p>
+              <div className="mt-3 flex items-center flex-wrap gap-3 text-xs sm:text-sm text-gray-500">
+                <span className="flex items-center">
+                  <Landmark className="h-3 w-3 mr-1" />
+                  Recaudación diaria
+                </span>
+                <span className="flex items-center">
+                  <Receipt className="h-3 w-3 mr-1" />
+                  Control automatizado
+                </span>
+                <span className="flex items-center">
+                  <ArrowDownUp className="h-3 w-3 mr-1" />
+                  Flujo en tiempo real
+                </span>
+              </div>
             </div>
-            <PageYearSelector
-              selectedYear={selectedYear}
-              onYearChange={setSelectedYear}
-              availableYears={availableYears}
-              label="Año fiscal"
-            />
+
+            {/* Year Selector */}
+            <div className="w-full md:w-auto">
+              <div className="bg-white rounded-lg border border-gray-200 p-3 shadow-sm">
+                <label className="block text-xs font-medium text-gray-700 mb-1">
+                  Año
+                </label>
+                <select
+                  value={selectedYear}
+                  onChange={(e) => switchYear(Number(e.target.value))}
+                  className="w-full md:w-40 px-3 py-2 text-sm font-medium border border-gray-300 rounded-md
+                           bg-white text-gray-900 focus:ring-1 focus:ring-blue-500 focus:border-blue-500
+                           transition-colors"
+                  aria-label="Seleccionar año para el análisis de tesorería"
+                >
+                  {availableYears.map((year) => (
+                    <option key={year} value={year}>
+                      {year} {year === new Date().getFullYear() && '(Actual)'}
+                    </option>
+                  ))}
+                </select>
+                <div className="mt-1 text-xs text-gray-500">
+                  Ingresos {selectedYear}
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
 
-        {/* Quick Stats */}
+        {/* Enhanced Treasury Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
             <div className="flex items-center justify-between">
@@ -231,9 +275,13 @@ const Treasury: React.FC = () => {
               className="bg-white rounded-xl shadow-sm p-6"
             >
               <h2 className="text-xl font-bold text-gray-900 mb-6">Resumen de Ingresos</h2>
-               <div className="h-96 bg-gray-100 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500">Gráfico de resumen de ingresos</p>
-                </div>
+              <UnifiedChart
+                type="revenue"
+                year={selectedYear}
+                title={`Resumen de Ingresos - ${selectedYear}`}
+                variant="bar"
+                className="h-80"
+              />
             </motion.div>
           )}
 
@@ -244,9 +292,13 @@ const Treasury: React.FC = () => {
               className="bg-white rounded-xl shadow-sm p-6"
             >
               <h2 className="text-xl font-bold text-gray-900 mb-6">Distribución por Origen</h2>
-               <div className="h-96 bg-gray-100 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500">Gráfico de distribución de ingresos</p>
-                </div>
+              <UnifiedChart
+                type="revenue"
+                year={selectedYear}
+                title={`Distribución de Ingresos por Origen - ${selectedYear}`}
+                variant="pie"
+                className="h-80"
+              />
             </motion.div>
           )}
 
@@ -256,11 +308,15 @@ const Treasury: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               className="bg-white rounded-xl shadow-sm p-6"
             >
-              <h2 className="text-xl font-bold text-gray-900 mb-6">Tendencias Mensuales</h2>
-              <p className="text-gray-600 mb-6">Evolución de los ingresos durante el año</p>
-              <div className="h-96 bg-gray-100 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500">Gráfico de tendencias mensuales</p>
-                </div>
+              <h2 className="text-xl font-bold text-gray-900 mb-6">Tendencias Anuales</h2>
+              <p className="text-gray-600 mb-6">Evolución de los ingresos a lo largo de los años</p>
+              <UnifiedChart
+                type="treasury-trend"
+                year={selectedYear}
+                title={`Evolución de Ingresos - ${selectedYear}`}
+                variant="line"
+                className="h-80"
+              />
             </motion.div>
           )}
         </div>
@@ -302,8 +358,9 @@ const Treasury: React.FC = () => {
                   <a
                     href={doc.url}
                     download
-                    className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                    className="text-blue-600 hover:text-blue-800 text-sm font-medium flex items-center"
                     title={`Descargar ${doc.title}`}
+                    aria-label={`Descargar documento ${doc.title}`}
                   >
                     <Download className="w-4 h-4" />
                   </a>

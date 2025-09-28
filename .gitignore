@@ -15,6 +15,7 @@ node_modules/
 .claude/
 .github/
 .kilocode/
+.qwen/
 
 # OS generated files
 .DS_Store
@@ -36,24 +37,8 @@ Thumbs.db
 *.log
 
 # Data files (excluding organized data)
-data/acquired/
-data/audit_irregularities/
-data/audit_trail/
-data/comparison_reports/
-data/csv_exports/
-data/cycle_results/
-data/enhanced_audit_data/
-data/optimized/
-data/pdf_extracts/
-data/preserved/
-data/processed/
-data/visualizations/
-data/web_sources.json
-data/*_data_*.json
-data/budget_data_*.json
-data/salary_data_*.json
-data/debt_data_*.json
-data/anomaly_data_*.json
+.data/
+.cda/
 
 # Database files
 database/postgres-data/

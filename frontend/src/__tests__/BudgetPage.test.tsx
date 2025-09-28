@@ -60,7 +60,7 @@ vi.mock('../services/ConsolidatedApiService', () => ({
 
 // Mock other components
 vi.mock('../components/PageYearSelector', () => ({
-  default: (props: any) => {
+  default: () => {
     return <div data-testid="page-year-selector">PageYearSelector</div>;
   }
 }));

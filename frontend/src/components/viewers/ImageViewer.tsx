@@ -93,7 +93,7 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
     }
   };
 
-  const handleError = (errorMsg: string) => {
+  const _handleError = (errorMsg: string) => {
     setError(errorMsg);
     setLoading(false);
     onError?.(errorMsg);

@@ -18,8 +18,8 @@ import {
   FileText,
   BarChart3
 } from 'lucide-react';
-import { useTransparencyData } from '../hooks/useTransparencyData';
-import PageYearSelector from '../components/selectors/PageYearSelector';
+import { useMasterData } from '../hooks/useMasterData';
+import PageYearSelector from '../components/forms/PageYearSelector';
 import { formatCurrencyARS, formatPercentageARS } from '../utils/formatters';
 
 interface BudgetData {
@@ -46,28 +46,36 @@ const UnifiedBudget: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'overview' | 'categories' | 'trends'>('overview');
 
-  // 🚀 SINGLE SOURCE OF TRUTH - Unified transparency data
+  // Use unified master data service
   const {
-    currentYearData,
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
+    currentDebt,
     loading,
     error,
-    metrics,
-    formatCurrency,
-    formatPercentage,
-    refetch
-  } = useTransparencyData(selectedYear);
+    totalDocuments,
+    availableYears,
+    categories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
 
-  // Process budget data from unified data source
+  // Process budget data from master data source
   const budgetData: BudgetData = {
-    totalBudget: metrics.totalBudget,
-    totalExecuted: metrics.totalExecuted,
-    executionRate: metrics.executionRate,
-    categoryBreakdown: currentYearData?.budget?.categories || [],
+    totalBudget: currentBudget?.total_budget || currentBudget?.totalBudget || 0,
+    totalExecuted: currentBudget?.expenses || currentBudget?.totalExecuted || 0,
+    executionRate: currentBudget?.execution_rate || currentBudget?.executionPercentage || 0,
+    categoryBreakdown: currentBudget?.categories || [],
     monthlyTrend: [] // Add monthly trend data if available
   };
 
   // Filter budget-related documents
-  const budgetDocuments = currentYearData?.documents?.filter(doc => 
+  const budgetDocuments = currentDocuments?.filter(doc => 
     doc.category?.toLowerCase().includes('budget') ||
     doc.category?.toLowerCase().includes('presupuesto') ||
     doc.category?.toLowerCase().includes('ejecución') ||
@@ -80,6 +88,17 @@ const UnifiedBudget: React.FC = () => {
     doc.filename?.toLowerCase().includes('budget') ||
     doc.filename?.toLowerCase().includes('presupuesto')
   ) || [];
+
+  // Extract metrics from currentBudget
+  const metrics = {
+    totalBudget: currentBudget?.total_budget || currentBudget?.totalBudget || 0,
+    totalExecuted: currentBudget?.expenses || currentBudget?.totalExecuted || 0,
+    executionRate: currentBudget?.execution_rate || currentBudget?.executionPercentage || 0,
+    personnel: currentBudget?.personnel || 0,
+    infra: currentBudget?.executed_infra || 0,
+    availableYears: availableYears,
+    // Add other metrics as needed
+  };
 
   if (loading) {
     return (

@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import { useAccessibility } from '../../utils/accessibility';
 import { monitoring } from '../../utils/monitoring';
 import { chartAccessibility } from '../../utils/accessibility';
-import ChartSkeleton from '../skeletons/ChartSkeleton';
+import ChartSkeleton from '../ui/ChartSkeleton';
 
 // Data validation schema
 const dataNodeSchema = {
-  isValid: (item: any): item is TreemapDataNode => 
+  isValid: (props: Record<string, unknown>): item is TreemapDataNode => 
     typeof item === 'object' &&
     item !== null &&
     typeof item.name === 'string' &&
@@ -27,7 +27,7 @@ interface TreemapChartProps {
   title?: string;
   height?: number;
   className?: string;
-  onNodeClick?: (node: any) => void;
+  onNodeClick?: (props: Record<string, unknown>) => void;
   onNodeHover?: (node: any, event: React.MouseEvent) => void;
   colorScheme?: readonly string[];
 }
@@ -43,7 +43,7 @@ const TreemapChart: React.FC<TreemapChartProps> = ({
 }) => {
   const { prefersReducedMotion, isScreenReader, language } = useAccessibility();
   const [error, setError] = useState<Error | null>(null);
-  const [formattedData, setFormattedData] = useState<any>(null);
+  const [formattedData, setFormattedData] = useState<unknown>(null);
 
   useEffect(() => {
     const startTime = performance.now();
@@ -102,7 +102,7 @@ const TreemapChart: React.FC<TreemapChartProps> = ({
     if (!formattedData) return;
     const csvContent = "data:text/csv;charset=utf-8," 
       + "Path,Value\n"
-      + formattedData.children.map((d: any) => `${d.name},${d.value}`).join("\n");
+      + formattedData.children.map((props: Record<string, unknown>) => `${d.name},${d.value}`).join("\n");
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);

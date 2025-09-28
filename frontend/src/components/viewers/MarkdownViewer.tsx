@@ -72,7 +72,7 @@ Contenido de la segunda sección del documento.
 ### Código
 
 \`\`\`javascript
-console.log('Hola mundo');
+    // // console.log('Hola mundo');
 \`\`\`
 
 ### Enlaces

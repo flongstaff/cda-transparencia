@@ -594,12 +594,14 @@ class ComprehensiveTransparencyController {
                 financialOverview,
                 budgetBreakdown,
                 documents,
-                dashboard
+                dashboard,
+                externalData
             ] = await Promise.allSettled([
                 this.service.getCitizenFinancialOverview(yearInt),
                 this.service.getBudgetBreakdownForCitizens(yearInt),
                 this.service.getAllDocuments({ year: yearInt }),
-                this.service.getTransparencyDashboard()
+                this.service.getTransparencyDashboard(),
+                this.service.getExternalFinancialData(yearInt)
             ]);
 
             // Process results
@@ -607,7 +609,8 @@ class ComprehensiveTransparencyController {
                 financialOverview,
                 budgetBreakdown,
                 documents,
-                dashboard
+                dashboard,
+                externalData
             ].reduce((acc, result) => {
                 if (result.status === 'fulfilled') {
                     // Merge the result data into our accumulator
@@ -628,6 +631,7 @@ class ComprehensiveTransparencyController {
                 dashboard: processedResults.data.dashboard,
                 auditOverview: processedResults.data.auditOverview || processedResults.data.audit_overview,
                 antiCorruption: processedResults.data.antiCorruption || processedResults.data.anti_corruption,
+                externalData: processedResults.data.externalData || processedResults.data,
                 generated_at: new Date().toISOString()
             };
 
@@ -646,6 +650,13 @@ class ComprehensiveTransparencyController {
                     documents_expected: expectedDocs,
                     documents_received: docCount,
                     data_complete: dataComplete
+                },
+                data_sources: {
+                    local: 'active',
+                    external: processedResults.data.externalData ? 'active' : 'inactive',
+                    provincial: processedResults.data.externalData?.ba_municipal_data ? 'active' : 'inactive',
+                    national: processedResults.data.externalData?.national_data ? 'active' : 'inactive',
+                    procurement: processedResults.data.externalData?.procurement_data ? 'active' : 'inactive'
                 }
             });
 

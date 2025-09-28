@@ -89,6 +89,18 @@ export default {
           800: '#343a40',
           900: '#212529',
         },
+        // Dark mode specific colors - Completely dark
+        'dark': {
+          'background': '#0f0f0f',       // Almost black
+          'surface': '#1a1a1a',          // Very dark gray
+          'surface-alt': '#2a2a2a',      // Dark gray
+          'text-primary': '#ffffff',     // Pure white
+          'text-secondary': '#e0e0e0',  // Light gray
+          'text-tertiary': '#a0a0a0',    // Medium gray
+          'border': '#333333',           // Dark border
+          'accent': '#3b82f6',           // blue-500
+          'accent-hover': '#2563eb',    // blue-600
+        }
       },
       fontFamily: {
         heading: ['Montserrat', 'sans-serif'],

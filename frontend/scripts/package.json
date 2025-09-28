@@ -1,24 +1,3 @@
 {
-  "name": "cda-transparency-scripts",
-  "version": "1.0.0",
-  "description": "Data collection and management scripts for Carmen de Areco transparency portal",
-  "scripts": {
-    "collect": "node data-collector.js",
-    "spider": "node web-spider.js",
-    "sync": "node data-sync.js",
-    "validate": "node data-validator.js",
-    "backup": "node backup-manager.js",
-    "serve-data": "node data-server.js"
-  },
-  "dependencies": {
-    "axios": "^1.6.0",
-    "cheerio": "^1.0.0-rc.12",
-    "sqlite3": "^5.1.6",
-    "node-cron": "^3.0.3",
-    "express": "^4.18.2",
-    "cors": "^2.8.5"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  }
+  "type": "module"
 }

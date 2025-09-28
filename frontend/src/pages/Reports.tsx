@@ -1,17 +1,33 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Eye, Download, FileText } from 'lucide-react';
-import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
-import PageYearSelector from '../components/selectors/PageYearSelector';
-import { formatCurrencyARS } from '../utils/formatters';
-import { useMultiSourceReport } from '../hooks/useMultiSourceReport';
+import { useMasterData } from '../hooks/useMasterData';
+import PageYearSelector from '../components/forms/PageYearSelector';
 
 const Reports: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [searchTerm, setSearchTerm] = useState<string>('');
 
-  const { documents, loading, error } = useCompleteFinalData({ year: selectedYear });
-  const { report, bySource, metrics, loading: loadingMulti, error: errorMulti } = useMultiSourceReport();
+  // Use unified master data service
+  const {
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
+    loading,
+    error,
+    totalDocuments,
+    availableYears,
+    categories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
+  
+  // Get documents from the master data
+  const documents = currentDocuments;
 
   // Load reports data (placeholder – replace with real API call if needed)
   const loadReportsDataForYear = async (year: number) => {
@@ -140,7 +156,7 @@ const Reports: React.FC = () => {
 
         {/* Lista de documentos principales */}
         <ul className="space-y-4">
-          {report?.documents?.slice(0, 10).map((doc: any) => (
+          {report?.documents?.slice(0, 10).map((props: Record<string, unknown>) => (
             <li key={doc.id} className="bg-white rounded-xl shadow p-4 flex items-center justify-between">
               <div>
                 <p className="font-medium text-gray-900">{doc.title}</p>

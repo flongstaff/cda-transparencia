@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Shield, FileText, AlertTriangle, CheckCircle, Eye } from 'lucide-react';
+import { Shield, AlertTriangle, CheckCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useUnifiedTransparencyData } from '../hooks/useUnifiedTransparencyData';
+import { useMasterData } from '../hooks/useMasterData';
 
 const Whistleblower: React.FC = () => {
   const { t } = useLanguage();
-  const { antiCorruption, loading, error } = useUnifiedTransparencyData(new Date().getFullYear());
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [formData, setFormData] = useState({
     name: '',
@@ -16,6 +15,24 @@ const Whistleblower: React.FC = () => {
     evidence: '',
     category: 'corruption',
   });
+  
+  // Use unified master data service
+  const {
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
+    loading,
+    error,
+    totalDocuments,
+    availableYears,
+    categories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -41,6 +58,9 @@ const Whistleblower: React.FC = () => {
 
   if (loading) return <p className="text-center py-8">Cargando datos…</p>;
   if (error) return <p className="text-center text-red-600 py-8">Error: {error}</p>;
+
+  // Extract anti-corruption data from masterData
+  const antiCorruption = masterData?.completeData?.antiCorruption;
 
   if (!antiCorruption) {
     return <p className="text-center py-8">No hay datos de anti‑corrupción disponibles.</p>;

@@ -1,0 +1,181 @@
+import React, { useState } from 'react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { useMasterData } from '../hooks/useMasterData';
+
+// Define TypeScript interfaces
+interface YearlyData {
+  year: number;
+  total_budget: number;
+  executed_infra: number;
+  planned_infra: number;
+  personnel: number;
+  total_executed: number;
+  execution_rate: number;
+}
+
+const FinancialOverview: React.FC = () => {
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
+  
+  // Use unified master data service
+  const {
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
+    loading,
+    error,
+    totalDocuments,
+    availableYears,
+    categories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
+
+  // Get yearly data from masterData
+  const yearlyData = Object.entries(masterData?.multiYearData || {}).map(([year, data]) => ({
+    year: parseInt(year),
+    total_budget: data.budget?.total_budget || 0,
+    executed_infra: data.budget?.executed_infra || 0,
+    planned_infra: data.budget?.planned_infra || 0,
+    personnel: data.budget?.personnel || 0,
+    total_executed: data.budget?.expenses || data.budget?.total_executed || 0,
+    execution_rate: data.budget?.execution_rate || 0,
+  }));
+
+  if (loading) {
+    return <div className="text-center p-4">Cargando datos financieros completos...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center p-4 text-red-500">Error: {error}</div>;
+  }
+
+  // Formatter for ARS (handles commas/dots correctly)
+  const formatARS = (num: number) => new Intl.NumberFormat('es-AR', {
+    style: 'currency',
+    currency: 'ARS',
+    minimumFractionDigits: 0
+  }).format(num);
+
+  // Calculate infrastructure under-execution from real data
+  const infraUnderExec = yearlyData.reduce((acc: number, year: YearlyData) => 
+    acc + Math.max(0, (year.planned_infra || 0) - (year.executed_infra || 0)), 0);
+
+  return (
+    <div className="container mx-auto p-4 max-w-7xl">
+      <h2 className="text-2xl font-bold mb-4">Resumen Financiero (2017–2025)</h2>
+      <p className="mb-6">
+        Datos extraídos de cuentas públicas y análisis organizados. Desviación en infraestructura: ~{formatARS(infraUnderExec)} (bajo-ejecución).
+      </p>
+      
+      {/* Summary Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div className="bg-white p-6 rounded-lg shadow border border-gray-200">
+          <h3 className="text-lg font-semibold text-gray-700">Total Presupuestado</h3>
+          <p className="text-2xl font-bold text-blue-600">
+            {formatARS(yearlyData.reduce((sum, d) => sum + d.total_budget, 0))}
+          </p>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow border border-gray-200">
+          <h3 className="text-lg font-semibold text-gray-700">Total Ejecutado</h3>
+          <p className="text-2xl font-bold text-green-600">
+            {formatARS(yearlyData.reduce((sum, d) => sum + d.total_executed, 0))}
+          </p>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow border border-gray-200">
+          <h3 className="text-lg font-semibold text-gray-700">Años Cubiertos</h3>
+          <p className="text-2xl font-bold text-purple-600">
+            {yearlyData.length}
+          </p>
+        </div>
+        <div className="bg-white p-6 rounded-lg shadow border border-gray-200">
+          <h3 className="text-lg font-semibold text-gray-700">Años con Desvío</h3>
+          <p className="text-2xl font-bold text-red-600">
+            {yearlyData.filter(y => (y.personnel / (y.total_executed || 1)) > 0.45).length}
+          </p>
+        </div>
+      </div>
+      
+      <div className="overflow-x-auto mb-8">
+        <table className="min-w-full border-collapse border border-gray-300 bg-white shadow-md">
+          <thead className="bg-gray-50">
+            <tr>
+              <th className="border border-gray-300 px-4 py-2 text-left">Año</th>
+              <th className="border border-gray-300 px-4 py-2 text-left">Presupuesto Total</th>
+              <th className="border border-gray-300 px-4 py-2 text-left">Ejecutado Total</th>
+              <th className="border border-gray-300 px-4 py-2 text-left">Ejecutado Infraestructura</th>
+              <th className="border border-gray-300 px-4 py-2 text-left">Gastos Personal</th>
+              <th className="border border-gray-300 px-4 py-2 text-left">Ejecución %</th>
+              <th className="border border-gray-300 px-4 py-2 text-left">Desvío</th>
+            </tr>
+          </thead>
+          <tbody>
+            {yearlyData.map((year: YearlyData) => (
+              <tr key={year.year} className="hover:bg-gray-50">
+                <td className="border border-gray-300 px-4 py-2 font-medium">{year.year}</td>
+                <td className="border border-gray-300 px-4 py-2">{formatARS(year.total_budget)}</td>
+                <td className="border border-gray-300 px-4 py-2">{formatARS(year.total_executed)}</td>
+                <td className="border border-gray-300 px-4 py-2 text-green-600">{formatARS(year.executed_infra)}</td>
+                <td className="border border-gray-300 px-4 py-2 text-red-600">
+                  <div className="flex items-center">
+                    <span>{formatARS(year.personnel)}</span>
+                    <span className="ml-2 text-xs">({((year.personnel / (year.total_executed || 1)) * 100).toFixed(1)}%)</span>
+                  </div>
+                </td>
+                <td className="border border-gray-300 px-4 py-2">{((year.total_executed / (year.total_budget || 1)) * 100).toFixed(1)}%</td>
+                <td className="border border-gray-300 px-4 py-2">
+                  <span className={`px-2 py-1 rounded-full text-xs ${
+                    (year.personnel / (year.total_executed || 1)) > 0.45 
+                      ? 'bg-red-100 text-red-800' 
+                      : 'bg-green-100 text-green-800'
+                  }`}>
+                    {(year.personnel / (year.total_executed || 1)) > 0.45 ? '⚠️ Sí' : 'No'}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      
+      {/* Chart for trends */}
+      <div className="bg-white p-6 rounded-lg shadow border border-gray-200">
+        <h3 className="text-xl font-semibold mb-4">Tendencias Financieras</h3>
+        <div className="h-80">
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart
+              data={yearlyData}
+              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="year" />
+              <YAxis tickFormatter={(value) => formatARS(Number(value)).replace('ARS', '').trim()} />
+              <Tooltip 
+                formatter={(value) => [formatARS(Number(value)), 'Monto']} 
+                labelFormatter={(label) => `Año: ${label}`}
+              />
+              <Legend />
+              <Line type="monotone" dataKey="executed_infra" stroke="#3b82f6" name="Infraestructura Ejecutada" strokeWidth={2} />
+              <Line type="monotone" dataKey="personnel" stroke="#ef4444" name="Gastos de Personal" strokeWidth={2} />
+              <Line type="monotone" dataKey="total_executed" stroke="#10b981" name="Total Ejecutado" strokeWidth={2} />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+      
+      {/* Data Validation */}
+      <div className="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+        <h3 className="font-semibold text-blue-800 mb-2">Validación de Datos</h3>
+        <p className="text-blue-700">
+          Todos los datos son reales y extraídos de fuentes oficiales del municipio de Carmen de Areco (2017-2025).
+          La información incluye presupuestos, ejecución de gastos, contratos y estados financieros.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default FinancialOverview;

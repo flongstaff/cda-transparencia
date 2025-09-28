@@ -193,18 +193,20 @@ class ComprehensiveResourceLoader {
         case 'xls':
         case 'xlsx':
         case 'ppt':
-        case 'pptx':
+        case 'pptx': {
           // For binary files, return the download URL
           const fileInfo = await githubAPI.getFileContent(path);
           return fileInfo.download_url || '';
+        }
           
         case 'json':
         case 'md':
         case 'markdown':
         case 'txt':
-        case 'csv':
+        case 'csv': {
           // For text files, fetch the raw content
           return await githubAPI.getRawFileContent(path);
+        }
           
         default:
           // For unknown file types, try to fetch as text

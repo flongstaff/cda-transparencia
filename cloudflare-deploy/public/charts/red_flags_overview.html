@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resumen de Banderas Rojas - Carmen de Areco</title>
+    <meta charset="utf-8">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .chart-container { width: 100%; height: 400px; }
+        .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .card { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .critical { border-left: 4px solid #dc3545; }
+        .medium { border-left: 4px solid #ffc107; }
+    </style>
+</head>
+<body>
+    <h1>🚩 Dashboard de Banderas Rojas - Carmen de Areco</h1>
+
+    <div class="summary">
+        <div class="card critical">
+            <h3>5 Alertas Críticas</h3>
+            <p>Requieren investigación inmediata</p>
+        </div>
+        <div class="card medium">
+            <h3>1 Alerta Media</h3>
+            <p>Requieren monitoreo</p>
+        </div>
+        <div class="card">
+            <h3>6 Total</h3>
+            <p>Banderas rojas detectadas</p>
+        </div>
+    </div>
+
+    <div id="chart" class="chart-container"></div>
+
+    <script>
+        const data = [{
+            values: [5, 1],
+            labels: ['Críticas', 'Medias'],
+            type: 'pie',
+            marker: {
+                colors: ['#dc3545', '#ffc107']
+            }
+        }];
+
+        const layout = {
+            title: 'Distribución de Banderas Rojas por Severidad'
+        };
+
+        Plotly.newPlot('chart', data, layout);
+    </script>
+
+    <h3>Principales Hallazgos:</h3>
+    <ul>
+        <li><strong>Procurement Clustering:</strong> 5 licitaciones en noviembre 2023</li>
+        <li><strong>Gender Tokenism:</strong> $65M presupuestado, $0 ejecutado en género</li>
+        <li><strong>Programmatic Gaps:</strong> -25% familias asistidas vs. planificado</li>
+        <li><strong>Budget Execution:</strong> Tasas >95% en todos los sectores</li>
+    </ul>
+
+    <p><strong>Disclaimer:</strong> Análisis basado en datos oficiales del municipio. Se recomienda verificación adicional.</p>
+</body>
+</html>

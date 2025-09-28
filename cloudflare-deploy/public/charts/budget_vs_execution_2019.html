@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Presupuesto vs Ejecución 2019 - Carmen de Areco</title>
+    <meta charset="utf-8">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .chart-container { width: 100%; height: 500px; }
+        .alert { background: #fee; border: 1px solid #fcc; padding: 15px; margin: 10px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🚩 Análisis: Presupuesto vs Ejecución 2019</h1>
+
+    <div class="alert">
+        <strong>Bandera Roja Detectada:</strong> Ejecución presupuestaria anormalmente alta (>95% en todos los sectores).
+        <br><strong>Investigar:</strong> ¿Los datos representan gastos comprometidos (devengado) o pagos efectivos?
+    </div>
+
+    <div id="chart" class="chart-container"></div>
+
+    <script>
+        const data = [
+            {
+                x: ['Administración', 'Obras Públicas', 'Desarrollo Social', 'Salud', 'Educación'],
+                y: [250000000, 300000000, 150000000, 180000000, 200000000],
+                name: 'Presupuestado',
+                type: 'bar',
+                marker: { color: 'lightblue' }
+            },
+            {
+                x: ['Administración', 'Obras Públicas', 'Desarrollo Social', 'Salud', 'Educación'],
+                y: [240000000, 285000000, 144000000, 171000000, 192000000],
+                name: 'Ejecutado',
+                type: 'bar',
+                marker: { color: 'orange' }
+            }
+        ];
+
+        const layout = {
+            title: 'Presupuesto vs Ejecución por Sector (2019)',
+            xaxis: { title: 'Sectores' },
+            yaxis: { title: 'Monto (ARS)' },
+            barmode: 'group'
+        };
+
+        Plotly.newPlot('chart', data, layout);
+    </script>
+
+    <h3>Hallazgos Clave:</h3>
+    <ul>
+        <li>Todas las áreas ejecutan entre 93-96% del presupuesto</li>
+        <li>$300M en Obras Públicas ejecutados - verificar entrega real</li>
+        <li>Administración gasta 1.7x más que Desarrollo Social</li>
+    </ul>
+</body>
+</html>

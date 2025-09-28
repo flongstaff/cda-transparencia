@@ -278,7 +278,41 @@ class ComprehensiveTransparencyService {
 
     async getYearlyData(year) {
         await this.initialize();
-        return this.dataService.getYearlyData(year);
+        try {
+            const [documents, summary, externalData] = await Promise.all([
+                this.getDocumentsByYear(year),
+                this.getYearlySummary(year),
+                this.getExternalFinancialData(year)  // Add external data
+            ]);
+
+            const categorizedDocs = this.categorizeDocuments(documents);
+            
+            // Enhance with external data if available
+            const enhancedSummary = {
+                ...summary,
+                external_data: externalData || {},
+                provincial_data: externalData?.ba_municipal_data || {},
+                national_data: externalData?.national_data || {},
+                procurement_data: externalData?.procurement_data || {}
+            };
+
+            return {
+                year: parseInt(year),
+                documents,
+                summary: enhancedSummary,
+                categories: categorizedDocs,
+                total_documents: documents.length,
+                verified_documents: documents.filter(d => d.verification_status === 'verified').length,
+                external_data_sources: {
+                    provincial: !!externalData?.ba_municipal_data,
+                    national: !!externalData?.national_data,
+                    procurement: !!externalData?.procurement_data
+                }
+            };
+        } catch (error) {
+            console.error('Error fetching yearly data:', error);
+            throw error;
+        }
     }
 
     categorizeDocuments(documents) {
@@ -421,11 +455,13 @@ class ComprehensiveTransparencyService {
             
             try {
                 // Try to get provincial data from Buenos Aires Data
-                const baData = await this.fetchFromApi(
-                    `${this.externalApis.datos_gob_ar}/package_search`,
-                    { fq: `organization:carmen-de-areco AND year:${year}` },
-                    [`${this.externalApis.datos_gob_ar.replace('api.3', 'api/v2')}/package_search`] // Fallback URL
-                );
+                const baSearchUrl = `${this.externalApis.datos_gob_ar}/package_search`;
+                const baSearchParams = {
+                    q: `carmen de areco ${year}`,
+                    fq: 'organization:provincia-de-buenos-aires'
+                };
+                
+                const baData = await this.fetchFromApi(baSearchUrl, baSearchParams);
                 externalData.ba_data = baData;
             } catch (error) {
                 console.warn('Could not fetch data from Buenos Aires Data:', error.message);
@@ -441,6 +477,33 @@ class ComprehensiveTransparencyService {
                 externalData.national_data = nationalData;
             } catch (error) {
                 console.warn('Could not fetch national budget data:', error.message);
+            }
+            
+            try {
+                // Try to get Buenos Aires province municipal data
+                const baProvMunicipalUrl = `${this.externalApis.BUENOS_AIRES_GOV}/municipalities`;
+                const baMunicipalData = await this.fetchFromApi(
+                    baProvMunicipalUrl,
+                    { municipality: 'carmen de areco', year: year }
+                );
+                externalData.ba_municipal_data = baMunicipalData;
+            } catch (error) {
+                console.warn('Could not fetch Buenos Aires municipal data:', error.message);
+            }
+            
+            try {
+                // Try to get national procurement data
+                const procurementUrl = `${this.externalApis.CONTRATACIONES_AR}/licitaciones`;
+                const procurementData = await this.fetchFromApi(
+                    procurementUrl,
+                    { 
+                        q: `carmen de areco ${year}`,
+                        fields: 'id,titulo,descripcion,estado,monto,fecha_publicacion'
+                    }
+                );
+                externalData.procurement_data = procurementData;
+            } catch (error) {
+                console.warn('Could not fetch procurement data:', error.message);
             }
             
             // Cache the result

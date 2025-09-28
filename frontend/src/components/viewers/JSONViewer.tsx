@@ -33,7 +33,7 @@ const JSONViewer: React.FC<JSONViewerProps> = ({
 }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [jsonData, setJsonData] = useState<any>(null);
+  const [jsonData, setJsonData] = useState<unknown>(null);
   const [viewMode, setViewMode] = useState<'tree' | 'raw'>('tree');
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedKeys, setExpandedKeys] = useState<Set<string>>(new Set());
@@ -112,7 +112,7 @@ const JSONViewer: React.FC<JSONViewerProps> = ({
     setExpandedKeys(newExpanded);
   };
 
-  const renderJsonValue = (value: any, path: string = ''): React.ReactNode => {
+  const renderJsonValue = (value: any, path: string = ''): React._ReactNode => {
     if (value === null) {
       return <span className="text-gray-500">null</span>;
     }

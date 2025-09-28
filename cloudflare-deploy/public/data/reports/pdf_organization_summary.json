@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-09-27T11:39:29.616050",
+  "statistics": {
+    "total_found": 1038,
+    "duplicates_removed": 930,
+    "organized_files": 96,
+    "errors": 12
+  },
+  "categories_created": 8,
+  "total_organized": 96,
+  "duplicates_summary": {
+    "duplicate_sets": 108,
+    "total_duplicates_moved": 868
+  }
+}

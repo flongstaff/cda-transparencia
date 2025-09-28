@@ -1,0 +1,203 @@
+/**
+ * Waterfall Execution Chart Component
+ * Displays cumulative execution across quarters using Waterfall chart
+ */
+
+import React, { useState, useEffect } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { Alert, CircularProgress, Box, Typography } from '@mui/material';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LabelList } from 'recharts';
+
+// Props for the Waterfall Execution Chart component
+interface WaterfallExecutionChartProps {
+  height?: number;
+  width?: number | string;
+  showTitle?: boolean;
+  showDescription?: boolean;
+  className?: string;
+  year?: number;
+}
+
+interface WaterfallDataPoint {
+  name: string;
+  value: number;
+  cumulative: number;
+  start: number;
+  end: number;
+}
+
+const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
+  height = 400,
+  width = '100%',
+  showTitle = true,
+  showDescription = true,
+  className = '',
+  year
+}) => {
+  const [chartData, setChartData] = useState<WaterfallDataPoint[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+  
+  // Load chart data using React Query
+  const { data, isLoading, isError, error: queryError } = useQuery({
+    queryKey: ['chart-data', 'Waterfall_Execution', year],
+    queryFn: () => 
+      // Mock data for now - in a real implementation, we'd fetch from data service
+      Promise.resolve([
+        { name: 'Q1', budgeted: 500000000, executed: 480000000 },
+        { name: 'Q2', budgeted: 500000000, executed: 520000000 },
+        { name: 'Q3', budgeted: 500000000, executed: 490000000 },
+        { name: 'Q4', budgeted: 500000000, executed: 510000000 }
+      ]),
+    staleTime: 1000 * 60 * 5, // 5 minutes
+    gcTime: 1000 * 60 * 10, // 10 minutes
+  });
+  
+  // Process data to waterfall format
+  useEffect(() => {
+    if (isLoading) {
+      setLoading(true);
+      setError(null);
+    } else if (isError) {
+      setLoading(false);
+      setError(queryError?.message || 'Error loading chart data');
+    } else if (data) {
+      // Calculate waterfall data
+      let cumulative = 0;
+      const processedData: WaterfallDataPoint[] = [];
+      
+      for (const item of data) {
+        const executed = typeof item.executed === 'number' ? item.executed : 
+                        typeof item.executed_amount === 'number' ? item.executed_amount : 0;
+        
+        const start = cumulative;
+        const end = cumulative + executed;
+        
+        processedData.push({
+          name: item.name || item.quarter || item.period,
+          value: executed,
+          cumulative: end,
+          start,
+          end
+        });
+        
+        cumulative = end;
+      }
+      
+      setLoading(false);
+      setError(null);
+      setChartData(processedData);
+    }
+  }, [data, isLoading, isError, queryError]);
+  
+  // Handle data point clicks
+  const handleDataPointClick = (dataPoint: WaterfallDataPoint) => {
+    console.log('Waterfall Execution data point clicked:', dataPoint);
+  };
+  
+  // Show loading spinner
+  if (loading) {
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
+        <CircularProgress />
+        <Typography variant="body1" sx={{ ml: 2 }}>
+          Loading Waterfall Execution data...
+        </Typography>
+      </Box>
+    );
+  }
+  
+  // Show error message
+  if (error) {
+    return (
+      <Alert severity="error" className={className}>
+        Error loading Waterfall Execution data: {error}
+      </Alert>
+    );
+  }
+  
+  // Show no data message
+  if (!chartData || chartData.length === 0) {
+    return (
+      <Alert severity="warning" className={className}>
+        No Waterfall Execution data available
+      </Alert>
+    );
+  }
+  
+  // Calculate the domain for the Y-axis to center the chart
+  const maxVal = Math.max(...chartData.map(d => Math.abs(d.start), Math.abs(d.end)));
+  const domain = [-maxVal * 1.1, maxVal * 1.1];
+  
+  return (
+    <div className={`chart-container ${className}`}>
+      {showTitle && <h3 className="chart-title">Cumulative Execution Waterfall Chart</h3>}
+      {showDescription && <p className="chart-description">Visualizing cumulative budget execution across quarters</p>}
+      <div className="chart-wrapper" style={{ height: height, width: width }}>
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart
+            data={chartData}
+            layout="vertical"
+            margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
+            onClick={(e: any) => handleDataPointClick(e)}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis 
+              type="number" 
+              domain={domain}
+              label={{ value: 'Amount (ARS)', position: 'insideBottom', offset: -10 }}
+            />
+            <YAxis 
+              type="category" 
+              dataKey="name" 
+            />
+            <Tooltip 
+              formatter={(value) => [`ARS ${Number(value).toLocaleString()}`, 'Amount']}
+              labelFormatter={(label) => `Period: ${label}`}
+            />
+            <Bar
+              dataKey="value"
+              fill="#8884d8"
+              shape={(props: any) => {
+                const { x, y, width, height, value } = props;
+                const isPositive = value >= 0;
+                const fill = isPositive ? '#82ca9d' : '#ff7300'; // Green for positive, orange for negative
+                
+                return (
+                  <g>
+                    <rect
+                      x={x}
+                      y={y}
+                      width={width}
+                      height={height}
+                      fill={fill}
+                      rx={4}
+                      ry={4}
+                      onClick={() => handleDataPointClick(props.payload)}
+                      style={{ cursor: 'pointer' }}
+                    />
+                    {/* Connection line to next bar */}
+                    {props.index < chartData.length - 1 && (
+                      <line
+                        x1={x + width}
+                        y1={y + height / 2}
+                        x2={chartData[props.index + 1].start < chartData[props.index].end ? x + width + 20 : x + width + 20}
+                        y2={y + height / 2}
+                        stroke="#ccc"
+                        strokeDasharray="2 2"
+                      />
+                    )}
+                  </g>
+                );
+              }}
+            >
+              <LabelList dataKey="value" position="center" formatter={(val: number) => `ARS ${Number(val).toLocaleString()}`} />
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+    </div>
+  );
+};
+
+export default WaterfallExecutionChart;

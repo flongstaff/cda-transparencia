@@ -1,0 +1,1 @@
+{"/api/*":{"Cache-Control":"public, max-age=300","Content-Type":"application/json"},"/charts/*":{"Cache-Control":"public, max-age=3600","Content-Type":"text/html"}}

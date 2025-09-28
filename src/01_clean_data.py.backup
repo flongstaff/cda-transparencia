@@ -1,0 +1,758 @@
+#!/usr/bin/env python3
+"""
+Clean and standardize budget execution data from all available years
+"""
+import pandas as pd
+import os
+import glob
+from pathlib import Path
+
+def clean_monetary_value(value):
+    """Clean monetary values by removing currency symbols and formatting"""
+    if pd.isna(value) or value == "":
+        return 0.0
+    
+    # Convert to string and clean
+    val_str = str(value)
+    
+    # Remove currency symbols and formatting
+    val_str = val_str.replace('
+
+def process_year_data(year):
+    """Process budget execution data for a specific year"""
+    try:
+        # Look for budget execution files for this year
+        budget_files = list(Path(f"data/processed/{year}").glob("*Budget*Execution*table_0.csv"))
+        
+        if not budget_files:
+            print(f"⚠️  No budget execution data found for {year}")
+            return None
+            
+        # Process the first file found
+        file_path = budget_files[0]
+        df = pd.read_csv(file_path)
+        
+        print(f"✅ Processing {year} data from {file_path.name}")
+        
+        # Clean monetary columns if they exist
+        monetary_cols = ['Budgeted', 'Executed', 'Percentage']
+        for col in monetary_cols:
+            if col in df.columns:
+                if col in ['Budgeted', 'Executed']:
+                    df[col] = df[col].apply(clean_monetary_value)
+                elif col == 'Percentage':
+                    # Clean percentage values
+                    df[col] = df[col].astype(str).str.replace('%', '').str.replace(',', '.').astype(float)
+        
+        # Add year column
+        df['year'] = year
+        
+        return df
+    except Exception as e:
+        print(f"❌ Error processing {year} data: {e}")
+        return None
+
+def main():
+    """Main function to process all years of data"""
+    print("🧹 Starting data cleaning process...")
+    
+    # Create processed directory
+    os.makedirs("data/processed/cleaned", exist_ok=True)
+    
+    # Find all years with processed data
+    processed_years = []
+    for year_dir in Path("data/processed").iterdir():
+        if year_dir.is_dir() and year_dir.name.isdigit():
+            processed_years.append(int(year_dir.name))
+    
+    print(f"📅 Found data for years: {sorted(processed_years)}")
+    
+    # Process data for each year
+    all_data = []
+    
+    for year in sorted(processed_years):
+        df = process_year_data(year)
+        if df is not None:
+            all_data.append(df)
+    
+    # Combine all years into one dataset
+    if all_data:
+        combined_df = pd.concat(all_data, ignore_index=True)
+        
+        # Save combined data
+        output_path = "data/processed/cleaned/budget_execution_all_years.csv"
+        combined_df.to_csv(output_path, index=False)
+        print(f"💾 Saved combined data to {output_path}")
+        
+        # Also save individual year files
+        for df in all_data:
+            year = df['year'].iloc[0]
+            year_output_path = f"data/processed/cleaned/budget_execution_{year}.csv"
+            df.to_csv(year_output_path, index=False)
+            print(f"💾 Saved {year} data to {year_output_path}")
+        
+        print(f"\n🎉 Successfully processed {len(all_data)} years of data")
+        print(f"📊 Combined dataset has {len(combined_df)} rows and {len(combined_df.columns)} columns")
+    else:
+        print("❌ No data was processed successfully")
+
+if __name__ == "__main__":
+    main(), '').replace(',', '').replace('"', '').strip()
+    
+    # Handle different decimal formats
+    if '.' in val_str and ',' in val_str:
+        # Handle mixed formats like "1.234,56"
+        val_str = val_str.replace('.', '').replace(',', '.')
+    elif ',' in val_str:
+        # Handle European format like "1234,56"
+        val_str = val_str.replace(',', '.')
+    
+    try:
+        return float(val_str)
+    except ValueError:
+        return 0.0
+
+def process_year_data(year):
+    """Process budget execution data for a specific year"""
+    try:
+        # Look for budget execution files for this year
+        budget_files = list(Path(f"data/processed/{year}").glob("*Budget*Execution*table_0.csv"))
+        
+        if not budget_files:
+            print(f"⚠️  No budget execution data found for {year}")
+            return None
+            
+        # Process the first file found
+        file_path = budget_files[0]
+        df = pd.read_csv(file_path)
+        
+        print(f"✅ Processing {year} data from {file_path.name}")
+        
+        # Clean monetary columns if they exist
+        monetary_cols = ['Budgeted', 'Executed', 'Percentage']
+        for col in monetary_cols:
+            if col in df.columns:
+                if col in ['Budgeted', 'Executed']:
+                    df[col] = df[col].apply(clean_monetary_value)
+                elif col == 'Percentage':
+                    # Clean percentage values
+                    df[col] = df[col].astype(str).str.replace('%', '').str.replace(',', '.').astype(float)
+        
+        # Add year column
+        df['year'] = year
+        
+        return df
+    except Exception as e:
+        print(f"❌ Error processing {year} data: {e}")
+        return None
+
+def main():
+    """Main function to process all years of data"""
+    print("🧹 Starting data cleaning process...")
+    
+    # Create processed directory
+    os.makedirs("data/processed/cleaned", exist_ok=True)
+    
+    # Find all years with processed data
+    processed_years = []
+    for year_dir in Path("data/processed").iterdir():
+        if year_dir.is_dir() and year_dir.name.isdigit():
+            processed_years.append(int(year_dir.name))
+    
+    print(f"📅 Found data for years: {sorted(processed_years)}")
+    
+    # Process data for each year
+    all_data = []
+    
+    for year in sorted(processed_years):
+        df = process_year_data(year)
+        if df is not None:
+            all_data.append(df)
+    
+    # Combine all years into one dataset
+    if all_data:
+        combined_df = pd.concat(all_data, ignore_index=True)
+        
+        # Save combined data
+        output_path = "data/processed/cleaned/budget_execution_all_years.csv"
+        combined_df.to_csv(output_path, index=False)
+        print(f"💾 Saved combined data to {output_path}")
+        
+        # Also save individual year files
+        for df in all_data:
+            year = df['year'].iloc[0]
+            year_output_path = f"data/processed/cleaned/budget_execution_{year}.csv"
+            df.to_csv(year_output_path, index=False)
+            print(f"💾 Saved {year} data to {year_output_path}")
+        
+        print(f"\n🎉 Successfully processed {len(all_data)} years of data")
+        print(f"📊 Combined dataset has {len(combined_df)} rows and {len(combined_df.columns)} columns")
+    else:
+        print("❌ No data was processed successfully")
+
+if __name__ == "__main__":
+    main(), '').replace(',', '').replace('"', '').strip()
+    
+    # Handle different decimal formats
+    if '.' in val_str and ',' in val_str:
+        # Handle mixed formats like "1.234,56"
+        val_str = val_str.replace('.', '').replace(',', '.')
+    elif ',' in val_str:
+        # Handle European format like "1234,56"
+        val_str = val_str.replace(',', '.')
+    
+    try:
+        return float(val_str)
+    except ValueError:
+        return 0.0
+
+def process_year_data(year):
+    """Process budget execution data for a specific year"""
+    try:
+        # Look for budget execution files for this year
+        budget_files = list(Path(f"data/processed/{year}").glob("*Budget*Execution*table_0.csv"))
+        
+        if not budget_files:
+            print(f"⚠️  No budget execution data found for {year}")
+            return None
+            
+        # Process the first file found
+        file_path = budget_files[0]
+        df = pd.read_csv(file_path)
+        
+        print(f"✅ Processing {year} data from {file_path.name}")
+        
+        # Clean monetary columns if they exist
+        monetary_cols = ['Budgeted', 'Executed', 'Percentage']
+        for col in monetary_cols:
+            if col in df.columns:
+                if col in ['Budgeted', 'Executed']:
+                    df[col] = df[col].apply(clean_monetary_value)
+                elif col == 'Percentage':
+                    # Clean percentage values
+                    df[col] = df[col].astype(str).str.replace('%', '').str.replace(',', '.').astype(float)
+        
+        # Add year column
+        df['year'] = year
+        
+        return df
+    except Exception as e:
+        print(f"❌ Error processing {year} data: {e}")
+        return None
+
+def main():
+    """Main function to process all years of data"""
+    print("🧹 Starting data cleaning process...")
+    
+    # Create processed directory
+    os.makedirs("data/processed/cleaned", exist_ok=True)
+    
+    # Find all years with processed data
+    processed_years = []
+    for year_dir in Path("data/processed").iterdir():
+        if year_dir.is_dir() and year_dir.name.isdigit():
+            processed_years.append(int(year_dir.name))
+    
+    print(f"📅 Found data for years: {sorted(processed_years)}")
+    
+    # Process data for each year
+    all_data = []
+    
+    for year in sorted(processed_years):
+        df = process_year_data(year)
+        if df is not None:
+            all_data.append(df)
+    
+    # Combine all years into one dataset
+    if all_data:
+        combined_df = pd.concat(all_data, ignore_index=True)
+        
+        # Save combined data
+        output_path = "data/processed/cleaned/budget_execution_all_years.csv"
+        combined_df.to_csv(output_path, index=False)
+        print(f"💾 Saved combined data to {output_path}")
+        
+        # Also save individual year files
+        for df in all_data:
+            year = df['year'].iloc[0]
+            year_output_path = f"data/processed/cleaned/budget_execution_{year}.csv"
+            df.to_csv(year_output_path, index=False)
+            print(f"💾 Saved {year} data to {year_output_path}")
+        
+        print(f"\n🎉 Successfully processed {len(all_data)} years of data")
+        print(f"📊 Combined dataset has {len(combined_df)} rows and {len(combined_df.columns)} columns")
+    else:
+        print("❌ No data was processed successfully")
+
+if __name__ == "__main__":
+    main(), '').replace(',', '').replace('"', '').strip()
+    
+    # Handle different decimal formats
+    if '.' in val_str and ',' in val_str:
+        # Handle mixed formats like "1.234,56"
+        val_str = val_str.replace('.', '').replace(',', '.')
+    elif ',' in val_str:
+        # Handle European format like "1234,56"
+        val_str = val_str.replace(',', '.')
+    
+    try:
+        return float(val_str)
+    except ValueError:
+        return 0.0
+
+def process_year_data(year):
+    """Process budget execution data for a specific year"""
+    try:
+        # Look for budget execution files for this year
+        budget_files = list(Path(f"data/processed/{year}").glob("*Budget*Execution*table_0.csv"))
+        
+        if not budget_files:
+            print(f"⚠️  No budget execution data found for {year}")
+            return None
+            
+        # Process the first file found
+        file_path = budget_files[0]
+        df = pd.read_csv(file_path)
+        
+        print(f"✅ Processing {year} data from {file_path.name}")
+        
+        # Clean monetary columns if they exist
+        monetary_cols = ['Budgeted', 'Executed', 'Percentage']
+        for col in monetary_cols:
+            if col in df.columns:
+                if col in ['Budgeted', 'Executed']:
+                    df[col] = df[col].apply(clean_monetary_value)
+                elif col == 'Percentage':
+                    # Clean percentage values
+                    df[col] = df[col].astype(str).str.replace('%', '').str.replace(',', '.').astype(float)
+        
+        # Add year column
+        df['year'] = year
+        
+        return df
+    except Exception as e:
+        print(f"❌ Error processing {year} data: {e}")
+        return None
+
+def main():
+    """Main function to process all years of data"""
+    print("🧹 Starting data cleaning process...")
+    
+    # Create processed directory
+    os.makedirs("data/processed/cleaned", exist_ok=True)
+    
+    # Find all years with processed data
+    processed_years = []
+    for year_dir in Path("data/processed").iterdir():
+        if year_dir.is_dir() and year_dir.name.isdigit():
+            processed_years.append(int(year_dir.name))
+    
+    print(f"📅 Found data for years: {sorted(processed_years)}")
+    
+    # Process data for each year
+    all_data = []
+    
+    for year in sorted(processed_years):
+        df = process_year_data(year)
+        if df is not None:
+            all_data.append(df)
+    
+    # Combine all years into one dataset
+    if all_data:
+        combined_df = pd.concat(all_data, ignore_index=True)
+        
+        # Save combined data
+        output_path = "data/processed/cleaned/budget_execution_all_years.csv"
+        combined_df.to_csv(output_path, index=False)
+        print(f"💾 Saved combined data to {output_path}")
+        
+        # Also save individual year files
+        for df in all_data:
+            year = df['year'].iloc[0]
+            year_output_path = f"data/processed/cleaned/budget_execution_{year}.csv"
+            df.to_csv(year_output_path, index=False)
+            print(f"💾 Saved {year} data to {year_output_path}")
+        
+        print(f"\n🎉 Successfully processed {len(all_data)} years of data")
+        print(f"📊 Combined dataset has {len(combined_df)} rows and {len(combined_df.columns)} columns")
+    else:
+        print("❌ No data was processed successfully")
+
+if __name__ == "__main__":
+    main(), '').replace(',', '').replace('"', '').strip()
+    
+    # Handle different decimal formats
+    if '.' in val_str and ',' in val_str:
+        # Handle mixed formats like "1.234,56"
+        val_str = val_str.replace('.', '').replace(',', '.')
+    elif ',' in val_str:
+        # Handle European format like "1234,56"
+        val_str = val_str.replace(',', '.')
+    
+    try:
+        return float(val_str)
+    except ValueError:
+        return 0.0
+
+def process_year_data(year):
+    """Process budget execution data for a specific year"""
+    try:
+        # Look for budget execution files for this year
+        budget_files = list(Path(f"data/processed/{year}").glob("*Budget*Execution*table_0.csv"))
+        
+        if not budget_files:
+            print(f"⚠️  No budget execution data found for {year}")
+            return None
+            
+        # Process the first file found
+        file_path = budget_files[0]
+        df = pd.read_csv(file_path)
+        
+        print(f"✅ Processing {year} data from {file_path.name}")
+        
+        # Clean monetary columns if they exist
+        monetary_cols = ['Budgeted', 'Executed', 'Percentage']
+        for col in monetary_cols:
+            if col in df.columns:
+                if col in ['Budgeted', 'Executed']:
+                    df[col] = df[col].apply(clean_monetary_value)
+                elif col == 'Percentage':
+                    # Clean percentage values
+                    df[col] = df[col].astype(str).str.replace('%', '').str.replace(',', '.').astype(float)
+        
+        # Add year column
+        df['year'] = year
+        
+        return df
+    except Exception as e:
+        print(f"❌ Error processing {year} data: {e}")
+        return None
+
+def main():
+    """Main function to process all years of data"""
+    print("🧹 Starting data cleaning process...")
+    
+    # Create processed directory
+    os.makedirs("data/processed/cleaned", exist_ok=True)
+    
+    # Find all years with processed data
+    processed_years = []
+    for year_dir in Path("data/processed").iterdir():
+        if year_dir.is_dir() and year_dir.name.isdigit():
+            processed_years.append(int(year_dir.name))
+    
+    print(f"📅 Found data for years: {sorted(processed_years)}")
+    
+    # Process data for each year
+    all_data = []
+    
+    for year in sorted(processed_years):
+        df = process_year_data(year)
+        if df is not None:
+            all_data.append(df)
+    
+    # Combine all years into one dataset
+    if all_data:
+        combined_df = pd.concat(all_data, ignore_index=True)
+        
+        # Save combined data
+        output_path = "data/processed/cleaned/budget_execution_all_years.csv"
+        combined_df.to_csv(output_path, index=False)
+        print(f"💾 Saved combined data to {output_path}")
+        
+        # Also save individual year files
+        for df in all_data:
+            year = df['year'].iloc[0]
+            year_output_path = f"data/processed/cleaned/budget_execution_{year}.csv"
+            df.to_csv(year_output_path, index=False)
+            print(f"💾 Saved {year} data to {year_output_path}")
+        
+        print(f"\n🎉 Successfully processed {len(all_data)} years of data")
+        print(f"📊 Combined dataset has {len(combined_df)} rows and {len(combined_df.columns)} columns")
+    else:
+        print("❌ No data was processed successfully")
+
+if __name__ == "__main__":
+    main(), '').replace(',', '').replace('"', '').strip()
+    
+    # Handle different decimal formats
+    if '.' in val_str and ',' in val_str:
+        # Handle mixed formats like "1.234,56"
+        val_str = val_str.replace('.', '').replace(',', '.')
+    elif ',' in val_str:
+        # Handle European format like "1234,56"
+        val_str = val_str.replace(',', '.')
+    
+    try:
+        return float(val_str)
+    except ValueError:
+        return 0.0
+
+def process_year_data(year):
+    """Process budget execution data for a specific year"""
+    try:
+        # Look for budget execution files for this year
+        budget_files = list(Path(f"data/processed/{year}").glob("*Budget*Execution*table_0.csv"))
+        
+        if not budget_files:
+            print(f"⚠️  No budget execution data found for {year}")
+            return None
+            
+        # Process the first file found
+        file_path = budget_files[0]
+        df = pd.read_csv(file_path)
+        
+        print(f"✅ Processing {year} data from {file_path.name}")
+        
+        # Clean monetary columns if they exist
+        monetary_cols = ['Budgeted', 'Executed', 'Percentage']
+        for col in monetary_cols:
+            if col in df.columns:
+                if col in ['Budgeted', 'Executed']:
+                    df[col] = df[col].apply(clean_monetary_value)
+                elif col == 'Percentage':
+                    # Clean percentage values
+                    df[col] = df[col].astype(str).str.replace('%', '').str.replace(',', '.').astype(float)
+        
+        # Add year column
+        df['year'] = year
+        
+        return df
+    except Exception as e:
+        print(f"❌ Error processing {year} data: {e}")
+        return None
+
+def main():
+    """Main function to process all years of data"""
+    print("🧹 Starting data cleaning process...")
+    
+    # Create processed directory
+    os.makedirs("data/processed/cleaned", exist_ok=True)
+    
+    # Find all years with processed data
+    processed_years = []
+    for year_dir in Path("data/processed").iterdir():
+        if year_dir.is_dir() and year_dir.name.isdigit():
+            processed_years.append(int(year_dir.name))
+    
+    print(f"📅 Found data for years: {sorted(processed_years)}")
+    
+    # Process data for each year
+    all_data = []
+    
+    for year in sorted(processed_years):
+        df = process_year_data(year)
+        if df is not None:
+            all_data.append(df)
+    
+    # Combine all years into one dataset
+    if all_data:
+        combined_df = pd.concat(all_data, ignore_index=True)
+        
+        # Save combined data
+        output_path = "data/processed/cleaned/budget_execution_all_years.csv"
+        combined_df.to_csv(output_path, index=False)
+        print(f"💾 Saved combined data to {output_path}")
+        
+        # Also save individual year files
+        for df in all_data:
+            year = df['year'].iloc[0]
+            year_output_path = f"data/processed/cleaned/budget_execution_{year}.csv"
+            df.to_csv(year_output_path, index=False)
+            print(f"💾 Saved {year} data to {year_output_path}")
+        
+        print(f"\n🎉 Successfully processed {len(all_data)} years of data")
+        print(f"📊 Combined dataset has {len(combined_df)} rows and {len(combined_df.columns)} columns")
+    else:
+        print("❌ No data was processed successfully")
+
+if __name__ == "__main__":
+    main(), '').replace(',', '').replace('"', '').strip()
+    
+    # Handle different decimal formats
+    if '.' in val_str and ',' in val_str:
+        # Handle mixed formats like "1.234,56"
+        val_str = val_str.replace('.', '').replace(',', '.')
+    elif ',' in val_str:
+        # Handle European format like "1234,56"
+        val_str = val_str.replace(',', '.')
+    
+    try:
+        return float(val_str)
+    except ValueError:
+        return 0.0
+
+def process_year_data(year):
+    """Process budget execution data for a specific year"""
+    try:
+        # Look for budget execution files for this year
+        budget_files = list(Path(f"data/processed/{year}").glob("*Budget*Execution*table_0.csv"))
+        
+        if not budget_files:
+            print(f"⚠️  No budget execution data found for {year}")
+            return None
+            
+        # Process the first file found
+        file_path = budget_files[0]
+        df = pd.read_csv(file_path)
+        
+        print(f"✅ Processing {year} data from {file_path.name}")
+        
+        # Clean monetary columns if they exist
+        monetary_cols = ['Budgeted', 'Executed', 'Percentage']
+        for col in monetary_cols:
+            if col in df.columns:
+                if col in ['Budgeted', 'Executed']:
+                    df[col] = df[col].apply(clean_monetary_value)
+                elif col == 'Percentage':
+                    # Clean percentage values
+                    df[col] = df[col].astype(str).str.replace('%', '').str.replace(',', '.').astype(float)
+        
+        # Add year column
+        df['year'] = year
+        
+        return df
+    except Exception as e:
+        print(f"❌ Error processing {year} data: {e}")
+        return None
+
+def main():
+    """Main function to process all years of data"""
+    print("🧹 Starting data cleaning process...")
+    
+    # Create processed directory
+    os.makedirs("data/processed/cleaned", exist_ok=True)
+    
+    # Find all years with processed data
+    processed_years = []
+    for year_dir in Path("data/processed").iterdir():
+        if year_dir.is_dir() and year_dir.name.isdigit():
+            processed_years.append(int(year_dir.name))
+    
+    print(f"📅 Found data for years: {sorted(processed_years)}")
+    
+    # Process data for each year
+    all_data = []
+    
+    for year in sorted(processed_years):
+        df = process_year_data(year)
+        if df is not None:
+            all_data.append(df)
+    
+    # Combine all years into one dataset
+    if all_data:
+        combined_df = pd.concat(all_data, ignore_index=True)
+        
+        # Save combined data
+        output_path = "data/processed/cleaned/budget_execution_all_years.csv"
+        combined_df.to_csv(output_path, index=False)
+        print(f"💾 Saved combined data to {output_path}")
+        
+        # Also save individual year files
+        for df in all_data:
+            year = df['year'].iloc[0]
+            year_output_path = f"data/processed/cleaned/budget_execution_{year}.csv"
+            df.to_csv(year_output_path, index=False)
+            print(f"💾 Saved {year} data to {year_output_path}")
+        
+        print(f"\n🎉 Successfully processed {len(all_data)} years of data")
+        print(f"📊 Combined dataset has {len(combined_df)} rows and {len(combined_df.columns)} columns")
+    else:
+        print("❌ No data was processed successfully")
+
+if __name__ == "__main__":
+    main(), '').replace(',', '').replace('"', '').strip()
+    
+    # Handle different decimal formats
+    if '.' in val_str and ',' in val_str:
+        # Handle mixed formats like "1.234,56"
+        val_str = val_str.replace('.', '').replace(',', '.')
+    elif ',' in val_str:
+        # Handle European format like "1234,56"
+        val_str = val_str.replace(',', '.')
+    
+    try:
+        return float(val_str)
+    except ValueError:
+        return 0.0
+
+def process_year_data(year):
+    """Process budget execution data for a specific year"""
+    try:
+        # Look for budget execution files for this year
+        budget_files = list(Path(f"data/processed/{year}").glob("*Budget*Execution*table_0.csv"))
+        
+        if not budget_files:
+            print(f"⚠️  No budget execution data found for {year}")
+            return None
+            
+        # Process the first file found
+        file_path = budget_files[0]
+        df = pd.read_csv(file_path)
+        
+        print(f"✅ Processing {year} data from {file_path.name}")
+        
+        # Clean monetary columns if they exist
+        monetary_cols = ['Budgeted', 'Executed', 'Percentage']
+        for col in monetary_cols:
+            if col in df.columns:
+                if col in ['Budgeted', 'Executed']:
+                    df[col] = df[col].apply(clean_monetary_value)
+                elif col == 'Percentage':
+                    # Clean percentage values
+                    df[col] = df[col].astype(str).str.replace('%', '').str.replace(',', '.').astype(float)
+        
+        # Add year column
+        df['year'] = year
+        
+        return df
+    except Exception as e:
+        print(f"❌ Error processing {year} data: {e}")
+        return None
+
+def main():
+    """Main function to process all years of data"""
+    print("🧹 Starting data cleaning process...")
+    
+    # Create processed directory
+    os.makedirs("data/processed/cleaned", exist_ok=True)
+    
+    # Find all years with processed data
+    processed_years = []
+    for year_dir in Path("data/processed").iterdir():
+        if year_dir.is_dir() and year_dir.name.isdigit():
+            processed_years.append(int(year_dir.name))
+    
+    print(f"📅 Found data for years: {sorted(processed_years)}")
+    
+    # Process data for each year
+    all_data = []
+    
+    for year in sorted(processed_years):
+        df = process_year_data(year)
+        if df is not None:
+            all_data.append(df)
+    
+    # Combine all years into one dataset
+    if all_data:
+        combined_df = pd.concat(all_data, ignore_index=True)
+        
+        # Save combined data
+        output_path = "data/processed/cleaned/budget_execution_all_years.csv"
+        combined_df.to_csv(output_path, index=False)
+        print(f"💾 Saved combined data to {output_path}")
+        
+        # Also save individual year files
+        for df in all_data:
+            year = df['year'].iloc[0]
+            year_output_path = f"data/processed/cleaned/budget_execution_{year}.csv"
+            df.to_csv(year_output_path, index=False)
+            print(f"💾 Saved {year} data to {year_output_path}")
+        
+        print(f"\n🎉 Successfully processed {len(all_data)} years of data")
+        print(f"📊 Combined dataset has {len(combined_df)} rows and {len(combined_df.columns)} columns")
+    else:
+        print("❌ No data was processed successfully")
+
+if __name__ == "__main__":
+    main()

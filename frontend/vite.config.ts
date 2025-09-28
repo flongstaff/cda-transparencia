@@ -1,11 +1,13 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import { copyFileSync, mkdirSync, existsSync } from 'fs';
+import { glob } from 'glob';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-  
+
   // Determine base path based on environment
   const getBasePath = () => {
     if (mode === 'development') return '/';
@@ -15,14 +17,70 @@ export default defineConfig(({ mode }) => {
   };
 
   return {
-    plugins: [react()],
+    plugins: [
+      react(),
+      // Copy data directory to public during build
+      {
+        name: 'copy-data',
+        generateBundle() {
+          if (mode === 'production' || mode === 'github') {
+            const dataDir = path.resolve(__dirname, '../data');
+            const publicDataDir = path.resolve(__dirname, 'public/data');
+
+            if (existsSync(dataDir)) {
+              if (!existsSync(publicDataDir)) {
+                mkdirSync(publicDataDir, { recursive: true });
+              }
+
+              // Copy JSON files from data directory
+              const jsonFiles = glob.sync('**/*.json', { cwd: dataDir });
+              jsonFiles.forEach(file => {
+                const srcPath = path.join(dataDir, file);
+                const destPath = path.join(publicDataDir, file);
+                const destDir = path.dirname(destPath);
+
+                if (!existsSync(destDir)) {
+                  mkdirSync(destDir, { recursive: true });
+                }
+
+                try {
+                  copyFileSync(srcPath, destPath);
+                } catch (err) {
+                  console.warn(`Failed to copy ${file}:`, err);
+                }
+              });
+
+              // Copy CSV files from data directory
+              const csvFiles = glob.sync('**/*.csv', { cwd: dataDir });
+              csvFiles.forEach(file => {
+                const srcPath = path.join(dataDir, file);
+                const destPath = path.join(publicDataDir, file);
+                const destDir = path.dirname(destPath);
+
+                if (!existsSync(destDir)) {
+                  mkdirSync(destDir, { recursive: true });
+                }
+
+                try {
+                  copyFileSync(srcPath, destPath);
+                } catch (err) {
+                  console.warn(`Failed to copy ${file}:`, err);
+                }
+              });
+            }
+          }
+        }
+      }
+    ],
+    publicDir: 'public',
     base: getBasePath(),
     define: {
       __APP_VERSION__: JSON.stringify(process.env.npm_package_version || '1.0.0'),
       __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
     },
     build: {
-      outDir: 'dist',
+      outDir: '../../dist',
+      emptyOutDir: true,
       assetsDir: 'assets',
       sourcemap: mode === 'development',
       minify: mode === 'production' ? 'terser' : false,

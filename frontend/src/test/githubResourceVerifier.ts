@@ -64,21 +64,23 @@ export class GitHubResourceVerifier {
       
       // Test fetching content based on type
       switch (type) {
-        case 'json':
+        case 'json': {
           const jsonData = await unifiedResourceService.fetchJSON(path);
           if (!jsonData) {
             throw new Error('Empty JSON data');
           }
           break;
+        }
           
         case 'md':
         case 'txt':
-        case 'csv':
+        case 'csv': {
           const textData = await unifiedResourceService.fetchText(path);
           if (!textData) {
             throw new Error('Empty text data');
           }
           break;
+        }
           
         case 'pdf':
         case 'jpg':
@@ -94,13 +96,14 @@ export class GitHubResourceVerifier {
         case 'xls':
         case 'xlsx':
         case 'ppt':
-        case 'pptx':
+        case 'pptx': {
           // For binary files, just verify we can fetch them
           const response = await fetch(metadata.url);
           if (!response.ok) {
             throw new Error(`HTTP ${response.status}: ${response.statusText}`);
           }
           break;
+        }
           
         default:
           throw new Error(`Unsupported file type: ${type}`);

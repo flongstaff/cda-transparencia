@@ -126,7 +126,7 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
     }
   };
 
-  const handleError = (errorMsg: string) => {
+  const _handleError = (errorMsg: string) => {
     setError(errorMsg);
     setLoading(false);
     onError?.(errorMsg);

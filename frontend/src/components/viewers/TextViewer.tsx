@@ -104,7 +104,7 @@ const TextViewer: React.FC<TextViewerProps> = ({
     }
   };
 
-  const getFileTypeDescription = (fileType: SupportedFileType): string => {
+  const getFileTypeDescription = (fileType: SupportedFileType): _string => {
     switch (fileType) {
       case 'txt':
         return 'Documento de texto';

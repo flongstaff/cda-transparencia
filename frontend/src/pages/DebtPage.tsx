@@ -1,39 +1,50 @@
 import React, { useState, useMemo } from 'react';
-import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
-import PageYearSelector from '../components/selectors/PageYearSelector';
+import { useMasterData } from '../hooks/useMasterData';
+import PageYearSelector from '../components/forms/PageYearSelector';
 import { formatCurrencyARS } from '../utils/formatters';
-import { CreditCard, AlertCircle, Loader2, TrendingUp } from 'lucide-react';
+import { CreditCard, AlertCircle, TrendingUp } from 'lucide-react';
 
 const DebtPage: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   
-  // 🚀 Use the most comprehensive data service - CompleteFinalDataService
+  // 🚀 Use the unified master data service
   const {
-    completeData,
-    currentYearData,
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
+    currentDebt,
     loading,
     error,
-    availableYears
-  } = useCompleteFinalData(selectedYear);
+    totalDocuments,
+    availableYears,
+    categories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
 
   // Extract debt data from comprehensive data service
   const debtData = useMemo(() => {
-    if (!currentYearData) return null;
+    if (!currentDebt) return null;
     
     // Try different possible debt data sources
-    return currentYearData.budget?.debt || currentYearData.debt || null;
-  }, [currentYearData]);
+    return currentDebt;
+  }, [currentDebt]);
 
   // Calculate total debt amount
   const totalDebt = useMemo(() => {
-    if (!debtData || !debtData.items) return 0;
+    if (!debtData) return 0;
     
-    if (Array.isArray(debtData.items)) {
+    // Try different ways to get total debt
+    if (debtData.items && Array.isArray(debtData.items)) {
       return debtData.items.reduce((sum: number, item: any) => sum + (item.amount || 0), 0);
     }
     
     // If debtData is not an array, try to get a total amount from the object
-    return debtData.total_amount || debtData.amount || 0;
+    return debtData.total_debt || debtData.total_amount || debtData.amount || debtData.total || 0;
   }, [debtData]);
 
   return (

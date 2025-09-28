@@ -1,0 +1,27 @@
+{
+  "files": [
+    {
+      "filename": "transparency_data_complete.csv",
+      "description": "Complete transparency data extracted from all PDFs",
+      "rows": 500,
+      "url": "/data/csv/transparency_data_complete.csv"
+    },
+    {
+      "filename": "revenue_summary.csv",
+      "description": "Revenue and income data from financial reports",
+      "rows": 102,
+      "url": "/data/csv/revenue_summary.csv"
+    },
+    {
+      "filename": "expenses_summary.csv",
+      "description": "Expense and expenditure data from financial reports",
+      "rows": 268,
+      "url": "/data/csv/expenses_summary.csv"
+    }
+  ],
+  "statistics": {
+    "total_csv_files": 3,
+    "data_rows_created": 500
+  },
+  "last_updated": "2025-09-27T17:04:10.565727"
+}

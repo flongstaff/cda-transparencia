@@ -1,12 +1,31 @@
 import React, { useState } from 'react';
-import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
-import PageYearSelector from '../components/selectors/PageYearSelector';
+import { useMasterData } from '../hooks/useMasterData';
+import PageYearSelector from '../components/forms/PageYearSelector';
 import { formatCurrencyARS } from '../utils/formatters';
 import { Building } from 'lucide-react';
 
 const InvestmentsPage: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-  const { data, loading, error, availableYears } = useCompleteFinalData(selectedYear);
+  const {
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
+    currentDebt,
+    loading,
+    error,
+    totalDocuments,
+    availableYears,
+    categories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
+  
+  // Get investments data from masterData
+  const currentInvestments = masterData?.yearData?.investments || masterData?.yearData?.budget?.investments || [];
 
   return (
     <div className="space-y-6">
@@ -26,7 +45,7 @@ const InvestmentsPage: React.FC = () => {
         />
       </div>
 
-      {isLoading && (
+      {loading && (
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
@@ -49,7 +68,7 @@ const InvestmentsPage: React.FC = () => {
               <div className="ml-3">
                 <h3 className="text-sm font-medium text-red-800 dark:text-red-200">Error</h3>
                 <div className="mt-2 text-sm text-red-700 dark:text-red-300">
-                  <p>{error.message}</p>
+                  <p>{error}</p>
                 </div>
               </div>
             </div>
@@ -57,7 +76,7 @@ const InvestmentsPage: React.FC = () => {
         </div>
       )}
 
-      {investmentData && investmentData.items && (
+      {currentInvestments && currentInvestments.items && (
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Detalle de Inversiones</h2>
           <div className="overflow-x-auto">
@@ -74,7 +93,7 @@ const InvestmentsPage: React.FC = () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {investmentData.items.map((item) => (
+                {currentInvestments.items.map((item) => (
                   <tr key={item.id}>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{item.description}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.category}</td>

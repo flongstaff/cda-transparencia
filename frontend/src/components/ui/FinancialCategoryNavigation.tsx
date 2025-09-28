@@ -39,7 +39,7 @@ const FinancialCategoryNavigation: React.FC<FinancialCategoryNavigationProps> = 
   };
 
   // Get trend icon
-  const getTrendIcon = (trend?: 'up' | 'down' | 'stable') => {
+  const _getTrendIcon = (trend?: 'up' | 'down' | 'stable') => {
     if (trend === 'up') return <TrendingUp className="w-4 h-4 text-green-500" />;
     if (trend === 'down') return <TrendingDown className="w-4 h-4 text-red-500" />;
     if (trend === 'stable') return <Minus className="w-4 h-4 text-gray-500" />;

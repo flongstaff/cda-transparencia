@@ -91,7 +91,7 @@ const UniversalChart: React.FC<UniversalChartProps> = ({
   height = 400,
   additionalSeries = [],
   showControls = true,
-  timeRange = '2018-2025',
+  timeRange = '2000-2025',
   metadata,
   onChartTypeChange,
   onRetry,

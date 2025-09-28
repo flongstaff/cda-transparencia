@@ -13,11 +13,10 @@ import {
   Download
 } from 'lucide-react';
 import SalaryAnalysisChart from '../components/charts/SalaryAnalysisChart';
-import SalaryScaleVisualization from '../components/salaries/SalaryScaleVisualization';
-import PageYearSelector from '../components/selectors/PageYearSelector';
+import SalaryScaleVisualization from '../components/data-display/SalaryScaleVisualization';
+import PageYearSelector from '../components/forms/PageYearSelector';
 import { formatCurrencyARS } from '../utils/formatters';
-import { useCompleteFinalData } from '../hooks/useCompleteFinalData';
-import { Link } from 'react-router-dom';
+import { useMasterData } from '../hooks/useMasterData';
 
 interface SalaryPosition {
   code: string;
@@ -43,18 +42,27 @@ interface SalaryData {
 const Salaries: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   
-  // 🚀 Use the most comprehensive data service - CompleteFinalDataService
+  // Use unified master data service
   const {
-    completeData,
-    currentYearData,
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
     loading,
     error,
-    availableYears: allAvailableYears
-  } = useCompleteFinalData(selectedYear);
+    totalDocuments,
+    availableYears,
+    categories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
 
   // Process salary data from comprehensive data service
   const salaryData: SalaryData | null = useMemo(() => {
-    const yearSalaryData = currentYearData?.salaries;
+    const yearSalaryData = currentSalaries;
     if (!yearSalaryData) return null;
 
     // Extract data from real data structure
@@ -64,7 +72,7 @@ const Salaries: React.FC = () => {
     const allPositions: SalaryPosition[] = [];
 
     if (yearSalaryData.positions && Array.isArray(yearSalaryData.positions)) {
-      yearSalaryData.positions.forEach((pos: any) => {
+      yearSalaryData.positions.forEach((props: Record<string, unknown>) => {
         const position: SalaryPosition = {
           code: pos.code || pos.codigo || 'N/A',
           name: pos.name || pos.nombre || pos.puesto || 'Posición sin nombre',
@@ -88,12 +96,12 @@ const Salaries: React.FC = () => {
       employeeCount,
       positions: allPositions
     };
-  }, [currentYearData, selectedYear]);
+  }, [currentSalaries, selectedYear]);
 
   // Filter salary-related documents from comprehensive data
   const salaryDocuments = useMemo(() => {
-    if (!currentYearData?.documents) return [];
-    const allDocs = currentYearData.documents;
+    if (!currentDocuments) return [];
+    const allDocs = currentDocuments;
     return allDocs.filter(doc =>
       doc.category?.toLowerCase().includes('recursos') ||
       doc.category?.toLowerCase().includes('humanos') ||
@@ -104,7 +112,7 @@ const Salaries: React.FC = () => {
       doc.title?.toLowerCase().includes('sueldo') ||
       doc.category === 'salaries'
     );
-  }, [currentYearData]);
+  }, [currentDocuments]);
 
   // Process salary data from organized files
   const processedSalaryData = useMemo(() => {
@@ -134,7 +142,7 @@ const Salaries: React.FC = () => {
     }, {} as Record<string, any>);
 
     // Calculate averages
-    Object.values(categoryGroups).forEach((group: any) => {
+    Object.values(categoryGroups).forEach((props: Record<string, unknown>) => {
       group.avgSalary = group.totalGross / group.totalEmployees;
     });
 
@@ -216,9 +224,9 @@ const Salaries: React.FC = () => {
             </p>
           </div>
           <PageYearSelector
-            availableYears={allAvailableYears}
+            availableYears={availableYears}
             selectedYear={selectedYear}
-            onYearChange={setSelectedYear}
+            onYearChange={switchYear}
           />
         </div>
       </div>

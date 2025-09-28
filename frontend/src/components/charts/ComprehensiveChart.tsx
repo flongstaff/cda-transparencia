@@ -19,15 +19,14 @@ import {
 import { motion } from 'framer-motion';
 import { 
   TrendingUp, 
-  TrendingDown, 
   PieChart as PieIcon, 
   BarChart3, 
   Activity, 
   AlertTriangle, 
   Loader2
 } from 'lucide-react';
-import { formatCurrencyARS, formatPercentageARS } from '../../utils/formatters';
-import { useCompleteFinalData } from '../../hooks/useCompleteFinalData';
+import { formatCurrencyARS } from '../../utils/formatters';
+import { useMasterData } from '../../hooks/useMasterData';
 
 export type ChartType = 
   | 'budget' 
@@ -52,6 +51,62 @@ interface ComprehensiveChartProps {
   height?: number;
 }
 
+interface BudgetItem {
+  name?: string;
+  descripcion?: string;
+  category?: string;
+  budgeted?: string | number;
+  presupuestado?: string | number;
+  budget?: string | number;
+  executed?: string | number;
+  ejecutado?: string | number;
+  execution?: string | number;
+  execution_rate?: string | number;
+  porcentaje_ejecucion?: string | number;
+}
+
+interface DebtItem {
+  debt_type?: string;
+  descripcion?: string;
+  tipo?: string;
+  amount?: string | number;
+  monto?: string | number;
+  value?: string | number;
+}
+
+interface PositionGroup {
+  employees: number;
+  totalSalary: number;
+  count: number;
+}
+
+interface SalaryCategoryItem {
+  avg_salary?: string | number;
+  promedio?: string | number;
+  employee_count?: string | number;
+  cantidad?: string | number;
+}
+
+interface InvestmentItem {
+  description?: string;
+  name?: string;
+  net_value?: string | number;
+  value?: string | number;
+}
+
+interface ContractItem {
+  title?: string;
+  description?: string;
+  amount?: string | number;
+  budget?: string | number;
+}
+
+interface PropertyItem {
+  owner?: string;
+  count?: string | number;
+  total?: string | number;
+}
+
 const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#EC4899', '#6B7280', '#14B8A6'];
 
 const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
@@ -66,7 +121,7 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
   const [currentVariant, setCurrentVariant] = useState<ChartVariant>(variant);
   
   // 🚀 Use the most comprehensive data service - CompleteFinalDataService
-  const { completeData, currentYearData, loading, error } = useCompleteFinalData(year);
+  const { currentYearData, loading, error } = useMasterData(year);
 
   // Transform data based on chart type using real data
   const chartData = useMemo(() => {
@@ -79,29 +134,29 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
 
         // Handle different possible data structures for budget
         if (Array.isArray(budgetData.categories)) {
-          return budgetData.categories.map((item: any, index: number) => ({
+          return budgetData.categories.map((item: BudgetItem, index: number) => ({
             name: item.name || item.descripcion || item.category || `Categoría ${index + 1}`,
-            budgeted: parseFloat(item.budgeted || item.presupuestado || item.budget || 0),
-            executed: parseFloat(item.executed || item.ejecutado || item.execution || 0),
-            execution_rate: parseFloat(item.execution_rate || item.porcentaje_ejecucion || 0),
+            budgeted: parseFloat(String(item.budgeted || item.presupuestado || item.budget || 0)),
+            executed: parseFloat(String(item.executed || item.ejecutado || item.execution || 0)),
+            execution_rate: parseFloat(String(item.execution_rate || item.porcentaje_ejecucion || 0)),
             fill: COLORS[index % COLORS.length]
           }));
         } else if (budgetData.categories) {
           // If categories is an object instead of array
-          return Object.entries(budgetData.categories).map(([name, item]: [string, any], index: number) => ({
+          return Object.entries(budgetData.categories).map(([name, item]: [string, BudgetItem], index: number) => ({
             name: name,
-            budgeted: parseFloat(item.budgeted || item.presupuestado || item.budget || 0),
-            executed: parseFloat(item.executed || item.ejecutado || item.execution || 0),
-            execution_rate: parseFloat(item.execution_rate || item.porcentaje_ejecucion || 0),
+            budgeted: parseFloat(String(item.budgeted || item.presupuestado || item.budget || 0)),
+            executed: parseFloat(String(item.executed || item.ejecutado || item.execution || 0)),
+            execution_rate: parseFloat(String(item.execution_rate || item.porcentaje_ejecucion || 0)),
             fill: COLORS[index % COLORS.length]
           }));
         } else {
           // If budget data is directly in budgetData object
           return [{
             name: budgetData.name || budgetData.descripcion || 'Presupuesto Total',
-            budgeted: parseFloat(budgetData.total_budget || budgetData.budget || 0),
-            executed: parseFloat(budgetData.total_executed || budgetData.executed || 0),
-            execution_rate: budgetData.total_budget > 0 ? parseFloat((budgetData.total_executed / budgetData.total_budget) * 100) : 0,
+            budgeted: parseFloat(String(budgetData.total_budget || budgetData.budget || 0)),
+            executed: parseFloat(String(budgetData.total_executed || budgetData.executed || 0)),
+            execution_rate: budgetData.total_budget > 0 ? parseFloat(String((budgetData.total_executed / budgetData.total_budget) * 100)) : 0,
             fill: COLORS[0]
           }];
         }
@@ -111,8 +166,8 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
         const allDocs = currentYearData.documents || [];
         const docsByCategory: Record<string, number> = {};
         
-        allDocs.forEach((doc: any) => {
-          const category = doc.category || 'General';
+        allDocs.forEach((doc: Record<string, unknown>) => {
+          const category = (doc.category as string) || 'General';
           docsByCategory[category] = (docsByCategory[category] || 0) + 1;
         });
 
@@ -139,16 +194,16 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
         if (!debtData) return [];
 
         if (Array.isArray(debtData)) {
-          return debtData.map((item: any, index: number) => ({
+          return debtData.map((item: DebtItem, index: number) => ({
             name: item.debt_type || item.descripcion || item.tipo || 'Deuda',
-            value: parseFloat(item.amount || item.monto || item.value || 0),
+            value: parseFloat(String(item.amount || item.monto || item.value || 0)),
             fill: COLORS[index % COLORS.length]
           }));
         } else {
           // If debt data is a single object
           return [{
             name: debtData.debt_type || debtData.descripcion || 'Deuda Total',
-            value: parseFloat(debtData.amount || debtData.total || 0),
+            value: parseFloat(String(debtData.amount || debtData.total || 0)),
             fill: COLORS[0]
           }];
         }
@@ -159,21 +214,21 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
         if (!salaryData) return [];
 
         if (Array.isArray(salaryData)) {
-          const positionGroups: Record<string, any> = {};
-          salaryData.forEach((pos: any) => {
-            const category = pos.category || pos.area || pos.departamento || 'General';
+          const positionGroups: Record<string, PositionGroup> = {};
+          salaryData.forEach((pos: Record<string, unknown>) => {
+            const category = (pos.category as string) || (pos.area as string) || (pos.departamento as string) || 'General';
             if (!positionGroups[category]) {
               positionGroups[category] = { employees: 0, totalSalary: 0, count: 0 };
             }
-            const employees = parseFloat(pos.employeeCount || pos.cantidad || 1);
-            const salary = parseFloat(pos.grossSalary || pos.sueldo_bruto || pos.salario || 0);
+            const employees = parseFloat(String(pos.employeeCount || pos.cantidad || 1));
+            const salary = parseFloat(String(pos.grossSalary || pos.sueldo_bruto || pos.salario || 0));
 
             positionGroups[category].employees += employees;
             positionGroups[category].totalSalary += salary * employees;
             positionGroups[category].count += employees;
           });
 
-          return Object.entries(positionGroups).map(([category, data]: [string, any], index: number) => ({
+          return Object.entries(positionGroups).map(([category, data]: [string, PositionGroup], index: number) => ({
             name: category,
             employees: data.employees,
             avgSalary: data.count > 0 ? data.totalSalary / data.count : 0,
@@ -181,18 +236,18 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
           }));
         } else if (salaryData.categories) {
           // If salary data is grouped by category
-          return Object.entries(salaryData.categories).map(([name, item]: [string, any], index: number) => ({
+          return Object.entries(salaryData.categories).map(([name, item]: [string, SalaryCategoryItem], index: number) => ({
             name: name,
-            avgSalary: parseFloat(item.avg_salary || item.promedio || 0),
-            employees: parseInt(item.employee_count || item.cantidad || 0),
+            avgSalary: parseFloat(String(item.avg_salary || item.promedio || 0)),
+            employees: parseInt(String(item.employee_count || item.cantidad || 0)),
             fill: COLORS[index % COLORS.length]
           }));
         } else {
           // Single salary data
           return [{
             name: 'Salarios',
-            avgSalary: parseFloat(salaryData.avg_salary || salaryData.promedio || 0),
-            employees: parseInt(salaryData.employee_count || salaryData.total_employees || 0),
+            avgSalary: parseFloat(String(salaryData.avg_salary || salaryData.promedio || 0)),
+            employees: parseInt(String(salaryData.employee_count || salaryData.total_employees || 0)),
             fill: COLORS[0]
           }];
         }
@@ -203,16 +258,16 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
         if (!investmentData) return [];
 
         if (Array.isArray(investmentData)) {
-          return investmentData.map((inv: any, index: number) => ({
+          return investmentData.map((inv: InvestmentItem, index: number) => ({
             name: inv.description || inv.name || 'Inversión',
-            value: parseFloat(inv.net_value || inv.value || 0),
+            value: parseFloat(String(inv.net_value || inv.value || 0)),
             fill: COLORS[index % COLORS.length]
           }));
         } else {
           // If investment data is a single object
           return [{
             name: investmentData.description || investmentData.name || 'Inversión Total',
-            value: parseFloat(investmentData.net_value || investmentData.value || 0),
+            value: parseFloat(String(investmentData.net_value || investmentData.value || 0)),
             fill: COLORS[0]
           }];
         }
@@ -223,23 +278,23 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
         if (!contractData) return [];
 
         if (Array.isArray(contractData)) {
-          return contractData.map((item: any, index: number) => ({
+          return contractData.map((item: ContractItem, index: number) => ({
             name: item.title || item.description || `Contrato ${index + 1}`,
-            value: parseFloat(item.amount || 0),
+            value: parseFloat(String(item.amount || 0)),
             fill: COLORS[index % COLORS.length]
           }));
         } else if (contractData.documents) {
           // Handle contracts stored as documents
-          return (contractData.documents as any[]).map((item: any, index: number) => ({
+          return (contractData.documents as ContractItem[]).map((item: ContractItem, index: number) => ({
             name: item.title || item.description || `Contrato ${index + 1}`,
-            value: parseFloat(item.amount || item.budget || 0),
+            value: parseFloat(String(item.amount || item.budget || 0)),
             fill: COLORS[index % COLORS.length]
           }));
         } else {
           // Single contract data
           return [{
             name: contractData.title || contractData.description || 'Contratos',
-            value: parseFloat(contractData.amount || contractData.total_amount || 0),
+            value: parseFloat(String(contractData.amount || contractData.total_amount || 0)),
             fill: COLORS[0]
           }];
         }
@@ -251,9 +306,9 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
 
         if (treasuryData.movements) {
           const categories: Record<string, number> = {};
-          treasuryData.movements.forEach((movement: any) => {
-            const category = movement.category || movement.tipo || 'General';
-            categories[category] = (categories[category] || 0) + Math.abs(parseFloat(movement.amount || movement.monto || 0));
+          treasuryData.movements.forEach((movement: Record<string, unknown>) => {
+            const category = (movement.category as string) || (movement.tipo as string) || 'General';
+            categories[category] = (categories[category] || 0) + Math.abs(parseFloat(String(movement.amount || movement.monto || 0)));
           });
 
           return Object.entries(categories).map(([name, amount], index) => ({
@@ -265,7 +320,7 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
           // Single treasury data
           return [{
             name: 'Tesorería',
-            value: parseFloat(treasuryData.amount || treasuryData.total || 0),
+            value: parseFloat(String(treasuryData.amount || treasuryData.total || 0)),
             fill: COLORS[0]
           }];
         }
@@ -276,7 +331,7 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
         if (!propertyData) return [];
 
         if (Array.isArray(propertyData)) {
-          return propertyData.map((item: any, index: number) => ({
+          return propertyData.map((item: PropertyItem, index: number) => ({
             name: item.owner || `Declaración ${index + 1}`,
             value: 1, // Just count the declarations
             fill: COLORS[index % COLORS.length]
@@ -285,11 +340,12 @@ const ComprehensiveChart: React.FC<ComprehensiveChartProps> = ({
           // Single property data
           return [{
             name: 'Declaraciones Patrimoniales',
-            value: parseInt(propertyData.count || propertyData.total || 0),
+            value: parseInt(String(propertyData.count || propertyData.total || 0)),
             fill: COLORS[0]
           }];
         }
       }
+
 
       default:
         return [];

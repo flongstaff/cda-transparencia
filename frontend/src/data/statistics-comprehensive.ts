@@ -55,7 +55,7 @@ export const municipalStatistics = {
       'Resolutions',
       'Service Reports'
     ],
-    years_covered: '2018-2025',
+    years_covered: '2000-2025',
     update_frequency: 'Quarterly',
     transparency_index: 76 // From municipalities comparison
   },

@@ -1,0 +1,64 @@
+{
+  "year": 2025,
+  "total_documents": 2,
+  "categories": {
+    "Documentos Generales": [
+      {
+        "id": "pdf-66",
+        "title": "ORGANIGRAMA 2025",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/ORGANIGRAMA-2025.pdf",
+        "year": 2025,
+        "category": "Documentos Generales",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Documentos Generales",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/ORGANIGRAMA-2025.pdf",
+        "size_mb": 0.52,
+        "last_modified": ""
+      }
+    ],
+    "Presupuesto Municipal": [
+      {
+        "id": "pdf-144",
+        "title": "PRESUPUESTO 2025 APROBADO ORD 3280 24",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+        "year": 2025,
+        "category": "Presupuesto Municipal",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Presupuesto Municipal",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+        "size_mb": 9.18,
+        "last_modified": ""
+      }
+    ]
+  },
+  "documents": [
+    {
+      "id": "pdf-66",
+      "title": "ORGANIGRAMA 2025",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/ORGANIGRAMA-2025.pdf",
+      "year": 2025,
+      "category": "Documentos Generales",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Documentos Generales",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/ORGANIGRAMA-2025.pdf",
+      "size_mb": 0.52,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-144",
+      "title": "PRESUPUESTO 2025 APROBADO ORD 3280 24",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+      "year": 2025,
+      "category": "Presupuesto Municipal",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Presupuesto Municipal",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+      "size_mb": 9.18,
+      "last_modified": ""
+    }
+  ]
+}
