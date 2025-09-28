@@ -42,7 +42,10 @@
     "tax_ordinances": {
       "type": "tax_regulation",
       "description": "Ordenanzas Impositivas",
-      "ordinances": ["3202/24", "3282/25"],
+      "ordinances": [
+        "3202/24",
+        "3282/25"
+      ],
       "documents": [
         {
           "ordinance": "3202/24",
@@ -117,6 +120,12 @@
         "year": 2017,
         "format": "pdf"
       }
+    },
+    "external_data": {
+      "csv_files": "/data/csvs/",
+      "pdf_files": "/data/pdfs/",
+      "csv_count": 0,
+      "pdf_count": 202
     }
   },
   "summary": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-28T05:47:45.525Z",
+  "generatedAt": "2025-09-28T08:05:54.680Z",
   "dataSources": {
     "csv": [
       {
@@ -615,6 +615,14 @@
       ]
     },
     "processed/cleaned": {
+      "type": "directory",
+      "contents": []
+    },
+    "processed/csvs": {
+      "type": "directory",
+      "contents": []
+    },
+    "processed/pdfs": {
       "type": "directory",
       "contents": []
     },

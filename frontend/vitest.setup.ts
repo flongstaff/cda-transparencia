@@ -69,70 +69,84 @@ vi.mock('lucide-react', () => ({
 }));
 
 // Mock Recharts
-vi.mock('recharts', () => ({
-  ResponsiveContainer: ({ children }: { children: React.ReactNode }) =>
-    React.createElement('div', { 'data-testid': 'responsive-container' }, children),
-  BarChart: ({ children, data }: { children: React.ReactNode; data: any[] }) =>
-    React.createElement('div', {
-      'data-testid': 'bar-chart',
-      'data-length': data?.length || 0
-    }, children),
-  LineChart: ({ children, data }: { children: React.ReactNode; data: any[] }) =>
-    React.createElement('div', {
-      'data-testid': 'line-chart',
-      'data-length': data?.length || 0
-    }, children),
-  PieChart: ({ children, data }: { children: React.ReactNode; data: any[] }) =>
-    React.createElement('div', {
-      'data-testid': 'pie-chart',
-      'data-length': data?.length || 0
-    }, children),
-  AreaChart: ({ children, data }: { children: React.ReactNode; data: any[] }) =>
-    React.createElement('div', {
-      'data-testid': 'area-chart',
-      'data-length': data?.length || 0
-    }, children),
-  ComposedChart: ({ children, data }: { children: React.ReactNode; data: any[] }) =>
-    React.createElement('div', {
-      'data-testid': 'composed-chart',
-      'data-length': data?.length || 0
-    }, children),
-  Bar: ({ dataKey, fill }: { dataKey: string; fill: string }) =>
-    React.createElement('div', {
-      'data-testid': `bar-${dataKey}`,
-      style: { backgroundColor: fill }
-    }),
-  Line: ({ dataKey, stroke }: { dataKey: string; stroke: string }) =>
-    React.createElement('div', {
-      'data-testid': `line-${dataKey}`,
-      style: { borderColor: stroke }
-    }),
-  Area: ({ dataKey, fill }: { dataKey: string; fill: string }) =>
-    React.createElement('div', {
-      'data-testid': `area-${dataKey}`,
-      style: { backgroundColor: fill }
-    }),
-  Cell: ({ fill }: { fill: string }) =>
-    React.createElement('div', {
-      'data-testid': 'pie-cell',
-      style: { backgroundColor: fill }
-    }),
-  XAxis: ({ dataKey }: { dataKey: string }) =>
-    React.createElement('div', {
-      'data-testid': 'x-axis',
-      'data-key': dataKey
-    }),
-  YAxis: () => React.createElement('div', { 'data-testid': 'y-axis' }),
-  CartesianGrid: () => React.createElement('div', { 'data-testid': 'cartesian-grid' }),
-  Tooltip: ({ active, payload }: any) => {
-    if (active && payload && payload[0]) {
-      return React.createElement('div', { 'data-testid': 'tooltip' },
-        `${payload[0].name}: $${payload[0].value?.toLocaleString()}`);
-    }
-    return null;
-  },
-  Legend: () => React.createElement('div', { 'data-testid': 'legend' }),
-}));
+vi.mock('recharts', async (importOriginal) => {
+  const actual = await importOriginal();
+  return {
+    ...actual,
+    ResponsiveContainer: ({ children }: { children: React.ReactNode }) =>
+      React.createElement('div', { 'data-testid': 'responsive-container' }, children),
+    BarChart: ({ children, data }: { children: React.ReactNode; data: any[] }) =>
+      React.createElement('div', {
+        'data-testid': 'bar-chart',
+        'data-length': data?.length || 0
+      }, children),
+    LineChart: ({ children, data }: { children: React.ReactNode; data: any[] }) =>
+      React.createElement('div', {
+        'data-testid': 'line-chart',
+        'data-length': data?.length || 0
+      }, children),
+    PieChart: ({ children, data }: { children: React.ReactNode; data: any[] }) =>
+      React.createElement('div', {
+        'data-testid': 'pie-chart',
+        'data-length': data?.length || 0
+      }, children),
+    AreaChart: ({ children, data }: { children: React.ReactNode; data: any[] }) =>
+      React.createElement('div', {
+        'data-testid': 'area-chart',
+        'data-length': data?.length || 0
+      }, children),
+    ComposedChart: ({ children, data }: { children: React.ReactNode; data: any[] }) =>
+      React.createElement('div', {
+        'data-testid': 'composed-chart',
+        'data-length': data?.length || 0
+      }, children),
+    Sankey: ({ children, data }: { children: React.ReactNode; data: any[] }) =>
+      React.createElement('div', {
+        'data-testid': 'sankey',
+        'data-length': data?.length || 0
+      }, children),
+    Pie: ({ children, data }: { children: React.ReactNode; data: any[] }) =>
+      React.createElement('div', {
+        'data-testid': 'pie',
+        'data-length': data?.length || 0
+      }, children),
+    Bar: ({ dataKey, fill }: { dataKey: string; fill: string }) =>
+      React.createElement('div', {
+        'data-testid': `bar-${dataKey}`,
+        style: { backgroundColor: fill }
+      }),
+    Line: ({ dataKey, stroke }: { dataKey: string; stroke: string }) =>
+      React.createElement('div', {
+        'data-testid': `line-${dataKey}`,
+        style: { borderColor: stroke }
+      }),
+    Area: ({ dataKey, fill }: { dataKey: string; fill: string }) =>
+      React.createElement('div', {
+        'data-testid': `area-${dataKey}`,
+        style: { backgroundColor: fill }
+      }),
+    Cell: ({ fill }: { fill: string }) =>
+      React.createElement('div', {
+        'data-testid': 'pie-cell',
+        style: { backgroundColor: fill }
+      }),
+    XAxis: ({ dataKey }: { dataKey: string }) =>
+      React.createElement('div', {
+        'data-testid': 'x-axis',
+        'data-key': dataKey
+      }),
+    YAxis: () => React.createElement('div', { 'data-testid': 'y-axis' }),
+    CartesianGrid: () => React.createElement('div', { 'data-testid': 'cartesian-grid' }),
+    Tooltip: ({ active, payload }: any) => {
+      if (active && payload && payload[0]) {
+        return React.createElement('div', { 'data-testid': 'tooltip' },
+          `${payload[0].name}: ${payload[0].value?.toLocaleString()}`);
+      }
+      return null;
+    },
+    Legend: () => React.createElement('div', { 'data-testid': 'legend' }),
+  };
+});
 
 // Mock D3 Sankey
 vi.mock('d3-sankey', () => ({

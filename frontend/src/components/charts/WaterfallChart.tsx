@@ -8,7 +8,7 @@ import ChartSkeleton from '../ui/ChartSkeleton';
 
 // Data validation schema
 const dataPointSchema = {
-  isValid: (props: Record<string, unknown>) => 
+  isValid: (item: Record<string, unknown>): item is WaterfallDataPoint =>
     typeof item === 'object' &&
     item !== null &&
     typeof item.label === 'string' &&
@@ -33,7 +33,7 @@ interface WaterfallChartProps {
     start: string;
     end: string;
   };
-  onStepClick?: (dataPoint: any, index: number) => void;
+  onStepClick?: (dataPoint: WaterfallDataPoint, index: number) => void;
   className?: string;
 }
 
@@ -53,7 +53,7 @@ const WaterfallChart: React.FC<WaterfallChartProps> = ({
 }) => {
   const { prefersReducedMotion, isScreenReader, language } = useAccessibility();
   const [error, setError] = useState<Error | null>(null);
-  const [processedData, setProcessedData] = useState<any[]>([]);
+  const [processedData, setProcessedData] = useState<WaterfallDataPoint[]>([]);
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
@@ -143,7 +143,13 @@ const WaterfallChart: React.FC<WaterfallChartProps> = ({
     });
   }, [currency, language]);
 
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  interface TooltipProps {
+    active?: boolean;
+    payload?: Array<{ name: string; value: number; color: string }>;
+    label?: string;
+  }
+
+  const CustomTooltip = ({ active, payload, label }: TooltipProps) => {
     if (active && payload && payload.length) {
       const item = payload[0].payload;
       const change = item.value;

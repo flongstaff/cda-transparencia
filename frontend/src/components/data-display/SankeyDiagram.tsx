@@ -8,7 +8,7 @@ import { ResponsiveContainer, Sankey, Tooltip } from 'recharts';
 import { motion } from 'framer-motion';
 import { useAccessibility } from '../../utils/accessibility';
 import { monitoring } from '../../utils/monitoring';
-import ChartSkeleton from '../ui/ChartSkeleton';
+import ChartSkeleton from '../skeletons/ChartSkeleton';
 
 // Types for Sankey data
 interface SankeyNode {
@@ -44,7 +44,16 @@ interface SankeyDiagramProps {
 }
 
 // Custom tooltip component
-const CustomTooltip: React.FC<any> = ({ active, payload }) => {
+interface TooltipProps {
+  active?: boolean;
+  payload?: Array<{
+    name: string;
+    value: number;
+    color: string;
+  }>;
+}
+
+const CustomTooltip: React.FC<TooltipProps> = ({ active, payload }) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
     return (

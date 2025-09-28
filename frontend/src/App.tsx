@@ -10,53 +10,24 @@ import GovernmentHeader from './components/layout/GovernmentHeader';
 import Sidebar from './components/layout/Sidebar';
 import Footer from './components/layout/Footer';
 
-// Main Dashboard Pages
-import MasterDashboard from './pages/MasterDashboard';
-
-// Financial Pages
+// Core Pages
 import Budget from './pages/Budget';
 import Treasury from './pages/Treasury';
 import ExpensesPage from './pages/ExpensesPage';
 import DebtPage from './pages/DebtPage';
 import InvestmentsPage from './pages/InvestmentsPage';
-
-// Human Resources
 import Salaries from './pages/Salaries';
-
-// Contracts and Procurement
 import ContractsAndTendersPage from './pages/ContractsAndTendersPage';
-
-// Documents & Reports
 import Documents from './pages/Documents';
 import Reports from './pages/Reports';
-
-// Audit and Analysis
-import Audits from './pages/Audits';
-import AuditDashboard from './pages/AuditDashboard';
-import AuditAnomaliesExplainer from './pages/AuditAnomaliesExplainer';
-import FinancialAuditDashboard from './pages/FinancialAuditDashboard';
-
-// Data and Transparency
 import Database from './pages/Database';
 import SearchPage from './pages/SearchPage';
-import TransparencyDashboard from './pages/TransparencyDashboard';
-import EnhancedTransparencyDashboard from './pages/EnhancedTransparencyDashboard';
-import UnifiedTransparencyDashboard from './pages/UnifiedTransparencyDashboard';
-
-// Information Pages
 import About from './pages/About';
 import Contact from './pages/Contact';
 import PropertyDeclarations from './pages/PropertyDeclarations';
-
-// Enhanced Home Page
 import EnhancedHome from './pages/EnhancedHome';
-
-// Test Pages
 import TestAllChartsPage from './pages/TestAllChartsPage';
-
-// Additional Dashboard Pages
 import DataVerificationPage from './pages/DataVerificationPage';
-import AllChartsDashboard from './pages/AllChartsDashboard';
 import DashboardCompleto from './pages/DashboardCompleto';
 import NotFoundPage from './pages/NotFoundPage';
 import MonitoringDashboard from './pages/MonitoringDashboard';
@@ -79,8 +50,10 @@ function App() {
                   <Route path="/" element={<EnhancedHome />} />
                   <Route path="/dashboard" element={<DashboardCompleto />} />
 
-                  {/* Financial Management Routes */}
+                  {/* Financial Management Routes - All redirected to Dashboard Completo */}
                   <Route path="/finances" element={<DashboardCompleto />} />
+                  <Route path="/financial" element={<DashboardCompleto />} />
+                  <Route path="/financial-analysis" element={<DashboardCompleto />} />
                   <Route path="/budget" element={<Budget />} />
                   <Route path="/treasury" element={<Treasury />} />
                   <Route path="/expenses" element={<ExpensesPage />} />
@@ -97,21 +70,23 @@ function App() {
                   <Route path="/documents" element={<Documents />} />
                   <Route path="/reports" element={<Reports />} />
 
-                  {/* Analysis & Audit Routes */}
-                  <Route path="/audits" element={<Audits />} />
-                  <Route path="/audit-dashboard" element={<AuditDashboard />} />
-                  <Route path="/audit-anomalies" element={<AuditAnomaliesExplainer />} />
-                  <Route path="/financial-audit" element={<FinancialAuditDashboard />} />
+                  {/* Analysis & Audit Routes - All redirected to Dashboard Completo */}
+                  <Route path="/audits" element={<DashboardCompleto />} />
+                  <Route path="/audit-dashboard" element={<DashboardCompleto />} />
+                  <Route path="/audit-anomalies" element={<DashboardCompleto />} />
+                  <Route path="/financial-audit" element={<DashboardCompleto />} />
+                  <Route path="/transparency" element={<DashboardCompleto />} />
+                  <Route path="/enhanced-transparency" element={<DashboardCompleto />} />
+                  <Route path="/unified-transparency" element={<DashboardCompleto />} />
+                  <Route path="/analysis" element={<DashboardCompleto />} />
                   <Route path="/property-declarations" element={<PropertyDeclarations />} />
 
-                  {/* Data & Transparency Routes */}
+                  {/* Data & Charts Routes - All redirected to Dashboard Completo */}
                   <Route path="/database" element={<Database />} />
-                  <Route path="/all-charts" element={<AllChartsDashboard />} />
+                  <Route path="/all-charts" element={<DashboardCompleto />} />
+                  <Route path="/charts" element={<DashboardCompleto />} />
                   <Route path="/completo" element={<DashboardCompleto />} />
                   <Route path="/search" element={<SearchPage />} />
-                  <Route path="/transparency" element={<TransparencyDashboard />} />
-                  <Route path="/enhanced-transparency" element={<EnhancedTransparencyDashboard />} />
-                  <Route path="/unified-transparency" element={<UnifiedTransparencyDashboard />} />
 
                   {/* Information Pages */}
                   <Route path="/about" element={<About />} />

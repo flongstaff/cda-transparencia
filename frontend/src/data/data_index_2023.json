@@ -5,7 +5,14 @@
     "salary_data": {
       "type": "monthly_payroll",
       "description": "Sueldos mensuales del personal municipal",
-      "months_available": ["Enero", "Marzo", "Mayo", "Junio", "Julio", "Septiembre"],
+      "months_available": [
+        "Enero",
+        "Marzo",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Septiembre"
+      ],
       "documents": [
         {
           "month": "Enero 2023",
@@ -42,7 +49,12 @@
     "budget_execution": {
       "type": "quarterly_execution",
       "description": "Estados de Ejecución Presupuestaria Trimestral",
-      "quarters": ["Marzo", "Junio", "3er Trimestre", "4to Trimestre"],
+      "quarters": [
+        "Marzo",
+        "Junio",
+        "3er Trimestre",
+        "4to Trimestre"
+      ],
       "documents": [
         {
           "period": "Marzo 2023",
@@ -136,11 +148,17 @@
     "caif_data": {
       "type": "investment_financing",
       "description": "Cuenta de Ahorro, Inversión y Financiamiento",
-      "quarters": ["3er Trimestre", "4to Trimestre"],
+      "quarters": [
+        "3er Trimestre",
+        "4to Trimestre"
+      ],
       "documents": [
         {
           "period": "3er Trimestre 2023",
-          "files": ["CAIF-3.pdf", "CAIF-3°TRIMESTRE.pdf"],
+          "files": [
+            "CAIF-3.pdf",
+            "CAIF-3°TRIMESTRE.pdf"
+          ],
           "format": "pdf"
         },
         {
@@ -187,6 +205,12 @@
         "file": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
         "format": "pdf"
       }
+    },
+    "external_data": {
+      "csv_files": "/data/csvs/",
+      "pdf_files": "/data/pdfs/",
+      "csv_count": 0,
+      "pdf_count": 202
     }
   },
   "summary": {
@@ -229,7 +253,7 @@
     "recommended_services": [
       "FinancialDataService",
       "YearlyDataService",
-      "CrossValidationService", 
+      "CrossValidationService",
       "OfficialDataService",
       "MarkdownDataService"
     ],

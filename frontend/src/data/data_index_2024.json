@@ -5,7 +5,11 @@
     "debt_analysis": {
       "type": "debt_management",
       "description": "Análisis de Deuda y Perfil de Vencimientos",
-      "periods": ["Junio", "Septiembre", "Diciembre"],
+      "periods": [
+        "Junio",
+        "Septiembre",
+        "Diciembre"
+      ],
       "documents": [
         {
           "period": "Junio 2024",
@@ -21,7 +25,10 @@
             "03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-9-2024.pdf",
             "03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-9-2024.xlsx"
           ],
-          "formats": ["pdf", "excel"]
+          "formats": [
+            "pdf",
+            "excel"
+          ]
         },
         {
           "period": "Diciembre 2024",
@@ -33,7 +40,10 @@
     "salary_scales": {
       "type": "salary_scale_update",
       "description": "Escalas Salariales Actualizadas",
-      "updates": ["Febrero", "Octubre"],
+      "updates": [
+        "Febrero",
+        "Octubre"
+      ],
       "documents": [
         {
           "period": "Febrero 2024",
@@ -50,7 +60,12 @@
     "quarterly_budget_execution": {
       "type": "quarterly_execution",
       "description": "Ejecución Presupuestaria Trimestral Detallada",
-      "quarters": ["Marzo", "Junio", "3er Trimestre", "4to Trimestre"],
+      "quarters": [
+        "Marzo",
+        "Junio",
+        "3er Trimestre",
+        "4to Trimestre"
+      ],
       "documents": [
         {
           "period": "Marzo 2024",
@@ -101,7 +116,12 @@
     "gender_perspective_budget": {
       "type": "gender_budget",
       "description": "Ejecución de Gastos con Perspectiva de Género",
-      "quarters": ["Marzo", "Junio", "3er Trimestre", "4to Trimestre"],
+      "quarters": [
+        "Marzo",
+        "Junio",
+        "3er Trimestre",
+        "4to Trimestre"
+      ],
       "documents": [
         {
           "period": "Marzo 2024",
@@ -128,7 +148,11 @@
     "caif_data": {
       "type": "investment_financing",
       "description": "Cuenta de Ahorro, Inversión y Financiamiento",
-      "quarters": ["Marzo", "3er Trimestre", "4to Trimestre"],
+      "quarters": [
+        "Marzo",
+        "3er Trimestre",
+        "4to Trimestre"
+      ],
       "documents": [
         {
           "period": "Marzo 2024",
@@ -201,6 +225,12 @@
         "format": "pdf",
         "approved_date": "2024-01-01"
       }
+    },
+    "external_data": {
+      "csv_files": "/data/csvs/",
+      "pdf_files": "/data/pdfs/",
+      "csv_count": 0,
+      "pdf_count": 202
     }
   },
   "summary": {

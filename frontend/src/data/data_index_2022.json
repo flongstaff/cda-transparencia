@@ -5,10 +5,15 @@
     "caif": {
       "type": "financial_planning",
       "description": "Cuenta de Ahorro, Inversión y Financiamiento",
-      "quarters": ["Q1", "Q2", "Q3", "Q4"],
+      "quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
       "documents": [
         "CAIF-1",
-        "CAIF-2", 
+        "CAIF-2",
         "CAIF-3°TRI-2022",
         "CAIF-4°TRE-2022"
       ]
@@ -19,7 +24,11 @@
       "categories": [
         {
           "name": "Gastos por Finalidad y Función",
-          "quarters": ["Q1", "Q3", "Q4"],
+          "quarters": [
+            "Q1",
+            "Q3",
+            "Q4"
+          ],
           "documents": [
             "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
             "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf"
@@ -27,7 +36,11 @@
         },
         {
           "name": "Gastos por Carácter Económico",
-          "quarters": ["Q1", "Q3", "Q4"],
+          "quarters": [
+            "Q1",
+            "Q3",
+            "Q4"
+          ],
           "documents": [
             "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
             "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf"
@@ -35,7 +48,11 @@
         },
         {
           "name": "Recursos por Procedencia",
-          "quarters": ["Q1", "Q3", "Q4"],
+          "quarters": [
+            "Q1",
+            "Q3",
+            "Q4"
+          ],
           "documents": [
             "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
             "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf"
@@ -58,7 +75,7 @@
           "type": "health_services"
         },
         {
-          "name": "Habilitaciones Municipales", 
+          "name": "Habilitaciones Municipales",
           "document": "HABILITACIONES MUNICIPALES 2022.pdf",
           "type": "municipal_permits"
         },
@@ -87,7 +104,7 @@
       "documents": [
         "79/2022",
         "747/2022",
-        "1146/2022", 
+        "1146/2022",
         "1279/2022",
         "1593/2022"
       ]
@@ -102,7 +119,10 @@
         },
         {
           "name": "Monitoreo Municipal",
-          "documents": ["MONITOREO 2022.pdf", "NOTAS MONITOREO 2022.pdf"]
+          "documents": [
+            "MONITOREO 2022.pdf",
+            "NOTAS MONITOREO 2022.pdf"
+          ]
         },
         {
           "name": "Reportes Ciudadanos",
@@ -113,11 +133,20 @@
     "gender_perspective": {
       "type": "gender_budget",
       "description": "Gastos con Perspectiva de Género",
-      "quarters": ["Q3", "Q4"],
+      "quarters": [
+        "Q3",
+        "Q4"
+      ],
       "documents": [
         "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
         "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf"
       ]
+    },
+    "external_data": {
+      "csv_files": "/data/csvs/",
+      "pdf_files": "/data/pdfs/",
+      "csv_count": 0,
+      "pdf_count": 202
     }
   },
   "total_documents": 23,
@@ -141,7 +170,7 @@
   "services_integration": {
     "recommended_services": [
       "FinancialDataService",
-      "YearlyDataService", 
+      "YearlyDataService",
       "DataValidationService",
       "MarkdownDataService"
     ],

@@ -89,7 +89,13 @@ const SEVERITY_COLORS = {
 };
 
 // Red flag detection functions
-const detectBudgetExecutionFlags = (data: any[]): DataFlag[] => {
+interface BudgetExecutionData {
+  year: number;
+  budget: number;
+  executed: number;
+}
+
+const detectBudgetExecutionFlags = (data: BudgetExecutionData[]): DataFlag[] => {
   const flags: DataFlag[] = [];
 
   data.forEach(yearData => {
@@ -121,7 +127,12 @@ const detectBudgetExecutionFlags = (data: any[]): DataFlag[] => {
   return flags;
 };
 
-const detectFunctionPriorityFlags = (data: any[]): DataFlag[] => {
+interface SectorSpendingData {
+  sector: string;
+  executed: number;
+}
+
+const detectFunctionPriorityFlags = (data: SectorSpendingData[]): DataFlag[] => {
   const flags: DataFlag[] = [];
 
   const adminSpending = data.find(d => d.sector === 'Administración')?.executed || 0;
@@ -144,15 +155,21 @@ const detectFunctionPriorityFlags = (data: any[]): DataFlag[] => {
   return flags;
 };
 
-const detectProcurementFlags = (procurementData: any[]): DataFlag[] => {
+interface ProcurementData {
+  date: string;
+  amount: number;
+  supplier: string;
+}
+
+const detectProcurementFlags = (procurementData: ProcurementData[]): DataFlag[] => {
   const flags: DataFlag[] = [];
 
   // Group procurement by month
-  const monthGroups = procurementData.reduce((acc: any, proc) => {
+  const monthGroups = procurementData.reduce((acc: Record<number, number>, proc) => {
     const month = new Date(proc.date).getMonth();
     acc[month] = (acc[month] || 0) + 1;
     return acc;
-  }, {});
+  }, {} as Record<number, number>);
 
   // Flag clustering in November (month 10)
   if (monthGroups[10] && monthGroups[10] >= 5) {
@@ -180,7 +197,31 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
 }) => {
   const [currentAnalysis, setCurrentAnalysis] = useState<RedFlagAnalysis>(analysis);
   const [redFlags, setRedFlags] = useState<DataFlag[]>([]);
-  const [analysisData, setAnalysisData] = useState<any[]>([]);
+  interface AnalysisDataPoint {
+    year?: number;
+    budget?: number;
+    executed?: number;
+    executionRate?: number;
+    sector?: string;
+    function?: string;
+    percentage?: number;
+    id?: string;
+    indicator?: string;
+    gap?: number;
+    planned?: number;
+    category?: string;
+    budgeted?: number;
+    quarter?: string;
+    growth?: number;
+    date?: string;
+    amount?: number;
+    supplier?: string;
+    item?: string;
+    flags?: number;
+    value?: number;
+  }
+
+  const [analysisData, setAnalysisData] = useState<AnalysisDataPoint[]>([]);
 
   // Load audit data using React Query
   const {
@@ -229,7 +270,7 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
   useEffect(() => {
     if (!financialData || financialData.length === 0) return;
 
-    let processedData: any[] = [];
+    let processedData: AnalysisDataPoint[] = [];
     let flags: DataFlag[] = [];
 
     switch (currentAnalysis) {
@@ -340,7 +381,7 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
         ];
 
         // Flag quarters with >20% growth
-        processedData.forEach((q, index) => {
+        processedData.forEach((q) => {
           if (q.growth > 20) {
             flags.push({
               type: 'quarterly_surge',
@@ -474,7 +515,7 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
               <YAxis yAxisId="left" />
               <YAxis yAxisId="right" orientation="right" />
               <Tooltip
-                formatter={(value: any, name: string) => [
+                formatter={(value: number | string, name: string) => [
                   typeof value === 'number' ? `$${(value / 1000000).toFixed(0)}M` : value,
                   name === 'budget' ? 'Presupuesto' :
                   name === 'executed' ? 'Ejecutado' :
@@ -511,7 +552,7 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
                   />
                 ))}
               </Pie>
-              <Tooltip formatter={(value: any) => [`$${(value / 1000000).toFixed(0)}M`, 'Ejecutado']} />
+              <Tooltip formatter={(value: number) => [`$${(value / 1000000).toFixed(0)}M`, 'Ejecutado']} />
               <Legend />
             </PieChart>
           </ResponsiveContainer>
@@ -529,7 +570,7 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
               />
               <YAxis dataKey="item" type="category" />
               <Tooltip
-                formatter={(value: any, name: string) => [
+                formatter={(value: number | string, name: string) => [
                   name === 'value' ? `$${(value / 1000000).toFixed(1)}M` : value,
                   'Valor'
                 ]}
@@ -563,7 +604,7 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="category" />
               <YAxis />
-              <Tooltip formatter={(value: any) => [`$${(value / 1000000).toFixed(1)}M`, 'Monto']} />
+              <Tooltip formatter={(value: number) => [`$${(value / 1000000).toFixed(1)}M`, 'Monto']} />
               <Legend />
               <Bar dataKey="budgeted" fill={SEVERITY_COLORS.info} name="Presupuestado" />
               <Bar dataKey="executed" fill={SEVERITY_COLORS.medium} name="Ejecutado" />
@@ -578,7 +619,7 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="quarter" />
               <YAxis />
-              <Tooltip formatter={(value: any) => [`$${(value / 1000000).toFixed(0)}M`, 'Presupuesto']} />
+              <Tooltip formatter={(value: number) => [`$${(value / 1000000).toFixed(0)}M`, 'Presupuesto']} />
               <Legend />
               <Area type="monotone" dataKey="budgeted" fill={SEVERITY_COLORS.info} />
               <Line type="monotone" dataKey="growth" stroke={SEVERITY_COLORS.high} />

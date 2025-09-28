@@ -27,10 +27,40 @@ vi.mock('framer-motion', () => ({
   }
 }));
 
-// Mock Recharts (Sankey is not part of recharts, so we'll mock a custom implementation)
-vi.mock('recharts', () => ({
-  ResponsiveContainer: ({ children }: any) => <div data-testid="responsive-container">{children}</div>
-}));
+// Mock Recharts with Sankey component
+vi.mock('recharts', async (importOriginal) => {
+  const actual = await importOriginal();
+  return {
+    ...actual,
+    ResponsiveContainer: ({ children }: any) => <div data-testid="responsive-container">{children}</div>,
+    Sankey: ({ children, data }: any) => (
+      <div 
+        data-testid="sankey-svg" 
+        data-nodes={data?.nodes?.length || 0}
+        data-links={data?.links?.length || 0}
+      >
+        {children}
+        {data?.nodes?.map((node: any, index: number) => (
+          <div 
+            key={index} 
+            data-testid={`sankey-node-${node.id || index}`}
+          >
+            {node.name}
+          </div>
+        ))}
+        {data?.links?.map((link: any, index: number) => (
+          <div 
+            key={index} 
+            data-testid={`sankey-link-${index}`}
+          >
+            Link {index}
+          </div>
+        ))}
+      </div>
+    ),
+    Tooltip: ({ content }: any) => content
+  };
+});
 
 // Mock D3 for Sankey implementation
 vi.mock('d3-sankey', () => ({
