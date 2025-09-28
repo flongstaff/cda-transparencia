@@ -1,8 +1,837 @@
-source_file,page_number,table_number,row_number,extraction_method,extraction_date,Evolución de los Recursos,Vigente,Devengado,Percibido,Cuenta Ahorro Inversión Financiamiento,Importe,Evolución de Gastos por Objeto,Preventivo,Compromiso,Pagado,Evolución de Gastos por Programa,Movimientos de Tesorería,Estado de Situación Patrimonial,Saldo,Rubro - Descripción,Recursos,col_2,col_3,Gastos,col_5,col_6,col_7,"Dif. entre
+source_file,page_number,table_number,row_number,extraction_method,extraction_date,Rubro - Descripción,Recursos,col_2,col_3,Gastos,col_5,col_6,col_7,"Dif. entre
 Rec.Percibidos
 y Gastos
-Pagados( * )",Resultado Artículo 44
-Situacion-Economico-Financiera-Junio.pdf,1,1,1,pdfplumber,2025-09-27T17:03:13.636330,"1. Presupuestarios
+Pagados( * )",Evolución de los Recursos,Vigente,Devengado,Percibido,Cuenta Ahorro Inversión Financiamiento,Importe,Evolución de Gastos por Objeto,Preventivo,Compromiso,Pagado,Movimientos de Tesorería,Estado de Situación Patrimonial,Saldo,Cuenta Descripción,Evolución de Gastos por Programa,Resultado Artículo 44,"R.A.F.A.M. Hoja: 2 de 7
+Polķtica Presupuestaria de la Jurisdicción
+o Entidad
+Municipalidad de 21/11/2024 15:18
+Form. 1
+Carmen de Areco
+Jurisdicción : Departamento Ejecutivo
+Subjurisdicción : Secretaria de Hacienda y Finanzas Presupuesto: 2025
+Entidad :",col_1,"R.A.F.A.M. Hoja: 5 de 7
+Polķtica Presupuestaria de la Jurisdicción
+o Entidad
+Municipalidad de 21/11/2024 15:18
+Form. 1
+Carmen de Areco
+Jurisdicción : Departamento Ejecutivo
+Subjurisdicción : Secretaria de Gobierno Presupuesto: 2025
+Entidad :","R.A.F.A.M. Hoja: 6 de 7
+Polķtica Presupuestaria de la Jurisdicción
+o Entidad
+Municipalidad de 21/11/2024 15:18
+Form. 1
+Carmen de Areco
+Jurisdicción : Departamento Ejecutivo
+Subjurisdicción : Secretaria de Planificacion Presupuesto: 2025
+Entidad :","R.A.F.A.M. Hoja: 7 de 20
+DESCRIPCION DEL PROGRAMA
+21/11/2024 15:27
+Municipalidad de
+Carmen de Areco
+Form. 4
+Jurisdicción : Departamento Ejecutivo
+Subjurisdicción : Secretaria de Derechos Humanos
+Entidad :
+Presupuesto: 2025
+Programa : 26 - Coordinacion de Juventud
+Unidad Ejecutora : 65 - Coordinacion de Juventud","R.A.F.A.M. Hoja: 8 de 20
+DESCRIPCION DEL PROGRAMA
+21/11/2024 15:27
+Municipalidad de
+Carmen de Areco
+Form. 4
+Jurisdicción : Departamento Ejecutivo
+Subjurisdicción : Secretaria de Derechos Humanos
+Entidad :
+Presupuesto: 2025
+Programa : 26 - Coordinacion de Juventud
+Unidad Ejecutora : 65 - Coordinacion de Juventud","R.A.F.A.M. Hoja: 20 de 20
+DESCRIPCION DEL PROGRAMA
+21/11/2024 15:27
+Municipalidad de
+Carmen de Areco
+Form. 4
+Jurisdicción : Departamento Ejecutivo
+Subjurisdicción : Secretaria de Planificacion
+Entidad :
+Presupuesto: 2025
+Programa : 25 - Direccio de Planeamiento Urbano
+Unidad Ejecutora : 57 - Direccion de Planeamieto Urbano"
+pdf_4_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,1,1,1,pdfplumber,2025-09-28T16:45:47.670001,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_4_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,2,1,1,pdfplumber,2025-09-28T16:45:47.719344,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_4_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,3,1,1,pdfplumber,2025-09-28T16:45:47.763325,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_4_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,4,1,1,pdfplumber,2025-09-28T16:45:47.830201,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_4_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,5,1,1,pdfplumber,2025-09-28T16:45:47.861597,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_64_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,1,1,1,pdfplumber,2025-09-28T16:45:56.358410,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_64_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,2,1,1,pdfplumber,2025-09-28T16:45:57.021280,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_64_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,3,1,1,pdfplumber,2025-09-28T16:45:57.065495,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_64_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,4,1,1,pdfplumber,2025-09-28T16:45:57.111191,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_64_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,5,1,1,pdfplumber,2025-09-28T16:45:57.150224,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_15_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf,1,1,1,pdfplumber,2025-09-28T16:45:57.903579,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_98_RECURSOS-AFECTADOS-VS-GASTOS.pdf,1,1,1,pdfplumber,2025-09-28T16:45:57.955367,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_98_RECURSOS-AFECTADOS-VS-GASTOS.pdf,2,1,1,pdfplumber,2025-09-28T16:45:58.009667,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_98_RECURSOS-AFECTADOS-VS-GASTOS.pdf,3,1,1,pdfplumber,2025-09-28T16:45:58.054110,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_98_RECURSOS-AFECTADOS-VS-GASTOS.pdf,4,1,1,pdfplumber,2025-09-28T16:45:58.098255,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_98_RECURSOS-AFECTADOS-VS-GASTOS.pdf,5,1,1,pdfplumber,2025-09-28T16:45:58.146205,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_98_RECURSOS-AFECTADOS-VS-GASTOS.pdf,6,1,1,pdfplumber,2025-09-28T16:45:58.173446,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_104_SITUACION-ECONOMICO-FINANCIERA.pdf,1,1,1,pdfplumber,2025-09-28T16:46:08.932711,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","1.012.932.283,35
+230.212.490,93
+208.626.646,86
+1.451.771.421,14
+710.878.842,33
+740.892.578,81
+1.451.771.421,14","955.088.753,02
+265.869.744,65
+1.220.958.497,67
+651.035.312,00
+569.923.185,67
+1.220.958.497,67","900.369.984,69
+265.871.544,65
+0,00
+1.166.241.529,34
+596.318.343,67
+569.923.185,67
+1.166.241.529,34
+85.597.741,35","I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","900.369.984,69
+847.147.637,58
+53.222.347,11
+265.871.544,65
+402.467.102,07
+1.166.241.529,34
+1.249.614.739,65
+-83.373.210,31
+101.025.334,08
+17.652.123,77",,,,,,,,,,,,,,,,,
+pdf_104_SITUACION-ECONOMICO-FINANCIERA.pdf,1,2,1,pdfplumber,2025-09-28T16:46:08.932736,,,,,,,,,,,"421.213.166,19
+175.302.981,12
+409.947.519,52
+288.565.186,07
+140.301.538,44
+6.816.867,17
+9.624.162,63
+1.451.771.421,14","408.463.749,68
+165.144.398,87
+313.979.291,12
+267.298.137,83
+94.717.445,45
+1.017.000,00
+16.646.840,47
+1.267.266.863,42
+67.213.768,79",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+22.432.292,80
+32.338.082,53
+262.915.957,31
+7.881.109,92
+0,00
+0,00
+325.567.442,56","408.463.749,68
+165.261.341,55
+398.789.378,03
+291.832.768,42
+163.859.994,00
+1.017.000,00
+16.646.840,47
+1.445.871.072,15","408.463.749,68
+146.650.623,29
+303.786.985,01
+259.217.441,77
+92.818.377,45
+987.000,00
+16.646.840,47
+1.228.571.017,67
+63.820.693,60",,,,,,,,,,,,,
+pdf_104_SITUACION-ECONOMICO-FINANCIERA.pdf,2,1,1,pdfplumber,2025-09-28T16:46:08.971851,,,,,,,,,,,,,,,"204.481.588,57
+1.251.839.270,69
+746.303.307,80
+1.292.391.711,27
+839.503.307,80
+70.729.147,99",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","1.483.753.451,60
+377.544.583,79
+1.106.208.867,81
+-72.108.956,47
+-63.987.089,12
+-8.121.867,35
+-1.411.644.495,13
+-1.411.644.495,13
+-16.311.591,84
+-1.395.332.903,29
+-507.554.288,35
+-1.005.128.778,37
+117.350.163,43",,,,,,,,,,
+pdf_104_SITUACION-ECONOMICO-FINANCIERA.pdf,2,1,2,pdfplumber,2025-09-28T16:46:08.971863,,,,,,,,,,,,,,,"2.594.532,66
+57,01
+4.810.331,71
+20.024,32
+7.688,27
+61.409,72
+2.548,20
+1.159.774,21
+384.448,50
+904.401,55
+1.660.414,44
+291.450,05
+1.922.453,75
+187.880,49
+30.499.828,50
+723.349,78
+25.498.554,83
+70.729.147,99
+70.729.147,99",,,,,"Demostración del Saldo
+CAJA
+111210104PARTICIPACION IMPUESTOS PROV. (10037/3)
+111210117RECURSOS ORDINARIOS (50328/8)
+111220101FONDO VIVIENDA MUNICIPAL (10041/0)
+111220102INMOBILIARIO RURAL AFECTADO (10085/4)
+111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
+111220106FONDO TENDIENDO REDES (10092/2)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220115FONDO DE INFRAESTRUCTURA (50405/2)
+111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,1,1,7,pdfplumber,2025-09-28T16:46:21.731782,,,,,,,,,,,,,,,,,,,,,,"3.157.727,38",111210104 PARTICIPACION IMPUESTOS PROVINCIALES,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,1,1,9,pdfplumber,2025-09-28T16:46:21.731789,,,,,,,,,,,,,,,,,,,,,,"654,63",111210108 INGRESOS BRUTOS,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,1,1,10,pdfplumber,2025-09-28T16:46:21.731796,,,,,,,,,,,,,,,,,,,,,,"15.199.936,41",111210117 RECURSOS ORDINARIOS,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,1,1,18,pdfplumber,2025-09-28T16:46:21.731825,,,,,,,,,,,,,,,,,,,,,,"14.051.970,98",111220109 RECURSOS AFECTADOS,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,1,1,21,pdfplumber,2025-09-28T16:46:21.731835,,,,,,,,,,,,,,,,,,,,,,"6.977.941,90",111220114 COPARTICIPACION FONDO EDUCATIVO,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,2,1,50,pdfplumber,2025-09-28T16:46:21.800374,,,,,,,,,,,,,,,,,,,,,,"-474.745,25",211410000 Retenciones de impuestos a pagar DGI,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,2,1,51,pdfplumber,2025-09-28T16:46:21.800377,,,,,,,,,,,,,,,,,,,,,,"-874.448,41",211420000 Retenciones de impuestos provinciales,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,3,1,12,pdfplumber,2025-09-28T16:46:21.857625,,,,,,,,,,,,,,,,,,,,,,"-506,63",211490800 TASAS MUNICIPALES,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,3,1,17,pdfplumber,2025-09-28T16:46:21.857642,,,,,,,,,,,,,,,,,,,,,,"0,00",211600000 Impuestos a pagar,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,3,1,18,pdfplumber,2025-09-28T16:46:21.857646,,,,,,,,,,,,,,,,,,,,,,"-157.001,17",211800000 Transferencias a pagar,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,3,1,31,pdfplumber,2025-09-28T16:46:21.857692,,,,,,,,,,,,,,,,,,,,,,"-18.203,15",216211000 Ingresos de Origen desconocido,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,6,pdfplumber,2025-09-28T16:46:21.920625,,,,,,,,,,,,,,,,,,,,,,"-376.346.103,37",500000000 RECURSOS,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,7,pdfplumber,2025-09-28T16:46:21.920629,,,,,,,,,,,,,,,,,,,,,,"-376.346.103,37",510000000 INGRESOS CORRIENTES,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,8,pdfplumber,2025-09-28T16:46:21.920633,,,,,,,,,,,,,,,,,,,,,,"-201.842.996,62",511000000 Ingresos tributarios,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,9,pdfplumber,2025-09-28T16:46:21.920637,,,,,,,,,,,,,,,,,,,,,,"-160.829.222,68",511100000 Coparticipación de impuestos,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,11,pdfplumber,2025-09-28T16:46:21.920645,,,,,,,,,,,,,,,,,,,,,,"-80.397.826,69",512000000 Ingresos no tributarios,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,12,pdfplumber,2025-09-28T16:46:21.920648,,,,,,,,,,,,,,,,,,,,,,"-53.274.249,36",512100000 Tasas,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,16,pdfplumber,2025-09-28T16:46:21.920661,,,,,,,,,,,,,,,,,,,,,,"-682.520,55",515000000 Rentas de propiedad,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,18,pdfplumber,2025-09-28T16:46:21.920668,,,,,,,,,,,,,,,,,,,,,,"-93.272.759,51",516000000 Transferencias recibidas,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,19,pdfplumber,2025-09-28T16:46:21.920672,,,,,,,,,,,,,,,,,,,,,,"-270.000,00",516100000 Transferencias del sector privado,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,20,pdfplumber,2025-09-28T16:46:21.920675,,,,,,,,,,,,,,,,,,,,,,"-43.106.819,24",516200000 Transferencias del sector público nacional,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,21,pdfplumber,2025-09-28T16:46:21.920679,,,,,,,,,,,,,,,,,,,,,,"-49.895.940,27",516300000 Transferencias del sector público provincial y municipal,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,23,pdfplumber,2025-09-28T16:46:21.920686,,,,,,,,,,,,,,,,,,,,,,"-150.000,00",519000000 Otros Ingresos,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,40,pdfplumber,2025-09-28T16:46:21.920741,,,,,,,,,,,,,,,,,,,,,,"104.816,55",612000000 Rentas de la propiedad,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,43,pdfplumber,2025-09-28T16:46:21.920751,,,,,,,,,,,,,,,,,,,,,,"7.746.422,45",615000000 Transferencias otorgadas,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,44,pdfplumber,2025-09-28T16:46:21.920754,,,,,,,,,,,,,,,,,,,,,,"7.130.856,95",615100000 Transferencias al sector privado,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,45,pdfplumber,2025-09-28T16:46:21.920757,,,,,,,,,,,,,,,,,,,,,,"615.565,50",615200000 Transferencias al sector público,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,46,pdfplumber,2025-09-28T16:46:21.920760,,,,,,,,,,,,,,,,,,,,,,"550.000,00",615210000 Transferencias a la Administración Nacional,,,,,,,,,
+pdf_60_BALANCE-GENERAL-2020.pdf,4,1,47,pdfplumber,2025-09-28T16:46:21.920764,,,,,,,,,,,,,,,,,,,,,,"65.565,50",615230000 Transferencias a Instituciones Provinciales o Municipales,,,,,,,,,
+pdf_116_SITUACION-ECONOMICA-FINANCIERA-2.pdf,1,1,1,pdfplumber,2025-09-28T16:46:23.195984,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","709.327.757,14
+517.257,70
+208.626.646,86
+918.471.661,70
+709.845.014,84
+208.626.646,86
+918.471.661,70","360.025.589,85
+114.478.659,27
+474.504.249,12
+237.216.972,15
+237.287.276,97
+474.504.249,12","351.775.611,00
+114.479.259,27
+0,00
+466.254.870,27
+228.967.593,30
+237.287.276,97
+466.254.870,27
+31.540.864,04","I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","351.775.611,00
+287.594.994,96
+64.180.616,04
+114.479.259,27
+115.738.307,72
+466.254.870,27
+403.333.302,68
+62.921.567,59
+56.669.909,15
+119.591.476,74",,,,,,,,,,,,,,,,,
+pdf_116_SITUACION-ECONOMICA-FINANCIERA-2.pdf,1,2,1,pdfplumber,2025-09-28T16:46:23.196009,,,,,,,,,,,"394.969.637,61
+100.006.733,24
+307.578.944,99
+64.241.447,16
+42.315.365,49
+235.370,58
+9.124.162,63
+918.471.661,70","151.740.756,27
+50.724.206,65
+89.705.969,79
+98.604.761,40
+12.555.359,00
+533.000,00
+16.606.729,56
+420.470.782,67
+6.257.054,67",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+22.191.136,75
+59.734.673,41
+304.966.802,65
+206.158,40
+0,00
+0,00
+387.098.771,21","151.740.756,27
+53.918.060,35
+138.058.137,45
+100.808.291,40
+12.580.359,00
+533.000,00
+16.606.729,56
+474.245.334,03","151.732.944,27
+25.658.520,90
+80.776.439,05
+76.705.835,74
+11.787.404,00
+533.000,00
+16.606.729,56
+363.800.873,52
+6.257.054,67",,,,,,,,,,,,,
+pdf_116_SITUACION-ECONOMICA-FINANCIERA-2.pdf,2,1,1,pdfplumber,2025-09-28T16:46:23.222915,,,,,,,,,,,,,,,"204.481.588,57
+497.795.734,31
+330.200.000,00
+370.057.928,19
+330.200.000,00
+332.219.394,69",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","1.344.509.210,95
+499.367.241,01
+845.141.969,94
+-93.812.125,27
+-85.690.257,92
+-8.121.867,35
+-1.250.697.085,68
+-1.250.697.085,68
+-16.311.591,84
+-1.234.385.493,84
+-507.554.288,35
+-844.181.368,92
+117.350.163,43",,,,,,,,,,
+pdf_116_SITUACION-ECONOMICA-FINANCIERA-2.pdf,2,1,2,pdfplumber,2025-09-28T16:46:23.222931,,,,,,,,,,,,,,,"2.115.471,17
+7.374.220,65
+7.701,02
+955.793,54
+61.409,72
+2.548,20
+560.378,63
+147.509.124,69
+1.143.236,60
+34.702.356,90
+1.291.450,05
+1.333,75
+202.975,29
+120.746.059,01
+723.349,78
+14.821.985,69
+332.219.394,69
+332.219.394,69",,,,,"Demostración del Saldo
+CAJA
+111210117RECURSOS ORDINARIOS (50328/8)
+111220101FONDO VIVIENDA MUNICIPAL (10041/0)
+111220102INMOBILIARIO RURAL AFECTADO (10085/4)
+111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
+111220106FONDO TENDIENDO REDES (10092/2)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220115FONDO DE INFRAESTRUCTURA (50405/2)
+111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_146_SITUACION-ECONOMICA-FINANCIERA-1.pdf,1,1,1,pdfplumber,2025-09-28T16:46:23.340549,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","742.679.860,15
+97.341.480,60
+0,00
+840.021.340,75
+588.042.625,00
+251.978.715,75
+840.021.340,75","248.790.762,78
+134.364.111,58
+-279.898,27
+382.874.976,09
+181.280.153,32
+201.594.822,77
+382.874.976,09","237.285.080,95
+134.364.111,58
+-279.898,27
+371.369.294,26
+169.774.471,49
+201.594.822,77
+371.369.294,26
+24.877.294,45","I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","237.285.080,95
+199.539.634,40
+37.745.446,55
+134.364.111,58
+128.409.103,97
+371.649.192,53
+327.948.738,37
+43.700.454,16
+16.046.855,97
+64.402.847,85",,,,,,,,,,,,,,,,,
+pdf_146_SITUACION-ECONOMICA-FINANCIERA-1.pdf,1,2,1,pdfplumber,2025-09-28T16:46:23.340568,,,,,,,,,,,"435.296.427,86
+142.075.079,47
+86.377.503,90
+121.044.573,98
+42.739.693,40
+1.982.611,00
+10.505.451,14
+840.021.340,75","104.045.905,08
+37.091.797,05
+46.022.987,81
+125.948.242,89
+14.834.064,51
+590.000,00
+81.468,16
+328.614.465,50
+16.018.355,64",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+-811.962,41
+5.832.725,68
+46.559.717,89
+124.400,00
+0,00
+0,00
+51.704.881,16","104.045.905,08
+37.149.216,22
+43.334.720,85
+48.311.548,30
+14.834.064,51
+590.000,00
+81.468,16
+248.346.923,12","104.045.905,08
+40.603.125,97
+47.075.100,21
+150.736.811,81
+14.828.469,51
+590.000,00
+81.468,16
+357.960.880,74
+16.021.599,97",,,,,,,,,,,,,
+pdf_146_SITUACION-ECONOMICA-FINANCIERA-1.pdf,2,1,1,pdfplumber,2025-09-28T16:46:23.367524,,,,,,,,,,,,,,,"15.997.835,02
+396.246.588,71
+255.380.800,00
+373.982.480,71
+207.280.800,00
+86.361.943,02",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","822.990.145,91
+275.989.354,99
+547.000.790,92
+-40.115.583,95
+-32.458.857,68
+-7.656.726,27
+-782.874.561,96
+-782.874.561,96
+-16.311.591,84
+-766.562.970,12
+-498.544.093,41
+-302.542.685,66
+34.523.808,95",,,,,,,,,,
+pdf_146_SITUACION-ECONOMICA-FINANCIERA-1.pdf,2,1,2,pdfplumber,2025-09-28T16:46:23.367540,,,,,,,,,,,,,,,"1.523.497,01
+3.530.345,39
+0,77
+1.419.682,87
+50.333,00
+2.548,20
+437.625,95
+81.003,88
+319.603,02
+78.035,82
+625.157,92
+1.104.096,00
+510.813,37
+61.568.775,33
+156.919,49
+14.953.505,00
+86.361.943,02
+86.361.943,02",,,,,"Demostración del Saldo
+CAJA
+111210117RECURSOS ORDINARIOS (50328/8)
+111220101FONDO VIVIENDA MUNICIPAL (10041/0)
+111220102INMOBILIARIO RURAL AFECTADO (10085/4)
+111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
+111220106FONDO TENDIENDO REDES (10092/2)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220115FONDO DE INFRAESTRUCTURA (50405/2)
+111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_126_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf,1,1,1,pdfplumber,2025-09-28T16:46:23.471009,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","1.004.837.082,01
+228.898.351,61
+43.937.805,56
+1.277.673.239,18
+808.782.840,40
+468.890.398,78
+1.277.673.239,18","402.609.254,88
+219.884.063,83
+622.493.318,71
+274.792.574,80
+347.700.743,91
+622.493.318,71","385.515.063,57
+219.884.063,83
+0,00
+605.399.127,40
+257.698.383,49
+347.700.743,91
+605.399.127,40
+33.362.496,23","I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","385.515.063,57
+359.417.933,95
+26.097.129,62
+219.884.063,83
+135.362.208,68
+605.399.127,40
+494.780.142,63
+110.618.984,77
+16.589.124,86
+119.335.781,95",,,,,,,,,,,,,,,,,
+pdf_126_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf,1,2,1,pdfplumber,2025-09-28T16:46:23.471033,,,,,,,,,,,"446.915.124,55
+242.436.550,17
+267.219.623,88
+244.149.474,86
+67.922.236,44
+1.906.714,10
+7.123.515,18
+1.277.673.239,18","175.876.678,61
+63.033.181,20
+118.446.258,35
+114.758.073,82
+22.657.114,04
+250.000,00
+40.348,66
+495.061.654,68
+40.258.511,72",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+-36.190.873,82
+-82.436.185,58
+-16.165.695,53
+-265.075,00
+0,00
+0,00
+-135.057.829,93","175.876.678,61
+101.250.925,28
+172.602.797,85
+132.663.077,59
+22.657.114,04
+250.000,00
+40.348,66
+605.340.942,03","175.876.678,61
+66.666.442,29
+116.556.280,14
+120.918.251,80
+22.727.969,44
+250.000,00
+40.348,66
+503.035.970,94
+40.258.511,72",,,,,,,,,,,,,
+pdf_126_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf,2,1,1,pdfplumber,2025-09-28T16:46:23.498095,,,,,,,,,,,,,,,"109.014.447,60
+638.761.623,63
+436.265.354,96
+543.294.482,66
+436.265.354,96
+204.481.588,57",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","1.094.306.101,71
+362.915.056,04
+731.391.045,67
+-27.997.886,74
+-19.876.019,39
+-8.121.867,35
+-1.066.308.214,97
+-1.066.308.214,97
+-16.311.591,84
+-1.049.996.623,13
+-507.554.288,35
+-659.792.498,21
+117.350.163,43",,,,,,,,,,
+pdf_126_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf,2,1,2,pdfplumber,2025-09-28T16:46:23.498110,,,,,,,,,,,,,,,"84.410,28
+7.701,02
+114.239,27
+50.333,00
+2.548,20
+899.614,51
+90.479.612,52
+76.903,40
+2.990.303,28
+2.174.148,46
+594.481,00
+367.035,01
+102.630.014,31
+723.349,78
+3.286.894,53
+204.481.588,57
+204.481.588,57",,,,,"Demostración del Saldo
+111210117RECURSOS ORDINARIOS (50328/8)
+111220101FONDO VIVIENDA MUNICIPAL (10041/0)
+111220102INMOBILIARIO RURAL AFECTADO (10085/4)
+111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
+111220106FONDO TENDIENDO REDES (10092/2)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220115FONDO DE INFRAESTRUCTURA (50405/2)
+111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_27_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf,1,1,1,pdfplumber,2025-09-28T16:46:23.584708,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_27_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf,2,1,1,pdfplumber,2025-09-28T16:46:23.638576,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_27_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf,3,1,1,pdfplumber,2025-09-28T16:46:23.776777,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_27_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf,4,1,1,pdfplumber,2025-09-28T16:46:23.822615,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_27_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf,5,1,1,pdfplumber,2025-09-28T16:46:23.868892,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_27_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf,6,1,1,pdfplumber,2025-09-28T16:46:23.893086,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_40_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf,1,1,1,pdfplumber,2025-09-28T16:46:32.876586,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_40_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf,2,1,1,pdfplumber,2025-09-28T16:46:32.950794,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_40_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf,3,1,1,pdfplumber,2025-09-28T16:46:32.998861,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_40_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf,4,1,1,pdfplumber,2025-09-28T16:46:33.043980,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_40_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf,5,1,1,pdfplumber,2025-09-28T16:46:33.088280,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_40_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf,6,1,1,pdfplumber,2025-09-28T16:46:33.109052,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_86_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf,1,1,1,pdfplumber,2025-09-28T16:46:49.088966,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_86_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf,2,1,1,pdfplumber,2025-09-28T16:46:49.126623,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_86_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf,3,1,1,pdfplumber,2025-09-28T16:46:49.160863,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_86_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf,4,1,1,pdfplumber,2025-09-28T16:46:49.183009,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_141_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf,1,1,1,pdfplumber,2025-09-28T16:47:04.000937,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_141_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf,2,1,1,pdfplumber,2025-09-28T16:47:04.035017,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_141_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf,3,1,1,pdfplumber,2025-09-28T16:47:04.068538,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_141_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf,4,1,1,pdfplumber,2025-09-28T16:47:04.079121,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_21_Situacion-Economico-Financiera-Junio.pdf,1,1,1,pdfplumber,2025-09-28T16:47:19.040974,,,,,,,,,,"1. Presupuestarios
 Ingresos corrientes
 Recursos de capital
 Fuentes Financieras
@@ -46,8 +875,8 @@ X. APLICACIONES FINANCIERAS","4.273.950.508,84
 4.487.075.367,58
 142.365.771,20
 109.799.496,53
-252.165.267,73",,,,,,,,,,,,,,,,,,
-Situacion-Economico-Financiera-Junio.pdf,1,2,1,pdfplumber,2025-09-27T17:03:13.636358,,"4.758.346.992,05
+252.165.267,73",,,,,,,,,,,,,,,,,
+pdf_21_Situacion-Economico-Financiera-Junio.pdf,1,2,1,pdfplumber,2025-09-28T16:47:19.040996,,,,,,,,,,,"4.758.346.992,05
 1.941.066.910,74
 1.618.654.436,44
 1.015.617.574,13
@@ -93,8 +922,8 @@ Total
 16.544.652,11
 99.845.755,92
 4.476.487.415,96
-309.943.684,12",,,,,,,,,,,,,,
-Situacion-Economico-Financiera-Junio.pdf,1,3,1,pdfplumber,2025-09-27T17:03:13.636373,,"90.949.519,47
+309.943.684,12",,,,,,,,,,,,,
+pdf_21_Situacion-Economico-Financiera-Junio.pdf,1,3,1,pdfplumber,2025-09-28T16:47:19.041010,,,,,,,,,,,"90.949.519,47
 86.579.066,60
 77.832.428,63
 93.086.012,08
@@ -249,7 +1078,7 @@ iental 96.000.000,00
 99.011.544,91
 4.385.816.987,61
 90.670.428,35
-90.670.428,35","Departamento Ejecutivo
+90.670.428,35",,,,,"Departamento Ejecutivo
 1110101000 - 16 Juzgado de Faltas
 1110101000 - 17 Direccion de Legales y Tecnica
 1110101000 - 18 Direccion de Comunicacion
@@ -282,13 +1111,13 @@ Partidas no asignables a programas
 Total Departamento Ejecutivo
 H.C.D.
 Actividades Centrales
-Total H.C.D.",,,,,,,,,,,,,
-Situacion-Economico-Financiera-Junio.pdf,2,1,1,pdfplumber,2025-09-27T17:03:13.673785,,,,,,"394.596.969,79
+Total H.C.D.",,,,,,,,
+pdf_21_Situacion-Economico-Financiera-Junio.pdf,2,1,1,pdfplumber,2025-09-28T16:47:19.076847,,,,,,,,,,,,,,,"394.596.969,79
 5.019.840.255,59
 2.919.113.346,21
 4.786.431.100,08
 3.436.113.346,21
-111.006.125,30",,,,,,"Saldo Inicial:
+111.006.125,30",,,,,"Saldo Inicial:
 Ingresos del Período:
 Ingresos de Ajustes Contables:
 Gastos del Período:
@@ -322,7 +1151,7 @@ dominio público","4.926.867.714,68
 -3.030.575.839,99
 -1.573.255.118,45
 117.350.163,43",,,,,,,,,,
-Situacion-Economico-Financiera-Junio.pdf,2,1,2,pdfplumber,2025-09-27T17:03:13.673802,,,,,,"21.437.800,38
+pdf_21_Situacion-Economico-Financiera-Junio.pdf,2,1,2,pdfplumber,2025-09-28T16:47:19.076864,,,,,,,,,,,,,,,"21.437.800,38
 40.987.759,68
 345.725,46
 6.161,64
@@ -337,7 +1166,7 @@ Situacion-Economico-Financiera-Junio.pdf,2,1,2,pdfplumber,2025-09-27T17:03:13.67
 723.349,78
 34.716.756,42
 111.006.125,30
-111.006.125,30",,,,,,"Demostración del Saldo
+111.006.125,30",,,,,"Demostración del Saldo
 CAJA
 111210117RECURSOS ORDINARIOS (50328/8)
 111210201RENTAS GENERALES
@@ -354,7 +1183,1899 @@ CAJA
 111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
 111230101CUENTA DE TERCEROS (10097/7)
 Total Disponibilidades:",,,,,,,,,,,,
-Situacion-Economico-Financiera-Marzo.pdf,1,1,1,pdfplumber,2025-09-27T17:03:13.932862,"1. Presupuestarios
+pdf_92_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf,1,1,1,pdfplumber,2025-09-28T16:47:19.246329,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","874.303.301,86
+169.119.967,43
+1.043.423.269,29
+710.751.957,65
+332.671.311,64
+1.043.423.269,29","668.344.932,88
+152.270.103,67
+820.615.036,55
+502.659.461,17
+317.955.575,38
+820.615.036,55","656.450.315,06
+152.270.103,67
+808.720.418,73
+490.764.843,35
+317.955.575,38
+808.720.418,73
+51.002.405,39","I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","656.450.315,06
+627.827.244,15
+28.623.070,91
+152.270.103,67
+91.086.367,26
+808.720.418,73
+718.913.611,41
+89.806.807,32
+28.844.124,38
+17.625.597,62",,,,,,,,,,,,,,,,,
+pdf_92_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf,1,2,1,pdfplumber,2025-09-28T16:47:19.246355,,,,,,,,,,,"416.571.386,57
+160.643.570,46
+287.060.290,00
+91.299.061,79
+59.131.988,36
+21.593.456,93
+7.123.515,18
+1.043.423.269,29","299.174.908,62
+102.138.994,32
+181.834.151,02
+64.402.352,35
+59.955.355,61
+11.565.000,00
+35.435,54
+719.106.197,46
+71.794.215,81",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+34.096.195,36
+25.082.250,69
+84.834.045,75
+205.232.011,99
+0,00
+0,00
+349.244.503,79","299.174.908,62
+111.970.666,58
+176.712.178,34
+63.143.621,43
+59.955.355,61
+11.565.000,00
+35.435,54
+722.557.166,12","299.174.908,62
+101.142.459,01
+184.314.600,64
+71.397.168,41
+61.298.346,61
+11.595.000,00
+35.435,54
+728.957.918,83
+71.937.405,16",,,,,,,,,,,,,
+pdf_92_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf,2,1,1,pdfplumber,2025-09-28T16:47:19.273095,,,,,,,,,,,,,,,"70.729.147,99
+859.722.824,12
+483.900.000,00
+800.895.323,99
+585.000.000,00
+28.456.648,12",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","1.629.376.053,15
+448.301.701,74
+1.181.074.351,41
+-41.521.349,28
+-33.399.481,93
+-8.121.867,35
+-1.587.854.703,87
+-1.587.854.703,87
+-16.311.591,84
+-1.571.543.112,03
+-507.554.288,35
+-1.181.338.987,11
+117.350.163,43",,,,,,,,,,
+pdf_92_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf,2,1,2,pdfplumber,2025-09-28T16:47:19.273113,,,,,,,,,,,,,,,"1.502.568,76
+2.187.042,01
+4.128.028,08
+26.185,97
+61.409,72
+2.548,20
+1.630.609,02
+3.359.765,28
+1.418.204,05
+1.256.441,25
+1.575.139,57
+3.094.308,75
+740.535,57
+2.250.937,15
+723.349,78
+4.499.574,96
+28.456.648,12
+28.456.648,12",,,,,"Demostración del Saldo
+CAJA
+111210104PARTICIPACION IMPUESTOS PROV. (10037/3)
+111210117RECURSOS ORDINARIOS (50328/8)
+111220101FONDO VIVIENDA MUNICIPAL (10041/0)
+111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
+111220106FONDO TENDIENDO REDES (10092/2)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220115FONDO DE INFRAESTRUCTURA (50405/2)
+111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_110_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf,1,1,1,pdfplumber,2025-09-28T16:47:20.023905,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_110_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf,2,1,1,pdfplumber,2025-09-28T16:47:20.059614,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_110_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf,3,1,1,pdfplumber,2025-09-28T16:47:20.922055,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_110_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf,4,1,1,pdfplumber,2025-09-28T16:47:20.953264,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_110_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf,5,1,1,pdfplumber,2025-09-28T16:47:20.982047,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_110_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf,6,1,1,pdfplumber,2025-09-28T16:47:20.991892,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+boletin_oficial_pdf_5_SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021...pdf,1,1,1,pdfplumber,2025-09-28T16:47:21.601675,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","654.176.168,26
+90.995.572,49
+28.550.755,12
+773.722.495,87
+447.715.663,84
+326.006.832,03
+773.722.495,87","670.218.413,12
+85.847.765,82
+756.066.178,94
+469.484.419,82
+286.581.759,12
+756.066.178,94","653.200.479,33
+85.849.655,82
+0,00
+739.050.135,15
+452.468.376,03
+286.581.759,12
+739.050.135,15
+51.027.283,84",,,,,,,,,,,,,,,,,,,
+boletin_oficial_pdf_5_SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021...pdf,1,2,1,pdfplumber,2025-09-28T16:47:21.601697,,,,,,,,,,,,,,"I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","653.200.479,33
+519.695.220,23
+133.505.259,10
+85.849.655,82
+180.176.965,36
+739.050.135,15
+699.872.185,59
+39.177.949,56
+7.605.173,75
+46.783.123,31",,,,,,,,,,,,,,,,,
+boletin_oficial_pdf_5_SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021...pdf,1,3,1,pdfplumber,2025-09-28T16:47:21.601701,,,,,,,,,,,"267.631.135,24
+131.201.245,60
+132.487.447,87
+188.742.722,37
+41.528.914,07
+6.829.693,16
+5.301.337,56
+773.722.495,87","259.142.920,98
+127.266.337,09
+116.325.092,17
+162.068.005,28
+34.901.206,30
+6.710.784,80
+5.299.775,70
+711.714.122,32
+51.871.957,06",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+0,00
+0,00
+0,00
+0,00
+0,00
+0,00
+0,00","259.142.920,98
+127.281.769,09
+118.694.029,09
+250.674.376,81
+34.901.206,30
+6.710.784,80
+5.299.775,70
+802.704.862,77","259.142.920,98
+122.062.763,34
+114.160.302,17
+161.921.405,28
+34.810.996,30
+6.710.784,80
+5.299.775,70
+704.108.948,57
+51.871.957,06",,,,,,,,,,,,,
+boletin_oficial_pdf_5_SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021...pdf,2,1,1,pdfplumber,2025-09-28T16:47:21.639462,,,,,,,,,,,,,,,"48.879.919,69
+790.077.418,99
+652.832.890,93
+755.980.905,63
+652.832.890,93
+82.976.433,05",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","496.429.785,23
+182.137.425,88
+314.292.359,35
+-16.097.908,93
+-8.441.182,66
+-7.656.726,27
+-480.331.876,30
+-480.331.876,30
+-16.311.591,84
+-464.020.284,46
+-293.870.339,32
+-204.673.754,09
+34.523.808,95",,,,,,,,,,
+boletin_oficial_pdf_5_SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021...pdf,2,1,2,pdfplumber,2025-09-28T16:47:21.639473,,,,,,,,,,,,,,,"1.444.465,04
+2,32
+2,97
+42.493.335,23
+1.574.869,67
+401.994,67
+50.333,00
+2.548,20
+979,88
+24.735.194,10
+253.594,75
+462,10
+1.897.018,49
+3.078.417,06
+233.562,65
+5.956.092,70
+17.551,31
+836.008,91
+82.976.433,05
+82.976.433,05",,,,,"Demostración del Saldo
+111210104PARTICIPACION IMPUESTOS PROVINCIALES
+111210107INMOBILIARIO RURAL NO AFECTADO
+111210108INGRESOS BRUTOS
+111210117RECURSOS ORDINARIOS
+111220101FONDO VIVIENDA MUNICIPAL
+111220102INMOBILIARIO RURAL AFECTADO
+111220103FONDO PRODUCTIVO MUNICIPAL
+111220106FONDO TENDIENDO REDES
+111220107POLICIA COMUNAL
+111220109RECURSOS AFECTADOS
+111220112PLAN NACER
+111220113FONDO SOLIDARIO PCIAL SOJA
+111220114COPARTICIPACION FONDO EDUCATIVO
+111220115FONDO DE INFRAESTRUCTURA
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES
+111220212HABITAT NORTE INTERIOR Y OBRAS Y VIVIENDA
+NACION
+111230101CUENTA DE TERCEROS
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_59_Situacion-Economico-Financiera-Junio.pdf,1,1,1,pdfplumber,2025-09-28T16:47:21.747629,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","5.004.583.228,92
+158.798.019,83
+75.750.736,14
+5.239.131.984,89
+4.179.325.376,90
+1.059.806.607,99
+5.239.131.984,89","2.831.232.836,57
+149.286.320,96
+2.980.519.157,53
+2.405.028.052,55
+575.491.104,98
+2.980.519.157,53","2.315.003.453,80
+149.286.320,96
+0,00
+2.464.289.774,76
+1.888.798.669,78
+575.491.104,98
+2.464.289.774,76
+208.689.792,67","I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","2.315.003.453,80
+2.067.415.843,32
+247.587.610,48
+149.286.320,96
+218.988.335,52
+2.464.289.774,76
+2.286.404.178,84
+177.885.595,92
+68.680.035,13
+246.565.631,05",,,,,,,,,,,,,,,,,
+pdf_59_Situacion-Economico-Financiera-Junio.pdf,1,2,1,pdfplumber,2025-09-28T16:47:21.747653,,,,,,,,,,,"2.419.833.846,85
+1.006.059.798,83
+952.462.526,21
+450.052.563,22
+375.483.321,34
+2.910.049,95
+32.329.878,49
+5.239.131.984,89","1.159.521.532,07
+461.248.169,31
+396.090.236,94
+157.305.133,10
+112.228.259,74
+218.000,00
+32.061.338,76
+2.318.672.669,92
+169.079.825,85",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+140.975.003,59
+77.840.567,54
+17.100.580,01
+852.931,92
+0,00
+0,00
+236.769.083,06","1.159.521.532,07
+471.325.559,65
+437.762.525,92
+157.305.133,10
+112.228.259,74
+218.000,00
+32.061.338,76
+2.370.422.349,24","1.159.521.532,07
+406.748.162,92
+383.255.165,21
+156.304.676,09
+111.883.759,74
+218.000,00
+32.061.338,76
+2.249.992.634,79
+169.079.825,85",,,,,,,,,,,,,
+pdf_59_Situacion-Economico-Financiera-Junio.pdf,2,1,1,pdfplumber,2025-09-28T16:47:21.786327,,,,,,,,,,,,,,,"115.330.255,37
+2.672.979.567,43
+1.711.550.563,29
+2.419.072.460,64
+1.970.550.563,29
+110.237.362,16",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","2.851.611.300,46
+1.138.254.097,87
+1.713.357.202,59
+-138.843.842,89
+-123.230.088,82
+-15.613.754,07
+-2.712.767.457,57
+-2.712.767.457,57
+-16.311.591,84
+-2.696.455.865,73
+-1.914.449.156,76
+-899.356.872,40
+117.350.163,43",,,,,,,,,,
+pdf_59_Situacion-Economico-Financiera-Junio.pdf,2,1,2,pdfplumber,2025-09-28T16:47:21.786344,,,,,,,,,,,,,,,"19.416.910,41
+4.791.988,21
+44.233,78
+47.268,33
+110.126,71
+187.656,50
+570.076,30
+207.461,83
+997.894,59
+3.481.934,76
+16.657,66
+565.083,37
+8.592.253,65
+723.349,78
+70.484.466,28
+110.237.362,16
+110.237.362,16",,,,,"Demostración del Saldo
+CAJA
+111210117RECURSOS ORDINARIOS (50328/8)
+111210201RENTAS GENERALES
+111220101FONDO VIVIENDA MUNICIPAL (10041/0)
+111220102INMOBILIARIO RURAL AFECTADO (10085/4)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220115FONDO DE INFRAESTRUCTURA (50405/2)
+111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+boletin_oficial_pdf_6_SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022.pdf,1,1,1,pdfplumber,2025-09-28T16:47:30.732246,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","796.446.416,55
+170.081.945,76
+38.202.618,58
+1.004.730.980,89
+588.042.625,00
+416.688.355,89
+1.004.730.980,89","455.670.897,46
+207.648.113,72
+663.319.011,18
+308.703.363,89
+354.615.647,29
+663.319.011,18","441.004.468,32
+207.648.123,72
+0,00
+648.652.592,04
+294.036.944,75
+354.615.647,29
+648.652.592,04
+42.547.665,81",,,,,,,,,,,,,,,,,,,
+boletin_oficial_pdf_6_SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022.pdf,1,2,1,pdfplumber,2025-09-28T16:47:30.732270,,,,,,,,,,,,,,"I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","441.004.468,32
+356.991.144,36
+84.013.323,96
+207.648.123,72
+235.533.612,73
+648.652.592,04
+592.524.757,09
+56.127.834,95
+16.326.754,24
+72.454.589,19",,,,,,,,,,,,,,,,,
+boletin_oficial_pdf_6_SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022.pdf,1,3,1,pdfplumber,2025-09-28T16:47:30.732274,,,,,,,,,,,"438.473.217,31
+165.858.919,57
+94.719.410,54
+242.710.403,59
+49.513.961,88
+2.099.283,86
+11.355.784,14
+1.004.730.980,89","187.360.701,65
+74.504.157,66
+76.587.079,52
+233.032.445,24
+21.027.309,62
+960.000,00
+7.770.531,87
+601.242.225,56
+27.599.276,56",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+33.124.551,93
+36.588.120,22
+51.371.925,92
+166.910,00
+0,00
+0,00
+121.251.508,07","187.360.701,65
+74.562.114,83
+81.358.134,08
+304.804.852,56
+21.027.309,62
+960.000,00
+7.770.531,87
+677.843.644,61","187.360.701,65
+62.648.304,57
+73.694.611,38
+231.630.562,23
+20.850.759,62
+960.000,00
+7.770.531,87
+584.915.471,32
+27.599.276,56",,,,,,,,,,,,,
+boletin_oficial_pdf_6_SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022.pdf,2,1,1,pdfplumber,2025-09-28T16:47:30.772286,,,,,,,,,,,,,,,"82.976.433,05
+691.200.257,85
+955.000.286,45
+612.514.747,88
+1.030.300.286,45
+86.361.943,02",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","822.990.145,91
+275.989.354,99
+547.000.790,92
+-40.115.583,95
+-32.458.857,68
+-7.656.726,27
+-782.874.561,96
+-782.874.561,96
+-16.311.591,84
+-766.562.970,12
+-498.544.093,41
+-302.542.685,66
+34.523.808,95",,,,,,,,,,
+boletin_oficial_pdf_6_SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022.pdf,2,1,2,pdfplumber,2025-09-28T16:47:30.772299,,,,,,,,,,,,,,,"1.523.497,01
+3.530.345,39
+0,77
+1.419.682,87
+50.333,00
+2.548,20
+437.625,95
+81.003,88
+319.603,02
+78.035,82
+625.157,92
+1.104.096,00
+510.813,37
+61.568.775,33
+156.919,49
+14.953.505,00
+86.361.943,02
+86.361.943,02",,,,,"Demostración del Saldo
+CAJA
+111210117RECURSOS ORDINARIOS (50328/8)
+111220101FONDO VIVIENDA MUNICIPAL (10041/0)
+111220102INMOBILIARIO RURAL AFECTADO (10085/4)
+111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
+111220106FONDO TENDIENDO REDES (10092/2)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220115FONDO DE INFRAESTRUCTURA (50405/2)
+111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_53_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf,1,1,1,pdfplumber,2025-09-28T16:47:31.089741,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_53_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf,2,1,1,pdfplumber,2025-09-28T16:47:31.143012,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_53_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf,3,1,1,pdfplumber,2025-09-28T16:47:31.190693,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_53_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf,4,1,1,pdfplumber,2025-09-28T16:47:31.236815,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_53_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf,5,1,1,pdfplumber,2025-09-28T16:47:31.278540,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_53_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf,6,1,1,pdfplumber,2025-09-28T16:47:31.299731,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_136_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf,1,1,1,pdfplumber,2025-09-28T16:47:33.557641,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","763.497.300,74
+102.227.622,96
+0,00
+865.724.923,70
+588.042.625,00
+277.682.298,70
+865.724.923,70","305.762.198,07
+68.052.090,78
+373.814.288,85
+228.706.606,00
+145.107.682,85
+373.814.288,85","283.122.758,68
+68.052.100,78
+0,00
+351.174.859,46
+206.067.176,61
+145.107.682,85
+351.174.859,46
+24.457.076,16","I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","283.122.758,68
+242.596.093,33
+40.526.665,35
+68.052.100,78
+163.130.580,14
+351.174.859,46
+405.726.673,47
+-54.551.814,01
+24.563.441,12
+17.421.993,59",,,,,,,,,,,,,,,,,
+pdf_136_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf,1,2,1,pdfplumber,2025-09-28T16:47:33.557665,,,,,,,,,,,"435.341.735,91
+140.913.999,67
+91.491.596,60
+132.724.358,55
+52.765.170,83
+1.982.611,00
+10.505.451,14
+865.724.923,70","118.909.443,91
+38.424.298,72
+70.506.534,56
+153.831.618,32
+24.046.690,46
+576.000,00
+162.967,65
+406.457.553,62
+30.058.564,30",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+3.066.321,89
+45.788.065,36
+-35.206.230,39
+98.165,00
+0,00
+0,00
+13.746.321,86","118.909.443,91
+38.521.723,47
+87.142.446,26
+249.947.649,41
+24.046.690,46
+576.000,00
+162.967,65
+519.306.921,16","118.909.443,91
+35.468.085,32
+70.518.960,45
+148.507.024,35
+24.078.385,06
+576.000,00
+162.967,65
+398.220.866,74
+30.058.564,30",,,,,,,,,,,,,
+pdf_136_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf,2,1,1,pdfplumber,2025-09-28T16:47:33.585087,,,,,,,,,,,,,,,"86.361.943,02
+375.631.935,62
+265.985.919,96
+428.279.431,04
+190.685.919,96
+109.014.447,60",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","946.817.883,67
+245.981.288,96
+700.836.594,71
+-42.595.902,54
+-34.939.176,27
+-7.656.726,27
+-904.221.981,13
+-904.221.981,13
+-16.311.591,84
+-887.910.389,29
+-498.544.093,41
+-423.890.104,83
+34.523.808,95",,,,,,,,,,
+pdf_136_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf,2,1,2,pdfplumber,2025-09-28T16:47:33.585105,,,,,,,,,,,,,,,"2.365.810,10
+47,84
+65,17
+21.056.422,87
+0,77
+548.031,63
+50.333,00
+2.548,20
+1.638.181,07
+52.696.896,90
+496.665,19
+8.556.335,75
+1.063.757,06
+448.096,00
+358.200,01
+7.572.514,50
+723.349,78
+11.437.191,76
+109.014.447,60
+109.014.447,60",,,,,"Demostración del Saldo
+CAJA
+111210107INMOBILIARIO RURAL NO AFECTADO (10086/1)
+111210108INGRESOS BRUTOS (10087/8)
+111210117RECURSOS ORDINARIOS (50328/8)
+111220101FONDO VIVIENDA MUNICIPAL (10041/0)
+111220102INMOBILIARIO RURAL AFECTADO (10085/4)
+111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
+111220106FONDO TENDIENDO REDES (10092/2)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220115FONDO DE INFRAESTRUCTURA (50405/2)
+111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_46_Situacion-Economico-Financiera-3er-Trimestre.pdf,1,1,1,pdfplumber,2025-09-28T16:47:33.858576,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","5.267.172.154,65
+298.028.697,17
+75.750.736,14
+5.640.951.587,96
+4.377.259.839,28
+1.263.691.748,68
+5.640.951.587,96","4.520.633.058,75
+289.731.878,80
+4.810.364.937,55
+3.796.578.894,15
+1.013.786.043,40
+4.810.364.937,55","4.051.286.962,97
+289.731.888,80
+0,00
+4.341.018.851,77
+3.327.232.808,37
+1.013.786.043,40
+4.341.018.851,77
+356.569.699,78","I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","4.051.286.962,97
+3.740.422.791,09
+310.864.171,88
+289.731.888,80
+400.952.451,93
+4.341.018.851,77
+4.141.375.243,02
+199.643.608,75
+139.308.474,28
+338.952.083,03",,,,,,,,,,,,,,,,,
+pdf_46_Situacion-Economico-Financiera-3er-Trimestre.pdf,1,2,1,pdfplumber,2025-09-28T16:47:33.858599,,,,,,,,,,,"2.419.833.846,85
+1.162.040.890,67
+1.241.517.213,67
+363.198.359,92
+414.411.998,90
+6.074.049,95
+33.875.228,00
+5.640.951.587,96","2.025.505.526,33
+853.725.272,60
+756.957.151,52
+315.518.906,57
+189.330.446,24
+2.058.000,00
+33.615.861,46
+4.176.711.164,72
+320.210.283,02",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+78.624.519,42
+133.149.661,44
+31.087.094,35
+16.642.908,21
+0,00
+0,00
+259.504.183,42","2.025.505.526,33
+855.634.554,60
+787.596.233,12
+318.093.913,03
+189.330.446,24
+2.058.000,00
+33.615.861,46
+4.211.834.534,78","2.025.505.526,33
+748.321.406,14
+729.258.845,71
+310.600.699,56
+188.242.351,24
+1.858.000,00
+33.615.861,46
+4.037.402.690,44
+320.210.283,02",,,,,,,,,,,,,
+pdf_46_Situacion-Economico-Financiera-3er-Trimestre.pdf,2,1,1,pdfplumber,2025-09-28T16:47:33.958187,,,,,,,,,,,,,,,"115.330.255,37
+4.697.588.551,55
+2.742.550.563,29
+4.357.612.973,46
+3.055.550.563,29
+142.305.833,46",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","3.069.511.402,39
+1.177.439.272,18
+1.892.072.130,21
+-205.226.748,13
+-189.612.994,06
+-15.613.754,07
+-2.864.284.654,26
+-2.864.284.654,26
+-16.311.591,84
+-2.847.973.062,42
+-1.914.449.156,76
+-1.050.874.069,09
+117.350.163,43",,,,,,,,,,
+pdf_46_Situacion-Economico-Financiera-3er-Trimestre.pdf,2,1,2,pdfplumber,2025-09-28T16:47:33.958202,,,,,,,,,,,,,,,"28.185.153,13
+4.807.662,22
+406.192,89
+48.271,43
+508.884,49
+1.212.485,70
+22.488.895,66
+116.361,83
+799.993,43
+2.747.032,76
+16.657,66
+565.083,37
+8.893.828,99
+723.349,78
+70.785.980,12
+142.305.833,46
+142.305.833,46",,,,,"Demostración del Saldo
+CAJA
+111210117RECURSOS ORDINARIOS (50328/8)
+111210201RENTAS GENERALES
+111220101FONDO VIVIENDA MUNICIPAL (10041/0)
+111220102INMOBILIARIO RURAL AFECTADO (10085/4)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220115FONDO DE INFRAESTRUCTURA (50405/2)
+111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_46_Situacion-Economico-Financiera-3er-Trimestre.pdf,2,2,1,pdfplumber,2025-09-28T16:47:33.958212,,,,,,,,,,,,,,,"4.341.018.851,77
+4.141.375.243,02
+199.643.608,75
+0,00
+99.608.820,52
+33.277.921,70
+265.974.507,57",,,,,,,,,,"Recursos Corrientes y de Capital PERCIBIDO
+Gastos Corrientes y de Capital DEVENGADO
+RESULTADO DEL ART. 43
+Ingresos por endeudamiento aprobado
+Saldos de Caja y Bancos al cierre del ejercicio anterior (Recursos Ordinarios)
+Servicios de la deuda
+RESULTADO DEL ART. 44",,,,,,,
+pdf_157_SITUACION-ECONOMICA-FINANCIERA.pdf,1,1,1,pdfplumber,2025-09-28T16:47:35.489919,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","771.912.286,40
+75.552.281,16
+38.202.618,58
+885.667.186,14
+588.042.625,00
+297.624.561,14
+885.667.186,14","206.880.134,68
+73.284.002,14
+279.898,27
+280.444.035,09
+127.423.210,57
+153.020.824,52
+280.444.035,09","203.719.387,37
+73.284.012,14
+279.898,27
+277.283.297,78
+124.262.473,26
+153.020.824,52
+277.283.297,78
+17.670.371,36","I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","203.719.387,37
+157.451.509,96
+46.267.877,41
+73.284.012,14
+107.124.508,76
+277.003.399,51
+264.576.018,72
+12.427.380,79
+45.953.067,75
+58.380.448,54",,,,,,,,,,,,,,,,,
+pdf_157_SITUACION-ECONOMICA-FINANCIERA.pdf,1,2,1,pdfplumber,2025-09-28T16:47:35.489939,,,,,,,,,,,"431.496.819,93
+168.958.404,10
+91.491.904,78
+125.082.164,47
+55.182.824,86
+2.099.283,86
+11.355.784,14
+885.667.186,14","83.314.796,57
+37.412.360,61
+30.564.091,71
+107.084.202,35
+6.193.245,11
+370.000,00
+7.689.063,71
+272.627.760,06
+11.580.920,92",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+33.936.514,34
+30.815.394,54
+4.812.208,03
+42.510,00
+0,00
+0,00
+69.606.626,91","83.314.796,57
+37.412.898,61
+38.023.413,23
+256.493.304,26
+6.193.245,11
+370.000,00
+7.689.063,71
+429.496.721,49","83.314.796,57
+22.045.178,60
+26.619.511,17
+80.893.750,42
+6.022.290,11
+370.000,00
+7.689.063,71
+226.954.590,58
+11.577.676,59",,,,,,,,,,,,,
+pdf_157_SITUACION-ECONOMICA-FINANCIERA.pdf,2,1,1,pdfplumber,2025-09-28T16:47:35.618379,,,,,,,,,,,,,,,"82.976.433,05
+294.953.669,14
+699.619.486,45
+238.532.267,17
+823.019.486,45
+15.997.835,02",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","663.422.589,88
+242.219.565,16
+421.203.024,72
+-60.520.347,54
+-52.863.621,27
+-7.656.726,27
+-602.902.242,34
+-602.902.242,34
+-16.311.591,84
+-586.590.650,50
+-498.544.093,41
+-122.570.366,04
+34.523.808,95",,,,,,,,,,
+pdf_157_SITUACION-ECONOMICA-FINANCIERA.pdf,2,1,2,pdfplumber,2025-09-28T16:47:35.618396,,,,,,,,,,,,,,,"680.079,72
+59,24
+2.383.585,69
+763.417,77
+420.122,17
+50.333,00
+2.548,20
+780.257,84
+218.222,67
+322.980,75
+345.891,48
+861.743,28
+260.979,85
+645.372,43
+0,01
+8.262.240,92
+15.997.835,02
+15.997.835,02",,,,,"Demostración del Saldo
+CAJA
+111210104PARTICIPACION IMPUESTOS PROV. (10037/3)
+111210117RECURSOS ORDINARIOS (50328/8)
+111220101FONDO VIVIENDA MUNICIPAL (10041/0)
+111220102INMOBILIARIO RURAL AFECTADO (10085/4)
+111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
+111220106FONDO TENDIENDO REDES (10092/2)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220115FONDO DE INFRAESTRUCTURA (50405/2)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_75_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf,1,1,1,pdfplumber,2025-09-28T16:47:35.704687,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_75_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf,2,1,1,pdfplumber,2025-09-28T16:47:35.740560,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_75_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf,3,1,1,pdfplumber,2025-09-28T16:47:35.771027,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_75_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf,4,1,1,pdfplumber,2025-09-28T16:47:35.799331,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_121_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf,1,1,1,pdfplumber,2025-09-28T16:47:37.734032,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_121_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf,2,1,1,pdfplumber,2025-09-28T16:47:37.934990,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_121_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf,3,1,1,pdfplumber,2025-09-28T16:47:37.971406,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_121_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf,4,1,1,pdfplumber,2025-09-28T16:47:37.986440,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_152_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,1,1,1,pdfplumber,2025-09-28T16:47:38.240987,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_152_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,2,1,1,pdfplumber,2025-09-28T16:47:38.274964,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_152_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,3,1,1,pdfplumber,2025-09-28T16:47:38.303901,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_152_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,4,1,1,pdfplumber,2025-09-28T16:47:38.336490,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_152_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,5,1,1,pdfplumber,2025-09-28T16:47:38.345571,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_70_Situacion-Economico-Financiera-Marzo.pdf,1,1,1,pdfplumber,2025-09-28T16:47:39.646885,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","4.829.803.963,15
+22.758.619,86
+75.750.736,14
+4.928.313.319,15
+4.070.320.352,42
+857.992.966,73
+4.928.313.319,15","730.626.749,12
+12.503.915,89
+743.130.665,01
+617.792.529,17
+125.338.135,84
+743.130.665,01","740.390.116,83
+12.504.015,89
+0,00
+752.894.132,72
+627.555.996,88
+125.338.135,84
+752.894.132,72
+79.017.016,83","I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","740.390.116,83
+704.974.953,50
+35.415.163,33
+12.504.015,89
+34.084.163,68
+752.894.132,72
+739.059.117,18
+13.835.015,54
+47.133.351,22
+60.968.366,76",,,,,,,,,,,,,,,,,
+pdf_70_Situacion-Economico-Financiera-Marzo.pdf,1,2,1,pdfplumber,2025-09-28T16:47:39.646907,,,,,,,,,,,"2.411.374.984,47
+896.437.885,51
+854.631.264,35
+320.541.205,93
+411.318.340,33
+2.910.049,95
+31.099.588,61
+4.928.313.319,15","404.812.518,18
+169.507.471,65
+131.489.667,99
+12.371.563,35
+20.875.646,43
+218.000,00
+30.012.072,56
+769.286.940,16
+20.430.417,73",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+112.465.016,37
+46.064.892,02
+3.848.023,60
+0,00
+0,00
+0,00
+162.377.931,99","404.812.518,18
+169.507.471,65
+143.570.297,02
+12.371.563,35
+20.875.646,43
+218.000,00
+30.012.072,56
+781.367.569,19","404.812.518,18
+132.975.711,82
+121.836.576,60
+12.245.563,35
+20.053.146,43
+218.000,00
+30.012.072,56
+722.153.588,94
+20.430.417,73",,,,,,,,,,,,,
+pdf_70_Situacion-Economico-Financiera-Marzo.pdf,2,1,1,pdfplumber,2025-09-28T16:47:39.697448,,,,,,,,,,,,,,,"115.330.255,37
+831.911.149,55
+930.750.841,27
+742.584.006,67
+1.010.750.841,27
+124.657.398,25",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","1.983.634.411,12
+447.681.283,48
+1.535.953.127,64
+-137.739.284,11
+-122.125.530,04
+-15.613.754,07
+-1.845.895.127,01
+-1.845.895.127,01
+-16.311.591,84
+-1.829.583.535,17
+-1.915.248.878,78
+-31.684.819,82
+117.350.163,43",,,,,,,,,,
+pdf_70_Situacion-Economico-Financiera-Marzo.pdf,2,1,2,pdfplumber,2025-09-28T16:47:39.697468,,,,,,,,,,,,,,,"13.226.245,97
+39.361.425,05
+38.674,26
+385.303,30
+61.409,72
+2.548,20
+1.787.168,67
+719.785,73
+339.079,43
+10.713.917,64
+757.941,63
+2.696.998,75
+767.313,48
+13.232.753,65
+723.349,78
+39.843.482,99
+124.657.398,25
+124.657.398,25",,,,,"Demostración del Saldo
+CAJA
+111210117RECURSOS ORDINARIOS (50328/8)
+111220101FONDO VIVIENDA MUNICIPAL (10041/0)
+111220102INMOBILIARIO RURAL AFECTADO (10085/4)
+111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
+111220106FONDO TENDIENDO REDES (10092/2)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220115FONDO DE INFRAESTRUCTURA (50405/2)
+111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf,110,1,1,pdfplumber,2025-09-28T16:48:18.574938,,,,,,,,,,,,,,,,,,,,,,,,,,"EstáSecretaría tienela responsabilidadde impulsarpolíticasque contribuyanamaximizar losrecursosconlosquecuenta el
+Municipiopara cumplir con la variada ycreciente gama de funcionesque debe cubrir enservicio hacia la comunidad quelo
+Integra, y a promover su utilización de la mejor manera posible.
+Paraelejercicio2025,sehanfijadometasqueseconsideranprioritarias,cuyaconsecuciónencaminarálaacciónatravésdel
+período.a saber:
+1)ConvergenciaFiscal:Duranteelejercicio2025laSecretaríadeHaciendatrabajaráfuertementeengeneraruncaminohacia
+la sustentabilidad financiera y económica que permitan un mayor nivel de autonomía de esta comuna con respecto a los
+recursosprovenientesdelGobiernoProvincialyNacional.Enestesentidoduranteel2024sehatrabajadoencumplirconlos
+objetivosentiempo yformacontodaslasobligaciones:para ello esnecesario implementar unsistema tributario yfiscal que
+modifiqueestructuralmentelasinequidadesdelaordenanzafiscaleimpositivaqueaúnnohasidosubsanadas.Setrabajaraen
+búsqueda de cumplimentar de manera efectiva los principios Constitucionales de legalidad, igualdad, generalidad, no
+confiscatoriedad, proporcionalidad yequidad tributaria. Es por eso que este proyecto de presupuesto va ensimismado con el
+proyectodefiscalimpositiva enelqueseobservanmodificacionesestructuralesdela tasadeserviciosurbanos, delatasa de
+higiene y seguridad y servicios a la actividad económica y de la tasa de conservación y mantenimiento de la Red Vial
+Municipal.
+2) Funcionamiento de contralor fiscal (ingresos públicos) con la labor de un equipo, cuyo único fin sea el de procurar la
+mayor cobranza posible de los créditos municipales morosos, a través de los distintos mecanismos y procedimientos que
+autoriza la LeyOrgánica de las municipalidades yla Ordenanza Fiscal e Impositiva. En este sentido, esque el municipio ha
+incurrido enincorpo herramientas tecnológicas, tales como botones de pago a través de la página web municipal, convenios
+con red link para el cobro de tasas a través de Home Banking, la adhesión a débito automático y demás herramientas de
+cobranza.
+3) Coordinación con otras Secretarias, en particular con la Secretaría de Planificación, de las acciones
+destinadas a mejorar la recaudación de tasas derechos y contribuciones vigentes como también la ejecución, seguimiento
+administrativo de las obras y proyectos de dominio público y privado.
+4) Asesoramiento técnico: El área de Hacienda y finanzas brinda constante asesoramiento técnico financiero a los distintos
+departamentos gubernamentales con el objetivo de qué estás áreas encuentren un camino administrativo y financiero contable
+sustentable qué les permita cumplir con sus objetivos de gestión.
+5) Seguir trabajando en la transparencia a través del área de compras, profundizando todas las acciones dirigidas a lograr
+mayorcompetitividaddelosproveedoresatravésdelosconcursosdeprecios,licitacionesprivadasopúblicas,mejorandono
+solo lospreciosenlosquese adquierenlosbienessinotambiénlaExcelencia enlaprestacióndelosserviciosque requieren
+contratar. Durante este año está proyectado trabajar e implementar la plataforma de proveedores yprestadores online con el
+objetivodequeQuiénescontratanconelmunicipiotenganunflujodeinformaciónmuchomáseficazyeficienteyreduciendo
+la circulación de proveedores en la oficina de compras.",,,,,,
+pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf,113,1,1,pdfplumber,2025-09-28T16:48:18.763308,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Está Secretaría, asiste al intendente en la organización y funcionamiento del servicio interno con solvencia técnica;
+proveyéndolo de asesoramiento legal, jurídico y administrativo como en todo lo atinente al desarrollo de sus actividades.
+Sepermaneceráprofundizandolasrelacionesinstitucionalesenelmarcode unnuevomodelo degestión,medianteesquemas
+de trabajo interdisciplinario con las áreas que la componen Y con toda la estructura orgánica municipal.
+La actual conformación de la Administración pública Provincial y Nacional permite coordinar y articular políticas sociales
+que mejoran la gestión de gobierno, optimizando la asignación de recursos.
+En este contexto, la propia dinámica de la gestión lleva a transformacionessustanciales a los efectos de percibir, entenderla,
+abordarla y acompañarla.
+Asimismo,elcaráctermulticausal delarealidadsociallocalysusproblemáticas, cómoasísuprevisibilidadllevaarediseñar
+políticas públicas innovadoras de carácter científico y tecnológico.
+En este sentido, la capacitación ymodernizaciónde la función pública en coordinacióncon las unidades operativas de cada
+área se vuelve imprescindible. Resultando menester aumentar la disponibilidad de conocimientos, aptitudes y adopción de
+actitudes y habilidades específicas en los recursos humanos para alcanzar mayores estándares de eficiencia y eficacia posible.
+Dicha acción se llevará adelante con el trabajo en equipo de la Dirección de Recursos Humanos y esta secretaría.
+En función de la reorganización mencionada, se comenzó a trazar instrumentos y procedimientos que permiten mejorar el
+funcionamiento de cada área y generar una cultura organizacional.
+De lo anterior se desprende conjuntamente con la Secretaría de Hacienda el programa de modernización del estado
+reconociendolaeficaciajurídicadeladigitalizacióndelosexpedientesylafirmaelectrónica,sistemaquedesburocratizaray
+permitiráoptimizartiempoyrecursos;conelclaroobjetivodepropiciarunaadministraciónpúblicamoderna,ágilyeficiente,
+garantizandomayorperdurabilidad delosdocumentos,lautilizaciónde menosespaciofísico,elcuidado delmedioambiente
+conelahorrodelpapel,larecuperaciónpermanentedeloscontenidosconplenovalor,ylasimplificaciónyconsulta;además
+de ser un salto cuantitativo y ponderar la institución.
+En ese marco y con el fin de propiciar un estado municipal abierto, que democratice su contenido, se procederá a la
+actualización normativa en tiempo real sirviéndose de una técnica legislativa que propicie una mayor proximidad a los/as
+ciudadanos.
+Enesadirección,laparticipaciónciudadanaylasrelacionesconlacomunidadenarticulaciónconestasecretariatieneunrol
+central, cuyo objetivo prioritario es fortalecer las organizaciones de la sociedad civil dotándolas de conocimiento sobre su
+propia realidad y generando espacios de transformación.
+Desde allí, se permanecerá implementando estrategias de acompañamiento con abordaje territorial, herramienta que surge a
+raíz del nuevo escenario suscitado por la crisis sanitaria mundial.
+Bajo ese eje, se seguirá construyendo y fomentando una sociedad civil pacífica con memoria, a través del trabajo con la
+secretaría de Derechos Humanos y su intersección mancomunada con otras áreas del gobierno local Provincial y Nacional.",,,,
+pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf,114,1,1,pdfplumber,2025-09-28T16:48:18.777938,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Estareparticióntienemuchasnecesidadesquecubrirymuchasveceslosrecursosgenuinosnoalcanzan;detodasmanerasse
+pone el mayor esfuerzo para poder alcanzar los objetivos planificados en cada año, cuyo único fin es el mayor bienestar
+posible de nuestra Comunidad. Además, esta Secretaría cuenta con apoyo económico permanente del Gobierno Provincial y
+Nacional,atravésdediferentesprogramascomoeslaConstruccióndeViviendas,elmantenimientodeCaminosRurales,etc.
+EnesteejercicioseseguiránrealizandomejorasyconstruccióndeobraspúblicasquepermitanquenuestraComunidadcrezca
+día a día, como por ejemplo: bacheos, veredas, mejorado de calles, etc.",,,
+pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf,122,1,1,pdfplumber,2025-09-28T16:48:19.022613,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"El objetivo de la Direcciónde Juventud es acercar a los ylas jóvenes respuestas a sus inquietudes, realizar actividades
+recreativas,ofrecerposibilidadesdetrabajo,ampliarlaofertayoportunidadesdeestudiospost-secundario,darimpulsoy
+continuidadasusproyectos,generarespaciosdeescucha,debateyconversacióntomandolasideasquedeellossurjany
+llevándolas a la realidad como políticas públicas.
+La Dirección de Juventud es un área transversal a todas las áreas del Municipio. Trabaja de manera mancomunada
+participando de todos los programas y proyectos que involucren a jóvenes.
+Actividades a desarrollar:
+-Casa de la Juventud
+SeguirtrabajandoenunespaciodeinteracciónparajóvenesdeCarmendeAreco,GouinyTresSargentosquepermitael
+fortalecimiento de sus capacidades y aptitudes y la reivindicación de las juventudes.
+Un lugar donde puedan encontrarse, desarrollar actividades de ocio, culturales y/o educativas, recibir capacitaciones,
+crear posibilidades de empleo a través de microemprendimientos y talleres que les permitan insertarse en el mercado
+laboral asegurando institucionalmente igualdad de oportunidades y mejores condiciones de vida.
+Con el objetivo de generar sentido de pertenencia, potenciar sus capacidades, lograr el arraigo en la comunidad, y ser
+conscientesdeladefensayconquistade derechosindividualesycolectivosparalogrartransformacionesenlasdistintas
+realidades que nos atraviesan.
+Centros de Estudiantes
+Consideramos de suma importancia que en Carmen de Areco, Gouin yTres Sargentos se pongan en valor yen marcha
+los Centros de Estudiantes.
+La legislacióntantoanivelprovincial comonacionaldice expresamente quese garantizaypromueve lacreaciónde los
+organismos de representación estudiantil bajo la forma de Centros de Estudiantes en cada una de las instituciones
+educativas de nivel medio yde nivel superior.Asimismo, arbitrará losmedios necesariospara el reconocimiento de los
+ya existentes.
+Es importante la difusión para que no sea otra de las tantas normas desconocidas y para prevenir que con la
+desinformaciónselimiteelactuardeloscentrosdeestudiantes.Lalegislaciónestablecelaeleccióndelosrepresentantes
+de los Centros de Estudiantes a través del voto, el primer acto democrático formal para muchas y muchos jóvenes.
+Los jóvenes deben involucrarse, participar, proponer y cuestionar. En el ámbito escolar, los centros de estudiantes
+cumplen la función de brindar espacios para ser escuchados y obtener respuestas concretas a sus demandas; abren
+canales de participación activa donde la juventud desarrolla capacidad de decisión.
+El objetivo esgenerar condicionesquepermitanconstruir herramientasque potencienla expresiónderecho a tener voz,
+la participación y la acción derecho a proponer y a actuar, desarrollar habilidades para la comunicación a través de
+prácticas de expresión, para sentirse parte y ejercer la ciudadanía.
+Conversatorios jóvenes
+Un espacio para acercarse e involucrarse,para participar de manera activa trayendo inquietudes ypropuestas que serán
+escuchadas y se les darán respuestas.
+De aquí saldrán los temas más urgentes y se prepararán proyectos para establecer políticas públicas.
+Será un espacio para proponer actividades y organizar voluntariados, brindando a las y los jóvenes una perspectiva
+social.
+PROGRAMA ENVION
+El Programa Envión está destinado a jóvenes entre 12 y 21 años que se encuentran en situación de vulnerabilidad social.
+El objetivo esencial es la inclusión, la contención, el acompañamiento y el diseño de estrategias que fortalezcan su
+estima, reparen y brinden igualdad de oportunidades.
+El Envión es nido ypista de despegue, es usina queconstruye, oferta y, a la vez,busca recuperar recursos materialesy
+simbólicos para que todos y cada uno puedan comenzar a re-escribir, a re-narrar un proyecto de vida.
+Objetivos Generales:
+Promover la integración socia",,
+pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf,123,1,1,pdfplumber,2025-09-28T16:48:19.066802,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"l plena de los jóvenes bonaerenses a través de la inclusión, protección, prevención en los campos de la educación, el
+trabajo, la salud, el arte, el deporte, etc.
+Desarrollando nuevas modalidades de relación y vinculación de estos jóvenes con el medio social al superar
+condicionamientos socio económicos de origen, tendientes a la construcción de un proyecto de vida.
+Objetivos Especificos:
+Mejorar la inserción y/o reinserción de adolescentes y jóvenes entre 12 y18 años en el sistema educativo, a través del
+otorgamiento de unrecursoeconómicoqueconlamodalidadde becaincremente losingresosfamiliaresdestinadosa la
+educación y la contención de estos jóvenes.
+Favorecer la inserción laboral de los jóvenes de 16 a 21 años, a partir de incrementar sus oportunidades para la
+generación de ingresos propios.
+Reducir la situación de riesgo de adolescentes y jóvenes en situación de vulnerabilidad social, a partir de brindar
+elementos y accesibilidad a recursos de cuidado de la salud, prevención de embarazos y adicciones y tratamiento de
+diferentes aspectos que hacen a su pleno desarrollo y bienestar.
+Favorecer la integración social, el sentido de la pertenencia y la construcción de la propia identidad a través de la
+participación en actividades artísticas, expresivas y deportivas.
+Para lograr esto, trabaja sobre cuatro componentes:
+Educación:paralapromocióndelainclusióneducativaypropiciarlacalidaddelosprocesosdesostenimientodelavida
+escolar.
+Trabajo:fortaleciendoaptitudesyactitudesquefacilitenelvínculoconelmundodeltrabajo,favoreciendolaformación
+técnica, brindando recursos para la búsqueda y continuidad en el trabajo. Este componente trabaja con la franja de
+jóvenes de 16 a 21 años.
+Salud:parafavorecerelaccesoalaatencióndelasalud,susaludindividualcolectiva.Incluyeelabordajedetemasmás
+generales en relación a la salud y temas puntuales como adicciones, salud sexual y reproductiva, e
+ntre otros.
+Integración: se trabaja desde el deporte, las actividades físicas y lúdicas, la cultura y la comunicación, para promover el
+desarrollo personal y el cumplimiento de derechos. Este componente trabaja sobre las potencialidades de los jóvenes
+fortaleciendo sus recursos subjetivos.
+Todos estos componentes se articulan y despliegan en sedes barriales, en donde trabaja un equipo técnico, con otros
+jóvenes referentes del barrio, profesores que brindan apoyo escolar, de oficios, de deportes, de artes, entre otros. Por
+otro lado, los jóvenes que lo requieren perciben una beca con la finalidad de contribuir a sus procesos de inclusión y
+terminalidad educativa.",
+pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf,135,1,1,pdfplumber,2025-09-28T16:48:19.540797,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"Este programa tiene como Objetivo la planificacion, creacion de proyectos, puesta en marcha, ejecucion y control de
+todaslasobrasquellevaadelanteelMunicipiofinanciadaconrecursosafectadoqueprovienendelafirmadeconvenios
+con el gobierno Provincial y Nacional."
+pdf_33_Situacion-Economico-Financiera-4to-Trimestre.pdf,1,1,1,pdfplumber,2025-09-28T16:48:24.906595,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","7.280.350.374,66
+451.737.382,61
+75.750.736,14
+7.807.838.493,41
+6.202.069.838,99
+1.605.768.654,42
+7.807.838.493,41","7.612.831.505,12
+446.571.166,50
+8.059.402.671,62
+6.572.650.362,29
+1.486.752.309,33
+8.059.402.671,62","6.634.326.237,87
+446.571.166,50
+0,00
+7.080.897.404,37
+5.594.145.095,04
+1.486.752.309,33
+7.080.897.404,37
+557.808.298,68","I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","6.634.326.237,87
+6.116.380.512,01
+517.945.725,86
+446.571.166,50
+736.799.708,00
+7.080.897.404,37
+6.853.180.220,01
+227.717.184,36
+93.790.188,96
+321.507.373,32",,,,,,,,,,,,,,,,,
+pdf_33_Situacion-Economico-Financiera-4to-Trimestre.pdf,1,2,1,pdfplumber,2025-09-28T16:48:24.906621,,,,,,,,,,,"3.413.039.923,86
+1.506.943.489,81
+1.664.157.100,45
+774.900.775,23
+405.283.845,52
+7.803.933,87
+35.709.424,67
+7.807.838.493,41","3.183.939.313,45
+1.263.059.268,77
+1.478.582.643,04
+623.006.396,00
+302.068.835,83
+4.107.883,92
+35.462.289,05
+6.890.226.630,06
+563.002.547,53",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+0,00
+0,00
+0,00
+0,00
+0,00
+0,00
+0,00","3.183.939.313,45
+1.263.268.768,77
+1.483.302.829,87
+729.759.960,58
+302.068.835,83
+4.107.883,92
+35.462.289,05
+7.001.909.881,47","3.183.939.313,45
+1.198.273.228,85
+1.452.836.232,92
+620.968.255,08
+300.849.237,83
+4.107.883,92
+35.462.289,05
+6.796.436.441,10
+563.002.547,53",,,,,,,,,,,,,
+pdf_33_Situacion-Economico-Financiera-4to-Trimestre.pdf,2,1,1,pdfplumber,2025-09-28T16:48:24.968862,,,,,,,,,,,,,,,"115.330.255,37
+7.638.705.703,05
+6.214.382.865,50
+7.359.438.988,63
+6.214.382.865,50
+394.596.969,79",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","3.261.369.211,92
+1.085.544.454,15
+2.175.824.757,77
+-331.831.943,52
+-104.317.374,96
+-227.514.568,56
+-2.929.537.268,40
+-2.929.537.268,40
+-16.311.591,84
+-2.913.225.676,56
+-1.618.462.493,78
+-1.412.113.346,21
+117.350.163,43",,,,,,,,,,
+pdf_33_Situacion-Economico-Financiera-4to-Trimestre.pdf,2,1,2,pdfplumber,2025-09-28T16:48:24.968878,,,,,,,,,,,,,,,"134.664.670,51
+834.224,95
+32.632.270,82
+415.453,70
+44.060.035,95
+14.799,88
+164.729.123,73
+18.326,75
+474.037,40
+5.503.490,32
+723.349,78
+10.527.186,00
+394.596.969,79
+394.596.969,79",,,,,"Demostración del Saldo
+111210117RECURSOS ORDINARIOS (50328/8)
+111210201RENTAS GENERALES
+111220102INMOBILIARIO RURAL AFECTADO (10085/4)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_33_Situacion-Economico-Financiera-4to-Trimestre.pdf,2,2,1,pdfplumber,2025-09-28T16:48:24.968888,,,,,,,,,,,,,,,"7.080.897.404,37
+6.853.180.220,01
+227.717.184,36
+0,00
+99.608.820,52
+34.508.410,05
+292.817.594,83",,,,,,,,,,"Recursos Corrientes y de Capital PERCIBIDO
+Gastos Corrientes y de Capital DEVENGADO
+RESULTADO DEL ART. 43
+Ingresos por endeudamiento aprobado
+Saldos de Caja y Bancos al cierre del ejercicio anterior (Recursos Ordinarios)
+Servicios de la deuda
+RESULTADO DEL ART. 44",,,,,,,
+pdf_81_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf,1,1,1,pdfplumber,2025-09-28T16:48:36.791050,,,,,,,,,,"1. Presupuestarios
+Ingresos corrientes
+Recursos de capital
+Fuentes Financieras
+Total
+De libre disponibilidad
+Afectados
+Total
+2. Extrapresupuestarios","833.340.880,32
+317.724.402,42
+0,00
+1.151.065.282,74
+707.904.244,54
+443.161.038,20
+1.151.065.282,74","772.490.862,97
+300.773.844,86
+7.590.000,00
+1.080.854.707,83
+660.635.187,09
+420.219.520,74
+1.080.854.707,83","736.933.805,68
+300.772.044,86
+7.590.000,00
+1.045.295.850,54
+625.076.329,80
+420.219.520,74
+1.045.295.850,54
+77.031.733,49","I. INGRESOS CORRIENTES
+II. GASTOS CORRIENTES
+III. AHORRO CORRIENTE: (I - II)
+IV. RECURSOS DE CAPITAL
+V. GASTOS DE CAPITAL
+VI. INGRESOS TOTALES
+VII. GASTOS TOTALES
+VIII. RESULTADO FINANCIERO (VI - VII)
+IX. FUENTES FINANCIERAS
+X. APLICACIONES FINANCIERAS","736.933.805,68
+759.337.002,99
+-22.403.197,31
+300.772.044,86
+393.826.288,35
+1.037.705.850,54
+1.153.163.291,34
+-115.457.440,80
+139.177.741,37
+12.141.161,07",,,,,,,,,,,,,,,,,
+pdf_81_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf,1,2,1,pdfplumber,2025-09-28T16:48:36.791074,,,,,,,,,,,"425.302.830,51
+108.490.515,08
+242.564.143,23
+324.170.056,02
+44.124.804,07
+-710.581,35
+7.123.515,18
+1.151.065.282,74","378.030.954,00
+137.848.709,27
+224.518.451,47
+368.226.095,72
+44.532.848,18
+11.720.000,00
+427.393,77
+1.165.304.452,41
+62.189.355,31",,,,"1. Presupuestarios
+Gastos en personal
+Bienes de consumo
+Servicios no personales
+Bienes de uso
+Transferencias
+Activos financieros
+Servicio de la deuda y disminución de otros pasivos
+Total
+2. Extrapresupuestarios","0,00
+-43.268.384,16
+-57.425.228,22
+-361.010.107,06
+-213.113.121,91
+0,00
+0,00
+-674.816.841,35","378.030.954,00
+134.811.632,40
+187.887.369,43
+638.705.149,95
+46.514.298,14
+11.720.000,00
+427.393,77
+1.398.096.797,69","378.030.954,00
+134.027.772,60
+226.586.849,36
+368.931.975,72
+44.589.790,18
+11.720.000,00
+427.393,77
+1.164.314.735,63
+65.439.241,15",,,,,,,,,,,,,
+pdf_81_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf,2,1,1,pdfplumber,2025-09-28T16:48:36.816930,,,,,,,,,,,,,,,"28.456.648,12
+1.122.327.584,03
+1.315.447.766,29
+1.229.753.976,78
+1.121.147.766,29
+115.330.255,37",,,,,"Saldo Inicial:
+Ingresos del Período:
+Ingresos de Ajustes Contables:
+Gastos del Período:
+Egresos de Ajustes Contables:
+Saldo final:","100000000 ACTIVO
+110000000 ACTIVO CORRIENTE
+120000000 ACTIVO NO CORRIENTE
+200000000 PASIVO
+210000000 PASIVO CORRIENTE
+220000000 PASIVO NO CORRIENTE
+300000000 PATRIMONIO
+310000000 PATRIMONIO PUBLICO
+311000000 Capital fiscal
+312000000 Resultados de la cuenta
+corriente
+312100000 Resultados de ejercicios
+anteriores
+312200000 Resultado del ejercicio
+312300000 Resultados afectados a
+construcción de bienes de
+dominio público","1.875.547.363,96
+367.417.608,31
+1.508.129.755,65
+-61.337.056,77
+-45.723.302,70
+-15.613.754,07
+-1.814.210.307,19
+-1.814.210.307,19
+-16.311.591,84
+-1.797.898.715,35
+-1.168.498.037,51
+-746.750.841,27
+117.350.163,43",,,,,,,,,,
+pdf_81_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf,2,1,2,pdfplumber,2025-09-28T16:48:36.816942,,,,,,,,,,,,,,,"23.858.084,38
+32.512,61
+280.788,77
+61.409,72
+2.548,20
+148.008,67
+57.847.982,36
+14.198,23
+2.536.059,29
+757.941,63
+633,75
+112.549,48
+13.232.753,65
+723.349,78
+15.721.434,85
+115.330.255,37
+115.330.255,37",,,,,"Demostración del Saldo
+111210117RECURSOS ORDINARIOS (50328/8)
+111220101FONDO VIVIENDA MUNICIPAL (10041/0)
+111220102INMOBILIARIO RURAL AFECTADO (10085/4)
+111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
+111220106FONDO TENDIENDO REDES (10092/2)
+111220107POLICIA COMUNAL (10093/9)
+111220109RECURSOS AFECTADOS (10096/0)
+111220112PLAN NACER (50008/1)
+111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
+111220115FONDO DE INFRAESTRUCTURA (50405/2)
+111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
+111220118S.A.M.O, Sistema de Atención Médica Organizada
+(51006/8)
+111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
+111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
+111230101CUENTA DE TERCEROS (10097/7)
+Total Disponibilidades:",,,,,,,,,,,,
+pdf_10_Situacion-Economico-Financiera-Marzo.pdf,1,1,1,pdfplumber,2025-09-28T16:48:49.889890,,,,,,,,,,"1. Presupuestarios
 Ingresos corrientes
 Recursos de capital
 Fuentes Financieras
@@ -398,8 +3119,8 @@ X. APLICACIONES FINANCIERAS","1.642.088.330,28
 1.986.988.200,28
 -110.338.203,19
 200.979.350,48
-90.641.147,29",,,,,,,,,,,,,,,,,,
-Situacion-Economico-Financiera-Marzo.pdf,1,2,1,pdfplumber,2025-09-27T17:03:13.932886,,"4.663.962.888,00
+90.641.147,29",,,,,,,,,,,,,,,,,
+pdf_10_Situacion-Economico-Financiera-Marzo.pdf,1,2,1,pdfplumber,2025-09-28T16:48:49.889913,,,,,,,,,,,"4.663.962.888,00
 1.909.776.013,68
 1.474.140.714,98
 884.601.083,39
@@ -445,8 +3166,8 @@ Total
 1.229.266,30
 90.443.409,19
 1.954.015.216,89
-131.905.915,42",,,,,,,,,,,,,,
-Situacion-Economico-Financiera-Marzo.pdf,1,3,1,pdfplumber,2025-09-27T17:03:13.932900,,"90.949.519,47
+131.905.915,42",,,,,,,,,,,,,
+pdf_10_Situacion-Economico-Financiera-Marzo.pdf,1,3,1,pdfplumber,2025-09-28T16:48:49.889927,,,,,,,,,,,"90.949.519,47
 86.579.066,60
 77.832.428,63
 93.086.012,08
@@ -601,7 +3322,7 @@ iental 96.000.000,00
 90.441.147,29
 1.912.395.828,67
 41.619.388,22
-41.619.388,22","Departamento Ejecutivo
+41.619.388,22",,,,,"Departamento Ejecutivo
 1110101000 - 16 Juzgado de Faltas
 1110101000 - 17 Direccion de Legales y Tecnica
 1110101000 - 18 Direccion de Comunicacion
@@ -634,13 +3355,13 @@ Partidas no asignables a programas
 Total Departamento Ejecutivo
 H.C.D.
 Actividades Centrales
-Total H.C.D.",,,,,,,,,,,,,
-Situacion-Economico-Financiera-Marzo.pdf,2,1,1,pdfplumber,2025-09-27T17:03:13.973162,,,,,,"394.596.969,79
+Total H.C.D.",,,,,,,,
+pdf_10_Situacion-Economico-Financiera-Marzo.pdf,2,1,1,pdfplumber,2025-09-28T16:48:49.928279,,,,,,,,,,,,,,,"394.596.969,79
 2.058.055.211,61
 1.611.113.346,21
 2.085.921.132,31
 1.840.113.346,21
-137.731.049,09",,,,,,"Saldo Inicial:
+137.731.049,09",,,,,"Saldo Inicial:
 Ingresos del Período:
 Ingresos de Ajustes Contables:
 Gastos del Período:
@@ -674,7 +3395,7 @@ dominio público","3.870.539.260,74
 -3.030.575.839,99
 -525.497.766,33
 117.350.163,43",,,,,,,,,,
-Situacion-Economico-Financiera-Marzo.pdf,2,1,2,pdfplumber,2025-09-27T17:03:13.973181,,,,,,"7.882.088,39
+pdf_10_Situacion-Economico-Financiera-Marzo.pdf,2,1,2,pdfplumber,2025-09-28T16:48:49.928290,,,,,,,,,,,,,,,"7.882.088,39
 8.334.638,00
 35.240,72
 749.278,89
@@ -694,7 +3415,7 @@ Situacion-Economico-Financiera-Marzo.pdf,2,1,2,pdfplumber,2025-09-27T17:03:13.97
 583.333,00
 632.500,00
 87.268.199,31
-137.731.049,09",,,,,,"Demostración del Saldo
+137.731.049,09",,,,,"Demostración del Saldo
 CAJA
 111210117RECURSOS ORDINARIOS (50328/8)
 111210201RENTAS GENERALES
@@ -716,2107 +3437,9 @@ Total Disponibilidades:
 111281500Fdo Esp de Emerg Sanit Covid19
 111281600Fdo Esp. de Asig. Extra. Salarial Municipal (FEAESM)
 Total Movimientos Transitorios:",,,,,,,,,,,,
-SITUACION-ECONOMICO-FINANCIERA.pdf,1,1,1,pdfplumber,2025-09-27T17:03:15.493188,"1. Presupuestarios
-Ingresos corrientes
-Recursos de capital
-Fuentes Financieras
-Total
-De libre disponibilidad
-Afectados
-Total
-2. Extrapresupuestarios","1.012.932.283,35
-230.212.490,93
-208.626.646,86
-1.451.771.421,14
-710.878.842,33
-740.892.578,81
-1.451.771.421,14","955.088.753,02
-265.869.744,65
-1.220.958.497,67
-651.035.312,00
-569.923.185,67
-1.220.958.497,67","900.369.984,69
-265.871.544,65
-0,00
-1.166.241.529,34
-596.318.343,67
-569.923.185,67
-1.166.241.529,34
-85.597.741,35","I. INGRESOS CORRIENTES
-II. GASTOS CORRIENTES
-III. AHORRO CORRIENTE: (I - II)
-IV. RECURSOS DE CAPITAL
-V. GASTOS DE CAPITAL
-VI. INGRESOS TOTALES
-VII. GASTOS TOTALES
-VIII. RESULTADO FINANCIERO (VI - VII)
-IX. FUENTES FINANCIERAS
-X. APLICACIONES FINANCIERAS","900.369.984,69
-847.147.637,58
-53.222.347,11
-265.871.544,65
-402.467.102,07
-1.166.241.529,34
-1.249.614.739,65
--83.373.210,31
-101.025.334,08
-17.652.123,77",,,,,,,,,,,,,,,,,,
-SITUACION-ECONOMICO-FINANCIERA.pdf,1,2,1,pdfplumber,2025-09-27T17:03:15.493214,,"421.213.166,19
-175.302.981,12
-409.947.519,52
-288.565.186,07
-140.301.538,44
-6.816.867,17
-9.624.162,63
-1.451.771.421,14","408.463.749,68
-165.144.398,87
-313.979.291,12
-267.298.137,83
-94.717.445,45
-1.017.000,00
-16.646.840,47
-1.267.266.863,42
-67.213.768,79",,,,"1. Presupuestarios
-Gastos en personal
-Bienes de consumo
-Servicios no personales
-Bienes de uso
-Transferencias
-Activos financieros
-Servicio de la deuda y disminución de otros pasivos
-Total
-2. Extrapresupuestarios","0,00
-22.432.292,80
-32.338.082,53
-262.915.957,31
-7.881.109,92
-0,00
-0,00
-325.567.442,56","408.463.749,68
-165.261.341,55
-398.789.378,03
-291.832.768,42
-163.859.994,00
-1.017.000,00
-16.646.840,47
-1.445.871.072,15","408.463.749,68
-146.650.623,29
-303.786.985,01
-259.217.441,77
-92.818.377,45
-987.000,00
-16.646.840,47
-1.228.571.017,67
-63.820.693,60",,,,,,,,,,,,,,
-SITUACION-ECONOMICO-FINANCIERA.pdf,2,1,1,pdfplumber,2025-09-27T17:03:15.532236,,,,,,"204.481.588,57
-1.251.839.270,69
-746.303.307,80
-1.292.391.711,27
-839.503.307,80
-70.729.147,99",,,,,,"Saldo Inicial:
-Ingresos del Período:
-Ingresos de Ajustes Contables:
-Gastos del Período:
-Egresos de Ajustes Contables:
-Saldo final:","100000000 ACTIVO
-110000000 ACTIVO CORRIENTE
-120000000 ACTIVO NO CORRIENTE
-200000000 PASIVO
-210000000 PASIVO CORRIENTE
-220000000 PASIVO NO CORRIENTE
-300000000 PATRIMONIO
-310000000 PATRIMONIO PUBLICO
-311000000 Capital fiscal
-312000000 Resultados de la cuenta
-corriente
-312100000 Resultados de ejercicios
-anteriores
-312200000 Resultado del ejercicio
-312300000 Resultados afectados a
-construcción de bienes de
-dominio público","1.483.753.451,60
-377.544.583,79
-1.106.208.867,81
--72.108.956,47
--63.987.089,12
--8.121.867,35
--1.411.644.495,13
--1.411.644.495,13
--16.311.591,84
--1.395.332.903,29
--507.554.288,35
--1.005.128.778,37
-117.350.163,43",,,,,,,,,,
-SITUACION-ECONOMICO-FINANCIERA.pdf,2,1,2,pdfplumber,2025-09-27T17:03:15.532246,,,,,,"2.594.532,66
-57,01
-4.810.331,71
-20.024,32
-7.688,27
-61.409,72
-2.548,20
-1.159.774,21
-384.448,50
-904.401,55
-1.660.414,44
-291.450,05
-1.922.453,75
-187.880,49
-30.499.828,50
-723.349,78
-25.498.554,83
-70.729.147,99
-70.729.147,99",,,,,,"Demostración del Saldo
-CAJA
-111210104PARTICIPACION IMPUESTOS PROV. (10037/3)
-111210117RECURSOS ORDINARIOS (50328/8)
-111220101FONDO VIVIENDA MUNICIPAL (10041/0)
-111220102INMOBILIARIO RURAL AFECTADO (10085/4)
-111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
-111220106FONDO TENDIENDO REDES (10092/2)
-111220107POLICIA COMUNAL (10093/9)
-111220109RECURSOS AFECTADOS (10096/0)
-111220112PLAN NACER (50008/1)
-111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
-111220115FONDO DE INFRAESTRUCTURA (50405/2)
-111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
-111220118S.A.M.O, Sistema de Atención Médica Organizada
-(51006/8)
-111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
-111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
-111230101CUENTA DE TERCEROS (10097/7)
-Total Disponibilidades:",,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-2.pdf,1,1,1,pdfplumber,2025-09-27T17:03:15.678517,"1. Presupuestarios
-Ingresos corrientes
-Recursos de capital
-Fuentes Financieras
-Total
-De libre disponibilidad
-Afectados
-Total
-2. Extrapresupuestarios","709.327.757,14
-517.257,70
-208.626.646,86
-918.471.661,70
-709.845.014,84
-208.626.646,86
-918.471.661,70","360.025.589,85
-114.478.659,27
-474.504.249,12
-237.216.972,15
-237.287.276,97
-474.504.249,12","351.775.611,00
-114.479.259,27
-0,00
-466.254.870,27
-228.967.593,30
-237.287.276,97
-466.254.870,27
-31.540.864,04","I. INGRESOS CORRIENTES
-II. GASTOS CORRIENTES
-III. AHORRO CORRIENTE: (I - II)
-IV. RECURSOS DE CAPITAL
-V. GASTOS DE CAPITAL
-VI. INGRESOS TOTALES
-VII. GASTOS TOTALES
-VIII. RESULTADO FINANCIERO (VI - VII)
-IX. FUENTES FINANCIERAS
-X. APLICACIONES FINANCIERAS","351.775.611,00
-287.594.994,96
-64.180.616,04
-114.479.259,27
-115.738.307,72
-466.254.870,27
-403.333.302,68
-62.921.567,59
-56.669.909,15
-119.591.476,74",,,,,,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-2.pdf,1,2,1,pdfplumber,2025-09-27T17:03:15.678541,,"394.969.637,61
-100.006.733,24
-307.578.944,99
-64.241.447,16
-42.315.365,49
-235.370,58
-9.124.162,63
-918.471.661,70","151.740.756,27
-50.724.206,65
-89.705.969,79
-98.604.761,40
-12.555.359,00
-533.000,00
-16.606.729,56
-420.470.782,67
-6.257.054,67",,,,"1. Presupuestarios
-Gastos en personal
-Bienes de consumo
-Servicios no personales
-Bienes de uso
-Transferencias
-Activos financieros
-Servicio de la deuda y disminución de otros pasivos
-Total
-2. Extrapresupuestarios","0,00
-22.191.136,75
-59.734.673,41
-304.966.802,65
-206.158,40
-0,00
-0,00
-387.098.771,21","151.740.756,27
-53.918.060,35
-138.058.137,45
-100.808.291,40
-12.580.359,00
-533.000,00
-16.606.729,56
-474.245.334,03","151.732.944,27
-25.658.520,90
-80.776.439,05
-76.705.835,74
-11.787.404,00
-533.000,00
-16.606.729,56
-363.800.873,52
-6.257.054,67",,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-2.pdf,2,1,1,pdfplumber,2025-09-27T17:03:15.704725,,,,,,"204.481.588,57
-497.795.734,31
-330.200.000,00
-370.057.928,19
-330.200.000,00
-332.219.394,69",,,,,,"Saldo Inicial:
-Ingresos del Período:
-Ingresos de Ajustes Contables:
-Gastos del Período:
-Egresos de Ajustes Contables:
-Saldo final:","100000000 ACTIVO
-110000000 ACTIVO CORRIENTE
-120000000 ACTIVO NO CORRIENTE
-200000000 PASIVO
-210000000 PASIVO CORRIENTE
-220000000 PASIVO NO CORRIENTE
-300000000 PATRIMONIO
-310000000 PATRIMONIO PUBLICO
-311000000 Capital fiscal
-312000000 Resultados de la cuenta
-corriente
-312100000 Resultados de ejercicios
-anteriores
-312200000 Resultado del ejercicio
-312300000 Resultados afectados a
-construcción de bienes de
-dominio público","1.344.509.210,95
-499.367.241,01
-845.141.969,94
--93.812.125,27
--85.690.257,92
--8.121.867,35
--1.250.697.085,68
--1.250.697.085,68
--16.311.591,84
--1.234.385.493,84
--507.554.288,35
--844.181.368,92
-117.350.163,43",,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-2.pdf,2,1,2,pdfplumber,2025-09-27T17:03:15.704742,,,,,,"2.115.471,17
-7.374.220,65
-7.701,02
-955.793,54
-61.409,72
-2.548,20
-560.378,63
-147.509.124,69
-1.143.236,60
-34.702.356,90
-1.291.450,05
-1.333,75
-202.975,29
-120.746.059,01
-723.349,78
-14.821.985,69
-332.219.394,69
-332.219.394,69",,,,,,"Demostración del Saldo
-CAJA
-111210117RECURSOS ORDINARIOS (50328/8)
-111220101FONDO VIVIENDA MUNICIPAL (10041/0)
-111220102INMOBILIARIO RURAL AFECTADO (10085/4)
-111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
-111220106FONDO TENDIENDO REDES (10092/2)
-111220107POLICIA COMUNAL (10093/9)
-111220109RECURSOS AFECTADOS (10096/0)
-111220112PLAN NACER (50008/1)
-111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
-111220115FONDO DE INFRAESTRUCTURA (50405/2)
-111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
-111220118S.A.M.O, Sistema de Atención Médica Organizada
-(51006/8)
-111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
-111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
-111230101CUENTA DE TERCEROS (10097/7)
-Total Disponibilidades:",,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf,1,1,1,pdfplumber,2025-09-27T17:03:15.825837,"1. Presupuestarios
-Ingresos corrientes
-Recursos de capital
-Total
-De libre disponibilidad
-Afectados
-Total
-2. Extrapresupuestarios","874.303.301,86
-169.119.967,43
-1.043.423.269,29
-710.751.957,65
-332.671.311,64
-1.043.423.269,29","668.344.932,88
-152.270.103,67
-820.615.036,55
-502.659.461,17
-317.955.575,38
-820.615.036,55","656.450.315,06
-152.270.103,67
-808.720.418,73
-490.764.843,35
-317.955.575,38
-808.720.418,73
-51.002.405,39","I. INGRESOS CORRIENTES
-II. GASTOS CORRIENTES
-III. AHORRO CORRIENTE: (I - II)
-IV. RECURSOS DE CAPITAL
-V. GASTOS DE CAPITAL
-VI. INGRESOS TOTALES
-VII. GASTOS TOTALES
-VIII. RESULTADO FINANCIERO (VI - VII)
-IX. FUENTES FINANCIERAS
-X. APLICACIONES FINANCIERAS","656.450.315,06
-627.827.244,15
-28.623.070,91
-152.270.103,67
-91.086.367,26
-808.720.418,73
-718.913.611,41
-89.806.807,32
-28.844.124,38
-17.625.597,62",,,,,,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf,1,2,1,pdfplumber,2025-09-27T17:03:15.825886,,"416.571.386,57
-160.643.570,46
-287.060.290,00
-91.299.061,79
-59.131.988,36
-21.593.456,93
-7.123.515,18
-1.043.423.269,29","299.174.908,62
-102.138.994,32
-181.834.151,02
-64.402.352,35
-59.955.355,61
-11.565.000,00
-35.435,54
-719.106.197,46
-71.794.215,81",,,,"1. Presupuestarios
-Gastos en personal
-Bienes de consumo
-Servicios no personales
-Bienes de uso
-Transferencias
-Activos financieros
-Servicio de la deuda y disminución de otros pasivos
-Total
-2. Extrapresupuestarios","0,00
-34.096.195,36
-25.082.250,69
-84.834.045,75
-205.232.011,99
-0,00
-0,00
-349.244.503,79","299.174.908,62
-111.970.666,58
-176.712.178,34
-63.143.621,43
-59.955.355,61
-11.565.000,00
-35.435,54
-722.557.166,12","299.174.908,62
-101.142.459,01
-184.314.600,64
-71.397.168,41
-61.298.346,61
-11.595.000,00
-35.435,54
-728.957.918,83
-71.937.405,16",,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf,2,1,1,pdfplumber,2025-09-27T17:03:15.852725,,,,,,"70.729.147,99
-859.722.824,12
-483.900.000,00
-800.895.323,99
-585.000.000,00
-28.456.648,12",,,,,,"Saldo Inicial:
-Ingresos del Período:
-Ingresos de Ajustes Contables:
-Gastos del Período:
-Egresos de Ajustes Contables:
-Saldo final:","100000000 ACTIVO
-110000000 ACTIVO CORRIENTE
-120000000 ACTIVO NO CORRIENTE
-200000000 PASIVO
-210000000 PASIVO CORRIENTE
-220000000 PASIVO NO CORRIENTE
-300000000 PATRIMONIO
-310000000 PATRIMONIO PUBLICO
-311000000 Capital fiscal
-312000000 Resultados de la cuenta
-corriente
-312100000 Resultados de ejercicios
-anteriores
-312200000 Resultado del ejercicio
-312300000 Resultados afectados a
-construcción de bienes de
-dominio público","1.629.376.053,15
-448.301.701,74
-1.181.074.351,41
--41.521.349,28
--33.399.481,93
--8.121.867,35
--1.587.854.703,87
--1.587.854.703,87
--16.311.591,84
--1.571.543.112,03
--507.554.288,35
--1.181.338.987,11
-117.350.163,43",,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf,2,1,2,pdfplumber,2025-09-27T17:03:15.852742,,,,,,"1.502.568,76
-2.187.042,01
-4.128.028,08
-26.185,97
-61.409,72
-2.548,20
-1.630.609,02
-3.359.765,28
-1.418.204,05
-1.256.441,25
-1.575.139,57
-3.094.308,75
-740.535,57
-2.250.937,15
-723.349,78
-4.499.574,96
-28.456.648,12
-28.456.648,12",,,,,,"Demostración del Saldo
-CAJA
-111210104PARTICIPACION IMPUESTOS PROV. (10037/3)
-111210117RECURSOS ORDINARIOS (50328/8)
-111220101FONDO VIVIENDA MUNICIPAL (10041/0)
-111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
-111220106FONDO TENDIENDO REDES (10092/2)
-111220107POLICIA COMUNAL (10093/9)
-111220109RECURSOS AFECTADOS (10096/0)
-111220112PLAN NACER (50008/1)
-111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
-111220115FONDO DE INFRAESTRUCTURA (50405/2)
-111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
-111220118S.A.M.O, Sistema de Atención Médica Organizada
-(51006/8)
-111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
-111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
-111230101CUENTA DE TERCEROS (10097/7)
-Total Disponibilidades:",,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf,1,1,1,pdfplumber,2025-09-27T17:03:15.977358,"1. Presupuestarios
-Ingresos corrientes
-Recursos de capital
-Fuentes Financieras
-Total
-De libre disponibilidad
-Afectados
-Total
-2. Extrapresupuestarios","833.340.880,32
-317.724.402,42
-0,00
-1.151.065.282,74
-707.904.244,54
-443.161.038,20
-1.151.065.282,74","772.490.862,97
-300.773.844,86
-7.590.000,00
-1.080.854.707,83
-660.635.187,09
-420.219.520,74
-1.080.854.707,83","736.933.805,68
-300.772.044,86
-7.590.000,00
-1.045.295.850,54
-625.076.329,80
-420.219.520,74
-1.045.295.850,54
-77.031.733,49","I. INGRESOS CORRIENTES
-II. GASTOS CORRIENTES
-III. AHORRO CORRIENTE: (I - II)
-IV. RECURSOS DE CAPITAL
-V. GASTOS DE CAPITAL
-VI. INGRESOS TOTALES
-VII. GASTOS TOTALES
-VIII. RESULTADO FINANCIERO (VI - VII)
-IX. FUENTES FINANCIERAS
-X. APLICACIONES FINANCIERAS","736.933.805,68
-759.337.002,99
--22.403.197,31
-300.772.044,86
-393.826.288,35
-1.037.705.850,54
-1.153.163.291,34
--115.457.440,80
-139.177.741,37
-12.141.161,07",,,,,,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf,1,2,1,pdfplumber,2025-09-27T17:03:15.977379,,"425.302.830,51
-108.490.515,08
-242.564.143,23
-324.170.056,02
-44.124.804,07
--710.581,35
-7.123.515,18
-1.151.065.282,74","378.030.954,00
-137.848.709,27
-224.518.451,47
-368.226.095,72
-44.532.848,18
-11.720.000,00
-427.393,77
-1.165.304.452,41
-62.189.355,31",,,,"1. Presupuestarios
-Gastos en personal
-Bienes de consumo
-Servicios no personales
-Bienes de uso
-Transferencias
-Activos financieros
-Servicio de la deuda y disminución de otros pasivos
-Total
-2. Extrapresupuestarios","0,00
--43.268.384,16
--57.425.228,22
--361.010.107,06
--213.113.121,91
-0,00
-0,00
--674.816.841,35","378.030.954,00
-134.811.632,40
-187.887.369,43
-638.705.149,95
-46.514.298,14
-11.720.000,00
-427.393,77
-1.398.096.797,69","378.030.954,00
-134.027.772,60
-226.586.849,36
-368.931.975,72
-44.589.790,18
-11.720.000,00
-427.393,77
-1.164.314.735,63
-65.439.241,15",,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf,2,1,1,pdfplumber,2025-09-27T17:03:16.049581,,,,,,"28.456.648,12
-1.122.327.584,03
-1.315.447.766,29
-1.229.753.976,78
-1.121.147.766,29
-115.330.255,37",,,,,,"Saldo Inicial:
-Ingresos del Período:
-Ingresos de Ajustes Contables:
-Gastos del Período:
-Egresos de Ajustes Contables:
-Saldo final:","100000000 ACTIVO
-110000000 ACTIVO CORRIENTE
-120000000 ACTIVO NO CORRIENTE
-200000000 PASIVO
-210000000 PASIVO CORRIENTE
-220000000 PASIVO NO CORRIENTE
-300000000 PATRIMONIO
-310000000 PATRIMONIO PUBLICO
-311000000 Capital fiscal
-312000000 Resultados de la cuenta
-corriente
-312100000 Resultados de ejercicios
-anteriores
-312200000 Resultado del ejercicio
-312300000 Resultados afectados a
-construcción de bienes de
-dominio público","1.875.547.363,96
-367.417.608,31
-1.508.129.755,65
--61.337.056,77
--45.723.302,70
--15.613.754,07
--1.814.210.307,19
--1.814.210.307,19
--16.311.591,84
--1.797.898.715,35
--1.168.498.037,51
--746.750.841,27
-117.350.163,43",,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf,2,1,2,pdfplumber,2025-09-27T17:03:16.049600,,,,,,"23.858.084,38
-32.512,61
-280.788,77
-61.409,72
-2.548,20
-148.008,67
-57.847.982,36
-14.198,23
-2.536.059,29
-757.941,63
-633,75
-112.549,48
-13.232.753,65
-723.349,78
-15.721.434,85
-115.330.255,37
-115.330.255,37",,,,,,"Demostración del Saldo
-111210117RECURSOS ORDINARIOS (50328/8)
-111220101FONDO VIVIENDA MUNICIPAL (10041/0)
-111220102INMOBILIARIO RURAL AFECTADO (10085/4)
-111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
-111220106FONDO TENDIENDO REDES (10092/2)
-111220107POLICIA COMUNAL (10093/9)
-111220109RECURSOS AFECTADOS (10096/0)
-111220112PLAN NACER (50008/1)
-111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
-111220115FONDO DE INFRAESTRUCTURA (50405/2)
-111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
-111220118S.A.M.O, Sistema de Atención Médica Organizada
-(51006/8)
-111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
-111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
-111230101CUENTA DE TERCEROS (10097/7)
-Total Disponibilidades:",,,,,,,,,,,,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf,1,1,1,pdfplumber,2025-09-27T17:03:16.970745,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf,2,1,1,pdfplumber,2025-09-27T17:03:17.071360,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf,3,1,1,pdfplumber,2025-09-27T17:03:17.099284,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf,4,1,1,pdfplumber,2025-09-27T17:03:17.130834,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf,5,1,1,pdfplumber,2025-09-27T17:03:17.159786,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf,6,1,1,pdfplumber,2025-09-27T17:03:17.168908,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf,1,1,1,pdfplumber,2025-09-27T17:03:17.205777,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf,2,1,1,pdfplumber,2025-09-27T17:03:17.242981,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf,3,1,1,pdfplumber,2025-09-27T17:03:17.274566,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf,4,1,1,pdfplumber,2025-09-27T17:03:17.302995,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf,1,1,1,pdfplumber,2025-09-27T17:03:17.361402,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf,2,1,1,pdfplumber,2025-09-27T17:03:17.398376,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf,3,1,1,pdfplumber,2025-09-27T17:03:17.434477,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf,4,1,1,pdfplumber,2025-09-27T17:03:17.457537,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-Situacion-Economico-Financiera-Junio.pdf,1,1,1,pdfplumber,2025-09-27T17:03:33.342314,"1. Presupuestarios
-Ingresos corrientes
-Recursos de capital
-Fuentes Financieras
-Total
-De libre disponibilidad
-Afectados
-Total
-2. Extrapresupuestarios","5.004.583.228,92
-158.798.019,83
-75.750.736,14
-5.239.131.984,89
-4.179.325.376,90
-1.059.806.607,99
-5.239.131.984,89","2.831.232.836,57
-149.286.320,96
-2.980.519.157,53
-2.405.028.052,55
-575.491.104,98
-2.980.519.157,53","2.315.003.453,80
-149.286.320,96
-0,00
-2.464.289.774,76
-1.888.798.669,78
-575.491.104,98
-2.464.289.774,76
-208.689.792,67","I. INGRESOS CORRIENTES
-II. GASTOS CORRIENTES
-III. AHORRO CORRIENTE: (I - II)
-IV. RECURSOS DE CAPITAL
-V. GASTOS DE CAPITAL
-VI. INGRESOS TOTALES
-VII. GASTOS TOTALES
-VIII. RESULTADO FINANCIERO (VI - VII)
-IX. FUENTES FINANCIERAS
-X. APLICACIONES FINANCIERAS","2.315.003.453,80
-2.067.415.843,32
-247.587.610,48
-149.286.320,96
-218.988.335,52
-2.464.289.774,76
-2.286.404.178,84
-177.885.595,92
-68.680.035,13
-246.565.631,05",,,,,,,,,,,,,,,,,,
-Situacion-Economico-Financiera-Junio.pdf,1,2,1,pdfplumber,2025-09-27T17:03:33.342340,,"2.419.833.846,85
-1.006.059.798,83
-952.462.526,21
-450.052.563,22
-375.483.321,34
-2.910.049,95
-32.329.878,49
-5.239.131.984,89","1.159.521.532,07
-461.248.169,31
-396.090.236,94
-157.305.133,10
-112.228.259,74
-218.000,00
-32.061.338,76
-2.318.672.669,92
-169.079.825,85",,,,"1. Presupuestarios
-Gastos en personal
-Bienes de consumo
-Servicios no personales
-Bienes de uso
-Transferencias
-Activos financieros
-Servicio de la deuda y disminución de otros pasivos
-Total
-2. Extrapresupuestarios","0,00
-140.975.003,59
-77.840.567,54
-17.100.580,01
-852.931,92
-0,00
-0,00
-236.769.083,06","1.159.521.532,07
-471.325.559,65
-437.762.525,92
-157.305.133,10
-112.228.259,74
-218.000,00
-32.061.338,76
-2.370.422.349,24","1.159.521.532,07
-406.748.162,92
-383.255.165,21
-156.304.676,09
-111.883.759,74
-218.000,00
-32.061.338,76
-2.249.992.634,79
-169.079.825,85",,,,,,,,,,,,,,
-Situacion-Economico-Financiera-Junio.pdf,2,1,1,pdfplumber,2025-09-27T17:03:33.380251,,,,,,"115.330.255,37
-2.672.979.567,43
-1.711.550.563,29
-2.419.072.460,64
-1.970.550.563,29
-110.237.362,16",,,,,,"Saldo Inicial:
-Ingresos del Período:
-Ingresos de Ajustes Contables:
-Gastos del Período:
-Egresos de Ajustes Contables:
-Saldo final:","100000000 ACTIVO
-110000000 ACTIVO CORRIENTE
-120000000 ACTIVO NO CORRIENTE
-200000000 PASIVO
-210000000 PASIVO CORRIENTE
-220000000 PASIVO NO CORRIENTE
-300000000 PATRIMONIO
-310000000 PATRIMONIO PUBLICO
-311000000 Capital fiscal
-312000000 Resultados de la cuenta
-corriente
-312100000 Resultados de ejercicios
-anteriores
-312200000 Resultado del ejercicio
-312300000 Resultados afectados a
-construcción de bienes de
-dominio público","2.851.611.300,46
-1.138.254.097,87
-1.713.357.202,59
--138.843.842,89
--123.230.088,82
--15.613.754,07
--2.712.767.457,57
--2.712.767.457,57
--16.311.591,84
--2.696.455.865,73
--1.914.449.156,76
--899.356.872,40
-117.350.163,43",,,,,,,,,,
-Situacion-Economico-Financiera-Junio.pdf,2,1,2,pdfplumber,2025-09-27T17:03:33.380270,,,,,,"19.416.910,41
-4.791.988,21
-44.233,78
-47.268,33
-110.126,71
-187.656,50
-570.076,30
-207.461,83
-997.894,59
-3.481.934,76
-16.657,66
-565.083,37
-8.592.253,65
-723.349,78
-70.484.466,28
-110.237.362,16
-110.237.362,16",,,,,,"Demostración del Saldo
-CAJA
-111210117RECURSOS ORDINARIOS (50328/8)
-111210201RENTAS GENERALES
-111220101FONDO VIVIENDA MUNICIPAL (10041/0)
-111220102INMOBILIARIO RURAL AFECTADO (10085/4)
-111220107POLICIA COMUNAL (10093/9)
-111220109RECURSOS AFECTADOS (10096/0)
-111220112PLAN NACER (50008/1)
-111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
-111220115FONDO DE INFRAESTRUCTURA (50405/2)
-111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
-111220118S.A.M.O, Sistema de Atención Médica Organizada
-(51006/8)
-111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
-111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
-111230101CUENTA DE TERCEROS (10097/7)
-Total Disponibilidades:",,,,,,,,,,,,
-Situacion-Economico-Financiera-3er-Trimestre.pdf,1,1,1,pdfplumber,2025-09-27T17:03:33.530698,"1. Presupuestarios
-Ingresos corrientes
-Recursos de capital
-Fuentes Financieras
-Total
-De libre disponibilidad
-Afectados
-Total
-2. Extrapresupuestarios","5.267.172.154,65
-298.028.697,17
-75.750.736,14
-5.640.951.587,96
-4.377.259.839,28
-1.263.691.748,68
-5.640.951.587,96","4.520.633.058,75
-289.731.878,80
-4.810.364.937,55
-3.796.578.894,15
-1.013.786.043,40
-4.810.364.937,55","4.051.286.962,97
-289.731.888,80
-0,00
-4.341.018.851,77
-3.327.232.808,37
-1.013.786.043,40
-4.341.018.851,77
-356.569.699,78","I. INGRESOS CORRIENTES
-II. GASTOS CORRIENTES
-III. AHORRO CORRIENTE: (I - II)
-IV. RECURSOS DE CAPITAL
-V. GASTOS DE CAPITAL
-VI. INGRESOS TOTALES
-VII. GASTOS TOTALES
-VIII. RESULTADO FINANCIERO (VI - VII)
-IX. FUENTES FINANCIERAS
-X. APLICACIONES FINANCIERAS","4.051.286.962,97
-3.740.422.791,09
-310.864.171,88
-289.731.888,80
-400.952.451,93
-4.341.018.851,77
-4.141.375.243,02
-199.643.608,75
-139.308.474,28
-338.952.083,03",,,,,,,,,,,,,,,,,,
-Situacion-Economico-Financiera-3er-Trimestre.pdf,1,2,1,pdfplumber,2025-09-27T17:03:33.530722,,"2.419.833.846,85
-1.162.040.890,67
-1.241.517.213,67
-363.198.359,92
-414.411.998,90
-6.074.049,95
-33.875.228,00
-5.640.951.587,96","2.025.505.526,33
-853.725.272,60
-756.957.151,52
-315.518.906,57
-189.330.446,24
-2.058.000,00
-33.615.861,46
-4.176.711.164,72
-320.210.283,02",,,,"1. Presupuestarios
-Gastos en personal
-Bienes de consumo
-Servicios no personales
-Bienes de uso
-Transferencias
-Activos financieros
-Servicio de la deuda y disminución de otros pasivos
-Total
-2. Extrapresupuestarios","0,00
-78.624.519,42
-133.149.661,44
-31.087.094,35
-16.642.908,21
-0,00
-0,00
-259.504.183,42","2.025.505.526,33
-855.634.554,60
-787.596.233,12
-318.093.913,03
-189.330.446,24
-2.058.000,00
-33.615.861,46
-4.211.834.534,78","2.025.505.526,33
-748.321.406,14
-729.258.845,71
-310.600.699,56
-188.242.351,24
-1.858.000,00
-33.615.861,46
-4.037.402.690,44
-320.210.283,02",,,,,,,,,,,,,,
-Situacion-Economico-Financiera-3er-Trimestre.pdf,2,1,1,pdfplumber,2025-09-27T17:03:33.575668,,,,,,"115.330.255,37
-4.697.588.551,55
-2.742.550.563,29
-4.357.612.973,46
-3.055.550.563,29
-142.305.833,46",,,,,,"Saldo Inicial:
-Ingresos del Período:
-Ingresos de Ajustes Contables:
-Gastos del Período:
-Egresos de Ajustes Contables:
-Saldo final:","100000000 ACTIVO
-110000000 ACTIVO CORRIENTE
-120000000 ACTIVO NO CORRIENTE
-200000000 PASIVO
-210000000 PASIVO CORRIENTE
-220000000 PASIVO NO CORRIENTE
-300000000 PATRIMONIO
-310000000 PATRIMONIO PUBLICO
-311000000 Capital fiscal
-312000000 Resultados de la cuenta
-corriente
-312100000 Resultados de ejercicios
-anteriores
-312200000 Resultado del ejercicio
-312300000 Resultados afectados a
-construcción de bienes de
-dominio público","3.069.511.402,39
-1.177.439.272,18
-1.892.072.130,21
--205.226.748,13
--189.612.994,06
--15.613.754,07
--2.864.284.654,26
--2.864.284.654,26
--16.311.591,84
--2.847.973.062,42
--1.914.449.156,76
--1.050.874.069,09
-117.350.163,43",,,,,,,,,,
-Situacion-Economico-Financiera-3er-Trimestre.pdf,2,1,2,pdfplumber,2025-09-27T17:03:33.575687,,,,,,"28.185.153,13
-4.807.662,22
-406.192,89
-48.271,43
-508.884,49
-1.212.485,70
-22.488.895,66
-116.361,83
-799.993,43
-2.747.032,76
-16.657,66
-565.083,37
-8.893.828,99
-723.349,78
-70.785.980,12
-142.305.833,46
-142.305.833,46",,,,,,"Demostración del Saldo
-CAJA
-111210117RECURSOS ORDINARIOS (50328/8)
-111210201RENTAS GENERALES
-111220101FONDO VIVIENDA MUNICIPAL (10041/0)
-111220102INMOBILIARIO RURAL AFECTADO (10085/4)
-111220107POLICIA COMUNAL (10093/9)
-111220109RECURSOS AFECTADOS (10096/0)
-111220112PLAN NACER (50008/1)
-111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
-111220115FONDO DE INFRAESTRUCTURA (50405/2)
-111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
-111220118S.A.M.O, Sistema de Atención Médica Organizada
-(51006/8)
-111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
-111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
-111230101CUENTA DE TERCEROS (10097/7)
-Total Disponibilidades:",,,,,,,,,,,,
-Situacion-Economico-Financiera-3er-Trimestre.pdf,2,2,1,pdfplumber,2025-09-27T17:03:33.575698,,,,,,"4.341.018.851,77
-4.141.375.243,02
-199.643.608,75
-0,00
-99.608.820,52
-33.277.921,70
-265.974.507,57",,,,,,,,,,,,,,,,,,"Recursos Corrientes y de Capital PERCIBIDO
-Gastos Corrientes y de Capital DEVENGADO
-RESULTADO DEL ART. 43
-Ingresos por endeudamiento aprobado
-Saldos de Caja y Bancos al cierre del ejercicio anterior (Recursos Ordinarios)
-Servicios de la deuda
-RESULTADO DEL ART. 44"
-Situacion-Economico-Financiera-4to-Trimestre.pdf,1,1,1,pdfplumber,2025-09-27T17:03:33.758020,"1. Presupuestarios
-Ingresos corrientes
-Recursos de capital
-Fuentes Financieras
-Total
-De libre disponibilidad
-Afectados
-Total
-2. Extrapresupuestarios","7.280.350.374,66
-451.737.382,61
-75.750.736,14
-7.807.838.493,41
-6.202.069.838,99
-1.605.768.654,42
-7.807.838.493,41","7.612.831.505,12
-446.571.166,50
-8.059.402.671,62
-6.572.650.362,29
-1.486.752.309,33
-8.059.402.671,62","6.634.326.237,87
-446.571.166,50
-0,00
-7.080.897.404,37
-5.594.145.095,04
-1.486.752.309,33
-7.080.897.404,37
-557.808.298,68","I. INGRESOS CORRIENTES
-II. GASTOS CORRIENTES
-III. AHORRO CORRIENTE: (I - II)
-IV. RECURSOS DE CAPITAL
-V. GASTOS DE CAPITAL
-VI. INGRESOS TOTALES
-VII. GASTOS TOTALES
-VIII. RESULTADO FINANCIERO (VI - VII)
-IX. FUENTES FINANCIERAS
-X. APLICACIONES FINANCIERAS","6.634.326.237,87
-6.116.380.512,01
-517.945.725,86
-446.571.166,50
-736.799.708,00
-7.080.897.404,37
-6.853.180.220,01
-227.717.184,36
-93.790.188,96
-321.507.373,32",,,,,,,,,,,,,,,,,,
-Situacion-Economico-Financiera-4to-Trimestre.pdf,1,2,1,pdfplumber,2025-09-27T17:03:33.758041,,"3.413.039.923,86
-1.506.943.489,81
-1.664.157.100,45
-774.900.775,23
-405.283.845,52
-7.803.933,87
-35.709.424,67
-7.807.838.493,41","3.183.939.313,45
-1.263.059.268,77
-1.478.582.643,04
-623.006.396,00
-302.068.835,83
-4.107.883,92
-35.462.289,05
-6.890.226.630,06
-563.002.547,53",,,,"1. Presupuestarios
-Gastos en personal
-Bienes de consumo
-Servicios no personales
-Bienes de uso
-Transferencias
-Activos financieros
-Servicio de la deuda y disminución de otros pasivos
-Total
-2. Extrapresupuestarios","0,00
-0,00
-0,00
-0,00
-0,00
-0,00
-0,00
-0,00","3.183.939.313,45
-1.263.268.768,77
-1.483.302.829,87
-729.759.960,58
-302.068.835,83
-4.107.883,92
-35.462.289,05
-7.001.909.881,47","3.183.939.313,45
-1.198.273.228,85
-1.452.836.232,92
-620.968.255,08
-300.849.237,83
-4.107.883,92
-35.462.289,05
-6.796.436.441,10
-563.002.547,53",,,,,,,,,,,,,,
-Situacion-Economico-Financiera-4to-Trimestre.pdf,2,1,1,pdfplumber,2025-09-27T17:03:33.800640,,,,,,"115.330.255,37
-7.638.705.703,05
-6.214.382.865,50
-7.359.438.988,63
-6.214.382.865,50
-394.596.969,79",,,,,,"Saldo Inicial:
-Ingresos del Período:
-Ingresos de Ajustes Contables:
-Gastos del Período:
-Egresos de Ajustes Contables:
-Saldo final:","100000000 ACTIVO
-110000000 ACTIVO CORRIENTE
-120000000 ACTIVO NO CORRIENTE
-200000000 PASIVO
-210000000 PASIVO CORRIENTE
-220000000 PASIVO NO CORRIENTE
-300000000 PATRIMONIO
-310000000 PATRIMONIO PUBLICO
-311000000 Capital fiscal
-312000000 Resultados de la cuenta
-corriente
-312100000 Resultados de ejercicios
-anteriores
-312200000 Resultado del ejercicio
-312300000 Resultados afectados a
-construcción de bienes de
-dominio público","3.261.369.211,92
-1.085.544.454,15
-2.175.824.757,77
--331.831.943,52
--104.317.374,96
--227.514.568,56
--2.929.537.268,40
--2.929.537.268,40
--16.311.591,84
--2.913.225.676,56
--1.618.462.493,78
--1.412.113.346,21
-117.350.163,43",,,,,,,,,,
-Situacion-Economico-Financiera-4to-Trimestre.pdf,2,1,2,pdfplumber,2025-09-27T17:03:33.800650,,,,,,"134.664.670,51
-834.224,95
-32.632.270,82
-415.453,70
-44.060.035,95
-14.799,88
-164.729.123,73
-18.326,75
-474.037,40
-5.503.490,32
-723.349,78
-10.527.186,00
-394.596.969,79
-394.596.969,79",,,,,,"Demostración del Saldo
-111210117RECURSOS ORDINARIOS (50328/8)
-111210201RENTAS GENERALES
-111220102INMOBILIARIO RURAL AFECTADO (10085/4)
-111220107POLICIA COMUNAL (10093/9)
-111220109RECURSOS AFECTADOS (10096/0)
-111220112PLAN NACER (50008/1)
-111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
-111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
-111220118S.A.M.O, Sistema de Atención Médica Organizada
-(51006/8)
-111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
-111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
-111230101CUENTA DE TERCEROS (10097/7)
-Total Disponibilidades:",,,,,,,,,,,,
-Situacion-Economico-Financiera-4to-Trimestre.pdf,2,2,1,pdfplumber,2025-09-27T17:03:33.800659,,,,,,"7.080.897.404,37
-6.853.180.220,01
-227.717.184,36
-0,00
-99.608.820,52
-34.508.410,05
-292.817.594,83",,,,,,,,,,,,,,,,,,"Recursos Corrientes y de Capital PERCIBIDO
-Gastos Corrientes y de Capital DEVENGADO
-RESULTADO DEL ART. 43
-Ingresos por endeudamiento aprobado
-Saldos de Caja y Bancos al cierre del ejercicio anterior (Recursos Ordinarios)
-Servicios de la deuda
-RESULTADO DEL ART. 44"
-Situacion-Economico-Financiera-Marzo.pdf,1,1,1,pdfplumber,2025-09-27T17:03:33.950204,"1. Presupuestarios
-Ingresos corrientes
-Recursos de capital
-Fuentes Financieras
-Total
-De libre disponibilidad
-Afectados
-Total
-2. Extrapresupuestarios","4.829.803.963,15
-22.758.619,86
-75.750.736,14
-4.928.313.319,15
-4.070.320.352,42
-857.992.966,73
-4.928.313.319,15","730.626.749,12
-12.503.915,89
-743.130.665,01
-617.792.529,17
-125.338.135,84
-743.130.665,01","740.390.116,83
-12.504.015,89
-0,00
-752.894.132,72
-627.555.996,88
-125.338.135,84
-752.894.132,72
-79.017.016,83","I. INGRESOS CORRIENTES
-II. GASTOS CORRIENTES
-III. AHORRO CORRIENTE: (I - II)
-IV. RECURSOS DE CAPITAL
-V. GASTOS DE CAPITAL
-VI. INGRESOS TOTALES
-VII. GASTOS TOTALES
-VIII. RESULTADO FINANCIERO (VI - VII)
-IX. FUENTES FINANCIERAS
-X. APLICACIONES FINANCIERAS","740.390.116,83
-704.974.953,50
-35.415.163,33
-12.504.015,89
-34.084.163,68
-752.894.132,72
-739.059.117,18
-13.835.015,54
-47.133.351,22
-60.968.366,76",,,,,,,,,,,,,,,,,,
-Situacion-Economico-Financiera-Marzo.pdf,1,2,1,pdfplumber,2025-09-27T17:03:33.950226,,"2.411.374.984,47
-896.437.885,51
-854.631.264,35
-320.541.205,93
-411.318.340,33
-2.910.049,95
-31.099.588,61
-4.928.313.319,15","404.812.518,18
-169.507.471,65
-131.489.667,99
-12.371.563,35
-20.875.646,43
-218.000,00
-30.012.072,56
-769.286.940,16
-20.430.417,73",,,,"1. Presupuestarios
-Gastos en personal
-Bienes de consumo
-Servicios no personales
-Bienes de uso
-Transferencias
-Activos financieros
-Servicio de la deuda y disminución de otros pasivos
-Total
-2. Extrapresupuestarios","0,00
-112.465.016,37
-46.064.892,02
-3.848.023,60
-0,00
-0,00
-0,00
-162.377.931,99","404.812.518,18
-169.507.471,65
-143.570.297,02
-12.371.563,35
-20.875.646,43
-218.000,00
-30.012.072,56
-781.367.569,19","404.812.518,18
-132.975.711,82
-121.836.576,60
-12.245.563,35
-20.053.146,43
-218.000,00
-30.012.072,56
-722.153.588,94
-20.430.417,73",,,,,,,,,,,,,,
-Situacion-Economico-Financiera-Marzo.pdf,2,1,1,pdfplumber,2025-09-27T17:03:33.988409,,,,,,"115.330.255,37
-831.911.149,55
-930.750.841,27
-742.584.006,67
-1.010.750.841,27
-124.657.398,25",,,,,,"Saldo Inicial:
-Ingresos del Período:
-Ingresos de Ajustes Contables:
-Gastos del Período:
-Egresos de Ajustes Contables:
-Saldo final:","100000000 ACTIVO
-110000000 ACTIVO CORRIENTE
-120000000 ACTIVO NO CORRIENTE
-200000000 PASIVO
-210000000 PASIVO CORRIENTE
-220000000 PASIVO NO CORRIENTE
-300000000 PATRIMONIO
-310000000 PATRIMONIO PUBLICO
-311000000 Capital fiscal
-312000000 Resultados de la cuenta
-corriente
-312100000 Resultados de ejercicios
-anteriores
-312200000 Resultado del ejercicio
-312300000 Resultados afectados a
-construcción de bienes de
-dominio público","1.983.634.411,12
-447.681.283,48
-1.535.953.127,64
--137.739.284,11
--122.125.530,04
--15.613.754,07
--1.845.895.127,01
--1.845.895.127,01
--16.311.591,84
--1.829.583.535,17
--1.915.248.878,78
--31.684.819,82
-117.350.163,43",,,,,,,,,,
-Situacion-Economico-Financiera-Marzo.pdf,2,1,2,pdfplumber,2025-09-27T17:03:33.988427,,,,,,"13.226.245,97
-39.361.425,05
-38.674,26
-385.303,30
-61.409,72
-2.548,20
-1.787.168,67
-719.785,73
-339.079,43
-10.713.917,64
-757.941,63
-2.696.998,75
-767.313,48
-13.232.753,65
-723.349,78
-39.843.482,99
-124.657.398,25
-124.657.398,25",,,,,,"Demostración del Saldo
-CAJA
-111210117RECURSOS ORDINARIOS (50328/8)
-111220101FONDO VIVIENDA MUNICIPAL (10041/0)
-111220102INMOBILIARIO RURAL AFECTADO (10085/4)
-111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
-111220106FONDO TENDIENDO REDES (10092/2)
-111220107POLICIA COMUNAL (10093/9)
-111220109RECURSOS AFECTADOS (10096/0)
-111220112PLAN NACER (50008/1)
-111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
-111220115FONDO DE INFRAESTRUCTURA (50405/2)
-111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
-111220118S.A.M.O, Sistema de Atención Médica Organizada
-(51006/8)
-111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
-111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
-111230101CUENTA DE TERCEROS (10097/7)
-Total Disponibilidades:",,,,,,,,,,,,
-Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf,1,1,1,pdfplumber,2025-09-27T17:03:34.088009,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf,2,1,1,pdfplumber,2025-09-27T17:03:34.143146,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf,3,1,1,pdfplumber,2025-09-27T17:03:34.190898,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf,4,1,1,pdfplumber,2025-09-27T17:03:34.237503,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf,5,1,1,pdfplumber,2025-09-27T17:03:34.281578,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf,6,1,1,pdfplumber,2025-09-27T17:03:34.306764,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,1,1,1,pdfplumber,2025-09-27T17:04:05.283732,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,2,1,1,pdfplumber,2025-09-27T17:04:05.336187,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,3,1,1,pdfplumber,2025-09-27T17:04:05.380774,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,4,1,1,pdfplumber,2025-09-27T17:04:05.425094,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf,5,1,1,pdfplumber,2025-09-27T17:04:05.456678,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf,1,1,1,pdfplumber,2025-09-27T17:04:06.775424,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf,1,1,1,pdfplumber,2025-09-27T17:04:07.149386,"1. Presupuestarios
-Ingresos corrientes
-Recursos de capital
-Fuentes Financieras
-Total
-De libre disponibilidad
-Afectados
-Total
-2. Extrapresupuestarios","1.004.837.082,01
-228.898.351,61
-43.937.805,56
-1.277.673.239,18
-808.782.840,40
-468.890.398,78
-1.277.673.239,18","402.609.254,88
-219.884.063,83
-622.493.318,71
-274.792.574,80
-347.700.743,91
-622.493.318,71","385.515.063,57
-219.884.063,83
-0,00
-605.399.127,40
-257.698.383,49
-347.700.743,91
-605.399.127,40
-33.362.496,23","I. INGRESOS CORRIENTES
-II. GASTOS CORRIENTES
-III. AHORRO CORRIENTE: (I - II)
-IV. RECURSOS DE CAPITAL
-V. GASTOS DE CAPITAL
-VI. INGRESOS TOTALES
-VII. GASTOS TOTALES
-VIII. RESULTADO FINANCIERO (VI - VII)
-IX. FUENTES FINANCIERAS
-X. APLICACIONES FINANCIERAS","385.515.063,57
-359.417.933,95
-26.097.129,62
-219.884.063,83
-135.362.208,68
-605.399.127,40
-494.780.142,63
-110.618.984,77
-16.589.124,86
-119.335.781,95",,,,,,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf,1,2,1,pdfplumber,2025-09-27T17:04:07.149410,,"446.915.124,55
-242.436.550,17
-267.219.623,88
-244.149.474,86
-67.922.236,44
-1.906.714,10
-7.123.515,18
-1.277.673.239,18","175.876.678,61
-63.033.181,20
-118.446.258,35
-114.758.073,82
-22.657.114,04
-250.000,00
-40.348,66
-495.061.654,68
-40.258.511,72",,,,"1. Presupuestarios
-Gastos en personal
-Bienes de consumo
-Servicios no personales
-Bienes de uso
-Transferencias
-Activos financieros
-Servicio de la deuda y disminución de otros pasivos
-Total
-2. Extrapresupuestarios","0,00
--36.190.873,82
--82.436.185,58
--16.165.695,53
--265.075,00
-0,00
-0,00
--135.057.829,93","175.876.678,61
-101.250.925,28
-172.602.797,85
-132.663.077,59
-22.657.114,04
-250.000,00
-40.348,66
-605.340.942,03","175.876.678,61
-66.666.442,29
-116.556.280,14
-120.918.251,80
-22.727.969,44
-250.000,00
-40.348,66
-503.035.970,94
-40.258.511,72",,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf,2,1,1,pdfplumber,2025-09-27T17:04:07.177757,,,,,,"109.014.447,60
-638.761.623,63
-436.265.354,96
-543.294.482,66
-436.265.354,96
-204.481.588,57",,,,,,"Saldo Inicial:
-Ingresos del Período:
-Ingresos de Ajustes Contables:
-Gastos del Período:
-Egresos de Ajustes Contables:
-Saldo final:","100000000 ACTIVO
-110000000 ACTIVO CORRIENTE
-120000000 ACTIVO NO CORRIENTE
-200000000 PASIVO
-210000000 PASIVO CORRIENTE
-220000000 PASIVO NO CORRIENTE
-300000000 PATRIMONIO
-310000000 PATRIMONIO PUBLICO
-311000000 Capital fiscal
-312000000 Resultados de la cuenta
-corriente
-312100000 Resultados de ejercicios
-anteriores
-312200000 Resultado del ejercicio
-312300000 Resultados afectados a
-construcción de bienes de
-dominio público","1.094.306.101,71
-362.915.056,04
-731.391.045,67
--27.997.886,74
--19.876.019,39
--8.121.867,35
--1.066.308.214,97
--1.066.308.214,97
--16.311.591,84
--1.049.996.623,13
--507.554.288,35
--659.792.498,21
-117.350.163,43",,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf,2,1,2,pdfplumber,2025-09-27T17:04:07.177774,,,,,,"84.410,28
-7.701,02
-114.239,27
-50.333,00
-2.548,20
-899.614,51
-90.479.612,52
-76.903,40
-2.990.303,28
-2.174.148,46
-594.481,00
-367.035,01
-102.630.014,31
-723.349,78
-3.286.894,53
-204.481.588,57
-204.481.588,57",,,,,,"Demostración del Saldo
-111210117RECURSOS ORDINARIOS (50328/8)
-111220101FONDO VIVIENDA MUNICIPAL (10041/0)
-111220102INMOBILIARIO RURAL AFECTADO (10085/4)
-111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
-111220106FONDO TENDIENDO REDES (10092/2)
-111220107POLICIA COMUNAL (10093/9)
-111220109RECURSOS AFECTADOS (10096/0)
-111220112PLAN NACER (50008/1)
-111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
-111220115FONDO DE INFRAESTRUCTURA (50405/2)
-111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
-111220118S.A.M.O, Sistema de Atención Médica Organizada
-(51006/8)
-111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
-111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
-111230101CUENTA DE TERCEROS (10097/7)
-Total Disponibilidades:",,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf,1,1,1,pdfplumber,2025-09-27T17:04:07.378447,"1. Presupuestarios
-Ingresos corrientes
-Recursos de capital
-Fuentes Financieras
-Total
-De libre disponibilidad
-Afectados
-Total
-2. Extrapresupuestarios","763.497.300,74
-102.227.622,96
-0,00
-865.724.923,70
-588.042.625,00
-277.682.298,70
-865.724.923,70","305.762.198,07
-68.052.090,78
-373.814.288,85
-228.706.606,00
-145.107.682,85
-373.814.288,85","283.122.758,68
-68.052.100,78
-0,00
-351.174.859,46
-206.067.176,61
-145.107.682,85
-351.174.859,46
-24.457.076,16","I. INGRESOS CORRIENTES
-II. GASTOS CORRIENTES
-III. AHORRO CORRIENTE: (I - II)
-IV. RECURSOS DE CAPITAL
-V. GASTOS DE CAPITAL
-VI. INGRESOS TOTALES
-VII. GASTOS TOTALES
-VIII. RESULTADO FINANCIERO (VI - VII)
-IX. FUENTES FINANCIERAS
-X. APLICACIONES FINANCIERAS","283.122.758,68
-242.596.093,33
-40.526.665,35
-68.052.100,78
-163.130.580,14
-351.174.859,46
-405.726.673,47
--54.551.814,01
-24.563.441,12
-17.421.993,59",,,,,,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf,1,2,1,pdfplumber,2025-09-27T17:04:07.378468,,"435.341.735,91
-140.913.999,67
-91.491.596,60
-132.724.358,55
-52.765.170,83
-1.982.611,00
-10.505.451,14
-865.724.923,70","118.909.443,91
-38.424.298,72
-70.506.534,56
-153.831.618,32
-24.046.690,46
-576.000,00
-162.967,65
-406.457.553,62
-30.058.564,30",,,,"1. Presupuestarios
-Gastos en personal
-Bienes de consumo
-Servicios no personales
-Bienes de uso
-Transferencias
-Activos financieros
-Servicio de la deuda y disminución de otros pasivos
-Total
-2. Extrapresupuestarios","0,00
-3.066.321,89
-45.788.065,36
--35.206.230,39
-98.165,00
-0,00
-0,00
-13.746.321,86","118.909.443,91
-38.521.723,47
-87.142.446,26
-249.947.649,41
-24.046.690,46
-576.000,00
-162.967,65
-519.306.921,16","118.909.443,91
-35.468.085,32
-70.518.960,45
-148.507.024,35
-24.078.385,06
-576.000,00
-162.967,65
-398.220.866,74
-30.058.564,30",,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf,2,1,1,pdfplumber,2025-09-27T17:04:07.406266,,,,,,"86.361.943,02
-375.631.935,62
-265.985.919,96
-428.279.431,04
-190.685.919,96
-109.014.447,60",,,,,,"Saldo Inicial:
-Ingresos del Período:
-Ingresos de Ajustes Contables:
-Gastos del Período:
-Egresos de Ajustes Contables:
-Saldo final:","100000000 ACTIVO
-110000000 ACTIVO CORRIENTE
-120000000 ACTIVO NO CORRIENTE
-200000000 PASIVO
-210000000 PASIVO CORRIENTE
-220000000 PASIVO NO CORRIENTE
-300000000 PATRIMONIO
-310000000 PATRIMONIO PUBLICO
-311000000 Capital fiscal
-312000000 Resultados de la cuenta
-corriente
-312100000 Resultados de ejercicios
-anteriores
-312200000 Resultado del ejercicio
-312300000 Resultados afectados a
-construcción de bienes de
-dominio público","946.817.883,67
-245.981.288,96
-700.836.594,71
--42.595.902,54
--34.939.176,27
--7.656.726,27
--904.221.981,13
--904.221.981,13
--16.311.591,84
--887.910.389,29
--498.544.093,41
--423.890.104,83
-34.523.808,95",,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf,2,1,2,pdfplumber,2025-09-27T17:04:07.406283,,,,,,"2.365.810,10
-47,84
-65,17
-21.056.422,87
-0,77
-548.031,63
-50.333,00
-2.548,20
-1.638.181,07
-52.696.896,90
-496.665,19
-8.556.335,75
-1.063.757,06
-448.096,00
-358.200,01
-7.572.514,50
-723.349,78
-11.437.191,76
-109.014.447,60
-109.014.447,60",,,,,,"Demostración del Saldo
-CAJA
-111210107INMOBILIARIO RURAL NO AFECTADO (10086/1)
-111210108INGRESOS BRUTOS (10087/8)
-111210117RECURSOS ORDINARIOS (50328/8)
-111220101FONDO VIVIENDA MUNICIPAL (10041/0)
-111220102INMOBILIARIO RURAL AFECTADO (10085/4)
-111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
-111220106FONDO TENDIENDO REDES (10092/2)
-111220107POLICIA COMUNAL (10093/9)
-111220109RECURSOS AFECTADOS (10096/0)
-111220112PLAN NACER (50008/1)
-111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
-111220115FONDO DE INFRAESTRUCTURA (50405/2)
-111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
-111220118S.A.M.O, Sistema de Atención Médica Organizada
-(51006/8)
-111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
-111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
-111230101CUENTA DE TERCEROS (10097/7)
-Total Disponibilidades:",,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA.pdf,1,1,1,pdfplumber,2025-09-27T17:04:07.507540,"1. Presupuestarios
-Ingresos corrientes
-Recursos de capital
-Fuentes Financieras
-Total
-De libre disponibilidad
-Afectados
-Total
-2. Extrapresupuestarios","771.912.286,40
-75.552.281,16
-38.202.618,58
-885.667.186,14
-588.042.625,00
-297.624.561,14
-885.667.186,14","206.880.134,68
-73.284.002,14
-279.898,27
-280.444.035,09
-127.423.210,57
-153.020.824,52
-280.444.035,09","203.719.387,37
-73.284.012,14
-279.898,27
-277.283.297,78
-124.262.473,26
-153.020.824,52
-277.283.297,78
-17.670.371,36","I. INGRESOS CORRIENTES
-II. GASTOS CORRIENTES
-III. AHORRO CORRIENTE: (I - II)
-IV. RECURSOS DE CAPITAL
-V. GASTOS DE CAPITAL
-VI. INGRESOS TOTALES
-VII. GASTOS TOTALES
-VIII. RESULTADO FINANCIERO (VI - VII)
-IX. FUENTES FINANCIERAS
-X. APLICACIONES FINANCIERAS","203.719.387,37
-157.451.509,96
-46.267.877,41
-73.284.012,14
-107.124.508,76
-277.003.399,51
-264.576.018,72
-12.427.380,79
-45.953.067,75
-58.380.448,54",,,,,,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA.pdf,1,2,1,pdfplumber,2025-09-27T17:04:07.507563,,"431.496.819,93
-168.958.404,10
-91.491.904,78
-125.082.164,47
-55.182.824,86
-2.099.283,86
-11.355.784,14
-885.667.186,14","83.314.796,57
-37.412.360,61
-30.564.091,71
-107.084.202,35
-6.193.245,11
-370.000,00
-7.689.063,71
-272.627.760,06
-11.580.920,92",,,,"1. Presupuestarios
-Gastos en personal
-Bienes de consumo
-Servicios no personales
-Bienes de uso
-Transferencias
-Activos financieros
-Servicio de la deuda y disminución de otros pasivos
-Total
-2. Extrapresupuestarios","0,00
-33.936.514,34
-30.815.394,54
-4.812.208,03
-42.510,00
-0,00
-0,00
-69.606.626,91","83.314.796,57
-37.412.898,61
-38.023.413,23
-256.493.304,26
-6.193.245,11
-370.000,00
-7.689.063,71
-429.496.721,49","83.314.796,57
-22.045.178,60
-26.619.511,17
-80.893.750,42
-6.022.290,11
-370.000,00
-7.689.063,71
-226.954.590,58
-11.577.676,59",,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA.pdf,2,1,1,pdfplumber,2025-09-27T17:04:07.533081,,,,,,"82.976.433,05
-294.953.669,14
-699.619.486,45
-238.532.267,17
-823.019.486,45
-15.997.835,02",,,,,,"Saldo Inicial:
-Ingresos del Período:
-Ingresos de Ajustes Contables:
-Gastos del Período:
-Egresos de Ajustes Contables:
-Saldo final:","100000000 ACTIVO
-110000000 ACTIVO CORRIENTE
-120000000 ACTIVO NO CORRIENTE
-200000000 PASIVO
-210000000 PASIVO CORRIENTE
-220000000 PASIVO NO CORRIENTE
-300000000 PATRIMONIO
-310000000 PATRIMONIO PUBLICO
-311000000 Capital fiscal
-312000000 Resultados de la cuenta
-corriente
-312100000 Resultados de ejercicios
-anteriores
-312200000 Resultado del ejercicio
-312300000 Resultados afectados a
-construcción de bienes de
-dominio público","663.422.589,88
-242.219.565,16
-421.203.024,72
--60.520.347,54
--52.863.621,27
--7.656.726,27
--602.902.242,34
--602.902.242,34
--16.311.591,84
--586.590.650,50
--498.544.093,41
--122.570.366,04
-34.523.808,95",,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA.pdf,2,1,2,pdfplumber,2025-09-27T17:04:07.533120,,,,,,"680.079,72
-59,24
-2.383.585,69
-763.417,77
-420.122,17
-50.333,00
-2.548,20
-780.257,84
-218.222,67
-322.980,75
-345.891,48
-861.743,28
-260.979,85
-645.372,43
-0,01
-8.262.240,92
-15.997.835,02
-15.997.835,02",,,,,,"Demostración del Saldo
-CAJA
-111210104PARTICIPACION IMPUESTOS PROV. (10037/3)
-111210117RECURSOS ORDINARIOS (50328/8)
-111220101FONDO VIVIENDA MUNICIPAL (10041/0)
-111220102INMOBILIARIO RURAL AFECTADO (10085/4)
-111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
-111220106FONDO TENDIENDO REDES (10092/2)
-111220107POLICIA COMUNAL (10093/9)
-111220109RECURSOS AFECTADOS (10096/0)
-111220112PLAN NACER (50008/1)
-111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
-111220115FONDO DE INFRAESTRUCTURA (50405/2)
-111220118S.A.M.O, Sistema de Atención Médica Organizada
-(51006/8)
-111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
-111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
-111230101CUENTA DE TERCEROS (10097/7)
-Total Disponibilidades:",,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-1.pdf,1,1,1,pdfplumber,2025-09-27T17:04:07.645314,"1. Presupuestarios
-Ingresos corrientes
-Recursos de capital
-Fuentes Financieras
-Total
-De libre disponibilidad
-Afectados
-Total
-2. Extrapresupuestarios","742.679.860,15
-97.341.480,60
-0,00
-840.021.340,75
-588.042.625,00
-251.978.715,75
-840.021.340,75","248.790.762,78
-134.364.111,58
--279.898,27
-382.874.976,09
-181.280.153,32
-201.594.822,77
-382.874.976,09","237.285.080,95
-134.364.111,58
--279.898,27
-371.369.294,26
-169.774.471,49
-201.594.822,77
-371.369.294,26
-24.877.294,45","I. INGRESOS CORRIENTES
-II. GASTOS CORRIENTES
-III. AHORRO CORRIENTE: (I - II)
-IV. RECURSOS DE CAPITAL
-V. GASTOS DE CAPITAL
-VI. INGRESOS TOTALES
-VII. GASTOS TOTALES
-VIII. RESULTADO FINANCIERO (VI - VII)
-IX. FUENTES FINANCIERAS
-X. APLICACIONES FINANCIERAS","237.285.080,95
-199.539.634,40
-37.745.446,55
-134.364.111,58
-128.409.103,97
-371.649.192,53
-327.948.738,37
-43.700.454,16
-16.046.855,97
-64.402.847,85",,,,,,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-1.pdf,1,2,1,pdfplumber,2025-09-27T17:04:07.645338,,"435.296.427,86
-142.075.079,47
-86.377.503,90
-121.044.573,98
-42.739.693,40
-1.982.611,00
-10.505.451,14
-840.021.340,75","104.045.905,08
-37.091.797,05
-46.022.987,81
-125.948.242,89
-14.834.064,51
-590.000,00
-81.468,16
-328.614.465,50
-16.018.355,64",,,,"1. Presupuestarios
-Gastos en personal
-Bienes de consumo
-Servicios no personales
-Bienes de uso
-Transferencias
-Activos financieros
-Servicio de la deuda y disminución de otros pasivos
-Total
-2. Extrapresupuestarios","0,00
--811.962,41
-5.832.725,68
-46.559.717,89
-124.400,00
-0,00
-0,00
-51.704.881,16","104.045.905,08
-37.149.216,22
-43.334.720,85
-48.311.548,30
-14.834.064,51
-590.000,00
-81.468,16
-248.346.923,12","104.045.905,08
-40.603.125,97
-47.075.100,21
-150.736.811,81
-14.828.469,51
-590.000,00
-81.468,16
-357.960.880,74
-16.021.599,97",,,,,,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-1.pdf,2,1,1,pdfplumber,2025-09-27T17:04:07.673088,,,,,,"15.997.835,02
-396.246.588,71
-255.380.800,00
-373.982.480,71
-207.280.800,00
-86.361.943,02",,,,,,"Saldo Inicial:
-Ingresos del Período:
-Ingresos de Ajustes Contables:
-Gastos del Período:
-Egresos de Ajustes Contables:
-Saldo final:","100000000 ACTIVO
-110000000 ACTIVO CORRIENTE
-120000000 ACTIVO NO CORRIENTE
-200000000 PASIVO
-210000000 PASIVO CORRIENTE
-220000000 PASIVO NO CORRIENTE
-300000000 PATRIMONIO
-310000000 PATRIMONIO PUBLICO
-311000000 Capital fiscal
-312000000 Resultados de la cuenta
-corriente
-312100000 Resultados de ejercicios
-anteriores
-312200000 Resultado del ejercicio
-312300000 Resultados afectados a
-construcción de bienes de
-dominio público","822.990.145,91
-275.989.354,99
-547.000.790,92
--40.115.583,95
--32.458.857,68
--7.656.726,27
--782.874.561,96
--782.874.561,96
--16.311.591,84
--766.562.970,12
--498.544.093,41
--302.542.685,66
-34.523.808,95",,,,,,,,,,
-SITUACION-ECONOMICA-FINANCIERA-1.pdf,2,1,2,pdfplumber,2025-09-27T17:04:07.673101,,,,,,"1.523.497,01
-3.530.345,39
-0,77
-1.419.682,87
-50.333,00
-2.548,20
-437.625,95
-81.003,88
-319.603,02
-78.035,82
-625.157,92
-1.104.096,00
-510.813,37
-61.568.775,33
-156.919,49
-14.953.505,00
-86.361.943,02
-86.361.943,02",,,,,,"Demostración del Saldo
-CAJA
-111210117RECURSOS ORDINARIOS (50328/8)
-111220101FONDO VIVIENDA MUNICIPAL (10041/0)
-111220102INMOBILIARIO RURAL AFECTADO (10085/4)
-111220103FONDO PRODUCTIVO MUNICIPAL (10089/2)
-111220106FONDO TENDIENDO REDES (10092/2)
-111220107POLICIA COMUNAL (10093/9)
-111220109RECURSOS AFECTADOS (10096/0)
-111220112PLAN NACER (50008/1)
-111220114COPARTICIPACION FONDO EDUCATIVO (50283/4)
-111220115FONDO DE INFRAESTRUCTURA (50405/2)
-111220116FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)
-111220118S.A.M.O, Sistema de Atención Médica Organizada
-(51006/8)
-111220203PLAN NACIONAL DE OBRAS MUNICIPALES (88/25)
-111220212HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)
-111230101CUENTA DE TERCEROS (10097/7)
-Total Disponibilidades:",,,,,,,,,,,,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf,1,1,1,pdfplumber,2025-09-27T17:04:07.953315,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf,2,1,1,pdfplumber,2025-09-27T17:04:07.991907,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf,3,1,1,pdfplumber,2025-09-27T17:04:08.030868,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf,4,1,1,pdfplumber,2025-09-27T17:04:08.047620,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,1,1,1,pdfplumber,2025-09-27T17:04:08.807410,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,2,1,1,pdfplumber,2025-09-27T17:04:08.899159,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,3,1,1,pdfplumber,2025-09-27T17:04:08.928979,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf,1,1,1,pdfplumber,2025-09-27T17:04:08.993690,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf,2,1,1,pdfplumber,2025-09-27T17:04:09.027352,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf,3,1,1,pdfplumber,2025-09-27T17:04:09.061207,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf,4,1,1,pdfplumber,2025-09-27T17:04:09.070958,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,1,1,1,pdfplumber,2025-09-27T17:04:10.024352,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,2,1,1,pdfplumber,2025-09-27T17:04:10.064190,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,3,1,1,pdfplumber,2025-09-27T17:04:10.093278,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,4,1,1,pdfplumber,2025-09-27T17:04:10.126147,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
-ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,5,1,1,pdfplumber,2025-09-27T17:04:10.135348,,,,,,,,,,,,,,,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
-no Pagado",,
+pdf_131_ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,1,1,1,pdfplumber,2025-09-28T16:48:59.234745,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_131_ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,2,1,1,pdfplumber,2025-09-28T16:48:59.267775,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
+pdf_131_ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf,3,1,1,pdfplumber,2025-09-28T16:48:59.294016,,Vigente,Devengado,Percibido,Compromiso,Devengado,Pagado,"Devengado
+no Pagado",,,,,,,,,,,,,,,,,,,,,,,,
