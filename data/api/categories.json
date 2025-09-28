@@ -1,0 +1,99 @@
+{
+  "categories": [
+    {
+      "id": "budget_execution",
+      "name": "Budget Execution",
+      "folder": "budget_execution",
+      "keywords": [
+        "ejecucion",
+        "gastos",
+        "presupuesto",
+        "execution"
+      ],
+      "document_count": 77
+    },
+    {
+      "id": "revenue_reports",
+      "name": "Revenue Reports",
+      "folder": "revenue_reports",
+      "keywords": [
+        "recursos",
+        "ingresos",
+        "revenue",
+        "recaudacion"
+      ],
+      "document_count": 1
+    },
+    {
+      "id": "financial_statements",
+      "name": "Financial Statements",
+      "folder": "financial_statements",
+      "keywords": [
+        "balance",
+        "situacion",
+        "financiera",
+        "economica"
+      ],
+      "document_count": 13
+    },
+    {
+      "id": "debt_reports",
+      "name": "Debt Reports",
+      "folder": "debt_reports",
+      "keywords": [
+        "deuda",
+        "stock",
+        "vencimientos",
+        "debt"
+      ],
+      "document_count": 0
+    },
+    {
+      "id": "contracts",
+      "name": "Contracts",
+      "folder": "contracts",
+      "keywords": [
+        "contrato",
+        "licitacion",
+        "adjudicacion",
+        "contract"
+      ],
+      "document_count": 5
+    },
+    {
+      "id": "ordinances",
+      "name": "Ordinances",
+      "folder": "ordinances",
+      "keywords": [
+        "ordenanza",
+        "resolucion",
+        "disposicion"
+      ],
+      "document_count": 0
+    },
+    {
+      "id": "statistical_reports",
+      "name": "Statistical Reports",
+      "folder": "statistical_reports",
+      "keywords": [
+        "estadistica",
+        "caps",
+        "monitoreo",
+        "reportes"
+      ],
+      "document_count": 0
+    },
+    {
+      "id": "salary_scales",
+      "name": "Salary Scales",
+      "folder": "salary_scales",
+      "keywords": [
+        "escala",
+        "salarial",
+        "sueldos",
+        "salaries"
+      ],
+      "document_count": 0
+    }
+  ]
+}

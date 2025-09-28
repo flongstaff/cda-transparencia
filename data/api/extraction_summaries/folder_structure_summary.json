@@ -1,0 +1,68 @@
+{
+  "Municipal_Documents/General/Unknown_Year": {
+    "pdf_count": 1,
+    "files": [
+      "GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf"
+    ]
+  },
+  "Economic_Reports/Revenue_Execution/2022": {
+    "pdf_count": 6,
+    "files": [
+      "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+      "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+      "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+      "ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+      "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+      "..."
+    ]
+  },
+  "Economic_Reports/Revenue_Execution/2023": {
+    "pdf_count": 3,
+    "files": [
+      "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+      "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+      "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf"
+    ]
+  },
+  "Economic_Reports/Revenue_Execution/Unknown_Year": {
+    "pdf_count": 18,
+    "files": [
+      "Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+      "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+      "Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+      "ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+      "ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+      "..."
+    ]
+  },
+  "Economic_Reports/Budget_Execution/2022": {
+    "pdf_count": 4,
+    "files": [
+      "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+      "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+      "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+      "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf"
+    ]
+  },
+  "Economic_Reports/Budget_Execution/2023": {
+    "pdf_count": 5,
+    "files": [
+      "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+      "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+      "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+      "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+      "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf"
+    ]
+  },
+  "Economic_Reports/Budget_Execution/Unknown_Year": {
+    "pdf_count": 34,
+    "files": [
+      "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+      "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+      "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+      "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf",
+      "Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+      "..."
+    ]
+  }
+}

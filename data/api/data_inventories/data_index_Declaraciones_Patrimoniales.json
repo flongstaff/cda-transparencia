@@ -1,0 +1,92 @@
+{
+  "category": "Declaraciones Patrimoniales",
+  "total_documents": 3,
+  "years": {
+    "2024": [
+      {
+        "id": "pdf-25",
+        "title": "DDJJ 2024",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/DDJJ-2024.pdf",
+        "year": 2024,
+        "category": "Declaraciones Patrimoniales",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Declaraciones Patrimoniales",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/DDJJ-2024.pdf",
+        "size_mb": 0.43,
+        "last_modified": ""
+      }
+    ],
+    "2023": [
+      {
+        "id": "pdf-12",
+        "title": "ddjj 2023",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/ddjj-2023.pdf",
+        "year": 2023,
+        "category": "Declaraciones Patrimoniales",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Declaraciones Patrimoniales",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/ddjj-2023.pdf",
+        "size_mb": 0.41,
+        "last_modified": ""
+      }
+    ],
+    "2022": [
+      {
+        "id": "pdf-7",
+        "title": "ddjj 2022",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2022/ddjj-2022.pdf",
+        "year": 2022,
+        "category": "Declaraciones Patrimoniales",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Declaraciones Patrimoniales",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2022/ddjj-2022.pdf",
+        "size_mb": 0.41,
+        "last_modified": ""
+      }
+    ]
+  },
+  "documents": [
+    {
+      "id": "pdf-25",
+      "title": "DDJJ 2024",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/DDJJ-2024.pdf",
+      "year": 2024,
+      "category": "Declaraciones Patrimoniales",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Declaraciones Patrimoniales",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2024/DDJJ-2024.pdf",
+      "size_mb": 0.43,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-12",
+      "title": "ddjj 2023",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/ddjj-2023.pdf",
+      "year": 2023,
+      "category": "Declaraciones Patrimoniales",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Declaraciones Patrimoniales",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/ddjj-2023.pdf",
+      "size_mb": 0.41,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-7",
+      "title": "ddjj 2022",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2022/ddjj-2022.pdf",
+      "year": 2022,
+      "category": "Declaraciones Patrimoniales",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Declaraciones Patrimoniales",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2022/ddjj-2022.pdf",
+      "size_mb": 0.41,
+      "last_modified": ""
+    }
+  ]
+}

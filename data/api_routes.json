@@ -1,0 +1,41 @@
+{
+  "api_version": "1.0",
+  "endpoints": {
+    "financial_data": {
+      "base": "/api/financial",
+      "description": "Financial data organized by year",
+      "routes": {
+        "consolidated_data": "/api/financial/{year}/consolidated_data.json",
+        "financial_summary": "/api/financial/{year}/financial_summary.json",
+        "revenue_by_source": "/api/financial/{year}/revenue_by_source.json",
+        "expenditure_by_program": "/api/financial/{year}/expenditure_by_program.json"
+      }
+    },
+    "transparency_data": {
+      "base": "/api/transparency",
+      "description": "Transparency portal data",
+      "routes": {
+        "documents_index": "/api/transparency/documents_index.json",
+        "categories": "/api/transparency/categories.json"
+      }
+    },
+    "statistical_data": {
+      "base": "/api/statistics",
+      "description": "Statistical reports and data",
+      "routes": {
+        "index": "/api/statistics/index.json"
+      }
+    },
+    "tender_data": {
+      "base": "/api/tenders",
+      "description": "Public tender data",
+      "routes": {
+        "index": "/api/tenders/index.json"
+      }
+    }
+  },
+  "data_availability": {
+    "years": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+    "last_updated": "2025-09-27"
+  }
+}

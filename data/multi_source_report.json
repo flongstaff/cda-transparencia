@@ -1,0 +1,644 @@
+{
+  "timestamp": "2025-09-11T17:29:08.956607",
+  "municipality": {
+    "name": "Carmen de Areco",
+    "provincia": "Buenos Aires",
+    "partido": "Carmen de Areco",
+    "cuit_prefix": "30",
+    "codigo_postal": "2725"
+  },
+  "sources": {
+    "local": {
+      "count": 144,
+      "documents": [
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-Marzo.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-Marzo.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/04/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-Junio.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-Junio.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Recursos-4toTrimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-4toTrimestres.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+          "file": "data/multi_source/local/BALANCE-GENERAL-2020.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+          "file": "data/multi_source/local/BALANCE-GENERAL-2020.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-AL-31-12-2024.xlsx",
+          "file": "data/multi_source/local/STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-AL-31-12-2024.xlsx"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Recursos-3er-Trimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-3er-Trimestres.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+          "file": "data/multi_source/local/BALANCE-GENERAL-2020.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+          "file": "data/multi_source/local/BALANCE-GENERAL-2020.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-9-2024.xlsx",
+          "file": "data/multi_source/local/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-9-2024.xlsx"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-Junio.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+          "file": "data/multi_source/local/BALANCE-GENERAL-2020.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-Junio.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+          "file": "data/multi_source/local/BALANCE-GENERAL-2020.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-6-2024.xlsx",
+          "file": "data/multi_source/local/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-6-2024.xlsx"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/10/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-6-2020.xlsx",
+          "file": "data/multi_source/local/03.01-STOCK-DE-DEUDA-Y-PERFIL-DE-VENCIMIENTOS-Planilla-Modelo-30-6-2020.xlsx"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-Marzo.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-Marzo.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+          "file": "data/multi_source/local/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/EJECUCION-PRESUPUESTARIA-DE-RECURSOS.pdf",
+          "file": "data/multi_source/local/EJECUCION-PRESUPUESTARIA-DE-RECURSOS.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+          "file": "data/multi_source/local/BALANCE-GENERAL-2020.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+          "file": "data/multi_source/local/RECURSOS-AFECTADOS-VS-GASTOS.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/EJECUCION-DE-GASTOS.pdf",
+          "file": "data/multi_source/local/EJECUCION-DE-GASTOS.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+          "file": "data/multi_source/local/GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/GASTOS-POR-CARACTER-ECONOMICO.pdf",
+          "file": "data/multi_source/local/GASTOS-POR-CARACTER-ECONOMICO.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+          "file": "data/multi_source/local/GASTOS-POR-FINALIDAD-Y-FUNCION.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/GASTOS-CON-PERSPECTIVA-DE-GENERO.pdf",
+          "file": "data/multi_source/local/GASTOS-CON-PERSPECTIVA-DE-GENERO.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+          "file": "data/multi_source/local/BALANCE-GENERAL-2020.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+          "file": "data/multi_source/local/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+          "file": "data/multi_source/local/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+          "file": "data/multi_source/local/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+          "file": "data/multi_source/local/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-1.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-1.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+          "file": "data/multi_source/local/BALANCE-GENERAL-2020.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+          "file": "data/multi_source/local/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/download/gobierno-abierto/BALANCE-GENERAL-2020.pdf",
+          "file": "data/multi_source/local/BALANCE-GENERAL-2020.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+          "file": "data/multi_source/local/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf"
+        },
+        {
+          "url": "http://carmendeareco.gob.ar/wp-content/uploads/2025/02/ORDENANZA-IMPOSITIVA-3282-25.pdf",
+          "file": "data/multi_source/local/ORDENANZA-IMPOSITIVA-3282-25.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-3200-24-PRESUPUESTO-2024.pdf",
+          "file": "data/multi_source/local/ORDENANZA-3200-24-PRESUPUESTO-2024.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-IMPOSITIVA-3202-24.pdf",
+          "file": "data/multi_source/local/ORDENANZA-IMPOSITIVA-3202-24.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2024/08/CONSULTA-IMPOSITIVA-VIGENTE-.xlsx",
+          "file": "data/multi_source/local/CONSULTA-IMPOSITIVA-VIGENTE-.xlsx"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°11.pdf",
+          "file": "data/multi_source/local/LICITACION-PUBLICA-N°11.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°10.pdf",
+          "file": "data/multi_source/local/LICITACION-PUBLICA-N°10.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°9.pdf",
+          "file": "data/multi_source/local/LICITACION-PUBLICA-N°9.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°8.pdf",
+          "file": "data/multi_source/local/LICITACION-PUBLICA-N°8.pdf"
+        },
+        {
+          "url": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf",
+          "file": "data/multi_source/local/LICITACION-PUBLICA-N°7.pdf"
+        }
+      ]
+    },
+    "afip": {
+      "count": 3,
+      "documents": [
+        {
+          "url": "https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do?method=buscar&razonSocial=MUNICIPALIDAD DE CARMEN DE ARECO",
+          "file": "data/multi_source/afip/afip_search_municipalidad_de_carmen_de_areco.html"
+        },
+        {
+          "url": "https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do?method=buscar&razonSocial=COMUNA CARMEN DE ARECO",
+          "file": "data/multi_source/afip/afip_search_comuna_carmen_de_areco.html"
+        },
+        {
+          "url": "https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do?method=buscar&razonSocial=GOBIERNO MUNICIPAL CARMEN",
+          "file": "data/multi_source/afip/afip_search_gobierno_municipal_carmen.html"
+        }
+      ]
+    },
+    "contracting": {
+      "count": 0,
+      "documents": []
+    },
+    "provincial": {
+      "count": 0,
+      "documents": []
+    },
+    "budget": {
+      "count": 4,
+      "documents": [
+        {
+          "url": "https://www.presupuestoabierto.gob.ar/sici/?q=coparticipacion municipal",
+          "file": "data/multi_source/budget/budget_search_coparticipacion_municipal.json"
+        },
+        {
+          "url": "https://www.presupuestoabierto.gob.ar/sici/?q=transferencias municipios",
+          "file": "data/multi_source/budget/budget_search_transferencias_municipios.json"
+        },
+        {
+          "url": "https://www.presupuestoabierto.gob.ar/sici/?q=fondos municipales",
+          "file": "data/multi_source/budget/budget_search_fondos_municipales.json"
+        },
+        {
+          "url": "https://www.presupuestoabierto.gob.ar/sici/?q=carmen de areco",
+          "file": "data/multi_source/budget/budget_search_carmen_de_areco.json"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "total_sources": 5,
+    "total_documents": 151,
+    "status": "multi_source_operational"
+  }
+}

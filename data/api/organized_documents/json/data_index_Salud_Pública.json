@@ -1,0 +1,194 @@
+{
+  "category": "Salud P\u00fablica",
+  "total_documents": 7,
+  "years": {
+    "2023": [
+      {
+        "id": "pdf-53",
+        "title": "CAIF 1",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-1.pdf",
+        "year": 2023,
+        "category": "Salud P\u00fablica",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-1.pdf",
+        "size_mb": 0.09,
+        "last_modified": ""
+      },
+      {
+        "id": "pdf-56",
+        "title": "CAIF 3\u00b0TRIMESTRE",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-3\u00b0TRIMESTRE.pdf",
+        "year": 2023,
+        "category": "Salud P\u00fablica",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-3\u00b0TRIMESTRE.pdf",
+        "size_mb": 0.09,
+        "last_modified": ""
+      },
+      {
+        "id": "pdf-69",
+        "title": "CAIF 2",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-2.pdf",
+        "year": 2023,
+        "category": "Salud P\u00fablica",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-2.pdf",
+        "size_mb": 0.09,
+        "last_modified": ""
+      },
+      {
+        "id": "pdf-75",
+        "title": "CAIF 3",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-3.pdf",
+        "year": 2023,
+        "category": "Salud P\u00fablica",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-3.pdf",
+        "size_mb": 0.09,
+        "last_modified": ""
+      },
+      {
+        "id": "pdf-136",
+        "title": "CAIF",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF.pdf",
+        "year": 2023,
+        "category": "Salud P\u00fablica",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF.pdf",
+        "size_mb": 0.36,
+        "last_modified": ""
+      }
+    ],
+    "2022": [
+      {
+        "id": "pdf-83",
+        "title": "CAIF 3\u00b0TRI 2022",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2022/CAIF-3\u00b0TRI-2022.pdf",
+        "year": 2022,
+        "category": "Salud P\u00fablica",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2022/CAIF-3\u00b0TRI-2022.pdf",
+        "size_mb": 0.09,
+        "last_modified": ""
+      },
+      {
+        "id": "pdf-153",
+        "title": "CAIF 4\u00b0TRE 2022",
+        "url": "http://carmendeareco.gob.ar/wp-content/uploads/2022/CAIF-4\u00b0TRE-2022.pdf",
+        "year": 2022,
+        "category": "Salud P\u00fablica",
+        "source": "Municipal Records",
+        "type": "PDF",
+        "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+        "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2022/CAIF-4\u00b0TRE-2022.pdf",
+        "size_mb": 0.09,
+        "last_modified": ""
+      }
+    ]
+  },
+  "documents": [
+    {
+      "id": "pdf-53",
+      "title": "CAIF 1",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-1.pdf",
+      "year": 2023,
+      "category": "Salud P\u00fablica",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-1.pdf",
+      "size_mb": 0.09,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-56",
+      "title": "CAIF 3\u00b0TRIMESTRE",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-3\u00b0TRIMESTRE.pdf",
+      "year": 2023,
+      "category": "Salud P\u00fablica",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-3\u00b0TRIMESTRE.pdf",
+      "size_mb": 0.09,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-69",
+      "title": "CAIF 2",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-2.pdf",
+      "year": 2023,
+      "category": "Salud P\u00fablica",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-2.pdf",
+      "size_mb": 0.09,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-75",
+      "title": "CAIF 3",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-3.pdf",
+      "year": 2023,
+      "category": "Salud P\u00fablica",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF-3.pdf",
+      "size_mb": 0.09,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-136",
+      "title": "CAIF",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF.pdf",
+      "year": 2023,
+      "category": "Salud P\u00fablica",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2023/CAIF.pdf",
+      "size_mb": 0.36,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-83",
+      "title": "CAIF 3\u00b0TRI 2022",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2022/CAIF-3\u00b0TRI-2022.pdf",
+      "year": 2022,
+      "category": "Salud P\u00fablica",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2022/CAIF-3\u00b0TRI-2022.pdf",
+      "size_mb": 0.09,
+      "last_modified": ""
+    },
+    {
+      "id": "pdf-153",
+      "title": "CAIF 4\u00b0TRE 2022",
+      "url": "http://carmendeareco.gob.ar/wp-content/uploads/2022/CAIF-4\u00b0TRE-2022.pdf",
+      "year": 2022,
+      "category": "Salud P\u00fablica",
+      "source": "Municipal Records",
+      "type": "PDF",
+      "description": "Documento financiero del municipio de Carmen de Areco - Salud P\u00fablica",
+      "official_url": "http://carmendeareco.gob.ar/wp-content/uploads/2022/CAIF-4\u00b0TRE-2022.pdf",
+      "size_mb": 0.09,
+      "last_modified": ""
+    }
+  ]
+}

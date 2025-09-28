@@ -1,0 +1,16 @@
+{
+  "system": "CDA Transparency Portal",
+  "status": "ready",
+  "timestamp": "2025-09-26T20:39:28.480114",
+  "data_summary": {
+    "pdf_documents": 607,
+    "json_files": 998,
+    "api_endpoints": 5
+  },
+  "available_operations": [
+    "status - Show system status",
+    "process - Process transparency data",
+    "generate-web - Generate web-ready files",
+    "validate - Validate data integrity"
+  ]
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "source_name": "PROVINCIAL_TRANSPARENCY",
+    "url": "https://www.gba.gob.ar",
+    "content_hash": "3f154d207e64523c7ffa267082bbf7bdca7bcd59df59aa4b6ccb9c3b49608e81",
+    "last_scraped": "2025-08-25T11:33:28.188050",
+    "status": "HTTP_200",
+    "response_time": null,
+    "content_size": 212528,
+    "documents_found": 0
+  },
+  {
+    "id": 2,
+    "source_name": "NATIONAL_PORTAL",
+    "url": "https://www.argentina.gob.ar",
+    "content_hash": "bab40ef641bc0153ffdf23d74aed8ee476760c81e85dfc94de456aeddb984b74",
+    "last_scraped": "2025-08-25T11:33:28.297810",
+    "status": "HTTP_200",
+    "response_time": null,
+    "content_size": 30719,
+    "documents_found": 0
+  },
+  {
+    "id": 3,
+    "source_name": "INFORMATION_ACCESS",
+    "url": "https://www.aaip.gob.ar",
+    "content_hash": "7aedc1bc86c5a8db13c95630a889554dfeee72074d693e2f83935d5c7ab7fe10",
+    "last_scraped": "2025-08-25T11:33:29.658988",
+    "status": "HTTP_200",
+    "response_time": null,
+    "content_size": 42276,
+    "documents_found": 0
+  }
+]

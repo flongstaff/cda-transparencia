@@ -1,0 +1,109 @@
+year,type,title,link,format
+2019,Informe Económico,2019 - Revenue,2019_revenue.csv,CSV
+2019,Informe Económico,2019 - Expenditure,2019_expenditure.csv,CSV
+2019,Informe Económico,2019 - Fiscal Balance,2019_fiscal_balance.csv,CSV
+2019,Informe Económico,2019 - Revenue By Type,2019_revenue_by_type.csv,CSV
+2019,Informe Económico,2019 - Expenditure By Function,2019_expenditure_by_function.csv,CSV
+2019,Informe Económico,2019 - Personnel Expenses,2019_personnel_expenses.csv,CSV
+2019,Informe Económico,2019 - Investment By Area,2019_investment_by_area.csv,CSV
+2019,Informe Económico,2019 - Debt Status,2019_debt_status.csv,CSV
+2019,Informe Económico,2019 - Budget Execution Quarterly,2019_budget_execution_quarterly.csv,CSV
+2019,Informe Económico,2019 - Revenue Sources Evolution,2019_revenue_sources_evolution.csv,CSV
+2019,Informe Económico,2019 - Expenditure Administrative Level,2019_expenditure_admin_level.csv,CSV
+2019,Informe Económico,2019 - Capital vs Current Expenditure,2019_capital_current_expenditure.csv,CSV
+2019,Informe Económico,2019 - Financial Reserves,2019_financial_reserves.csv,CSV
+2019,Informe Económico,2019 - Summary,2019_summary.csv,CSV
+2022,Transparencia,Estado de Ejecución de Recursos Q1 2022,transparency_index.csv,CSV
+2022,Transparencia,Gastos Q1 2022,transparency_index.csv,CSV
+2022,Transparencia,Situación Económico-Financiera Q1 2022,transparency_index.csv,CSV
+2022,Transparencia,Estado de Ejecución de Recursos Q2 2022,transparency_index.csv,CSV
+2022,Transparencia,Gastos Q2 2022,transparency_index.csv,CSV
+2022,Transparencia,Situación Económico-Financiera Q2 2022,transparency_index.csv,CSV
+2022,Transparencia,Stock de Deuda Anual 2022,transparency_index.csv,CSV
+2022,Transparencia,Perspectiva de Género Anual 2022,transparency_index.csv,CSV
+2023,Transparencia,Estado de Ejecución de Recursos Q1 2023,transparency_index.csv,CSV
+2023,Transparencia,Gastos Q1 2023,transparency_index.csv,CSV
+2023,Transparencia,Situación Económico-Financiera Q1 2023,transparency_index.csv,CSV
+2023,Transparencia,Estado de Ejecución de Recursos Q2 2023,transparency_index.csv,CSV
+2023,Transparencia,Gastos Q2 2023,transparency_index.csv,CSV
+2023,Transparencia,Situación Económico-Financiera Q2 2023,transparency_index.csv,CSV
+2023,Transparencia,Stock de Deuda Anual 2023,transparency_index.csv,CSV
+2023,Transparencia,Perspectiva de Género Anual 2023,transparency_index.csv,CSV
+2024,Transparencia,Estado de Ejecución de Recursos Q1 2024,transparency_index.csv,CSV
+2024,Transparencia,Gastos Q1 2024,transparency_index.csv,CSV
+2024,Transparencia,Situación Económico-Financiera Q1 2024,transparency_index.csv,CSV
+2024,Transparencia,Estado de Ejecución de Recursos Q2 2024,transparency_index.csv,CSV
+2024,Transparencia,Gastos Q2 2024,transparency_index.csv,CSV
+2024,Transparencia,Situación Económico-Financiera Q2 2024,transparency_index.csv,CSV
+2024,Transparencia,Stock de Deuda Anual 2024,transparency_index.csv,CSV
+2024,Transparencia,Perspectiva de Género Anual 2024,transparency_index.csv,CSV
+2025,Transparencia,Estado de Ejecución de Recursos Q1 2025,transparency_index.csv,CSV
+2025,Transparencia,Gastos Q1 2025,transparency_index.csv,CSV
+2025,Transparencia,Situación Económico-Financiera Q1 2025,transparency_index.csv,CSV
+2025,Transparencia,Stock de Deuda Anual 2025,transparency_index.csv,CSV
+2025,Transparencia,Perspectiva de Género Anual 2025,transparency_index.csv,CSV
+2012,Estadísticas,Estadísticas de Demografía 2012,estadisticas_index.csv,CSV
+2012,Estadísticas,Estadísticas de Economía 2012,estadisticas_index.csv,CSV
+2012,Estadísticas,Estadísticas de Social 2012,estadisticas_index.csv,CSV
+2012,Estadísticas,Estadísticas de Ambiente 2012,estadisticas_index.csv,CSV
+2012,Estadísticas,Estadísticas de Empleo 2012,estadisticas_index.csv,CSV
+2013,Estadísticas,Estadísticas de Demografía 2013,estadisticas_index.csv,CSV
+2013,Estadísticas,Estadísticas de Economía 2013,estadisticas_index.csv,CSV
+2013,Estadísticas,Estadísticas de Social 2013,estadisticas_index.csv,CSV
+2013,Estadísticas,Estadísticas de Ambiente 2013,estadisticas_index.csv,CSV
+2013,Estadísticas,Estadísticas de Empleo 2013,estadisticas_index.csv,CSV
+2014,Estadísticas,Estadísticas de Demografía 2014,estadisticas_index.csv,CSV
+2014,Estadísticas,Estadísticas de Economía 2014,estadisticas_index.csv,CSV
+2014,Estadísticas,Estadísticas de Social 2014,estadisticas_index.csv,CSV
+2014,Estadísticas,Estadísticas de Ambiente 2014,estadisticas_index.csv,CSV
+2014,Estadísticas,Estadísticas de Empleo 2014,estadisticas_index.csv,CSV
+2015,Estadísticas,Estadísticas de Demografía 2015,estadisticas_index.csv,CSV
+2015,Estadísticas,Estadísticas de Economía 2015,estadisticas_index.csv,CSV
+2015,Estadísticas,Estadísticas de Social 2015,estadisticas_index.csv,CSV
+2015,Estadísticas,Estadísticas de Ambiente 2015,estadisticas_index.csv,CSV
+2015,Estadísticas,Estadísticas de Empleo 2015,estadisticas_index.csv,CSV
+2016,Estadísticas,Estadísticas de Demografía 2016,estadisticas_index.csv,CSV
+2016,Estadísticas,Estadísticas de Economía 2016,estadisticas_index.csv,CSV
+2016,Estadísticas,Estadísticas de Social 2016,estadisticas_index.csv,CSV
+2016,Estadísticas,Estadísticas de Ambiente 2016,estadisticas_index.csv,CSV
+2016,Estadísticas,Estadísticas de Empleo 2016,estadisticas_index.csv,CSV
+2017,Estadísticas,Estadísticas de Demografía 2017,estadisticas_index.csv,CSV
+2017,Estadísticas,Estadísticas de Economía 2017,estadisticas_index.csv,CSV
+2017,Estadísticas,Estadísticas de Social 2017,estadisticas_index.csv,CSV
+2017,Estadísticas,Estadísticas de Ambiente 2017,estadisticas_index.csv,CSV
+2017,Estadísticas,Estadísticas de Empleo 2017,estadisticas_index.csv,CSV
+2018,Estadísticas,Estadísticas de Demografía 2018,estadisticas_index.csv,CSV
+2018,Estadísticas,Estadísticas de Economía 2018,estadisticas_index.csv,CSV
+2018,Estadísticas,Estadísticas de Social 2018,estadisticas_index.csv,CSV
+2018,Estadísticas,Estadísticas de Ambiente 2018,estadisticas_index.csv,CSV
+2018,Estadísticas,Estadísticas de Empleo 2018,estadisticas_index.csv,CSV
+2019,Estadísticas,Estadísticas de Demografía 2019,estadisticas_index.csv,CSV
+2019,Estadísticas,Estadísticas de Economía 2019,estadisticas_index.csv,CSV
+2019,Estadísticas,Estadísticas de Social 2019,estadisticas_index.csv,CSV
+2019,Estadísticas,Estadísticas de Ambiente 2019,estadisticas_index.csv,CSV
+2019,Estadísticas,Estadísticas de Empleo 2019,estadisticas_index.csv,CSV
+2020,Estadísticas,Estadísticas de Demografía 2020,estadisticas_index.csv,CSV
+2020,Estadísticas,Estadísticas de Economía 2020,estadisticas_index.csv,CSV
+2020,Estadísticas,Estadísticas de Social 2020,estadisticas_index.csv,CSV
+2020,Estadísticas,Estadísticas de Ambiente 2020,estadisticas_index.csv,CSV
+2020,Estadísticas,Estadísticas de Empleo 2020,estadisticas_index.csv,CSV
+2021,Estadísticas,Estadísticas de Demografía 2021,estadisticas_index.csv,CSV
+2021,Estadísticas,Estadísticas de Economía 2021,estadisticas_index.csv,CSV
+2021,Estadísticas,Estadísticas de Social 2021,estadisticas_index.csv,CSV
+2021,Estadísticas,Estadísticas de Ambiente 2021,estadisticas_index.csv,CSV
+2021,Estadísticas,Estadísticas de Empleo 2021,estadisticas_index.csv,CSV
+2022,Estadísticas,Estadísticas de Demografía 2022,estadisticas_index.csv,CSV
+2022,Estadísticas,Estadísticas de Economía 2022,estadisticas_index.csv,CSV
+2022,Estadísticas,Estadísticas de Social 2022,estadisticas_index.csv,CSV
+2022,Estadísticas,Estadísticas de Ambiente 2022,estadisticas_index.csv,CSV
+2022,Estadísticas,Estadísticas de Empleo 2022,estadisticas_index.csv,CSV
+2023,Licitaciones,Licitación Nº10/2023 - Reparación de caminos rurales,licitaciones_2023.csv,CSV
+2023,Licitaciones,Licitación Nº15/2023 - Adquisición de mobiliario escolar,licitaciones_2023.csv,CSV
+2023,Licitaciones,Licitación Nº22/2023 - Servicio de mantenimiento informático,licitaciones_2023.csv,CSV
+2023,Licitaciones,Licitación Nº30/2023 - Construcción de centro comunitario,licitaciones_2023.csv,CSV
+2023,Licitaciones,Licitación Nº42/2023 - Reposición de luminarias led,licitaciones_2023.csv,CSV
+2023,Licitaciones,Licitación Nº55/2023 - Servicios de limpieza,licitaciones_2023.csv,CSV
+2023,Licitaciones,Licitación Nº63/2023 - Reformas en edificio municipal,licitaciones_2023.csv,CSV
+2023,Licitaciones,Licitación Nº71/2023 - Adquisición de vehículos,licitaciones_2023.csv,CSV
+2023,Licitaciones,Licitación Nº78/2023 - Mantenimiento de sistema de agua potable,licitaciones_2023.csv,CSV
+2023,Licitaciones,Licitación Nº85/2023 - Servicios de salud,licitaciones_2023.csv,CSV

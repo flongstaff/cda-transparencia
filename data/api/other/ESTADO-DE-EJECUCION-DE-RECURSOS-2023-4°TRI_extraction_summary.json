@@ -1,0 +1,22 @@
+{
+  "document_info": {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+    "category": "Ejecución de Recursos",
+    "year": 2023,
+    "quarter": "4Q"
+  },
+  "extraction_stats": {
+    "text_pages": 9,
+    "tables_found": 13,
+    "methods_used": [
+      "pdfplumber",
+      "tabula"
+    ],
+    "output_files_count": 15
+  },
+  "financial_summary": {
+    "amounts_found": 0,
+    "dates_found": 45,
+    "percentages_found": 0
+  }
+}

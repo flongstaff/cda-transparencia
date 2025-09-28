@@ -1,0 +1,16 @@
+{
+  "total_categories": 4,
+  "total_files": 33,
+  "by_category": {
+    "data_analysis": 24,
+    "governance_review": 1,
+    "audit_cycles": 5,
+    "financial_oversight": 3
+  },
+  "by_file_type": {
+    ".csv": 19,
+    ".png": 4,
+    ".json": 9,
+    ".db": 1
+  }
+}

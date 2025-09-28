@@ -1,0 +1,139 @@
+{
+  "year": 2019,
+  "title": "Gastos por Programa 2019",
+  "programs": [
+    {
+      "program_code": "1110101000-17",
+      "program_name": "Planificacion y desarrollo de politicas sociales, salu",
+      "budgeted": 17185446.15,
+      "executed": 17143446.15,
+      "paid": 16736420.07
+    },
+    {
+      "program_code": "111010100018",
+      "program_name": "Desarrollo Productivo en el Ambito Local",
+      "budgeted": 1739912.03,
+      "executed": 1739912.03,
+      "paid": 1701912.03
+    },
+    {
+      "program_code": "111010100019",
+      "program_name": "Desarrollo de Políticas Sociales",
+      "budgeted": 10930343.69,
+      "executed": 10930343.69,
+      "paid": 10745925.77
+    },
+    {
+      "program_code": "1110101000-20",
+      "program_name": "Desarrollo de Políticas de Educación",
+      "budgeted": 10265427.08,
+      "executed": 10265427.08,
+      "paid": 10265427.08
+    },
+    {
+      "program_code": "111010300026",
+      "program_name": "Fondo Educativo",
+      "budgeted": 25464554.77,
+      "executed": 25358513.52,
+      "paid": 25358513.52
+    },
+    {
+      "program_code": "1110106000-61",
+      "program_name": "Mantenimiento y ampliación de la red cloacal",
+      "budgeted": 2635695.35,
+      "executed": 2635695.35,
+      "paid": 2635695.35
+    },
+    {
+      "program_code": "1110106000-62",
+      "program_name": "Mantenimiento y ampliación de la Red de agua pot",
+      "budgeted": 303047.28,
+      "executed": 303047.28,
+      "paid": 303047.28
+    },
+    {
+      "program_code": "1110111000-25",
+      "program_name": "Desarrollo de Políticas Culturales",
+      "budgeted": 10223678.46,
+      "executed": 10223678.46,
+      "paid": 10062466.11
+    },
+    {
+      "program_code": "1110111000-26",
+      "program_name": "Desarrollo de Políticas Deportivas",
+      "budgeted": 4158320.27,
+      "executed": 4158320.27,
+      "paid": 4136430.27
+    },
+    {
+      "program_code": "1110111000-27",
+      "program_name": "Desarrollo de Politicas de Turismo",
+      "budgeted": 1098951.45,
+      "executed": 1098951.45,
+      "paid": 1010543.45
+    },
+    {
+      "program_code": "1110112000-24",
+      "program_name": "Servicios Urbanos",
+      "budgeted": 61379244.23,
+      "executed": 61327344.23,
+      "paid": 61327344.23
+    },
+    {
+      "program_code": "1110112000-51",
+      "program_name": "Obras Infraestructura y Vivienda",
+      "budgeted": 10397281.49,
+      "executed": 9846526.99,
+      "paid": 9846526.99
+    },
+    {
+      "program_code": "1110112000-52",
+      "program_name": "Obras Infraestructuras y Viviendas II",
+      "budgeted": 12944070.37,
+      "executed": 12944070.37,
+      "paid": 12944070.37
+    },
+    {
+      "program_code": "1110112000-53",
+      "program_name": "Mantenimiento y reparacion de caminos",
+      "budgeted": 6344786.29,
+      "executed": 6344786.29,
+      "paid": 6344786.29
+    },
+    {
+      "program_code": "1110112000-55",
+      "program_name": "Fondo de Pavimentacion Urbana Pcia. de Bs As",
+      "budgeted": 1664279.43,
+      "executed": 1664279.43,
+      "paid": 1664279.43
+    },
+    {
+      "program_code": "central_activities",
+      "program_name": "Actividades Centrales",
+      "budgeted": 88744150.53,
+      "executed": 88741630.12,
+      "paid": 84747188.39
+    },
+    {
+      "program_code": "non_programmable",
+      "program_name": "Partidas no asignables a programas",
+      "budgeted": 499288.68,
+      "executed": 499288.68,
+      "paid": 499288.68
+    },
+    {
+      "program_code": "legislative",
+      "program_name": "H.C.D. - Actividades Centrales",
+      "budgeted": 5921324.78,
+      "executed": 5921324.78,
+      "paid": 5881132.78
+    },
+    {
+      "program_code": "total",
+      "program_name": "Total General",
+      "budgeted": 271899802.33,
+      "executed": 271146586.17,
+      "paid": 266210998.09
+    }
+  ]
+}

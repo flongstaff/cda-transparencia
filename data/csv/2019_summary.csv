@@ -1,0 +1,111 @@
+--- 2019_revenue.csv ---
+Evolucion de los Recursos,Vigente,Devengado,Percibido
+I. Presupuestarios,,
+Ingresos corrientes,216.733.227,43,241.879.702,14,232.492.993,99
+Recursos de capital,1.416.495,87,1.632.279,86,1.632.279,86
+Fuentes Financieras,17.234.121,45,,
+Total,235.383.844,75,243.511.982,00,234.125.273,85
+De libre disponibilidad,160.430.517,65,185.792.776,35,176.406.068,20
+Afectados,74.953.327,10,57.719.205,65,57.719.205,65
+Total,235.383.844,75,243.511.982,00,234.125.273,85
+II. Extrapresupuestarios,,22.652.473,11
+Total General (1+2),235.383.844,75,243.511.982,00,256.777.746,96
+
+--- 2019_expenditure_by_object.csv ---
+Evolucion de Gastos por Objeto,Vigente,Preventivo,Compromiso,Devengado,Pagado
+I. Presupuestarios,,
+Gastos en personal,90.020.334,35,0,00,115.221.488,53,115.221.488,53,115.221.488,53
+Bienes de consumo,42.976.482,57,0,00,48.292.633,90,48.290.113,49,45.006.222,39
+Servicios no personales,57.920.052,05,0,00,66.281.069,41,65.636.414,91,64.584.379,32
+Bienes de uso,31.617.505,57,0,00,30.571.005,55,30.464.964,30,29.993.727,40
+Transferencias,9.573.146,58,0,00,10.376.925,15,10.376.925,15,10.248.500,66
+Activos financieros,1.158.513,63,0,00,517.575,61,517.575,61,517.575,61
+Servicio de la deuda y disminución de otros pasivos,2.117.810,00,0,00,639.104,18,639.104,18,639.104,18
+Total,235.383.844,75,0,00,271.899.802,33,271.146.586,17,266.210.998,09
+II. Extrapresupuestarios,,,,,22.620.259,13,22.620.259,13
+Total General (1+2),235.383.844,75,0,00,271.899.802,33,293.766.845,30,288.831.257,22
+
+--- 2019_expenditure_by_program.csv ---
+Evolucion de Gastos por Programa,Vigente,Preventivo,Compromiso,Devengado,Pagado
+Departamento Ejecutivo,,
+1110101000-17 Planificacion y desarrollo de politicas sociales, salu,16.224.895,41,0,00,17.185.446,15,17.143.446,15,16.736.420,07
+111010100018 Desarrollo Productivo en el Ambito Local,3.219.322,10,0,00,1.739.912,03,1.739.912,03,1.701.912,03
+111010100019 Desarrollo de Políticas Sociales,6.083.132,35,0,00,10.930.343,69,10.930.343,69,10.745.925,77
+1110101000-20 Desarrollo de Políticas de Educación,8.440.651,70,0,00,10.265.427,08,10.265.427,08,10.265.427,08
+111010300026 Fondo Educativo,27.468.877,57,0,00,25.464.554,77,25.358.513,52,25.358.513,52
+1110106000-61 Mantenimiento y ampliación de la red cloacal,2.957.132,81,0,00,2.635.695,35,2.635.695,35,2.635.695,35
+1110106000-62 Mantenimiento y ampliación de la Red de agua pot,361.234,50,-19.038,60,303.047,28,303.047,28,303.047,28
+1110111000-25 Desarrollo de Políticas Culturales,7.603.182,52,0,00,10.223.678,46,10.223.678,46,10.062.466,11
+1110111000-26 Desarrollo de Políticas Deportivas,3.308.536,62,0,00,4.158.320,27,4.158.320,27,4.136.430,27
+1110111000-27 Desarrollo de Politicas de Turismo,986.370,08,0,00,1.098.951,45,1.098.951,45,1.010.543,45
+1110112000-24 Servicios Urbanos,53.266.702,48,0,00,61.379.244,23,61.327.344,23,61.327.344,23
+1110112000-51 Obras Infraestructura y Vivienda,10.200.404,10,0,00,10.397.281,49,9.846.526,99,9.846.526,99
+1110112000-52 Obras Infraestructuras y Viviendas II,13.114.532,39,0,00,12.944.070,37,12.944.070,37,12.944.070,37
+1110112000-53 Mantenimiento y reparacion de caminos,7.903.443,86,0,00,6.344.786,29,6.344.786,29,6.344.786,29
+1110112000-54 Fondo de Infraestructura de la Pcia. de Bs.As.,0,00,0,00,0,00,0,00,0,00
+1110112000-55 Fondo de Pavimentacion Urbana Pcia. de Bs As,1.001.830,61,0,00,1.664.279,43,1.664.279,43,1.664.279,43
+Actividades Centrales,66.073.525,36,19.038,60,88.744.150,53,88.741.630,12,84.747.188,39
+Partidas no asignables a programas,1.866.850,00,0,00,499.288,68,499.288,68,499.288,68
+Total Departamento Ejecutivo,230.080.624,46,0,00,265.978.477,55,265.225.261,39,260.329.865,31
+H.C.D.,,
+Actividades Centrales,5.303.220,29,0,00,5.921.324,78,5.921.324,78,5.881.132,78
+Total H.C.D.,5.303.220,29,0,00,5.921.324,78,5.921.324,78,5.881.132,78
+Total General,235.383.844,75,0,00,271.899.802,33,271.146.586,17,266.210.998,09
+
+--- 2019_treasury_movements.csv ---
+Movimientos de Tesoreria,Importe
+Saldo Inicial:,38.450.309,46
+Ingresos del Período:,256.777.746,96
+Ingresos de Ajustes Contables:,81.414.933,29
+Gastos del Período:,288.831.257,22
+Egresos de Ajustes Contables:,81.414.933,29
+Saldo final:,6.396.799,20
+
+--- 2019_statement_of_financial_position.csv ---
+Estado de Situacion Patrimonial,Saldo
+100000000 ACTIVO,200.062.157,87
+110000000 ACTIVO CORRIENTE,72.871.274,53
+120000000 ACTIVO NO CORRIENTE,127.190.883,34
+200000000 PASIVO,-7.154.118,35
+210000000 PASIVO CORRIENTE,-5.669.298,76
+220000000 PASIVO NO CORRIENTE,-1.484.819,59
+300000000 PATRIMONΙΟ,-192.908.039,52
+310000000 PATRIMONIO PUBLICO,-192.908.039,52
+311000000 Capital fiscal,-16.311.591,84
+312000000 Resultados de la cuenta corriente,-176.596.447,68
+312100000 Resultados de ejercicios anteriores,-187.288.018,40
+312200000 Resultado del ejercicio,-14.721.351,66
+312300000 Resultados afectados a construcción de bienes de dominio público,25.412.922,38
+
+--- 2019_balance_demonstration.csv ---
+Demostracion del Saldo,Importe
+111210104 PARTICIPACION IMPUESTOS PROVINCIALES,379.449,30
+111210107 INMOBILIARIO RURAL NO AFECTADO,177.861,13
+111210108 INGRESOS BRUTOS,428,24
+111210117 RECURSOS ORDINARIOS,60.532,50
+111220101 FONDO VIVIENDA MUNICIPAL,190.780,09
+111220102 INMOBILIARIO RURAL AFECTADO,858.657,57
+111220103 FONDO PRODUCTIVO MUNICIPAL,43.966,04
+111220106 FONDO TENDIENDO REDES,2.548,20
+111220107 POLICIA COMUNAL,4.380,14
+111220108 SEGUNDA OPORTUNIDAD,586,04
+111220109 RECURSOS AFECTADOS,3.509.966,87
+111220112 PLAN NACER,3.310,50
+111220113 FONDO SOLIDARIO PCIAL SOJA,462,10
+111220114 COPARTICIPACION FONDO EDUCATIVO,42.141,33
+111220115 FONDO DE INFRAESTRUCTURA,22.842,71
+111220118 S.A.M.O, Sistema de Atención Médica Organizada,80.299,94
+111220203 PLAN NACIONAL DE OBRAS MUNICIPALES,284.875,02
+111220212 HABITAT NORTE INTERIOR Y OBRAS Y VIVIENDA,0,80
+111230101 CUENTA DE TERCEROS,733.710,68
+Total Disponibilidades:,6.396.799,20
+
+--- 2019_article_44_result.csv ---
+Resultado Artículo 44,Importe
+Recursos Corrientes y de Capital PERCIBIDO,234.125.273,85
+Gastos Corrientes y de Capital DEVENGADO,270.542.007,49
+RESULTADO DEL ART. 43,-36.416.733,64
+Ingresos por endeudamiento aprobado,0,00
+Saldos de Caja y Bancos al cierre del ejercicio anterior (Recursos Ordinarios),37.748.812,76
+Servicios de la deuda,499.288,68
+RESULTADO DEL ART. 44,832.790,44

@@ -1,0 +1,18 @@
+{
+  "report_id": "WB-20250926-C62663F3",
+  "timestamp": "2025-09-26T20:49:36.161536",
+  "category": "corruption",
+  "severity": "high",
+  "entity_involved": "Carmen de Areco Municipality",
+  "description_hash": "Z0FBQUFBQm8xb3Znc3dqUC1BZUZKVTBRSnhPdTZtZDNNSEI3Q0hjekxnN0F2NDFhMXVZcFFEVnFvelpqUFZEYjNYR180ZjJPQnhyaE1LNEVqNHhGWkZ3QjJGX3JBZ1FpM0hZZDd5ZFBySEVZb00yYW5pVVFjRENXRjZGN25pVTBoRUFDelhMa0l3M21oQ05LUjNwTEkzdm5leXNVcE5GYi1BPT0=",
+  "evidence_hash": "Z0FBQUFBQm8xb3ZnR0hGX0xNaG0wZXJ6TmgzRHNvdmZjeGJQTVJhS0RGcWo2RVpSb0hFY3l1S09zM2FxclVhTEVTbG15ZVl6REw5cEhnd2Z5dWMxa0RLb21UU1UxYXBTQllvaU1aY1NPaU40ZGVBVzNKUTBjaGgwRWN1Y2VfZlpTR05vcWxOU1h0bVl5SHZvamFid0ZCZ3JiTzZxUUstZ0docGlnbk1fQTEyeWQzdVo0Y0FBSV84PQ==",
+  "reporter_contact_hash": "",
+  "status": "received",
+  "assigned_investigator": "unassigned",
+  "protection_level": "standard",
+  "legal_basis": [
+    "Ley 27.401 Art. 22",
+    "Código Penal Arts. 256-268"
+  ],
+  "follow_up_required": true
+}

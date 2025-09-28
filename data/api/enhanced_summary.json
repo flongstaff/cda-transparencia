@@ -1,0 +1,154 @@
+{
+  "transparency_portal": {
+    "name": "CDA Transparency Portal",
+    "municipality": "Carmen de Areco",
+    "last_updated": "2025-09-27T11:39:41.863379",
+    "data_sources": {
+      "pdfs_processed": 96,
+      "tables_extracted": "Multiple",
+      "records_generated": "Dynamic"
+    }
+  },
+  "data_categories": {
+    "revenue": "Municipal revenue and income data",
+    "expenses": "Municipal expense and budget execution",
+    "financial_statements": "Financial position and statements",
+    "contracts": "Public contracts and tenders",
+    "statistical_reports": "Municipal statistics and reports"
+  },
+  "csv_files": {
+    "transparency_index.csv": {
+      "records": 199,
+      "columns": [
+        "Year",
+        "Quarter",
+        "Category name",
+        "File link"
+      ],
+      "size_kb": 30.2,
+      "url": "/data/csv/transparency_index.csv"
+    },
+    "pdf_inventory.csv": {
+      "records": 399,
+      "columns": [
+        "Year",
+        "Quarter",
+        "Report Type",
+        "PDF Link",
+        "Format"
+      ],
+      "size_kb": 70.5,
+      "url": "/data/csv/pdf_inventory.csv"
+    },
+    "2019_treasury_movements.csv": {
+      "records": 6,
+      "columns": [
+        "Movimientos de Tesoreria",
+        "Importe"
+      ],
+      "size_kb": 0.2,
+      "url": "/data/csv/2019_treasury_movements.csv"
+    },
+    "master_index.csv": {
+      "records": 32,
+      "columns": [
+        "Año",
+        "Tipo",
+        "Título",
+        "Enlace",
+        "Formato"
+      ],
+      "size_kb": 2.8,
+      "url": "/data/csv/master_index.csv"
+    },
+    "expenses_summary.csv": {
+      "records": 79,
+      "columns": [
+        "Descripcion",
+        "Año",
+        "Credito_Vigente",
+        "Devengado",
+        "Pagado",
+        "Fuente"
+      ],
+      "size_kb": 14.0,
+      "url": "/data/csv/expenses_summary.csv"
+    },
+    "2019_article_44_result.csv": {
+      "records": 7,
+      "columns": [
+        "Resultado Artículo 44",
+        "Importe"
+      ],
+      "size_kb": 0.4,
+      "url": "/data/csv/2019_article_44_result.csv"
+    },
+    "transparency_data_complete.csv": {
+      "records": 1240,
+      "columns": [
+        "Descripcion",
+        "Vigente",
+        "Devengado",
+        "Percibido",
+        "Año",
+        "Fuente",
+        "Categoria",
+        "Credito_Vigente",
+        "Pagado"
+      ],
+      "size_kb": 160.4,
+      "url": "/data/csv/transparency_data_complete.csv"
+    },
+    "licitaciones_2023.csv": {
+      "records": 5,
+      "columns": [
+        "Número de Licitación",
+        "Objeto",
+        "Expediente",
+        "Fecha de Apertura",
+        "Monto Presupuestado",
+        "Valor del Pliego",
+        "Archivo Fuente"
+      ],
+      "size_kb": 1.1,
+      "url": "/data/csv/licitaciones_2023.csv"
+    },
+    "estadisticas_index.csv": {
+      "records": 44,
+      "columns": [
+        "Título",
+        "Año",
+        "Tema",
+        "Enlace"
+      ],
+      "size_kb": 5.2,
+      "url": "/data/csv/estadisticas_index.csv"
+    },
+    "revenue_summary.csv": {
+      "records": 653,
+      "columns": [
+        "Descripcion",
+        "Año",
+        "Vigente",
+        "Devengado",
+        "Percibido"
+      ],
+      "size_kb": 37.1,
+      "url": "/data/csv/revenue_summary.csv"
+    },
+    "2019_statement_of_financial_position.csv": {
+      "records": 13,
+      "columns": [
+        "Estado de Situacion Patrimonial",
+        "Saldo"
+      ],
+      "size_kb": 0.6,
+      "url": "/data/csv/2019_statement_of_financial_position.csv"
+    }
+  },
+  "usage": {
+    "web_integration": "Files ready for web deployment",
+    "api_access": "JSON endpoints available",
+    "download_links": "Direct CSV access"
+  }
+}

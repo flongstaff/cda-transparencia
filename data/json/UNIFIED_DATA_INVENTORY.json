@@ -1,0 +1,9 @@
+{
+  "migration_timestamp": "2025-09-26T20:26:04.785309",
+  "migration_stats": {
+    "files_migrated": 0,
+    "pdfs_consolidated": 187,
+    "csvs_merged": 6,
+    "jsons_updated": 566,
+    "duplicates_handled": 286,
+    "start_time": 

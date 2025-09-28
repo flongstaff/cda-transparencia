@@ -1,0 +1,105 @@
+{
+  "project": "Carmen de Areco Transparency Portal",
+  "version": "1.0.0",
+  "last_updated": "2025-09-27",
+  "data_sources": [
+    {
+      "id": "financial_2019",
+      "name": "Datos Financieros 2019",
+      "description": "Información financiera extraída del Informe Económico Financiero 2019 del Municipio de Carmen de Areco",
+      "type": "financial",
+      "year": 2019,
+      "files": [
+        {
+          "path": "/data/financial/2019/summary.json",
+          "format": "JSON",
+          "size": "2KB",
+          "description": "Resumen financiero completo"
+        },
+        {
+          "path": "/data/financial/2019/revenue_by_source.json",
+          "format": "JSON",
+          "size": "1KB",
+          "description": "Ingresos desglosados por fuente"
+        },
+        {
+          "path": "/data/financial/2019/expenditure_by_program.json",
+          "format": "JSON",
+          "size": "3KB",
+          "description": "Gastos desglosados por programa"
+        },
+        {
+          "path": "/data/financial/2019/consolidated.json",
+          "format": "JSON",
+          "size": "5KB",
+          "description": "Datos financieros consolidados"
+        }
+      ],
+      "api_endpoints": [
+        "/api/financial/2019/summary.json",
+        "/api/financial/2019/revenue_by_source.json",
+        "/api/financial/2019/expenditure_by_program.json",
+        "/api/financial/2019/consolidated.json"
+      ]
+    },
+    {
+      "id": "transparency_portal",
+      "name": "Portal de Transparencia (2022-2025)",
+      "description": "Datos del Portal de Transparencia del Municipio de Carmen de Areco",
+      "type": "transparency",
+      "years": "2022-2025",
+      "files": [
+        {
+          "path": "/data/transparency/index.csv",
+          "format": "CSV",
+          "size": "15KB",
+          "description": "Índice de documentos del portal de transparencia"
+        }
+      ],
+      "api_endpoints": [
+        "/api/transparency/index.json"
+      ]
+    },
+    {
+      "id": "statistical_reports",
+      "name": "Informes Estadísticos (2012-2022)",
+      "description": "Informes estadísticos del municipio entre 2012 y 2022",
+      "type": "statistics",
+      "years": "2012-2022",
+      "files": [
+        {
+          "path": "/data/statistics/index.csv",
+          "format": "CSV",
+          "size": "8KB",
+          "description": "Índice de informes estadísticos"
+        }
+      ],
+      "api_endpoints": [
+        "/api/statistics/index.json"
+      ]
+    },
+    {
+      "id": "public_tenders",
+      "name": "Licitaciones Públicas (2023)",
+      "description": "Datos de licitaciones públicas del año 2023",
+      "type": "tenders",
+      "year": 2023,
+      "files": [
+        {
+          "path": "/data/tenders/licitaciones_2023.csv",
+          "format": "CSV",
+          "size": "2KB",
+          "description": "Datos de licitaciones públicas 2023"
+        }
+      ],
+      "api_endpoints": [
+        "/api/tenders/licitaciones_2023.json"
+      ]
+    }
+  ],
+  "total_data_sources": 4,
+  "total_files": 8,
+  "total_api_endpoints": 8,
+  "license": "MIT",
+  "attribution": "Datos extraídos de documentos oficiales del Municipio de Carmen de Areco"
+}

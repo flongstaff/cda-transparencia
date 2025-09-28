@@ -1,0 +1,21 @@
+{
+  "document_info": {
+    "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "category": "Ejecución de Gastos",
+    "year": null,
+    "quarter": "Q1"
+  },
+  "extraction_stats": {
+    "text_pages": 2,
+    "tables_found": 2,
+    "methods_used": [
+      "pdfplumber"
+    ],
+    "output_files_count": 4
+  },
+  "financial_summary": {
+    "amounts_found": 0,
+    "dates_found": 10,
+    "percentages_found": 16
+  }
+}

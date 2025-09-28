@@ -1,0 +1,906 @@
+{
+  "total_documents": 96,
+  "categories": {
+    "financial_statements": {
+      "name": "Financial Statements",
+      "folder": "financial_statements",
+      "count": 13,
+      "years": [
+        "2022",
+        "unknown"
+      ]
+    },
+    "budget_execution": {
+      "name": "Budget Execution",
+      "folder": "budget_execution",
+      "count": 77,
+      "years": [
+        "2022",
+        "2023",
+        "unknown"
+      ]
+    },
+    "contracts": {
+      "name": "Contracts",
+      "folder": "contracts",
+      "count": 5,
+      "years": [
+        "unknown"
+      ]
+    },
+    "revenue_reports": {
+      "name": "Revenue Reports",
+      "folder": "revenue_reports",
+      "count": 1,
+      "years": [
+        "unknown"
+      ]
+    }
+  },
+  "documents": [
+    {
+      "id": "2f6a43c4",
+      "title": "Situacion-Economica-Financiera-al-30-06-23.pdf",
+      "category": "financial_statements",
+      "year": "unknown",
+      "size": 271646,
+      "url": "/data/documents/pdfs/financial_statements/unknown/2f6a43c4_Situacion-Economica-Financiera-al-30-06-23.pdf",
+      "path": "documents/pdfs/financial_statements/unknown/2f6a43c4_Situacion-Economica-Financiera-al-30-06-23.pdf"
+    },
+    {
+      "id": "b587c3d0",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 121409,
+      "url": "/data/documents/pdfs/budget_execution/unknown/b587c3d0_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/b587c3d0_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf"
+    },
+    {
+      "id": "9e3a6c53",
+      "title": "LICITACION-PUBLICA-N°10.pdf",
+      "category": "contracts",
+      "year": "unknown",
+      "size": 722391,
+      "url": "/data/documents/pdfs/contracts/unknown/9e3a6c53_LICITACION-PUBLICA-N°10.pdf",
+      "path": "documents/pdfs/contracts/unknown/9e3a6c53_LICITACION-PUBLICA-N°10.pdf"
+    },
+    {
+      "id": "7232b707",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 154286,
+      "url": "/data/documents/pdfs/budget_execution/unknown/7232b707_ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/7232b707_ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf"
+    },
+    {
+      "id": "c96a1ed2",
+      "title": "Situacion-Economico-Financiera-Junio.pdf",
+      "category": "financial_statements",
+      "year": "unknown",
+      "size": 224328,
+      "url": "/data/documents/pdfs/financial_statements/unknown/c96a1ed2_Situacion-Economico-Financiera-Junio.pdf",
+      "path": "documents/pdfs/financial_statements/unknown/c96a1ed2_Situacion-Economico-Financiera-Junio.pdf"
+    },
+    {
+      "id": "32b51dd3",
+      "title": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 294085,
+      "url": "/data/documents/pdfs/budget_execution/unknown/32b51dd3_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/32b51dd3_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf"
+    },
+    {
+      "id": "4306f1e4",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 67548,
+      "url": "/data/documents/pdfs/budget_execution/unknown/4306f1e4_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/4306f1e4_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf"
+    },
+    {
+      "id": "ae54edfb",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 86333,
+      "url": "/data/documents/pdfs/budget_execution/unknown/ae54edfb_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/ae54edfb_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf"
+    },
+    {
+      "id": "4e83b6de",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 111422,
+      "url": "/data/documents/pdfs/budget_execution/unknown/4e83b6de_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/4e83b6de_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf"
+    },
+    {
+      "id": "1d993b32",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+      "category": "budget_execution",
+      "year": "2023",
+      "size": 85219,
+      "url": "/data/documents/pdfs/budget_execution/2023/1d993b32_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+      "path": "documents/pdfs/budget_execution/2023/1d993b32_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf"
+    },
+    {
+      "id": "657e795c",
+      "title": "Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 388601,
+      "url": "/data/documents/pdfs/budget_execution/unknown/657e795c_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/657e795c_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf"
+    },
+    {
+      "id": "b8fd4047",
+      "title": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 361665,
+      "url": "/data/documents/pdfs/budget_execution/unknown/b8fd4047_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/b8fd4047_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf"
+    },
+    {
+      "id": "53306e11",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+      "category": "budget_execution",
+      "year": "2023",
+      "size": 101956,
+      "url": "/data/documents/pdfs/budget_execution/2023/53306e11_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+      "path": "documents/pdfs/budget_execution/2023/53306e11_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf"
+    },
+    {
+      "id": "4125c24f",
+      "title": "GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 277260,
+      "url": "/data/documents/pdfs/budget_execution/unknown/4125c24f_GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/4125c24f_GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf"
+    },
+    {
+      "id": "465dae3e",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 109812,
+      "url": "/data/documents/pdfs/budget_execution/unknown/465dae3e_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/465dae3e_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf"
+    },
+    {
+      "id": "e00625e9",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 125901,
+      "url": "/data/documents/pdfs/budget_execution/unknown/e00625e9_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/e00625e9_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf"
+    },
+    {
+      "id": "0b09f420",
+      "title": "Situacion-Economico-Financiera-Marzo.pdf",
+      "category": "financial_statements",
+      "year": "unknown",
+      "size": 224229,
+      "url": "/data/documents/pdfs/financial_statements/unknown/0b09f420_Situacion-Economico-Financiera-Marzo.pdf",
+      "path": "documents/pdfs/financial_statements/unknown/0b09f420_Situacion-Economico-Financiera-Marzo.pdf"
+    },
+    {
+      "id": "52df6398",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 102105,
+      "url": "/data/documents/pdfs/budget_execution/unknown/52df6398_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/52df6398_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf"
+    },
+    {
+      "id": "a2f62b95",
+      "title": "LICITACION-PUBLICA-N°8.pdf",
+      "category": "contracts",
+      "year": "unknown",
+      "size": 809403,
+      "url": "/data/documents/pdfs/contracts/unknown/a2f62b95_LICITACION-PUBLICA-N°8.pdf",
+      "path": "documents/pdfs/contracts/unknown/a2f62b95_LICITACION-PUBLICA-N°8.pdf"
+    },
+    {
+      "id": "ee8a3c2a",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 101071,
+      "url": "/data/documents/pdfs/budget_execution/unknown/ee8a3c2a_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/ee8a3c2a_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf"
+    },
+    {
+      "id": "2ba47d2c",
+      "title": "SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+      "category": "financial_statements",
+      "year": "unknown",
+      "size": 89080,
+      "url": "/data/documents/pdfs/financial_statements/unknown/2ba47d2c_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+      "path": "documents/pdfs/financial_statements/unknown/2ba47d2c_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf"
+    },
+    {
+      "id": "57d5e4fb",
+      "title": "SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+      "category": "financial_statements",
+      "year": "unknown",
+      "size": 72410,
+      "url": "/data/documents/pdfs/financial_statements/unknown/57d5e4fb_SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+      "path": "documents/pdfs/financial_statements/unknown/57d5e4fb_SITUACION-ECONOMICA-FINANCIERA-2.pdf"
+    },
+    {
+      "id": "8ba792ed",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 102839,
+      "url": "/data/documents/pdfs/budget_execution/unknown/8ba792ed_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/8ba792ed_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf"
+    },
+    {
+      "id": "6a278588",
+      "title": "SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+      "category": "financial_statements",
+      "year": "unknown",
+      "size": 72452,
+      "url": "/data/documents/pdfs/financial_statements/unknown/6a278588_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+      "path": "documents/pdfs/financial_statements/unknown/6a278588_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf"
+    },
+    {
+      "id": "338d773b",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 66180,
+      "url": "/data/documents/pdfs/budget_execution/unknown/338d773b_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/338d773b_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf"
+    },
+    {
+      "id": "5872165b",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 102641,
+      "url": "/data/documents/pdfs/budget_execution/unknown/5872165b_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/5872165b_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf"
+    },
+    {
+      "id": "cc95c83a",
+      "title": "Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 463491,
+      "url": "/data/documents/pdfs/budget_execution/unknown/cc95c83a_Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/cc95c83a_Estado-de-Ejecucion-de-Recursos-Junio.pdf"
+    },
+    {
+      "id": "a4b793dd",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 110199,
+      "url": "/data/documents/pdfs/budget_execution/unknown/a4b793dd_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/a4b793dd_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf"
+    },
+    {
+      "id": "308daa7e",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 102664,
+      "url": "/data/documents/pdfs/budget_execution/unknown/308daa7e_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/308daa7e_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf"
+    },
+    {
+      "id": "e2ddf5be",
+      "title": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 275027,
+      "url": "/data/documents/pdfs/budget_execution/unknown/e2ddf5be_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/e2ddf5be_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf"
+    },
+    {
+      "id": "a841f43f",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 109662,
+      "url": "/data/documents/pdfs/budget_execution/unknown/a841f43f_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/a841f43f_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf"
+    },
+    {
+      "id": "d35c0fe4",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 140098,
+      "url": "/data/documents/pdfs/budget_execution/unknown/d35c0fe4_ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/d35c0fe4_ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf"
+    },
+    {
+      "id": "910a81f6",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 87336,
+      "url": "/data/documents/pdfs/budget_execution/unknown/910a81f6_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/910a81f6_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf"
+    },
+    {
+      "id": "aca9bfca",
+      "title": "LICITACION-PUBLICA-N°7.pdf",
+      "category": "contracts",
+      "year": "unknown",
+      "size": 808836,
+      "url": "/data/documents/pdfs/contracts/unknown/aca9bfca_LICITACION-PUBLICA-N°7.pdf",
+      "path": "documents/pdfs/contracts/unknown/aca9bfca_LICITACION-PUBLICA-N°7.pdf"
+    },
+    {
+      "id": "f5cc5695",
+      "title": "Situacion-Economico-Financiera-3er-Trimestre.pdf",
+      "category": "financial_statements",
+      "year": "unknown",
+      "size": 226061,
+      "url": "/data/documents/pdfs/financial_statements/unknown/f5cc5695_Situacion-Economico-Financiera-3er-Trimestre.pdf",
+      "path": "documents/pdfs/financial_statements/unknown/f5cc5695_Situacion-Economico-Financiera-3er-Trimestre.pdf"
+    },
+    {
+      "id": "8d6f28cf",
+      "title": "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+      "category": "budget_execution",
+      "year": "2022",
+      "size": 102876,
+      "url": "/data/documents/pdfs/budget_execution/2022/8d6f28cf_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+      "path": "documents/pdfs/budget_execution/2022/8d6f28cf_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf"
+    },
+    {
+      "id": "34ad4c9b",
+      "title": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 278043,
+      "url": "/data/documents/pdfs/budget_execution/unknown/34ad4c9b_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/34ad4c9b_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf"
+    },
+    {
+      "id": "782401fa",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+      "category": "budget_execution",
+      "year": "2023",
+      "size": 114620,
+      "url": "/data/documents/pdfs/budget_execution/2023/782401fa_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+      "path": "documents/pdfs/budget_execution/2023/782401fa_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf"
+    },
+    {
+      "id": "3d259a10",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 84880,
+      "url": "/data/documents/pdfs/budget_execution/unknown/3d259a10_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/3d259a10_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf"
+    },
+    {
+      "id": "7f09557c",
+      "title": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 276458,
+      "url": "/data/documents/pdfs/budget_execution/unknown/7f09557c_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/7f09557c_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf"
+    },
+    {
+      "id": "64a8adaf",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 68205,
+      "url": "/data/documents/pdfs/budget_execution/unknown/64a8adaf_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/64a8adaf_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf"
+    },
+    {
+      "id": "ac0caf67",
+      "title": "SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+      "category": "financial_statements",
+      "year": "2022",
+      "size": 72061,
+      "url": "/data/documents/pdfs/financial_statements/2022/ac0caf67_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+      "path": "documents/pdfs/financial_statements/2022/ac0caf67_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf"
+    },
+    {
+      "id": "4afedf8d",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+      "category": "budget_execution",
+      "year": "2022",
+      "size": 85022,
+      "url": "/data/documents/pdfs/budget_execution/2022/4afedf8d_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+      "path": "documents/pdfs/budget_execution/2022/4afedf8d_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf"
+    },
+    {
+      "id": "2e1515de",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+      "category": "budget_execution",
+      "year": "2023",
+      "size": 85281,
+      "url": "/data/documents/pdfs/budget_execution/2023/2e1515de_ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+      "path": "documents/pdfs/budget_execution/2023/2e1515de_ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf"
+    },
+    {
+      "id": "476def09",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 102829,
+      "url": "/data/documents/pdfs/budget_execution/unknown/476def09_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/476def09_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf"
+    },
+    {
+      "id": "4a083772",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+      "category": "budget_execution",
+      "year": "2022",
+      "size": 119210,
+      "url": "/data/documents/pdfs/budget_execution/2022/4a083772_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+      "path": "documents/pdfs/budget_execution/2022/4a083772_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf"
+    },
+    {
+      "id": "489697d1",
+      "title": "Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 387205,
+      "url": "/data/documents/pdfs/budget_execution/unknown/489697d1_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/489697d1_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf"
+    },
+    {
+      "id": "f8376937",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+      "category": "budget_execution",
+      "year": "2023",
+      "size": 119224,
+      "url": "/data/documents/pdfs/budget_execution/2023/f8376937_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+      "path": "documents/pdfs/budget_execution/2023/f8376937_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf"
+    },
+    {
+      "id": "0ac5b509",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+      "category": "budget_execution",
+      "year": "2023",
+      "size": 102727,
+      "url": "/data/documents/pdfs/budget_execution/2023/0ac5b509_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+      "path": "documents/pdfs/budget_execution/2023/0ac5b509_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf"
+    },
+    {
+      "id": "75d3b177",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+      "category": "budget_execution",
+      "year": "2022",
+      "size": 101639,
+      "url": "/data/documents/pdfs/budget_execution/2022/75d3b177_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+      "path": "documents/pdfs/budget_execution/2022/75d3b177_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf"
+    },
+    {
+      "id": "5543a0b6",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+      "category": "budget_execution",
+      "year": "2022",
+      "size": 67723,
+      "url": "/data/documents/pdfs/budget_execution/2022/5543a0b6_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+      "path": "documents/pdfs/budget_execution/2022/5543a0b6_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf"
+    },
+    {
+      "id": "e4f48d0c",
+      "title": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 294922,
+      "url": "/data/documents/pdfs/budget_execution/unknown/e4f48d0c_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/e4f48d0c_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf"
+    },
+    {
+      "id": "d4ad8d51",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 99892,
+      "url": "/data/documents/pdfs/budget_execution/unknown/d4ad8d51_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/d4ad8d51_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf"
+    },
+    {
+      "id": "6f39b1bf",
+      "title": "Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 387591,
+      "url": "/data/documents/pdfs/budget_execution/unknown/6f39b1bf_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/6f39b1bf_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf"
+    },
+    {
+      "id": "91849815",
+      "title": "ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 115864,
+      "url": "/data/documents/pdfs/budget_execution/unknown/91849815_ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/91849815_ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf"
+    },
+    {
+      "id": "d53d9da0",
+      "title": "SITUACION-ECONOMICA-FINANCIERA-1.pdf",
+      "category": "financial_statements",
+      "year": "unknown",
+      "size": 72005,
+      "url": "/data/documents/pdfs/financial_statements/unknown/d53d9da0_SITUACION-ECONOMICA-FINANCIERA-1.pdf",
+      "path": "documents/pdfs/financial_statements/unknown/d53d9da0_SITUACION-ECONOMICA-FINANCIERA-1.pdf"
+    },
+    {
+      "id": "7d3ccddc",
+      "title": "Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 387930,
+      "url": "/data/documents/pdfs/budget_execution/unknown/7d3ccddc_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/7d3ccddc_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf"
+    },
+    {
+      "id": "648e058f",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+      "category": "budget_execution",
+      "year": "2023",
+      "size": 143218,
+      "url": "/data/documents/pdfs/budget_execution/2023/648e058f_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+      "path": "documents/pdfs/budget_execution/2023/648e058f_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf"
+    },
+    {
+      "id": "ab1883e0",
+      "title": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 287915,
+      "url": "/data/documents/pdfs/budget_execution/unknown/ab1883e0_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/ab1883e0_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf"
+    },
+    {
+      "id": "df5587bf",
+      "title": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 362608,
+      "url": "/data/documents/pdfs/budget_execution/unknown/df5587bf_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/df5587bf_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf"
+    },
+    {
+      "id": "7204f82a",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+      "category": "budget_execution",
+      "year": "2022",
+      "size": 102506,
+      "url": "/data/documents/pdfs/budget_execution/2022/7204f82a_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+      "path": "documents/pdfs/budget_execution/2022/7204f82a_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf"
+    },
+    {
+      "id": "2db8629d",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 109758,
+      "url": "/data/documents/pdfs/budget_execution/unknown/2db8629d_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/2db8629d_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf"
+    },
+    {
+      "id": "12c15f37",
+      "title": "SITUACION-ECONOMICA-FINANCIERA.pdf",
+      "category": "financial_statements",
+      "year": "unknown",
+      "size": 71806,
+      "url": "/data/documents/pdfs/financial_statements/unknown/12c15f37_SITUACION-ECONOMICA-FINANCIERA.pdf",
+      "path": "documents/pdfs/financial_statements/unknown/12c15f37_SITUACION-ECONOMICA-FINANCIERA.pdf"
+    },
+    {
+      "id": "1fdbe0ce",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 151544,
+      "url": "/data/documents/pdfs/budget_execution/unknown/1fdbe0ce_ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/1fdbe0ce_ESTADO-DE-EJECUCION-DE-RECURSOS.pdf"
+    },
+    {
+      "id": "f7d12a5f",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 119668,
+      "url": "/data/documents/pdfs/budget_execution/unknown/f7d12a5f_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/f7d12a5f_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf"
+    },
+    {
+      "id": "4f9f36eb",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 85431,
+      "url": "/data/documents/pdfs/budget_execution/unknown/4f9f36eb_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/4f9f36eb_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf"
+    },
+    {
+      "id": "f0a524f4",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+      "category": "budget_execution",
+      "year": "2022",
+      "size": 109553,
+      "url": "/data/documents/pdfs/budget_execution/2022/f0a524f4_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+      "path": "documents/pdfs/budget_execution/2022/f0a524f4_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf"
+    },
+    {
+      "id": "9ca20572",
+      "title": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 362628,
+      "url": "/data/documents/pdfs/budget_execution/unknown/9ca20572_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/9ca20572_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf"
+    },
+    {
+      "id": "2f28055c",
+      "title": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 410450,
+      "url": "/data/documents/pdfs/budget_execution/unknown/2f28055c_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/2f28055c_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf"
+    },
+    {
+      "id": "c79cc06e",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+      "category": "budget_execution",
+      "year": "2023",
+      "size": 69801,
+      "url": "/data/documents/pdfs/budget_execution/2023/c79cc06e_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+      "path": "documents/pdfs/budget_execution/2023/c79cc06e_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf"
+    },
+    {
+      "id": "8bf8fc90",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+      "category": "budget_execution",
+      "year": "2022",
+      "size": 147280,
+      "url": "/data/documents/pdfs/budget_execution/2022/8bf8fc90_ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+      "path": "documents/pdfs/budget_execution/2022/8bf8fc90_ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf"
+    },
+    {
+      "id": "c785170f",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 85386,
+      "url": "/data/documents/pdfs/budget_execution/unknown/c785170f_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/c785170f_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf"
+    },
+    {
+      "id": "f901b71d",
+      "title": "Situacion-Economico-Financiera-4to-Trimestre.pdf",
+      "category": "financial_statements",
+      "year": "unknown",
+      "size": 305831,
+      "url": "/data/documents/pdfs/financial_statements/unknown/f901b71d_Situacion-Economico-Financiera-4to-Trimestre.pdf",
+      "path": "documents/pdfs/financial_statements/unknown/f901b71d_Situacion-Economico-Financiera-4to-Trimestre.pdf"
+    },
+    {
+      "id": "c598acc5",
+      "title": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 278896,
+      "url": "/data/documents/pdfs/budget_execution/unknown/c598acc5_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/c598acc5_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf"
+    },
+    {
+      "id": "37b9eadd",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 141931,
+      "url": "/data/documents/pdfs/budget_execution/unknown/37b9eadd_ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/37b9eadd_ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf"
+    },
+    {
+      "id": "e603a19d",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 66761,
+      "url": "/data/documents/pdfs/budget_execution/unknown/e603a19d_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/e603a19d_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf"
+    },
+    {
+      "id": "affa6522",
+      "title": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 361206,
+      "url": "/data/documents/pdfs/budget_execution/unknown/affa6522_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/affa6522_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf"
+    },
+    {
+      "id": "1c364856",
+      "title": "SITUACION-ECONOMICO-FINANCIERA.pdf",
+      "category": "financial_statements",
+      "year": "unknown",
+      "size": 227255,
+      "url": "/data/documents/pdfs/financial_statements/unknown/1c364856_SITUACION-ECONOMICO-FINANCIERA.pdf",
+      "path": "documents/pdfs/financial_statements/unknown/1c364856_SITUACION-ECONOMICO-FINANCIERA.pdf"
+    },
+    {
+      "id": "c401cfab",
+      "title": "ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+      "category": "budget_execution",
+      "year": "2022",
+      "size": 142229,
+      "url": "/data/documents/pdfs/budget_execution/2022/c401cfab_ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+      "path": "documents/pdfs/budget_execution/2022/c401cfab_ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf"
+    },
+    {
+      "id": "37c59f66",
+      "title": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 287416,
+      "url": "/data/documents/pdfs/budget_execution/unknown/37c59f66_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/37c59f66_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf"
+    },
+    {
+      "id": "f1a97a35",
+      "title": "Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 397346,
+      "url": "/data/documents/pdfs/budget_execution/unknown/f1a97a35_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/f1a97a35_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf"
+    },
+    {
+      "id": "be9be7d9",
+      "title": "Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 459999,
+      "url": "/data/documents/pdfs/budget_execution/unknown/be9be7d9_Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/be9be7d9_Estado-de-Ejecucion-de-Recursos-Marzo.pdf"
+    },
+    {
+      "id": "f201f0fd",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 85712,
+      "url": "/data/documents/pdfs/budget_execution/unknown/f201f0fd_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/f201f0fd_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf"
+    },
+    {
+      "id": "1bc732bc",
+      "title": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 276006,
+      "url": "/data/documents/pdfs/budget_execution/unknown/1bc732bc_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/1bc732bc_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf"
+    },
+    {
+      "id": "787feaa0",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 118244,
+      "url": "/data/documents/pdfs/budget_execution/unknown/787feaa0_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/787feaa0_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf"
+    },
+    {
+      "id": "ab419cf2",
+      "title": "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+      "category": "budget_execution",
+      "year": "2022",
+      "size": 85366,
+      "url": "/data/documents/pdfs/budget_execution/2022/ab419cf2_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+      "path": "documents/pdfs/budget_execution/2022/ab419cf2_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf"
+    },
+    {
+      "id": "7ae065cb",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 67534,
+      "url": "/data/documents/pdfs/budget_execution/unknown/7ae065cb_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/7ae065cb_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf"
+    },
+    {
+      "id": "0234d274",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 101611,
+      "url": "/data/documents/pdfs/budget_execution/unknown/0234d274_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/0234d274_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf"
+    },
+    {
+      "id": "46e31617",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 102665,
+      "url": "/data/documents/pdfs/budget_execution/unknown/46e31617_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/46e31617_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf"
+    },
+    {
+      "id": "0572c13d",
+      "title": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 382115,
+      "url": "/data/documents/pdfs/budget_execution/unknown/0572c13d_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/0572c13d_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf"
+    },
+    {
+      "id": "f1bf0d80",
+      "title": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 277186,
+      "url": "/data/documents/pdfs/budget_execution/unknown/f1bf0d80_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/f1bf0d80_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf"
+    },
+    {
+      "id": "6a7ceab2",
+      "title": "RECURSOS-POR-PROCEDENCIA.pdf",
+      "category": "revenue_reports",
+      "year": "unknown",
+      "size": 362991,
+      "url": "/data/documents/pdfs/revenue_reports/unknown/6a7ceab2_RECURSOS-POR-PROCEDENCIA.pdf",
+      "path": "documents/pdfs/revenue_reports/unknown/6a7ceab2_RECURSOS-POR-PROCEDENCIA.pdf"
+    },
+    {
+      "id": "d8bfffdd",
+      "title": "SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+      "category": "financial_statements",
+      "year": "2022",
+      "size": 88878,
+      "url": "/data/documents/pdfs/financial_statements/2022/d8bfffdd_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+      "path": "documents/pdfs/financial_statements/2022/d8bfffdd_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf"
+    },
+    {
+      "id": "a98757a4",
+      "title": "Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+      "category": "budget_execution",
+      "year": "unknown",
+      "size": 397604,
+      "url": "/data/documents/pdfs/budget_execution/unknown/a98757a4_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+      "path": "documents/pdfs/budget_execution/unknown/a98757a4_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf"
+    },
+    {
+      "id": "551ae71a",
+      "title": "LICITACION-PUBLICA-N°11.pdf",
+      "category": "contracts",
+      "year": "unknown",
+      "size": 769278,
+      "url": "/data/documents/pdfs/contracts/unknown/551ae71a_LICITACION-PUBLICA-N°11.pdf",
+      "path": "documents/pdfs/contracts/unknown/551ae71a_LICITACION-PUBLICA-N°11.pdf"
+    },
+    {
+      "id": "e625b318",
+      "title": "LICITACION-PUBLICA-N°9.pdf",
+      "category": "contracts",
+      "year": "unknown",
+      "size": 735593,
+      "url": "/data/documents/pdfs/contracts/unknown/e625b318_LICITACION-PUBLICA-N°9.pdf",
+      "path": "documents/pdfs/contracts/unknown/e625b318_LICITACION-PUBLICA-N°9.pdf"
+    }
+  ]
+}

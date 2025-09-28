@@ -1,0 +1,20 @@
+{
+  "deployment": {
+    "type": "github_pages",
+    "url": "https://cda-transparencia.org",
+    "api_base": "/data/api",
+    "static_files": true,
+    "offline_support": true
+  },
+  "build": {
+    "timestamp": "2025-09-26T20:34:54.258161",
+    "version": "1.0.0",
+    "node_env": "production"
+  },
+  "api_endpoints": {
+    "transparency": "/data/api/transparency.json",
+    "statistics": "/data/api/statistics.json",
+    "audit": "/data/api/audit.json",
+    "documents": "/data/api/pdf_manifest.json"
+  }
+}

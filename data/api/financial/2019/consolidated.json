@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "year": 2019,
+    "title": "Datos Financieros Consolidados 2019",
+    "last_updated": "2025-09-27",
+    "source": "Informe Económico 2019"
+  },
+  "summary": {
+    "revenue": {
+      "total": {
+        "budgeted": 243511982.00,
+        "executed": 234125273.85,
+        "percentage": 96.15
+      },
+      "current": {
+        "budgeted": 241879702.14,
+        "executed": 232492993.99,
+        "percentage": 96.12
+      },
+      "capital": {
+        "budgeted": 1632279.86,
+        "executed": 1632279.86,
+        "percentage": 100.00
+      }
+    },
+    "expenditure": {
+      "total": {
+        "budgeted": 271899802.33,
+        "executed": 266210998.09,
+        "percentage": 97.91
+      },
+      "personnel": {
+        "budgeted": 115221488.53,
+        "executed": 115221488.53,
+        "percentage": 100.00
+      },
+      "consumables": {
+        "budgeted": 48292633.90,
+        "executed": 45006222.39,
+        "percentage": 93.19
+      }
+    },
+    "financial_result": {
+      "operating_result": {
+        "executed": 832790.44
+      },
+      "net_result": {
+        "executed": -14721351.66
+      }
+    }
+  },
+  "revenue_by_source": [
+    {
+      "source": "provincial_participation",
+      "description": "Participación Impuestos Provinciales",
+      "executed": 379449.30
+    },
+    {
+      "source": "property_tax",
+      "description": "Inmobiliario Rural No Afectado",
+      "executed": 177861.13
+    },
+    {
+      "source": "revenue_tax",
+      "description": "Ingresos Brutos",
+      "executed": 428.24
+    },
+    {
+      "source": "ordinary_resources",
+      "description": "Recursos Ordinarios",
+      "executed": 60532.50
+    },
+    {
+      "source": "municipal_housing_fund",
+      "description": "Fondo Vivienda Municipal",
+      "executed": 190780.09
+    },
+    {
+      "source": "rural_property",
+      "description": "Inmobiliario Rural Afectado",
+      "executed": 858657.57
+    },
+    {
+      "source": "municipal_productive_fund",
+      "description": "Fondo Productivo Municipal",
+      "executed": 43966.04
+    },
+    {
+      "source": "network_expansion_fund",
+      "description": "Fondo Tendiend Redes",
+      "executed": 2548.20
+    },
+    {
+      "source": "communal_police",
+      "description": "Policia Comunal",
+      "executed": 4380.14
+    },
+    {
+      "source": "second_chance",
+      "description": "Segunda Oportunidad",
+      "executed": 586.04
+    },
+    {
+      "source": "affected_resources",
+      "description": "Recursos Afectados",
+      "executed": 3509966.87
+    },
+    {
+      "source": "nacer_plan",
+      "description": "Plan NACER",
+      "executed": 3310.50
+    },
+    {
+      "source": "soy_fund",
+      "description": "Fondo Solidario Pcial Soja",
+      "executed": 462.10
+    },
+    {
+      "source": "educational_coparticipation",
+      "description": "Coparticipacion Fondo Educativo",
+      "executed": 42141.33
+    },
+    {
+      "source": "infrastructure_fund",
+      "description": "Fondo de Infraestructura",
+      "executed": 22842.71
+    },
+    {
+      "source": "samo",
+      "description": "Sistema de Atención Médica Organizada",
+      "executed": 80299.94
+    },
+    {
+      "source": "national_municipal_plan",
+      "description": "Plan Nacional de Obras Municipales",
+      "executed": 284875.02
+    },
+    {
+      "source": "habitat_north",
+      "description": "Habitat Norte Interior Y Obras Y Vivienda",
+      "executed": 0.80
+    },
+    {
+      "source": "third_party_account",
+      "description": "Cuenta de Terceros",
+      "executed": 733710.68
+    }
+  ],
+  "top_expenditure_programs": [
+    {
+      "program_name": "Servicios Urbanos",
+      "executed": 61327344.23
+    },
+    {
+      "program_name": "Actividades Centrales",
+      "executed": 84747188.39
+    },
+    {
+      "program_name": "Fondo Educativo",
+      "executed": 25358513.52
+    },
+    {
+      "program_name": "Desarrollo de Políticas Sociales",
+      "executed": 10745925.77
+    },
+    {
+      "program_name": "Planificacion y desarrollo de politicas sociales, salu",
+      "executed": 16736420.07
+    }
+  ]
+}

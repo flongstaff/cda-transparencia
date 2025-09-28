@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "id": "2019_summary",
+      "title": "Resumen Financiero 2019",
+      "description": "Resumen completo de ingresos, gastos y posición financiera para 2019",
+      "category": "financial_summary",
+      "file_path": "/data/financial/2019/summary.json",
+      "file_type": "json",
+      "year": 2019,
+      "last_updated": "2025-09-27"
+    },
+    {
+      "id": "2019_revenue_by_source",
+      "title": "Ingresos por Fuente 2019",
+      "description": "Desglose detallado de ingresos por fuente para 2019",
+      "category": "revenue",
+      "file_path": "/data/financial/2019/revenue_by_source.json",
+      "file_type": "json",
+      "year": 2019,
+      "last_updated": "2025-09-27"
+    },
+    {
+      "id": "2019_expenditure_by_program",
+      "title": "Gastos por Programa 2019",
+      "description": "Desglose detallado de gastos por programa para 2019",
+      "category": "expenditure",
+      "file_path": "/data/financial/2019/expenditure_by_program.json",
+      "file_type": "json",
+      "year": 2019,
+      "last_updated": "2025-09-27"
+    },
+    {
+      "id": "2019_consolidated",
+      "title": "Datos Financieros Consolidados 2019",
+      "description": "Todos los datos financieros de 2019 en un solo archivo",
+      "category": "consolidated",
+      "file_path": "/data/financial/2019/consolidated.json",
+      "file_type": "json",
+      "year": 2019,
+      "last_updated": "2025-09-27"
+    }
+  ],
+  "metadata": {
+    "generated_date": "2025-09-27",
+    "version": "1.0",
+    "total_datasets": 4
+  }
+}

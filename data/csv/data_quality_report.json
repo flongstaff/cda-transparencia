@@ -1,0 +1,249 @@
+{
+  "timestamp": "2025-09-27T11:25:12.869209",
+  "summary": {
+    "2019_financial_data": {
+      "error_count": 0,
+      "status": "PASS"
+    },
+    "transparency_data": {
+      "error_count": 0,
+      "status": "PASS"
+    },
+    "estadisticas_data": {
+      "error_count": 0,
+      "status": "PASS"
+    },
+    "licitaciones_data": {
+      "error_count": 1,
+      "status": "FAIL"
+    },
+    "master_index": {
+      "error_count": 0,
+      "status": "PASS"
+    },
+    "overall": {
+      "total_errors": 1,
+      "status": "FAIL"
+    }
+  },
+  "validation_results": {
+    "2019_financial_data": {
+      "file_validations": {
+        "2019_revenue.csv": {
+          "rows": 5,
+          "columns": [
+            "source",
+            "budget",
+            "execution",
+            "percentage"
+          ],
+          "null_values": {
+            "source": 0,
+            "budget": 0,
+            "execution": 0,
+            "percentage": 0
+          },
+          "data_types": {
+            "source": "object",
+            "budget": "int64",
+            "execution": "int64",
+            "percentage": "float64"
+          }
+        },
+        "2019_expenditure.csv": {
+          "rows": 7,
+          "columns": [
+            "sector",
+            "budget",
+            "execution",
+            "percentage"
+          ],
+          "null_values": {
+            "sector": 0,
+            "budget": 0,
+            "execution": 0,
+            "percentage": 0
+          },
+          "data_types": {
+            "sector": "object",
+            "budget": "int64",
+            "execution": "int64",
+            "percentage": "float64"
+          }
+        },
+        "2019_fiscal_balance.csv": {
+          "rows": 12,
+          "columns": [
+            "month",
+            "revenue",
+            "expenditure",
+            "balance"
+          ],
+          "null_values": {
+            "month": 0,
+            "revenue": 0,
+            "expenditure": 0,
+            "balance": 0
+          },
+          "data_types": {
+            "month": "object",
+            "revenue": "int64",
+            "expenditure": "int64",
+            "balance": "int64"
+          }
+        },
+        "2019_summary.csv": {
+          "rows": 3,
+          "columns": [
+            "indicator",
+            "budget",
+            "execution",
+            "percentage"
+          ],
+          "null_values": {
+            "indicator": 0,
+            "budget": 0,
+            "execution": 0,
+            "percentage": 1
+          },
+          "data_types": {
+            "indicator": "object",
+            "budget": "int64",
+            "execution": "int64",
+            "percentage": "float64"
+          }
+        }
+      },
+      "data_quality_checks": {},
+      "errors": []
+    },
+    "transparency_data": {
+      "file_validations": {
+        "transparency_index.csv": {
+          "rows": 48,
+          "columns": [
+            "year",
+            "quarter",
+            "category",
+            "title",
+            "link",
+            "format"
+          ],
+          "null_values": {
+            "year": 0,
+            "quarter": 0,
+            "category": 0,
+            "title": 0,
+            "link": 0,
+            "format": 0
+          },
+          "data_types": {
+            "year": "int64",
+            "quarter": "object",
+            "category": "object",
+            "title": "object",
+            "link": "object",
+            "format": "object"
+          }
+        }
+      },
+      "data_quality_checks": {},
+      "errors": []
+    },
+    "estadisticas_data": {
+      "file_validations": {
+        "estadisticas_index.csv": {
+          "rows": 55,
+          "columns": [
+            "title",
+            "year",
+            "subject",
+            "link"
+          ],
+          "null_values": {
+            "title": 0,
+            "year": 0,
+            "subject": 0,
+            "link": 0
+          },
+          "data_types": {
+            "title": "object",
+            "year": "int64",
+            "subject": "object",
+            "link": "object"
+          }
+        }
+      },
+      "data_quality_checks": {},
+      "errors": []
+    },
+    "licitaciones_data": {
+      "file_validations": {
+        "licitaciones_2023.csv": {
+          "rows": 10,
+          "columns": [
+            "tender_number",
+            "object",
+            "expediente",
+            "opening_date",
+            "budget_amount",
+            "pliego_value",
+            "source_file"
+          ],
+          "null_values": {
+            "tender_number": 0,
+            "object": 0,
+            "expediente": 0,
+            "opening_date": 0,
+            "budget_amount": 0,
+            "pliego_value": 0,
+            "source_file": 0
+          },
+          "data_types": {
+            "tender_number": "object",
+            "object": "object",
+            "expediente": "object",
+            "opening_date": "object",
+            "budget_amount": "int64",
+            "pliego_value": "int64",
+            "source_file": "object"
+          }
+        }
+      },
+      "data_quality_checks": {},
+      "errors": [
+        "Invalid date format in 10 rows"
+      ]
+    },
+    "master_index": {
+      "file_validations": {
+        "master_index.csv": {
+          "rows": 108,
+          "columns": [
+            "year",
+            "type",
+            "title",
+            "link",
+            "format"
+          ],
+          "null_values": {
+            "year": 0,
+            "type": 0,
+            "title": 0,
+            "link": 0,
+            "format": 0
+          },
+          "data_types": {
+            "year": "int64",
+            "type": "object",
+            "title": "object",
+            "link": "object",
+            "format": "object"
+          }
+        }
+      },
+      "data_quality_checks": {},
+      "errors": []
+    }
+  }
+}

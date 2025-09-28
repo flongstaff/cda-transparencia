@@ -1,0 +1,480 @@
+{
+  "gastos_pie": [
+    {
+      "name": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+      "value": 6
+    },
+    {
+      "name": "Situacion-Economico-Financiera-Junio.pdf",
+      "value": 6
+    },
+    {
+      "name": "Situacion-Economico-Financiera-Marzo.pdf",
+      "value": 6
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+      "value": 6
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "value": 5
+    },
+    {
+      "name": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+      "value": 5
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+      "value": 5
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2_910a81f6.pdf",
+      "value": 5
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+      "value": 5
+    },
+    {
+      "name": "Situacion-Economico-Financiera-3er-Trimestre.pdf",
+      "value": 4
+    }
+  ],
+  "gastos_bar": [
+    {
+      "page": 1,
+      "count": 57
+    },
+    {
+      "page": 2,
+      "count": 31
+    },
+    {
+      "page": 3,
+      "count": 13
+    },
+    {
+      "page": 4,
+      "count": 11
+    },
+    {
+      "page": 5,
+      "count": 7
+    },
+    {
+      "page": 6,
+      "count": 2
+    }
+  ],
+  "gastos_line": [
+    {
+      "table": 1,
+      "count": 105
+    },
+    {
+      "table": 2,
+      "count": 16
+    }
+  ],
+  "recursos_pie": [
+    {
+      "name": "Situacion-Economico-Financiera-Junio.pdf",
+      "value": 7
+    },
+    {
+      "name": "Situacion-Economico-Financiera-Marzo.pdf",
+      "value": 7
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+      "value": 6
+    },
+    {
+      "name": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+      "value": 6
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "value": 5
+    },
+    {
+      "name": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+      "value": 5
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+      "value": 4
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+      "value": 4
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+      "value": 4
+    },
+    {
+      "name": "Situacion-Economico-Financiera-3er-Trimestre.pdf",
+      "value": 4
+    }
+  ],
+  "recursos_bar": [
+    {
+      "page": 1,
+      "count": 26
+    },
+    {
+      "page": 2,
+      "count": 39
+    },
+    {
+      "page": 3,
+      "count": 9
+    },
+    {
+      "page": 4,
+      "count": 8
+    },
+    {
+      "page": 5,
+      "count": 4
+    },
+    {
+      "page": 6,
+      "count": 2
+    }
+  ],
+  "recursos_line": [
+    {
+      "table": 1,
+      "count": 84
+    },
+    {
+      "table": 2,
+      "count": 2
+    },
+    {
+      "table": 3,
+      "count": 2
+    }
+  ],
+  "presupuesto_pie": [
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+      "value": 6
+    },
+    {
+      "name": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+      "value": 6
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2_910a81f6.pdf",
+      "value": 5
+    },
+    {
+      "name": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+      "value": 5
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+      "value": 5
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "value": 5
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+      "value": 5
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+      "value": 4
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+      "value": 4
+    },
+    {
+      "name": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+      "value": 4
+    }
+  ],
+  "presupuesto_bar": [
+    {
+      "page": 1,
+      "count": 29
+    },
+    {
+      "page": 2,
+      "count": 17
+    },
+    {
+      "page": 3,
+      "count": 13
+    },
+    {
+      "page": 4,
+      "count": 11
+    },
+    {
+      "page": 5,
+      "count": 7
+    },
+    {
+      "page": 6,
+      "count": 2
+    }
+  ],
+  "presupuesto_line": [
+    {
+      "table": 1,
+      "count": 77
+    },
+    {
+      "table": 2,
+      "count": 2
+    }
+  ],
+  "situacion_economica_pie": [
+    {
+      "name": "Situacion-Economico-Financiera-Junio.pdf",
+      "value": 48
+    },
+    {
+      "name": "Situacion-Economico-Financiera-Marzo.pdf",
+      "value": 48
+    },
+    {
+      "name": "SITUACION-ECONOMICO-FINANCIERA.pdf",
+      "value": 33
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+      "value": 33
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+      "value": 33
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+      "value": 29
+    },
+    {
+      "name": "Situacion-Economico-Financiera-3er-Trimestre.pdf",
+      "value": 25
+    },
+    {
+      "name": "Situacion-Economico-Financiera-4to-Trimestre.pdf",
+      "value": 25
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+      "value": 24
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+      "value": 24
+    }
+  ],
+  "situacion_economica_bar": [
+    {
+      "page": 1,
+      "count": 84
+    },
+    {
+      "page": 2,
+      "count": 30
+    },
+    {
+      "page": 3,
+      "count": 256
+    }
+  ],
+  "situacion_economica_line": [
+    {
+      "table": 1,
+      "count": 312
+    },
+    {
+      "table": 2,
+      "count": 30
+    },
+    {
+      "table": 3,
+      "count": 28
+    }
+  ],
+  "licitaciones_pie": [
+    {
+      "name": "Situacion-Economico-Financiera-Junio.pdf",
+      "value": 2
+    },
+    {
+      "name": "Situacion-Economico-Financiera-3er-Trimestre.pdf",
+      "value": 2
+    },
+    {
+      "name": "Situacion-Economico-Financiera-4to-Trimestre.pdf",
+      "value": 2
+    },
+    {
+      "name": "Situacion-Economico-Financiera-Marzo.pdf",
+      "value": 2
+    }
+  ],
+  "licitaciones_bar": [
+    {
+      "page": 1,
+      "count": 4
+    },
+    {
+      "page": 3,
+      "count": 4
+    }
+  ],
+  "licitaciones_line": [
+    {
+      "table": 1,
+      "count": 4
+    },
+    {
+      "table": 3,
+      "count": 4
+    }
+  ],
+  "caif_pie": [
+    {
+      "name": "SITUACION-ECONOMICO-FINANCIERA.pdf",
+      "value": 4
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+      "value": 4
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+      "value": 4
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+      "value": 3
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+      "value": 3
+    },
+    {
+      "name": "Situacion-Economico-Financiera-Junio.pdf",
+      "value": 2
+    },
+    {
+      "name": "Situacion-Economico-Financiera-Marzo.pdf",
+      "value": 2
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+      "value": 2
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA.pdf",
+      "value": 2
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-1.pdf",
+      "value": 2
+    }
+  ],
+  "caif_bar": [
+    {
+      "page": 1,
+      "count": 4
+    },
+    {
+      "page": 3,
+      "count": 26
+    }
+  ],
+  "caif_line": [
+    {
+      "table": 1,
+      "count": 26
+    },
+    {
+      "table": 3,
+      "count": 4
+    }
+  ],
+  "personal_pie": [
+    {
+      "name": "2021 ADMINISTRACION DE PERSONAL.pdf",
+      "value": 21
+    },
+    {
+      "name": "Situacion-Economico-Financiera-Junio.pdf",
+      "value": 4
+    },
+    {
+      "name": "Situacion-Economico-Financiera-Marzo.pdf",
+      "value": 4
+    },
+    {
+      "name": "SITUACION-ECONOMICO-FINANCIERA.pdf",
+      "value": 2
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+      "value": 2
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+      "value": 2
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+      "value": 2
+    },
+    {
+      "name": "Situacion-Economico-Financiera-3er-Trimestre.pdf",
+      "value": 2
+    },
+    {
+      "name": "Situacion-Economico-Financiera-4to-Trimestre.pdf",
+      "value": 2
+    },
+    {
+      "name": "SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+      "value": 1
+    }
+  ],
+  "personal_bar": [
+    {
+      "page": 1,
+      "count": 18
+    },
+    {
+      "page": 3,
+      "count": 23
+    },
+    {
+      "page": 5,
+      "count": 4
+    }
+  ],
+  "personal_line": [
+    {
+      "table": 1,
+      "count": 21
+    },
+    {
+      "table": 2,
+      "count": 23
+    },
+    {
+      "table": 3,
+      "count": 1
+    }
+  ]
+}
