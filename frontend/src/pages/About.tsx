@@ -28,7 +28,7 @@ const About: React.FC = () => {
   // Metrics calculation using real master data
   const metrics = {
     totalDocuments: totalDocuments || 0,
-    verifiedDocuments: currentDocuments?.filter((props: Record<string, unknown>) => doc.verified === true).length ?? 0,
+    verifiedDocuments: currentDocuments?.filter((doc: Record<string, unknown>) => doc.verified === true).length ?? 0,
     transparencyScore: 85, // Static score based on available data
     dataSources: dataSourcesActive || 5,
     budgetTotal: currentBudget?.total_budget || currentBudget?.totalBudget || 0,

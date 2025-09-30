@@ -1,0 +1,64 @@
+{
+  "report_date": "2025-09-26T20:50:12.238826",
+  "summary": {
+    "total_projects": 3,
+    "total_budget": 75000000,
+    "delayed_projects": 1,
+    "completed_projects": 0,
+    "completion_rate": 0.0,
+    "flagged_projects": 1
+  },
+  "top_contractors": [
+    {
+      "contractor_name": "Sistemas Hidráulicos S.A.",
+      "total_projects": 1,
+      "total_amount": 32000000,
+      "completion_rate": 0.0,
+      "delay_rate": 0.0,
+      "first_project_date": "2024-01-10T00:00:00",
+      "last_project_date": "2024-01-10T00:00:00"
+    },
+    {
+      "contractor_name": "Constructora ABC S.A.",
+      "total_projects": 1,
+      "total_amount": 25000000,
+      "completion_rate": 0.0,
+      "delay_rate": 0.0,
+      "first_project_date": "2024-03-15T00:00:00",
+      "last_project_date": "2024-03-15T00:00:00"
+    },
+    {
+      "contractor_name": "Obras Verdes S.R.L.",
+      "total_projects": 1,
+      "total_amount": 18000000,
+      "completion_rate": 0.0,
+      "delay_rate": 1.0,
+      "first_project_date": "2023-11-20T00:00:00",
+      "last_project_date": "2023-11-20T00:00:00"
+    }
+  ],
+  "delayed_projects": [
+    {
+      "project_name": "Parque Municipal Nuevo",
+      "project_type": "Park Development",
+      "budgeted_amount": 18000000,
+      "contractor": "Obras Verdes S.R.L.",
+      "award_date": "2023-11-20",
+      "scheduled_completion": "2024-08-30",
+      "status": "Delayed",
+      "location": "Barrio Norte",
+      "description": "Desarrollo de parque con canchas y áreas verdes",
+      "source": "document_analysis",
+      "scraped_date": "2025-09-26T20:50:12.237865"
+    }
+  ],
+  "flags": [
+    {
+      "project_name": "Parque Municipal Nuevo",
+      "flag_type": "delayed_completion",
+      "description": "Project awarded 2023-11-20 but still not completed after 676 days",
+      "severity": "high",
+      "budgeted_amount": 18000000
+    }
+  ]
+}

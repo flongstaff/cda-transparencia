@@ -68,6 +68,12 @@ export default defineConfig(({ mode }) => {
                 }
               });
             }
+
+            // Also copy any transformed data files that were created in public/data
+            const transformedDataDir = path.resolve(__dirname, 'public/data');
+            if (existsSync(transformedDataDir)) {
+              // This will be handled by the postbuild script in copy-data-files.js
+            }
           }
         }
       }

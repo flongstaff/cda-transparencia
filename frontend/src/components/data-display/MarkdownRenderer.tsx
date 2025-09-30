@@ -17,20 +17,20 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
       // Handle headers
       if (line.startsWith('# ')) {
         elements.push(
-          <h1 key={index} className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-            <FileText className="mr-3 text-blue-600" size={32} />
+          <h1 key={index} className="text-3xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6 flex items-center">
+            <FileText className="mr-3 text-blue-600 dark:text-blue-400" size={32} />
             {line.substring(2)}
           </h1>
         );
       } else if (line.startsWith('## ')) {
         elements.push(
-          <h2 key={index} className="text-2xl font-semibold text-gray-800 mb-4 mt-8 border-b border-gray-200 pb-2">
+          <h2 key={index} className="text-2xl font-semibold text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary mb-4 mt-8 border-b border-gray-200 dark:border-dark-border pb-2">
             {line.substring(3)}
           </h2>
         );
       } else if (line.startsWith('### ')) {
         elements.push(
-          <h3 key={index} className="text-xl font-medium text-gray-700 mb-3 mt-6">
+          <h3 key={index} className="text-xl font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-3 mt-6">
             {line.substring(4)}
           </h3>
         );
@@ -54,7 +54,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
         // Handle lists
         if (line.startsWith('- ')) {
           elements.push(
-            <li key={index} className="ml-6 mb-2 text-gray-700 list-disc">
+            <li key={index} className="ml-6 mb-2 text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary list-disc">
               {parseInlineElements(line.substring(2))}
             </li>
           );
@@ -62,7 +62,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
         // Handle bold text paragraphs
         else if (line.startsWith('**') && line.endsWith('**')) {
           elements.push(
-            <p key={index} className="font-semibold text-gray-800 mb-3">
+            <p key={index} className="font-semibold text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary mb-3">
               {line.substring(2, line.length - 2)}
             </p>
           );
@@ -70,7 +70,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
         // Handle regular paragraphs
         else if (line.trim() !== '') {
           elements.push(
-            <p key={index} className="text-gray-700 mb-3 leading-relaxed">
+            <p key={index} className="text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-3 leading-relaxed">
               {parseInlineElements(line)}
             </p>
           );
@@ -110,7 +110,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
           href={match[2]}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-blue-600 hover:text-blue-800 underline"
+          className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 underline"
         >
           {match[1]}
           <ExternalLink size={14} />
@@ -144,11 +144,11 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
     
     return (
       <div key={key} className="my-6 overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
-          <thead className="bg-gray-50">
+        <table className="min-w-full bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-lg shadow-sm">
+          <thead className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
             <tr>
               {headers.map((header, idx) => (
-                <th key={idx} className="px-4 py-3 text-left text-sm font-semibold text-gray-700 border-b">
+                <th key={idx} className="px-4 py-3 text-left text-sm font-semibold text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary border-b">
                   {header.replace(/\*\*/g, '')}
                 </th>
               ))}
@@ -158,9 +158,9 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
             {dataRows.map((row, rowIdx) => {
               const cells = parseTableRow(row);
               return (
-                <tr key={rowIdx} className={rowIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <tr key={rowIdx} className={rowIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50 dark:bg-dark-background'}>
                   {cells.map((cell, cellIdx) => (
-                    <td key={cellIdx} className="px-4 py-3 text-sm text-gray-700 border-b">
+                    <td key={cellIdx} className="px-4 py-3 text-sm text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary border-b">
                       {parseInlineElements(cell)}
                     </td>
                   ))}

@@ -1,0 +1,32 @@
+{
+  "year": 2024,
+  "total_salaries": 165916603,
+  "average_salary": 592559,
+  "employee_count": 305,
+  "salary_breakdown": [
+    [
+      "Administration",
+      "$66M",
+      "40%",
+      "98%"
+    ],
+    [
+      "Operations",
+      "$58M",
+      "35%",
+      "97%"
+    ],
+    [
+      "Healthcare",
+      "$25M",
+      "15%",
+      "99%"
+    ],
+    [
+      "Education",
+      "$17M",
+      "10%",
+      "100%"
+    ]
+  ]
+}

@@ -561,22 +561,39 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
       case 'procurement-timeline':
         return (
           <ResponsiveContainer width="100%" height={chartConfig.height}>
-            <ScatterChart data={analysisData} margin={chartConfig.margin}>
-              <CartesianGrid strokeDasharray="3 3" />
+            <ScatterChart 
+              data={analysisData} 
+              margin={chartConfig.margin}
+              className="text-gray-900 dark:text-dark-text-primary"
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke="#ccc" className="dark:stroke-gray-600" />
               <XAxis
                 dataKey="date"
                 type="category"
                 tickFormatter={(date) => new Date(date).getDate().toString()}
+                stroke="#333" 
+                className="dark:stroke-gray-300"
               />
-              <YAxis dataKey="item" type="category" />
-              <Tooltip
+              <YAxis 
+                dataKey="item" 
+                type="category" 
+                stroke="#333" 
+                className="dark:stroke-gray-300"
+              />
+              <Tooltip 
+                contentStyle={{ 
+                  backgroundColor: '#fff', 
+                  borderColor: '#e5e7eb',
+                  color: '#000'
+                }}
+                className="dark:bg-dark-surface dark:border-dark-border dark:text-dark-text-primary"
                 formatter={(value: number | string, name: string) => [
-                  name === 'value' ? `$${(value / 1000000).toFixed(1)}M` : value,
+                  name === 'value' ? `${(value / 1000000).toFixed(1)}M` : value,
                   'Valor'
                 ]}
                 labelFormatter={(date) => `Fecha: ${date}`}
               />
-              <Scatter dataKey="value" fill={SEVERITY_COLORS.high} />
+              <Scatter dataKey="value" fill="#f44336" />
             </ScatterChart>
           </ResponsiveContainer>
         );
@@ -698,15 +715,15 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
   };
 
   return (
-    <div className={`audit-chart-container ${className}`}>
+    <div className={`audit-chart-container ${className} bg-white dark:bg-dark-surface p-6 rounded-xl border border-gray-200 dark:border-dark-border shadow-sm`}>
       {showTitle && (
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h5" gutterBottom className="dark:text-dark-text-primary">
           🚩 Análisis de Banderas Rojas - Carmen de Areco
         </Typography>
       )}
 
       {showDescription && (
-        <Typography variant="body1" color="textSecondary" gutterBottom>
+        <Typography variant="body2" className="text-gray-600 dark:text-dark-text-secondary mb-6" gutterBottom>
           Detección automática de anomalías en datos de transparencia municipal basado en criterios de auditoría
         </Typography>
       )}
@@ -714,7 +731,7 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
       {renderRedFlagsSummary()}
 
       {interactive && (
-        <Box sx={{ borderBottom: 1, borderColor: 'divider', mb: 2 }}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider', mb: 3 }} className="dark:border-dark-border">
           <Tabs
             value={currentAnalysis}
             onChange={handleAnalysisChange}
@@ -732,19 +749,26 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
         </Box>
       )}
 
-      <div className="chart-wrapper">
+      <div className="chart-wrapper mb-6">
         {renderAnalysisChart()}
       </div>
 
       {renderRedFlagsTable()}
 
-      <Box sx={{ mt: 3, p: 2, bgcolor: 'grey.100', borderRadius: 1 }}>
-        <Typography variant="caption" color="textSecondary">
+      <Box sx={{ 
+        mt: 4, 
+        p: 3, 
+        borderRadius: 2,
+        bgcolor: 'grey.50',
+        border: '1px solid',
+        borderColor: 'divider'
+      }} className="dark:border-dark-border dark:bg-dark-surface-alt rounded-lg">
+        <Typography variant="caption" className="dark:text-dark-text-tertiary block">
           ⚖️ <strong>Disclaimer:</strong> Estos análisis usan datos oficiales del Municipio de Carmen de Areco.
           Las banderas rojas detectadas requieren investigación adicional.
           Invitamos a la gestión municipal a aclarar las discrepancias identificadas.
         </Typography>
-        <Box sx={{ mt: 1 }}>
+        <Box sx={{ mt: 2, display: 'flex', justifyContent: 'flex-end' }}>
           <Button
             startIcon={<Download />}
             size="small"

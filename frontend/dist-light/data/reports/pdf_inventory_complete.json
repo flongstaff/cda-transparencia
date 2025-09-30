@@ -1,0 +1,962 @@
+{
+  "2f6a43c436c866955b0b3bc2d153798fef4875d54a3d71bf68e37c5fafb16972": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Situacion-Economica-Financiera-al-30-06-23.pdf",
+    "organized_path": "documents/pdfs/financial_statements/unknown/2f6a43c4_Situacion-Economica-Financiera-al-30-06-23.pdf",
+    "category": "financial_statements",
+    "year": "unknown",
+    "filename": "Situacion-Economica-Financiera-al-30-06-23.pdf",
+    "size": 271646,
+    "sha256": "2f6a43c436c866955b0b3bc2d153798fef4875d54a3d71bf68e37c5fafb16972",
+    "web_url": "/data/documents/pdfs/financial_statements/unknown/2f6a43c4_Situacion-Economica-Financiera-al-30-06-23.pdf"
+  },
+  "b587c3d0c2d04c7d629795390b7e350438639686d9c63d05e3d44337a7efafe6": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/b587c3d0_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "size": 121409,
+    "sha256": "b587c3d0c2d04c7d629795390b7e350438639686d9c63d05e3d44337a7efafe6",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/b587c3d0_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf"
+  },
+  "9e3a6c534f421d24ca521a122e99b139fab7e1be7801dc2ae0367541ad9236ab": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/LICITACION-PUBLICA-N°10.pdf",
+    "organized_path": "documents/pdfs/contracts/unknown/9e3a6c53_LICITACION-PUBLICA-N°10.pdf",
+    "category": "contracts",
+    "year": "unknown",
+    "filename": "LICITACION-PUBLICA-N°10.pdf",
+    "size": 722391,
+    "sha256": "9e3a6c534f421d24ca521a122e99b139fab7e1be7801dc2ae0367541ad9236ab",
+    "web_url": "/data/documents/pdfs/contracts/unknown/9e3a6c53_LICITACION-PUBLICA-N°10.pdf"
+  },
+  "7232b7070585c0069593be5ac4c0ca503144c30f4df83cc325c148b43ddb81e7": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/7232b707_ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+    "size": 154286,
+    "sha256": "7232b7070585c0069593be5ac4c0ca503144c30f4df83cc325c148b43ddb81e7",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/7232b707_ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf"
+  },
+  "c96a1ed230645586c5ebd285fcc0b835423a7c2aa4f9e41b2a00aad9a22e9211": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Situacion-Economico-Financiera-Junio.pdf",
+    "organized_path": "documents/pdfs/financial_statements/unknown/c96a1ed2_Situacion-Economico-Financiera-Junio.pdf",
+    "category": "financial_statements",
+    "year": "unknown",
+    "filename": "Situacion-Economico-Financiera-Junio.pdf",
+    "size": 224328,
+    "sha256": "c96a1ed230645586c5ebd285fcc0b835423a7c2aa4f9e41b2a00aad9a22e9211",
+    "web_url": "/data/documents/pdfs/financial_statements/unknown/c96a1ed2_Situacion-Economico-Financiera-Junio.pdf"
+  },
+  "32b51dd36b8b5ddeefa9aeb2ea64acbccb1d2b17c32d8aafa5fd4a5a09be80d5": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/32b51dd3_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+    "size": 294085,
+    "sha256": "32b51dd36b8b5ddeefa9aeb2ea64acbccb1d2b17c32d8aafa5fd4a5a09be80d5",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/32b51dd3_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf"
+  },
+  "4306f1e488451b31f7ac5ba558f7a57b2cd9eca3574565da7cd29e37fb308eea": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/4306f1e4_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+    "size": 67548,
+    "sha256": "4306f1e488451b31f7ac5ba558f7a57b2cd9eca3574565da7cd29e37fb308eea",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/4306f1e4_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf"
+  },
+  "ae54edfbcd1d15475e157fbbb692f7e604f97cb93db9a699769927d1276c941f": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/ae54edfb_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+    "size": 86333,
+    "sha256": "ae54edfbcd1d15475e157fbbb692f7e604f97cb93db9a699769927d1276c941f",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/ae54edfb_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf"
+  },
+  "4e83b6de075c5ac255c48f0f04244fb9a86cadb421617d68c688590c7fbc660c": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/4e83b6de_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+    "size": 111422,
+    "sha256": "4e83b6de075c5ac255c48f0f04244fb9a86cadb421617d68c688590c7fbc660c",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/4e83b6de_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf"
+  },
+  "1d993b326aa0b8c74e0021bfe79bfb0afa4c86cfc201249813ac706553598aa8": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2023/1d993b32_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+    "category": "budget_execution",
+    "year": "2023",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+    "size": 85219,
+    "sha256": "1d993b326aa0b8c74e0021bfe79bfb0afa4c86cfc201249813ac706553598aa8",
+    "web_url": "/data/documents/pdfs/budget_execution/2023/1d993b32_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf"
+  },
+  "657e795cccfca50b79ad49fbc3af921a81c6d399ca7c650afb39ff448b5543d0": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/657e795c_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+    "size": 388601,
+    "sha256": "657e795cccfca50b79ad49fbc3af921a81c6d399ca7c650afb39ff448b5543d0",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/657e795c_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf"
+  },
+  "b8fd4047379f92c5f3249af079f979c2de83a26c8b3755bbb4bf6ec887b783aa": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/b8fd4047_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+    "size": 361665,
+    "sha256": "b8fd4047379f92c5f3249af079f979c2de83a26c8b3755bbb4bf6ec887b783aa",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/b8fd4047_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf"
+  },
+  "53306e1153884c66096ca0005169d07ed9c417121d54321ad16e3e33a505cb96": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2023/53306e11_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+    "category": "budget_execution",
+    "year": "2023",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+    "size": 101956,
+    "sha256": "53306e1153884c66096ca0005169d07ed9c417121d54321ad16e3e33a505cb96",
+    "web_url": "/data/documents/pdfs/budget_execution/2023/53306e11_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf"
+  },
+  "4125c24fb06ed2d26e492e84c25a838ec6c3cf0e9326d49c02c8b9baf7178181": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/4125c24f_GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+    "size": 277260,
+    "sha256": "4125c24fb06ed2d26e492e84c25a838ec6c3cf0e9326d49c02c8b9baf7178181",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/4125c24f_GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf"
+  },
+  "465dae3e768f713c360ed1857ea1f97b9c74d78dc32ad7ce8b603f7dbffc2432": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/465dae3e_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+    "size": 109812,
+    "sha256": "465dae3e768f713c360ed1857ea1f97b9c74d78dc32ad7ce8b603f7dbffc2432",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/465dae3e_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf"
+  },
+  "e00625e929b2d148c98e02f8fd0d697d5034e19be5555349e7931902c21d5b6c": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/e00625e9_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+    "size": 125901,
+    "sha256": "e00625e929b2d148c98e02f8fd0d697d5034e19be5555349e7931902c21d5b6c",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/e00625e9_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf"
+  },
+  "0b09f42064bf14f39d0a6d51da8d52ad7fb001a63cd3bab7b00d3ba3fafafbe6": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Situacion-Economico-Financiera-Marzo.pdf",
+    "organized_path": "documents/pdfs/financial_statements/unknown/0b09f420_Situacion-Economico-Financiera-Marzo.pdf",
+    "category": "financial_statements",
+    "year": "unknown",
+    "filename": "Situacion-Economico-Financiera-Marzo.pdf",
+    "size": 224229,
+    "sha256": "0b09f42064bf14f39d0a6d51da8d52ad7fb001a63cd3bab7b00d3ba3fafafbe6",
+    "web_url": "/data/documents/pdfs/financial_statements/unknown/0b09f420_Situacion-Economico-Financiera-Marzo.pdf"
+  },
+  "52df63981063e70a4f4f90e8b7fa6c27c9ddf5ba74d32e3e1629dd6c6d5c7794": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/52df6398_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+    "size": 102105,
+    "sha256": "52df63981063e70a4f4f90e8b7fa6c27c9ddf5ba74d32e3e1629dd6c6d5c7794",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/52df6398_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf"
+  },
+  "a2f62b95099ab076e4ff621ab5d14bc649738ec70de0831ca9f3be7bff9cf59b": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/LICITACION-PUBLICA-N°8.pdf",
+    "organized_path": "documents/pdfs/contracts/unknown/a2f62b95_LICITACION-PUBLICA-N°8.pdf",
+    "category": "contracts",
+    "year": "unknown",
+    "filename": "LICITACION-PUBLICA-N°8.pdf",
+    "size": 809403,
+    "sha256": "a2f62b95099ab076e4ff621ab5d14bc649738ec70de0831ca9f3be7bff9cf59b",
+    "web_url": "/data/documents/pdfs/contracts/unknown/a2f62b95_LICITACION-PUBLICA-N°8.pdf"
+  },
+  "ee8a3c2aab89ba62d573850e6f715dbe8b5ee37aae7d426c7ce7a4acfc21286f": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/ee8a3c2a_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+    "size": 101071,
+    "sha256": "ee8a3c2aab89ba62d573850e6f715dbe8b5ee37aae7d426c7ce7a4acfc21286f",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/ee8a3c2a_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf"
+  },
+  "2ba47d2c3b626473b13de82698d87d76cfc91e69e8e174ea87c7b75e24fa331e": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+    "organized_path": "documents/pdfs/financial_statements/unknown/2ba47d2c_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+    "category": "financial_statements",
+    "year": "unknown",
+    "filename": "SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+    "size": 89080,
+    "sha256": "2ba47d2c3b626473b13de82698d87d76cfc91e69e8e174ea87c7b75e24fa331e",
+    "web_url": "/data/documents/pdfs/financial_statements/unknown/2ba47d2c_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf"
+  },
+  "57d5e4fbca388e26460809c7acf2a66dc5b4d79d336b07a82aa147ee47b2c0ed": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+    "organized_path": "documents/pdfs/financial_statements/unknown/57d5e4fb_SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+    "category": "financial_statements",
+    "year": "unknown",
+    "filename": "SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+    "size": 72410,
+    "sha256": "57d5e4fbca388e26460809c7acf2a66dc5b4d79d336b07a82aa147ee47b2c0ed",
+    "web_url": "/data/documents/pdfs/financial_statements/unknown/57d5e4fb_SITUACION-ECONOMICA-FINANCIERA-2.pdf"
+  },
+  "8ba792ed7ac608e72188d3c9d9d8279636f1d6be6b255212fcf241c4809a4a49": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/8ba792ed_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+    "size": 102839,
+    "sha256": "8ba792ed7ac608e72188d3c9d9d8279636f1d6be6b255212fcf241c4809a4a49",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/8ba792ed_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf"
+  },
+  "6a2785885a928f0eb585c365b449f9508d124b3fc883e01ac99d311015e40d53": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+    "organized_path": "documents/pdfs/financial_statements/unknown/6a278588_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+    "category": "financial_statements",
+    "year": "unknown",
+    "filename": "SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+    "size": 72452,
+    "sha256": "6a2785885a928f0eb585c365b449f9508d124b3fc883e01ac99d311015e40d53",
+    "web_url": "/data/documents/pdfs/financial_statements/unknown/6a278588_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf"
+  },
+  "338d773bec757011ebdeeee0a9d987cf14275d21857ff23258d64f54d2f1233b": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/338d773b_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+    "size": 66180,
+    "sha256": "338d773bec757011ebdeeee0a9d987cf14275d21857ff23258d64f54d2f1233b",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/338d773b_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf"
+  },
+  "5872165b737a1ebe62afb3b4ddb55bab58aae7d10e89d9c2c05cbecbe270c1dd": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/5872165b_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+    "size": 102641,
+    "sha256": "5872165b737a1ebe62afb3b4ddb55bab58aae7d10e89d9c2c05cbecbe270c1dd",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/5872165b_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf"
+  },
+  "cc95c83a6ab8c9fb567755afa0ff9fc941a59c90be2b0faf6620f97b99dc2f5f": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/cc95c83a_Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+    "size": 463491,
+    "sha256": "cc95c83a6ab8c9fb567755afa0ff9fc941a59c90be2b0faf6620f97b99dc2f5f",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/cc95c83a_Estado-de-Ejecucion-de-Recursos-Junio.pdf"
+  },
+  "a4b793ddf65083f966cc1441762761fc806d87901e9fcb658458816a5ab9537f": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/a4b793dd_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf",
+    "size": 110199,
+    "sha256": "a4b793ddf65083f966cc1441762761fc806d87901e9fcb658458816a5ab9537f",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/a4b793dd_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf"
+  },
+  "308daa7e179baedd867e9fd32cc73d3695082b17b4019e0280f363e3a7a0ac76": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/308daa7e_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+    "size": 102664,
+    "sha256": "308daa7e179baedd867e9fd32cc73d3695082b17b4019e0280f363e3a7a0ac76",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/308daa7e_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf"
+  },
+  "e2ddf5be5abcecdbc8e2ec509decfdace401249b01571cd8ab1b75935e1c030b": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/e2ddf5be_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+    "size": 275027,
+    "sha256": "e2ddf5be5abcecdbc8e2ec509decfdace401249b01571cd8ab1b75935e1c030b",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/e2ddf5be_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf"
+  },
+  "a841f43fbcd9b851ee884dedfd2e9381bb4166c4dea34a30b1f3d5e2cf14e624": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/a841f43f_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+    "size": 109662,
+    "sha256": "a841f43fbcd9b851ee884dedfd2e9381bb4166c4dea34a30b1f3d5e2cf14e624",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/a841f43f_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf"
+  },
+  "d35c0fe49cbad094849e10a91fa3865e39b35b10730bd9b8ebdeaf461151a50e": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/d35c0fe4_ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+    "size": 140098,
+    "sha256": "d35c0fe49cbad094849e10a91fa3865e39b35b10730bd9b8ebdeaf461151a50e",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/d35c0fe4_ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf"
+  },
+  "910a81f6b53cc206be09d5f109d8246393d29e093cbdfa98621f4435b77a49e7": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/910a81f6_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+    "size": 87336,
+    "sha256": "910a81f6b53cc206be09d5f109d8246393d29e093cbdfa98621f4435b77a49e7",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/910a81f6_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf"
+  },
+  "aca9bfcacb7eb305dd650b9b28a206362f0b027e1ff9a3f135c3b380ab42291e": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/LICITACION-PUBLICA-N°7.pdf",
+    "organized_path": "documents/pdfs/contracts/unknown/aca9bfca_LICITACION-PUBLICA-N°7.pdf",
+    "category": "contracts",
+    "year": "unknown",
+    "filename": "LICITACION-PUBLICA-N°7.pdf",
+    "size": 808836,
+    "sha256": "aca9bfcacb7eb305dd650b9b28a206362f0b027e1ff9a3f135c3b380ab42291e",
+    "web_url": "/data/documents/pdfs/contracts/unknown/aca9bfca_LICITACION-PUBLICA-N°7.pdf"
+  },
+  "f5cc5695ee5713a00ad14c54c1326fe47bb9fa18d32ae4c0495ca7cda9aec247": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Situacion-Economico-Financiera-3er-Trimestre.pdf",
+    "organized_path": "documents/pdfs/financial_statements/unknown/f5cc5695_Situacion-Economico-Financiera-3er-Trimestre.pdf",
+    "category": "financial_statements",
+    "year": "unknown",
+    "filename": "Situacion-Economico-Financiera-3er-Trimestre.pdf",
+    "size": 226061,
+    "sha256": "f5cc5695ee5713a00ad14c54c1326fe47bb9fa18d32ae4c0495ca7cda9aec247",
+    "web_url": "/data/documents/pdfs/financial_statements/unknown/f5cc5695_Situacion-Economico-Financiera-3er-Trimestre.pdf"
+  },
+  "8d6f28cf74b7e254ec84956826a51851b18292014d6a3f95a4c5007dddf509cd": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2022/8d6f28cf_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+    "category": "budget_execution",
+    "year": "2022",
+    "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+    "size": 102876,
+    "sha256": "8d6f28cf74b7e254ec84956826a51851b18292014d6a3f95a4c5007dddf509cd",
+    "web_url": "/data/documents/pdfs/budget_execution/2022/8d6f28cf_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf"
+  },
+  "34ad4c9be2e64fdc441cabf3b6d6b99017aa9c5cbe3c177deb08139c0b47d9d3": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/34ad4c9b_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+    "size": 278043,
+    "sha256": "34ad4c9be2e64fdc441cabf3b6d6b99017aa9c5cbe3c177deb08139c0b47d9d3",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/34ad4c9b_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf"
+  },
+  "782401fa254feb8ddb2873cd0e5de1ab9a821bf07164a1f30aaafe72b1bc1323": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2023/782401fa_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+    "category": "budget_execution",
+    "year": "2023",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+    "size": 114620,
+    "sha256": "782401fa254feb8ddb2873cd0e5de1ab9a821bf07164a1f30aaafe72b1bc1323",
+    "web_url": "/data/documents/pdfs/budget_execution/2023/782401fa_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf"
+  },
+  "3d259a10eebff6b80812be1ae92ae7122f2b1e6036e4c8b0450278cf526eda6d": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/3d259a10_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+    "size": 84880,
+    "sha256": "3d259a10eebff6b80812be1ae92ae7122f2b1e6036e4c8b0450278cf526eda6d",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/3d259a10_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf"
+  },
+  "7f09557c268b97bc144b3e35a544b2421a4a83b40581bf3d530ae130f8d2c39c": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/7f09557c_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+    "size": 276458,
+    "sha256": "7f09557c268b97bc144b3e35a544b2421a4a83b40581bf3d530ae130f8d2c39c",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/7f09557c_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf"
+  },
+  "64a8adaf2fdba8238fd84584112eedd31a1b5cec79496fcaef4998d26219b17c": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/64a8adaf_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+    "size": 68205,
+    "sha256": "64a8adaf2fdba8238fd84584112eedd31a1b5cec79496fcaef4998d26219b17c",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/64a8adaf_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf"
+  },
+  "ac0caf6772fc436603311ab54f2907cf19d6bdaaa9916ae73475a295b8ba048c": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+    "organized_path": "documents/pdfs/financial_statements/2022/ac0caf67_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+    "category": "financial_statements",
+    "year": "2022",
+    "filename": "SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+    "size": 72061,
+    "sha256": "ac0caf6772fc436603311ab54f2907cf19d6bdaaa9916ae73475a295b8ba048c",
+    "web_url": "/data/documents/pdfs/financial_statements/2022/ac0caf67_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf"
+  },
+  "4afedf8d7291e59f7742bef43e9aacd1dd0b576f7e87433692a27cebcb45eb64": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2022/4afedf8d_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+    "category": "budget_execution",
+    "year": "2022",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+    "size": 85022,
+    "sha256": "4afedf8d7291e59f7742bef43e9aacd1dd0b576f7e87433692a27cebcb45eb64",
+    "web_url": "/data/documents/pdfs/budget_execution/2022/4afedf8d_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf"
+  },
+  "2e1515de2cf28604adb6fe79f62661c5166ae492f90620eca3c9491ac5e425b5": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2023/2e1515de_ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+    "category": "budget_execution",
+    "year": "2023",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+    "size": 85281,
+    "sha256": "2e1515de2cf28604adb6fe79f62661c5166ae492f90620eca3c9491ac5e425b5",
+    "web_url": "/data/documents/pdfs/budget_execution/2023/2e1515de_ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf"
+  },
+  "476def09bb93b4ecd073912fade8095155899ac35bf8dcbf5eb7b780664fcd44": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/476def09_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+    "size": 102829,
+    "sha256": "476def09bb93b4ecd073912fade8095155899ac35bf8dcbf5eb7b780664fcd44",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/476def09_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf"
+  },
+  "4a083772815e88766d34b06e2bb681cee0def5f6489325237964f5406b50b5dd": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2022/4a083772_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+    "category": "budget_execution",
+    "year": "2022",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+    "size": 119210,
+    "sha256": "4a083772815e88766d34b06e2bb681cee0def5f6489325237964f5406b50b5dd",
+    "web_url": "/data/documents/pdfs/budget_execution/2022/4a083772_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf"
+  },
+  "489697d1ba5e333563e0bbc6abf730f6a502dee94094178fcb1421538ac648e1": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/489697d1_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+    "size": 387205,
+    "sha256": "489697d1ba5e333563e0bbc6abf730f6a502dee94094178fcb1421538ac648e1",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/489697d1_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf"
+  },
+  "f837693724d91e940ede9c6ce0b1b40691777fdebad4af1a8636d0cb2117c4f2": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2023/f8376937_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+    "category": "budget_execution",
+    "year": "2023",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+    "size": 119224,
+    "sha256": "f837693724d91e940ede9c6ce0b1b40691777fdebad4af1a8636d0cb2117c4f2",
+    "web_url": "/data/documents/pdfs/budget_execution/2023/f8376937_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf"
+  },
+  "0ac5b5091f01ddc827b061b3f414ed2aec1d3f408d747d04ebf6bbed7785168d": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2023/0ac5b509_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+    "category": "budget_execution",
+    "year": "2023",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+    "size": 102727,
+    "sha256": "0ac5b5091f01ddc827b061b3f414ed2aec1d3f408d747d04ebf6bbed7785168d",
+    "web_url": "/data/documents/pdfs/budget_execution/2023/0ac5b509_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf"
+  },
+  "75d3b177a2d81d121848a0d0179220eda740948f9df8790960b19037712e0ce2": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2022/75d3b177_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+    "category": "budget_execution",
+    "year": "2022",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+    "size": 101639,
+    "sha256": "75d3b177a2d81d121848a0d0179220eda740948f9df8790960b19037712e0ce2",
+    "web_url": "/data/documents/pdfs/budget_execution/2022/75d3b177_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf"
+  },
+  "5543a0b6883b62e2d8ee6250e6caa93a33644da29a19a8f705dd718d4cf959f0": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2022/5543a0b6_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+    "category": "budget_execution",
+    "year": "2022",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+    "size": 67723,
+    "sha256": "5543a0b6883b62e2d8ee6250e6caa93a33644da29a19a8f705dd718d4cf959f0",
+    "web_url": "/data/documents/pdfs/budget_execution/2022/5543a0b6_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf"
+  },
+  "e4f48d0c2926a7e5457a68722f1d7af287e80dbd4171f13b1348ea1bab2e445c": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/e4f48d0c_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "size": 294922,
+    "sha256": "e4f48d0c2926a7e5457a68722f1d7af287e80dbd4171f13b1348ea1bab2e445c",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/e4f48d0c_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf"
+  },
+  "d4ad8d5154f9246807e8883b107f9e35d6ede6335645958e37c7c6707d6760b6": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/d4ad8d51_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+    "size": 99892,
+    "sha256": "d4ad8d5154f9246807e8883b107f9e35d6ede6335645958e37c7c6707d6760b6",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/d4ad8d51_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf"
+  },
+  "6f39b1bf90fdf0b4398b6bc6baf8b556b3ed02ef597e7f798639ea010354f326": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/6f39b1bf_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+    "size": 387591,
+    "sha256": "6f39b1bf90fdf0b4398b6bc6baf8b556b3ed02ef597e7f798639ea010354f326",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/6f39b1bf_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf"
+  },
+  "9184981528eaf7b5a7f90ddc786d9accf7ca755ec0b7222cf5b75503e5b3ea6d": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/91849815_ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "size": 115864,
+    "sha256": "9184981528eaf7b5a7f90ddc786d9accf7ca755ec0b7222cf5b75503e5b3ea6d",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/91849815_ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf"
+  },
+  "d53d9da0a37c71f6172da64f9916d937791985b50ecb99c1596e61e0f53f2c2a": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/SITUACION-ECONOMICA-FINANCIERA-1.pdf",
+    "organized_path": "documents/pdfs/financial_statements/unknown/d53d9da0_SITUACION-ECONOMICA-FINANCIERA-1.pdf",
+    "category": "financial_statements",
+    "year": "unknown",
+    "filename": "SITUACION-ECONOMICA-FINANCIERA-1.pdf",
+    "size": 72005,
+    "sha256": "d53d9da0a37c71f6172da64f9916d937791985b50ecb99c1596e61e0f53f2c2a",
+    "web_url": "/data/documents/pdfs/financial_statements/unknown/d53d9da0_SITUACION-ECONOMICA-FINANCIERA-1.pdf"
+  },
+  "7d3ccddca8fb3b8f31b2b1ed91c46ac8190b3aac4bdaa82647c3b3cb0d8c728f": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/7d3ccddc_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+    "size": 387930,
+    "sha256": "7d3ccddca8fb3b8f31b2b1ed91c46ac8190b3aac4bdaa82647c3b3cb0d8c728f",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/7d3ccddc_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf"
+  },
+  "648e058f6e2b4fd2cf13fc7615e2d81d487f521590c091be4f225f9bf72604d3": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2023/648e058f_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+    "category": "budget_execution",
+    "year": "2023",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+    "size": 143218,
+    "sha256": "648e058f6e2b4fd2cf13fc7615e2d81d487f521590c091be4f225f9bf72604d3",
+    "web_url": "/data/documents/pdfs/budget_execution/2023/648e058f_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf"
+  },
+  "ab1883e079bd3e4983c43d78842421dcc9618b8d8449bc5b82a42a3cc64c88a1": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/ab1883e0_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "size": 287915,
+    "sha256": "ab1883e079bd3e4983c43d78842421dcc9618b8d8449bc5b82a42a3cc64c88a1",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/ab1883e0_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf"
+  },
+  "df5587bfd6c7b2257485c89f3c68a55ddd4c5ecd7e7b63656c31085211d49852": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/df5587bf_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+    "size": 362608,
+    "sha256": "df5587bfd6c7b2257485c89f3c68a55ddd4c5ecd7e7b63656c31085211d49852",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/df5587bf_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf"
+  },
+  "7204f82ac99b0cbc94d6f6d3181968b9f06c96c9d2ce56f4077d906d1d71c01b": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2022/7204f82a_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+    "category": "budget_execution",
+    "year": "2022",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+    "size": 102506,
+    "sha256": "7204f82ac99b0cbc94d6f6d3181968b9f06c96c9d2ce56f4077d906d1d71c01b",
+    "web_url": "/data/documents/pdfs/budget_execution/2022/7204f82a_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf"
+  },
+  "2db8629dcbf32354177d38d0a07f390dcb9394dc89d0fd8a9557518be40493c1": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/2db8629d_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+    "size": 109758,
+    "sha256": "2db8629dcbf32354177d38d0a07f390dcb9394dc89d0fd8a9557518be40493c1",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/2db8629d_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf"
+  },
+  "12c15f3752c5adaae566b63ab5445425961323386899bee3d6cc6399abf89ff4": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/SITUACION-ECONOMICA-FINANCIERA.pdf",
+    "organized_path": "documents/pdfs/financial_statements/unknown/12c15f37_SITUACION-ECONOMICA-FINANCIERA.pdf",
+    "category": "financial_statements",
+    "year": "unknown",
+    "filename": "SITUACION-ECONOMICA-FINANCIERA.pdf",
+    "size": 71806,
+    "sha256": "12c15f3752c5adaae566b63ab5445425961323386899bee3d6cc6399abf89ff4",
+    "web_url": "/data/documents/pdfs/financial_statements/unknown/12c15f37_SITUACION-ECONOMICA-FINANCIERA.pdf"
+  },
+  "1fdbe0cea50eaf6e9be1db520f63d5b8572573dea8dce55e25966902515bb958": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/1fdbe0ce_ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+    "size": 151544,
+    "sha256": "1fdbe0cea50eaf6e9be1db520f63d5b8572573dea8dce55e25966902515bb958",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/1fdbe0ce_ESTADO-DE-EJECUCION-DE-RECURSOS.pdf"
+  },
+  "f7d12a5f4353fe34d27bc2c879a1caad55d8ab8f5b2ae7fde7d867f8e69b5257": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/f7d12a5f_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+    "size": 119668,
+    "sha256": "f7d12a5f4353fe34d27bc2c879a1caad55d8ab8f5b2ae7fde7d867f8e69b5257",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/f7d12a5f_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf"
+  },
+  "4f9f36eb2fa279a17e70f5ce1758fe0ffa5eba1b3e46b1e0d096becf6d44c6a6": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/4f9f36eb_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+    "size": 85431,
+    "sha256": "4f9f36eb2fa279a17e70f5ce1758fe0ffa5eba1b3e46b1e0d096becf6d44c6a6",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/4f9f36eb_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf"
+  },
+  "f0a524f4c7136cfd1b1259b5588a93b1c3f5639b1f7f20552ec125b2d755e8ad": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2022/f0a524f4_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+    "category": "budget_execution",
+    "year": "2022",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+    "size": 109553,
+    "sha256": "f0a524f4c7136cfd1b1259b5588a93b1c3f5639b1f7f20552ec125b2d755e8ad",
+    "web_url": "/data/documents/pdfs/budget_execution/2022/f0a524f4_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf"
+  },
+  "9ca20572c11d3a60741b778f76c5e6288ad288211ed403f80d97b92cfd3907da": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/9ca20572_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+    "size": 362628,
+    "sha256": "9ca20572c11d3a60741b778f76c5e6288ad288211ed403f80d97b92cfd3907da",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/9ca20572_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf"
+  },
+  "2f28055c2e1df3b2283f4e23ba6aa875dabeb5a491078bf23b5a106c7ad4b7e9": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/2f28055c_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+    "size": 410450,
+    "sha256": "2f28055c2e1df3b2283f4e23ba6aa875dabeb5a491078bf23b5a106c7ad4b7e9",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/2f28055c_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf"
+  },
+  "c79cc06ec688d509a4123f46bba8a8fa7fe02a31c9920546784b05eeceb03ead": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2023/c79cc06e_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+    "category": "budget_execution",
+    "year": "2023",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+    "size": 69801,
+    "sha256": "c79cc06ec688d509a4123f46bba8a8fa7fe02a31c9920546784b05eeceb03ead",
+    "web_url": "/data/documents/pdfs/budget_execution/2023/c79cc06e_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf"
+  },
+  "8bf8fc908041f32b11fb7ed8732ecd5083042b9c30229de81b6f90b39cba5a26": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2022/8bf8fc90_ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+    "category": "budget_execution",
+    "year": "2022",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+    "size": 147280,
+    "sha256": "8bf8fc908041f32b11fb7ed8732ecd5083042b9c30229de81b6f90b39cba5a26",
+    "web_url": "/data/documents/pdfs/budget_execution/2022/8bf8fc90_ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf"
+  },
+  "c785170fd84deba5735fd324a078a5123e5d4cc46ba6c98b43376d47e2531ba2": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/c785170f_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+    "size": 85386,
+    "sha256": "c785170fd84deba5735fd324a078a5123e5d4cc46ba6c98b43376d47e2531ba2",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/c785170f_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf"
+  },
+  "f901b71d01b5f721ce6192221f070adb937dabe36a547a20e18047438e5d3350": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Situacion-Economico-Financiera-4to-Trimestre.pdf",
+    "organized_path": "documents/pdfs/financial_statements/unknown/f901b71d_Situacion-Economico-Financiera-4to-Trimestre.pdf",
+    "category": "financial_statements",
+    "year": "unknown",
+    "filename": "Situacion-Economico-Financiera-4to-Trimestre.pdf",
+    "size": 305831,
+    "sha256": "f901b71d01b5f721ce6192221f070adb937dabe36a547a20e18047438e5d3350",
+    "web_url": "/data/documents/pdfs/financial_statements/unknown/f901b71d_Situacion-Economico-Financiera-4to-Trimestre.pdf"
+  },
+  "c598acc527f92993ade1139a24c3fe9b668be66dbaa672d390240dce826c45dc": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/c598acc5_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+    "size": 278896,
+    "sha256": "c598acc527f92993ade1139a24c3fe9b668be66dbaa672d390240dce826c45dc",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/c598acc5_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf"
+  },
+  "37b9eaddabafb660035df5a322a84523cda4f5d34f60a3ff6fa7d4363e199b6b": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/37b9eadd_ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+    "size": 141931,
+    "sha256": "37b9eaddabafb660035df5a322a84523cda4f5d34f60a3ff6fa7d4363e199b6b",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/37b9eadd_ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf"
+  },
+  "e603a19d1b7049bda57b0efcda3b2d964be27955d17e92c26d7fb2695e022424": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/e603a19d_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf",
+    "size": 66761,
+    "sha256": "e603a19d1b7049bda57b0efcda3b2d964be27955d17e92c26d7fb2695e022424",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/e603a19d_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf"
+  },
+  "affa65225aec2163f7efe665d394d61af9ba6b94eac36ef1a7f73df54e023279": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/affa6522_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+    "size": 361206,
+    "sha256": "affa65225aec2163f7efe665d394d61af9ba6b94eac36ef1a7f73df54e023279",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/affa6522_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf"
+  },
+  "1c3648564ea79e7485c21ac60d9e6e53a8d08c42af24a8550b9a0eb1f381cbb5": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/SITUACION-ECONOMICO-FINANCIERA.pdf",
+    "organized_path": "documents/pdfs/financial_statements/unknown/1c364856_SITUACION-ECONOMICO-FINANCIERA.pdf",
+    "category": "financial_statements",
+    "year": "unknown",
+    "filename": "SITUACION-ECONOMICO-FINANCIERA.pdf",
+    "size": 227255,
+    "sha256": "1c3648564ea79e7485c21ac60d9e6e53a8d08c42af24a8550b9a0eb1f381cbb5",
+    "web_url": "/data/documents/pdfs/financial_statements/unknown/1c364856_SITUACION-ECONOMICO-FINANCIERA.pdf"
+  },
+  "c401cfabe62f7406b74d761f36122ff31dbda494e474f4f87b66427d44712c14": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2022/c401cfab_ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+    "category": "budget_execution",
+    "year": "2022",
+    "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+    "size": 142229,
+    "sha256": "c401cfabe62f7406b74d761f36122ff31dbda494e474f4f87b66427d44712c14",
+    "web_url": "/data/documents/pdfs/budget_execution/2022/c401cfab_ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf"
+  },
+  "37c59f6650444a6e1f8665aa6ba719eb4e24e502d37601bf627614f7e917f517": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/37c59f66_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+    "size": 287416,
+    "sha256": "37c59f6650444a6e1f8665aa6ba719eb4e24e502d37601bf627614f7e917f517",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/37c59f66_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf"
+  },
+  "f1a97a35e5325a2e0139fc0298ff7508650fce19b195dc758feb419b0a8c56a4": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/f1a97a35_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+    "size": 397346,
+    "sha256": "f1a97a35e5325a2e0139fc0298ff7508650fce19b195dc758feb419b0a8c56a4",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/f1a97a35_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf"
+  },
+  "be9be7d910fdf7007b93b9941d47fc8f6628574322d1b8148190bbccf2a090a5": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/be9be7d9_Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+    "size": 459999,
+    "sha256": "be9be7d910fdf7007b93b9941d47fc8f6628574322d1b8148190bbccf2a090a5",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/be9be7d9_Estado-de-Ejecucion-de-Recursos-Marzo.pdf"
+  },
+  "f201f0fd100485241cf4933c842bdd0ee5bd010b07269ffd08adc3d29dd26769": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/f201f0fd_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+    "size": 85712,
+    "sha256": "f201f0fd100485241cf4933c842bdd0ee5bd010b07269ffd08adc3d29dd26769",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/f201f0fd_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf"
+  },
+  "1bc732bc7316a4f5b6a0e6ec2681d32feee67584dbb15d65e7e3c771265e0b6f": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/1bc732bc_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+    "size": 276006,
+    "sha256": "1bc732bc7316a4f5b6a0e6ec2681d32feee67584dbb15d65e7e3c771265e0b6f",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/1bc732bc_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf"
+  },
+  "787feaa0bb2b433eb2af8f63287ed3216a4803ff880a01ffd9cffe55e51cacb3": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/787feaa0_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+    "size": 118244,
+    "sha256": "787feaa0bb2b433eb2af8f63287ed3216a4803ff880a01ffd9cffe55e51cacb3",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/787feaa0_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf"
+  },
+  "ab419cf2f9b6fe30ff65392bb507d7cfb06d011a4f3fb09ea2db4bccd89134a6": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+    "organized_path": "documents/pdfs/budget_execution/2022/ab419cf2_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+    "category": "budget_execution",
+    "year": "2022",
+    "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+    "size": 85366,
+    "sha256": "ab419cf2f9b6fe30ff65392bb507d7cfb06d011a4f3fb09ea2db4bccd89134a6",
+    "web_url": "/data/documents/pdfs/budget_execution/2022/ab419cf2_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf"
+  },
+  "7ae065cb66d61c6942d686e332cc25f3921fcfc3cf00410644d24bfa93de5163": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/7ae065cb_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+    "size": 67534,
+    "sha256": "7ae065cb66d61c6942d686e332cc25f3921fcfc3cf00410644d24bfa93de5163",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/7ae065cb_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf"
+  },
+  "0234d274672c198ae963fe47dbacce1e8b02095e7ad63da982b855a64557ebd7": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/0234d274_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+    "size": 101611,
+    "sha256": "0234d274672c198ae963fe47dbacce1e8b02095e7ad63da982b855a64557ebd7",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/0234d274_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf"
+  },
+  "46e3161758ab366576a2e38d58389174e0545d9f694d088768901d32fa3b8969": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/46e31617_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+    "size": 102665,
+    "sha256": "46e3161758ab366576a2e38d58389174e0545d9f694d088768901d32fa3b8969",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/46e31617_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf"
+  },
+  "0572c13dab859bf3f85f24c2fe3168147a18cd8bf706013e4a9ed21374de4076": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/0572c13d_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+    "size": 382115,
+    "sha256": "0572c13dab859bf3f85f24c2fe3168147a18cd8bf706013e4a9ed21374de4076",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/0572c13d_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf"
+  },
+  "f1bf0d80ec91075182b068899dcefb94bff746ec949a42dce807df523023306a": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/f1bf0d80_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+    "size": 277186,
+    "sha256": "f1bf0d80ec91075182b068899dcefb94bff746ec949a42dce807df523023306a",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/f1bf0d80_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf"
+  },
+  "6a7ceab2efb87ac1518f96e1238e0a1c2e0b6f2810696f7151cf8fd4e9341a5e": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/RECURSOS-POR-PROCEDENCIA.pdf",
+    "organized_path": "documents/pdfs/revenue_reports/unknown/6a7ceab2_RECURSOS-POR-PROCEDENCIA.pdf",
+    "category": "revenue_reports",
+    "year": "unknown",
+    "filename": "RECURSOS-POR-PROCEDENCIA.pdf",
+    "size": 362991,
+    "sha256": "6a7ceab2efb87ac1518f96e1238e0a1c2e0b6f2810696f7151cf8fd4e9341a5e",
+    "web_url": "/data/documents/pdfs/revenue_reports/unknown/6a7ceab2_RECURSOS-POR-PROCEDENCIA.pdf"
+  },
+  "d8bfffdd6c9c62b59142839b09aba07e0782b3e00aaeb8b7c3628033e9d5e72a": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+    "organized_path": "documents/pdfs/financial_statements/2022/d8bfffdd_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+    "category": "financial_statements",
+    "year": "2022",
+    "filename": "SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+    "size": 88878,
+    "sha256": "d8bfffdd6c9c62b59142839b09aba07e0782b3e00aaeb8b7c3628033e9d5e72a",
+    "web_url": "/data/documents/pdfs/financial_statements/2022/d8bfffdd_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf"
+  },
+  "a98757a4754a94ae7451d477641f0939dc0feb3b5bce83c39e30d77d66e7e492": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+    "organized_path": "documents/pdfs/budget_execution/unknown/a98757a4_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+    "category": "budget_execution",
+    "year": "unknown",
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+    "size": 397604,
+    "sha256": "a98757a4754a94ae7451d477641f0939dc0feb3b5bce83c39e30d77d66e7e492",
+    "web_url": "/data/documents/pdfs/budget_execution/unknown/a98757a4_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf"
+  },
+  "551ae71a8be9e2903b5988db85ab273f80955ad0bae57613759ea2076085efdd": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/LICITACION-PUBLICA-N°11.pdf",
+    "organized_path": "documents/pdfs/contracts/unknown/551ae71a_LICITACION-PUBLICA-N°11.pdf",
+    "category": "contracts",
+    "year": "unknown",
+    "filename": "LICITACION-PUBLICA-N°11.pdf",
+    "size": 769278,
+    "sha256": "551ae71a8be9e2903b5988db85ab273f80955ad0bae57613759ea2076085efdd",
+    "web_url": "/data/documents/pdfs/contracts/unknown/551ae71a_LICITACION-PUBLICA-N°11.pdf"
+  },
+  "e625b3186807e104214e98dfc2532cf328ae8c476f85de4900a32e0b842797aa": {
+    "original_path": "/Users/flong/Developer/cda-transparencia/frontend/dist/data/pdfs/LICITACION-PUBLICA-N°9.pdf",
+    "organized_path": "documents/pdfs/contracts/unknown/e625b318_LICITACION-PUBLICA-N°9.pdf",
+    "category": "contracts",
+    "year": "unknown",
+    "filename": "LICITACION-PUBLICA-N°9.pdf",
+    "size": 735593,
+    "sha256": "e625b3186807e104214e98dfc2532cf328ae8c476f85de4900a32e0b842797aa",
+    "web_url": "/data/documents/pdfs/contracts/unknown/e625b318_LICITACION-PUBLICA-N°9.pdf"
+  }
+}

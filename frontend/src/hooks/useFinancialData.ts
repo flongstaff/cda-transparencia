@@ -2,12 +2,7 @@
 // Custom hook to fetch financial data for Carmen de Areco Transparency Portal
 
 import { useState, useEffect } from 'react';
-import FinancialDataService, {
-  FinancialData,
-  RevenueBySource,
-  ExpenditureByProgram,
-  ConsolidatedData
-} from './FinancialDataService';
+import FinancialDataService from "../services/FinancialDataService";
 
 interface UseFinancialDataReturn {
   data: {

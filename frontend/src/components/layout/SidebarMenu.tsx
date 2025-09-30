@@ -29,21 +29,21 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ isExpanded }) => {
           // Expanded view with full text
           <button
             onClick={() => hasChildren && toggleCategory(category.id)}
-            className="w-full flex items-center px-4 py-3 text-left hover:bg-blue-50 hover:text-blue-700 transition-all duration-200 rounded-lg group"
+            className="w-full flex items-center px-4 py-3 text-left hover:bg-blue-50 dark:bg-blue-900/20 hover:text-blue-700 transition-all duration-200 rounded-lg group"
             disabled={!hasChildren}
           >
-            <category.icon className="h-5 w-5 text-gray-600 group-hover:text-blue-600 mr-3 flex-shrink-0" />
+            <category.icon className="h-5 w-5 text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary group-hover:text-blue-600 dark:text-blue-400 mr-3 flex-shrink-0" />
             <div className="flex-1">
-              <div className="font-semibold text-gray-700 group-hover:text-blue-700 text-sm">
+              <div className="font-semibold text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary group-hover:text-blue-700 text-sm">
                 {category.title}
               </div>
             </div>
             {hasChildren && (
               <div className="ml-auto">
                 {isCategoryExpanded ? (
-                  <ChevronDown className="h-4 w-4 text-gray-400 group-hover:text-blue-500 transition-colors" />
+                  <ChevronDown className="h-4 w-4 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary group-hover:text-blue-500 transition-colors" />
                 ) : (
-                  <ChevronRight className="h-4 w-4 text-gray-400 group-hover:text-blue-500 transition-colors" />
+                  <ChevronRight className="h-4 w-4 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary group-hover:text-blue-500 transition-colors" />
                 )}
               </div>
             )}
@@ -52,11 +52,11 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ isExpanded }) => {
           // Collapsed view with icon only
           <button
             onClick={() => hasChildren && toggleCategory(category.id)}
-            className="w-full flex items-center justify-center p-3 hover:bg-blue-50 hover:text-blue-700 transition-all duration-200 rounded-lg"
+            className="w-full flex items-center justify-center p-3 hover:bg-blue-50 dark:bg-blue-900/20 hover:text-blue-700 transition-all duration-200 rounded-lg"
             title={category.title}
             disabled={!hasChildren}
           >
-            <category.icon className="h-5 w-5 text-gray-600 group-hover:text-blue-600 flex-shrink-0" />
+            <category.icon className="h-5 w-5 text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary group-hover:text-blue-600 dark:text-blue-400 flex-shrink-0" />
           </button>
         )}
 
@@ -70,17 +70,17 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ isExpanded }) => {
                   `flex items-center px-4 py-2.5 my-0.5 rounded-lg transition-all duration-200 group ${
                     isActive
                       ? 'bg-blue-100 text-blue-700 border-l-4 border-blue-600'
-                      : 'hover:bg-gray-50 hover:text-gray-900'
+                      : 'hover:bg-gray-50 dark:bg-dark-background hover:text-gray-900 dark:text-dark-text-primary'
                   } ml-6 py-2`
                 }
               >
                 {({ isActive }) => (
                   <>
                     <item.icon className={`h-4 w-4 mr-3 flex-shrink-0 ${
-                      isActive ? 'text-blue-600' : 'text-gray-500 group-hover:text-gray-700'
+                      isActive ? 'text-blue-600' : 'text-gray-500 dark:text-dark-text-tertiary group-hover:text-gray-700 dark:text-dark-text-secondary'
                     }`} />
                     <span className={`text-sm font-medium ${
-                      isActive ? 'text-blue-700' : 'text-gray-700 group-hover:text-gray-900'
+                      isActive ? 'text-blue-700' : 'text-gray-700 dark:text-dark-text-secondary group-hover:text-gray-900 dark:text-dark-text-primary'
                     }`}>
                       {item.label}
                     </span>
@@ -88,7 +88,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ isExpanded }) => {
                       <span className={`ml-auto px-2 py-0.5 text-xs rounded-full ${
                         isActive
                           ? 'bg-blue-200 text-blue-700'
-                          : 'bg-gray-200 text-gray-600'
+                          : 'bg-gray-200 dark:bg-dark-surface-alt text-gray-600 dark:text-dark-text-secondary'
                       }`}>
                         {item.badge}
                       </span>

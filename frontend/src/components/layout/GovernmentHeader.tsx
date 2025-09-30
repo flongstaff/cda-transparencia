@@ -61,7 +61,7 @@ const GovernmentHeader: React.FC = () => {
           </div>
 
           {/* Center: Enhanced Search and Navigation */}
-          <div className="flex items-center space-x-6 flex-1 max-w-4xl mx-8">
+          <div className="flex items-center space-x-6 flex-1 max-w-4xl mx-6">
             {/* Compact Navigation for larger screens */}
             <div className="hidden 2xl:flex items-center space-x-1">
               {navItems.slice(0, 4).map((item) => {
@@ -83,73 +83,82 @@ const GovernmentHeader: React.FC = () => {
 
             {/* Enhanced Search Bar */}
             <div className="flex-1 max-w-2xl">
-              <Combobox value={searchQuery} onChange={setSearchQuery}>
-                <div className="relative">
-                  <motion.div
-                    className="relative"
-                    animate={{
-                      scale: isSearchFocused ? 1.02 : 1,
-                    }}
-                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                  >
-                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                      <Search className={`h-5 w-5 transition-colors duration-200 ${
-                        isSearchFocused ? 'text-blue-500' : 'text-gray-400'
-                      }`} />
+              <form onSubmit={handleSearch} className="relative">
+                <motion.div
+                  className="relative"
+                  animate={{
+                    scale: isSearchFocused ? 1.02 : 1,
+                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                >
+                  <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <Search className={`h-5 w-5 transition-colors duration-200 ${
+                      isSearchFocused ? 'text-blue-500' : 'text-gray-400'
+                    }`} />
+                  </div>
+                  <input
+                    ref={searchInputRef}
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onFocus={() => setIsSearchFocused(true)}
+                    onBlur={() => setIsSearchFocused(false)}
+                    placeholder="Buscar en presupuestos, contratos, declaraciones patrimoniales, auditorías..."
+                    className="w-full pl-12 pr-20 py-3.5 text-base border-2 border-gray-200 dark:border-dark-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-dark-surface text-gray-900 dark:text-dark-text-primary placeholder-gray-500 dark:placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg transition-all duration-200"
+                  />
+                  <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
+                    <div className="flex items-center space-x-3">
+                      <motion.button
+                        type="button"
+                        className="p-1.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 rounded-md transition-colors"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => {
+                          // Clear search
+                          setSearchQuery('');
+                          if (searchInputRef.current) searchInputRef.current.focus();
+                        }}
+                      >
+                        <Command className="h-4 w-4" />
+                      </motion.button>
+                      <kbd className="hidden sm:inline-flex items-center px-2 py-1 border border-gray-200 dark:border-gray-600 rounded text-xs font-mono font-semibold text-gray-500 bg-gray-50 dark:bg-dark-surface-alt dark:text-gray-400">
+                        ⌘K
+                      </kbd>
                     </div>
-                    <Combobox.Input
-                      ref={searchInputRef}
-                      className="w-full pl-12 pr-12 py-3.5 text-base border-2 border-gray-200 dark:border-dark-border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-dark-surface text-gray-900 dark:text-dark-text-primary placeholder-gray-500 dark:placeholder-gray-400 shadow-sm hover:shadow-md focus:shadow-lg transition-all duration-200"
-                      placeholder="Buscar en documentos, presupuestos, contratos..."
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      onFocus={() => setIsSearchFocused(true)}
-                      onBlur={() => setIsSearchFocused(false)}
-                    />
-                    <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
-                      <div className="flex items-center space-x-2">
-                        <motion.button
-                          type="button"
-                          className="p-1.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 rounded-md transition-colors"
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                        >
-                          <Filter className="h-4 w-4" />
-                        </motion.button>
-                        <kbd className="hidden sm:inline-flex items-center px-2 py-1 border border-gray-200 dark:border-gray-600 rounded text-xs font-mono text-gray-500 dark:text-gray-400">
-                          ⌘K
-                        </kbd>
-                      </div>
-                    </div>
-                  </motion.div>
+                  </div>
+                </motion.div>
 
-                  {/* Search Suggestions Dropdown */}
-                  <Transition
-                    show={isSearchFocused && searchQuery.length === 0}
-                    enter="transition ease-out duration-200"
-                    enterFrom="opacity-0 translate-y-1"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in duration-150"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 translate-y-1"
-                  >
-                    <Combobox.Options className="absolute z-50 w-full mt-2 bg-white dark:bg-dark-surface shadow-lg rounded-xl border border-gray-200 dark:border-dark-border max-h-64 overflow-auto">
-                      <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-700">
-                        <p className="text-sm font-medium text-gray-900 dark:text-dark-text-primary">Búsquedas sugeridas</p>
+                {/* Search Suggestions Dropdown */}
+                <Transition
+                  show={isSearchFocused && searchQuery.length === 0}
+                  enter="transition ease-out duration-200"
+                  enterFrom="opacity-0 translate-y-1"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-1"
+                >
+                  <div className="absolute z-50 w-full mt-2 bg-white dark:bg-dark-surface shadow-lg rounded-xl border border-gray-200 dark:border-dark-border max-h-64 overflow-auto">
+                    <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-700">
+                      <p className="text-sm font-medium text-gray-900 dark:text-dark-text-primary">Búsquedas sugeridas</p>
+                    </div>
+                    {searchSuggestions.map((suggestion, index) => (
+                      <div
+                        key={index}
+                        className="px-4 py-3 text-sm text-gray-700 dark:text-dark-text-secondary hover:bg-gray-50 dark:hover:bg-dark-surface-alt cursor-pointer flex items-center space-x-3"
+                        onClick={() => {
+                          setSearchQuery(suggestion);
+                          navigate(`/search?q=${encodeURIComponent(suggestion)}`);
+                          setIsSearchFocused(false);
+                        }}
+                      >
+                        <Search className="h-4 w-4 text-gray-400" />
+                        <span>{suggestion}</span>
                       </div>
-                      {searchSuggestions.map((suggestion, index) => (
-                        <Combobox.Option
-                          key={index}
-                          value={suggestion}
-                          className="px-4 py-3 text-sm text-gray-700 dark:text-dark-text-secondary hover:bg-gray-50 dark:hover:bg-dark-surface-alt cursor-pointer flex items-center space-x-3"
-                        >
-                          <Search className="h-4 w-4 text-gray-400" />
-                          <span>{suggestion}</span>
-                        </Combobox.Option>
-                      ))}
-                    </Combobox.Options>
-                  </Transition>
-                </div>
-              </Combobox>
+                    ))}
+                  </div>
+                </Transition>
+              </form>
             </div>
           </div>
 

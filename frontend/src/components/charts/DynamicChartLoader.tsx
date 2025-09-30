@@ -7,7 +7,7 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Alert, CircularProgress, Box, Typography } from '@mui/material';
-import chartDataService, { CHART_TYPES, CHART_TYPE_NAMES, CHART_TYPE_DESCRIPTIONS } from '../../services/charts/ChartDataService';
+import chartDataService, { CHART_TYPE_NAMES, ChartType } from '../../services/charts/ChartDataService';
 
 // Import all chart components
 import BudgetExecutionChart from './BudgetExecutionChart';
@@ -29,7 +29,16 @@ import GenderBudgetingChart from './GenderBudgetingChart';
 import WaterfallExecutionChart from './WaterfallExecutionChart';
 
 // Map chart types to components
-const CHART_COMPONENTS: Record<string, React.ComponentType<any>> = {
+interface ChartComponentProps {
+  height?: number;
+  width?: number | string;
+  chartType?: string;
+  showTitle?: boolean;
+  showDescription?: boolean;
+  className?: string;
+}
+
+const CHART_COMPONENTS: Record<string, React.ComponentType<ChartComponentProps>> = {
   'Budget_Execution': BudgetExecutionChart,
   'Debt_Report': DebtReportChart,
   'Economic_Report': EconomicReportChart,
@@ -76,7 +85,7 @@ const DynamicChartLoader: React.FC<DynamicChartLoaderProps> = ({
   // Load chart data using React Query
   const { data, isLoading, isError, error: queryError } = useQuery({
     queryKey: ['chart-data', chartType, year],
-    queryFn: () => chartDataService.loadChartData(chartType as any),
+    queryFn: () => chartDataService.loadChartData(chartType as ChartType),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
     retry: 1, // Retry once on failure

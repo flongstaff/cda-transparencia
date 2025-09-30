@@ -34,7 +34,7 @@ const RadarChartComponent: React.FC<RadarChartProps> = ({
     >
       {title && (
         <div className="p-4 border-b border-gray-100">
-          <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{title}</h3>
         </div>
       )}
       

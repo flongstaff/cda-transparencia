@@ -60,10 +60,10 @@ const TestDataIntegration: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-64 bg-gray-50 rounded-lg">
+      <div className="flex items-center justify-center h-64 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">Cargando datos de todas las fuentes...</p>
+          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Cargando datos de todas las fuentes...</p>
         </div>
       </div>
     );
@@ -71,15 +71,15 @@ const TestDataIntegration: React.FC = () => {
 
   if (error) {
     return (
-      <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg p-6 text-center">
         <h3 className="text-lg font-medium text-red-800">Error en la integración de datos</h3>
-        <p className="text-red-600">{error}</p>
+        <p className="text-red-600 dark:text-red-400">{error}</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+    <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg p-6">
       <h3 className="text-lg font-medium text-green-800 mb-2">✅ Integración de Datos Completa</h3>
       <p className="text-green-700">Todas las fuentes de datos están correctamente integradas:</p>
       <ul className="mt-2 space-y-1 text-sm text-green-700">

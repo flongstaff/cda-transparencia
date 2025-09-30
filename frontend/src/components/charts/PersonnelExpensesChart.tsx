@@ -17,6 +17,7 @@ interface PersonnelExpensesChartProps {
   showTitle?: boolean;
   showDescription?: boolean;
   className?: string;
+  year?: number; // Optional year filter
 }
 
 const PersonnelExpensesChart: React.FC<PersonnelExpensesChartProps> = ({
@@ -25,7 +26,8 @@ const PersonnelExpensesChart: React.FC<PersonnelExpensesChartProps> = ({
   chartType = 'line',
   showTitle = true,
   showDescription = true,
-  className = ''
+  className = '',
+  year
 }) => {
   const [chartData, setChartData] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -50,9 +52,19 @@ const PersonnelExpensesChart: React.FC<PersonnelExpensesChartProps> = ({
     } else if (data) {
       setLoading(false);
       setError(null);
-      setChartData(data);
+
+      // Filter data by year if specified
+      let filteredData = data;
+      if (year && Array.isArray(data)) {
+        filteredData = data.filter((item: Record<string, unknown>) => {
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          return itemYear && parseInt(String(itemYear)) === year;
+        });
+      }
+
+      setChartData(filteredData);
     }
-  }, [data, isLoading, isError, queryError]);
+  }, [data, isLoading, isError, queryError, year]);
   
   // Handle data point clicks
   const handleDataPointClick = (dataPoint: any) => {
@@ -92,12 +104,12 @@ const PersonnelExpensesChart: React.FC<PersonnelExpensesChartProps> = ({
   
   // Determine which columns to use as Y-axis keys
   // We'll look for numeric columns that represent financial values
-  const yAxisKeys = chartData[0] 
-    ? Object.keys(chartData[0]).filter(key => 
-        key !== 'year' && 
-        key !== 'concept' && 
-        typeof chartData[0][key] === 'number'
-      )
+  const yAxisKeys = chartData.length > 0
+    ? Object.keys(chartData[0]).filter(key => {
+        if (key === 'year' || key === 'concept') return false;
+        const value = (chartData[0] as any)[key];
+        return typeof value === 'number' || (!isNaN(Number(value)) && value !== '' && value !== null);
+      })
     : [];
   
   return (

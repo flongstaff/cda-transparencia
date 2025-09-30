@@ -135,13 +135,17 @@ class YearDataService {
   getYearSummary(yearData: YearData): YearDataSummary {
     const { financial, charts, audits } = yearData;
 
-    const totalBudget = financial.reduce((sum: number, item: any) =>
-      sum + (parseFloat(item.planned) || parseFloat(item.presupuesto) || 0), 0
-    );
+    const totalBudget = financial.reduce((sum: number, item: any) => {
+      // Try multiple field variations for budget, clean currency formatting
+      const budgetValue = parseFloat((item.Budgeted || item.planned || item.presupuesto || item.budget || '0').toString().replace(/[$,]/g, '')) || 0;
+      return sum + budgetValue;
+    }, 0);
 
-    const totalExecuted = financial.reduce((sum: number, item: any) =>
-      sum + (parseFloat(item.executed) || parseFloat(item.ejecutado) || 0), 0
-    );
+    const totalExecuted = financial.reduce((sum: number, item: any) => {
+      // Try multiple field variations for executed, clean currency formatting
+      const executedValue = parseFloat((item.Executed || item.executed || item.ejecutado || item.spent || '0').toString().replace(/[$,]/g, '')) || 0;
+      return sum + executedValue;
+    }, 0);
 
     const executionRate = totalBudget > 0 ? (totalExecuted / totalBudget) * 100 : 0;
 

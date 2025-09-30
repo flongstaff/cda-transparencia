@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --mode development",
-    "prebuild": "node ../scripts/generate-data-index.js",
+    "prebuild": "node ../scripts/generate-data-index.js && node ../scripts/transform-processed-data.js",
     "build": "npm run prebuild && vite build --mode production && npm run postbuild",
     "postbuild": "node ../scripts/frontend/copy-data-files.js",
     "build:development": "npm run prebuild && vite build --mode development",

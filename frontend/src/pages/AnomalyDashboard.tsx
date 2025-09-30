@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AlertTriangle, DollarSign, FileText, TrendingDown } from 'lucide-react';
+import { useMasterData } from '../hooks/useMasterData';
 
 interface Anomaly {
   id: string;
@@ -14,9 +15,24 @@ interface Anomaly {
 }
 
 const AnomalyDashboard: React.FC = () => {
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   const [anomalies, setAnomalies] = useState<Anomaly[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Use integrated master data service
+  const {
+    masterData,
+    currentBudget,
+    currentTreasury,
+    currentSalaries,
+    currentContracts,
+    currentDebt,
+    loading: dataLoading,
+    error: dataError,
+    switchYear,
+    availableYears
+  } = useMasterData(selectedYear);
 
   useEffect(() => {
     loadAnomalyData();

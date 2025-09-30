@@ -51,8 +51,8 @@ const ExpensesPage: React.FC = () => {
 
   // Process expenses data
   const expensesData = useMemo(() => {
-    const totalExpenses = currentBudget?.total_executed || currentBudget?.totalExecuted || 1800000000;
-    const budget = currentBudget?.total_budget || currentBudget?.totalBudget || 2100000000;
+    const totalExpenses = currentBudget?.total_executed || currentBudget?.totalExecuted || 0;
+    const budget = currentBudget?.total_budget || currentBudget?.totalBudget || 0;
     const executionRate = budget > 0 ? (totalExpenses / budget) * 100 : 0;
 
     // Categorized expenses with realistic distribution
@@ -90,10 +90,10 @@ const ExpensesPage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background flex items-center justify-center">
         <div className="text-center">
-          <Calculator className="w-12 h-12 animate-pulse mx-auto mb-4 text-blue-600" />
-          <p className="text-gray-600">Cargando análisis de gastos...</p>
+          <Calculator className="w-12 h-12 animate-pulse mx-auto mb-4 text-blue-600 dark:text-blue-400" />
+          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Cargando análisis de gastos...</p>
         </div>
       </div>
     );
@@ -101,18 +101,18 @@ const ExpensesPage: React.FC = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background flex items-center justify-center">
         <div className="text-center">
           <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
           <h2 className="text-lg font-semibold text-red-800 mb-2">Error</h2>
-          <p className="text-gray-600">{error}</p>
+          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">{error}</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Enhanced Header */}
         <motion.div
@@ -122,18 +122,18 @@ const ExpensesPage: React.FC = () => {
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div className="flex-1">
-              <h1 className="text-3xl font-bold text-gray-900 flex items-center">
-                <Calculator className="w-8 h-8 mr-3 text-purple-600" />
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary flex items-center">
+                <Calculator className="w-8 h-8 mr-3 text-purple-600 dark:text-purple-400" />
                 Análisis de Gastos {selectedYear}
                 <span className="ml-3 px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
                   Detallado
                 </span>
               </h1>
-              <p className="text-gray-600 mt-3 max-w-2xl">
+              <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mt-3 max-w-2xl">
                 Análisis exhaustivo de gastos y erogaciones municipales de Carmen de Areco.
                 Distribución por categorías, eficiencia presupuestaria, tendencias y control de ejecución para {selectedYear}.
               </p>
-              <div className="mt-4 flex items-center space-x-4 text-sm text-gray-500">
+              <div className="mt-4 flex items-center space-x-4 text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                 <span className="flex items-center">
                   <BarChart3 className="h-4 w-4 mr-1" />
                   {expensesData.categories.length} categorías
@@ -151,16 +151,16 @@ const ExpensesPage: React.FC = () => {
 
             {/* Enhanced Year Selector */}
             <div className="flex-shrink-0">
-              <div className="bg-white rounded-xl border border-gray-200 p-4 shadow-sm">
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+              <div className="bg-white dark:bg-dark-surface rounded-xl border border-gray-200 dark:border-dark-border p-4 shadow-sm">
+                <label className="block text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-2">
                   Período de Análisis
                 </label>
                 <select
                   value={selectedYear}
                   onChange={(e) => switchYear(Number(e.target.value))}
                   title="Seleccionar año para el análisis de gastos"
-                  className="w-full px-4 py-2 text-base font-medium border border-gray-300 rounded-lg
-                           bg-white text-gray-900 focus:ring-2 focus:ring-purple-500 focus:border-transparent
+                  className="w-full px-4 py-2 text-base font-medium border border-gray-300 dark:border-dark-border rounded-lg
+                           bg-white dark:bg-dark-surface text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary focus:ring-2 focus:ring-purple-500 focus:border-transparent
                            hover:border-purple-300 transition-colors"
                 >
                   {availableYears.map((year) => (
@@ -169,7 +169,7 @@ const ExpensesPage: React.FC = () => {
                     </option>
                   ))}
                 </select>
-                <div className="mt-2 text-xs text-gray-500">
+                <div className="mt-2 text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                   Gastos ejecutados {selectedYear}
                 </div>
               </div>
@@ -183,24 +183,24 @@ const ExpensesPage: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+            className="bg-white dark:bg-dark-surface rounded-xl p-6 shadow-sm border border-gray-200 dark:border-dark-border hover:shadow-md transition-shadow"
           >
             <div className="flex items-center justify-between">
               <div className="flex-1">
-                <p className="text-sm font-medium text-gray-600">Gastos Totales</p>
-                <p className="text-2xl font-bold text-gray-900">
+                <p className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Gastos Totales</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
                   {formatCurrencyARS(expensesData.totalExpenses)}
                 </p>
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-1">
                   {formatPercentageARS(expensesData.executionRate)} del presupuesto
                 </p>
               </div>
               <div className="p-3 bg-purple-100 rounded-lg">
-                <Calculator className="w-6 h-6 text-purple-600" />
+                <Calculator className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               </div>
             </div>
             <div className="mt-4">
-              <div className="w-full bg-gray-200 rounded-full h-2">
+              <div className="w-full bg-gray-200 dark:bg-dark-surface-alt dark:bg-dark-border rounded-full h-2">
                 <div
                   className="bg-purple-600 h-2 rounded-full transition-all duration-500"
                   style={{ width: `${Math.min(expensesData.executionRate, 100)}%` }}
@@ -213,24 +213,24 @@ const ExpensesPage: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+            className="bg-white dark:bg-dark-surface rounded-xl p-6 shadow-sm border border-gray-200 dark:border-dark-border hover:shadow-md transition-shadow"
           >
             <div className="flex items-center justify-between">
               <div className="flex-1">
-                <p className="text-sm font-medium text-gray-600">Mayor Categoría</p>
-                <p className="text-2xl font-bold text-gray-900">
+                <p className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Mayor Categoría</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
                   {formatCurrencyARS(expensesData.categories[0]?.amount || 0)}
                 </p>
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-1">
                   {expensesData.categories[0]?.name || 'N/A'}
                 </p>
               </div>
               <div className="p-3 bg-blue-100 rounded-lg">
-                <Users className="w-6 h-6 text-blue-600" />
+                <Users className="w-6 h-6 text-blue-600 dark:text-blue-400" />
               </div>
             </div>
             <div className="mt-4">
-              <div className="flex items-center text-sm text-blue-600">
+              <div className="flex items-center text-sm text-blue-600 dark:text-blue-400">
                 <TrendingUp className="h-4 w-4 mr-1" />
                 <span>45% del total</span>
               </div>
@@ -241,24 +241,24 @@ const ExpensesPage: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+            className="bg-white dark:bg-dark-surface rounded-xl p-6 shadow-sm border border-gray-200 dark:border-dark-border hover:shadow-md transition-shadow"
           >
             <div className="flex items-center justify-between">
               <div className="flex-1">
-                <p className="text-sm font-medium text-gray-600">Ahorro Generado</p>
-                <p className="text-2xl font-bold text-gray-900">
+                <p className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Ahorro Generado</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
                   {formatCurrencyARS(expensesData.savings)}
                 </p>
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-1">
                   {formatPercentageARS(100 - expensesData.executionRate)} no ejecutado
                 </p>
               </div>
               <div className="p-3 bg-green-100 rounded-lg">
-                <DollarSign className="w-6 h-6 text-green-600" />
+                <DollarSign className="w-6 h-6 text-green-600 dark:text-green-400" />
               </div>
             </div>
             <div className="mt-4">
-              <div className="flex items-center text-sm text-green-600">
+              <div className="flex items-center text-sm text-green-600 dark:text-green-400">
                 <CheckCircle className="h-4 w-4 mr-1" />
                 <span>Control eficiente</span>
               </div>
@@ -269,15 +269,15 @@ const ExpensesPage: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+            className="bg-white dark:bg-dark-surface rounded-xl p-6 shadow-sm border border-gray-200 dark:border-dark-border hover:shadow-md transition-shadow"
           >
             <div className="flex items-center justify-between">
               <div className="flex-1">
-                <p className="text-sm font-medium text-gray-600">Eficiencia</p>
-                <p className="text-2xl font-bold text-gray-900">
+                <p className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Eficiencia</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
                   {expensesData.efficiency}
                 </p>
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-1">
                   {expensesData.categories.length} categorías activas
                 </p>
               </div>
@@ -315,9 +315,9 @@ const ExpensesPage: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="bg-white rounded-xl shadow-sm p-6 border border-gray-200 mb-8"
+          className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border border-gray-200 dark:border-dark-border mb-8"
         >
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">
             Distribución por Categorías
           </h2>
 
@@ -340,27 +340,27 @@ const ExpensesPage: React.FC = () => {
 
             {/* Detailed Category List */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">
                 Detalle por Categoría
               </h3>
               {expensesData.categories.map((category, index) => {
                 const Icon = category.icon;
                 const executionRate = category.budget > 0 ? (category.amount / category.budget) * 100 : 0;
                 return (
-                  <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                  <div key={index} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
                     <div className="flex items-center space-x-3">
                       <div className={`p-2 bg-${category.color}-100 rounded-lg`}>
                         <Icon className={`h-5 w-5 text-${category.color}-600`} />
                       </div>
                       <div>
-                        <p className="font-medium text-gray-900">{category.name}</p>
-                        <p className="text-sm text-gray-500">
+                        <p className="font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{category.name}</p>
+                        <p className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                           {formatCurrencyARS(category.amount)} • {formatPercentageARS(executionRate)} ejecutado
                         </p>
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="text-lg font-bold text-gray-900">
+                      <p className="text-lg font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
                         {((category.amount / expensesData.totalExpenses) * 100).toFixed(1)}%
                       </p>
                     </div>
@@ -371,55 +371,186 @@ const ExpensesPage: React.FC = () => {
           </div>
         </motion.div>
         
+        {/* Navigation Tabs */}
+        <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm mb-8">
+          <nav className="flex border-b border-gray-200 dark:border-dark-border">
+            {[
+              { id: 'overview', label: 'Resumen', icon: BarChart3 },
+              { id: 'categories', label: 'Por Categoría', icon: FileText },
+              { id: 'trends', label: 'Tendencias', icon: TrendingUp },
+              { id: 'analysis', label: 'Análisis', icon: Calculator }
+            ].map((tab) => {
+              const Icon = tab.icon;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setViewMode(tab.id as 'overview' | 'categories' | 'trends' | 'analysis')}
+                  className={`flex items-center px-6 py-4 border-b-2 font-medium text-sm transition-colors ${
+                    viewMode === tab.id
+                      ? 'border-purple-500 text-purple-600'
+                      : 'border-transparent text-gray-500 dark:text-dark-text-tertiary hover:text-gray-700 dark:hover:text-dark-text-secondary hover:border-gray-300'
+                  }`}
+                  title={`Ver ${tab.label.toLowerCase()}`}
+                >
+                  <Icon className="w-4 h-4 mr-2" />
+                  {tab.label}
+                </button>
+              );
+            })}
+          </nav>
+        </div>
+
         {!loading && !error && (
           <div className="space-y-6">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Resumen de Gastos y Erogaciones</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="text-center p-4 bg-green-50 rounded-lg">
-                  <p className="text-2xl font-bold text-green-600">
-                    {formatCurrencyARS(currentTreasury?.totalRevenue || currentTreasury?.revenues || 0)}
-                  </p>
-                  <p className="text-sm text-gray-600">Ingresos Totales</p>
+            {/* Overview View */}
+            {viewMode === 'overview' && (
+              <div className="space-y-6">
+                <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Resumen de Gastos y Erogaciones</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                      <p className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        {formatCurrencyARS(currentTreasury?.totalRevenue || currentTreasury?.revenues || 0)}
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Ingresos Totales</p>
+                    </div>
+                    <div className="text-center p-4 bg-red-50 dark:bg-red-900/20 rounded-lg">
+                      <p className="text-2xl font-bold text-red-600 dark:text-red-400">
+                        {formatCurrencyARS(currentTreasury?.totalExpenses || currentTreasury?.expenses || 0)}
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Gastos Totales</p>
+                    </div>
+                    <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                      <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                        {formatCurrencyARS((currentTreasury?.revenues || 0) - (currentTreasury?.expenses || 0))}
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Balance</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-center p-4 bg-red-50 rounded-lg">
-                  <p className="text-2xl font-bold text-red-600">
-                    {formatCurrencyARS(currentTreasury?.totalExpenses || currentTreasury?.expenses || 0)}
-                  </p>
-                  <p className="text-sm text-gray-600">Gastos Totales</p>
-                </div>
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <p className="text-2xl font-bold text-blue-600">
-                    {formatCurrencyARS((currentTreasury?.revenues || 0) - (currentTreasury?.expenses || 0))}
-                  </p>
-                  <p className="text-sm text-gray-600">Balance</p>
+
+                <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Información de Gastos</h2>
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="p-4 border border-gray-200 dark:border-dark-border rounded-lg">
+                        <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">Gastos por Carácter Económico</h3>
+                        <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary text-sm">Información disponible en documentos oficiales del municipio</p>
+                      </div>
+                      <div className="p-4 border border-gray-200 dark:border-dark-border rounded-lg">
+                        <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">Gastos por Finalidad y Función</h3>
+                        <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary text-sm">Detalle de la ejecución presupuestaria por áreas funcionales</p>
+                      </div>
+                    </div>
+
+                    <div className="p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
+                      <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">Estado de Ejecución - {selectedYear}</h3>
+                      <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary text-sm">
+                        Los datos de gastos y erogaciones se actualizan trimestralmente según los reportes oficiales del municipio.
+                        Para información detallada, consulte los documentos en la sección de Documentos.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Información de Gastos</h2>
-              <div className="space-y-4">
+            {/* Trends View - Multi-Year Data */}
+            {viewMode === 'trends' && (
+              <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Tendencias de Gastos - Análisis Multi-Año</h2>
+                <div className="space-y-6">
+                  {/* Multi-year expense trends */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Expense trends chart */}
+                    <div className="p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
+                      <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Evolución de Gastos Totales</h3>
+                      <div className="h-64 flex items-center justify-center">
+                        <p className="text-gray-500">Gráfico de tendencia multi-año (2019-2025)</p>
+                      </div>
+                    </div>
+                    
+                    {/* Expense categories trends chart */}
+                    <div className="p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
+                      <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Distribución por Categoría - Multi-Año</h3>
+                      <div className="h-64 flex items-center justify-center">
+                        <p className="text-gray-500">Gráfico de categorías multi-año</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Multi-year expense data as a summary table */}
+                  <div className="overflow-x-auto">
+                    <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                      <thead className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
+                        <tr>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary uppercase tracking-wider">Año</th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary uppercase tracking-wider">Gastos Totales</th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary uppercase tracking-wider">Presupuesto</th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary uppercase tracking-wider">Ejecución %</th>
+                        </tr>
+                      </thead>
+                      <tbody className="bg-white dark:bg-dark-surface divide-y divide-gray-200 dark:divide-gray-700">
+                        {Object.entries(masterData?.financialData || {}).map(([year, data]: [string, any]) => (
+                          <tr key={year}>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-dark-text-primary">{year}</td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-secondary">
+                              {formatCurrencyARS(data.budget?.total_executed || 0)}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-secondary">
+                              {formatCurrencyARS(data.budget?.total_budget || 0)}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap">
+                              <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                                {((data.budget?.total_executed || 0) > 0 && (data.budget?.total_budget || 0) > 0) 
+                                  ? ((data.budget.total_executed / data.budget.total_budget) * 100).toFixed(1) + '%' 
+                                  : 'N/A'}
+                              </span>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Analysis View */}
+            {viewMode === 'analysis' && (
+              <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Análisis de Gastos</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="p-4 border border-gray-200 rounded-lg">
-                    <h3 className="font-semibold text-gray-900 mb-2">Gastos por Carácter Económico</h3>
-                    <p className="text-gray-600 text-sm">Información disponible en documentos oficiales del municipio</p>
+                  <div className="p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
+                    <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Eficiencia Presupuestaria</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-4">
+                      El índice de eficiencia de gasto mide cuán efectivamente se utilizan los recursos
+                      disponibles para cumplir con los objetivos del municipio.
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-gray-700 dark:text-dark-text-secondary">Eficiencia Actual</span>
+                      <span className="text-lg font-bold text-purple-600 dark:text-purple-400">
+                        {expensesData.efficiency}
+                      </span>
+                    </div>
                   </div>
-                  <div className="p-4 border border-gray-200 rounded-lg">
-                    <h3 className="font-semibold text-gray-900 mb-2">Gastos por Finalidad y Función</h3>
-                    <p className="text-gray-600 text-sm">Detalle de la ejecución presupuestaria por áreas funcionales</p>
+                  
+                  <div className="p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
+                    <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Ahorro Potencial</h3>
+                    <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-4">
+                      Identificación de áreas donde se pueden optimizar gastos sin comprometer la calidad
+                      de los servicios públicos.
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-medium text-gray-700 dark:text-dark-text-secondary">Ahorro Estimado</span>
+                      <span className="text-lg font-bold text-green-600 dark:text-green-400">
+                        {formatCurrencyARS(expensesData.savings)}
+                      </span>
+                    </div>
                   </div>
-                </div>
-
-                <div className="p-4 bg-gray-50 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 mb-2">Estado de Ejecución - {selectedYear}</h3>
-                  <p className="text-gray-600 text-sm">
-                    Los datos de gastos y erogaciones se actualizan trimestralmente según los reportes oficiales del municipio.
-                    Para información detallada, consulte los documentos en la sección de Documentos.
-                  </p>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         )}
       </div>

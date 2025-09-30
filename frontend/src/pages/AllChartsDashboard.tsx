@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useMasterData } from '../hooks/useMasterData';
 import { 
   BarChart3, 
   PieChart, 
@@ -134,7 +135,22 @@ const CHART_METADATA = [
 const AllChartsDashboard: React.FC = () => {
   const [selectedChart, setSelectedChart] = useState<string | null>(null);
   const [chartHeight, setChartHeight] = useState<number>(400);
-  
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
+
+  // Use integrated master data service
+  const {
+    masterData,
+    currentBudget,
+    currentTreasury,
+    currentSalaries,
+    currentContracts,
+    currentDebt,
+    loading,
+    error,
+    switchYear,
+    availableYears
+  } = useMasterData(selectedYear);
+
   // Filter charts based on selection
   const filteredCharts = selectedChart 
     ? CHART_METADATA.filter(chart => chart.id === selectedChart)

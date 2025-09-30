@@ -1,90 +1,87 @@
 /**
- * Time Series Chart Component
- * Displays financial data over time with anomaly detection and color coding
+ * Time Series Chart Component using Recharts
+ * Displays multi-year data with corruption/anomaly highlighting
+ * Uses enhanced CSV data loading with caching
  */
 
-import React, { useMemo } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import React from 'react';
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+  ReferenceLine
+} from 'recharts';
+import { AlertTriangle, TrendingUp, TrendingDown } from 'lucide-react';
 import useCsvData from '../../hooks/useCsvData';
-import { formatCurrencyARS, getColorForExecutionRate } from '../../utils/parseCsv';
-
-interface TimeSeriesDataPoint {
-  year: string;
-  budgeted?: number;
-  executed?: number;
-  execution_rate?: number;
-  [key: string]: any;
-}
 
 interface TimeSeriesChartProps {
   csvUrl: string;
+  selectedYear?: number;
   title?: string;
+  description?: string;
   height?: number;
-  showLegend?: boolean;
-  showGrid?: boolean;
+  dataKey: string;
+  valueKey: string;
+  showAnomalies?: boolean;
+  className?: string;
+}
+
+interface TimeSeriesData {
+  year: number;
+  [key: string]: any;
 }
 
 const TimeSeriesChart: React.FC<TimeSeriesChartProps> = ({
   csvUrl,
-  title = "Evolución Presupuestaria",
+  selectedYear,
+  title = "Time Series Analysis",
+  description,
   height = 400,
-  showLegend = true,
-  showGrid = true
+  dataKey = "year",
+  valueKey = "value",
+  showAnomalies = true,
+  className = ""
 }) => {
-  // Use the CSV parsing hook
-  const { data, loading, error } = useCsvData<TimeSeriesDataPoint>(csvUrl);
+  const { data, loading, error } = useCsvData<TimeSeriesData>(csvUrl, {}, selectedYear);
 
-  // Process data for charting
-  const chartData = useMemo(() => {
-    if (!data || data.length === 0) return [];
+  // Calculate anomalies (values that are 50% higher/lower than average)
+  const calculateAnomalies = (data: TimeSeriesData[]) => {
+    if (!data || data.length < 3) return [];
 
-    return data.map((point, index) => {
-      const year = point.year || `Año ${index + 1}`;
-      const budgeted = point.budgeted || 0;
-      const executed = point.executed || 0;
-      const executionRate = point.execution_rate !== undefined 
-        ? point.execution_rate 
-        : (budgeted > 0 ? executed / budgeted : 0);
+    const values = data.map(d => parseFloat(d[valueKey]) || 0).filter(v => v > 0);
+    const average = values.reduce((sum, val) => sum + val, 0) / values.length;
+    const threshold = average * 0.5; // 50% threshold
 
-      return {
-        year,
-        budgeted,
-        executed,
-        execution_rate: executionRate,
-        // Color coding based on execution rate
-        budgetedColor: getColorForExecutionRate(executionRate),
-        executedColor: getColorForExecutionRate(executionRate)
-      };
+    return data.filter(d => {
+      const value = parseFloat(d[valueKey]) || 0;
+      return value > average + threshold || value < average - threshold;
     });
-  }, [data]);
+  };
 
-  // Custom tooltip with color coding
+  // Custom tooltip with anomaly detection
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
-      const dataPoint = payload[0].payload;
-      const executionRate = dataPoint.execution_rate || 0;
-      
+      const value = payload[0].value;
+      const isAnomaly = anomalies.some(a => a[dataKey] === label);
+
       return (
-        <div className="bg-white dark:bg-dark-surface p-4 border border-gray-200 dark:border-dark-border rounded-lg shadow-lg">
-          <p className="font-semibold text-gray-900 dark:text-dark-text-primary">{`Año: ${label}`}</p>
-          <p className="text-sm" style={{ color: dataPoint.budgetedColor }}>
-            Presupuestado: {formatCurrencyARS(dataPoint.budgeted || 0)}
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg p-3">
+          <p className="font-medium text-gray-900 dark:text-gray-100">
+            {`${dataKey}: ${label}`}
           </p>
-          <p className="text-sm" style={{ color: dataPoint.executedColor }}>
-            Ejecutado: {formatCurrencyARS(dataPoint.executed || 0)}
+          <p className="text-blue-600 dark:text-blue-400">
+            {`${valueKey}: ${typeof value === 'number' ? value.toLocaleString() : value}`}
           </p>
-          <p className="text-sm">
-            Tasa de Ejecución: {(executionRate * 100).toFixed(1)}%
-          </p>
-          {executionRate < 0.5 && (
-            <p className="text-xs text-red-600 dark:text-red-400 mt-1">
-              ⚠️ Ejecución baja
-            </p>
-          )}
-          {executionRate > 1.2 && (
-            <p className="text-xs text-blue-600 dark:text-blue-400 mt-1">
-              ℹ️ Ejecución alta
-            </p>
+          {isAnomaly && (
+            <div className="flex items-center mt-2 text-red-600 dark:text-red-400">
+              <AlertTriangle className="w-4 h-4 mr-1" />
+              <span className="text-sm">Anomaly detected</span>
+            </div>
           )}
         </div>
       );
@@ -92,12 +89,32 @@ const TimeSeriesChart: React.FC<TimeSeriesChartProps> = ({
     return null;
   };
 
+  // Custom dot for anomalies
+  const CustomDot = (props: any) => {
+    const { cx, cy, payload } = props;
+    const isAnomaly = anomalies.some(a => a[dataKey] === payload[dataKey]);
+
+    if (isAnomaly) {
+      return (
+        <circle
+          cx={cx}
+          cy={cy}
+          r={6}
+          fill="#ef4444"
+          stroke="#ffffff"
+          strokeWidth={2}
+        />
+      );
+    }
+    return null;
+  };
+
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-64">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-2"></div>
-          <p className="text-gray-600 dark:text-dark-text-secondary">Cargando datos...</p>
+      <div className={`flex items-center justify-center h-96 ${className}`}>
+        <div className="flex flex-col items-center space-y-2">
+          <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+          <p className="text-gray-600 dark:text-gray-400">Loading chart data...</p>
         </div>
       </div>
     );
@@ -105,82 +122,138 @@ const TimeSeriesChart: React.FC<TimeSeriesChartProps> = ({
 
   if (error) {
     return (
-      <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg p-4">
-        <p className="text-red-800 dark:text-red-200">Error al cargar datos: {error.message}</p>
+      <div className={`flex items-center justify-center h-96 ${className}`}>
+        <div className="flex flex-col items-center space-y-2 text-center">
+          <AlertTriangle className="w-12 h-12 text-red-500" />
+          <p className="text-red-600 dark:text-red-400 font-medium">Error loading chart data</p>
+          <p className="text-gray-500 text-sm">{error.message}</p>
+        </div>
       </div>
     );
   }
 
-  if (!chartData || chartData.length === 0) {
+  if (!data || data.length === 0) {
     return (
-      <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4">
-        <p className="text-yellow-800 dark:text-yellow-200">No hay datos disponibles para mostrar</p>
+      <div className={`flex items-center justify-center h-96 ${className}`}>
+        <div className="flex flex-col items-center space-y-2 text-center">
+          <TrendingDown className="w-12 h-12 text-gray-400" />
+          <p className="text-gray-600 dark:text-gray-400 font-medium">No data available</p>
+          <p className="text-gray-500 text-sm">
+            {selectedYear ? `for year ${selectedYear}` : 'for the selected period'}
+          </p>
+        </div>
       </div>
     );
   }
+
+  const anomalies = showAnomalies ? calculateAnomalies(data) : [];
+  const hasAnomalies = anomalies.length > 0;
+
+  // Calculate trend
+  const firstValue = parseFloat(data[0]?.[valueKey]) || 0;
+  const lastValue = parseFloat(data[data.length - 1]?.[valueKey]) || 0;
+  const trend = lastValue > firstValue ? 'up' : 'down';
+  const trendPercent = firstValue > 0 ? ((lastValue - firstValue) / firstValue * 100) : 0;
 
   return (
-    <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border border-gray-200 dark:border-dark-border">
-      {title && (
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary mb-4">
-          {title}
-        </h3>
-      )}
-      
-      <div className="h-96">
+    <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6 ${className}`}>
+      {/* Header */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">{title}</h3>
+          <div className="flex items-center space-x-2">
+            {trend === 'up' ? (
+              <TrendingUp className="w-5 h-5 text-green-500" />
+            ) : (
+              <TrendingDown className="w-5 h-5 text-red-500" />
+            )}
+            <span className={`text-sm font-medium ${trend === 'up' ? 'text-green-600' : 'text-red-600'}`}>
+              {trendPercent >= 0 ? '+' : ''}{trendPercent.toFixed(1)}%
+            </span>
+          </div>
+        </div>
+        {description && (
+          <p className="text-gray-600 dark:text-gray-400 text-sm">{description}</p>
+        )}
+        {hasAnomalies && (
+          <div className="flex items-center mt-2 text-red-600 dark:text-red-400 text-sm">
+            <AlertTriangle className="w-4 h-4 mr-1" />
+            <span>{anomalies.length} anomal{anomalies.length === 1 ? 'y' : 'ies'} detected</span>
+          </div>
+        )}
+      </div>
+
+      {/* Chart */}
+      <div style={{ height }}>
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart
-            data={chartData}
-            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-          >
-            {showGrid && <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />}
-            <XAxis 
-              dataKey="year" 
+          <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+            <XAxis
+              dataKey={dataKey}
               stroke="#6b7280"
-              tick={{ fill: '#6b7280' }}
+              fontSize={12}
+              tickLine={false}
             />
-            <YAxis 
+            <YAxis
               stroke="#6b7280"
-              tick={{ fill: '#6b7280' }}
-              tickFormatter={(value) => `$${(value / 1000000).toFixed(0)}M`}
+              fontSize={12}
+              tickLine={false}
+              tickFormatter={(value) => {
+                if (typeof value === 'number' && value > 1000000) {
+                  return `${(value / 1000000).toFixed(1)}M`;
+                } else if (typeof value === 'number' && value > 1000) {
+                  return `${(value / 1000).toFixed(1)}K`;
+                }
+                return value;
+              }}
             />
             <Tooltip content={<CustomTooltip />} />
-            {showLegend && <Legend />}
+            <Legend />
+
+            {/* Main line */}
             <Line
               type="monotone"
-              dataKey="budgeted"
+              dataKey={valueKey}
               stroke="#3b82f6"
               strokeWidth={2}
-              dot={{ r: 4 }}
-              activeDot={{ r: 6, stroke: '#3b82f6', strokeWidth: 2, fill: '#fff' }}
-              name="Presupuestado"
+              dot={<CustomDot />}
+              activeDot={{ r: 6, stroke: '#3b82f6', strokeWidth: 2 }}
             />
-            <Line
-              type="monotone"
-              dataKey="executed"
-              stroke="#10b981"
-              strokeWidth={2}
-              dot={{ r: 4 }}
-              activeDot={{ r: 6, stroke: '#10b981', strokeWidth: 2, fill: '#fff' }}
-              name="Ejecutado"
-            />
+
+            {/* Reference line for average if showing anomalies */}
+            {showAnomalies && data.length > 0 && (
+              <ReferenceLine
+                y={data.reduce((sum, d) => sum + (parseFloat(d[valueKey]) || 0), 0) / data.length}
+                stroke="#9ca3af"
+                strokeDasharray="5 5"
+                label="Average"
+              />
+            )}
           </LineChart>
         </ResponsiveContainer>
       </div>
-      
-      {/* Anomaly indicators */}
-      <div className="mt-4 flex flex-wrap gap-2">
-        {chartData.some(point => point.execution_rate < 0.5) && (
-          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-200">
-            ⚠️ Ejecución baja detectada
-          </span>
-        )}
-        {chartData.some(point => point.execution_rate > 1.2) && (
-          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-200">
-            ℹ️ Ejecución alta detectada
-          </span>
-        )}
-      </div>
+
+      {/* Anomaly details */}
+      {hasAnomalies && (
+        <div className="mt-4 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-200 dark:border-red-800">
+          <h4 className="text-sm font-medium text-red-800 dark:text-red-200 mb-2">Detected Anomalies:</h4>
+          <div className="space-y-1">
+            {anomalies.slice(0, 3).map((anomaly, index) => (
+              <div key={index} className="text-xs text-red-700 dark:text-red-300">
+                {anomaly[dataKey]}: {typeof anomaly[valueKey] === 'number'
+                  ? anomaly[valueKey].toLocaleString()
+                  : anomaly[valueKey]
+                }
+              </div>
+            ))}
+            {anomalies.length > 3 && (
+              <div className="text-xs text-red-600 dark:text-red-400">
+                +{anomalies.length - 3} more anomalies
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

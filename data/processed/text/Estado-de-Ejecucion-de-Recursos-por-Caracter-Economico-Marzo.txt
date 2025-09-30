@@ -1,0 +1,127 @@
+                                                                                           R.A.F.A.M.                                                                                   Hoja: 1 de 3
+                                                     ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOS
+                                                                            (POR CARACTER ECONÓMICO)                                                                         26/04/2025       12:56
+
+      Municipalidad de                                                               CONSOLIDADO
+      Carmen de Areco                                                           Del 02/01/2025 al 31/03/2025                                                                   Ejercicio: 2025
+                                                                                                                                                    Dif. entre                           Dif. entre
+                                                                      Recurso                                  Recurso            Recurso                            Recursos
+                 Descripción                                                             Modificaciones                                            Vigente y                            Devengado y
+                                                                      Estimado                                 Vigente           Devengado                           Percibido
+                                                                                                                                                   Devengado                             Percibido
+
+ RECURSOS
+   INGRESOS CORRIENTES
+    Ingresos tributarios
+      Impuestos provinciales y nacionales                             5.046.004.267,00                 0,00   5.046.004.267,00     965.081.432,50 4.080.922.834,50     965.081.432,50               0,00
+      Otros impuestos                                                   809.823.649,00                 0,00     809.823.649,00      80.878.678,63 728.944.970,37        87.039.962,72      -6.161.284,09
+    Total Ingresos tributarios                                        5.855.827.916,00                 0,00   5.855.827.916,00   1.045.960.111,13 4.809.867.804,87   1.052.121.395,22      -6.161.284,09
+
+    Ingresos no tributarios
+      Tasas                                                           1.891.642.203,00                 0,00   1.891.642.203,00    703.448.751,82 1.188.193.451,18     351.914.881,37      351.533.870,45
+      Derechos                                                          418.099.809,00                 0,00     418.099.809,00     28.933.273,51 389.166.535,49        30.119.784,01       -1.186.510,50
+      Otros no tributarios                                              442.672.306,00                 0,00     442.672.306,00    106.326.876,22 336.345.429,78       106.326.876,22                0,00
+    Total Ingresos no tributarios                                     2.752.414.318,00                 0,00   2.752.414.318,00    838.708.901,55 1.913.705.416,45     488.361.541,60      350.347.359,95
+
+     Rentas de la propiedad
+      Intereses
+        Intereses internos
+          Intereses por depósitos                                      180.750.644,00                  0,00    180.750.644,00         755.258,98   179.995.385,02         755.258,98                  0,00
+        Total Intereses internos                                       180.750.644,00                  0,00    180.750.644,00         755.258,98   179.995.385,02         755.258,98                  0,00
+
+     Total Intereses                                                   180.750.644,00                  0,00    180.750.644,00         755.258,98   179.995.385,02         755.258,98                  0,00
+
+    Total Rentas de la propiedad                                       180.750.644,00                  0,00    180.750.644,00         755.258,98   179.995.385,02         755.258,98                  0,00
+
+     Transferencias Corrientes
+      Del sector privado
+        De empresas privadas                                                      0,00                 0,00               0,00      3.333.873,00     -3.333.873,00      3.333.873,00                  0,00
+     Total Del sector privado                                                     0,00                 0,00               0,00      3.333.873,00     -3.333.873,00      3.333.873,00                  0,00
+
+       Del sector público
+        De provincias y municipios
+          De gobiernos provinciales                                    491.514.303,00         11.883.365,87    503.397.668,87      97.516.261,48   405.881.407,39      97.516.261,48                  0,00
+        Total De provincias y municipios                               491.514.303,00         11.883.365,87    503.397.668,87      97.516.261,48   405.881.407,39      97.516.261,48                  0,00
+
+     Total Del sector público                                          491.514.303,00         11.883.365,87    503.397.668,87      97.516.261,48   405.881.407,39      97.516.261,48                  0,00
+
+    Total Transferencias Corrientes                                    491.514.303,00         11.883.365,87    503.397.668,87     100.850.134,48   402.547.534,39     100.850.134,48                  0,00
+
+ TOTAL INGRESOS CORRIENTES                                            9.280.507.181,00        11.883.365,87   9.292.390.546,87   1.986.274.406,14 7.306.116.140,73   1.642.088.330,28     344.186.075,86
+
+
+
+Filtro aplicado: Ejercicio: 2025 - Fechas: 02/01/2025 al 31/03/2025
+                                                                                           R.A.F.A.M.                                                                                   Hoja: 2 de 3
+                                                     ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOS
+                                                                            (POR CARACTER ECONÓMICO)                                                                         26/04/2025       12:56
+
+      Municipalidad de                                                               CONSOLIDADO
+      Carmen de Areco                                                           Del 02/01/2025 al 31/03/2025                                                                   Ejercicio: 2025
+                                                                                                                                                    Dif. entre                           Dif. entre
+                                                                      Recurso                                  Recurso            Recurso                            Recursos
+                 Descripción                                                             Modificaciones                                            Vigente y                            Devengado y
+                                                                      Estimado                                 Vigente           Devengado                           Percibido
+                                                                                                                                                   Devengado                             Percibido
+
+   RECURSOS DE CAPITAL
+     Transferencias de capital
+      Del sector público
+        De provincias y municipios
+          De gobiernos provinciales                                               0,00       232.690.775,64    232.690.775,64     232.690.775,64              0,00    232.690.775,64                  0,00
+        Total De provincias y municipios                                          0,00       232.690.775,64    232.690.775,64     232.690.775,64              0,00    232.690.775,64                  0,00
+
+     Total Del sector público                                                     0,00       232.690.775,64    232.690.775,64     232.690.775,64              0,00    232.690.775,64                  0,00
+
+    Total Transferencias de capital                                               0,00       232.690.775,64    232.690.775,64     232.690.775,64              0,00    232.690.775,64                  0,00
+
+     Disminución de la inversión financiera
+      Recuperación de préstamos de largo plazo
+        Del sector privado                                                        0,00                 0,00               0,00      1.870.891,17     -1.870.891,17      1.870.891,17                  0,00
+     Total Recuperación de préstamos de largo plazo                               0,00                 0,00               0,00      1.870.891,17     -1.870.891,17      1.870.891,17                  0,00
+
+    Total Disminución de la inversión financiera                                  0,00                 0,00               0,00      1.870.891,17     -1.870.891,17      1.870.891,17                  0,00
+
+ TOTAL RECURSOS DE CAPITAL                                                        0,00       232.690.775,64    232.690.775,64     234.561.666,81     -1.870.891,17    234.561.666,81                  0,00
+
+   FUENTES FINANCIERAS
+     Disminución de la inversión financiera
+      Disminución de otros activos financieros
+        Disminución de disponibilidades
+          Disminución de caja y bancos                                            0,00       248.570.888,33    248.570.888,33               0,00   248.570.888,33                0,00                 0,00
+        Total Disminución de disponibilidades                                     0,00       248.570.888,33    248.570.888,33               0,00   248.570.888,33                0,00                 0,00
+
+     Total Disminución de otros activos financieros                               0,00       248.570.888,33    248.570.888,33               0,00   248.570.888,33                0,00                 0,00
+
+    Total Disminución de la inversión financiera                                  0,00       248.570.888,33    248.570.888,33               0,00   248.570.888,33                0,00                 0,00
+
+ TOTAL FUENTES FINANCIERAS                                                        0,00       248.570.888,33    248.570.888,33               0,00   248.570.888,33                0,00                 0,00
+
+TOTALRECURSOS                                                         9.280.507.181,00       493.145.029,84   9.773.652.210,84   2.220.836.072,95 7.552.816.137,89   1.876.649.997,09     344.186.075,86
+
+
+
+
+Filtro aplicado: Ejercicio: 2025 - Fechas: 02/01/2025 al 31/03/2025
+                                                                                           R.A.F.A.M.                                                                                   Hoja: 3 de 3
+                                                     ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOS
+                                                                            (POR CARACTER ECONÓMICO)                                                                         26/04/2025       12:56
+
+      Municipalidad de                                                               CONSOLIDADO
+      Carmen de Areco                                                           Del 02/01/2025 al 31/03/2025                                                                   Ejercicio: 2025
+                                                                                                                                                    Dif. entre                           Dif. entre
+                                                                      Recurso                                  Recurso            Recurso                            Recursos
+                 Descripción                                                             Modificaciones                                            Vigente y                            Devengado y
+                                                                      Estimado                                 Vigente           Devengado                           Percibido
+                                                                                                                                                   Devengado                             Percibido
+
+
+
+
+                                         TOTAL GENERAL                9.280.507.181,00       493.145.029,84   9.773.652.210,84   2.220.836.072,95 7.552.816.137,89   1.876.649.997,09     344.186.075,86
+
+
+
+
+Filtro aplicado: Ejercicio: 2025 - Fechas: 02/01/2025 al 31/03/2025
+

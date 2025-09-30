@@ -25,17 +25,17 @@ const YearSelectorDemo: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-8">
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">
           Year Selector Components Demo
         </h1>
-        <p className="text-gray-600">
+        <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
           Demonstrating React best practices with modern year selection components
         </p>
       </div>
 
       {/* Basic PageYearSelector */}
-      <section className="bg-white p-6 rounded-lg shadow-lg">
-        <h2 className="text-xl font-semibold mb-4 text-gray-800">
+      <section className="bg-white dark:bg-dark-surface p-6 rounded-lg shadow-lg">
+        <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary">
           1. Basic PageYearSelector
         </h2>
         <div className="space-y-4">
@@ -60,15 +60,15 @@ const YearSelectorDemo: React.FC = () => {
               label="Badge Style"
             />
           </div>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
             Selected: <span className="font-medium">{basicYear}</span>
           </p>
         </div>
       </section>
 
       {/* Advanced YearSelector - Dropdown */}
-      <section className="bg-white p-6 rounded-lg shadow-lg">
-        <h2 className="text-xl font-semibold mb-4 text-gray-800">
+      <section className="bg-white dark:bg-dark-surface p-6 rounded-lg shadow-lg">
+        <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary">
           2. Advanced YearSelector - Dropdown Variant
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -89,14 +89,14 @@ const YearSelectorDemo: React.FC = () => {
             size="lg"
           />
         </div>
-        <p className="text-sm text-gray-600 mt-2">
+        <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mt-2">
           Selected: <span className="font-medium">{advancedYear}</span>
         </p>
       </section>
 
       {/* Advanced YearSelector - Tabs */}
-      <section className="bg-white p-6 rounded-lg shadow-lg">
-        <h2 className="text-xl font-semibold mb-4 text-gray-800">
+      <section className="bg-white dark:bg-dark-surface p-6 rounded-lg shadow-lg">
+        <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary">
           3. Advanced YearSelector - Tabs Variant
         </h2>
         <AdvancedYearSelector
@@ -109,8 +109,8 @@ const YearSelectorDemo: React.FC = () => {
       </section>
 
       {/* Advanced YearSelector - Cards */}
-      <section className="bg-white p-6 rounded-lg shadow-lg">
-        <h2 className="text-xl font-semibold mb-4 text-gray-800">
+      <section className="bg-white dark:bg-dark-surface p-6 rounded-lg shadow-lg">
+        <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary">
           4. Advanced YearSelector - Cards Variant
         </h2>
         <AdvancedYearSelector
@@ -124,8 +124,8 @@ const YearSelectorDemo: React.FC = () => {
       </section>
 
       {/* Hook-based Year Selection */}
-      <section className="bg-white p-6 rounded-lg shadow-lg">
-        <h2 className="text-xl font-semibold mb-4 text-gray-800">
+      <section className="bg-white dark:bg-dark-surface p-6 rounded-lg shadow-lg">
+        <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary">
           5. Hook-based Year Selection (useYearSelection)
         </h2>
         <div className="space-y-4">
@@ -152,16 +152,16 @@ const YearSelectorDemo: React.FC = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-            <div className="bg-gray-50 p-3 rounded">
+            <div className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background p-3 rounded">
               <strong>Selected:</strong> {hookYear}
             </div>
-            <div className="bg-gray-50 p-3 rounded">
+            <div className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background p-3 rounded">
               <strong>Valid:</strong> {isYearValid ? '✅' : '❌'}
             </div>
-            <div className="bg-gray-50 p-3 rounded">
+            <div className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background p-3 rounded">
               <strong>Available:</strong> {availableYears.length}
             </div>
-            <div className="bg-gray-50 p-3 rounded">
+            <div className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background p-3 rounded">
               <strong>Hook:</strong> Active
             </div>
           </div>
@@ -169,14 +169,14 @@ const YearSelectorDemo: React.FC = () => {
       </section>
 
       {/* Performance & Accessibility Features */}
-      <section className="bg-gray-50 p-6 rounded-lg">
-        <h2 className="text-xl font-semibold mb-4 text-gray-800">
+      <section className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background p-6 rounded-lg">
+        <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary">
           React Best Practices Implemented
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h3 className="font-medium text-gray-700 mb-2">Performance</h3>
-            <ul className="text-sm text-gray-600 space-y-1">
+            <h3 className="font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-2">Performance</h3>
+            <ul className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary space-y-1">
               <li>✅ React.memo() for component memoization</li>
               <li>✅ useMemo() for expensive calculations</li>
               <li>✅ useCallback() for stable function references</li>
@@ -185,8 +185,8 @@ const YearSelectorDemo: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h3 className="font-medium text-gray-700 mb-2">Accessibility</h3>
-            <ul className="text-sm text-gray-600 space-y-1">
+            <h3 className="font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-2">Accessibility</h3>
+            <ul className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary space-y-1">
               <li>✅ Proper ARIA labels and descriptions</li>
               <li>✅ Keyboard navigation support</li>
               <li>✅ Screen reader compatibility</li>
@@ -196,8 +196,8 @@ const YearSelectorDemo: React.FC = () => {
           </div>
         </div>
         <div className="mt-4">
-          <h3 className="font-medium text-gray-700 mb-2">Developer Experience</h3>
-          <ul className="text-sm text-gray-600 space-y-1 columns-2">
+          <h3 className="font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-2">Developer Experience</h3>
+          <ul className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary space-y-1 columns-2">
             <li>✅ TypeScript with strict typing</li>
             <li>✅ Consistent API patterns</li>
             <li>✅ Comprehensive prop validation</li>

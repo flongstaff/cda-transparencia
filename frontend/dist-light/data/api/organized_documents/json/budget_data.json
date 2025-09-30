@@ -1,0 +1,3096 @@
+[
+  {
+    "filename": "EJECUCION-DE-RECURSOS-PERIODO-2020.pdf",
+    "year": 2020,
+    "file_type": ".pdf",
+    "size_bytes": 347152,
+    "created_date": "2025-08-25T15:58:41.031142",
+    "modified_date": "2025-08-24T13:23:02.097457",
+    "sha256_hash": "fbd2126dc38e4515c6991d5b057c0f8f04302a53e0bf0139fcf720c6a1b3bc97",
+    "relative_path": "data/source_materials/2020/EJECUCION-DE-RECURSOS-PERIODO-2020.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2020/EJECUCION-DE-RECURSOS-PERIODO-2020.pdf",
+    "processing_date": "2025-08-25T19:53:04.762413",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/EJECUCION-DE-RECURSOS-PERIODO-2020.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/EJECUCION-DE-RECURSOS-PERIODO-2020.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2020
+    }
+  },
+  {
+    "filename": "EJECUCION-DEL-PRESUPUESTO-DE-GASTOS-2020.pdf",
+    "year": 2020,
+    "file_type": ".pdf",
+    "size_bytes": 383011,
+    "created_date": "2025-08-25T15:58:41.033016",
+    "modified_date": "2025-08-24T13:23:02.097897",
+    "sha256_hash": "2c7bfb00e01916cc1436a9b2452c8300eef89c29fea41510d754f2e5c5b7c736",
+    "relative_path": "data/source_materials/2020/EJECUCION-DEL-PRESUPUESTO-DE-GASTOS-2020.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2020/EJECUCION-DEL-PRESUPUESTO-DE-GASTOS-2020.pdf",
+    "processing_date": "2025-08-25T19:53:04.770715",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/EJECUCION-DEL-PRESUPUESTO-DE-GASTOS-2020.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/EJECUCION-DEL-PRESUPUESTO-DE-GASTOS-2020.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2020
+    }
+  },
+  {
+    "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "year": 2021,
+    "file_type": ".pdf",
+    "size_bytes": 115864,
+    "created_date": "2025-08-25T15:58:41.233781",
+    "modified_date": "2025-08-24T13:23:02.141900",
+    "sha256_hash": "9184981528eaf7b5a7f90ddc786d9accf7ca755ec0b7222cf5b75503e5b3ea6d",
+    "relative_path": "data/source_materials/2021/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2021/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "processing_date": "2025-08-25T19:53:04.787942",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-1.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 1141711,
+    "created_date": "2025-08-25T15:58:41.413343",
+    "modified_date": "2025-08-24T13:23:02.150220",
+    "sha256_hash": "c96410bfe1d487c5a1adf85d05d5c5af26d5ff0ec3a520abe2ee3de8661aba3b",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-1.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-1.pdf",
+    "processing_date": "2025-08-25T19:53:04.802200",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-1.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-1.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 86333,
+    "created_date": "2025-08-25T15:58:41.414123",
+    "modified_date": "2025-08-24T13:23:02.154938",
+    "sha256_hash": "ae54edfbcd1d15475e157fbbb692f7e604f97cb93db9a699769927d1276c941f",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+    "processing_date": "2025-08-25T19:53:04.805309",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 119210,
+    "created_date": "2025-08-25T15:58:41.414484",
+    "modified_date": "2025-08-24T13:23:02.159906",
+    "sha256_hash": "4a083772815e88766d34b06e2bb681cee0def5f6489325237964f5406b50b5dd",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+    "processing_date": "2025-08-25T19:53:04.806217",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 109553,
+    "created_date": "2025-08-25T15:58:41.414674",
+    "modified_date": "2025-08-24T13:23:02.155174",
+    "sha256_hash": "f0a524f4c7136cfd1b1259b5588a93b1c3f5639b1f7f20552ec125b2d755e8ad",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+    "processing_date": "2025-08-25T19:53:04.806803",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 101639,
+    "created_date": "2025-08-25T15:58:41.414951",
+    "modified_date": "2025-08-24T13:23:02.155854",
+    "sha256_hash": "75d3b177a2d81d121848a0d0179220eda740948f9df8790960b19037712e0ce2",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+    "processing_date": "2025-08-25T19:53:04.807062",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 151544,
+    "created_date": "2025-08-25T15:58:41.416253",
+    "modified_date": "2025-08-24T13:23:02.161718",
+    "sha256_hash": "1fdbe0cea50eaf6e9be1db520f63d5b8572573dea8dce55e25966902515bb958",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+    "processing_date": "2025-08-25T19:53:04.811352",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 66180,
+    "created_date": "2025-08-25T15:58:41.416535",
+    "modified_date": "2025-08-24T13:23:02.156239",
+    "sha256_hash": "338d773bec757011ebdeeee0a9d987cf14275d21857ff23258d64f54d2f1233b",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+    "processing_date": "2025-08-25T19:53:04.811846",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 109812,
+    "created_date": "2025-08-25T15:58:41.417325",
+    "modified_date": "2025-08-24T13:23:02.155017",
+    "sha256_hash": "465dae3e768f713c360ed1857ea1f97b9c74d78dc32ad7ce8b603f7dbffc2432",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+    "processing_date": "2025-08-25T19:53:04.812879",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 101071,
+    "created_date": "2025-08-25T15:58:41.417554",
+    "modified_date": "2025-08-24T13:23:02.155634",
+    "sha256_hash": "ee8a3c2aab89ba62d573850e6f715dbe8b5ee37aae7d426c7ce7a4acfc21286f",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+    "processing_date": "2025-08-25T19:53:04.813106",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 115864,
+    "created_date": "2025-08-25T15:58:41.418613",
+    "modified_date": "2025-08-24T13:23:02.162603",
+    "sha256_hash": "9184981528eaf7b5a7f90ddc786d9accf7ca755ec0b7222cf5b75503e5b3ea6d",
+    "relative_path": "data/source_materials/2022/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "processing_date": "2025-08-25T19:53:04.814924",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 67548,
+    "created_date": "2025-08-25T15:58:41.419681",
+    "modified_date": "2025-08-24T13:23:02.156616",
+    "sha256_hash": "4306f1e488451b31f7ac5ba558f7a57b2cd9eca3574565da7cd29e37fb308eea",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+    "processing_date": "2025-08-25T19:53:04.817954",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 1299495,
+    "created_date": "2025-08-25T15:58:41.420288",
+    "modified_date": "2025-08-24T13:23:02.154712",
+    "sha256_hash": "0cc6ea42fda7e0c6041a038039d5e1bdb84985d403becb64e5c6fcdf7d12ec20",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022.pdf",
+    "processing_date": "2025-08-25T19:53:04.820299",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 85022,
+    "created_date": "2025-08-25T15:58:41.420871",
+    "modified_date": "2025-08-24T13:23:02.161192",
+    "sha256_hash": "4afedf8d7291e59f7742bef43e9aacd1dd0b576f7e87433692a27cebcb45eb64",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+    "processing_date": "2025-08-25T19:53:04.822170",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 118244,
+    "created_date": "2025-08-25T15:58:41.421900",
+    "modified_date": "2025-08-24T13:23:02.159624",
+    "sha256_hash": "787feaa0bb2b433eb2af8f63287ed3216a4803ff880a01ffd9cffe55e51cacb3",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+    "processing_date": "2025-08-25T19:53:04.825035",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 85712,
+    "created_date": "2025-08-25T15:58:41.422321",
+    "modified_date": "2025-08-24T13:23:02.161408",
+    "sha256_hash": "f201f0fd100485241cf4933c842bdd0ee5bd010b07269ffd08adc3d29dd26769",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+    "processing_date": "2025-08-25T19:53:04.826181",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 85431,
+    "created_date": "2025-08-25T15:58:41.422518",
+    "modified_date": "2025-08-24T13:23:02.160967",
+    "sha256_hash": "4f9f36eb2fa279a17e70f5ce1758fe0ffa5eba1b3e46b1e0d096becf6d44c6a6",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+    "processing_date": "2025-08-25T19:53:04.826701",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 85366,
+    "created_date": "2025-08-25T15:58:41.423218",
+    "modified_date": "2025-08-24T13:23:02.163050",
+    "sha256_hash": "ab419cf2f9b6fe30ff65392bb507d7cfb06d011a4f3fb09ea2db4bccd89134a6",
+    "relative_path": "data/source_materials/2022/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+    "processing_date": "2025-08-25T19:53:04.829561",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 102876,
+    "created_date": "2025-08-25T15:58:41.423416",
+    "modified_date": "2025-08-24T13:23:02.162777",
+    "sha256_hash": "8d6f28cf74b7e254ec84956826a51851b18292014d6a3f95a4c5007dddf509cd",
+    "relative_path": "data/source_materials/2022/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+    "processing_date": "2025-08-25T19:53:04.829793",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 102105,
+    "created_date": "2025-08-25T15:58:41.423621",
+    "modified_date": "2025-08-24T13:23:02.156070",
+    "sha256_hash": "52df63981063e70a4f4f90e8b7fa6c27c9ddf5ba74d32e3e1629dd6c6d5c7794",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+    "processing_date": "2025-08-25T19:53:04.830567",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 1173473,
+    "created_date": "2025-08-25T15:58:41.423798",
+    "modified_date": "2025-08-24T13:23:02.158834",
+    "sha256_hash": "2c484fe3d6da30036b0bc2f57be03943a38cea6a8cf9b4e783aca3e0341f2962",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS.pdf",
+    "processing_date": "2025-08-25T19:53:04.832344",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 141931,
+    "created_date": "2025-08-25T15:58:41.423967",
+    "modified_date": "2025-08-24T13:23:02.159096",
+    "sha256_hash": "37b9eaddabafb660035df5a322a84523cda4f5d34f60a3ff6fa7d4363e199b6b",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+    "processing_date": "2025-08-25T19:53:04.833113",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022 copy.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 142229,
+    "created_date": "2025-08-25T15:58:41.424156",
+    "modified_date": "2025-08-24T13:23:02.162031",
+    "sha256_hash": "c401cfabe62f7406b74d761f36122ff31dbda494e474f4f87b66427d44712c14",
+    "relative_path": "data/source_materials/2022/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022 copy.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022 copy.pdf",
+    "processing_date": "2025-08-25T19:53:04.833865",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022 copy.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022 copy.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 147280,
+    "created_date": "2025-08-25T15:58:41.424385",
+    "modified_date": "2025-08-24T13:23:02.159358",
+    "sha256_hash": "8bf8fc908041f32b11fb7ed8732ecd5083042b9c30229de81b6f90b39cba5a26",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+    "processing_date": "2025-08-25T19:53:04.834195",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 67723,
+    "created_date": "2025-08-25T15:58:41.424634",
+    "modified_date": "2025-08-24T13:23:02.156430",
+    "sha256_hash": "5543a0b6883b62e2d8ee6250e6caa93a33644da29a19a8f705dd718d4cf959f0",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+    "processing_date": "2025-08-25T19:53:04.834433",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 102506,
+    "created_date": "2025-08-25T15:58:41.425022",
+    "modified_date": "2025-08-24T13:23:02.160413",
+    "sha256_hash": "7204f82ac99b0cbc94d6f6d3181968b9f06c96c9d2ce56f4077d906d1d71c01b",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+    "processing_date": "2025-08-25T19:53:04.836024",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 1157656,
+    "created_date": "2025-08-25T15:58:41.425746",
+    "modified_date": "2025-08-24T13:23:02.152474",
+    "sha256_hash": "369b875462e5b7903925b02d4f09898e52b5a65b07a31bc4d663d5286466a450",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022.pdf",
+    "processing_date": "2025-08-25T19:53:04.838242",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 109662,
+    "created_date": "2025-08-25T15:58:41.426231",
+    "modified_date": "2025-08-24T13:23:02.155404",
+    "sha256_hash": "a841f43fbcd9b851ee884dedfd2e9381bb4166c4dea34a30b1f3d5e2cf14e624",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+    "processing_date": "2025-08-25T19:53:04.839450",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 121409,
+    "created_date": "2025-08-25T15:58:41.426800",
+    "modified_date": "2025-08-24T13:23:02.160178",
+    "sha256_hash": "b587c3d0c2d04c7d629795390b7e350438639686d9c63d05e3d44337a7efafe6",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+    "processing_date": "2025-08-25T19:53:04.841422",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 102839,
+    "created_date": "2025-08-25T15:58:41.427141",
+    "modified_date": "2025-08-24T13:23:02.160285",
+    "sha256_hash": "8ba792ed7ac608e72188d3c9d9d8279636f1d6be6b255212fcf241c4809a4a49",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+    "processing_date": "2025-08-25T19:53:04.841645",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 142229,
+    "created_date": "2025-08-25T15:58:41.427451",
+    "modified_date": "2025-08-24T13:23:02.162315",
+    "sha256_hash": "c401cfabe62f7406b74d761f36122ff31dbda494e474f4f87b66427d44712c14",
+    "relative_path": "data/source_materials/2022/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+    "processing_date": "2025-08-25T19:53:04.842206",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2022
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+    "year": 2022,
+    "file_type": ".pdf",
+    "size_bytes": 102664,
+    "created_date": "2025-08-25T15:58:41.427789",
+    "modified_date": "2025-08-24T13:23:02.160685",
+    "sha256_hash": "308daa7e179baedd867e9fd32cc73d3695082b17b4019e0280f363e3a7a0ac76",
+    "relative_path": "data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+    "processing_date": "2025-08-25T19:53:04.842854",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 1172209,
+    "created_date": "2025-08-25T15:58:41.441485",
+    "modified_date": "2025-08-24T13:23:02.180171",
+    "sha256_hash": "768a6e2c33e6632c7fc156cf975bb86dc1480c5bcc28381ab8c56290cedbed66",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf",
+    "processing_date": "2025-08-25T19:53:04.848151",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 85219,
+    "created_date": "2025-08-25T15:58:41.443858",
+    "modified_date": "2025-08-24T13:23:02.190960",
+    "sha256_hash": "1d993b326aa0b8c74e0021bfe79bfb0afa4c86cfc201249813ac706553598aa8",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+    "processing_date": "2025-08-25T19:53:04.854895",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2023
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 102641,
+    "created_date": "2025-08-25T15:58:41.445312",
+    "modified_date": "2025-08-24T13:23:02.186740",
+    "sha256_hash": "5872165b737a1ebe62afb3b4ddb55bab58aae7d10e89d9c2c05cbecbe270c1dd",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+    "processing_date": "2025-08-25T19:53:04.858579",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 1164653,
+    "created_date": "2025-08-25T15:58:41.445819",
+    "modified_date": "2025-08-24T13:23:02.182423",
+    "sha256_hash": "c46dd8876a0dbd8b1f9e6ed92b3bd1172709988be1046ed3914c437d5b83c8d6",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf",
+    "processing_date": "2025-08-25T19:53:04.860369",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2023
+    }
+  },
+  {
+    "filename": "EJECUCION-PRESUPUESTARIA-DE-RECURSOS.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 469905,
+    "created_date": "2025-08-25T15:58:41.446219",
+    "modified_date": "2025-08-24T13:23:02.177840",
+    "sha256_hash": "484ea7e10649585b0a82866c012b1feb58dace2d5f68067464e53cc01a384993",
+    "relative_path": "data/source_materials/2023/EJECUCION-PRESUPUESTARIA-DE-RECURSOS.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/EJECUCION-PRESUPUESTARIA-DE-RECURSOS.pdf",
+    "processing_date": "2025-08-25T19:53:04.861483",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/EJECUCION-PRESUPUESTARIA-DE-RECURSOS.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/EJECUCION-PRESUPUESTARIA-DE-RECURSOS.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 67534,
+    "created_date": "2025-08-25T15:58:41.446572",
+    "modified_date": "2025-08-24T13:23:02.186932",
+    "sha256_hash": "7ae065cb66d61c6942d686e332cc25f3921fcfc3cf00410644d24bfa93de5163",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+    "processing_date": "2025-08-25T19:53:04.862139",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 102727,
+    "created_date": "2025-08-25T15:58:41.447709",
+    "modified_date": "2025-08-24T13:23:02.189860",
+    "sha256_hash": "0ac5b5091f01ddc827b061b3f414ed2aec1d3f408d747d04ebf6bbed7785168d",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+    "processing_date": "2025-08-25T19:53:04.864964",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2023
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 102665,
+    "created_date": "2025-08-25T15:58:41.448629",
+    "modified_date": "2025-08-24T13:23:02.186254",
+    "sha256_hash": "46e3161758ab366576a2e38d58389174e0545d9f694d088768901d32fa3b8969",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+    "processing_date": "2025-08-25T19:53:04.867979",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 143218,
+    "created_date": "2025-08-25T15:58:41.449079",
+    "modified_date": "2025-08-24T13:23:02.188147",
+    "sha256_hash": "648e058f6e2b4fd2cf13fc7615e2d81d487f521590c091be4f225f9bf72604d3",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+    "processing_date": "2025-08-25T19:53:04.869765",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2023
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 69801,
+    "created_date": "2025-08-25T15:58:41.449717",
+    "modified_date": "2025-08-24T13:23:02.187130",
+    "sha256_hash": "c79cc06ec688d509a4123f46bba8a8fa7fe02a31c9920546784b05eeceb03ead",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+    "processing_date": "2025-08-25T19:53:04.871546",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2023
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 140098,
+    "created_date": "2025-08-25T15:58:41.450209",
+    "modified_date": "2025-08-24T13:23:02.188467",
+    "sha256_hash": "d35c0fe49cbad094849e10a91fa3865e39b35b10730bd9b8ebdeaf461151a50e",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+    "processing_date": "2025-08-25T19:53:04.872783",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 85386,
+    "created_date": "2025-08-25T15:58:41.450429",
+    "modified_date": "2025-08-24T13:23:02.191209",
+    "sha256_hash": "c785170fd84deba5735fd324a078a5123e5d4cc46ba6c98b43376d47e2531ba2",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+    "processing_date": "2025-08-25T19:53:04.873347",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 109758,
+    "created_date": "2025-08-25T15:58:41.451253",
+    "modified_date": "2025-08-24T13:23:02.185492",
+    "sha256_hash": "2db8629dcbf32354177d38d0a07f390dcb9394dc89d0fd8a9557518be40493c1",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+    "processing_date": "2025-08-25T19:53:04.876388",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 99892,
+    "created_date": "2025-08-25T15:58:41.451751",
+    "modified_date": "2025-08-24T13:23:02.190118",
+    "sha256_hash": "d4ad8d5154f9246807e8883b107f9e35d6ede6335645958e37c7c6707d6760b6",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+    "processing_date": "2025-08-25T19:53:04.877595",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "EJECUCION-DE-GASTOS.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 2036729,
+    "created_date": "2025-08-25T15:58:41.451997",
+    "modified_date": "2025-08-24T13:23:02.177236",
+    "sha256_hash": "48a89dad650dceff484c10889816bd424cda0e716b3cb6a37ffc2564cd37759c",
+    "relative_path": "data/source_materials/2023/EJECUCION-DE-GASTOS.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/EJECUCION-DE-GASTOS.pdf",
+    "processing_date": "2025-08-25T19:53:04.880018",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/EJECUCION-DE-GASTOS.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/EJECUCION-DE-GASTOS.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 1152329,
+    "created_date": "2025-08-25T15:58:41.452266",
+    "modified_date": "2025-08-24T13:23:02.184730",
+    "sha256_hash": "6eadd93f417a8684d61295ae1ba1e3a3cb37c7c19d24a0f8b17e4c3de36161d7",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE.pdf",
+    "processing_date": "2025-08-25T19:53:04.882061",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 101956,
+    "created_date": "2025-08-25T15:58:41.452491",
+    "modified_date": "2025-08-24T13:23:02.186501",
+    "sha256_hash": "53306e1153884c66096ca0005169d07ed9c417121d54321ad16e3e33a505cb96",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+    "processing_date": "2025-08-25T19:53:04.882641",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2023
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 125901,
+    "created_date": "2025-08-25T15:58:41.452759",
+    "modified_date": "2025-08-24T13:23:02.188752",
+    "sha256_hash": "e00625e929b2d148c98e02f8fd0d697d5034e19be5555349e7931902c21d5b6c",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+    "processing_date": "2025-08-25T19:53:04.883208",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 68205,
+    "created_date": "2025-08-25T15:58:41.453056",
+    "modified_date": "2025-08-24T13:23:02.187327",
+    "sha256_hash": "64a8adaf2fdba8238fd84584112eedd31a1b5cec79496fcaef4998d26219b17c",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+    "processing_date": "2025-08-25T19:53:04.883799",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 114620,
+    "created_date": "2025-08-25T15:58:41.453659",
+    "modified_date": "2025-08-24T13:23:02.185759",
+    "sha256_hash": "782401fa254feb8ddb2873cd0e5de1ab9a821bf07164a1f30aaafe72b1bc1323",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+    "processing_date": "2025-08-25T19:53:04.885413",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2023
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 119224,
+    "created_date": "2025-08-25T15:58:41.455038",
+    "modified_date": "2025-08-24T13:23:02.189036",
+    "sha256_hash": "f837693724d91e940ede9c6ce0b1b40691777fdebad4af1a8636d0cb2117c4f2",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+    "processing_date": "2025-08-25T19:53:04.890484",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2023
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 84880,
+    "created_date": "2025-08-25T15:58:41.456395",
+    "modified_date": "2025-08-24T13:23:02.190345",
+    "sha256_hash": "3d259a10eebff6b80812be1ae92ae7122f2b1e6036e4c8b0450278cf526eda6d",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+    "processing_date": "2025-08-25T19:53:04.893635",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 111422,
+    "created_date": "2025-08-25T15:58:41.456643",
+    "modified_date": "2025-08-24T13:23:02.186018",
+    "sha256_hash": "4e83b6de075c5ac255c48f0f04244fb9a86cadb421617d68c688590c7fbc660c",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+    "processing_date": "2025-08-25T19:53:04.894150",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 119668,
+    "created_date": "2025-08-25T15:58:41.457299",
+    "modified_date": "2025-08-24T13:23:02.189317",
+    "sha256_hash": "f7d12a5f4353fe34d27bc2c879a1caad55d8ab8f5b2ae7fde7d867f8e69b5257",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+    "processing_date": "2025-08-25T19:53:04.895819",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 154286,
+    "created_date": "2025-08-25T15:58:41.457490",
+    "modified_date": "2025-08-24T13:23:02.187842",
+    "sha256_hash": "7232b7070585c0069593be5ac4c0ca503144c30f4df83cc325c148b43ddb81e7",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+    "processing_date": "2025-08-25T19:53:04.896541",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 87336,
+    "created_date": "2025-08-25T15:58:41.458442",
+    "modified_date": "2025-08-24T13:23:02.185210",
+    "sha256_hash": "910a81f6b53cc206be09d5f109d8246393d29e093cbdfa98621f4435b77a49e7",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+    "processing_date": "2025-08-25T19:53:04.901080",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 101611,
+    "created_date": "2025-08-25T15:58:41.458904",
+    "modified_date": "2025-08-24T13:23:02.189596",
+    "sha256_hash": "0234d274672c198ae963fe47dbacce1e8b02095e7ad63da982b855a64557ebd7",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+    "processing_date": "2025-08-25T19:53:04.902292",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+    "year": 2023,
+    "file_type": ".pdf",
+    "size_bytes": 85281,
+    "created_date": "2025-08-25T15:58:41.460084",
+    "modified_date": "2025-08-24T13:23:02.187525",
+    "sha256_hash": "2e1515de2cf28604adb6fe79f62661c5166ae492f90620eca3c9491ac5e425b5",
+    "relative_path": "data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2023/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+    "processing_date": "2025-08-25T19:53:04.903930",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2023
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 294922,
+    "created_date": "2025-08-25T15:58:41.472188",
+    "modified_date": "2025-08-24T13:23:02.227806",
+    "sha256_hash": "e4f48d0c2926a7e5457a68722f1d7af287e80dbd4171f13b1348ea1bab2e445c",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:04.905844",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 417054,
+    "created_date": "2025-08-25T15:58:41.472431",
+    "modified_date": "2025-08-24T13:23:02.235175",
+    "sha256_hash": "fda863c9e4742fc63d121bb8c6f67a75ffb678697ce46924bb933e60ad8ea1f4",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.906830",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 464068,
+    "created_date": "2025-08-25T15:58:41.472917",
+    "modified_date": "2025-08-24T13:23:02.237157",
+    "sha256_hash": "9dc5180c8321b1fceb8c9df4956c32cc2c5f19a37c968e8d80d08c4849c7a76e",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.908268",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 398461,
+    "created_date": "2025-08-25T15:58:41.474101",
+    "modified_date": "2025-08-24T13:23:02.230095",
+    "sha256_hash": "54924fb94e4ca7432e34311a62a0e6b8f0d45d3f4488146d42e5e119cd1e573d",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.911591",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 388038,
+    "created_date": "2025-08-25T15:58:41.474449",
+    "modified_date": "2025-08-24T13:23:02.231635",
+    "sha256_hash": "2d9df7a81196bce0e5a48dc2381d0e8cbd51ceee73a7b6951f2222915ea88752",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.912645",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 1967737,
+    "created_date": "2025-08-25T15:58:41.474751",
+    "modified_date": "2025-08-24T13:23:02.223793",
+    "sha256_hash": "874761519e04b458479a032f31860458ae9ab38253c5f241f9a9d0067b20ff2f",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:04.914910",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 361665,
+    "created_date": "2025-08-25T15:58:41.475715",
+    "modified_date": "2025-08-24T13:23:02.240519",
+    "sha256_hash": "b8fd4047379f92c5f3249af079f979c2de83a26c8b3755bbb4bf6ec887b783aa",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.917950",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-3er-Trimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 471919,
+    "created_date": "2025-08-25T15:58:41.476632",
+    "modified_date": "2025-08-24T13:23:02.233693",
+    "sha256_hash": "eff7a700920e8703d48ecc299217d82974c3eb6bea3fafd5f985e9883ebbc3bd",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-3er-Trimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-3er-Trimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.920868",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-3er-Trimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-3er-Trimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 388869,
+    "created_date": "2025-08-25T15:58:41.476918",
+    "modified_date": "2025-08-24T13:23:02.230509",
+    "sha256_hash": "e7095588496ac652cb708e7e33fde4ba5fabd41a996f78f051c535b0bd38defd",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.921629",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 387766,
+    "created_date": "2025-08-25T15:58:41.477143",
+    "modified_date": "2025-08-24T13:23:02.239002",
+    "sha256_hash": "a46fadb9a16c7866650739fef3d1e134284c773140b08a697b3742288d8833d2",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.922889",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 275027,
+    "created_date": "2025-08-25T15:58:41.477429",
+    "modified_date": "2025-08-24T13:23:02.233061",
+    "sha256_hash": "e2ddf5be5abcecdbc8e2ec509decfdace401249b01571cd8ab1b75935e1c030b",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.923754",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 276006,
+    "created_date": "2025-08-25T15:58:41.477698",
+    "modified_date": "2025-08-24T13:23:02.232384",
+    "sha256_hash": "1bc732bc7316a4f5b6a0e6ec2681d32feee67584dbb15d65e7e3c771265e0b6f",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.924694",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 2137158,
+    "created_date": "2025-08-25T15:58:41.478290",
+    "modified_date": "2025-08-24T13:23:02.220494",
+    "sha256_hash": "c58c3d1ea333b33b46e2edcf62505b8c3a48ac08e62b5074fae2d71495edca9d",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.927841",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 418941,
+    "created_date": "2025-08-25T15:58:41.479028",
+    "modified_date": "2025-08-24T13:23:02.234754",
+    "sha256_hash": "98e5962fbcbff54a4a024af8e10d8824bf3c3eda4f3db12e7b99c57a0b6704d4",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.930082",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 413246,
+    "created_date": "2025-08-25T15:58:41.479249",
+    "modified_date": "2025-08-24T13:23:02.235883",
+    "sha256_hash": "9f5b362cd36885d3393367bb8174fee985a46a490fda5d08c872c7018d74d846",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.930851",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 294013,
+    "created_date": "2025-08-25T15:58:41.479675",
+    "modified_date": "2025-08-24T13:23:02.227397",
+    "sha256_hash": "9a125a073c60037d839bdf096937614e895c2767e9fe7ca263cf6940210e5117",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf",
+    "processing_date": "2025-08-25T19:53:04.932069",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 362628,
+    "created_date": "2025-08-25T15:58:41.480124",
+    "modified_date": "2025-08-24T13:23:02.240262",
+    "sha256_hash": "9ca20572c11d3a60741b778f76c5e6288ad288211ed403f80d97b92cfd3907da",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:04.932949",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 399307,
+    "created_date": "2025-08-25T15:58:41.480921",
+    "modified_date": "2025-08-24T13:23:02.229645",
+    "sha256_hash": "f7fa8bd469c38fbbad04da87180fda46923f820f7e9ed894ce1e78a27826a4b2",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:04.936057",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 361491,
+    "created_date": "2025-08-25T15:58:41.481151",
+    "modified_date": "2025-08-24T13:23:02.239796",
+    "sha256_hash": "ec7ff9715e2076eb615f8a0de37c3d3c4257dbaa7b7f2ee6630b70607950a20d",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.936918",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 389286,
+    "created_date": "2025-08-25T15:58:41.481373",
+    "modified_date": "2025-08-24T13:23:02.231453",
+    "sha256_hash": "23eafa7a8105c46da2d3e1974e7b96032bb4fbac3ca133acf8744a4d517f1e86",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:04.937954",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 1801842,
+    "created_date": "2025-08-25T15:58:41.481592",
+    "modified_date": "2025-08-24T13:23:02.226890",
+    "sha256_hash": "ceda375dcda211334b1d037ac60ed1c8d11d8f4a4f44578be523e59330d1084a",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.940586",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 295227,
+    "created_date": "2025-08-25T15:58:41.481793",
+    "modified_date": "2025-08-24T13:23:02.227062",
+    "sha256_hash": "ea08cbab669263a858d3ea1d2d9cee8402e7f54db42d6e12ea91e87ffaeed19b",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf",
+    "processing_date": "2025-08-25T19:53:04.941464",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-4toTrimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 471414,
+    "created_date": "2025-08-25T15:58:41.482007",
+    "modified_date": "2025-08-24T13:23:02.234349",
+    "sha256_hash": "ba7910ad37105ad86dcb852d9c6f4f8db59316643ed92ed33e818d16fda94800",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-4toTrimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-4toTrimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.942450",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-4toTrimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-4toTrimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 278896,
+    "created_date": "2025-08-25T15:58:41.482281",
+    "modified_date": "2025-08-24T13:23:02.232023",
+    "sha256_hash": "c598acc527f92993ade1139a24c3fe9b668be66dbaa672d390240dce826c45dc",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.943245",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 470734,
+    "created_date": "2025-08-25T15:58:41.482718",
+    "modified_date": "2025-08-24T13:23:02.236543",
+    "sha256_hash": "5cb7f6ef63b9f6e1d18e5f0e53915548744f21e4884a2f192a0cf0342c5e3943",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:04.945250",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 386959,
+    "created_date": "2025-08-25T15:58:41.483287",
+    "modified_date": "2025-08-24T13:23:02.237740",
+    "sha256_hash": "1c53ae8c000b795f35af498d6182111a5983ca4ae0c2c3174b1629d8d05cbab7",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf",
+    "processing_date": "2025-08-25T19:53:04.947098",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 362364,
+    "created_date": "2025-08-25T15:58:41.483493",
+    "modified_date": "2025-08-24T13:23:02.239401",
+    "sha256_hash": "e4b824630ee51b686514fea747b6df223672ac25c44bad7eb15f326524188a73",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.948122",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 400441,
+    "created_date": "2025-08-25T15:58:41.483696",
+    "modified_date": "2025-08-24T13:23:02.228721",
+    "sha256_hash": "726165a5adace0ed7efa3cd43e2139b7ffca5978a95dd3de34eb08bc8ff384a0",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.948923",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 294085,
+    "created_date": "2025-08-25T15:58:41.484124",
+    "modified_date": "2025-08-24T13:23:02.228202",
+    "sha256_hash": "32b51dd36b8b5ddeefa9aeb2ea64acbccb1d2b17c32d8aafa5fd4a5a09be80d5",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.950304",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 389471,
+    "created_date": "2025-08-25T15:58:41.484325",
+    "modified_date": "2025-08-24T13:23:02.237323",
+    "sha256_hash": "b70186be3673a7c4e430ddde4372c9b4fd1ecfb9604679caa59f849e1028de84",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf",
+    "processing_date": "2025-08-25T19:53:04.951391",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 386059,
+    "created_date": "2025-08-25T15:58:41.484529",
+    "modified_date": "2025-08-24T13:23:02.230942",
+    "sha256_hash": "d5fd3315d8aa8d87d999138883ddeb1b44fb2a992a44024bd052b310be45a0e6",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.952228",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 418582,
+    "created_date": "2025-08-25T15:58:41.485798",
+    "modified_date": "2025-08-24T13:23:02.235702",
+    "sha256_hash": "57699ba7d54424c6b83dfe5a15d0c9fe1b4ddd21ca0cb66e6e92d207fc06f5b4",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:04.955489",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 2071972,
+    "created_date": "2025-08-25T15:58:41.486259",
+    "modified_date": "2025-08-24T13:23:02.216547",
+    "sha256_hash": "8647e5d72e97edc7a074f407068cd09ec5106f222c92bf49a953a92945dd4204",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf",
+    "processing_date": "2025-08-25T19:53:04.958166",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 9629038,
+    "created_date": "2025-08-25T15:58:41.487161",
+    "modified_date": "2025-08-24T13:23:02.304324",
+    "sha256_hash": "98ebd96bc481b194f266de5a2ffd3a146d72e83b2988829ed1e32a0b37fcdc34",
+    "relative_path": "data/source_materials/2024/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+    "processing_date": "2025-08-25T19:53:04.979562",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2025
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 278043,
+    "created_date": "2025-08-25T15:58:41.487413",
+    "modified_date": "2025-08-24T13:23:02.232747",
+    "sha256_hash": "34ad4c9be2e64fdc441cabf3b6d6b99017aa9c5cbe3c177deb08139c0b47d9d3",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:04.980490",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 397512,
+    "created_date": "2025-08-25T15:58:41.488214",
+    "modified_date": "2025-08-24T13:23:02.229141",
+    "sha256_hash": "c704de18642ef3a2cae2e2c324e6603017c5be091ece9c5fbcc95d45775459d0",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf",
+    "processing_date": "2025-08-25T19:53:04.983147",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+    "year": 2024,
+    "file_type": ".pdf",
+    "size_bytes": 388402,
+    "created_date": "2025-08-25T15:58:41.488459",
+    "modified_date": "2025-08-24T13:23:02.238211",
+    "sha256_hash": "960b87afdf19973a49343cec49f9f67590fcd533802c38a4faeb221898efb6de",
+    "relative_path": "data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2024/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:04.983944",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 287915,
+    "created_date": "2025-08-25T15:58:41.500419",
+    "modified_date": "2025-08-24T15:44:40.646787",
+    "sha256_hash": "ab1883e079bd3e4983c43d78842421dcc9618b8d8449bc5b82a42a3cc64c88a1",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:04.988776",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 459999,
+    "created_date": "2025-08-25T15:58:41.500829",
+    "modified_date": "2025-08-24T15:43:24.932023",
+    "sha256_hash": "be9be7d910fdf7007b93b9941d47fc8f6628574322d1b8148190bbccf2a090a5",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.989794",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 397604,
+    "created_date": "2025-08-25T15:58:41.501470",
+    "modified_date": "2025-08-24T15:43:54.946597",
+    "sha256_hash": "a98757a4754a94ae7451d477641f0939dc0feb3b5bce83c39e30d77d66e7e492",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.991414",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 387205,
+    "created_date": "2025-08-25T15:58:41.501696",
+    "modified_date": "2025-08-24T15:44:00.768976",
+    "sha256_hash": "489697d1ba5e333563e0bbc6abf730f6a502dee94094178fcb1421538ac648e1",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.992453",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 1872515,
+    "created_date": "2025-08-25T15:58:41.501911",
+    "modified_date": "2025-08-24T15:44:29.581596",
+    "sha256_hash": "4dd94e4bd5eb67186147a9293ed85db13aad6c7cdd9f65f97b5d24f8e912ebe8",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:04.994550",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 361206,
+    "created_date": "2025-08-25T15:58:41.502198",
+    "modified_date": "2025-08-24T15:43:29.245387",
+    "sha256_hash": "affa65225aec2163f7efe665d394d61af9ba6b94eac36ef1a7f73df54e023279",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.995385",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 387930,
+    "created_date": "2025-08-25T15:58:41.503387",
+    "modified_date": "2025-08-24T15:43:33.370054",
+    "sha256_hash": "7d3ccddca8fb3b8f31b2b1ed91c46ac8190b3aac4bdaa82647c3b3cb0d8c728f",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.998498",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 276458,
+    "created_date": "2025-08-25T15:58:41.503769",
+    "modified_date": "2025-08-24T15:43:51.793353",
+    "sha256_hash": "7f09557c268b97bc144b3e35a544b2421a4a83b40581bf3d530ae130f8d2c39c",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:04.999471",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 410450,
+    "created_date": "2025-08-25T15:58:41.504020",
+    "modified_date": "2025-08-24T15:43:37.220814",
+    "sha256_hash": "2f28055c2e1df3b2283f4e23ba6aa875dabeb5a491078bf23b5a106c7ad4b7e9",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:05.000380",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 362608,
+    "created_date": "2025-08-25T15:58:41.504271",
+    "modified_date": "2025-08-24T15:44:21.422623",
+    "sha256_hash": "df5587bfd6c7b2257485c89f3c68a55ddd4c5ecd7e7b63656c31085211d49852",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:05.001359",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 397346,
+    "created_date": "2025-08-25T15:58:41.504536",
+    "modified_date": "2025-08-24T15:44:35.553969",
+    "sha256_hash": "f1a97a35e5325a2e0139fc0298ff7508650fce19b195dc758feb419b0a8c56a4",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:05.002407",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 388601,
+    "created_date": "2025-08-25T15:58:41.504766",
+    "modified_date": "2025-08-24T15:44:38.237741",
+    "sha256_hash": "657e795cccfca50b79ad49fbc3af921a81c6d399ca7c650afb39ff448b5543d0",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:05.003394",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 1777921,
+    "created_date": "2025-08-25T15:58:41.505068",
+    "modified_date": "2025-08-24T15:43:40.062187",
+    "sha256_hash": "302f624762d78290862ec9a15639a8760f18dca7f686cd1113eb12368034c4a3",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:05.005537",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 463491,
+    "created_date": "2025-08-25T15:58:41.505294",
+    "modified_date": "2025-08-24T15:44:18.570029",
+    "sha256_hash": "cc95c83a6ab8c9fb567755afa0ff9fc941a59c90be2b0faf6620f97b99dc2f5f",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:05.006589",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 287416,
+    "created_date": "2025-08-25T15:58:41.505596",
+    "modified_date": "2025-08-24T15:44:04.058112",
+    "sha256_hash": "37c59f6650444a6e1f8665aa6ba719eb4e24e502d37601bf627614f7e917f517",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+    "processing_date": "2025-08-25T19:53:05.007338",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 382115,
+    "created_date": "2025-08-25T15:58:41.506310",
+    "modified_date": "2025-08-24T15:44:26.769904",
+    "sha256_hash": "0572c13dab859bf3f85f24c2fe3168147a18cd8bf706013e4a9ed21374de4076",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:05.009154",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 9629038,
+    "created_date": "2025-08-25T15:58:41.506756",
+    "modified_date": "2025-08-24T15:45:05.196763",
+    "sha256_hash": "98ebd96bc481b194f266de5a2ffd3a146d72e83b2988829ed1e32a0b37fcdc34",
+    "relative_path": "data/source_materials/2025/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+    "processing_date": "2025-08-25T19:53:05.016250",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high",
+      "extracted_year": 2025
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 277186,
+    "created_date": "2025-08-25T15:58:41.507135",
+    "modified_date": "2025-08-24T15:44:32.658694",
+    "sha256_hash": "f1bf0d80ec91075182b068899dcefb94bff746ec949a42dce807df523023306a",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:05.017272",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  },
+  {
+    "filename": "Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+    "year": 2025,
+    "file_type": ".pdf",
+    "size_bytes": 387591,
+    "created_date": "2025-08-25T15:58:41.508180",
+    "modified_date": "2025-08-24T15:44:23.991227",
+    "sha256_hash": "6f39b1bf90fdf0b4398b6bc6baf8b556b3ed02ef597e7f798639ea010354f326",
+    "relative_path": "data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+    "absolute_path": "/Users/flong/Developer/cda-transparencia/data/source_materials/2025/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+    "processing_date": "2025-08-25T19:53:05.048454",
+    "source_verification": {
+      "official_url": "https://carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+      "archive_url": "https://web.archive.org/web/*/carmendeareco.gob.ar/transparencia/Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+      "verification_status": "preserved",
+      "integrity_verified": true
+    },
+    "extracted_info": {
+      "document_type": "financial_report",
+      "keywords": [
+        "presupuesto"
+      ],
+      "estimated_category": "budget",
+      "priority": "high"
+    }
+  }
+]

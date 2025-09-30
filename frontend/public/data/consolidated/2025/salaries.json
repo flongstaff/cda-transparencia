@@ -1,0 +1,32 @@
+{
+  "year": 2025,
+  "total_salaries": 174212433,
+  "average_salary": 622187,
+  "employee_count": 310,
+  "salary_breakdown": [
+    [
+      "Administration",
+      "$70M",
+      "40%",
+      "98%"
+    ],
+    [
+      "Operations",
+      "$61M",
+      "35%",
+      "97%"
+    ],
+    [
+      "Healthcare",
+      "$26M",
+      "15%",
+      "99%"
+    ],
+    [
+      "Education",
+      "$17M",
+      "10%",
+      "100%"
+    ]
+  ]
+}

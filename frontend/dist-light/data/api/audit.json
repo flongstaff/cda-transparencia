@@ -1,0 +1,190 @@
+{
+  "municipality": "Carmen de Areco",
+  "last_updated": "2025-09-26T20:34:59.526528",
+  "audit_results": [
+    {
+      "timestamp": "2025-09-26T20:18:12.273419",
+      "external_records": 1,
+      "local_records": 0,
+      "anomalies": [],
+      "discrepancies": [],
+      "completeness_analysis": {
+        "total_years_available": 0,
+        "years_with_data": [],
+        "missing_recent_years": [
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "document_type_coverage": {
+          "has_budget_execution": {
+            "years_available": [],
+            "coverage_percentage": 0.0
+          },
+          "has_revenue_execution": {
+            "years_available": [],
+            "coverage_percentage": 0.0
+          },
+          "has_financial_statements": {
+            "years_available": [],
+            "coverage_percentage": 0.0
+          }
+        }
+      },
+      "recommendations": [
+        {
+          "priority": "high",
+          "category": "data_completeness",
+          "issue": "Missing data for recent years: [2020, 2021, 2022, 2023, 2024, 2025]",
+          "action": "Obtain and process documents for missing years"
+        },
+        {
+          "priority": "medium",
+          "category": "document_coverage",
+          "issue": "Low coverage for has_budget_execution: 0.0%",
+          "action": "Improve collection of budget execution documents"
+        },
+        {
+          "priority": "medium",
+          "category": "document_coverage",
+          "issue": "Low coverage for has_revenue_execution: 0.0%",
+          "action": "Improve collection of revenue execution documents"
+        },
+        {
+          "priority": "medium",
+          "category": "document_coverage",
+          "issue": "Low coverage for has_financial_statements: 0.0%",
+          "action": "Improve collection of financial statements documents"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "generated_at": "2025-09-25T11:48:56.392Z",
+        "version": "1.0.0",
+        "source": "External Data Fetcher"
+      },
+      "summary": {
+        "total_comparisons": 0,
+        "discrepancies_found": 0,
+        "warnings_found": 0,
+        "audit_timestamp": "2025-09-25T11:48:56.391Z",
+        "local_data_coverage": 6,
+        "external_data_coverage": 0
+      },
+      "alerts": {
+        "critical": [],
+        "warnings": [],
+        "info": []
+      },
+      "recommendations": [],
+      "data_sources": {
+        "external": "datos.gob.ar",
+        "local": "multi_source_report.json",
+        "last_sync": "2025-09-25T11:48:56.392Z"
+      }
+    },
+    [],
+    {
+      "last_updated": "2025-09-26T03:56:05.558Z",
+      "status": "healthy",
+      "external_sources": 0,
+      "discrepancies": 0,
+      "recommendations": 0
+    },
+    {
+      "timestamp": "2025-09-26T03:56:05.558Z",
+      "summary": {
+        "total_external_sources": 0,
+        "local_datasets_found": 1,
+        "discrepancies": [],
+        "recommendations": []
+      },
+      "external_datasets": [],
+      "local_data_summary": [
+        {
+          "source": "unified_data_structure",
+          "records": "Object"
+        }
+      ]
+    },
+    {
+      "timestamp": "2025-09-26T20:24:38.075782",
+      "system_stats": {
+        "pdfs_processed": 5,
+        "tables_extracted": 15,
+        "documents_in_database": 0,
+        "external_sources_checked": 0,
+        "anomalies_detected": 0,
+        "start_time": "2025-09-26 20:24:29.562094"
+      },
+      "module_availability": {
+        "pdf_processing": true,
+        "database_operations": true,
+        "web_scraping": true,
+        "external_apis": true
+      },
+      "document_analysis": {
+        "documents_by_year": {},
+        "documents_by_category": {},
+        "average_tables_per_document": 0,
+        "average_pages_per_document": 0
+      },
+      "external_comparison": {
+        "asap": {
+          "source": "ASAP",
+          "data": [
+            {
+              "Municipio": "Carmen de Areco",
+              "Indice": 100,
+              "Municipio.1": "Rauch",
+              "Indice.1": 100.0
+            }
+          ],
+          "last_updated": "2025-09-26T20:24:54.028370"
+        },
+        "national": [
+          {
+            "api_url": "https://datos.gob.ar/api/3/action/package_search?q=presupuesto+municipal",
+            "status": "success",
+            "data_sample": "{'help': 'https://datos.gob.ar/api/3/action/help_show?name=package_search', 'success': True, 'result': {'count': 0, 'sort': 'score desc, metadata_modified desc', 'facets': {}, 'results': [], 'search_facets': {}}}"
+          }
+        ]
+      },
+      "anomalies": [],
+      "recommendations": [],
+      "file_system": {
+        "pdf_directories": {
+          "/Users/flong/Developer/cda-transparencia/frontend/dist/data/organized_pdfs": {
+            "file_count": 257,
+            "total_size_mb": 36.10975456237793
+          },
+          "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local": {
+            "file_count": 71,
+            "total_size_mb": 11.579660415649414
+          }
+        },
+        "data_directories": {
+          "/Users/flong/Developer/cda-transparencia/frontend/dist/data/extracted_comprehensive": {
+            "file_count": 13,
+            "subdirectories": 2
+          },
+          "/Users/flong/Developer/cda-transparencia/frontend/dist/data/organized_pdfs": {
+            "file_count": 267,
+            "subdirectories": 92
+          },
+          "/Users/flong/Developer/cda-transparencia/frontend/dist/data/unified_output": {
+            "file_count": 32,
+            "subdirectories": 3
+          }
+        },
+        "total_files": 328
+      }
+    }
+  ],
+  "compliance_score": 0,
+  "recommendations": []
+}

@@ -150,7 +150,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ notification
       case 'error':
         return 'text-red-800';
       default:
-        return 'text-gray-800';
+        return 'text-gray-800 dark:text-dark-text-secondary';
     }
   };
 
@@ -165,7 +165,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ notification
       case 'error':
         return 'text-red-700';
       default:
-        return 'text-gray-700';
+        return 'text-gray-700 dark:text-dark-text-secondary';
     }
   };
 

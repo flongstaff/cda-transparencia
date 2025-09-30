@@ -160,29 +160,29 @@ const Audits: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-6">
+    <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background p-4 md:p-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-6">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
             <div className="flex-1">
-              <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">
+              <h1 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-1">
                 Auditorías y Control de Transparencia {selectedYear}
               </h1>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary text-sm">
                 Verificación automática de datos locales vs. fuentes externas oficiales
               </p>
             </div>
             <div className="w-full md:w-auto">
-              <div className="bg-white rounded-lg border border-gray-200 p-3 shadow-sm">
-                <label className="block text-xs font-medium text-gray-700 mb-1">
+              <div className="bg-white dark:bg-dark-surface rounded-lg border border-gray-200 dark:border-dark-border p-3 shadow-sm">
+                <label className="block text-xs font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-1">
                   Año
                 </label>
                 <select
                   value={selectedYear}
                   onChange={(e) => switchYear(Number(e.target.value))}
-                  className="w-full md:w-40 px-3 py-2 text-sm font-medium border border-gray-300 rounded-md
-                           bg-white text-gray-900 focus:ring-1 focus:ring-blue-500 focus:border-blue-500
+                  className="w-full md:w-40 px-3 py-2 text-sm font-medium border border-gray-300 dark:border-dark-border rounded-md
+                           bg-white dark:bg-dark-surface text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary focus:ring-1 focus:ring-blue-500 focus:border-blue-500
                            transition-colors"
                 >
                   {availableYears.map((year) => (
@@ -191,7 +191,7 @@ const Audits: React.FC = () => {
                     </option>
                   ))}
                 </select>
-                <div className="mt-1 text-xs text-gray-500">
+                <div className="mt-1 text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                   Datos {selectedYear}
                 </div>
               </div>
@@ -201,7 +201,7 @@ const Audits: React.FC = () => {
 
         {loadingAudits && (
           <div className="flex justify-center items-center py-12">
-            <Loader2 className="animate-spin w-8 h-8 text-blue-600 mr-2" />
+            <Loader2 className="animate-spin w-8 h-8 text-blue-600 dark:text-blue-400 mr-2" />
             <span>Cargando auditorías...</span>
           </div>
         )}
@@ -209,8 +209,8 @@ const Audits: React.FC = () => {
         {/* Audit Summary Cards */}
         {auditSummary && (
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <div className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-500">
-              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide">Estado General</h3>
+            <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border-l-4 border-blue-500">
+              <h3 className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wide">Estado General</h3>
               <div className="mt-2 flex items-center">
                 {auditSummary.status === 'healthy' ? (
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
@@ -221,30 +221,30 @@ const Audits: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-green-500">
-              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide">Fuentes Externas</h3>
-              <p className="text-2xl font-bold text-green-600 mt-2">{auditSummary.external_sources}</p>
-              <p className="text-sm text-gray-500">datasets encontrados</p>
+            <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border-l-4 border-green-500">
+              <h3 className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wide">Fuentes Externas</h3>
+              <p className="text-2xl font-bold text-green-600 dark:text-green-400 mt-2">{auditSummary.external_sources}</p>
+              <p className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">datasets encontrados</p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-yellow-500">
-              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide">Discrepancias</h3>
+            <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border-l-4 border-yellow-500">
+              <h3 className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wide">Discrepancias</h3>
               <p className="text-2xl font-bold text-yellow-600 mt-2">{auditSummary.discrepancies}</p>
-              <p className="text-sm text-gray-500">diferencias detectadas</p>
+              <p className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">diferencias detectadas</p>
             </div>
 
-            <div className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-purple-500">
-              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide">Recomendaciones</h3>
-              <p className="text-2xl font-bold text-purple-600 mt-2">{auditSummary.recommendations}</p>
-              <p className="text-sm text-gray-500">mejoras sugeridas</p>
+            <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border-l-4 border-purple-500">
+              <h3 className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wide">Recomendaciones</h3>
+              <p className="text-2xl font-bold text-purple-600 dark:text-purple-400 mt-2">{auditSummary.recommendations}</p>
+              <p className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">mejoras sugeridas</p>
             </div>
           </div>
         )}
 
         {/* Data Quality Flags */}
         {dataFlags.length > 0 && (
-          <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 mb-8">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">
               <AlertTriangle className="inline-block w-5 h-5 mr-2" />
               Alertas de Calidad de Datos
             </h2>
@@ -268,13 +268,13 @@ const Audits: React.FC = () => {
                     )}
                   </div>
                   <div className="flex-1">
-                    <p className="font-medium text-gray-900">{flag.message}</p>
+                    <p className="font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{flag.message}</p>
                     {flag.recommendation && (
-                      <p className="text-sm text-gray-600 mt-1">
+                      <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mt-1">
                         <strong>Recomendación:</strong> {flag.recommendation}
                       </p>
                     )}
-                    <span className="text-xs text-gray-500 uppercase">{flag.source}</span>
+                    <span className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase">{flag.source}</span>
                   </div>
                 </div>
               ))}
@@ -284,42 +284,42 @@ const Audits: React.FC = () => {
 
         {/* External Data Sources */}
         {auditResults?.external_datasets && auditResults.external_datasets.length > 0 && (
-          <div className="bg-white rounded-xl shadow-sm p-6 mb-8">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 mb-8">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">
               <ExternalLink className="inline-block w-5 h-5 mr-2" />
               Fuentes de Datos Externas Detectadas
             </h2>
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
+                <thead className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
                   <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                       Dataset
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                       Año
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                       Organización
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                       Última Actualización
                     </th>
                   </tr>
                 </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
+                <tbody className="bg-white dark:bg-dark-surface divide-y divide-gray-200">
                   {auditResults.external_datasets.map((dataset: any, index: number) => (
-                    <tr key={index} className="hover:bg-gray-50">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    <tr key={index} className="hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
                         {dataset.title}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                         {dataset.year || 'N/A'}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                         {dataset.organization}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                         {new Date(dataset.last_modified).toLocaleDateString()}
                       </td>
                     </tr>
@@ -345,22 +345,22 @@ const Audits: React.FC = () => {
             </BarChart>
           </ResponsiveContainer>
         ) : (
-          <p className="text-gray-500">No hay datos disponibles</p>
+          <p className="text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">No hay datos disponibles</p>
         )}
       </div>
 
       {/* Discrepancies Table */}
-      <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+      <div className="bg-white dark:bg-dark-surface p-6 rounded-lg shadow-md mb-8">
         <h2 className="text-xl font-semibold mb-4">Tabla de Discrepancias</h2>
         <div className="overflow-x-auto">
           <table {...getTableProps()} className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
+            <thead className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
               {headerGroups.map(headerGroup => (
                 <tr {...headerGroup.getHeaderGroupProps()}>
                   {headerGroup.headers.map(column => (
                     <th
                       {...column.getHeaderProps()}
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider"
                     >
                       {column.render('Header')}
                     </th>
@@ -368,7 +368,7 @@ const Audits: React.FC = () => {
                 </tr>
               ))}
             </thead>
-            <tbody {...getTableBodyProps()} className="bg-white divide-y divide-gray-200">
+            <tbody {...getTableBodyProps()} className="bg-white dark:bg-dark-surface divide-y divide-gray-200">
               {rows.map(row => {
                 prepareRow(row);
                 
@@ -384,7 +384,7 @@ const Audits: React.FC = () => {
                     {row.cells.map(cell => (
                       <td
                         {...cell.getCellProps()}
-                        className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                        className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary"
                       >
                         {cell.render('Cell')}
                       </td>
@@ -398,34 +398,34 @@ const Audits: React.FC = () => {
       </div>
 
       {/* Discrepancy Summary */}
-      <div className="bg-white p-6 rounded-lg shadow-md">
+      <div className="bg-white dark:bg-dark-surface p-6 rounded-lg shadow-md">
         <h2 className="text-xl font-semibold mb-4">Resumen de Discrepancias</h2>
         
         <div className="mb-6">
           <h3 className="text-lg font-semibold mb-2">Total de Discrepancias</h3>
-          <p className="text-2xl font-bold text-gray-800">
+          <p className="text-2xl font-bold text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary">
             {discrepancies.length} años auditados
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="border rounded-lg p-4">
-            <p className="text-lg font-semibold text-green-600">
+            <p className="text-lg font-semibold text-green-600 dark:text-green-400">
               {discrepancies.filter(d => Math.abs(d.discrepancy) < 1000).length}
             </p>
-            <p className="text-gray-600">Años sin discrepancias significativas</p>
+            <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Años sin discrepancias significativas</p>
           </div>
           <div className="border rounded-lg p-4">
             <p className="text-lg font-semibold text-yellow-600">
               {discrepancies.filter(d => Math.abs(d.discrepancy) >= 1000 && Math.abs(d.discrepancy) < 10000).length}
             </p>
-            <p className="text-gray-600">Años con discrepancias moderadas</p>
+            <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Años con discrepancias moderadas</p>
           </div>
           <div className="border rounded-lg p-4">
-            <p className="text-lg font-semibold text-red-600">
+            <p className="text-lg font-semibold text-red-600 dark:text-red-400">
               {discrepancies.filter(d => Math.abs(d.discrepancy) >= 10000).length}
             </p>
-            <p className="text-gray-600">Años con discrepancias significativas</p>
+            <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Años con discrepancias significativas</p>
           </div>
         </div>
       </div>

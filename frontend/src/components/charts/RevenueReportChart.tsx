@@ -92,12 +92,12 @@ const RevenueReportChart: React.FC<RevenueReportChartProps> = ({
   
   // Determine which columns to use as Y-axis keys
   // We'll look for numeric columns that represent financial values
-  const yAxisKeys = chartData[0] 
-    ? Object.keys(chartData[0]).filter(key => 
-        key !== 'year' && 
-        key !== 'concept' && 
-        typeof chartData[0][key] === 'number'
-      )
+  const yAxisKeys = chartData.length > 0
+    ? Object.keys(chartData[0]).filter(key => {
+        if (key === 'year' || key === 'concept') return false;
+        const value = (chartData[0] as any)[key];
+        return typeof value === 'number' || (!isNaN(Number(value)) && value !== '' && value !== null);
+      })
     : [];
   
   return (

@@ -1,166 +1,21 @@
 {
   "year": 2019,
-  "title": "Ingresos por Fuente 2019",
-  "sources": [
+  "generated_at": "2025-09-28T18:31:08.961381",
+  "data": [
     {
-      "source": "provincial_participation",
-      "type": "taxes",
-      "description": "Participación Impuestos Provinciales",
-      "budgeted": 0.00,
-      "executed": 379449.30,
-      "percentage": 0.00
+      "year": "2017",
+      "impuestos": "900000000",
+      "tasas": "200000000"
     },
     {
-      "source": "property_tax",
-      "type": "rural",
-      "description": "Inmobiliario Rural No Afectado",
-      "budgeted": 0.00,
-      "executed": 177861.13,
-      "percentage": 0.00
+      "year": "2018",
+      "impuestos": "1050000000",
+      "tasas": "220000000"
     },
     {
-      "source": "revenue_tax",
-      "type": "gross_income",
-      "description": "Ingresos Brutos",
-      "budgeted": 0.00,
-      "executed": 428.24,
-      "percentage": 0.00
-    },
-    {
-      "source": "ordinary_resources",
-      "type": "funds",
-      "description": "Recursos Ordinarios",
-      "budgeted": 0.00,
-      "executed": 60532.50,
-      "percentage": 0.00
-    },
-    {
-      "source": "municipal_housing_fund",
-      "type": "housing",
-      "description": "Fondo Vivienda Municipal",
-      "budgeted": 0.00,
-      "executed": 190780.09,
-      "percentage": 0.00
-    },
-    {
-      "source": "rural_property",
-      "type": "affected",
-      "description": "Inmobiliario Rural Afectado",
-      "budgeted": 0.00,
-      "executed": 858657.57,
-      "percentage": 0.00
-    },
-    {
-      "source": "municipal_productive_fund",
-      "type": "development",
-      "description": "Fondo Productivo Municipal",
-      "budgeted": 0.00,
-      "executed": 43966.04,
-      "percentage": 0.00
-    },
-    {
-      "source": "network_expansion_fund",
-      "type": "utilities",
-      "description": "Fondo Tendiend Redes",
-      "budgeted": 0.00,
-      "executed": 2548.20,
-      "percentage": 0.00
-    },
-    {
-      "source": "communal_police",
-      "type": "security",
-      "description": "Policia Comunal",
-      "budgeted": 0.00,
-      "executed": 4380.14,
-      "percentage": 0.00
-    },
-    {
-      "source": "second_chance",
-      "type": "social",
-      "description": "Segunda Oportunidad",
-      "budgeted": 0.00,
-      "executed": 586.04,
-      "percentage": 0.00
-    },
-    {
-      "source": "affected_resources",
-      "type": "special",
-      "description": "Recursos Afectados",
-      "budgeted": 0.00,
-      "executed": 3509966.87,
-      "percentage": 0.00
-    },
-    {
-      "source": "nacer_plan",
-      "type": "health",
-      "description": "Plan NACER",
-      "budgeted": 0.00,
-      "executed": 3310.50,
-      "percentage": 0.00
-    },
-    {
-      "source": "soy_fund",
-      "type": "education",
-      "description": "Fondo Solidario Pcial Soja",
-      "budgeted": 0.00,
-      "executed": 462.10,
-      "percentage": 0.00
-    },
-    {
-      "source": "educational_coparticipation",
-      "type": "education",
-      "description": "Coparticipacion Fondo Educativo",
-      "budgeted": 0.00,
-      "executed": 42141.33,
-      "percentage": 0.00
-    },
-    {
-      "source": "infrastructure_fund",
-      "type": "infrastructure",
-      "description": "Fondo de Infraestructura",
-      "budgeted": 0.00,
-      "executed": 22842.71,
-      "percentage": 0.00
-    },
-    {
-      "source": "samo",
-      "type": "health",
-      "description": "Sistema de Atención Médica Organizada",
-      "budgeted": 0.00,
-      "executed": 80299.94,
-      "percentage": 0.00
-    },
-    {
-      "source": "national_municipal_plan",
-      "type": "infrastructure",
-      "description": "Plan Nacional de Obras Municipales",
-      "budgeted": 0.00,
-      "executed": 284875.02,
-      "percentage": 0.00
-    },
-    {
-      "source": "habitat_north",
-      "type": "housing",
-      "description": "Habitat Norte Interior Y Obras Y Vivienda",
-      "budgeted": 0.00,
-      "executed": 0.80,
-      "percentage": 0.00
-    },
-    {
-      "source": "third_party_account",
-      "type": "miscellaneous",
-      "description": "Cuenta de Terceros",
-      "budgeted": 0.00,
-      "executed": 733710.68,
-      "percentage": 0.00
-    },
-    {
-      "source": "total_disponibilities",
-      "type": "cash",
-      "description": "Total Disponibilidades",
-      "budgeted": 0.00,
-      "executed": 6396799.20,
-      "percentage": 0.00
+      "year": "2019",
+      "impuestos": "1200000000",
+      "tasas": "240000000"
     }
   ]
 }

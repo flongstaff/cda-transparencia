@@ -1,0 +1,30 @@
+{
+  "year": 2025,
+  "generated_at": "2025-09-28T18:31:08.966959",
+  "data": [
+    {
+      "Source": "Property Tax",
+      "Amount": "$100,000,000",
+      "% of Total": "30.3%",
+      "Variation": "5.2%"
+    },
+    {
+      "Source": "Business Tax",
+      "Amount": "$75,000,000",
+      "% of Total": "22.7%",
+      "Variation": "6.1%"
+    },
+    {
+      "Source": "Fees and Charges",
+      "Amount": "$55,000,000",
+      "% of Total": "16.7%",
+      "Variation": "4.3%"
+    },
+    {
+      "Source": "Transfers",
+      "Amount": "$100,000,000",
+      "% of Total": "30.3%",
+      "Variation": "5.8%"
+    }
+  ]
+}

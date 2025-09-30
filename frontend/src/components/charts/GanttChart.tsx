@@ -32,18 +32,18 @@ const GanttChart: React.FC<GanttChartProps> = ({
     >
       {title && (
         <div className="p-4 border-b border-gray-100">
-          <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{title}</h3>
         </div>
       )}
       
       <div style={{ height: height }} className="p-4">
-        <div className="text-gray-600">
+        <div className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
           Gantt chart functionality temporarily disabled for build compatibility.
           <div className="mt-4 space-y-2">
             {tasks.map(task => (
-              <div key={task.id} className="p-2 border rounded bg-gray-50">
+              <div key={task.id} className="p-2 border rounded bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
                 <div className="font-medium">{task.name}</div>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                   {task.start} - {task.end} ({task.progress}% complete)
                 </div>
               </div>

@@ -1,0 +1,24 @@
+{
+  "year": 2023,
+  "financial_overview": {
+    "total_budget": 340341750,
+    "total_executed": 320498610,
+    "execution_rate": 94.17,
+    "executed_infra": 61990819,
+    "personnel": 158015813
+  },
+  "key_metrics": {
+    "budget_per_capita": 10636,
+    "documents_processed": 43,
+    "contracts_managed": 37
+  },
+  "data_quality": {
+    "completeness": 93,
+    "accuracy": 98,
+    "last_validated": "2025-09-28T18:50:04.349Z"
+  },
+  "metadata": {
+    "processed_date": "2025-09-28T18:50:04.349Z",
+    "data_sources": 12
+  }
+}

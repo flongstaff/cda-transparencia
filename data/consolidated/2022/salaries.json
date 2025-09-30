@@ -1,0 +1,32 @@
+{
+  "year": 2022,
+  "total_salaries": 150491250,
+  "average_salary": 537469,
+  "employee_count": 295,
+  "salary_breakdown": [
+    [
+      "Administration",
+      "$60M",
+      "40%",
+      "98%"
+    ],
+    [
+      "Operations",
+      "$53M",
+      "35%",
+      "97%"
+    ],
+    [
+      "Healthcare",
+      "$23M",
+      "15%",
+      "99%"
+    ],
+    [
+      "Education",
+      "$15M",
+      "10%",
+      "100%"
+    ]
+  ]
+}

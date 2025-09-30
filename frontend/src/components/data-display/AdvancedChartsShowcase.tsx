@@ -109,18 +109,18 @@ const AdvancedChartsShowcase: React.FC = () => {
 
   return (
     <div className="space-y-8">
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">📊 Visualizaciones Avanzadas</h1>
-        <p className="text-gray-600 mb-6">
+      <div className="bg-white dark:bg-dark-surface rounded-lg shadow-sm border border-gray-200 dark:border-dark-border p-6">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">📊 Visualizaciones Avanzadas</h1>
+        <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-6">
           Demostración de todos los tipos de gráficos avanzados disponibles en el portal de transparencia
         </p>
         
         <div className="flex items-center space-x-4">
-          <label className="text-sm font-medium text-gray-700">Año:</label>
+          <label className="text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary">Año:</label>
           <select 
             value={selectedYear}
             onChange={(e) => setSelectedYear(Number(e.target.value))}
-            className="border border-gray-300 rounded-md px-3 py-1 text-sm"
+            className="border border-gray-300 dark:border-dark-border rounded-md px-3 py-1 text-sm"
           >
             <option value={2024}>2024</option>
             <option value={2025}>2025</option>

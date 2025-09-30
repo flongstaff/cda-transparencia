@@ -381,11 +381,35 @@ class ProductionDataService {
   }
 
   /**
+   * Get red flags report
+   */
+  public async getRedFlags(): Promise<any[]> {  // Keeping 'any' for now as the return type is complex and varies
+    try {
+      // Try to fetch red flags report
+      const redFlagsReport = await this.fetchWithCache<any>(
+        '/data/red_flags_report.json',
+        'red-flags-report'
+      );
+
+      return redFlagsReport?.all_flags || redFlagsReport?.flags || [];
+    } catch (error) {
+      console.error('[PROD DATA SERVICE] Error fetching red flags report:', error);
+      return [];
+    }
+  }
+
+  /**
    * Get data flags
    */
   public async getDataFlags(): Promise<any[]> {  // Keeping 'any' for now as the return type is complex and varies
     try {
-      // Try to fetch data flags
+      // Try to fetch red flags first (more comprehensive)
+      const redFlags = await this.getRedFlags();
+      if (redFlags && redFlags.length > 0) {
+        return redFlags;
+      }
+      
+      // Fallback to audit results
       const auditResults = await this.getAuditResults();
       
       const flags: any[] = [];

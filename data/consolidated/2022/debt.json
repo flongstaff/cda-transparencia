@@ -1,0 +1,30 @@
+{
+  "year": 2022,
+  "total_debt": 71309700,
+  "debt_service": 12965400,
+  "debt_by_type": [
+    [
+      "Municipal Bonds",
+      "$39M",
+      "6.5%",
+      "10 years"
+    ],
+    [
+      "Bank Loans",
+      "$23M",
+      "8.0%",
+      "7 years"
+    ],
+    [
+      "Development Bank",
+      "$10M",
+      "5.5%",
+      "15 years"
+    ]
+  ],
+  "analysis": {
+    "debt_ratio": "22%",
+    "sustainability": "Good",
+    "risk_level": "Low"
+  }
+}

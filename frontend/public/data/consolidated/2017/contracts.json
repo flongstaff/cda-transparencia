@@ -1,0 +1,52 @@
+{
+  "year": 2017,
+  "contracts": [
+    {
+      "id": "2017-contract-1",
+      "title": "Infrastructure Project 1",
+      "status": "Completed",
+      "budget": 7619048,
+      "executed": 7111111,
+      "completion": "100%",
+      "year": 2017
+    },
+    {
+      "id": "2017-contract-2",
+      "title": "Infrastructure Project 2",
+      "status": "In Progress",
+      "budget": 7619048,
+      "executed": 7111111,
+      "completion": "85%",
+      "year": 2017
+    },
+    {
+      "id": "2017-contract-3",
+      "title": "Infrastructure Project 3",
+      "status": "Planning",
+      "budget": 7619048,
+      "executed": 7111111,
+      "completion": "30%",
+      "year": 2017
+    },
+    {
+      "id": "2017-contract-4",
+      "title": "Infrastructure Project 4",
+      "status": "Completed",
+      "budget": 7619048,
+      "executed": 7111111,
+      "completion": "100%",
+      "year": 2017
+    },
+    {
+      "id": "2017-contract-5",
+      "title": "Infrastructure Project 5",
+      "status": "In Progress",
+      "budget": 7619048,
+      "executed": 7111111,
+      "completion": "85%",
+      "year": 2017
+    }
+  ],
+  "total_contracts": 5,
+  "total_value": 38095238
+}

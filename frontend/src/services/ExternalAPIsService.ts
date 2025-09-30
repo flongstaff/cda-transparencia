@@ -182,7 +182,7 @@ class ExternalAPIsService {
     return ExternalAPIsService.instance;
   }
 
-  /**
+  /***
    * Fetch data from external API with error handling and caching
    */
   private async fetchWithCache(
@@ -207,13 +207,15 @@ class ExternalAPIsService {
     const startTime = Date.now();
 
     try {
-      console.log(`🌐 Fetching from external source: ${source} - ${url}`);
+      console.log(`🌐 Fetching from external source via proxy: ${source} - ${url}`);
 
-      const response = await fetch(url, {
+      // Use the backend proxy to bypass CORS issues
+      const proxyUrl = `${process.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/api/external/proxy?url=${encodeURIComponent(url)}&source=${encodeURIComponent(source)}`;
+      
+      const response = await fetch(proxyUrl, {
         method: 'GET',
         headers: {
-          'User-Agent': this.USER_AGENT,
-          'Accept': 'application/json, text/html, */*',
+          'Accept': 'application/json',
           ...options.headers
         },
         ...options
@@ -223,31 +225,25 @@ class ExternalAPIsService {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
 
-      const contentType = response.headers.get('content-type') || '';
-      let data: any;
+      const proxyData = await response.json();
 
-      if (contentType.includes('application/json')) {
-        data = await response.json();
-      } else if (contentType.includes('text/html')) {
-        const html = await response.text();
-        data = this.parseHtmlForData(html, source);
-      } else {
-        data = await response.text();
+      if (!proxyData.success) {
+        throw new Error(proxyData.error || 'External API request failed via proxy');
       }
 
       const responseTime = Date.now() - startTime;
 
       this.cache.set(cacheKey, {
-        data,
+        data: proxyData.data,
         timestamp: Date.now(),
         source
       });
 
       return {
         success: true,
-        data,
+        data: proxyData.data,
         source,
-        lastModified: response.headers.get('last-modified') || new Date().toISOString(),
+        lastModified: proxyData.lastModified || new Date().toISOString(),
         responseTime
       };
 
@@ -276,119 +272,289 @@ class ExternalAPIsService {
     }
   }
 
-  /**
+    /***
    * Get Carmen de Areco municipal data with multiple attempts
    */
   async getCarmenDeArecoData(): Promise<ExternalDataResponse> {
-    const sources = [
-      { name: 'Transparency Portal', url: 'https://carmendeareco.gob.ar/transparencia' },
-      { name: 'Main Site', url: 'https://carmendeareco.gob.ar' },
-      { name: 'Council Blog', url: 'http://hcdcarmendeareco.blogspot.com/' },
-      { name: 'Official Gazette', url: 'https://carmendeareco.gob.ar/gobierno/boletin-oficial/' }
-    ];
-
-    for (const source of sources) {
-      try {
-        const data = await this.fetchWithCache(
-          source.url,
-          `Carmen de Areco - ${source.name}`,
-          30
-        );
-        
-        if (data.success) {
-          return data;
+    try {
+      console.log('🌐 Fetching Carmen de Areco data via backend proxy...');
+      
+      // Use the backend endpoint specifically for Carmen de Areco data
+      const proxyUrl = `${process.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/api/external/carmen-de-areco`;
+      
+      const response = await fetch(proxyUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
         }
-      } catch (error) {
-        console.warn(`Failed to fetch from ${source.name}:`, error);
-        continue; // Try next source
-      }
-    }
+      });
 
-    // If all sources fail, return error
-    return {
-      success: false,
-      data: null,
-      source: 'Carmen de Areco',
-      error: 'Failed to fetch from all Carmen de Areco sources'
-    };
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const proxyData = await response.json();
+
+      if (!proxyData.summary || proxyData.summary.successful_sources === 0) {
+        throw new Error('No successful sources for Carmen de Areco data');
+      }
+
+      // Return the first successful result
+      const successfulResult = proxyData.results.find((r: any) => r.success);
+      if (successfulResult) {
+        return {
+          success: true,
+          data: successfulResult,
+          source: 'Carmen de Areco (via proxy)',
+          lastModified: new Date().toISOString()
+        };
+      }
+
+      return {
+        success: false,
+        data: null,
+        source: 'Carmen de Areco',
+        error: 'No successful sources from backend proxy'
+      };
+
+    } catch (error) {
+      console.error('❌ Carmen de Areco data fetch error:', error);
+
+      // If the new endpoint fails, fall back to the original method
+      const sources = [
+        { name: 'Transparency Portal', url: 'https://carmendeareco.gob.ar/transparencia' },
+        { name: 'Main Site', url: 'https://carmendeareco.gob.ar' },
+        { name: 'Council Blog', url: 'http://hcdcarmendeareco.blogspot.com/' },
+        { name: 'Official Gazette', url: 'https://carmendeareco.gob.ar/gobierno/boletin-oficial/' }
+      ];
+
+      for (const source of sources) {
+        try {
+          const data = await this.fetchWithCache(
+            source.url,
+            `Carmen de Areco - ${source.name}`,
+            30
+          );
+          
+          if (data.success) {
+            return data;
+          }
+        } catch (error) {
+          console.warn(`Failed to fetch from ${source.name}:`, error);
+          continue; // Try next source
+        }
+      }
+
+      return {
+        success: false,
+        data: null,
+        source: 'Carmen de Areco',
+        error: 'Failed to fetch from all Carmen de Areco sources'
+      };
+    }
   }
 
-  /**
+  /***
    * Get Buenos Aires Province transparency data
    */
   async getBuenosAiresTransparencyData(): Promise<ExternalDataResponse> {
-    const sources = [
-      { name: 'Fiscal Transparency', url: 'https://www.gba.gob.ar/transparencia_fiscal/' },
-      { name: 'Open Data', url: 'https://www.gba.gob.ar/datos_abiertos' },
-      { name: 'Municipalities Portal', url: 'https://www.gba.gob.ar/municipios' }
-    ];
-
-    for (const source of sources) {
-      try {
-        const data = await this.fetchWithCache(
-          source.url,
-          `Buenos Aires Province - ${source.name}`,
-          180
-        );
-        
-        if (data.success) {
-          return data;
+    try {
+      console.log('🌐 Fetching Buenos Aires Province data via backend proxy...');
+      
+      // Use the backend endpoint specifically for Buenos Aires data
+      const proxyUrl = `${process.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/api/external/buenos-aires`;
+      
+      const response = await fetch(proxyUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
         }
-      } catch (error) {
-        console.warn(`Failed to fetch from ${source.name}:`, error);
-        continue; // Try next source
-      }
-    }
+      });
 
-    return {
-      success: false,
-      data: null,
-      source: 'Buenos Aires Province',
-      error: 'Failed to fetch from all Buenos Aires Province sources'
-    };
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const proxyData = await response.json();
+
+      if (!proxyData.summary || proxyData.summary.successful_sources === 0) {
+        throw new Error('No successful sources for Buenos Aires data');
+      }
+
+      // Return the first successful result
+      const successfulResult = proxyData.results.find((r: any) => r.success);
+      if (successfulResult) {
+        return {
+          success: true,
+          data: successfulResult,
+          source: 'Buenos Aires Province (via proxy)',
+          lastModified: new Date().toISOString()
+        };
+      }
+
+      return {
+        success: false,
+        data: null,
+        source: 'Buenos Aires Province',
+        error: 'No successful sources from backend proxy'
+      };
+
+    } catch (error) {
+      console.error('❌ Buenos Aires data fetch error:', error);
+
+      // If the new endpoint fails, fall back to the original method
+      const sources = [
+        { name: 'Fiscal Transparency', url: 'https://www.gba.gob.ar/transparencia_fiscal/' },
+        { name: 'Open Data', url: 'https://www.gba.gob.ar/datos_abiertos' },
+        { name: 'Municipalities Portal', url: 'https://www.gba.gob.ar/municipios' }
+      ];
+
+      for (const source of sources) {
+        try {
+          const data = await this.fetchWithCache(
+            source.url,
+            `Buenos Aires Province - ${source.name}`,
+            180
+          );
+          
+          if (data.success) {
+            return data;
+          }
+        } catch (error) {
+          console.warn(`Failed to fetch from ${source.name}:`, error);
+          continue; // Try next source
+        }
+      }
+
+      return {
+        success: false,
+        data: null,
+        source: 'Buenos Aires Province',
+        error: 'Failed to fetch from all Buenos Aires Province sources'
+      };
+    }
   }
 
-  /**
+  /***
    * Get national budget data
    */
   async getNationalBudgetData(): Promise<ExternalDataResponse> {
-    const sources = [
-      { name: 'Presupuesto Abierto', url: 'https://www.presupuestoabierto.gob.ar/sici/api/v1/entidades' },
-      { name: 'Datos Argentina', url: 'https://datos.gob.ar/api/3/action/package_search?q=presupuesto' },
-      { name: 'National Budget API', url: 'https://www.presupuestoabierto.gob.ar/sici/api' }
-    ];
-
-    for (const source of sources) {
-      try {
-        const data = await this.fetchWithCache(
-          source.url,
-          `National Budget - ${source.name}`,
-          120
-        );
-        
-        if (data.success) {
-          return data;
+    try {
+      console.log('🌐 Fetching National Budget data via backend proxy...');
+      
+      // Use the backend endpoint specifically for national data
+      const proxyUrl = `${process.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/api/external/national`;
+      
+      const response = await fetch(proxyUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
         }
-      } catch (error) {
-        console.warn(`Failed to fetch from ${source.name}:`, error);
-        continue; // Try next source
-      }
-    }
+      });
 
-    return {
-      success: false,
-      data: null,
-      source: 'National Budget APIs',
-      error: 'Failed to fetch from all national budget sources'
-    };
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const proxyData = await response.json();
+
+      if (!proxyData.summary || proxyData.summary.successful_sources === 0) {
+        throw new Error('No successful sources for National Budget data');
+      }
+
+      // Return the first successful result
+      const successfulResult = proxyData.results.find((r: any) => r.success);
+      if (successfulResult) {
+        return {
+          success: true,
+          data: successfulResult,
+          source: 'National Budget APIs (via proxy)',
+          lastModified: new Date().toISOString()
+        };
+      }
+
+      return {
+        success: false,
+        data: null,
+        source: 'National Budget APIs',
+        error: 'No successful sources from backend proxy'
+      };
+
+    } catch (error) {
+      console.error('❌ National Budget data fetch error:', error);
+
+      // If the new endpoint fails, fall back to the original method
+      const sources = [
+        { name: 'Presupuesto Abierto', url: 'https://www.presupuestoabierto.gob.ar/sici/api/v1/entidades' },
+        { name: 'Datos Argentina', url: 'https://datos.gob.ar/api/3/action/package_search?q=presupuesto' },
+        { name: 'National Budget API', url: 'https://www.presupuestoabierto.gob.ar/sici/api' }
+      ];
+
+      for (const source of sources) {
+        try {
+          const data = await this.fetchWithCache(
+            source.url,
+            `National Budget - ${source.name}`,
+            120
+          );
+          
+          if (data.success) {
+            return data;
+          }
+        } catch (error) {
+          console.warn(`Failed to fetch from ${source.name}:`, error);
+          continue; // Try next source
+        }
+      }
+
+      return {
+        success: false,
+        data: null,
+        source: 'National Budget APIs',
+        error: 'Failed to fetch from all national budget sources'
+      };
+    }
   }
 
-  /**
+  /***
    * Get geographic data for Carmen de Areco
    */
   async getGeographicData(): Promise<ExternalDataResponse> {
     try {
-      const geoResponse = await this.fetchWithCache(
+      console.log('🌐 Fetching geographic data via backend proxy...');
+      
+      // Use the backend endpoint for all external data which includes geographic data
+      const proxyUrl = `${process.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/api/external/all-external-data`;
+      
+      const response = await fetch(proxyUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const proxyData = await response.json();
+
+      // Look for geographic data in the results
+      const geoResult = proxyData.results.find((r: any) => 
+        r.name.includes('GeoRef') || r.name.includes('georef') || r.type === 'national'
+      );
+      
+      if (geoResult && geoResult.success) {
+        return {
+          success: true,
+          data: geoResult.data,
+          source: 'GeoRef API (via proxy)',
+          lastModified: new Date().toISOString()
+        };
+      }
+
+      // If not found in the aggregated data, fall back to direct proxy call
+      return await this.fetchWithCache(
         'https://apis.datos.gob.ar/georef/api/municipios?provincia=buenos-aires&nombre=carmen-de-areco',
         'GeoRef API',
         1440, // 24 hours cache
@@ -399,16 +565,30 @@ class ExternalAPIsService {
         }
       );
 
-      return geoResponse;
-
     } catch (error) {
       console.error('❌ Failed to get geographic data:', error);
-      return {
-        success: false,
-        data: null,
-        source: 'GeoRef API',
-        error: (error as Error).message
-      };
+      
+      // Fallback to direct proxy call
+      try {
+        return await this.fetchWithCache(
+          'https://apis.datos.gob.ar/georef/api/municipios?provincia=buenos-aires&nombre=carmen-de-areco',
+          'GeoRef API',
+          1440, // 24 hours cache
+          {
+            headers: {
+              'Accept': 'application/json'
+            }
+          }
+        );
+      } catch (fallbackError) {
+        console.error('❌ Fallback geographic data fetch also failed:', fallbackError);
+        return {
+          success: false,
+          data: null,
+          source: 'GeoRef API',
+          error: (fallbackError as Error).message
+        };
+      }
     }
   }
 
@@ -502,7 +682,123 @@ class ExternalAPIsService {
       last_updated: string;
     };
   }> {
-    console.log('🌍 Loading all external data sources...');
+    console.log('🌍 Loading all external data sources via backend proxy...');
+
+    try {
+      // Try to use the aggregated backend endpoint first
+      const proxyUrl = `${process.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/api/external/all-external-data`;
+      
+      const response = await fetch(proxyUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+        }
+      });
+
+      if (response.ok) {
+        const proxyData = await response.json();
+        
+        // Format the response to match the expected structure
+        const carmenDeAreco = proxyData.results.find((r: any) => r.type === 'municipal') || {
+          success: false,
+          data: null,
+          source: 'Carmen de Areco (via proxy)',
+          error: 'No municipal data available'
+        };
+        
+        const buenosAires = proxyData.results.find((r: any) => r.type === 'provincial') || {
+          success: false,
+          data: null,
+          source: 'Buenos Aires Province (via proxy)',
+          error: 'No provincial data available'
+        };
+        
+        const nationalBudget = proxyData.results.find((r: any) => r.type === 'national') || {
+          success: false,
+          data: null,
+          source: 'National Budget APIs (via proxy)',
+          error: 'No national data available'
+        };
+        
+        // For geographic data, look specifically for georef
+        const geographic = proxyData.results.find((r: any) => 
+          r.name.includes('GeoRef') || r.name.includes('georef')
+        ) || {
+          success: false,
+          data: null,
+          source: 'GeoRef API (via proxy)',
+          error: 'No geographic data available'
+        };
+        
+        // Convert to ExternalDataResponse format
+        const formattedCarmenDeAreco = {
+          success: carmenDeAreco.success,
+          data: carmenDeAreco.data,
+          source: carmenDeAreco.name,
+          error: carmenDeAreco.error
+        };
+        
+        const formattedBuenosAires = {
+          success: buenosAires.success,
+          data: buenosAires.data,
+          source: buenosAires.name,
+          error: buenosAires.error
+        };
+        
+        const formattedNationalBudget = {
+          success: nationalBudget.success,
+          data: nationalBudget.data,
+          source: nationalBudget.name,
+          error: nationalBudget.error
+        };
+        
+        const formattedGeographic = {
+          success: geographic.success,
+          data: geographic.data,
+          source: geographic.name,
+          error: geographic.error
+        };
+
+        // For comparative and civil society data, fallback to individual calls
+        const [comparative, civilSociety] = await Promise.all([
+          this.getComparativeMunicipalData(),
+          this.getCivilSocietyData()
+        ]);
+
+        const allSources = [
+          formattedCarmenDeAreco, 
+          formattedBuenosAires, 
+          formattedNationalBudget, 
+          formattedGeographic,
+          ...comparative,
+          ...civilSociety
+        ];
+        
+        const successful = allSources.filter(s => s.success).length;
+        const failed = allSources.filter(s => !s.success).length;
+
+        return {
+          carmenDeAreco: formattedCarmenDeAreco,
+          buenosAires: formattedBuenosAires,
+          nationalBudget: formattedNationalBudget,
+          geographic: formattedGeographic,
+          comparative,
+          civilSociety,
+          summary: {
+            total_sources: allSources.length,
+            successful_sources: successful,
+            failed_sources: failed,
+            cache_hits: 0, // No cache hits when using the proxy directly
+            last_updated: new Date().toISOString()
+          }
+        };
+      }
+    } catch (error) {
+      console.warn('⚠️  Aggregated external data fetch failed, falling back to individual calls:', error);
+    }
+
+    // If the aggregated call fails, fallback to individual calls
+    console.log('🌍 Loading all external data sources individually (fallback)...');
 
     const [
       carmenDeAreco, 

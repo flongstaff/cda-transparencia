@@ -322,17 +322,17 @@ const ComponentShowcase: React.FC<{ selectedYear: number }> = ({ selectedYear })
 
     if (status === 'error') {
       return (
-        <div className="p-4 border border-red-200 rounded-lg bg-red-50">
+        <div className="p-4 border border-red-200 dark:border-red-700 rounded-lg bg-red-50 dark:bg-red-900/20">
           <AlertCircle className="w-5 h-5 text-red-500 mb-2" />
           <p className="text-red-700">No data available for this component</p>
-          <p className="text-sm text-red-600">Requires: {componentInfo.dataRequirements.join(', ')}</p>
+          <p className="text-sm text-red-600 dark:text-red-400">Requires: {componentInfo.dataRequirements.join(', ')}</p>
         </div>
       );
     }
 
     try {
       return (
-        <div className="border border-gray-200 rounded-lg p-4 bg-white">
+        <div className="border border-gray-200 dark:border-dark-border rounded-lg p-4 bg-white dark:bg-dark-surface">
           <Component
             year={selectedYear}
             data={data}
@@ -354,7 +354,7 @@ const ComponentShowcase: React.FC<{ selectedYear: number }> = ({ selectedYear })
   if (loading) {
     return (
       <div className="flex items-center justify-center p-8">
-        <Loader2 className="w-8 h-8 animate-spin text-blue-600 mr-2" />
+        <Loader2 className="w-8 h-8 animate-spin text-blue-600 dark:text-blue-400 mr-2" />
         <p>Loading component showcase...</p>
       </div>
     );
@@ -362,7 +362,7 @@ const ComponentShowcase: React.FC<{ selectedYear: number }> = ({ selectedYear })
 
   if (error) {
     return (
-      <div className="p-4 border border-red-200 rounded-lg bg-red-50">
+      <div className="p-4 border border-red-200 dark:border-red-700 rounded-lg bg-red-50 dark:bg-red-900/20">
         <AlertCircle className="w-5 h-5 text-red-500 mb-2" />
         <p className="text-red-700">Error loading data: {error}</p>
       </div>
@@ -371,11 +371,11 @@ const ComponentShowcase: React.FC<{ selectedYear: number }> = ({ selectedYear })
 
   return (
     <div className="space-y-6">
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+      <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">
           🎯 Complete Component Showcase - {selectedYear}
         </h2>
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-4">
           Showcasing all {componentCategories.reduce((acc, cat) => acc + cat.components.length, 0)} components
           from your comprehensive system
         </p>
@@ -384,12 +384,12 @@ const ComponentShowcase: React.FC<{ selectedYear: number }> = ({ selectedYear })
             const readyCount = category.components.filter(c => c.status === 'ready').length;
             const totalCount = category.components.length;
             return (
-              <div key={category.name} className="p-3 border border-gray-200 rounded-lg">
+              <div key={category.name} className="p-3 border border-gray-200 dark:border-dark-border rounded-lg">
                 <div className="flex items-center mb-2">
                   {category.icon}
                   <span className="ml-2 font-medium">{category.name}</span>
                 </div>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
                   {readyCount}/{totalCount} ready
                 </p>
               </div>
@@ -400,15 +400,15 @@ const ComponentShowcase: React.FC<{ selectedYear: number }> = ({ selectedYear })
 
       {/* Component Categories */}
       {componentCategories.map((category) => (
-        <div key={category.name} className="bg-white rounded-xl shadow-sm border border-gray-200">
+        <div key={category.name} className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border">
           <button
             onClick={() => toggleCategory(category.name)}
-            className="w-full flex items-center justify-between p-4 border-b border-gray-200"
+            className="w-full flex items-center justify-between p-4 border-b border-gray-200 dark:border-dark-border"
           >
             <div className="flex items-center">
               {category.icon}
               <span className="ml-3 text-lg font-semibold">{category.name}</span>
-              <span className="ml-2 text-sm text-gray-500">
+              <span className="ml-2 text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                 ({category.components.filter(c => c.status === 'ready').length}/{category.components.length})
               </span>
             </div>
@@ -428,8 +428,8 @@ const ComponentShowcase: React.FC<{ selectedYear: number }> = ({ selectedYear })
                 className="p-4 space-y-4"
               >
                 {category.components.map((componentInfo) => (
-                  <div key={componentInfo.name} className="border border-gray-200 rounded-lg">
-                    <div className="p-4 border-b border-gray-200 bg-gray-50">
+                  <div key={componentInfo.name} className="border border-gray-200 dark:border-dark-border rounded-lg">
+                    <div className="p-4 border-b border-gray-200 dark:border-dark-border bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
                       <div className="flex items-center justify-between">
                         <div>
                           <h4 className="font-semibold flex items-center">
@@ -441,8 +441,8 @@ const ComponentShowcase: React.FC<{ selectedYear: number }> = ({ selectedYear })
                               <AlertCircle className="w-4 h-4 text-red-500 ml-2" />
                             )}
                           </h4>
-                          <p className="text-sm text-gray-600">{componentInfo.description}</p>
-                          <p className="text-xs text-gray-500">
+                          <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">{componentInfo.description}</p>
+                          <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                             Requires: {componentInfo.dataRequirements.join(', ')}
                           </p>
                         </div>

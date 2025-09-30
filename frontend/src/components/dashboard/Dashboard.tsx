@@ -31,12 +31,18 @@ import {
   CreditCard, 
   Mail, 
   Info, 
-  Archive 
+  Archive,
+  AlertCircle,
+  Clock
 } from 'lucide-react';
 import TimeSeriesChart from '../charts/TimeSeriesChart';
 import BarChartComponent from '../charts/BarChartComponent';
 import CorruptionAlert from '../alerts/CorruptionAlert';
 import PageYearSelector from '../forms/PageYearSelector';
+import TimeSeriesAnomalyChart from '../charts/TimeSeriesAnomalyChart';
+import ProcurementTimelineChart from '../charts/ProcurementTimelineChart';
+import EnhancedDataVisualization from '../charts/EnhancedDataVisualization';
+import OSINTMonitoringSystem from '../monitoring/OSINTMonitoringSystem';
 
 interface DashboardProps {
   year?: number;
@@ -178,6 +184,31 @@ const Dashboard: React.FC<DashboardProps> = ({
         </div>
       </div>
 
+      {/* Anomaly Detection Section */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary mb-6">
+          Detección de Anomalías
+        </h2>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <TimeSeriesAnomalyChart
+              title="Análisis de Series Temporales - Detección de Anomalías"
+              height={400}
+              years={[selectedYear]}
+            />
+          </div>
+          
+          <div>
+            <ProcurementTimelineChart
+              title="Línea de Tiempo de Licitaciones"
+              height={400}
+              years={[selectedYear]}
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Correlation Analysis */}
       <div className="mb-8">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary mb-6">
@@ -259,7 +290,73 @@ const Dashboard: React.FC<DashboardProps> = ({
             value={25.7}
             expected={5.0}
           />
+          
+          <CorruptionAlert
+            type="anomaly_concentration"
+            title="Concentración de Licitaciones"
+            description="5 licitaciones concentradas en 15 días de noviembre 2023"
+            severity="high"
+            value={5}
+            expected={1.5}
+            icon={<Clock className="h-5 w-5" />}
+          />
+          
+          <CorruptionAlert
+            type="gender_perspective_gap"
+            title="Brecha en Perspectiva de Género"
+            description="Presupuesto con perspectiva de género prometido pero no ejecutado"
+            severity="medium"
+            value={0}
+            expected={100}
+            icon={<AlertCircle className="h-5 w-5" />}
+          />
         </div>
+      </div>
+
+      {/* Enhanced Data Visualization Section */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary mb-6">
+          Visualización de Datos Mejorada
+        </h2>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <EnhancedDataVisualization
+              year={selectedYear}
+              dataType="budget"
+              variant="dashboard"
+              showControls={true}
+              showExport={true}
+              showFilters={true}
+            />
+          </div>
+          
+          <div>
+            <EnhancedDataVisualization
+              year={selectedYear}
+              dataType="revenue"
+              variant="dashboard"
+              showControls={true}
+              showExport={true}
+              showFilters={true}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* OSINT Monitoring Section */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary mb-6">
+          Monitoreo OSINT
+        </h2>
+        
+        <OSINTMonitoringSystem
+          year={selectedYear}
+          municipality="Carmen de Areco"
+          showControls={true}
+          autoRefresh={true}
+          refreshInterval={300000}
+        />
       </div>
 
       {/* Data Sources */}

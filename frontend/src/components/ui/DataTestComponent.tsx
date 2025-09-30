@@ -30,7 +30,7 @@ const DataTestComponent: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="p-4 bg-blue-50 rounded-lg">
+      <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
         <p className="text-blue-800">🔄 Loading data from /data/multi_source_report.json...</p>
       </div>
     );
@@ -38,15 +38,15 @@ const DataTestComponent: React.FC = () => {
 
   if (error) {
     return (
-      <div className="p-4 bg-red-50 rounded-lg">
+      <div className="p-4 bg-red-50 dark:bg-red-900/20 rounded-lg">
         <p className="text-red-800">❌ Error loading data: {error}</p>
-        <p className="text-red-600 mt-2">Please check browser console for more details.</p>
+        <p className="text-red-600 dark:text-red-400 mt-2">Please check browser console for more details.</p>
       </div>
     );
   }
 
   return (
-    <div className="p-4 bg-green-50 rounded-lg">
+    <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
       <h2 className="text-xl font-bold text-green-800 mb-2">✅ Data Loaded Successfully!</h2>
       <p className="text-green-700">Multi-year data available: {data?.multi_year_summary?.length || 0} years</p>
       {data?.multi_year_summary && (

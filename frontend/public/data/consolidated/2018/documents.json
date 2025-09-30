@@ -1,0 +1,53 @@
+{
+  "year": 2018,
+  "total_documents": 33,
+  "categories": [
+    {
+      "name": "Budget",
+      "count": 5
+    },
+    {
+      "name": "Contracts",
+      "count": 7
+    },
+    {
+      "name": "Personnel",
+      "count": 5
+    },
+    {
+      "name": "Treasury",
+      "count": 5
+    },
+    {
+      "name": "Debt",
+      "count": 3
+    },
+    {
+      "name": "Other",
+      "count": 8
+    }
+  ],
+  "recent_documents": [
+    {
+      "id": "2018-doc-1",
+      "title": "Annual Report Q1 2018",
+      "category": "Budget",
+      "date": "2018-01-15",
+      "size": "2.4 MB"
+    },
+    {
+      "id": "2018-doc-2",
+      "title": "Annual Report Q2 2018",
+      "category": "Contracts",
+      "date": "2018-02-15",
+      "size": "2.4 MB"
+    },
+    {
+      "id": "2018-doc-3",
+      "title": "Annual Report Q3 2018",
+      "category": "Personnel",
+      "date": "2018-03-15",
+      "size": "2.4 MB"
+    }
+  ]
+}

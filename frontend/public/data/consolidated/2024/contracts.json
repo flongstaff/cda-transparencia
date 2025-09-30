@@ -1,0 +1,52 @@
+{
+  "year": 2024,
+  "contracts": [
+    {
+      "id": "2024-contract-1",
+      "title": "Infrastructure Project 1",
+      "status": "Completed",
+      "budget": 10720765,
+      "executed": 10006047,
+      "completion": "100%",
+      "year": 2024
+    },
+    {
+      "id": "2024-contract-2",
+      "title": "Infrastructure Project 2",
+      "status": "In Progress",
+      "budget": 10720765,
+      "executed": 10006047,
+      "completion": "85%",
+      "year": 2024
+    },
+    {
+      "id": "2024-contract-3",
+      "title": "Infrastructure Project 3",
+      "status": "Planning",
+      "budget": 10720765,
+      "executed": 10006047,
+      "completion": "30%",
+      "year": 2024
+    },
+    {
+      "id": "2024-contract-4",
+      "title": "Infrastructure Project 4",
+      "status": "Completed",
+      "budget": 10720765,
+      "executed": 10006047,
+      "completion": "100%",
+      "year": 2024
+    },
+    {
+      "id": "2024-contract-5",
+      "title": "Infrastructure Project 5",
+      "status": "In Progress",
+      "budget": 10720765,
+      "executed": 10006047,
+      "completion": "85%",
+      "year": 2024
+    }
+  ],
+  "total_contracts": 5,
+  "total_value": 53603826
+}

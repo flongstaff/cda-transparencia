@@ -1,0 +1,390 @@
+{
+  "filename": "Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+  "document_type": "budget_execution",
+  "extraction_results": {
+    "tabula": {
+      "success": true,
+      "table_count": 6,
+      "tables": [
+        [
+          {
+            "Unnamed: 0": NaN,
+            "Unnamed: 1": NaN,
+            "Recursos": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Gastos": NaN,
+            "Unnamed: 4": NaN,
+            "Dif. entre": "Rec.Percibidos"
+          },
+          {
+            "Unnamed: 0": "Rubro - Descripción",
+            "Unnamed: 1": "Vigente",
+            "Recursos": "Devengado",
+            "Unnamed: 2": "Percibido",
+            "Unnamed: 3": "Compromiso",
+            "Gastos": "Devengado Pagado",
+            "Unnamed: 4": "Devengado",
+            "Dif. entre": "y Gastos"
+          },
+          {
+            "Unnamed: 0": NaN,
+            "Unnamed: 1": NaN,
+            "Recursos": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Gastos": NaN,
+            "Unnamed: 4": "no Pagado",
+            "Dif. entre": "Pagados( * )"
+          }
+        ],
+        [
+          {
+            "Unnamed: 0": NaN,
+            "Unnamed: 1": NaN,
+            "Recursos": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Gastos": NaN,
+            "Unnamed: 4": NaN,
+            "Dif. entre": "Rec.Percibidos"
+          },
+          {
+            "Unnamed: 0": "Rubro - Descripción",
+            "Unnamed: 1": "Vigente",
+            "Recursos": "Devengado",
+            "Unnamed: 2": "Percibido",
+            "Unnamed: 3": "Compromiso",
+            "Gastos": "Devengado Pagado",
+            "Unnamed: 4": "Devengado",
+            "Dif. entre": "y Gastos"
+          },
+          {
+            "Unnamed: 0": NaN,
+            "Unnamed: 1": NaN,
+            "Recursos": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Gastos": NaN,
+            "Unnamed: 4": "no Pagado",
+            "Dif. entre": "Pagados( * )"
+          }
+        ],
+        [
+          {
+            "Unnamed: 0": NaN,
+            "Unnamed: 1": NaN,
+            "Recursos": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Gastos": NaN,
+            "Unnamed: 4": NaN,
+            "Dif. entre": "Rec.Percibidos"
+          },
+          {
+            "Unnamed: 0": "Rubro - Descripción",
+            "Unnamed: 1": "Vigente",
+            "Recursos": "Devengado",
+            "Unnamed: 2": "Percibido",
+            "Unnamed: 3": "Compromiso",
+            "Gastos": "Devengado Pagado",
+            "Unnamed: 4": "Devengado",
+            "Dif. entre": "y Gastos"
+          },
+          {
+            "Unnamed: 0": NaN,
+            "Unnamed: 1": NaN,
+            "Recursos": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Gastos": NaN,
+            "Unnamed: 4": "no Pagado",
+            "Dif. entre": "Pagados( * )"
+          }
+        ],
+        [
+          {
+            "Unnamed: 0": NaN,
+            "Unnamed: 1": NaN,
+            "Recursos": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Gastos": NaN,
+            "Unnamed: 4": NaN,
+            "Dif. entre": "Rec.Percibidos"
+          },
+          {
+            "Unnamed: 0": "Rubro - Descripción",
+            "Unnamed: 1": "Vigente",
+            "Recursos": "Devengado",
+            "Unnamed: 2": "Percibido",
+            "Unnamed: 3": "Compromiso",
+            "Gastos": "Devengado Pagado",
+            "Unnamed: 4": "Devengado",
+            "Dif. entre": "y Gastos"
+          },
+          {
+            "Unnamed: 0": NaN,
+            "Unnamed: 1": NaN,
+            "Recursos": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Gastos": NaN,
+            "Unnamed: 4": "no Pagado",
+            "Dif. entre": "Pagados( * )"
+          }
+        ],
+        [
+          {
+            "35.1.01.44 - Fdo.Municipal de Fortalecimiento de la Seguridad (Art 51 y 52": "Ley 15310)",
+            "18.326,75": NaN,
+            "0,00": NaN,
+            "0,00.1": NaN,
+            "0,00.2": NaN,
+            "0,00.3": NaN,
+            "0,00.4": NaN,
+            "0,00.5": NaN,
+            "18.326,75.1": NaN
+          },
+          {
+            "35.1.01.44 - Fdo.Municipal de Fortalecimiento de la Seguridad (Art 51 y 52": "35.1.01.48 - Barrio Adentro",
+            "18.326,75": "2.982.738,00",
+            "0,00": "0,00",
+            "0,00.1": "0,00",
+            "0,00.2": "708.588,00",
+            "0,00.3": "708.588,00",
+            "0,00.4": "708.588,00",
+            "0,00.5": "0,00",
+            "18.326,75.1": "2.274.150,00"
+          }
+        ],
+        [
+          {
+            "Unnamed: 0": NaN,
+            "Unnamed: 1": NaN,
+            "Recursos": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Gastos": NaN,
+            "Unnamed: 4": NaN,
+            "Dif. entre": "Rec.Percibidos"
+          },
+          {
+            "Unnamed: 0": "Rubro - Descripción",
+            "Unnamed: 1": "Vigente",
+            "Recursos": "Devengado",
+            "Unnamed: 2": "Percibido",
+            "Unnamed: 3": "Compromiso",
+            "Gastos": "Devengado Pagado",
+            "Unnamed: 4": "Devengado",
+            "Dif. entre": "y Gastos"
+          },
+          {
+            "Unnamed: 0": NaN,
+            "Unnamed: 1": NaN,
+            "Recursos": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Gastos": NaN,
+            "Unnamed: 4": "no Pagado",
+            "Dif. entre": "Pagados( * )"
+          }
+        ]
+      ]
+    }
+  },
+  "best_method": "tabula",
+  "tables": [
+    [
+      {
+        "Unnamed: 0": NaN,
+        "Unnamed: 1": NaN,
+        "Recursos": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Gastos": NaN,
+        "Unnamed: 4": NaN,
+        "Dif. entre": "Rec.Percibidos"
+      },
+      {
+        "Unnamed: 0": "Rubro - Descripción",
+        "Unnamed: 1": "Vigente",
+        "Recursos": "Devengado",
+        "Unnamed: 2": "Percibido",
+        "Unnamed: 3": "Compromiso",
+        "Gastos": "Devengado Pagado",
+        "Unnamed: 4": "Devengado",
+        "Dif. entre": "y Gastos"
+      },
+      {
+        "Unnamed: 0": NaN,
+        "Unnamed: 1": NaN,
+        "Recursos": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Gastos": NaN,
+        "Unnamed: 4": "no Pagado",
+        "Dif. entre": "Pagados( * )"
+      }
+    ],
+    [
+      {
+        "Unnamed: 0": NaN,
+        "Unnamed: 1": NaN,
+        "Recursos": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Gastos": NaN,
+        "Unnamed: 4": NaN,
+        "Dif. entre": "Rec.Percibidos"
+      },
+      {
+        "Unnamed: 0": "Rubro - Descripción",
+        "Unnamed: 1": "Vigente",
+        "Recursos": "Devengado",
+        "Unnamed: 2": "Percibido",
+        "Unnamed: 3": "Compromiso",
+        "Gastos": "Devengado Pagado",
+        "Unnamed: 4": "Devengado",
+        "Dif. entre": "y Gastos"
+      },
+      {
+        "Unnamed: 0": NaN,
+        "Unnamed: 1": NaN,
+        "Recursos": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Gastos": NaN,
+        "Unnamed: 4": "no Pagado",
+        "Dif. entre": "Pagados( * )"
+      }
+    ],
+    [
+      {
+        "Unnamed: 0": NaN,
+        "Unnamed: 1": NaN,
+        "Recursos": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Gastos": NaN,
+        "Unnamed: 4": NaN,
+        "Dif. entre": "Rec.Percibidos"
+      },
+      {
+        "Unnamed: 0": "Rubro - Descripción",
+        "Unnamed: 1": "Vigente",
+        "Recursos": "Devengado",
+        "Unnamed: 2": "Percibido",
+        "Unnamed: 3": "Compromiso",
+        "Gastos": "Devengado Pagado",
+        "Unnamed: 4": "Devengado",
+        "Dif. entre": "y Gastos"
+      },
+      {
+        "Unnamed: 0": NaN,
+        "Unnamed: 1": NaN,
+        "Recursos": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Gastos": NaN,
+        "Unnamed: 4": "no Pagado",
+        "Dif. entre": "Pagados( * )"
+      }
+    ],
+    [
+      {
+        "Unnamed: 0": NaN,
+        "Unnamed: 1": NaN,
+        "Recursos": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Gastos": NaN,
+        "Unnamed: 4": NaN,
+        "Dif. entre": "Rec.Percibidos"
+      },
+      {
+        "Unnamed: 0": "Rubro - Descripción",
+        "Unnamed: 1": "Vigente",
+        "Recursos": "Devengado",
+        "Unnamed: 2": "Percibido",
+        "Unnamed: 3": "Compromiso",
+        "Gastos": "Devengado Pagado",
+        "Unnamed: 4": "Devengado",
+        "Dif. entre": "y Gastos"
+      },
+      {
+        "Unnamed: 0": NaN,
+        "Unnamed: 1": NaN,
+        "Recursos": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Gastos": NaN,
+        "Unnamed: 4": "no Pagado",
+        "Dif. entre": "Pagados( * )"
+      }
+    ],
+    [
+      {
+        "35.1.01.44 - Fdo.Municipal de Fortalecimiento de la Seguridad (Art 51 y 52": "Ley 15310)",
+        "18.326,75": NaN,
+        "0,00": NaN,
+        "0,00.1": NaN,
+        "0,00.2": NaN,
+        "0,00.3": NaN,
+        "0,00.4": NaN,
+        "0,00.5": NaN,
+        "18.326,75.1": NaN
+      },
+      {
+        "35.1.01.44 - Fdo.Municipal de Fortalecimiento de la Seguridad (Art 51 y 52": "35.1.01.48 - Barrio Adentro",
+        "18.326,75": "2.982.738,00",
+        "0,00": "0,00",
+        "0,00.1": "0,00",
+        "0,00.2": "708.588,00",
+        "0,00.3": "708.588,00",
+        "0,00.4": "708.588,00",
+        "0,00.5": "0,00",
+        "18.326,75.1": "2.274.150,00"
+      }
+    ],
+    [
+      {
+        "Unnamed: 0": NaN,
+        "Unnamed: 1": NaN,
+        "Recursos": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Gastos": NaN,
+        "Unnamed: 4": NaN,
+        "Dif. entre": "Rec.Percibidos"
+      },
+      {
+        "Unnamed: 0": "Rubro - Descripción",
+        "Unnamed: 1": "Vigente",
+        "Recursos": "Devengado",
+        "Unnamed: 2": "Percibido",
+        "Unnamed: 3": "Compromiso",
+        "Gastos": "Devengado Pagado",
+        "Unnamed: 4": "Devengado",
+        "Dif. entre": "y Gastos"
+      },
+      {
+        "Unnamed: 0": NaN,
+        "Unnamed: 1": NaN,
+        "Recursos": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Gastos": NaN,
+        "Unnamed: 4": "no Pagado",
+        "Dif. entre": "Pagados( * )"
+      }
+    ]
+  ],
+  "metadata": {
+    "page_count": 5,
+    "title": "Seagate Crystal Reports - CTA_ListadoRecursosxCuentas.rpt",
+    "author": "",
+    "creation_date": "D:20250426130104-03'00'",
+    "file_size": 410450
+  }
+}

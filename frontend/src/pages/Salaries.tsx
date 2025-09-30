@@ -180,8 +180,8 @@ const Salaries: React.FC = () => {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <Loader2 className="animate-spin h-12 w-12 text-blue-600 mx-auto mb-4" />
-          <p className="text-gray-600">Cargando información salarial...</p>
+          <Loader2 className="animate-spin h-12 w-12 text-blue-600 dark:text-blue-400 mx-auto mb-4" />
+          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Cargando información salarial...</p>
         </div>
       </div>
     );
@@ -190,7 +190,7 @@ const Salaries: React.FC = () => {
   if (error) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg p-6">
           <div className="flex items-center">
             <AlertCircle className="h-5 w-5 text-red-400" />
             <div className="ml-3">
@@ -208,13 +208,13 @@ const Salaries: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+      <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">
               👥 Sueldos y Salarios Municipales
             </h1>
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
               Información sobre escalas salariales y remuneraciones del personal municipal para {selectedYear}
               {processedSalaryData && (
                 <span className="ml-2 text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">
@@ -233,54 +233,54 @@ const Salaries: React.FC = () => {
 
       {/* General Statistics */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Users className="h-8 w-8 text-blue-500" />
             </div>
             <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500">Total Empleados</p>
-              <p className="text-2xl font-semibold text-blue-600">{totalStats.totalEmployees}</p>
+              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Total Empleados</p>
+              <p className="text-2xl font-semibold text-blue-600 dark:text-blue-400">{totalStats.totalEmployees}</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <DollarSign className="h-8 w-8 text-green-500" />
             </div>
             <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500">Salario Promedio</p>
-              <p className="text-2xl font-semibold text-green-600">
+              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Salario Promedio</p>
+              <p className="text-2xl font-semibold text-green-600 dark:text-green-400">
                 {formatCurrencyARS(totalStats.averageSalary)}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <TrendingUp className="h-8 w-8 text-purple-500" />
             </div>
             <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500">Costo Mensual</p>
-              <p className="text-2xl font-semibold text-purple-600">
+              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Costo Mensual</p>
+              <p className="text-2xl font-semibold text-purple-600 dark:text-purple-400">
                 {formatCurrencyARS(totalStats.totalMonthlyCost)}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <BarChart3 className="h-8 w-8 text-orange-500" />
             </div>
             <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500">Costo Anual</p>
-              <p className="text-2xl font-semibold text-orange-600">
+              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Costo Anual</p>
+              <p className="text-2xl font-semibold text-orange-600 dark:text-orange-400">
                 {formatCurrencyARS(totalStats.totalAnnualCost)}
               </p>
             </div>
@@ -290,7 +290,7 @@ const Salaries: React.FC = () => {
 
       {/* Module Value Information */}
       {totalStats.moduleValue > 0 && (
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <BarChart3 className="h-5 w-5 text-blue-500 mr-2" />
@@ -308,8 +308,8 @@ const Salaries: React.FC = () => {
 
       {/* Salary Scales by Category - Real Data */}
       {processedSalaryData && (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Escalas Salariales por Categoría</h2>
+        <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Escalas Salariales por Categoría</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {processedSalaryData.categoryGroups.map((group: any, index: number) => (
@@ -318,39 +318,39 @@ const Salaries: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="border border-gray-200 rounded-lg p-6"
+                className="border border-gray-200 dark:border-dark-border rounded-lg p-6"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">{group.category}</h3>
-                    <p className="text-sm text-gray-600">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{group.category}</h3>
+                    <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
                       {group.positions.length} cargo{group.positions.length !== 1 ? 's' : ''}
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-2xl font-bold text-blue-600">{group.totalEmployees}</p>
-                    <p className="text-xs text-gray-500">empleados</p>
+                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">{group.totalEmployees}</p>
+                    <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">empleados</p>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-700">Salario Promedio:</span>
-                    <span className="text-sm font-semibold text-green-600">
+                    <span className="text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary">Salario Promedio:</span>
+                    <span className="text-sm font-semibold text-green-600 dark:text-green-400">
                       {formatCurrencyARS(group.avgSalary)}
                     </span>
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-700">Rango Salarial:</span>
-                    <span className="text-sm text-gray-600">
+                    <span className="text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary">Rango Salarial:</span>
+                    <span className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
                       {formatCurrencyARS(group.minSalary)} - {formatCurrencyARS(group.maxSalary)}
                     </span>
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-700">Costo Mensual:</span>
-                    <span className="text-sm font-semibold text-purple-600">
+                    <span className="text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary">Costo Mensual:</span>
+                    <span className="text-sm font-semibold text-purple-600 dark:text-purple-400">
                       {formatCurrencyARS(group.totalGross)}
                     </span>
                   </div>
@@ -358,12 +358,12 @@ const Salaries: React.FC = () => {
 
                 {/* Visual progress bar for salary range */}
                 <div className="mt-4">
-                  <div className="flex items-center justify-between text-xs text-gray-500 mb-1">
+                  <div className="flex items-center justify-between text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mb-1">
                     <span>Mín</span>
                     <span>Promedio</span>
                     <span>Máx</span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="w-full bg-gray-200 dark:bg-dark-surface-alt dark:bg-dark-border rounded-full h-2">
                     <div 
                       className="bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full"
                       style={{ 
@@ -375,15 +375,15 @@ const Salaries: React.FC = () => {
 
                 {/* Individual Positions */}
                 <div className="mt-4 pt-4 border-t border-gray-100">
-                  <h4 className="text-sm font-medium text-gray-700 mb-2">Cargos:</h4>
+                  <h4 className="text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-2">Cargos:</h4>
                   <div className="space-y-2">
                     {group.positions.map((position: SalaryPosition) => (
                       <div key={position.code} className="flex justify-between items-center text-sm">
                         <div>
                           <span className="font-medium">{position.name}</span>
-                          <span className="text-gray-500 ml-2">({position.employeeCount})</span>
+                          <span className="text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary ml-2">({position.employeeCount})</span>
                         </div>
-                        <span className="text-green-600 font-semibold">
+                        <span className="text-green-600 dark:text-green-400 font-semibold">
                           {formatCurrencyARS(position.grossSalary)}
                         </span>
                       </div>
@@ -398,60 +398,60 @@ const Salaries: React.FC = () => {
 
       {/* Detailed Position Information */}
       {processedSalaryData && (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Detalle de Cargos y Remuneraciones</h2>
+        <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Detalle de Cargos y Remuneraciones</h2>
           
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
+              <thead className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Código
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Cargo
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Categoría
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Cantidad
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Sueldo Bruto
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Sueldo Neto
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Módulos
                   </th>
                 </tr>
               </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
+              <tbody className="bg-white dark:bg-dark-surface divide-y divide-gray-200">
                 {processedSalaryData.positions.map((position) => (
-                  <tr key={position.code} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-500">
+                  <tr key={position.code} className="hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-mono text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                       {position.code}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
                       {position.name}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                       <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
                         {position.category}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
                       {position.employeeCount}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-600">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-600 dark:text-green-400">
                       {formatCurrencyARS(position.grossSalary)}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600 dark:text-blue-400">
                       {formatCurrencyARS(position.netSalary)}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                       {position.modules.toFixed(1)}
                     </td>
                   </tr>
@@ -464,8 +464,8 @@ const Salaries: React.FC = () => {
 
       {/* Salary Documents */}
       {salaryDocuments.length > 0 && (
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Documentos de Escalas Salariales</h2>
+        <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Documentos de Escalas Salariales</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {salaryDocuments.map((doc) => (
@@ -473,20 +473,20 @@ const Salaries: React.FC = () => {
                 key={doc.id || doc.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-all duration-200"
+                className="border border-gray-200 dark:border-dark-border rounded-lg p-4 hover:shadow-md transition-all duration-200"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-2xl">📄</div>
-                  <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                  <span className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary bg-gray-100 dark:bg-dark-background dark:bg-dark-surface-alt px-2 py-1 rounded">
                     {doc.type?.toUpperCase() || 'DOC'}
                   </span>
                 </div>
                 
-                <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
+                <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2 line-clamp-2">
                   {doc.title}
                 </h3>
                 
-                <div className="text-sm text-gray-600 space-y-1 mb-4">
+                <div className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary space-y-1 mb-4">
                   <div className="flex items-center">
                     <Building className="h-4 w-4 mr-2" />
                     <span>{selectedYear}</span>
@@ -504,7 +504,7 @@ const Salaries: React.FC = () => {
                     href={doc.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+                    className="flex-1 inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100 transition-colors"
                   >
                     <Eye className="h-4 w-4 mr-2" />
                     Ver
@@ -512,7 +512,7 @@ const Salaries: React.FC = () => {
                   <a
                     href={doc.url}
                     download
-                    className="flex-1 inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-gray-600 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="flex-1 inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg hover:bg-gray-100 dark:bg-dark-background dark:bg-dark-surface-alt transition-colors"
                   >
                     <Download className="h-4 w-4 mr-2" />
                     Descargar
@@ -525,8 +525,8 @@ const Salaries: React.FC = () => {
       )}
 
       {/* Salary Analysis Chart */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Análisis Salarial</h2>
+      <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Análisis Salarial</h2>
         <SalaryAnalysisChart year={selectedYear} />
       </div>
 
@@ -536,7 +536,7 @@ const Salaries: React.FC = () => {
       </div>
 
       {/* Legal Information */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-6">
         <div className="flex items-start">
           <Building className="h-6 w-6 text-blue-500 mt-1 mr-3" />
           <div>

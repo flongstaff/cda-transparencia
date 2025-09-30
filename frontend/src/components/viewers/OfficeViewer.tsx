@@ -61,7 +61,7 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
       case 'pptx':
         return <Presentation className="w-12 h-12 text-orange-500" />;
       default:
-        return <FileText className="w-12 h-12 text-gray-500" />;
+        return <FileText className="w-12 h-12 text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary" />;
     }
   };
 
@@ -135,8 +135,8 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
   if (loading) {
     return (
       <div className={`bg-white border border-gray-200 rounded-lg p-8 text-center ${className}`}>
-        <Loader2 className="w-8 h-8 text-blue-600 animate-spin mx-auto mb-4" />
-        <p className="text-gray-600">Cargando documento de Office...</p>
+        <Loader2 className="w-8 h-8 text-blue-600 dark:text-blue-400 animate-spin mx-auto mb-4" />
+        <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Cargando documento de Office...</p>
       </div>
     );
   }
@@ -145,10 +145,10 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
     return (
       <div className={`bg-white border border-red-200 rounded-lg p-8 text-center ${className}`}>
         <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">
           Error al cargar el documento
         </h3>
-        <p className="text-gray-600 mb-4">{error}</p>
+        <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-4">{error}</p>
         <div className="space-x-3">
           <button
             onClick={() => window.location.reload()}
@@ -160,7 +160,7 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
             href={document.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 inline-flex items-center"
+            className="px-4 py-2 border border-gray-300 dark:border-dark-border text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary rounded-lg hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background inline-flex items-center"
           >
             <ExternalLink className="w-4 h-4 mr-2" />
             Abrir directamente
@@ -173,15 +173,15 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
   return (
     <div className={`bg-white border border-gray-200 rounded-lg shadow-sm ${className}`}>
       {/* Header */}
-      <div className="border-b border-gray-200 p-4">
+      <div className="border-b border-gray-200 dark:border-dark-border p-4">
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center space-x-3">
             {getFileIcon(document.file_type)}
             <div>
-              <h3 className="font-semibold text-gray-900 truncate">
+              <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary truncate">
                 {document.title}
               </h3>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                 {getFileTypeDescription(document.file_type)} • {document.size_mb} MB
               </p>
             </div>
@@ -189,13 +189,13 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
 
           <div className="flex items-center space-x-2">
             {/* View Mode Toggle */}
-            <div className="flex items-center border border-gray-300 rounded-lg">
+            <div className="flex items-center border border-gray-300 dark:border-dark-border rounded-lg">
               <button
                 onClick={() => setViewMode('preview')}
                 className={`px-3 py-2 text-sm font-medium rounded-l-lg ${
                   viewMode === 'preview'
                     ? 'bg-blue-600 text-white'
-                    : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'
+                    : 'text-gray-600 dark:text-dark-text-secondary hover:text-gray-800 dark:text-dark-text-secondary hover:bg-gray-50 dark:bg-dark-background'
                 }`}
                 title="Vista previa"
               >
@@ -206,7 +206,7 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
                 className={`px-3 py-2 text-sm font-medium rounded-r-lg ${
                   viewMode === 'fallback'
                     ? 'bg-blue-600 text-white'
-                    : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'
+                    : 'text-gray-600 dark:text-dark-text-secondary hover:text-gray-800 dark:text-dark-text-secondary hover:bg-gray-50 dark:bg-dark-background'
                 }`}
                 title="Fallback"
               >
@@ -218,7 +218,7 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
             <div className="flex items-center space-x-1">
               <button
                 onClick={handleShare}
-                className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-50 rounded-lg"
+                className="p-2 text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary hover:text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg"
                 title="Compartir documento"
               >
                 <Share2 className="w-4 h-4" />
@@ -226,7 +226,7 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
 
               <button
                 onClick={handleDownload}
-                className="p-2 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded-lg"
+                className="p-2 text-blue-600 dark:text-blue-400 hover:text-blue-800 hover:bg-blue-50 dark:bg-blue-900/20 rounded-lg"
                 title="Descargar documento"
               >
                 <Download className="w-4 h-4" />
@@ -234,7 +234,7 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
 
               <button
                 onClick={handleOpen}
-                className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-50 rounded-lg"
+                className="p-2 text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary hover:text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg"
                 title="Abrir en nueva ventana"
               >
                 <ExternalLink className="w-4 h-4" />
@@ -253,19 +253,19 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
                 {getFileIcon(document.file_type)}
               </div>
               
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">
                 {getFileTypeDescription(document.file_type)}
               </h3>
               
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-6 max-w-2xl mx-auto">
                 Este documento está en formato {document.file_type.toUpperCase()} y no puede ser visualizado 
                 directamente en el navegador. Para ver su contenido, descargue el archivo y ábralo con 
                 una aplicación compatible.
               </p>
               
-              <div className="bg-gray-50 rounded-lg p-6 mb-6 max-w-2xl mx-auto">
-                <h4 className="font-medium text-gray-900 mb-3">Aplicaciones recomendadas:</h4>
-                <p className="text-gray-700">{getSoftwareRecommendations(document.file_type)}</p>
+              <div className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg p-6 mb-6 max-w-2xl mx-auto">
+                <h4 className="font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-3">Aplicaciones recomendadas:</h4>
+                <p className="text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary">{getSoftwareRecommendations(document.file_type)}</p>
               </div>
               
               <div className="flex flex-col sm:flex-row justify-center gap-3">
@@ -279,7 +279,7 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
                 
                 <button
                   onClick={handleOpen}
-                  className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 inline-flex items-center justify-center"
+                  className="px-6 py-3 border border-gray-300 dark:border-dark-border text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary rounded-lg hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background inline-flex items-center justify-center"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Abrir directamente
@@ -289,12 +289,12 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
           </div>
         ) : (
           <div className="p-8">
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
-              <FileText className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            <div className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background border border-gray-200 dark:border-dark-border rounded-lg p-6 text-center">
+              <FileText className="w-12 h-12 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">
                 Fallback para {getFileTypeDescription(document.file_type)}
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-4">
                 No hay un visor nativo disponible para este tipo de documento.
               </p>
               <div className="space-x-3">
@@ -307,7 +307,7 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
                 </button>
                 <button
                   onClick={handleOpen}
-                  className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 inline-flex items-center"
+                  className="px-4 py-2 border border-gray-300 dark:border-dark-border text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary rounded-lg hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background inline-flex items-center"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Abrir
@@ -319,8 +319,8 @@ const OfficeViewer: React.FC<OfficeViewerProps> = ({
       </div>
 
       {/* Footer with metadata */}
-      <div className="border-t border-gray-200 px-4 py-3 bg-gray-50">
-        <div className="flex items-center justify-between text-sm text-gray-600">
+      <div className="border-t border-gray-200 dark:border-dark-border px-4 py-3 bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
+        <div className="flex items-center justify-between text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
           <div className="flex items-center space-x-4">
             <span className="flex items-center">
               {getFileIcon(document.file_type)}

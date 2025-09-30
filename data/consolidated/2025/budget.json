@@ -1,0 +1,86 @@
+{
+  "year": 2025,
+  "total_budget": 375226779,
+  "total_executed": 348022838,
+  "execution_rate": 92.75,
+  "executed_infra": 64324591,
+  "personnel": 174212433,
+  "budget_execution": [
+    [
+      "Q1",
+      "$94M",
+      "$84M",
+      "96%"
+    ],
+    [
+      "Q2",
+      "$94M",
+      "$87M",
+      "100%"
+    ],
+    [
+      "Q3",
+      "$94M",
+      "$90M",
+      "104%"
+    ],
+    [
+      "Q4",
+      "$94M",
+      "$87M",
+      "100%"
+    ]
+  ],
+  "revenue_sources": [
+    [
+      "Property Tax",
+      "$131M",
+      "35%",
+      "+3.2%"
+    ],
+    [
+      "Business Tax",
+      "$94M",
+      "25%",
+      "+4.1%"
+    ],
+    [
+      "Fees and Charges",
+      "$75M",
+      "20%",
+      "+2.8%"
+    ],
+    [
+      "Transfers",
+      "$75M",
+      "20%",
+      "+3.5%"
+    ]
+  ],
+  "expenditure_breakdown": [
+    [
+      "Personnel",
+      "$174M",
+      "45%",
+      "50%"
+    ],
+    [
+      "Services",
+      "$113M",
+      "30%",
+      "100%"
+    ],
+    [
+      "Infrastructure",
+      "$64M",
+      "20%",
+      "95%"
+    ],
+    [
+      "Others",
+      "$38M",
+      "5%",
+      "100%"
+    ]
+  ]
+}

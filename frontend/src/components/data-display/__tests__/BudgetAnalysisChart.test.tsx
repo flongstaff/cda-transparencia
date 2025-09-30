@@ -3,32 +3,38 @@ import { render, screen, waitFor } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import BudgetAnalysisChart from '../../charts/BudgetAnalysisChart';
 
-// Mock the consolidated API service
+// Mock the master data service
 const mockBudgetData = {
-  total_budgeted: 5000000000,
-  total_executed: 4200000000,
-  execution_rate: '84.0',
-  categories: {
-    'Gastos en Personal': {
-      budgeted: 2250000000,
-      executed: 1900000000,
-      execution_rate: '84.4'
-    },
-    'Servicios no Personales': {
-      budgeted: 1250000000,
-      executed: 1050000000,
-      execution_rate: '84.0'
-    },
-    'Bienes de Consumo': {
-      budgeted: 750000000,
-      executed: 630000000,
-      execution_rate: '84.0'
-    },
-    'Transferencias': {
-      budgeted: 750000000,
-      executed: 620000000,
-      execution_rate: '82.7'
-    }
+  budget: {
+    total_budgeted: 5000000000,
+    total_executed: 4200000000,
+    execution_rate: '84.0',
+    categories: [
+      {
+        name: 'Gastos en Personal',
+        budgeted: 2250000000,
+        executed: 1900000000,
+        execution_rate: '84.4'
+      },
+      {
+        name: 'Servicios no Personales',
+        budgeted: 1250000000,
+        executed: 1050000000,
+        execution_rate: '84.0'
+      },
+      {
+        name: 'Bienes de Consumo',
+        budgeted: 750000000,
+        executed: 630000000,
+        execution_rate: '84.0'
+      },
+      {
+        name: 'Transferencias',
+        budgeted: 750000000,
+        executed: 620000000,
+        execution_rate: '82.7'
+      }
+    ]
   }
 };
 
@@ -44,11 +50,14 @@ const createTestQueryClient = () => {
   });
 };
 
-// Mock the consolidated API service
-vi.mock('../../../services/ConsolidatedApiService', () => ({
-  consolidatedApiService: {
-    getBudgetData: vi.fn().mockResolvedValue(mockBudgetData)
-  }
+// Mock the master data service
+vi.mock('../../hooks/useMasterData', () => ({
+  useMasterData: vi.fn(() => ({
+    masterData: mockBudgetData,
+    currentBudget: mockBudgetData.budget,
+    loading: false,
+    error: null
+  }))
 }));
 
 // Wrapper component with React Query provider
@@ -80,28 +89,42 @@ describe('BudgetAnalysisChart', () => {
   });
 
   test('handles loading state', () => {
-    // Mock loading state by making the API call pending
-    vi.spyOn(consolidatedApiService.consolidatedApiService, 'getBudgetData').mockImplementation(() => 
-      new Promise(() => {}) // Never resolves
-    );
+    // Mock the useMasterData hook to return loading state
+    const useMasterData = vi.fn(() => ({
+      masterData: null,
+      currentBudget: null,
+      loading: true,
+      error: null
+    }));
+    
+    vi.doMock('../../hooks/useMasterData', () => ({
+      useMasterData
+    }));
     
     render(<BudgetAnalysisChart year={2024} />, { wrapper });
     
     // Check that loading state is displayed
-    expect(screen.getByText('Cargando análisis presupuestario...')).toBeInTheDocument();
+    expect(screen.getByTestId('loader-icon')).toBeInTheDocument();
   });
 
   test('handles error state', async () => {
-    // Mock error state
-    vi.spyOn(consolidatedApiService.consolidatedApiService, 'getBudgetData').mockImplementation(() => 
-      Promise.reject(new Error('Failed to fetch budget data'))
-    );
+    // Mock the useMasterData hook to return error state
+    const useMasterData = vi.fn(() => ({
+      masterData: null,
+      currentBudget: null,
+      loading: false,
+      error: new Error('Failed to fetch budget data')
+    }));
+    
+    vi.doMock('../../hooks/useMasterData', () => ({
+      useMasterData
+    }));
     
     render(<BudgetAnalysisChart year={2024} />, { wrapper });
     
     // Wait for error to be displayed
     await waitFor(() => {
-      expect(screen.getByText('Error al cargar los datos presupuestarios')).toBeInTheDocument();
+      expect(screen.getByTestId('alert-triangle-icon')).toBeInTheDocument();
     });
   });
 
@@ -114,13 +137,13 @@ describe('BudgetAnalysisChart', () => {
     });
     
     // Check that bar chart is displayed by default
-    expect(screen.getByLabelText('Cambiar a gráfico de barras')).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByTitle('Vista bar')).toHaveClass('bg-blue-100');
     
     // Switch to pie chart
-    const pieButton = screen.getByLabelText('Cambiar a gráfico circular');
+    const pieButton = screen.getByTitle('Vista pie');
     pieButton.click();
     
     // Check that pie chart button is now active
-    expect(pieButton).toHaveAttribute('aria-pressed', 'true');
+    expect(pieButton).toHaveClass('bg-blue-100');
   });
 });

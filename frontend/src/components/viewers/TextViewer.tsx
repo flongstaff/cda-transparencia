@@ -118,8 +118,8 @@ const TextViewer: React.FC<TextViewerProps> = ({
   if (loading) {
     return (
       <div className={`bg-white border border-gray-200 rounded-lg p-8 text-center ${className}`}>
-        <Loader2 className="w-8 h-8 text-blue-600 animate-spin mx-auto mb-4" />
-        <p className="text-gray-600">Cargando documento de texto...</p>
+        <Loader2 className="w-8 h-8 text-blue-600 dark:text-blue-400 animate-spin mx-auto mb-4" />
+        <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Cargando documento de texto...</p>
       </div>
     );
   }
@@ -128,10 +128,10 @@ const TextViewer: React.FC<TextViewerProps> = ({
     return (
       <div className={`bg-white border border-red-200 rounded-lg p-8 text-center ${className}`}>
         <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">
           Error al cargar el documento
         </h3>
-        <p className="text-gray-600 mb-4">{error}</p>
+        <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-4">{error}</p>
         <div className="space-x-3">
           <button
             onClick={() => window.location.reload()}
@@ -141,7 +141,7 @@ const TextViewer: React.FC<TextViewerProps> = ({
           </button>
           <button
             onClick={handleOpen}
-            className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 inline-flex items-center"
+            className="px-4 py-2 border border-gray-300 dark:border-dark-border text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary rounded-lg hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background inline-flex items-center"
           >
             <ExternalLink className="w-4 h-4 mr-2" />
             Abrir directamente
@@ -154,15 +154,15 @@ const TextViewer: React.FC<TextViewerProps> = ({
   return (
     <div className={`bg-white border border-gray-200 rounded-lg shadow-sm ${className}`}>
       {/* Header */}
-      <div className="border-b border-gray-200 p-4">
+      <div className="border-b border-gray-200 dark:border-dark-border p-4">
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center space-x-3">
-            <FileText className="w-6 h-6 text-gray-500" />
+            <FileText className="w-6 h-6 text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary" />
             <div>
-              <h3 className="font-semibold text-gray-900 truncate">
+              <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary truncate">
                 {document.title}
               </h3>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                 {getFileTypeDescription(document.file_type)} • {document.size_mb} MB
               </p>
             </div>
@@ -171,24 +171,24 @@ const TextViewer: React.FC<TextViewerProps> = ({
           <div className="flex items-center space-x-2">
             {/* Search */}
             <div className="relative">
-              <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
+              <Search className="w-4 h-4 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary absolute left-3 top-1/2 transform -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Buscar en documento..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="pl-10 pr-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
 
             {/* View Mode Toggle */}
-            <div className="flex items-center border border-gray-300 rounded-lg">
+            <div className="flex items-center border border-gray-300 dark:border-dark-border rounded-lg">
               <button
                 onClick={() => setViewMode('rendered')}
                 className={`px-3 py-2 text-sm font-medium rounded-l-lg ${
                   viewMode === 'rendered'
                     ? 'bg-blue-600 text-white'
-                    : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'
+                    : 'text-gray-600 dark:text-dark-text-secondary hover:text-gray-800 dark:text-dark-text-secondary hover:bg-gray-50 dark:bg-dark-background'
                 }`}
                 title="Vista renderizada"
               >
@@ -199,7 +199,7 @@ const TextViewer: React.FC<TextViewerProps> = ({
                 className={`px-3 py-2 text-sm font-medium rounded-r-lg ${
                   viewMode === 'raw'
                     ? 'bg-blue-600 text-white'
-                    : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'
+                    : 'text-gray-600 dark:text-dark-text-secondary hover:text-gray-800 dark:text-dark-text-secondary hover:bg-gray-50 dark:bg-dark-background'
                 }`}
                 title="Código fuente"
               >
@@ -211,7 +211,7 @@ const TextViewer: React.FC<TextViewerProps> = ({
             <div className="flex items-center space-x-1">
               <button
                 onClick={handleShare}
-                className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-50 rounded-lg"
+                className="p-2 text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary hover:text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg"
                 title="Compartir documento"
               >
                 <Share2 className="w-4 h-4" />
@@ -219,7 +219,7 @@ const TextViewer: React.FC<TextViewerProps> = ({
 
               <button
                 onClick={handleCopyContent}
-                className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-50 rounded-lg"
+                className="p-2 text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary hover:text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg"
                 title="Copiar contenido"
               >
                 <Copy className="w-4 h-4" />
@@ -227,7 +227,7 @@ const TextViewer: React.FC<TextViewerProps> = ({
 
               <button
                 onClick={handleDownload}
-                className="p-2 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded-lg"
+                className="p-2 text-blue-600 dark:text-blue-400 hover:text-blue-800 hover:bg-blue-50 dark:bg-blue-900/20 rounded-lg"
                 title="Descargar texto"
               >
                 <Download className="w-4 h-4" />
@@ -235,7 +235,7 @@ const TextViewer: React.FC<TextViewerProps> = ({
 
               <button
                 onClick={handleOpen}
-                className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-50 rounded-lg"
+                className="p-2 text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary hover:text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg"
                 title="Abrir en nueva ventana"
               >
                 <ExternalLink className="w-4 h-4" />
@@ -255,15 +255,15 @@ const TextViewer: React.FC<TextViewerProps> = ({
             }}
           />
         ) : (
-          <pre className="whitespace-pre-wrap font-mono text-sm bg-gray-50 border border-gray-300 rounded-lg p-4 overflow-auto max-h-96">
+          <pre className="whitespace-pre-wrap font-mono text-sm bg-gray-50 dark:bg-dark-background dark:bg-dark-background border border-gray-300 dark:border-dark-border rounded-lg p-4 overflow-auto max-h-96">
             {highlightSearchTerm(textContent, searchTerm)}
           </pre>
         )}
       </div>
 
       {/* Footer */}
-      <div className="border-t border-gray-200 px-4 py-3 bg-gray-50">
-        <div className="flex items-center justify-between text-sm text-gray-600">
+      <div className="border-t border-gray-200 dark:border-dark-border px-4 py-3 bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
+        <div className="flex items-center justify-between text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
           <div className="flex items-center space-x-4">
             <span className="flex items-center">
               <FileText className="w-4 h-4 mr-1" />

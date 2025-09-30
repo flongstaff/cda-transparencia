@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { AlertTriangle, Shield, CheckCircle, XCircle, TrendingUp, TrendingDown, DollarSign } from 'lucide-react';
+import { AlertTriangle, Shield, XCircle, TrendingUp, TrendingDown } from 'lucide-react';
 
 interface CorruptionAlertProps {
   type: 'low_execution' | 'high_execution' | 'variance_spike' | 'missing_data' | 'duplicate_entry';

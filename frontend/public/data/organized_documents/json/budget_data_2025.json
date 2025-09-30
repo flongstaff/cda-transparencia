@@ -1,0 +1,23 @@
+{
+  "year": 2025,
+  "total_budget": 80000000,
+  "total_executed": 78000000,
+  "execution_rate": 97.5,
+  "budget_links": [],
+  "budget_execution": [
+    {
+      "quarter": "Q2",
+      "budgeted": 80000000,
+      "executed": 78000000,
+      "percentage": 97.5
+    },
+    {
+      "quarter": "Q3",
+      "budgeted": 85000000,
+      "executed": 83500000,
+      "percentage": 98.2
+    }
+  ],
+  "revenue": {},
+  "expenditure": {}
+}

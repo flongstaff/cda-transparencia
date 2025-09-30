@@ -156,17 +156,17 @@ const WaterfallChart: React.FC<WaterfallChartProps> = ({
       const percentageChange = item.previous !== 0 ? (change / item.previous) * 100 : 0;
 
       return (
-        <div className="bg-white p-3 rounded-lg shadow-lg border border-gray-200 text-sm">
-          <p className="font-semibold text-gray-800">{label}</p>
+        <div className="bg-white dark:bg-dark-surface p-3 rounded-lg shadow-lg border border-gray-200 dark:border-dark-border text-sm">
+          <p className="font-semibold text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary">{label}</p>
           <p style={{ color: item.value > 0 ? colorScheme.positive : colorScheme.negative }}>
             Change: {formatCurrency.format(change)}
           </p>
           {item.type !== 'start' && (
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
               {percentageChange.toFixed(2)}% vs previous
             </p>
           )}
-          <p className="text-gray-600">Cumulative: {formatCurrency.format(item.cumulative)}</p>
+          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Cumulative: {formatCurrency.format(item.cumulative)}</p>
         </div>
       );
     }
@@ -175,7 +175,7 @@ const WaterfallChart: React.FC<WaterfallChartProps> = ({
 
   if (error) {
     return (
-      <div className="flex items-center justify-center h-full bg-red-50 text-red-700 p-4 rounded-lg">
+      <div className="flex items-center justify-center h-full bg-red-50 dark:bg-red-900/20 text-red-700 p-4 rounded-lg">
         Error al cargar el gráfico.
       </div>
     );
@@ -187,7 +187,7 @@ const WaterfallChart: React.FC<WaterfallChartProps> = ({
 
   if (processedData.length === 0) {
     return (
-      <div className="flex items-center justify-center h-full text-gray-500 p-4">
+      <div className="flex items-center justify-center h-full text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary p-4">
         No hay datos disponibles.
       </div>
     );
@@ -232,7 +232,7 @@ const WaterfallChart: React.FC<WaterfallChartProps> = ({
           {chartDescription}
         </div>
       )}
-       <button onClick={handleExport} className="text-sm text-gray-600 hover:text-gray-900">
+       <button onClick={handleExport} className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary hover:text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
         Exportar
       </button>
     </motion.div>

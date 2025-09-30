@@ -1,0 +1,86 @@
+{
+  "year": 2023,
+  "total_budget": 340341750,
+  "total_executed": 320498610,
+  "execution_rate": 94.17,
+  "executed_infra": 61990819,
+  "personnel": 158015813,
+  "budget_execution": [
+    [
+      "Q1",
+      "$85M",
+      "$77M",
+      "96%"
+    ],
+    [
+      "Q2",
+      "$85M",
+      "$80M",
+      "100%"
+    ],
+    [
+      "Q3",
+      "$85M",
+      "$83M",
+      "104%"
+    ],
+    [
+      "Q4",
+      "$85M",
+      "$80M",
+      "100%"
+    ]
+  ],
+  "revenue_sources": [
+    [
+      "Property Tax",
+      "$119M",
+      "35%",
+      "+3.2%"
+    ],
+    [
+      "Business Tax",
+      "$85M",
+      "25%",
+      "+4.1%"
+    ],
+    [
+      "Fees and Charges",
+      "$68M",
+      "20%",
+      "+2.8%"
+    ],
+    [
+      "Transfers",
+      "$68M",
+      "20%",
+      "+3.5%"
+    ]
+  ],
+  "expenditure_breakdown": [
+    [
+      "Personnel",
+      "$158M",
+      "45%",
+      "49%"
+    ],
+    [
+      "Services",
+      "$102M",
+      "30%",
+      "100%"
+    ],
+    [
+      "Infrastructure",
+      "$62M",
+      "20%",
+      "95%"
+    ],
+    [
+      "Others",
+      "$34M",
+      "5%",
+      "100%"
+    ]
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "document_info": {
+    "filename": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+    "category": "Ejecución de Gastos",
+    "year": null,
+    "quarter": "3Q"
+  },
+  "extraction_stats": {
+    "text_pages": 5,
+    "tables_found": 5,
+    "methods_used": [
+      "pdfplumber"
+    ],
+    "output_files_count": 7
+  },
+  "financial_summary": {
+    "amounts_found": 0,
+    "dates_found": 25,
+    "percentages_found": 46
+  }
+}

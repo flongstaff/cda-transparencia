@@ -57,9 +57,9 @@ const CustomTooltip: React.FC<TooltipProps> = ({ active, payload }) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
     return (
-      <div className="bg-white p-3 shadow-lg rounded-lg border border-gray-200">
-        <p className="font-semibold text-gray-900">{data.name}</p>
-        <p className="text-sm text-gray-600">
+      <div className="bg-white dark:bg-dark-surface p-3 shadow-lg rounded-lg border border-gray-200 dark:border-dark-border">
+        <p className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{data.name}</p>
+        <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
           Value: {new Intl.NumberFormat('es-AR', { 
             style: 'currency', 
             currency: 'ARS',
@@ -123,7 +123,7 @@ const SankeyDiagram: React.FC<SankeyDiagramProps> = ({
     return (
       <div className={`bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}>
         <div className="p-8 text-center">
-          <p className="text-gray-500">No hay datos de flujo disponibles</p>
+          <p className="text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">No hay datos de flujo disponibles</p>
         </div>
       </div>
     );
@@ -186,7 +186,7 @@ const SankeyDiagram: React.FC<SankeyDiagramProps> = ({
     >
       {title && (
         <div className="p-4 border-b border-gray-100">
-          <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{title}</h3>
         </div>
       )}
       

@@ -405,7 +405,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
     if (loading) {
       return (
         <div className="flex items-center justify-center h-64">
-          <Loader2 className="h-8 w-8 animate-spin text-blue-600" />
+          <Loader2 className="h-8 w-8 animate-spin text-blue-600 dark:text-blue-400" />
         </div>
       );
     }
@@ -415,7 +415,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
         <div className="flex items-center justify-center h-64">
           <div className="text-center">
             <AlertTriangle className="h-8 w-8 text-amber-500 mx-auto mb-2" />
-            <p className="text-sm text-gray-600">No hay datos disponibles para mostrar</p>
+            <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">No hay datos disponibles para mostrar</p>
           </div>
         </div>
       );
@@ -815,7 +815,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       {(title || showControls) && (
         <div className="flex items-center justify-between p-4 border-b border-gray-100">
           {title && (
-            <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{title}</h3>
           )}
           {showControls && (
             <div className="flex items-center space-x-2">
@@ -834,7 +834,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
                     className={`flex items-center px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
                       currentVariant === chartType
                         ? 'bg-blue-100 text-blue-700 border border-blue-200'
-                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                        : 'text-gray-600 dark:text-dark-text-secondary hover:text-gray-900 dark:text-dark-text-primary hover:bg-gray-100 dark:bg-dark-background'
                     }`}
                     title={`Vista ${chartType}`}
                   >
@@ -855,8 +855,8 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
 
       {/* Footer Stats */}
       {!loading && !error && chartData.length > 0 && (
-        <div className="px-4 py-3 bg-gray-50 border-t border-gray-100 rounded-b-lg">
-          <div className="flex items-center justify-between text-sm text-gray-600">
+        <div className="px-4 py-3 bg-gray-50 dark:bg-dark-background dark:bg-dark-background border-t border-gray-100 rounded-b-lg">
+          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
             <span>
               {chartData.length} elemento{chartData.length !== 1 ? 's' : ''} • {type.includes('-trend') ? 'Serie Histórica' : `Año ${year}`}
             </span>

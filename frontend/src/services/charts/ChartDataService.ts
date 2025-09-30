@@ -1,4 +1,4 @@
-/**
+/** 
  * Chart Data Service - Loads and processes consolidated chart data
  * Handles loading of CSV data for the 13 chart types across all years (2019-2025)
  */
@@ -119,7 +119,25 @@ class ChartDataService {
       const parsed = Papa.parse(csvText, {
         header: true,
         skipEmptyLines: true,
-        dynamicTyping: true
+        dynamicTyping: true,
+        transform: (value) => {
+          // Handle monetary values with dollar signs and commas
+          if (typeof value === 'string') {
+            // Check if it's a monetary value like "$330,000,000"
+            if (value.startsWith('$') && value.includes(',')) {
+              const numericValue = value.replace('$', '').replace(/,/g, '');
+              const num = parseFloat(numericValue);
+              return isNaN(num) ? value : num;
+            }
+            // Also handle percentages like "97.9%"
+            else if (value.endsWith('%')) {
+              const numericValue = value.replace('%', '');
+              const num = parseFloat(numericValue);
+              return isNaN(num) ? value : num;
+            }
+          }
+          return value;
+        }
       });
       
       if (parsed.errors.length > 0) {

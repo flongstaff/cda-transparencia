@@ -31,7 +31,7 @@ const YearlyComparisonChart: React.FC<YearlyComparisonChartProps> = ({
   if (loading) {
     return (
       <div className="flex items-center justify-center h-full min-h-[200px]">
-        <Loader2 className="h-8 w-8 animate-spin text-blue-600" />
+        <Loader2 className="h-8 w-8 animate-spin text-blue-600 dark:text-blue-400" />
       </div>
     );
   }
@@ -41,7 +41,7 @@ const YearlyComparisonChart: React.FC<YearlyComparisonChartProps> = ({
       <div className="flex items-center justify-center h-full min-h-[200px]">
         <div className="text-center">
           <AlertTriangle className="h-8 w-8 text-red-500 mx-auto mb-2" />
-          <p className="text-sm text-gray-600">Error al cargar datos históricos: {error}</p>
+          <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Error al cargar datos históricos: {error}</p>
         </div>
       </div>
     );
@@ -52,7 +52,7 @@ const YearlyComparisonChart: React.FC<YearlyComparisonChartProps> = ({
       <div className="flex items-center justify-center h-full min-h-[200px]">
         <div className="text-center">
           <AlertTriangle className="h-8 w-8 text-amber-500 mx-auto mb-2" />
-          <p className="text-sm text-gray-600">No hay datos históricos disponibles para {title}</p>
+          <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">No hay datos históricos disponibles para {title}</p>
         </div>
       </div>
     );
@@ -60,7 +60,7 @@ const YearlyComparisonChart: React.FC<YearlyComparisonChartProps> = ({
 
   return (
     <div className="w-full" style={{ height: height }}>
-      {title && <h3 className="text-lg font-semibold text-gray-900 mb-4">{title}</h3>}
+      {title && <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">{title}</h3>}
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />

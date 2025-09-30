@@ -1,0 +1,8 @@
+{
+  "name": "cda-transparencia",
+  "compatibility_date": "2024-01-01",
+  "pages": {
+    "build_command": "cd frontend && npm run build && mkdir -p dist-light && rsync -av --exclude='data/pdfs' --exclude='data/csv' --exclude='data/json' --exclude='data/charts' --exclude='data/consolidated' --exclude='data/web_accessible_pdfs' --exclude='*.db' --exclude='data/db' --exclude='raw' --exclude='processed' --exclude='local' --exclude='organized_by_subject' --exclude='organized_documents' --exclude='organized_by_category' --exclude='powerbi_extraction' --exclude='merged_datasets' --exclude='infrastructure_tracking' --exclude='organized_analysis' --exclude='validation_reports' --exclude='reports' --exclude='whistleblower_reports' frontend/dist/ frontend/dist-light/",
+    "build_output_dir": "./frontend/dist-light"
+  }
+}

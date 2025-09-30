@@ -1,18 +1,36 @@
 {
-  "timestamp": "2025-09-27T11:39:41.863091",
-  "status": "ready",
-  "system": {
-    "total_pdfs": 96,
-    "csv_files": 16,
-    "last_processed": "2025-09-27T11:39:41.863094"
-  },
+  "api_version": "1.0",
+  "generated_at": "2025-09-28T18:31:08.967449",
   "endpoints": {
-    "documents": "/data/api/documents.json",
-    "categories": "/data/api/categories.json",
-    "csv_data": "/data/api/csv_data.json",
-    "data_summary": "/data/api/data_summary.json",
-    "transparency_data": "/data/csv/transparency_data_complete.csv",
-    "revenue_data": "/data/csv/revenue_summary.csv",
-    "expenses_data": "/data/csv/expenses_summary.csv"
+    "financial": {
+      "base": "/api/financial",
+      "description": "Financial data organized by year",
+      "available_years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "transparency": {
+      "base": "/api/transparency",
+      "description": "Transparency portal data",
+      "routes": {}
+    },
+    "statistics": {
+      "base": "/api/statistics",
+      "description": "Statistical reports and data",
+      "routes": {}
+    },
+    "tenders": {
+      "base": "/api/tenders",
+      "description": "Public tender data",
+      "routes": {}
+    }
   }
 }

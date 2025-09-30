@@ -164,10 +164,10 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
     
     // Text files
     if (['txt', 'csv'].includes(type) || /\.(txt|csv)$/.test(filename)) {
-      return <FileText className="w-8 h-8 text-gray-500" />;
+      return <FileText className="w-8 h-8 text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary" />;
     }
     
-    return <FileX className="w-8 h-8 text-gray-500" />;
+    return <FileX className="w-8 h-8 text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary" />;
   };
 
   const getFileTypeDescription = (document: Document) => {
@@ -284,14 +284,14 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
     // Generic fallback
     else {
       return (
-        <div className="bg-white border border-gray-200 rounded-lg p-8 text-center">
+        <div className="bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-lg p-8 text-center">
           <div className="mb-4">
             {getFileIcon(document)}
           </div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">
             {getFileTypeDescription(document)}
           </h3>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-4">
             Este tipo de archivo no se puede previsualizar directamente.
           </p>
           <div className="space-x-3">
@@ -309,7 +309,7 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
                   href={document.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 inline-flex items-center"
+                  className="px-4 py-2 border border-gray-300 dark:border-dark-border text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary rounded-lg hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background inline-flex items-center"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   Abrir
@@ -327,7 +327,7 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -2 }}
-      className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-all cursor-pointer"
+      className="bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-lg p-4 shadow-sm hover:shadow-md transition-all cursor-pointer"
       onClick={() => handleDocumentSelect(document)}
     >
       <div className="flex items-start space-x-3">
@@ -335,13 +335,13 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
           {getFileIcon(document)}
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-semibold text-gray-900 truncate">
+          <h3 className="text-sm font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary truncate">
             {document.title}
           </h3>
-          <p className="text-xs text-gray-500 mt-1">
+          <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-1">
             {document.category} • {document.year}
           </p>
-          <p className="text-xs text-gray-400 mt-1">
+          <p className="text-xs text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-1">
             {getFileTypeDescription(document)} • {document.size_mb} MB
           </p>
           <div className="flex items-center mt-2">
@@ -362,7 +362,7 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-all cursor-pointer"
+      className="bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-lg p-4 shadow-sm hover:shadow-md transition-all cursor-pointer"
       onClick={() => handleDocumentSelect(document)}
     >
       <div className="flex items-center justify-between">
@@ -371,16 +371,16 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
             {getFileIcon(document)}
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-sm font-semibold text-gray-900 truncate">
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary truncate">
               {document.title}
             </h3>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
               {document.category} • {getFileTypeDescription(document)}
             </p>
           </div>
         </div>
         
-        <div className="flex items-center space-x-4 text-xs text-gray-500">
+        <div className="flex items-center space-x-4 text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
           <span>{document.year}</span>
           <span>{document.size_mb} MB</span>
           <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
@@ -398,8 +398,8 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
   if (loading) {
     return (
       <div className={`bg-white border border-gray-200 rounded-lg p-8 text-center ${className}`}>
-        <Loader2 className="w-8 h-8 text-blue-600 animate-spin mx-auto mb-4" />
-        <p className="text-gray-600">Cargando documentos...</p>
+        <Loader2 className="w-8 h-8 text-blue-600 dark:text-blue-400 animate-spin mx-auto mb-4" />
+        <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Cargando documentos...</p>
       </div>
     );
   }
@@ -408,8 +408,8 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
     return (
       <div className={`bg-white border border-red-200 rounded-lg p-8 text-center ${className}`}>
         <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">Error</h3>
-        <p className="text-gray-600">{error}</p>
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">Error</h3>
+        <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">{error}</p>
       </div>
     );
   }
@@ -428,12 +428,12 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
       {selectedDocument && (
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-bold text-gray-900">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
               {selectedDocument.title}
             </h2>
             <button
               onClick={() => setSelectedDocument(null)}
-              className="text-gray-500 hover:text-gray-700"
+              className="text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary hover:text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary"
             >
               Cerrar vista
             </button>
@@ -446,17 +446,17 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
       {showList && (
         <div>
           {/* Filters */}
-          <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
+          <div className="bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-lg p-4 mb-6">
             <div className="flex flex-wrap gap-4 items-center">
               {/* Search */}
               <div className="relative flex-1 min-w-64">
-                <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
+                <Search className="w-4 h-4 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary absolute left-3 top-1/2 transform -translate-y-1/2" />
                 <input
                   type="text"
                   placeholder="Buscar documentos..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="pl-10 pr-4 py-2 w-full border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
 
@@ -464,7 +464,7 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
               <select
                 value={categoryFilter}
                 onChange={(e) => setCategoryFilter(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="px-3 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="all">Todas las categorías</option>
                 {categories.map(category => (
@@ -476,7 +476,7 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
               <select
                 value={yearFilter}
                 onChange={(e) => setYearFilter(e.target.value === 'all' ? 'all' : parseInt(e.target.value))}
-                className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="px-3 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="all">Todos los años</option>
                 {years.map(year => (
@@ -485,16 +485,16 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
               </select>
 
               {/* View Toggle */}
-              <div className="flex items-center border border-gray-300 rounded-lg">
+              <div className="flex items-center border border-gray-300 dark:border-dark-border rounded-lg">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-gray-600 hover:bg-gray-50'} rounded-l-lg`}
+                  className={`p-2 ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-gray-600 dark:text-dark-text-secondary hover:bg-gray-50 dark:bg-dark-background'} rounded-l-lg`}
                 >
                   <Grid className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-gray-600 hover:bg-gray-50'} rounded-r-lg`}
+                  className={`p-2 ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-gray-600 dark:text-dark-text-secondary hover:bg-gray-50 dark:bg-dark-background'} rounded-r-lg`}
                 >
                   <List className="w-4 h-4" />
                 </button>
@@ -502,19 +502,19 @@ const UnifiedDocumentViewer: React.FC<UnifiedDocumentViewerProps> = ({
             </div>
 
             {/* Results Summary */}
-            <div className="mt-3 text-sm text-gray-600">
+            <div className="mt-3 text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
               Mostrando {filteredDocuments.length} de {documents.length} documentos
             </div>
           </div>
 
           {/* Document Grid/List */}
           {filteredDocuments.length === 0 ? (
-            <div className="bg-white border border-gray-200 rounded-lg p-8 text-center">
-              <FileX className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            <div className="bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-lg p-8 text-center">
+              <FileX className="w-12 h-12 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">
                 No se encontraron documentos
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
                 Intenta ajustar los filtros de búsqueda
               </p>
             </div>

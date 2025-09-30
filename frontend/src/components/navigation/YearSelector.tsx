@@ -59,7 +59,7 @@ const YearSelector: React.FC<YearSelectorProps> = ({
 
       {isOpen && (
         <div 
-          className="absolute z-10 mt-2 w-full md:w-48 bg-white rounded-lg shadow-lg border border-gray-200 max-h-60 overflow-y-auto"
+          className="absolute z-10 mt-2 w-full md:w-48 bg-white dark:bg-dark-surface rounded-lg shadow-lg border border-gray-200 dark:border-dark-border max-h-60 overflow-y-auto"
           role="menu"
         >
           <div className="py-1">
@@ -73,7 +73,7 @@ const YearSelector: React.FC<YearSelectorProps> = ({
                     className={`block w-full text-left px-4 py-2 text-sm ${
                       year === selectedYear
                         ? 'bg-blue-50 text-blue-600 font-medium'
-                        : 'text-gray-700 hover:bg-gray-100'
+                        : 'text-gray-700 dark:text-dark-text-secondary hover:bg-gray-100 dark:bg-dark-background'
                     }`}
                     role="menuitem"
                   >
@@ -81,7 +81,7 @@ const YearSelector: React.FC<YearSelectorProps> = ({
                   </button>
                 ))
             ) : (
-              <div className="px-4 py-2 text-sm text-gray-500">
+              <div className="px-4 py-2 text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                 Cargando años...
               </div>
             )}

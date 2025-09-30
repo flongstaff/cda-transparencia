@@ -1,0 +1,52 @@
+{
+  "githubPagesConfig": {
+    "include": [
+      "**/*"
+    ],
+    "exclude": [
+      "data/pdfs/**/*",
+      "data/csv/**/*",
+      "data/json/**/*", 
+      "data/charts/**/*",
+      "data/consolidated/**/*",
+      "data/web_accessible_pdfs/**/*",
+      "*.db",
+      "data/db/**/*",
+      "raw/**/*",
+      "processed/**/*",
+      "local/**/*",
+      "organized_by_subject/**/*"
+    ]
+  },
+  "cloudflarePagesConfig": {
+    "build_command": "cd frontend && npm run build",
+    "build_output_dir": "./dist-light",
+    "environment_variables": {
+      "NODE_ENV": "production"
+    },
+    "exclude": [
+      "data/pdfs/**/*",
+      "data/csv/**/*", 
+      "data/json/**/*",
+      "data/charts/**/*",
+      "data/consolidated/**/*",
+      "data/web_accessible_pdfs/**/*",
+      "*.db",
+      "data/db/**/*",
+      "raw/**/*",
+      "processed/**/*",
+      "local/**/*",
+      "organized_by_subject/**/*",
+      "organized_documents/**/*",
+      "organized_by_category/**/*",
+      "organized_by_subject/**/*",
+      "powerbi_extraction/**/*",
+      "merged_datasets/**/*",
+      "infrastructure_tracking/**/*",
+      "organized_analysis/**/*",
+      "validation_reports/**/*",
+      "reports/**/*",
+      "whistleblower_reports/**/*"
+    ]
+  }
+}

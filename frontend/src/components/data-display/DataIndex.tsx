@@ -119,15 +119,15 @@ const DataIndex: React.FC = () => {
           onChange={(e) => setSearchQuery(e.target.value)}
           className="border p-2 mb-2 w-full max-w-md rounded-lg"
         />
-        <p className="text-sm text-gray-600 mt-1">
+        <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mt-1">
           Resultados: {filteredFiles.length} de {files.length} archivos
         </p>
       </div>
       
       <div className="overflow-x-auto">
-        <table className="min-w-full border-collapse border border-gray-300">
+        <table className="min-w-full border-collapse border border-gray-300 dark:border-dark-border">
           <thead>
-            <tr className="bg-gray-100">
+            <tr className="bg-gray-100 dark:bg-dark-background dark:bg-dark-surface-alt">
               <th className="border px-4 py-2 text-left">Archivo</th>
               <th className="border px-4 py-2 text-left">Tipo</th>
               <th className="border px-4 py-2 text-left">Categoría (para Auditoría)</th>
@@ -136,7 +136,7 @@ const DataIndex: React.FC = () => {
           </thead>
           <tbody>
             {filteredFiles.map((file, i) => (
-              <tr key={i} className="hover:bg-gray-50">
+              <tr key={i} className="hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
                 <td className="border px-4 py-2">{file.name}</td>
                 <td className="border px-4 py-2">{file.type}</td>
                 <td className="border px-4 py-2">
@@ -165,7 +165,7 @@ const DataIndex: React.FC = () => {
         </table>
       </div>
       
-      <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+      <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">
         <h3 className="text-lg font-semibold text-blue-800 mb-2">Sobre este Índice</h3>
         <p className="text-blue-700">
           Total: {files.length} archivos identificados. Usados para validación externa y auditoría.
@@ -175,7 +175,7 @@ const DataIndex: React.FC = () => {
         <p className="text-blue-700 mt-2">
           Para auditoría externa: Comparar con <a 
             href="https://datos.gob.ar/dataset/municipalidad-carmen-de-areco" 
-            className="text-blue-600 hover:underline"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >

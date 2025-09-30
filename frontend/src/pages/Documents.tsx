@@ -156,10 +156,10 @@ const Documents: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
         <div className="text-center">
-          <Loader2 className="w-8 h-8 animate-spin text-blue-600 mx-auto mb-4" />
-          <p className="text-gray-600">Cargando documentos…</p>
+          <Loader2 className="w-8 h-8 animate-spin text-blue-600 dark:text-blue-400 mx-auto mb-4" />
+          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Cargando documentos…</p>
         </div>
       </div>
     );
@@ -167,23 +167,23 @@ const Documents: React.FC = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
         <AlertCircle className="w-12 h-12 text-red-500 mr-4" />
-        <p className="text-red-600">{error || 'Error al cargar los documentos'}</p>
+        <p className="text-red-600 dark:text-red-400">{error || 'Error al cargar los documentos'}</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
       {/* Header */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+      <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">
               📄 Documentos de Transparencia
             </h1>
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
               Accede a todos los documentos oficiales del municipio para el año {selectedYear}
               <span className="ml-2 text-sm bg-green-100 text-green-800 px-2 py-1 rounded">
                 {totalStats.totalDocuments} documentos disponibles
@@ -200,99 +200,99 @@ const Documents: React.FC = () => {
 
       {/* Enhanced Statistics */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
           <div className="flex items-center">
             <FileText className="h-8 w-8 text-blue-500" />
             <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500">Total Documentos</p>
-              <p className="text-2xl font-semibold text-blue-600">{totalStats.totalDocuments}</p>
-              <p className="text-xs text-gray-400">
+              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Total Documentos</p>
+              <p className="text-2xl font-semibold text-blue-600 dark:text-blue-400">{totalStats.totalDocuments}</p>
+              <p className="text-xs text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                 Promedio: {(totalStats.totalSize / Math.max(totalStats.totalDocuments, 1)).toFixed(1)} MB
               </p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
           <div className="flex items-center">
             <CheckCircle className="h-8 w-8 text-green-500" />
             <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500">Verificados</p>
-              <p className="text-2xl font-semibold text-green-600">{totalStats.verified}</p>
-              <p className="text-xs text-gray-400">
+              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Verificados</p>
+              <p className="text-2xl font-semibold text-green-600 dark:text-green-400">{totalStats.verified}</p>
+              <p className="text-xs text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                 {Math.round((totalStats.verified / Math.max(totalStats.totalDocuments, 1)) * 100)}% del total
               </p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
           <div className="flex items-center">
             <FileText className="h-8 w-8 text-purple-500" />
             <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500">Categorías</p>
-              <p className="text-2xl font-semibold text-purple-600">{totalStats.categoriesCount}</p>
-              <p className="text-xs text-gray-400">Organizadas por tema</p>
+              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Categorías</p>
+              <p className="text-2xl font-semibold text-purple-600 dark:text-purple-400">{totalStats.categoriesCount}</p>
+              <p className="text-xs text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Organizadas por tema</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
           <div className="flex items-center">
             <FileText className="h-8 w-8 text-orange-500" />
             <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500">Tamaño Total</p>
-              <p className="text-2xl font-semibold text-orange-600">{totalStats.totalSize.toFixed(1)} MB</p>
-              <p className="text-xs text-gray-400">Archivo digital</p>
+              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Tamaño Total</p>
+              <p className="text-2xl font-semibold text-orange-600 dark:text-orange-400">{totalStats.totalSize.toFixed(1)} MB</p>
+              <p className="text-xs text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Archivo digital</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Document Categories Summary */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Documentos por Categoría</h2>
+      <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Documentos por Categoría</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {categories.slice(0, 8).map((category) => (
             <div
               key={category}
-              className="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
+              className="flex items-center p-3 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg hover:bg-gray-100 dark:bg-dark-background dark:bg-dark-surface-alt transition-colors cursor-pointer"
               onClick={() => setSelectedCategory(category)}
             >
               <span className="text-2xl mr-3">{getCategoryIcon(category)}</span>
               <div>
-                <p className="text-sm font-medium text-gray-900">{category.replace(/_/g, ' ')}</p>
-                <p className="text-xs text-gray-500">{yearDocuments.filter(doc => doc.category === category).length} documentos</p>
+                <p className="text-sm font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{category.replace(/_/g, ' ')}</p>
+                <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">{yearDocuments.filter(doc => doc.category === category).length} documentos</p>
               </div>
             </div>
           ))}
         </div>
         {categories.length > 8 && (
-          <p className="text-sm text-gray-500 mt-4 text-center">
+          <p className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-4 text-center">
             +{categories.length - 8} categorías más disponibles
           </p>
         )}
       </div>
 
       {/* Filters and Controls */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+      <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
         <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
           <div className="flex flex-col sm:flex-row gap-4 flex-1">
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary h-5 w-5" />
               <input
                 type="text"
                 placeholder="Buscar documentos..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
 
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="all">Todas las categorías</option>
               {categories.map((category) => (
@@ -305,7 +305,7 @@ const Documents: React.FC = () => {
             <select
               value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="all">Todos los tipos</option>
               {documentTypes.map((type) => (
@@ -317,20 +317,20 @@ const Documents: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-500 mr-2">
+            <span className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mr-2">
               {filteredDocuments.length} de {totalStats.totalDocuments}
             </span>
             <button
               type="button"
               onClick={() => setViewMode('grid')}
-              className={`p-2 rounded-lg ${viewMode === 'grid' ? 'bg-blue-100 text-blue-600' : 'text-gray-400'}`}
+              className={`p-2 rounded-lg ${viewMode === 'grid' ? 'bg-blue-100 text-blue-600' : 'text-gray-400 dark:text-dark-text-tertiary'}`}
             >
               <Grid className="h-5 w-5" />
             </button>
             <button
               type="button"
               onClick={() => setViewMode('list')}
-              className={`p-2 rounded-lg ${viewMode === 'list' ? 'bg-blue-100 text-blue-600' : 'text-gray-400'}`}
+              className={`p-2 rounded-lg ${viewMode === 'list' ? 'bg-blue-100 text-blue-600' : 'text-gray-400 dark:text-dark-text-tertiary'}`}
             >
               <List className="h-5 w-5" />
             </button>
@@ -346,22 +346,22 @@ const Documents: React.FC = () => {
               key={doc.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200"
+              className="bg-white dark:bg-dark-surface rounded-lg border border-gray-200 dark:border-dark-border shadow-sm hover:shadow-md transition-all duration-200"
             >
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-2xl">{getCategoryIcon(doc.category)}</div>
                   <div className="flex items-center space-x-1">
                     {doc.verified && <CheckCircle className="h-4 w-4 text-green-500" />}
-                    <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                    <span className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary bg-gray-100 dark:bg-dark-background dark:bg-dark-surface-alt px-2 py-1 rounded">
                       {doc.type?.toUpperCase() || 'UNKNOWN'}
                     </span>
                   </div>
                 </div>
 
-                <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">{doc.title}</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2 line-clamp-2">{doc.title}</h3>
 
-                <div className="text-sm text-gray-600 space-y-1 mb-4">
+                <div className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary space-y-1 mb-4">
                   <div className="flex items-center">
                     <FileText className="h-4 w-4 mr-2" />
                     <span>{formatFileSize(doc.size_mb * 1024 * 1024)}</span>
@@ -379,7 +379,7 @@ const Documents: React.FC = () => {
                     href={doc.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100 transition-colors"
                   >
                     <Eye className="h-4 w-4 mr-2" />
                     Ver
@@ -387,7 +387,7 @@ const Documents: React.FC = () => {
                   <a
                     href={doc.url}
                     download
-                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-600 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg hover:bg-gray-100 dark:bg-dark-background dark:bg-dark-surface-alt transition-colors"
                   >
                     <Download className="h-4 w-4 mr-2" />
                     Descargar
@@ -399,49 +399,49 @@ const Documents: React.FC = () => {
         </div>
       ) : (
         /* List View */
-        <div className="bg-white rounded-xl-sm border border-gray-200 overflow-hidden">
+        <div className="bg-white dark:bg-dark-surface rounded-xl-sm border border-gray-200 dark:border-dark-border overflow-hidden">
           <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
+            <thead className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                   Documento
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                   Categoría
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                   Tipo
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                   Tamaño
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                   Estado
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                   Acciones
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white dark:bg-dark-surface divide-y divide-gray-200">
               {filteredDocuments.map((doc) => (
-                <tr key={doc.id} className="hover:bg-gray-50">
+                <tr key={doc.id} className="hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
                   <td className="px-6 py-4">
                     <div className="flex items-center">
                       <div className="text-xl mr-3">{getCategoryIcon(doc.category)}</div>
                       <div>
-                        <div className="text-sm font-medium text-gray-900 max-w-xs truncate">{doc.title}</div>
-                        <div className="text-sm text-gray-500 max-xs truncate">{doc.filename}</div>
+                        <div className="text-sm font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary max-w-xs truncate">{doc.title}</div>
+                        <div className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary max-xs truncate">{doc.filename}</div>
                       </div>
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{doc.category.replace(/_/g, ' ')}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">{doc.category.replace(/_/g, ' ')}</td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800">
                       {doc.type?.toUpperCase() || 'UNKNOWN'}
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                     {formatFileSize(doc.size_mb * 1024 * 1024)}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
@@ -462,7 +462,7 @@ const Documents: React.FC = () => {
                       href={doc.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-900 mr-4 flex items-center"
+                      className="text-blue-600 dark:text-blue-400 hover:text-blue-900 mr-4 flex items-center"
                       title="Ver documento"
                     >
                       <Eye className="h-4 w-4 mr-1" />
@@ -471,7 +471,7 @@ const Documents: React.FC = () => {
                     <a
                       href={doc.url}
                       download
-                      className="text-gray-600 hover:text-gray-900 flex items-center"
+                      className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary hover:text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary flex items-center"
                       title="Descargar documento"
                     >
                       <Download className="h-4 w-4 mr-1" />
@@ -488,9 +488,9 @@ const Documents: React.FC = () => {
       {/* No results message */}
       {filteredDocuments.length === 0 && searchTerm && (
         <div className="text-center py-12">
-          <FileText className="mx-auto h-12 w-12 text-gray-400" />
-          <h3 className="mt-2 text-sm font-medium text-gray-900">No hay documentos</h3>
-          <p className="mt-1 text-sm text-gray-500">
+          <FileText className="mx-auto h-12 w-12 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary" />
+          <h3 className="mt-2 text-sm font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">No hay documentos</h3>
+          <p className="mt-1 text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
             No se encontraron documentos con los filtros seleccionados: "{searchTerm}"
           </p>
           <button
@@ -507,7 +507,7 @@ const Documents: React.FC = () => {
       )}
 
       {/* Data Sources Information */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">
+      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-6 mt-8">
         <div className="flex items-start">
           <FileText className="h-6 w-6 text-blue-500 mt-1 mr-3" />
           <div>

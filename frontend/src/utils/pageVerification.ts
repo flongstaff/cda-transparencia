@@ -3,8 +3,8 @@
  * Ensures all pages exist and are properly connected
  */
 
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+// import React, { useState, useEffect } from 'react';
+// import { Link } from 'react-router-dom';
 
 // Page components that should exist
 const REQUIRED_PAGES = [
@@ -60,7 +60,7 @@ export const verifyAllPagesExist = () => {
       // This would dynamically check if page exists
       // In practice, we'd check the filesystem or imports
       console.log(`✅ Verified page exists: ${page}`);
-    } catch (error) {
+    } catch {
       missingPages.push(page);
       console.warn(`⚠️  Missing page: ${page}`);
     }

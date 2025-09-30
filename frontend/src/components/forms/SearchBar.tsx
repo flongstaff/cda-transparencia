@@ -146,11 +146,11 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
           value={query}
           onChange={handleInputChange}
           placeholder="Buscar en el portal de transparencia..."
-          className="w-full px-4 py-2 rounded-l-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-4 py-2 rounded-l-lg text-gray-800 dark:text-dark-text-secondary dark:text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r-lg transition duration-200"
+          className="bg-blue-50 dark:bg-blue-900/200 hover:bg-blue-600 text-white px-4 py-2 rounded-r-lg transition duration-200"
         >
           Buscar
         </button>
@@ -158,19 +158,19 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
 
       {/* Search Results Dropdown */}
       {showResults && searchResults.length > 0 && (
-        <div className="absolute z-10 w-full bg-white shadow-lg rounded-md mt-1 max-h-80 overflow-y-auto">
+        <div className="absolute z-10 w-full bg-white dark:bg-dark-surface shadow-lg rounded-md mt-1 max-h-80 overflow-y-auto">
           <ul>
             {searchResults.map((result, index) => (
               <li 
                 key={result.item.id} 
-                className={`border-b border-gray-200 last:border-b-0 p-3 cursor-pointer hover:bg-gray-100 ${
-                  index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
+                className={`border-b border-gray-200 last:border-b-0 p-3 cursor-pointer hover:bg-gray-100 dark:bg-dark-background ${
+                  index % 2 === 0 ? 'bg-white' : 'bg-gray-50 dark:bg-dark-background'
                 }`}
                 onClick={() => handleResultClick(result.item.url)}
               >
-                <div className="font-semibold text-blue-600">{result.item.title}</div>
-                <div className="text-sm text-gray-600 truncate">{result.item.content}</div>
-                <div className="text-xs text-gray-500 mt-1">{result.item.type}</div>
+                <div className="font-semibold text-blue-600 dark:text-blue-400">{result.item.title}</div>
+                <div className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary truncate">{result.item.content}</div>
+                <div className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-1">{result.item.type}</div>
               </li>
             ))}
           </ul>
@@ -179,7 +179,7 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
 
       {/* Show "no results" message */}
       {showResults && searchResults.length === 0 && query && (
-        <div className="absolute z-10 w-full bg-white shadow-lg rounded-md mt-1 p-3">
+        <div className="absolute z-10 w-full bg-white dark:bg-dark-surface shadow-lg rounded-md mt-1 p-3">
           No se encontraron resultados para "{query}"
         </div>
       )}

@@ -56,7 +56,7 @@ const Database: React.FC = () => {
 
   const documentTypes = useMemo(() => {
     if (!documents || documents.length === 0) return [];
-    return [...new Set(documents.map((props: Record<string, unknown>) => doc.type || 'Documento'))].sort();
+    return [...new Set(documents.map((doc: Record<string, unknown>) => doc.type || 'Documento'))].sort();
   }, [documents]);
 
   const totalStats = useMemo(() => {
@@ -71,9 +71,9 @@ const Database: React.FC = () => {
     return {
       totalDocuments: documents.length,
       totalSize: documents.reduce((sum: number, doc: any) => sum + (doc.size_mb || 0), 0),
-      yearsCovered: new Set(documents.map((props: Record<string, unknown>) => doc.year)).size,
+      yearsCovered: new Set(documents.map((doc: Record<string, unknown>) => doc.year)).size,
       categoriesCount: categories.length,
-      verified: documents.filter((props: Record<string, unknown>) => doc.verified).length,
+      verified: documents.filter((doc: Record<string, unknown>) => doc.verified).length,
       integrityVerified: documents.filter((doc) => doc.integrity_verified).length
     };
   }, [documents, categories]);
@@ -137,10 +137,10 @@ const Database: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background flex items-center justify-center">
         <div className="text-center">
-          <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-blue-600" />
-          <p className="text-gray-600">Cargando base de datos...</p>
+          <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-blue-600 dark:text-blue-400" />
+          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Cargando base de datos...</p>
         </div>
       </div>
     );
@@ -148,11 +148,11 @@ const Database: React.FC = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background flex items-center justify-center">
         <div className="text-center">
           <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
           <h2 className="text-lg font-semibold text-red-800 mb-2">Error</h2>
-          <p className="text-gray-600">{error}</p>
+          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">{error}</p>
         </div>
       </div>
     );
@@ -163,16 +163,16 @@ const Database: React.FC = () => {
   const categoriesCount = categories.length;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+        <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6 mb-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div className="flex items-center mb-4 lg:mb-0">
-              <DatabaseIcon className="w-8 h-8 text-blue-600 mr-3" />
+              <DatabaseIcon className="w-8 h-8 text-blue-600 dark:text-blue-400 mr-3" />
               <div>
-                <h1 className="text-3xl font-bold text-gray-900">Base de Datos Municipal</h1>
-                <p className="text-gray-600">Búsqueda y exploración completa de documentos municipales</p>
+                <h1 className="text-3xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">Base de Datos Municipal</h1>
+                <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Búsqueda y exploración completa de documentos municipales</p>
               </div>
             </div>
             <PageYearSelector
@@ -186,30 +186,30 @@ const Database: React.FC = () => {
 
         {/* Statistics */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white rounded-xl shadow p-4 flex items-center">
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow p-4 flex items-center">
             <FileText className="w-8 h-8 text-blue-500 mr-3" />
             <div>
-              <p className="text-sm text-gray-600">Documentos Totales</p>
+              <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Documentos Totales</p>
               <p className="text-2xl font-semibold">
                 {totalDocs.toLocaleString()}
               </p>
             </div>
           </div>
 
-          <div className="bg-white rounded-xl shadow p-4 flex items-center">
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow p-4 flex items-center">
             <Users className="w-8 h-8 text-green-500 mr-3" />
             <div>
-              <p className="text-sm text-gray-600">Categorías</p>
+              <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Categorías</p>
               <p className="text-2xl font-semibold">
                 {categoriesCount}
               </p>
             </div>
           </div>
 
-          <div className="bg-white rounded-xl shadow p-4 flex items-center">
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow p-4 flex items-center">
             <DollarSign className="w-8 h-8 text-purple-500 mr-3" />
             <div>
-              <p className="text-sm text-gray-600">Fuentes de Datos</p>
+              <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Fuentes de Datos</p>
               <p className="text-2xl font-semibold">
                 {sources}
               </p>
@@ -218,16 +218,16 @@ const Database: React.FC = () => {
         </div>
 
         {/* Filters */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+        <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6 mb-8">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary w-5 h-5" />
               <input
                 type="text"
                 placeholder="Buscar documentos por título, archivo o tipo..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 aria-label="Buscar en la base de datos"
               />
             </div>
@@ -236,7 +236,7 @@ const Database: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 aria-label="Filtrar por categoría"
               >
                 <option value="all">Todas las categorías</option>
@@ -250,7 +250,7 @@ const Database: React.FC = () => {
               <select
                 value={selectedType}
                 onChange={(e) => setSelectedType(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 aria-label="Filtrar por tipo de archivo"
               >
                 <option value="all">Todos los tipos</option>
@@ -264,14 +264,14 @@ const Database: React.FC = () => {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-lg ${viewMode === 'grid' ? 'bg-blue-100 text-blue-600' : 'text-gray-400'}`}
+                  className={`p-2 rounded-lg ${viewMode === 'grid' ? 'bg-blue-100 text-blue-600' : 'text-gray-400 dark:text-dark-text-tertiary'}`}
                   title="Vista de cuadrícula"
                 >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-lg ${viewMode === 'list' ? 'bg-blue-100 text-blue-600' : 'text-gray-400'}`}
+                  className={`p-2 rounded-lg ${viewMode === 'list' ? 'bg-blue-100 text-blue-600' : 'text-gray-400 dark:text-dark-text-tertiary'}`}
                   title="Vista de lista"
                 >
                   <List className="w-5 h-5" />
@@ -301,7 +301,7 @@ const Database: React.FC = () => {
                   a.click();
                   window.URL.revokeObjectURL(url);
                 }}
-                className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+                className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary bg-white dark:bg-dark-surface hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background"
                 title="Exportar resultados a CSV"
               >
                 <Download className="w-4 h-4 mr-2" />
@@ -312,13 +312,13 @@ const Database: React.FC = () => {
         </div>
 
         {/* Sorting Header */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 mb-4">
+        <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-4 mb-4">
           <div className="flex items-center justify-between">
-            <span className="text-sm text-gray-600">
+            <span className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
               {filteredDocuments.length} de {totalStats.totalDocuments} documentos
             </span>
             <div className="flex items-center space-x-4">
-              <span className="text-sm text-gray-600">Ordenar por:</span>
+              <span className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Ordenar por:</span>
               <div className="flex space-x-2">
                 {(['title', 'size', 'date', 'category'] as const).map((field) => (
                   <button
@@ -327,7 +327,7 @@ const Database: React.FC = () => {
                     className={`flex items-center px-3 py-1 rounded text-sm ${ 
                       sortField === field
                         ? 'bg-blue-100 text-blue-700'
-                        : 'text-gray-600 hover:text-gray-800'
+                        : 'text-gray-600 dark:text-dark-text-secondary hover:text-gray-800 dark:text-dark-text-secondary'
                     }`}
                   >
                     {{ 
@@ -350,7 +350,7 @@ const Database: React.FC = () => {
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredDocuments.map((document) => (
-              <div key={document.id} className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <div key={document.id} className="bg-white dark:bg-dark-surface rounded-lg border border-gray-200 dark:border-dark-border shadow-sm hover:shadow-md transition-shadow">
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="text-2xl">
@@ -362,17 +362,17 @@ const Database: React.FC = () => {
                       {document.verified && (
                         <CheckCircle className="w-4 h-4 text-green-500" />
                       )}
-                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                      <span className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary bg-gray-100 dark:bg-dark-background dark:bg-dark-surface-alt px-2 py-1 rounded">
                         {document.type.toUpperCase()}
                       </span>
                     </div>
                   </div>
                   
-                  <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
+                  <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2 line-clamp-2">
                     {document.title}
                   </h3>
                   
-                  <div className="text-sm text-gray-600 space-y-1 mb-4">
+                  <div className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary space-y-1 mb-4">
                     <div className="flex items-center">
                       <span className="capitalize">{document.category.replace(/_/g, ' ')}</span>
                     </div>
@@ -387,7 +387,7 @@ const Database: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <button
                       onClick={() => setSelectedDocument(document)}
-                      className="inline-flex items-center px-3 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+                      className="inline-flex items-center px-3 py-2 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100 transition-colors"
                       title={`Ver documento ${document.title}`}
                     >
                       <Eye className="w-4 h-4 mr-1" />
@@ -396,7 +396,7 @@ const Database: React.FC = () => {
                     <a
                       href={document.url}
                       download
-                      className="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-600 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                      className="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg hover:bg-gray-100 dark:bg-dark-background dark:bg-dark-surface-alt transition-colors"
                       title={`Descargar ${document.filename}`}
                     >
                       <Download className="w-4 h-4 mr-1" />
@@ -408,36 +408,36 @@ const Database: React.FC = () => {
             ))}
           </div>
         ) : (
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border overflow-hidden">
             <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
+              <thead className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Documento
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Categoría
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Tipo
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Tamaño
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Año
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Estado
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">
                     Acciones
                   </th>
                 </tr>
               </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
+              <tbody className="bg-white dark:bg-dark-surface divide-y divide-gray-200">
                 {filteredDocuments.map((document) => (
-                  <tr key={document.id} className="hover:bg-gray-50">
+                  <tr key={document.id} className="hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
                     <td className="px-6 py-4">
                       <div className="flex items-center">
                         <div className="text-xl mr-3">
@@ -446,16 +446,16 @@ const Database: React.FC = () => {
                            document.type === 'json' ? '🔷' : '📝'}
                         </div>
                         <div>
-                          <div className="text-sm font-medium text-gray-900 max-w-xs truncate">
+                          <div className="text-sm font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary max-w-xs truncate">
                             {document.title}
                           </div>
-                          <div className="text-sm text-gray-500 max-w-xs truncate">
+                          <div className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary max-w-xs truncate">
                             {document.filename}
                           </div>
                         </div>
                       </div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                       {document.category.replace(/_/g, ' ')}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
@@ -463,10 +463,10 @@ const Database: React.FC = () => {
                         {document.type}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                       {formatFileSize(document.size_mb * 1024 * 1024)}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
                       {document.year}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
@@ -481,7 +481,7 @@ const Database: React.FC = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       <button
                         onClick={() => setSelectedDocument(document)}
-                        className="text-blue-600 hover:text-blue-900 mr-4 flex items-center"
+                        className="text-blue-600 dark:text-blue-400 hover:text-blue-900 mr-4 flex items-center"
                         title="Ver documento"
                       >
                         <Eye className="h-4 w-4 mr-1" />
@@ -490,7 +490,7 @@ const Database: React.FC = () => {
                       <a
                         href={document.url}
                         download
-                        className="text-green-600 hover:text-green-900 flex items-center"
+                        className="text-green-600 dark:text-green-400 hover:text-green-900 flex items-center"
                         title="Descargar documento"
                       >
                         <Download className="h-4 w-4 mr-1" />
@@ -505,10 +505,10 @@ const Database: React.FC = () => {
         )}
 
         {filteredDocuments.length === 0 && searchTerm && (
-          <div className="text-center py-12 bg-white rounded-xl shadow-sm border border-gray-200">
-            <FileText className="mx-auto h-12 w-12 text-gray-400" />
-            <h3 className="mt-2 text-sm font-medium text-gray-900">No hay documentos</h3>
-            <p className="mt-1 text-sm text-gray-500">
+          <div className="text-center py-12 bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border">
+            <FileText className="mx-auto h-12 w-12 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary" />
+            <h3 className="mt-2 text-sm font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">No hay documentos</h3>
+            <p className="mt-1 text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
               No se encontraron documentos con los filtros seleccionados: "{searchTerm}"
             </p>
             <button
@@ -529,16 +529,16 @@ const Database: React.FC = () => {
           <div className="fixed inset-0 z-50 overflow-y-auto">
             <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
               <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-                <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+                <div className="absolute inset-0 bg-gray-50 dark:bg-dark-background dark:bg-dark-background0 opacity-75"></div>
               </div>
 
-              <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
-                <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+              <div className="inline-block align-bottom bg-white dark:bg-dark-surface rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+                <div className="bg-white dark:bg-dark-surface px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                   <div className="flex justify-between items-center mb-4">
-                    <h3 className="text-lg font-medium text-gray-900">{selectedDocument.title}</h3>
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{selectedDocument.title}</h3>
                     <button
                       onClick={() => setSelectedDocument(null)}
-                      className="text-gray-400 hover:text-gray-600"
+                      className="text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary hover:text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary"
                       title="Cerrar visor de documentos"
                     >
                       ✕

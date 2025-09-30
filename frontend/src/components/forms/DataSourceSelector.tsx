@@ -99,26 +99,26 @@ const DataSourceSelector: React.FC = () => {
   const getStatusIcon = (status: DataSource['status']) => {
     switch (status) {
       case 'working':
-        return <CheckCircleIcon className="w-5 h-5 text-green-600" />;
+        return <CheckCircleIcon className="w-5 h-5 text-green-600 dark:text-green-400" />;
       case 'pronto':
         return <ClockIcon className="w-5 h-5 text-yellow-600" />;
       case 'error':
-        return <ExclamationTriangleIcon className="w-5 h-5 text-red-600" />;
+        return <ExclamationTriangleIcon className="w-5 h-5 text-red-600 dark:text-red-400" />;
     }
   };
 
   const getTypeIcon = (type: DataSource['type']) => {
     switch (type) {
       case 'official':
-        return <GlobeEuropeAfricaIcon className="w-5 h-5 text-blue-600" />;
+        return <GlobeEuropeAfricaIcon className="w-5 h-5 text-blue-600 dark:text-blue-400" />;
       case 'archive':
-        return <ArchiveBoxIcon className="w-5 h-5 text-purple-600" />;
+        return <ArchiveBoxIcon className="w-5 h-5 text-purple-600 dark:text-purple-400" />;
       case 'local':
-        return <ShieldCheckIcon className="w-5 h-5 text-green-600" />;
+        return <ShieldCheckIcon className="w-5 h-5 text-green-600 dark:text-green-400" />;
       case 'backup':
-        return <ShieldCheckIcon className="w-5 h-5 text-gray-600" />;
+        return <ShieldCheckIcon className="w-5 h-5 text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary" />;
       default:
-        return <GlobeEuropeAfricaIcon className="w-5 h-5 text-gray-600" />;
+        return <GlobeEuropeAfricaIcon className="w-5 h-5 text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary" />;
     }
   };
 
@@ -148,26 +148,26 @@ const DataSourceSelector: React.FC = () => {
   const prontoSources = DATA_SOURCES.filter(s => s.status === 'pronto');
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+    <div className="bg-white dark:bg-dark-surface rounded-lg shadow-sm border border-gray-200 dark:border-dark-border p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-lg font-semibold text-gray-900">Fuentes de Datos Disponibles</h3>
-          <p className="text-sm text-gray-600">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">Fuentes de Datos Disponibles</h3>
+          <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
             Todas las fuentes activas utilizadas para verificar la información
           </p>
         </div>
         <button
           onClick={() => setShowDetails(!showDetails)}
-          className="text-sm text-blue-600 hover:text-blue-800"
+          className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800"
         >
           {showDetails ? 'Ocultar detalles' : 'Ver detalles'}
         </button>
       </div>
 
       {/* Information Banner */}
-      <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+      <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
         <div className="flex">
-          <ShieldCheckIcon className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+          <ShieldCheckIcon className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
           <div className="ml-3">
             <h4 className="text-sm font-medium text-blue-800">
               Verificación Automática de Fuentes
@@ -183,7 +183,7 @@ const DataSourceSelector: React.FC = () => {
 
       {/* Working Sources - Always Active */}
       <div className="mb-6">
-        <h4 className="text-sm font-medium text-gray-700 mb-3">
+        <h4 className="text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-3">
           📊 Fuentes Activas ({workingSources.length})
         </h4>
         <div className="grid grid-cols-1 gap-3">
@@ -201,7 +201,7 @@ const DataSourceSelector: React.FC = () => {
                   {getTypeIcon(source.type)}
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
-                      <span className="font-medium text-gray-900">{source.name}</span>
+                      <span className="font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{source.name}</span>
                       <div className="flex items-center space-x-2">
                         <span className={`text-xs ${getReliabilityColor(source.reliability)}`}>
                           {source.reliability === 'high' ? 'Alta confiabilidad' : 
@@ -213,13 +213,13 @@ const DataSourceSelector: React.FC = () => {
                       </div>
                     </div>
                     {showDetails && (
-                      <p className="text-sm text-gray-600 mt-1">{source.description}</p>
+                      <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mt-1">{source.description}</p>
                     )}
                   </div>
                 </div>
               </div>
               {selectedSources.includes(source.id) && (
-                <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center ml-3">
+                <div className="w-5 h-5 rounded-full bg-green-50 dark:bg-green-900/200 flex items-center justify-center ml-3">
                   <CheckCircleIcon className="w-3 h-3 text-white" />
                 </div>
               )}
@@ -230,27 +230,27 @@ const DataSourceSelector: React.FC = () => {
 
       {/* Pronto Sources */}
       <div>
-        <h4 className="text-sm font-medium text-gray-700 mb-3">
+        <h4 className="text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-3">
           ⏳ Próximamente Disponibles ({prontoSources.length})
         </h4>
         <div className="grid grid-cols-1 gap-3">
           {prontoSources.map(source => (
             <div
               key={source.id}
-              className="flex items-center p-3 rounded-lg border-2 border-gray-100 bg-gray-50"
+              className="flex items-center p-3 rounded-lg border-2 border-gray-100 bg-gray-50 dark:bg-dark-background dark:bg-dark-background"
             >
               <div className="flex-1">
                 <div className="flex items-center gap-3">
                   {getStatusIcon(source.status)}
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
-                      <span className="font-medium text-gray-700">{source.name}</span>
+                      <span className="font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary">{source.name}</span>
                       <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
                         {getStatusText(source.status)}
                       </span>
                     </div>
                     {showDetails && (
-                      <p className="text-sm text-gray-500 mt-1">{source.description}</p>
+                      <p className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-1">{source.description}</p>
                     )}
                   </div>
                 </div>
@@ -261,9 +261,9 @@ const DataSourceSelector: React.FC = () => {
       </div>
 
       {/* Integrity Notice */}
-      <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+      <div className="mt-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">
         <div className="flex">
-          <ExclamationTriangleIcon className="w-5 h-5 text-red-600 mt-0.5" />
+          <ExclamationTriangleIcon className="w-5 h-5 text-red-600 dark:text-red-400 mt-0.5" />
           <div className="ml-3">
             <h4 className="text-sm font-medium text-red-800">
               Compromiso con la Transparencia
@@ -278,8 +278,8 @@ const DataSourceSelector: React.FC = () => {
       </div>
 
       {/* Selection Summary */}
-      <div className="mt-4 pt-4 border-t border-gray-200">
-        <p className="text-sm text-gray-600">
+      <div className="mt-4 pt-4 border-t border-gray-200 dark:border-dark-border">
+        <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
           <strong>{selectedSources.length}</strong> fuentes activas verificando automáticamente la información
         </p>
       </div>

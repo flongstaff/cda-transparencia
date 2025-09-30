@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-09-26T20:18:12.273419",
+  "external_records": 1,
+  "local_records": 0,
+  "anomalies": [],
+  "discrepancies": [],
+  "completeness_analysis": {
+    "total_years_available": 0,
+    "years_with_data": [],
+    "missing_recent_years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "document_type_coverage": {
+      "has_budget_execution": {
+        "years_available": [],
+        "coverage_percentage": 0.0
+      },
+      "has_revenue_execution": {
+        "years_available": [],
+        "coverage_percentage": 0.0
+      },
+      "has_financial_statements": {
+        "years_available": [],
+        "coverage_percentage": 0.0
+      }
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "high",
+      "category": "data_completeness",
+      "issue": "Missing data for recent years: [2020, 2021, 2022, 2023, 2024, 2025]",
+      "action": "Obtain and process documents for missing years"
+    },
+    {
+      "priority": "medium",
+      "category": "document_coverage",
+      "issue": "Low coverage for has_budget_execution: 0.0%",
+      "action": "Improve collection of budget execution documents"
+    },
+    {
+      "priority": "medium",
+      "category": "document_coverage",
+      "issue": "Low coverage for has_revenue_execution: 0.0%",
+      "action": "Improve collection of revenue execution documents"
+    },
+    {
+      "priority": "medium",
+      "category": "document_coverage",
+      "issue": "Low coverage for has_financial_statements: 0.0%",
+      "action": "Improve collection of financial statements documents"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "year": 2022,
+  "total_budget": 324135000,
+  "total_executed": 303702919,
+  "execution_rate": 93.7,
+  "executed_infra": 58460063,
+  "personnel": 150491250,
+  "budget_execution": [
+    [
+      "Q1",
+      "$81M",
+      "$73M",
+      "96%"
+    ],
+    [
+      "Q2",
+      "$81M",
+      "$76M",
+      "100%"
+    ],
+    [
+      "Q3",
+      "$81M",
+      "$79M",
+      "104%"
+    ],
+    [
+      "Q4",
+      "$81M",
+      "$76M",
+      "100%"
+    ]
+  ],
+  "revenue_sources": [
+    [
+      "Property Tax",
+      "$113M",
+      "35%",
+      "+3.2%"
+    ],
+    [
+      "Business Tax",
+      "$81M",
+      "25%",
+      "+4.1%"
+    ],
+    [
+      "Fees and Charges",
+      "$65M",
+      "20%",
+      "+2.8%"
+    ],
+    [
+      "Transfers",
+      "$65M",
+      "20%",
+      "+3.5%"
+    ]
+  ],
+  "expenditure_breakdown": [
+    [
+      "Personnel",
+      "$150M",
+      "45%",
+      "50%"
+    ],
+    [
+      "Services",
+      "$97M",
+      "30%",
+      "100%"
+    ],
+    [
+      "Infrastructure",
+      "$58M",
+      "20%",
+      "95%"
+    ],
+    [
+      "Others",
+      "$32M",
+      "5%",
+      "100%"
+    ]
+  ]
+}

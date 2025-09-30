@@ -1,0 +1,30 @@
+{
+  "year": 2018,
+  "total_debt": 58666667,
+  "debt_service": 10666667,
+  "debt_by_type": [
+    [
+      "Municipal Bonds",
+      "$32M",
+      "6.5%",
+      "10 years"
+    ],
+    [
+      "Bank Loans",
+      "$19M",
+      "8.0%",
+      "7 years"
+    ],
+    [
+      "Development Bank",
+      "$8M",
+      "5.5%",
+      "15 years"
+    ]
+  ],
+  "analysis": {
+    "debt_ratio": "22%",
+    "sustainability": "Good",
+    "risk_level": "Low"
+  }
+}

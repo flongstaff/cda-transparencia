@@ -125,10 +125,10 @@ const ProductionVerificationChecklist: React.FC = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+    <div className="max-w-4xl mx-auto p-6 bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border">
       <div className="mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Production Verification Checklist</h2>
-        <p className="text-gray-600">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">Production Verification Checklist</h2>
+        <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
           Comprehensive verification of all components and services for production deployment
         </p>
       </div>
@@ -140,10 +140,10 @@ const ProductionVerificationChecklist: React.FC = () => {
         'bg-blue-50 border-blue-200'
       }`}>
         <div className="flex items-center">
-          {overallStatus === 'success' && <CheckCircle className="w-6 h-6 text-green-600 mr-2" />}
+          {overallStatus === 'success' && <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400 mr-2" />}
           {overallStatus === 'warning' && <AlertTriangle className="w-6 h-6 text-yellow-600 mr-2" />}
-          {overallStatus === 'error' && <XCircle className="w-6 h-6 text-red-600 mr-2" />}
-          {overallStatus === 'pending' && <Loader2 className="w-6 h-6 text-blue-600 mr-2 animate-spin" />}
+          {overallStatus === 'error' && <XCircle className="w-6 h-6 text-red-600 dark:text-red-400 mr-2" />}
+          {overallStatus === 'pending' && <Loader2 className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-2 animate-spin" />}
           <span className={`font-medium ${getStatusColor(overallStatus)}`}>
             {getOverallMessage()}
           </span>
@@ -154,17 +154,17 @@ const ProductionVerificationChecklist: React.FC = () => {
         {checks.map((check) => (
           <div 
             key={check.id} 
-            className="flex items-start p-4 bg-gray-50 rounded-lg border border-gray-200"
+            className="flex items-start p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg border border-gray-200 dark:border-dark-border"
           >
             <div className="flex-shrink-0 mr-3 mt-0.5">
               {getStatusIcon(check.status)}
             </div>
             <div className="flex-1">
-              <h3 className="font-medium text-gray-900">{check.name}</h3>
+              <h3 className="font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{check.name}</h3>
               <p className={`text-sm mt-1 ${
                 check.status === 'completed' ? 'text-green-600' :
                 check.status === 'failed' ? 'text-red-600' :
-                'text-gray-500'
+                'text-gray-500 dark:text-dark-text-tertiary'
               }`}>
                 {check.details}
               </p>
@@ -173,22 +173,22 @@ const ProductionVerificationChecklist: React.FC = () => {
         ))}
       </div>
 
-      <div className="mt-8 pt-6 border-t border-gray-200">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Production Ready Features</h3>
+      <div className="mt-8 pt-6 border-t border-gray-200 dark:border-dark-border">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Production Ready Features</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+          <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-700">
             <h4 className="font-medium text-blue-900 mb-2">📅 Complete Data Coverage</h4>
             <p className="text-sm text-blue-700">
               All data from 2018 to 2025 available through unified dashboard
             </p>
           </div>
-          <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+          <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-700">
             <h4 className="font-medium text-green-900 mb-2">📈 24+ Chart Components</h4>
             <p className="text-sm text-green-700">
               Comprehensive data visualization with multiple chart types
             </p>
           </div>
-          <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
+          <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border border-purple-200 dark:border-purple-700">
             <h4 className="font-medium text-purple-900 mb-2">🛡️ Audit Trail System</h4>
             <p className="text-sm text-purple-700">
               Full audit capabilities with discrepancy detection
@@ -203,29 +203,29 @@ const ProductionVerificationChecklist: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-8 pt-6 border-t border-gray-200">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Access Points</h3>
+      <div className="mt-8 pt-6 border-t border-gray-200 dark:border-dark-border">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Access Points</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link 
             to="/" 
-            className="block p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-center"
+            className="block p-4 bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-lg hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background transition-colors text-center"
           >
-            <h4 className="font-medium text-gray-900">🏠 Main Dashboard</h4>
-            <p className="text-sm text-gray-600 mt-1">cda-transparencia.org</p>
+            <h4 className="font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">🏠 Main Dashboard</h4>
+            <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mt-1">cda-transparencia.org</p>
           </Link>
           <Link 
             to="/dashboard" 
-            className="block p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-center"
+            className="block p-4 bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-lg hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background transition-colors text-center"
           >
-            <h4 className="font-medium text-gray-900">📊 Financial Dashboard</h4>
-            <p className="text-sm text-gray-600 mt-1">Detailed financial analysis</p>
+            <h4 className="font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">📊 Financial Dashboard</h4>
+            <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mt-1">Detailed financial analysis</p>
           </Link>
           <Link 
             to="/documents" 
-            className="block p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-center"
+            className="block p-4 bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-lg hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background transition-colors text-center"
           >
-            <h4 className="font-medium text-gray-900">📁 Document Library</h4>
-            <p className="text-sm text-gray-600 mt-1">500+ searchable documents</p>
+            <h4 className="font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">📁 Document Library</h4>
+            <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mt-1">500+ searchable documents</p>
           </Link>
         </div>
       </div>

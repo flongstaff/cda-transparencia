@@ -107,9 +107,11 @@ const ContractsAndTendersPage: React.FC = () => {
   // 🚀 Use master data service that includes all contract sources
   const {
     currentContracts,
+    availableYears,
     loading,
     error,
-    refetch
+    refetch,
+    switchYear
   } = useMasterData(selectedYear);
 
   // Format currency function
@@ -192,7 +194,7 @@ const ContractsAndTendersPage: React.FC = () => {
         <div className="flex items-center justify-center min-h-[400px]">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
-            <p className="mt-4 text-gray-600">Cargando contratos y licitaciones...</p>
+            <p className="mt-4 text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Cargando contratos y licitaciones...</p>
           </div>
         </div>
       </div>
@@ -206,8 +208,8 @@ const ContractsAndTendersPage: React.FC = () => {
         <div className="flex items-center justify-center min-h-[400px]">
           <div className="text-center">
             <AlertTriangle className="h-12 w-12 text-red-500 mx-auto mb-4" />
-            <h3 className="text-lg font-medium text-gray-900 mb-2">Error al cargar los datos</h3>
-            <p className="text-gray-600 mb-4">{error}</p>
+            <h3 className="text-lg font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">Error al cargar los datos</h3>
+            <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-4">{error}</p>
             <button
               onClick={refetch}
               className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -224,35 +226,64 @@ const ContractsAndTendersPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">
-          Contratos y Licitaciones
-        </h1>
-        <p className="text-gray-600">
-          Seguimiento de contratos y licitaciones municipales
-        </p>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">
+              Contratos y Licitaciones {selectedYear}
+            </h1>
+            <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
+              Seguimiento de contratos y licitaciones municipales para el ejercicio {selectedYear}
+            </p>
+          </div>
+
+          {/* Year Selector */}
+          <div className="flex-shrink-0">
+            <div className="bg-white dark:bg-dark-surface rounded-xl border border-gray-200 dark:border-dark-border p-4 shadow-sm">
+              <label className="block text-sm font-medium text-gray-700 dark:text-dark-text-secondary mb-2">
+                Año Fiscal
+              </label>
+              <select
+                value={selectedYear}
+                onChange={(e) => switchYear(Number(e.target.value))}
+                className="w-full px-4 py-2 text-base font-medium border border-gray-300 dark:border-dark-border rounded-lg
+                         bg-white dark:bg-dark-surface text-gray-900 dark:text-dark-text-primary focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                         hover:border-blue-300 transition-colors"
+              >
+                {availableYears.map((year) => (
+                  <option key={year} value={year}>
+                    {year} {year === new Date().getFullYear() && '(Actual)'}
+                  </option>
+                ))}
+              </select>
+              <div className="mt-2 text-xs text-gray-500 dark:text-dark-text-tertiary">
+                Contratos {selectedYear}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Search and Filters */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 mb-8">
         <div className="lg:col-span-2">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary w-5 h-5" />
             <input
               type="text"
               placeholder="Buscar contratos, proveedores..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Categoría</label>
+          <label className="block text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-1">Categoría</label>
           <select
             value={filterCategory}
             onChange={(e) => setFilterCategory(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value="all">Todas</option>
             {uniqueCategories.map(cat => (
@@ -262,11 +293,11 @@ const ContractsAndTendersPage: React.FC = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Estado</label>
+          <label className="block text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-1">Estado</label>
           <select
             value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value="all">Todos</option>
             <option value="pending">Pendiente</option>
@@ -276,11 +307,11 @@ const ContractsAndTendersPage: React.FC = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Año</label>
+          <label className="block text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-1">Año</label>
           <select
             value={filterYear}
             onChange={(e) => setFilterYear(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value="all">Todos</option>
             {uniqueYears.map(year => (
@@ -290,11 +321,11 @@ const ContractsAndTendersPage: React.FC = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Ordenar por</label>
+          <label className="block text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-1">Ordenar por</label>
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value="amount">Monto</option>
             <option value="title">Título</option>
@@ -307,7 +338,7 @@ const ContractsAndTendersPage: React.FC = () => {
 
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow border">
+        <div className="bg-white dark:bg-dark-surface p-6 rounded-lg shadow border">
           <h3 className="text-lg font-semibold mb-4">Contratos por Categoría</h3>
           <div className="h-80">
             <ResponsiveContainer width="100%" height="100%">
@@ -327,7 +358,7 @@ const ContractsAndTendersPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow border">
+        <div className="bg-white dark:bg-dark-surface p-6 rounded-lg shadow border">
           <h3 className="text-lg font-semibold mb-4">Flujo de Contratos</h3>
           <div className="h-80">
             <ResponsiveContainer width="100%" height="100%">
@@ -336,7 +367,7 @@ const ContractsAndTendersPage: React.FC = () => {
                   data={sankeyData}
                 />
               ) : (
-                <div className="flex items-center justify-center h-full text-gray-500">
+                <div className="flex items-center justify-center h-full text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                   No hay datos suficientes para mostrar el diagrama Sankey
                 </div>
               )}
@@ -346,37 +377,37 @@ const ContractsAndTendersPage: React.FC = () => {
       </div>
 
       {/* Contracts Table */}
-      <div className="bg-white rounded-lg shadow border overflow-hidden">
+      <div className="bg-white dark:bg-dark-surface rounded-lg shadow border overflow-hidden">
         <h3 className="text-xl font-semibold p-4 border-b">Lista de Contratos</h3>
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
+            <thead className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Título</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Proveedor</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Categoría</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Monto</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ejecutado</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tasa Ejecución</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estado</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">Título</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">Proveedor</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">Categoría</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">Monto</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">Ejecutado</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">Tasa Ejecución</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">Estado</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider">Acciones</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white dark:bg-dark-surface divide-y divide-gray-200">
               {filteredData.map((contract) => (
-                <tr key={contract.id} className={contract.id % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <tr key={contract.id} className={contract.id % 2 === 0 ? 'bg-white' : 'bg-gray-50 dark:bg-dark-background'}>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm font-medium text-gray-900">{contract.title}</div>
-                    <div className="text-sm text-gray-500">ID: {contract.id}</div>
+                    <div className="text-sm font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{contract.title}</div>
+                    <div className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">ID: {contract.id}</div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{contract.vendor}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{contract.category}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{formatCurrency(contract.amount)}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{formatCurrency(contract.execution)}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">{contract.vendor}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">{contract.category}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">{formatCurrency(contract.amount)}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">{formatCurrency(contract.execution)}</td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
-                      <span className="text-sm text-gray-500 mr-2">{contract.executionRate}%</span>
-                      <div className="w-24 bg-gray-200 rounded-full h-2">
+                      <span className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mr-2">{contract.executionRate}%</span>
+                      <div className="w-24 bg-gray-200 dark:bg-dark-surface-alt dark:bg-dark-border rounded-full h-2">
                         <div 
                           className={`h-2 rounded-full ${
                             contract.executionRate >= 90 ? 'bg-green-500' :
@@ -397,12 +428,12 @@ const ContractsAndTendersPage: React.FC = () => {
                        contract.status === 'in-progress' ? 'En Progreso' : 'Pendiente'}
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
                     <div className="flex space-x-2">
-                      <button className="text-blue-600 hover:text-blue-900">
+                      <button className="text-blue-600 dark:text-blue-400 hover:text-blue-900">
                         <FileText className="h-4 w-4" />
                       </button>
-                      <button className="text-green-600 hover:text-green-900">
+                      <button className="text-green-600 dark:text-green-400 hover:text-green-900">
                         <Download className="h-4 w-4" />
                       </button>
                     </div>
@@ -415,7 +446,7 @@ const ContractsAndTendersPage: React.FC = () => {
       </div>
 
       {/* Contract Details Panel */}
-      <div className="mt-8 bg-white rounded-lg shadow border p-6">
+      <div className="mt-8 bg-white dark:bg-dark-surface rounded-lg shadow border p-6">
         <h3 className="text-xl font-semibold mb-4">Análisis de Contratos</h3>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -423,7 +454,7 @@ const ContractsAndTendersPage: React.FC = () => {
             <div className="flex items-center">
               <Building className="h-6 w-6 text-blue-500 mr-3" />
               <div>
-                <p className="text-sm text-gray-500">Total Contratos</p>
+                <p className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Total Contratos</p>
                 <p className="text-2xl font-bold">{filteredData.length}</p>
               </div>
             </div>
@@ -433,7 +464,7 @@ const ContractsAndTendersPage: React.FC = () => {
             <div className="flex items-center">
               <DollarSign className="h-6 w-6 text-green-500 mr-3" />
               <div>
-                <p className="text-sm text-gray-500">Monto Total</p>
+                <p className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Monto Total</p>
                 <p className="text-2xl font-bold">{formatCurrency(filteredData.reduce((sum, c) => sum + c.amount, 0))}</p>
               </div>
             </div>
@@ -443,7 +474,7 @@ const ContractsAndTendersPage: React.FC = () => {
             <div className="flex items-center">
               <TrendingUp className="h-6 w-6 text-purple-500 mr-3" />
               <div>
-                <p className="text-sm text-gray-500">Tasa Promedio</p>
+                <p className="text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Tasa Promedio</p>
                 <p className="text-2xl font-bold">
                   {filteredData.length > 0 
                     ? (filteredData.reduce((sum, c) => sum + c.executionRate, 0) / filteredData.length).toFixed(1) 
@@ -458,7 +489,7 @@ const ContractsAndTendersPage: React.FC = () => {
           <h4 className="font-medium mb-2">Contratos con Anomalías</h4>
           <div className="space-y-2">
             {filteredData.filter(c => c.executionRate < 75).map(contract => (
-              <div key={`anomaly-${contract.id}`} className="flex items-center p-3 bg-red-50 border border-red-200 rounded">
+              <div key={`anomaly-${contract.id}`} className="flex items-center p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded">
                 <AlertTriangle className="h-5 w-5 text-red-500 mr-3" />
                 <span className="text-sm">
                   <span className="font-medium">{contract.title}</span> - Solo {contract.executionRate}% ejecutado
@@ -466,7 +497,7 @@ const ContractsAndTendersPage: React.FC = () => {
               </div>
             ))}
             {filteredData.filter(c => c.executionRate < 75).length === 0 && (
-              <div className="flex items-center p-3 bg-green-50 border border-green-200 rounded">
+              <div className="flex items-center p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded">
                 <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
                 <span className="text-sm">No se encontraron contratos con ejecución crítica</span>
               </div>

@@ -138,6 +138,48 @@ const DebtPage: React.FC = () => {
           )}
         </div>
       )}
+      
+      {/* Multi-year debt comparison section - only shown when we have multi-year data */}
+      {(masterData?.financialData && Object.keys(masterData.financialData).length > 1) && (
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Comparativa Multi-Año de Deuda</h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Año</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Deuda Total</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Deuda por Habitante</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Relación con Presupuesto</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {Object.entries(masterData.financialData).map(([year, data]: [string, any]) => (
+                  <tr key={year} className={parseInt(year) === selectedYear ? 'bg-blue-50' : ''}>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{year}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {formatCurrencyARS(data.debt?.total_debt || 0)}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {data.debt?.total_debt ? 
+                        formatCurrencyARS(data.debt.total_debt / 27000) // Assuming ~27,000 inhabitants for Carmen de Areco
+                        : 'N/A'}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {data.debt?.total_debt && data.budget?.total_budget ? 
+                        <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                          {((data.debt.total_debt / data.budget.total_budget) * 100).toFixed(1)}%
+                        </span>
+                        : <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800">N/A</span>
+                      }
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

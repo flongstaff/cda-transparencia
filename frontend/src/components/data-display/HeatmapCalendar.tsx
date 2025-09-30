@@ -32,7 +32,7 @@ const HeatmapCalendar: React.FC<HeatmapCalendarProps> = ({
     >
       {title && (
         <div className="p-4 border-b border-gray-100">
-          <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{title}</h3>
         </div>
       )}
       
@@ -61,9 +61,9 @@ const HeatmapCalendar: React.FC<HeatmapCalendarProps> = ({
             }
           ]}
           tooltip={({ day, value }) => (
-            <div className="bg-white p-2 shadow-lg rounded border border-gray-200">
+            <div className="bg-white dark:bg-dark-surface p-2 shadow-lg rounded border border-gray-200 dark:border-dark-border">
               <div className="font-semibold">{day}</div>
-              <div className="text-sm text-gray-600">
+              <div className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
                 Value: {value.toLocaleString()}
               </div>
             </div>

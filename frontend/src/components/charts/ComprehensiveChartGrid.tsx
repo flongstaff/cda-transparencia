@@ -6,34 +6,29 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
-  PieChart, 
-  TrendingUp, 
-  DollarSign, 
-  Users, 
-  Building, 
-  Heart, 
-  Wrench, 
-  FileText, 
-  TrendingDown, 
-  Wallet, 
-  ArrowUpDown, 
-  Package, 
-  Eye, 
-  Shield, 
-  Search, 
-  Calendar, 
-  Activity, 
-  CheckCircle, 
-  ArrowRight,
-  Filter,
+import {
+  BarChart3,
+  TrendingUp,
+  DollarSign,
+  Users,
+  Building,
+  Heart,
+  FileText,
+  TrendingDown,
+  Wallet,
+  ArrowUpDown,
+  Package,
+  Shield,
+  Search,
+  Calendar,
+  Activity,
+  CheckCircle,
   Grid,
   List,
   RefreshCw
 } from 'lucide-react';
 import DynamicChartLoader from './DynamicChartLoader';
-import chartDataService, { CHART_TYPES, CHART_TYPE_NAMES, CHART_TYPE_DESCRIPTIONS } from '../../services/charts/ChartDataService';
+import { CHART_TYPES, CHART_TYPE_NAMES, CHART_TYPE_DESCRIPTIONS } from '../../services/charts/ChartDataService';
 
 // Chart category mapping
 const CHART_CATEGORIES: Record<string, { icon: React.ReactNode; color: string }> = {

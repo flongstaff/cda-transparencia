@@ -121,7 +121,7 @@ const TreemapChart: React.FC<TreemapChartProps> = ({
 
   if (error) {
     return (
-      <div className="flex items-center justify-center h-full bg-red-50 text-red-700 p-4 rounded-lg">
+      <div className="flex items-center justify-center h-full bg-red-50 dark:bg-red-900/20 text-red-700 p-4 rounded-lg">
         Error al cargar el gráfico.
       </div>
     );
@@ -133,7 +133,7 @@ const TreemapChart: React.FC<TreemapChartProps> = ({
 
   if (!formattedData || formattedData.children.length === 0) {
     return (
-      <div className="flex items-center justify-center h-full text-gray-500 p-4">
+      <div className="flex items-center justify-center h-full text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary p-4">
         No hay datos disponibles
       </div>
     );
@@ -152,8 +152,8 @@ const TreemapChart: React.FC<TreemapChartProps> = ({
     >
       {title && (
         <div className="p-4 border-b border-gray-100 flex justify-between items-center">
-          <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-          <button onClick={handleExport} className="text-sm text-gray-600 hover:text-gray-900">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{title}</h3>
+          <button onClick={handleExport} className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary hover:text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
             Exportar
           </button>
         </div>
@@ -183,9 +183,9 @@ const TreemapChart: React.FC<TreemapChartProps> = ({
           onClick={onNodeClick}
           onMouseMove={onNodeHover}
           tooltip={({ node }) => (
-            <div className="bg-white p-2 shadow-lg rounded border border-gray-200">
+            <div className="bg-white dark:bg-dark-surface p-2 shadow-lg rounded border border-gray-200 dark:border-dark-border">
               <div className="font-semibold">{node.data.name}</div>
-              <div className="text-sm text-gray-600">
+              <div className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
                 Value: {node.value?.toLocaleString(language) || 'N/A'}
               </div>
             </div>
