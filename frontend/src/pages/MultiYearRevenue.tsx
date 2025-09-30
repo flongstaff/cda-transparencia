@@ -22,6 +22,10 @@ import {
   Info
 } from 'lucide-react';
 import MultiYearRevenueChart from '../components/charts/MultiYearRevenueChart';
+import ErrorBoundary from '../components/common/ErrorBoundary';
+import RevenueSourcesChart from '../components/charts/RevenueSourcesChart';
+import RevenueReportChart from '../components/charts/RevenueReportChart';
+import UnifiedChart from '../components/charts/UnifiedChart';
 import { useMultiYearData } from '../hooks/useMultiYearData';
 import { formatCurrencyARS as formatCurrency, formatNumberARS as formatNumber, formatDateARS as formatDate } from '../utils/formatters';
 
@@ -323,12 +327,88 @@ const MultiYearRevenue: React.FC = () => {
 
       {/* Main Chart */}
       <div className="mb-8">
-        <MultiYearRevenueChart
-          height={600}
-          showFilters={viewMode === 'detailed'}
-          showExport={true}
-        />
+        <ErrorBoundary>
+          <MultiYearRevenueChart
+            height={600}
+            showFilters={viewMode === 'detailed'}
+            showExport={true}
+          />
+        </ErrorBoundary>
       </div>
+
+      {/* Additional Revenue Charts */}
+      {viewMode === 'detailed' && (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          {/* Revenue Sources Chart */}
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-lg border border-gray-200 dark:border-dark-border p-6">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary mb-4">
+              Fuentes de Ingresos
+            </h3>
+            <div className="h-64">
+              <ErrorBoundary>
+                <RevenueSourcesChart
+                  height={250}
+                  chartType="pie"
+                />
+              </ErrorBoundary>
+            </div>
+          </div>
+
+          {/* Revenue Report Chart */}
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-lg border border-gray-200 dark:border-dark-border p-6">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary mb-4">
+              Reporte de Ingresos
+            </h3>
+            <div className="h-64">
+              <ErrorBoundary>
+                <RevenueReportChart
+                  height={250}
+                  chartType="line"
+                />
+              </ErrorBoundary>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Revenue Trends with UnifiedChart */}
+      {viewMode === 'comparison' && (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          {/* Revenue Trends */}
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-lg border border-gray-200 dark:border-dark-border p-6">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary mb-4">
+              Tendencias de Ingresos
+            </h3>
+            <div className="h-64">
+              <ErrorBoundary>
+                <UnifiedChart
+                  type="revenue"
+                  year={availableYears[availableYears.length - 1]}
+                  variant="line"
+                  height={250}
+                />
+              </ErrorBoundary>
+            </div>
+          </div>
+
+          {/* Revenue Distribution */}
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-lg border border-gray-200 dark:border-dark-border p-6">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary mb-4">
+              Distribución de Ingresos
+            </h3>
+            <div className="h-64">
+              <ErrorBoundary>
+                <UnifiedChart
+                  type="revenue"
+                  year={availableYears[availableYears.length - 1]}
+                  variant="bar"
+                  height={250}
+                />
+              </ErrorBoundary>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Category Breakdown and Trends */}
       {viewMode !== 'overview' && (

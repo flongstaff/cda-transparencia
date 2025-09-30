@@ -128,5 +128,13 @@
     "vite": "^7.1.4",
     "vitest": "^3.2.4"
   },
+  "overrides": {
+    "@msrvida/sanddance-react": {
+      "react": "$react",
+      "react-dom": "$react-dom",
+      "@types/react": "$@types/react",
+      "@types/react-dom": "$@types/react-dom"
+    }
+  },
   "homepage": "https://cda-transparencia.org"
 }

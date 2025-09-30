@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import ComprehensiveDataDisplay from '../components/data-display/ComprehensiveDataDisplay';
 import StandardizedChart from '../components/charts/StandardizedChart';
+import ErrorBoundary from '../components/common/ErrorBoundary';
 import { formatCurrencyARS } from '../utils/formatters';
 
 interface ChartData {
@@ -254,17 +255,19 @@ const DataVisualizationHub: React.FC = () => {
     }
 
     return (
-      <StandardizedChart
-        data={config.data}
-        chartType={config.type}
-        xAxisKey={categoryKey}
-        yAxisKeys={numericKeys.slice(0, 3)} // Limit to 3 series
-        title={config.name.replace(/_/g, ' ')}
-        description={config.description}
-        height={300}
-        valueFormatter={formatCurrencyARS}
-        className="w-full"
-      />
+      <ErrorBoundary>
+        <StandardizedChart
+          data={config.data}
+          chartType={config.type}
+          xAxisKey={categoryKey}
+          yAxisKeys={numericKeys.slice(0, 3)} // Limit to 3 series
+          title={config.name.replace(/_/g, ' ')}
+          description={config.description}
+          height={300}
+          valueFormatter={formatCurrencyARS}
+          className="w-full"
+        />
+      </ErrorBoundary>
     );
   };
 
@@ -468,11 +471,13 @@ const DataVisualizationHub: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <ComprehensiveDataDisplay
-                showAllFiles={true}
-                category={selectedCategory !== 'all' ? selectedCategory : undefined}
-                year={selectedYear}
-              />
+              <ErrorBoundary>
+                <ComprehensiveDataDisplay
+                  showAllFiles={true}
+                  category={selectedCategory !== 'all' ? selectedCategory : undefined}
+                  year={selectedYear}
+                />
+              </ErrorBoundary>
             </motion.div>
           )}
         </div>

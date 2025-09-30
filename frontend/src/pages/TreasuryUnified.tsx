@@ -32,6 +32,9 @@ import {
 import { useTreasuryData } from '../hooks/useUnifiedData';
 import PageYearSelector from '../components/forms/PageYearSelector';
 import UnifiedChart from '../components/charts/UnifiedChart';
+import TreasuryAnalysisChart from '../components/charts/TreasuryAnalysisChart';
+import FinancialReservesChart from '../components/charts/FinancialReservesChart';
+import ErrorBoundary from '../components/common/ErrorBoundary';
 
 const TreasuryUnified: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
@@ -166,12 +169,14 @@ const TreasuryUnified: React.FC = () => {
             Fuentes de Ingresos
           </h3>
           <div className="h-64">
-            <UnifiedChart
-              type="pie"
-              data={treasuryData?.revenue_breakdown || []}
-              height={250}
-              showLegend={true}
-            />
+            <ErrorBoundary>
+              <UnifiedChart
+                type="treasury"
+                year={selectedYear}
+                variant="pie"
+                height={250}
+              />
+            </ErrorBoundary>
           </div>
         </motion.div>
 
@@ -186,12 +191,56 @@ const TreasuryUnified: React.FC = () => {
             Distribución de Gastos
           </h3>
           <div className="h-64">
-            <UnifiedChart
-              type="bar"
-              data={treasuryData?.expense_breakdown || []}
-              height={250}
-              showLegend={true}
-            />
+            <ErrorBoundary>
+              <UnifiedChart
+                type="treasury"
+                year={selectedYear}
+                variant="bar"
+                height={250}
+              />
+            </ErrorBoundary>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Additional Treasury Charts */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+        >
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <Activity className="h-5 w-5 mr-2 text-blue-600" />
+            Análisis del Tesoro
+          </h3>
+          <div className="h-64">
+            <ErrorBoundary>
+              <TreasuryAnalysisChart
+                year={selectedYear}
+              />
+            </ErrorBoundary>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+        >
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <DollarSign className="h-5 w-5 mr-2 text-purple-600" />
+            Reservas Financieras
+          </h3>
+          <div className="h-64">
+            <ErrorBoundary>
+              <FinancialReservesChart
+                year={selectedYear}
+                height={250}
+              />
+            </ErrorBoundary>
           </div>
         </motion.div>
       </div>

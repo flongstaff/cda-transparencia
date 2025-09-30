@@ -280,8 +280,8 @@ class ComprehensiveTransparencyService {
         await this.initialize();
         try {
             const [documents, summary, externalData] = await Promise.all([
-                this.getDocumentsByYear(year),
-                this.getYearlySummary(year),
+                this.dbAdapter.getDocumentsByYear(year),  // Fixed: call on dbAdapter
+                this.dbAdapter.getYearlySummary(year),    // Fixed: call on dbAdapter
                 this.getExternalFinancialData(year)  // Add external data
             ]);
 

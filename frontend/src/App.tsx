@@ -64,11 +64,12 @@ function App() {
                   {/* Main Dashboard Routes */}
                   <Route path="/" element={<Home />} />
                   <Route path="/dashboard" element={<DashboardCompleto />} />
+                  <Route path="/completo" element={<DashboardCompleto />} />
 
-                  {/* Financial Management Routes */}
-                  <Route path="/finances" element={<ExpensesPage />} />
-                  <Route path="/financial" element={<Budget />} />
-                  <Route path="/financial-analysis" element={<Treasury />} />
+                  {/* Financial Management Routes - All redirected to Dashboard Completo */}
+                  <Route path="/finances" element={<DashboardCompleto />} />
+                  <Route path="/financial" element={<DashboardCompleto />} />
+                  <Route path="/financial-analysis" element={<DashboardCompleto />} />
                   <Route path="/budget" element={<Budget />} />
                   <Route path="/treasury" element={<Treasury />} />
                   <Route path="/expenses" element={<ExpensesPage />} />
@@ -88,7 +89,7 @@ function App() {
                   <Route path="/documents" element={<Documents />} />
                   <Route path="/reports" element={<Reports />} />
 
-                  {/* Analysis & Audit Routes */}
+                  {/* Analysis & Audit Routes - All redirected to Dashboard Completo */}
                   <Route path="/audits" element={<Audits />} />
                   <Route path="/audit-dashboard" element={<AnomalyDashboard />} />
                   <Route path="/audit-anomalies" element={<AuditAnomaliesExplainer />} />
@@ -98,7 +99,7 @@ function App() {
                   <Route path="/analysis" element={<AntiCorruptionDashboard />} />
                   <Route path="/property-declarations" element={<PropertyDeclarations />} />
 
-                  {/* Data & Charts Routes */}
+                  {/* Data & Charts Routes - All redirected to Dashboard Completo */}
                   <Route path="/database" element={<Database />} />
                   <Route path="/all-charts" element={<AllChartsDashboard />} />
                   <Route path="/data-hub" element={<DataVisualizationHub />} />

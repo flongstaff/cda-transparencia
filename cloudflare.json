@@ -1,13 +1,8 @@
-# Cloudflare Pages Configuration
-
-# Build configuration
-[build]
-command = "cd frontend && npm run build"
-publish = "frontend/dist"
-
-# Environment variables
-[env]
-API_BASE_URL = "http://localhost:3001"
-
-# Compatibility settings
-compatibility_date = "2024-01-01"
+{
+  "name": "cda-transparencia-cloudflare",
+  "compatibility_date": "2024-01-01",
+  "pages": {
+    "build_command": "cd frontend && npm run build",
+    "build_output_dir": "./frontend/dist"
+  }
+}

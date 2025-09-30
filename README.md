@@ -21,7 +21,7 @@ This is the transparency portal for Carmen de Areco, providing citizens with acc
 - **Frontend**: React 18 + TypeScript, Vite, Recharts, D3.js, Nivo, Lucide React, Tailwind CSS
 - **Data Sources**: Local JSON files + External APIs (datos.gob.ar, presupuestoabierto.gob.ar)
 - **Charts**: Multiple chart libraries for comprehensive data visualization
-- **Deployment**: GitHub Pages with automated CI/CD
+- **Deployment**: Dual deployment to GitHub Pages and Cloudflare Pages with automated CI/CD
 
 ## Quick Start
 
@@ -43,6 +43,8 @@ npm run dev
 ├── backend/          # API server (Node.js)
 ├── data/            # Municipal data files
 ├── docs/            # Documentation
+├── .github/workflows/ # GitHub Actions workflows
+├── cloudflare-deploy/ # Cloudflare Pages deployment files
 └── README.md        # This file
 ```
 
@@ -55,6 +57,15 @@ Detailed documentation is available in the `/docs` folder:
 - [Frontend Components](docs/FRONTEND_COMPONENTS.md) - Component implementation details
 - [Performance Considerations](docs/PERFORMANCE_CONSIDERATIONS.md) - Performance optimization guide
 - [Testing Strategy](docs/TESTING_STRATEGY.md) - Testing approach and tools
+
+## Deployment
+
+The portal is deployed to two platforms for redundancy and performance:
+
+1. **GitHub Pages** - Primary deployment with custom domain
+2. **Cloudflare Pages** - Secondary deployment for improved global performance
+
+Both deployments are automated through GitHub Actions and updated weekly.
 
 ## Data Sources
 

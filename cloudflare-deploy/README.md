@@ -1,80 +1,49 @@
-# Carmen de Areco Transparency Portal
+# Carmen de Areco Transparency Portal - Cloudflare Deployment
 
-This is the transparency portal for Carmen de Areco, providing citizens with access to municipal financial data and documents.
+This directory contains the optimized deployment files for Cloudflare Pages.
 
 ## 🌐 Live Demo
 
 - **Portal**: [https://cda-transparencia.org](https://cda-transparencia.org)
-- **GitHub Pages**: [https://flongstaff.github.io/cda-transparencia](https://flongstaff.github.io/cda-transparencia)
 
 ## Features
 
-- **Financial Overview** - Budget execution, revenue, and expenditure tracking
-- **Document Access** - Searchable municipal documents with multiple viewers
-- **Interactive Charts** - Budget breakdown, debt analysis, and trend visualization
-- **Multi-year Comparison** - Historical financial data comparison (2019-2025)
-- **Transparency Dashboard** - Real-time data verification and quality metrics
-- **External Data Integration** - Connects to official Argentine government APIs
+- **Optimized for Cloudflare Pages**: Lightweight deployment with minimal assets
+- **Static Site Generation**: Pre-rendered pages for fast loading
+- **Edge Network**: Global distribution through Cloudflare's CDN
+- **Automatic HTTPS**: Free SSL certificates
+- **Custom Domain**: cda-transparencia.org
 
-## Technology Stack
+## Deployment Process
 
-- **Frontend**: React 18 + TypeScript, Vite, Recharts, D3.js, Nivo, Lucide React, Tailwind CSS
-- **Data Sources**: Local JSON files + External APIs (datos.gob.ar, presupuestoabierto.gob.ar)
-- **Charts**: Multiple chart libraries for comprehensive data visualization
-- **Deployment**: GitHub Pages with automated CI/CD
+1. GitHub Actions builds the frontend in the main workflow
+2. Built files are copied to this directory
+3. Cloudflare Pages automatically deploys from this directory
 
-## Quick Start
+## Files Structure
+
+```
+├── public/              # Built static files
+│   ├── index.html       # Main entry point
+│   ├── assets/          # Bundled CSS/JS
+│   ├── data/            # Processed data files
+│   └── ...
+├── _routes.json         # Routing configuration
+└── deployment-manifest.json # Deployment metadata
+```
+
+## Optimization
+
+- Reduced asset size by excluding heavy data files
+- Optimized for edge delivery
+- SPA routing support
+- Custom domain configuration
+
+## Manual Deployment
 
 ```bash
-# Clone the repository
-git clone https://github.com/flongstaff/cda-transparencia.git
-cd cda-transparencia
-
-# Install dependencies and start development
-cd frontend
-npm install
-npm run dev
+# From the root directory
+cd cloudflare-deploy
+# Deploy using Wrangler CLI
+npx wrangler pages deploy public --project-name=cda-transparencia
 ```
-
-## Project Structure
-
-```
-├── frontend/          # React application
-├── backend/          # API server (Node.js)
-├── data/            # Municipal data files
-├── docs/            # Documentation
-└── README.md        # This file
-```
-
-## Documentation
-
-Detailed documentation is available in the `/docs` folder:
-
-- [Component Library](docs/COMPONENT_LIBRARY.md) - UI components documentation
-- [Data Sources](docs/DATA_SOURCES.md) - Available data sources and APIs
-- [Frontend Components](docs/FRONTEND_COMPONENTS.md) - Component implementation details
-- [Performance Considerations](docs/PERFORMANCE_CONSIDERATIONS.md) - Performance optimization guide
-- [Testing Strategy](docs/TESTING_STRATEGY.md) - Testing approach and tools
-
-## Data Sources
-
-The portal integrates data from multiple sources:
-
-- **Local Data**: Financial reports, documents, and municipal records
-- **Official APIs**: National and provincial transparency portals
-- **External Sources**: Government open data platforms
-
-See [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md) for complete list and implementation details.
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Commit your changes (`git commit -m 'Add amazing feature'`)
-5. Push to the branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

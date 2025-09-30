@@ -19,9 +19,8 @@
     "✅ Redirects configured"
   ],
   "deployment_commands": [
-    "1. cd cloudflare-deploy",
-    "2. Connect to Cloudflare Pages",
-    "3. Deploy from /public directory",
-    "4. Configure custom domain (optional)"
+    "1. cd frontend",
+    "2. npm run build",
+    "3. Deploy to Cloudflare Pages using GitHub Actions"
   ]
 }

@@ -22,183 +22,117 @@ import {
 import { Link } from 'react-router-dom';
 import TransparencyHighlights from '../components/transparency/TransparencyHighlights';
 
-// Data integration hooks
-const useTransparencyData = () => {
-  const [data, setData] = useState({
-    totalDocuments: 0,
-    totalRevenue: 0,
-    totalExpenses: 0,
-    categories: [],
-    lastUpdated: null,
-    systemStatus: 'loading',
-    totalPDFs: 0,
-    totalCSVs: 0,
-    totalJSONs: 0,
-    totalDatabases: 0
-  });
-
-  useEffect(() => {
-    // Fetch data from our organized API endpoints with fallback
-    const fetchData = async () => {
-      try {
-        // Use a single, more reliable data source
-        const response = await fetch('/data/api/config.json');
-
-        if (response.ok) {
-          const contentType = response.headers.get('content-type');
-          if (contentType && contentType.includes('application/json')) {
-            const configData = await response.json();
-
-            setData({
-              totalDocuments: configData.statistics?.total_documents || 171,
-              totalRevenue: configData.statistics?.data_rows_created || 500,
-              totalExpenses: configData.statistics?.csv_files_created || 7,
-              categories: ['Finanzas', 'Contratos', 'Auditorías', 'Documentos'],
-              lastUpdated: configData.last_updated || new Date().toISOString(),
-              systemStatus: 'active',
-              totalPDFs: configData.statistics?.pdfs_consolidated || 114,
-              totalCSVs: configData.statistics?.csvs_consolidated || 7,
-              totalJSONs: configData.statistics?.jsons_consolidated || 5,
-              totalDatabases: configData.statistics?.databases_consolidated || 1
-            });
-          } else {
-            throw new Error('Invalid content type');
-          }
-        } else {
-          throw new Error('Failed to fetch');
-        }
-      } catch (error) {
-        console.error('Error fetching transparency data:', error);
-        // Set fallback data
-        setData({
-          totalDocuments: 171,
-          totalRevenue: 500,
-          totalExpenses: 7,
-          categories: ['Finanzas', 'Contratos', 'Auditorías', 'Documentos'],
-          lastUpdated: new Date().toISOString(),
-          systemStatus: 'active',
-          totalPDFs: 114,
-          totalCSVs: 7,
-          totalJSONs: 5,
-          totalDatabases: 1
-        });
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  return data;
-};
-
-// Quick access links with real data integration
-const getQuickLinks = (data: Record<string, unknown>) => [
-  {
-    title: 'Dashboard Completo',
-    description: 'Vista integral con todos los datos financieros y documentos organizados',
-    path: '/completo',
-    icon: <LayoutDashboard className="w-6 h-6 text-blue-600" />,
-    color: 'bg-blue-50 border-blue-200 hover:bg-blue-100',
-    stats: `${data.totalDocuments || 0} documentos procesados`,
-    highlight: true
-  },
-  {
-    title: 'Presupuesto Municipal',
-    description: 'Análisis completo del presupuesto con datos extraídos de PDFs',
-    path: '/budget',
-    icon: <DollarSign className="w-6 h-6 text-green-600" />,
-    color: 'bg-green-50 border-green-200 hover:bg-green-100',
-    stats: 'Datos actualizados del presupuesto'
-  },
-  {
-    title: 'Ingresos y Recursos',
-    description: 'Visualización de todos los ingresos municipales por categoría',
-    path: '/revenue',
-    icon: <TrendingUp className="w-6 h-6 text-emerald-600" />,
-    color: 'bg-emerald-50 border-emerald-200 hover:bg-emerald-100',
-    stats: 'CSV con datos de ingresos disponible'
-  },
-  {
-    title: 'Gastos y Ejecución',
-    description: 'Estado de ejecución presupuestaria y análisis de gastos',
-    path: '/expenses',
-    icon: <Calculator className="w-6 h-6 text-red-600" />,
-    color: 'bg-red-50 border-red-200 hover:bg-red-100',
-    stats: 'Datos de ejecución presupuestaria'
-  },
-  {
-    title: 'Contratos y Licitaciones',
-    description: 'Todos los contratos públicos y procesos de licitación',
-    path: '/contracts',
-    icon: <Briefcase className="w-6 h-6 text-purple-600" />,
-    color: 'bg-purple-50 border-purple-200 hover:bg-purple-100',
-    stats: 'Contratos organizados por categoría'
-  },
-  {
-    title: 'Biblioteca de Documentos',
-    description: 'Acceso completo a todos los documentos públicos organizados',
-    path: '/documents',
-    icon: <FileText className="w-6 h-6 text-gray-600" />,
-    color: 'bg-gray-50 border-gray-200 hover:bg-gray-100',
-    stats: `${Array.isArray(data.categories) ? data.categories.length : 0} categorías disponibles`
-  },
-  {
-    title: 'Centro de Datos',
-    description: 'Visualizaciones interactivas de todos los archivos CSV, JSON y PDF',
-    path: '/data-hub',
-    icon: <Database className="w-6 h-6 text-indigo-600" />,
-    color: 'bg-indigo-50 border-indigo-200 hover:bg-indigo-100',
-    stats: 'Todas las fuentes de datos unificadas',
-    highlight: true
-  }
-];
-
-// Statistics cards with real data
-const getStatisticsCards = (data: Record<string, any>) => [
-  {
-    title: 'Documentos Públicos',
-    value: (data.totalDocuments || 171).toLocaleString(),
-    subtitle: 'Archivos PDF disponibles',
-    icon: <FileText className="w-8 h-8 text-blue-600" />,
-    color: 'bg-blue-50 border-blue-200'
-  },
-  {
-    title: 'Categorías de Datos',
-    value: (data.categories?.length || 7).toString(),
-    subtitle: 'Tipos de información financiera',
-    icon: <Database className="w-8 h-8 text-green-600" />,
-    color: 'bg-green-50 border-green-200'
-  },
-  {
-    title: 'Archivos de Datos',
-    value: (data.totalFiles || 43).toString(),
-    subtitle: 'Bases de datos estructuradas',
-    icon: <BarChart3 className="w-8 h-8 text-purple-600" />,
-    color: 'bg-purple-50 border-purple-200'
-  },
-  {
-    title: 'Sistema Actualizado',
-    value: new Date().getFullYear().toString(),
-    subtitle: 'Última actualización',
-    icon: <Shield className="w-8 h-8 text-emerald-600" />,
-    color: 'bg-emerald-50 border-emerald-200'
-  }
-];
-
-const EnhancedHome: React.FC = () => {
+const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const transparencyData = useTransparencyData();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchTerm.trim()) {
-      // Navigate to search with the term
       window.location.href = `/search?q=${encodeURIComponent(searchTerm)}`;
     }
   };
 
-  const quickLinks = getQuickLinks(transparencyData);
-  const statisticsCards = getStatisticsCards(transparencyData);
+  // Quick access links
+  const quickLinks = [
+    {
+      title: 'Dashboard Completo',
+      description: 'Vista integral con todos los datos financieros y documentos organizados',
+      path: '/completo',
+      icon: <LayoutDashboard className="w-6 h-6 text-blue-600" />,
+      color: 'bg-blue-50 border-blue-200 hover:bg-blue-100',
+      stats: 'Documentos procesados',
+      highlight: true
+    },
+    {
+      title: 'Presupuesto Municipal',
+      description: 'Análisis completo del presupuesto con datos extraídos de PDFs',
+      path: '/budget',
+      icon: <DollarSign className="w-6 h-6 text-green-600" />,
+      color: 'bg-green-50 border-green-200 hover:bg-green-100',
+      stats: 'Datos actualizados del presupuesto'
+    },
+    {
+      title: 'Ingresos y Recursos',
+      description: 'Visualización de todos los ingresos municipales por categoría',
+      path: '/revenue',
+      icon: <TrendingUp className="w-6 h-6 text-emerald-600" />,
+      color: 'bg-emerald-50 border-emerald-200 hover:bg-emerald-100',
+      stats: 'CSV con datos de ingresos disponible'
+    },
+    {
+      title: 'Centro de Datos',
+      description: 'Visualizaciones interactivas de todos los archivos CSV, JSON y PDF',
+      path: '/data-hub',
+      icon: <Database className="w-6 h-6 text-indigo-600" />,
+      color: 'bg-indigo-50 border-indigo-200 hover:bg-indigo-100',
+      stats: 'Todas las fuentes de datos unificadas',
+      highlight: true
+    },
+    {
+      title: 'Tesorería Municipal',
+      description: 'Gestión de fondos públicos y flujo de efectivo',
+      path: '/treasury',
+      icon: <Calculator className="w-6 h-6 text-yellow-600" />,
+      color: 'bg-yellow-50 border-yellow-200 hover:bg-yellow-100',
+      stats: 'Administración financiera'
+    },
+    {
+      title: 'Gastos y Ejecución',
+      description: 'Estado de ejecución presupuestaria y análisis de gastos',
+      path: '/expenses',
+      icon: <Calculator className="w-6 h-6 text-red-600" />,
+      color: 'bg-red-50 border-red-200 hover:bg-red-100',
+      stats: 'Datos de ejecución presupuestaria'
+    },
+    {
+      title: 'Contratos y Licitaciones',
+      description: 'Todos los contratos públicos y procesos de licitación',
+      path: '/contracts',
+      icon: <Briefcase className="w-6 h-6 text-purple-600" />,
+      color: 'bg-purple-50 border-purple-200 hover:bg-purple-100',
+      stats: 'Contratos organizados por categoría'
+    },
+    {
+      title: 'Biblioteca de Documentos',
+      description: 'Acceso completo a todos los documentos públicos organizados',
+      path: '/documents',
+      icon: <FileText className="w-6 h-6 text-gray-600" />,
+      color: 'bg-gray-50 border-gray-200 hover:bg-gray-100',
+      stats: 'Categorías disponibles'
+    }
+  ];
+
+  // Statistics cards
+  const statisticsCards = [
+    {
+      title: 'Documentos Públicos',
+      value: '171',
+      subtitle: 'Archivos PDF disponibles',
+      icon: <FileText className="w-8 h-8 text-blue-600" />,
+      color: 'bg-blue-50 border-blue-200'
+    },
+    {
+      title: 'Categorías de Datos',
+      value: '7',
+      subtitle: 'Tipos de información financiera',
+      icon: <Database className="w-8 h-8 text-green-600" />,
+      color: 'bg-green-50 border-green-200'
+    },
+    {
+      title: 'Archivos de Datos',
+      value: '43',
+      subtitle: 'Bases de datos estructuradas',
+      icon: <BarChart3 className="w-8 h-8 text-purple-600" />,
+      color: 'bg-purple-50 border-purple-200'
+    },
+    {
+      title: 'Sistema Actualizado',
+      value: new Date().getFullYear().toString(),
+      subtitle: 'Última actualización',
+      icon: <Shield className="w-8 h-8 text-emerald-600" />,
+      color: 'bg-emerald-50 border-emerald-200'
+    }
+  ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
@@ -239,7 +173,7 @@ const EnhancedHome: React.FC = () => {
                   className="px-8 py-4 bg-blue-900 bg-opacity-50 text-white rounded-xl font-semibold hover:bg-opacity-70 transition-all duration-300 inline-flex items-center border border-blue-400 hover:shadow-lg"
                 >
                   <Database className="w-5 h-5 mr-2" />
-                  Centro de Datos ({transparencyData.totalDocuments})
+                  Centro de Datos
                 </Link>
               </div>
             </div>
@@ -264,8 +198,8 @@ const EnhancedHome: React.FC = () => {
       {/* Real-time Statistics */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 mb-6">
         {statisticsCards.map((card, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className={`${card.color} border rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5 dark:bg-dark-surface dark:border-dark-border`}
           >
             <div className="flex items-center justify-between mb-3">
@@ -293,7 +227,7 @@ const EnhancedHome: React.FC = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {quickLinks.map((link, index) => (
             <Link
               key={index}
@@ -334,7 +268,7 @@ const EnhancedHome: React.FC = () => {
               Búsqueda Avanzada en Documentos
             </h2>
             <p className="text-gray-600 dark:text-dark-text-secondary">
-              Busque en {transparencyData.totalDocuments} documentos organizados y datos estructurados
+              Busque en documentos organizados y datos estructurados
             </p>
           </div>
 
@@ -371,8 +305,152 @@ const EnhancedHome: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Comprehensive Navigation - All Pages */}
+      <div className="bg-gray-50 dark:bg-dark-surface-alt rounded-xl shadow-lg border border-gray-200 dark:border-dark-border p-6 mb-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary mb-6 text-center">
+            Navegación Completa - Todas las Secciones
+          </h2>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+            {/* Financial Pages */}
+            <Link to="/budget" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <DollarSign className="w-6 h-6 text-green-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Presupuesto</span>
+              </div>
+            </Link>
+
+            <Link to="/treasury" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <Calculator className="w-6 h-6 text-yellow-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Tesorería</span>
+              </div>
+            </Link>
+
+            <Link to="/expenses" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <BarChart3 className="w-6 h-6 text-red-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Gastos</span>
+              </div>
+            </Link>
+
+            <Link to="/revenue" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <TrendingUp className="w-6 h-6 text-emerald-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Ingresos</span>
+              </div>
+            </Link>
+
+            <Link to="/debt" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <Calculator className="w-6 h-6 text-orange-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Deuda</span>
+              </div>
+            </Link>
+
+            <Link to="/investments" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <Building className="w-6 h-6 text-blue-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Inversiones</span>
+              </div>
+            </Link>
+
+            <Link to="/salaries" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <Calculator className="w-6 h-6 text-purple-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Salarios</span>
+              </div>
+            </Link>
+
+            <Link to="/contracts" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <Briefcase className="w-6 h-6 text-purple-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Contratos</span>
+              </div>
+            </Link>
+
+            <Link to="/documents" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <FileText className="w-6 h-6 text-gray-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Documentos</span>
+              </div>
+            </Link>
+
+            <Link to="/reports" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <FileText className="w-6 h-6 text-indigo-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Reportes</span>
+              </div>
+            </Link>
+
+            <Link to="/audits" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <Shield className="w-6 h-6 text-red-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Auditorías</span>
+              </div>
+            </Link>
+
+            <Link to="/transparency" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <Shield className="w-6 h-6 text-blue-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Transparencia</span>
+              </div>
+            </Link>
+
+            <Link to="/data-hub" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <Database className="w-6 h-6 text-indigo-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Centro Datos</span>
+              </div>
+            </Link>
+
+            <Link to="/database" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <Database className="w-6 h-6 text-green-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Base Datos</span>
+              </div>
+            </Link>
+
+            <Link to="/search" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <Search className="w-6 h-6 text-gray-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Búsqueda</span>
+              </div>
+            </Link>
+
+            <Link to="/about" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <Building className="w-6 h-6 text-gray-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Acerca de</span>
+              </div>
+            </Link>
+
+            <Link to="/contact" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <Building className="w-6 h-6 text-blue-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Contacto</span>
+              </div>
+            </Link>
+
+            <Link to="/all-charts" className="p-3 bg-white dark:bg-dark-surface rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-dark-border">
+              <div className="text-center">
+                <BarChart3 className="w-6 h-6 text-purple-600 mx-auto mb-1" />
+                <span className="text-xs font-medium text-gray-700 dark:text-dark-text-secondary">Gráficos</span>
+              </div>
+            </Link>
+          </div>
+
+          <div className="mt-4 text-center">
+            <p className="text-sm text-gray-500 dark:text-dark-text-tertiary">
+              Todas las secciones del Portal de Transparencia disponibles desde esta página
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default EnhancedHome;
+export default Home;

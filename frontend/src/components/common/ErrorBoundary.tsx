@@ -50,9 +50,14 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     window.location.href = '/';
   };
 
-  handleReportIssue = (): _void => {
+  handleReportIssue = (): void => {
     // Open GitHub issues
     window.open('https://github.com/flongstaff/cda-transparencia/issues', '_blank');
+  };
+
+  handleContinue = (): void => {
+    // Reset error state to try to continue
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
   render(): React.ReactNode {
@@ -93,13 +98,21 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
               
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
+                  onClick={this.handleContinue}
+                  className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 inline-flex items-center justify-center"
+                >
+                  <CheckCircle className="w-4 h-4 mr-2" />
+                  Continuar navegando
+                </button>
+
+                <button
                   onClick={this.handleReload}
                   className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 inline-flex items-center justify-center"
                 >
                   <RefreshCw className="w-4 h-4 mr-2" />
                   Recargar página
                 </button>
-                
+
                 <button
                   onClick={this.handleGoHome}
                   className="px-4 py-2 border border-gray-300 dark:border-dark-border text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary rounded-lg hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background inline-flex items-center justify-center"
@@ -107,7 +120,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
                   <Home className="w-4 h-4 mr-2" />
                   Ir a inicio
                 </button>
-                
+
                 <button
                   onClick={this.handleReportIssue}
                   className="px-4 py-2 border border-gray-300 dark:border-dark-border text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary rounded-lg hover:bg-gray-50 dark:bg-dark-background dark:bg-dark-background inline-flex items-center justify-center"

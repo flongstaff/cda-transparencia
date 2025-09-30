@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carmen de Areco Transparency Portal</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: #f3f4f6;
+        color: #1f2937;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 600px;
+        padding: 2rem;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #111827;
+      }
+      p {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+        color: #4b5563;
+      }
+      a {
+        color: #3b82f6;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: #3b82f6;
+        color: white;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.2s;
+      }
+      .button:hover {
+        background-color: #2563eb;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Página no encontrada</h1>
+      <p>La página que estás buscando no existe o ha sido movida.</p>
+      <p><a href="/" class="button">Volver a la página principal</a></p>
+      <p>O puedes <a href="/">visitar nuestra página de inicio</a>.</p>
+    </div>
+    <script>
+      // For GitHub Pages SPA routing, redirect to index.html
+      (function() {
+        var path = window.location.pathname;
+        if (path !== '/' && path.indexOf('.') === -1) {
+          // This is likely a client-side route, redirect to index.html
+          window.history.replaceState(null, null, '/');
+          // Reload to let the SPA handle the route
+          window.location.reload();
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -31,6 +31,9 @@ import { useBudgetData } from '../hooks/useUnifiedData';
 import PageYearSelector from '../components/forms/PageYearSelector';
 import UnifiedChart from '../components/charts/UnifiedChart';
 import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
+import BudgetExecutionDashboard from '../components/charts/BudgetExecutionDashboard';
+import BudgetExecutionChart from '../components/charts/BudgetExecutionChart';
+import ErrorBoundary from '../components/common/ErrorBoundary';
 
 const BudgetUnified: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
@@ -155,8 +158,9 @@ const BudgetUnified: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {/* Enhanced Budget Charts Grid */}
+      <div className="space-y-6">
+        {/* Main Budget Execution Dashboard */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -165,37 +169,104 @@ const BudgetUnified: React.FC = () => {
         >
           <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
             <BarChart3 className="h-5 w-5 mr-2 text-blue-600" />
-            Ejecución Presupuestaria
+            Dashboard de Ejecución Presupuestaria - {selectedYear}
           </h3>
-          <div className="h-64">
-            <UnifiedChart
-              type="bar"
-              data={budgetData?.budget_execution || []}
-              height={250}
-              showLegend={true}
+          <ErrorBoundary>
+            <BudgetExecutionDashboard
+              year={selectedYear}
+              data={budgetData}
             />
-          </div>
+          </ErrorBoundary>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
-        >
-          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <PiggyBank className="h-5 w-5 mr-2 text-green-600" />
-            Distribución por Categoría
-          </h3>
-          <div className="h-64">
-            <UnifiedChart
-              type="pie"
-              data={budgetData?.revenue_sources || []}
-              height={250}
-              showLegend={true}
-            />
-          </div>
-        </motion.div>
+        {/* Secondary Charts Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          >
+            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <BarChart3 className="h-5 w-5 mr-2 text-blue-600" />
+              Ejecución por Partida
+            </h3>
+            <ErrorBoundary>
+              <div className="h-64">
+                <UnifiedChart
+                  type="bar"
+                  data={budgetData?.budget_execution || []}
+                  height={250}
+                  showLegend={true}
+                />
+              </div>
+            </ErrorBoundary>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          >
+            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <PiggyBank className="h-5 w-5 mr-2 text-green-600" />
+              Distribución por Categoría
+            </h3>
+            <ErrorBoundary>
+              <div className="h-64">
+                <UnifiedChart
+                  type="pie"
+                  data={budgetData?.revenue_sources || []}
+                  height={250}
+                  showLegend={true}
+                />
+              </div>
+            </ErrorBoundary>
+          </motion.div>
+
+          {/* Additional Budget Execution Chart */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          >
+            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <Activity className="h-5 w-5 mr-2 text-purple-600" />
+              Análisis de Tendencias
+            </h3>
+            <ErrorBoundary>
+              <div className="h-64">
+                <BudgetExecutionChart
+                  data={budgetData?.budget_execution || []}
+                  year={selectedYear}
+                />
+              </div>
+            </ErrorBoundary>
+          </motion.div>
+
+          {/* Budget Analysis Chart */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          >
+            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <Scale className="h-5 w-5 mr-2 text-orange-600" />
+              Análisis Presupuestario
+            </h3>
+            <ErrorBoundary>
+              <div className="h-64">
+                <BudgetAnalysisChart
+                  data={budgetData}
+                  year={selectedYear}
+                />
+              </div>
+            </ErrorBoundary>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

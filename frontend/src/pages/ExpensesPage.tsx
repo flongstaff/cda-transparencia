@@ -24,6 +24,11 @@ import {
 import { useMasterData } from '../hooks/useMasterData';
 import { formatCurrencyARS, formatPercentageARS } from '../utils/formatters';
 import ValidatedChart from '../components/charts/ValidatedChart';
+import ErrorBoundary from '../components/common/ErrorBoundary';
+import UnifiedChart from '../components/charts/UnifiedChart';
+import PersonnelExpensesChart from '../components/charts/PersonnelExpensesChart';
+import ExpenditureReportChart from '../components/charts/ExpenditureReportChart';
+import BudgetExecutionDashboard from '../components/charts/BudgetExecutionDashboard';
 
 const ExpensesPage: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
@@ -324,18 +329,20 @@ const ExpensesPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Category Breakdown Chart */}
             <div>
-              <ValidatedChart
-              data={expensesData.categories.map(cat => ({
-                name: cat.name,
-                value: Math.round(cat.amount / 1000000), // Convert to millions
-                amount: cat.amount
-              }))}
-              type="pie"
-              year={selectedYear}
-              title="Gastos por Categoría (Millones ARS)"
-              sources={['https://carmendeareco.gob.ar/transparencia/']}
-              showValidation={true}
-              />
+              <ErrorBoundary>
+                <ValidatedChart
+                data={expensesData.categories.map(cat => ({
+                  name: cat.name,
+                  value: Math.round(cat.amount / 1000000), // Convert to millions
+                  amount: cat.amount
+                }))}
+                type="pie"
+                year={selectedYear}
+                title="Gastos por Categoría (Millones ARS)"
+                sources={['https://carmendeareco.gob.ar/transparencia/']}
+                showValidation={true}
+                />
+              </ErrorBoundary>
             </div>
 
             {/* Detailed Category List */}
@@ -402,6 +409,45 @@ const ExpensesPage: React.FC = () => {
 
         {!loading && !error && (
           <div className="space-y-6">
+            {/* Categories View */}
+            {viewMode === 'categories' && (
+              <div className="space-y-6">
+                <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Análisis Detallado por Categorías</h2>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Personnel Expenses Chart */}
+                    <div className="p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
+                      <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Gastos de Personal y Sueldos</h3>
+                      <div className="h-64">
+                        <ErrorBoundary>
+                          <PersonnelExpensesChart
+                            year={selectedYear}
+                            height={250}
+                            chartType="pie"
+                          />
+                        </ErrorBoundary>
+                      </div>
+                    </div>
+
+                    {/* Budget vs Execution */}
+                    <div className="p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
+                      <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Presupuesto vs Ejecución</h3>
+                      <div className="h-64">
+                        <ErrorBoundary>
+                          <UnifiedChart
+                            type="budget"
+                            year={selectedYear}
+                            variant="bar"
+                            height={250}
+                          />
+                        </ErrorBoundary>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Overview View */}
             {viewMode === 'overview' && (
               <div className="space-y-6">
@@ -462,19 +508,59 @@ const ExpensesPage: React.FC = () => {
                 <div className="space-y-6">
                   {/* Multi-year expense trends */}
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {/* Expense trends chart */}
+                    {/* Budget Execution Dashboard */}
                     <div className="p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
-                      <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Evolución de Gastos Totales</h3>
-                      <div className="h-64 flex items-center justify-center">
-                        <p className="text-gray-500">Gráfico de tendencia multi-año (2019-2025)</p>
+                      <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Ejecución Presupuestaria</h3>
+                      <div className="h-64">
+                        <ErrorBoundary>
+                          <BudgetExecutionDashboard />
+                        </ErrorBoundary>
                       </div>
                     </div>
-                    
-                    {/* Expense categories trends chart */}
+
+                    {/* Expense categories chart using UnifiedChart */}
                     <div className="p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
-                      <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Distribución por Categoría - Multi-Año</h3>
-                      <div className="h-64 flex items-center justify-center">
-                        <p className="text-gray-500">Gráfico de categorías multi-año</p>
+                      <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Distribución de Gastos</h3>
+                      <div className="h-64">
+                        <ErrorBoundary>
+                          <UnifiedChart
+                            type="budget"
+                            year={selectedYear}
+                            variant="bar"
+                            height={250}
+                          />
+                        </ErrorBoundary>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Additional Expense Charts */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+                    {/* Personnel Expenses Chart */}
+                    <div className="p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
+                      <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Gastos de Personal</h3>
+                      <div className="h-64">
+                        <ErrorBoundary>
+                          <PersonnelExpensesChart
+                            year={selectedYear}
+                            height={250}
+                            chartType="bar"
+                          />
+                        </ErrorBoundary>
+                      </div>
+                    </div>
+
+                    {/* Expenditure Report Chart */}
+                    <div className="p-4 bg-gray-50 dark:bg-dark-background dark:bg-dark-background rounded-lg">
+                      <h3 className="font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-4">Reporte de Gastos</h3>
+                      <div className="h-64">
+                        <ErrorBoundary>
+                          <ExpenditureReportChart
+                            year={selectedYear}
+                            height={250}
+                            chartType="line"
+                          />
+                        </ErrorBoundary>
                       </div>
                     </div>
                   </div>

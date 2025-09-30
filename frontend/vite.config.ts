@@ -85,7 +85,7 @@ export default defineConfig(({ mode }) => {
       __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
     },
     build: {
-      outDir: '../../dist',
+      outDir: 'dist',
       emptyOutDir: true,
       assetsDir: 'assets',
       sourcemap: mode === 'development',

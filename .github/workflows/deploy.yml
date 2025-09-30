@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages and Cloudflare Workers
+name: Deploy to GitHub Pages and Cloudflare Pages
 
 on:
   push:
@@ -19,21 +19,23 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         working-directory: frontend
 
       - name: Build frontend
-        run: npm run build:github
+        run: npm run build
         working-directory: frontend
+        env:
+          NODE_ENV: production
 
       - name: Run Audits
         run: |
           cd scripts
           npm install axios
           node fetch-external.js
-          # python audit_asap.py  # Install Python in Actions if needed
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
           git add ../data/audit_results.json
@@ -46,24 +48,24 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./frontend/dist
           cname: cda-transparencia.org
+          enable_jekyll: false
+          allow_empty_commit: false
+          keep_files: false
+          force_orphan: true
 
-  deploy-worker:
-    runs-on: ubuntu-latest
-    needs: deploy-frontend
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Prepare Cloudflare Pages deployment
+        run: |
+          # Copy built files to Cloudflare deployment directory
+          mkdir -p cloudflare-deploy/public
+          cp -r frontend/dist/* cloudflare-deploy/public/
+          # Copy CNAME file for custom domain
+          echo "cda-transparencia.org" > cloudflare-deploy/public/CNAME
+          
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
         with:
-          node-version: '20'
-
-      - name: Install Wrangler
-        run: npm install -g wrangler
-
-      - name: Publish Cloudflare Worker
-        run: wrangler publish
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: cda-transparencia
+          directory: cloudflare-deploy/public
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
