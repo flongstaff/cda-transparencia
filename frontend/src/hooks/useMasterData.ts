@@ -303,8 +303,9 @@ export const useMasterData = (selectedYear?: number) => {
     return Object.entries(masterData.financialData)
       .map(([year, data]) => ({
         year: parseInt(year),
-        count: data.contracts?.length || 0,
-        total_value: data.contracts?.reduce((sum, contract) => sum + (contract.value || 0), 0) || 0
+        count: Array.isArray(data.contracts) ? data.contracts.length : 0,
+        total_value: Array.isArray(data.contracts) && data.contracts.length > 0 ? 
+          data.contracts.reduce((sum, contract) => sum + (contract.value || 0), 0) : 0
       }))
       .filter(item => item.count > 0 || item.total_value > 0)
       .sort((a, b) => a.year - b.year);
@@ -315,8 +316,8 @@ export const useMasterData = (selectedYear?: number) => {
     return Object.entries(masterData.financialData)
       .map(([year, data]) => ({
         year: parseInt(year),
-        count: data.salaries?.length || 0,
-        total_salary: data.salaries?.reduce((sum, salary) => sum + (salary.amount || 0), 0) || 0
+        count: data.salaries?.employeeCount || 0,
+        total_salary: data.salaries?.totalPayroll || 0
       }))
       .filter(item => item.count > 0 || item.total_salary > 0)
       .sort((a, b) => a.year - b.year);
@@ -352,7 +353,7 @@ export const useMasterData = (selectedYear?: number) => {
     return Object.entries(masterData.financialData)
       .map(([year, data]) => ({
         year: parseInt(year),
-        count: data.documents?.length || 0
+        count: Array.isArray(data.documents) ? data.documents.length : 0
       }))
       .filter(item => item.count > 0)
       .sort((a, b) => a.year - b.year);

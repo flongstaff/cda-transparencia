@@ -46,6 +46,9 @@ import TransparencyPage from './pages/TransparencyPage';
 import InfrastructureTracker from './pages/InfrastructureTracker';
 import DataVisualizationHub from './pages/DataVisualizationHub';
 import MultiYearRevenue from './pages/MultiYearRevenue';
+import SectoralStatsDashboard from './pages/SectoralStatsDashboard';
+import CorruptionMonitoringDashboard from './pages/CorruptionMonitoringDashboard';
+import MetaTransparencyDashboard from './pages/MetaTransparencyDashboard';
 import Home from './pages/Home';
 
 function App() {
@@ -78,6 +81,9 @@ function App() {
                   <Route path="/infrastructure" element={<InfrastructureTracker />} />
                   <Route path="/revenue" element={<MultiYearRevenue />} />
                   <Route path="/multi-year-revenue" element={<MultiYearRevenue />} />
+                  <Route path="/sectoral" element={<SectoralStatsDashboard />} />
+                  <Route path="/sectoral-stats" element={<SectoralStatsDashboard />} />
+                  <Route path="/sectors" element={<SectoralStatsDashboard />} />
 
                   {/* Human Resources Routes */}
                   <Route path="/salaries" element={<Salaries />} />
@@ -97,6 +103,9 @@ function App() {
                   <Route path="/transparency" element={<TransparencyPage />} />
                   <Route path="/enhanced-transparency" element={<EnhancedTransparencyDashboard />} />
                   <Route path="/analysis" element={<AntiCorruptionDashboard />} />
+                  <Route path="/corruption-monitoring" element={<CorruptionMonitoringDashboard />} />
+                  <Route path="/integrity" element={<CorruptionMonitoringDashboard />} />
+                  <Route path="/anticorruption" element={<CorruptionMonitoringDashboard />} />
                   <Route path="/property-declarations" element={<PropertyDeclarations />} />
 
                   {/* Data & Charts Routes - All redirected to Dashboard Completo */}
@@ -115,7 +124,8 @@ function App() {
 
                   {/* Monitoring Routes */}
                   <Route path="/monitoring" element={<MonitoringDashboard />} />
-                  <Route path="/system-health" element={<MonitoringDashboard />} />
+                  <Route path="/meta-transparency" element={<MetaTransparencyDashboard />} />
+                  <Route path="/data-quality" element={<MetaTransparencyDashboard />} />
 
                   {/* Demo Components */}
                   <Route path="/demo/year-selector" element={<YearSelectorDemo />} />

@@ -38,9 +38,9 @@ const BudgetExecutionChartWrapper: React.FC<BudgetExecutionChartWrapperProps> = 
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Load chart data using React Query
+  // Load chart data using React Query (include year in cache key for proper invalidation)
   const { data, isLoading, isError, error: queryError } = useQuery({
-    queryKey: ['chart-data', 'Budget_Execution'],
+    queryKey: ['chart-data', 'Budget_Execution', year],
     queryFn: () => chartDataService.loadChartData('Budget_Execution'),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes

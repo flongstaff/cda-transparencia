@@ -34,11 +34,16 @@ import PageYearSelector from '../components/forms/PageYearSelector';
 import UnifiedChart from '../components/charts/UnifiedChart';
 import TreasuryAnalysisChart from '../components/charts/TreasuryAnalysisChart';
 import FinancialReservesChart from '../components/charts/FinancialReservesChart';
+import FiscalBalanceReportChart from '../components/charts/FiscalBalanceReportChart';
+import EconomicReportChart from '../components/charts/EconomicReportChart';
+import WaterfallChart from '../components/charts/WaterfallChart';
+import TimeSeriesChart from '../components/charts/TimeSeriesChart';
+import RevenueSourcesChart from '../components/charts/RevenueSourcesChart';
 import ErrorBoundary from '../components/common/ErrorBoundary';
 
 const TreasuryUnified: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-  const [viewMode, setViewMode] = useState<'overview' | 'revenue' | 'expenses' | 'sources'>('overview');
+  const [viewMode, setViewMode] = useState<'overview' | 'sef' | 'cashflow' | 'revenue' | 'expenses' | 'sources'>('overview');
 
   // Use unified data service
   const {
@@ -247,6 +252,216 @@ const TreasuryUnified: React.FC = () => {
     </div>
   );
 
+  const renderSEFReports = () => (
+    <div className="space-y-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+          <Scale className="h-6 w-6 mr-3 text-blue-600" />
+          Situación Económico-Financiera (SEF)
+        </h3>
+        <p className="text-gray-600 mb-6">
+          Análisis trimestral de ingresos vs gastos con detección de sobregastos y análisis de balance
+        </p>
+
+        {/* Multi-source data status indicator */}
+        <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+          <div className="flex items-center mb-2">
+            <CheckCircle className="h-5 w-5 text-blue-600 mr-2" />
+            <span className="font-medium text-blue-900">Integración Multi-fuente Activa</span>
+          </div>
+          <div className="grid grid-cols-4 gap-2 text-sm text-blue-700">
+            <span>📊 CSV: Estados financieros</span>
+            <span>📄 PDF: Reportes SEF</span>
+            <span>🔗 JSON: Datos estructurados</span>
+            <span>🌐 APIs: Datos en tiempo real</span>
+          </div>
+        </div>
+
+        {/* SEF Revenue vs Expenditure Analysis */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white border border-gray-200 rounded-xl p-6"
+          >
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <TrendingUp className="h-5 w-5 mr-2 text-green-600" />
+              Ingresos vs Gastos - Análisis Trimestral
+            </h4>
+            <div className="h-80">
+              <ErrorBoundary>
+                <TimeSeriesChart
+                  year={selectedYear}
+                  chartType="line"
+                  title="Evolución Trimestral - Ingresos vs Gastos"
+                  height={300}
+                />
+              </ErrorBoundary>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="bg-white border border-gray-200 rounded-xl p-6"
+          >
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <AlertCircle className="h-5 w-5 mr-2 text-red-600" />
+              Heatmap de Sobregastos
+            </h4>
+            <div className="h-80">
+              <ErrorBoundary>
+                <FiscalBalanceReportChart
+                  year={selectedYear}
+                  chartType="heatmap"
+                  title="Meses con Gastos > Ingresos"
+                  height={300}
+                />
+              </ErrorBoundary>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Waterfall Chart for Balance Analysis */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-white border border-gray-200 rounded-xl p-6"
+        >
+          <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <BarChart3 className="h-5 w-5 mr-2 text-blue-600" />
+            Balance Sheet Waterfall - Origen de Déficits
+          </h4>
+          <div className="h-80">
+            <ErrorBoundary>
+              <WaterfallChart
+                year={selectedYear}
+                title="Análisis de Balance - De dónde vienen los déficits"
+                height={300}
+              />
+            </ErrorBoundary>
+          </div>
+        </motion.div>
+
+        {/* Economic Report Analysis */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="bg-white border border-gray-200 rounded-xl p-6"
+        >
+          <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <DollarSign className="h-5 w-5 mr-2 text-purple-600" />
+            Reporte Económico Detallado
+          </h4>
+          <div className="h-80">
+            <ErrorBoundary>
+              <EconomicReportChart
+                year={selectedYear}
+                height={300}
+              />
+            </ErrorBoundary>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+
+  const renderCashFlow = () => (
+    <div className="space-y-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+          <Activity className="h-6 w-6 mr-3 text-green-600" />
+          Flujo de Caja Municipal
+        </h3>
+        <p className="text-gray-600 mb-6">
+          Análisis detallado del flujo de efectivo con proyecciones y análisis de liquidez
+        </p>
+
+        {/* Multi-source data integration status */}
+        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+          <div className="flex items-center mb-2">
+            <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
+            <span className="font-medium text-green-900">Datos de Flujo de Caja Integrados</span>
+          </div>
+          <div className="grid grid-cols-4 gap-2 text-sm text-green-700">
+            <span>💰 Tesorería: Movimientos diarios</span>
+            <span>🏦 Bancos: Estados de cuenta</span>
+            <span>📈 Proyecciones: Modelos predictivos</span>
+            <span>⚡ Tiempo real: APIs bancarias</span>
+          </div>
+        </div>
+
+        {/* Cash Flow Time Series */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white border border-gray-200 rounded-xl p-6"
+          >
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <TrendingUp className="h-5 w-5 mr-2 text-blue-600" />
+              Flujo de Efectivo Mensual
+            </h4>
+            <div className="h-80">
+              <ErrorBoundary>
+                <TimeSeriesChart
+                  year={selectedYear}
+                  chartType="area"
+                  title="Entradas y Salidas de Efectivo"
+                  height={300}
+                />
+              </ErrorBoundary>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="bg-white border border-gray-200 rounded-xl p-6"
+          >
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <CreditCard className="h-5 w-5 mr-2 text-purple-600" />
+              Análisis de Liquidez
+            </h4>
+            <div className="h-80">
+              <ErrorBoundary>
+                <FinancialReservesChart
+                  year={selectedYear}
+                  height={300}
+                />
+              </ErrorBoundary>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Cash Sources Breakdown */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-white border border-gray-200 rounded-xl p-6"
+        >
+          <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <Banknote className="h-5 w-5 mr-2 text-green-600" />
+            Fuentes de Efectivo
+          </h4>
+          <div className="h-80">
+            <ErrorBoundary>
+              <RevenueSourcesChart
+                year={selectedYear}
+                height={300}
+              />
+            </ErrorBoundary>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+
   const renderSources = () => (
     <div className="space-y-6">
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
@@ -254,7 +469,7 @@ const TreasuryUnified: React.FC = () => {
           <Database className="h-5 w-5 mr-2 text-blue-600" />
           Fuentes de Datos del Tesoro
         </h3>
-        
+
         <div className="space-y-4">
           {sources.map((source, index) => (
             <motion.div
@@ -344,6 +559,8 @@ const TreasuryUnified: React.FC = () => {
               <nav className="flex space-x-8">
                 {[
                   { id: 'overview', label: 'Resumen', icon: BarChart3 },
+                  { id: 'sef', label: 'SEF Reports', icon: FileText },
+                  { id: 'cashflow', label: 'Flujo de Caja', icon: Activity },
                   { id: 'revenue', label: 'Ingresos', icon: TrendingUp },
                   { id: 'expenses', label: 'Gastos', icon: TrendingDown },
                   { id: 'sources', label: 'Fuentes', icon: Database }
@@ -400,6 +617,8 @@ const TreasuryUnified: React.FC = () => {
               transition={{ duration: 0.3 }}
             >
               {viewMode === 'overview' && renderOverview()}
+              {viewMode === 'sef' && renderSEFReports()}
+              {viewMode === 'cashflow' && renderCashFlow()}
               {viewMode === 'sources' && renderSources()}
               {viewMode === 'revenue' && (
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">

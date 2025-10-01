@@ -73,6 +73,14 @@ class DataIntegrationService {
   }
 
   /**
+   * Clear all cached data
+   */
+  public clearCache(): void {
+    console.log('🗑️ Clearing data integration cache');
+    this.cache.clear();
+  }
+
+  /**
    * Load integrated data for a specific year
    * Combines external APIs, local JSON, CSV data, and generated fallback
    */
@@ -127,6 +135,14 @@ class DataIntegrationService {
    */
   private async loadExternalData(year: number): Promise<DataSource> {
     try {
+      // Skip external APIs if proxy server is not available (development mode)
+      const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+      if (isDevelopment) {
+        console.log(`⏭️ Skipping external APIs in development mode (no proxy server)`);
+        throw new Error('External APIs disabled in development mode');
+      }
+
       console.log(`🌐 Loading external API data for year ${year}...`);
 
       const [carmenData, nationalData, geoData] = await Promise.allSettled([
@@ -375,7 +391,7 @@ class DataIntegrationService {
     for (const source of sources) {
       if (source?.data?.budget) {
         const budget = source.data.budget;
-        return {
+        const merged = {
           total_budget: budget.totalBudget || budget.total_budget || 0,
           total_executed: budget.totalExecuted || budget.total_executed || 0,
           execution_rate: budget.executionRate || budget.execution_rate || 0,
@@ -383,10 +399,19 @@ class DataIntegrationService {
           source: source.source_type,
           last_updated: source.timestamp
         };
+
+        console.log(`💰 Merged budget data from ${source.source_type}:`, {
+          total_budget: merged.total_budget,
+          total_executed: merged.total_executed,
+          year: budget.year
+        });
+
+        return merged;
       }
     }
 
     // Fallback to empty budget
+    console.log('⚠️ No budget data found in any source, using empty fallback');
     return {
       total_budget: 0,
       total_executed: 0,
@@ -501,7 +526,7 @@ class DataIntegrationService {
    * Parse local JSON data into standardized format
    */
   private parseLocalJSONData(jsonData: any, year: number): any {
-    return {
+    const parsed = {
       budget: jsonData.budget || jsonData.summary?.budget || {},
       contracts: jsonData.contracts || [],
       salaries: jsonData.salaries || {},
@@ -509,6 +534,16 @@ class DataIntegrationService {
       treasury: jsonData.treasury || {},
       debt: jsonData.debt || {}
     };
+
+    console.log(`📊 Parsed local JSON data for year ${year}:`, {
+      budget: {
+        total_budget: parsed.budget.total_budget,
+        total_executed: parsed.budget.total_executed,
+        year: parsed.budget.year
+      }
+    });
+
+    return parsed;
   }
 
   /**
@@ -607,10 +642,7 @@ class DataIntegrationService {
   /**
    * Clear integration cache
    */
-  clearCache(): void {
-    this.cache.clear();
-    console.log('🧹 Data integration cache cleared');
-  }
+
 
   /**
    * Get integration status

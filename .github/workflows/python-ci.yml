@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8, 3.9, '3.10', '3.11']
+        python-version: [3.9, '3.10', '3.11']
     
     services:
       postgres:
@@ -38,7 +38,7 @@ jobs:
           - 5432:5432
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
@@ -71,7 +71,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -87,7 +87,7 @@ jobs:
       run: python -m build
     
     - name: Store distribution packages
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: python-package-distributions
         path: dist/

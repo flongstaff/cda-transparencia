@@ -4,7 +4,12 @@ import { useTable } from 'react-table';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useMasterData } from '../hooks/useMasterData';
 import UnifiedTransparencyService from '../services/UnifiedTransparencyService';
-import { AlertTriangle, CheckCircle, Clock, ExternalLink, Loader2 } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Clock, ExternalLink, Loader2, Shield, Search, TrendingUp } from 'lucide-react';
+import ErrorBoundary from '../components/common/ErrorBoundary';
+import ChartAuditReport from '../components/charts/ChartAuditReport';
+import TimeSeriesAnomalyChart from '../components/charts/TimeSeriesAnomalyChart';
+import FiscalBalanceReportChart from '../components/charts/FiscalBalanceReportChart';
+import UnifiedChart from '../components/charts/UnifiedChart';
 
 // Define TypeScript interfaces
 interface AuditResult {
@@ -330,71 +335,187 @@ const Audits: React.FC = () => {
           </div>
         )}
 
+        {/* Enhanced Audit Charts Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          {/* Audit Report Chart */}
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border border-gray-200 dark:border-dark-border">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary mb-4 flex items-center">
+              <Shield className="h-5 w-5 mr-2 text-blue-600" />
+              Reporte de Auditoría
+            </h3>
+            <div className="h-64">
+              <ErrorBoundary>
+                <ChartAuditReport
+                  year={selectedYear}
+                  height={250}
+                />
+              </ErrorBoundary>
+            </div>
+          </div>
+
+          {/* Time Series Anomaly Detection */}
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border border-gray-200 dark:border-dark-border">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary mb-4 flex items-center">
+              <Search className="h-5 w-5 mr-2 text-red-600" />
+              Detección de Anomalías
+            </h3>
+            <div className="h-64">
+              <ErrorBoundary>
+                <TimeSeriesAnomalyChart
+                  year={selectedYear}
+                  height={250}
+                />
+              </ErrorBoundary>
+            </div>
+          </div>
+
+          {/* Fiscal Balance Report */}
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border border-gray-200 dark:border-dark-border">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary mb-4 flex items-center">
+              <TrendingUp className="h-5 w-5 mr-2 text-green-600" />
+              Balance Fiscal
+            </h3>
+            <div className="h-64">
+              <ErrorBoundary>
+                <FiscalBalanceReportChart
+                  year={selectedYear}
+                  height={250}
+                />
+              </ErrorBoundary>
+            </div>
+          </div>
+
+          {/* Unified Multi-Source Chart */}
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border border-gray-200 dark:border-dark-border">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary mb-4 flex items-center">
+              <ExternalLink className="h-5 w-5 mr-2 text-purple-600" />
+              Datos Multi-Fuente
+            </h3>
+            <div className="h-64">
+              <ErrorBoundary>
+                <UnifiedChart
+                  type="audit"
+                  year={selectedYear}
+                  variant="line"
+                  height={250}
+                />
+              </ErrorBoundary>
+            </div>
+          </div>
+        </div>
+
         {/* Original Discrepancies Chart for existing data */}
-        {auditData && auditData.length > 0 ? (
-          <ResponsiveContainer width="100%" height={400}>
-            <BarChart data={auditData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="year" />
-              <YAxis tickFormatter={(value) => `${value / 1000000}M`} />
-              <Tooltip formatter={(value) => [`${Number(value).toLocaleString('es-AR')}`, 'Valor']} />
-              <Legend />
-              <Bar dataKey="local" name="Local" fill="#0088FE" />
-              <Bar dataKey="external" name="Externo" fill="#FF8042" />
-              <Bar dataKey="discrepancy" name="Discrepancia" fill="#FF0000" />
-            </BarChart>
-          </ResponsiveContainer>
-        ) : (
-          <p className="text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">No hay datos disponibles</p>
-        )}
+        <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border border-gray-200 dark:border-dark-border mb-8">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary mb-4 flex items-center">
+            <AlertTriangle className="h-5 w-5 mr-2 text-yellow-600" />
+            Análisis de Discrepancias
+          </h3>
+          {auditData && auditData.length > 0 ? (
+            <div className="h-96">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={auditData}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="year" />
+                  <YAxis tickFormatter={(value) => `${value / 1000000}M`} />
+                  <Tooltip formatter={(value) => [`${Number(value).toLocaleString('es-AR')}`, 'Valor']} />
+                  <Legend />
+                  <Bar dataKey="local" name="Local" fill="#0088FE" />
+                  <Bar dataKey="external" name="Externo" fill="#FF8042" />
+                  <Bar dataKey="discrepancy" name="Discrepancia" fill="#FF0000" />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          ) : (
+            <p className="text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">No hay datos disponibles</p>
+          )}
+        </div>
+      </div>
+
+      {/* Multi-Source Data Integration Status */}
+      <div className="bg-white dark:bg-dark-surface p-6 rounded-lg shadow-md mb-8">
+        <h2 className="text-xl font-semibold mb-4 flex items-center">
+          <ExternalLink className="h-6 w-6 mr-2 text-blue-600" />
+          Estado de Integración Multi-Fuente
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="border-l-4 border-green-500 bg-green-50 dark:bg-green-900/20 p-4 rounded">
+            <h3 className="font-semibold text-green-700 dark:text-green-400">Archivos CSV</h3>
+            <p className="text-sm text-green-600 dark:text-green-300">
+              {(typeof dataSourcesActive === 'object' && dataSourcesActive?.csvFiles) || 0} archivos procesados
+            </p>
+            <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+              Extraídos de documentos PDF municipales
+            </p>
+          </div>
+          <div className="border-l-4 border-blue-500 bg-blue-50 dark:bg-blue-900/20 p-4 rounded">
+            <h3 className="font-semibold text-blue-700 dark:text-blue-400">Datos JSON</h3>
+            <p className="text-sm text-blue-600 dark:text-blue-300">
+              {(typeof dataSourcesActive === 'object' && dataSourcesActive?.jsonFiles) || 0} fuentes estructuradas
+            </p>
+            <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+              APIs locales y consolidaciones
+            </p>
+          </div>
+          <div className="border-l-4 border-purple-500 bg-purple-50 dark:bg-purple-900/20 p-4 rounded">
+            <h3 className="font-semibold text-purple-700 dark:text-purple-400">APIs Externas</h3>
+            <p className="text-sm text-purple-600 dark:text-purple-300">
+              {auditResults?.external_datasets?.length || 0} servicios conectados
+            </p>
+            <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+              Datos de GBA y fuentes gubernamentales
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Discrepancies Table */}
       <div className="bg-white dark:bg-dark-surface p-6 rounded-lg shadow-md mb-8">
         <h2 className="text-xl font-semibold mb-4">Tabla de Discrepancias</h2>
-        <div className="overflow-x-auto">
-          <table {...getTableProps()} className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
-              {headerGroups.map(headerGroup => (
-                <tr {...headerGroup.getHeaderGroupProps()}>
-                  {headerGroup.headers.map(column => (
-                    <th
-                      {...column.getHeaderProps()}
-                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider"
-                    >
-                      {column.render('Header')}
-                    </th>
-                  ))}
-                </tr>
-              ))}
-            </thead>
-            <tbody {...getTableBodyProps()} className="bg-white dark:bg-dark-surface divide-y divide-gray-200">
-              {rows.map(row => {
-                prepareRow(row);
-                
-                // Determine row class based on discrepancy
-                const discrepancy = row.original.discrepancy || 0;
-                const hasHighDiscrepancy = Math.abs(discrepancy) > 10000;
-                
-                return (
-                  <tr 
-                    {...row.getRowProps()} 
-                    className={hasHighDiscrepancy ? 'bg-red-100' : ''}
-                  >
-                    {row.cells.map(cell => (
-                      <td
-                        {...cell.getCellProps()}
-                        className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary"
+        <ErrorBoundary>
+          <div className="overflow-x-auto">
+            <table {...getTableProps()} className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
+                {headerGroups.map(headerGroup => (
+                  <tr {...headerGroup.getHeaderGroupProps()}>
+                    {headerGroup.headers.map(column => (
+                      <th
+                        {...column.getHeaderProps()}
+                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary uppercase tracking-wider"
                       >
-                        {cell.render('Cell')}
-                      </td>
+                        {column.render('Header')}
+                      </th>
                     ))}
                   </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+                ))}
+              </thead>
+              <tbody {...getTableBodyProps()} className="bg-white dark:bg-dark-surface divide-y divide-gray-200">
+                {rows.map(row => {
+                  prepareRow(row);
+
+                  // Determine row class based on discrepancy
+                  const discrepancy = row.original.discrepancy || 0;
+                  const hasHighDiscrepancy = Math.abs(discrepancy) > 10000;
+
+                  return (
+                    <tr
+                      {...row.getRowProps()}
+                      className={hasHighDiscrepancy ? 'bg-red-100' : ''}
+                    >
+                      {row.cells.map(cell => (
+                        <td
+                          {...cell.getCellProps()}
+                          className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary"
+                        >
+                          {cell.render('Cell')}
+                        </td>
+                      ))}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </ErrorBoundary>
       </div>
 
       {/* Discrepancy Summary */}

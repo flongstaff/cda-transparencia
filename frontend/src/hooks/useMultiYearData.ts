@@ -1,248 +1,257 @@
 /**
- * Multi-Year Data Hook
+ * MULTI-YEAR DATA HOOK
  *
- * Custom hook to access multi-year data trends, comparisons, and analysis
- * Integrates with MultiYearDataService to provide React components with
- * comprehensive multi-year financial and administrative data
+ * Preloads data for ALL available years and provides instant year switching
+ * without page refresh. Uses data source priority: CSV > JSON > PDF > External
  */
 
-import { useState, useEffect, useCallback } from 'react';
-import MultiYearDataService, {
-  MultiYearTrend,
-  YearComparison,
-  DataAvailability,
-  YearlyDataPoint
-} from '../services/MultiYearDataService';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import dataIntegrationService from '../services/DataIntegrationService';
+import yearSpecificDataService from '../services/YearSpecificDataService';
 
-interface UseMultiYearDataOptions {
-  indicators?: string[];
-  categories?: string[];
-  autoLoad?: boolean;
-  refreshInterval?: number;
-}
-
-interface MultiYearDataState {
-  trends: MultiYearTrend[];
-  yearlyData: Map<number, YearlyDataPoint[]>;
-  dataAvailability: DataAvailability[];
-  summary: {
-    totalDataPoints: number;
-    yearsWithData: number[];
-    categoriesWithData: string[];
-    dataQualityByYear: Record<number, number>;
-    trendsCount: {
-      increasing: number;
-      decreasing: number;
-      stable: number;
-      volatile: number;
-    };
-  } | null;
+export interface YearData {
+  year: number;
+  budget: {
+    total_budget: number;
+    total_executed: number;
+    execution_rate: number;
+    quarterly_data: any[];
+  };
+  contracts: any[];
+  salaries: any;
+  documents: any[];
+  treasury: any;
+  debt: any;
+  loaded: boolean;
   loading: boolean;
   error: string | null;
 }
 
-export const useMultiYearData = (options: UseMultiYearDataOptions = {}) => {
-  const {
-    indicators,
-    categories,
-    autoLoad = true,
-    refreshInterval
-  } = options;
+export interface UseMultiYearDataReturn {
+  // Current year selection
+  selectedYear: number;
+  setSelectedYear: (year: number) => void;
 
-  const [state, setState] = useState<MultiYearDataState>({
-    trends: [],
-    yearlyData: new Map(),
-    dataAvailability: [],
-    summary: null,
-    loading: false,
-    error: null
-  });
+  // Current year data (instant access, no loading)
+  currentData: YearData | null;
 
-  const multiYearService = MultiYearDataService.getInstance();
+  // All years data (for multi-year charts)
+  allYearsData: Map<number, YearData>;
 
-  const loadData = useCallback(async () => {
-    setState(prev => ({ ...prev, loading: true, error: null }));
+  // Available years
+  availableYears: number[];
+
+  // Loading states
+  initialLoading: boolean;
+  backgroundLoading: boolean;
+
+  // Preload specific year
+  preloadYear: (year: number) => Promise<void>;
+
+  // Refresh data
+  refresh: () => Promise<void>;
+}
+
+export const useMultiYearData = (defaultYear?: number): UseMultiYearDataReturn => {
+  const [selectedYear, setSelectedYear] = useState<number>(
+    defaultYear || new Date().getFullYear()
+  );
+
+  const [allYearsData, setAllYearsData] = useState<Map<number, YearData>>(new Map());
+  const [initialLoading, setInitialLoading] = useState(true);
+  const [backgroundLoading, setBackgroundLoading] = useState(false);
+
+  const availableYears = useMemo(() =>
+    yearSpecificDataService.getAvailableYears(),
+    []
+  );
+
+  // Load data for a specific year
+  const loadYearData = useCallback(async (year: number, isBackground = false): Promise<YearData> => {
+    console.log(`📅 Loading data for year ${year}${isBackground ? ' (background)' : ''}...`);
 
     try {
-      console.log('🔄 Loading multi-year data...');
+      // Check if already loaded
+      const existing = allYearsData.get(year);
+      if (existing?.loaded && !existing.error) {
+        console.log(`✅ Year ${year} already loaded from cache`);
+        return existing;
+      }
 
-      // Load all data in parallel
-      const [
-        yearlyData,
-        trends,
-        dataAvailability,
-        summary
-      ] = await Promise.all([
-        multiYearService.loadAllYearsData(),
-        multiYearService.getMultiYearTrends(indicators, categories),
-        multiYearService.getDataAvailability(),
-        multiYearService.getYearsSummary()
-      ]);
+      // Set loading state
+      const loadingData: YearData = {
+        year,
+        budget: { total_budget: 0, total_executed: 0, execution_rate: 0, quarterly_data: [] },
+        contracts: [],
+        salaries: {},
+        documents: [],
+        treasury: {},
+        debt: {},
+        loaded: false,
+        loading: true,
+        error: null
+      };
 
-      setState({
-        trends,
-        yearlyData,
-        dataAvailability,
-        summary,
+      setAllYearsData(prev => new Map(prev).set(year, loadingData));
+
+      // Load integrated data (CSV + JSON + PDF + External)
+      const integratedData = await dataIntegrationService.loadIntegratedData(year);
+
+      const yearData: YearData = {
+        year,
+        budget: integratedData.budget,
+        contracts: integratedData.contracts,
+        salaries: integratedData.salaries,
+        documents: integratedData.documents,
+        treasury: integratedData.treasury,
+        debt: integratedData.debt,
+        loaded: true,
         loading: false,
         error: null
+      };
+
+      console.log(`✅ Year ${year} loaded successfully:`, {
+        budget: yearData.budget.total_budget,
+        contracts: yearData.contracts.length,
+        sources: integratedData.metadata.sources_used
       });
 
-      console.log(`✅ Loaded multi-year data: ${trends.length} trends, ${yearlyData.size} years`);
-    } catch (error) {
-      console.error('❌ Error loading multi-year data:', error);
-      setState(prev => ({
-        ...prev,
+      setAllYearsData(prev => new Map(prev).set(year, yearData));
+      return yearData;
+
+    } catch (error: any) {
+      console.error(`❌ Failed to load year ${year}:`, error);
+
+      const errorData: YearData = {
+        year,
+        budget: { total_budget: 0, total_executed: 0, execution_rate: 0, quarterly_data: [] },
+        contracts: [],
+        salaries: {},
+        documents: [],
+        treasury: {},
+        debt: {},
+        loaded: false,
         loading: false,
-        error: error instanceof Error ? error.message : 'Error desconocido'
-      }));
+        error: error.message || 'Failed to load data'
+      };
+
+      setAllYearsData(prev => new Map(prev).set(year, errorData));
+      return errorData;
     }
-  }, [indicators, categories, multiYearService]);
+  }, [allYearsData]);
 
-  const refreshData = useCallback(() => {
-    multiYearService.clearCache();
-    return loadData();
-  }, [loadData, multiYearService]);
+  // Initial load: Load current year immediately, then preload others in background
+  useEffect(() => {
+    const initializeData = async () => {
+      setInitialLoading(true);
 
-  const compareYears = useCallback(async (
-    baseYear: number,
-    comparisonYear: number,
-    category?: string
-  ): Promise<YearComparison[]> => {
-    try {
-      return await multiYearService.compareYears(baseYear, comparisonYear, category);
-    } catch (error) {
-      console.error('Error comparing years:', error);
-      return [];
-    }
-  }, [multiYearService]);
+      try {
+        // 1. Load current year first (blocking)
+        console.log(`🚀 Initial load: Loading current year ${selectedYear}...`);
+        await loadYearData(selectedYear, false);
 
-  const getKPITrends = useCallback(async (): Promise<MultiYearTrend[]> => {
-    try {
-      return await multiYearService.getKPITrends();
-    } catch (error) {
-      console.error('Error loading KPI trends:', error);
-      return [];
-    }
-  }, [multiYearService]);
+        setInitialLoading(false);
 
-  const getDataForYear = useCallback((year: number): YearlyDataPoint[] => {
-    return state.yearlyData.get(year) || [];
-  }, [state.yearlyData]);
+        // 2. Preload adjacent years in background (non-blocking)
+        setBackgroundLoading(true);
+        const adjacentYears = [
+          selectedYear - 1,
+          selectedYear + 1,
+          selectedYear - 2,
+          selectedYear + 2
+        ].filter(year => availableYears.includes(year));
 
-  const getDataForCategory = useCallback((category: string): YearlyDataPoint[] => {
-    const allData: YearlyDataPoint[] = [];
-    state.yearlyData.forEach(yearData => {
-      const categoryData = yearData.filter(point => point.category === category);
-      allData.push(...categoryData);
-    });
-    return allData;
-  }, [state.yearlyData]);
+        console.log(`🔄 Background preload: Loading ${adjacentYears.length} adjacent years...`);
 
-  const getDataForIndicator = useCallback((indicator: string): YearlyDataPoint[] => {
-    const allData: YearlyDataPoint[] = [];
-    state.yearlyData.forEach(yearData => {
-      const indicatorData = yearData.filter(point => point.indicator === indicator);
-      allData.push(...indicatorData);
-    });
-    return allData.sort((a, b) => a.year - b.year);
-  }, [state.yearlyData]);
-
-  const getTrendForIndicator = useCallback((
-    indicator: string,
-    category?: string
-  ): MultiYearTrend | null => {
-    return state.trends.find(trend =>
-      trend.indicator === indicator &&
-      (!category || trend.category === category)
-    ) || null;
-  }, [state.trends]);
-
-  const getAvailableYears = useCallback((): number[] => {
-    return multiYearService.getAvailableYears();
-  }, [multiYearService]);
-
-  const getAvailableCategories = useCallback((): string[] => {
-    return state.summary?.categoriesWithData || [];
-  }, [state.summary]);
-
-  const getAvailableIndicators = useCallback((category?: string): string[] => {
-    const indicators = new Set<string>();
-
-    state.yearlyData.forEach(yearData => {
-      yearData.forEach(point => {
-        if (!category || point.category === category) {
-          indicators.add(point.indicator);
+        for (const year of adjacentYears) {
+          await loadYearData(year, true);
+          // Small delay to prevent overwhelming the system
+          await new Promise(resolve => setTimeout(resolve, 100));
         }
-      });
-    });
 
-    return Array.from(indicators).sort();
-  }, [state.yearlyData]);
+        // 3. Load remaining years
+        const remainingYears = availableYears.filter(
+          year => year !== selectedYear && !adjacentYears.includes(year)
+        );
 
-  // Data quality and statistics
-  const getDataQualityStats = useCallback(() => {
-    if (!state.summary) return null;
+        console.log(`🔄 Background preload: Loading ${remainingYears.length} remaining years...`);
 
-    const avgQuality = Object.values(state.summary.dataQualityByYear)
-      .reduce((sum, quality) => sum + quality, 0) / Object.keys(state.summary.dataQualityByYear).length;
+        for (const year of remainingYears) {
+          await loadYearData(year, true);
+          await new Promise(resolve => setTimeout(resolve, 200));
+        }
 
-    return {
-      averageQuality: avgQuality,
-      qualityByYear: state.summary.dataQualityByYear,
-      dataCompleteness: state.dataAvailability.reduce(
-        (sum, item) => sum + item.dataCompleteness, 0
-      ) / state.dataAvailability.length
+        setBackgroundLoading(false);
+        console.log(`✅ All ${availableYears.length} years preloaded successfully`);
+
+      } catch (error) {
+        console.error('❌ Initialization failed:', error);
+        setInitialLoading(false);
+        setBackgroundLoading(false);
+      }
     };
-  }, [state.summary, state.dataAvailability]);
 
-  // Load data on mount and when dependencies change
-  useEffect(() => {
-    if (autoLoad) {
-      loadData();
-    }
-  }, [autoLoad, loadData]);
+    initializeData();
+  }, []); // Only run once on mount
 
-  // Set up refresh interval if specified
-  useEffect(() => {
-    if (refreshInterval && refreshInterval > 0) {
-      const interval = setInterval(refreshData, refreshInterval);
-      return () => clearInterval(interval);
+  // Preload specific year on demand
+  const preloadYear = useCallback(async (year: number) => {
+    if (!availableYears.includes(year)) {
+      console.warn(`⚠️ Year ${year} not available`);
+      return;
     }
-  }, [refreshInterval, refreshData]);
+
+    const existing = allYearsData.get(year);
+    if (existing?.loaded) {
+      console.log(`✅ Year ${year} already loaded`);
+      return;
+    }
+
+    await loadYearData(year, true);
+  }, [availableYears, allYearsData, loadYearData]);
+
+  // Refresh all data
+  const refresh = useCallback(async () => {
+    console.log('🔄 Refreshing all data...');
+    setInitialLoading(true);
+
+    // Clear cache
+    dataIntegrationService.clearCache();
+    setAllYearsData(new Map());
+
+    // Reload current year
+    await loadYearData(selectedYear, false);
+    setInitialLoading(false);
+  }, [selectedYear, loadYearData]);
+
+  // Get current year data
+  const currentData = useMemo(() => {
+    return allYearsData.get(selectedYear) || null;
+  }, [allYearsData, selectedYear]);
+
+  // Custom setter that preloads adjacent years
+  const handleSetSelectedYear = useCallback((year: number) => {
+    console.log(`🔀 Switching to year ${year}...`);
+    setSelectedYear(year);
+
+    // Preload adjacent years if not already loaded
+    const adjacentYears = [year - 1, year + 1].filter(y =>
+      availableYears.includes(y) && !allYearsData.get(y)?.loaded
+    );
+
+    adjacentYears.forEach(y => preloadYear(y));
+  }, [availableYears, allYearsData, preloadYear]);
 
   return {
-    // Data
-    trends: state.trends,
-    yearlyData: state.yearlyData,
-    dataAvailability: state.dataAvailability,
-    summary: state.summary,
-
-    // State
-    loading: state.loading,
-    error: state.error,
-
-    // Actions
-    loadData,
-    refreshData,
-    compareYears,
-    getKPITrends,
-
-    // Data access helpers
-    getDataForYear,
-    getDataForCategory,
-    getDataForIndicator,
-    getTrendForIndicator,
-
-    // Metadata helpers
-    getAvailableYears,
-    getAvailableCategories,
-    getAvailableIndicators,
-    getDataQualityStats,
-
-    // Utilities
-    clearCache: multiYearService.clearCache.bind(multiYearService),
-    hasData: state.yearlyData.size > 0
+    selectedYear,
+    setSelectedYear: handleSetSelectedYear,
+    currentData,
+    allYearsData,
+    availableYears,
+    initialLoading,
+    backgroundLoading,
+    preloadYear,
+    refresh
   };
 };
 

@@ -46,7 +46,7 @@ import {
 
 // Import enhanced year selector and data hooks
 import ResponsiveYearSelector from '../components/forms/ResponsiveYearSelector';
-import { useMasterData } from '../hooks/useMasterData';
+import { useMultiYearData } from '../hooks/useMultiYearData';
 import TimeSeriesChart from '../components/charts/TimeSeriesChart';
 import RechartsWrapper from '../components/charts/RechartsWrapper';
 
@@ -332,118 +332,45 @@ const DashboardCompleto: React.FC = () => {
   const [financialSearchTerm, setFinancialSearchTerm] = useState<string>('');
   const [transparencyViewMode, setTransparencyViewMode] = useState<'overview' | 'audit' | 'irregularities' | 'reports'>('overview');
 
-  // Year data state
-  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-
-  // Enhanced master data hook with year filtering
+  // Multi-year data hook - preloads ALL years for instant switching
   const {
-    masterData,
-    currentBudget,
-    currentContracts,
-    currentSalaries,
-    currentDocuments,
-    currentTreasury,
-    currentDebt,
-    multiYearData,
-    budgetChartData,
-    contractsChartData,
-    salariesChartData,
-    treasuryChartData,
-    debtChartData,
-    documentsChartData,
-    comprehensiveChartData,
-    budgetHistoricalData,
-    contractsHistoricalData,
-    salariesHistoricalData,
-    treasuryHistoricalData,
-    debtHistoricalData,
-    documentsHistoricalData,
-    loading: isLoading,
-    error,
-    loadingYear: isPreloading,
-    totalDocuments,
+    selectedYear,
+    setSelectedYear,
+    currentData,
+    allYearsData,
     availableYears,
-    categories,
-    dataSourcesActive,
-    auditDiscrepancies,
-    auditSummary,
-    dataFlags,
-    refetch: refreshData,
-    switchYear
-  } = useMasterData(selectedYear);
+    initialLoading: isLoading,
+    backgroundLoading: isPreloading,
+    refresh: refreshData
+  } = useMultiYearData(new Date().getFullYear());
 
-  // Handle year change
-  const handleYearChange = async (year: number) => {
+  // Extract current year data for easy access
+  const currentBudget = currentData?.budget;
+  const currentContracts = currentData?.contracts || [];
+  const currentDocuments = currentData?.documents || [];
+  const currentSalaries = currentData?.salaries;
+  const currentTreasury = currentData?.treasury;
+  const currentDebt = currentData?.debt;
+
+  // Error state
+  const error = currentData?.error || null;
+
+  // Handle year change (instant, no loading)
+  const handleYearChange = (year: number) => {
+    console.log(`🔀 Year changed to: ${year}`);
     setSelectedYear(year);
-    await switchYear(year);
-    console.log(`Year changed to: ${year}, data loaded:`, currentBudget);
+    // Data is already preloaded, UI updates instantly
   };
 
-
-  // Fast, direct data loading with immediate fallbacks
-  const [budgetData, setBudgetData] = useState({
-    totalBudget: 330000000,
-    totalExecuted: 323000000,
-    executionRate: 97.9,
-    totalDocuments: 45
-  });
-
-  // Override summary with working data immediately
+  // Use year-specific data for summary cards
   const workingSummary = useMemo(() => ({
-    totalBudget: budgetData.totalBudget,
-    totalExecuted: budgetData.totalExecuted,
-    executionRate: budgetData.executionRate,
-    totalContracts: 24,
-    totalDocuments: budgetData.totalDocuments,
-    averageCompletion: 89.5
-  }), [budgetData]);
-
-  useEffect(() => {
-    // Fast data loading without blocking UI
-    const loadBudgetData = async () => {
-      try {
-        const response = await fetch('/data/charts/Budget_Execution_consolidated_2019-2025.csv');
-        if (response.ok) {
-          const csvText = await response.text();
-          const lines = csvText.split('\n').slice(1).filter(line => line.trim());
-
-          let totalBudget = 0;
-          let totalExecuted = 0;
-          let yearCount = 0;
-
-          lines.forEach(line => {
-            const parts = line.split(',');
-            if (parts.length >= 5) {
-              const year = parseInt(parts[4]);
-              if (year === selectedYear) {
-                const budgeted = parseFloat(parts[1].replace(/[$",]/g, '')) || 0;
-                const executed = parseFloat(parts[2].replace(/[$",]/g, '')) || 0;
-                totalBudget += budgeted;
-                totalExecuted += executed;
-                yearCount++;
-              }
-            }
-          });
-
-          if (yearCount > 0) {
-            const executionRate = totalBudget > 0 ? (totalExecuted / totalBudget) * 100 : 97.9;
-            setBudgetData({
-              totalBudget: totalBudget || 330000000,
-              totalExecuted: totalExecuted || 323000000,
-              executionRate,
-              totalDocuments: lines.length
-            });
-          }
-        }
-      } catch (error) {
-        console.error('Error loading budget data:', error);
-        // Keep working fallback data
-      }
-    };
-
-    // Non-blocking load
-    loadBudgetData();
-  }, [selectedYear]);
+    totalBudget: currentBudget?.total_budget || 0,
+    totalExecuted: currentBudget?.total_executed || 0,
+    executionRate: currentBudget?.execution_rate || 0,
+    totalContracts: currentContracts.length,
+    totalDocuments: currentDocuments.length,
+    averageCompletion: currentBudget?.execution_rate || 0
+  }), [currentBudget, currentContracts, currentDocuments]);
 
   // Filter charts by category for the current section
   const filteredCharts = useMemo(() => {
@@ -504,7 +431,7 @@ const DashboardCompleto: React.FC = () => {
               <div className="relative">
                 <ResponsiveYearSelector
                   selectedYear={selectedYear}
-                  onYearChange={setSelectedYear}
+                  onYearChange={handleYearChange}
                   availableYears={availableYears}
                   className="min-w-[200px]"
                 />

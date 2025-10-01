@@ -148,20 +148,23 @@ function dataReducer(state: DataState, action: DataAction): DataState {
     case 'SET_AVAILABLE_YEARS':
       return { ...state, availableYears: action.payload };
 
-    case 'UPDATE_CSV_CACHE':
+    case 'UPDATE_CSV_CACHE': {
       const newCsvData = new Map(state.csvData);
       newCsvData.set(action.payload.key, action.payload.data);
       return { ...state, csvData: newCsvData };
+    }
 
-    case 'UPDATE_JSON_CACHE':
+    case 'UPDATE_JSON_CACHE': {
       const newJsonData = new Map(state.jsonData);
       newJsonData.set(action.payload.key, action.payload.data);
       return { ...state, jsonData: newJsonData };
+    }
 
-    case 'UPDATE_PDF_CACHE':
+    case 'UPDATE_PDF_CACHE': {
       const newPdfData = new Map(state.pdfData);
       newPdfData.set(action.payload.key, action.payload.data);
       return { ...state, pdfData: newPdfData };
+    }
 
     case 'SET_FILTERS':
       return {

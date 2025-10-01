@@ -112,13 +112,13 @@ function testDarkModeClasses() {
   let totalTests = darkModeTestCases.length;
   
   darkModeTestCases.forEach(testCase => {
-    console.log(\`🔍 Testing ${testCase.component}...\`);
+    console.log(`🔍 Testing ${testCase.component}...`);
     
     // Check if all required dark mode classes are present
     let hasAllDarkClasses = true;
     testCase.darkModeClasses.forEach(className => {
       if (!document.querySelector(\`\${className.replace(/\\s+/g, '.')}\`)) {
-        console.log(\`  ❌ Missing dark mode class: \${className}\`);
+        console.log(`  ❌ Missing dark mode class: ${className}`);
         hasAllDarkClasses = false;
       }
     });
@@ -127,22 +127,22 @@ function testDarkModeClasses() {
     let hasAllLightClasses = true;
     testCase.lightModeClasses.forEach(className => {
       if (!document.querySelector(\`\${className.replace(/\\s+/g, '.')}\`)) {
-        console.log(\`  ❌ Missing light mode class: \${className}\`);
+        console.log(`  ❌ Missing light mode class: ${className}`);
         hasAllLightClasses = false;
       }
     });
     
     if (hasAllDarkClasses && hasAllLightClasses) {
-      console.log(\`  ✅ \${testCase.component} has all required dark/light mode classes\`);
+      console.log(`  ✅ ${testCase.component} has all required dark/light mode classes`);
       passedTests++;
     } else {
-      console.log(\`  ⚠️  \${testCase.component} is missing some required classes\`);
+      console.log(`  ⚠️  ${testCase.component} is missing some required classes`);
     }
     
     console.log('');
   });
   
-  console.log(\`📊 Test Results: \${passedTests}/\${totalTests} components passed dark mode class validation\`);
+  console.log(`📊 Test Results: ${passedTests}/${totalTests} components passed dark mode class validation`);
   
   if (passedTests === totalTests) {
     console.log('🎉 All components have proper dark/light mode support!');
@@ -161,7 +161,7 @@ function testChartDisplay() {
   const chartElements = document.querySelectorAll('[class*="recharts"]');
   
   if (chartElements.length > 0) {
-    console.log(\`✅ Found \${chartElements.length} chart elements\`);
+    console.log(`✅ Found ${chartElements.length} chart elements`);
     
     // Check if charts have proper text colors
     const textElements = document.querySelectorAll('.recharts-text');
@@ -195,7 +195,7 @@ function testTableDisplay() {
   const tableElements = document.querySelectorAll('table');
   
   if (tableElements.length > 0) {
-    console.log(\`✅ Found \${tableElements.length} table elements\`);
+    console.log(`✅ Found ${tableElements.length} table elements`);
     
     // Check if tables have proper header colors
     const headerElements = document.querySelectorAll('th');

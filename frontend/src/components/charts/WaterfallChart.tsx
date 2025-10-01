@@ -4,7 +4,40 @@ import { motion } from 'framer-motion';
 import { useAccessibility } from '../../utils/accessibility';
 import { monitoring } from '../../utils/monitoring';
 import { chartAccessibility } from '../../utils/accessibility';
-import ChartSkeleton from '../ui/ChartSkeleton';
+import ChartSkeleton from '../skeletons/ChartSkeleton';
+
+// Data normalization for multi-source support
+const normalizeDataPoint = (item: any): WaterfallDataPoint | null => {
+  try {
+    // Handle different field name variations from different sources
+    const label = item.label || item.name || item.descripcion || item.description || item.concepto || item.categoria || 'Sin título';
+    const value = parseFloat(item.value || item.amount || item.monto || item.importe || item.valor || 0);
+    let type = item.type || item.tipo || 'increase';
+
+    // Normalize type values from different sources
+    if (type === 'inicio' || type === 'inicial' || type === 'start') type = 'start';
+    else if (type === 'incremento' || type === 'aumento' || type === 'increase' || value > 0) type = 'increase';
+    else if (type === 'decremento' || type === 'disminucion' || type === 'decrease' || value < 0) type = 'decrease';
+    else if (type === 'final' || type === 'end') type = 'end';
+
+    // Validate required fields
+    if (typeof label !== 'string' || isNaN(value)) {
+      return null;
+    }
+
+    return {
+      label: String(label),
+      value: Number(value),
+      type: type as 'start' | 'increase' | 'decrease' | 'end'
+    };
+  } catch (error) {
+    monitoring.captureError(error as Error, {
+      tags: { chartType: 'waterfall', function: 'normalizeDataPoint' },
+      extra: { item }
+    });
+    return null;
+  }
+};
 
 // Data validation schema
 const dataPointSchema = {
@@ -23,7 +56,10 @@ interface WaterfallDataPoint {
 }
 
 interface WaterfallChartProps {
-  data?: WaterfallDataPoint[];
+  data?: WaterfallDataPoint[] | any[];
+  year?: number;
+  title?: string;
+  height?: number;
   currency?: string;
   showTotal?: boolean;
   colorScheme?: {
@@ -35,10 +71,16 @@ interface WaterfallChartProps {
   };
   onStepClick?: (dataPoint: WaterfallDataPoint, index: number) => void;
   className?: string;
+  // Multi-source data support
+  dataSource?: 'csv' | 'json' | 'pdf' | 'external' | 'auto';
+  showDataSourceIndicator?: boolean;
 }
 
 const WaterfallChart: React.FC<WaterfallChartProps> = ({
   data,
+  year,
+  title,
+  height = 400,
   currency = 'ARS',
   showTotal = true,
   colorScheme = {
@@ -50,6 +92,8 @@ const WaterfallChart: React.FC<WaterfallChartProps> = ({
   },
   onStepClick,
   className = '',
+  dataSource = 'auto',
+  showDataSourceIndicator = true,
 }) => {
   const { prefersReducedMotion, isScreenReader, language } = useAccessibility();
   const [error, setError] = useState<Error | null>(null);
@@ -73,7 +117,10 @@ const WaterfallChart: React.FC<WaterfallChartProps> = ({
         throw new Error("Data must be an array.");
       }
 
-      const validatedData = data.filter(item => {
+      // Normalize data from different sources first
+      const normalizedData = data.map(normalizeDataPoint).filter(Boolean) as WaterfallDataPoint[];
+
+      const validatedData = normalizedData.filter(item => {
         const isValid = dataPointSchema.isValid(item);
         if (!isValid) {
           monitoring.captureError(new Error('Invalid data point detected'), {

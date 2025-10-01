@@ -11,10 +11,13 @@ import {
   CheckCircle,
   AlertCircle,
   Loader2,
+  X,
 } from 'lucide-react';
 import { useMasterData } from '../hooks/useMasterData';
 import YearSelector from '../components/navigation/YearSelector';
 import { formatFileSize } from '../utils/formatters';
+import UnifiedDocumentViewer from '../components/viewers/UnifiedDocumentViewer';
+import ErrorBoundary from '../components/common/ErrorBoundary';
 
 const Documents: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
@@ -24,6 +27,8 @@ const Documents: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortField, setSortField] = useState<'title' | 'size' | 'date' | 'category'>('title');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+  const [selectedDocument, setSelectedDocument] = useState<any>(null);
+  const [showDocumentViewer, setShowDocumentViewer] = useState<boolean>(false);
 
   // 🚀 Use unified master data service
   const {
@@ -126,6 +131,16 @@ const Documents: React.FC = () => {
       setSortField(field);
       setSortDirection('asc');
     }
+  };
+
+  const handleDocumentView = (doc: any) => {
+    setSelectedDocument(doc);
+    setShowDocumentViewer(true);
+  };
+
+  const handleCloseViewer = () => {
+    setSelectedDocument(null);
+    setShowDocumentViewer(false);
   };
 
   // Simple fallback icon function (keeps original behaviour)
@@ -375,15 +390,13 @@ const Documents: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <a
-                    href={doc.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => handleDocumentView(doc)}
                     className="inline-flex items-center px-3 py-2 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100 transition-colors"
                   >
                     <Eye className="h-4 w-4 mr-2" />
                     Ver
-                  </a>
+                  </button>
                   <a
                     href={doc.url}
                     download
@@ -458,16 +471,14 @@ const Documents: React.FC = () => {
                     )}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <a
-                      href={doc.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button
+                      onClick={() => handleDocumentView(doc)}
                       className="text-blue-600 dark:text-blue-400 hover:text-blue-900 mr-4 flex items-center"
                       title="Ver documento"
                     >
                       <Eye className="h-4 w-4 mr-1" />
                       Ver
-                    </a>
+                    </button>
                     <a
                       href={doc.url}
                       download
@@ -503,6 +514,54 @@ const Documents: React.FC = () => {
           >
             Limpiar filtros
           </button>
+        </div>
+      )}
+
+      {/* Unified Document Viewer Modal */}
+      {showDocumentViewer && selectedDocument && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-2xl border border-gray-200 dark:border-dark-border max-w-6xl w-full max-h-[90vh] flex flex-col">
+            {/* Viewer Header */}
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-dark-border">
+              <div>
+                <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary">
+                  {selectedDocument.title}
+                </h2>
+                <p className="text-sm text-gray-600 dark:text-dark-text-secondary">
+                  {selectedDocument.category} • {selectedDocument.type?.toUpperCase()}
+                </p>
+              </div>
+              <button
+                onClick={handleCloseViewer}
+                className="p-2 text-gray-400 hover:text-gray-600 dark:text-dark-text-tertiary dark:hover:text-dark-text-secondary rounded-lg hover:bg-gray-100 dark:hover:bg-dark-surface-alt"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+
+            {/* Viewer Content */}
+            <div className="flex-1 overflow-hidden">
+              <ErrorBoundary>
+                <UnifiedDocumentViewer
+                  documents={[{
+                    id: selectedDocument.id,
+                    title: selectedDocument.title,
+                    filename: selectedDocument.filename,
+                    category: selectedDocument.category,
+                    year: selectedYear,
+                    size_mb: selectedDocument.size_mb,
+                    url: selectedDocument.url,
+                    verification_status: selectedDocument.verified ? 'verified' : 'pending',
+                    processing_date: selectedDocument.processing_date,
+                    file_type: selectedDocument.type
+                  }]}
+                  documentId={selectedDocument.id}
+                  showList={false}
+                  className="h-full"
+                />
+              </ErrorBoundary>
+            </div>
+          </div>
         </div>
       )}
 

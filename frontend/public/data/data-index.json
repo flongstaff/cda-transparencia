@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-30T05:23:25.479Z",
+  "generatedAt": "2025-10-01T03:12:59.117Z",
   "dataSources": {
     "csv": [
       {
@@ -9335,6 +9335,11 @@
         "size": 38185
       },
       {
+        "path": "metadata/index.json",
+        "name": "index.json",
+        "size": 2771
+      },
+      {
         "path": "consolidated/index.json",
         "name": "index.json",
         "size": 213
@@ -10128,7 +10133,14 @@
     },
     "metadata": {
       "type": "directory",
-      "contents": []
+      "contents": [
+        {
+          "name": "index.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 2771
+        }
+      ]
     },
     "ocr_extracted": {
       "type": "directory",

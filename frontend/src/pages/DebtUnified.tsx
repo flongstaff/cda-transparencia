@@ -32,10 +32,15 @@ import {
 import { useDebtData } from '../hooks/useUnifiedData';
 import PageYearSelector from '../components/forms/PageYearSelector';
 import UnifiedChart from '../components/charts/UnifiedChart';
+import DebtReportChart from '../components/charts/DebtReportChart';
+import TimeSeriesChart from '../components/charts/TimeSeriesChart';
+import TreemapChart from '../components/charts/TreemapChart';
+import WaterfallChart from '../components/charts/WaterfallChart';
+import ErrorBoundary from '../components/common/ErrorBoundary';
 
 const DebtUnified: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
-  const [viewMode, setViewMode] = useState<'overview' | 'breakdown' | 'trends' | 'sources'>('overview');
+  const [viewMode, setViewMode] = useState<'overview' | 'breakdown' | 'trends' | 'external' | 'timeline' | 'composition' | 'sources'>('overview');
 
   // Use unified data service
   const {
@@ -305,6 +310,394 @@ const DebtUnified: React.FC = () => {
     </div>
   );
 
+  const renderDebtBreakdown = () => (
+    <div className="space-y-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+          <CreditCard className="h-6 w-6 mr-3 text-red-600" />
+          Desglose Detallado de Deuda Municipal
+        </h3>
+        <p className="text-gray-600 mb-6">
+          Análisis por tipo de deuda, acreedores y condiciones financieras
+        </p>
+
+        {/* Multi-source data integration status */}
+        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+          <div className="flex items-center mb-2">
+            <CheckCircle className="h-5 w-5 text-red-600 mr-2" />
+            <span className="font-medium text-red-900">Datos de Deuda Multi-fuente Integrados</span>
+          </div>
+          <div className="grid grid-cols-4 gap-2 text-sm text-red-700">
+            <span>📄 Ministerio: Registro oficial</span>
+            <span>🏦 Bancos: Créditos y préstamos</span>
+            <span>📊 CSV: Planillas detalladas</span>
+            <span>🌐 APIs: Datos en tiempo real</span>
+          </div>
+        </div>
+
+        {/* Debt Type Breakdown */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white border border-gray-200 rounded-xl p-6"
+          >
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <BarChart3 className="h-5 w-5 mr-2 text-blue-600" />
+              Deuda por Tipo
+            </h4>
+            <div className="h-80">
+              <ErrorBoundary>
+                <TreemapChart
+                  year={selectedYear}
+                  title="Composición de Deuda por Tipo"
+                  height={300}
+                />
+              </ErrorBoundary>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="bg-white border border-gray-200 rounded-xl p-6"
+          >
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <DollarSign className="h-5 w-5 mr-2 text-purple-600" />
+              Deuda por Acreedor
+            </h4>
+            <div className="h-80">
+              <ErrorBoundary>
+                <UnifiedChart
+                  type="pie"
+                  data={debtData?.debt_by_creditor || []}
+                  height={300}
+                  showLegend={true}
+                />
+              </ErrorBoundary>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Debt Conditions Analysis */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-white border border-gray-200 rounded-xl p-6"
+        >
+          <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <Activity className="h-5 w-5 mr-2 text-green-600" />
+            Condiciones y Términos de Deuda
+          </h4>
+          <div className="h-80">
+            <ErrorBoundary>
+              <DebtReportChart
+                year={selectedYear}
+                height={300}
+              />
+            </ErrorBoundary>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+
+  const renderDebtTrends = () => (
+    <div className="space-y-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+          <TrendingUpIcon className="h-6 w-6 mr-3 text-blue-600" />
+          Tendencias Históricas de Deuda
+        </h3>
+        <p className="text-gray-600 mb-6">
+          Evolución temporal de la deuda municipal y proyecciones
+        </p>
+
+        {/* Multi-year trend analysis */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white border border-gray-200 rounded-xl p-6"
+          >
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <TrendingUp className="h-5 w-5 mr-2 text-blue-600" />
+              Evolución de Deuda Total
+            </h4>
+            <div className="h-80">
+              <ErrorBoundary>
+                <TimeSeriesChart
+                  year={selectedYear}
+                  chartType="line"
+                  title="Deuda Total - Tendencia Histórica"
+                  height={300}
+                />
+              </ErrorBoundary>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="bg-white border border-gray-200 rounded-xl p-6"
+          >
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <Scale className="h-5 w-5 mr-2 text-purple-600" />
+              Ratio Deuda/PBI Histórico
+            </h4>
+            <div className="h-80">
+              <ErrorBoundary>
+                <TimeSeriesChart
+                  year={selectedYear}
+                  chartType="area"
+                  title="Sostenibilidad de Deuda - Ratio Deuda/PBI"
+                  height={300}
+                />
+              </ErrorBoundary>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Debt Growth Analysis */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-white border border-gray-200 rounded-xl p-6"
+        >
+          <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <Activity className="h-5 w-5 mr-2 text-red-600" />
+            Análisis de Crecimiento de Deuda
+          </h4>
+          <div className="h-80">
+            <ErrorBoundary>
+              <WaterfallChart
+                year={selectedYear}
+                title="Factores de Crecimiento de Deuda"
+                height={300}
+              />
+            </ErrorBoundary>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+
+  const renderExternalDebt = () => (
+    <div className="space-y-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+          <ExternalLink className="h-6 w-6 mr-3 text-orange-600" />
+          Deuda Externa Municipal
+        </h3>
+        <p className="text-gray-600 mb-6">
+          Análisis de deuda con organismos externos y fuentes de financiamiento internacionales
+        </p>
+
+        {/* External debt sources status */}
+        <div className="mb-6 p-4 bg-orange-50 border border-orange-200 rounded-lg">
+          <div className="flex items-center mb-2">
+            <CheckCircle className="h-5 w-5 text-orange-600 mr-2" />
+            <span className="font-medium text-orange-900">Fuentes de Deuda Externa Monitoreadas</span>
+          </div>
+          <div className="grid grid-cols-4 gap-2 text-sm text-orange-700">
+            <span>🏛️ Ministerio: Deuda provincial/nacional</span>
+            <span>🌍 Organismos: BID, Banco Mundial</span>
+            <span>💼 Privados: Bonos y créditos</span>
+            <span>📊 APIs: Cotizaciones en tiempo real</span>
+          </div>
+        </div>
+
+        {/* External Debt Analysis */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white border border-gray-200 rounded-xl p-6"
+          >
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <DollarSign className="h-5 w-5 mr-2 text-green-600" />
+              Deuda Externa por Organismo
+            </h4>
+            <div className="h-80">
+              <ErrorBoundary>
+                <UnifiedChart
+                  type="donut"
+                  data={debtData?.external_debt_by_source || []}
+                  height={300}
+                  showLegend={true}
+                />
+              </ErrorBoundary>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="bg-white border border-gray-200 rounded-xl p-6"
+          >
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <TrendingUp className="h-5 w-5 mr-2 text-blue-600" />
+              Evolución Deuda Externa vs Interna
+            </h4>
+            <div className="h-80">
+              <ErrorBoundary>
+                <TimeSeriesChart
+                  year={selectedYear}
+                  chartType="line"
+                  title="Comparación Deuda Externa vs Interna"
+                  height={300}
+                />
+              </ErrorBoundary>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderDebtTimeline = () => (
+    <div className="space-y-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+          <Calendar className="h-6 w-6 mr-3 text-green-600" />
+          Timeline de Deuda Municipal
+        </h3>
+        <p className="text-gray-600 mb-6">
+          Cronología de endeudamiento y calendario de vencimientos
+        </p>
+
+        {/* Timeline Analysis */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-white border border-gray-200 rounded-xl p-6 mb-6"
+        >
+          <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <Activity className="h-5 w-5 mr-2 text-blue-600" />
+            Cronología de Endeudamiento
+          </h4>
+          <div className="h-96">
+            <ErrorBoundary>
+              <TimeSeriesChart
+                year={selectedYear}
+                chartType="timeline"
+                title="Timeline Completo de Deuda Municipal"
+                height={350}
+              />
+            </ErrorBoundary>
+          </div>
+        </motion.div>
+
+        {/* Maturity Profile */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="bg-white border border-gray-200 rounded-xl p-6"
+        >
+          <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <AlertTriangle className="h-5 w-5 mr-2 text-orange-600" />
+            Perfil de Vencimientos
+          </h4>
+          <div className="h-80">
+            <ErrorBoundary>
+              <WaterfallChart
+                year={selectedYear}
+                title="Calendario de Vencimientos de Deuda"
+                height={300}
+              />
+            </ErrorBoundary>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+
+  const renderDebtComposition = () => (
+    <div className="space-y-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+          <BarChart3 className="h-6 w-6 mr-3 text-purple-600" />
+          Composición de Deuda Municipal
+        </h3>
+        <p className="text-gray-600 mb-6">
+          Análisis detallado de la estructura y composición de la deuda
+        </p>
+
+        {/* Composition Analysis */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white border border-gray-200 rounded-xl p-6"
+          >
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <DollarSign className="h-5 w-5 mr-2 text-green-600" />
+              Composición por Moneda
+            </h4>
+            <div className="h-80">
+              <ErrorBoundary>
+                <TreemapChart
+                  year={selectedYear}
+                  title="Deuda por Tipo de Moneda"
+                  height={300}
+                />
+              </ErrorBoundary>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="bg-white border border-gray-200 rounded-xl p-6"
+          >
+            <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <Activity className="h-5 w-5 mr-2 text-blue-600" />
+              Estructura de Tasas de Interés
+            </h4>
+            <div className="h-80">
+              <ErrorBoundary>
+                <UnifiedChart
+                  type="bar"
+                  data={debtData?.debt_by_interest_rate || []}
+                  height={300}
+                  showLegend={true}
+                />
+              </ErrorBoundary>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Detailed Composition */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-white border border-gray-200 rounded-xl p-6"
+        >
+          <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <Scale className="h-5 w-5 mr-2 text-purple-600" />
+            Análisis de Sostenibilidad por Composición
+          </h4>
+          <div className="h-80">
+            <ErrorBoundary>
+              <DebtReportChart
+                year={selectedYear}
+                height={300}
+              />
+            </ErrorBoundary>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+
   const renderSources = () => (
     <div className="space-y-6">
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
@@ -404,6 +797,9 @@ const DebtUnified: React.FC = () => {
                   { id: 'overview', label: 'Resumen', icon: BarChart3 },
                   { id: 'breakdown', label: 'Desglose', icon: CreditCard },
                   { id: 'trends', label: 'Tendencias', icon: TrendingUp },
+                  { id: 'external', label: 'Externa', icon: ExternalLink },
+                  { id: 'timeline', label: 'Timeline', icon: Calendar },
+                  { id: 'composition', label: 'Composición', icon: Scale },
                   { id: 'sources', label: 'Fuentes', icon: Database }
                 ].map((tab) => (
                   <button
@@ -458,19 +854,12 @@ const DebtUnified: React.FC = () => {
               transition={{ duration: 0.3 }}
             >
               {viewMode === 'overview' && renderOverview()}
+              {viewMode === 'breakdown' && renderDebtBreakdown()}
+              {viewMode === 'trends' && renderDebtTrends()}
+              {viewMode === 'external' && renderExternalDebt()}
+              {viewMode === 'timeline' && renderDebtTimeline()}
+              {viewMode === 'composition' && renderDebtComposition()}
               {viewMode === 'sources' && renderSources()}
-              {viewMode === 'breakdown' && (
-                <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Desglose de Deuda</h3>
-                  <p className="text-gray-600">Análisis detallado por tipo de deuda en desarrollo...</p>
-                </div>
-              )}
-              {viewMode === 'trends' && (
-                <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Tendencias de Deuda</h3>
-                  <p className="text-gray-600">Análisis de tendencias históricas en desarrollo...</p>
-                </div>
-              )}
             </motion.div>
           )}
         </div>

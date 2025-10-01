@@ -1,0 +1,10 @@
+{
+  "build": {
+    "command": "cd frontend && npm run build",
+    "publish": "frontend/dist-light"
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "compatibility_date": "2024-01-01"
+}
