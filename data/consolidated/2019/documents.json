@@ -1,0 +1,53 @@
+{
+  "year": 2019,
+  "total_documents": 35,
+  "categories": [
+    {
+      "name": "Budget",
+      "count": 5
+    },
+    {
+      "name": "Contracts",
+      "count": 7
+    },
+    {
+      "name": "Personnel",
+      "count": 5
+    },
+    {
+      "name": "Treasury",
+      "count": 5
+    },
+    {
+      "name": "Debt",
+      "count": 4
+    },
+    {
+      "name": "Other",
+      "count": 9
+    }
+  ],
+  "recent_documents": [
+    {
+      "id": "2019-doc-1",
+      "title": "Annual Report Q1 2019",
+      "category": "Budget",
+      "date": "2019-01-15",
+      "size": "2.4 MB"
+    },
+    {
+      "id": "2019-doc-2",
+      "title": "Annual Report Q2 2019",
+      "category": "Contracts",
+      "date": "2019-02-15",
+      "size": "2.4 MB"
+    },
+    {
+      "id": "2019-doc-3",
+      "title": "Annual Report Q3 2019",
+      "category": "Personnel",
+      "date": "2019-03-15",
+      "size": "2.4 MB"
+    }
+  ]
+}

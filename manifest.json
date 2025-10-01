@@ -1,0 +1,36 @@
+{
+  "name": "Análisis de Datos Públicos Carmen de Areco - NO OFICIAL",
+  "short_name": "CDA Análisis",
+  "description": "Proyecto educativo de análisis de datos públicos de Carmen de Areco - NO OFICIAL",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "lang": "es-AR",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "research", "data-analysis"],
+  "screenshots": [
+    {
+      "src": "/logo.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "platform": "wide",
+      "label": "Análisis de Datos Públicos Dashboard - NO OFICIAL"
+    }
+  ]
+}

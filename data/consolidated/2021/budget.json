@@ -1,0 +1,86 @@
+{
+  "year": 2021,
+  "total_budget": 308700000,
+  "total_executed": 287780063,
+  "execution_rate": 93.22,
+  "executed_infra": 55125000,
+  "personnel": 143325000,
+  "budget_execution": [
+    [
+      "Q1",
+      "$77M",
+      "$69M",
+      "96%"
+    ],
+    [
+      "Q2",
+      "$77M",
+      "$72M",
+      "100%"
+    ],
+    [
+      "Q3",
+      "$77M",
+      "$75M",
+      "104%"
+    ],
+    [
+      "Q4",
+      "$77M",
+      "$72M",
+      "100%"
+    ]
+  ],
+  "revenue_sources": [
+    [
+      "Property Tax",
+      "$108M",
+      "35%",
+      "+3.2%"
+    ],
+    [
+      "Business Tax",
+      "$77M",
+      "25%",
+      "+4.1%"
+    ],
+    [
+      "Fees and Charges",
+      "$62M",
+      "20%",
+      "+2.8%"
+    ],
+    [
+      "Transfers",
+      "$62M",
+      "20%",
+      "+3.5%"
+    ]
+  ],
+  "expenditure_breakdown": [
+    [
+      "Personnel",
+      "$143M",
+      "45%",
+      "50%"
+    ],
+    [
+      "Services",
+      "$93M",
+      "30%",
+      "100%"
+    ],
+    [
+      "Infrastructure",
+      "$55M",
+      "20%",
+      "95%"
+    ],
+    [
+      "Others",
+      "$31M",
+      "5%",
+      "100%"
+    ]
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "year": 2019,
+  "total_budget": 280000000,
+  "total_executed": 265000000,
+  "execution_rate": 94.64,
+  "executed_infra": 49000000,
+  "personnel": 130000000,
+  "budget_execution": [
+    [
+      "Q1",
+      "$70M",
+      "$64M",
+      "96%"
+    ],
+    [
+      "Q2",
+      "$70M",
+      "$66M",
+      "100%"
+    ],
+    [
+      "Q3",
+      "$70M",
+      "$69M",
+      "104%"
+    ],
+    [
+      "Q4",
+      "$70M",
+      "$66M",
+      "100%"
+    ]
+  ],
+  "revenue_sources": [
+    [
+      "Property Tax",
+      "$98M",
+      "35%",
+      "+3.2%"
+    ],
+    [
+      "Business Tax",
+      "$70M",
+      "25%",
+      "+4.1%"
+    ],
+    [
+      "Fees and Charges",
+      "$56M",
+      "20%",
+      "+2.8%"
+    ],
+    [
+      "Transfers",
+      "$56M",
+      "20%",
+      "+3.5%"
+    ]
+  ],
+  "expenditure_breakdown": [
+    [
+      "Personnel",
+      "$130M",
+      "45%",
+      "49%"
+    ],
+    [
+      "Services",
+      "$84M",
+      "30%",
+      "100%"
+    ],
+    [
+      "Infrastructure",
+      "$49M",
+      "20%",
+      "95%"
+    ],
+    [
+      "Others",
+      "$28M",
+      "5%",
+      "100%"
+    ]
+  ]
+}

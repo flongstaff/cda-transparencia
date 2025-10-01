@@ -1,0 +1,510 @@
+{
+  "documents": [
+    {
+      "id": "2023-ESTADODEEJECUCIONDEGASTOSPORFINALIDADYFUNCION20234TRI_tabula_table_2csv",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI_tabula_table_2.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI_tabula_table_2.csv",
+      "headers": [
+        "Unnamed: 0",
+        "Crédito",
+        "Modifica",
+        "Crédito.1",
+        "Preventivo",
+        "Compromiso",
+        "Devengado",
+        "Pagado",
+        "Crédito.2",
+        "Crédito Vig.",
+        "Devengado.1"
+      ]
+    },
+    {
+      "id": "2023-Education_Data_2023_table_0csv",
+      "title": "Education_Data_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Education_Data_2023_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDEGASTOSPORFINALIDADYFUNCION20234TRI_tabula_table_1csv",
+      "title": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI_tabula_table_1.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI_tabula_table_1.csv",
+      "headers": [
+        "Unnamed: 0",
+        "Crédito",
+        "Modifica",
+        "Crédito.1",
+        "Preventivo",
+        "Compromiso",
+        "Devengado",
+        "Pagado",
+        "Crédito.2",
+        "Crédito Vig.",
+        "Devengado.1"
+      ]
+    },
+    {
+      "id": "2023-Investment_Report_2023_table_0csv",
+      "title": "Investment_Report_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Investment_Report_2023_table_0.csv",
+      "headers": [
+        "Project",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2023-Expenditure_Report_2023_table_0csv",
+      "title": "Expenditure_Report_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Expenditure_Report_2023_table_0.csv",
+      "headers": [
+        "Category",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2023-Fiscal_Balance_Report_2023_table_0csv",
+      "title": "Fiscal_Balance_Report_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Fiscal_Balance_Report_2023_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2023-Revenue_Report_2023_table_0csv",
+      "title": "Revenue_Report_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Revenue_Report_2023_table_0.csv",
+      "headers": [
+        "Concept",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_6csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_6.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_6.csv",
+      "headers": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Recurso",
+        "Unnamed: 2",
+        "Recurso Recurso",
+        "Dif. entre",
+        "Recursos",
+        "Dif. entre.1",
+        "Dif. entre.2"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_4csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_4.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_4.csv",
+      "headers": [
+        "11.9.04.00 - Inmobiliario Rural.Afectado",
+        "22 - Origen Provincial -",
+        "0,00",
+        "9.555.173,15",
+        "9.555.173,15.1",
+        "9.555.173,15.2",
+        "0,00.1",
+        "9.555.173,15.3",
+        "0,00.2",
+        "0,00.3"
+      ]
+    },
+    {
+      "id": "2023-licitaciones_2023_enhancedcsv",
+      "title": "licitaciones_2023_enhanced.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "licitaciones_2023_enhanced.csv",
+      "headers": [
+        "tender_number",
+        "object",
+        "expedient",
+        "opening_date",
+        "budget_amount",
+        "document_fee",
+        "source_file",
+        "status",
+        "contract_type",
+        "year"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_5csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_5.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_5.csv",
+      "headers": [
+        "11.9.06.00 - Ingresos Brutos. Ley 13010",
+        "21 - Origen Provincial - De",
+        "4.583.786,58",
+        "0,00",
+        "4.583.786,58.1",
+        "3.170.976,46",
+        "1.412.810,12",
+        "3.170.976,46.1",
+        "0,00.1",
+        "1.412.810,12.1"
+      ]
+    },
+    {
+      "id": "2023-Debt_Report_2023_table_0csv",
+      "title": "Debt_Report_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Debt_Report_2023_table_0.csv",
+      "headers": [
+        "Debt Type",
+        "Amount",
+        "Interest Rate",
+        "Maturity"
+      ]
+    },
+    {
+      "id": "2023-Health_Statistics_2023_table_0csv",
+      "title": "Health_Statistics_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Health_Statistics_2023_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_1csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_1.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_1.csv",
+      "headers": [
+        "Rubro - Descripción",
+        "Procedencia",
+        "Recurso",
+        "Modifica Recurso",
+        "Recurso.1",
+        "Dif. entre",
+        "Recursos",
+        "Dif. entre.1",
+        "Dif. entre.2"
+      ]
+    },
+    {
+      "id": "2023-licitaciones_licitaciones_2023csv",
+      "title": "licitaciones_licitaciones_2023.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "licitaciones_licitaciones_2023.csv",
+      "headers": [
+        "Tender Number",
+        "Object",
+        "Expediente",
+        "Opening Date",
+        "Budget Amount",
+        "Pliego Value",
+        "Source File Link"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_2csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_2.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_2.csv",
+      "headers": [
+        "11.4.01.00 - Coparticipación Pcial. de Impuesto",
+        "21 - Origen Provincial - De",
+        "387.924.873,00",
+        "0,00",
+        "387.924.873,00.1",
+        "286.673.585,93",
+        "101.251.287,07",
+        "286.673.585,93.1",
+        "0,00.1",
+        "101.251.287,07.1"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_3csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_3.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_3.csv",
+      "headers": [
+        "11.9.01.00 - Ley 9226",
+        "21 - Origen Provincial - De",
+        "200.000,00",
+        "0,00",
+        "200.000,00.1",
+        "26.762,61",
+        "173.237,39",
+        "26.762,61.1",
+        "0,00.1",
+        "173.237,39.1"
+      ]
+    },
+    {
+      "id": "2023-Revenue_Sources_2023_table_0csv",
+      "title": "Revenue_Sources_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Revenue_Sources_2023_table_0.csv",
+      "headers": [
+        "Source",
+        "Amount",
+        "% of Total",
+        "Variation"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_13csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_13.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_13.csv",
+      "headers": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Recurso",
+        "Unnamed: 2",
+        "Recurso Recurso",
+        "Dif. entre",
+        "Recursos",
+        "Dif. entre.1",
+        "Dif. entre.2"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_12csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_12.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_12.csv",
+      "headers": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Recurso",
+        "Unnamed: 2",
+        "Recurso Recurso",
+        "Dif. entre",
+        "Recursos",
+        "Dif. entre.1",
+        "Dif. entre.2"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_10csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_10.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_10.csv",
+      "headers": [
+        "Rubro - Descripción",
+        "Procedencia",
+        "Recurso",
+        "Modifica",
+        "Recurso.1",
+        "Recurso.2",
+        "Dif. entre",
+        "Recursos",
+        "Dif. entre.1",
+        "Dif. entre.2"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_11csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_11.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_11.csv",
+      "headers": [
+        "16.2.01.04 - Intereses por Fondos Comunes de",
+        "11 - Origen Municipal - De",
+        "42.988.154,74",
+        "0,00",
+        "42.988.154,74.1",
+        "48.226.550,86",
+        "-5.238.396,12",
+        "48.226.550,86.1",
+        "0,00.1",
+        "-5.238.396,12.1"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_15csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_15.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_15.csv",
+      "headers": [
+        "Rubro - Descripción",
+        "Procedencia",
+        "Recurso",
+        "Modifica Recurso",
+        "Recurso.1",
+        "Dif. entre",
+        "Recursos",
+        "Dif. entre.1",
+        "Dif. entre.2"
+      ]
+    },
+    {
+      "id": "2023-Personnel_Expenses_2023_table_0csv",
+      "title": "Personnel_Expenses_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Personnel_Expenses_2023_table_0.csv",
+      "headers": [
+        "Category",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_14csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_14.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_14.csv",
+      "headers": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Recurso",
+        "Unnamed: 2",
+        "Recurso Recurso",
+        "Dif. entre",
+        "Recursos",
+        "Dif. entre.1",
+        "Dif. entre.2"
+      ]
+    },
+    {
+      "id": "2023-ESTADODEEJECUCIONDERECURSOS20234TRI_tabula_table_9csv",
+      "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_9.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_9.csv",
+      "headers": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Recurso",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Dif. entre Recursos",
+        "Dif. entre",
+        "Dif. entre.1"
+      ]
+    },
+    {
+      "id": "2023-Budget_Execution_2023_table_0csv",
+      "title": "Budget_Execution_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Budget_Execution_2023_table_0.csv",
+      "headers": [
+        "Quarter",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2023-Infrastructure_Projects_2023_table_0csv",
+      "title": "Infrastructure_Projects_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Infrastructure_Projects_2023_table_0.csv",
+      "headers": [
+        "Project",
+        "Status",
+        "Budget",
+        "Executed",
+        "Completion"
+      ]
+    },
+    {
+      "id": "2023-Financial_Reserves_2023_table_0csv",
+      "title": "Financial_Reserves_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Financial_Reserves_2023_table_0.csv",
+      "headers": [
+        "Reserve Type",
+        "Beginning",
+        "Additions",
+        "Withdrawals",
+        "Ending"
+      ]
+    },
+    {
+      "id": "2023-licitaciones_2023csv",
+      "title": "licitaciones_2023.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "licitaciones_2023.csv",
+      "headers": [
+        "Número de Licitación",
+        "Objeto",
+        "Expediente",
+        "Fecha de Apertura",
+        "Monto Presupuestado",
+        "Valor del Pliego",
+        "Archivo Fuente"
+      ]
+    },
+    {
+      "id": "2023-Economic_Report_2023_table_0csv",
+      "title": "Economic_Report_2023_table_0.csv",
+      "year": 2023,
+      "category": "Financial Report",
+      "source": "Economic_Report_2023_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    }
+  ],
+  "total": 31,
+  "categories": [
+    "Financial Report"
+  ]
+}

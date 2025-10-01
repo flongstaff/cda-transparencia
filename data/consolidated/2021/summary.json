@@ -1,0 +1,24 @@
+{
+  "year": 2021,
+  "financial_overview": {
+    "total_budget": 308700000,
+    "total_executed": 287780063,
+    "execution_rate": 93.22,
+    "executed_infra": 55125000,
+    "personnel": 143325000
+  },
+  "key_metrics": {
+    "budget_per_capita": 9647,
+    "documents_processed": 39,
+    "contracts_managed": 31
+  },
+  "data_quality": {
+    "completeness": 91,
+    "accuracy": 96,
+    "last_validated": "2025-09-28T18:50:04.347Z"
+  },
+  "metadata": {
+    "processed_date": "2025-09-28T18:50:04.347Z",
+    "data_sources": 12
+  }
+}

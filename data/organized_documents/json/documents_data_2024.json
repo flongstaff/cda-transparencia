@@ -1,0 +1,179 @@
+{
+  "documents": [
+    {
+      "id": "2024-Economic_Report_2024_table_0csv",
+      "title": "Economic_Report_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Economic_Report_2024_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2024-Budget_Execution_2024_table_0csv",
+      "title": "Budget_Execution_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Budget_Execution_2024_table_0.csv",
+      "headers": [
+        "Quarter",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2024-Infrastructure_Projects_2024_table_0csv",
+      "title": "Infrastructure_Projects_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Infrastructure_Projects_2024_table_0.csv",
+      "headers": [
+        "Project",
+        "Status",
+        "Budget",
+        "Executed",
+        "Completion"
+      ]
+    },
+    {
+      "id": "2024-Financial_Reserves_2024_table_0csv",
+      "title": "Financial_Reserves_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Financial_Reserves_2024_table_0.csv",
+      "headers": [
+        "Reserve Type",
+        "Beginning",
+        "Additions",
+        "Withdrawals",
+        "Ending"
+      ]
+    },
+    {
+      "id": "2024-Personnel_Expenses_2024_table_0csv",
+      "title": "Personnel_Expenses_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Personnel_Expenses_2024_table_0.csv",
+      "headers": [
+        "Category",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2024-Revenue_Sources_2024_table_0csv",
+      "title": "Revenue_Sources_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Revenue_Sources_2024_table_0.csv",
+      "headers": [
+        "Source",
+        "Amount",
+        "% of Total",
+        "Variation"
+      ]
+    },
+    {
+      "id": "2024-Health_Statistics_2024_table_0csv",
+      "title": "Health_Statistics_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Health_Statistics_2024_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2024-Debt_Report_2024_table_0csv",
+      "title": "Debt_Report_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Debt_Report_2024_table_0.csv",
+      "headers": [
+        "Debt Type",
+        "Amount",
+        "Interest Rate",
+        "Maturity"
+      ]
+    },
+    {
+      "id": "2024-Fiscal_Balance_Report_2024_table_0csv",
+      "title": "Fiscal_Balance_Report_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Fiscal_Balance_Report_2024_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2024-Revenue_Report_2024_table_0csv",
+      "title": "Revenue_Report_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Revenue_Report_2024_table_0.csv",
+      "headers": [
+        "Concept",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2024-Expenditure_Report_2024_table_0csv",
+      "title": "Expenditure_Report_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Expenditure_Report_2024_table_0.csv",
+      "headers": [
+        "Category",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2024-Investment_Report_2024_table_0csv",
+      "title": "Investment_Report_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Investment_Report_2024_table_0.csv",
+      "headers": [
+        "Project",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2024-Education_Data_2024_table_0csv",
+      "title": "Education_Data_2024_table_0.csv",
+      "year": 2024,
+      "category": "Financial Report",
+      "source": "Education_Data_2024_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    }
+  ],
+  "total": 13,
+  "categories": [
+    "Financial Report"
+  ]
+}

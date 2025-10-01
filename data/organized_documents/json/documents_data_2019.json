@@ -1,0 +1,468 @@
+{
+  "documents": [
+    {
+      "id": "2019-Personnel_Expenses_2019_table_0csv",
+      "title": "Personnel_Expenses_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Personnel_Expenses_2019_table_0.csv",
+      "headers": [
+        "Category",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2019-2019_personnel_expensescsv",
+      "title": "2019_personnel_expenses.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_personnel_expenses.csv",
+      "headers": [
+        "category",
+        "amount",
+        "percentage"
+      ]
+    },
+    {
+      "id": "2019-2019_balance_demonstrationcsv",
+      "title": "2019_balance_demonstration.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_balance_demonstration.csv",
+      "headers": [
+        "Demostracion del Saldo",
+        "Importe"
+      ]
+    },
+    {
+      "id": "2019-2019_revenuecsv",
+      "title": "2019_revenue.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_revenue.csv",
+      "headers": [
+        "Evolucion de los Recursos",
+        "Vigente",
+        "Devengado",
+        "Percibido"
+      ]
+    },
+    {
+      "id": "2019-2019_expenditure_by_programcsv",
+      "title": "2019_expenditure_by_program.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_expenditure_by_program.csv",
+      "headers": [
+        "Evolucion de Gastos por Programa",
+        "Vigente",
+        "Preventivo",
+        "Compromiso",
+        "Devengado",
+        "Pagado"
+      ]
+    },
+    {
+      "id": "2019-Revenue_Sources_2019_table_0csv",
+      "title": "Revenue_Sources_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Revenue_Sources_2019_table_0.csv",
+      "headers": [
+        "Source",
+        "Amount",
+        "% of Total",
+        "Variation"
+      ]
+    },
+    {
+      "id": "2019-2019_expenditure_by_functioncsv",
+      "title": "2019_expenditure_by_function.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_expenditure_by_function.csv",
+      "headers": [
+        "function",
+        "budget",
+        "execution",
+        "percentage"
+      ]
+    },
+    {
+      "id": "2019-2019_financial_reservescsv",
+      "title": "2019_financial_reserves.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_financial_reserves.csv",
+      "headers": [
+        "fund",
+        "amount"
+      ]
+    },
+    {
+      "id": "2019-2019_capital_current_expenditurecsv",
+      "title": "2019_capital_current_expenditure.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_capital_current_expenditure.csv",
+      "headers": [
+        "type",
+        "amount",
+        "percentage"
+      ]
+    },
+    {
+      "id": "2019-2019_fiscal_balancecsv",
+      "title": "2019_fiscal_balance.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_fiscal_balance.csv",
+      "headers": [
+        "month",
+        "revenue",
+        "expenditure",
+        "balance"
+      ]
+    },
+    {
+      "id": "2019-2019_summarycsv",
+      "title": "2019_summary.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_summary.csv",
+      "headers": [
+        "--- 2019_revenue.csv ---"
+      ]
+    },
+    {
+      "id": "2019-2019_expenditurecsv",
+      "title": "2019_expenditure.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_expenditure.csv",
+      "headers": [
+        "sector",
+        "budget",
+        "execution",
+        "percentage"
+      ]
+    },
+    {
+      "id": "2019-Economic_Report_2019_table_0csv",
+      "title": "Economic_Report_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Economic_Report_2019_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2019-2019_expenditure_by_objectcsv",
+      "title": "2019_expenditure_by_object.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_expenditure_by_object.csv",
+      "headers": [
+        "Evolucion de Gastos por Objeto",
+        "Vigente",
+        "Preventivo",
+        "Compromiso",
+        "Devengado",
+        "Pagado"
+      ]
+    },
+    {
+      "id": "2019-Budget_Execution_2019_table_0csv",
+      "title": "Budget_Execution_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Budget_Execution_2019_table_0.csv",
+      "headers": [
+        "Quarter",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2019-Infrastructure_Projects_2019_table_0csv",
+      "title": "Infrastructure_Projects_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Infrastructure_Projects_2019_table_0.csv",
+      "headers": [
+        "Project",
+        "Status",
+        "Budget",
+        "Executed",
+        "Completion"
+      ]
+    },
+    {
+      "id": "2019-2019_expenditure_by_program_structuredcsv",
+      "title": "2019_expenditure_by_program_structured.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_expenditure_by_program_structured.csv",
+      "headers": [
+        "program_code",
+        "program_name",
+        "budgeted",
+        "executed",
+        "paid",
+        "year"
+      ]
+    },
+    {
+      "id": "2019-Financial_Reserves_2019_table_0csv",
+      "title": "Financial_Reserves_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Financial_Reserves_2019_table_0.csv",
+      "headers": [
+        "Reserve Type",
+        "Beginning",
+        "Additions",
+        "Withdrawals",
+        "Ending"
+      ]
+    },
+    {
+      "id": "2019-2019_revenue_by_source_structuredcsv",
+      "title": "2019_revenue_by_source_structured.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_revenue_by_source_structured.csv",
+      "headers": [
+        "source",
+        "type",
+        "description",
+        "budgeted",
+        "executed",
+        "percentage",
+        "year"
+      ]
+    },
+    {
+      "id": "2019-Investment_Report_2019_table_0csv",
+      "title": "Investment_Report_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Investment_Report_2019_table_0.csv",
+      "headers": [
+        "Project",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2019-2019_treasury_movementscsv",
+      "title": "2019_treasury_movements.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_treasury_movements.csv",
+      "headers": [
+        "Movimientos de Tesoreria",
+        "Importe"
+      ]
+    },
+    {
+      "id": "2019-Expenditure_Report_2019_table_0csv",
+      "title": "Expenditure_Report_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Expenditure_Report_2019_table_0.csv",
+      "headers": [
+        "Category",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2019-Education_Data_2019_table_0csv",
+      "title": "Education_Data_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Education_Data_2019_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2019-2019_revenue_by_typecsv",
+      "title": "2019_revenue_by_type.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_revenue_by_type.csv",
+      "headers": [
+        "type",
+        "amount",
+        "percentage"
+      ]
+    },
+    {
+      "id": "2019-Health_Statistics_2019_table_0csv",
+      "title": "Health_Statistics_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Health_Statistics_2019_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2019-2019_expenditure_admin_levelcsv",
+      "title": "2019_expenditure_admin_level.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_expenditure_admin_level.csv",
+      "headers": [
+        "level",
+        "amount",
+        "percentage"
+      ]
+    },
+    {
+      "id": "2019-2019_investment_by_areacsv",
+      "title": "2019_investment_by_area.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_investment_by_area.csv",
+      "headers": [
+        "area",
+        "amount"
+      ]
+    },
+    {
+      "id": "2019-2019_budget_execution_quarterlycsv",
+      "title": "2019_budget_execution_quarterly.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_budget_execution_quarterly.csv",
+      "headers": [
+        "quarter",
+        "revenue_percentage",
+        "expenditure_percentage"
+      ]
+    },
+    {
+      "id": "2019-Fiscal_Balance_Report_2019_table_0csv",
+      "title": "Fiscal_Balance_Report_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Fiscal_Balance_Report_2019_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2019-2019_article_44_resultcsv",
+      "title": "2019_article_44_result.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_article_44_result.csv",
+      "headers": [
+        "Resultado Artículo 44",
+        "Importe"
+      ]
+    },
+    {
+      "id": "2019-Revenue_Report_2019_table_0csv",
+      "title": "Revenue_Report_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Revenue_Report_2019_table_0.csv",
+      "headers": [
+        "Concept",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2019-2019_debt_statuscsv",
+      "title": "2019_debt_status.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_debt_status.csv",
+      "headers": [
+        "type",
+        "amount",
+        "due_date"
+      ]
+    },
+    {
+      "id": "2019-2019_revenue_sources_evolutioncsv",
+      "title": "2019_revenue_sources_evolution.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_revenue_sources_evolution.csv",
+      "headers": [
+        "year",
+        "impuestos",
+        "tasas"
+      ]
+    },
+    {
+      "id": "2019-2019_statement_of_financial_positioncsv",
+      "title": "2019_statement_of_financial_position.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_statement_of_financial_position.csv",
+      "headers": [
+        "Estado de Situacion Patrimonial",
+        "Saldo"
+      ]
+    },
+    {
+      "id": "2019-2019_financial_summary_structuredcsv",
+      "title": "2019_financial_summary_structured.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "2019_financial_summary_structured.csv",
+      "headers": [
+        "category",
+        "subcategory",
+        "description",
+        "budgeted",
+        "executed",
+        "percentage",
+        "year"
+      ]
+    },
+    {
+      "id": "2019-Debt_Report_2019_table_0csv",
+      "title": "Debt_Report_2019_table_0.csv",
+      "year": 2019,
+      "category": "Financial Report",
+      "source": "Debt_Report_2019_table_0.csv",
+      "headers": [
+        "Debt Type",
+        "Amount",
+        "Interest Rate",
+        "Maturity"
+      ]
+    }
+  ],
+  "total": 36,
+  "categories": [
+    "Financial Report"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "year": 2020,
+  "total_documents": 37,
+  "categories": [
+    {
+      "name": "Budget",
+      "count": 6
+    },
+    {
+      "name": "Contracts",
+      "count": 7
+    },
+    {
+      "name": "Personnel",
+      "count": 6
+    },
+    {
+      "name": "Treasury",
+      "count": 6
+    },
+    {
+      "name": "Debt",
+      "count": 4
+    },
+    {
+      "name": "Other",
+      "count": 9
+    }
+  ],
+  "recent_documents": [
+    {
+      "id": "2020-doc-1",
+      "title": "Annual Report Q1 2020",
+      "category": "Budget",
+      "date": "2020-01-15",
+      "size": "2.4 MB"
+    },
+    {
+      "id": "2020-doc-2",
+      "title": "Annual Report Q2 2020",
+      "category": "Contracts",
+      "date": "2020-02-15",
+      "size": "2.4 MB"
+    },
+    {
+      "id": "2020-doc-3",
+      "title": "Annual Report Q3 2020",
+      "category": "Personnel",
+      "date": "2020-03-15",
+      "size": "2.4 MB"
+    }
+  ]
+}

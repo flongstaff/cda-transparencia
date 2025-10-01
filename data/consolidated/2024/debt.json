@@ -1,0 +1,30 @@
+{
+  "year": 2024,
+  "total_debt": 78618944,
+  "debt_service": 14294354,
+  "debt_by_type": [
+    [
+      "Municipal Bonds",
+      "$43M",
+      "6.5%",
+      "10 years"
+    ],
+    [
+      "Bank Loans",
+      "$25M",
+      "8.0%",
+      "7 years"
+    ],
+    [
+      "Development Bank",
+      "$11M",
+      "5.5%",
+      "15 years"
+    ]
+  ],
+  "analysis": {
+    "debt_ratio": "22%",
+    "sustainability": "Good",
+    "risk_level": "Low"
+  }
+}

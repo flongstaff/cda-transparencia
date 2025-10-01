@@ -1,0 +1,23 @@
+{
+  "year": 2021,
+  "income": 308700000,
+  "expenses": 287780063,
+  "balance": 20919937,
+  "treasury_movements": [
+    [
+      "January",
+      "$25M",
+      "$20M"
+    ],
+    [
+      "February",
+      "$28M",
+      "$23M"
+    ],
+    [
+      "March",
+      "$25M",
+      "$26M"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "year": 2019,
+  "total_salaries": 130000000,
+  "average_salary": 464286,
+  "employee_count": 280,
+  "salary_breakdown": [
+    [
+      "Administration",
+      "$52M",
+      "40%",
+      "98%"
+    ],
+    [
+      "Operations",
+      "$46M",
+      "35%",
+      "97%"
+    ],
+    [
+      "Healthcare",
+      "$20M",
+      "15%",
+      "99%"
+    ],
+    [
+      "Education",
+      "$13M",
+      "10%",
+      "100%"
+    ]
+  ]
+}

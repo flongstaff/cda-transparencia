@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Shield shape optimized for small size -->
+  <path d="M16 3 C22 3 26 5 28 7 L28 14 C28 22 22 27 16 30 C10 27 4 22 4 14 L4 7 C6 5 10 3 16 3 Z"
+        fill="url(#faviconGradient)"
+        stroke="#1e40af"
+        stroke-width="0.5"/>
+
+  <!-- Simple checkmark for transparency -->
+  <path d="M12 16 L14 18 L20 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

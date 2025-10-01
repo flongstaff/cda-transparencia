@@ -1,0 +1,53 @@
+{
+  "year": 2023,
+  "total_documents": 43,
+  "categories": [
+    {
+      "name": "Budget",
+      "count": 6
+    },
+    {
+      "name": "Contracts",
+      "count": 9
+    },
+    {
+      "name": "Personnel",
+      "count": 6
+    },
+    {
+      "name": "Treasury",
+      "count": 6
+    },
+    {
+      "name": "Debt",
+      "count": 4
+    },
+    {
+      "name": "Other",
+      "count": 11
+    }
+  ],
+  "recent_documents": [
+    {
+      "id": "2023-doc-1",
+      "title": "Annual Report Q1 2023",
+      "category": "Budget",
+      "date": "2023-01-15",
+      "size": "2.4 MB"
+    },
+    {
+      "id": "2023-doc-2",
+      "title": "Annual Report Q2 2023",
+      "category": "Contracts",
+      "date": "2023-02-15",
+      "size": "2.4 MB"
+    },
+    {
+      "id": "2023-doc-3",
+      "title": "Annual Report Q3 2023",
+      "category": "Personnel",
+      "date": "2023-03-15",
+      "size": "2.4 MB"
+    }
+  ]
+}

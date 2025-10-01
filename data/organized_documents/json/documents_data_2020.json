@@ -1,0 +1,179 @@
+{
+  "documents": [
+    {
+      "id": "2020-Health_Statistics_2020_table_0csv",
+      "title": "Health_Statistics_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Health_Statistics_2020_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2020-Debt_Report_2020_table_0csv",
+      "title": "Debt_Report_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Debt_Report_2020_table_0.csv",
+      "headers": [
+        "Debt Type",
+        "Amount",
+        "Interest Rate",
+        "Maturity"
+      ]
+    },
+    {
+      "id": "2020-Revenue_Report_2020_table_0csv",
+      "title": "Revenue_Report_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Revenue_Report_2020_table_0.csv",
+      "headers": [
+        "Concept",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2020-Fiscal_Balance_Report_2020_table_0csv",
+      "title": "Fiscal_Balance_Report_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Fiscal_Balance_Report_2020_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2020-Expenditure_Report_2020_table_0csv",
+      "title": "Expenditure_Report_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Expenditure_Report_2020_table_0.csv",
+      "headers": [
+        "Category",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2020-Investment_Report_2020_table_0csv",
+      "title": "Investment_Report_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Investment_Report_2020_table_0.csv",
+      "headers": [
+        "Project",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2020-Education_Data_2020_table_0csv",
+      "title": "Education_Data_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Education_Data_2020_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2020-Economic_Report_2020_table_0csv",
+      "title": "Economic_Report_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Economic_Report_2020_table_0.csv",
+      "headers": [
+        "Column_0",
+        "Column_1",
+        "Column_2",
+        "Column_3"
+      ]
+    },
+    {
+      "id": "2020-Financial_Reserves_2020_table_0csv",
+      "title": "Financial_Reserves_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Financial_Reserves_2020_table_0.csv",
+      "headers": [
+        "Reserve Type",
+        "Beginning",
+        "Additions",
+        "Withdrawals",
+        "Ending"
+      ]
+    },
+    {
+      "id": "2020-Infrastructure_Projects_2020_table_0csv",
+      "title": "Infrastructure_Projects_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Infrastructure_Projects_2020_table_0.csv",
+      "headers": [
+        "Project",
+        "Status",
+        "Budget",
+        "Executed",
+        "Completion"
+      ]
+    },
+    {
+      "id": "2020-Budget_Execution_2020_table_0csv",
+      "title": "Budget_Execution_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Budget_Execution_2020_table_0.csv",
+      "headers": [
+        "Quarter",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2020-Personnel_Expenses_2020_table_0csv",
+      "title": "Personnel_Expenses_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Personnel_Expenses_2020_table_0.csv",
+      "headers": [
+        "Category",
+        "Budgeted",
+        "Executed",
+        "Percentage"
+      ]
+    },
+    {
+      "id": "2020-Revenue_Sources_2020_table_0csv",
+      "title": "Revenue_Sources_2020_table_0.csv",
+      "year": 2020,
+      "category": "Financial Report",
+      "source": "Revenue_Sources_2020_table_0.csv",
+      "headers": [
+        "Source",
+        "Amount",
+        "% of Total",
+        "Variation"
+      ]
+    }
+  ],
+  "total": 13,
+  "categories": [
+    "Financial Report"
+  ]
+}

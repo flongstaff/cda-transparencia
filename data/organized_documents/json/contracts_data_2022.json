@@ -1,0 +1,25 @@
+{
+  "contracts": [
+    {
+      "id": "2022-SchoolRenovation",
+      "title": "School Renovation",
+      "contractor": "School Renovation",
+      "status": "Completed",
+      "budget": 8000000,
+      "executed": 8000000,
+      "completion": "100%",
+      "year": 2022
+    },
+    {
+      "id": "2022-WaterSystem",
+      "title": "Water System",
+      "contractor": "Water System",
+      "status": "Planning",
+      "budget": 20000000,
+      "executed": 0,
+      "completion": "0%",
+      "year": 2022
+    }
+  ],
+  "total_contracts": 2
+}

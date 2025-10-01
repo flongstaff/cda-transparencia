@@ -1,0 +1,24 @@
+{
+  "year": 2022,
+  "financial_overview": {
+    "total_budget": 324135000,
+    "total_executed": 303702919,
+    "execution_rate": 93.7,
+    "executed_infra": 58460063,
+    "personnel": 150491250
+  },
+  "key_metrics": {
+    "budget_per_capita": 10129,
+    "documents_processed": 41,
+    "contracts_managed": 34
+  },
+  "data_quality": {
+    "completeness": 92,
+    "accuracy": 97,
+    "last_validated": "2025-09-28T18:50:04.348Z"
+  },
+  "metadata": {
+    "processed_date": "2025-09-28T18:50:04.348Z",
+    "data_sources": 12
+  }
+}

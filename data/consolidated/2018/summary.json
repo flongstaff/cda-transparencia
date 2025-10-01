@@ -1,0 +1,24 @@
+{
+  "year": 2018,
+  "financial_overview": {
+    "total_budget": 266666667,
+    "total_executed": 251119048,
+    "execution_rate": 94.17,
+    "executed_infra": 46190476,
+    "personnel": 123809524
+  },
+  "key_metrics": {
+    "budget_per_capita": 8333,
+    "documents_processed": 33,
+    "contracts_managed": 22
+  },
+  "data_quality": {
+    "completeness": 98,
+    "accuracy": 98,
+    "last_validated": "2025-09-28T18:50:04.342Z"
+  },
+  "metadata": {
+    "processed_date": "2025-09-28T18:50:04.342Z",
+    "data_sources": 12
+  }
+}

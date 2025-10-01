@@ -1,0 +1,103 @@
+{
+  "mcp_version": "1.0",
+  "portal_name": "Carmen de Areco Transparency Portal",
+  "description": "MCP-compliant metadata for transparency data",
+  "last_updated": "2025-09-27T18:44:46.046167",
+  "data_context": {
+    "source": "Carmen de Areco Municipal Transparency System",
+    "context_id": "cda-transparency-mcp-v1",
+    "version": "1.0",
+    "schema_version": "1.0"
+  },
+  "data_sources": {
+    "local_files": {
+      "description": "Local data files processed by the system",
+      "count": 139,
+      "years": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+      "categories": [
+        "Budget",
+        "Expenditure",
+        "Revenue",
+        "Debt",
+        "Personnel",
+        "Infrastructure",
+        "Health",
+        "Education"
+      ],
+      "data_types": [
+        "CSV",
+        "JSON",
+        "PDF"
+      ]
+    },
+    "external_apis": {
+      "description": "External API data sources",
+      "sources": [
+        {
+          "name": "Datos Argentina",
+          "url": "https://datos.gob.ar/",
+          "status": "active",
+          "last_fetched": "2025-09-27T18:44:46.046167"
+        },
+        {
+          "name": "Presupuesto Abierto",
+          "url": "https://www.presupuestoabierto.gob.ar/",
+          "status": "active",
+          "last_fetched": "2025-09-27T18:44:46.046167"
+        }
+      ]
+    }
+  },
+  "chart_context": {
+    "supported_chart_types": [
+      "Budget_Execution",
+      "Debt_Report", 
+      "Economic_Report",
+      "Education_Data",
+      "Expenditure_Report",
+      "Financial_Reserves",
+      "Fiscal_Balance_Report",
+      "Health_Statistics",
+      "Infrastructure_Projects",
+      "Investment_Report",
+      "Personnel_Expenses",
+      "Revenue_Report",
+      "Revenue_Sources",
+      "Quarterly_Execution",
+      "Programmatic_Performance",
+      "Gender_Budgeting",
+      "Waterfall_Execution"
+    ],
+    "consolidated_data": {
+      "format": "CSV",
+      "years": [2019, 2020, 2021, 2022, 2023, 2024, 2025],
+      "last_updated": "2025-09-27T18:44:46.046167"
+    }
+  },
+  "mcp_compliance": {
+    "status": "active",
+    "last_audit": "2025-09-27T18:44:46.046167",
+    "validation_rules": [
+      {
+        "rule_id": "mcp-001",
+        "description": "Data must be validated before processing",
+        "status": "implemented"
+      },
+      {
+        "rule_id": "mcp-002", 
+        "description": "Context must be maintained throughout processing",
+        "status": "implemented"
+      },
+      {
+        "rule_id": "mcp-003",
+        "description": "Caching must be implemented for performance",
+        "status": "implemented"
+      }
+    ]
+  },
+  "metadata_context": {
+    "created_at": "2025-09-27T18:44:46.046167",
+    "updated_at": "2025-09-27T18:44:46.046167",
+    "version": "1.0"
+  }
+}
