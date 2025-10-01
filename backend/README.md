@@ -1,31 +1,48 @@
-# Carmen de Areco Transparency API
+# Carmen de Areco Transparency Portal - Backend Proxy Server
 
-This is the backend API for the Carmen de Areco Transparency Portal.
+## Quick Start
 
-## Deployment
+```bash
+cd backend
+npm install
+npm run proxy
+```
 
-To deploy this API to Fly.io:
+Server starts on `http://localhost:3001`
 
-1. Install the Fly.io CLI: `curl -L https://fly.io/install.sh | sh`
-2. Log in to Fly.io: `flyctl auth login`
-3. Deploy the app: `flyctl deploy`
+## Available Endpoints
 
-## Environment Variables
+- `GET  /health` - Health check
+- `GET  /api/carmen/official` - Carmen de Areco official site
+- `GET  /api/carmen/transparency` - Transparency portal
+- `GET  /api/national/datos` - datos.gob.ar API
+- `GET  /api/national/georef` - Geographic data
+- `GET  /api/provincial/gba` - Buenos Aires open data
+- `GET  /api/powerbi/extract?url=<url>` - Extract PowerBI data
+- `POST /api/pdf/extract` - Extract PDF data
+- `POST /api/validate` - Validate data
 
-The following environment variables need to be set:
+## Usage with Frontend
 
-- `DATABASE_URL` - PostgreSQL database connection string
-- `PORT` - Port to run the server on (default: 8080)
+```bash
+# Terminal 1: Start proxy
+cd backend && npm run proxy
 
-## API Endpoints
+# Terminal 2: Start frontend
+cd frontend && npm run dev
 
-All endpoints are available under `/api/transparency/`:
+# Or use dev:full to start both:
+cd frontend && npm run dev:full
+```
 
-- `/api/transparency/available-years` - Get available years of data
-- `/api/transparency/year-data/:year` - Get all data for a specific year
-- `/api/transparency/documents` - Get documents with filtering
-- And many more...
+## Features
 
-## Health Check
+- CORS bypass for external APIs
+- Response caching (5-30 minutes)
+- Web scraping with Cheerio
+- PowerBI extraction with Puppeteer
+- PDF processing
+- Data validation
+- Rate limiting (100 req/15min)
 
-- `/api/health` - Basic health check endpoint
+See `proxy-server.js` for full implementation.

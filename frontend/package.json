@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --mode development",
+    "dev:full": "concurrently \"npm run dev\" \"npm run proxy\"",
+    "proxy": "cd ../backend && npm run proxy",
     "prebuild": "node ../scripts/generate-data-index.js && node ../scripts/transform-processed-data.js",
     "build": "npm run prebuild && vite build --mode production && npm run postbuild",
     "postbuild": "node ../scripts/frontend/copy-data-files.js",

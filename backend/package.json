@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
+    "proxy": "node proxy-server.js",
+    "proxy:dev": "nodemon proxy-server.js",
     "populate-db": "node src/populate-db.js",
     "extract-financial": "node src/scripts/extract-financial-data.js",
     "test-api": "node src/test-api.js",
@@ -35,6 +37,8 @@
     "express-rate-limit": "^8.0.1",
     "helmet": "^7.2.0",
     "markdown-pdf": "^11.0.0",
+    "morgan": "^1.10.0",
+    "node-cache": "^5.1.2",
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^1.1.1",
     "pg": "^8.16.3",

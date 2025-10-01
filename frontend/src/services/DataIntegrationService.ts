@@ -135,12 +135,28 @@ class DataIntegrationService {
    */
   private async loadExternalData(year: number): Promise<DataSource> {
     try {
-      // Skip external APIs if proxy server is not available (development mode)
+      // Check if we're in production or if proxy server is available
+      const isProduction = window.location.hostname === 'cda-transparencia.org' ||
+                          window.location.hostname.includes('pages.dev') ||
+                          window.location.hostname.includes('github.io');
+
       const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
+      // In development, check if proxy server is available
       if (isDevelopment) {
-        console.log(`⏭️ Skipping external APIs in development mode (no proxy server)`);
-        throw new Error('External APIs disabled in development mode');
+        try {
+          const proxyCheck = await fetch('http://localhost:3001/health', {
+            method: 'GET',
+            signal: AbortSignal.timeout(2000) // 2 second timeout
+          });
+          if (!proxyCheck.ok) {
+            throw new Error('Proxy server not responding');
+          }
+          console.log(`✅ Proxy server detected - enabling external APIs`);
+        } catch (error) {
+          console.log(`⏭️ Skipping external APIs in development mode (no proxy server)`);
+          throw new Error('External APIs disabled in development mode - start proxy with: npm run proxy');
+        }
       }
 
       console.log(`🌐 Loading external API data for year ${year}...`);
