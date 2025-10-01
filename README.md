@@ -6,6 +6,7 @@ This is the transparency portal for Carmen de Areco, providing citizens with acc
 
 - **Portal**: [https://cda-transparencia.org](https://cda-transparencia.org)
 - **GitHub Pages**: [https://flongstaff.github.io/cda-transparencia](https://flongstaff.github.io/cda-transparencia)
+- **API Endpoint**: [https://cda-transparencia.flongstaff.workers.dev](https://cda-transparencia.flongstaff.workers.dev)
 
 ## Features
 
@@ -60,12 +61,13 @@ Detailed documentation is available in the `/docs` folder:
 
 ## Deployment
 
-The portal is deployed to two platforms for redundancy and performance:
+The portal is deployed to three platforms for redundancy and performance:
 
 1. **GitHub Pages** - Primary deployment with custom domain
 2. **Cloudflare Pages** - Secondary deployment for improved global performance
+3. **Cloudflare Workers** - API endpoint for external data integration
 
-Both deployments are automated through GitHub Actions and updated weekly.
+All deployments are automated through GitHub Actions and updated weekly.
 
 ## Data Sources
 
@@ -76,6 +78,57 @@ The portal integrates data from multiple sources:
 - **External Sources**: Government open data platforms
 
 See [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md) for complete list and implementation details.
+
+## Enhanced Data Architecture
+
+The transparency portal implements a robust, multi-source data architecture that integrates:
+
+1. **External APIs** (Primary) - Government transparency portals and national databases
+2. **Local Files** (Secondary) - CSV/JSON files in repository via GitHub raw URLs
+3. **PDF Data** (Processed) - OCR-extracted data from official documents
+4. **Generated Data** (Fallback) - Synthetic data when other sources unavailable
+
+### Enhanced Data Organization
+
+All data files are now organized in a comprehensive directory structure:
+
+```
+/public/data/csv/
+├── budget/                 # Budget execution and planning data
+├── contracts/              # Contracts and procurement data
+├── salaries/               # Personnel and salary data
+├── treasury/               # Treasury and cash flow data
+├── debt/                   # Debt and obligation data
+├── documents/              # Document and report inventories
+├── infrastructure/          # Infrastructure projects data
+├── education/              # Education statistics data
+├── health/                 # Health statistics data
+├── caif/                   # CAIF (Centro de Atención e Integración Familiar) data
+├── reserves/               # Financial reserves data
+├── expenses/               # Expense analysis data
+├── financial/              # General financial data
+├── revenue/                # Revenue analysis data
+├── trends/                 # Trend analysis data
+└── other/                  # Miscellaneous data files
+```
+
+Each category contains subdirectories for `execution`, `historical`, and `reports` data.
+
+### Multi-Source Data Integration
+
+Each page receives complementary data from multiple sources:
+- **Budget Page**: Budget execution + Contracts + Salaries + Treasury
+- **Contracts Page**: Contract details + Budget impact + Vendor analysis
+- **Salaries Page**: Salary data + Budget impact + Market comparisons
+- **Treasury Page**: Cash flow + Contract payments + Debt service
+- **Debt Page**: Debt levels + Budget impact + Treasury relationships
+- **Documents Page**: Document metadata + Content analysis + Cross-references
+
+### Deployment Compatibility
+
+✅ **GitHub Pages**: Works with GitHub raw URLs for data access
+✅ **Cloudflare Pages**: Compatible with standard static hosting
+✅ **Zero Backend Dependencies**: No separate processes or tunnels required
 
 ## Contributing
 

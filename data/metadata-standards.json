@@ -1,0 +1,320 @@
+{
+  "schema": {
+    "title": "Metadatos de Datos Abiertos - AAIP Compliant",
+    "description": "Esquema de metadatos para datos abiertos del Portal de Transparencia de Carmen de Areco, alineado con las directrices de la AAIP",
+    "version": "1.0.0",
+    "type": "object",
+    "required": [
+      "title",
+      "description",
+      "publisher",
+      "issued",
+      "modified",
+      "identifier",
+      "theme",
+      "accessLevel",
+      "bureauCode",
+      "programCode"
+    ],
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "Nombre del dataset o recurso",
+        "example": "Ejecución Presupuestaria 2024"
+      },
+      "description": {
+        "type": "string", 
+        "description": "Descripción detallada del dataset o recurso",
+        "example": "Datos mensuales de ejecución presupuestaria para el año 2024"
+      },
+      "publisher": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Nombre del editor o entidad publicadora",
+            "example": "Municipalidad de Carmen de Areco"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Email de contacto para el editor",
+            "example": "transparencia@carmendeareco.gob.ar"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Sitio web del editor",
+            "example": "https://carmendeareco.gob.ar/transparencia"
+          }
+        }
+      },
+      "issued": {
+        "type": "string",
+        "format": "date",
+        "description": "Fecha de publicación original del dataset",
+        "example": "2024-01-15"
+      },
+      "modified": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Fecha y hora de la última modificación",
+        "example": "2024-11-30T10:30:00Z"
+      },
+      "identifier": {
+        "type": "string",
+        "description": "Identificador único del dataset",
+        "example": "cda-budget-execution-2024"
+      },
+      "theme": {
+        "type": "string",
+        "description": "Categoría temática del dataset según clasificación AAIP",
+        "enum": [
+          "planning-budgeting",
+          "institutional-info", 
+          "normative-framework",
+          "economic-financial",
+          "public-procurement",
+          "public-services",
+          "human-resources",
+          "infrastructure-works",
+          "transparency-info",
+          "social-programs",
+          "citizen-participation",
+          "evaluation-control"
+        ],
+        "example": "economic-financial"
+      },
+      "accessLevel": {
+        "type": "string",
+        "description": "Nivel de acceso del dataset",
+        "enum": ["public", "restricted public", "non-public"],
+        "default": "public",
+        "example": "public"
+      },
+      "bureauCode": {
+        "type": "string",
+        "description": "Código de la dependencia dentro del municipio",
+        "example": "cda-tesoreria"
+      },
+      "programCode": {
+        "type": "string", 
+        "description": "Código del programa específico",
+        "example": "cda-budget-execution"
+      },
+      "keyword": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Palabras clave para facilitar la búsqueda",
+        "example": ["presupuesto", "ejecución", "gastos", "2024"]
+      },
+      "landingPage": {
+        "type": "string",
+        "format": "uri",
+        "description": "Página web con información sobre el dataset",
+        "example": "https://carmendeareco.gob.ar/data/budget-execution-2024"
+      },
+      "license": {
+        "type": "string",
+        "description": "Licencia de uso del dataset",
+        "default": "Creative Commons Zero v1.0 Universal",
+        "example": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "rights": {
+        "type": "string",
+        "description": "Declaración sobre derechos de autor e información sobre la documentación",
+        "example": "Los datos están disponibles bajo la licencia Creative Commons Zero, lo que significa que pueden ser utilizados, modificados y distribuidos libremente."
+      },
+      "spatial": {
+        "type": "string",
+        "description": "Cobertura geográfica del dataset",
+        "example": "Carmen de Areco, Buenos Aires, Argentina"
+      },
+      "temporal": {
+        "type": "string",
+        "description": "Cobertura temporal del dataset",
+        "example": "2024-01-01/2024-12-31"
+      },
+      "distribution": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/distribution"
+        },
+        "description": "Recursos disponibles para el dataset (diferentes formatos)"
+      },
+      "contactPoint": {
+        "$ref": "#/definitions/vcard",
+        "description": "Persona de contacto para este dataset"
+      },
+      "dataQuality": {
+        "type": "boolean",
+        "description": "Indica si los datos han sido revisados para la calidad",
+        "default": true,
+        "example": true
+      },
+      "describedBy": {
+        "type": "string",
+        "format": "uri",
+        "description": "URL del esquema o estructura del dataset",
+        "example": "https://carmendeareco.gob.ar/schemas/budget-schema.json"
+      },
+      "describedByType": {
+        "type": "string",
+        "description": "Tipo MIME del esquema de datos",
+        "example": "application/json"
+      },
+      "accrualPeriodicity": {
+        "type": "string",
+        "description": "Frecuencia con la que se actualiza el dataset",
+        "enum": [
+          "R/P1D", 
+          "R/P7D",
+          "R/P1M", 
+          "R/P3M",
+          "R/P1Y"
+        ],
+        "example": "R/P1M"
+      },
+      "language": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(?:-[A-Z]{2})?$"
+        },
+        "description": "Idiomas del dataset",
+        "default": ["es-AR"],
+        "example": ["es-AR", "en"]
+      },
+      "primaryITInvestmentUII": {
+        "type": "string",
+        "description": "Identificador único para inversiones de TI (si aplica)",
+        "example": "cda-it-investment-001"
+      },
+      "systemOfRecords": {
+        "type": "string",
+        "description": "Nombre del sistema de registros que contiene los datos",
+        "example": "Sistema de Gestión Financiera Municipal"
+      },
+      "accessibility": {
+        "$ref": "#/definitions/accessibility",
+        "description": "Información sobre accesibilidad del dataset"
+      }
+    },
+    "definitions": {
+      "distribution": {
+        "type": "object",
+        "required": ["mediaType", "format"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Nombre descriptivo del archivo",
+            "example": "Ejecución Presupuestaria 2024 - Formato CSV"
+          },
+          "description": {
+            "type": "string",
+            "description": "Descripción del archivo específico",
+            "example": "Datos en formato CSV para uso en planillas de cálculo y análisis estadístico"
+          },
+          "downloadURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL directa para descargar el archivo",
+            "example": "https://carmendeareco.gob.ar/data/budget-execution-2024.csv"
+          },
+          "mediaType": {
+            "type": "string",
+            "description": "Tipo MIME del archivo",
+            "enum": [
+              "text/csv",
+              "application/json",
+              "application/vnd.ms-excel",
+              "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+              "application/pdf",
+              "text/plain"
+            ],
+            "example": "text/csv"
+          },
+          "format": {
+            "type": "string",
+            "description": "Formato del archivo",
+            "enum": ["CSV", "JSON", "XLS", "XLSX", "PDF", "TXT"],
+            "example": "CSV"
+          },
+          "byteSize": {
+            "type": "integer",
+            "description": "Tamaño del archivo en bytes",
+            "example": 1234567
+          },
+          "accessibilityCompliant": {
+            "type": "boolean",
+            "description": "Indica si el archivo cumple con estándares de accesibilidad",
+            "default": true,
+            "example": true
+          }
+        }
+      },
+      "vcard": {
+        "type": "object",
+        "properties": {
+          "fn": {
+            "type": "string",
+            "description": "Nombre completo de la persona de contacto",
+            "example": "María González"
+          },
+          "hasEmail": {
+            "type": "string",
+            "format": "uri",
+            "description": "Email de contacto en formato URI",
+            "example": "mailto:maria.gonzalez@carmendeareco.gob.ar"
+          },
+          "telephone": {
+            "type": "string",
+            "description": "Número de teléfono de contacto",
+            "example": "+54 2323 45-6789"
+          }
+        }
+      },
+      "accessibility": {
+        "type": "object",
+        "properties": {
+          "compliant": {
+            "type": "boolean",
+            "description": "Indica si el dataset es accesible",
+            "default": true,
+            "example": true
+          },
+          "standards": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "WCAG 2.0 A",
+                "WCAG 2.0 AA", 
+                "WCAG 2.1 A",
+                "WCAG 2.1 AA",
+                "Section 508"
+              ]
+            },
+            "description": "Estándares de accesibilidad cumplidos",
+            "example": ["WCAG 2.1 AA"]
+          },
+          "evaluationMethod": {
+            "type": "string",
+            "description": "Método de evaluación de accesibilidad",
+            "example": "Automated evaluation with manual verification"
+          }
+        }
+      }
+    }
+  },
+  "compliance": {
+    "follows": ["DCAT-AP", "ISO 19115", "Dublin Core"],
+    "aaipAlignment": {
+      "transparencyIndex": true,
+      "publicationStandards": true,
+      "accessibilityGuidelines": true
+    }
+  }
+}

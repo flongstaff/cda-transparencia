@@ -1,4 +1,1 @@
-pandas
-plotly
-pdfplumber
-jupyter
+requests>=2.25.1

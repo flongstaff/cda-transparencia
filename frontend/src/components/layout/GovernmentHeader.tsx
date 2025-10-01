@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Shield, Calendar, Phone, Mail, Home, BarChart3, FileText, Users, Building, ShieldCheck, Search, Command, Filter } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Combobox, Transition } from '@headlessui/react';
 import DarkModeToggle from '../ui/DarkModeToggle';
@@ -31,6 +31,7 @@ const GovernmentHeader: React.FC = () => {
     { id: 'salaries', label: 'Salarios', icon: Users, path: '/salaries' },
     { id: 'contracts', label: 'Contratos', icon: Building, path: '/contracts' },
     { id: 'audits', label: 'Auditorías', icon: ShieldCheck, path: '/audits' },
+    { id: 'contact', label: 'Contacto', icon: Mail, path: '/contact' },
   ];
 
   const handleSearch = (e: React.FormEvent) => {
@@ -67,16 +68,14 @@ const GovernmentHeader: React.FC = () => {
               {navItems.slice(0, 4).map((item) => {
                 const IconComponent = item.icon;
                 return (
-                  <motion.a
+                  <Link
                     key={item.id}
-                    href={item.path}
+                    to={item.path}
                     className="flex items-center px-3 py-2 text-sm font-medium text-gray-700 dark:text-dark-text-secondary hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-dark-surface rounded-lg transition-colors"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                   >
                     <IconComponent className="h-4 w-4 mr-2" />
                     {item.label}
-                  </motion.a>
+                  </Link>
                 );
               })}
             </div>
@@ -165,10 +164,10 @@ const GovernmentHeader: React.FC = () => {
           {/* Right: Theme Toggle and Contact */}
           <div className="flex items-center space-x-3">
             <DarkModeToggle />
-            <button className="hidden md:inline-flex items-center px-3 py-2 text-sm font-medium text-gray-700 dark:text-dark-text-secondary hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <Link to="/contact" className="hidden md:inline-flex items-center px-3 py-2 text-sm font-medium text-gray-700 dark:text-dark-text-secondary hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               <Phone className="h-4 w-4 mr-1" />
               Contacto
-            </button>
+            </Link>
           </div>
         </div>
       </div>

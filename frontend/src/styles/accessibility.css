@@ -1,0 +1,175 @@
+/* 
+ * Accessibility Styles for Carmen de Areco Transparency Portal
+ * Implements WCAG 2.1 AA compliance features
+ */
+
+/* High contrast mode styles */
+.high-contrast {
+  filter: contrast(1.5) brightness(1.1);
+}
+
+.high-contrast * {
+  border-color: #000 !important;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.high-contrast a,
+.high-contrast button,
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  border: 2px solid #000 !important;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.high-contrast a:hover,
+.high-contrast button:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* Focus indicators for keyboard navigation */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+a:focus,
+[tabindex]:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Skip link for keyboard users */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Ensure sufficient color contrast */
+.text-contrast-high {
+  color: #000;
+}
+
+.bg-contrast-high {
+  background-color: #fff;
+}
+
+/* Responsive adjustments for text sizing */
+html {
+  font-size: 100%; /* Base size, will be adjusted by accessibility toolbar */
+}
+
+/* Ensure content remains readable when text is enlarged */
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Maintain layout integrity when zoomed */
+.container,
+.max-w-7xl {
+  max-width: 100% !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container,
+  .max-w-7xl {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container,
+  .max-w-7xl {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Responsive grid adjustments */
+.grid {
+  grid-gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-gap: 1.5rem;
+  }
+}
+
+/* Adjustments for high zoom levels */
+@media screen and (min-width: 1200px) {
+  .container,
+  .max-w-7xl {
+    max-width: 90% !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-readable {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: #000;
+    background: #fff;
+  }
+}
+
+/* Animations with reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Forced colors mode support */
+@media (forced-colors: active) {
+  .forced-colors-compliant {
+    border: 1px solid;
+    background-color: Canvas;
+    color: CanvasText;
+  }
+  
+  .forced-colors-compliant a {
+    color: LinkText;
+  }
+  
+  .forced-colors-compliant button,
+  .forced-colors-compliant input[type="button"],
+  .forced-colors-compliant input[type="submit"] {
+    background-color: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonBorder;
+  }
+}

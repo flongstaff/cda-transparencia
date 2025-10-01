@@ -1,0 +1,173 @@
+{
+  "argentine_scrapers": [
+    {
+      "name": "BORA App",
+      "url": "https://github.com/juancarlospaco/borapp",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.223495
+    },
+    {
+      "name": "Official Gazette Scraper",
+      "url": "https://github.com/tommanzur/scraper_boletin_oficial",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.756134
+    },
+    {
+      "name": "Justice Ministry Scraper",
+      "url": "https://github.com/jorgechavez6816/minjus_reg_sociedades_argentina",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.747715
+    },
+    {
+      "name": "BCRA Analysis",
+      "url": "https://github.com/ezebinker/DatosAPI-BCRA",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.733182
+    },
+    {
+      "name": "SIBOM Bot",
+      "url": "https://github.com/nmontesoro/SIBOM",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.83647
+    }
+  ],
+  "monitoring_tools": [
+    {
+      "name": "Change Detection",
+      "url": "https://github.com/dgtlmoon/changedetection.io",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.760446
+    },
+    {
+      "name": "Wayback Machine API",
+      "url": "https://archive.org/help/wayback_api.php",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.847237
+    },
+    {
+      "name": "CrawlMonitor",
+      "url": "https://github.com/crawlmonitor/crawlmonitor",
+      "status_code": 404,
+      "success": false,
+      "response_time": 0.420391
+    },
+    {
+      "name": "WebScraper.io",
+      "url": "https://webscraper.io/",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.850337
+    },
+    {
+      "name": "IFTTT Monitoring",
+      "url": "https://ifttt.com/",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.165799
+    }
+  ],
+  "data_processing_tools": [
+    {
+      "name": "PDFPlumber",
+      "url": "https://github.com/jsvine/pdfplumber",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.633389
+    },
+    {
+      "name": "Tabula-py",
+      "url": "https://github.com/chezou/tabula-py",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.683443
+    },
+    {
+      "name": "Budget Standardizer",
+      "url": "https://github.com/openspending/gobify",
+      "status_code": 404,
+      "success": false,
+      "response_time": 0.354789
+    }
+  ],
+  "verification_tools": [
+    {
+      "name": "Open Refine",
+      "url": "https://openrefine.org/",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.362218
+    },
+    {
+      "name": "CSVLint",
+      "url": "https://csvlint.io/",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.626069
+    },
+    {
+      "name": "Data Quality Tool",
+      "url": "https://github.com/frictionlessdata/goodtables-py",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.86036
+    },
+    {
+      "name": "Talend Open Studio",
+      "url": "https://www.talend.com/products/talend-open-studio/",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.686086
+    }
+  ],
+  "development_tools": [
+    {
+      "name": "AfipSDK PHP",
+      "url": "https://github.com/AfipSDK/afip.php",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.73275
+    },
+    {
+      "name": "AfipSDK JS",
+      "url": "https://github.com/AfipSDK/afip.js",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.716637
+    },
+    {
+      "name": "PyAfipWs",
+      "url": "https://github.com/reingart/pyafipws",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.93016
+    },
+    {
+      "name": "Argentina.js",
+      "url": "https://github.com/seppo0010/argentina.js",
+      "status_code": 404,
+      "success": false,
+      "response_time": 0.414427
+    },
+    {
+      "name": "Civics API",
+      "url": "https://github.com/datosgobar/civics-apis-argentina",
+      "status_code": 404,
+      "success": false,
+      "response_time": 0.417253
+    },
+    {
+      "name": "Poncho Framework",
+      "url": "https://github.com/argob/poncho",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.713373
+    }
+  ]
+}

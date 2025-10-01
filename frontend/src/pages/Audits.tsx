@@ -335,23 +335,54 @@ const Audits: React.FC = () => {
           </div>
         )}
 
-        {/* Enhanced Audit Charts Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Audit Report Chart */}
-          <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border border-gray-200 dark:border-dark-border">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary mb-4 flex items-center">
-              <Shield className="h-5 w-5 mr-2 text-blue-600" />
-              Reporte de Auditoría
-            </h3>
-            <div className="h-64">
+        {/* Red Flag Analysis Section - Prominently displayed on Audits page */}
+        <div className="mb-8">
+          <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-xl border border-red-200 dark:border-red-700 p-6">
+            <div className="flex items-center mb-4">
+              <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400 mr-3" />
+              <div>
+                <h2 className="text-2xl font-bold text-red-800 dark:text-red-200">🚩 Análisis de Banderas Rojas</h2>
+                <p className="text-red-700 dark:text-red-300">Detección automática de anomalías en datos municipales</p>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-dark-surface rounded-lg p-4">
               <ErrorBoundary>
                 <ChartAuditReport
+                  analysis="overview"
                   year={selectedYear}
-                  height={250}
+                  height={400}
+                  interactive={true}
+                  showTitle={false}
+                  showDescription={false}
                 />
               </ErrorBoundary>
             </div>
+            
+            <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <AlertTriangle className="h-5 w-5 text-blue-400" />
+                </div>
+                <div className="ml-3">
+                  <h3 className="text-sm font-medium text-blue-800 dark:text-blue-200">
+                    Información Importante
+                  </h3>
+                  <div className="mt-2 text-sm text-blue-700 dark:text-blue-300">
+                    <p>
+                      ⚖️ Disclaimer: Estos análisis usan datos oficiales del Municipio de Carmen de Areco. 
+                      Las banderas rojas detectadas requieren investigación adicional. 
+                      Invitamos a la gestión municipal a verificar estas discrepancias.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* Other Enhanced Audit Charts Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
 
           {/* Time Series Anomaly Detection */}
           <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 border border-gray-200 dark:border-dark-border">

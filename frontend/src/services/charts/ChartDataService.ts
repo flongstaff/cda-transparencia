@@ -31,44 +31,44 @@ export type ChartType = typeof CHART_TYPES[number];
 
 // Mapping chart types to human-readable names
 export const CHART_TYPE_NAMES: Record<ChartType, string> = {
-  'Budget_Execution': 'Budget Execution',
-  'Debt_Report': 'Debt Report',
-  'Economic_Report': 'Economic Report',
-  'Education_Data': 'Education Data',
-  'Expenditure_Report': 'Expenditure Report',
-  'Financial_Reserves': 'Financial Reserves',
-  'Fiscal_Balance_Report': 'Fiscal Balance Report',
-  'Health_Statistics': 'Health Statistics',
-  'Infrastructure_Projects': 'Infrastructure Projects',
-  'Investment_Report': 'Investment Report',
-  'Personnel_Expenses': 'Personnel Expenses',
-  'Revenue_Report': 'Revenue Report',
-  'Revenue_Sources': 'Revenue Sources',
-  'Quarterly_Execution': 'Quarterly Execution Trends',
-  'Programmatic_Performance': 'Programmatic Performance',
-  'Gender_Budgeting': 'Gender Budgeting Analysis',
-  'Waterfall_Execution': 'Cumulative Execution Waterfall'
+  'Budget_Execution': 'Ejecución Presupuestaria',
+  'Debt_Report': 'Informe de Deuda',
+  'Economic_Report': 'Informe Económico',
+  'Education_Data': 'Datos Educativos',
+  'Expenditure_Report': 'Informe de Gastos',
+  'Financial_Reserves': 'Reservas Financieras',
+  'Fiscal_Balance_Report': 'Balance Fiscal',
+  'Health_Statistics': 'Estadísticas de Salud',
+  'Infrastructure_Projects': 'Proyectos de Infraestructura',
+  'Investment_Report': 'Informe de Inversiones',
+  'Personnel_Expenses': 'Gastos en Personal',
+  'Revenue_Report': 'Informe de Ingresos',
+  'Revenue_Sources': 'Fuentes de Ingresos',
+  'Quarterly_Execution': 'Ejecución Trimestral',
+  'Programmatic_Performance': 'Rendimiento Programático',
+  'Gender_Budgeting': 'Presupuesto de Género',
+  'Waterfall_Execution': 'Ejecución en Cascada'
 };
 
 // Mapping chart types to descriptions
 export const CHART_TYPE_DESCRIPTIONS: Record<ChartType, string> = {
-  'Budget_Execution': 'Shows how the municipal budget was executed over time, comparing planned vs actual spending',
-  'Debt_Report': "Details the municipality's debt obligations, interest rates, and repayment schedules",
-  'Economic_Report': 'Provides overall economic indicators for the municipality',
-  'Education_Data': 'Tracks educational statistics, school enrollment, and education spending',
-  'Expenditure_Report': 'Detailed breakdown of municipal expenditures by category',
-  'Financial_Reserves': 'Information about financial reserves and contingency funds',
-  'Fiscal_Balance_Report': 'Shows the fiscal balance (revenue minus expenses) over time',
-  'Health_Statistics': 'Healthcare statistics, health center data, and medical spending',
-  'Infrastructure_Projects': 'Details major infrastructure projects and their progress',
-  'Investment_Report': 'Investment activities and capital expenditure projects',
-  'Personnel_Expenses': 'Personnel costs including salaries, benefits, and staffing levels',
-  'Revenue_Report': 'Detailed breakdown of municipal revenue sources',
-  'Revenue_Sources': 'Analysis of different revenue streams and their contributions',
-  'Quarterly_Execution': 'Quarterly trends in budget execution with combo chart visualization',
-  'Programmatic_Performance': 'Performance metrics for key municipal programs and initiatives',
-  'Gender_Budgeting': 'Analysis of gender perspective in municipal budgeting and staffing',
-  'Waterfall_Execution': 'Cumulative visualization of budget execution across periods'
+  'Budget_Execution': 'Muestra cómo se ejecutó el presupuesto municipal a lo largo del tiempo, comparando lo planificado vs lo ejecutado',
+  'Debt_Report': "Detalla las obligaciones de deuda del municipio, tasas de interés y cronogramas de pago",
+  'Economic_Report': 'Proporciona indicadores económicos generales para el municipio',
+  'Education_Data': 'Rastrea estadísticas educativas, matrícula escolar y gastos en educación',
+  'Expenditure_Report': 'Desglose detallado de los gastos municipales por categoría',
+  'Financial_Reserves': 'Información sobre reservas financieras y fondos de contingencia',
+  'Fiscal_Balance_Report': 'Muestra el balance fiscal (ingresos menos gastos) a lo largo del tiempo',
+  'Health_Statistics': 'Estadísticas de salud, datos de centros de salud y gastos médicos',
+  'Infrastructure_Projects': 'Detalles de proyectos de infraestructura importantes y su avance',
+  'Investment_Report': 'Actividades de inversión y proyectos de gasto de capital',
+  'Personnel_Expenses': 'Costos de personal incluyendo salarios, beneficios y niveles de contratación',
+  'Revenue_Report': 'Desglose detallado de las fuentes de ingresos municipales',
+  'Revenue_Sources': 'Análisis de diferentes corrientes de ingresos y sus contribuciones',
+  'Quarterly_Execution': 'Tendencias trimestrales en la ejecución del presupuesto con visualización combinada',
+  'Programmatic_Performance': 'Métricas de rendimiento para programas municipales clave e iniciativas',
+  'Gender_Budgeting': 'Análisis de perspectiva de género en el presupuestamiento y personal municipal',
+  'Waterfall_Execution': 'Visualización acumulativa de la ejecución del presupuesto a través de períodos'
 };
 
 class ChartDataService {
@@ -134,7 +134,7 @@ class ChartDataService {
         transform: (value) => {
           // Handle monetary values with dollar signs and commas
           if (typeof value === 'string') {
-            // Check if it's a monetary value like "$330,000,000"
+            // Check if it's a monetary value like \$330,000,000
             if (value.startsWith('$')) {
               return parseFloat(value.replace(/[$,]/g, ''));
             }

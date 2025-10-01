@@ -649,9 +649,9 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
               <Tooltip 
                 formatter={(value: number | string, name: string) => {
                   if (name === 'planned' || name === 'executed') {
-                    return [formatNumberARS(Number(value)), name === 'planned' ? 'Planificado' : 'Ejecutado'];
+                    return [formatCurrencyARS(Number(value)), name === 'planned' ? 'Planificado' : 'Ejecutado'];
                   } else if (name === 'gap') {
-                    return [formatNumberARS(Number(value)), 'Brecha'];
+                    return [formatCurrencyARS(Number(value)), 'Brecha'];
                   }
                   return [value, name];
                 }}
@@ -779,7 +779,7 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
                 className="dark:tick-fill-gray-300"
               />
               <Tooltip 
-                formatter={(value: number) => [formatNumberARS(Number(value)), 'Banderas Rojas']}
+                formatter={(value: number) => [formatCurrencyARS(Number(value)), 'Banderas Rojas']}
                 contentStyle={{ 
                   backgroundColor: '#fff', 
                   borderColor: '#e5e7eb',

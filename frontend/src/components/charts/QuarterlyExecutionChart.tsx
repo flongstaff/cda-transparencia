@@ -65,7 +65,7 @@ const QuarterlyExecutionChart: React.FC<QuarterlyExecutionChartProps> = memo(({
   
   // Handle data point clicks
   const handleDataPointClick = (dataPoint: Record<string, unknown>) => {
-    console.log('Quarterly Execution data point clicked:', dataPoint);
+    console.log('Punto de datos de ejecución trimestral seleccionado:', dataPoint);
   };
   
   // Show loading spinner
@@ -74,7 +74,7 @@ const QuarterlyExecutionChart: React.FC<QuarterlyExecutionChartProps> = memo(({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Quarterly Execution data...
+          Cargando datos de ejecución trimestral...
         </Typography>
       </Box>
     );
@@ -84,7 +84,7 @@ const QuarterlyExecutionChart: React.FC<QuarterlyExecutionChartProps> = memo(({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Quarterly Execution data: {error}
+        Error cargando datos de ejecución trimestral: {error}
       </Alert>
     );
   }
@@ -93,17 +93,33 @@ const QuarterlyExecutionChart: React.FC<QuarterlyExecutionChartProps> = memo(({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Quarterly Execution data available
+        No hay datos de ejecución trimestral disponibles
       </Alert>
     );
   }
   
   // Determine which columns to use as Y-axis keys for combo chart
-  // For budget vs execution, we need columns like 'budgeted', 'executed', 'execution_rate'
+  // For quarterly execution, we need columns like 'budgeted', 'executed', 'revenue_percentage', 'expenditure_percentage'
   const yAxisKeys: string[] = [];
   
   if (chartData[0]) {
-    // Add budgeted amount if available
+    // Add revenue percentage if available
+    if (chartData[0].revenue_percentage || chartData[0].ingresos_porcentaje) {
+      yAxisKeys.push(
+        chartData[0].revenue_percentage ? 'revenue_percentage' :
+        'ingresos_porcentaje'
+      );
+    }
+    
+    // Add expenditure percentage if available
+    if (chartData[0].expenditure_percentage || chartData[0].gastos_porcentaje) {
+      yAxisKeys.push(
+        chartData[0].expenditure_percentage ? 'expenditure_percentage' :
+        'gastos_porcentaje'
+      );
+    }
+    
+    // Add budgeted amount if available (fallback)
     if (chartData[0].budgeted || chartData[0].budgeted_amount || chartData[0].budget) {
       yAxisKeys.push(
         chartData[0].budgeted ? 'budgeted' :
@@ -112,7 +128,7 @@ const QuarterlyExecutionChart: React.FC<QuarterlyExecutionChartProps> = memo(({
       );
     }
     
-    // Add executed amount if available
+    // Add executed amount if available (fallback)
     if (chartData[0].executed || chartData[0].executed_amount || chartData[0].executed) {
       yAxisKeys.push(
         chartData[0].executed ? 'executed' :
@@ -120,19 +136,12 @@ const QuarterlyExecutionChart: React.FC<QuarterlyExecutionChartProps> = memo(({
         'executed'
       );
     }
-    
-    // Add execution rate if available
-    if (chartData[0]['execution_rate'] || chartData[0]['execution_percentage']) {
-      yAxisKeys.push(
-        chartData[0]['execution_rate'] ? 'execution_rate' : 
-        'execution_percentage'
-      );
-    }
   }
   
   // Default to 'quarter' or 'period' for x-axis if available, else use 'year'
   const xAxisKey = chartData[0]?.quarter ? 'quarter' : 
                    chartData[0]?.period ? 'period' : 
+                   chartData[0]?.trimestre ? 'trimestre' :
                    'year';
   
   return (
@@ -141,14 +150,14 @@ const QuarterlyExecutionChart: React.FC<QuarterlyExecutionChartProps> = memo(({
       chartType={chartType}
       xAxisKey={xAxisKey}
       yAxisKeys={yAxisKeys}
-      title={showTitle ? "Quarterly Budget Execution Trends" : undefined}
-      description={showDescription ? "Visualizing quarterly budgeted vs executed amounts with execution percentage" : undefined}
+      title={showTitle ? "Tendencias de Ejecución Presupuestaria Trimestral" : undefined}
+      description={showDescription ? "Visualización de montos presupuestados vs ejecutados por trimestre con porcentaje de ejecución" : undefined}
       height={height}
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel={xAxisKey === 'quarter' ? 'Quarter' : xAxisKey === 'period' ? 'Period' : 'Year'}
-      yAxisLabel="Amount (ARS) / Percentage"
+      xAxisLabel={xAxisKey === 'quarter' || xAxisKey === 'trimestre' ? 'Trimestre' : xAxisKey === 'period' ? 'Período' : 'Año'}
+      yAxisLabel="Porcentaje (%)"
     />
   );
 });

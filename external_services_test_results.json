@@ -1,0 +1,333 @@
+{
+  "municipal": [
+    {
+      "name": "Carmen de Areco Official Site",
+      "url": "https://carmendeareco.gob.ar/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.11642,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "Carmen de Areco Transparency Portal",
+      "url": "https://carmendeareco.gob.ar/transparencia",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.847936,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "Carmen de Areco Official Bulletin",
+      "url": "https://carmendeareco.gob.ar/gobierno/boletin-oficial/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.599536,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "Municipal Council Blog",
+      "url": "http://hcdcarmendeareco.blogspot.com/",
+      "method": "GET",
+      "status_code": 404,
+      "success": false,
+      "response_time": 1.145858,
+      "content_type": "text/html; charset=UTF-8"
+    }
+  ],
+  "national": [
+    {
+      "name": "National Open Data Portal",
+      "url": "https://datos.gob.ar/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.634813,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "Carmen de Areco datasets",
+      "url": "https://datos.gob.ar/dataset?q=carmen+de+areco",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.138609,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "National Budget API",
+      "url": "https://datos.gob.ar/dataset/sspm-presupuesto-abierto",
+      "method": "GET",
+      "status_code": 404,
+      "success": false,
+      "response_time": 0.807573,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "National Contracts API",
+      "url": "https://datos.gob.ar/dataset/modernizacion-sistema-contrataciones-electronicas-argentina",
+      "method": "GET",
+      "status_code": 404,
+      "success": false,
+      "response_time": 1.093397,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "Ministry of Justice Open Data",
+      "url": "https://datos.jus.gob.ar/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 3.708308,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "Anti-Corruption Office",
+      "url": "https://www.argentina.gob.ar/anticorrupcion",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 2.080151,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "Access to Information Law",
+      "url": "https://www.argentina.gob.ar/aaip",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 2.309747,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "InfoLEG Legal Database",
+      "url": "http://www.infoleg.gob.ar/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.994495,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "Investment Map",
+      "url": "https://www.argentina.gob.ar/jefatura/innovacion-publica/mapa-inversiones",
+      "method": "GET",
+      "status_code": 404,
+      "success": false,
+      "response_time": 2.193724,
+      "content_type": "text/html"
+    }
+  ],
+  "provincial": [
+    {
+      "name": "Provincial Open Data",
+      "url": "https://www.gba.gob.ar/datos_abiertos",
+      "method": "GET",
+      "status_code": 404,
+      "success": false,
+      "response_time": 1.4503,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "Provincial Fiscal Transparency",
+      "url": "https://www.gba.gob.ar/transparencia_fiscal/",
+      "method": "GET",
+      "status_code": 404,
+      "success": false,
+      "response_time": 0.353203,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "Provincial Municipalities Portal",
+      "url": "https://www.gba.gob.ar/municipios",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.35093,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "Provincial Procurement Portal",
+      "url": "https://pbac.cgp.gba.gov.ar/Default.aspx",
+      "method": "GET",
+      "success": false,
+      "error": "HTTPSConnectionPool(host='pbac.cgp.gba.gov.ar', port=443): Max retries exceeded with url: /Default.aspx (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x10a6af9d0>, 'Connection to pbac.cgp.gba.gov.ar timed out. (connect timeout=10)'))"
+    },
+    {
+      "name": "Provincial Contracts Search",
+      "url": "https://sistemas.gba.gob.ar/consulta/contrataciones/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.396239,
+      "content_type": "text/html"
+    }
+  ],
+  "api": [
+    {
+      "name": "Geographic API - Provinces",
+      "url": "https://apis.datos.gob.ar/georef/api/provincias",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.641668,
+      "missing_keys": null
+    },
+    {
+      "name": "National Open Data Search API",
+      "url": "https://datos.gob.ar/api/3/action/package_search",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.423391,
+      "data_sample": "{'help': 'https://datos.gob.ar/api/3/action/help_show?name=package_search', 'success': True, 'result': {'count': 0, 'sort': 'score desc, metadata_modified desc', 'facets': {}, 'results': [], 'search_f"
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Poder Ciudadano",
+      "url": "https://poderciudadano.org/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.179132,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "ACIJ",
+      "url": "https://acij.org.ar/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.031961,
+      "content_type": "text/html"
+    },
+    {
+      "name": "Directorio Legislativo",
+      "url": "https://directoriolegislativo.org/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.271361,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "Chequeado Projects",
+      "url": "https://chequeado.com/proyectos/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.047972,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "La Nación Data",
+      "url": "https://www.lanacion.com.ar/data/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.182875,
+      "content_type": "text/html; charset=utf-8"
+    }
+  ],
+  "similar_municipalities": [
+    {
+      "name": "Chacabuco",
+      "url": "https://chacabuco.gob.ar/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.970121,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "Chivilcoy",
+      "url": "https://chivilcoy.gob.ar/",
+      "method": "GET",
+      "success": false,
+      "error": "HTTPSConnectionPool(host='chivilcoy.gob.ar', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+    },
+    {
+      "name": "San Antonio de Areco",
+      "url": "https://www.sanantoniodeareco.gob.ar/",
+      "method": "GET",
+      "success": false,
+      "error": "HTTPSConnectionPool(host='www.sanantoniodeareco.gob.ar', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10a6afed0>: Failed to resolve 'www.sanantoniodeareco.gob.ar' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "name": "San Andrés de Giles",
+      "url": "https://www.sag.gob.ar/",
+      "method": "GET",
+      "success": false,
+      "error": "HTTPSConnectionPool(host='www.sag.gob.ar', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10a7b0050>: Failed to resolve 'www.sag.gob.ar' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "name": "Pergamino",
+      "url": "https://www.pergamino.gob.ar/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 2.573378,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "Capitán Sarmiento",
+      "url": "https://capitansarmiento.gob.ar/",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.209964,
+      "content_type": "text/html; charset=UTF-8"
+    }
+  ],
+  "best_practice_municipalities": [
+    {
+      "name": "Bahía Blanca Transparency",
+      "url": "https://transparencia.bahia.gob.ar/",
+      "method": "GET",
+      "success": false,
+      "error": "HTTPSConnectionPool(host='transparencia.bahia.gob.ar', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10a6af250>: Failed to resolve 'transparencia.bahia.gob.ar' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "name": "Mar del Plata Data",
+      "url": "https://www.mardelplata.gob.ar/datos-abiertos",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 1.825273,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "Pilar Open Data",
+      "url": "https://datosabiertos.pilar.gob.ar/",
+      "method": "GET",
+      "success": false,
+      "error": "HTTPSConnectionPool(host='datosabiertos.pilar.gob.ar', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10a6af890>: Failed to resolve 'datosabiertos.pilar.gob.ar' ([Errno 8] nodename nor servname provided, or not known)\"))"
+    },
+    {
+      "name": "San Isidro Transparency",
+      "url": "https://www.sanisidro.gob.ar/transparencia",
+      "method": "GET",
+      "success": false,
+      "error": "HTTPSConnectionPool(host='www.sanisidro.gob.ar', port=443): Max retries exceeded with url: /transparencia (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+    },
+    {
+      "name": "Rosario Open Government",
+      "url": "https://www.rosario.gob.ar/web/gobierno/gobierno-abierto",
+      "method": "GET",
+      "status_code": 200,
+      "success": true,
+      "response_time": 0.381907,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "Rafaela Open Government",
+      "url": "https://rafaela-gob-ar.github.io/",
+      "method": "GET",
+      "status_code": 404,
+      "success": false,
+      "response_time": 0.370088,
+      "content_type": "text/html; charset=utf-8"
+    }
+  ]
+}

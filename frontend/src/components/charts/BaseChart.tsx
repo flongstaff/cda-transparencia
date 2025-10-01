@@ -24,6 +24,7 @@ import {
   ResponsiveContainer,
   Scatter
 } from 'recharts';
+import { formatCurrencyARS, formatPercentage, formatNumberARS, formatQuarter } from '../../utils/spanishFormatter';
 
 // Chart types supported
 export type SupportedChartType = 
@@ -95,6 +96,32 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
       className
     };
     
+    // Custom tooltip to better format values in Spanish
+    const CustomTooltip = ({ active, payload, label }: any) => {
+      if (active && payload && payload.length) {
+        return (
+          <div className="bg-white dark:bg-dark-surface p-2 border border-gray-200 dark:border-dark-border rounded shadow-sm">
+            <p className="text-sm font-semibold text-gray-900 dark:text-dark-text-primary">{label}</p>
+            {payload.map((entry: any, index: number) => (
+              <p key={index} className="text-sm" style={{ color: entry.color }}>
+                {entry.name}: {
+                  // Format based on the type of data
+                  isNaN(entry.value) || entry.value === null ? entry.value :
+                  // Check if this looks like currency (large numbers)
+                  entry.value > 1000 ? formatCurrencyARS(entry.value) :
+                  // Check if this looks like a percentage (1-100 range)
+                  entry.value > 0 && entry.value <= 100 && entry.name.toLowerCase().includes('rate') ? formatPercentage(entry.value) :
+                  // Otherwise format as number
+                  formatNumberARS(entry.value)
+                }
+              </p>
+            ))}
+          </div>
+        );
+      }
+      return null;
+    };
+    
 
     // Render chart based on type
     switch (chartType) {
@@ -105,11 +132,56 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
             <XAxis 
               dataKey={xAxisKey} 
               label={xAxisLabel ? { value: xAxisLabel, position: 'insideBottom', offset: -10 } : undefined}
+              tick={{ fill: '#333' }}
+              className="dark:tick-fill-gray-300"
+              tickFormatter={(value) => {
+                // Format quarterly data like "Q1 2021" -> "1er Trimestre 2021"
+                if (typeof value === 'string' && value.startsWith('Q') && value.includes(' ')) {
+                  const [quarter, year] = value.split(' ');
+                  const quarterNum = parseInt(quarter.replace('Q', ''));
+                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
+                  return `${quarterNames[quarterNum]} Trimestre ${year}`;
+                }
+                // Format simple quarter data like "Q1" -> "1er Trimestre"
+                else if (typeof value === 'string' && value.startsWith('Q')) {
+                  const quarterNum = parseInt(value.replace('Q', ''));
+                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
+                  return `${quarterNames[quarterNum]} Trimestre`;
+                }
+                // Format monthly data like "Jan 2021" -> "Ene 2021" (Spanish)
+                else if (typeof value === 'string' && /^[A-Za-z]{3} \d{4}$/.test(value)) {
+                  const [month, year] = value.split(' ');
+                  const monthMap: Record<string, string> = {
+                    'Jan': 'Ene',
+                    'Feb': 'Feb',
+                    'Mar': 'Mar',
+                    'Apr': 'Abr',
+                    'May': 'May',
+                    'Jun': 'Jun',
+                    'Jul': 'Jul',
+                    'Aug': 'Ago',
+                    'Sep': 'Sep',
+                    'Oct': 'Oct',
+                    'Nov': 'Nov',
+                    'Dec': 'Dic'
+                  };
+                  return `${monthMap[month] || month} ${year}`;
+                }
+                return value;
+              }}
             />
             <YAxis 
               label={yAxisLabel ? { value: yAxisLabel, angle: -90, position: 'insideLeft' } : undefined}
+              tick={{ fill: '#333' }}
+              tickFormatter={(value) => {
+                // Format large numbers as currency or percentage based on value and context
+                if (value > 1000) return `${(value / 1000000).toFixed(0)}M`;
+                else if (value > 0 && value <= 100 && yAxisLabel?.toLowerCase().includes('percentage')) return `${value}%`;
+                else return value;
+              }}
+              className="dark:tick-fill-gray-300"
             />
-            {showTooltip && <Tooltip />}
+            {showTooltip && <Tooltip content={<CustomTooltip />} />}
             {showLegend && <Legend />}
             {yAxisKeys.map((key, index) => (
               <Line
@@ -131,11 +203,56 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
             <XAxis 
               dataKey={xAxisKey} 
               label={xAxisLabel ? { value: xAxisLabel, position: 'insideBottom', offset: -10 } : undefined}
+              tick={{ fill: '#333' }}
+              className="dark:tick-fill-gray-300"
+              tickFormatter={(value) => {
+                // Format quarterly data like "Q1 2021" -> "1er Trimestre 2021"
+                if (typeof value === 'string' && value.startsWith('Q') && value.includes(' ')) {
+                  const [quarter, year] = value.split(' ');
+                  const quarterNum = parseInt(quarter.replace('Q', ''));
+                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
+                  return `${quarterNames[quarterNum]} Trimestre ${year}`;
+                }
+                // Format simple quarter data like "Q1" -> "1er Trimestre"
+                else if (typeof value === 'string' && value.startsWith('Q')) {
+                  const quarterNum = parseInt(value.replace('Q', ''));
+                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
+                  return `${quarterNames[quarterNum]} Trimestre`;
+                }
+                // Format monthly data like "Jan 2021" -> "Ene 2021" (Spanish)
+                else if (typeof value === 'string' && /^[A-Za-z]{3} \d{4}$/.test(value)) {
+                  const [month, year] = value.split(' ');
+                  const monthMap: Record<string, string> = {
+                    'Jan': 'Ene',
+                    'Feb': 'Feb',
+                    'Mar': 'Mar',
+                    'Apr': 'Abr',
+                    'May': 'May',
+                    'Jun': 'Jun',
+                    'Jul': 'Jul',
+                    'Aug': 'Ago',
+                    'Sep': 'Sep',
+                    'Oct': 'Oct',
+                    'Nov': 'Nov',
+                    'Dec': 'Dic'
+                  };
+                  return `${monthMap[month] || month} ${year}`;
+                }
+                return value;
+              }}
             />
             <YAxis 
               label={yAxisLabel ? { value: yAxisLabel, angle: -90, position: 'insideLeft' } : undefined}
+              tick={{ fill: '#333' }}
+              tickFormatter={(value) => {
+                // Format large numbers as currency or percentage based on value and context
+                if (value > 1000) return `${(value / 1000000).toFixed(0)}M`;
+                else if (value > 0 && value <= 100 && yAxisLabel?.toLowerCase().includes('percentage')) return `${value}%`;
+                else return value;
+              }}
+              className="dark:tick-fill-gray-300"
             />
-            {showTooltip && <Tooltip />}
+            {showTooltip && <Tooltip content={<CustomTooltip />} />}
             {showLegend && <Legend />}
             {yAxisKeys.map((key, index) => (
               <Bar
@@ -143,6 +260,7 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
                 dataKey={key}
                 fill={colors[index % colors.length]}
                 name={key}
+                onClick={onDataPointClick}
               />
             ))}
           </BarChart>
@@ -155,11 +273,56 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
             <XAxis 
               dataKey={xAxisKey} 
               label={xAxisLabel ? { value: xAxisLabel, position: 'insideBottom', offset: -10 } : undefined}
+              tick={{ fill: '#333' }}
+              className="dark:tick-fill-gray-300"
+              tickFormatter={(value) => {
+                // Format quarterly data like "Q1 2021" -> "1er Trimestre 2021"
+                if (typeof value === 'string' && value.startsWith('Q') && value.includes(' ')) {
+                  const [quarter, year] = value.split(' ');
+                  const quarterNum = parseInt(quarter.replace('Q', ''));
+                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
+                  return `${quarterNames[quarterNum]} Trimestre ${year}`;
+                }
+                // Format simple quarter data like "Q1" -> "1er Trimestre"
+                else if (typeof value === 'string' && value.startsWith('Q')) {
+                  const quarterNum = parseInt(value.replace('Q', ''));
+                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
+                  return `${quarterNames[quarterNum]} Trimestre`;
+                }
+                // Format monthly data like "Jan 2021" -> "Ene 2021" (Spanish)
+                else if (typeof value === 'string' && /^[A-Za-z]{3} \d{4}$/.test(value)) {
+                  const [month, year] = value.split(' ');
+                  const monthMap: Record<string, string> = {
+                    'Jan': 'Ene',
+                    'Feb': 'Feb',
+                    'Mar': 'Mar',
+                    'Apr': 'Abr',
+                    'May': 'May',
+                    'Jun': 'Jun',
+                    'Jul': 'Jul',
+                    'Aug': 'Ago',
+                    'Sep': 'Sep',
+                    'Oct': 'Oct',
+                    'Nov': 'Nov',
+                    'Dec': 'Dic'
+                  };
+                  return `${monthMap[month] || month} ${year}`;
+                }
+                return value;
+              }}
             />
             <YAxis 
               label={yAxisLabel ? { value: yAxisLabel, angle: -90, position: 'insideLeft' } : undefined}
+              tick={{ fill: '#333' }}
+              tickFormatter={(value) => {
+                // Format large numbers as currency or percentage based on value and context
+                if (value > 1000) return `${(value / 1000000).toFixed(0)}M`;
+                else if (value > 0 && value <= 100 && yAxisLabel?.toLowerCase().includes('percentage')) return `${value}%`;
+                else return value;
+              }}
+              className="dark:tick-fill-gray-300"
             />
-            {showTooltip && <Tooltip />}
+            {showTooltip && <Tooltip content={<CustomTooltip />} />}
             {showLegend && <Legend />}
             {yAxisKeys.map((key, index) => (
               <Area
@@ -169,6 +332,7 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
                 fill={colors[index % colors.length]}
                 stroke={colors[index % colors.length]}
                 name={key}
+                onClick={onDataPointClick}
               />
             ))}
           </AreaChart>
@@ -195,7 +359,7 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
                 />
               ))}
             </Pie>
-            {showTooltip && <Tooltip />}
+            {showTooltip && <Tooltip content={<CustomTooltip />} />}
             {showLegend && <Legend />}
           </PieChart>
         );
@@ -208,11 +372,56 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
             <XAxis 
               dataKey={xAxisKey} 
               label={xAxisLabel ? { value: xAxisLabel, position: 'insideBottom', offset: -10 } : undefined}
+              tick={{ fill: '#333' }}
+              className="dark:tick-fill-gray-300"
+              tickFormatter={(value) => {
+                // Format quarterly data like "Q1 2021" -> "1er Trimestre 2021"
+                if (typeof value === 'string' && value.startsWith('Q') && value.includes(' ')) {
+                  const [quarter, year] = value.split(' ');
+                  const quarterNum = parseInt(quarter.replace('Q', ''));
+                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
+                  return `${quarterNames[quarterNum]} Trimestre ${year}`;
+                }
+                // Format simple quarter data like "Q1" -> "1er Trimestre"
+                else if (typeof value === 'string' && value.startsWith('Q')) {
+                  const quarterNum = parseInt(value.replace('Q', ''));
+                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
+                  return `${quarterNames[quarterNum]} Trimestre`;
+                }
+                // Format monthly data like "Jan 2021" -> "Ene 2021" (Spanish)
+                else if (typeof value === 'string' && /^[A-Za-z]{3} \d{4}$/.test(value)) {
+                  const [month, year] = value.split(' ');
+                  const monthMap: Record<string, string> = {
+                    'Jan': 'Ene',
+                    'Feb': 'Feb',
+                    'Mar': 'Mar',
+                    'Apr': 'Abr',
+                    'May': 'May',
+                    'Jun': 'Jun',
+                    'Jul': 'Jul',
+                    'Aug': 'Ago',
+                    'Sep': 'Sep',
+                    'Oct': 'Oct',
+                    'Nov': 'Nov',
+                    'Dec': 'Dic'
+                  };
+                  return `${monthMap[month] || month} ${year}`;
+                }
+                return value;
+              }}
             />
             <YAxis 
               label={yAxisLabel ? { value: yAxisLabel, angle: -90, position: 'insideLeft' } : undefined}
+              tick={{ fill: '#333' }}
+              tickFormatter={(value) => {
+                // Format large numbers as currency or percentage based on value and context
+                if (value > 1000) return `${(value / 1000000).toFixed(0)}M`;
+                else if (value > 0 && value <= 100 && yAxisLabel?.toLowerCase().includes('percentage')) return `${value}%`;
+                else return value;
+              }}
+              className="dark:tick-fill-gray-300"
             />
-            {showTooltip && <Tooltip cursor={{ strokeDasharray: '3 3' }} />}
+            {showTooltip && <Tooltip cursor={{ strokeDasharray: '3 3' }} content={<CustomTooltip />} />}
             {showLegend && <Legend />}
             {yAxisKeys.map((key, index) => (
               <Scatter
@@ -220,6 +429,7 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
                 dataKey={key}
                 fill={colors[index % colors.length]}
                 name={key}
+                onClick={onDataPointClick}
               />
             ))}
           </ScatterChart>
@@ -232,11 +442,56 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
             <XAxis 
               dataKey={xAxisKey} 
               label={xAxisLabel ? { value: xAxisLabel, position: 'insideBottom', offset: -10 } : undefined}
+              tick={{ fill: '#333' }}
+              className="dark:tick-fill-gray-300"
+              tickFormatter={(value) => {
+                // Format quarterly data like "Q1 2021" -> "1er Trimestre 2021"
+                if (typeof value === 'string' && value.startsWith('Q') && value.includes(' ')) {
+                  const [quarter, year] = value.split(' ');
+                  const quarterNum = parseInt(quarter.replace('Q', ''));
+                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
+                  return `${quarterNames[quarterNum]} Trimestre ${year}`;
+                }
+                // Format simple quarter data like "Q1" -> "1er Trimestre"
+                else if (typeof value === 'string' && value.startsWith('Q')) {
+                  const quarterNum = parseInt(value.replace('Q', ''));
+                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
+                  return `${quarterNames[quarterNum]} Trimestre`;
+                }
+                // Format monthly data like "Jan 2021" -> "Ene 2021" (Spanish)
+                else if (typeof value === 'string' && /^[A-Za-z]{3} \d{4}$/.test(value)) {
+                  const [month, year] = value.split(' ');
+                  const monthMap: Record<string, string> = {
+                    'Jan': 'Ene',
+                    'Feb': 'Feb',
+                    'Mar': 'Mar',
+                    'Apr': 'Abr',
+                    'May': 'May',
+                    'Jun': 'Jun',
+                    'Jul': 'Jul',
+                    'Aug': 'Ago',
+                    'Sep': 'Sep',
+                    'Oct': 'Oct',
+                    'Nov': 'Nov',
+                    'Dec': 'Dic'
+                  };
+                  return `${monthMap[month] || month} ${year}`;
+                }
+                return value;
+              }}
             />
             <YAxis 
               label={yAxisLabel ? { value: yAxisLabel, angle: -90, position: 'insideLeft' } : undefined}
+              tick={{ fill: '#333' }}
+              tickFormatter={(value) => {
+                // Format large numbers as currency or percentage based on value and context
+                if (value > 1000) return `${(value / 1000000).toFixed(0)}M`;
+                else if (value > 0 && value <= 100 && yAxisLabel?.toLowerCase().includes('percentage')) return `${value}%`;
+                else return value;
+              }}
+              className="dark:tick-fill-gray-300"
             />
-            {showTooltip && <Tooltip />}
+            {showTooltip && <Tooltip content={<CustomTooltip />} />}
             {showLegend && <Legend />}
             {yAxisKeys.map((key, index) => {
               // Alternate between line and bar for composed chart
@@ -249,6 +504,7 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
                   stroke={colors[index % colors.length]}
                   fill={colors[index % colors.length]}
                   name={key}
+                  onClick={onDataPointClick}
                 />
               );
             })}
@@ -269,10 +525,10 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
   ) : renderChart();
   
   return (
-    <div className={`chart-container ${className}`}>
+    <div className={`chart-container ${className} w-full max-w-full`}>
       {title && <h3 className="chart-title">{title}</h3>}
       {description && <p className="chart-description">{description}</p>}
-      <div className="chart-wrapper">
+      <div className="chart-wrapper w-full max-w-full overflow-x-auto">
         {chartElement}
       </div>
     </div>

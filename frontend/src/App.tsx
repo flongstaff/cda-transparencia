@@ -32,6 +32,7 @@ import DataVerificationPage from './pages/DataVerificationPage';
 import DashboardCompleto from './pages/DashboardCompleto';
 import NotFoundPage from './pages/NotFoundPage';
 import MonitoringDashboard from './pages/MonitoringDashboard';
+import OpenDataPage from './pages/OpenDataPage';
 
 // Demo Components
 import YearSelectorDemo from './components/demos/YearSelectorDemo';
@@ -121,6 +122,9 @@ function App() {
                   
                   {/* Data Verification */}
                   <Route path="/data-verification" element={<DataVerificationPage />} />
+                  
+                  {/* Open Data Catalog */}
+                  <Route path="/open-data" element={<OpenDataPage />} />
 
                   {/* Monitoring Routes */}
                   <Route path="/monitoring" element={<MonitoringDashboard />} />

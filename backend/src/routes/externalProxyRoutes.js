@@ -78,6 +78,16 @@ router.get('/all-external-data', async (req, res) => {
         type: 'municipal'
       },
       { 
+        name: 'Carmen de Areco Official Bulletin', 
+        url: 'https://carmendeareco.gob.ar/gobierno/boletin-oficial/',
+        type: 'municipal'
+      },
+      { 
+        name: 'Carmen de Areco Council Blog', 
+        url: 'http://hcdcarmendeareco.blogspot.com/',
+        type: 'municipal'
+      },
+      { 
         name: 'Buenos Aires Provincial Transparency', 
         url: 'https://www.gba.gob.ar/transparencia_fiscal/',
         type: 'provincial'
@@ -88,18 +98,53 @@ router.get('/all-external-data', async (req, res) => {
         type: 'provincial'
       },
       { 
-        name: 'Datos Argentina', 
+        name: 'Buenos Aires Municipalities Portal', 
+        url: 'https://www.gba.gob.ar/municipios',
+        type: 'provincial'
+      },
+      { 
+        name: 'Buenos Aires Contracts Search', 
+        url: 'https://sistemas.gba.gob.ar/consulta/contrataciones/',
+        type: 'provincial'
+      },
+      { 
+        name: 'Datos Argentina - Search Carmen de Areco', 
+        url: 'https://datos.gob.ar/api/3/action/package_search?q=carmen+de+areco',
+        type: 'national'
+      },
+      { 
+        name: 'Datos Argentina - General Search', 
         url: 'https://datos.gob.ar/api/3/action/package_search?q=presupuesto',
         type: 'national'
       },
       { 
-        name: 'Presupuesto Abierto Nacional', 
-        url: 'https://www.presupuestoabierto.gob.ar/sici/api/v1/entidades',
+        name: 'GeoRef Argentina - Carmen de Areco', 
+        url: 'https://apis.datos.gob.ar/georef/api/municipios?provincia=buenos-aires&nombre=carmen-de-areco',
         type: 'national'
       },
       { 
-        name: 'GeoRef Argentina', 
-        url: 'https://apis.datos.gob.ar/georef/api/municipios?provincia=buenos-aires&nombre=carmen-de-areco',
+        name: 'GeoRef Argentina - Provinces', 
+        url: 'https://apis.datos.gob.ar/georef/api/provincias',
+        type: 'national'
+      },
+      { 
+        name: 'Ministry of Justice Open Data', 
+        url: 'https://datos.jus.gob.ar/',
+        type: 'national'
+      },
+      { 
+        name: 'Anti-Corruption Office', 
+        url: 'https://www.argentina.gob.ar/anticorrupcion',
+        type: 'national'
+      },
+      { 
+        name: 'InfoLEG Legal Database', 
+        url: 'http://www.infoleg.gob.ar/',
+        type: 'national'
+      },
+      { 
+        name: 'Access to Information Law', 
+        url: 'https://www.argentina.gob.ar/aaip',
         type: 'national'
       }
     ];
@@ -156,12 +201,35 @@ router.get('/all-external-data', async (req, res) => {
     const successfulSources = formattedResults.filter(r => r.success).length;
     const totalSources = formattedResults.length;
 
+    // Group results by type
+    const groupedResults = {
+      municipal: formattedResults.filter(r => r.type === 'municipal'),
+      provincial: formattedResults.filter(r => r.type === 'provincial'),
+      national: formattedResults.filter(r => r.type === 'national')
+    };
+
     res.json({
       results: formattedResults,
+      grouped_results: groupedResults,
       summary: {
         total_sources: totalSources,
         successful_sources: successfulSources,
         failed_sources: totalSources - successfulSources,
+        success_rate: Math.round((successfulSources / totalSources) * 100),
+        by_type: {
+          municipal: {
+            total: groupedResults.municipal.length,
+            successful: groupedResults.municipal.filter(r => r.success).length
+          },
+          provincial: {
+            total: groupedResults.provincial.length,
+            successful: groupedResults.provincial.filter(r => r.success).length
+          },
+          national: {
+            total: groupedResults.national.length,
+            successful: groupedResults.national.filter(r => r.success).length
+          }
+        },
         last_updated: new Date().toISOString()
       }
     });

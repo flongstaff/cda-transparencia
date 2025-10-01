@@ -541,7 +541,7 @@ const StandardizedChart: React.FC<StandardizedChartProps> = ({
       )}
 
       {/* Chart container */}
-      <div className="h-80">
+      <div className="h-80 w-full max-w-full overflow-x-auto">
         <ResponsiveContainer width="100%" height="100%">
           {renderChart()}
         </ResponsiveContainer>

@@ -15,7 +15,8 @@
     "sync-data": "node src/sync-live-data.js",
     "process-excel": "node src/process-excel-data.js",
     "archive-sync": "node src/sync-archive-data.js",
-    "test": "jest"
+    "test": "jest",
+    "search-index": "node src/scripts/setup-search-index.js"
   },
   "keywords": [
     "transparency",
@@ -46,7 +47,8 @@
     "sequelize": "^6.32.1",
     "sqlite3": "^5.1.7",
     "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "swagger-ui-express": "^5.0.1",
+    "@elastic/elasticsearch": "^8.15.0"
   },
   "devDependencies": {
     "jest": "^29.6.1",

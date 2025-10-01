@@ -143,14 +143,14 @@ const TimeSeriesAnomalyChart: React.FC<TimeSeriesAnomalyChartProps> = memo(({
       chartType={chartType}
       xAxisKey={xAxisKey}
       yAxisKeys={yAxisKeys}
-      title={showTitle ? "Time Series Anomaly Analysis" : undefined}
-      description={showDescription ? "Identifying unusual patterns in quarterly budget execution, including the Q4 2021 spike (+20% in one quarter)" : undefined}
+      title={showTitle ? "Análisis de Anomalías en Series Temporales" : undefined}
+      description={showDescription ? "Identificando patrones inusuales en la ejecución presupuestaria trimestral, incluyendo el pico de Q4 2021 (+20% en un trimestre)" : undefined}
       height={height}
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel={xAxisKey === 'date' ? 'Date' : xAxisKey === 'quarter' ? 'Quarter' : xAxisKey === 'period' ? 'Period' : 'Year'}
-      yAxisLabel="Amount (ARS) / Anomaly Score"
+      xAxisLabel={xAxisKey === 'date' ? 'Fecha' : xAxisKey === 'quarter' ? 'Trimestre' : xAxisKey === 'period' ? 'Período' : 'Año'}
+      yAxisLabel="Monto (ARS) / Puntaje de Anomalía"
       // Special configuration for anomaly highlighting
       config={{
         referenceLines: [
@@ -158,12 +158,12 @@ const TimeSeriesAnomalyChart: React.FC<TimeSeriesAnomalyChartProps> = memo(({
             y: 90000000, // Example threshold for anomaly detection
             stroke: '#EF4444',
             strokeDasharray: '3 3',
-            label: 'Anomaly Threshold'
+            label: 'Umbral de Anomalía'
           }
         ],
         annotations: [
           {
-            x: 'Q4 2021',
+            x: '4to Trimestre 2021',
             y: 90000000,
             text: 'PICO Q4 2021',
             showArrow: true,

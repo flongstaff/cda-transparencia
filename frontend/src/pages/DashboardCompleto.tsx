@@ -579,32 +579,7 @@ const DashboardCompleto: React.FC = () => {
         </div>
       )}
 
-      {/* Red Flag Analysis Section - Always Visible on Dashboard Completo */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-lg border border-red-200 dark:border-red-700 p-6 mb-8"
-        >
-          <div className="flex items-center mb-4">
-            <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400 mr-3" />
-            <div>
-              <h2 className="text-2xl font-bold text-red-800 dark:text-red-200">🚩 Análisis de Banderas Rojas</h2>
-              <p className="text-red-700 dark:text-red-300">Detección automática de anomalías en datos municipales</p>
-            </div>
-          </div>
 
-          <ChartAuditReport
-            analysis="overview"
-            height={500}
-            interactive={true}
-            showTitle={false}
-            showDescription={false}
-            year={selectedYear}
-            className="bg-white dark:bg-dark-surface rounded-lg"
-          />
-        </motion.div>
-      </div>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -996,8 +971,8 @@ const EnhancedTransparencyContent: React.FC<{
   const auditData = {
     financial_irregularities: {
       salary_irregularities: [
-        { official_name: 'Juan Pérez', role: 'Director', declared_salary: 800000, estimated_fair_salary: 500000, discrepancy_ratio: 1.6 },
-        { official_name: 'María García', role: 'Subdirectora', declared_salary: 600000, estimated_fair_salary: 450000, discrepancy_ratio: 1.3 }
+        { official_name: 'Funcionario A', role: 'Director', declared_salary: 800000, estimated_fair_salary: 500000, discrepancy_ratio: 1.6 },
+        { official_name: 'Funcionario B', role: 'Subdirectora', declared_salary: 600000, estimated_fair_salary: 450000, discrepancy_ratio: 1.3 }
       ],
       budget_discrepancies: [
         { category: 'Viales', budgeted_amount: 100000000, actual_spent: 120000000, difference: 20000000, difference_percentage: 0.2 },
@@ -1011,8 +986,8 @@ const EnhancedTransparencyContent: React.FC<{
     },
     infrastructure_projects: {
       flags: [
-        { project_name: 'Ruta Provincial 60', budgeted_amount: 200000000, actual_spent: 250000000, delay_days: 120, irregularity_type: 'cost_overrun' },
-        { project_name: 'Hospital Local', budgeted_amount: 150000000, actual_spent: 130000000, delay_days: 90, irregularity_type: 'delayed_completion' }
+        { project_name: 'Proyecto de Infraestructura A', budgeted_amount: 200000000, actual_spent: 250000000, delay_days: 120, irregularity_type: 'cost_overrun' },
+        { project_name: 'Proyecto de Infraestructura B', budgeted_amount: 150000000, actual_spent: 130000000, delay_days: 90, irregularity_type: 'delayed_completion' }
       ],
       summary: {
         flagged_projects: 2,

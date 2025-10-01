@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => {
   // Determine base path based on environment
   const getBasePath = () => {
     if (mode === 'development') return '/';
-    if (mode === 'github') return '/'; // Changed: custom domain uses root path
+    if (mode === 'github') return '/cda-transparencia/'; // GitHub Pages requires repo name as base path
     if (mode === 'production') return '/';
     return '/'; // default fallback
   };

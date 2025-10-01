@@ -68,19 +68,49 @@ const TimeSeriesChart: React.FC<TimeSeriesChartProps> = ({
     if (active && payload && payload.length) {
       const value = payload[0].value;
       const isAnomaly = anomalies.some(a => a[dataKey] === label);
+      
+      // Format label for display in tooltip (Spanish)
+      let formattedLabel = label;
+      if (typeof label === 'string' && label.startsWith('Q') && label.includes(' ')) {
+        const [quarter, year] = label.split(' ');
+        const quarterNum = parseInt(quarter.replace('Q', ''));
+        const quarterNames = ['', '1er', '2do', '3er', '4to'];
+        formattedLabel = `${quarterNames[quarterNum]} Trimestre ${year}`;
+      } else if (typeof label === 'string' && label.startsWith('Q')) {
+        const quarterNum = parseInt(label.replace('Q', ''));
+        const quarterNames = ['', '1er', '2do', '3er', '4to'];
+        formattedLabel = `${quarterNames[quarterNum]} Trimestre`;
+      } else if (typeof label === 'string' && /^[A-Za-z]{3} \d{4}$/.test(label)) {
+        const [month, year] = label.split(' ');
+        const monthMap: Record<string, string> = {
+          'Jan': 'Ene',
+          'Feb': 'Feb',
+          'Mar': 'Mar',
+          'Apr': 'Abr',
+          'May': 'May',
+          'Jun': 'Jun',
+          'Jul': 'Jul',
+          'Aug': 'Ago',
+          'Sep': 'Sep',
+          'Oct': 'Oct',
+          'Nov': 'Nov',
+          'Dec': 'Dic'
+        };
+        formattedLabel = `${monthMap[month] || month} ${year}`;
+      }
 
       return (
         <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg p-3">
           <p className="font-medium text-gray-900 dark:text-gray-100">
-            {`${dataKey}: ${label}`}
+            {`${dataKey}: ${formattedLabel}`}
           </p>
           <p className="text-blue-600 dark:text-blue-400">
-            {`${valueKey}: ${typeof value === 'number' ? value.toLocaleString() : value}`}
+            {`${valueKey}: ${typeof value === 'number' ? value.toLocaleString('es-AR') : value}`}
           </p>
           {isAnomaly && (
             <div className="flex items-center mt-2 text-red-600 dark:text-red-400">
               <AlertTriangle className="w-4 h-4 mr-1" />
-              <span className="text-sm">Anomaly detected</span>
+              <span className="text-sm">Anomalía detectada</span>
             </div>
           )}
         </div>
@@ -193,6 +223,41 @@ const TimeSeriesChart: React.FC<TimeSeriesChartProps> = ({
               stroke="#6b7280"
               fontSize={12}
               tickLine={false}
+              tickFormatter={(value) => {
+                // Format quarterly data like "Q1 2021" -> "1er Trimestre 2021"
+                if (typeof value === 'string' && value.startsWith('Q') && value.includes(' ')) {
+                  const [quarter, year] = value.split(' ');
+                  const quarterNum = parseInt(quarter.replace('Q', ''));
+                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
+                  return `${quarterNames[quarterNum]} Trimestre ${year}`;
+                }
+                // Format simple quarter data like "Q1" -> "1er Trimestre"
+                else if (typeof value === 'string' && value.startsWith('Q')) {
+                  const quarterNum = parseInt(value.replace('Q', ''));
+                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
+                  return `${quarterNames[quarterNum]} Trimestre`;
+                }
+                // Format monthly data like "Jan 2021" -> "Ene 2021" (Spanish)
+                else if (typeof value === 'string' && /^[A-Za-z]{3} \d{4}$/.test(value)) {
+                  const [month, year] = value.split(' ');
+                  const monthMap: Record<string, string> = {
+                    'Jan': 'Ene',
+                    'Feb': 'Feb',
+                    'Mar': 'Mar',
+                    'Apr': 'Abr',
+                    'May': 'May',
+                    'Jun': 'Jun',
+                    'Jul': 'Jul',
+                    'Aug': 'Ago',
+                    'Sep': 'Sep',
+                    'Oct': 'Oct',
+                    'Nov': 'Nov',
+                    'Dec': 'Dic'
+                  };
+                  return `${monthMap[month] || month} ${year}`;
+                }
+                return value;
+              }}
             />
             <YAxis
               stroke="#6b7280"

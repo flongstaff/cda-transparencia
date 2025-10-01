@@ -1,0 +1,311 @@
+{
+  "categories": [
+    {
+      "id": "planning-budgeting",
+      "title": "Planeamiento y Presupuesto",
+      "description": "Documentos de planeamiento estratégico, presupuesto, planes plurianuales",
+      "icon": "BarChart3",
+      "itemsCount": 24,
+      "lastUpdated": "2024-12-01",
+      "updateFrequency": "monthly",
+      "dataTypes": ["budget", "planning", "ordinance"],
+      "datasets": [
+        {
+          "id": "budget-2025",
+          "title": "Presupuesto 2025",
+          "description": "Proyecto de presupuesto municipal para el ejercicio 2025",
+          "formats": ["pdf", "csv", "xlsx"],
+          "size": "2.4 MB",
+          "lastUpdated": "2024-12-01",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        },
+        {
+          "id": "budget-execution-2024",
+          "title": "Ejecución Presupuestaria 2024",
+          "description": "Reporte mensual de ejecución presupuestaria 2024",
+          "formats": ["csv", "json", "xlsx"],
+          "size": "5.7 MB",
+          "lastUpdated": "2024-11-30",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "institutional-info",
+      "title": "Información Institucional",
+      "description": "Estructura organizacional, directorio de funcionarios, funciones",
+      "icon": "Building",
+      "itemsCount": 18,
+      "lastUpdated": "2024-11-15",
+      "updateFrequency": "quarterly",
+      "dataTypes": ["directory", "structure", "contact"],
+      "datasets": [
+        {
+          "id": "org-chart",
+          "title": "Organigrama Municipal",
+          "description": "Estructura organizacional actualizada del municipio",
+          "formats": ["pdf", "svg"],
+          "size": "1.2 MB",
+          "lastUpdated": "2024-11-15",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "normative-framework",
+      "title": "Marco Normativo",
+      "description": "Leyes, ordenanzas, resoluciones, normativa interna",
+      "icon": "FileText",
+      "itemsCount": 42,
+      "lastUpdated": "2024-12-01",
+      "updateFrequency": "weekly",
+      "dataTypes": ["ordinance", "resolution", "law"],
+      "datasets": [
+        {
+          "id": "ordinances-2024",
+          "title": "Ordenanzas 2024",
+          "description": "Colección de ordenanzas municipales del año 2024",
+          "formats": ["pdf", "json"],
+          "size": "8.3 MB",
+          "lastUpdated": "2024-12-01",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "economic-financial",
+      "title": "Información Económico-Financiera",
+      "description": "Presupuestos, ejecución, contratos, gastos, ingresos",
+      "icon": "DollarSign",
+      "itemsCount": 67,
+      "lastUpdated": "2024-11-30",
+      "updateFrequency": "monthly",
+      "dataTypes": ["budget", "expense", "revenue", "contract"],
+      "datasets": [
+        {
+          "id": "municipal-accounting",
+          "title": "Contabilidad Municipal",
+          "description": "Datos contables detallados del municipio",
+          "formats": ["csv", "xlsx", "json"],
+          "size": "12.4 MB",
+          "lastUpdated": "2024-11-30",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "public-procurement",
+      "title": "Contrataciones Públicas",
+      "description": "Licitaciones, contratos, proveedores, procedimientos",
+      "icon": "Gavel",
+      "itemsCount": 35,
+      "lastUpdated": "2024-12-01",
+      "updateFrequency": "weekly",
+      "dataTypes": ["tender", "contract", "procurement"],
+      "datasets": [
+        {
+          "id": "active-tenders",
+          "title": "Licitaciones Activas",
+          "description": "Licitaciones públicas actualmente vigentes",
+          "formats": ["csv", "json", "xlsx"],
+          "size": "1.8 MB",
+          "lastUpdated": "2024-12-01",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "public-services",
+      "title": "Servicios Públicos",
+      "description": "Servicios ofrecidos, indicadores, calidad, desempeño",
+      "icon": "Settings",
+      "itemsCount": 28,
+      "lastUpdated": "2024-11-20",
+      "updateFrequency": "monthly",
+      "dataTypes": ["service", "indicator", "performance"],
+      "datasets": [
+        {
+          "id": "service-metrics",
+          "title": "Indicadores de Servicios",
+          "description": "Métricas de calidad y desempeño de servicios públicos",
+          "formats": ["csv", "json"],
+          "size": "2.1 MB",
+          "lastUpdated": "2024-11-20",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "human-resources",
+      "title": "Recursos Humanos",
+      "description": "Personal, remuneraciones, declaraciones juradas, cargos",
+      "icon": "Users",
+      "itemsCount": 22,
+      "lastUpdated": "2024-11-25",
+      "updateFrequency": "monthly",
+      "dataTypes": ["salary", "declaration", "position"],
+      "datasets": [
+        {
+          "id": "salary-registry",
+          "title": "Registro Salarial",
+          "description": "Datos de remuneraciones del personal municipal",
+          "formats": ["csv", "xlsx"],
+          "size": "3.2 MB",
+          "lastUpdated": "2024-11-25",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "infrastructure-works",
+      "title": "Infraestructura y Obras",
+      "description": "Obras públicas, proyectos de inversión, infraestructura",
+      "icon": "HardHat",
+      "itemsCount": 19,
+      "lastUpdated": "2024-11-18",
+      "updateFrequency": "monthly",
+      "dataTypes": ["project", "investment", "infrastructure"],
+      "datasets": [
+        {
+          "id": "public-works-registry",
+          "title": "Registro de Obras Públicas",
+          "description": "Catálogo de obras públicas ejecutadas y en curso",
+          "formats": ["csv", "json"],
+          "size": "2.9 MB",
+          "lastUpdated": "2024-11-18",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "transparency-info",
+      "title": "Transparencia e Información Pública",
+      "description": "SIAO, solicitudes de información, estadísticas",
+      "icon": "Shield",
+      "itemsCount": 15,
+      "lastUpdated": "2024-12-01",
+      "updateFrequency": "monthly",
+      "dataTypes": ["request", "statistics", "siao"],
+      "datasets": [
+        {
+          "id": "info-requests-stats",
+          "title": "Estadísticas de Solicitudes",
+          "description": "Datos sobre solicitudes de acceso a información",
+          "formats": ["csv", "json"],
+          "size": "1.5 MB",
+          "lastUpdated": "2024-12-01",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "social-programs",
+      "title": "Programas Sociales",
+      "description": "Asistencia social, programas educativos, salud",
+      "icon": "Heart",
+      "itemsCount": 12,
+      "lastUpdated": "2024-11-10",
+      "updateFrequency": "quarterly",
+      "dataTypes": ["program", "assistance", "education"],
+      "datasets": [
+        {
+          "id": "social-assistance",
+          "title": "Asistencia Social",
+          "description": "Datos sobre programas de asistencia social",
+          "formats": ["csv", "xlsx"],
+          "size": "1.8 MB",
+          "lastUpdated": "2024-11-10",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "citizen-participation",
+      "title": "Participación Ciudadana",
+      "description": "Audiencias públicas, mecanismos de participación",
+      "icon": "Megaphone",
+      "itemsCount": 8,
+      "lastUpdated": "2024-11-28",
+      "updateFrequency": "monthly",
+      "dataTypes": ["participation", "hearing", "consultation"],
+      "datasets": [
+        {
+          "id": "public-hearings",
+          "title": "Audiencias Públicas",
+          "description": "Calendario y resultados de audiencias públicas",
+          "formats": ["csv", "json"],
+          "size": "850 KB",
+          "lastUpdated": "2024-11-28",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "evaluation-control",
+      "title": "Evaluación y Control",
+      "description": "Controles internos, auditorías, evaluaciones",
+      "icon": "Gauge",
+      "itemsCount": 16,
+      "lastUpdated": "2024-11-15",
+      "updateFrequency": "quarterly",
+      "dataTypes": ["audit", "control", "evaluation"],
+      "datasets": [
+        {
+          "id": "internal-audits",
+          "title": "Auditorías Internas",
+          "description": "Reportes de auditoría interna del municipio",
+          "formats": ["pdf", "json"],
+          "size": "4.2 MB",
+          "lastUpdated": "2024-11-15",
+          "accessibility": {
+            "compliant": true,
+            "standards": ["WCAG 2.1 AA"]
+          }
+        }
+      ]
+    }
+  ],
+  "compliance": {
+    "aaipStandards": true,
+    "itaMethodology": true,
+    "wcagCompliance": "2.1 AA",
+    "updatePolicy": "Proactive publication following AAIP guidelines",
+    "accessibilityPolicy": "All content meets WCAG 2.1 AA standards"
+  }
+}

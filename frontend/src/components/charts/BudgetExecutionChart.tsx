@@ -47,28 +47,28 @@ const BudgetExecutionChart: React.FC<BudgetExecutionChartProps> = ({
       description="Comparación entre presupuesto aprobado y ejecutado por sector"
       className={className}
     >
-      <div className="h-80">
+      <div className="h-80 w-full max-w-full overflow-x-auto">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={chartData}
-            margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
+            margin={{ top: 20, right: 30, left: 20, bottom: 100 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" className="dark:stroke-gray-700" />
             <XAxis 
               dataKey="sector" 
               tick={{ 
-                fontSize: 12,
+                fontSize: 10,
                 fill: '#4b5563',
                 className: 'dark:fill-gray-300'
               }} 
-              height={60}
+              height={70}
               angle={-45}
               textAnchor="end"
               interval={0}
             />
             <YAxis 
               tick={{ 
-                fontSize: 12,
+                fontSize: 10,
                 fill: '#4b5563',
                 className: 'dark:fill-gray-300'
               }} 
@@ -80,7 +80,8 @@ const BudgetExecutionChart: React.FC<BudgetExecutionChartProps> = ({
                 borderColor: '#e5e7eb',
                 color: '#000',
                 borderRadius: '0.5rem',
-                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                minWidth: '150px'
               }}
               className="dark:bg-dark-surface dark:border-dark-border dark:text-dark-text-primary"
               formatter={(value, name) => [

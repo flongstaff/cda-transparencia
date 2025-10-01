@@ -19,7 +19,12 @@ class EnhancedAuditService {
             presupuesto_abierto: 'https://www.presupuestoabierto.gob.ar/sici/api',
             contrataciones_abiertas: 'https://www.argentina.gob.ar/contratacionesabiertas/api',
             bcra_api: 'https://api.estadisticasbcra.com',
-            wayback_machine: 'https://archive.org/wayback/available'
+            wayback_machine: 'https://archive.org/wayback/available',
+            gba_datos_abiertos: 'https://www.gba.gob.ar/municipios', // Updated URL based on our test results
+            gba_contrataciones: 'https://sistemas.gba.gob.ar/consulta/contrataciones',
+            infoleg_api: 'http://www.infoleg.gob.ar/',
+            anticorrupcion_api: 'https://www.argentina.gob.ar/anticorrupcion',
+            georef_api: 'https://apis.datos.gob.ar/georef/api' // Already included but adding for clarity
         };
     }
 
@@ -137,6 +142,88 @@ class EnhancedAuditService {
                 };
             }
 
+            // Try to get geographic data from GeoRef API
+            try {
+                const georefResponse = await axios.get(
+                    `${this.externalApis.georef_api}/municipios`,
+                    {
+                        params: {
+                            provincia: 'buenos-aires',
+                            nombre: 'carmen de areco'
+                        },
+                        timeout: 10000
+                    }
+                );
+                externalData.geographicData = georefResponse.data;
+            } catch (error) {
+                console.warn('Could not fetch geographic data:', error.message);
+                externalData.geographicData = {
+                    success: false,
+                    error: 'Could not fetch from geographic API'
+                };
+            }
+
+            // Try to get provincial data from Buenos Aires systems
+            try {
+                const gbaResponse = await axios.get(
+                    this.externalApis.gba_datos_abiertos,
+                    {
+                        timeout: 10000
+                    }
+                );
+                externalData.provincialData = {
+                    success: gbaResponse.status === 200,
+                    status: gbaResponse.status
+                };
+            } catch (error) {
+                console.warn('Could not fetch provincial data:', error.message);
+                externalData.provincialData = {
+                    success: false,
+                    error: 'Could not fetch from provincial API'
+                };
+            }
+
+            // Try to get information from InfoLEG
+            try {
+                // Since InfoLEG is HTML-based, we'll just check if it's accessible
+                const infolegResponse = await axios.get(
+                    this.externalApis.infoleg_api,
+                    {
+                        timeout: 10000
+                    }
+                );
+                externalData.infolegData = {
+                    success: infolegResponse.status === 200,
+                    status: infolegResponse.status
+                };
+            } catch (error) {
+                console.warn('Could not fetch InfoLEG data:', error.message);
+                externalData.infolegData = {
+                    success: false,
+                    error: 'Could not fetch from InfoLEG'
+                };
+            }
+
+            // Try to get data from Anti-Corruption Office
+            try {
+                const anticorrupcionResponse = await axios.get(
+                    this.externalApis.anticorrupcion_api,
+                    {
+                        timeout: 10000
+                    }
+                );
+                externalData.anticorrupcionData = {
+                    success: anticorrupcionResponse.status === 200,
+                    status: anticorrupcionResponse.status
+                };
+            } catch (error) {
+                console.warn('Could not fetch Anti-Corruption Office data:', error.message);
+                externalData.anticorrupcionData = {
+                    success: false,
+                    error: 'Could not fetch from Anti-Corruption Office'
+                };
+            }
+
             // Cache the external data
             this.cache.set(cacheKey, {
                 data: externalData,
@@ -151,6 +238,22 @@ class EnhancedAuditService {
                     success: false,
                     result: { count: 0, results: [] },
                     error: 'Could not fetch external data'
+                },
+                geographicData: {
+                    success: false,
+                    error: 'Could not fetch external data'
+                },
+                provincialData: {
+                    success: false,
+                    error: 'Could not fetch external data'
+                },
+                infolegData: {
+                    success: false,
+                    error: 'Could not fetch external data'
+                },
+                anticorrupcionData: {
+                    success: false,
+                    error: 'Could not fetch external data'
                 }
             };
         }
@@ -164,12 +267,16 @@ class EnhancedAuditService {
                 cycle_report: localData.latestCycleReport
             },
             external: {
-                national_search: externalData.nationalData
+                national_search: externalData.nationalData,
+                geographic_data: externalData.geographicData,
+                provincial_data: externalData.provincialData,
+                infoleg_data: externalData.infolegData,
+                anticorrupcion_data: externalData.anticorrupcionData
             },
             combined_insights: this.generateInsights(localData, externalData),
             metadata: {
                 processed_at: new Date().toISOString(),
-                data_sources: ['local', 'national'],
+                data_sources: ['local', 'national', 'provincial', 'geographic'],
                 completeness_score: this.calculateCompletenessScore(localData, externalData)
             }
         };
@@ -213,6 +320,66 @@ class EnhancedAuditService {
             });
         }
 
+        // Add geographic data insights
+        if (externalData.geographicData && externalData.geographicData.success) {
+            insights.push({
+                type: 'geographic_data',
+                available: true,
+                municipalities_found: externalData.geographicData.cantidad || 0
+            });
+        } else {
+            insights.push({
+                type: 'geographic_data',
+                available: false,
+                error: externalData.geographicData?.error || 'Geographic data unavailable'
+            });
+        }
+
+        // Add provincial data insights
+        if (externalData.provincialData && externalData.provincialData.success) {
+            insights.push({
+                type: 'provincial_data',
+                available: true,
+                status: externalData.provincialData.status
+            });
+        } else {
+            insights.push({
+                type: 'provincial_data',
+                available: false,
+                error: externalData.provincialData?.error || 'Provincial data unavailable'
+            });
+        }
+
+        // Add InfoLEG data insights
+        if (externalData.infolegData && externalData.infolegData.success) {
+            insights.push({
+                type: 'infoleg_data',
+                available: true,
+                status: externalData.infolegData.status
+            });
+        } else {
+            insights.push({
+                type: 'infoleg_data',
+                available: false,
+                error: externalData.infolegData?.error || 'InfoLEG data unavailable'
+            });
+        }
+
+        // Add Anti-Corruption Office data insights
+        if (externalData.anticorrupcionData && externalData.anticorrupcionData.success) {
+            insights.push({
+                type: 'anticorrupcion_data',
+                available: true,
+                status: externalData.anticorrupcionData.status
+            });
+        } else {
+            insights.push({
+                type: 'anticorrupcion_data',
+                available: false,
+                error: externalData.anticorrupcionData?.error || 'Anti-Corruption Office data unavailable'
+            });
+        }
+
         return insights;
     }
 
@@ -222,27 +389,51 @@ class EnhancedAuditService {
 
         // Check for local anomalies
         if (localData.anomalyData) {
-            score += 25;
-        }
-        total += 25;
-
-        // Check for enhanced audit data
-        if (localData.enhancedAuditData) {
-            score += 25;
-        }
-        total += 25;
-
-        // Check for cycle reports
-        if (localData.latestCycleReport) {
             score += 20;
         }
         total += 20;
 
-        // Check for external data
-        if (externalData.nationalData && externalData.nationalData.result && externalData.nationalData.result.count > 0) {
-            score += 30;
+        // Check for enhanced audit data
+        if (localData.enhancedAuditData) {
+            score += 20;
         }
-        total += 30;
+        total += 20;
+
+        // Check for cycle reports
+        if (localData.latestCycleReport) {
+            score += 15;
+        }
+        total += 15;
+
+        // Check for national external data
+        if (externalData.nationalData && externalData.nationalData.result && externalData.nationalData.result.count > 0) {
+            score += 10;
+        }
+        total += 10;
+
+        // Check for geographic data
+        if (externalData.geographicData && externalData.geographicData.success) {
+            score += 5;
+        }
+        total += 5;
+
+        // Check for provincial data
+        if (externalData.provincialData && externalData.provincialData.success) {
+            score += 10;
+        }
+        total += 10;
+
+        // Check for InfoLEG data
+        if (externalData.infolegData && externalData.infolegData.success) {
+            score += 10;
+        }
+        total += 10;
+
+        // Check for Anti-Corruption Office data
+        if (externalData.anticorrupcionData && externalData.anticorrupcionData.success) {
+            score += 10;
+        }
+        total += 10;
 
         return Math.round((score / total) * 100);
     }
