@@ -210,39 +210,39 @@ function createTreasuryData(consolidatedData, year, publicDataDir) {
   // Extract treasury-related information
   const treasuryData = {
     year: parseInt(year),
-    income: 0,
-    expenses: 0,
+    total_revenue: 0,
+    total_expenses: 0,
     balance: 0
   };
-  
+
   // Look for revenue and expenditure data
-  const revenueFile = consolidatedData.financial_data_files.find(file => 
+  const revenueFile = consolidatedData.financial_data_files.find(file =>
     file.filename.includes('Revenue') || file.filename.includes('revenue')
   );
-  const expenditureFile = consolidatedData.financial_data_files.find(file => 
+  const expenditureFile = consolidatedData.financial_data_files.find(file =>
     file.filename.includes('Expenditure') || file.filename.includes('expenditure')
   );
-  
+
   if (revenueFile && revenueFile.sample_rows && revenueFile.sample_rows.length > 1) {
     // Sum up revenue from all sources
     for (let i = 1; i < revenueFile.sample_rows.length; i++) {
       const row = revenueFile.sample_rows[i];
       if (row.length >= 2) {
-        treasuryData.income += parseNumber(row[1]);
+        treasuryData.total_revenue += parseNumber(row[1]);
       }
     }
   }
-  
+
   if (expenditureFile && expenditureFile.sample_rows && expenditureFile.sample_rows.length > 1) {
     for (let i = 1; i < expenditureFile.sample_rows.length; i++) {
       const row = expenditureFile.sample_rows[i];
       if (row.length >= 2) {
-        treasuryData.expenses += parseNumber(row[1]);
+        treasuryData.total_expenses += parseNumber(row[1]);
       }
     }
   }
-  
-  treasuryData.balance = treasuryData.income - treasuryData.expenses;
+
+  treasuryData.balance = treasuryData.total_revenue - treasuryData.total_expenses;
   
   // Write the treasury data file
   const treasuryFilePath = path.join(treasuryDir, `treasury_data_${year}.json`);

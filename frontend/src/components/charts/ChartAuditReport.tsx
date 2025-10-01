@@ -60,6 +60,7 @@ import AuditService, {
 import DataService from '../../services/dataService';
 
 import { RedFlagAnalysis } from '../../types/charts';
+import { formatCurrencyARS, formatPercentage, formatQuarter } from '../../utils/spanishFormatter';
 
 // Props for the Chart Audit Report component
 interface ChartAuditReportProps {
@@ -374,10 +375,10 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
       case 'quarterly-anomalies':
         // Quarterly budget growth analysis for 2021
         processedData = [
-          { quarter: 'Q1 2021', budgeted: 75000000, growth: 0 },
-          { quarter: 'Q2 2021', budgeted: 82000000, growth: 9.3 },
-          { quarter: 'Q3 2021', budgeted: 86000000, growth: 4.9 },
-          { quarter: 'Q4 2021', budgeted: 90000000, growth: 4.7 }
+          { quarter: 'Q1 2021', budgeted: 75000000, growth: 0, quarterLabel: '1er Trimestre 2021' },
+          { quarter: 'Q2 2021', budgeted: 82000000, growth: 9.3, quarterLabel: '2do Trimestre 2021' },
+          { quarter: 'Q3 2021', budgeted: 86000000, growth: 4.9, quarterLabel: '3er Trimestre 2021' },
+          { quarter: 'Q4 2021', budgeted: 90000000, growth: 4.7, quarterLabel: '4to Trimestre 2021' }
         ];
 
         // Flag quarters with >20% growth
@@ -386,7 +387,7 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
             flags.push({
               type: 'quarterly_surge',
               severity: 'medium',
-              message: `${q.quarter}: Crecimiento presupuestario de ${q.growth}% (posible gasto electoral)`,
+              message: `${q.quarterLabel}: Crecimiento presupuestario de ${q.growth}% (posible gasto electoral)`,
               recommendation: 'Analizar justificación del incremento presupuestario',
               source: 'quarterly_analysis'
             });
@@ -511,16 +512,35 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
           <ResponsiveContainer width="100%" height={chartConfig.height}>
             <ComposedChart data={analysisData} margin={chartConfig.margin}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="year" />
-              <YAxis yAxisId="left" />
-              <YAxis yAxisId="right" orientation="right" />
+              <XAxis dataKey="year" tick={{ fill: '#333' }} className="dark:tick-fill-gray-300" />
+              <YAxis 
+                yAxisId="left" 
+                tick={{ fill: '#333' }} 
+                tickFormatter={(value) => `${(value / 1000000).toFixed(0)}M`}
+                className="dark:tick-fill-gray-300"
+              />
+              <YAxis 
+                yAxisId="right" 
+                orientation="right" 
+                tick={{ fill: '#333' }} 
+                tickFormatter={(value) => `${value}%`}
+                className="dark:tick-fill-gray-300"
+              />
               <Tooltip
-                formatter={(value: number | string, name: string) => [
-                  typeof value === 'number' ? `$${(value / 1000000).toFixed(0)}M` : value,
-                  name === 'budget' ? 'Presupuesto' :
-                  name === 'executed' ? 'Ejecutado' :
-                  name === 'executionRate' ? '% Ejecución' : name
-                ]}
+                formatter={(value: number | string, name: string) => {
+                  if (name === 'budget' || name === 'executed') {
+                    return [formatCurrencyARS(Number(value)), name === 'budget' ? 'Presupuesto' : 'Ejecutado'];
+                  } else if (name === 'executionRate') {
+                    return [formatPercentage(Number(value)), '% Ejecución'];
+                  }
+                  return [value, name];
+                }}
+                contentStyle={{ 
+                  backgroundColor: '#fff', 
+                  borderColor: '#e5e7eb',
+                  color: '#000'
+                }}
+                className="dark:bg-dark-surface dark:border-dark-border dark:text-dark-text-primary"
               />
               <Legend />
               <Bar yAxisId="left" dataKey="budget" fill={SEVERITY_COLORS.info} name="Presupuesto" />
@@ -552,7 +572,15 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
                   />
                 ))}
               </Pie>
-              <Tooltip formatter={(value: number) => [`$${(value / 1000000).toFixed(0)}M`, 'Ejecutado']} />
+              <Tooltip 
+                formatter={(value: number) => [formatCurrencyARS(Number(value)), 'Ejecutado']}
+                contentStyle={{ 
+                  backgroundColor: '#fff', 
+                  borderColor: '#e5e7eb',
+                  color: '#000'
+                }}
+                className="dark:bg-dark-surface dark:border-dark-border dark:text-dark-text-primary"
+              />
               <Legend />
             </PieChart>
           </ResponsiveContainer>
@@ -570,7 +598,10 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
               <XAxis
                 dataKey="date"
                 type="category"
-                tickFormatter={(date) => new Date(date).getDate().toString()}
+                tickFormatter={(date) => {
+                  const dateObj = new Date(date);
+                  return `${dateObj.getDate()}/${dateObj.getMonth() + 1}/${dateObj.getFullYear()}`;
+                }}
                 stroke="#333" 
                 className="dark:stroke-gray-300"
               />
@@ -587,11 +618,13 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
                   color: '#000'
                 }}
                 className="dark:bg-dark-surface dark:border-dark-border dark:text-dark-text-primary"
-                formatter={(value: number | string, name: string) => [
-                  name === 'value' ? `${(value / 1000000).toFixed(1)}M` : value,
-                  'Valor'
-                ]}
-                labelFormatter={(date) => `Fecha: ${date}`}
+                formatter={(value: number | string, name: string) => {
+                  if (name === 'value') {
+                    return [formatCurrencyARS(Number(value)), 'Valor'];
+                  }
+                  return [value, name];
+                }}
+                labelFormatter={(date) => `Fecha: ${new Date(date).toLocaleDateString('es-AR')}`}
               />
               <Scatter dataKey="value" fill="#f44336" />
             </ScatterChart>
@@ -603,9 +636,32 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
           <ResponsiveContainer width="100%" height={chartConfig.height}>
             <ComposedChart data={analysisData} margin={chartConfig.margin}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="indicator" />
-              <YAxis />
-              <Tooltip />
+              <XAxis 
+                dataKey="indicator" 
+                tick={{ fill: '#333', angle: -45, textAnchor: 'end', fontSize: 12 }} 
+                height={80}
+                className="dark:tick-fill-gray-300"
+              />
+              <YAxis 
+                tick={{ fill: '#333' }} 
+                className="dark:tick-fill-gray-300"
+              />
+              <Tooltip 
+                formatter={(value: number | string, name: string) => {
+                  if (name === 'planned' || name === 'executed') {
+                    return [formatNumberARS(Number(value)), name === 'planned' ? 'Planificado' : 'Ejecutado'];
+                  } else if (name === 'gap') {
+                    return [formatNumberARS(Number(value)), 'Brecha'];
+                  }
+                  return [value, name];
+                }}
+                contentStyle={{ 
+                  backgroundColor: '#fff', 
+                  borderColor: '#e5e7eb',
+                  color: '#000'
+                }}
+                className="dark:bg-dark-surface dark:border-dark-border dark:text-dark-text-primary"
+              />
               <Legend />
               <Bar dataKey="planned" fill={SEVERITY_COLORS.info} name="Planificado" />
               <Bar dataKey="executed" fill={SEVERITY_COLORS.medium} name="Ejecutado" />
@@ -619,9 +675,26 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
           <ResponsiveContainer width="100%" height={chartConfig.height}>
             <ComposedChart data={analysisData} margin={chartConfig.margin}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="category" />
-              <YAxis />
-              <Tooltip formatter={(value: number) => [`$${(value / 1000000).toFixed(1)}M`, 'Monto']} />
+              <XAxis 
+                dataKey="category" 
+                tick={{ fill: '#333', angle: -45, textAnchor: 'end', fontSize: 12 }} 
+                height={80}
+                className="dark:tick-fill-gray-300"
+              />
+              <YAxis 
+                tick={{ fill: '#333' }} 
+                tickFormatter={(value) => `${(value / 1000000).toFixed(1)}M`}
+                className="dark:tick-fill-gray-300"
+              />
+              <Tooltip 
+                formatter={(value: number) => [formatCurrencyARS(Number(value)), 'Monto']}
+                contentStyle={{ 
+                  backgroundColor: '#fff', 
+                  borderColor: '#e5e7eb',
+                  color: '#000'
+                }}
+                className="dark:bg-dark-surface dark:border-dark-border dark:text-dark-text-primary"
+              />
               <Legend />
               <Bar dataKey="budgeted" fill={SEVERITY_COLORS.info} name="Presupuestado" />
               <Bar dataKey="executed" fill={SEVERITY_COLORS.medium} name="Ejecutado" />
@@ -632,15 +705,60 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
       case 'quarterly-anomalies':
         return (
           <ResponsiveContainer width="100%" height={chartConfig.height}>
-            <AreaChart data={analysisData} margin={chartConfig.margin}>
+            <ComposedChart data={analysisData} margin={chartConfig.margin}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="quarter" />
-              <YAxis />
-              <Tooltip formatter={(value: number) => [`$${(value / 1000000).toFixed(0)}M`, 'Presupuesto']} />
+              <XAxis 
+                dataKey="quarterLabel" 
+                tick={{ fill: '#333' }} 
+                className="dark:tick-fill-gray-300"
+              />
+              <YAxis 
+                yAxisId="left"
+                tick={{ fill: '#333' }} 
+                tickFormatter={(value) => `${(value / 1000000).toFixed(0)}M`}
+                className="dark:tick-fill-gray-300"
+              />
+              <YAxis 
+                yAxisId="right" 
+                orientation="right" 
+                tick={{ fill: '#333' }} 
+                tickFormatter={(value) => `${value}%`}
+                className="dark:tick-fill-gray-300"
+              />
+              <Tooltip 
+                formatter={(value: number | string, name: string) => {
+                  if (name === 'budgeted') {
+                    return [formatCurrencyARS(Number(value)), 'Presupuesto'];
+                  } else if (name === 'growth') {
+                    return [`${Number(value).toFixed(1)}%`, 'Crecimiento'];
+                  }
+                  return [value, name];
+                }}
+                labelFormatter={(label) => `Trimestre: ${label}`}
+                contentStyle={{ 
+                  backgroundColor: '#fff', 
+                  borderColor: '#e5e7eb',
+                  color: '#000'
+                }}
+                className="dark:bg-dark-surface dark:border-dark-border dark:text-dark-text-primary"
+              />
               <Legend />
-              <Area type="monotone" dataKey="budgeted" fill={SEVERITY_COLORS.info} />
-              <Line type="monotone" dataKey="growth" stroke={SEVERITY_COLORS.high} />
-            </AreaChart>
+              <Bar 
+                yAxisId="left"
+                dataKey="budgeted" 
+                fill={SEVERITY_COLORS.info} 
+                name="Presupuesto Trimestral"
+                radius={[4, 4, 0, 0]}
+              />
+              <Line 
+                yAxisId="right"
+                type="monotone" 
+                dataKey="growth" 
+                stroke={SEVERITY_COLORS.high} 
+                name="% Crecimiento"
+                strokeWidth={2}
+              />
+            </ComposedChart>
           </ResponsiveContainer>
         );
 
@@ -650,9 +768,25 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
           <ResponsiveContainer width="100%" height={chartConfig.height}>
             <BarChart data={analysisData} margin={chartConfig.margin}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="category" />
-              <YAxis />
-              <Tooltip />
+              <XAxis 
+                dataKey="category" 
+                tick={{ fill: '#333', angle: -45, textAnchor: 'end', fontSize: 12 }} 
+                height={80}
+                className="dark:tick-fill-gray-300"
+              />
+              <YAxis 
+                tick={{ fill: '#333' }} 
+                className="dark:tick-fill-gray-300"
+              />
+              <Tooltip 
+                formatter={(value: number) => [formatNumberARS(Number(value)), 'Banderas Rojas']}
+                contentStyle={{ 
+                  backgroundColor: '#fff', 
+                  borderColor: '#e5e7eb',
+                  color: '#000'
+                }}
+                className="dark:bg-dark-surface dark:border-dark-border dark:text-dark-text-primary"
+              />
               <Legend />
               <Bar
                 dataKey="flags"
