@@ -1,7 +1,7 @@
 {
   "year": 2020,
-  "income": 294000000,
-  "expenses": 272685000,
+  "total_revenue": 294000000,
+  "total_expenses": 272685000,
   "balance": 21315000,
   "treasury_movements": [
     [
