@@ -138,5 +138,5 @@
       "@types/react-dom": "$@types/react-dom"
     }
   },
-  "homepage": "https://cda-transparencia.org"
+  "homepage": "."
 }

@@ -1,5 +1,10 @@
 {
   "name": "cda-transparencia",
   "compatibility_date": "2024-01-01",
-  "pages_build_output_dir": "frontend/dist"
+  "pages": {
+    // This file is kept for potential future Cloudflare deployment but not actively used
+    // Current deployment is configured via GitHub Actions to GitHub Pages
+    "build_command": "cd frontend && npm run build",
+    "build_output_dir": "./frontend/dist"
+  }
 }

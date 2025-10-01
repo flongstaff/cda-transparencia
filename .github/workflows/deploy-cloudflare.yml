@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages (replaced Cloudflare deployment)
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      # Setup Node.js environment
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      # Install frontend dependencies
+      - run: cd frontend && npm ci
+      
+      # Build the frontend for GitHub Pages
+      - run: cd frontend && npm run build:github
+      
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./frontend/dist
+          cname: cda-transparencia.org
+          enable_jekyll: false
+          allow_empty_commit: false
+          keep_files: false
+          force_orphan: true
