@@ -166,10 +166,10 @@ const DataVisualizationHub: React.FC = () => {
       console.log('Fetching external data sources...');
 
       const [rafamResult, gbaResult, contratacionesResult, carmenResult] = await Promise.allSettled([
-        externalApisService.getRAFAMData('270'),
-        externalApisService.getBuenosAiresProvincialData(),
-        externalApisService.getContratacionesData('Carmen de Areco'),
-        externalApisService.getCarmenDeArecoData()
+        externalAPIsService.getRAFAMData('270'),
+        externalAPIsService.getBuenosAiresProvincialData(),
+        externalAPIsService.getContratacionesData('Carmen de Areco'),
+        externalAPIsService.getCarmenDeArecoData()
       ]);
 
       const newExternalData: any = {
