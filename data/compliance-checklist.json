@@ -1,0 +1,270 @@
+{
+  "complianceChecklist": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-01",
+    "system": "Carmen de Areco Transparency Portal",
+    "aaipCompliance": {
+      "itaIndexAlignment": {
+        "activeDisclosure": {
+          "status": "compliant",
+          "criteria": [
+            {
+              "id": "mandatory-datasets",
+              "name": "Conjuntos de Datos Obligatorios",
+              "description": "Publicación de todos los conjuntos de datos requeridos por la normativa",
+              "requirement": "Ley 27.275 y resoluciones complementarias",
+              "status": "compliant",
+              "evidence": "catálogo_de_datos_abiertos.json",
+              "lastChecked": "2024-12-01",
+              "nextReview": "2025-01-01"
+            },
+            {
+              "id": "data-update-frequency",
+              "name": "Frecuencia de Actualización",
+              "description": "Cumplimiento de los plazos de actualización establecidos",
+              "requirement": "Resolución 102/2017 AAIP",
+              "status": "compliant",
+              "evidence": "update_schedule_tracking.json",
+              "lastChecked": "2024-12-01",
+              "nextReview": "2024-12-08"
+            },
+            {
+              "id": "data-quality-standards",
+              "name": "Estándares de Calidad",
+              "description": "Cumplimiento de estándares mínimos de calidad de datos",
+              "requirement": "Guía de calidad de datos AAIP",
+              "status": "compliant",
+              "evidence": "data_quality_reports.json",
+              "lastChecked": "2024-12-01",
+              "nextReview": "2024-12-15"
+            }
+          ]
+        },
+        "accessibility": {
+          "status": "compliant",
+          "criteria": [
+            {
+              "id": "wcag-compliance",
+              "name": "Cumplimiento WCAG 2.1 AA",
+              "description": "Adhesión a los estándares de accesibilidad web",
+              "requirement": "Guía de accesibilidad AAIP",
+              "status": "compliant",
+              "evidence": "accessibility_audit_report.pdf",
+              "lastChecked": "2024-12-01",
+              "nextReview": "2025-03-01"
+            },
+            {
+              "id": "alternative-formats",
+              "name": "Formatos Alternativos",
+              "description": "Disponibilidad de datos en múltiples formatos accesibles",
+              "requirement": "Ley 27.275, artículo 19",
+              "status": "compliant",
+              "evidence": "format_availability_matrix.json",
+              "lastChecked": "2024-12-01",
+              "nextReview": "2025-01-01"
+            }
+          ]
+        },
+        "usability": {
+          "status": "compliant",
+          "criteria": [
+            {
+              "id": "user-interface",
+              "name": "Interfaz de Usuario",
+              "description": "Diseño intuitivo y fácil de usar",
+              "requirement": "Principios de diseño inclusivo",
+              "status": "compliant",
+              "evidence": "user_testing_reports.json",
+              "lastChecked": "2024-12-01",
+              "nextReview": "2025-02-01"
+            },
+            {
+              "id": "search-functionality",
+              "name": "Funcionalidad de Búsqueda",
+              "description": "Motor de búsqueda efectivo y eficiente",
+              "requirement": "Guía de funcionalidades esenciales",
+              "status": "compliant",
+              "evidence": "search_effectiveness_metrics.json",
+              "lastChecked": "2024-12-01",
+              "nextReview": "2024-12-15"
+            }
+          ]
+        },
+        "findability": {
+          "status": "compliant",
+          "criteria": [
+            {
+              "id": "navigation-structure",
+              "name": "Estructura de Navegación",
+              "description": "Organización clara y lógica de la información",
+              "requirement": "Principios de arquitectura de información",
+              "status": "compliant",
+              "evidence": "site_navigation_map.json",
+              "lastChecked": "2024-12-01",
+              "nextReview": "2025-01-01"
+            },
+            {
+              "id": "metadata-standardization",
+              "name": "Estandarización de Metadatos",
+              "description": "Uso consistente de metadatos para facilitar el descubrimiento",
+              "requirement": "DCAT-AP, ISO 19115",
+              "status": "compliant",
+              "evidence": "metadata_standards_compliance.json",
+              "lastChecked": "2024-12-01",
+              "nextReview": "2025-01-01"
+            }
+          ]
+        }
+      },
+      "selfAssessment": {
+        "status": "active",
+        "frequency": "monthly",
+        "lastCompleted": "2024-12-01",
+        "nextDue": "2025-01-01",
+        "responsibleParty": "Departamento de Tecnología"
+      },
+      "publicReporting": {
+        "status": "active",
+        "frequency": "quarterly",
+        "lastPublished": "2024-10-01",
+        "nextPublication": "2025-01-01",
+        "reportFormat": "PDF, HTML",
+        "publicationChannels": ["portal", "AAIP registry"]
+      }
+    },
+    "dataProtectionCompliance": {
+      "ley25326": {
+        "status": "compliant",
+        "criteria": [
+          {
+            "id": "data-minimization",
+            "name": "Minimización de Datos",
+            "description": "Solo se recopilan datos necesarios para fines específicos",
+            "requirement": "Artículo 5, inciso b) Ley 25.326",
+            "status": "compliant",
+            "evidence": "data_mapping.json",
+            "lastChecked": "2024-12-01",
+            "nextReview": "2025-01-01"
+          },
+          {
+            "id": "purpose-limitation",
+            "name": "Limitación de Finalidad",
+            "description": "Los datos se utilizan solo para los fines declarados",
+            "requirement": "Artículo 5, inciso c) Ley 25.326",
+            "status": "compliant",
+            "evidence": "privacy_policy.json",
+            "lastChecked": "2024-12-01",
+            "nextReview": "2025-01-01"
+          },
+          {
+            "id": "data-security",
+            "name": "Seguridad de Datos",
+            "description": "Medidas técnicas y organizativas para proteger los datos",
+            "requirement": "Artículo 13 Ley 25.326",
+            "status": "compliant",
+            "evidence": "security_measures_documentation.pdf",
+            "lastChecked": "2024-12-01",
+            "nextReview": "2025-01-01"
+          }
+        ]
+      },
+      "arcoRights": {
+        "status": "implemented",
+        "criteria": [
+          {
+            "id": "access-right",
+            "name": "Derecho de Acceso",
+            "description": "Posibilidad de acceder a datos personales tratados",
+            "requirement": "Artículo 14 Ley 25.326",
+            "status": "implemented",
+            "evidence": "data_rights_procedures.json",
+            "lastChecked": "2024-12-01",
+            "nextReview": "2025-01-01"
+          },
+          {
+            "id": "rectification-right",
+            "name": "Derecho de Rectificación",
+            "description": "Corrección de datos personales inexactos",
+            "requirement": "Artículo 15 Ley 25.326",
+            "status": "implemented",
+            "evidence": "data_rights_procedures.json",
+            "lastChecked": "2024-12-01",
+            "nextReview": "2025-01-01"
+          },
+          {
+            "id": "cancellation-right",
+            "name": "Derecho de Cancelación",
+            "description": "Eliminación de datos personales cuando sea procedente",
+            "requirement": "Artículo 16 Ley 25.326",
+            "status": "implemented",
+            "evidence": "data_rights_procedures.json",
+            "lastChecked": "2024-12-01",
+            "nextReview": "2025-01-01"
+          },
+          {
+            "id": "opposition-right",
+            "name": "Derecho de Oposición",
+            "description": "Oposición al tratamiento de datos personales",
+            "requirement": "Artículo 17 Ley 25.326",
+            "status": "implemented",
+            "evidence": "data_rights_procedures.json",
+            "lastChecked": "2024-12-01",
+            "nextReview": "2025-01-01"
+          }
+        ]
+      }
+    },
+    "monitoringAndEvaluation": {
+      "dashboardImplementation": {
+        "status": "in_progress",
+        "criteria": [
+          {
+            "id": "kpi-tracking",
+            "name": "Seguimiento de KPI",
+            "description": "Implementación de indicadores clave de rendimiento",
+            "requirement": "Guía de monitoreo AAIP",
+            "status": "in_progress",
+            "evidence": "kpi_definitions.json",
+            "lastChecked": "2024-12-01",
+            "nextReview": "2024-12-15"
+          },
+          {
+            "id": "compliance-reporting",
+            "name": "Reportes de Cumplimiento",
+            "description": "Generación automática de reportes de cumplimiento",
+            "requirement": "Recomendaciones AAIP",
+            "status": "in_progress",
+            "evidence": "compliance_reporting_template.json",
+            "lastChecked": "2024-12-01",
+            "nextReview": "2024-12-15"
+          }
+        ]
+      },
+      "continuousImprovement": {
+        "status": "active",
+        "criteria": [
+          {
+            "id": "feedback-integration",
+            "name": "Integración de Retroalimentación",
+            "description": "Incorporación de comentarios de usuarios en mejoras",
+            "requirement": "Proceso de mejora continua",
+            "status": "active",
+            "evidence": "user_feedback_log.json",
+            "lastChecked": "2024-12-01",
+            "nextReview": "2024-12-15"
+          },
+          {
+            "id": "performance-optimization",
+            "name": "Optimización de Rendimiento",
+            "description": "Mejoras continuas basadas en métricas de desempeño",
+            "requirement": "Monitoreo constante",
+            "status": "active",
+            "evidence": "performance_optimization_log.json",
+            "lastChecked": "2024-12-01",
+            "nextReview": "2024-12-15"
+          }
+        ]
+      }
+    }
+  }
+}

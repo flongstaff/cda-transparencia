@@ -1,0 +1,319 @@
+{
+  "kpiDefinitions": [
+    {
+      "id": "data-availability",
+      "name": "Disponibilidad de Datos",
+      "category": "Calidad de Datos",
+      "subcategory": "Publicación",
+      "description": "Porcentaje de conjuntos de datos requeridos que están publicados",
+      "longDescription": "Este indicador mide la proporción de conjuntos de datos que deben estar disponibles según la normativa de transparencia activa y que efectivamente han sido publicados en el portal.",
+      "calculationMethod": "(conjuntos_de_datos_publicados / conjuntos_de_datos_requeridos) * 100",
+      "unit": "porcentaje",
+      "targetValue": 100,
+      "warningThreshold": 90,
+      "criticalThreshold": 80,
+      "measurementFrequency": "diaria",
+      "dataSource": "sistema_interno",
+      "aaipAlignment": {
+        "itaIndex": true,
+        "transparencyCategory": "divulgación_activa",
+        "evaluationMethod": "conteo_de_conjuntos_de_datos"
+      },
+      "privacyCompliant": true,
+      "visualization": {
+        "type": "gauge",
+        "colorScheme": "green_to_red",
+        "displayFormat": "percentage"
+      },
+      "historicalTracking": true,
+      "trendAnalysis": true
+    },
+    {
+      "id": "update-timeliness",
+      "name": "Actualización Oportuna",
+      "category": "Calidad de Datos",
+      "subcategory": "Temporalidad",
+      "description": "Porcentaje de datos actualizados según el cronograma establecido",
+      "longDescription": "Mide la puntualidad en la actualización de los datos según los plazos establecidos por la normativa de transparencia.",
+      "calculationMethod": "(actualizaciones_a_tiempo / total_actualizaciones_requeridas) * 100",
+      "unit": "porcentaje",
+      "targetValue": 95,
+      "warningThreshold": 85,
+      "criticalThreshold": 75,
+      "measurementFrequency": "semanal",
+      "dataSource": "sistema_interno",
+      "aaipAlignment": {
+        "itaIndex": true,
+        "transparencyCategory": "puntualidad",
+        "evaluationMethod": "seguimiento_de_cronogramas"
+      },
+      "privacyCompliant": true,
+      "visualization": {
+        "type": "bar_chart",
+        "colorScheme": "blue_gradient",
+        "displayFormat": "percentage"
+      },
+      "historicalTracking": true,
+      "trendAnalysis": true
+    },
+    {
+      "id": "data-completeness",
+      "name": "Integridad de Datos",
+      "category": "Calidad de Datos",
+      "subcategory": "Precisión",
+      "description": "Porcentaje de campos requeridos completos en los conjuntos de datos",
+      "longDescription": "Evalúa la completitud de la información en los conjuntos de datos publicados, asegurando que todos los campos requeridos estén debidamente llenos.",
+      "calculationMethod": "(campos_completos / campos_requeridos_totales) * 100",
+      "unit": "porcentaje",
+      "targetValue": 98,
+      "warningThreshold": 90,
+      "criticalThreshold": 80,
+      "measurementFrequency": "diaria",
+      "dataSource": "sistema_interno",
+      "aaipAlignment": {
+        "itaIndex": true,
+        "transparencyCategory": "calidad_de_datos",
+        "evaluationMethod": "análisis_de_campos"
+      },
+      "privacyCompliant": true,
+      "visualization": {
+        "type": "line_chart",
+        "colorScheme": "purple_gradient",
+        "displayFormat": "percentage"
+      },
+      "historicalTracking": true,
+      "trendAnalysis": true
+    },
+    {
+      "id": "accessibility-compliance",
+      "name": "Cumplimiento de Accesibilidad",
+      "category": "Experiencia del Usuario",
+      "subcategory": "Accesibilidad",
+      "description": "Porcentaje de páginas que cumplen con estándares WCAG 2.1 AA",
+      "longDescription": "Verifica el cumplimiento de los estándares de accesibilidad web para garantizar que el portal sea usable por personas con discapacidades.",
+      "calculationMethod": "(páginas_accesibles / páginas_totales) * 100",
+      "unit": "porcentaje",
+      "targetValue": 100,
+      "warningThreshold": 95,
+      "criticalThreshold": 90,
+      "measurementFrequency": "mensual",
+      "dataSource": "automated_testing",
+      "aaipAlignment": {
+        "itaIndex": true,
+        "transparencyCategory": "accesibilidad",
+        "evaluationMethod": "auditoría_automática"
+      },
+      "privacyCompliant": true,
+      "visualization": {
+        "type": "radar_chart",
+        "colorScheme": "orange_gradient",
+        "displayFormat": "percentage"
+      },
+      "historicalTracking": true,
+      "trendAnalysis": true
+    },
+    {
+      "id": "portal-performance",
+      "name": "Rendimiento del Portal",
+      "category": "Rendimiento Técnico",
+      "subcategory": "Velocidad",
+      "description": "Tiempo promedio de carga de páginas (milisegundos)",
+      "longDescription": "Mide el tiempo promedio que tardan en cargarse las páginas del portal, afectando la experiencia del usuario.",
+      "calculationMethod": "promedio(tiempos_de_carga_de_páginas)",
+      "unit": "milisegundos",
+      "targetValue": 2000,
+      "warningThreshold": 3000,
+      "criticalThreshold": 5000,
+      "measurementFrequency": "horaria",
+      "dataSource": "performance_monitoring",
+      "aaipAlignment": {
+        "itaIndex": false,
+        "transparencyCategory": "usabilidad",
+        "evaluationMethod": "monitoreo_de_rendimiento"
+      },
+      "privacyCompliant": true,
+      "visualization": {
+        "type": "area_chart",
+        "colorScheme": "blue_to_green",
+        "displayFormat": "numeric"
+      },
+      "historicalTracking": true,
+      "trendAnalysis": true
+    },
+    {
+      "id": "uptime",
+      "name": "Disponibilidad del Sistema",
+      "category": "Rendimiento Técnico",
+      "subcategory": "Fiabilidad",
+      "description": "Porcentaje de tiempo que el portal está disponible",
+      "longDescription": "Indica la disponibilidad del portal medido como porcentaje de tiempo operativo durante un período determinado.",
+      "calculationMethod": "(minutos_de_funcionamiento / minutos_totales) * 100",
+      "unit": "porcentaje",
+      "targetValue": 99.9,
+      "warningThreshold": 99.5,
+      "criticalThreshold": 99.0,
+      "measurementFrequency": "diaria",
+      "dataSource": "uptime_monitoring",
+      "aaipAlignment": {
+        "itaIndex": false,
+        "transparencyCategory": "fiabilidad",
+        "evaluationMethod": "monitoreo_continuo"
+      },
+      "privacyCompliant": true,
+      "visualization": {
+        "type": "gauge",
+        "colorScheme": "green_gradient",
+        "displayFormat": "percentage"
+      },
+      "historicalTracking": true,
+      "trendAnalysis": true
+    },
+    {
+      "id": "user-satisfaction",
+      "name": "Satisfacción del Usuario",
+      "category": "Experiencia del Usuario",
+      "subcategory": "Usabilidad",
+      "description": "Puntaje promedio de satisfacción del usuario (escala 1-10)",
+      "longDescription": "Mide la percepción de los usuarios sobre la utilidad y facilidad de uso del portal mediante encuestas periódicas.",
+      "calculationMethod": "promedio(calificaciones_de_satisfacción_del_usuario)",
+      "unit": "puntaje",
+      "targetValue": 8.5,
+      "warningThreshold": 7.0,
+      "criticalThreshold": 5.0,
+      "measurementFrequency": "semanal",
+      "dataSource": "user_surveys",
+      "aaipAlignment": {
+        "itaIndex": true,
+        "transparencyCategory": "usabilidad",
+        "evaluationMethod": "encuestas_de_usuario"
+      },
+      "privacyCompliant": true,
+      "anonymousCollection": true,
+      "visualization": {
+        "type": "bar_chart",
+        "colorScheme": "red_to_green",
+        "displayFormat": "numeric"
+      },
+      "historicalTracking": true,
+      "trendAnalysis": true
+    },
+    {
+      "id": "search-effectiveness",
+      "name": "Efectividad de Búsqueda",
+      "category": "Experiencia del Usuario",
+      "subcategory": "Facilidad de Búsqueda",
+      "description": "Porcentaje de búsquedas que producen resultados relevantes",
+      "longDescription": "Evalúa la capacidad del sistema de búsqueda para retornar resultados relevantes a las consultas de los usuarios.",
+      "calculationMethod": "(búsquedas_con_resultados_relevantes / búsquedas_totales) * 100",
+      "unit": "porcentaje",
+      "targetValue": 90,
+      "warningThreshold": 75,
+      "criticalThreshold": 60,
+      "measurementFrequency": "diaria",
+      "dataSource": "search_analytics",
+      "aaipAlignment": {
+        "itaIndex": true,
+        "transparencyCategory": "facilidad_de_búsqueda",
+        "evaluationMethod": "análisis_de_resultados_de_búsqueda"
+      },
+      "privacyCompliant": true,
+      "anonymousCollection": true,
+      "visualization": {
+        "type": "line_chart",
+        "colorScheme": "green_gradient",
+        "displayFormat": "percentage"
+      },
+      "historicalTracking": true,
+      "trendAnalysis": true
+    },
+    {
+      "id": "document-processing",
+      "name": "Procesamiento de Documentos",
+      "category": "Rendimiento Técnico",
+      "subcategory": "Gestión de Documentos",
+      "description": "Porcentaje de documentos procesados correctamente",
+      "longDescription": "Mide la eficiencia del sistema en el procesamiento y conversión de documentos para su publicación en el portal.",
+      "calculationMethod": "(documentos_procesados_correctamente / documentos_totales) * 100",
+      "unit": "porcentaje",
+      "targetValue": 98,
+      "warningThreshold": 90,
+      "criticalThreshold": 80,
+      "measurementFrequency": "horaria",
+      "dataSource": "processing_logs",
+      "aaipAlignment": {
+        "itaIndex": false,
+        "transparencyCategory": "gestión_de_documentos",
+        "evaluationMethod": "seguimiento_de_procesamiento"
+      },
+      "privacyCompliant": true,
+      "visualization": {
+        "type": "area_chart",
+        "colorScheme": "purple_to_blue",
+        "displayFormat": "percentage"
+      },
+      "historicalTracking": true,
+      "trendAnalysis": true
+    },
+    {
+      "id": "api-availability",
+      "name": "Disponibilidad de API",
+      "category": "Rendimiento Técnico",
+      "subcategory": "Acceso para Desarrolladores",
+      "description": "Porcentaje de tiempo que las APIs están disponibles",
+      "longDescription": "Indica la disponibilidad de las interfaces de programación de aplicaciones (APIs) para desarrolladores y sistemas externos.",
+      "calculationMethod": "(tiempo_de_disponibilidad_de_api / tiempo_total) * 100",
+      "unit": "porcentaje",
+      "targetValue": 99.5,
+      "warningThreshold": 99.0,
+      "criticalThreshold": 98.0,
+      "measurementFrequency": "horaria",
+      "dataSource": "api_monitoring",
+      "aaipAlignment": {
+        "itaIndex": false,
+        "transparencyCategory": "acceso_para_desarrolladores",
+        "evaluationMethod": "monitoreo_de_api"
+      },
+      "privacyCompliant": true,
+      "visualization": {
+        "type": "gauge",
+        "colorScheme": "blue_gradient",
+        "displayFormat": "percentage"
+      },
+      "historicalTracking": true,
+      "trendAnalysis": true
+    }
+  ],
+  "kpiCategories": [
+    {
+      "id": "data-quality",
+      "name": "Calidad de Datos",
+      "description": "Indicadores relacionados con la integridad, precisión y completitud de los datos publicados",
+      "kpis": ["data-availability", "update-timeliness", "data-completeness"]
+    },
+    {
+      "id": "user-experience",
+      "name": "Experiencia del Usuario",
+      "description": "Métricas que evalúan la usabilidad, accesibilidad y satisfacción del usuario",
+      "kpis": ["accessibility-compliance", "user-satisfaction", "search-effectiveness"]
+    },
+    {
+      "id": "technical-performance",
+      "name": "Rendimiento Técnico",
+      "description": "Indicadores técnicos sobre la disponibilidad, velocidad y fiabilidad del sistema",
+      "kpis": ["portal-performance", "uptime", "document-processing", "api-availability"]
+    }
+  ],
+  "complianceStandards": {
+    "aaipGuidelines": true,
+    "itaMethodology": true,
+    "wcagCompliance": "2.1 AA",
+    "dataProtection": "Ley 25.326 compliant"
+  },
+  "reportingSchedule": {
+    "realTime": ["portal-performance", "uptime", "api-availability", "document-processing"],
+    "hourly": ["search-effectiveness"],
+    "daily": ["data-availability", "data-completeness", "accessibility-compliance"],
+    "weekly": ["user-satisfaction", "update-timeliness"],
+    "monthly": ["comprehensive-report"]
+  }
+}

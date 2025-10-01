@@ -1,0 +1,104 @@
+{
+  "index_name": "transparency-documents",
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "analysis": {
+      "analyzer": {
+        "spanish_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "spanish_stop",
+            "spanish_stemmer"
+          ]
+        }
+      },
+      "filter": {
+        "spanish_stop": {
+          "type": "stop",
+          "stopwords": "_spanish_"
+        },
+        "spanish_stemmer": {
+          "type": "stemmer",
+          "language": "light_spanish"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "title": {
+        "type": "text",
+        "analyzer": "spanish_analyzer",
+        "fields": {
+          "raw": {
+            "type": "keyword"
+          }
+        }
+      },
+      "content": {
+        "type": "text",
+        "analyzer": "spanish_analyzer"
+      },
+      "category": {
+        "type": "keyword",
+        "fields": {
+          "text": {
+            "type": "text",
+            "analyzer": "spanish_analyzer"
+          }
+        }
+      },
+      "year": {
+        "type": "integer"
+      },
+      "date": {
+        "type": "date"
+      },
+      "source": {
+        "type": "keyword"
+      },
+      "url": {
+        "type": "keyword"
+      },
+      "type": {
+        "type": "keyword"
+      },
+      "tags": {
+        "type": "keyword"
+      },
+      "title_vector": {
+        "type": "dense_vector",
+        "dims": 384,
+        "index": true,
+        "similarity": "cosine"
+      },
+      "content_vector": {
+        "type": "dense_vector",
+        "dims": 384,
+        "index": true,
+        "similarity": "cosine"
+      }
+    }
+  },
+  "ai_transparency_settings": {
+    "processing_method": "hybrid semantic and traditional search",
+    "model_used": "sentence-transformers/all-MiniLM-L6-v2 adapted for Spanish",
+    "vector_dimensions": 384,
+    "privacy_protection": {
+      "query_anonymization": true,
+      "no_persistent_storage": true,
+      "ip_hashing": true
+    },
+    "compliance": {
+      "follows_aaip_guidelines": true,
+      "data_protection_compliant": true,
+      "transparency_indicators": true
+    }
+  }
+}

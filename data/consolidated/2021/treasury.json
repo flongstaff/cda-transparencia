@@ -1,7 +1,7 @@
 {
   "year": 2021,
-  "total_revenue": 308700000,
-  "total_expenses": 287780063,
+  "income": 308700000,
+  "expenses": 287780063,
   "balance": 20919937,
   "treasury_movements": [
     [

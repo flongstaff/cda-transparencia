@@ -1,0 +1,286 @@
+{
+  "metadataStandards": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-01",
+    "standards": [
+      {
+        "id": "dc-title",
+        "name": "Título",
+        "description": "Nombre descriptivo del recurso",
+        "required": true,
+        "format": "texto",
+        "examples": ["Presupuesto 2025", "Contratos de obra pública", "Salarios municipales"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Planning and Budgeting",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dc-description",
+        "name": "Descripción",
+        "description": "Descripción detallada del contenido del recurso",
+        "required": true,
+        "format": "texto",
+        "examples": ["Proyecto de presupuesto municipal para el ejercicio 2025", "Base de datos de contratos públicos adjudicados en 2024", "Datos mensuales de ejecución presupuestaria para el año 2024"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Planning and Budgeting",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dct-creator",
+        "name": "Creador",
+        "description": "Entidad responsable de crear el recurso",
+        "required": true,
+        "format": "texto",
+        "examples": ["Municipalidad de Carmen de Areco", "Secretaría de Hacienda", "Dirección de Tesorería"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Institutional Information",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dct-publisher",
+        "name": "Editor",
+        "description": "Entidad responsable de hacer disponible el recurso",
+        "required": true,
+        "format": "texto",
+        "examples": ["Municipalidad de Carmen de Areco", "Portal de Transparencia Carmen de Areco"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Institutional Information",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dct-contributor",
+        "name": "Contribuyente",
+        "description": "Entidad que contribuyó al recurso",
+        "required": false,
+        "format": "texto",
+        "examples": ["Dirección de Contabilidad", "Secretaría de Obras Públicas", "Proveedores"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Institutional Information",
+          "category": "optional"
+        }
+      },
+      {
+        "id": "dct-issued",
+        "name": "Fecha de emisión",
+        "description": "Fecha de publicación formal del recurso",
+        "required": true,
+        "format": "fecha (ISO 8601)",
+        "examples": ["2024-12-01", "2024-01-01", "2024-06-15"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Planning and Budgeting",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dct-modified",
+        "name": "Fecha de modificación",
+        "description": "Fecha de la última modificación del recurso",
+        "required": true,
+        "format": "fecha (ISO 8601)",
+        "examples": ["2024-12-01", "2024-11-30", "2024-11-28"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Planning and Budgeting",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dc-identifier",
+        "name": "Identificador",
+        "description": "Referencia inequívoca al recurso dentro de un contexto dado",
+        "required": true,
+        "format": "URI o cadena única",
+        "examples": ["cda-budget-2025", "cda-contracts-2024", "cda-execution-monthly-2024-11"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Planning and Budgeting",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dc-language",
+        "name": "Idioma",
+        "description": "Idioma del recurso",
+        "required": true,
+        "format": "código de idioma (ISO 639-1)",
+        "examples": ["es", "en", "pt"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Institutional Information",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dct-license",
+        "name": "Licencia",
+        "description": "Licencia bajo la cual se distribuye el recurso",
+        "required": true,
+        "format": "URI",
+        "examples": ["https://creativecommons.org/publicdomain/zero/1.0/", "https://creativecommons.org/licenses/by/4.0/"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Institutional Information",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dct-rights",
+        "name": "Derechos",
+        "description": "Declaración de derechos sobre el recurso",
+        "required": false,
+        "format": "texto",
+        "examples": ["Dominio público", "Creative Commons Zero", "Datos disponibles bajo licencia CC0"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Institutional Information",
+          "category": "optional"
+        }
+      },
+      {
+        "id": "dct-accessRights",
+        "name": "Derechos de acceso",
+        "description": "Información sobre quién puede acceder al recurso o una indicación de su nivel de seguridad",
+        "required": false,
+        "format": "texto",
+        "examples": ["público", "restringido", "confidencial"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Institutional Information",
+          "category": "optional"
+        }
+      },
+      {
+        "id": "dc-subject",
+        "name": "Tema",
+        "description": "Tema del recurso",
+        "required": true,
+        "format": "texto",
+        "examples": ["presupuesto", "contratación", "ejecución", "gasto", "ingreso"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Planning and Budgeting",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dct-spatial",
+        "name": "Cobertura espacial",
+        "description": "Entidad espacial o jurisdiccional a la que el recurso se aplica",
+        "required": false,
+        "format": "texto",
+        "examples": ["Carmen de Areco, Buenos Aires, Argentina", "Municipio de Carmen de Areco"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Institutional Information",
+          "category": "optional"
+        }
+      },
+      {
+        "id": "dct-temporal",
+        "name": "Cobertura temporal",
+        "description": "Período de tiempo al que se aplica el recurso",
+        "required": false,
+        "format": "fecha (ISO 8601)",
+        "examples": ["2024-01-01/2024-12-31", "2023-01-01/2023-12-31"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Planning and Budgeting",
+          "category": "optional"
+        }
+      },
+      {
+        "id": "dcat-theme",
+        "name": "Tema",
+        "description": "Categoría temática principal del recurso",
+        "required": true,
+        "format": "URI",
+        "examples": ["http://vocab.linkeddata.es/datosabiertos/kos/sector-publico/concepto", "http://datos.gob.ar/themes/economy"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Planning and Budgeting",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dcat-keyword",
+        "name": "Palabra clave",
+        "description": "Palabra o frase clave que describa el recurso",
+        "required": true,
+        "format": "texto",
+        "examples": ["presupuesto", "municipal", "2025", "gasto", "ingreso", "contrato", "licitación", "proveedor"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Planning and Budgeting",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dcat-contactPoint",
+        "name": "Punto de contacto",
+        "description": "Relevante punto de contacto para el recurso catalogado",
+        "required": false,
+        "format": "vCard",
+        "examples": ["mailto:transparencia@carmendeareco.gob.ar", "tel:+542323456789"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Institutional Information",
+          "category": "optional"
+        }
+      },
+      {
+        "id": "dcat-distribution",
+        "name": "Distribución",
+        "description": "Representación física del recurso en un formato específico",
+        "required": true,
+        "format": "objeto",
+        "examples": [
+          {
+            "title": "Presupuesto 2025 en CSV",
+            "description": "Proyecto de presupuesto municipal 2025 en formato CSV",
+            "format": "CSV",
+            "mediaType": "text/csv",
+            "accessURL": "https://carmendeareco.gob.ar/data/budget-2025.csv",
+            "downloadURL": "https://carmendeareco.gob.ar/data/budget-2025.csv",
+            "byteSize": 2400000,
+            "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+          }
+        ],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Planning and Budgeting",
+          "category": "mandatory"
+        }
+      },
+      {
+        "id": "dcat-landingPage",
+        "name": "Página de destino",
+        "description": "Página web que puede actuar como página de destino del recurso",
+        "required": false,
+        "format": "URI",
+        "examples": ["https://carmendeareco.gob.ar/transparencia/budget", "https://carmendeareco.gob.ar/transparencia/contracts"],
+        "aaipCompliance": {
+          "requiredBy": "AAIP ITA methodology",
+          "transparencyIndex": "Planning and Budgeting",
+          "category": "optional"
+        }
+      }
+    ],
+    "compliance": {
+      "aaipGuidelines": true,
+      "itaMethodology": true,
+      "wcagCompliance": "2.1 AA",
+      "updatePolicy": "Proactive publication following AAIP guidelines",
+      "accessibilityPolicy": "All content meets WCAG 2.1 AA standards"
+    }
+  }
+}

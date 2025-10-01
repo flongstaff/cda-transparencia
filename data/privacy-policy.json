@@ -1,0 +1,191 @@
+{
+  "privacyPolicy": {
+    "version": "1.0",
+    "effectiveDate": "2025-01-01",
+    "lastUpdated": "2024-12-01",
+    "title": "Política de Privacidad - Portal de Transparencia Carmen de Areco",
+    "jurisdiction": "Argentina",
+    "governingLaws": [
+      "Ley 25.326 de Protección de Datos Personales",
+      "Ley 27.275 de Acceso a la Información Pública",
+      "Reglamentación de la Ley de Protección de Datos",
+      "Directrices de la AAIP sobre Protección de Datos"
+    ],
+    "policySections": [
+      {
+        "id": "data-collection",
+        "title": "Recopilación de Información",
+        "content": "El Portal de Transparencia Carmen de Areco recopila únicamente la información necesaria para proporcionar servicios de transparencia pública. Esto incluye información de contacto cuando se envían solicitudes, y datos técnicos básicos para fines de funcionalidad y seguridad del sistema.",
+        "personalDataTypes": [
+          "Nombre",
+          "Dirección de correo electrónico",
+          "Información técnica (IP, tipo de navegador)"
+        ],
+        "nonPersonalDataTypes": [
+          "Estadísticas de uso anónimas",
+          "Patrones de navegación agregados",
+          "Tipos de dispositivos utilizados"
+        ],
+        "legalBases": [
+          {
+            "basis": "Consentimiento",
+            "description": "Cuando usted nos proporciona información de contacto explícitamente"
+          },
+          {
+            "basis": "Interés legítimo",
+            "description": "Para operar y mejorar nuestros servicios de transparencia"
+          },
+          {
+            "basis": "Obligación legal",
+            "description": "Para cumplir con Ley 27.275 de Acceso a la Información Pública"
+          }
+        ]
+      },
+      {
+        "id": "data-usage",
+        "title": "Uso de la Información",
+        "content": "La información recopilada se utiliza exclusivamente para proporcionar acceso a la información pública municipal, responder a solicitudes de información y mejorar la funcionalidad del portal. No se comparte con terceros para fines de marketing.",
+        "purposes": [
+          "Procesamiento de solicitudes de información pública",
+          "Mejora de servicios de transparencia",
+          "Mantenimiento de la seguridad del sistema",
+          "Cumplimiento de obligaciones legales"
+        ],
+        "dataRetention": "La información personal se retiene solo por el tiempo necesario para cumplir con los fines mencionados, en cumplimiento de las regulaciones aplicables."
+      },
+      {
+        "id": "data-sharing",
+        "title": "Compartición de Información",
+        "content": "No vendemos, comerciamos ni alquilamos su información personal. La información puede divulgarse cuando sea necesario para cumplir con obligaciones legales o para proporcionar información pública según la Ley 27.275.",
+        "recipients": [
+          "Autoridades municipales para procesamiento de solicitudes",
+          "Proveedores de servicios técnicos bajo acuerdos de confidencialidad",
+          "Autoridades según lo requiera la ley"
+        ],
+        "thirdParties": {
+          "analyticsProviders": false,
+          "marketingProviders": false,
+          "researchProviders": false
+        }
+      },
+      {
+        "id": "data-security",
+        "title": "Seguridad de los Datos",
+        "content": "Implementamos medidas técnicas y organizativas apropiadas para proteger su información contra el procesamiento no autorizado, pérdida accidental, destrucción o daño.",
+        "technicalMeasures": [
+          "Cifrado de datos en tránsito y en reposo",
+          "Controles de acceso basados en roles",
+          "Monitoreo de seguridad continuo"
+        ],
+        "organizationalMeasures": [
+          "Capacitación de personal en protección de datos",
+          "Procedimientos de respuesta a incidentes",
+          "Auditorías de seguridad regulares"
+        ]
+      },
+      {
+        "id": "user-rights",
+        "title": "Derechos del Titular de los Datos",
+        "content": "Usted tiene derechos específicos en relación con sus datos personales, incluyendo acceso, rectificación, cancelación y oposición, conocidos como derechos ARCO, más portabilidad y limitación del procesamiento según la ley aplicable.",
+        "rights": [
+          {
+            "name": "Acceso",
+            "description": "Derecho a obtener confirmación sobre si se están tratando datos personales y acceso a los mismos"
+          },
+          {
+            "name": "Rectificación",
+            "description": "Derecho a solicitar la corrección de datos personales inexactos o incompletos"
+          },
+          {
+            "name": "Cancelación",
+            "description": "Derecho a solicitar la eliminación de datos personales cuando sean inadecuados o excesivos"
+          },
+          {
+            "name": "Oposición",
+            "description": "Derecho a oponerse al tratamiento de sus datos personales en ciertas circunstancias"
+          },
+          {
+            "name": "Portabilidad",
+            "description": "Derecho a recibir sus datos personales en formato estructurado, de uso común y lectura mecánica"
+          },
+          {
+            "name": "Limitación del tratamiento",
+            "description": "Derecho a limitar el tratamiento de sus datos personales en ciertas circunstancias"
+          }
+        ],
+        "exerciseMethod": "Puede ejercer sus derechos contactándonos a través de dpo@carmendeareco.gob.ar o completando el formulario en nuestra página de Derechos de Datos."
+      },
+      {
+        "id": "cookies",
+        "title": "Cookies y Tecnologías Similares",
+        "content": "El portal puede utilizar cookies técnicamente necesarias para el funcionamiento del sitio. No utilizamos cookies de seguimiento o publicidad.",
+        "cookieTypes": [
+          {
+            "name": "Cookies de Sesión",
+            "purpose": "Mantener la sesión del usuario",
+            "duration": "Duración de la sesión"
+          },
+          {
+            "name": "Cookies de Seguridad",
+            "purpose": "Prevenir actividades maliciosas",
+            "duration": "Duración de la sesión"
+          }
+        ]
+      },
+      {
+        "id": "ai-processing",
+        "title": "Procesamiento por Inteligencia Artificial",
+        "content": "Utilizamos sistemas de inteligencia artificial para mejorar la funcionalidad del portal, como clasificación automática de documentos y búsqueda semántica. Estos sistemas procesan información pública y no almacenan datos personales.",
+        "aiPurposes": [
+          "Clasificación automática de documentos públicos",
+          "Búsqueda semántica de información",
+          "Generación de resúmenes de documentos públicos"
+        ],
+        "aiSafeguards": [
+          "No procesamiento de datos personales",
+          "Transparencia sobre el uso de IA",
+          "Control humano sobre decisiones automatizadas",
+          "Evaluación de impacto de privacidad"
+        ],
+        "aiRights": "Tiene derecho a obtener información sobre las decisiones automatizadas que le afecten y a solicitar revisión humana de tales decisiones."
+      },
+      {
+        "id": "data-breach",
+        "title": "Notificación de Violaciones de Datos",
+        "content": "En caso de una violación de seguridad que pueda entrañar un riesgo para los derechos y libertades de las personas, notificaremos a las autoridades competentes según lo requieran las regulaciones aplicables y, cuando sea posible, afectará directamente a los interesados.",
+        "notificationTimeline": "Dentro de las 72 horas posteriores al conocimiento de la violación",
+        "affectedParties": "Cuando la violación es de alto riesgo para los interesados"
+      },
+      {
+        "id": "contact",
+        "title": "Contacto y Delegado de Protección de Datos",
+        "content": "Si tiene preguntas sobre esta política de privacidad o sobre el tratamiento de sus datos personales, puede contactar a nuestro Delegado de Protección de Datos.",
+        "dpoContact": {
+          "name": "Delegado de Protección de Datos",
+          "email": "dpo@carmendeareco.gob.ar",
+          "address": "Municipalidad de Carmen de Areco, Buenos Aires, Argentina"
+        },
+        "supervisoryAuthority": {
+          "name": "Agencia de Acceso a la Información Pública (AAIP)",
+          "contact": "consultas@aaip.gob.ar",
+          "url": "https://www.argentina.gob.ar/aaip"
+        }
+      }
+    ],
+    "compliance": {
+      "aaipGuidelines": true,
+      "ley25326Compliance": true,
+      "ley27275Alignment": true,
+      "gdprPrinciples": true,
+      "dataMinimization": true,
+      "purposeLimitation": true,
+      "storageLimitation": true,
+      "integrityAndConfidentiality": true
+    },
+    "policyUpdates": {
+      "updateNotification": "Las actualizaciones a esta política se publicarán en esta página con la fecha de entrada en vigencia. Los cambios materiales se comunicarán a través de notificación en el portal.",
+      "lastReviewDate": "2024-12-01",
+      "nextReviewDate": "2025-06-01"
+    }
+  }
+}
