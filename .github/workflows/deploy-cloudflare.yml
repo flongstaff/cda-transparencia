@@ -1,5 +1,8 @@
-name: Deploy to GitHub Pages (replaced Cloudflare deployment)
+name: Deploy to Cloudflare Pages
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -14,20 +17,22 @@ jobs:
           node-version: '20'
           cache: 'npm'
           
+      # Install wrangler for Cloudflare Pages deployment
+      - name: Install wrangler
+        run: npm install -g wrangler
+        
       # Install frontend dependencies
       - run: cd frontend && npm ci
       
-      # Build the frontend for GitHub Pages
+      # Build the frontend with GitHub Pages configuration
       - run: cd frontend && npm run build:github
       
-      # Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      # Deploy to Cloudflare Pages
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./frontend/dist
-          cname: cda-transparencia.org
-          enable_jekyll: false
-          allow_empty_commit: false
-          keep_files: false
-          force_orphan: true
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: cda-transparencia
+          directory: ./frontend/dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
