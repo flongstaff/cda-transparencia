@@ -89,8 +89,8 @@ const EnhancedTransparencyDashboard: React.FC = () => {
     const totalExecuted = currentBudget?.total_executed || currentBudget?.totalExecuted || 0;
     const executionRate = totalBudget > 0 ? (totalExecuted / totalBudget) * 100 : 0;
 
-    const categoryBreakdown = currentBudget?.categories?.map((props: Record<string, unknown>) => ({
-      name: cat.name,
+    const categoryBreakdown = currentBudget?.categories?.map((cat: Record<string, unknown>) => ({
+      name: cat.name || cat.category || '',
       budgeted: cat.budgeted || cat.budget_amount || cat.budget || 0,
       executed: cat.executed || cat.executed_amount || cat.executed || 0,
       execution_rate: cat.execution_rate || cat.executionPercentage || 0,

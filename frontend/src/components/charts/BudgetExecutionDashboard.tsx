@@ -14,6 +14,7 @@ import {
   Cell,
   ReferenceLine
 } from 'recharts';
+import dataIntegrationService from '../../services/DataIntegrationService';
 
 // Utility function for currency formatting
 const formatCurrencyARS = (value: number): string => {
@@ -49,18 +50,64 @@ const BudgetExecutionDashboard: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Try to load the budget data
-        const response = await fetch('/data/json/budget_data_2024.json');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data: BudgetData = await response.json();
-        setBudgetData(data);
+        // Load budget data using the data integration service
+        const year = 2024; // Default to 2024, but this could be parameterized
+        const integratedData = await dataIntegrationService.loadIntegratedData(year);
+        
+        // Structure the data to match the expected format
+        // Check if we have category data in the integrated budget
+        const categories = integratedData.budget.quarterly_data && Array.isArray(integratedData.budget.quarterly_data) 
+          ? integratedData.budget.quarterly_data.map((category: any, index: number) => ({
+              name: category.name || category.category || `Categoría ${index + 1}`,
+              budgeted: category.budgeted || category.total_budget || 0,
+              executed: category.executed || category.total_executed || 0,
+              percentage: (category.execution_rate || category.executionRate || 0) * 100, // Convert to percentage
+            }))
+          : integratedData.budget.categories && Array.isArray(integratedData.budget.categories)
+          ? integratedData.budget.categories.map((category: any) => ({
+              name: category.name || category.category || 'Desconocido',
+              budgeted: category.budgeted || category.total_budget || 0,
+              executed: category.executed || category.total_executed || 0,
+              percentage: (category.execution_rate || category.executionRate || 0) * 100, // Convert to percentage
+            }))
+          : [
+              {
+                name: 'General',
+                budgeted: integratedData.budget.total_budget || 0,
+                executed: integratedData.budget.total_executed || 0,
+                percentage: integratedData.budget.execution_rate || 0,
+              }
+            ];
+        
+        const budgetData: BudgetData = {
+          year: year,
+          totalBudget: integratedData.budget.total_budget,
+          totalExecuted: integratedData.budget.total_executed,
+          executionPercentage: integratedData.budget.execution_rate,
+          transparencyScore: 75, // Default or calculated from other data
+          categories: categories
+        };
+        
+        setBudgetData(budgetData);
         setLoading(false);
       } catch (err) {
         console.error('Error loading budget data:', err);
         setError('Failed to load budget execution data');
-        setLoading(false);
+        
+        // Fallback to loading from local JSON if service fails
+        try {
+          const response = await fetch('/data/json/budget_data_2024.json');
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data: BudgetData = await response.json();
+          setBudgetData(data);
+          setLoading(false);
+        } catch (fallbackError) {
+          console.error('Error loading budget data from local JSON:', fallbackError);
+          setError('Failed to load budget execution data from all sources');
+          setLoading(false);
+        }
       }
     };
 

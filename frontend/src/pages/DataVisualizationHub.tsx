@@ -15,12 +15,16 @@ import {
   Table,
   LineChart,
   Activity,
-  RefreshCw
+  RefreshCw,
+  AlertCircle,
+  CheckCircle,
+  ExternalLink
 } from 'lucide-react';
 import ComprehensiveDataDisplay from '../components/data-display/ComprehensiveDataDisplay';
 import StandardizedChart from '../components/charts/StandardizedChart';
 import ErrorBoundary from '../components/common/ErrorBoundary';
 import { formatCurrencyARS } from '../utils/formatters';
+import { externalAPIsService } from '../services/ExternalAPIsService';
 
 interface ChartData {
   name: string;
@@ -37,6 +41,19 @@ const DataVisualizationHub: React.FC = () => {
   const [chartData, setChartData] = useState<ChartData[]>([]);
   const [loading, setLoading] = useState(true);
   const [csvData, setCsvData] = useState<Record<string, any[]>>({});
+  const [externalData, setExternalData] = useState<{
+    rafam: any;
+    gba: any;
+    contrataciones: any;
+    carmenOfficial: any;
+  }>({
+    rafam: null,
+    gba: null,
+    contrataciones: null,
+    carmenOfficial: null
+  });
+  const [externalLoading, setExternalLoading] = useState(true);
+  const [dataSources, setDataSources] = useState<string[]>(['local']);
 
   const availableYears = [2019, 2020, 2021, 2022, 2023, 2024, 2025];
 
@@ -142,8 +159,53 @@ const DataVisualizationHub: React.FC = () => {
     setCsvData(loadedData);
   };
 
+  // Load external data sources
+  const loadExternalData = async () => {
+    try {
+      setExternalLoading(true);
+      console.log('Fetching external data sources...');
+
+      const [rafamResult, gbaResult, contratacionesResult, carmenResult] = await Promise.allSettled([
+        externalApisService.getRAFAMData('270'),
+        externalApisService.getBuenosAiresProvincialData(),
+        externalApisService.getContratacionesData('Carmen de Areco'),
+        externalApisService.getCarmenDeArecoData()
+      ]);
+
+      const newExternalData: any = {
+        rafam: rafamResult.status === 'fulfilled' && rafamResult.value.success ? rafamResult.value.data : null,
+        gba: gbaResult.status === 'fulfilled' && gbaResult.value.success ? gbaResult.value.data : null,
+        contrataciones: contratacionesResult.status === 'fulfilled' && contratacionesResult.value.success ? contratacionesResult.value.data : null,
+        carmenOfficial: carmenResult.status === 'fulfilled' ? carmenResult.value : null
+      };
+
+      setExternalData(newExternalData);
+
+      const activeSources = ['local'];
+      if (newExternalData.rafam) activeSources.push('rafam');
+      if (newExternalData.gba) activeSources.push('gba');
+      if (newExternalData.contrataciones) activeSources.push('contrataciones');
+      if (newExternalData.carmenOfficial) activeSources.push('carmen');
+
+      setDataSources(activeSources);
+
+      console.log('External data loaded:', {
+        rafam: !!newExternalData.rafam,
+        gba: !!newExternalData.gba,
+        contrataciones: !!newExternalData.contrataciones,
+        carmen: !!newExternalData.carmenOfficial
+      });
+
+    } catch (error) {
+      console.error('Error loading external data:', error);
+    } finally {
+      setExternalLoading(false);
+    }
+  };
+
   useEffect(() => {
     loadCSVData();
+    loadExternalData();
     setLoading(false);
   }, [selectedYear]);
 
@@ -371,6 +433,85 @@ const DataVisualizationHub: React.FC = () => {
                 ))}
               </select>
             </div>
+          </div>
+        </motion.div>
+
+        {/* Data Sources Status */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="mb-6 bg-white dark:bg-dark-surface rounded-lg p-4 border border-gray-200 dark:border-dark-border"
+        >
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-dark-text-primary flex items-center">
+              <Database className="w-4 h-4 mr-2" />
+              Fuentes de Datos Activas
+            </h3>
+            {externalLoading && (
+              <RefreshCw className="w-4 h-4 animate-spin text-blue-600" />
+            )}
+          </div>
+          <div className="mt-3 grid grid-cols-2 md:grid-cols-5 gap-3">
+            <div className="flex items-center text-sm">
+              <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+              <span className="text-gray-700 dark:text-dark-text-secondary">Archivos Locales (CSV/JSON)</span>
+            </div>
+            <div className="flex items-center text-sm">
+              {externalData.rafam ? (
+                <>
+                  <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+                  <span className="text-gray-700 dark:text-dark-text-secondary">RAFAM</span>
+                </>
+              ) : (
+                <>
+                  <AlertCircle className="w-4 h-4 mr-2 text-gray-400" />
+                  <span className="text-gray-400">RAFAM</span>
+                </>
+              )}
+            </div>
+            <div className="flex items-center text-sm">
+              {externalData.gba ? (
+                <>
+                  <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+                  <span className="text-gray-700 dark:text-dark-text-secondary">Buenos Aires</span>
+                </>
+              ) : (
+                <>
+                  <AlertCircle className="w-4 h-4 mr-2 text-gray-400" />
+                  <span className="text-gray-400">Buenos Aires</span>
+                </>
+              )}
+            </div>
+            <div className="flex items-center text-sm">
+              {externalData.contrataciones ? (
+                <>
+                  <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+                  <span className="text-gray-700 dark:text-dark-text-secondary">Contrataciones</span>
+                </>
+              ) : (
+                <>
+                  <AlertCircle className="w-4 h-4 mr-2 text-gray-400" />
+                  <span className="text-gray-400">Contrataciones</span>
+                </>
+              )}
+            </div>
+            <div className="flex items-center text-sm">
+              {externalData.carmenOfficial ? (
+                <>
+                  <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+                  <span className="text-gray-700 dark:text-dark-text-secondary">Carmen de Areco</span>
+                  <ExternalLink className="w-3 h-3 ml-1" />
+                </>
+              ) : (
+                <>
+                  <AlertCircle className="w-4 h-4 mr-2 text-gray-400" />
+                  <span className="text-gray-400">Carmen de Areco</span>
+                </>
+              )}
+            </div>
+          </div>
+          <div className="mt-2 text-xs text-gray-500 dark:text-dark-text-tertiary">
+            Fuentes activas: {dataSources.length} | Clic en "Gráficos" para ver comparaciones entre fuentes
           </div>
         </motion.div>
 

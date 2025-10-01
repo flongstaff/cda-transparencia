@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Building, Clock, AlertTriangle, CheckCircle, DollarSign } from 'lucide-react';
+import { externalAPIsService } from '../services/ExternalAPIsService';
 
 interface InfrastructureProject {
   project_name: string;
@@ -62,22 +63,48 @@ const InfrastructureTracker: React.FC = () => {
     try {
       setLoading(true);
       
-      // Try to load real infrastructure data from API
-      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+      // Try to load infrastructure data from external APIs service
+      console.log('Loading infrastructure data from external APIs...');
       
       try {
-        const response = await fetch(`${API_BASE}/api/audit/infrastructure`, {
-          headers: { 'Accept': 'application/json' }
-        });
+        const externalResult = await externalAPIsService.getComparativeMunicipalData();
+        console.log('External results:', externalResult);
         
-        if (response.ok) {
-          const realData = await response.json();
-          setInfrastructureData(realData);
+        // Process external results to construct infrastructure data
+        // In a real implementation, we would have specific infrastructure data endpoints
+        // For now, we'll create a structure based on available data
+        
+        // Check if any infrastructure-related data is available
+        const infrastructureDataFromExternal = externalResult.find(result => 
+          result.success && 
+          result.data && 
+          (result.data.projects || result.data.contracts || result.data.infrastructure)
+        );
+        
+        if (infrastructureDataFromExternal && infrastructureDataFromExternal.success) {
+          console.log('Found infrastructure data in external sources:', infrastructureDataFromExternal);
+          
+          // This is a simplified example - in practice, you'd parse the actual data structure
+          const infrastructureData: InfrastructureData = {
+            timestamp: new Date().toISOString(),
+            projects: infrastructureDataFromExternal.data.projects || [],
+            contractor_analysis: [],
+            flags: [],
+            summary: {
+              total_projects: infrastructureDataFromExternal.data.projects?.length || 0,
+              total_budget: 0, // Calculate from projects if available
+              delayed_projects: 0,
+              flagged_projects: 0,
+              completion_rate: 0,
+            }
+          };
+          
+          setInfrastructureData(infrastructureData);
           setLoading(false);
           return;
         }
-      } catch (_apiError) {
-    // // console.log('API not available, showing empty state');
+      } catch (externalError) {
+        console.warn('External API infrastructure data not available:', externalError);
       }
       
       // Show empty state when no real data is available
