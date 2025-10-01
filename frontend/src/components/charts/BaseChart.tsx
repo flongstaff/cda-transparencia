@@ -26,6 +26,34 @@ import {
 } from 'recharts';
 import { formatCurrencyARS, formatPercentage, formatNumberARS, formatQuarter } from '../../utils/spanishFormatter';
 
+// Centralized function for formatting X-axis labels
+const formatXAxisLabel = (value: any): string => {
+  // Format quarterly data using the utility function
+  if (typeof value === 'string' && value.startsWith('Q') && (value.includes(' ') || value.length <= 3)) {
+    return formatQuarter(value);
+  }
+  // Format monthly data like "Jan 2021" -> "Ene 2021" (Spanish)
+  else if (typeof value === 'string' && /^[A-Za-z]{3} \d{4}$/.test(value)) {
+    const [month, year] = value.split(' ');
+    const monthMap: Record<string, string> = {
+      'Jan': 'Ene',
+      'Feb': 'Feb',
+      'Mar': 'Mar',
+      'Apr': 'Abr',
+      'May': 'May',
+      'Jun': 'Jun',
+      'Jul': 'Jul',
+      'Aug': 'Ago',
+      'Sep': 'Sep',
+      'Oct': 'Oct',
+      'Nov': 'Nov',
+      'Dec': 'Dic'
+    };
+    return `${monthMap[month] || month} ${year}`;
+  }
+  return value;
+};
+
 // Chart types supported
 export type SupportedChartType = 
   'line' | 'bar' | 'area' | 'pie' | 'scatter' | 'composed';
@@ -134,41 +162,7 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
               label={xAxisLabel ? { value: xAxisLabel, position: 'insideBottom', offset: -10 } : undefined}
               tick={{ fill: '#333' }}
               className="dark:tick-fill-gray-300"
-              tickFormatter={(value) => {
-                // Format quarterly data like "Q1 2021" -> "1er Trimestre 2021"
-                if (typeof value === 'string' && value.startsWith('Q') && value.includes(' ')) {
-                  const [quarter, year] = value.split(' ');
-                  const quarterNum = parseInt(quarter.replace('Q', ''));
-                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
-                  return `${quarterNames[quarterNum]} Trimestre ${year}`;
-                }
-                // Format simple quarter data like "Q1" -> "1er Trimestre"
-                else if (typeof value === 'string' && value.startsWith('Q')) {
-                  const quarterNum = parseInt(value.replace('Q', ''));
-                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
-                  return `${quarterNames[quarterNum]} Trimestre`;
-                }
-                // Format monthly data like "Jan 2021" -> "Ene 2021" (Spanish)
-                else if (typeof value === 'string' && /^[A-Za-z]{3} \d{4}$/.test(value)) {
-                  const [month, year] = value.split(' ');
-                  const monthMap: Record<string, string> = {
-                    'Jan': 'Ene',
-                    'Feb': 'Feb',
-                    'Mar': 'Mar',
-                    'Apr': 'Abr',
-                    'May': 'May',
-                    'Jun': 'Jun',
-                    'Jul': 'Jul',
-                    'Aug': 'Ago',
-                    'Sep': 'Sep',
-                    'Oct': 'Oct',
-                    'Nov': 'Nov',
-                    'Dec': 'Dic'
-                  };
-                  return `${monthMap[month] || month} ${year}`;
-                }
-                return value;
-              }}
+              tickFormatter={formatXAxisLabel}
             />
             <YAxis 
               label={yAxisLabel ? { value: yAxisLabel, angle: -90, position: 'insideLeft' } : undefined}

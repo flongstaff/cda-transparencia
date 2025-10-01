@@ -1,0 +1,213 @@
+{
+  "monitoringConfig": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-01",
+    "system": "Carmen de Areco Transparency Portal",
+    "kpiDefinitions": [
+      {
+        "id": "data-availability",
+        "name": "Disponibilidad de Datos",
+        "category": "Data Quality",
+        "description": "Porcentaje de conjuntos de datos requeridos que están publicados",
+        "calculationMethod": "(published_datasets / required_datasets) * 100",
+        "targetValue": 100,
+        "warningThreshold": 90,
+        "criticalThreshold": 80,
+        "measurementFrequency": "daily",
+        "aaipAlignment": {
+          "itaIndex": true,
+          "transparencyCategory": "active_disclosure"
+        },
+        "privacyCompliant": true
+      },
+      {
+        "id": "update-timeliness",
+        "name": "Actualización Oportuna",
+        "category": "Data Quality",
+        "description": "Porcentaje de datos actualizados según el cronograma establecido",
+        "calculationMethod": "(on_time_updates / total_required_updates) * 100",
+        "targetValue": 95,
+        "warningThreshold": 85,
+        "criticalThreshold": 75,
+        "measurementFrequency": "weekly",
+        "aaipAlignment": {
+          "itaIndex": true,
+          "transparencyCategory": "timeliness"
+        },
+        "privacyCompliant": true
+      },
+      {
+        "id": "data-completeness",
+        "name": "Integridad de Datos",
+        "category": "Data Quality",
+        "description": "Porcentaje de campos requeridos completos en los conjuntos de datos",
+        "calculationMethod": "(complete_fields / total_required_fields) * 100",
+        "targetValue": 98,
+        "warningThreshold": 90,
+        "criticalThreshold": 80,
+        "measurementFrequency": "daily",
+        "aaipAlignment": {
+          "itaIndex": true,
+          "transparencyCategory": "data_quality"
+        },
+        "privacyCompliant": true
+      },
+      {
+        "id": "accessibility-compliance",
+        "name": "Cumplimiento de Accesibilidad",
+        "category": "User Experience",
+        "description": "Porcentaje de páginas que cumplen con estándares WCAG 2.1 AA",
+        "calculationMethod": "(accessible_pages / total_pages) * 100",
+        "targetValue": 100,
+        "warningThreshold": 95,
+        "criticalThreshold": 90,
+        "measurementFrequency": "monthly",
+        "aaipAlignment": {
+          "itaIndex": true,
+          "transparencyCategory": "accessibility"
+        },
+        "privacyCompliant": true
+      },
+      {
+        "id": "portal-performance",
+        "name": "Rendimiento del Portal",
+        "category": "Technical Performance",
+        "description": "Tiempo promedio de carga de páginas (milisegundos)",
+        "calculationMethod": "average(page_load_times)",
+        "targetValue": 2000,
+        "warningThreshold": 3000,
+        "criticalThreshold": 5000,
+        "measurementFrequency": "hourly",
+        "aaipAlignment": {
+          "itaIndex": false,
+          "transparencyCategory": "usability"
+        },
+        "privacyCompliant": true
+      },
+      {
+        "id": "uptime",
+        "name": "Disponibilidad del Sistema",
+        "category": "Technical Performance",
+        "description": "Porcentaje de tiempo que el portal está disponible",
+        "calculationMethod": "(uptime_minutes / total_minutes) * 100",
+        "targetValue": 99.9,
+        "warningThreshold": 99.5,
+        "criticalThreshold": 99.0,
+        "measurementFrequency": "daily",
+        "aaipAlignment": {
+          "itaIndex": false,
+          "transparencyCategory": "reliability"
+        },
+        "privacyCompliant": true
+      },
+      {
+        "id": "user-satisfaction",
+        "name": "Satisfacción del Usuario",
+        "category": "User Experience",
+        "description": "Puntaje promedio de satisfacción del usuario (escala 1-10)",
+        "calculationMethod": "average(user_satisfaction_scores)",
+        "targetValue": 8.5,
+        "warningThreshold": 7.0,
+        "criticalThreshold": 5.0,
+        "measurementFrequency": "weekly",
+        "aaipAlignment": {
+          "itaIndex": true,
+          "transparencyCategory": "usability"
+        },
+        "privacyCompliant": true,
+        "anonymousCollection": true
+      },
+      {
+        "id": "search-effectiveness",
+        "name": "Efectividad de Búsqueda",
+        "category": "User Experience",
+        "description": "Porcentaje de búsquedas que producen resultados relevantes",
+        "calculationMethod": "(relevant_search_results / total_searches) * 100",
+        "targetValue": 90,
+        "warningThreshold": 75,
+        "criticalThreshold": 60,
+        "measurementFrequency": "daily",
+        "aaipAlignment": {
+          "itaIndex": true,
+          "transparencyCategory": "findability"
+        },
+        "privacyCompliant": true,
+        "anonymousCollection": true
+      },
+      {
+        "id": "document-processing",
+        "name": "Procesamiento de Documentos",
+        "category": "Technical Performance",
+        "description": "Porcentaje de documentos procesados correctamente",
+        "calculationMethod": "(successfully_processed_docs / total_docs) * 100",
+        "targetValue": 98,
+        "warningThreshold": 90,
+        "criticalThreshold": 80,
+        "measurementFrequency": "hourly",
+        "aaipAlignment": {
+          "itaIndex": false,
+          "transparencyCategory": "document_management"
+        },
+        "privacyCompliant": true
+      },
+      {
+        "id": "api-availability",
+        "name": "Disponibilidad de API",
+        "category": "Technical Performance",
+        "description": "Porcentaje de tiempo que las APIs están disponibles",
+        "calculationMethod": "(api_uptime / total_time) * 100",
+        "targetValue": 99.5,
+        "warningThreshold": 99.0,
+        "criticalThreshold": 98.0,
+        "measurementFrequency": "hourly",
+        "aaipAlignment": {
+          "itaIndex": false,
+          "transparencyCategory": "developer_access"
+        },
+        "privacyCompliant": true
+      }
+    ],
+    "complianceTracking": {
+      "aaipGuidelines": true,
+      "itaMethodology": true,
+      "transparencyIndices": ["ITA"],
+      "evaluationSchedule": "quarterly",
+      "selfAssessmentFrequency": "monthly",
+      "reportingSchedule": {
+        "internal": "weekly",
+        "public": "monthly"
+      }
+    },
+    "alertingConfig": {
+      "enabled": true,
+      "channels": ["email", "slack", "dashboard"],
+      "thresholds": {
+        "critical": "immediate",
+        "warning": "hourly",
+        "info": "daily"
+      },
+      "recipients": [
+        "admin@carmendeareco.gob.ar",
+        "tech-team@carmendeareco.gob.ar"
+      ]
+    },
+    "dataRetention": {
+      "metricsData": "2 years",
+      "complianceReports": "5 years",
+      "performanceLogs": "90 days",
+      "userAnalytics": "30 days"
+    },
+    "privacyCompliance": {
+      "noPersonalData": true,
+      "anonymousAnalytics": true,
+      "dataMinimization": true,
+      "purposeLimitation": true
+    },
+    "aaipAlignment": {
+      "followsItaMethodology": true,
+      "transparentReporting": true,
+      "publicAvailability": true,
+      "regularSelfAssessment": true
+    }
+  }
+}

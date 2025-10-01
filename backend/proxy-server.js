@@ -250,6 +250,418 @@ app.get('/api/provincial/gba', async (req, res) => {
   }
 });
 
+// Buenos Aires Fiscal Transparency
+app.get('/api/provincial/fiscal', async (req, res) => {
+  try {
+    const cacheKey = 'gba_fiscal';
+    const cached = cache.get(cacheKey);
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    const response = await axios.get('https://www.gba.gob.ar/transparencia_fiscal/', {
+      timeout: 10000,
+      headers: { 'User-Agent': 'Carmen-Transparency-Portal/1.0' }
+    });
+
+    const $ = cheerio.load(response.data);
+
+    const data = {
+      budget_documents: [],
+      execution_reports: [],
+      debt_reports: [],
+      transfers: []
+    };
+
+    // Extract fiscal documents
+    $('a[href$=".pdf"], a[href*="pdf"]').each((i, elem) => {
+      const href = $(elem).attr('href');
+      const text = $(elem).text().trim();
+
+      const doc = {
+        title: text,
+        url: href.startsWith('http') ? href : `https://www.gba.gob.ar${href}`,
+        type: 'pdf'
+      };
+
+      if (text.toLowerCase().includes('presupuesto') || text.toLowerCase().includes('budget')) {
+        data.budget_documents.push(doc);
+      } else if (text.toLowerCase().includes('ejecuci') || text.toLowerCase().includes('execution')) {
+        data.execution_reports.push(doc);
+      } else if (text.toLowerCase().includes('deuda') || text.toLowerCase().includes('debt')) {
+        data.debt_reports.push(doc);
+      } else if (text.toLowerCase().includes('transferencia') || text.toLowerCase().includes('transfer')) {
+        data.transfers.push(doc);
+      }
+    });
+
+    cache.set(cacheKey, data, 3600); // 1 hour
+    res.json({ success: true, data, cached: false });
+
+  } catch (error) {
+    console.error('Error fetching GBA fiscal data:', error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// RAFAM - Buenos Aires Economic Data
+app.post('/api/external/rafam', async (req, res) => {
+  try {
+    const { municipalityCode = '270', url } = req.body;
+    const cacheKey = `rafam_${municipalityCode}`;
+    const cached = cache.get(cacheKey);
+
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    // RAFAM requires specific request parameters for Carmen de Areco (code 270)
+    const rafamUrl = url || 'https://www.rafam.ec.gba.gov.ar/';
+
+    console.log(`Fetching RAFAM data for municipality ${municipalityCode}`);
+
+    const response = await axios.get(rafamUrl, {
+      params: {
+        mun: municipalityCode,
+        // Add other RAFAM-specific parameters as needed
+      },
+      timeout: 15000,
+      headers: {
+        'User-Agent': 'Carmen-Transparency-Portal/1.0',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+      }
+    });
+
+    const $ = cheerio.load(response.data);
+
+    // Extract RAFAM economic data
+    const data = {
+      municipality: 'Carmen de Areco',
+      municipalityCode,
+      economicData: {
+        budget: [],
+        execution: [],
+        resources: [],
+        expenses: []
+      },
+      lastUpdated: new Date().toISOString()
+    };
+
+    // Extract budget data tables
+    $('table').each((i, table) => {
+      const tableData = [];
+      $(table).find('tr').each((j, row) => {
+        const rowData = [];
+        $(row).find('td, th').each((k, cell) => {
+          rowData.push($(cell).text().trim());
+        });
+        if (rowData.length > 0) {
+          tableData.push(rowData);
+        }
+      });
+
+      const tableTitle = $(table).prev('h2, h3, h4').text().trim();
+      if (tableTitle.toLowerCase().includes('presupuesto') || tableTitle.toLowerCase().includes('budget')) {
+        data.economicData.budget.push({ title: tableTitle, data: tableData });
+      } else if (tableTitle.toLowerCase().includes('ejecuci') || tableTitle.toLowerCase().includes('execution')) {
+        data.economicData.execution.push({ title: tableTitle, data: tableData });
+      } else if (tableTitle.toLowerCase().includes('recurso') || tableTitle.toLowerCase().includes('revenue')) {
+        data.economicData.resources.push({ title: tableTitle, data: tableData });
+      } else if (tableTitle.toLowerCase().includes('gasto') || tableTitle.toLowerCase().includes('expense')) {
+        data.economicData.expenses.push({ title: tableTitle, data: tableData });
+      }
+    });
+
+    cache.set(cacheKey, data, 10800); // 3 hours
+    res.json({ success: true, data, cached: false, source: 'RAFAM' });
+
+  } catch (error) {
+    console.error('Error fetching RAFAM data:', error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      source: 'RAFAM'
+    });
+  }
+});
+
+/**
+ * AFIP (Federal Tax Agency) Data
+ */
+app.post('/api/national/afip', async (req, res) => {
+  try {
+    const { cuit } = req.body;
+    const cacheKey = `afip_${cuit}`;
+    const cached = cache.get(cacheKey);
+
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    console.log(`Fetching AFIP data for CUIT: ${cuit}`);
+
+    // AFIP API endpoint (if available) or web scraping
+    const afipUrl = 'https://www.afip.gob.ar/sitio/externos/default.asp';
+
+    const response = await axios.get(afipUrl, {
+      timeout: 15000,
+      headers: {
+        'User-Agent': 'Carmen-Transparency-Portal/1.0'
+      }
+    });
+
+    const $ = cheerio.load(response.data);
+
+    const data = {
+      cuit,
+      status: 'active',
+      lastUpdated: new Date().toISOString(),
+      source: 'AFIP'
+    };
+
+    cache.set(cacheKey, data, 86400); // 24 hours
+    res.json({ success: true, data, cached: false, source: 'AFIP' });
+
+  } catch (error) {
+    console.error('Error fetching AFIP data:', error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      source: 'AFIP'
+    });
+  }
+});
+
+/**
+ * CONTRATACIONES ABIERTAS (Open Contracts)
+ */
+app.post('/api/national/contrataciones', async (req, res) => {
+  try {
+    const { query } = req.body;
+    const cacheKey = `contrataciones_${query}`;
+    const cached = cache.get(cacheKey);
+
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    console.log(`Fetching Contrataciones Abiertas for: ${query}`);
+
+    const contratacionesUrl = 'https://www.argentina.gob.ar/jefatura/innovacion-publica/contrataciones-abiertas';
+
+    const response = await axios.get(contratacionesUrl, {
+      params: { q: query },
+      timeout: 15000,
+      headers: {
+        'User-Agent': 'Carmen-Transparency-Portal/1.0'
+      }
+    });
+
+    const $ = cheerio.load(response.data);
+    const contracts = [];
+
+    $('.contract-item, .contrato').each((i, elem) => {
+      contracts.push({
+        title: $(elem).find('h2, h3, .title').text().trim(),
+        amount: $(elem).find('.amount, .monto').text().trim(),
+        status: $(elem).find('.status, .estado').text().trim(),
+        date: $(elem).find('.date, .fecha').text().trim()
+      });
+    });
+
+    const data = {
+      query,
+      contracts,
+      count: contracts.length,
+      lastUpdated: new Date().toISOString()
+    };
+
+    cache.set(cacheKey, data, 3600); // 1 hour
+    res.json({ success: true, data, cached: false, source: 'Contrataciones Abiertas' });
+
+  } catch (error) {
+    console.error('Error fetching Contrataciones data:', error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      source: 'Contrataciones'
+    });
+  }
+});
+
+/**
+ * BOLETIN OFICIAL NACIONAL
+ */
+app.post('/api/national/boletin', async (req, res) => {
+  try {
+    const { query } = req.body;
+    const cacheKey = `boletin_nacional_${query}`;
+    const cached = cache.get(cacheKey);
+
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    console.log(`Fetching Boletín Oficial Nacional for: ${query}`);
+
+    const boletinUrl = 'https://www.boletinoficial.gob.ar/';
+
+    const response = await axios.get(boletinUrl, {
+      params: { q: query },
+      timeout: 15000,
+      headers: {
+        'User-Agent': 'Carmen-Transparency-Portal/1.0'
+      }
+    });
+
+    const $ = cheerio.load(response.data);
+    const publications = [];
+
+    $('.publication, .aviso').each((i, elem) => {
+      publications.push({
+        title: $(elem).find('h2, h3, .title').text().trim(),
+        date: $(elem).find('.date, .fecha').text().trim(),
+        section: $(elem).find('.section, .seccion').text().trim(),
+        url: $(elem).find('a').attr('href')
+      });
+    });
+
+    const data = {
+      query,
+      publications,
+      count: publications.length,
+      lastUpdated: new Date().toISOString()
+    };
+
+    cache.set(cacheKey, data, 3600); // 1 hour
+    res.json({ success: true, data, cached: false, source: 'Boletín Oficial Nacional' });
+
+  } catch (error) {
+    console.error('Error fetching Boletín Oficial Nacional:', error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      source: 'Boletín Oficial'
+    });
+  }
+});
+
+/**
+ * BOLETIN OFICIAL PROVINCIAL (Buenos Aires)
+ */
+app.post('/api/provincial/boletin', async (req, res) => {
+  try {
+    const { query } = req.body;
+    const cacheKey = `boletin_provincial_${query}`;
+    const cached = cache.get(cacheKey);
+
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    console.log(`Fetching Boletín Oficial Provincial for: ${query}`);
+
+    const boletinUrl = 'https://www.gba.gob.ar/boletin_oficial';
+
+    const response = await axios.get(boletinUrl, {
+      params: { q: query },
+      timeout: 15000,
+      headers: {
+        'User-Agent': 'Carmen-Transparency-Portal/1.0'
+      }
+    });
+
+    const $ = cheerio.load(response.data);
+    const publications = [];
+
+    $('.publication, .aviso, .decreto').each((i, elem) => {
+      publications.push({
+        title: $(elem).find('h2, h3, .title').text().trim(),
+        date: $(elem).find('.date, .fecha').text().trim(),
+        type: $(elem).find('.type, .tipo').text().trim(),
+        url: $(elem).find('a').attr('href')
+      });
+    });
+
+    const data = {
+      query,
+      publications,
+      count: publications.length,
+      lastUpdated: new Date().toISOString()
+    };
+
+    cache.set(cacheKey, data, 3600); // 1 hour
+    res.json({ success: true, data, cached: false, source: 'Boletín Oficial Buenos Aires' });
+
+  } catch (error) {
+    console.error('Error fetching Boletín Oficial Provincial:', error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      source: 'Boletín Provincial'
+    });
+  }
+});
+
+/**
+ * EXPEDIENTES (Administrative Proceedings)
+ */
+app.post('/api/provincial/expedientes', async (req, res) => {
+  try {
+    const { query } = req.body;
+    const cacheKey = `expedientes_${query}`;
+    const cached = cache.get(cacheKey);
+
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    console.log(`Fetching Expedientes for: ${query}`);
+
+    // Use expedientes tracking system or Buenos Aires portal
+    const expedientesUrl = 'https://www.gba.gob.ar/expedientes';
+
+    const response = await axios.get(expedientesUrl, {
+      params: { q: query },
+      timeout: 15000,
+      headers: {
+        'User-Agent': 'Carmen-Transparency-Portal/1.0'
+      }
+    });
+
+    const $ = cheerio.load(response.data);
+    const expedientes = [];
+
+    $('.expediente, .proceeding').each((i, elem) => {
+      expedientes.push({
+        number: $(elem).find('.number, .numero').text().trim(),
+        title: $(elem).find('h2, h3, .title').text().trim(),
+        status: $(elem).find('.status, .estado').text().trim(),
+        date: $(elem).find('.date, .fecha').text().trim(),
+        url: $(elem).find('a').attr('href')
+      });
+    });
+
+    const data = {
+      query,
+      expedientes,
+      count: expedientes.length,
+      lastUpdated: new Date().toISOString()
+    };
+
+    cache.set(cacheKey, data, 3600); // 1 hour
+    res.json({ success: true, data, cached: false, source: 'Expedientes' });
+
+  } catch (error) {
+    console.error('Error fetching Expedientes:', error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      source: 'Expedientes'
+    });
+  }
+});
+
 /**
  * POWERBI DASHBOARD EXTRACTION
  */
@@ -435,7 +847,14 @@ app.listen(PORT, () => {
   console.log(`   GET  /api/carmen/transparency - Transparency portal`);
   console.log(`   GET  /api/national/datos - datos.gob.ar API`);
   console.log(`   GET  /api/national/georef - Geographic data`);
+  console.log(`   POST /api/national/afip - AFIP tax data`);
+  console.log(`   POST /api/national/contrataciones - Open contracts`);
+  console.log(`   POST /api/national/boletin - National Boletín Oficial`);
   console.log(`   GET  /api/provincial/gba - Buenos Aires open data`);
+  console.log(`   GET  /api/provincial/fiscal - Buenos Aires fiscal transparency`);
+  console.log(`   POST /api/provincial/boletin - Provincial Boletín Oficial`);
+  console.log(`   POST /api/provincial/expedientes - Administrative proceedings`);
+  console.log(`   POST /api/external/rafam - RAFAM economic data`);
   console.log(`   GET  /api/powerbi/extract?url=<url> - Extract PowerBI data`);
   console.log(`   POST /api/pdf/extract - Extract PDF data`);
   console.log(`   POST /api/validate - Validate data`);

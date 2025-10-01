@@ -118,6 +118,15 @@ class ExternalAPIsService {
 
     // Provincial Level
     {
+      name: 'RAFAM - Buenos Aires Economic Data',
+      url: 'https://www.rafam.ec.gba.gov.ar/',
+      type: 'scraping',
+      format: 'html',
+      enabled: true,
+      priority: 1,
+      cacheMinutes: 180
+    },
+    {
       name: 'Buenos Aires Provincial Open Data',
       url: 'https://www.gba.gob.ar/datos_abiertos',
       type: 'api',
@@ -433,6 +442,365 @@ class ExternalAPIsService {
         data: null,
         source: 'Buenos Aires Province',
         error: 'Failed to fetch from all Buenos Aires Province sources'
+      };
+    }
+  }
+
+  /**
+   * Get Buenos Aires Provincial Open Data
+   */
+  async getBuenosAiresProvincialData(): Promise<ExternalDataResponse> {
+    try {
+      console.log('Fetching Buenos Aires provincial open data...');
+
+      const proxyUrl = buildApiUrl('provincial/gba');
+
+      const response = await fetch(proxyUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      return {
+        success: true,
+        data: data,
+        source: 'Buenos Aires Provincial Open Data',
+        lastModified: new Date().toISOString()
+      };
+
+    } catch (error) {
+      console.error('Buenos Aires provincial data fetch error:', error);
+
+      return {
+        success: false,
+        data: null,
+        source: 'GBA Open Data',
+        error: `Failed to fetch Buenos Aires data: ${error instanceof Error ? error.message : 'Unknown error'}`
+      };
+    }
+  }
+
+  /**
+   * Get Buenos Aires Fiscal Transparency Data
+   */
+  async getBuenosAiresFiscalData(): Promise<ExternalDataResponse> {
+    try {
+      console.log('Fetching Buenos Aires fiscal transparency data...');
+
+      const proxyUrl = buildApiUrl('provincial/fiscal');
+
+      const response = await fetch(proxyUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      return {
+        success: true,
+        data: data,
+        source: 'Buenos Aires Fiscal Transparency',
+        lastModified: new Date().toISOString()
+      };
+
+    } catch (error) {
+      console.error('Buenos Aires fiscal data fetch error:', error);
+
+      return {
+        success: false,
+        data: null,
+        source: 'GBA Fiscal',
+        error: `Failed to fetch fiscal data: ${error instanceof Error ? error.message : 'Unknown error'}`
+      };
+    }
+  }
+
+  /**
+   * Get RAFAM (Buenos Aires Economic Data) for Carmen de Areco
+   * RAFAM is the provincial economic data system crucial for auditing
+   */
+  async getRAFAMData(municipalityCode: string = '270'): Promise<ExternalDataResponse> {
+    try {
+      console.log('🌐 Fetching RAFAM economic data for Carmen de Areco...');
+
+      const rafamBaseUrl = 'https://www.rafam.ec.gba.gov.ar/';
+
+      // Use backend proxy to fetch RAFAM data
+      const proxyUrl = buildApiUrl('external/rafam');
+
+      const response = await fetch(proxyUrl, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          municipalityCode,
+          url: rafamBaseUrl
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const rafamData = await response.json();
+
+      return {
+        success: true,
+        data: rafamData,
+        source: 'RAFAM - Buenos Aires Economic Data',
+        lastModified: new Date().toISOString()
+      };
+
+    } catch (error) {
+      console.error('❌ RAFAM data fetch error:', error);
+
+      return {
+        success: false,
+        data: null,
+        source: 'RAFAM',
+        error: `Failed to fetch RAFAM data: ${error instanceof Error ? error.message : 'Unknown error'}`
+      };
+    }
+  }
+
+  /**
+   * Get AFIP (Federal Tax Agency) data
+   */
+  async getAFIPData(cuit?: string): Promise<ExternalDataResponse> {
+    try {
+      console.log('Fetching AFIP data...');
+
+      const proxyUrl = buildApiUrl('national/afip');
+
+      const response = await fetch(proxyUrl, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          cuit: cuit || '30-99914050-5' // Carmen de Areco municipality CUIT
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      return {
+        success: true,
+        data: data,
+        source: 'AFIP',
+        lastModified: new Date().toISOString()
+      };
+
+    } catch (error) {
+      console.error('AFIP data fetch error:', error);
+
+      return {
+        success: false,
+        data: null,
+        source: 'AFIP',
+        error: `Failed to fetch AFIP data: ${error instanceof Error ? error.message : 'Unknown error'}`
+      };
+    }
+  }
+
+  /**
+   * Get Contrataciones Abiertas (Open Contracts) data
+   */
+  async getContratacionesData(query?: string): Promise<ExternalDataResponse> {
+    try {
+      console.log('Fetching Contrataciones Abiertas data...');
+
+      const proxyUrl = buildApiUrl('national/contrataciones');
+
+      const response = await fetch(proxyUrl, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          query: query || 'Carmen de Areco'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      return {
+        success: true,
+        data: data,
+        source: 'Contrataciones Abiertas',
+        lastModified: new Date().toISOString()
+      };
+
+    } catch (error) {
+      console.error('Contrataciones data fetch error:', error);
+
+      return {
+        success: false,
+        data: null,
+        source: 'Contrataciones',
+        error: `Failed to fetch contracts data: ${error instanceof Error ? error.message : 'Unknown error'}`
+      };
+    }
+  }
+
+  /**
+   * Get National Boletín Oficial data
+   */
+  async getBoletinOficialNacional(query?: string): Promise<ExternalDataResponse> {
+    try {
+      console.log('Fetching National Boletín Oficial...');
+
+      const proxyUrl = buildApiUrl('national/boletin');
+
+      const response = await fetch(proxyUrl, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          query: query || 'Carmen de Areco'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      return {
+        success: true,
+        data: data,
+        source: 'Boletín Oficial Nacional',
+        lastModified: new Date().toISOString()
+      };
+
+    } catch (error) {
+      console.error('Boletín Oficial Nacional fetch error:', error);
+
+      return {
+        success: false,
+        data: null,
+        source: 'Boletín Oficial',
+        error: `Failed to fetch Boletín Oficial: ${error instanceof Error ? error.message : 'Unknown error'}`
+      };
+    }
+  }
+
+  /**
+   * Get Provincial Boletín Oficial data (Buenos Aires)
+   */
+  async getBoletinOficialProvincial(query?: string): Promise<ExternalDataResponse> {
+    try {
+      console.log('Fetching Provincial Boletín Oficial...');
+
+      const proxyUrl = buildApiUrl('provincial/boletin');
+
+      const response = await fetch(proxyUrl, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          query: query || 'Carmen de Areco'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      return {
+        success: true,
+        data: data,
+        source: 'Boletín Oficial Buenos Aires',
+        lastModified: new Date().toISOString()
+      };
+
+    } catch (error) {
+      console.error('Boletín Oficial Provincial fetch error:', error);
+
+      return {
+        success: false,
+        data: null,
+        source: 'Boletín Provincial',
+        error: `Failed to fetch Provincial Boletín: ${error instanceof Error ? error.message : 'Unknown error'}`
+      };
+    }
+  }
+
+  /**
+   * Get Expedientes (Administrative Proceedings) data
+   */
+  async getExpedientesData(query?: string): Promise<ExternalDataResponse> {
+    try {
+      console.log('Fetching Expedientes data...');
+
+      const proxyUrl = buildApiUrl('provincial/expedientes');
+
+      const response = await fetch(proxyUrl, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          query: query || 'Carmen de Areco'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+
+      return {
+        success: true,
+        data: data,
+        source: 'Expedientes Tracking',
+        lastModified: new Date().toISOString()
+      };
+
+    } catch (error) {
+      console.error('Expedientes data fetch error:', error);
+
+      return {
+        success: false,
+        data: null,
+        source: 'Expedientes',
+        error: `Failed to fetch expedientes data: ${error instanceof Error ? error.message : 'Unknown error'}`
       };
     }
   }

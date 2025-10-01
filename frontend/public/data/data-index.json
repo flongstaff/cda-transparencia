@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-01T06:24:37.842Z",
+  "generatedAt": "2025-10-01T09:32:02.786Z",
   "dataSources": {
     "csv": [
       {
@@ -9285,9 +9285,29 @@
     ],
     "json": [
       {
+        "path": "search-index-config.json",
+        "name": "search-index-config.json",
+        "size": 2256
+      },
+      {
         "path": "red_flags_report.json",
         "name": "red_flags_report.json",
         "size": 3326
+      },
+      {
+        "path": "privacy-policy.json",
+        "name": "privacy-policy.json",
+        "size": 9216
+      },
+      {
+        "path": "monitoring-config.json",
+        "name": "monitoring-config.json",
+        "size": 7187
+      },
+      {
+        "path": "metadata-standards.json",
+        "name": "metadata-standards.json",
+        "size": 11230
       },
       {
         "path": "master_index.json",
@@ -9295,9 +9315,39 @@
         "size": 15270
       },
       {
+        "path": "kpi-definitions.json",
+        "name": "kpi-definitions.json",
+        "size": 12402
+      },
+      {
+        "path": "document-categories.json",
+        "name": "document-categories.json",
+        "size": 6334
+      },
+      {
+        "path": "data-mapping.json",
+        "name": "data-mapping.json",
+        "size": 8797
+      },
+      {
+        "path": "compliance-checklist.json",
+        "name": "compliance-checklist.json",
+        "size": 10277
+      },
+      {
+        "path": "categories-structure.json",
+        "name": "categories-structure.json",
+        "size": 10069
+      },
+      {
         "path": "api_routes.json",
         "name": "api_routes.json",
         "size": 1274
+      },
+      {
+        "path": "accessibility-standards.json",
+        "name": "accessibility-standards.json",
+        "size": 26864
       },
       {
         "path": "processed/2025/consolidated_data.json",
@@ -9666,10 +9716,46 @@
       "type": "directory",
       "contents": [
         {
+          "name": "accessibility-standards.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 26864
+        },
+        {
           "name": "api_routes.json",
           "type": "file",
           "extension": ".json",
           "size": 1274
+        },
+        {
+          "name": "categories-structure.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 10069
+        },
+        {
+          "name": "compliance-checklist.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 10277
+        },
+        {
+          "name": "data-mapping.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 8797
+        },
+        {
+          "name": "document-categories.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 6334
+        },
+        {
+          "name": "kpi-definitions.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 12402
         },
         {
           "name": "master_index.json",
@@ -9678,10 +9764,34 @@
           "size": 15270
         },
         {
+          "name": "metadata-standards.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 11230
+        },
+        {
+          "name": "monitoring-config.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 7187
+        },
+        {
+          "name": "privacy-policy.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 9216
+        },
+        {
           "name": "red_flags_report.json",
           "type": "file",
           "extension": ".json",
           "size": 3326
+        },
+        {
+          "name": "search-index-config.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 2256
         }
       ]
     },

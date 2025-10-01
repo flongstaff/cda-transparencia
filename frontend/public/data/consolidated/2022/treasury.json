@@ -1,7 +1,7 @@
 {
   "year": 2022,
-  "total_revenue": 324135000,
-  "total_expenses": 303702919,
+  "income": 324135000,
+  "expenses": 303702919,
   "balance": 20432081,
   "treasury_movements": [
     [

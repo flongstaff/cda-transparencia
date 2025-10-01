@@ -33,6 +33,10 @@ import DashboardCompleto from './pages/DashboardCompleto';
 import NotFoundPage from './pages/NotFoundPage';
 import MonitoringDashboard from './pages/MonitoringDashboard';
 import OpenDataPage from './pages/OpenDataPage';
+import DocumentAnalysisPage from './pages/DocumentAnalysisPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import DataRightsPage from './pages/DataRightsPage';
+import MonitoringPage from './pages/MonitoringPage';
 
 // Demo Components
 import YearSelectorDemo from './components/demos/YearSelectorDemo';
@@ -125,6 +129,16 @@ function App() {
                   
                   {/* Open Data Catalog */}
                   <Route path="/open-data" element={<OpenDataPage />} />
+                  
+                  {/* Document Analysis */}
+                  <Route path="/document-analysis" element={<DocumentAnalysisPage />} />
+                  
+                  {/* Privacy and Data Protection */}
+                  <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+                  <Route path="/data-rights" element={<DataRightsPage />} />
+                  
+                  {/* Monitoring and Evaluation */}
+                  <Route path="/monitoring" element={<MonitoringPage />} />
 
                   {/* Monitoring Routes */}
                   <Route path="/monitoring" element={<MonitoringDashboard />} />

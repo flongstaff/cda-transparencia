@@ -315,6 +315,13 @@ export const NAV_CATEGORIES: NavCategory[] = [
         description: 'Sistema de monitoreo OSINT y análisis'
       },
       {
+        id: 'open-data-catalog',
+        label: 'Catálogo de Datos Abiertos',
+        icon: Database,
+        path: '/open-data',
+        description: 'Catálogo de datos abiertos y reutilizables'
+      },
+      {
         id: 'audit-dashboard',
         label: 'Auditorías',
         icon: ShieldCheck,

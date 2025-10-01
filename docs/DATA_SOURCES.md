@@ -107,6 +107,7 @@
 
 ## Transparency and Audit Tools
 
+- **RAFAM - Buenos Aires Economic Data**: [https://www.rafam.ec.gba.gov.ar/](https://www.rafam.ec.gba.gov.ar/) - **CRUCIAL FOR AUDITING**
 - **Portal de Transparencia Fiscal PBA**: [https://www.gba.gob.ar/transparencia_fiscal/](https://www.gba.gob.ar/transparencia_fiscal/)
 - **Mapa de inversiones**: [https://www.argentina.gob.ar/jefatura/innovacion-publica/mapa-inversiones](https://www.argentina.gob.ar/jefatura/innovacion-publica/mapa-inversiones)
 - **Directorio Legislativo**: [https://directoriolegislativo.org/](https://directoriolegislativo.org/)
