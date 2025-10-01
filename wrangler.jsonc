@@ -1,5 +1,8 @@
 {
   "name": "cda-transparencia",
   "compatibility_date": "2024-01-01",
-  "pages_build_output_dir": "frontend/dist"
+  "pages": {
+    "build_command": "cd frontend && npm run build:github",
+    "build_output_dir": "./frontend/dist"
+  }
 }
