@@ -605,9 +605,9 @@
     },
     "compliance": {
       "aaipGuidelines": true,
-      "wcag21AA": true,
-      "argentineStandards": true,
-      "internationalStandards": true
+      "itaMethodology": true,
+      "wcagCompliance": "2.1 AA",
+      "dataProtection": true
     },
     "testing": {
       "automatedTools": [

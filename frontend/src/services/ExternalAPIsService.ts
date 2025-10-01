@@ -1429,5 +1429,8 @@ class ExternalAPIsService {
   }
 }
 
-export const externalAPIsService = ExternalAPIsService.getInstance();
+const externalAPIsService = ExternalAPIsService.getInstance();
+
+export { ExternalAPIsService };
+export { externalAPIsService };
 export default externalAPIsService;

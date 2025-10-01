@@ -1,130 +1,9 @@
 /**
- * OpenDataCatalog Component
+ * OpenDataCatalog Component - Simplified Version
  * Main catalog interface for open data with AAIP-compliant categories and accessibility features
  */
 
 import React, { useState, useEffect } from 'react';
-import { 
-  Database, 
-  Download, 
-  Filter, 
-  Search, 
-  Calendar, 
-  FileText, 
-  BarChart3, 
-  Users, 
-  Building, 
-  DollarSign, 
-  HardHat, 
-  Shield, 
-  Heart, 
-  Megaphone, 
-  Leaf, 
-  Car, 
-  Plane, 
-  Ship, 
-  Train, 
-  Bike, 
-  Truck, 
-  Bus, 
-  Rocket, 
-  Zap, 
-  Cloud, 
-  Wind, 
-  Sun as SunIcon, 
-  Droplets, 
-  Mountain, 
-  TreePine, 
-  Waves, 
-  Castle, 
-  Church, 
-  School, 
-  Hospital, 
-  Store, 
-  Factory, 
-  Warehouse, 
-  Tent, 
-  House, 
-  Hotel, 
-  MapPin, 
-  Navigation, 
-  Compass, 
-  Target, 
-  Layers, 
-  Grid, 
-  List, 
-  SortAsc, 
-  SortDesc, 
-  Eye, 
-  EyeOff, 
-  Upload, 
-  Share2, 
-  Printer, 
-  Bookmark, 
-  Star, 
-  ThumbsUp, 
-  ThumbsDown, 
-  MessageCircle, 
-  Bell, 
-  Wifi, 
-  Bluetooth, 
-  Camera, 
-  Video, 
-  Music, 
-  Film, 
-  Gamepad2, 
-  Coffee, 
-  Utensils, 
-  ShoppingCart, 
-  Gift, 
-  CreditCard, 
-  CircleDollarSign, 
-  PiggyBank, 
-  Wallet, 
-  Coins, 
-  Gem, 
-  Bitcoin, 
-  Ethereum, 
-  Litecoin, 
-  Tether, 
-  Monero, 
-  Zcash, 
-  Dash, 
-  Waves as WavesIcon, 
-  Stellar, 
-  Ripple, 
-  Cardano, 
-  Solana, 
-  Polygon, 
-  Avalanche, 
-  Cosmos, 
-  Polkadot, 
-  Chainlink, 
-  Uniswap, 
-  Sushi, 
-  Pancake, 
-  Aave, 
-  Compound, 
-  Maker, 
-  Yearn, 
-  Curve, 
-  Balancer, 
-  Synthetix, 
-  ZeroX, 
-  Kyber, 
-  Bancor, 
-  Oasis, 
-  Loopring, 
-  Dydx, 
-  Perpetual, 
-  Injective, 
-  Serum, 
-  Mango, 
-  CheckCircle,
-  AlertTriangle,
-  X,
-  Loader2
-} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 interface DataCategory {
@@ -326,6 +205,7 @@ const OpenDataCatalog: React.FC = () => {
       } catch (err) {
         console.error('Error loading data categories:', err);
         setError('Error al cargar el catálogo de datos abiertos');
+      } finally {
         setLoading(false);
       }
     };
@@ -389,17 +269,16 @@ const OpenDataCatalog: React.FC = () => {
     ...categories.map(cat => ({ id: cat.id, title: cat.title }))
   ];
 
-  const getIconByName = (iconName: string) => {
-    const iconMap: Record<string, React.ReactNode> = {
-      'DollarSign': <DollarSign className="w-6 h-6" />,
-      'Building': <Building className="w-6 h-6" />,
-      'Users': <Users className="w-6 h-6" />,
-      'FileText': <FileText className="w-6 h-6" />,
-      'HardHat': <HardHat className="w-6 h-6" />,
-      'Shield': <Shield className="w-6 h-6" />
-    };
-    
-    return iconMap[iconName] || <Database className="w-6 h-6" />;
+  const getIconComponent = (iconName: string) => {
+    switch (iconName) {
+      case 'DollarSign': return <div className="h-6 w-6">💰</div>;
+      case 'Building': return <div className="h-6 w-6">🏢</div>;
+      case 'Users': return <div className="h-6 w-6">👥</div>;
+      case 'FileText': return <div className="h-6 w-6">📄</div>;
+      case 'HardHat': return <div className="h-6 w-6">👷</div>;
+      case 'Shield': return <div className="h-6 w-6">🛡️</div>;
+      default: return <div className="h-6 w-6">📁</div>;
+    }
   };
 
   const formatDate = (dateString: string) => {
@@ -416,14 +295,14 @@ const OpenDataCatalog: React.FC = () => {
 
   const getFormatIcon = (format: string) => {
     switch (format.toLowerCase()) {
-      case 'csv': return <FileText className="h-4 w-4" />;
-      case 'json': return <Database className="h-4 w-4" />;
-      case 'xlsx': return <FileText className="h-4 w-4" />;
-      case 'pdf': return <FileText className="h-4 w-4" />;
-      case 'xml': return <FileText className="h-4 w-4" />;
-      case 'txt': return <FileText className="h-4 w-4" />;
-      case 'zip': return <FileText className="h-4 w-4" />;
-      default: return <FileText className="h-4 w-4" />;
+      case 'csv': return <div className="h-4 w-4">📄</div>;
+      case 'json': return <div className="h-4 w-4">🗄️</div>;
+      case 'xlsx': return <div className="h-4 w-4">📊</div>;
+      case 'pdf': return <div className="h-4 w-4">📄</div>;
+      case 'xml': return <div className="h-4 w-4">📄</div>;
+      case 'txt': return <div className="h-4 w-4">📄</div>;
+      case 'zip': return <div className="h-4 w-4">📦</div>;
+      default: return <div className="h-4 w-4">📄</div>;
     }
   };
 
@@ -448,7 +327,7 @@ const OpenDataCatalog: React.FC = () => {
           <div className="flex items-center justify-between mb-6">
             <div>
               <div className="flex items-center">
-                <Database className="h-8 w-8 text-blue-600 mr-3" />
+                <div className="h-8 w-8 text-blue-600 mr-3">📊</div>
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
                   Catálogo de Datos Abiertos
                 </h1>
@@ -461,11 +340,11 @@ const OpenDataCatalog: React.FC = () => {
             {/* Compliance badges */}
             <div className="flex flex-col items-end">
               <div className="flex items-center bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 text-sm px-3 py-1.5 rounded-full mb-2">
-                <Shield className="w-4 h-4 mr-1" />
+                <div className="h-4 w-4 mr-1">🛡️</div>
                 Cumple AAIP
               </div>
               <div className="flex items-center bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-sm px-3 py-1.5 rounded-full">
-                <Shield className="w-4 h-4 mr-1" />
+                <div className="h-4 w-4 mr-1">🛡️</div>
                 WCAG 2.1 AA
               </div>
             </div>
@@ -476,7 +355,9 @@ const OpenDataCatalog: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Search */}
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400">
+                  🔍
+                </div>
                 <input
                   type="text"
                   value={searchQuery}
@@ -546,7 +427,7 @@ const OpenDataCatalog: React.FC = () => {
         {/* Loading state */}
         {loading && (
           <div className="flex justify-center items-center py-12">
-            <Loader2 className="h-12 w-12 animate-spin text-blue-600 mr-3" />
+            <div className="h-12 w-12 animate-spin text-blue-600 mr-3">🌀</div>
             <span className="text-gray-700 dark:text-gray-300">Cargando catálogo de datos abiertos...</span>
           </div>
         )}
@@ -555,7 +436,7 @@ const OpenDataCatalog: React.FC = () => {
         {error && (
           <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg p-6">
             <div className="flex items-center">
-              <AlertTriangle className="h-5 w-5 text-red-400 mr-2" />
+              <div className="h-5 w-5 text-red-400 mr-2">⚠️</div>
               <h3 className="text-lg font-medium text-red-800 dark:text-red-200">
                 Error
               </h3>
@@ -577,7 +458,7 @@ const OpenDataCatalog: React.FC = () => {
           <div>
             {sortedCategories.length === 0 ? (
               <div className="text-center py-12">
-                <Database className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+                <div className="h-12 w-12 text-gray-400 mx-auto mb-4">📁</div>
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
                   No se encontraron datos
                 </h3>
@@ -604,7 +485,7 @@ const OpenDataCatalog: React.FC = () => {
                     >
                       <div className="flex items-start mb-4">
                         <div className="flex-shrink-0 p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 mr-4">
-                          {getIconByName(category.icon)}
+                          {getIconComponent(category.icon)}
                         </div>
                         <div>
                           <div className="flex items-center justify-between">
@@ -623,23 +504,23 @@ const OpenDataCatalog: React.FC = () => {
 
                       <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
                         <div className="flex items-center text-gray-600 dark:text-gray-400">
-                          <FileText className="h-4 w-4 mr-1" />
+                          <div className="h-4 w-4 mr-1">📄</div>
                           <span>{category.itemsCount} conjuntos</span>
                         </div>
                         <div className="flex items-center text-gray-600 dark:text-gray-400">
-                          <Calendar className="h-4 w-4 mr-1" />
+                          <div className="h-4 w-4 mr-1">📅</div>
                           <span>
                             Act: {formatDate(category.lastUpdated)}
                           </span>
                         </div>
                         <div className="flex items-center text-gray-600 dark:text-gray-400">
-                          <Clock className="h-4 w-4 mr-1" />
+                          <div className="h-4 w-4 mr-1">⏱️</div>
                           <span>Frec: {category.updateFrequency}</span>
                         </div>
                       </div>
                       
                       {/* Dataset previews */}
-                      <div className="border-t border-gray-100 dark:border-dark-border pt-4">
+                      <div className="border-t border-gray-100 dark:border-dark-border pt-3">
                         <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2">
                           Conjuntos de datos recientes:
                         </h4>
@@ -677,7 +558,7 @@ const OpenDataCatalog: React.FC = () => {
                           <div className="flex items-center">
                             {category.datasets.some(ds => ds.accessibility.compliant) ? (
                               <div className="flex items-center text-green-600 dark:text-green-400 text-xs">
-                                <Shield className="h-3 w-3 mr-1" />
+                                <div className="h-3 w-3 mr-1">🛡️</div>
                                 Accesible
                               </div>
                             ) : (
@@ -695,7 +576,7 @@ const OpenDataCatalog: React.FC = () => {
                             aria-label={`Ver datos de ${category.title}`}
                           >
                             Ver datos
-                            <Download className="w-4 h-4 ml-1" />
+                            <div className="w-4 h-4 ml-1">⬇️</div>
                           </button>
                         </div>
                       </div>
@@ -710,7 +591,7 @@ const OpenDataCatalog: React.FC = () => {
         {/* AAIP Compliance Information */}
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">
           <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3 flex items-center">
-            <Shield className="h-5 w-5 mr-2" />
+            <div className="h-5 w-5 mr-2">🛡️</div>
             Cumplimiento y Accesibilidad
           </h3>
           <p className="text-blue-700 dark:text-blue-300 text-sm mb-3">

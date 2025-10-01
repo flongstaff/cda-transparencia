@@ -6,7 +6,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.11642,
+      "response_time": 1.250894,
       "content_type": "text/html; charset=UTF-8"
     },
     {
@@ -15,7 +15,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 0.847936,
+      "response_time": 0.370977,
       "content_type": "text/html; charset=UTF-8"
     },
     {
@@ -24,7 +24,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 0.599536,
+      "response_time": 0.372549,
       "content_type": "text/html; charset=UTF-8"
     },
     {
@@ -33,7 +33,7 @@
       "method": "GET",
       "status_code": 404,
       "success": false,
-      "response_time": 1.145858,
+      "response_time": 1.282019,
       "content_type": "text/html; charset=UTF-8"
     }
   ],
@@ -44,7 +44,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.634813,
+      "response_time": 2.821998,
       "content_type": "text/html; charset=utf-8"
     },
     {
@@ -53,26 +53,22 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.138609,
+      "response_time": 1.144196,
       "content_type": "text/html; charset=utf-8"
     },
     {
       "name": "National Budget API",
       "url": "https://datos.gob.ar/dataset/sspm-presupuesto-abierto",
       "method": "GET",
-      "status_code": 404,
       "success": false,
-      "response_time": 0.807573,
-      "content_type": "text/html; charset=utf-8"
+      "error": "Response ended prematurely"
     },
     {
       "name": "National Contracts API",
       "url": "https://datos.gob.ar/dataset/modernizacion-sistema-contrataciones-electronicas-argentina",
       "method": "GET",
-      "status_code": 404,
       "success": false,
-      "response_time": 1.093397,
-      "content_type": "text/html; charset=utf-8"
+      "error": "Response ended prematurely"
     },
     {
       "name": "Ministry of Justice Open Data",
@@ -80,7 +76,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 3.708308,
+      "response_time": 3.610353,
       "content_type": "text/html; charset=utf-8"
     },
     {
@@ -89,7 +85,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 2.080151,
+      "response_time": 0.157183,
       "content_type": "text/html; charset=utf-8"
     },
     {
@@ -98,7 +94,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 2.309747,
+      "response_time": 0.05511,
       "content_type": "text/html; charset=utf-8"
     },
     {
@@ -107,7 +103,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.994495,
+      "response_time": 2.031488,
       "content_type": "text/html; charset=UTF-8"
     },
     {
@@ -116,7 +112,7 @@
       "method": "GET",
       "status_code": 404,
       "success": false,
-      "response_time": 2.193724,
+      "response_time": 0.060583,
       "content_type": "text/html"
     }
   ],
@@ -127,7 +123,7 @@
       "method": "GET",
       "status_code": 404,
       "success": false,
-      "response_time": 1.4503,
+      "response_time": 2.00483,
       "content_type": "text/html; charset=utf-8"
     },
     {
@@ -136,7 +132,7 @@
       "method": "GET",
       "status_code": 404,
       "success": false,
-      "response_time": 0.353203,
+      "response_time": 0.430839,
       "content_type": "text/html; charset=utf-8"
     },
     {
@@ -145,7 +141,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 0.35093,
+      "response_time": 0.380608,
       "content_type": "text/html; charset=utf-8"
     },
     {
@@ -153,7 +149,7 @@
       "url": "https://pbac.cgp.gba.gov.ar/Default.aspx",
       "method": "GET",
       "success": false,
-      "error": "HTTPSConnectionPool(host='pbac.cgp.gba.gov.ar', port=443): Max retries exceeded with url: /Default.aspx (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x10a6af9d0>, 'Connection to pbac.cgp.gba.gov.ar timed out. (connect timeout=10)'))"
+      "error": "HTTPSConnectionPool(host='pbac.cgp.gba.gov.ar', port=443): Max retries exceeded with url: /Default.aspx (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x1028bb9d0>, 'Connection to pbac.cgp.gba.gov.ar timed out. (connect timeout=10)'))"
     },
     {
       "name": "Provincial Contracts Search",
@@ -161,7 +157,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.396239,
+      "response_time": 1.491261,
       "content_type": "text/html"
     }
   ],
@@ -171,7 +167,7 @@
       "url": "https://apis.datos.gob.ar/georef/api/provincias",
       "status_code": 200,
       "success": true,
-      "response_time": 1.641668,
+      "response_time": 1.668147,
       "missing_keys": null
     },
     {
@@ -179,7 +175,7 @@
       "url": "https://datos.gob.ar/api/3/action/package_search",
       "status_code": 200,
       "success": true,
-      "response_time": 0.423391,
+      "response_time": 0.543181,
       "data_sample": "{'help': 'https://datos.gob.ar/api/3/action/help_show?name=package_search', 'success': True, 'result': {'count': 0, 'sort': 'score desc, metadata_modified desc', 'facets': {}, 'results': [], 'search_f"
     }
   ],
@@ -190,7 +186,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.179132,
+      "response_time": 1.497518,
       "content_type": "text/html; charset=UTF-8"
     },
     {
@@ -199,7 +195,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.031961,
+      "response_time": 1.021377,
       "content_type": "text/html"
     },
     {
@@ -208,7 +204,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.271361,
+      "response_time": 1.205733,
       "content_type": "text/html; charset=UTF-8"
     },
     {
@@ -217,7 +213,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.047972,
+      "response_time": 1.19421,
       "content_type": "text/html; charset=UTF-8"
     },
     {
@@ -226,7 +222,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.182875,
+      "response_time": 1.239005,
       "content_type": "text/html; charset=utf-8"
     }
   ],
@@ -237,7 +233,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.970121,
+      "response_time": 2.606223,
       "content_type": "text/html; charset=UTF-8"
     },
     {
@@ -252,14 +248,14 @@
       "url": "https://www.sanantoniodeareco.gob.ar/",
       "method": "GET",
       "success": false,
-      "error": "HTTPSConnectionPool(host='www.sanantoniodeareco.gob.ar', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10a6afed0>: Failed to resolve 'www.sanantoniodeareco.gob.ar' ([Errno 8] nodename nor servname provided, or not known)\"))"
+      "error": "HTTPSConnectionPool(host='www.sanantoniodeareco.gob.ar', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1028bbed0>: Failed to resolve 'www.sanantoniodeareco.gob.ar' ([Errno 8] nodename nor servname provided, or not known)\"))"
     },
     {
       "name": "San Andrés de Giles",
       "url": "https://www.sag.gob.ar/",
       "method": "GET",
       "success": false,
-      "error": "HTTPSConnectionPool(host='www.sag.gob.ar', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10a7b0050>: Failed to resolve 'www.sag.gob.ar' ([Errno 8] nodename nor servname provided, or not known)\"))"
+      "error": "HTTPSConnectionPool(host='www.sag.gob.ar', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1029bc050>: Failed to resolve 'www.sag.gob.ar' ([Errno 8] nodename nor servname provided, or not known)\"))"
     },
     {
       "name": "Pergamino",
@@ -267,7 +263,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 2.573378,
+      "response_time": 1.725893,
       "content_type": "text/html; charset=UTF-8"
     },
     {
@@ -276,7 +272,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.209964,
+      "response_time": 1.449352,
       "content_type": "text/html; charset=UTF-8"
     }
   ],
@@ -286,7 +282,7 @@
       "url": "https://transparencia.bahia.gob.ar/",
       "method": "GET",
       "success": false,
-      "error": "HTTPSConnectionPool(host='transparencia.bahia.gob.ar', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10a6af250>: Failed to resolve 'transparencia.bahia.gob.ar' ([Errno 8] nodename nor servname provided, or not known)\"))"
+      "error": "HTTPSConnectionPool(host='transparencia.bahia.gob.ar', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1028bb250>: Failed to resolve 'transparencia.bahia.gob.ar' ([Errno 8] nodename nor servname provided, or not known)\"))"
     },
     {
       "name": "Mar del Plata Data",
@@ -294,7 +290,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 1.825273,
+      "response_time": 0.44717,
       "content_type": "text/html; charset=UTF-8"
     },
     {
@@ -302,7 +298,7 @@
       "url": "https://datosabiertos.pilar.gob.ar/",
       "method": "GET",
       "success": false,
-      "error": "HTTPSConnectionPool(host='datosabiertos.pilar.gob.ar', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10a6af890>: Failed to resolve 'datosabiertos.pilar.gob.ar' ([Errno 8] nodename nor servname provided, or not known)\"))"
+      "error": "HTTPSConnectionPool(host='datosabiertos.pilar.gob.ar', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1028bb890>: Failed to resolve 'datosabiertos.pilar.gob.ar' ([Errno 8] nodename nor servname provided, or not known)\"))"
     },
     {
       "name": "San Isidro Transparency",
@@ -317,7 +313,7 @@
       "method": "GET",
       "status_code": 200,
       "success": true,
-      "response_time": 0.381907,
+      "response_time": 0.411461,
       "content_type": "text/html; charset=utf-8"
     },
     {
@@ -326,7 +322,7 @@
       "method": "GET",
       "status_code": 404,
       "success": false,
-      "response_time": 0.370088,
+      "response_time": 0.407975,
       "content_type": "text/html; charset=utf-8"
     }
   ]

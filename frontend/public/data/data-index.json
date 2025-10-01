@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-01T09:32:02.786Z",
+  "generatedAt": "2025-10-01T10:52:07.540Z",
   "dataSources": {
     "csv": [
       {
@@ -9307,7 +9307,7 @@
       {
         "path": "metadata-standards.json",
         "name": "metadata-standards.json",
-        "size": 11230
+        "size": 10562
       },
       {
         "path": "master_index.json",
@@ -9337,7 +9337,7 @@
       {
         "path": "categories-structure.json",
         "name": "categories-structure.json",
-        "size": 10069
+        "size": 16609
       },
       {
         "path": "api_routes.json",
@@ -9347,7 +9347,7 @@
       {
         "path": "accessibility-standards.json",
         "name": "accessibility-standards.json",
-        "size": 26864
+        "size": 26862
       },
       {
         "path": "processed/2025/consolidated_data.json",
@@ -9719,7 +9719,7 @@
           "name": "accessibility-standards.json",
           "type": "file",
           "extension": ".json",
-          "size": 26864
+          "size": 26862
         },
         {
           "name": "api_routes.json",
@@ -9731,7 +9731,7 @@
           "name": "categories-structure.json",
           "type": "file",
           "extension": ".json",
-          "size": 10069
+          "size": 16609
         },
         {
           "name": "compliance-checklist.json",
@@ -9767,7 +9767,7 @@
           "name": "metadata-standards.json",
           "type": "file",
           "extension": ".json",
-          "size": 11230
+          "size": 10562
         },
         {
           "name": "monitoring-config.json",

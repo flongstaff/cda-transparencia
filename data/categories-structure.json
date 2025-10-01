@@ -13,25 +13,47 @@
         {
           "id": "budget-2025",
           "title": "Presupuesto 2025",
-          "description": "Proyecto de presupuesto municipal para el ejercicio 2025",
-          "formats": ["pdf", "csv", "xlsx"],
+          "description": "Proyecto de presupuesto municipal para el ejercicio 2025 en formato estructurado",
+          "formats": ["pdf", "csv", "xlsx", "json"],
           "size": "2.4 MB",
           "lastUpdated": "2024-12-01",
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-12-01",
+            "modified": "2024-12-01",
+            "theme": "Presupuesto",
+            "accessLevel": "public",
+            "keyword": ["presupuesto", "municipal", "2025", "gasto", "ingreso"],
+            "landingPage": "/budget",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         },
         {
           "id": "budget-execution-2024",
           "title": "Ejecución Presupuestaria 2024",
           "description": "Datos mensuales de ejecución presupuestaria para el año 2024",
-          "formats": ["csv", "xlsx"],
+          "formats": ["csv", "xlsx", "json"],
           "size": "5.7 MB",
           "lastUpdated": "2024-11-30",
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-01-01",
+            "modified": "2024-11-30",
+            "theme": "Ejecución Presupuestaria",
+            "accessLevel": "public",
+            "keyword": ["ejecución", "presupuesto", "municipal", "2024", "gasto"],
+            "landingPage": "/budget",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         }
       ]
@@ -56,6 +78,17 @@
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-11-15",
+            "modified": "2024-11-15",
+            "theme": "Organización",
+            "accessLevel": "public",
+            "keyword": ["organigrama", "estructura", "organización", "municipal"],
+            "landingPage": "/about",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         }
       ]
@@ -72,7 +105,7 @@
       "datasets": [
         {
           "id": "ordinances-2024",
-          "title": "Ordenanzas 2024",
+          "title": "Ordenanzas Municipales 2024",
           "description": "Colección de ordenanzas municipales del año 2024",
           "formats": ["pdf", "json"],
           "size": "8.3 MB",
@@ -80,6 +113,17 @@
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-01-01",
+            "modified": "2024-12-01",
+            "theme": "Normativa Municipal",
+            "accessLevel": "public",
+            "keyword": ["ordenanza", "municipal", "ley", "2024", "reglamento"],
+            "landingPage": "/documents",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         }
       ]
@@ -104,6 +148,17 @@
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-01-01",
+            "modified": "2024-11-30",
+            "theme": "Finanzas",
+            "accessLevel": "public",
+            "keyword": ["ejecución", "presupuesto", "finanzas", "resumen", "2024"],
+            "landingPage": "/budget",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         }
       ]
@@ -128,6 +183,17 @@
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-01-01",
+            "modified": "2024-11-28",
+            "theme": "Contrataciones Públicas",
+            "accessLevel": "public",
+            "keyword": ["contrato", "licitación", "proveedor", "adjudicación", "2024"],
+            "landingPage": "/contracts",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         }
       ]
@@ -152,6 +218,17 @@
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-01-01",
+            "modified": "2024-11-20",
+            "theme": "Servicios Públicos",
+            "accessLevel": "public",
+            "keyword": ["servicio", "indicador", "métrica", "calidad", "desempeño"],
+            "landingPage": "/services",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         }
       ]
@@ -171,11 +248,22 @@
           "title": "Registro Salarial",
           "description": "Datos de remuneraciones del personal municipal",
           "formats": ["csv", "xlsx"],
-          "size": "3.2 MB",
+          "size": "1.8 MB",
           "lastUpdated": "2024-11-15",
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-01-01",
+            "modified": "2024-11-15",
+            "theme": "Remuneraciones",
+            "accessLevel": "public",
+            "keyword": ["salario", "remuneración", "personal", "municipal", "2024"],
+            "landingPage": "/salaries",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         }
       ]
@@ -186,9 +274,9 @@
       "description": "Documentos sobre obras públicas, proyectos de infraestructura",
       "icon": "HardHat",
       "itemsCount": 24,
-      "lastUpdated": "2024-11-18",
+      "lastUpdated": "2024-11-20",
       "updateFrequency": "monthly",
-      "dataTypes": ["project", "investment", "infrastructure"],
+      "dataTypes": ["infrastructure", "project", "work"],
       "datasets": [
         {
           "id": "public-works-registry",
@@ -196,23 +284,34 @@
           "description": "Catálogo de obras públicas ejecutadas y en curso",
           "formats": ["csv", "json"],
           "size": "2.9 MB",
-          "lastUpdated": "2024-11-18",
+          "lastUpdated": "2024-11-20",
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-01-01",
+            "modified": "2024-11-20",
+            "theme": "Obras Públicas",
+            "accessLevel": "public",
+            "keyword": ["obra", "infraestructura", "proyecto", "construcción", "2024"],
+            "landingPage": "/investments",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         }
       ]
     },
     {
-      "id": "transparency-info",
-      "title": "Transparencia e Información Pública",
-      "description": "SIAO, solicitudes de información, estadísticas",
+      "id": "transparency-reporting",
+      "title": "Transparencia y Reportes",
+      "description": "Documentos de reporte, auditoría y transparencia activa",
       "icon": "Shield",
       "itemsCount": 15,
       "lastUpdated": "2024-12-01",
       "updateFrequency": "monthly",
-      "dataTypes": ["request", "statistics", "siao"],
+      "dataTypes": ["report", "statistics", "siao"],
       "datasets": [
         {
           "id": "info-requests-stats",
@@ -224,6 +323,17 @@
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-01-01",
+            "modified": "2024-12-01",
+            "theme": "Transparencia",
+            "accessLevel": "public",
+            "keyword": ["solicitud", "información", "transparencia", "estadística", "2024"],
+            "landingPage": "/transparency",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         }
       ]
@@ -231,7 +341,7 @@
     {
       "id": "social-programs",
       "title": "Programas Sociales",
-      "description": "Asistencia social, programas educativos, salud",
+      "description": "Asistencia social, programas educativos, bienestar",
       "icon": "Heart",
       "itemsCount": 12,
       "lastUpdated": "2024-11-10",
@@ -248,6 +358,17 @@
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-01-01",
+            "modified": "2024-11-10",
+            "theme": "Asistencia Social",
+            "accessLevel": "public",
+            "keyword": ["asistencia", "social", "programa", "ayuda", "2024"],
+            "landingPage": "/social-programs",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         }
       ]
@@ -267,11 +388,22 @@
           "title": "Audiencias Públicas",
           "description": "Calendario y resultados de audiencias públicas",
           "formats": ["csv", "json"],
-          "size": "850 KB",
+          "size": "0.8 MB",
           "lastUpdated": "2024-11-28",
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-01-01",
+            "modified": "2024-11-28",
+            "theme": "Participación Ciudadana",
+            "accessLevel": "public",
+            "keyword": ["audiencia", "pública", "participación", "consulta", "2024"],
+            "landingPage": "/participation",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         }
       ]
@@ -296,13 +428,24 @@
           "accessibility": {
             "compliant": true,
             "standards": ["WCAG 2.1 AA"]
+          },
+          "metadata": {
+            "publisher": "Municipalidad de Carmen de Areco",
+            "issued": "2024-01-01",
+            "modified": "2024-11-15",
+            "theme": "Auditoría",
+            "accessLevel": "public",
+            "keyword": ["auditoría", "control", "interno", "2024", "informe"],
+            "landingPage": "/audits",
+            "license": "Creative Commons Zero v1.0 Universal",
+            "rights": "Datos disponibles bajo licencia CC0"
           }
         }
       ]
     }
   ],
   "compliance": {
-    "aaipStandards": true,
+    "aaipGuidelines": true,
     "itaMethodology": true,
     "wcagCompliance": "2.1 AA",
     "updatePolicy": "Proactive publication following AAIP guidelines",

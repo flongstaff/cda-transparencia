@@ -9,7 +9,7 @@
         "description": "Nombre descriptivo del recurso",
         "required": true,
         "format": "texto",
-        "examples": ["Presupuesto 2025", "Contratos Públicos 2024", "Ejecución Presupuestaria Mensual"],
+        "examples": ["Presupuesto 2025", "Contratos de obra pública", "Salarios municipales"],
         "aaipCompliance": {
           "requiredBy": "AAIP ITA methodology",
           "transparencyIndex": "Planning and Budgeting",
@@ -22,7 +22,7 @@
         "description": "Descripción detallada del contenido del recurso",
         "required": true,
         "format": "texto",
-        "examples": ["Proyecto de presupuesto municipal para el ejercicio 2025", "Base de datos de contratos públicos adjudicados en 2024", "Datos mensuales de ejecución presupuestaria"],
+        "examples": ["Proyecto de presupuesto municipal para el ejercicio 2025", "Base de datos de contratos públicos adjudicados en 2024", "Datos mensuales de ejecución presupuestaria para el año 2024"],
         "aaipCompliance": {
           "requiredBy": "AAIP ITA methodology",
           "transparencyIndex": "Planning and Budgeting",
@@ -278,41 +278,9 @@
     "compliance": {
       "aaipGuidelines": true,
       "itaMethodology": true,
-      "dublinCore": true,
-      "dcatAp": true,
-      "iso19115": true
-    },
-    "validation": {
-      "requiredFields": [
-        "dc-title",
-        "dc-description",
-        "dct-creator",
-        "dct-publisher",
-        "dct-issued",
-        "dct-modified",
-        "dc-identifier",
-        "dc-language",
-        "dct-license",
-        "dc-subject",
-        "dcat-theme",
-        "dcat-keyword",
-        "dcat-distribution"
-      ],
-      "optionalFields": [
-        "dct-contributor",
-        "dct-rights",
-        "dct-accessRights",
-        "dct-spatial",
-        "dct-temporal",
-        "dcat-contactPoint",
-        "dcat-landingPage"
-      ],
-      "formatValidation": {
-        "date": "ISO 8601 (YYYY-MM-DD)",
-        "language": "ISO 639-1 (es, en, etc.)",
-        "uri": "Valid URI format",
-        "email": "Valid email format"
-      }
+      "wcagCompliance": "2.1 AA",
+      "updatePolicy": "Proactive publication following AAIP guidelines",
+      "accessibilityPolicy": "All content meets WCAG 2.1 AA standards"
     }
   }
 }
