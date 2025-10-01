@@ -364,12 +364,7 @@ class ExternalAPIsService {
       console.log('🌐 Fetching Buenos Aires Province data via backend proxy...');
       
       // Use the backend endpoint specifically for Buenos Aires data
-      let apiUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001';
-      // Ensure URL ends with a slash
-      if (!apiUrl.endsWith('/')) {
-        apiUrl += '/';
-      }
-      const proxyUrl = `${apiUrl}api/external/buenos-aires`;
+      const proxyUrl = buildApiUrl('external/buenos-aires');
       
       const response = await fetch(proxyUrl, {
         method: 'GET',
@@ -450,12 +445,7 @@ class ExternalAPIsService {
       console.log('🌐 Fetching National Budget data via backend proxy...');
       
       // Use the backend endpoint specifically for national data
-      let apiUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001';
-      // Ensure URL ends with a slash
-      if (!apiUrl.endsWith('/')) {
-        apiUrl += '/';
-      }
-      const proxyUrl = `${apiUrl}api/external/national`;
+      const proxyUrl = buildApiUrl('external/national');
       
       const response = await fetch(proxyUrl, {
         method: 'GET',
@@ -536,12 +526,7 @@ class ExternalAPIsService {
       console.log('🌐 Fetching geographic data via backend proxy...');
       
       // Use the backend endpoint for all external data which includes geographic data
-      let apiUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001';
-      // Ensure URL ends with a slash
-      if (!apiUrl.endsWith('/')) {
-        apiUrl += '/';
-      }
-      const proxyUrl = `${apiUrl}api/external/all-external-data`;
+      const proxyUrl = buildApiUrl('external/all-external-data');
       
       const response = await fetch(proxyUrl, {
         method: 'GET',
@@ -703,12 +688,7 @@ class ExternalAPIsService {
 
     try {
       // Try to use the aggregated backend endpoint first
-      let apiUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001';
-      // Ensure URL ends with a slash
-      if (!apiUrl.endsWith('/')) {
-        apiUrl += '/';
-      }
-      const proxyUrl = `${apiUrl}api/external/all-external-data`;
+      const proxyUrl = buildApiUrl('external/all-external-data');
       
       const response = await fetch(proxyUrl, {
         method: 'GET',
