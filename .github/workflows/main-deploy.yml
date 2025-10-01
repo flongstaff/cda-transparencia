@@ -21,6 +21,9 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      - name: Install root dependencies
+        run: npm ci
+
       - name: Install frontend dependencies
         run: npm ci
         working-directory: frontend
