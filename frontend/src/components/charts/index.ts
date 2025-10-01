@@ -56,6 +56,9 @@ export { default as ValidatedChart } from './ValidatedChart';
 export { default as WaterfallChart } from './WaterfallChart';
 export { default as WaterfallExecutionChart } from './WaterfallExecutionChart';
 export { default as YearlyComparisonChart } from './YearlyComparisonChart';
+export { default as ImprovedBarChartComponent } from './ImprovedBarChartComponent';
+export { default as ImprovedBudgetExecutionChart } from './ImprovedBudgetExecutionChart';
+export { default as ChartWrapper } from './ChartWrapper';
 
 // Dashboard & Composite Charts
 export { default as ChartAuditReport } from './ChartAuditReport';

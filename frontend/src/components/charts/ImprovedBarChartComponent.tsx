@@ -1,5 +1,5 @@
 /**
- * Bar Chart Component with Color Coding and Conditional Styling
+ * Improved Bar Chart Component with Better Design, UX/UI and Proper Spacing
  * Displays financial data with visual indicators for anomalies and execution rates
  */
 
@@ -17,7 +17,7 @@ interface BarChartDataPoint {
   [key: string]: unknown;
 }
 
-interface BarChartComponentProps {
+interface ImprovedBarChartComponentProps {
   csvUrl: string;
   title?: string;
   height?: number;
@@ -27,7 +27,7 @@ interface BarChartComponentProps {
   compareMode?: boolean; // Show budgeted vs executed comparison
 }
 
-const BarChartComponent: React.FC<BarChartComponentProps> = ({
+const ImprovedBarChartComponent: React.FC<ImprovedBarChartComponentProps> = ({
   csvUrl,
   title = "Distribución Presupuestaria",
   showLegend = true,
@@ -62,7 +62,7 @@ const BarChartComponent: React.FC<BarChartComponentProps> = ({
     });
   }, [data]);
 
-  // Custom tooltip with color coding
+  // Custom tooltip with better styling
   const CustomTooltip = ({ active, payload, label }: {
     active?: boolean;
     payload?: Array<{
@@ -76,35 +76,35 @@ const BarChartComponent: React.FC<BarChartComponentProps> = ({
       const executionRate = dataPoint.execution_rate || 0;
       
       return (
-        <div className="bg-white dark:bg-dark-surface p-4 border border-gray-200 dark:border-dark-border rounded-lg shadow-lg">
-          <p className="font-semibold text-gray-900 dark:text-dark-text-primary">{label}</p>
+        <div className="bg-white dark:bg-dark-surface p-4 border border-gray-200 dark:border-dark-border rounded-lg shadow-xl">
+          <p className="font-semibold text-gray-900 dark:text-dark-text-primary mb-2">{label}</p>
           
           {compareMode ? (
             <>
-              <p className="text-sm" style={{ color: getColorForExecutionRate(executionRate) }}>
-                Presupuestado: {formatCurrencyARS(dataPoint.budgeted || 0)}
+              <p className="text-sm text-gray-700 dark:text-dark-text-secondary">
+                Presupuestado: <span className="font-medium" style={{ color: '#3B82F6' }}>{formatCurrencyARS(dataPoint.budgeted || 0)}</span>
               </p>
-              <p className="text-sm" style={{ color: getColorForExecutionRate(executionRate) }}>
-                Ejecutado: {formatCurrencyARS(dataPoint.executed || 0)}
+              <p className="text-sm text-gray-700 dark:text-dark-text-secondary">
+                Ejecutado: <span className="font-medium" style={{ color: '#10B981' }}>{formatCurrencyARS(dataPoint.executed || 0)}</span>
               </p>
-              <p className="text-sm font-medium">
+              <p className="text-sm font-medium text-gray-800 dark:text-dark-text-primary mt-1">
                 Tasa de Ejecución: {(executionRate * 100).toFixed(1)}%
               </p>
               
               {executionRate < 0.5 && (
-                <div className="mt-2 p-2 bg-red-50 dark:bg-red-900/20 rounded text-red-700 dark:text-red-300 text-xs">
+                <div className="mt-2 p-2 bg-red-50 dark:bg-red-900/20 rounded text-red-700 dark:text-red-300 text-xs border border-red-200 dark:border-red-700">
                   ⚠️ Ejecución muy baja
                 </div>
               )}
               {executionRate > 1.2 && (
-                <div className="mt-2 p-2 bg-blue-50 dark:bg-blue-900/20 rounded text-blue-700 dark:text-blue-300 text-xs">
+                <div className="mt-2 p-2 bg-blue-50 dark:bg-blue-900/20 rounded text-blue-700 dark:text-blue-300 text-xs border border-blue-200 dark:border-blue-700">
                   ℹ️ Ejecución alta
                 </div>
               )}
             </>
           ) : (
-            <p className="text-sm" style={{ color: dataPoint.color }}>
-              Valor: {formatCurrencyARS(payload[0].value || 0)}
+            <p className="text-sm text-gray-700 dark:text-dark-text-secondary">
+              Valor: <span className="font-medium" style={{ color: dataPoint.color }}>{formatCurrencyARS(payload[0].value || 0)}</span>
             </p>
           )}
         </div>
@@ -188,7 +188,7 @@ const BarChartComponent: React.FC<BarChartComponentProps> = ({
               <YAxis 
                 stroke="#6b7280"
                 tick={{ fill: '#6b7280', fontSize: 12 }}
-                tickFormatter={(value) => `${(value / 1000000).toFixed(0)}M`}
+                tickFormatter={(value) => `$${(value / 1000000).toFixed(0)}M`}
                 className="dark:stroke-gray-300 dark:fill-gray-300"
               />
               <Tooltip content={<CustomTooltip />} />
@@ -196,13 +196,21 @@ const BarChartComponent: React.FC<BarChartComponentProps> = ({
               <Bar 
                 dataKey="budgeted" 
                 name="Presupuestado" 
-                fill="#3B82F6"
-              />
+                radius={[4, 4, 0, 0]}
+              >
+                {chartData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill="#3B82F6" />
+                ))}
+              </Bar>
               <Bar 
                 dataKey="executed" 
                 name="Ejecutado" 
-                fill="#10B981"
-              />
+                radius={[4, 4, 0, 0]}
+              >
+                {chartData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill="#10B981" />
+                ))}
+              </Bar>
             </BarChart>
           ) : (
             <BarChart
@@ -222,7 +230,7 @@ const BarChartComponent: React.FC<BarChartComponentProps> = ({
               <YAxis 
                 stroke="#6b7280"
                 tick={{ fill: '#6b7280', fontSize: 12 }}
-                tickFormatter={(value) => `${(value / 1000000).toFixed(0)}M`}
+                tickFormatter={(value) => `$${(value / 1000000).toFixed(0)}M`}
                 className="dark:stroke-gray-300 dark:fill-gray-300"
               />
               <Tooltip content={<CustomTooltip />} />
@@ -262,4 +270,4 @@ const BarChartComponent: React.FC<BarChartComponentProps> = ({
   );
 };
 
-export default BarChartComponent;
+export default ImprovedBarChartComponent;

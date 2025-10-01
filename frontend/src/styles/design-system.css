@@ -546,6 +546,9 @@ html {
   padding: var(--space-6);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .chart-container:hover {
@@ -559,6 +562,63 @@ html {
   font-weight: var(--font-semibold);
   color: var(--color-on-surface);
   margin-bottom: var(--space-4);
+}
+
+.chart-content {
+  flex: 1;
+  min-height: 300px;
+}
+
+.chart-legend {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-variant);
+}
+
+/* Chart Grid Responsive */
+.chart-grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .chart-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .chart-grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+}
+
+/* Responsive chart container */
+.responsive-chart-container {
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .responsive-chart-container {
+    height: 300px;
+  }
+}
+
+/* Chart loading state */
+.chart-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+/* Chart error state */
+.chart-error {
+  background-color: var(--color-danger-light);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  color: var(--color-danger-dark);
 }
 
 /* Color Utility Classes */
