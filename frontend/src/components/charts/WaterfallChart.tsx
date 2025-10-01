@@ -190,13 +190,11 @@ const WaterfallChart: React.FC<WaterfallChartProps> = ({
     });
   }, [currency, language]);
 
-  interface TooltipProps {
+  const CustomTooltip = ({ active, payload, label }: {
     active?: boolean;
     payload?: Array<{ name: string; value: number; color: string }>;
     label?: string;
-  }
-
-  const CustomTooltip = ({ active, payload, label }: TooltipProps) => {
+  }) => {
     if (active && payload && payload.length) {
       const item = payload[0].payload;
       const change = item.value;

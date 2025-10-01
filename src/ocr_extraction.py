@@ -367,6 +367,47 @@ class PDFOCRExtractor:
             self.log_extraction_result(pdf_path, 'combined', 0, 0.0, {}, 0, error=str(e))
             return {"status": "failed", "pdf_path": str(pdf_path), "error": str(e)}
 
+    def extract_date_range_from_filename(self, filename):
+        """Extract date range from financial report PDF filenames like 'Informe Situación Económico-Financiera 02/01/2024–30/06/2024'"""
+        import re
+        
+        # Pattern to match date ranges in format DD/MM/YYYY–DD/MM/YYYY
+        date_pattern = r"(\d{2}/\d{2}/\d{4})[–-](\d{2}/\d{2}/\d{4})"
+        matches = re.search(date_pattern, filename, re.IGNORECASE)
+        
+        if matches:
+            start_date = matches.group(1)
+            end_date = matches.group(2)
+            return {"start_date": start_date, "end_date": end_date}
+        
+        # Also check for other common date range patterns in financial reports
+        # Pattern for format like SITUACION-ECONOMICA-FINANCIERA-01-01-2024–31-12-2024
+        alt_date_pattern = r"(\d{2}[/-]\d{2}[/-]\d{4})[–-](\d{2}[/-]\d{2}[/-]\d{4})"
+        alt_matches = re.search(alt_date_pattern, filename, re.IGNORECASE)
+        
+        if alt_matches:
+            start_date = alt_matches.group(1)
+            end_date = alt_matches.group(2)
+            return {"start_date": start_date, "end_date": end_date}
+        
+        # Pattern for year and period like "SITUACION-ECONOMICA-FINANCIERA-2024", "SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022"
+        year_period_pattern = r"(?:SITUACION[-_](?:ECONOMICA[-_])?FINANCIERA)[-_](\d{4})"  # Just year
+        year_period_matches = re.search(year_period_pattern, filename, re.IGNORECASE)
+        
+        if year_period_matches:
+            year = year_period_matches.group(1)
+            return {"year": year}
+        
+        # Pattern for specific periods like "3°TRI-2022", "4°TRE-2022", "3°TRIMESTRE", etc.
+        period_pattern = r"(?:SITUACION[-_](?:ECONOMICA[-_])?FINANCIERA)[-_]([0-9°º]*\w*(?:[-_]\d{4})?)"
+        period_matches = re.search(period_pattern, filename, re.IGNORECASE)
+        
+        if period_matches:
+            period = period_matches.group(1)
+            return {"period": period}
+        
+        return None
+
     def save_extraction_results(self, pdf_path, results):
         """Save OCR extraction results in multiple formats"""
         try:
@@ -374,12 +415,22 @@ class PDFOCRExtractor:
             pdf_stem = pdf_path.stem
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             
+            # Extract additional metadata for financial reports
+            filename_metadata = self.extract_date_range_from_filename(pdf_path.name)
+            
             output_files = {}
+            
+            # Add metadata to results before saving
+            results_with_metadata = results.copy()
+            results_with_metadata['filename_metadata'] = filename_metadata
+            results_with_metadata['is_financial_report'] = 'situacion' in pdf_path.name.lower() or \
+                                                          'economico' in pdf_path.name.lower() or \
+                                                          'financiera' in pdf_path.name.lower()
             
             # Save as JSON
             json_path = self.output_dirs['json'] / f"{pdf_stem}_{timestamp}.json"
             with open(json_path, 'w', encoding='utf-8') as f:
-                json.dump(results, f, ensure_ascii=False, indent=2)
+                json.dump(results_with_metadata, f, ensure_ascii=False, indent=2)
             output_files['json'] = str(json_path)
             
             # Save as TXT (combined text)
@@ -449,12 +500,54 @@ class PDFOCRExtractor:
         logger.info(f"Found {len(pdf_files)} PDF files for OCR processing")
         return pdf_files
 
-    def process_all_pdfs(self, skip_processed=True, limit=None):
+    def find_financial_report_pdfs(self, skip_processed=True):
+        """Find PDF files specifically related to financial reports like 'Situación Económico-Financiera'"""
+        logger.info("Searching for financial report PDF files...")
+        
+        pdf_files = []
+        for pdf_path in self.base_dir.rglob("*.pdf"):
+            # Skip node_modules and .git directories
+            if "node_modules" in str(pdf_path) or ".git" in str(pdf_path):
+                continue
+            
+            # Check if filename contains financial report terms
+            filename_lower = pdf_path.name.lower()
+            is_financial_report = (
+                'situacion' in filename_lower or
+                'economico' in filename_lower or
+                'financiera' in filename_lower or
+                'financial' in filename_lower or
+                'informe' in filename_lower
+            )
+            
+            if is_financial_report:
+                # Skip already processed files if requested
+                if skip_processed and self.is_already_processed(pdf_path):
+                    logger.info(f"Skipping already processed financial report: {pdf_path}")
+                    continue
+                
+                pdf_files.append(pdf_path)
+        
+        logger.info(f"Found {len(pdf_files)} financial report PDF files for OCR processing")
+        return pdf_files
+
+    def process_all_pdfs(self, skip_processed=True, limit=None, prioritize_financial_reports=False):
         """Process all PDF files"""
         logger.info("Starting batch PDF OCR processing...")
         
         # Find PDF files
-        pdf_files = self.find_pdf_files(skip_processed=skip_processed)
+        if prioritize_financial_reports:
+            # Process financial reports first
+            all_pdf_files = self.find_pdf_files(skip_processed=skip_processed)
+            financial_pdfs = self.find_financial_report_pdfs(skip_processed=skip_processed)
+            
+            # Sort the full list to put financial reports first
+            other_pdfs = [pdf for pdf in all_pdf_files if pdf not in financial_pdfs]
+            pdf_files = financial_pdfs + other_pdfs
+            
+            logger.info(f"Priotizing {len(financial_pdfs)} financial reports first, followed by {len(other_pdfs)} other PDFs")
+        else:
+            pdf_files = self.find_pdf_files(skip_processed=skip_processed)
         
         if limit:
             pdf_files = pdf_files[:limit]
@@ -485,6 +578,8 @@ def main():
     parser.add_argument('--limit', type=int, help='Limit number of PDFs to process')
     parser.add_argument('--skip-processed', action='store_true', 
                         help='Skip already processed PDFs')
+    parser.add_argument('--prioritize-financial-reports', action='store_true',
+                        help='Process financial reports (like Situación Económico-Financiera) first')
     
     args = parser.parse_args()
     
@@ -498,7 +593,8 @@ def main():
     # Process all PDFs
     results = extractor.process_all_pdfs(
         skip_processed=args.skip_processed,
-        limit=args.limit
+        limit=args.limit,
+        prioritize_financial_reports=args.prioritize_financial_reports
     )
     
     # Generate summary report

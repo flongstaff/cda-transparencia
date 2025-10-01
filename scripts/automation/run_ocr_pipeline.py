@@ -86,7 +86,7 @@ class OCROrchestrator:
         
         return True
 
-    def extract_pdfs_with_ocr(self, limit=None, skip_processed=True):
+    def extract_pdfs_with_ocr(self, limit=None, skip_processed=True, prioritize_financial_reports=False):
         """Extract text from PDFs using OCR"""
         ocr_script = self.scripts_dir / "ocr_extraction.py"
         
@@ -105,6 +105,9 @@ class OCROrchestrator:
         
         if skip_processed:
             cmd.append("--skip-processed")
+        
+        if prioritize_financial_reports:
+            cmd.append("--prioritize-financial-reports")
         
         return self.run_command(cmd, "PDF OCR extraction")
 
@@ -217,7 +220,7 @@ class OCROrchestrator:
             logger.error(f"Quality verification failed: {e}")
             return False
 
-    def run_complete_pipeline(self, limit=None, skip_processed=True):
+    def run_complete_pipeline(self, limit=None, skip_processed=True, prioritize_financial_reports=False):
         """Run the complete OCR pipeline"""
         logger.info("Starting complete OCR extraction pipeline...")
         start_time = datetime.now()
@@ -230,7 +233,7 @@ class OCROrchestrator:
             
             # 2. Extract PDFs with OCR
             logger.info("Step 1/5: Extracting PDFs with OCR...")
-            if not self.extract_pdfs_with_ocr(limit=limit, skip_processed=skip_processed):
+            if not self.extract_pdfs_with_ocr(limit=limit, skip_processed=skip_processed, prioritize_financial_reports=prioritize_financial_reports):
                 logger.error("PDF OCR extraction failed")
                 return False
             
@@ -304,6 +307,8 @@ def main():
                         help='Cleanup temporary files after processing')
     parser.add_argument('--verify-only', action='store_true',
                         help='Only verify existing OCR extraction quality')
+    parser.add_argument('--prioritize-financial-reports', action='store_true',
+                        help='Process financial reports (like Situación Económico-Financiera) first')
     
     args = parser.parse_args()
     
@@ -321,7 +326,8 @@ def main():
     else:
         success = orchestrator.run_complete_pipeline(
             limit=args.limit,
-            skip_processed=args.incremental
+            skip_processed=args.incremental,
+            prioritize_financial_reports=args.prioritize_financial_reports
         )
     
     # Cleanup if requested

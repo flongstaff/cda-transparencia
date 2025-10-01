@@ -4,6 +4,7 @@
  */
 
 import Papa from 'papaparse';
+import { buildDataUrl } from '../../config/apiConfig';
 
 // Chart types that we have consolidated data for
 export const CHART_TYPES = [
@@ -100,20 +101,30 @@ class ChartDataService {
     try {
       console.log(`[CHART DATA SERVICE] Loading chart data for: ${chartType}`);
       
-      // Construct the URL for the consolidated CSV file
-      // Use absolute path to work in both development and production
-      const csvUrl = `/data/charts/${chartType}_consolidated_2019-2025.csv`;
+      // Construct the URL for the consolidated CSV file using the new API config
+      const csvUrl = buildDataUrl(`${chartType}_consolidated_2019-2025.csv`);
       
       // Fetch the CSV file
       const response = await fetch(csvUrl);
       
       if (!response.ok) {
         console.warn(`[CHART DATA SERVICE] Failed to load ${chartType} data from ${csvUrl}: HTTP ${response.status}`);
-        // Return empty data instead of throwing error to allow graceful degradation
-        return [];
+        
+        // Fallback to local CSV if API failed
+        const localUrl = `/data/charts/${chartType}_consolidated_2019-2025.csv`;
+        console.log(`[CHART DATA SERVICE] Trying local fallback: ${localUrl}`);
+        const localResponse = await fetch(localUrl);
+        
+        if (!localResponse.ok) {
+          console.warn(`[CHART DATA SERVICE] Failed to load ${chartType} data from ${localUrl}: HTTP ${localResponse.status}`);
+          // Return empty data instead of throwing error to allow graceful degradation
+          return [];
+        }
+        
+        var csvText = await localResponse.text();
+      } else {
+        csvText = await response.text();
       }
-      
-      const csvText = await response.text();
       
       // Parse the CSV data
       const parsed = Papa.parse(csvText, {
@@ -124,8 +135,188 @@ class ChartDataService {
           // Handle monetary values with dollar signs and commas
           if (typeof value === 'string') {
             // Check if it's a monetary value like "$330,000,000"
-            if (value.startsWith('$') && value.includes(',')) {
-              const numericValue = value.replace('$', '').replace(/,/g, '');
+            if (value.startsWith('
+
+  /**
+   * Load all chart data for a dashboard view
+   */
+  public async loadAllChartData(): Promise<Record<ChartType, any[] | null>> {
+    console.log('[CHART DATA SERVICE] Loading all chart data...');
+    
+    // Load all chart types in parallel
+    const loadDataPromises = CHART_TYPES.map(chartType => 
+      this.loadChartData(chartType).then(data => ({ chartType, data }))
+    );
+    
+    const results = await Promise.all(loadDataPromises);
+    
+    // Convert to record format
+    const allData: Record<ChartType, any[] | null> = {} as Record<ChartType, any[] | null>;
+    
+    results.forEach(({ chartType, data }) => {
+      allData[chartType] = data;
+    });
+    
+    console.log('[CHART DATA SERVICE] Loaded all chart data');
+    return allData;
+  }
+
+  /**
+   * Get chart metadata including available years and data points
+   */
+  public async getChartMetadata(chartType: ChartType): Promise<any> {
+    const data = await this.loadChartData(chartType);
+    
+    if (!data || data.length === 0) {
+      return {
+        chartType,
+        availableYears: [],
+        totalRecords: 0,
+        dataPoints: 0,
+        lastUpdated: new Date().toISOString()
+      };
+    }
+    
+    // Extract unique years
+    const years = [...new Set(data.map(row => row.year))].sort((a, b) => b - a);
+    
+    return {
+      chartType,
+      availableYears: years,
+      totalRecords: data.length,
+      dataPoints: Object.keys(data[0] || {}).length,
+      lastUpdated: new Date().toISOString()
+    };
+  }
+
+  /**
+   * Get all chart metadata
+   */
+  public async getAllChartMetadata(): Promise<any[]> {
+    const metadataPromises = CHART_TYPES.map(chartType => 
+      this.getChartMetadata(chartType)
+    );
+    
+    return Promise.all(metadataPromises);
+  }
+
+  /**
+   * Clear cache
+   */
+  public clearCache(): void {
+    this.cache.clear();
+    console.log('[CHART DATA SERVICE] Cache cleared');
+  }
+
+  /**
+   * Get cache stats
+   */
+  public getCacheStats(): { size: number; keys: string[] } {
+    return {
+      size: this.cache.size,
+      keys: Array.from(this.cache.keys())
+    };
+  }
+}
+
+// Export singleton instance
+const chartDataService = ChartDataService.getInstance();
+export default chartDataService;
+
+// Export for named imports
+export { chartDataService };
+) && value.includes(',')) {
+              const numericValue = value.replace('
+
+  /**
+   * Load all chart data for a dashboard view
+   */
+  public async loadAllChartData(): Promise<Record<ChartType, any[] | null>> {
+    console.log('[CHART DATA SERVICE] Loading all chart data...');
+    
+    // Load all chart types in parallel
+    const loadDataPromises = CHART_TYPES.map(chartType => 
+      this.loadChartData(chartType).then(data => ({ chartType, data }))
+    );
+    
+    const results = await Promise.all(loadDataPromises);
+    
+    // Convert to record format
+    const allData: Record<ChartType, any[] | null> = {} as Record<ChartType, any[] | null>;
+    
+    results.forEach(({ chartType, data }) => {
+      allData[chartType] = data;
+    });
+    
+    console.log('[CHART DATA SERVICE] Loaded all chart data');
+    return allData;
+  }
+
+  /**
+   * Get chart metadata including available years and data points
+   */
+  public async getChartMetadata(chartType: ChartType): Promise<any> {
+    const data = await this.loadChartData(chartType);
+    
+    if (!data || data.length === 0) {
+      return {
+        chartType,
+        availableYears: [],
+        totalRecords: 0,
+        dataPoints: 0,
+        lastUpdated: new Date().toISOString()
+      };
+    }
+    
+    // Extract unique years
+    const years = [...new Set(data.map(row => row.year))].sort((a, b) => b - a);
+    
+    return {
+      chartType,
+      availableYears: years,
+      totalRecords: data.length,
+      dataPoints: Object.keys(data[0] || {}).length,
+      lastUpdated: new Date().toISOString()
+    };
+  }
+
+  /**
+   * Get all chart metadata
+   */
+  public async getAllChartMetadata(): Promise<any[]> {
+    const metadataPromises = CHART_TYPES.map(chartType => 
+      this.getChartMetadata(chartType)
+    );
+    
+    return Promise.all(metadataPromises);
+  }
+
+  /**
+   * Clear cache
+   */
+  public clearCache(): void {
+    this.cache.clear();
+    console.log('[CHART DATA SERVICE] Cache cleared');
+  }
+
+  /**
+   * Get cache stats
+   */
+  public getCacheStats(): { size: number; keys: string[] } {
+    return {
+      size: this.cache.size,
+      keys: Array.from(this.cache.keys())
+    };
+  }
+}
+
+// Export singleton instance
+const chartDataService = ChartDataService.getInstance();
+export default chartDataService;
+
+// Export for named imports
+export { chartDataService };
+, '').replace(/,/g, '');
               const num = parseFloat(numericValue);
               return isNaN(num) ? value : num;
             }

@@ -6,15 +6,23 @@ with open('/Users/flong/Developer/cda-transparencia/scripts/enhance-data-organiz
 
 # Update the specific line (246th line - index 245)
 if len(lines) >= 246:
-    old_line = "    const categoryMatch = filename.match(/(?:^|_)(budget|contract|salary|treasury|debt|document|report|sef|presupuesto|contrato|sueldo|tesoreria|deuda|informe)(?:_|\\\\.|$)/i);\n"
-    new_line = "    const categoryMatch = filename.match(/(?:^|_)(budget|contract|salary|treasury|debt|document|report|sef|presupuesto|contrato|sueldo|tesoreria|deuda|informe|situacion|economico|financiera|financial)(?:_|\\\\.|$)/i);\n"
-    
-    if lines[245] == old_line:
-        lines[245] = new_line
-        print("Line successfully updated")
+    content = lines[245]
+    # Check if this line contains the target pattern
+    if "const categoryMatch = filename.match" in content and "deuda|informe" in content:
+        # Replace the pattern with the new one containing additional categories
+        old_pattern = "deuda|informe"
+        new_pattern = "deuda|informe|situacion|economico|financiera|financial"
+        
+        original_line = lines[245]
+        lines[245] = lines[245].replace(old_pattern, new_pattern)
+        
+        if original_line != lines[245]:
+            print("Line successfully updated")
+        else:
+            print("Line was not updated - replacement failed")
     else:
-        print("Line not found in expected format. Current content:")
-        print(repr(lines[245]))
+        print("Target pattern not found in expected line. Current content:")
+        print(repr(content))
 else:
     print("File doesn't have 246 lines")
 

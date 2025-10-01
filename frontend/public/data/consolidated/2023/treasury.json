@@ -1,7 +1,7 @@
 {
   "year": 2023,
-  "income": 340341750,
-  "expenses": 320498610,
+  "total_revenue": 340341750,
+  "total_expenses": 320498610,
   "balance": 19843140,
   "treasury_movements": [
     [

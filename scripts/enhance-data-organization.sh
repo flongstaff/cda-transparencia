@@ -243,7 +243,7 @@ async function generateFileMetadata(filePath) {
     const yearMatch = filename.match(/(?:^|_)(\d{4})(?:_|$)/);
     const year = yearMatch ? parseInt(yearMatch[1]) : null;
     
-    const categoryMatch = filename.match(/(?:^|_)(budget|contract|salary|treasury|debt|document|report|sef|presupuesto|contrato|sueldo|tesoreria|deuda|informe)(?:_|\.|$)/i);
+    const categoryMatch = filename.match(/(?:^|_)(budget|contract|salary|treasury|debt|document|report|sef|presupuesto|contrato|sueldo|tesoreria|deuda|informe|situacion|economico|financiera|financial)(?:_|\.|$)/i);
     const category = categoryMatch ? categoryMatch[1].toLowerCase() : 'uncategorized';
     
     // Read file to get more info (for CSV/JSON)

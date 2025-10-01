@@ -12,6 +12,8 @@
  * - Civil society oversight organizations
  */
 
+import { buildApiUrl } from '../config/apiConfig';
+
 export interface ExternalDataResponse {
   success: boolean;
   data: any;
@@ -210,7 +212,7 @@ class ExternalAPIsService {
       console.log(`🌐 Fetching from external source via proxy: ${source} - ${url}`);
 
       // Use the backend proxy to bypass CORS issues
-      const proxyUrl = `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/api/external/proxy?url=${encodeURIComponent(url)}&source=${encodeURIComponent(source)}`;
+      const proxyUrl = buildApiUrl(`external/proxy?url=${encodeURIComponent(url)}&source=${encodeURIComponent(source)}`);
       
       const response = await fetch(proxyUrl, {
         method: 'GET',
@@ -280,7 +282,7 @@ class ExternalAPIsService {
       console.log('🌐 Fetching Carmen de Areco data via backend proxy...');
       
       // Use the backend endpoint specifically for Carmen de Areco data
-      const proxyUrl = `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/api/external/carmen-de-areco`;
+      const proxyUrl = buildApiUrl('external/carmen-de-areco');
       
       const response = await fetch(proxyUrl, {
         method: 'GET',
@@ -362,7 +364,12 @@ class ExternalAPIsService {
       console.log('🌐 Fetching Buenos Aires Province data via backend proxy...');
       
       // Use the backend endpoint specifically for Buenos Aires data
-      const proxyUrl = `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/api/external/buenos-aires`;
+      let apiUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001';
+      // Ensure URL ends with a slash
+      if (!apiUrl.endsWith('/')) {
+        apiUrl += '/';
+      }
+      const proxyUrl = `${apiUrl}api/external/buenos-aires`;
       
       const response = await fetch(proxyUrl, {
         method: 'GET',
@@ -443,7 +450,12 @@ class ExternalAPIsService {
       console.log('🌐 Fetching National Budget data via backend proxy...');
       
       // Use the backend endpoint specifically for national data
-      const proxyUrl = `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/api/external/national`;
+      let apiUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001';
+      // Ensure URL ends with a slash
+      if (!apiUrl.endsWith('/')) {
+        apiUrl += '/';
+      }
+      const proxyUrl = `${apiUrl}api/external/national`;
       
       const response = await fetch(proxyUrl, {
         method: 'GET',
@@ -524,7 +536,12 @@ class ExternalAPIsService {
       console.log('🌐 Fetching geographic data via backend proxy...');
       
       // Use the backend endpoint for all external data which includes geographic data
-      const proxyUrl = `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/api/external/all-external-data`;
+      let apiUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001';
+      // Ensure URL ends with a slash
+      if (!apiUrl.endsWith('/')) {
+        apiUrl += '/';
+      }
+      const proxyUrl = `${apiUrl}api/external/all-external-data`;
       
       const response = await fetch(proxyUrl, {
         method: 'GET',
@@ -686,7 +703,12 @@ class ExternalAPIsService {
 
     try {
       // Try to use the aggregated backend endpoint first
-      const proxyUrl = `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/api/external/all-external-data`;
+      let apiUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001';
+      // Ensure URL ends with a slash
+      if (!apiUrl.endsWith('/')) {
+        apiUrl += '/';
+      }
+      const proxyUrl = `${apiUrl}api/external/all-external-data`;
       
       const response = await fetch(proxyUrl, {
         method: 'GET',
