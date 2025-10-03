@@ -221,29 +221,63 @@ async function main() {
   const allData = [];
   
   if (!isRAFAMAccessible) {
-    console.log('⚠️  RAFAM site is inaccessible. Using mock data fallback for all years.');
+    console.log('⚠️  RAFAM site is inaccessible. Using local data fallback for all years.');
     
-    // Use mock data for all years as fallback
+    // Use local data for all years as fallback
     for (const year of YEARS) {
-      console.log(`\n🔍 Loading mock RAFAM data for ${year}...`);
+      console.log(`\n🔍 Loading local RAFAM data for ${year}...`);
       
       try {
-        const yearData = await loadMockRAFAMData(year);
-        allData.push(yearData);
+        // First try to load local organized JSON data
+        const localData = await loadLocalBudgetData(year);
         
-        // Save individual year file
-        const filename = path.join(OUTPUT_DIR, `rafam_${year}_comprehensive.json`);
-        await fs.writeFile(filename, JSON.stringify(yearData, null, 2));
-        console.log(`💾 Saved: ${filename}`);
+        if (localData) {
+          const yearData = {
+            year,
+            municipality: 'Carmen de Areco',
+            municipalityCode: MUNICIPALITY_CODE,
+            economicData: {
+              budget: {
+                total_approved: localData.total_budget || 0,
+                total_executed: localData.total_executed || 0,
+                execution_rate: localData.execution_rate || 0,
+                budget_execution: localData.budget_execution || []
+              },
+              revenue: localData.revenue || {},
+              expenditure: localData.expenditure || {},
+              contracts: [],
+              salaries: []
+            },
+            lastUpdated: new Date().toISOString(),
+            source: 'local_json_files'
+          };
+          
+          allData.push(yearData);
+          
+          // Save individual year file
+          const filename = path.join(OUTPUT_DIR, `rafam_${year}_comprehensive.json`);
+          await fs.writeFile(filename, JSON.stringify(yearData, null, 2));
+          console.log(`💾 Saved: ${filename}`);
+        } else {
+          // Fall back to mock data if local JSON files don't exist
+          console.log(`⚠️  Local JSON not found for ${year}, using mock data fallback...`);
+          const yearData = await loadMockRAFAMData(year);
+          allData.push(yearData);
+          
+          // Save individual year file
+          const filename = path.join(OUTPUT_DIR, `rafam_${year}_comprehensive.json`);
+          await fs.writeFile(filename, JSON.stringify(yearData, null, 2));
+          console.log(`💾 Saved: ${filename}`);
+        }
       } catch (error) {
-        console.error(`❌ Error loading mock data for ${year}:`, error);
+        console.error(`❌ Error loading local/mock data for ${year}:`, error);
         // Save error data
         const errorData = {
           year,
           error: error.message,
           municipalityCode: MUNICIPALITY_CODE,
-          extractedDate: new Date().toISOString(),
-          source: 'error_in_mock_data_load'
+          lastUpdated: new Date().toISOString(),
+          source: 'error_in_local_data_load'
         };
         allData.push(errorData);
         

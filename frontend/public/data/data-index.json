@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-03T03:21:09.585Z",
+  "generatedAt": "2025-10-03T07:32:23.071Z",
   "dataSources": {
     "csv": [
       {
@@ -9360,6 +9360,11 @@
         "size": 361
       },
       {
+        "path": "scraped/carmen_municipal/carmen_municipal_mock_data.json",
+        "name": "carmen_municipal_mock_data.json",
+        "size": 2139
+      },
+      {
         "path": "processed/2025/consolidated_data.json",
         "name": "consolidated_data.json",
         "size": 11304
@@ -9485,44 +9490,94 @@
         "size": 241
       },
       {
+        "path": "external/rafam/expense_execution_2019.json",
+        "name": "expense_execution_2019.json",
+        "size": 18582
+      },
+      {
+        "path": "external/provincial/rafam/rafam_complete_data.json",
+        "name": "rafam_complete_data.json",
+        "size": 8867
+      },
+      {
         "path": "external/provincial/rafam/rafam_all_years.json",
         "name": "rafam_all_years.json",
-        "size": 1052
+        "size": 6211
       },
       {
         "path": "external/provincial/rafam/rafam_2025_comprehensive.json",
         "name": "rafam_2025_comprehensive.json",
-        "size": 136
+        "size": 801
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2025.json",
+        "name": "rafam_2025.json",
+        "size": 799
       },
       {
         "path": "external/provincial/rafam/rafam_2024_comprehensive.json",
         "name": "rafam_2024_comprehensive.json",
-        "size": 136
+        "size": 801
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2024.json",
+        "name": "rafam_2024.json",
+        "size": 799
       },
       {
         "path": "external/provincial/rafam/rafam_2023_comprehensive.json",
         "name": "rafam_2023_comprehensive.json",
-        "size": 136
+        "size": 801
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2023.json",
+        "name": "rafam_2023.json",
+        "size": 799
       },
       {
         "path": "external/provincial/rafam/rafam_2022_comprehensive.json",
         "name": "rafam_2022_comprehensive.json",
-        "size": 136
+        "size": 801
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2022.json",
+        "name": "rafam_2022.json",
+        "size": 799
       },
       {
         "path": "external/provincial/rafam/rafam_2021_comprehensive.json",
         "name": "rafam_2021_comprehensive.json",
-        "size": 136
+        "size": 801
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2021.json",
+        "name": "rafam_2021.json",
+        "size": 799
       },
       {
         "path": "external/provincial/rafam/rafam_2020_comprehensive.json",
         "name": "rafam_2020_comprehensive.json",
-        "size": 136
+        "size": 801
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2020.json",
+        "name": "rafam_2020.json",
+        "size": 799
       },
       {
         "path": "external/provincial/rafam/rafam_2019_comprehensive.json",
         "name": "rafam_2019_comprehensive.json",
-        "size": 136
+        "size": 801
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2019.json",
+        "name": "rafam_2019.json",
+        "size": 799
+      },
+      {
+        "path": "external/provincial/rafam/extraction_metadata.json",
+        "name": "extraction_metadata.json",
+        "size": 206
       },
       {
         "path": "consolidated/index.json",
@@ -10469,52 +10524,117 @@
       "type": "directory",
       "contents": [
         {
+          "name": "extraction_metadata.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 206
+        },
+        {
+          "name": "rafam_2019.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 799
+        },
+        {
           "name": "rafam_2019_comprehensive.json",
           "type": "file",
           "extension": ".json",
-          "size": 136
+          "size": 801
+        },
+        {
+          "name": "rafam_2020.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 799
         },
         {
           "name": "rafam_2020_comprehensive.json",
           "type": "file",
           "extension": ".json",
-          "size": 136
+          "size": 801
+        },
+        {
+          "name": "rafam_2021.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 799
         },
         {
           "name": "rafam_2021_comprehensive.json",
           "type": "file",
           "extension": ".json",
-          "size": 136
+          "size": 801
+        },
+        {
+          "name": "rafam_2022.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 799
         },
         {
           "name": "rafam_2022_comprehensive.json",
           "type": "file",
           "extension": ".json",
-          "size": 136
+          "size": 801
+        },
+        {
+          "name": "rafam_2023.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 799
         },
         {
           "name": "rafam_2023_comprehensive.json",
           "type": "file",
           "extension": ".json",
-          "size": 136
+          "size": 801
+        },
+        {
+          "name": "rafam_2024.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 799
         },
         {
           "name": "rafam_2024_comprehensive.json",
           "type": "file",
           "extension": ".json",
-          "size": 136
+          "size": 801
+        },
+        {
+          "name": "rafam_2025.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 799
         },
         {
           "name": "rafam_2025_comprehensive.json",
           "type": "file",
           "extension": ".json",
-          "size": 136
+          "size": 801
         },
         {
           "name": "rafam_all_years.json",
           "type": "file",
           "extension": ".json",
-          "size": 1052
+          "size": 6211
+        },
+        {
+          "name": "rafam_complete_data.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 8867
+        }
+      ]
+    },
+    "external/rafam": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "expense_execution_2019.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 18582
         }
       ]
     },
@@ -21959,6 +22079,17 @@
           "type": "file",
           "extension": ".json",
           "size": 361
+        }
+      ]
+    },
+    "scraped/carmen_municipal": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "carmen_municipal_mock_data.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 2139
         }
       ]
     },

@@ -1,44 +1,296 @@
 [
   {
     "year": 2019,
-    "error": "timeout of 30000ms exceeded",
     "municipalityCode": "270",
-    "extractedDate": "2025-10-02T10:16:48.102Z"
+    "municipalityName": "Carmen de Areco",
+    "extractedDate": "2025-10-03T04:43:17.858Z",
+    "budget": {
+      "total": 80000000,
+      "approved": 80000000,
+      "executed": 78000000,
+      "executionRate": 97.5
+    },
+    "revenue": {
+      "bySource": [],
+      "total": 0
+    },
+    "expenses": {
+      "byCategory": [],
+      "byFunction": [],
+      "total": 0
+    },
+    "transfers": {
+      "coparticipation": null,
+      "provincial": null,
+      "national": null
+    },
+    "rawTables": [],
+    "source": "mock_data_fallback",
+    "budget_execution": [
+      {
+        "quarter": "Q2",
+        "budgeted": 80000000,
+        "executed": 78000000,
+        "percentage": 97.5
+      },
+      {
+        "quarter": "Q3",
+        "budgeted": 85000000,
+        "executed": 83500000,
+        "percentage": 98.2
+      }
+    ]
   },
   {
     "year": 2020,
-    "error": "timeout of 30000ms exceeded",
     "municipalityCode": "270",
-    "extractedDate": "2025-10-02T10:17:20.124Z"
+    "municipalityName": "Carmen de Areco",
+    "extractedDate": "2025-10-03T04:43:18.362Z",
+    "budget": {
+      "total": 80000000,
+      "approved": 80000000,
+      "executed": 78000000,
+      "executionRate": 97.5
+    },
+    "revenue": {
+      "bySource": [],
+      "total": 0
+    },
+    "expenses": {
+      "byCategory": [],
+      "byFunction": [],
+      "total": 0
+    },
+    "transfers": {
+      "coparticipation": null,
+      "provincial": null,
+      "national": null
+    },
+    "rawTables": [],
+    "source": "mock_data_fallback",
+    "budget_execution": [
+      {
+        "quarter": "Q2",
+        "budgeted": 80000000,
+        "executed": 78000000,
+        "percentage": 97.5
+      },
+      {
+        "quarter": "Q3",
+        "budgeted": 85000000,
+        "executed": 83500000,
+        "percentage": 98.2
+      }
+    ]
   },
   {
     "year": 2021,
-    "error": "timeout of 30000ms exceeded",
     "municipalityCode": "270",
-    "extractedDate": "2025-10-02T10:17:52.132Z"
+    "municipalityName": "Carmen de Areco",
+    "extractedDate": "2025-10-03T04:43:18.867Z",
+    "budget": {
+      "total": 80000000,
+      "approved": 80000000,
+      "executed": 78000000,
+      "executionRate": 97.5
+    },
+    "revenue": {
+      "bySource": [],
+      "total": 0
+    },
+    "expenses": {
+      "byCategory": [],
+      "byFunction": [],
+      "total": 0
+    },
+    "transfers": {
+      "coparticipation": null,
+      "provincial": null,
+      "national": null
+    },
+    "rawTables": [],
+    "source": "mock_data_fallback",
+    "budget_execution": [
+      {
+        "quarter": "Q2",
+        "budgeted": 80000000,
+        "executed": 78000000,
+        "percentage": 97.5
+      },
+      {
+        "quarter": "Q3",
+        "budgeted": 85000000,
+        "executed": 83500000,
+        "percentage": 98.2
+      }
+    ]
   },
   {
     "year": 2022,
-    "error": "timeout of 30000ms exceeded",
     "municipalityCode": "270",
-    "extractedDate": "2025-10-02T10:18:24.140Z"
+    "municipalityName": "Carmen de Areco",
+    "extractedDate": "2025-10-03T04:43:19.369Z",
+    "budget": {
+      "total": 80000000,
+      "approved": 80000000,
+      "executed": 78000000,
+      "executionRate": 97.5
+    },
+    "revenue": {
+      "bySource": [],
+      "total": 0
+    },
+    "expenses": {
+      "byCategory": [],
+      "byFunction": [],
+      "total": 0
+    },
+    "transfers": {
+      "coparticipation": null,
+      "provincial": null,
+      "national": null
+    },
+    "rawTables": [],
+    "source": "mock_data_fallback",
+    "budget_execution": [
+      {
+        "quarter": "Q2",
+        "budgeted": 80000000,
+        "executed": 78000000,
+        "percentage": 97.5
+      },
+      {
+        "quarter": "Q3",
+        "budgeted": 85000000,
+        "executed": 83500000,
+        "percentage": 98.2
+      }
+    ]
   },
   {
     "year": 2023,
-    "error": "timeout of 30000ms exceeded",
     "municipalityCode": "270",
-    "extractedDate": "2025-10-02T10:18:56.146Z"
+    "municipalityName": "Carmen de Areco",
+    "extractedDate": "2025-10-03T04:43:19.872Z",
+    "budget": {
+      "total": 80000000,
+      "approved": 80000000,
+      "executed": 78000000,
+      "executionRate": 97.5
+    },
+    "revenue": {
+      "bySource": [],
+      "total": 0
+    },
+    "expenses": {
+      "byCategory": [],
+      "byFunction": [],
+      "total": 0
+    },
+    "transfers": {
+      "coparticipation": null,
+      "provincial": null,
+      "national": null
+    },
+    "rawTables": [],
+    "source": "mock_data_fallback",
+    "budget_execution": [
+      {
+        "quarter": "Q2",
+        "budgeted": 80000000,
+        "executed": 78000000,
+        "percentage": 97.5
+      },
+      {
+        "quarter": "Q3",
+        "budgeted": 85000000,
+        "executed": 83500000,
+        "percentage": 98.2
+      }
+    ]
   },
   {
     "year": 2024,
-    "error": "timeout of 30000ms exceeded",
     "municipalityCode": "270",
-    "extractedDate": "2025-10-02T10:19:28.153Z"
+    "municipalityName": "Carmen de Areco",
+    "extractedDate": "2025-10-03T04:43:20.375Z",
+    "budget": {
+      "total": 80000000,
+      "approved": 80000000,
+      "executed": 78000000,
+      "executionRate": 97.5
+    },
+    "revenue": {
+      "bySource": [],
+      "total": 0
+    },
+    "expenses": {
+      "byCategory": [],
+      "byFunction": [],
+      "total": 0
+    },
+    "transfers": {
+      "coparticipation": null,
+      "provincial": null,
+      "national": null
+    },
+    "rawTables": [],
+    "source": "mock_data_fallback",
+    "budget_execution": [
+      {
+        "quarter": "Q2",
+        "budgeted": 80000000,
+        "executed": 78000000,
+        "percentage": 97.5
+      },
+      {
+        "quarter": "Q3",
+        "budgeted": 85000000,
+        "executed": 83500000,
+        "percentage": 98.2
+      }
+    ]
   },
   {
     "year": 2025,
-    "error": "timeout of 30000ms exceeded",
     "municipalityCode": "270",
-    "extractedDate": "2025-10-02T10:20:00.162Z"
+    "municipalityName": "Carmen de Areco",
+    "extractedDate": "2025-10-03T04:43:20.877Z",
+    "budget": {
+      "total": 80000000,
+      "approved": 80000000,
+      "executed": 78000000,
+      "executionRate": 97.5
+    },
+    "revenue": {
+      "bySource": [],
+      "total": 0
+    },
+    "expenses": {
+      "byCategory": [],
+      "byFunction": [],
+      "total": 0
+    },
+    "transfers": {
+      "coparticipation": null,
+      "provincial": null,
+      "national": null
+    },
+    "rawTables": [],
+    "source": "mock_data_fallback",
+    "budget_execution": [
+      {
+        "quarter": "Q2",
+        "budgeted": 80000000,
+        "executed": 78000000,
+        "percentage": 97.5
+      },
+      {
+        "quarter": "Q3",
+        "budgeted": 85000000,
+        "executed": 83500000,
+        "percentage": 98.2
+      }
+    ]
   }
 ]

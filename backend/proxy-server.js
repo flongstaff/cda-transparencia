@@ -404,28 +404,31 @@ app.get('/api/provincial/gba', async (req, res) => {
       return res.json({ success: true, data: cached, cached: true });
     }
 
-    const response = await axios.get('https://www.gba.gob.ar/datos_abiertos', {
-      timeout: 10000,
-      headers: { 'User-Agent': 'Carmen-Transparency-Portal/1.0' }
+    // Use the correct datos.gob.ar API endpoint for Buenos Aires data
+    const response = await axios.get('https://datos.gob.ar/api/3/action/package_search', {
+      params: {
+        q: 'organization:buenos-aires',
+        rows: 50
+      },
+      timeout: 15000,
+      headers: { 
+        'User-Agent': 'Carmen-Transparency-Portal/1.0',
+        'Accept': 'application/json'
+      }
     });
 
-    const $ = cheerio.load(response.data);
-    const datasets = [];
+    const data = {
+      source: 'Buenos Aires Province Open Data',
+      datasets: response.data.result.results || [],
+      count: response.data.result.count || 0,
+      lastUpdated: new Date().toISOString()
+    };
 
-    $('.dataset, .data-item').each((i, elem) => {
-      datasets.push({
-        title: $(elem).find('h2, h3, .title').text().trim(),
-        description: $(elem).find('p, .description').text().trim(),
-        url: $(elem).find('a').attr('href')
-      });
-    });
-
-    const data = { datasets };
     cache.set(cacheKey, data, 3600); // 1 hour
     res.json({ success: true, data, cached: false });
 
   } catch (error) {
-    console.error('Error fetching GBA data:', error.message);
+    console.error('Error fetching Buenos Aires Province data:', error.message);
     res.status(500).json({ success: false, error: error.message });
   }
 });

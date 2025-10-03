@@ -1,0 +1,388 @@
+{
+  "municipality": {
+    "code": "270",
+    "name": "Carmen de Areco",
+    "province": "Buenos Aires"
+  },
+  "years": {
+    "2019": {
+      "year": 2019,
+      "budget": {
+        "year": 2019,
+        "budget_by_partida": [],
+        "total_budgeted": 80000000,
+        "total_executed": 78000000,
+        "overall_execution_rate": 97.5,
+        "budget_execution": [
+          {
+            "quarter": "Q2",
+            "budgeted": 80000000,
+            "executed": 78000000,
+            "percentage": 97.5
+          },
+          {
+            "quarter": "Q3",
+            "budgeted": 85000000,
+            "executed": 83500000,
+            "percentage": 98.2
+          }
+        ]
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "monthly_execution": []
+      },
+      "extracted_at": "2025-10-03T04:42:55.076Z",
+      "source": "mock_data_fallback"
+    },
+    "2020": {
+      "year": 2020,
+      "budget": {
+        "year": 2020,
+        "budget_by_partida": [],
+        "total_budgeted": 80000000,
+        "total_executed": 78000000,
+        "overall_execution_rate": 97.5,
+        "budget_execution": [
+          {
+            "quarter": "Q2",
+            "budgeted": 80000000,
+            "executed": 78000000,
+            "percentage": 97.5
+          },
+          {
+            "quarter": "Q3",
+            "budgeted": 85000000,
+            "executed": 83500000,
+            "percentage": 98.2
+          }
+        ]
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "monthly_execution": []
+      },
+      "extracted_at": "2025-10-03T04:42:55.578Z",
+      "source": "mock_data_fallback"
+    },
+    "2021": {
+      "year": 2021,
+      "budget": {
+        "year": 2021,
+        "budget_by_partida": [],
+        "total_budgeted": 80000000,
+        "total_executed": 78000000,
+        "overall_execution_rate": 97.5,
+        "budget_execution": [
+          {
+            "quarter": "Q2",
+            "budgeted": 80000000,
+            "executed": 78000000,
+            "percentage": 97.5
+          },
+          {
+            "quarter": "Q3",
+            "budgeted": 85000000,
+            "executed": 83500000,
+            "percentage": 98.2
+          }
+        ]
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "monthly_execution": []
+      },
+      "extracted_at": "2025-10-03T04:42:56.081Z",
+      "source": "mock_data_fallback"
+    },
+    "2022": {
+      "year": 2022,
+      "budget": {
+        "year": 2022,
+        "budget_by_partida": [],
+        "total_budgeted": 80000000,
+        "total_executed": 78000000,
+        "overall_execution_rate": 97.5,
+        "budget_execution": [
+          {
+            "quarter": "Q2",
+            "budgeted": 80000000,
+            "executed": 78000000,
+            "percentage": 97.5
+          },
+          {
+            "quarter": "Q3",
+            "budgeted": 85000000,
+            "executed": 83500000,
+            "percentage": 98.2
+          }
+        ]
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "monthly_execution": []
+      },
+      "extracted_at": "2025-10-03T04:42:56.583Z",
+      "source": "mock_data_fallback"
+    },
+    "2023": {
+      "year": 2023,
+      "budget": {
+        "year": 2023,
+        "budget_by_partida": [],
+        "total_budgeted": 80000000,
+        "total_executed": 78000000,
+        "overall_execution_rate": 97.5,
+        "budget_execution": [
+          {
+            "quarter": "Q2",
+            "budgeted": 80000000,
+            "executed": 78000000,
+            "percentage": 97.5
+          },
+          {
+            "quarter": "Q3",
+            "budgeted": 85000000,
+            "executed": 83500000,
+            "percentage": 98.2
+          }
+        ]
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "monthly_execution": []
+      },
+      "extracted_at": "2025-10-03T04:42:57.087Z",
+      "source": "mock_data_fallback"
+    },
+    "2024": {
+      "year": 2024,
+      "budget": {
+        "year": 2024,
+        "budget_by_partida": [],
+        "total_budgeted": 80000000,
+        "total_executed": 78000000,
+        "overall_execution_rate": 97.5,
+        "budget_execution": [
+          {
+            "quarter": "Q2",
+            "budgeted": 80000000,
+            "executed": 78000000,
+            "percentage": 97.5
+          },
+          {
+            "quarter": "Q3",
+            "budgeted": 85000000,
+            "executed": 83500000,
+            "percentage": 98.2
+          }
+        ]
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "monthly_execution": []
+      },
+      "extracted_at": "2025-10-03T04:42:57.589Z",
+      "source": "mock_data_fallback"
+    },
+    "2025": {
+      "year": 2025,
+      "budget": {
+        "year": 2025,
+        "budget_by_partida": [],
+        "total_budgeted": 80000000,
+        "total_executed": 78000000,
+        "overall_execution_rate": 97.5,
+        "budget_execution": [
+          {
+            "quarter": "Q2",
+            "budgeted": 80000000,
+            "executed": 78000000,
+            "percentage": 97.5
+          },
+          {
+            "quarter": "Q3",
+            "budgeted": 85000000,
+            "executed": 83500000,
+            "percentage": 98.2
+          }
+        ]
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "monthly_execution": []
+      },
+      "extracted_at": "2025-10-03T04:42:58.091Z",
+      "source": "mock_data_fallback"
+    }
+  },
+  "metadata": {
+    "scraped_at": "2025-10-03T04:42:40.054Z",
+    "source": "https://www.rafam.ec.gba.gov.ar",
+    "years_extracted": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "errors": []
+  },
+  "year_over_year_analysis": [
+    {
+      "year": 2020,
+      "budget_change": {
+        "absolute": 0,
+        "percentage": 0
+      },
+      "revenue_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "expenses_change": {
+        "absolute": 0,
+        "percentage": null
+      }
+    },
+    {
+      "year": 2021,
+      "budget_change": {
+        "absolute": 0,
+        "percentage": 0
+      },
+      "revenue_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "expenses_change": {
+        "absolute": 0,
+        "percentage": null
+      }
+    },
+    {
+      "year": 2022,
+      "budget_change": {
+        "absolute": 0,
+        "percentage": 0
+      },
+      "revenue_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "expenses_change": {
+        "absolute": 0,
+        "percentage": null
+      }
+    },
+    {
+      "year": 2023,
+      "budget_change": {
+        "absolute": 0,
+        "percentage": 0
+      },
+      "revenue_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "expenses_change": {
+        "absolute": 0,
+        "percentage": null
+      }
+    },
+    {
+      "year": 2024,
+      "budget_change": {
+        "absolute": 0,
+        "percentage": 0
+      },
+      "revenue_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "expenses_change": {
+        "absolute": 0,
+        "percentage": null
+      }
+    },
+    {
+      "year": 2025,
+      "budget_change": {
+        "absolute": 0,
+        "percentage": 0
+      },
+      "revenue_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "expenses_change": {
+        "absolute": 0,
+        "percentage": null
+      }
+    }
+  ]
+}
