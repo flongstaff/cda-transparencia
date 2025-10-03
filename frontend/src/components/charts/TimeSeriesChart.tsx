@@ -4,7 +4,7 @@
  * Uses enhanced CSV data loading with caching
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   LineChart,
   Line,
@@ -13,11 +13,41 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer,
   ReferenceLine
 } from 'recharts';
 import { AlertTriangle, TrendingUp, TrendingDown } from 'lucide-react';
 import useCsvData from '../../hooks/useCsvData';
+import { formatCurrencyARS, formatPercentage, formatNumberARS, formatQuarter } from '../../utils/spanishFormatter';
+import useResponsive from '../../hooks/useResponsive';
+import ResponsiveChartWrapper from './ResponsiveChartWrapper';
+
+// Centralized function for formatting X-axis labels
+const formatXAxisLabel = (value: any): string => {
+  // Format quarterly data using the utility function
+  if (typeof value === 'string' && value.startsWith('Q') && (value.includes(' ') || value.length <= 3)) {
+    return formatQuarter(value);
+  }
+  // Format monthly data like "Jan 2021" -> "Ene 2021" (Spanish)
+  else if (typeof value === 'string' && /^[A-Za-z]{3} \d{4}$/.test(value)) {
+    const [month, year] = value.split(' ');
+    const monthMap: Record<string, string> = {
+      'Jan': 'Ene',
+      'Feb': 'Feb',
+      'Mar': 'Mar',
+      'Apr': 'Abr',
+      'May': 'May',
+      'Jun': 'Jun',
+      'Jul': 'Jul',
+      'Aug': 'Ago',
+      'Sep': 'Sep',
+      'Oct': 'Oct',
+      'Nov': 'Nov',
+      'Dec': 'Dic'
+    };
+    return `${monthMap[month] || month} ${year}`;
+  }
+  return value;
+};
 
 interface TimeSeriesChartProps {
   csvUrl: string;
@@ -48,6 +78,7 @@ const TimeSeriesChart: React.FC<TimeSeriesChartProps> = ({
   className = ""
 }) => {
   const { data, loading, error } = useCsvData<TimeSeriesData>(csvUrl, {}, selectedYear);
+  const { isMobile, isTablet, isDesktop } = useResponsive();
 
   // Calculate anomalies (values that are 50% higher/lower than average)
   const calculateAnomalies = (data: TimeSeriesData[]) => {
@@ -214,75 +245,59 @@ const TimeSeriesChart: React.FC<TimeSeriesChartProps> = ({
       </div>
 
       {/* Chart */}
-      <div style={{ height }}>
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+      <div className="w-full">
+        <ResponsiveChartWrapper height={height}>
+          <LineChart 
+            data={data} 
+            margin={{ 
+              top: 5, 
+              right: 30, 
+              left: 20, 
+              bottom: isMobile ? 40 : 5 
+            }}
+          >
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis
               dataKey={dataKey}
               stroke="#6b7280"
-              fontSize={12}
+              fontSize={isMobile ? 10 : 12}
               tickLine={false}
-              tickFormatter={(value) => {
-                // Format quarterly data like "Q1 2021" -> "1er Trimestre 2021"
-                if (typeof value === 'string' && value.startsWith('Q') && value.includes(' ')) {
-                  const [quarter, year] = value.split(' ');
-                  const quarterNum = parseInt(quarter.replace('Q', ''));
-                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
-                  return `${quarterNames[quarterNum]} Trimestre ${year}`;
-                }
-                // Format simple quarter data like "Q1" -> "1er Trimestre"
-                else if (typeof value === 'string' && value.startsWith('Q')) {
-                  const quarterNum = parseInt(value.replace('Q', ''));
-                  const quarterNames = ['', '1er', '2do', '3er', '4to'];
-                  return `${quarterNames[quarterNum]} Trimestre`;
-                }
-                // Format monthly data like "Jan 2021" -> "Ene 2021" (Spanish)
-                else if (typeof value === 'string' && /^[A-Za-z]{3} \d{4}$/.test(value)) {
-                  const [month, year] = value.split(' ');
-                  const monthMap: Record<string, string> = {
-                    'Jan': 'Ene',
-                    'Feb': 'Feb',
-                    'Mar': 'Mar',
-                    'Apr': 'Abr',
-                    'May': 'May',
-                    'Jun': 'Jun',
-                    'Jul': 'Jul',
-                    'Aug': 'Ago',
-                    'Sep': 'Sep',
-                    'Oct': 'Oct',
-                    'Nov': 'Nov',
-                    'Dec': 'Dic'
-                  };
-                  return `${monthMap[month] || month} ${year}`;
-                }
-                return value;
-              }}
+              height={isMobile ? 50 : 30}
+              tickFormatter={formatXAxisLabel}
             />
             <YAxis
               stroke="#6b7280"
-              fontSize={12}
+              fontSize={isMobile ? 10 : 12}
               tickLine={false}
               tickFormatter={(value) => {
                 if (typeof value === 'number' && value > 1000000) {
-                  return `${(value / 1000000).toFixed(1)}M`;
+                  return `$${(value / 1000000).toFixed(1)}M`;
                 } else if (typeof value === 'number' && value > 1000) {
-                  return `${(value / 1000).toFixed(1)}K`;
+                  return `$${(value / 1000).toFixed(1)}K`;
                 }
                 return value;
               }}
             />
             <Tooltip content={<CustomTooltip />} />
-            <Legend />
+            <Legend 
+              wrapperStyle={{ 
+                paddingTop: isMobile ? 15 : 5,
+                fontSize: isMobile ? '10px' : '12px'
+              }}
+            />
 
             {/* Main line */}
             <Line
               type="monotone"
               dataKey={valueKey}
               stroke="#3b82f6"
-              strokeWidth={2}
-              dot={<CustomDot />}
-              activeDot={{ r: 6, stroke: '#3b82f6', strokeWidth: 2 }}
+              strokeWidth={isMobile ? 1.5 : 2}
+              dot={isMobile ? { r: 3 } : <CustomDot />}
+              activeDot={{ 
+                r: isMobile ? 4 : 6, 
+                stroke: '#3b82f6', 
+                strokeWidth: 2 
+              }}
             />
 
             {/* Reference line for average if showing anomalies */}
@@ -290,12 +305,12 @@ const TimeSeriesChart: React.FC<TimeSeriesChartProps> = ({
               <ReferenceLine
                 y={data.reduce((sum, d) => sum + (parseFloat(d[valueKey]) || 0), 0) / data.length}
                 stroke="#9ca3af"
-                strokeDasharray="5 5"
-                label="Average"
+                strokeDasharray={isMobile ? "3 3" : "5 5"}
+                label={isMobile ? { value: 'Promedio', position: 'top' } : "Average"}
               />
             )}
           </LineChart>
-        </ResponsiveContainer>
+        </ResponsiveChartWrapper>
       </div>
 
       {/* Anomaly details */}

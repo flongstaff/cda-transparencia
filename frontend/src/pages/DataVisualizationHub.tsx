@@ -25,6 +25,10 @@ import StandardizedChart from '../components/charts/StandardizedChart';
 import ErrorBoundary from '../components/common/ErrorBoundary';
 import { formatCurrencyARS } from '../utils/formatters';
 import { externalAPIsService } from '../services/ExternalAPIsService';
+import { carmenScraperService } from '../services/CarmenScraperService';
+import { dataAuditService } from '../services/DataAuditService';
+import ConsistentDataVisualization from '../components/charts/ConsistentDataVisualization';
+import ConsistentDataTable from '../components/tables/ConsistentDataTable';
 
 interface ChartData {
   name: string;
@@ -46,11 +50,13 @@ const DataVisualizationHub: React.FC = () => {
     gba: any;
     contrataciones: any;
     carmenOfficial: any;
+    carmenScraper: any;
   }>({
     rafam: null,
     gba: null,
     contrataciones: null,
-    carmenOfficial: null
+    carmenOfficial: null,
+    carmenScraper: null
   });
   const [externalLoading, setExternalLoading] = useState(true);
   const [dataSources, setDataSources] = useState<string[]>(['local']);
@@ -117,11 +123,16 @@ const DataVisualizationHub: React.FC = () => {
       if (values.length === headers.length) {
         const row: any = {};
         improvedHeaders.forEach((header, index) => {
-          const value = values[index];
-          // Try to parse as number if it looks like one (but not dates)
-          if (value && !isNaN(parseFloat(value)) && isNaN(Date.parse(value)) && !/^\d{4}$/.test(value)) {
-            row[header] = parseFloat(value);
+          let value = values[index];
+
+          // Clean currency values: remove $, commas, and percentage signs
+          const cleanValue = value.replace(/[$,\s%]/g, '');
+
+          // Try to parse as number if it looks like one (but not dates or 4-digit years)
+          if (cleanValue && !isNaN(parseFloat(cleanValue)) && isNaN(Date.parse(value)) && !/^\d{4}$/.test(value)) {
+            row[header] = parseFloat(cleanValue);
           } else {
+            // Keep original value for text fields (like Quarter, Concept, year)
             row[header] = value;
           }
         });
@@ -165,18 +176,20 @@ const DataVisualizationHub: React.FC = () => {
       setExternalLoading(true);
       console.log('Fetching external data sources...');
 
-      const [rafamResult, gbaResult, contratacionesResult, carmenResult] = await Promise.allSettled([
+      const [rafamResult, gbaResult, contratacionesResult, carmenResult, carmenScraperResult] = await Promise.allSettled([
         externalAPIsService.getRAFAMData('270'),
         externalAPIsService.getBuenosAiresProvincialData(),
         externalAPIsService.getContratacionesData('Carmen de Areco'),
-        externalAPIsService.getCarmenDeArecoData()
+        externalAPIsService.getCarmenDeArecoData(),
+        carmenScraperService.fetchAllCarmenData()
       ]);
 
       const newExternalData: any = {
         rafam: rafamResult.status === 'fulfilled' && rafamResult.value.success ? rafamResult.value.data : null,
         gba: gbaResult.status === 'fulfilled' && gbaResult.value.success ? gbaResult.value.data : null,
         contrataciones: contratacionesResult.status === 'fulfilled' && contratacionesResult.value.success ? contratacionesResult.value.data : null,
-        carmenOfficial: carmenResult.status === 'fulfilled' ? carmenResult.value : null
+        carmenOfficial: carmenResult.status === 'fulfilled' ? carmenResult.value : null,
+        carmenScraper: carmenScraperResult.status === 'fulfilled' && carmenScraperResult.value.success ? carmenScraperResult.value.results : null
       };
 
       setExternalData(newExternalData);
@@ -186,6 +199,7 @@ const DataVisualizationHub: React.FC = () => {
       if (newExternalData.gba) activeSources.push('gba');
       if (newExternalData.contrataciones) activeSources.push('contrataciones');
       if (newExternalData.carmenOfficial) activeSources.push('carmen');
+      if (newExternalData.carmenScraper) activeSources.push('carmen-scraper');
 
       setDataSources(activeSources);
 
@@ -193,7 +207,8 @@ const DataVisualizationHub: React.FC = () => {
         rafam: !!newExternalData.rafam,
         gba: !!newExternalData.gba,
         contrataciones: !!newExternalData.contrataciones,
-        carmen: !!newExternalData.carmenOfficial
+        carmen: !!newExternalData.carmenOfficial,
+        'carmen-scraper': !!newExternalData.carmenScraper
       });
 
     } catch (error) {
@@ -213,6 +228,7 @@ const DataVisualizationHub: React.FC = () => {
   const getChartConfigs = (): ChartData[] => {
     const configs: ChartData[] = [];
 
+    // Add local CSV data configurations
     Object.entries(csvData).forEach(([fileName, data]) => {
       if (data.length === 0) return;
 
@@ -275,6 +291,83 @@ const DataVisualizationHub: React.FC = () => {
         });
       }
     });
+
+    // Add external data configurations if available
+    if (externalData.rafam) {
+      configs.push({
+        name: 'RAFAM - Datos Económicos',
+        category: 'Finanzas',
+        data: externalData.rafam?.economicData?.budget || [],
+        type: 'bar',
+        description: 'Datos económicos del municipio de Carmen de Areco desde RAFAM'
+      });
+    }
+
+    if (externalData.gba && externalData.gba.datasets) {
+      configs.push({
+        name: 'Datos Abiertos GBA',
+        category: 'Transparencia',
+        data: externalData.gba.datasets,
+        type: 'line',
+        description: 'Datos abiertos de la Provincia de Buenos Aires'
+      });
+    }
+
+    if (externalData.contrataciones) {
+      configs.push({
+        name: 'Contrataciones Abiertas',
+        category: 'Contrataciones',
+        data: externalData.contrataciones.contracts || [],
+        type: 'bar',
+        description: 'Contrataciones del municipio desde el portal de contrataciones abiertas'
+      });
+    }
+
+    if (externalData.carmenOfficial) {
+      configs.push({
+        name: 'Datos Carmen de Areco',
+        category: 'Municipal',
+        data: externalData.carmenOfficial.data?.documents || [],
+        type: 'area',
+        description: 'Datos oficiales del municipio de Carmen de Areco'
+      });
+    }
+
+    // Add Carmen scraper data configurations
+    if (externalData.carmenScraper) {
+      // Add official data from scraper
+      if (externalData.carmenScraper.official) {
+        configs.push({
+          name: 'Scraper - Datos Oficiales Carmen',
+          category: 'Municipal',
+          data: Array.isArray(externalData.carmenScraper.official) ? externalData.carmenScraper.official : [externalData.carmenScraper.official],
+          type: 'line',
+          description: 'Datos oficiales del municipio de Carmen de Areco vía scraper'
+        });
+      }
+      
+      // Add transparency data from scraper
+      if (externalData.carmenScraper.transparency) {
+        configs.push({
+          name: 'Scraper - Datos Transparencia',
+          category: 'Transparencia',
+          data: Array.isArray(externalData.carmenScraper.transparency) ? externalData.carmenScraper.transparency : [externalData.carmenScraper.transparency],
+          type: 'bar',
+          description: 'Datos de transparencia del municipio de Carmen de Areco vía scraper'
+        });
+      }
+      
+      // Add boletin data from scraper
+      if (externalData.carmenScraper.boletin) {
+        configs.push({
+          name: 'Scraper - Boletín Oficial',
+          category: 'Legal',
+          data: Array.isArray(externalData.carmenScraper.boletin) ? externalData.carmenScraper.boletin : [externalData.carmenScraper.boletin],
+          type: 'area',
+          description: 'Publicaciones del boletín oficial de Carmen de Areco vía scraper'
+        });
+      }
+    }
 
     return configs;
   };
@@ -506,6 +599,19 @@ const DataVisualizationHub: React.FC = () => {
                 <>
                   <AlertCircle className="w-4 h-4 mr-2 text-gray-400" />
                   <span className="text-gray-400">Carmen de Areco</span>
+                </>
+              )}
+            </div>
+            <div className="flex items-center text-sm">
+              {externalData.carmenScraper ? (
+                <>
+                  <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+                  <span className="text-gray-700 dark:text-dark-text-secondary">Scraper Carmen</span>
+                </>
+              ) : (
+                <>
+                  <AlertCircle className="w-4 h-4 mr-2 text-gray-400" />
+                  <span className="text-gray-400">Scraper Carmen</span>
                 </>
               )}
             </div>

@@ -1,0 +1,36 @@
+{
+  "monitoring": {
+    "enabled": true,
+    "interval": 300000,
+    "alertThresholds": {
+      "uptime": 99.9,
+      "responseTime": 2000,
+      "errorRate": 1.0
+    }
+  },
+  "dataSources": [
+    {
+      "name": "Carmen de Areco Official Portal",
+      "url": "https://carmendeareco.gob.ar",
+      "type": "website",
+      "critical": true
+    },
+    {
+      "name": "Buenos Aires Province",
+      "url": "https://www.gba.gob.ar",
+      "type": "website",
+      "critical": true
+    },
+    {
+      "name": "National Data Portal",
+      "url": "https://datos.gob.ar",
+      "type": "api",
+      "critical": true
+    }
+  ],
+  "notifications": {
+    "email": "admin@carmendeareco.gob.ar",
+    "slack": "#monitoring",
+    "webhook": "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK"
+  }
+}

@@ -1,396 +1,539 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Activity,
-  AlertTriangle,
-  CheckCircle,
-  Database,
-  FileText,
-  Globe,
-  Server,
-  TrendingUp,
-  Users,
-  BarChart3,
-  Eye,
-  Shield
-} from 'lucide-react';
-import { monitoring } from '../utils/monitoring';
+/**
+ * MonitoringDashboard Component
+ * Main dashboard for monitoring portal performance and compliance
+ * Following AAIP guidelines for transparency and data protection
+ */
 
-interface MonitoringMetric {
-  name: string;
-  value: number;
-  unit?: string;
-  status: 'good' | 'warning' | 'error';
-  change?: number;
-}
+import React, { useState, useEffect } from 'react';
+import { BarChart3, Shield, AlertTriangle, CheckCircle, Clock, Activity, TrendingUp, TrendingDown, Minus, Users, Search, Download, Eye, FileText, Server, Wifi, Zap, Database, HardHat, Heart } from 'lucide-react';
+import { monitoringService, MonitoringDashboardData, KpiValue, Alert } from '../services/monitoringService';
+import KpiCards from '../components/KpiCards';
+import ComplianceChart from '../components/charts/ComplianceChart';
+import DataQualityReport from '../components/DataQualityReport';
+import UserEngagementChart from '../components/charts/UserEngagementChart';
+import RealtimeMetrics from '../components/RealtimeMetrics';
+import ErrorBoundary from '../components/common/ErrorBoundary';
+import { useMasterData } from '../hooks/useMasterData';
 
 const MonitoringDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<MonitoringMetric[]>([]);
-  const [errors, setErrors] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const { data: masterData, loading: masterLoading, error: masterError } = useMasterData();
 
+  const [dashboardData, setDashboardData] = useState<MonitoringDashboardData | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+  const [refreshInterval, setRefreshInterval] = useState<number>(30000); // 30 seconds
+  const [lastRefreshed, setLastRefreshed] = useState<Date>(new Date());
+
+  // Load dashboard data on component mount
   useEffect(() => {
-    const loadMonitoringData = () => {
-      try {
-        const monitoringMetrics = monitoring.getMetrics();
-        const monitoringErrors = monitoring.getErrors();
+    loadDashboardData();
 
-        // Transform monitoring data into dashboard metrics
-        const dashboardMetrics: MonitoringMetric[] = [
-          {
-            name: 'System Performance',
-            value: 98.5,
-            unit: '%',
-            status: 'good',
-            change: 2.1
-          },
-          {
-            name: 'Data Freshness',
-            value: 95.2,
-            unit: '%',
-            status: 'good',
-            change: -0.8
-          },
-          {
-            name: 'API Availability',
-            value: 99.9,
-            unit: '%',
-            status: 'good',
-            change: 0.1
-          },
-          {
-            name: 'Error Rate',
-            value: 0.3,
-            unit: '%',
-            status: 'good',
-            change: -0.1
-          },
-          {
-            name: 'Active Monitors',
-            value: 12,
-            unit: '',
-            status: 'good',
-            change: 2
-          },
-          {
-            name: 'Data Points',
-            value: monitoringMetrics.length,
-            unit: '',
-            status: 'good',
-            change: monitoringMetrics.length > 0 ? 5 : 0
-          }
-        ];
-
-        setMetrics(dashboardMetrics);
-        setErrors(monitoringErrors);
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Error loading monitoring data:', error);
-        setIsLoading(false);
-      }
-    };
-
-    loadMonitoringData();
-    const interval = setInterval(loadMonitoringData, 30000); // Update every 30 seconds
+    // Set up auto-refresh
+    const interval = setInterval(() => {
+      loadDashboardData();
+    }, refreshInterval);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [refreshInterval]);
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'good':
-        return 'text-green-600 bg-green-100';
-      case 'warning':
-        return 'text-yellow-600 bg-yellow-100';
-      case 'error':
-        return 'text-red-600 bg-red-100';
-      default:
-        return 'text-gray-600 bg-gray-100';
+  const loadDashboardData = async () => {
+    try {
+      setLoading(true);
+      const data = await monitoringService.getDashboardOverview();
+      setDashboardData(data);
+      setLastRefreshed(new Date());
+      setError(null);
+    } catch (err) {
+      console.error('Error loading dashboard data:', err);
+      setError('Error al cargar los datos del panel de monitoreo');
+    } finally {
+      setLoading(false);
     }
   };
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'good':
-        return <CheckCircle className="h-5 w-5" />;
-      case 'warning':
-        return <AlertTriangle className="h-5 w-5" />;
-      case 'error':
-        return <AlertTriangle className="h-5 w-5" />;
-      default:
-        return <Activity className="h-5 w-5" />;
-    }
+  const handleRefresh = () => {
+    loadDashboardData();
   };
 
-  if (isLoading) {
+  const handleRefreshIntervalChange = (interval: number) => {
+    setRefreshInterval(interval);
+  };
+
+  if (loading && !dashboardData) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <motion.div
-          className="flex items-center space-x-2"
-          animate={{ opacity: [0.5, 1, 0.5] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-        >
-          <Activity className="h-6 w-6 text-blue-600" />
-          <span className="text-lg font-medium text-gray-600">Cargando datos de monitoreo...</span>
-        </motion.div>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-dark-background">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-700 dark:text-gray-300">Cargando panel de monitoreo...</p>
+        </div>
       </div>
     );
   }
 
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-dark-background">
+        <div className="max-w-md mx-auto p-6 text-center">
+          <AlertTriangle className="h-12 w-12 text-red-500 mx-auto mb-4" />
+          <h2 className="text-xl font-semibold text-red-800 dark:text-red-200 mb-2">Error</h2>
+          <p className="text-gray-700 dark:text-gray-300 mb-4">{error}</p>
+          <button
+            onClick={handleRefresh}
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+          >
+            Reintentar
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (!dashboardData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-dark-background">
+        <div className="text-center">
+          <BarChart3 className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Sin datos disponibles</h2>
+          <p className="text-gray-600 dark:text-gray-400">No se pudieron cargar los datos del panel de monitoreo</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Extract key metrics for quick view
+  const systemStatus = dashboardData.systemStatus;
+  const kpiSummary = dashboardData.kpiSummary;
+  const complianceStatus = dashboardData.complianceStatus;
+  const recentAlerts = dashboardData.recentAlerts;
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-dark-background">
       {/* Header */}
-      <div className="bg-white dark:bg-dark-surface shadow-sm border-b border-gray-200 dark:border-dark-border">
+      <div className="bg-white dark:bg-dark-surface border-b border-gray-200 dark:border-dark-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center space-x-4">
-            <div className="p-3 bg-blue-100 dark:bg-blue-900/20 rounded-xl">
-              <Eye className="h-8 w-8 text-blue-600 dark:text-blue-400" />
-            </div>
+          <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-dark-text-primary">
-                Dashboard de Monitoreo
+              <h1 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center">
+                <BarChart3 className="h-8 w-8 mr-3 text-blue-600" />
+                Panel de Monitoreo
               </h1>
-              <p className="text-gray-600 dark:text-dark-text-secondary">
-                Sistema de monitoreo OSINT y análisis en tiempo real
+              <p className="text-gray-600 dark:text-gray-400 mt-1">
+                Estado del sistema y cumplimiento con estándares de transparencia
               </p>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <div className="text-sm text-gray-500 dark:text-gray-400">
+                Última actualización: {lastRefreshed.toLocaleTimeString()}
+              </div>
+              <button
+                onClick={handleRefresh}
+                className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              >
+                <RefreshCw className={`h-4 w-4 mr-2 ${loading ? 'animate-spin' : ''}`} />
+                Actualizar
+              </button>
+            </div>
+          </div>
+          
+          {/* AAIP Compliance Badges */}
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            <div className="flex items-center bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 text-sm px-3 py-1.5 rounded-full">
+              <Shield className="h-4 w-4 mr-1" />
+              Cumple AAIP
+            </div>
+            <div className="flex items-center bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-sm px-3 py-1.5 rounded-full">
+              <Shield className="h-4 w-4 mr-1" />
+              ITA Metodología
+            </div>
+            <div className="flex items-center bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 text-sm px-3 py-1.5 rounded-full">
+              <Shield className="h-4 w-4 mr-1" />
+              Privacidad Garantizada
             </div>
           </div>
         </div>
       </div>
 
+      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* System Status Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 mb-8">
-          {metrics.map((metric, index) => (
-            <motion.div
-              key={metric.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className={`p-2 rounded-lg ${getStatusColor(metric.status)}`}>
-                  {getStatusIcon(metric.status)}
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+            <Activity className="h-5 w-5 mr-2 text-blue-600" />
+            Estado del Sistema
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Disponibilidad</p>
+                  <p className="text-2xl font-semibold text-gray-900 dark:text-white mt-1">
+                    {systemStatus.uptime}%
+                  </p>
                 </div>
-                {metric.change !== undefined && (
-                  <div className={`text-sm font-medium ${
-                    metric.change > 0 ? 'text-green-600' : metric.change < 0 ? 'text-red-600' : 'text-gray-600'
-                  }`}>
-                    {metric.change > 0 ? '+' : ''}{metric.change}{metric.unit}
-                  </div>
-                )}
+                <div className={`p-3 rounded-full ${
+                  systemStatus.overallStatus === 'operational' 
+                    ? 'bg-green-100 dark:bg-green-900/30' 
+                    : 'bg-red-100 dark:bg-red-900/30'
+                }`}>
+                  {systemStatus.overallStatus === 'operational' ? (
+                    <CheckCircle className="h-6 w-6 text-green-600 dark:text-green-400" />
+                  ) : (
+                    <AlertTriangle className="h-6 w-6 text-red-600 dark:text-red-400" />
+                  )}
+                </div>
               </div>
-              <h3 className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary mb-1">
-                {metric.name}
-              </h3>
-              <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary">
-                {metric.value}{metric.unit}
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                Tiempo de actividad del sistema
               </p>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* System Health */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border"
-          >
-            <div className="p-6 border-b border-gray-200 dark:border-dark-border">
-              <div className="flex items-center space-x-3">
-                <Server className="h-6 w-6 text-blue-600" />
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-dark-text-primary">
-                  Estado del Sistema
-                </h2>
-              </div>
             </div>
-            <div className="p-6">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="font-medium text-green-800 dark:text-green-400">Servicios Principales</span>
-                  </div>
-                  <span className="text-green-600 font-semibold">Operativo</span>
+            
+            <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Respuesta</p>
+                  <p className="text-2xl font-semibold text-gray-900 dark:text-white mt-1">
+                    {systemStatus.responseTime}ms
+                  </p>
                 </div>
-                <div className="flex items-center justify-between p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="font-medium text-green-800 dark:text-green-400">Base de Datos</span>
-                  </div>
-                  <span className="text-green-600 font-semibold">Operativo</span>
-                </div>
-                <div className="flex items-center justify-between p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
-                    <span className="font-medium text-green-800 dark:text-green-400">Monitoreo OSINT</span>
-                  </div>
-                  <span className="text-green-600 font-semibold">Activo</span>
+                <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900/30">
+                  <Zap className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                 </div>
               </div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                Tiempo promedio de respuesta
+              </p>
             </div>
-          </motion.div>
-
-          {/* Recent Activity */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border"
-          >
-            <div className="p-6 border-b border-gray-200 dark:border-dark-border">
-              <div className="flex items-center space-x-3">
-                <Activity className="h-6 w-6 text-blue-600" />
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-dark-text-primary">
-                  Actividad Reciente
-                </h2>
-              </div>
-            </div>
-            <div className="p-6">
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="p-2 bg-blue-100 dark:bg-blue-900/20 rounded-lg">
-                    <Database className="h-4 w-4 text-blue-600" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-gray-900 dark:text-dark-text-primary">
-                      Datos actualizados
-                    </p>
-                    <p className="text-xs text-gray-500 dark:text-dark-text-secondary">
-                      hace 5 minutos
-                    </p>
-                  </div>
+            
+            <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Usuarios Activos</p>
+                  <p className="text-2xl font-semibold text-gray-900 dark:text-white mt-1">
+                    {systemStatus.activeUsers}
+                  </p>
                 </div>
-                <div className="flex items-start space-x-3">
-                  <div className="p-2 bg-green-100 dark:bg-green-900/20 rounded-lg">
-                    <FileText className="h-4 w-4 text-green-600" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-gray-900 dark:text-dark-text-primary">
-                      Procesamiento completado
-                    </p>
-                    <p className="text-xs text-gray-500 dark:text-dark-text-secondary">
-                      hace 12 minutos
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="p-2 bg-yellow-100 dark:bg-yellow-900/20 rounded-lg">
-                    <TrendingUp className="h-4 w-4 text-yellow-600" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-gray-900 dark:text-dark-text-primary">
-                      Análisis iniciado
-                    </p>
-                    <p className="text-xs text-gray-500 dark:text-dark-text-secondary">
-                      hace 25 minutos
-                    </p>
-                  </div>
+                <div className="p-3 rounded-full bg-purple-100 dark:bg-purple-900/30">
+                  <Users className="h-6 w-6 text-purple-600 dark:text-purple-400" />
                 </div>
               </div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                Sesiones activas en el portal
+              </p>
             </div>
-          </motion.div>
-        </div>
-
-        {/* OSINT Data Sources */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border mb-8"
-        >
-          <div className="p-6 border-b border-gray-200 dark:border-dark-border">
-            <div className="flex items-center space-x-3">
-              <Globe className="h-6 w-6 text-blue-600" />
-              <h2 className="text-xl font-semibold text-gray-900 dark:text-dark-text-primary">
-                Fuentes de Datos OSINT
-              </h2>
+            
+            <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Estado API</p>
+                  <p className="text-2xl font-semibold text-gray-900 dark:text-white mt-1 capitalize">
+                    {systemStatus.apiStatus}
+                  </p>
+                </div>
+                <div className={`p-3 rounded-full ${
+                  systemStatus.apiStatus === 'operational' 
+                    ? 'bg-green-100 dark:bg-green-900/30' 
+                    : 'bg-yellow-100 dark:bg-yellow-900/30'
+                }`}>
+                  <Wifi className="h-6 w-6 text-green-600 dark:text-green-400" />
+                </div>
+              </div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                Estado de los servicios API
+              </p>
             </div>
           </div>
-          <div className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center p-4 border border-gray-200 dark:border-dark-border rounded-lg">
-                <Shield className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                <h3 className="font-medium text-gray-900 dark:text-dark-text-primary">Transparencia</h3>
-                <p className="text-sm text-gray-500 dark:text-dark-text-secondary">Portales oficiales</p>
-                <div className="mt-2">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                    Activo
+        </div>
+
+        {/* KPI Summary */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white flex items-center">
+              <TrendingUp className="h-5 w-5 mr-2 text-blue-600" />
+              Indicadores de Rendimiento Clave (KPI)
+            </h2>
+            <div className="text-sm text-gray-500 dark:text-gray-400">
+              Salud general: {kpiSummary.overallHealth.score}%
+            </div>
+          </div>
+          
+          <KpiCards kpis={kpiSummary.kpis} />
+        </div>
+
+        {/* Compliance Status */}
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+            <Shield className="h-5 w-5 mr-2 text-blue-600" />
+            Estado de Cumplimiento
+          </h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+              <h3 className="font-medium text-gray-900 dark:text-white mb-4">Cumplimiento General</h3>
+              <div className="mb-4">
+                <div className="flex justify-between text-sm mb-1">
+                  <span className="text-gray-600 dark:text-gray-400">Puntaje de cumplimiento</span>
+                  <span className="font-medium">{complianceStatus.overallCompliance.score}%</span>
+                </div>
+                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div 
+                    className="bg-blue-600 h-2 rounded-full" 
+                    style={{ width: `${complianceStatus.overallCompliance.score}%` }}
+                  ></div>
+                </div>
+              </div>
+              
+              <div className="space-y-3">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-gray-600 dark:text-gray-400">Criterios cumplidos</span>
+                  <span className="font-medium">{complianceStatus.overallCompliance.compliantCriteria} / {complianceStatus.overallCompliance.totalCriteria}</span>
+                </div>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-gray-600 dark:text-gray-400">Estado general</span>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                    complianceStatus.overallCompliance.status === 'compliant' 
+                      ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-200'
+                      : complianceStatus.overallCompliance.status === 'partially-compliant'
+                      ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-200'
+                      : 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-200'
+                  }`}>
+                    {complianceStatus.overallCompliance.status === 'compliant' ? 'Cumplido' : 
+                     complianceStatus.overallCompliance.status === 'partially-compliant' ? 'Parcialmente cumplido' : 'No cumplido'}
                   </span>
                 </div>
               </div>
-              <div className="text-center p-4 border border-gray-200 dark:border-dark-border rounded-lg">
-                <FileText className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                <h3 className="font-medium text-gray-900 dark:text-dark-text-primary">Documentos</h3>
-                <p className="text-sm text-gray-500 dark:text-dark-text-secondary">PDFs y archivos</p>
-                <div className="mt-2">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                    Activo
-                  </span>
+            </div>
+            
+            <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6">
+              <h3 className="font-medium text-gray-900 dark:text-white mb-4">Áreas de Cumplimiento</h3>
+              <div className="space-y-4">
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span className="text-gray-600 dark:text-gray-400">AAIP</span>
+                    <span className="font-medium">
+                      {complianceStatus.aaipCompliance.overallCompliant ? 'Cumplido' : 'No cumplido'}
+                    </span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div 
+                      className={`h-2 rounded-full ${
+                        complianceStatus.aaipCompliance.overallCompliant 
+                          ? 'bg-green-600' 
+                          : 'bg-red-600'
+                      }`} 
+                      style={{ width: complianceStatus.aaipCompliance.overallCompliant ? '100%' : '0%' }}
+                    ></div>
+                  </div>
                 </div>
-              </div>
-              <div className="text-center p-4 border border-gray-200 dark:border-dark-border rounded-lg">
-                <BarChart3 className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                <h3 className="font-medium text-gray-900 dark:text-dark-text-primary">Datos Abiertos</h3>
-                <p className="text-sm text-gray-500 dark:text-dark-text-secondary">APIs públicas</p>
-                <div className="mt-2">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                    Activo
-                  </span>
+                
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span className="text-gray-600 dark:text-gray-400">Protección de Datos</span>
+                    <span className="font-medium">
+                      {complianceStatus.dataProtectionCompliance.overallCompliant ? 'Cumplido' : 'No cumplido'}
+                    </span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div 
+                      className={`h-2 rounded-full ${
+                        complianceStatus.dataProtectionCompliance.overallCompliant 
+                          ? 'bg-green-600' 
+                          : 'bg-red-600'
+                      }`} 
+                      style={{ width: complianceStatus.dataProtectionCompliance.overallCompliant ? '100%' : '0%' }}
+                    ></div>
+                  </div>
                 </div>
-              </div>
-              <div className="text-center p-4 border border-gray-200 dark:border-dark-border rounded-lg">
-                <Users className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                <h3 className="font-medium text-gray-900 dark:text-dark-text-primary">Social</h3>
-                <p className="text-sm text-gray-500 dark:text-dark-text-secondary">Redes sociales</p>
-                <div className="mt-2">
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                    Pendiente
-                  </span>
+                
+                <div>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span className="text-gray-600 dark:text-gray-400">Monitoreo</span>
+                    <span className="font-medium">
+                      {complianceStatus.monitoring.overallCompliant ? 'Cumplido' : 'No cumplido'}
+                    </span>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div 
+                      className={`h-2 rounded-full ${
+                        complianceStatus.monitoring.overallCompliant 
+                          ? 'bg-green-600' 
+                          : 'bg-red-600'
+                      }`} 
+                      style={{ width: complianceStatus.monitoring.overallCompliant ? '100%' : '0%' }}
+                    ></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Error Log */}
-        {errors.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border"
-          >
-            <div className="p-6 border-b border-gray-200 dark:border-dark-border">
-              <div className="flex items-center space-x-3">
-                <AlertTriangle className="h-6 w-6 text-red-600" />
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-dark-text-primary">
-                  Errores Recientes
-                </h2>
-              </div>
-            </div>
-            <div className="p-6">
-              <div className="space-y-4">
-                {errors.slice(0, 5).map((error, index) => (
-                  <div key={index} className="flex items-start space-x-3 p-4 bg-red-50 dark:bg-red-900/20 rounded-lg">
-                    <AlertTriangle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
-                    <div className="flex-1">
-                      <p className="text-sm font-medium text-red-800 dark:text-red-400">
-                        {error.error?.message || 'Error desconocido'}
-                      </p>
-                      <p className="text-xs text-red-600 dark:text-red-500 mt-1">
-                        {error.timestamp}
-                      </p>
+        {/* Recent Alerts */}
+        {recentAlerts.length > 0 && (
+          <div className="mb-8">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <AlertTriangle className="h-5 w-5 mr-2 text-yellow-600" />
+              Alertas Recientes
+            </h2>
+            
+            <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border overflow-hidden">
+              <ul className="divide-y divide-gray-200 dark:divide-dark-border">
+                {recentAlerts.slice(0, 5).map((alert) => (
+                  <li key={alert.id} className="p-4 hover:bg-gray-50 dark:hover:bg-dark-surface-alt">
+                    <div className="flex items-start">
+                      <div className={`flex-shrink-0 p-2 rounded-full ${
+                        alert.level === 'critical' 
+                          ? 'bg-red-100 dark:bg-red-900/30' 
+                          : alert.level === 'warning' 
+                            ? 'bg-yellow-100 dark:bg-yellow-900/30' 
+                            : 'bg-blue-100 dark:bg-blue-900/30'
+                      }`}>
+                        {alert.level === 'critical' ? (
+                          <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400" />
+                        ) : alert.level === 'warning' ? (
+                          <AlertTriangle className="h-5 w-5 text-yellow-600 dark:text-yellow-400" />
+                        ) : (
+                          <AlertTriangle className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                        )}
+                      </div>
+                      <div className="ml-4 flex-1">
+                        <div className="flex items-center justify-between">
+                          <h3 className="text-sm font-medium text-gray-900 dark:text-white">
+                            {alert.message}
+                          </h3>
+                          <span className="text-xs text-gray-500 dark:text-gray-400">
+                            hace {alert.age} minutos
+                          </span>
+                        </div>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                          Métrica: {alert.metric} | Valor: {alert.value} | Umbral: {alert.threshold}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
-          </motion.div>
+          </div>
         )}
+
+        {/* Detailed Sections */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <Database className="h-5 w-5 mr-2 text-blue-600" />
+              Calidad de Datos
+            </h2>
+            <DataQualityReport />
+          </div>
+          
+          <div>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+              <Users className="h-5 w-5 mr-2 text-blue-600" />
+              Participación Ciudadana
+            </h2>
+            <UserEngagementChart />
+          </div>
+        </div>
+
+        {/* Real-time Metrics */}
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+            <Activity className="h-5 w-5 mr-2 text-blue-600" />
+            Métricas en Tiempo Real
+          </h2>
+          <RealtimeMetrics />
+        </div>
+
+        {/* AAIP Compliance Information */}
+        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-6">
+          <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3 flex items-center">
+            <Shield className="h-5 w-5 mr-2" />
+            Cumplimiento con Directrices AAIP
+          </h3>
+          <p className="text-blue-700 dark:text-blue-300 text-sm mb-3">
+            Este panel de monitoreo se adhiere a las directrices de la Agencia de Acceso a la Información Pública (AAIP) 
+            y sigue la metodología del Índice de Transparencia Activa (ITA).
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div className="flex items-start">
+              <div className="flex-shrink-0 mt-1">
+                <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+              </div>
+              <p className="ml-2 text-blue-700 dark:text-blue-300">
+                Evaluación continua de indicadores de transparencia
+              </p>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 mt-1">
+                <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+              </div>
+              <p className="ml-2 text-blue-700 dark:text-blue-300">
+                Reportes automáticos de cumplimiento
+              </p>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 mt-1">
+                <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+              </div>
+              <p className="ml-2 text-blue-700 dark:text-blue-300">
+                Protección de datos personales garantizada
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default MonitoringDashboard;
+// Wrap with error boundary for production safety
+const MonitoringDashboardWithErrorBoundary: React.FC = () => {
+  return (
+    <ErrorBoundary
+      fallback={(error) => (
+        <div className="container mx-auto px-4 py-8">
+          <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-400 p-6 rounded-lg">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <AlertTriangle className="h-6 w-6 text-red-400" />
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-red-800 dark:text-red-200">
+                  Error en el Dashboard de Monitoreo
+                </h3>
+                <div className="mt-2 text-sm text-red-700 dark:text-red-300">
+                  <p>No se pudo cargar el dashboard de monitoreo. Este problema ha sido registrado y se está investigando.</p>
+                  {error && (
+                    <p className="mt-2 text-xs font-mono bg-red-100 dark:bg-red-900/40 p-2 rounded">
+                      Error: {error.message}
+                    </p>
+                  )}
+                </div>
+                <div className="mt-4 space-x-2">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Reintentar
+                  </button>
+                  <a
+                    href="/dashboard"
+                    className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Dashboard Principal
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    >
+      <MonitoringDashboard />
+    </ErrorBoundary>
+  );
+};
+
+export default MonitoringDashboardWithErrorBoundary;

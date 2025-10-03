@@ -33,6 +33,9 @@ import OSINTMonitoringSystem from '../components/monitoring/OSINTMonitoringSyste
 import EnhancedDataVisualization from '../components/charts/EnhancedDataVisualization';
 import PageYearSelector from '../components/forms/PageYearSelector';
 import { useDashboardData } from '../hooks/useUnifiedData';
+import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator';
+import { YearSelector } from '../components/common/YearSelector';
+import ErrorBoundary from '../components/common/ErrorBoundary';
 
 interface TransparencyPortalProps {
   initialYear?: number;
@@ -47,17 +50,28 @@ const TransparencyPortal: React.FC<TransparencyPortalProps> = ({
   const [activeView, setActiveView] = useState<'dashboard' | 'monitoring' | 'data' | 'audit'>('dashboard');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  // Use the enhanced data hook
-  const { 
-    consolidatedData, 
-    osintData, 
-    auditFindings, 
-    qualityMetrics, 
-    loading, 
-    error, 
+  // 🌐 Use UnifiedDataService with ALL external APIs
+  const {
+    data: dashboardData,
+    externalData,
+    sources,
+    activeSources,
+    loading,
+    error,
     refetch,
-    availableYears
-  } = useDashboardData(selectedYear, municipality);
+    availableYears,
+    liveDataEnabled
+  } = useDashboardData(selectedYear);
+
+  // Map data for backward compatibility
+  const consolidatedData = dashboardData;
+  const osintData = externalData;
+  const auditFindings = dashboardData?.audits || [];
+  const qualityMetrics = {
+    dataQuality: activeSources.length,
+    coverage: (activeSources.length / 8) * 100,
+    lastUpdate: new Date().toISOString()
+  };
 
   const views = [
     { 
@@ -397,16 +411,24 @@ const TransparencyPortal: React.FC<TransparencyPortalProps> = ({
               </div>
 
               <div className="flex items-center space-x-4">
-                <PageYearSelector
+                <YearSelector
                   selectedYear={selectedYear}
-                  onYearChange={handleYearChange}
                   availableYears={availableYears}
-                  size="md"
+                  onChange={handleYearChange}
                   label="Año de consulta"
-                  showDataAvailability={true}
                   className="min-w-[200px]"
                 />
               </div>
+            </div>
+
+            {/* Data Sources Indicator */}
+            <div className="mt-6">
+              <DataSourcesIndicator
+                activeSources={activeSources}
+                externalData={externalData}
+                loading={loading}
+                className="w-full"
+              />
             </div>
 
             {/* Search Bar */}
@@ -532,4 +554,55 @@ const TransparencyPortal: React.FC<TransparencyPortalProps> = ({
   );
 };
 
-export default TransparencyPortal;
+
+// Wrap with error boundary for production safety
+const TransparencyPortalWithErrorBoundary: React.FC = () => {
+  return (
+    <ErrorBoundary
+      fallback={(error) => (
+        <div className="container mx-auto px-4 py-8">
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-6 rounded-lg">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-yellow-800 dark:text-yellow-200">
+                  Error al Cargar Página
+                </h3>
+                <div className="mt-2 text-sm text-yellow-700 dark:text-yellow-300">
+                  <p>Ocurrió un error al cargar esta página. Por favor, intente más tarde.</p>
+                  {error && (
+                    <p className="mt-2 text-xs font-mono bg-yellow-100 dark:bg-yellow-900/40 p-2 rounded">
+                      {error.message}
+                    </p>
+                  )}
+                </div>
+                <div className="mt-4 space-x-2">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Recargar
+                  </button>
+                  <a
+                    href="/"
+                    className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Volver al Inicio
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    >
+      <TransparencyPortal />
+    </ErrorBoundary>
+  );
+};
+
+export default TransparencyPortalWithErrorBoundary;

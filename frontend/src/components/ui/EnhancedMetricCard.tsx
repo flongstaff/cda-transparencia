@@ -64,27 +64,29 @@ const EnhancedMetricCard: React.FC<EnhancedMetricCardProps> = ({
         }
       }}
     >
-      <div className="flex items-start justify-between mb-3">
-        <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 dark:text-blue-400">
-          {icon}
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+        <div className="flex items-center">
+          <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 dark:text-blue-400">
+            {icon}
+          </div>
+          <div className="ml-3">
+            <div className={`${getValueSize()} font-bold text-gray-900 dark:text-white mb-1`}>
+              {value}
+            </div>
+            <h3 className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white mb-1">
+              {title}
+            </h3>
+          </div>
         </div>
         {trend && (
-          <div className={`flex items-center text-sm font-medium ${trend.isPositive ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
-            {trend.isPositive ? <TrendingUp className="w-4 h-4 mr-1" /> : <TrendingDown className="w-4 h-4 mr-1" />}
+          <div className={`flex-shrink-0 flex items-center text-xs sm:text-sm font-medium ${trend.isPositive ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
+            {trend.isPositive ? <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 mr-1" /> : <TrendingDown className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />}
             <span>{Math.abs(trend.value)}%</span>
           </div>
         )}
       </div>
       
-      <div className={`${getValueSize()} font-bold text-gray-900 dark:text-white mb-1`}>
-        {value}
-      </div>
-      
-      <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
-        {title}
-      </h3>
-      
-      <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-3">
         {description}
       </p>
       

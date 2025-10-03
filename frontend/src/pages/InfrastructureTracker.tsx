@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Building, Clock, AlertTriangle, CheckCircle, DollarSign } from 'lucide-react';
 import { externalAPIsService } from '../services/ExternalAPIsService';
+import ErrorBoundary from '../components/common/ErrorBoundary';
 
 interface InfrastructureProject {
   project_name: string;
@@ -67,35 +68,25 @@ const InfrastructureTracker: React.FC = () => {
       console.log('Loading infrastructure data from external APIs...');
       
       try {
-        const externalResult = await externalAPIsService.getComparativeMunicipalData();
-        console.log('External results:', externalResult);
+        const externalResult = await externalAPIsService.getObrasPublicasData();
+        console.log('Obras Públicas data:', externalResult);
         
-        // Process external results to construct infrastructure data
-        // In a real implementation, we would have specific infrastructure data endpoints
-        // For now, we'll create a structure based on available data
-        
-        // Check if any infrastructure-related data is available
-        const infrastructureDataFromExternal = externalResult.find(result => 
-          result.success && 
-          result.data && 
-          (result.data.projects || result.data.contracts || result.data.infrastructure)
-        );
-        
-        if (infrastructureDataFromExternal && infrastructureDataFromExternal.success) {
-          console.log('Found infrastructure data in external sources:', infrastructureDataFromExternal);
+        // Process Obras Públicas data
+        if (externalResult.success && externalResult.data) {
+          console.log('Found Obras Públicas data:', externalResult);
           
-          // This is a simplified example - in practice, you'd parse the actual data structure
+          // Process the actual data structure
           const infrastructureData: InfrastructureData = {
             timestamp: new Date().toISOString(),
-            projects: infrastructureDataFromExternal.data.projects || [],
-            contractor_analysis: [],
-            flags: [],
+            projects: externalResult.data.projects || [],
+            contractor_analysis: externalResult.data.contractor_analysis || [],
+            flags: externalResult.data.flags || [],
             summary: {
-              total_projects: infrastructureDataFromExternal.data.projects?.length || 0,
-              total_budget: 0, // Calculate from projects if available
-              delayed_projects: 0,
-              flagged_projects: 0,
-              completion_rate: 0,
+              total_projects: externalResult.data.summary?.total_projects || 0,
+              total_budget: externalResult.data.summary?.total_budget || 0,
+              delayed_projects: externalResult.data.summary?.delayed_projects || 0,
+              flagged_projects: externalResult.data.summary?.flagged_projects || 0,
+              completion_rate: externalResult.data.summary?.completion_rate || 0,
             }
           };
           
@@ -104,7 +95,7 @@ const InfrastructureTracker: React.FC = () => {
           return;
         }
       } catch (externalError) {
-        console.warn('External API infrastructure data not available:', externalError);
+        console.warn('Obras Públicas API not available:', externalError);
       }
       
       // Show empty state when no real data is available
@@ -310,4 +301,55 @@ const InfrastructureTracker: React.FC = () => {
   );
 };
 
-export default InfrastructureTracker;
+
+// Wrap with error boundary for production safety
+const InfrastructureTrackerWithErrorBoundary: React.FC = () => {
+  return (
+    <ErrorBoundary
+      fallback={(error) => (
+        <div className="container mx-auto px-4 py-8">
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-6 rounded-lg">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-yellow-800 dark:text-yellow-200">
+                  Error al Cargar Página
+                </h3>
+                <div className="mt-2 text-sm text-yellow-700 dark:text-yellow-300">
+                  <p>Ocurrió un error al cargar esta página. Por favor, intente más tarde.</p>
+                  {error && (
+                    <p className="mt-2 text-xs font-mono bg-yellow-100 dark:bg-yellow-900/40 p-2 rounded">
+                      {error.message}
+                    </p>
+                  )}
+                </div>
+                <div className="mt-4 space-x-2">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Recargar
+                  </button>
+                  <a
+                    href="/"
+                    className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Volver al Inicio
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    >
+      <InfrastructureTracker />
+    </ErrorBoundary>
+  );
+};
+
+export default InfrastructureTrackerWithErrorBoundary;

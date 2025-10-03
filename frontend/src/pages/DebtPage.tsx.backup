@@ -1,0 +1,270 @@
+import React, { useState, useMemo } from 'react';
+import { useMasterData } from '../hooks/useMasterData';
+import { useDebtData } from '../hooks/useUnifiedData';
+import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator';
+import { YearSelector } from '../components/common/YearSelector';
+import PageYearSelector from '../components/forms/PageYearSelector';
+import { formatCurrencyARS } from '../utils/formatters';
+import { CreditCard, AlertCircle, TrendingUp, RefreshCw } from 'lucide-react';
+import ErrorBoundary from '../components/common/ErrorBoundary';
+
+const DebtPage: React.FC = () => {
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
+  
+  // 🚀 Use the unified master data service (legacy)
+  const {
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
+    currentDebt,
+    loading: legacyLoading,
+    error: legacyError,
+    totalDocuments,
+    availableYears: legacyYears,
+    categories,
+    dataSourcesActive,
+    refetch,
+    switchYear
+  } = useMasterData(selectedYear);
+
+  // 🌐 Use new UnifiedDataService with external APIs
+  const {
+    data: unifiedDebtData,
+    externalData,
+    sources,
+    activeSources,
+    loading: unifiedLoading,
+    error: unifiedError,
+    refetch: unifiedRefetch,
+    availableYears,
+    liveDataEnabled
+  } = useDebtData(selectedYear);
+
+  const loading = legacyLoading || unifiedLoading;
+  const error = legacyError || unifiedError;
+
+  // Extract debt data from comprehensive data service
+  const debtData = useMemo(() => {
+    if (!currentDebt) return null;
+    
+    // Try different possible debt data sources
+    return currentDebt;
+  }, [currentDebt]);
+
+  // Calculate total debt amount
+  const totalDebt = useMemo(() => {
+    if (!debtData) return 0;
+    
+    // Try different ways to get total debt
+    if (debtData.items && Array.isArray(debtData.items)) {
+      return debtData.items.reduce((sum: number, item: any) => sum + (item.amount || 0), 0);
+    }
+    
+    // If debtData is not an array, try to get a total amount from the object
+    return debtData.total_debt || debtData.total_amount || debtData.amount || debtData.total || 0;
+  }, [debtData]);
+
+  return (
+    <div className="space-y-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 flex flex-col md:flex-row md:justify-between">
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            <CreditCard className="w-8 h-8 inline-block mr-2" /> Deuda Pública
+          </h1>
+          <p className="text-gray-600">
+            Deuda pública del municipio para el año {selectedYear}
+          </p>
+          <div className="mt-2 flex items-center">
+            <TrendingUp className="w-5 h-5 text-red-500 mr-1" />
+            <span className="text-lg font-semibold text-gray-900">
+              Total Deuda: {formatCurrencyARS(totalDebt)}
+            </span>
+          </div>
+        </div>
+        <YearSelector
+          selectedYear={selectedYear}
+          availableYears={availableYears}
+          onChange={(year) => {
+            setSelectedYear(year);
+            switchYear(year);
+          }}
+          label="Año Deuda"
+        />
+      </div>
+
+      {/* Data Sources Indicator */}
+      <DataSourcesIndicator
+        activeSources={activeSources}
+        externalData={externalData}
+        loading={unifiedLoading}
+        className="mb-6"
+      />
+
+      {loading && (
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <p className="text-gray-600 dark:text-gray-400">Cargando datos de deuda…</p>
+          </div>
+        </div>
+      )}
+
+      {error && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="bg-red-50 border border-red-200 rounded-lg p-6 dark:bg-red-900/20 dark:border-red-700">
+            <div className="flex items-center">
+              <AlertCircle className="h-5 w-5 text-red-400" />
+              <div className="ml-3">
+                <h3 className="text-sm font-medium text-red-800 dark:text-red-200">Error</h3>
+                <div className="mt-2 text-sm text-red-700 dark:text-red-300">
+                  <p>{error}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {debtData && (
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Detalle de la Deuda</h2>
+          
+          {Array.isArray(debtData.items) && debtData.items.length > 0 ? (
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo de Deuda</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descripción</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Monto</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tasa de Interés</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fecha de Vencimiento</th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estado</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {debtData.items.map((item: any, index: number) => (
+                    <tr key={item.id || index}>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{item.debt_type || 'Deuda'}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.description || 'Sin descripción'}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{formatCurrencyARS(item.amount || 0)}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.interest_rate || 0}%</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        {item.due_date ? new Date(item.due_date).toLocaleDateString() : 'N/A'}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{item.status || 'Pendiente'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <div className="text-center py-8">
+              <CreditCard className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-lg font-medium text-gray-900 mb-2">No hay datos de deuda</h3>
+              <p className="text-gray-600">No se encontraron registros de deuda para el año {selectedYear}</p>
+            </div>
+          )}
+        </div>
+      )}
+      
+      {/* Multi-year debt comparison section - only shown when we have multi-year data */}
+      {(masterData?.financialData && Object.keys(masterData.financialData).length > 1) && (
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Comparativa Multi-Año de Deuda</h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Año</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Deuda Total</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Deuda por Habitante</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Relación con Presupuesto</th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {Object.entries(masterData.financialData).map(([year, data]: [string, any]) => (
+                  <tr key={year} className={parseInt(year) === selectedYear ? 'bg-blue-50' : ''}>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{year}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {formatCurrencyARS(data.debt?.total_debt || 0)}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {data.debt?.total_debt ? 
+                        formatCurrencyARS(data.debt.total_debt / 27000) // Assuming ~27,000 inhabitants for Carmen de Areco
+                        : 'N/A'}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      {data.debt?.total_debt && data.budget?.total_budget ? 
+                        <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                          {((data.debt.total_debt / data.budget.total_budget) * 100).toFixed(1)}%
+                        </span>
+                        : <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800">N/A</span>
+                      }
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+
+// Wrap with error boundary for production safety
+const DebtPageWithErrorBoundary: React.FC = () => {
+  return (
+    <ErrorBoundary
+      fallback={(error) => (
+        <div className="container mx-auto px-4 py-8">
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-6 rounded-lg">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-yellow-800 dark:text-yellow-200">
+                  Error al Cargar Página
+                </h3>
+                <div className="mt-2 text-sm text-yellow-700 dark:text-yellow-300">
+                  <p>Ocurrió un error al cargar esta página. Por favor, intente más tarde.</p>
+                  {error && (
+                    <p className="mt-2 text-xs font-mono bg-yellow-100 dark:bg-yellow-900/40 p-2 rounded">
+                      {error.message}
+                    </p>
+                  )}
+                </div>
+                <div className="mt-4 space-x-2">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Recargar
+                  </button>
+                  <a
+                    href="/"
+                    className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Volver al Inicio
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    >
+      <DebtPage />
+    </ErrorBoundary>
+  );
+};
+
+export default DebtPageWithErrorBoundary;

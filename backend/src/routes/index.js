@@ -6,6 +6,7 @@ const comprehensiveTransparencyRoutes = require('./comprehensiveTransparencyRout
 const staticDataRoutes = require('./staticDataRoutes');
 const externalProxyRoutes = require('./externalProxyRoutes');
 const externalDataRoutes = require('./externalDataRoutes');
+const externalAPIRoutes = require('./externalAPIRoutes');
 const searchRoutes = require('./searchRoutes');
 const openDataRoutes = require('./openDataRoutes');
 const documentRoutes = require('./documentRoutes');
@@ -23,6 +24,9 @@ router.use('/external', externalProxyRoutes);
 
 // External data source routes for comprehensive data integration
 router.use('/external-data', externalDataRoutes);
+
+// External API routes for government data sources (Georef, Presupuesto, etc.)
+router.use('/external-api', externalAPIRoutes);
 
 // Search routes for semantic and traditional search capabilities
 router.use('/search', searchRoutes);

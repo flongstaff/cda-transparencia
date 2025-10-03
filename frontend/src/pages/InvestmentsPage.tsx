@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { useMasterData } from '../hooks/useMasterData';
+import { useInvestmentsData } from '../hooks/useUnifiedData';
+import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator';
+import { YearSelector } from '../components/common/YearSelector';
 import PageYearSelector from '../components/forms/PageYearSelector';
 import { formatCurrencyARS } from '../utils/formatters';
-import { Building } from 'lucide-react';
+import { Building, RefreshCw } from 'lucide-react';
+import ErrorBoundary from '../components/common/ErrorBoundary';
 
 const InvestmentsPage: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
@@ -14,15 +18,31 @@ const InvestmentsPage: React.FC = () => {
     currentContracts,
     currentSalaries,
     currentDebt,
-    loading,
-    error,
+    loading: legacyLoading,
+    error: legacyError,
     totalDocuments,
-    availableYears,
+    availableYears: legacyYears,
     categories,
     dataSourcesActive,
     refetch,
     switchYear
   } = useMasterData(selectedYear);
+
+  // 🌐 Use new UnifiedDataService with external APIs
+  const {
+    data: unifiedInvestmentsData,
+    externalData,
+    sources,
+    activeSources,
+    loading: unifiedLoading,
+    error: unifiedError,
+    refetch: unifiedRefetch,
+    availableYears,
+    liveDataEnabled
+  } = useInvestmentsData(selectedYear);
+
+  const loading = legacyLoading || unifiedLoading;
+  const error = legacyError || unifiedError;
   
   // Get investments data from masterData
   const currentInvestments = masterData?.yearData?.investments || masterData?.yearData?.budget?.investments || [];
@@ -38,12 +58,24 @@ const InvestmentsPage: React.FC = () => {
             Activos e inversiones del municipio para el año {selectedYear}
           </p>
         </div>
-        <PageYearSelector
+        <YearSelector
           selectedYear={selectedYear}
-          onYearChange={setSelectedYear}
           availableYears={availableYears}
+          onChange={(year) => {
+            setSelectedYear(year);
+            switchYear(year);
+          }}
+          label="Año Inversiones"
         />
       </div>
+
+      {/* Data Sources Indicator */}
+      <DataSourcesIndicator
+        activeSources={activeSources}
+        externalData={externalData}
+        loading={unifiedLoading}
+        className="mb-6"
+      />
 
       {loading && (
         <div className="flex items-center justify-center min-h-screen">
@@ -113,4 +145,55 @@ const InvestmentsPage: React.FC = () => {
   );
 };
 
-export default InvestmentsPage;
+
+// Wrap with error boundary for production safety
+const InvestmentsPageWithErrorBoundary: React.FC = () => {
+  return (
+    <ErrorBoundary
+      fallback={(error) => (
+        <div className="container mx-auto px-4 py-8">
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-6 rounded-lg">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-yellow-800 dark:text-yellow-200">
+                  Error al Cargar Página
+                </h3>
+                <div className="mt-2 text-sm text-yellow-700 dark:text-yellow-300">
+                  <p>Ocurrió un error al cargar esta página. Por favor, intente más tarde.</p>
+                  {error && (
+                    <p className="mt-2 text-xs font-mono bg-yellow-100 dark:bg-yellow-900/40 p-2 rounded">
+                      {error.message}
+                    </p>
+                  )}
+                </div>
+                <div className="mt-4 space-x-2">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Recargar
+                  </button>
+                  <a
+                    href="/"
+                    className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Volver al Inicio
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    >
+      <InvestmentsPage />
+    </ErrorBoundary>
+  );
+};
+
+export default InvestmentsPageWithErrorBoundary;

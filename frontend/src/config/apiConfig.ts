@@ -28,19 +28,24 @@ const githubConfig = {
 function getAPIConfig() {
   const hostname = typeof window !== 'undefined' ? window.location.hostname : '';
   
+  // Safely access environment variables
+  const viteApiUrl = typeof process !== 'undefined' && process.env ? process.env.VITE_API_URL : undefined;
+  const viteChartsDataUrl = typeof process !== 'undefined' && process.env ? process.env.VITE_CHARTS_DATA_URL : undefined;
+  const viteUseApi = typeof process !== 'undefined' && process.env ? process.env.VITE_USE_API : undefined;
+  
   if (hostname.includes('cda-transparencia.org') || hostname.includes('github.io')) {
     // For production and GitHub Pages deployment
     return {
-      API_BASE_URL: import.meta.env.VITE_API_URL?.replace('/api', '') || githubConfig.API_BASE_URL,
-      CHARTS_DATA_URL: import.meta.env.VITE_CHARTS_DATA_URL || githubConfig.CHARTS_DATA_URL,
-      USE_API: import.meta.env.VITE_USE_API === 'true' || githubConfig.USE_API,
+      API_BASE_URL: (viteApiUrl ? viteApiUrl.replace('/api', '') : undefined) || githubConfig.API_BASE_URL,
+      CHARTS_DATA_URL: viteChartsDataUrl || githubConfig.CHARTS_DATA_URL,
+      USE_API: viteUseApi === 'true' || githubConfig.USE_API,
     };
   } else {
     // For development
     return {
-      API_BASE_URL: import.meta.env.VITE_API_URL?.replace('/api', '') || defaultConfig.API_BASE_URL,
-      CHARTS_DATA_URL: import.meta.env.VITE_CHARTS_DATA_URL || defaultConfig.CHARTS_DATA_URL,
-      USE_API: import.meta.env.VITE_USE_API === 'true' || defaultConfig.USE_API,
+      API_BASE_URL: (viteApiUrl ? viteApiUrl.replace('/api', '') : undefined) || defaultConfig.API_BASE_URL,
+      CHARTS_DATA_URL: viteChartsDataUrl || defaultConfig.CHARTS_DATA_URL,
+      USE_API: viteUseApi === 'true' || defaultConfig.USE_API,
     };
   }
 }

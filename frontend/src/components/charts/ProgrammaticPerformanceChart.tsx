@@ -139,8 +139,9 @@ const ProgrammaticPerformanceChart: React.FC<ProgrammaticPerformanceChartProps> 
     }
   }
   
-  // Default to 'quarter' or 'period' for x-axis if available, else use 'indicator'
-  const xAxisKey = chartData[0]?.quarter ? 'quarter' : 
+  // Default to 'quarterLabel' if available, else fall back to 'quarter' or 'period' for x-axis if available, else use 'indicator'
+  const xAxisKey = chartData[0]?.quarterLabel ? 'quarterLabel' : 
+                   chartData[0]?.quarter ? 'quarter' : 
                    chartData[0]?.period ? 'period' : 
                    chartData[0]?.indicator ? 'indicator' : 
                    chartData[0]?.name ? 'name' : 
@@ -158,10 +159,10 @@ const ProgrammaticPerformanceChart: React.FC<ProgrammaticPerformanceChartProps> 
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel={xAxisKey === 'quarter' ? 'Quarter' : 
-                  xAxisKey === 'period' ? 'Period' : 
-                  xAxisKey === 'indicator' ? 'Indicator' : 
-                  xAxisKey === 'name' ? 'Program' : 'Year'}
+      xAxisLabel={xAxisKey === 'quarterLabel' || xAxisKey === 'quarter' || xAxisKey === 'trimestre' ? 'Trimestre' : 
+                  xAxisKey === 'period' ? 'Período' : 
+                  xAxisKey === 'indicator' ? 'Indicador' : 
+                  xAxisKey === 'name' ? 'Programa' : 'Año'}
       yAxisLabel="Value / Percentage"
     />
   );

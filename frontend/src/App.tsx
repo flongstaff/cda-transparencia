@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 /**
  * Complete Routing Configuration - All Pages Properly Named and Routed
  * This file contains comprehensive routing for the transparency portal
@@ -8,6 +8,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { DataProvider } from './contexts/DataContext';
+import { register as registerServiceWorker } from './utils/serviceWorkerRegistration';
+import smartDataLoader from './services/SmartDataLoader';
+import productionDataManager from './services/ProductionDataManager';
 import GovernmentHeader from './components/layout/GovernmentHeader';
 import Sidebar from './components/layout/Sidebar';
 import Footer from './components/layout/Footer';
@@ -33,30 +36,81 @@ import DashboardCompleto from './pages/DashboardCompleto';
 import NotFoundPage from './pages/NotFoundPage';
 import MonitoringDashboard from './pages/MonitoringDashboard';
 import OpenDataPage from './pages/OpenDataPage';
+import OpenDataCatalogPage from './pages/OpenDataCatalogPage';
 import DocumentAnalysisPage from './pages/DocumentAnalysisPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import DataRightsPage from './pages/DataRightsPage';
-import MonitoringPage from './pages/MonitoringPage';
+import StandardizedDashboard from './pages/StandardizedDashboard';
+import Home from './pages/Home';
+
+// Dashboards & Analytics - CONSOLIDATED (removed MonitoringPage, FinancialDashboard, DataSourceMonitoringDashboard duplicates)
+import AnalyticsDashboard from './pages/AnalyticsDashboard';
+import MetaTransparencyDashboard from './pages/MetaTransparencyDashboard';
+import DataVisualizationHub from './pages/DataVisualizationHub';
+import AnomalyDashboard from './pages/AnomalyDashboard';
+import AntiCorruptionDashboard from './pages/AntiCorruptionDashboard';
+import CorruptionMonitoringDashboard from './pages/CorruptionMonitoringDashboard';
+import AllChartsDashboard from './pages/AllChartsDashboard';
+import MultiYearRevenue from './pages/MultiYearRevenue';
+import SectoralStatsDashboard from './pages/SectoralStatsDashboard';
+
+// Audit & Transparency
+import Audits from './pages/Audits';
+import AuditAnomaliesExplainer from './pages/AuditAnomaliesExplainer';
+import AuditsAndDiscrepanciesPage from './pages/AuditsAndDiscrepanciesPage';
+import TransparencyPage from './pages/TransparencyPage';
+import TransparencyPortal from './pages/TransparencyPortal';
+import EnhancedTransparencyDashboard from './pages/EnhancedTransparencyDashboard';
+import InfrastructureTracker from './pages/InfrastructureTracker';
 
 // Demo Components
 import YearSelectorDemo from './components/demos/YearSelectorDemo';
-import AnomalyDashboard from './pages/AnomalyDashboard';
-import AuditAnomaliesExplainer from './pages/AuditAnomaliesExplainer';
-import AllChartsDashboard from './pages/AllChartsDashboard';
-import Audits from './pages/Audits';
-import AuditsAndDiscrepanciesPage from './pages/AuditsAndDiscrepanciesPage';
-import AntiCorruptionDashboard from './pages/AntiCorruptionDashboard';
-import EnhancedTransparencyDashboard from './pages/EnhancedTransparencyDashboard';
-import TransparencyPage from './pages/TransparencyPage';
-import InfrastructureTracker from './pages/InfrastructureTracker';
-import DataVisualizationHub from './pages/DataVisualizationHub';
-import MultiYearRevenue from './pages/MultiYearRevenue';
-import SectoralStatsDashboard from './pages/SectoralStatsDashboard';
-import CorruptionMonitoringDashboard from './pages/CorruptionMonitoringDashboard';
-import MetaTransparencyDashboard from './pages/MetaTransparencyDashboard';
-import Home from './pages/Home';
 
 function App() {
+  useEffect(() => {
+    // Register service worker for offline support and caching
+    registerServiceWorker({
+      onSuccess: () => {
+        console.log('[App] Service worker registered successfully');
+      },
+      onUpdate: (registration) => {
+        console.log('[App] New content available, please refresh');
+        // Optionally show a notification to the user
+      },
+      onError: (error) => {
+        console.error('[App] Service worker registration failed:', error);
+      }
+    });
+
+    // Initialize production data manager
+    productionDataManager.initialize().catch(error => {
+      console.error('[App] Production data manager initialization failed:', error);
+    });
+
+    // Warm up cache with essential data
+    smartDataLoader.warmUpCache().catch(error => {
+      console.error('[App] Cache warm-up failed:', error);
+    });
+
+    // Log stats periodically
+    const statsInterval = setInterval(() => {
+      const loaderStats = smartDataLoader.getStats();
+      const managerStats = productionDataManager.getStats();
+
+      if (loaderStats.requestsCompleted > 0 || managerStats.activeSources > 0) {
+        console.log('[App] System Stats:', {
+          loader: loaderStats,
+          dataManager: managerStats
+        });
+      }
+    }, 60000); // Every minute
+
+    return () => {
+      clearInterval(statsInterval);
+      productionDataManager.stopBackgroundSync();
+    };
+  }, []);
+
   return (
     <HelmetProvider>
       <ThemeProvider>
@@ -106,6 +160,7 @@ function App() {
                   <Route path="/audit-anomalies" element={<AuditAnomaliesExplainer />} />
                   <Route path="/financial-audit" element={<AuditsAndDiscrepanciesPage />} />
                   <Route path="/transparency" element={<TransparencyPage />} />
+                  <Route path="/transparency-portal" element={<TransparencyPortal />} />
                   <Route path="/enhanced-transparency" element={<EnhancedTransparencyDashboard />} />
                   <Route path="/analysis" element={<AntiCorruptionDashboard />} />
                   <Route path="/corruption-monitoring" element={<CorruptionMonitoringDashboard />} />
@@ -129,7 +184,13 @@ function App() {
                   
                   {/* Open Data Catalog */}
                   <Route path="/open-data" element={<OpenDataPage />} />
-                  
+                  <Route path="/open-data-catalog" element={<OpenDataCatalogPage />} />
+                  <Route path="/catalog" element={<OpenDataCatalogPage />} />
+
+                  {/* Standardized Dashboard */}
+                  <Route path="/standardized" element={<StandardizedDashboard />} />
+                  <Route path="/standardized-dashboard" element={<StandardizedDashboard />} />
+
                   {/* Document Analysis */}
                   <Route path="/document-analysis" element={<DocumentAnalysisPage />} />
                   
@@ -137,13 +198,16 @@ function App() {
                   <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
                   <Route path="/data-rights" element={<DataRightsPage />} />
                   
-                  {/* Monitoring and Evaluation */}
-                  <Route path="/monitoring" element={<MonitoringPage />} />
-
-                  {/* Monitoring Routes */}
+                  {/* Monitoring and Evaluation - CONSOLIDATED to use MonitoringDashboard only */}
                   <Route path="/monitoring" element={<MonitoringDashboard />} />
+                  <Route path="/monitoring-dashboard" element={<MonitoringDashboard />} />
                   <Route path="/meta-transparency" element={<MetaTransparencyDashboard />} />
                   <Route path="/data-quality" element={<MetaTransparencyDashboard />} />
+                  <Route path="/data-sources" element={<MetaTransparencyDashboard />} />
+
+                  {/* Analytics Dashboard */}
+                  <Route path="/analytics" element={<AnalyticsDashboard />} />
+                  <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
 
                   {/* Demo Components */}
                   <Route path="/demo/year-selector" element={<YearSelectorDemo />} />

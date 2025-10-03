@@ -1,50 +1,19 @@
 /**
- * OpenDataCatalog Component - Simplified Version
- * Main catalog interface for open data with AAIP-compliant categories and accessibility features
+ * OpenDataCatalog Component - Minimal Functional Version
+ * Main catalog interface for open data with basic functionality
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-interface DataCategory {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  itemsCount: number;
-  lastUpdated: string;
-  updateFrequency: string;
-  dataTypes: string[];
-  datasets: Dataset[];
-}
-
-interface Dataset {
-  id: string;
-  title: string;
-  description: string;
-  formats: string[];
-  size: string;
-  lastUpdated: string;
-  accessibility: {
-    compliant: boolean;
-    standards: string[];
-  };
-}
-
-const OpenDataCatalog: React.FC = () => {
+const OpenDataCatalog = () => {
   const navigate = useNavigate();
-  const [categories, setCategories] = useState<DataCategory[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedFormat, setSelectedFormat] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'name' | 'date' | 'size'>('name');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedFormat, setSelectedFormat] = useState('all');
 
   // Mock data categories - in a real implementation, this would come from an API
-  const mockCategories: DataCategory[] = [
+  const categories = [
     {
       id: 'budget-financial',
       title: 'Presupuesto y Financiero',
@@ -64,7 +33,7 @@ const OpenDataCatalog: React.FC = () => {
           lastUpdated: '2024-12-01',
           accessibility: {
             compliant: true,
-            standards: ['WCAG 2.1 AA', 'Section 508']
+            standards: ['WCAG 2.1 AA']
           }
         }
       ]
@@ -88,7 +57,7 @@ const OpenDataCatalog: React.FC = () => {
           lastUpdated: '2024-11-28',
           accessibility: {
             compliant: true,
-            standards: ['WCAG 2.1 AA', 'Section 508']
+            standards: ['WCAG 2.1 AA']
           }
         }
       ]
@@ -107,12 +76,12 @@ const OpenDataCatalog: React.FC = () => {
           id: 'salary-data-2024',
           title: 'Datos Salariales 2024',
           description: 'Información sobre remuneraciones del personal municipal en 2024',
-          formats: ['csv', 'xlsx', 'json'],
+          formats: ['csv', 'xlsx'],
           size: '1.8 MB',
           lastUpdated: '2024-11-15',
           accessibility: {
             compliant: true,
-            standards: ['WCAG 2.1 AA', 'Section 508']
+            standards: ['WCAG 2.1 AA']
           }
         }
       ]
@@ -136,7 +105,7 @@ const OpenDataCatalog: React.FC = () => {
           lastUpdated: '2024-12-01',
           accessibility: {
             compliant: true,
-            standards: ['WCAG 2.1 AA', 'Section 508']
+            standards: ['WCAG 2.1 AA']
           }
         }
       ]
@@ -155,12 +124,12 @@ const OpenDataCatalog: React.FC = () => {
           id: 'public-works-registry',
           title: 'Registro de Obras Públicas',
           description: 'Catálogo de obras públicas ejecutadas y en curso',
-          formats: ['csv', 'xlsx', 'json'],
+          formats: ['csv', 'json'],
           size: '2.9 MB',
           lastUpdated: '2024-11-20',
           accessibility: {
             compliant: true,
-            standards: ['WCAG 2.1 AA', 'Section 508']
+            standards: ['WCAG 2.1 AA']
           }
         }
       ]
@@ -184,48 +153,26 @@ const OpenDataCatalog: React.FC = () => {
           lastUpdated: '2024-11-30',
           accessibility: {
             compliant: true,
-            standards: ['WCAG 2.1 AA', 'Section 508']
+            standards: ['WCAG 2.1 AA']
           }
         }
       ]
     }
   ];
 
-  useEffect(() => {
-    // Simulate loading data
-    const loadData = async () => {
-      try {
-        setLoading(true);
-        // In a real implementation, this would fetch from an API
-        // For now, we'll use the mock data
-        setTimeout(() => {
-          setCategories(mockCategories);
-          setLoading(false);
-        }, 1000);
-      } catch (err) {
-        console.error('Error loading data categories:', err);
-        setError('Error al cargar el catálogo de datos abiertos');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadData();
-  }, []);
-
-  // Filter categories based on search and selection
+  // Filter categories based on search, category, and format
   const filteredCategories = categories.filter(category => {
     // Filter by search query
     const matchesSearch = 
       category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      category.dataTypes.some(type => type.toLowerCase().includes(searchQuery.toLowerCase()));
+      (category.dataTypes && category.dataTypes.some(type => type.toLowerCase().includes(searchQuery.toLowerCase())));
     
     // Filter by category
     const matchesCategory = selectedCategory === 'all' || category.id === selectedCategory;
     
-    // Filter by format if selected
-    let matchesFormat = selectedFormat === 'all';
+    // Filter by format
+    let matchesFormat = true;
     if (selectedFormat !== 'all') {
       matchesFormat = category.datasets.some(dataset => 
         dataset.formats.includes(selectedFormat.toLowerCase())
@@ -235,53 +182,7 @@ const OpenDataCatalog: React.FC = () => {
     return matchesSearch && matchesCategory && matchesFormat;
   });
 
-  // Sort the categories
-  const sortedCategories = [...filteredCategories].sort((a, b) => {
-    if (sortBy === 'name') {
-      return sortOrder === 'asc' 
-        ? a.title.localeCompare(b.title) 
-        : b.title.localeCompare(a.title);
-    } else if (sortBy === 'date') {
-      return sortOrder === 'asc'
-        ? new Date(a.lastUpdated).getTime() - new Date(b.lastUpdated).getTime()
-        : new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
-    } else if (sortBy === 'size') {
-      // For size sorting, we'll sort by items count
-      return sortOrder === 'asc'
-        ? a.itemsCount - b.itemsCount
-        : b.itemsCount - a.itemsCount;
-    }
-    return 0;
-  });
-
-  // Get all unique formats across all datasets
-  const allFormats = Array.from(
-    new Set(
-      categories.flatMap(category => 
-        category.datasets.flatMap(dataset => dataset.formats)
-      )
-    )
-  );
-
-  // Get all category IDs for filter options
-  const categoryOptions = [
-    { id: 'all', title: 'Todas las categorías' },
-    ...categories.map(cat => ({ id: cat.id, title: cat.title }))
-  ];
-
-  const getIconComponent = (iconName: string) => {
-    switch (iconName) {
-      case 'DollarSign': return <div className="h-6 w-6">💰</div>;
-      case 'Building': return <div className="h-6 w-6">🏢</div>;
-      case 'Users': return <div className="h-6 w-6">👥</div>;
-      case 'FileText': return <div className="h-6 w-6">📄</div>;
-      case 'HardHat': return <div className="h-6 w-6">👷</div>;
-      case 'Shield': return <div className="h-6 w-6">🛡️</div>;
-      default: return <div className="h-6 w-6">📁</div>;
-    }
-  };
-
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('es-AR', {
       year: 'numeric',
       month: 'long',
@@ -289,24 +190,24 @@ const OpenDataCatalog: React.FC = () => {
     });
   };
 
-  const formatFileSize = (size: string) => {
+  const formatFileSize = (size) => {
     return size;
   };
 
-  const getFormatIcon = (format: string) => {
+  const getFormatIcon = (format) => {
     switch (format.toLowerCase()) {
-      case 'csv': return <div className="h-4 w-4">📄</div>;
-      case 'json': return <div className="h-4 w-4">🗄️</div>;
-      case 'xlsx': return <div className="h-4 w-4">📊</div>;
-      case 'pdf': return <div className="h-4 w-4">📄</div>;
-      case 'xml': return <div className="h-4 w-4">📄</div>;
-      case 'txt': return <div className="h-4 w-4">📄</div>;
-      case 'zip': return <div className="h-4 w-4">📦</div>;
-      default: return <div className="h-4 w-4">📄</div>;
+      case 'csv': return '📄';
+      case 'json': return '🗄️';
+      case 'xlsx': return '📊';
+      case 'pdf': return '📄';
+      case 'xml': return '📄';
+      case 'txt': return '📄';
+      case 'zip': return '📦';
+      default: return '📄';
     }
   };
 
-  const getFormatName = (format: string) => {
+  const getFormatName = (format) => {
     switch (format.toLowerCase()) {
       case 'csv': return 'CSV';
       case 'json': return 'JSON';
@@ -355,9 +256,7 @@ const OpenDataCatalog: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Search */}
               <div className="relative">
-                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400">
-                  🔍
-                </div>
+                <div className="h-5 w-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2">🔍</div>
                 <input
                   type="text"
                   value={searchQuery}
@@ -376,8 +275,9 @@ const OpenDataCatalog: React.FC = () => {
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-dark-surface text-gray-900 dark:text-dark-text-primary"
                   aria-label="Filtrar por categoría"
                 >
-                  {categoryOptions.map(option => (
-                    <option key={option.id} value={option.id}>{option.title}</option>
+                  <option value="all">Todas las categorías</option>
+                  {categories.map(category => (
+                    <option key={category.id} value={category.id}>{category.title}</option>
                   ))}
                 </select>
               </div>
@@ -391,30 +291,22 @@ const OpenDataCatalog: React.FC = () => {
                   aria-label="Filtrar por formato"
                 >
                   <option value="all">Todos los formatos</option>
-                  {allFormats.map(format => (
-                    <option key={format} value={format}>{getFormatName(format)}</option>
-                  ))}
+                  <option value="csv">CSV</option>
+                  <option value="json">JSON</option>
+                  <option value="xlsx">Excel</option>
+                  <option value="pdf">PDF</option>
                 </select>
               </div>
               
               {/* Sort */}
               <div>
                 <select
-                  value={`${sortBy}-${sortOrder}`}
-                  onChange={(e) => {
-                    const [sortField, sortOrderValue] = e.target.value.split('-');
-                    setSortBy(sortField as any);
-                    setSortOrder(sortOrderValue as any);
-                  }}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-dark-surface text-gray-900 dark:text-dark-text-primary"
                   aria-label="Ordenar resultados"
                 >
-                  <option value="name-asc">Nombre (A-Z)</option>
-                  <option value="name-desc">Nombre (Z-A)</option>
-                  <option value="date-desc">Más reciente primero</option>
-                  <option value="date-asc">Más antiguo primero</option>
-                  <option value="size-asc">Tamaño (menor primero)</option>
-                  <option value="size-desc">Tamaño (mayor primero)</option>
+                  <option value="name">Nombre (A-Z)</option>
+                  <option value="date">Más reciente primero</option>
+                  <option value="items">Mayor cantidad</option>
                 </select>
               </div>
             </div>
@@ -424,169 +316,208 @@ const OpenDataCatalog: React.FC = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Loading state */}
-        {loading && (
-          <div className="flex justify-center items-center py-12">
-            <div className="h-12 w-12 animate-spin text-blue-600 mr-3">🌀</div>
-            <span className="text-gray-700 dark:text-gray-300">Cargando catálogo de datos abiertos...</span>
-          </div>
-        )}
-
-        {/* Error state */}
-        {error && (
-          <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg p-6">
-            <div className="flex items-center">
-              <div className="h-5 w-5 text-red-400 mr-2">⚠️</div>
-              <h3 className="text-lg font-medium text-red-800 dark:text-red-200">
-                Error
-              </h3>
-            </div>
-            <p className="mt-2 text-red-700 dark:text-red-300">
-              {error}
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="mt-4 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
-            >
-              Reintentar
-            </button>
-          </div>
-        )}
-
         {/* Catalog content */}
-        {!loading && !error && (
-          <div>
-            {sortedCategories.length === 0 ? (
-              <div className="text-center py-12">
-                <div className="h-12 w-12 text-gray-400 mx-auto mb-4">📁</div>
-                <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-                  No se encontraron datos
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  No hay datos que coincidan con los filtros aplicados.
-                </p>
-              </div>
-            ) : (
-              <>
-                <div className="mb-6">
-                  <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                    {sortedCategories.length}{' '}
-                    {sortedCategories.length === 1 ? 'categoría' : 'categorías'} encontradas
-                  </h2>
+        <div>
+          <div className="mb-6">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              {filteredCategories.length}{' '}
+              {filteredCategories.length === 1 ? 'categoría' : 'categorías'} encontradas
+            </h2>
+          </div>
+          
+          {/* Categories grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredCategories.map((category) => (
+              <div 
+                key={category.id} 
+                className="bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                onClick={() => navigate(`/open-data/${category.id}`)}
+              >
+                <div className="flex items-start mb-4">
+                  <div className="flex-shrink-0 p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 mr-4">
+                    <div className="h-6 w-6">📁</div>
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                        {category.title}
+                      </h3>
+                      <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-dark-surface-alt text-gray-700 dark:text-dark-text-secondary rounded-full">
+                        {category.itemsCount} conjuntos
+                      </span>
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">
+                      {category.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
+                  <div className="flex items-center text-gray-600 dark:text-gray-400">
+                    <div className="h-4 w-4 mr-1">📄</div>
+                    <span>{category.itemsCount} conjuntos</span>
+                  </div>
+                  <div className="flex items-center text-gray-600 dark:text-gray-400">
+                    <div className="h-4 w-4 mr-1">📅</div>
+                    <span>
+                      Act: {formatDate(category.lastUpdated)}
+                    </span>
+                  </div>
+                  <div className="flex items-center text-gray-600 dark:text-gray-400">
+                    <div className="h-4 w-4 mr-1">⏱️</div>
+                    <span>Frec: {category.updateFrequency}</span>
+                  </div>
                 </div>
                 
-                {/* Categories grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {sortedCategories.map((category) => (
-                    <div 
-                      key={category.id} 
-                      className="bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer"
-                      onClick={() => navigate(`/open-data/${category.id}`)}
-                    >
-                      <div className="flex items-start mb-4">
-                        <div className="flex-shrink-0 p-3 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 mr-4">
-                          {getIconComponent(category.icon)}
-                        </div>
-                        <div>
-                          <div className="flex items-center justify-between">
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                              {category.title}
-                            </h3>
-                            <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-dark-surface-alt text-gray-700 dark:text-dark-text-secondary rounded-full">
-                              {category.itemsCount} conjuntos
-                            </span>
-                          </div>
-                          <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                            {category.description}
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
-                        <div className="flex items-center text-gray-600 dark:text-gray-400">
-                          <div className="h-4 w-4 mr-1">📄</div>
-                          <span>{category.itemsCount} conjuntos</span>
-                        </div>
-                        <div className="flex items-center text-gray-600 dark:text-gray-400">
-                          <div className="h-4 w-4 mr-1">📅</div>
-                          <span>
-                            Act: {formatDate(category.lastUpdated)}
-                          </span>
-                        </div>
-                        <div className="flex items-center text-gray-600 dark:text-gray-400">
-                          <div className="h-4 w-4 mr-1">⏱️</div>
-                          <span>Frec: {category.updateFrequency}</span>
-                        </div>
-                      </div>
-                      
-                      {/* Dataset previews */}
-                      <div className="border-t border-gray-100 dark:border-dark-border pt-3">
-                        <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2">
-                          Conjuntos de datos recientes:
-                        </h4>
-                        <ul className="space-y-2">
-                          {category.datasets.slice(0, 2).map((dataset) => (
-                            <li 
-                              key={dataset.id} 
-                              className="text-sm text-gray-700 dark:text-gray-300 flex justify-between items-start"
+                {/* Dataset previews */}
+                <div className="border-t border-gray-100 dark:border-dark-border pt-4">
+                  <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2">
+                    Conjuntos de datos recientes:
+                  </h4>
+                  <ul className="space-y-2">
+                    {category.datasets.slice(0, 2).map((dataset, index) => (
+                      <li key={index} className="text-sm text-gray-700 dark:text-gray-300 flex justify-between items-start">
+                        <span className="truncate mr-2">{dataset.title}</span>
+                        <div className="flex space-x-1">
+                          {dataset.formats.slice(0, 3).map((format, idx) => (
+                            <span 
+                              key={idx} 
+                              className="text-xs px-1.5 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full flex items-center"
                             >
-                              <span className="truncate mr-2">{dataset.title}</span>
-                              <div className="flex space-x-1">
-                                {dataset.formats.slice(0, 2).map((format) => (
-                                  <span 
-                                    key={format} 
-                                    className="text-xs px-1.5 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full flex items-center"
-                                    title={getFormatName(format)}
-                                  >
-                                    {getFormatIcon(format)}
-                                  </span>
-                                ))}
-                                {dataset.formats.length > 2 && (
-                                  <span className="text-xs px-1.5 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full">
-                                    +{dataset.formats.length - 2}
-                                  </span>
-                                )}
-                              </div>
-                            </li>
+                              <div className="h-3 w-3 mr-1">{getFormatIcon(format)}</div>
+                              {getFormatName(format)}
+                            </span>
                           ))}
-                        </ul>
-                      </div>
-                      
-                      {/* Accessibility status */}
-                      <div className="mt-4 pt-3 border-t border-gray-100 dark:border-dark-border">
-                        <div className="flex justify-between items-center">
-                          <div className="flex items-center">
-                            {category.datasets.some(ds => ds.accessibility.compliant) ? (
-                              <div className="flex items-center text-green-600 dark:text-green-400 text-xs">
-                                <div className="h-3 w-3 mr-1">🛡️</div>
-                                Accesible
-                              </div>
-                            ) : (
-                              <div className="text-gray-500 dark:text-gray-400 text-xs">
-                                No verificado
-                              </div>
-                            )}
-                          </div>
-                          <button 
-                            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium flex items-center"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              navigate(`/open-data/${category.id}`);
-                            }}
-                            aria-label={`Ver datos de ${category.title}`}
-                          >
-                            Ver datos
-                            <div className="w-4 h-4 ml-1">⬇️</div>
-                          </button>
                         </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                {/* Accessibility status */}
+                <div className="mt-4 pt-3 border-t border-gray-100 dark:border-dark-border">
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center">
+                      <div className="flex items-center text-green-600 dark:text-green-400 text-xs">
+                        <div className="h-3 w-3 mr-1">🛡️</div>
+                        Accesible
                       </div>
                     </div>
-                  ))}
+                    <button 
+                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium flex items-center"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigate(`/open-data/${category.id}`);
+                      }}
+                      aria-label={`Ver datos de ${category.title}`}
+                    >
+                      Ver datos
+                      <div className="w-4 h-4 ml-1">⬇️</div>
+                    </button>
+                  </div>
                 </div>
-              </>
-            )}
+              </div>
+            ))}
           </div>
-        )}
+        </div>
+
+        {/* PDF Catalog Section - Highlighted section for PDF documents */}
+        <div className="mt-16">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
+              <div className="h-6 w-6 mr-3">📄</div>
+              Catálogo de Documentos PDF
+            </h2>
+            <span className="text-sm text-gray-600 dark:text-gray-400">
+              {(() => {
+                let count = 0;
+                categories.forEach(category => {
+                  category.datasets.forEach(dataset => {
+                    if (dataset.formats.includes('pdf')) {
+                      count++;
+                    }
+                  });
+                });
+                return `${count} documentos PDF disponibles`;
+              })()}
+            </span>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {(() => {
+              const pdfDocs = [];
+              categories.forEach(category => {
+                category.datasets.forEach(dataset => {
+                  if (dataset.formats.includes('pdf')) {
+                    pdfDocs.push({ ...dataset, category: category.title, categoryId: category.id });
+                  }
+                });
+              });
+              
+              return pdfDocs.map((doc, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white dark:bg-dark-surface border border-gray-200 dark:border-dark-border rounded-xl p-5 hover:shadow-md transition-all duration-300"
+                >
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 p-2 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 mr-4">
+                      <div className="h-6 w-6">📄</div>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between">
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1 truncate">
+                          {doc.title}
+                        </h3>
+                        <span className="text-xs px-2 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 rounded-full">
+                          PDF
+                        </span>
+                      </div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                        {doc.description}
+                      </div>
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {doc.formats.filter(f => f !== 'pdf').map((format, idx) => (
+                          <span 
+                            key={idx}
+                            className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full"
+                          >
+                            {getFormatName(format)}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                        <span>{doc.size}</span>
+                        <span>Actualizado: {formatDate(doc.lastUpdated)}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex justify-between">
+                    <button 
+                      className="text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium flex items-center"
+                      onClick={() => navigate(`/open-data/${doc.categoryId}`)}
+                    >
+                      Ver detalles
+                      <div className="w-4 h-4 ml-1">⬇️</div>
+                    </button>
+                    <button 
+                      className="text-sm bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg flex items-center"
+                      onClick={() => {
+                        // In a real implementation, this would construct the actual PDF URL
+                        const pdfUrl = `/data/documents/${doc.id}.pdf`;
+                        console.log(`Downloading PDF: ${pdfUrl}`);
+                        // For now, just log. In a real implementation, we would download the PDF
+                        alert(`In a real implementation, this would download the PDF for: ${doc.id}`);
+                      }}
+                    >
+                      <div className="h-4 w-4 mr-1">📥</div>
+                      Descargar PDF
+                    </button>
+                  </div>
+                </div>
+              ));
+            })()}
+          </div>
+        </div>
 
         {/* AAIP Compliance Information */}
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl">

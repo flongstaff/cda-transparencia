@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-10-02T05:10:02.485Z",
+  "totalPdfs": 0,
+  "pdfLinks": [],
+  "baseUrl": "https://carmendeareco.gob.ar",
+  "pattern": [
+    "http://carmendeareco.gob.ar/wp-content/uploads/{year}/{filename}.pdf",
+    "http://carmendeareco.gob.ar/wp-content/uploads/{year}/{month}/{filename}.pdf"
+  ],
+  "yearsChecked": [
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+  ]
+}

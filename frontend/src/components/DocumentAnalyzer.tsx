@@ -5,8 +5,9 @@
  */
 
 import React, { useState, useRef, ChangeEvent } from 'react';
-import { Upload, FileText, Search, Download, AlertTriangle, CheckCircle, Clock, Eye, X, Loader2 } from 'lucide-react';
+import { Upload, FileText, Search, Download, AlertTriangle, CheckCircle, Clock, Eye, X, Loader2, Scale, BookOpen } from 'lucide-react';
 import { documentAnalysisService, DocumentAnalysisResult, DocumentCategory } from '../services/documentAnalysisService';
+import { externalAPIsService } from '../services/ExternalAPIsService';
 
 interface DocumentAnalyzerProps {
   onAnalysisComplete?: (result: DocumentAnalysisResult) => void;
@@ -486,6 +487,21 @@ const DocumentAnalyzer: React.FC<DocumentAnalyzerProps> = ({ onAnalysisComplete,
                   <span className="block">AAIP: {analysisResult.compliance.follows_AAIP_guidelines ? 'Sí' : 'No'}</span>
                   <span className="block">Revisión: {analysisResult.compliance.humanReviewRequired ? 'Requerida' : 'No'}</span>
                 </p>
+              </div>
+            </div>
+            
+            {/* InfoLEG Related Information */}
+            <div className="mt-6 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-700">
+              <h4 className="font-medium text-purple-800 dark:text-purple-200 mb-2 flex items-center">
+                <Scale className="h-4 w-4 mr-2" />
+                Marco Legal Relacionado (InfoLEG)
+              </h4>
+              <p className="text-sm text-purple-700 dark:text-purple-300 mb-3">
+                Basado en el contenido del documento, aquí están las normativas relacionadas:
+              </p>
+              <div className="flex items-center text-xs text-purple-600 dark:text-purple-400">
+                <BookOpen className="h-3 w-3 mr-1" />
+                <span>Conexión con InfoLEG - Sistema de Información Legislativa</span>
               </div>
             </div>
           </div>

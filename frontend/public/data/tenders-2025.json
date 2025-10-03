@@ -1,0 +1,20 @@
+[
+  {
+    "id": "Licitación N°11",
+    "title": "Adquisición de Equipo de Nefrología",
+    "description": "Licitación para la compra de equipo médico para el área de nefrología",
+    "date": "2025-01-15",
+    "status": "En curso",
+    "link": "https://carmendeareco.gob.ar/transparencia/licitaciones/licitacion-11",
+    "sourceUrl": "https://carmendeareco.gob.ar/transparencia/licitaciones"
+  },
+  {
+    "id": "Licitación N°12",
+    "title": "Mantenimiento Vial Invernal",
+    "description": "Servicios de mantenimiento de caminos y vías",
+    "date": "2025-02-20",
+    "status": "Cerrada",
+    "link": "https://carmendeareco.gob.ar/transparencia/licitaciones/licitacion-12",
+    "sourceUrl": "https://carmendeareco.gob.ar/transparencia/licitaciones"
+  }
+]

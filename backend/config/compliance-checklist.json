@@ -1,0 +1,93 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2025-10-02",
+  "complianceChecklist": [
+    {
+      "category": "Ley 27.275 - Acceso a la Información Pública",
+      "items": [
+        {
+          "id": "27275_1",
+          "requirement": "Active publication of budget documents",
+          "status": "implemented",
+          "evidence": "Budget documents published in /transparency/budget/",
+          "lastVerified": "2025-10-01"
+        },
+        {
+          "id": "27275_2",
+          "requirement": "Publication of contracts and tenders",
+          "status": "implemented",
+          "evidence": "Contracts published in /transparency/contracts/",
+          "lastVerified": "2025-10-01"
+        },
+        {
+          "id": "27275_3",
+          "requirement": "Publication of salary information",
+          "status": "implemented",
+          "evidence": "Salary data in /transparency/salaries/",
+          "lastVerified": "2025-10-01"
+        },
+        {
+          "id": "27275_4",
+          "requirement": "Publication of asset declarations",
+          "status": "implemented",
+          "evidence": "Declarations in /transparency/declarations/",
+          "lastVerified": "2025-10-01"
+        }
+      ]
+    },
+    {
+      "category": "Ley 25.326 - Protección de Datos Personales",
+      "items": [
+        {
+          "id": "25326_1",
+          "requirement": "Privacy policy publication",
+          "status": "implemented",
+          "evidence": "Privacy policy available at /privacy-policy",
+          "lastVerified": "2025-10-01"
+        },
+        {
+          "id": "25326_2",
+          "requirement": "Data subject rights information",
+          "status": "implemented",
+          "evidence": "Rights information in footer and /data-rights",
+          "lastVerified": "2025-10-01"
+        },
+        {
+          "id": "25326_3",
+          "requirement": "Data processing notice",
+          "status": "implemented",
+          "evidence": "Notice on data collection forms",
+          "lastVerified": "2025-10-01"
+        }
+      ]
+    },
+    {
+      "category": "AAIP Guidelines",
+      "items": [
+        {
+          "id": "aaip_1",
+          "requirement": "Standardized content categories",
+          "status": "implemented",
+          "evidence": "Categories aligned with AAIP transparency indices",
+          "lastVerified": "2025-10-01"
+        },
+        {
+          "id": "aaip_2",
+          "requirement": "Regular update schedule",
+          "status": "implemented",
+          "evidence": "Automated data updates configured",
+          "lastVerified": "2025-10-01"
+        },
+        {
+          "id": "aaip_3",
+          "requirement": "Accessibility compliance (WCAG 2.1 AA)",
+          "status": "in_progress",
+          "evidence": "Basic accessibility features implemented",
+          "lastVerified": "2025-10-01"
+        }
+      ]
+    }
+  ],
+  "nextReviewDate": "2025-12-01",
+  "reviewFrequency": "quarterly"
+}

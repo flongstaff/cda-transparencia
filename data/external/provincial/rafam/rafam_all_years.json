@@ -1,0 +1,44 @@
+[
+  {
+    "year": 2019,
+    "error": "timeout of 30000ms exceeded",
+    "municipalityCode": "270",
+    "extractedDate": "2025-10-02T10:16:48.102Z"
+  },
+  {
+    "year": 2020,
+    "error": "timeout of 30000ms exceeded",
+    "municipalityCode": "270",
+    "extractedDate": "2025-10-02T10:17:20.124Z"
+  },
+  {
+    "year": 2021,
+    "error": "timeout of 30000ms exceeded",
+    "municipalityCode": "270",
+    "extractedDate": "2025-10-02T10:17:52.132Z"
+  },
+  {
+    "year": 2022,
+    "error": "timeout of 30000ms exceeded",
+    "municipalityCode": "270",
+    "extractedDate": "2025-10-02T10:18:24.140Z"
+  },
+  {
+    "year": 2023,
+    "error": "timeout of 30000ms exceeded",
+    "municipalityCode": "270",
+    "extractedDate": "2025-10-02T10:18:56.146Z"
+  },
+  {
+    "year": 2024,
+    "error": "timeout of 30000ms exceeded",
+    "municipalityCode": "270",
+    "extractedDate": "2025-10-02T10:19:28.153Z"
+  },
+  {
+    "year": 2025,
+    "error": "timeout of 30000ms exceeded",
+    "municipalityCode": "270",
+    "extractedDate": "2025-10-02T10:20:00.162Z"
+  }
+]

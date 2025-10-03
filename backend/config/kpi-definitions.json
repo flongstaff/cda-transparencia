@@ -1,0 +1,52 @@
+[
+  {
+    "id": "budget_execution_rate",
+    "name": "Budget Execution Rate",
+    "description": "Percentage of budget executed vs planned",
+    "target": 95,
+    "warningThreshold": 90,
+    "criticalThreshold": 85,
+    "unit": "%",
+    "frequency": "monthly"
+  },
+  {
+    "id": "document_publication_timeliness",
+    "name": "Document Publication Timeliness",
+    "description": "Percentage of documents published on time",
+    "target": 98,
+    "warningThreshold": 95,
+    "criticalThreshold": 90,
+    "unit": "%",
+    "frequency": "monthly"
+  },
+  {
+    "id": "request_response_time",
+    "name": "Request Response Time",
+    "description": "Average time to respond to information requests",
+    "target": 10,
+    "warningThreshold": 12,
+    "criticalThreshold": 15,
+    "unit": "days",
+    "frequency": "monthly"
+  },
+  {
+    "id": "data_quality_score",
+    "name": "Data Quality Score",
+    "description": "Overall data quality assessment",
+    "target": 95,
+    "warningThreshold": 90,
+    "criticalThreshold": 85,
+    "unit": "score",
+    "frequency": "quarterly"
+  },
+  {
+    "id": "transparency_index",
+    "name": "Transparency Index",
+    "description": "AAIP transparency index score",
+    "target": 90,
+    "warningThreshold": 85,
+    "criticalThreshold": 80,
+    "unit": "score",
+    "frequency": "quarterly"
+  }
+]

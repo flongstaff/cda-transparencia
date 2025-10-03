@@ -19,9 +19,13 @@ import {
   Shield,
   Search,
   Download,
-  Filter
+  Filter,
+  RefreshCw
 } from 'lucide-react';
 import { useMasterData } from '../hooks/useMasterData';
+import { useExpensesData } from '../hooks/useUnifiedData';
+import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator';
+import { YearSelector } from '../components/common/YearSelector';
 import { formatCurrencyARS, formatPercentageARS } from '../utils/formatters';
 import ValidatedChart from '../components/charts/ValidatedChart';
 import ErrorBoundary from '../components/common/ErrorBoundary';
@@ -45,15 +49,31 @@ const ExpensesPage: React.FC = () => {
     currentContracts,
     currentSalaries,
     currentDebt,
-    loading,
-    error,
+    loading: legacyLoading,
+    error: legacyError,
     totalDocuments,
-    availableYears,
+    availableYears: legacyYears,
     categories,
     dataSourcesActive,
     refetch,
     switchYear
   } = useMasterData(selectedYear);
+
+  // 🌐 Use new UnifiedDataService with external APIs
+  const {
+    data: unifiedExpensesData,
+    externalData,
+    sources,
+    activeSources,
+    loading: unifiedLoading,
+    error: unifiedError,
+    refetch: unifiedRefetch,
+    availableYears,
+    liveDataEnabled
+  } = useExpensesData(selectedYear);
+
+  const loading = legacyLoading || unifiedLoading;
+  const error = legacyError || unifiedError;
 
   // Process expenses data
   const expensesData = useMemo(() => {
@@ -157,31 +177,27 @@ const ExpensesPage: React.FC = () => {
 
             {/* Enhanced Year Selector */}
             <div className="flex-shrink-0">
-              <div className="bg-white dark:bg-dark-surface rounded-xl border border-gray-200 dark:border-dark-border p-4 shadow-sm">
-                <label className="block text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-2">
-                  Período de Análisis
-                </label>
-                <select
-                  value={selectedYear}
-                  onChange={(e) => switchYear(Number(e.target.value))}
-                  title="Seleccionar año para el análisis de gastos"
-                  className="w-full px-4 py-2 text-base font-medium border border-gray-300 dark:border-dark-border rounded-lg
-                           bg-white dark:bg-dark-surface text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary focus:ring-2 focus:ring-purple-500 focus:border-transparent
-                           hover:border-purple-300 transition-colors"
-                >
-                  {availableYears.map((year) => (
-                    <option key={year} value={year}>
-                      {year} {year === new Date().getFullYear() && '(Actual)'}
-                    </option>
-                  ))}
-                </select>
-                <div className="mt-2 text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
-                  Gastos ejecutados {selectedYear}
-                </div>
-              </div>
+              <YearSelector
+                selectedYear={selectedYear}
+                availableYears={availableYears}
+                onChange={(year) => {
+                  setSelectedYear(year);
+                  switchYear(year);
+                }}
+                label="Período de Análisis"
+                className="bg-white dark:bg-dark-surface rounded-xl border border-gray-200 dark:border-dark-border p-4 shadow-sm"
+              />
             </div>
           </div>
         </motion.div>
+
+        {/* Data Sources Indicator */}
+        <DataSourcesIndicator
+          activeSources={activeSources}
+          externalData={externalData}
+          loading={unifiedLoading}
+          className="mb-6"
+        />
 
         {/* Enhanced Expenses Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

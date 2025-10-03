@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-01T10:52:07.540Z",
+  "generatedAt": "2025-10-03T03:21:09.585Z",
   "dataSources": {
     "csv": [
       {
@@ -9320,6 +9320,11 @@
         "size": 12402
       },
       {
+        "path": "ingestion_report.json",
+        "name": "ingestion_report.json",
+        "size": 1861
+      },
+      {
         "path": "document-categories.json",
         "name": "document-categories.json",
         "size": 6334
@@ -9348,6 +9353,11 @@
         "path": "accessibility-standards.json",
         "name": "accessibility-standards.json",
         "size": 26862
+      },
+      {
+        "path": "scraped/scrape_2025-10-02.json",
+        "name": "scrape_2025-10-02.json",
+        "size": 361
       },
       {
         "path": "processed/2025/consolidated_data.json",
@@ -9388,6 +9398,131 @@
         "path": "metadata/index.json",
         "name": "index.json",
         "size": 2771
+      },
+      {
+        "path": "historical/transparency_portal_2025.json",
+        "name": "transparency_portal_2025.json",
+        "size": 48047
+      },
+      {
+        "path": "historical/transparency_portal_2024.json",
+        "name": "transparency_portal_2024.json",
+        "size": 48047
+      },
+      {
+        "path": "historical/transparency_portal_2023.json",
+        "name": "transparency_portal_2023.json",
+        "size": 48047
+      },
+      {
+        "path": "historical/transparency_portal_2022.json",
+        "name": "transparency_portal_2022.json",
+        "size": 48047
+      },
+      {
+        "path": "historical/transparency_portal_2021.json",
+        "name": "transparency_portal_2021.json",
+        "size": 48047
+      },
+      {
+        "path": "historical/transparency_portal_2020.json",
+        "name": "transparency_portal_2020.json",
+        "size": 48047
+      },
+      {
+        "path": "historical/transparency_portal_2019.json",
+        "name": "transparency_portal_2019.json",
+        "size": 48047
+      },
+      {
+        "path": "historical/transparency_portal_2018.json",
+        "name": "transparency_portal_2018.json",
+        "size": 48047
+      },
+      {
+        "path": "external/rafam_2025.json",
+        "name": "rafam_2025.json",
+        "size": 186
+      },
+      {
+        "path": "external/rafam_2024.json",
+        "name": "rafam_2024.json",
+        "size": 186
+      },
+      {
+        "path": "external/rafam_2023.json",
+        "name": "rafam_2023.json",
+        "size": 186
+      },
+      {
+        "path": "external/rafam_2022.json",
+        "name": "rafam_2022.json",
+        "size": 186
+      },
+      {
+        "path": "external/rafam_2021.json",
+        "name": "rafam_2021.json",
+        "size": 186
+      },
+      {
+        "path": "external/rafam_2020.json",
+        "name": "rafam_2020.json",
+        "size": 186
+      },
+      {
+        "path": "external/rafam_2019.json",
+        "name": "rafam_2019.json",
+        "size": 186
+      },
+      {
+        "path": "external/rafam_2018.json",
+        "name": "rafam_2018.json",
+        "size": 186
+      },
+      {
+        "path": "external/georef_carmen_de_areco.json",
+        "name": "georef_carmen_de_areco.json",
+        "size": 241
+      },
+      {
+        "path": "external/provincial/rafam/rafam_all_years.json",
+        "name": "rafam_all_years.json",
+        "size": 1052
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2025_comprehensive.json",
+        "name": "rafam_2025_comprehensive.json",
+        "size": 136
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2024_comprehensive.json",
+        "name": "rafam_2024_comprehensive.json",
+        "size": 136
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2023_comprehensive.json",
+        "name": "rafam_2023_comprehensive.json",
+        "size": 136
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2022_comprehensive.json",
+        "name": "rafam_2022_comprehensive.json",
+        "size": 136
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2021_comprehensive.json",
+        "name": "rafam_2021_comprehensive.json",
+        "size": 136
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2020_comprehensive.json",
+        "name": "rafam_2020_comprehensive.json",
+        "size": 136
+      },
+      {
+        "path": "external/provincial/rafam/rafam_2019_comprehensive.json",
+        "name": "rafam_2019_comprehensive.json",
+        "size": 136
       },
       {
         "path": "consolidated/index.json",
@@ -9708,6 +9843,11 @@
         "path": "consolidated/2017/budget.json",
         "name": "budget.json",
         "size": 1103
+      },
+      {
+        "path": "audit_reports/audit_2025-10-02.json",
+        "name": "audit_2025-10-02.json",
+        "size": 1283
       }
     ]
   },
@@ -9752,6 +9892,12 @@
           "size": 6334
         },
         {
+          "name": "ingestion_report.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 1861
+        },
+        {
           "name": "kpi-definitions.json",
           "type": "file",
           "extension": ".json",
@@ -9792,6 +9938,17 @@
           "type": "file",
           "extension": ".json",
           "size": 2256
+        }
+      ]
+    },
+    "audit_reports": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "audit_2025-10-02.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 1283
         }
       ]
     },
@@ -10239,7 +10396,180 @@
     },
     "external": {
       "type": "directory",
+      "contents": [
+        {
+          "name": "georef_carmen_de_areco.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 241
+        },
+        {
+          "name": "rafam_2018.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 186
+        },
+        {
+          "name": "rafam_2019.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 186
+        },
+        {
+          "name": "rafam_2020.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 186
+        },
+        {
+          "name": "rafam_2021.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 186
+        },
+        {
+          "name": "rafam_2022.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 186
+        },
+        {
+          "name": "rafam_2023.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 186
+        },
+        {
+          "name": "rafam_2024.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 186
+        },
+        {
+          "name": "rafam_2025.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 186
+        }
+      ]
+    },
+    "external/municipal": {
+      "type": "directory",
       "contents": []
+    },
+    "external/national": {
+      "type": "directory",
+      "contents": []
+    },
+    "external/provincial": {
+      "type": "directory",
+      "contents": []
+    },
+    "external/provincial/rafam": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "rafam_2019_comprehensive.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 136
+        },
+        {
+          "name": "rafam_2020_comprehensive.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 136
+        },
+        {
+          "name": "rafam_2021_comprehensive.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 136
+        },
+        {
+          "name": "rafam_2022_comprehensive.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 136
+        },
+        {
+          "name": "rafam_2023_comprehensive.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 136
+        },
+        {
+          "name": "rafam_2024_comprehensive.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 136
+        },
+        {
+          "name": "rafam_2025_comprehensive.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 136
+        },
+        {
+          "name": "rafam_all_years.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 1052
+        }
+      ]
+    },
+    "historical": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "transparency_portal_2018.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 48047
+        },
+        {
+          "name": "transparency_portal_2019.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 48047
+        },
+        {
+          "name": "transparency_portal_2020.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 48047
+        },
+        {
+          "name": "transparency_portal_2021.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 48047
+        },
+        {
+          "name": "transparency_portal_2022.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 48047
+        },
+        {
+          "name": "transparency_portal_2023.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 48047
+        },
+        {
+          "name": "transparency_portal_2024.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 48047
+        },
+        {
+          "name": "transparency_portal_2025.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 48047
+        }
+      ]
     },
     "metadata": {
       "type": "directory",
@@ -21618,6 +21948,53 @@
       ]
     },
     "raw/pdf": {
+      "type": "directory",
+      "contents": []
+    },
+    "scraped": {
+      "type": "directory",
+      "contents": [
+        {
+          "name": "scrape_2025-10-02.json",
+          "type": "file",
+          "extension": ".json",
+          "size": 361
+        }
+      ]
+    },
+    "structured": {
+      "type": "directory",
+      "contents": []
+    },
+    "structured/2018": {
+      "type": "directory",
+      "contents": []
+    },
+    "structured/2019": {
+      "type": "directory",
+      "contents": []
+    },
+    "structured/2020": {
+      "type": "directory",
+      "contents": []
+    },
+    "structured/2021": {
+      "type": "directory",
+      "contents": []
+    },
+    "structured/2022": {
+      "type": "directory",
+      "contents": []
+    },
+    "structured/2023": {
+      "type": "directory",
+      "contents": []
+    },
+    "structured/2024": {
+      "type": "directory",
+      "contents": []
+    },
+    "structured/2025": {
       "type": "directory",
       "contents": []
     }

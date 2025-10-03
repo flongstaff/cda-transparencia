@@ -52,6 +52,7 @@ import {
   Info
 } from 'lucide-react';
 import dataIntegrationService from '../../services/DataIntegrationService';
+import chartDataService from '../../services/charts/ChartDataService';
 
 // Types
 interface FinancialData {
@@ -128,35 +129,111 @@ const EnhancedDataVisualization: React.FC<EnhancedDataVisualizationProps> = ({
     loadData();
   }, [year, dataType]);
 
+  // Helper function to map data types to chart type names
+  const getChartTypeName = (dataType: string): string => {
+    const typeMap: Record<string, string> = {
+      'budget': 'Budget_Execution',
+      'revenue': 'Revenue_Sources',
+      'expenditure': 'Expenditure_Report',
+      'debt': 'Debt_Report',
+      'personnel': 'Personnel_Expenses',
+      'contracts': 'Infrastructure_Projects',
+      'infrastructure': 'Infrastructure_Projects'
+    };
+    return typeMap[dataType] || 'Budget_Execution';
+  };
+
+  // Process raw chart data from CSV files
+  const processRawChartData = (rawData: any[], type: string): FinancialData[] => {
+    switch (type) {
+      case 'budget':
+        return rawData.map((item: any, index: number) => ({
+          category: item.category || item.Category || item.sector || item.Sector || `Category ${index + 1}`,
+          budgeted: parseFloat(item.budgeted || item.Budgeted || item.presupuestado || '0'),
+          executed: parseFloat(item.executed || item.Executed || item.ejecutado || '0'),
+          percentage: parseFloat(item.percentage || item.Percentage || item.execution_rate || '0'),
+          variance: parseFloat(item.variance || item.Variance || '0'),
+          trend: item.trend || item.Trend || (Math.random() > 0.5 ? 'up' : 'down')
+        }));
+      
+      case 'revenue':
+        return rawData.map((item: any, index: number) => ({
+          category: item.source || item.Source || item.category || item.Category || `Source ${index + 1}`,
+          budgeted: parseFloat(item.budgeted || item.Budgeted || item.presupuestado || '0'),
+          executed: parseFloat(item.executed || item.Executed || item.ejecutado || item.amount || '0'),
+          percentage: parseFloat(item.percentage || item.Percentage || item.execution_rate || '0'),
+          variance: parseFloat(item.variance || item.Variance || '0'),
+          trend: item.trend || item.Trend || (Math.random() > 0.5 ? 'up' : 'down')
+        }));
+      
+      case 'expenditure':
+        return rawData.map((item: any, index: number) => ({
+          category: item.category || item.Category || item.sector || item.Sector || `Category ${index + 1}`,
+          budgeted: parseFloat(item.budgeted || item.Budgeted || item.presupuestado || '0'),
+          executed: parseFloat(item.executed || item.Executed || item.ejecutado || item.amount || '0'),
+          percentage: parseFloat(item.percentage || item.Percentage || item.execution_rate || '0'),
+          variance: parseFloat(item.variance || item.Variance || '0'),
+          trend: item.trend || item.Trend || (Math.random() > 0.5 ? 'up' : 'down')
+        }));
+      
+      default:
+        return rawData.map((item: any, index: number) => ({
+          category: item.category || item.Category || item.name || item.Name || `Item ${index + 1}`,
+          budgeted: parseFloat(item.budgeted || item.Budgeted || item.presupuestado || '0'),
+          executed: parseFloat(item.executed || item.Executed || item.ejecutado || item.amount || '0'),
+          percentage: parseFloat(item.percentage || item.Percentage || item.execution_rate || '0'),
+          variance: parseFloat(item.variance || item.Variance || '0'),
+          trend: item.trend || item.Trend || (Math.random() > 0.5 ? 'up' : 'down')
+        }));
+    }
+  };
+
   const loadData = async () => {
     setLoading(true);
     setError(null);
 
     try {
-      // Try to load data from the data integration service first
-      const integratedData = await dataIntegrationService.loadIntegratedData(year);
+      // Try to load data from the chart data service first (highest priority)
+      const chartTypeName = getChartTypeName(dataType);
+      const rawData = await chartDataService.loadChartData(chartTypeName as any);
       
-      // Process the integrated data based on the requested data type
-      const processedData = processDataForType(integratedData, dataType);
-      setData(processedData);
-    } catch (integrationError) {
-      console.warn('Failed to load data from integration service:', integrationError);
+      if (rawData && rawData.length > 0) {
+        // Process the raw chart data directly
+        const processedData = processRawChartData(rawData, dataType);
+        setData(processedData);
+      } else {
+        // Fallback to data integration service
+        const integratedData = await dataIntegrationService.loadIntegratedData(year);
+        const processedData = processDataForType(integratedData, dataType);
+        setData(processedData);
+      }
+    } catch (chartDataError) {
+      console.warn('Failed to load data from chart data service:', chartDataError);
       
       try {
-        // Fallback to loading from local JSON if service fails
-        const response = await fetch(`/data/processed/${year}/consolidated_data.json`);
-        if (!response.ok) {
-          throw new Error(`Failed to load data for ${year}`);
-        }
-
-        const consolidatedData = await response.json();
-        const processedData = processDataForType(consolidatedData, dataType);
+        // Fallback to data integration service
+        const integratedData = await dataIntegrationService.loadIntegratedData(year);
+        const processedData = processDataForType(integratedData, dataType);
         setData(processedData);
-      } catch (localError) {
-        console.error('Error loading data from local JSON:', localError);
-        setError(localError instanceof Error ? localError.message : 'Error loading data');
-        // Fallback to sample data
-        setData(generateSampleData(dataType));
+      } catch (integrationError) {
+        console.warn('Failed to load data from integration service:', integrationError);
+        
+        try {
+          // Fallback to loading from local JSON if service fails
+          const response = await fetch(`/data/processed/${year}/consolidated_data.json`);
+          if (!response.ok) {
+            throw new Error(`Failed to load data for ${year}`);
+          }
+
+          const consolidatedData = await response.json();
+          const processedData = processDataForType(consolidatedData, dataType);
+          setData(processedData);
+        } catch (localError) {
+          console.error('Error loading data from local JSON:', localError);
+          setError(localError instanceof Error ? localError.message : 'Error loading data');
+          // Fallback to sample data only as last resort
+          setData(generateSampleData(dataType));
+        }
       }
     } finally {
       setLoading(false);

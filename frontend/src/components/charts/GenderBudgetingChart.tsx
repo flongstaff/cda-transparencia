@@ -46,22 +46,82 @@ const GenderBudgetingChart: React.FC<GenderBudgetingChartProps> = ({
   // Load chart data using React Query
   const { data, isLoading, isError, error: queryError } = useQuery({
     queryKey: ['chart-data', 'Gender_Budgeting', year],
-    queryFn: () => 
-      // Mock data for now - in a real implementation, we'd fetch from data service
-      Promise.resolve([
-        { month: 'ENE', male: 120, female: 135, total: 255 },
-        { month: 'FEB', male: 118, female: 138, total: 256 },
-        { month: 'MAR', male: 122, female: 140, total: 262 },
-        { month: 'ABR', male: 125, female: 142, total: 267 },
-        { month: 'MAY', male: 124, female: 145, total: 269 },
-        { month: 'JUN', male: 127, female: 147, total: 274 },
-        { month: 'JUL', male: 130, female: 148, total: 278 },
-        { month: 'AGO', male: 132, female: 150, total: 282 },
-        { month: 'SEP', male: 131, female: 152, total: 283 },
-        { month: 'OCT', male: 133, female: 155, total: 288 },
-        { month: 'NOV', male: 135, female: 157, total: 292 },
-        { month: 'DIC', male: 138, female: 155, total: 293 }
-      ]),
+    queryFn: async () => {
+      try {
+        // Try to load from the chart data service first
+        const rawData = await chartDataService.loadChartData('Gender_Budgeting');
+        
+        if (!rawData || rawData.length === 0) {
+          throw new Error('No data returned from service');
+        }
+        
+        // Process the raw data to match our expected format
+        return rawData.map((item: any) => ({
+          month: item.month || item.Month || item.date || 'Unknown',
+          male: parseInt(item.male || item.Male || item.hombres || 0),
+          female: parseInt(item.female || item.Female || item.mujeres || 0),
+          total: parseInt(item.total || item.Total || 0) || 
+                 (parseInt(item.male || item.Male || item.hombres || 0) + 
+                  parseInt(item.female || item.Female || item.mujeres || 0))
+        }));
+      } catch (serviceError) {
+        console.warn('Failed to load from chart data service, falling back to local data:', serviceError);
+        
+        // Fallback to local data if service fails
+        try {
+          const response = await fetch('/data/charts/Gender_Budgeting_consolidated_2019-2025.csv');
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          
+          const csvText = await response.text();
+          const lines = csvText.split('\n').filter(line => line.trim() !== '');
+          
+          if (lines.length < 2) {
+            throw new Error('CSV file is empty or malformed');
+          }
+          
+          // Parse CSV manually since we want to avoid importing PapaParse here
+          const headers = lines[0].split(',').map(h => h.trim());
+          const dataRows = lines.slice(1).map(line => {
+            const values = line.split(',').map(v => v.trim());
+            const obj: any = {};
+            headers.forEach((header, index) => {
+              obj[header] = values[index];
+            });
+            return obj;
+          });
+          
+          // Process the CSV data to match our expected format
+          return dataRows.map((item: any) => ({
+            month: item.month || item.Month || item.date || 'Unknown',
+            male: parseInt(item.male || item.Male || item.hombres || 0),
+            female: parseInt(item.female || item.Female || item.mujeres || 0),
+            total: parseInt(item.total || item.Total || 0) || 
+                   (parseInt(item.male || item.Male || item.hombres || 0) + 
+                    parseInt(item.female || item.Female || item.mujeres || 0))
+          }));
+        } catch (localError) {
+          console.error('Failed to load local data, using mock data as last resort:', localError);
+          
+          // Final fallback to mock data
+          return [
+            { month: 'ENE', male: 120, female: 135, total: 255 },
+            { month: 'FEB', male: 118, female: 138, total: 256 },
+            { month: 'MAR', male: 122, female: 140, total: 262 },
+            { month: 'ABR', male: 125, female: 142, total: 267 },
+            { month: 'MAY', male: 124, female: 145, total: 269 },
+            { month: 'JUN', male: 127, female: 147, total: 274 },
+            { month: 'JUL', male: 130, female: 148, total: 278 },
+            { month: 'AGO', male: 132, female: 150, total: 282 },
+            { month: 'SEP', male: 131, female: 152, total: 283 },
+            { month: 'OCT', male: 133, female: 155, total: 288 },
+            { month: 'NOV', male: 135, female: 157, total: 292 },
+            { month: 'DIC', male: 138, female: 155, total: 293 }
+          ];
+        }
+      }
+    },
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
   });

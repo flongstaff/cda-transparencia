@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
-import { 
-  Shield, 
-  AlertTriangle, 
-  CheckCircle, 
-  XCircle, 
-  Eye, 
+import React, { useState, useEffect } from 'react';
+import {
+  Shield,
+  AlertTriangle,
+  CheckCircle,
+  XCircle,
+  Eye,
   FileSearch,
   TrendingUp,
   TrendingDown,
   BarChart3,
   Search,
   Filter,
-  Download
+  Download,
+  RefreshCw,
+  ExternalLink
 } from 'lucide-react';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { externalAPIsService } from '../services/ExternalAPIsService';
+import { motion } from 'framer-motion';
+import ErrorBoundary from '../components/common/ErrorBoundary';
 
 // Mock data for demonstration
 const mockAuditData = [
@@ -87,7 +92,69 @@ const AuditsAndDiscrepanciesPage: React.FC = () => {
   const [sortBy, setSortBy] = useState<string>('variancePercent');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [viewMode, setViewMode] = useState<'table' | 'chart'>('table');
-  
+
+  // 🌐 External API integration for audit comparison
+  const [externalData, setExternalData] = useState<{
+    rafam: any;
+    gba: any;
+    contrataciones: any;
+  }>({
+    rafam: null,
+    gba: null,
+    contrataciones: null
+  });
+  const [externalLoading, setExternalLoading] = useState(true);
+  const [dataSources, setDataSources] = useState<string[]>(['local']);
+
+  // Load external data for audit comparison
+  useEffect(() => {
+    loadExternalData();
+  }, []);
+
+  const loadExternalData = async () => {
+    try {
+      setExternalLoading(true);
+      console.log('Fetching external data for audit comparison...');
+
+      const [rafamResult, gbaResult, contratacionesResult] = await Promise.allSettled([
+        externalAPIsService.getRAFAMData('270'),
+        externalAPIsService.getBuenosAiresProvincialData(),
+        externalAPIsService.getContratacionesData('Carmen de Areco')
+      ]);
+
+      const newExternalData: any = {
+        rafam: rafamResult.status === 'fulfilled' && rafamResult.value.success
+          ? rafamResult.value.data
+          : null,
+        gba: gbaResult.status === 'fulfilled' && gbaResult.value.success
+          ? gbaResult.value.data
+          : null,
+        contrataciones: contratacionesResult.status === 'fulfilled' && contratacionesResult.value.success
+          ? contratacionesResult.value.data
+          : null
+      };
+
+      setExternalData(newExternalData);
+
+      const activeSources = ['local'];
+      if (newExternalData.rafam) activeSources.push('rafam');
+      if (newExternalData.gba) activeSources.push('gba');
+      if (newExternalData.contrataciones) activeSources.push('contrataciones');
+
+      setDataSources(activeSources);
+
+      console.log('External audit data loaded:', {
+        rafam: !!newExternalData.rafam,
+        gba: !!newExternalData.gba,
+        contrataciones: !!newExternalData.contrataciones
+      });
+    } catch (error) {
+      console.error('Error loading external audit data:', error);
+    } finally {
+      setExternalLoading(false);
+    }
+  };
+
   // Format currency function
   const formatCurrency = (amount: number): string => {
     return new Intl.NumberFormat('es-AR', {
@@ -173,12 +240,72 @@ const AuditsAndDiscrepanciesPage: React.FC = () => {
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">
-          Audits y Discrepancies
+          Auditorías y Discrepancias
         </h1>
         <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">
-          Análisis comparativo entre datos locales y fuentes externas
+          Análisis comparativo entre datos locales y fuentes externas (RAFAM, GBA, Contrataciones)
         </p>
       </div>
+
+      {/* Data Sources Status */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mb-6 bg-white dark:bg-dark-surface rounded-lg p-4 border border-gray-200 dark:border-dark-border"
+      >
+        <div className="flex items-center justify-between">
+          <h3 className="text-sm font-semibold text-gray-700 dark:text-dark-text-secondary flex items-center">
+            <Shield className="w-4 h-4 mr-2" />
+            Fuentes de Comparación Activas
+          </h3>
+          {externalLoading && <RefreshCw className="w-4 h-4 animate-spin text-blue-600" />}
+        </div>
+        <div className="mt-3 flex flex-wrap gap-3">
+          <div className="flex items-center text-sm">
+            <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+            <span className="text-gray-700 dark:text-dark-text-secondary">Datos Locales (CSV/JSON)</span>
+          </div>
+          {externalData.rafam ? (
+            <div className="flex items-center text-sm">
+              <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+              <span className="text-gray-700 dark:text-dark-text-secondary">RAFAM Buenos Aires</span>
+              <ExternalLink className="w-3 h-3 ml-1 text-gray-400" />
+            </div>
+          ) : (
+            <div className="flex items-center text-sm">
+              <AlertTriangle className="w-4 h-4 mr-2 text-gray-400" />
+              <span className="text-gray-400">RAFAM Buenos Aires</span>
+            </div>
+          )}
+          {externalData.gba ? (
+            <div className="flex items-center text-sm">
+              <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+              <span className="text-gray-700 dark:text-dark-text-secondary">Portal GBA</span>
+              <ExternalLink className="w-3 h-3 ml-1 text-gray-400" />
+            </div>
+          ) : (
+            <div className="flex items-center text-sm">
+              <AlertTriangle className="w-4 h-4 mr-2 text-gray-400" />
+              <span className="text-gray-400">Portal GBA</span>
+            </div>
+          )}
+          {externalData.contrataciones ? (
+            <div className="flex items-center text-sm">
+              <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+              <span className="text-gray-700 dark:text-dark-text-secondary">Contrataciones Abiertas</span>
+              <ExternalLink className="w-3 h-3 ml-1 text-gray-400" />
+            </div>
+          ) : (
+            <div className="flex items-center text-sm">
+              <AlertTriangle className="w-4 h-4 mr-2 text-gray-400" />
+              <span className="text-gray-400">Contrataciones Abiertas</span>
+            </div>
+          )}
+          <div className="ml-auto text-xs text-gray-500 dark:text-dark-text-tertiary">
+            Fuentes activas para auditoría: {dataSources.length}
+          </div>
+        </div>
+      </motion.div>
 
       {/* Summary Stats */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
@@ -484,4 +611,55 @@ const AuditsAndDiscrepanciesPage: React.FC = () => {
   );
 };
 
-export default AuditsAndDiscrepanciesPage;
+
+// Wrap with error boundary for production safety
+const AuditsAndDiscrepanciesPageWithErrorBoundary: React.FC = () => {
+  return (
+    <ErrorBoundary
+      fallback={(error) => (
+        <div className="container mx-auto px-4 py-8">
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-6 rounded-lg">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-yellow-800 dark:text-yellow-200">
+                  Error al Cargar Página
+                </h3>
+                <div className="mt-2 text-sm text-yellow-700 dark:text-yellow-300">
+                  <p>Ocurrió un error al cargar esta página. Por favor, intente más tarde.</p>
+                  {error && (
+                    <p className="mt-2 text-xs font-mono bg-yellow-100 dark:bg-yellow-900/40 p-2 rounded">
+                      {error.message}
+                    </p>
+                  )}
+                </div>
+                <div className="mt-4 space-x-2">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Recargar
+                  </button>
+                  <a
+                    href="/"
+                    className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Volver al Inicio
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    >
+      <AuditsAndDiscrepanciesPage />
+    </ErrorBoundary>
+  );
+};
+
+export default AuditsAndDiscrepanciesPageWithErrorBoundary;

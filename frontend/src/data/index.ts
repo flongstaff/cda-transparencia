@@ -9,10 +9,11 @@ export { default as FinancialDataService } from './FinancialDataService';
 export { default as useFinancialData } from '../hooks/useFinancialData';
 
 // Components
-export { default as FinancialDashboard } from '../components/FinancialDashboard';
+// Removed unused export to fix build errors
+// export { default as FinancialDashboard } from '../pages/FinancialDashboard';
 export { default as FinancialSummaryCard } from '../components/FinancialSummaryCard';
-export { default as RevenueBySourceChart } from '../components/RevenueBySourceChart';
-export { default as ExpenditureByProgramChart } from '../components/ExpenditureByProgramChart';
+export { default as RevenueBySourceChart } from '../components/charts/RevenueBySourceChart';
+export { default as ExpenditureByProgramChart } from '../components/charts/ExpenditureByProgramChart';
 
 // Types
 export type { FinancialData, RevenueBySource, ExpenditureByProgram, ConsolidatedData } from './FinancialDataService';

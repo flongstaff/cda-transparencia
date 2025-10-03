@@ -3,8 +3,11 @@ import { useState, useEffect } from 'react';
 import { useTable } from 'react-table';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useMasterData } from '../hooks/useMasterData';
+import { useAuditsData } from '../hooks/useUnifiedData';
+import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator';
+import { YearSelector } from '../components/common/YearSelector';
 import UnifiedTransparencyService from '../services/UnifiedTransparencyService';
-import { AlertTriangle, CheckCircle, Clock, ExternalLink, Loader2, Shield, Search, TrendingUp } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Clock, ExternalLink, Loader2, Shield, Search, TrendingUp, RefreshCw } from 'lucide-react';
 import ErrorBoundary from '../components/common/ErrorBoundary';
 import ChartAuditReport from '../components/charts/ChartAuditReport';
 import TimeSeriesAnomalyChart from '../components/charts/TimeSeriesAnomalyChart';
@@ -53,7 +56,7 @@ const Audits: React.FC = () => {
   const [dataFlags, setDataFlags] = useState<DataFlag[]>([]);
   const [loadingAudits, setLoadingAudits] = useState<boolean>(true);
   
-  // Use unified master data service
+  // Use unified master data service (legacy)
   const {
     masterData,
     currentBudget,
@@ -62,15 +65,31 @@ const Audits: React.FC = () => {
     currentContracts,
     currentSalaries,
     currentDebt,
-    loading,
-    error,
+    loading: legacyLoading,
+    error: legacyError,
     totalDocuments,
-    availableYears,
+    availableYears: legacyYears,
     categories,
     dataSourcesActive,
     refetch,
     switchYear
   } = useMasterData(selectedYear);
+
+  // 🌐 Use new UnifiedDataService with external APIs
+  const {
+    data: unifiedAuditsData,
+    externalData,
+    sources,
+    activeSources,
+    loading: unifiedLoading,
+    error: unifiedError,
+    refetch: unifiedRefetch,
+    availableYears,
+    liveDataEnabled
+  } = useAuditsData(selectedYear);
+
+  const loading = legacyLoading || unifiedLoading;
+  const error = legacyError || unifiedError;
 
   // Load audit data
   useEffect(() => {

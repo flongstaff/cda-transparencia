@@ -33,7 +33,7 @@ const cache = new NodeCache({ stdTTL: 300, checkperiod: 60 });
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5176', 'http://localhost:5173', 'https://cda-transparencia.org'],
+  origin: ['http://localhost:5176', 'http://localhost:5177', 'http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175', 'https://cda-transparencia.org'],
   credentials: true
 }));
 app.use(express.json());
@@ -42,7 +42,7 @@ app.use(morgan('combined'));
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100 // limit each IP to 100 requests per windowMs
+  max: 1000 // limit each IP to 1000 requests per windowMs (increased for testing)
 });
 app.use('/api/', limiter);
 
@@ -154,6 +154,185 @@ app.get('/api/carmen/transparency', async (req, res) => {
 
   } catch (error) {
     console.error('Error fetching Carmen transparency data:', error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// Carmen de Areco Boletín Oficial
+app.get('/api/carmen/boletin', async (req, res) => {
+  try {
+    const cacheKey = 'carmen_boletin';
+    const cached = cache.get(cacheKey);
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    // Check for boletin oficial section
+    const response = await axios.get('https://carmendeareco.gob.ar/gobierno/boletin-oficial/', {
+      timeout: 10000,
+      headers: { 'User-Agent': 'Carmen-Transparency-Portal/1.0' }
+    });
+
+    const $ = cheerio.load(response.data);
+    const publications = [];
+
+    // Extract publications
+    $('article, .publication, .post').each((i, elem) => {
+      const title = $(elem).find('h2, h3, .title').text().trim();
+      const date = $(elem).find('.date, .fecha, time').text().trim();
+      const link = $(elem).find('a').first().attr('href');
+
+      if (title) {
+        publications.push({
+          title,
+          date,
+          url: link ? (link.startsWith('http') ? link : `https://carmendeareco.gob.ar${link}`) : null
+        });
+      }
+    });
+
+    const data = { publications, count: publications.length };
+
+    cache.set(cacheKey, data, 3600); // 1 hour
+    res.json({ success: true, data, cached: false });
+
+  } catch (error) {
+    console.error('Error fetching Carmen boletin data:', error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// Carmen de Areco Licitaciones/Contrataciones
+app.get('/api/carmen/licitaciones', async (req, res) => {
+  try {
+    const cacheKey = 'carmen_licitaciones';
+    const cached = cache.get(cacheKey);
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    const response = await axios.get('https://carmendeareco.gob.ar/licitaciones/', {
+      timeout: 10000,
+      headers: { 'User-Agent': 'Carmen-Transparency-Portal/1.0' }
+    });
+
+    const $ = cheerio.load(response.data);
+    const tenders = [];
+
+    // Extract tender notices
+    $('.tender, .licitacion, .contrato').each((i, elem) => {
+      const title = $(elem).find('h2, h3, .title').text().trim();
+      const date = $(elem).find('.date, .fecha').text().trim();
+      const status = $(elem).find('.status, .estado').text().trim();
+      const link = $(elem).find('a').first().attr('href');
+
+      if (title) {
+        tenders.push({
+          title,
+          date,
+          status,
+          url: link ? (link.startsWith('http') ? link : `https://carmendeareco.gob.ar${link}`) : null
+        });
+      }
+    });
+
+    const data = { tenders, count: tenders.length };
+
+    cache.set(cacheKey, data, 3600); // 1 hour
+    res.json({ success: true, data, cached: false });
+
+  } catch (error) {
+    console.error('Error fetching Carmen licitaciones data:', error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// Carmen de Areco Declaraciones Juradas
+app.get('/api/carmen/declaraciones', async (req, res) => {
+  try {
+    const cacheKey = 'carmen_declaraciones';
+    const cached = cache.get(cacheKey);
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    const response = await axios.get('https://carmendeareco.gob.ar/declaraciones-juradas/', {
+      timeout: 10000,
+      headers: { 'User-Agent': 'Carmen-Transparency-Portal/1.0' }
+    });
+
+    const $ = cheerio.load(response.data);
+    const declarations = [];
+
+    // Extract declarations
+    $('.declaration, .declaracion, .document').each((i, elem) => {
+      const official = $(elem).find('.official, .funcionario').text().trim();
+      const year = $(elem).find('.year, .anio').text().trim();
+      const type = $(elem).find('.type, .tipo').text().trim();
+      const link = $(elem).find('a').first().attr('href');
+
+      if (official) {
+        declarations.push({
+          official,
+          year,
+          type,
+          url: link ? (link.startsWith('http') ? link : `https://carmendeareco.gob.ar${link}`) : null
+        });
+      }
+    });
+
+    const data = { declarations, count: declarations.length };
+
+    cache.set(cacheKey, data, 3600); // 1 hour
+    res.json({ success: true, data, cached: false });
+
+  } catch (error) {
+    console.error('Error fetching Carmen declaraciones data:', error.message);
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// Honorable Concejo Deliberante (HCD) Blog
+app.get('/api/hcd/blog', async (req, res) => {
+  try {
+    const cacheKey = 'hcd_blog';
+    const cached = cache.get(cacheKey);
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    const response = await axios.get('http://hcdcarmendeareco.blogspot.com/', {
+      timeout: 15000,
+      headers: { 'User-Agent': 'Carmen-Transparency-Portal/1.0' }
+    });
+
+    const $ = cheerio.load(response.data);
+    const posts = [];
+
+    // Extract blog posts
+    $('.post, article, .blog-post').each((i, elem) => {
+      const title = $(elem).find('h2, h3, .title, .post-title').text().trim();
+      const date = $(elem).find('.date, .fecha, .post-date, time').text().trim();
+      const content = $(elem).find('.post-body, .content').text().trim().substring(0, 200) + '...';
+      const link = $(elem).find('a').first().attr('href');
+
+      if (title) {
+        posts.push({
+          title,
+          date,
+          content,
+          url: link || null
+        });
+      }
+    });
+
+    const data = { posts, count: posts.length };
+
+    cache.set(cacheKey, data, 3600); // 1 hour
+    res.json({ success: true, data, cached: false });
+
+  } catch (error) {
+    console.error('Error fetching HCD blog data:', error.message);
     res.status(500).json({ success: false, error: error.message });
   }
 });
@@ -325,7 +504,7 @@ app.post('/api/external/rafam', async (req, res) => {
         mun: municipalityCode,
         // Add other RAFAM-specific parameters as needed
       },
-      timeout: 15000,
+      timeout: 30000, // Increased to 30 seconds for slow RAFAM responses
       headers: {
         'User-Agent': 'Carmen-Transparency-Portal/1.0',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
@@ -766,6 +945,176 @@ app.post('/api/pdf/extract', async (req, res) => {
 });
 
 /**
+ * SERIES DE TIEMPO API (TIME SERIES)
+ */
+app.post('/api/national/series-tiempo', async (req, res) => {
+  try {
+    const { ids, start_date, limit, format } = req.body;
+    const cacheKey = `series_tiempo_${ids}_${start_date}`;
+    const cached = cache.get(cacheKey);
+
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    console.log(`Fetching Series de Tiempo data for: ${ids}`);
+
+    const seriesUrl = 'https://apis.datos.gob.ar/series/api/series';
+
+    const response = await axios.get(seriesUrl, {
+      params: {
+        ids,
+        start_date,
+        limit: limit || 1000,
+        format: format || 'json'
+      },
+      timeout: 15000,
+      headers: {
+        'User-Agent': 'Carmen-Transparency-Portal/1.0'
+      }
+    });
+
+    const data = {
+      series: response.data,
+      count: Array.isArray(response.data.data) ? response.data.data.length : 0,
+      lastUpdated: new Date().toISOString()
+    };
+
+    cache.set(cacheKey, data, 7200); // 2 hours
+    res.json({ success: true, data, cached: false, source: 'Series de Tiempo API' });
+
+  } catch (error) {
+    console.error('Error fetching Series de Tiempo:', error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      source: 'Series de Tiempo'
+    });
+  }
+});
+
+/**
+ * OBRAS PÚBLICAS API (PUBLIC WORKS)
+ */
+app.post('/api/national/obras-publicas', async (req, res) => {
+  try {
+    const { municipality, year, filters } = req.body;
+    const cacheKey = `obras_publicas_${municipality}_${year}`;
+    const cached = cache.get(cacheKey);
+
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    console.log(`Fetching Obras Públicas data for: ${municipality}, year: ${year}`);
+
+    // The official API endpoint for public works tracking
+    const obrasUrl = 'https://www.argentina.gob.ar/obras-publicas/api-seguimiento-de-obras';
+
+    const response = await axios.get(obrasUrl, {
+      params: {
+        provincia: filters?.province || 'Buenos Aires',
+        municipio: municipality,
+        anio: year,
+        estado: filters?.status || 'all'
+      },
+      timeout: 15000,
+      headers: {
+        'User-Agent': 'Carmen-Transparency-Portal/1.0'
+      }
+    });
+
+    const data = {
+      municipality,
+      year,
+      projects: response.data,
+      count: Array.isArray(response.data) ? response.data.length : 0,
+      lastUpdated: new Date().toISOString()
+    };
+
+    cache.set(cacheKey, data, 10800); // 3 hours
+    res.json({ success: true, data, cached: false, source: 'Obras Públicas API' });
+
+  } catch (error) {
+    console.error('Error fetching Obras Públicas:', error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      source: 'Obras Públicas'
+    });
+  }
+});
+
+/**
+ * AAIP TRANSPARENCY AGENCY DATA
+ */
+app.get('/api/national/aaip', async (req, res) => {
+  try {
+    const cacheKey = 'aaip_transparency';
+    const cached = cache.get(cacheKey);
+
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    console.log('Fetching AAIP transparency data');
+
+    const aaipUrl = 'https://www.argentina.gob.ar/aaip';
+
+    const response = await axios.get(aaipUrl, {
+      timeout: 15000,
+      headers: {
+        'User-Agent': 'Carmen-Transparency-Portal/1.0'
+      }
+    });
+
+    const $ = cheerio.load(response.data);
+    const transparencyData = {
+      guidelines: [],
+      reports: [],
+      regulations: [],
+      lastUpdated: new Date().toISOString()
+    };
+
+    // Extract transparency guidelines and reports
+    $('.guideline, .document, article').each((i, elem) => {
+      const title = $(elem).find('h2, h3, .title').text().trim();
+      const link = $(elem).find('a').first().attr('href');
+      const date = $(elem).find('.date, .fecha, time').text().trim();
+
+      if (title) {
+        const doc = {
+          title,
+          url: link ? (link.startsWith('http') ? link : `https://www.argentina.gob.ar${link}`) : null,
+          date
+        };
+
+        if (title.toLowerCase().includes('guía') || title.toLowerCase().includes('guide')) {
+          transparencyData.guidelines.push(doc);
+        } else if (title.toLowerCase().includes('informe') || title.toLowerCase().includes('report')) {
+          transparencyData.reports.push(doc);
+        } else if (title.toLowerCase().includes('reglament') || title.toLowerCase().includes('regulation')) {
+          transparencyData.regulations.push(doc);
+        }
+      }
+    });
+
+    const data = transparencyData;
+
+    cache.set(cacheKey, data, 14400); // 4 hours
+    res.json({ success: true, data, cached: false, source: 'AAIP' });
+
+  } catch (error) {
+    console.error('Error fetching AAIP data:', error.message);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      source: 'AAIP'
+    });
+  }
+});
+
+/**
  * DATA VALIDATION AND QUALITY CHECKS
  */
 app.post('/api/validate', async (req, res) => {
@@ -824,6 +1173,169 @@ app.get('/api/cache/stats', (req, res) => {
 });
 
 /**
+ * GENERIC PROXY ENDPOINT - Proxy any URL with CORS bypass
+ * Supports both GET (url as query param) and POST (url in body)
+ */
+const proxyHandler = async (req, res) => {
+  try {
+    const url = req.query.url || req.body?.url;
+    const method = req.body?.method || 'GET';
+    const headers = req.body?.headers || {};
+    const body = req.body?.body;
+
+    if (!url) {
+      return res.status(400).json({ success: false, error: 'URL is required' });
+    }
+
+    const cacheKey = `proxy_${method}_${url}`;
+    const cached = cache.get(cacheKey);
+    if (cached) {
+      return res.json({ success: true, data: cached, cached: true });
+    }
+
+    const requestConfig = {
+      method,
+      url,
+      headers: { 'User-Agent': 'Carmen-Transparency-Portal/1.0', ...headers },
+      timeout: 15000
+    };
+
+    if (body && (method === 'POST' || method === 'PUT')) {
+      requestConfig.data = body;
+    }
+
+    const response = await axios(requestConfig);
+    cache.set(cacheKey, response.data, 300);
+    res.json({ success: true, data: response.data, cached: false, source: url });
+  } catch (err) {
+    console.error('Proxy error:', err.message);
+    res.status(500).json({ success: false, error: err.message });
+  }
+};
+
+app.get('/api/external/proxy', proxyHandler);
+app.post('/api/external/proxy', proxyHandler);
+
+/**
+ * CARMEN DE ARECO AGGREGATED ENDPOINT
+ */
+app.get('/api/external/carmen-de-areco', async (req, res) => {
+  try {
+    const [official, transparency, licitaciones] = await Promise.allSettled([
+      axios.get('http://localhost:3001/api/carmen/official'),
+      axios.get('http://localhost:3001/api/carmen/transparency'),
+      axios.get('http://localhost:3001/api/carmen/licitaciones')
+    ]);
+
+    const data = {
+      source: 'Carmen de Areco',
+      official: official.status === 'fulfilled' ? official.value.data : null,
+      transparency: transparency.status === 'fulfilled' ? transparency.value.data : null,
+      licitaciones: licitaciones.status === 'fulfilled' ? licitaciones.value.data : null,
+      lastUpdated: new Date().toISOString()
+    };
+
+    res.json({ success: true, data });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+/**
+ * AGGREGATED EXTERNAL DATA - All sources in one call
+ */
+app.get('/api/external/all-external-data', async (req, res) => {
+  try {
+    const PORT_SELF = PORT || 3001;
+    const [carmenOfficial, rafam, gba, datos, georef] = await Promise.allSettled([
+      axios.get(`http://localhost:${PORT_SELF}/api/carmen/official`),
+      axios.post(`http://localhost:${PORT_SELF}/api/external/rafam`, { municipalityCode: '270', url: 'https://www.rafam.ec.gba.gov.ar/' }),
+      axios.get(`http://localhost:${PORT_SELF}/api/provincial/gba`),
+      axios.get(`http://localhost:${PORT_SELF}/api/national/datos`),
+      axios.get(`http://localhost:${PORT_SELF}/api/national/georef`)
+    ]);
+
+    const aggregatedData = {
+      municipal: { carmenOfficial: carmenOfficial.status === 'fulfilled' ? carmenOfficial.value.data : null },
+      provincial: { rafam: rafam.status === 'fulfilled' ? rafam.value.data : null, gba: gba.status === 'fulfilled' ? gba.value.data : null },
+      national: { datos: datos.status === 'fulfilled' ? datos.value.data : null, georef: georef.status === 'fulfilled' ? georef.value.data : null },
+      lastUpdated: new Date().toISOString(),
+      sourcesActive: {
+        municipal: carmenOfficial.status === 'fulfilled',
+        rafam: rafam.status === 'fulfilled',
+        gba: gba.status === 'fulfilled',
+        datos: datos.status === 'fulfilled',
+        georef: georef.status === 'fulfilled'
+      }
+    };
+
+    res.json({ success: true, data: aggregatedData, timestamp: new Date().toISOString() });
+  } catch (err) {
+    console.error('Aggregated data error:', err.message);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+/**
+ * CIVIL SOCIETY ENDPOINTS
+ */
+app.post('/api/external/poder-ciudadano', async (req, res) => {
+  try {
+    const { searchQuery = 'Carmen de Areco' } = req.body;
+    const data = { source: 'Poder Ciudadano', articles: [], available: false };
+    res.json({ success: true, data });
+  } catch (err) {
+    res.json({ success: false, error: err.message, data: { source: 'Poder Ciudadano', available: false } });
+  }
+});
+
+app.post('/api/external/acij', async (req, res) => {
+  try {
+    const data = { source: 'ACIJ', transparency_reports: [], available: false };
+    res.json({ success: true, data });
+  } catch (err) {
+    res.json({ success: false, error: err.message, data: { source: 'ACIJ', available: false } });
+  }
+});
+
+app.post('/api/external/aaip/transparency-index', async (req, res) => {
+  try {
+    const { municipality = 'Carmen de Areco' } = req.body;
+    const data = { source: 'AAIP', municipality, transparencyScore: 0, available: false };
+    res.json({ success: true, data });
+  } catch (err) {
+    res.json({ success: false, error: err.message, data: { source: 'AAIP', available: false } });
+  }
+});
+
+app.post('/api/external/infoleg', async (req, res) => {
+  try {
+    const data = { source: 'InfoLEG', laws: [], available: false };
+    res.json({ success: true, data });
+  } catch (err) {
+    res.json({ success: false, error: err.message, data: { source: 'InfoLEG', available: false } });
+  }
+});
+
+app.post('/api/external/ministry-of-justice', async (req, res) => {
+  try {
+    const data = { source: 'Ministry of Justice', documents: [], available: false };
+    res.json({ success: true, data });
+  } catch (err) {
+    res.json({ success: false, error: err.message, data: { source: 'Ministry of Justice', available: false } });
+  }
+});
+
+app.post('/api/external/directorio-legislativo', async (req, res) => {
+  try {
+    const data = { source: 'Directorio Legislativo', representatives: [], available: false };
+    res.json({ success: true, data });
+  } catch (err) {
+    res.json({ success: false, error: err.message, data: { source: 'Directorio Legislativo', available: false } });
+  }
+});
+
+/**
  * ERROR HANDLER
  */
 app.use((err, req, res, next) => {
@@ -843,18 +1355,29 @@ app.listen(PORT, () => {
   console.log(`📊 Health check: http://localhost:${PORT}/health`);
   console.log(`🗑️  Clear cache: curl -X DELETE http://localhost:${PORT}/api/cache/clear`);
   console.log(`\n🌐 Available endpoints:`);
+  console.log(`\n  📍 Carmen de Areco Sources:`);
   console.log(`   GET  /api/carmen/official - Carmen de Areco official site`);
   console.log(`   GET  /api/carmen/transparency - Transparency portal`);
+  console.log(`   GET  /api/carmen/boletin - Boletín Oficial Carmen de Areco`);
+  console.log(`   GET  /api/carmen/licitaciones - Licitaciones/Contrataciones`);
+  console.log(`   GET  /api/carmen/declaraciones - Declaraciones Juradas`);
+  console.log(`   GET  /api/hcd/blog - Honorable Concejo Deliberante blog`);
+  console.log(`\n  🇦🇷 National Level APIs:`);
   console.log(`   GET  /api/national/datos - datos.gob.ar API`);
-  console.log(`   GET  /api/national/georef - Geographic data`);
+  console.log(`   GET  /api/national/georef - Geographic data (Georef API)`);
+  console.log(`   GET  /api/national/aaip - AAIP Transparency Agency`);
+  console.log(`   POST /api/national/series-tiempo - Time Series API`);
+  console.log(`   POST /api/national/obras-publicas - Public Works API`);
   console.log(`   POST /api/national/afip - AFIP tax data`);
   console.log(`   POST /api/national/contrataciones - Open contracts`);
   console.log(`   POST /api/national/boletin - National Boletín Oficial`);
+  console.log(`\n  🏛️  Provincial Level (Buenos Aires):`);
   console.log(`   GET  /api/provincial/gba - Buenos Aires open data`);
   console.log(`   GET  /api/provincial/fiscal - Buenos Aires fiscal transparency`);
   console.log(`   POST /api/provincial/boletin - Provincial Boletín Oficial`);
   console.log(`   POST /api/provincial/expedientes - Administrative proceedings`);
-  console.log(`   POST /api/external/rafam - RAFAM economic data`);
+  console.log(`   POST /api/external/rafam - RAFAM economic data (CRUCIAL)`);
+  console.log(`\n  🔧 Utilities:`);
   console.log(`   GET  /api/powerbi/extract?url=<url> - Extract PowerBI data`);
   console.log(`   POST /api/pdf/extract - Extract PDF data`);
   console.log(`   POST /api/validate - Validate data`);

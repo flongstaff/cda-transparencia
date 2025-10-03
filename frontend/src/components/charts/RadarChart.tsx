@@ -1,65 +1,54 @@
 import React from 'react';
-import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend, ResponsiveContainer } from 'recharts';
-import { motion } from 'framer-motion';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import StandardizedSection from '../ui/StandardizedSection';
 
-interface RadarDataPoint {
+interface RadarDataItem {
   subject: string;
-  [key: string]: number | string;
+  value: number;
+  fullMark: number;
 }
 
 interface RadarChartProps {
-  data: RadarDataPoint[];
+  data: RadarDataItem[];
   title?: string;
+  description?: string;
   height?: number;
   className?: string;
+  color?: string;
 }
 
-const RadarChartComponent: React.FC<RadarChartProps> = ({ 
-  data, 
-  title, 
+const CustomRadarChart: React.FC<RadarChartProps> = ({
+  data,
+  title = 'Radar Chart',
+  description,
   height = 400,
-  className = ''
+  className = '',
+  color = '#3B82F6'
 }) => {
-  // Get all data keys except 'subject'
-  const dataKeys = Object.keys(data[0] || {}).filter(key => key !== 'subject');
-  
-  // Define colors for each data series
-  const colors = ['#8884d8', '#82ca9d', '#ffc658', '#ff7300', '#00ff00'];
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className={`bg-white rounded-lg shadow-sm border border-gray-200 ${className}`}
+    <StandardizedSection
+      title={title}
+      description={description}
+      className={className}
     >
-      {title && (
-        <div className="p-4 border-b border-gray-100">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{title}</h3>
-        </div>
-      )}
-      
-      <div style={{ height: height }}>
+      <div style={{ height, width: '100%' }}>
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
             <PolarGrid />
             <PolarAngleAxis dataKey="subject" />
-            <PolarRadiusAxis />
-            {dataKeys.map((key, index) => (
-              <Radar
-                key={key}
-                name={key}
-                dataKey={key}
-                stroke={colors[index % colors.length]}
-                fill={colors[index % colors.length]}
-                fillOpacity={0.6}
-              />
-            ))}
-            <Legend />
+            <PolarRadiusAxis angle={30} domain={[0, 'dataMax']} />
+            <Radar
+              name="Performance"
+              dataKey="value"
+              stroke={color}
+              fill={color}
+              fillOpacity={0.6}
+            />
           </RadarChart>
         </ResponsiveContainer>
       </div>
-    </motion.div>
+    </StandardizedSection>
   );
 };
 
-export default RadarChartComponent;
+export default CustomRadarChart;

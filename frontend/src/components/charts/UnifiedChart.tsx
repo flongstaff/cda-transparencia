@@ -126,7 +126,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
   // Transform data based on chart type using real data
   const chartData = useMemo(() => {
     // Handle historical trend charts first
-    if (type === 'budget-trend' && budgetHistoricalData.length > 0) {
+    if (type === 'budget-trend' && budgetHistoricalData && budgetHistoricalData.length > 0) {
       return budgetHistoricalData.map((item: Record<string, unknown>) => ({
         year: item.year,
         budget_total: item.budget_total,
@@ -136,7 +136,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       }));
     }
     
-    if (type === 'contract-trend' && contractsHistoricalData.length > 0) {
+    if (type === 'contract-trend' && contractsHistoricalData && contractsHistoricalData.length > 0) {
       return contractsHistoricalData.map((item: Record<string, unknown>) => ({
         year: item.year,
         total_contracts: item.total_contracts,
@@ -145,7 +145,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       }));
     }
     
-    if (type === 'salary-trend' && salariesHistoricalData.length > 0) {
+    if (type === 'salary-trend' && salariesHistoricalData && salariesHistoricalData.length > 0) {
       return salariesHistoricalData.map((item: Record<string, unknown>) => ({
         year: item.year,
         total_employees: item.total_employees,
@@ -155,7 +155,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       }));
     }
     
-    if (type === 'document-trend' && documentsHistoricalData.length > 0) {
+    if (type === 'document-trend' && documentsHistoricalData && documentsHistoricalData.length > 0) {
       return documentsHistoricalData.map((item: Record<string, unknown>) => ({
         year: item.year,
         total_documents: item.total_documents,
@@ -163,7 +163,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       }));
     }
     
-    if (type === 'debt-trend' && debtHistoricalData.length > 0) {
+    if (type === 'debt-trend' && debtHistoricalData && debtHistoricalData.length > 0) {
       return debtHistoricalData.map((item: Record<string, unknown>) => ({
         year: item.year,
         total_debt: item.total_debt,
@@ -171,7 +171,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       }));
     }
     
-    if (type === 'treasury-trend' && treasuryHistoricalData.length > 0) {
+    if (type === 'treasury-trend' && treasuryHistoricalData && treasuryHistoricalData.length > 0) {
       return treasuryHistoricalData.map((item: Record<string, unknown>) => ({
         year: item.year,
         total_revenue: item.total_revenue,

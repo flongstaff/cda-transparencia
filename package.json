@@ -23,18 +23,21 @@
   "author": "Carmen de Areco Transparency Team",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.12",
+    "axios": "^1.12.2",
+    "cheerio": "^1.1.2",
     "csv-writer": "^1.6.0",
     "fs-extra": "^11.3.2",
     "glob": "^11.0.3",
     "lucide-react": "^0.544.0",
+    "pdf-parse": "^2.1.1",
     "pdfjs-dist": "^4.0.0",
     "puppeteer": "^24.22.3",
     "tesseract.js": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "@types/puppeteer": "^7.0.0"
+    "@types/puppeteer": "^7.0.0",
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=18.0.0"

@@ -57,9 +57,21 @@ const QuarterlyExecutionChart: React.FC<QuarterlyExecutionChartProps> = memo(({
         filteredData = filteredData.filter(item => Number(item.year) === year);
       }
       
+      // Process quarterly data to combine quarter and year fields for proper display
+      const processedData = filteredData.map(item => {
+        if (item.quarter && item.year) {
+          // Create a quarterLabel field with the combined formatted value
+          return {
+            ...item,
+            quarterLabel: `${item.quarter} ${item.year}`
+          };
+        }
+        return item;
+      });
+      
       setLoading(false);
       setError(null);
-      setChartData(filteredData);
+      setChartData(processedData);
     }
   }, [data, isLoading, isError, queryError, year]);
   
@@ -138,8 +150,9 @@ const QuarterlyExecutionChart: React.FC<QuarterlyExecutionChartProps> = memo(({
     }
   }
   
-  // Default to 'quarter' or 'period' for x-axis if available, else use 'year'
-  const xAxisKey = chartData[0]?.quarter ? 'quarter' : 
+  // Default to 'quarterLabel' if available, else fall back to 'quarter' or 'period' for x-axis if available, else use 'year'
+  const xAxisKey = chartData[0]?.quarterLabel ? 'quarterLabel' : 
+                   chartData[0]?.quarter ? 'quarter' : 
                    chartData[0]?.period ? 'period' : 
                    chartData[0]?.trimestre ? 'trimestre' :
                    'year';
@@ -156,7 +169,7 @@ const QuarterlyExecutionChart: React.FC<QuarterlyExecutionChartProps> = memo(({
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel={xAxisKey === 'quarter' || xAxisKey === 'trimestre' ? 'Trimestre' : xAxisKey === 'period' ? 'Período' : 'Año'}
+      xAxisLabel={xAxisKey === 'quarterLabel' || xAxisKey === 'quarter' || xAxisKey === 'trimestre' ? 'Trimestre' : xAxisKey === 'period' ? 'Período' : 'Año'}
       yAxisLabel="Porcentaje (%)"
     />
   );
