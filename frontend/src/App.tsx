@@ -111,11 +111,15 @@ function App() {
     };
   }, []);
 
+  // Determine which router to use based on environment
+  const isGitHubPages = window.location.hostname.includes('github.io');
+  const RouterComponent = isGitHubPages ? HashRouter : BrowserRouter;
+
   return (
     <HelmetProvider>
       <ThemeProvider>
         <DataProvider>
-          <BrowserRouter>
+          <RouterComponent>
           <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-dark-background text-gray-900 dark:text-dark-text-primary transition-colors duration-300">
           <GovernmentHeader />
           <div className="flex flex-1 pt-16">
@@ -223,7 +227,7 @@ function App() {
           </div>
           <Footer />
           </div>
-          </BrowserRouter>
+          </RouterComponent>
         </DataProvider>
       </ThemeProvider>
     </HelmetProvider>

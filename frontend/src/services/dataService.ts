@@ -659,9 +659,15 @@ class ProductionDataService {
    */
   private extractCategories(documents: any[]): string[] {
     const categories = new Set<string>();
-    documents.forEach(doc => {
-      if (doc.category) categories.add(doc.category);
-    });
+    if (documents && Array.isArray(documents)) {
+      documents.forEach(doc => {
+        if (doc && doc.category) {
+          categories.add(doc.category);
+        }
+      });
+    } else {
+      console.warn('Documents is not an array:', documents);
+    }
     return Array.from(categories);
   }
   

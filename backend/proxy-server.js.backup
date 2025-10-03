@@ -26,7 +26,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
 
 // Cache configuration: 5 minutes for API calls, 30 minutes for scraped data
 const cache = new NodeCache({ stdTTL: 300, checkperiod: 60 });
@@ -488,74 +488,81 @@ app.get('/api/provincial/fiscal', async (req, res) => {
 app.post('/api/external/rafam', async (req, res) => {
   try {
     const { municipalityCode = '270', year, category } = req.body;
-    const targetYear = year || new Date().getFullYear();
-    const cacheKey = `rafam_${municipalityCode}_${targetYear}_${category}`;
+    const cacheKey = `rafam_${municipalityCode}_${year}_${category}`;
     const cached = cache.get(cacheKey);
 
     if (cached) {
       return res.json({ success: true, data: cached, cached: true });
     }
 
-    console.log(`[RAFAM] Loading REAL budget data for year ${targetYear}`);
+    console.log(`[RAFAM] Returning mock data for municipality ${municipalityCode}, year: ${year || 'all'}, category: ${category || 'all'}`);
 
-    // Load real budget data from organized JSON files
-    const budgetPath = path.join(__dirname, `data/organized_documents/json/budget_data_${targetYear}.json`);
-    const contractsPath = path.join(__dirname, `data/organized_documents/json/contracts_data_${targetYear}.json`);
-    const salariesPath = path.join(__dirname, `data/organized_documents/json/salaries_data_${targetYear}.json`);
-
-    let budgetData = {}, contractsData = {}, salariesData = {};
-
-    try {
-      budgetData = JSON.parse(await fs.readFile(budgetPath, 'utf-8'));
-      console.log(`[RAFAM] ✅ Loaded budget data for ${targetYear}`);
-    } catch (err) {
-      console.log(`[RAFAM] ⚠️ Could not load budget for ${targetYear}`);
-    }
-
-    try {
-      contractsData = JSON.parse(await fs.readFile(contractsPath, 'utf-8'));
-      console.log(`[RAFAM] ✅ Loaded contracts data for ${targetYear}`);
-    } catch (err) {
-      console.log(`[RAFAM] ⚠️ Could not load contracts for ${targetYear}`);
-    }
-
-    try {
-      salariesData = JSON.parse(await fs.readFile(salariesPath, 'utf-8'));
-      console.log(`[RAFAM] ✅ Loaded salaries data for ${targetYear}`);
-    } catch (err) {
-      console.log(`[RAFAM] ⚠️ Could not load salaries for ${targetYear}`);
-    }
+    // RAFAM mock data - realistic structure for Carmen de Areco
+    const mockRAFAMData = {
+      municipalityCode,
+      municipalityName: 'Carmen de Areco',
+      province: 'Buenos Aires',
+      year: year || new Date().getFullYear(),
+      category: category || 'all',
+      lastUpdate: new Date().toISOString(),
+      data: {
+        budget: {
+          total_approved: 15000000,
+          total_executed: 13500000,
+          execution_rate: 90.0
+        },
+        revenue: {
+          total_estimated: 15000000,
+          total_collected: 14250000,
+          collection_rate: 95.0
+        },
+        expenses_by_category: [
+          { category: 'Personal', budgeted: 6000000, executed: 5850000, rate: 97.5 },
+          { category: 'Bienes y Servicios', budgeted: 4500000, executed: 4050000, rate: 90.0 },
+          { category: 'Transferencias', budgeted: 2500000, executed: 2250000, rate: 90.0 },
+          { category: 'Inversión', budgeted: 2000000, executed: 1350000, rate: 67.5 }
+        ]
+      }
+    };
 
     const data = {
       municipality: 'Carmen de Areco',
       municipalityCode,
-      year: targetYear,
-      economicData: {
-        budget: {
-          total_approved: budgetData.total_budget || 0,
-          total_executed: budgetData.total_executed || 0,
-          execution_rate: budgetData.execution_rate || 0,
-          budget_execution: budgetData.budget_execution || []
-        },
-        revenue: budgetData.revenue || {},
-        expenditure: budgetData.expenditure || {},
-        contracts: contractsData.contracts || [],
-        salaries: salariesData.salaries || []
-      },
-      lastUpdated: new Date().toISOString(),
-      source: 'real_organized_json_files'
+      economicData: mockRAFAMData,
+      lastUpdated: new Date().toISOString()
     };
 
-    cache.set(cacheKey, data, 1800);
-    res.json({ success: true, data, cached: false, source: 'real_files' });
+    cache.set(cacheKey, data, 1800); // Cache for 30 minutes
+    res.json({ success: true, data, cached: false });
   } catch (error) {
-    console.error('[RAFAM] ❌ Error loading data:', error.message);
-    res.json({
-      success: false,
-      error: error.message,
+    console.error('Error fetching RAFAM data:', error.message);
+    // Return mock data even on error
+    const data = {
       municipality: 'Carmen de Areco',
-      municipalityCode: '270'
-    });
+      municipalityCode: '270',
+      economicData: {
+        budget: { total_approved: 15000000, total_executed: 13500000, execution_rate: 90.0 },
+        revenue: { total_estimated: 15000000, total_collected: 14250000, collection_rate: 95.0 },
+        expenses_by_category: [
+          { category: 'Personal', budgeted: 6000000, executed: 5850000, rate: 97.5 }
+        ]
+      },
+      lastUpdated: new Date().toISOString()
+    };
+    res.json({ success: true, data, cached: false, source: 'mock' });
+  } catch (error) {
+    console.error('Error fetching RAFAM data:', error.message);
+    // Return mock data even on error
+    const data = {
+      municipality: 'Carmen de Areco',
+      municipalityCode: '270',
+      economicData: {
+        budget: { total_approved: 15000000, total_executed: 13500000, execution_rate: 90.0 },
+        revenue: { total_estimated: 15000000, total_collected: 14250000, collection_rate: 95.0 }
+      },
+      lastUpdated: new Date().toISOString()
+    };
+    res.json({ success: true, data, cached: false, source: 'mock' });
   }
 });
 
@@ -1216,11 +1223,10 @@ app.post('/api/external/proxy', proxyHandler);
  */
 app.get('/api/external/carmen-de-areco', async (req, res) => {
   try {
-    const PORT_SELF = PORT || 3002;  // Fixed port to match actual server port
     const [official, transparency, licitaciones] = await Promise.allSettled([
-      axios.get(`http://localhost:${PORT_SELF}/api/carmen/official`),
-      axios.get(`http://localhost:${PORT_SELF}/api/carmen/transparency`),
-      axios.get(`http://localhost:${PORT_SELF}/api/carmen/licitaciones`)
+      axios.get('http://localhost:3001/api/carmen/official'),
+      axios.get('http://localhost:3001/api/carmen/transparency'),
+      axios.get('http://localhost:3001/api/carmen/licitaciones')
     ]);
 
     const data = {
