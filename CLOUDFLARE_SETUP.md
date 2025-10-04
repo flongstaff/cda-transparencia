@@ -7,6 +7,8 @@ Your Cloudflare Workers & Pages project is connected to: `flongstaff/cda-transpa
 
 ### In Cloudflare Dashboard (Settings → Builds & deployments):
 
+**IMPORTANT:** Configure these settings in the Cloudflare Pages dashboard, NOT in wrangler.toml.
+
 Set the following build settings:
 
 ```
@@ -14,7 +16,10 @@ Framework preset: None
 Build command: ./build.sh
 Build output directory: frontend/dist
 Root directory: (leave empty)
+Branch: main
 ```
+
+**Note:** Do NOT use `wrangler.toml` for Cloudflare Pages. That file is for Cloudflare Workers only.
 
 ### Environment Variables
 
