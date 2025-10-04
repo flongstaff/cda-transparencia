@@ -67,6 +67,7 @@ export interface UseMasterDataReturn {
   // Actions
   refetch: () => Promise<void>;
   switchYear: (year: number) => Promise<void>;
+  retry: () => Promise<void>;  // New retry function
 }
 
 export const useMasterData = (selectedYear?: number) => {
@@ -149,6 +150,17 @@ export const useMasterData = (selectedYear?: number) => {
       setLoading(false);
     }
   }, [currentYear]);
+
+  // New retry function that attempts to refetch data
+  const retry = useCallback(async () => {
+    try {
+      setError(null);
+      await initializeData();
+    } catch (err: any) {
+      console.error('❌ Retry failed:', err);
+      setError(err.message || 'Failed to load data after retry');
+    }
+  }, [initializeData]);
 
   // Efficiently switch between years by only updating current year data if available
   const switchYear = useCallback(async (year: number) => {
@@ -403,7 +415,8 @@ export const useMasterData = (selectedYear?: number) => {
     auditSummary,
     dataFlags,
     refetch: initializeData,
-    switchYear
+    switchYear,
+    retry
   };
 };
 

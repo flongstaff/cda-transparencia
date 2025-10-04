@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Users, FileText, CheckCircle, Globe, ExternalLink, BarChart3, TrendingUp, PieChart } from 'lucide-react';
 import { useMasterData } from '../hooks/useMasterData';
-import PageYearSelector from '../components/forms/PageYearSelector';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import PageYearSelector from '@components/forms/PageYearSelector';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 
 const About: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());

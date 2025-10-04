@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Environment files - Keep secure
+.env
+.env.local
+.env.production
+.env.*
+!.env.example
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+
+# Cloudflare secrets that should not be committed
+wrangler.toml.private
+wrangler-dev.toml
+wrangler-staging.toml
+
+# For Cloudflare Pages, the main wrangler.toml is minimal and may be needed
+# But keep environment-specific config files private
+.env
+.env.local
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Cache directories
+.cache/
+.vite/
+.npm/
+
+# Sensitive deployment files
+*.key
+*.pem
+*.crt
+secrets/
+config/
+credentials.json

@@ -95,3 +95,21 @@ pytestdebug.log
 Dockerfile
 Makefile
 ./*.txt
+
+# Cloudflare Workers
+.wrangler/
+workers/
+*.mjs
+
+# Cloudflare secrets
+wrangler.toml.private
+wrangler-dev.toml
+wrangler-staging.toml
+
+# API keys and secrets (general)
+*.key
+*.pem
+*.crt
+secrets/
+credentials.json
+config/

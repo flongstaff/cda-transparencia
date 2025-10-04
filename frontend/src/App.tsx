@@ -11,9 +11,9 @@ import { DataProvider } from './contexts/DataContext';
 import { register as registerServiceWorker } from './utils/serviceWorkerRegistration';
 import smartDataLoader from './services/SmartDataLoader';
 import productionDataManager from './services/ProductionDataManager';
-import GovernmentHeader from './components/layout/GovernmentHeader';
-import Sidebar from './components/layout/Sidebar';
-import Footer from './components/layout/Footer';
+import GovernmentHeader from '@components/layout/GovernmentHeader';
+import Sidebar from '@components/layout/Sidebar';
+import Footer from '@components/layout/Footer';
 
 // Core Pages
 import Budget from './pages/BudgetUnified';
@@ -64,7 +64,7 @@ import EnhancedTransparencyDashboard from './pages/EnhancedTransparencyDashboard
 import InfrastructureTracker from './pages/InfrastructureTracker';
 
 // Demo Components
-import YearSelectorDemo from './components/demos/YearSelectorDemo';
+import YearSelectorDemo from '@components/demos/YearSelectorDemo';
 
 function App() {
   useEffect(() => {
@@ -120,7 +120,7 @@ function App() {
           <GovernmentHeader />
           <div className="flex flex-1 pt-16">
             <Sidebar />
-            <main className="flex-grow ml-4 lg:ml-20">
+            <main className="flex-grow ml-0 md:ml-4 lg:ml-20 transition-all duration-300">
             <div className="container mx-auto px-4 py-6 sm:px-6 lg:px-8">
                 <Routes>
                   {/* Main Dashboard Routes */}

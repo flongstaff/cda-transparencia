@@ -13,9 +13,13 @@ const documentRoutes = require('./documentRoutes');
 const privacyRoutes = require('./privacyRoutes');
 const monitoringRoutes = require('./monitoringRoutes');
 const feedbackRoutes = require('./feedbackRoutes');
+const carmenRoutes = require('./carmenRoutes');
 
 // Main transparency portal for citizens (consolidated PostgreSQL and real documents system)
 router.use('/transparency', comprehensiveTransparencyRoutes);
+
+// Carmen de Areco specific routes
+router.use('/carmen', carmenRoutes);
 
 // Static data integration from all three data folders
 router.use('/data', staticDataRoutes);

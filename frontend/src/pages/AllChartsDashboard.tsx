@@ -23,20 +23,20 @@ import {
 } from 'lucide-react';
 
 // Import all 13 chart components
-import BudgetExecutionChart from '../components/charts/BudgetExecutionChart';
-import DebtReportChart from '../components/charts/DebtReportChart';
-import EconomicReportChart from '../components/charts/EconomicReportChart';
-import EducationDataChart from '../components/charts/EducationDataChart';
-import ExpenditureReportChart from '../components/charts/ExpenditureReportChart';
-import FinancialReservesChart from '../components/charts/FinancialReservesChart';
-import FiscalBalanceReportChart from '../components/charts/FiscalBalanceReportChart';
-import HealthStatisticsChart from '../components/charts/HealthStatisticsChart';
-import InfrastructureProjectsChart from '../components/charts/InfrastructureProjectsChart';
-import InvestmentReportChart from '../components/charts/InvestmentReportChart';
-import PersonnelExpensesChart from '../components/charts/PersonnelExpensesChart';
-import RevenueReportChart from '../components/charts/RevenueReportChart';
-import RevenueSourcesChart from '../components/charts/RevenueSourcesChart';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import BudgetExecutionChart from '@components/charts/BudgetExecutionChart';
+import DebtReportChart from '@components/charts/DebtReportChart';
+import EconomicReportChart from '@components/charts/EconomicReportChart';
+import EducationDataChart from '@components/charts/EducationDataChart';
+import ExpenditureReportChart from '@components/charts/ExpenditureReportChart';
+import FinancialReservesChart from '@components/charts/FinancialReservesChart';
+import FiscalBalanceReportChart from '@components/charts/FiscalBalanceReportChart';
+import HealthStatisticsChart from '@components/charts/HealthStatisticsChart';
+import InfrastructureProjectsChart from '@components/charts/InfrastructureProjectsChart';
+import InvestmentReportChart from '@components/charts/InvestmentReportChart';
+import PersonnelExpensesChart from '@components/charts/PersonnelExpensesChart';
+import RevenueReportChart from '@components/charts/RevenueReportChart';
+import RevenueSourcesChart from '@components/charts/RevenueSourcesChart';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 
 // Chart metadata with icons and descriptions
 const CHART_METADATA = [
