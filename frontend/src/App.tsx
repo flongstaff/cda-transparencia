@@ -222,10 +222,6 @@ function App() {
             </main>
           </div>
           <Footer />
-          </div>
-  </main>
-          </div>
-          <Footer />
         </div>
       </BrowserRouter>
     </DataProvider>
