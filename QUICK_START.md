@@ -267,6 +267,22 @@ cd scripts && node sync-external-data.js
 
 ## 🚀 Deployment
 
+### For Custom Domain Deployment
+
+When deploying with a custom domain to GitHub Pages, use production mode to ensure proper routing:
+
+```bash
+# Build for custom domain (uses base path "/")
+cd frontend && npm run build:production
+
+# Alternative custom domain build command
+cd frontend && npm run build:custom-domain
+```
+
+This ensures the site is built with the correct base path for custom domains.
+
+## 🚀 Deployment
+
 ### Option 1: Traditional Server
 
 1. **Build frontend**:

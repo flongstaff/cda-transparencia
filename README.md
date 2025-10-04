@@ -67,6 +67,22 @@ The portal is deployed to three platforms for redundancy and performance:
 2. **Cloudflare Pages** - Secondary deployment for improved global performance
 3. **Cloudflare Workers** - API endpoint for external data integration
 
+### Custom Domain Deployment Note
+
+When deploying to GitHub Pages with a custom domain (cda-transparencia.org), ensure the build uses production mode to avoid subdirectory routing issues:
+
+```bash
+# For custom domains - use production mode (base: "/")
+npm run build:production
+
+# For username.github.io/repo-name - use github mode (base: "/repo-name/")
+npm run build:github
+```
+
+The build process automatically sets the correct base path:
+- Production mode: base path is "/" (for custom domains)
+- GitHub mode: base path is "/cda-transparencia/" (for GitHub Pages subdirectories)
+
 All deployments are automated through GitHub Actions and updated weekly.
 
 ## Data Sources

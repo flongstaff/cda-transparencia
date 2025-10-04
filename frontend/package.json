@@ -13,6 +13,7 @@
     "build:development": "npm run prebuild && vite build --mode development",
     "build:production": "npm run prebuild && vite build --mode production",
     "build:github": "npm run prebuild && vite build --mode github",
+    "build:custom-domain": "npm run prebuild && vite build --mode production",
     "lint": "eslint . --max-warnings 999",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
