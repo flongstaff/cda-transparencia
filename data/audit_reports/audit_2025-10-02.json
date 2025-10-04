@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-10-02T10:15:25.086Z",
+  "summary": {
+    "totalRedFlags": 3,
+    "highSeverity": 2,
+    "mediumSeverity": 1,
+    "lowSeverity": 0
+  },
+  "redFlags": [
+    {
+      "type": "BUDGET_OVERRUN",
+      "severity": "HIGH",
+      "item": "Obras Públicas",
+      "approved": 100000,
+      "executed": 150000,
+      "overrunPercent": "50.00",
+      "message": "Budget overrun of 50.0% detected"
+    },
+    {
+      "type": "VENDOR_CONCENTRATION",
+      "severity": "HIGH",
+      "vendor": "Empresa A",
+      "amount": 800000,
+      "concentration": "88.89",
+      "message": "Single vendor controls 88.9% of contracts"
+    },
+    {
+      "type": "ROUND_NUMBER_SYNDROME",
+      "severity": "MEDIUM",
+      "roundCount": 3,
+      "totalCount": 3,
+      "percentage": "100.00",
+      "message": "100.0% of amounts are suspiciously round numbers"
+    }
+  ],
+  "warnings": [],
+  "metrics": {},
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Review budget overruns with financial department",
+      "reason": "Multiple budget items exceeded approved amounts by >20%"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Investigate vendor concentration and procurement process",
+      "reason": "Single vendor has excessive market share"
+    }
+  ]
+}

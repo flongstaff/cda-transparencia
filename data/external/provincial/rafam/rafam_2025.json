@@ -1,0 +1,39 @@
+{
+  "year": 2025,
+  "budget": {
+    "year": 2025,
+    "budget_by_partida": [],
+    "total_budgeted": 80000000,
+    "total_executed": 78000000,
+    "overall_execution_rate": 97.5,
+    "budget_execution": [
+      {
+        "quarter": "Q2",
+        "budgeted": 80000000,
+        "executed": 78000000,
+        "percentage": 97.5
+      },
+      {
+        "quarter": "Q3",
+        "budgeted": 85000000,
+        "executed": 83500000,
+        "percentage": 98.2
+      }
+    ]
+  },
+  "revenue": {
+    "revenue_by_source": [],
+    "total_budgeted": 0,
+    "total_actual": 0
+  },
+  "expenses": {
+    "expenses_by_category": [],
+    "total_budgeted": 0,
+    "total_executed": 0
+  },
+  "monthly": {
+    "monthly_execution": []
+  },
+  "extracted_at": "2025-10-03T04:42:58.091Z",
+  "source": "mock_data_fallback"
+}

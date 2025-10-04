@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "data": {
+    "success": true,
+    "data": {
+      "help": "https://datos.gob.ar/api/3/action/help_show?name=package_search",
+      "success": true,
+      "result": {
+        "count": 0,
+        "sort": "score desc, metadata_modified desc",
+        "facets": {},
+        "results": [],
+        "search_facets": {}
+      }
+    },
+    "source": "datos.gob.ar"
+  },
+  "source": "datos_argentina",
+  "timestamp": "2025-10-03T03:56:54.850Z"
+}

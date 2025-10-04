@@ -1,0 +1,628 @@
+{
+  "metadata": {
+    "category": "expense_execution",
+    "category_name": "Ejecución de Gastos",
+    "jurisdiction": "270",
+    "jurisdiction_name": "Carmen de Areco",
+    "year": 2019,
+    "extracted_at": "2025-10-03T03:26:38.796Z",
+    "source": "RAFAM_MOCK",
+    "data_quality": "MOCK_FOR_DEVELOPMENT"
+  },
+  "summary": {
+    "budgeted": 10000000,
+    "executed": 8500000,
+    "committed": 9200000,
+    "pending": 1500000
+  },
+  "records": [
+    {
+      "date": "2019-01-15",
+      "program_code": "1",
+      "program_name": "Administración General",
+      "budgeted": 566717.1907703603,
+      "executed": 418734.0832939027,
+      "committed": 507641.3592795679,
+      "available": 78558.85856796907,
+      "execution_percentage": "84.29"
+    },
+    {
+      "date": "2019-02-15",
+      "program_code": "1",
+      "program_name": "Administración General",
+      "budgeted": 630049.124640605,
+      "executed": 491230.97933180345,
+      "committed": 598384.0530795497,
+      "available": 121385.93937931577,
+      "execution_percentage": "81.61"
+    },
+    {
+      "date": "2019-03-15",
+      "program_code": "1",
+      "program_name": "Administración General",
+      "budgeted": 541115.2527679716,
+      "executed": 446150.2266742159,
+      "committed": 493788.5830432777,
+      "available": 29385.221904560443,
+      "execution_percentage": "89.02"
+    },
+    {
+      "date": "2019-04-15",
+      "program_code": "1",
+      "program_name": "Administración General",
+      "budgeted": 673776.6768738477,
+      "executed": 566694.6714522657,
+      "committed": 582047.8898575987,
+      "available": 97778.00650376604,
+      "execution_percentage": "79.61"
+    },
+    {
+      "date": "2019-05-15",
+      "program_code": "1",
+      "program_name": "Administración General",
+      "budgeted": 626160.9644885298,
+      "executed": 519049.2506481102,
+      "committed": 508313.3210902759,
+      "available": 124750.11560666235,
+      "execution_percentage": "88.26"
+    },
+    {
+      "date": "2019-06-15",
+      "program_code": "1",
+      "program_name": "Administración General",
+      "budgeted": 620201.5366832672,
+      "executed": 435496.43219227105,
+      "committed": 522327.9537970544,
+      "available": 77969.96804482947,
+      "execution_percentage": "80.37"
+    },
+    {
+      "date": "2019-07-15",
+      "program_code": "1",
+      "program_name": "Administración General",
+      "budgeted": 602546.1770868668,
+      "executed": 554626.6028231523,
+      "committed": 526217.2708215631,
+      "available": 108184.32326181342,
+      "execution_percentage": "78.82"
+    },
+    {
+      "date": "2019-08-15",
+      "program_code": "1",
+      "program_name": "Administración General",
+      "budgeted": 590113.5195128932,
+      "executed": 418554.3101450565,
+      "committed": 485784.2490068459,
+      "available": 78126.9319903316,
+      "execution_percentage": "70.60"
+    },
+    {
+      "date": "2019-09-15",
+      "program_code": "1",
+      "program_name": "Administración General",
+      "budgeted": 665852.4124782445,
+      "executed": 532778.36178572,
+      "committed": 614943.335226313,
+      "available": 67280.46867084346,
+      "execution_percentage": "81.33"
+    },
+    {
+      "date": "2019-10-15",
+      "program_code": "1",
+      "program_name": "Administración General",
+      "budgeted": 572738.1343006736,
+      "executed": 466123.3619343807,
+      "committed": 484780.0619760459,
+      "available": 72856.63100081288,
+      "execution_percentage": "75.81"
+    },
+    {
+      "date": "2019-11-15",
+      "program_code": "1",
+      "program_name": "Administración General",
+      "budgeted": 572894.2608439794,
+      "executed": 428001.54385227663,
+      "committed": 542573.0990568113,
+      "available": 35950.28465667104,
+      "execution_percentage": "75.16"
+    },
+    {
+      "date": "2019-12-15",
+      "program_code": "1",
+      "program_name": "Administración General",
+      "budgeted": 689442.2012751407,
+      "executed": 624529.949303077,
+      "committed": 564913.1272435843,
+      "available": 54220.37140119184,
+      "execution_percentage": "87.38"
+    },
+    {
+      "date": "2019-01-15",
+      "program_code": "2",
+      "program_name": "Educación y Cultura",
+      "budgeted": 594251.3460018085,
+      "executed": 508991.84150673024,
+      "committed": 499400.8919828249,
+      "available": 60557.22322849241,
+      "execution_percentage": "88.57"
+    },
+    {
+      "date": "2019-02-15",
+      "program_code": "2",
+      "program_name": "Educación y Cultura",
+      "budgeted": 507759.6124096328,
+      "executed": 400368.01093319646,
+      "committed": 442692.27849093894,
+      "available": 65994.93423771014,
+      "execution_percentage": "87.83"
+    },
+    {
+      "date": "2019-03-15",
+      "program_code": "2",
+      "program_name": "Educación y Cultura",
+      "budgeted": 609303.0383069076,
+      "executed": 449399.5761742674,
+      "committed": 527647.7623452046,
+      "available": 101154.87682442681,
+      "execution_percentage": "76.14"
+    },
+    {
+      "date": "2019-04-15",
+      "program_code": "2",
+      "program_name": "Educación y Cultura",
+      "budgeted": 697565.3652129811,
+      "executed": 580148.5573021505,
+      "committed": 647353.6662145794,
+      "available": 113539.23588136461,
+      "execution_percentage": "89.01"
+    },
+    {
+      "date": "2019-05-15",
+      "program_code": "2",
+      "program_name": "Educación y Cultura",
+      "budgeted": 606939.8531895711,
+      "executed": 432430.75139650406,
+      "committed": 529954.573687346,
+      "available": 59581.64099909518,
+      "execution_percentage": "93.50"
+    },
+    {
+      "date": "2019-06-15",
+      "program_code": "2",
+      "program_name": "Educación y Cultura",
+      "budgeted": 636062.0272084313,
+      "executed": 469220.38669259363,
+      "committed": 582673.3199519515,
+      "available": 56694.67005467696,
+      "execution_percentage": "83.16"
+    },
+    {
+      "date": "2019-07-15",
+      "program_code": "2",
+      "program_name": "Educación y Cultura",
+      "budgeted": 648890.8643462786,
+      "executed": 517672.2504529149,
+      "committed": 596249.9668712624,
+      "available": 55989.3776614735,
+      "execution_percentage": "72.86"
+    },
+    {
+      "date": "2019-08-15",
+      "program_code": "2",
+      "program_name": "Educación y Cultura",
+      "budgeted": 590283.6161911128,
+      "executed": 531529.5329054276,
+      "committed": 547952.9171339535,
+      "available": 49624.338058701425,
+      "execution_percentage": "78.42"
+    },
+    {
+      "date": "2019-09-15",
+      "program_code": "2",
+      "program_name": "Educación y Cultura",
+      "budgeted": 614458.799258115,
+      "executed": 500423.498997237,
+      "committed": 553386.9622983129,
+      "available": 55238.04275719965,
+      "execution_percentage": "92.29"
+    },
+    {
+      "date": "2019-10-15",
+      "program_code": "2",
+      "program_name": "Educación y Cultura",
+      "budgeted": 516591.92341219063,
+      "executed": 407849.49292631337,
+      "committed": 465552.94331388694,
+      "available": 52764.42698344817,
+      "execution_percentage": "84.17"
+    },
+    {
+      "date": "2019-11-15",
+      "program_code": "2",
+      "program_name": "Educación y Cultura",
+      "budgeted": 509747.35670119856,
+      "executed": 446307.48495185236,
+      "committed": 477411.5148538936,
+      "available": 34451.62868217316,
+      "execution_percentage": "79.87"
+    },
+    {
+      "date": "2019-12-15",
+      "program_code": "2",
+      "program_name": "Educación y Cultura",
+      "budgeted": 641096.3013414199,
+      "executed": 535981.9497346706,
+      "committed": 545270.5825064133,
+      "available": 79998.0017995298,
+      "execution_percentage": "76.50"
+    },
+    {
+      "date": "2019-01-15",
+      "program_code": "3",
+      "program_name": "Salud",
+      "budgeted": 658312.8444451218,
+      "executed": 593038.3910864576,
+      "committed": 542299.754298667,
+      "available": 34274.71370675855,
+      "execution_percentage": "74.96"
+    },
+    {
+      "date": "2019-02-15",
+      "program_code": "3",
+      "program_name": "Salud",
+      "budgeted": 680498.9060713935,
+      "executed": 496628.78552217106,
+      "committed": 598216.6453821432,
+      "available": 106673.4570203972,
+      "execution_percentage": "84.80"
+    },
+    {
+      "date": "2019-03-15",
+      "program_code": "3",
+      "program_name": "Salud",
+      "budgeted": 558118.2103484636,
+      "executed": 468447.8577084586,
+      "committed": 450281.05211781396,
+      "available": 95195.47042131447,
+      "execution_percentage": "84.28"
+    },
+    {
+      "date": "2019-04-15",
+      "program_code": "3",
+      "program_name": "Salud",
+      "budgeted": 539122.2579295249,
+      "executed": 482731.57032469584,
+      "committed": 470328.060269789,
+      "available": 100458.26701083904,
+      "execution_percentage": "85.25"
+    },
+    {
+      "date": "2019-05-15",
+      "program_code": "3",
+      "program_name": "Salud",
+      "budgeted": 691304.6717976951,
+      "executed": 570141.6342302104,
+      "committed": 616938.2572965858,
+      "available": 121807.66904392798,
+      "execution_percentage": "80.38"
+    },
+    {
+      "date": "2019-06-15",
+      "program_code": "3",
+      "program_name": "Salud",
+      "budgeted": 568112.8958242417,
+      "executed": 402334.13045334275,
+      "committed": 492527.7892297381,
+      "available": 35290.20705637761,
+      "execution_percentage": "86.04"
+    },
+    {
+      "date": "2019-07-15",
+      "program_code": "3",
+      "program_name": "Salud",
+      "budgeted": 628374.5308163236,
+      "executed": 548330.3223427468,
+      "committed": 560142.9003532948,
+      "available": 39694.042103947686,
+      "execution_percentage": "88.44"
+    },
+    {
+      "date": "2019-08-15",
+      "program_code": "3",
+      "program_name": "Salud",
+      "budgeted": 585792.3693390246,
+      "executed": 530661.8085910301,
+      "committed": 476543.5477869417,
+      "available": 82319.04300662682,
+      "execution_percentage": "72.22"
+    },
+    {
+      "date": "2019-09-15",
+      "program_code": "3",
+      "program_name": "Salud",
+      "budgeted": 539294.1175926079,
+      "executed": 426244.7276475525,
+      "committed": 442710.6837887788,
+      "available": 76284.62074614574,
+      "execution_percentage": "89.43"
+    },
+    {
+      "date": "2019-10-15",
+      "program_code": "3",
+      "program_name": "Salud",
+      "budgeted": 511211.2600997347,
+      "executed": 428351.2902247241,
+      "committed": 434544.3356213272,
+      "available": 93077.85668295658,
+      "execution_percentage": "75.99"
+    },
+    {
+      "date": "2019-11-15",
+      "program_code": "3",
+      "program_name": "Salud",
+      "budgeted": 672655.5109936149,
+      "executed": 582459.0627592534,
+      "committed": 560568.1404501769,
+      "available": 88757.54339430385,
+      "execution_percentage": "87.96"
+    },
+    {
+      "date": "2019-12-15",
+      "program_code": "3",
+      "program_name": "Salud",
+      "budgeted": 634468.1874031454,
+      "executed": 529014.007422104,
+      "committed": 510320.4242237905,
+      "available": 104569.87566298842,
+      "execution_percentage": "81.48"
+    },
+    {
+      "date": "2019-01-15",
+      "program_code": "4",
+      "program_name": "Obras y Servicios Públicos",
+      "budgeted": 503981.20167101535,
+      "executed": 361699.18180174456,
+      "committed": 463130.7741552315,
+      "available": 71048.3309634514,
+      "execution_percentage": "87.07"
+    },
+    {
+      "date": "2019-02-15",
+      "program_code": "4",
+      "program_name": "Obras y Servicios Públicos",
+      "budgeted": 550704.418598183,
+      "executed": 446901.2712264704,
+      "committed": 455249.0060643413,
+      "available": 51988.585856240716,
+      "execution_percentage": "94.38"
+    },
+    {
+      "date": "2019-03-15",
+      "program_code": "4",
+      "program_name": "Obras y Servicios Públicos",
+      "budgeted": 602593.1404201294,
+      "executed": 428919.8380668678,
+      "committed": 525163.6076691793,
+      "available": 95373.99399370805,
+      "execution_percentage": "87.86"
+    },
+    {
+      "date": "2019-04-15",
+      "program_code": "4",
+      "program_name": "Obras y Servicios Públicos",
+      "budgeted": 640483.9931031063,
+      "executed": 556697.1531656411,
+      "committed": 535512.7302179955,
+      "available": 40258.260623535374,
+      "execution_percentage": "70.43"
+    },
+    {
+      "date": "2019-05-15",
+      "program_code": "4",
+      "program_name": "Obras y Servicios Públicos",
+      "budgeted": 564326.1495820142,
+      "executed": 509340.7466447377,
+      "committed": 500218.6469999874,
+      "available": 95075.85076637575,
+      "execution_percentage": "84.85"
+    },
+    {
+      "date": "2019-06-15",
+      "program_code": "4",
+      "program_name": "Obras y Servicios Públicos",
+      "budgeted": 589381.0779135007,
+      "executed": 420948.8577960208,
+      "committed": 557645.3321678413,
+      "available": 87167.13752879358,
+      "execution_percentage": "71.33"
+    },
+    {
+      "date": "2019-07-15",
+      "program_code": "4",
+      "program_name": "Obras y Servicios Públicos",
+      "budgeted": 527772.6539423672,
+      "executed": 409862.48449479765,
+      "committed": 439954.41882505745,
+      "available": 61853.083037050885,
+      "execution_percentage": "70.26"
+    },
+    {
+      "date": "2019-08-15",
+      "program_code": "4",
+      "program_name": "Obras y Servicios Públicos",
+      "budgeted": 548836.9299597337,
+      "executed": 460621.1917709975,
+      "committed": 503351.80168393865,
+      "available": 82724.32572755923,
+      "execution_percentage": "74.59"
+    },
+    {
+      "date": "2019-09-15",
+      "program_code": "4",
+      "program_name": "Obras y Servicios Públicos",
+      "budgeted": 500069.916712579,
+      "executed": 458314.85989309556,
+      "committed": 425666.65782313194,
+      "available": 29850.03646089708,
+      "execution_percentage": "72.00"
+    },
+    {
+      "date": "2019-10-15",
+      "program_code": "4",
+      "program_name": "Obras y Servicios Públicos",
+      "budgeted": 576457.1522492092,
+      "executed": 492668.45256070903,
+      "committed": 517256.1877096239,
+      "available": 43496.27855804654,
+      "execution_percentage": "89.07"
+    },
+    {
+      "date": "2019-11-15",
+      "program_code": "4",
+      "program_name": "Obras y Servicios Públicos",
+      "budgeted": 527798.5762504997,
+      "executed": 452909.6296845332,
+      "committed": 500736.720385866,
+      "available": 65753.00733732597,
+      "execution_percentage": "78.05"
+    },
+    {
+      "date": "2019-12-15",
+      "program_code": "4",
+      "program_name": "Obras y Servicios Públicos",
+      "budgeted": 592530.282890584,
+      "executed": 517399.19054958,
+      "committed": 493174.86368802615,
+      "available": 113877.12695354312,
+      "execution_percentage": "94.74"
+    },
+    {
+      "date": "2019-01-15",
+      "program_code": "5",
+      "program_name": "Seguridad",
+      "budgeted": 571222.2416732032,
+      "executed": 525838.9291225693,
+      "committed": 515812.7198985736,
+      "available": 101133.97465324946,
+      "execution_percentage": "88.47"
+    },
+    {
+      "date": "2019-02-15",
+      "program_code": "5",
+      "program_name": "Seguridad",
+      "budgeted": 511321.81693785504,
+      "executed": 430521.2177011693,
+      "committed": 473084.6442118657,
+      "available": 60802.1703304579,
+      "execution_percentage": "88.05"
+    },
+    {
+      "date": "2019-03-15",
+      "program_code": "5",
+      "program_name": "Seguridad",
+      "budgeted": 641383.6592511218,
+      "executed": 505695.42574033083,
+      "committed": 591204.3065168388,
+      "available": 46186.808888974934,
+      "execution_percentage": "70.35"
+    },
+    {
+      "date": "2019-04-15",
+      "program_code": "5",
+      "program_name": "Seguridad",
+      "budgeted": 671519.3030973868,
+      "executed": 594480.037887023,
+      "committed": 541495.9605659369,
+      "available": 120690.73514213013,
+      "execution_percentage": "85.00"
+    },
+    {
+      "date": "2019-05-15",
+      "program_code": "5",
+      "program_name": "Seguridad",
+      "budgeted": 522356.1369242939,
+      "executed": 482116.4077764007,
+      "committed": 494873.10118635604,
+      "available": 95693.45004770865,
+      "execution_percentage": "91.30"
+    },
+    {
+      "date": "2019-06-15",
+      "program_code": "5",
+      "program_name": "Seguridad",
+      "budgeted": 548314.6194896604,
+      "executed": 417119.28563939256,
+      "committed": 504868.7096532097,
+      "available": 42512.702015239636,
+      "execution_percentage": "77.51"
+    },
+    {
+      "date": "2019-07-15",
+      "program_code": "5",
+      "program_name": "Seguridad",
+      "budgeted": 510550.27093894855,
+      "executed": 426982.71214799845,
+      "committed": 470604.4576301244,
+      "available": 90174.38374555742,
+      "execution_percentage": "75.60"
+    },
+    {
+      "date": "2019-08-15",
+      "program_code": "5",
+      "program_name": "Seguridad",
+      "budgeted": 506118.1521586661,
+      "executed": 358405.90413490654,
+      "committed": 462702.4269047174,
+      "available": 49340.610799121765,
+      "execution_percentage": "70.06"
+    },
+    {
+      "date": "2019-09-15",
+      "program_code": "5",
+      "program_name": "Seguridad",
+      "budgeted": 659201.8271244853,
+      "executed": 620421.6098455507,
+      "committed": 616581.2138564908,
+      "available": 120656.17557865453,
+      "execution_percentage": "72.72"
+    },
+    {
+      "date": "2019-10-15",
+      "program_code": "5",
+      "program_name": "Seguridad",
+      "budgeted": 541254.682480778,
+      "executed": 484533.17232629133,
+      "committed": 455424.1643276802,
+      "available": 52883.03565360771,
+      "execution_percentage": "85.94"
+    },
+    {
+      "date": "2019-11-15",
+      "program_code": "5",
+      "program_name": "Seguridad",
+      "budgeted": 540565.6995035805,
+      "executed": 497284.78225677717,
+      "committed": 453732.62635728985,
+      "available": 81221.58824061327,
+      "execution_percentage": "79.68"
+    },
+    {
+      "date": "2019-12-15",
+      "program_code": "5",
+      "program_name": "Seguridad",
+      "budgeted": 660020.2326579975,
+      "executed": 494128.79918464785,
+      "committed": 539262.0104053906,
+      "available": 109669.47976504399,
+      "execution_percentage": "72.56"
+    }
+  ],
+  "statistics": {
+    "total_records": 60,
+    "total_amount": 29094487.837141093,
+    "date_range": {
+      "from": "2019-01-01",
+      "to": "2019-12-31"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "timestamp": "2025-10-02T05:26:07.016Z",
+  "results": {
+    "municipal": [],
+    "provincial": [
+      {
+        "source": "RAFAM",
+        "year": 2018
+      },
+      {
+        "source": "RAFAM",
+        "year": 2019
+      },
+      {
+        "source": "RAFAM",
+        "year": 2020
+      },
+      {
+        "source": "RAFAM",
+        "year": 2021
+      },
+      {
+        "source": "RAFAM",
+        "year": 2022
+      },
+      {
+        "source": "RAFAM",
+        "year": 2023
+      },
+      {
+        "source": "RAFAM",
+        "year": 2024
+      },
+      {
+        "source": "RAFAM",
+        "year": 2025
+      }
+    ],
+    "national": [
+      {
+        "source": "Georef",
+        "data": {
+          "id": "060161",
+          "nombre": "Carmen de Areco",
+          "provincia": {
+            "id": "06",
+            "nombre": "Buenos Aires"
+          },
+          "centroide": {
+            "lat": -34.4067977840705,
+            "lon": -59.884413320764
+          },
+          "fetchedAt": "2025-10-02T05:23:25.996Z"
+        }
+      }
+    ],
+    "historical": [
+      {
+        "source": "Transparency Portal",
+        "year": 2018,
+        "count": 144
+      },
+      {
+        "source": "Transparency Portal",
+        "year": 2019,
+        "count": 144
+      },
+      {
+        "source": "Transparency Portal",
+        "year": 2022,
+        "count": 144
+      },
+      {
+        "source": "Transparency Portal",
+        "year": 2024,
+        "count": 144
+      },
+      {
+        "source": "Transparency Portal",
+        "year": 2025,
+        "count": 144
+      }
+    ],
+    "errors": [
+      {
+        "type": "budget",
+        "error": "Error"
+      },
+      {
+        "type": "licitaciones",
+        "error": ""
+      }
+    ]
+  },
+  "summary": {
+    "municipal": 0,
+    "provincial": 8,
+    "national": 1,
+    "historical": 5,
+    "errors": 2
+  }
+}

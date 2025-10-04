@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "municipality": "Carmen de Areco",
+    "province": "Buenos Aires",
+    "generated_at": "2025-10-03T03:28:45.070Z",
+    "data_quality": "MOCK_FOR_DEVELOPMENT"
+  },
+  "transparency_documents": [
+    {
+      "id": "DOC-001",
+      "type": "presupuesto",
+      "title": "Presupuesto Municipal 2025",
+      "description": "Ordenanza de Presupuesto Año 2025",
+      "ordinance_number": "1234/2024",
+      "date": "2024-12-15",
+      "pdf_url": "/transparencia/presupuesto-2025.pdf",
+      "categories": [
+        "presupuesto",
+        "finanzas"
+      ]
+    },
+    {
+      "id": "DOC-002",
+      "type": "ejecucion_presupuestaria",
+      "title": "Ejecución Presupuestaria - Enero 2025",
+      "description": "Informe mensual de ejecución presupuestaria",
+      "date": "2025-02-01",
+      "pdf_url": "/transparencia/ejecucion-enero-2025.pdf",
+      "categories": [
+        "presupuesto",
+        "transparencia"
+      ]
+    }
+  ],
+  "ordinances": [
+    {
+      "number": "1234/2024",
+      "title": "Presupuesto General de Gastos y Recursos Año 2025",
+      "date": "2024-12-15",
+      "type": "presupuesto",
+      "status": "vigente"
+    },
+    {
+      "number": "1235/2025",
+      "title": "Modificación Ordenanza Fiscal y Tributaria",
+      "date": "2025-01-10",
+      "type": "fiscal",
+      "status": "vigente"
+    }
+  ],
+  "tenders": [
+    {
+      "id": "LIC-2025-001",
+      "title": "Provisión de Combustible - Año 2025",
+      "type": "licitacion_publica",
+      "opening_date": "2025-02-15",
+      "budget": 5000000,
+      "status": "abierta"
+    },
+    {
+      "id": "LIC-2025-002",
+      "title": "Construcción Cordón Cuneta - Barrio Centro",
+      "type": "licitacion_publica",
+      "opening_date": "2025-03-01",
+      "budget": 12000000,
+      "status": "en_evaluacion"
+    }
+  ],
+  "declarations": [
+    {
+      "official": "Intendente Municipal",
+      "year": 2024,
+      "status": "presentada",
+      "presentation_date": "2024-06-30"
+    },
+    {
+      "official": "Secretario de Hacienda",
+      "year": 2024,
+      "status": "presentada",
+      "presentation_date": "2024-06-30"
+    }
+  ]
+}

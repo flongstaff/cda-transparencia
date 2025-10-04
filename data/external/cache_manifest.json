@@ -1,0 +1,92 @@
+{
+  "last_sync": "2025-10-03T03:57:02.972Z",
+  "sources": [
+    {
+      "id": "rafam",
+      "name": "RAFAM Provincial Data",
+      "category": "provincial",
+      "priority": "critical",
+      "files": 7,
+      "total_size": 14103,
+      "last_updated": "2025-10-03T03:56:39.862Z"
+    },
+    {
+      "id": "carmen_official",
+      "name": "Carmen de Areco Official",
+      "category": "municipal",
+      "priority": "critical",
+      "files": 1,
+      "total_size": 3529,
+      "last_updated": "2025-10-03T03:56:41.869Z"
+    },
+    {
+      "id": "carmen_transparency",
+      "name": "Carmen Transparency Portal",
+      "category": "municipal",
+      "priority": "critical",
+      "files": 0,
+      "total_size": 0,
+      "last_updated": "2025-10-03T03:56:44.133Z"
+    },
+    {
+      "id": "carmen_licitaciones",
+      "name": "Carmen Licitaciones",
+      "category": "municipal",
+      "priority": "high",
+      "files": 0,
+      "total_size": 0,
+      "last_updated": "2025-10-03T03:56:46.393Z"
+    },
+    {
+      "id": "georef",
+      "name": "Georef API (Geographic Data)",
+      "category": "national",
+      "priority": "high",
+      "files": 1,
+      "total_size": 622,
+      "last_updated": "2025-10-03T03:56:48.858Z"
+    },
+    {
+      "id": "bcra",
+      "name": "BCRA Economic Indicators",
+      "category": "national",
+      "priority": "medium",
+      "files": 1,
+      "total_size": 670,
+      "last_updated": "2025-10-03T03:56:52.347Z"
+    },
+    {
+      "id": "datos_argentina",
+      "name": "Datos Argentina Datasets",
+      "category": "national",
+      "priority": "medium",
+      "files": 1,
+      "total_size": 460,
+      "last_updated": "2025-10-03T03:56:54.850Z"
+    },
+    {
+      "id": "boletin_municipal",
+      "name": "Boletín Oficial Municipal",
+      "category": "municipal",
+      "priority": "medium",
+      "files": 1,
+      "total_size": 757,
+      "last_updated": "2025-10-03T03:56:56.854Z"
+    },
+    {
+      "id": "gba_provincial",
+      "name": "GBA Provincial Open Data",
+      "category": "provincial",
+      "priority": "low",
+      "files": 0,
+      "total_size": 0,
+      "last_updated": "2025-10-03T03:57:00.971Z"
+    }
+  ],
+  "statistics": {
+    "total_sources": 9,
+    "successful_sources": 6,
+    "total_files": 12,
+    "total_size_bytes": 20141
+  }
+}

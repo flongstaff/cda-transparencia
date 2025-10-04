@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "success": true,
+    "data": {
+      "cantidad": 1,
+      "inicio": 0,
+      "municipios": [
+        {
+          "centroide": {
+            "lat": -34.4067977840705,
+            "lon": -59.884413320764
+          },
+          "id": "060161",
+          "nombre": "Carmen de Areco",
+          "provincia": {
+            "id": "06",
+            "nombre": "Buenos Aires"
+          }
+        }
+      ],
+      "parametros": {
+        "nombre": "Carmen de Areco"
+      },
+      "total": 1
+    },
+    "source": "Georef API"
+  },
+  "source": "georef",
+  "timestamp": "2025-10-03T03:56:48.857Z"
+}
