@@ -30,7 +30,9 @@ import TreemapChart from '../components/charts/TreemapChart';
 import UnifiedChart from '../components/charts/UnifiedChart';
 import ErrorBoundary from '../components/common/ErrorBoundary';
 import { motion } from 'framer-motion';
-import { externalAPIsService } from '../services/ExternalAPIsService';
+import { externalAPIsService } from "../services/ExternalDataAdapter";
+import { StatCard } from '../components/common/StatCard';
+import { ChartContainer } from '../components/common/ChartContainer';
 
 // Mock data for demonstration
 const mockTendersData = [
@@ -603,39 +605,39 @@ const ContractsAndTendersPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Análisis de Contratos</h3>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="border rounded-lg p-4">
-                  <div className="flex items-center">
-                    <Building className="h-6 w-6 text-blue-500 mr-3" />
-                    <div>
-                      <p className="text-sm text-gray-500 dark:text-dark-text-tertiary">Total Contratos</p>
-                      <p className="text-2xl font-bold">{filteredData.length}</p>
-                    </div>
-                  </div>
-                </div>
+                <StatCard
+                  title="Total Contratos"
+                  value={filteredData.length.toString()}
+                  subtitle="Licitaciones y contratos"
+                  icon={Building}
+                  iconColor="blue"
+                  delay={0}
+                />
 
-                <div className="border rounded-lg p-4">
-                  <div className="flex items-center">
-                    <DollarSign className="h-6 w-6 text-green-500 mr-3" />
-                    <div>
-                      <p className="text-sm text-gray-500 dark:text-dark-text-tertiary">Monto Total</p>
-                      <p className="text-2xl font-bold">{formatCurrency(filteredData.reduce((sum, c) => sum + c.amount, 0))}</p>
-                    </div>
-                  </div>
-                </div>
+                <StatCard
+                  title="Monto Total Contratado"
+                  value={formatCurrency(filteredData.reduce((sum, c) => sum + c.amount, 0))}
+                  subtitle="Suma de todos los contratos"
+                  icon={DollarSign}
+                  iconColor="green"
+                  delay={0.1}
+                />
 
-                <div className="border rounded-lg p-4">
-                  <div className="flex items-center">
-                    <TrendingUp className="h-6 w-6 text-purple-500 mr-3" />
-                    <div>
-                      <p className="text-sm text-gray-500 dark:text-dark-text-tertiary">Tasa Promedio</p>
-                      <p className="text-2xl font-bold">
-                        {filteredData.length > 0
-                          ? (filteredData.reduce((sum, c) => sum + c.executionRate, 0) / filteredData.length).toFixed(1)
-                          : '0'}%
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <StatCard
+                  title="Tasa de Ejecución Promedio"
+                  value={`${filteredData.length > 0
+                    ? (filteredData.reduce((sum, c) => sum + c.executionRate, 0) / filteredData.length).toFixed(1)
+                    : '0'}%`}
+                  subtitle="Promedio de cumplimiento"
+                  icon={TrendingUp}
+                  iconColor="purple"
+                  trend={filteredData.length > 0 ? {
+                    value: filteredData.reduce((sum, c) => sum + c.executionRate, 0) / filteredData.length,
+                    direction: ((filteredData.reduce((sum, c) => sum + c.executionRate, 0) / filteredData.length) >= 80) ? 'up' : 'down',
+                    label: 'ejecutado'
+                  } : undefined}
+                  delay={0.2}
+                />
               </div>
 
               <div className="mt-6">

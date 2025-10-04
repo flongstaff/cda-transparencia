@@ -3,6 +3,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const dotenv = require('dotenv');
 const path = require('path');
+const ErrorHandler = require('./utils/ErrorHandler');
 
 // Load environment variables
 dotenv.config();
@@ -10,9 +11,6 @@ dotenv.config();
 // Create Express app
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-// Initialize the comprehensive transparency system
-const routes = require('./routes');
 
 console.log('🚀 Initializing Carmen de Areco Comprehensive Transparency API...');
 
@@ -26,25 +24,42 @@ const rateLimit = require('express-rate-limit');
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 1000, // Increased limit for development
-  message: { error: 'Too many requests, please try again later.' }
+  message: { 
+    success: false,
+    error: {
+      type: 'RateLimitError',
+      message: 'Too many requests',
+      details: 'Rate limit exceeded, please try again later.',
+      timestamp: new Date().toISOString()
+    }
+  }
 });
 app.use(limiter);
+
+// Initialize the comprehensive transparency system
+const routes = require('./routes');
 
 // Use comprehensive transparency routes
 app.use('/api', routes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error('Server error:', err);
-  res.status(500).json({ 
-    error: 'Internal server error',
-    details: process.env.NODE_ENV === 'development' ? err.message : 'Contact administrator'
-  });
+  ErrorHandler.handleExpressError(err, req, res, next);
 });
 
 // 404 handler
 app.use((req, res) => {
-  res.status(404).json({ error: 'Endpoint not found' });
+  const notFoundError = new Error('Endpoint not found');
+  notFoundError.name = 'NotFoundError';
+  
+  const { response, statusCode } = ErrorHandler.createErrorResponse(notFoundError, `404 - ${req.method} ${req.path}`, 404);
+  ErrorHandler.logError(notFoundError, `404 - ${req.method} ${req.path}`, {
+    url: req.url,
+    method: req.method,
+    ip: req.ip
+  });
+  
+  res.status(statusCode).json(response);
 });
 
 // Start server

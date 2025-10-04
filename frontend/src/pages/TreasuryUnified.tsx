@@ -40,6 +40,8 @@ import WaterfallChart from '../components/charts/WaterfallChart';
 import TimeSeriesChart from '../components/charts/TimeSeriesChart';
 import RevenueSourcesChart from '../components/charts/RevenueSourcesChart';
 import ErrorBoundary from '../components/common/ErrorBoundary';
+import { StatCard } from '../components/common/StatCard';
+import { ChartContainer } from '../components/common/ChartContainer';
 
 const TreasuryUnified: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
@@ -77,177 +79,117 @@ const TreasuryUnified: React.FC = () => {
     <div className="space-y-6">
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
-        >
-          <div className="flex items-center">
-            <div className="p-3 bg-green-100 rounded-lg mr-4">
-              <TrendingUp className="h-6 w-6 text-green-600" />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-gray-500">Ingresos Totales</p>
-              <p className="text-2xl font-bold text-gray-900">
-                {treasuryData?.total_revenue ? formatCurrency(treasuryData.total_revenue) : 'N/A'}
-              </p>
-            </div>
-          </div>
-        </motion.div>
+        <StatCard
+          title="Ingresos Totales"
+          value={treasuryData?.total_revenue ? formatCurrency(treasuryData.total_revenue) : 'N/A'}
+          subtitle="Recaudación del período"
+          icon={TrendingUp}
+          iconColor="green"
+          delay={0}
+        />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
-        >
-          <div className="flex items-center">
-            <div className="p-3 bg-red-100 rounded-lg mr-4">
-              <TrendingDown className="h-6 w-6 text-red-600" />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-gray-500">Gastos Totales</p>
-              <p className="text-2xl font-bold text-gray-900">
-                {treasuryData?.total_expenses ? formatCurrency(treasuryData.total_expenses) : 'N/A'}
-              </p>
-            </div>
-          </div>
-        </motion.div>
+        <StatCard
+          title="Gastos Totales"
+          value={treasuryData?.total_expenses ? formatCurrency(treasuryData.total_expenses) : 'N/A'}
+          subtitle="Erogaciones del período"
+          icon={TrendingDown}
+          iconColor="red"
+          delay={0.1}
+        />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
-        >
-          <div className="flex items-center">
-            <div className={`p-3 rounded-lg mr-4 ${
-              (treasuryData?.balance || 0) >= 0 ? 'bg-green-100' : 'bg-red-100'
-            }`}>
-              <PiggyBank className={`h-6 w-6 ${
-                (treasuryData?.balance || 0) >= 0 ? 'text-green-600' : 'text-red-600'
-              }`} />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-gray-500">Balance</p>
-              <p className={`text-2xl font-bold ${
-                (treasuryData?.balance || 0) >= 0 ? 'text-green-600' : 'text-red-600'
-              }`}>
-                {treasuryData?.balance ? formatCurrency(treasuryData.balance) : 'N/A'}
-              </p>
-            </div>
-          </div>
-        </motion.div>
+        <StatCard
+          title="Balance"
+          value={treasuryData?.balance ? formatCurrency(treasuryData.balance) : 'N/A'}
+          subtitle={treasuryData?.balance && treasuryData.balance >= 0 ? 'Superávit' : 'Déficit'}
+          icon={PiggyBank}
+          iconColor={treasuryData?.balance && treasuryData.balance >= 0 ? 'green' : 'red'}
+          trend={treasuryData?.balance ? {
+            value: treasuryData.balance,
+            direction: treasuryData.balance >= 0 ? 'up' : 'down',
+            label: treasuryData.balance >= 0 ? 'positivo' : 'negativo'
+          } : undefined}
+          delay={0.2}
+        />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
-        >
-          <div className="flex items-center">
-            <div className="p-3 bg-blue-100 rounded-lg mr-4">
-              <Activity className="h-6 w-6 text-blue-600" />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-gray-500">Eficiencia</p>
-              <p className="text-2xl font-bold text-gray-900">
-                {treasuryData?.total_revenue && treasuryData?.total_expenses
-                  ? formatPercentage((treasuryData.total_revenue / treasuryData.total_expenses) * 100)
-                  : 'N/A'}
-              </p>
-            </div>
-          </div>
-        </motion.div>
+        <StatCard
+          title="Eficiencia Fiscal"
+          value={treasuryData?.total_revenue && treasuryData?.total_expenses
+            ? formatPercentage((treasuryData.total_revenue / treasuryData.total_expenses) * 100)
+            : 'N/A'}
+          subtitle="Ingresos / Gastos"
+          icon={Activity}
+          iconColor="blue"
+          delay={0.3}
+        />
       </div>
 
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+        <ChartContainer
+          title="Fuentes de Ingresos"
+          description="Distribución por origen de recursos"
+          icon={BarChart3}
+          height={280}
+          delay={0.4}
         >
-          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <BarChart3 className="h-5 w-5 mr-2 text-green-600" />
-            Fuentes de Ingresos
-          </h3>
-          <div className="h-64">
-            <ErrorBoundary>
-              <UnifiedChart
-                type="treasury"
-                year={selectedYear}
-                variant="pie"
-                height={250}
-              />
-            </ErrorBoundary>
-          </div>
-        </motion.div>
+          <ErrorBoundary>
+            <UnifiedChart
+              type="treasury"
+              year={selectedYear}
+              variant="pie"
+              height={250}
+            />
+          </ErrorBoundary>
+        </ChartContainer>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+        <ChartContainer
+          title="Distribución de Gastos"
+          description="Erogaciones por categoría"
+          icon={TrendingDown}
+          height={280}
+          delay={0.5}
         >
-          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <TrendingDown className="h-5 w-5 mr-2 text-red-600" />
-            Distribución de Gastos
-          </h3>
-          <div className="h-64">
-            <ErrorBoundary>
-              <UnifiedChart
-                type="treasury"
-                year={selectedYear}
-                variant="bar"
-                height={250}
-              />
-            </ErrorBoundary>
-          </div>
-        </motion.div>
+          <ErrorBoundary>
+            <UnifiedChart
+              type="treasury"
+              year={selectedYear}
+              variant="bar"
+              height={250}
+            />
+          </ErrorBoundary>
+        </ChartContainer>
       </div>
 
       {/* Additional Treasury Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+        <ChartContainer
+          title="Análisis del Tesoro"
+          description="Evolución temporal de ingresos y gastos"
+          icon={Activity}
+          height={280}
+          delay={0.6}
         >
-          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <Activity className="h-5 w-5 mr-2 text-blue-600" />
-            Análisis del Tesoro
-          </h3>
-          <div className="h-64">
-            <ErrorBoundary>
-              <TreasuryAnalysisChart
-                year={selectedYear}
-              />
-            </ErrorBoundary>
-          </div>
-        </motion.div>
+          <ErrorBoundary>
+            <TreasuryAnalysisChart
+              year={selectedYear}
+            />
+          </ErrorBoundary>
+        </ChartContainer>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+        <ChartContainer
+          title="Reservas Financieras"
+          description="Disponibilidad y liquidez"
+          icon={DollarSign}
+          height={280}
+          delay={0.7}
         >
-          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <DollarSign className="h-5 w-5 mr-2 text-purple-600" />
-            Reservas Financieras
-          </h3>
-          <div className="h-64">
-            <ErrorBoundary>
-              <FinancialReservesChart
-                year={selectedYear}
-                height={250}
-              />
-            </ErrorBoundary>
-          </div>
-        </motion.div>
+          <ErrorBoundary>
+            <FinancialReservesChart
+              year={selectedYear}
+              height={250}
+            />
+          </ErrorBoundary>
+        </ChartContainer>
       </div>
     </div>
   );

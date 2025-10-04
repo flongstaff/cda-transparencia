@@ -5,7 +5,7 @@
  * Provides comprehensive data comparison and cross-referencing capabilities
  */
 
-import { externalAPIsService } from './ExternalAPIsService';
+import { externalAPIsService } from "./ExternalDataAdapter";
 
 export interface DataSource {
   id: string;

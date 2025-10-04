@@ -3,7 +3,7 @@
  * Handles data fetching with comprehensive error handling and caching
  */
 
-import externalAPIsService from './ExternalAPIsService';
+import externalAPIsService from "./ExternalDataAdapter";
 import { githubDataService } from './GitHubDataService';
 import EnhancedDataService from './EnhancedDataService';
 

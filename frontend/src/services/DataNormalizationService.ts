@@ -7,7 +7,7 @@
  * and standardizes data structures for internal use.
  */
 
-import { ExternalDataResponse, DataSource } from './ExternalAPIsService';
+import { ExternalDataResponse, DataSource } from "./ExternalDataAdapter";
 
 export interface NormalizedDataPoint {
   id: string;

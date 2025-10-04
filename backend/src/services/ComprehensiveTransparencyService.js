@@ -863,13 +863,13 @@ class ComprehensiveTransparencyService {
     getImpactDescription(category, amount) {
         const amountMillion = (amount / 1000000).toFixed(1);
         const impacts = {
-            'Recursos Humanos': `Personal calificado brindando servicios públicos ($${amountMillion}M)`,
-            'Obras Públicas': `Infraestructura y mejoras urbanas ($${amountMillion}M)`,
-            'Contrataciones': `Servicios especializados para la comunidad ($${amountMillion}M)`,
-            'Ejecución Presupuestaria': `Gestión eficiente de recursos públicos ($${amountMillion}M)`
+            'Recursos Humanos': `Personal calificado brindando servicios públicos (${amountMillion}M)`,
+            'Obras Públicas': `Infraestructura y mejoras urbanas (${amountMillion}M)`,
+            'Contrataciones': `Servicios especializados para la comunidad (${amountMillion}M)`,
+            'Ejecución Presupuestaria': `Gestión eficiente de recursos públicos (${amountMillion}M)`
         };
         
-        return impacts[category] || `Servicios municipales ($${amountMillion}M)`;
+        return impacts[category] || `Servicios municipales (${amountMillion}M)`;
     }
 
     getCitizenServices(category) {
@@ -998,6 +998,228 @@ class ComprehensiveTransparencyService {
             cache_size: this.apiCache.size,
             cache_keys: Array.from(this.apiCache.keys())
         };
+    }
+
+    /**
+     * Get municipal debt data by year
+     */
+    async getMunicipalDebtByYear(year) {
+        try {
+            await this.initialize();
+            
+            // For now, we'll return mock data based on our existing document data
+            // In a real implementation, this would connect to debt-specific data sources
+            const documents = await this.getAllDocuments({ year });
+            
+            // Calculate debt metrics based on the document data
+            const totalBudgeted = documents.reduce((sum, doc) => sum + (parseFloat(doc.budgeted_amount) || 0), 0);
+            const totalExecuted = documents.reduce((sum, doc) => sum + (parseFloat(doc.executed_amount) || 0), 0);
+            
+            // Mock debt data based on financial data
+            const debtData = {
+                year: parseInt(year),
+                debt_data: [
+                    {
+                        type: 'Deuda Pública',
+                        amount: totalBudgeted * 0.1, // Assume 10% of budget is debt
+                        description: 'Deuda pública municipal',
+                        creditor: 'Entidades Financieras',
+                        interest_rate: 7.5,
+                        due_date: `${year + 2}-12-31`
+                    },
+                    {
+                        type: 'Obligaciones Emitidas',
+                        amount: totalBudgeted * 0.05, // Assume 5% of budget is bonds
+                        description: 'Obligaciones emitidas por el municipio',
+                        creditor: 'Inversores Públicos',
+                        interest_rate: 6.2,
+                        due_date: `${year + 5}-06-30`
+                    }
+                ],
+                total_debt: totalBudgeted * 0.15, // Total assumed debt
+                average_interest_rate: 6.85, // Weighted average
+                long_term_debt: totalBudgeted * 0.12, // Assume 80% is long term
+                short_term_debt: totalBudgeted * 0.03, // Assume 20% is short term
+                debt_by_type: {
+                    public_debt: totalBudgeted * 0.1,
+                    issued_bonds: totalBudgeted * 0.05,
+                    short_term: totalBudgeted * 0.03,
+                    long_term: totalBudgeted * 0.12
+                },
+                debt_to_revenue_ratio: 0.15, // Debt as percentage of budget
+                annual_debt_service: totalBudgeted * 0.02, // Annual payment
+                debt_maturity_profile: {
+                    [year + 1]: totalBudgeted * 0.01,
+                    [year + 2]: totalBudgeted * 0.02,
+                    [year + 3]: totalBudgeted * 0.03,
+                    [year + 4]: totalBudgeted * 0.01,
+                    [year + 5]: totalBudgeted * 0.08
+                }
+            };
+
+            return debtData;
+        } catch (error) {
+            console.error('Error getting municipal debt by year:', error);
+            throw error;
+        }
+    }
+
+    /**
+     * Get comparative analysis between years
+     */
+    async getComparativeAnalysis(startYear, endYear) {
+        try {
+            await this.initialize();
+            
+            // Get data for both years
+            const startYearData = await this.getYearlyData(startYear);
+            const endYearData = await this.getYearlyData(endYear);
+            
+            // Calculate trends and comparisons
+            const startTotalBudgeted = startYearData.summary.total_budgeted || startYearData.summary.total_municipal_budget || 0;
+            const endTotalBudgeted = endYearData.summary.total_budgeted || endYearData.summary.total_municipal_budget || 0;
+            
+            const startTotalExecuted = startYearData.summary.total_executed || startYearData.total_executed || 0;
+            const endTotalExecuted = endYearData.summary.total_executed || endYearData.total_executed || 0;
+            
+            const startTotalDocs = startYearData.total_documents || 0;
+            const endTotalDocs = endYearData.total_documents || 0;
+            
+            // Calculate growth rates
+            const budgetGrowthRate = startTotalBudgeted > 0 ? ((endTotalBudgeted - startTotalBudgeted) / startTotalBudgeted) * 100 : 0;
+            const executionGrowthRate = startTotalExecuted > 0 ? ((endTotalExecuted - startTotalExecuted) / startTotalExecuted) * 100 : 0;
+            const docsGrowthRate = startTotalDocs > 0 ? ((endTotalDocs - startTotalDocs) / startTotalDocs) * 100 : 0;
+            
+            // Calculate execution efficiency
+            const startExecutionRate = startTotalBudgeted > 0 ? (startTotalExecuted / startTotalBudgeted) * 100 : 0;
+            const endExecutionRate = endTotalBudgeted > 0 ? (endTotalExecuted / endTotalBudgeted) * 100 : 0;
+            
+            // Get category comparisons
+            const startCategories = this.categorizeBudgetByCategory(startYearData.documents);
+            const endCategories = this.categorizeBudgetByCategory(endYearData.documents);
+            
+            const categoryComparisons = {};
+            const allCategories = new Set([
+                ...Object.keys(startCategories),
+                ...Object.keys(endCategories)
+            ]);
+            
+            allCategories.forEach(category => {
+                const startCat = startCategories[category] || { budgeted: 0, executed: 0, execution_rate: 0 };
+                const endCat = endCategories[category] || { budgeted: 0, executed: 0, execution_rate: 0 };
+                
+                categoryComparisons[category] = {
+                    budgeted_change: endCat.budgeted - startCat.budgeted,
+                    budgeted_growth_rate: startCat.budgeted > 0 ? ((endCat.budgeted - startCat.budgeted) / startCat.budgeted) * 100 : 0,
+                    executed_change: endCat.executed - startCat.executed,
+                    executed_growth_rate: startCat.executed > 0 ? ((endCat.executed - startCat.executed) / startCat.executed) * 100 : 0,
+                    execution_rate_change: endCat.execution_rate - startCat.execution_rate,
+                    start_values: startCat,
+                    end_values: endCat
+                };
+            });
+
+            const comparativeData = {
+                comparison_period: {
+                    start_year: startYear,
+                    end_year: endYear,
+                    duration_years: endYear - startYear
+                },
+                financial_indicators: {
+                    total_budgeted_start: startTotalBudgeted,
+                    total_budgeted_end: endTotalBudgeted,
+                    budget_growth_rate: budgetGrowthRate.toFixed(2),
+                    total_executed_start: startTotalExecuted,
+                    total_executed_end: endTotalExecuted,
+                    execution_growth_rate: executionGrowthRate.toFixed(2),
+                    start_execution_rate: startExecutionRate.toFixed(2),
+                    end_execution_rate: endExecutionRate.toFixed(2),
+                    execution_rate_change: (endExecutionRate - startExecutionRate).toFixed(2)
+                },
+                document_metrics: {
+                    total_documents_start: startTotalDocs,
+                    total_documents_end: endTotalDocs,
+                    document_growth_rate: docsGrowthRate.toFixed(2),
+                    transparency_improvement: docsGrowthRate > 0
+                },
+                category_analysis: categoryComparisons,
+                summary: {
+                    budget_trend: budgetGrowthRate >= 0 ? 'Increasing' : 'Decreasing',
+                    execution_trend: executionGrowthRate >= 0 ? 'Improving' : 'Declining',
+                    transparency_trend: docsGrowthRate >= 0 ? 'Improving' : 'Declining',
+                    key_improvements: this.getComparativeImprovements(
+                        budgetGrowthRate, executionGrowthRate, docsGrowthRate
+                    ),
+                    recommendations: this.getComparativeRecommendations(
+                        budgetGrowthRate, executionGrowthRate, docsGrowthRate, categoryComparisons
+                    )
+                },
+                generated_at: new Date().toISOString()
+            };
+
+            return comparativeData;
+        } catch (error) {
+            console.error('Error getting comparative analysis:', error);
+            throw error;
+        }
+    }
+
+    /**
+     * Get comparative improvements
+     */
+    getComparativeImprovements(budgetGrowth, executionGrowth, docsGrowth) {
+        const improvements = [];
+        
+        if (budgetGrowth > 5) improvements.push('Significant budget growth');
+        if (executionGrowth > 5) improvements.push('Improved budget execution');
+        if (docsGrowth > 10) improvements.push('Major transparency improvements');
+        if (executionGrowth > budgetGrowth) improvements.push('Better execution than budget growth');
+        
+        return improvements;
+    }
+
+    /**
+     * Get comparative recommendations based on trend analysis
+     */
+    getComparativeRecommendations(budgetGrowth, executionGrowth, docsGrowth, categoryComparisons) {
+        const recommendations = [];
+        
+        if (budgetGrowth < 2) {
+            recommendations.push('Consider budget growth for infrastructure investments');
+        }
+        if (executionGrowth < budgetGrowth - 10) {
+            recommendations.push('Investigate reasons for lower execution rate');
+        }
+        if (docsGrowth < 5) {
+            recommendations.push('Improve document availability and transparency');
+        }
+        
+        // Check categories with biggest changes
+        let biggestChange = { category: '', change: 0, type: '' };
+        for (const [category, comparison] of Object.entries(categoryComparisons)) {
+            if (Math.abs(comparison.budgeted_growth_rate) > Math.abs(biggestChange.change)) {
+                biggestChange = {
+                    category,
+                    change: comparison.budgeted_growth_rate,
+                    type: 'budget'
+                };
+            }
+            if (Math.abs(comparison.execution_rate_change) > Math.abs(biggestChange.change)) {
+                biggestChange = {
+                    category,
+                    change: comparison.execution_rate_change,
+                    type: 'execution'
+                };
+            }
+        }
+        
+        if (biggestChange.change > 20) {
+            recommendations.push(`Investigate increase in ${biggestChange.category} ${biggestChange.type}`);
+        } else if (biggestChange.change < -20) {
+            recommendations.push(`Investigate decrease in ${biggestChange.category} ${biggestChange.type}`);
+        }
+        
+        return recommendations;
     }
 }
 

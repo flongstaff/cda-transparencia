@@ -24,7 +24,7 @@ import ComprehensiveDataDisplay from '../components/data-display/ComprehensiveDa
 import StandardizedChart from '../components/charts/StandardizedChart';
 import ErrorBoundary from '../components/common/ErrorBoundary';
 import { formatCurrencyARS } from '../utils/formatters';
-import { externalAPIsService } from '../services/ExternalAPIsService';
+import { externalAPIsService } from "../services/ExternalDataAdapter";
 import { carmenScraperService } from '../services/CarmenScraperService';
 import { dataAuditService } from '../services/DataAuditService';
 import ConsistentDataVisualization from '../components/charts/ConsistentDataVisualization';

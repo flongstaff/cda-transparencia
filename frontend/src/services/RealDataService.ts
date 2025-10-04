@@ -6,7 +6,7 @@
  * This service ensures the portal provides authentic and up-to-date data as required by law.
  */
 
-import { externalAPIsService } from './ExternalAPIsService';
+import { externalAPIsService } from "./ExternalDataAdapter";
 import DataService from './dataService';
 import AuditService from './AuditService';
 import EnhancedDataService from './EnhancedDataService';

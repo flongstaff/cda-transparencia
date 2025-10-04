@@ -8,7 +8,7 @@
  * - DataSourceIndicatorsService for monitoring and UI indicators
  */
 
-import { externalAPIsService, ExternalDataResponse } from './ExternalAPIsService';
+import { externalAPIsService, ExternalDataResponse } from "./ExternalDataAdapter";
 import { dataNormalizationService, NormalizedDataPoint } from './DataNormalizationService';
 import { dataCachingService } from './DataCachingService';
 import { dataSourceIndicatorsService, DataSourceIndicator } from './DataSourceIndicatorsService';

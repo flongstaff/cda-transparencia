@@ -22,6 +22,7 @@ import { useSalariesData } from '../hooks/useUnifiedData';
 import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator';
 import { YearSelector } from '../components/common/YearSelector';
 import ErrorBoundary from '../components/common/ErrorBoundary';
+import { StatCard } from '../components/common/StatCard';
 
 interface SalaryPosition {
   code: string;
@@ -163,7 +164,7 @@ const Salaries: React.FC = () => {
     }, {} as Record<string, any>);
 
     // Calculate averages
-    Object.values(categoryGroups).forEach((props: Record<string, unknown>) => {
+    Object.values(categoryGroups).forEach((group: any) => {
       group.avgSalary = group.totalGross / group.totalEmployees;
     });
 
@@ -265,60 +266,42 @@ const Salaries: React.FC = () => {
       />
 
       {/* General Statistics */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <Users className="h-8 w-8 text-blue-500" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Total Empleados</p>
-              <p className="text-2xl font-semibold text-blue-600 dark:text-blue-400">{totalStats.totalEmployees}</p>
-            </div>
-          </div>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <StatCard
+          title="Total Empleados"
+          value={totalStats.totalEmployees.toString()}
+          subtitle="Personal municipal"
+          icon={Users}
+          iconColor="blue"
+          delay={0}
+        />
 
-        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <DollarSign className="h-8 w-8 text-green-500" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Salario Promedio</p>
-              <p className="text-2xl font-semibold text-green-600 dark:text-green-400">
-                {formatCurrencyARS(totalStats.averageSalary)}
-              </p>
-            </div>
-          </div>
-        </div>
+        <StatCard
+          title="Salario Promedio"
+          value={formatCurrencyARS(totalStats.averageSalary)}
+          subtitle="Remuneración media"
+          icon={DollarSign}
+          iconColor="green"
+          delay={0.1}
+        />
 
-        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <TrendingUp className="h-8 w-8 text-purple-500" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Costo Mensual</p>
-              <p className="text-2xl font-semibold text-purple-600 dark:text-purple-400">
-                {formatCurrencyARS(totalStats.totalMonthlyCost)}
-              </p>
-            </div>
-          </div>
-        </div>
+        <StatCard
+          title="Costo Mensual"
+          value={formatCurrencyARS(totalStats.totalMonthlyCost)}
+          subtitle="Masa salarial del mes"
+          icon={TrendingUp}
+          iconColor="purple"
+          delay={0.2}
+        />
 
-        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <BarChart3 className="h-8 w-8 text-orange-500" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Costo Anual</p>
-              <p className="text-2xl font-semibold text-orange-600 dark:text-orange-400">
-                {formatCurrencyARS(totalStats.totalAnnualCost)}
-              </p>
-            </div>
-          </div>
-        </div>
+        <StatCard
+          title="Costo Anual"
+          value={formatCurrencyARS(totalStats.totalAnnualCost)}
+          subtitle="Incluye aguinaldo (13 sueldos)"
+          icon={BarChart3}
+          iconColor="orange"
+          delay={0.3}
+        />
       </div>
 
       {/* Module Value Information */}

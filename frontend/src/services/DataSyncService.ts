@@ -1,6 +1,6 @@
 
 import { githubDataService } from './GitHubDataService';
-import externalAPIsService from './ExternalAPIsService';
+import externalAPIsService from "./ExternalDataAdapter";
 
 export interface SyncResult {
   source: string;

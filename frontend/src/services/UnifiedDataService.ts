@@ -5,7 +5,7 @@
  * Uses SmartDataLoader for intelligent caching and on-demand loading
  */
 
-import { externalAPIsService } from './ExternalAPIsService';
+import { externalAPIsService } from "./ExternalDataAdapter";
 import { buildApiUrl } from '../config/apiConfig';
 import smartDataLoader from './SmartDataLoader';
 import dataCachingService from './DataCachingService';

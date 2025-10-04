@@ -6,7 +6,7 @@
  * and their reliability metrics.
  */
 
-import { externalAPIsService } from './ExternalAPIsService';
+import { externalAPIsService } from "./ExternalDataAdapter";
 import { dataNormalizationService } from './DataNormalizationService';
 import { NormalizedDataPoint } from './DataNormalizationService';
 

@@ -5,7 +5,7 @@
  * Ensures all external services are fetched efficiently and cached properly
  */
 
-import { externalAPIsService } from './ExternalAPIsService';
+import { externalAPIsService } from "./ExternalDataAdapter";
 import smartDataLoader from './SmartDataLoader';
 import dataCachingService from './DataCachingService';
 

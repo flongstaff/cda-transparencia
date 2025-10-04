@@ -4,7 +4,7 @@
  */
 
 import Papa from 'papaparse';
-import externalAPIsService from './ExternalAPIsService';
+import externalAPIsService from "./ExternalDataAdapter";
 
 // Define interfaces for data structures to avoid using 'any'
 interface CacheEntry<T> {

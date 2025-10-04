@@ -12,6 +12,7 @@ const openDataRoutes = require('./openDataRoutes');
 const documentRoutes = require('./documentRoutes');
 const privacyRoutes = require('./privacyRoutes');
 const monitoringRoutes = require('./monitoringRoutes');
+const feedbackRoutes = require('./feedbackRoutes');
 
 // Main transparency portal for citizens (consolidated PostgreSQL and real documents system)
 router.use('/transparency', comprehensiveTransparencyRoutes);
@@ -43,6 +44,9 @@ router.use('/privacy', privacyRoutes);
 // Monitoring and evaluation routes for system performance and compliance
 router.use('/monitoring', monitoringRoutes);
 
+// User feedback routes for collecting and managing user input
+router.use('/feedback', feedbackRoutes);
+
 // Health check endpoint
 router.get('/health', (req, res) => {
   res.json({
@@ -59,7 +63,8 @@ router.get('/health', (req, res) => {
       open_data_catalog: 'active',
       document_analysis: 'active',
       privacy_protection: 'active',
-      monitoring_evaluation: 'active'
+      monitoring_evaluation: 'active',
+      user_feedback: 'active'
     },
     version: '3.0.0',
     timestamp: new Date().toISOString()

@@ -6,7 +6,7 @@
 import DataService from '../dataService';
 import AuditService from '../AuditService';
 import EnhancedDataService from '../EnhancedDataService';
-import externalAPIsService from '../ExternalAPIsService';
+import externalAPIsService from '../ExternalDataAdapter';
 import { githubDataService } from '../GitHubDataService';
 import { dataSyncService } from '../DataSyncService';
 import masterDataService from '../MasterDataService';

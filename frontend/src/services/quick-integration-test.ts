@@ -3,7 +3,7 @@
  * Verifies that all external data integrations are working properly
  */
 
-import { externalAPIsService } from './ExternalAPIsService';
+import { externalAPIsService } from "./ExternalDataAdapter";
 import { carmenScraperService } from './CarmenScraperService';
 import { dataAuditService } from './DataAuditService';
 

@@ -170,8 +170,8 @@ function App() {
 
                   {/* Data & Charts Routes - All redirected to Dashboard Completo */}
                   <Route path="/database" element={<Database />} />
-                  <Route path="/all-charts" element={<AllChartsDashboard />} />
                   <Route path="/data-hub" element={<DataVisualizationHub />} />
+                  <Route path="/data-hub/all-charts" element={<AllChartsDashboard />} />
                   <Route path="/data-visualization" element={<DataVisualizationHub />} />
                   <Route path="/search" element={<SearchPage />} />
 
@@ -223,10 +223,14 @@ function App() {
           </div>
           <Footer />
           </div>
-          </BrowserRouter>
-        </DataProvider>
-      </ThemeProvider>
-    </HelmetProvider>
+  </main>
+          </div>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </DataProvider>
+  </ThemeProvider>
+</HelmetProvider>
   );
 }
 

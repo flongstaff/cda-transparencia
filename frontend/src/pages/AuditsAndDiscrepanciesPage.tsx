@@ -16,7 +16,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { externalAPIsService } from '../services/ExternalAPIsService';
+import { externalAPIsService } from "../services/ExternalDataAdapter";
 import { motion } from 'framer-motion';
 import ErrorBoundary from '../components/common/ErrorBoundary';
 

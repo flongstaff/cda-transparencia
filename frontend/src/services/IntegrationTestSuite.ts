@@ -3,7 +3,7 @@
  * Tests all the integrations between components and services
  */
 
-import { externalAPIsService } from '../services/ExternalAPIsService';
+import { externalAPIsService } from "../services/ExternalDataAdapter";
 import { carmenScraperService } from '../services/CarmenScraperService';
 import { dataAuditService } from '../services/DataAuditService';
 

@@ -7,7 +7,7 @@
 import React, { useState, useRef, ChangeEvent } from 'react';
 import { Upload, FileText, Search, Download, AlertTriangle, CheckCircle, Clock, Eye, X, Loader2, Scale, BookOpen } from 'lucide-react';
 import { documentAnalysisService, DocumentAnalysisResult, DocumentCategory } from '../services/documentAnalysisService';
-import { externalAPIsService } from '../services/ExternalAPIsService';
+import { externalAPIsService } from "../services/ExternalDataAdapter";
 
 interface DocumentAnalyzerProps {
   onAnalysisComplete?: (result: DocumentAnalysisResult) => void;

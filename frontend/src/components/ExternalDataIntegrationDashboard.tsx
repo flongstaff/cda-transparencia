@@ -10,7 +10,7 @@ import { comprehensiveExternalDataIntegrationService } from '../services/Compreh
 import { dataSourceIndicatorsService } from '../services/DataSourceIndicatorsService';
 import { dataCachingService } from '../services/DataCachingService';
 import DataSourceIndicators from '../components/DataSourceIndicators';
-import { ExternalDataResponse } from '../services/ExternalAPIsService';
+import { ExternalDataResponse } from "../services/ExternalDataAdapter";
 import { NormalizedDataPoint } from '../services/DataNormalizationService';
 
 interface DashboardStats {

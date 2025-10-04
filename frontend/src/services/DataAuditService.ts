@@ -4,7 +4,7 @@
  * Helps ensure data integrity and accuracy across Carmen de Areco transparency portal
  */
 
-import { externalAPIsService } from './ExternalAPIsService';
+import { externalAPIsService } from "./ExternalDataAdapter";
 import { carmenScraperService } from './CarmenScraperService';
 
 export interface DataComparisonResult {

@@ -5,7 +5,7 @@
  * It follows the AAIP guidelines and integrates municipal, provincial, and national data sources
  */
 
-import { externalAPIsService } from './ExternalAPIsService';
+import { externalAPIsService } from "./ExternalDataAdapter";
 import { buildApiUrl } from '../config/apiConfig';
 
 export interface ComprehensiveDataResponse {

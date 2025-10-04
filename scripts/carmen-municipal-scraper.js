@@ -22,15 +22,15 @@ const __dirname = path.dirname(__filename);
 
 const OUTPUT_DIR = path.join(__dirname, '../data/scraped/carmen_municipal');
 
-// Carmen de Areco URLs from DATA_SOURCES.md
+// Carmen de Areco URLs from verified-sources.md (Updated October 2025)
 const CARMEN_URLS = {
   main: 'https://carmendeareco.gob.ar',
   transparency: 'https://carmendeareco.gob.ar/transparencia',
-  budget: 'https://carmendeareco.gob.ar/presupuesto-participativo',
-  bulletin: 'https://carmendeareco.gob.ar/boletin-oficial',
-  tenders: 'https://carmendeareco.gob.ar/licitaciones',
-  declarations: 'https://carmendeareco.gob.ar/declaraciones-juradas',
-  council: 'http://hcdcarmendeareco.blogspot.com'
+  budget: 'https://carmendeareco.gob.ar/wp-content/uploads/2025/02/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf', // Direct PDF link for 2025 budget
+  bulletin: 'https://carmendeareco.gob.ar/boletin-oficial/', // Updated with trailing slash
+  tenders: 'https://carmendeareco.gob.ar/transparencia/licitaciones', // Updated to correct path
+  declarations: 'https://carmendeareco.gob.ar/transparencia', // Asset declarations likely on main transparency page
+  council: 'https://carmendeareco.gob.ar/gobierno/comision-legislativa/' // Updated to official council page instead of inactive blog
 };
 
 // Scraping statistics
@@ -177,17 +177,40 @@ function extractDataByType($, pageType, url) {
       break;
 
     case 'council':
-      // Extract municipal council blog posts (Blogspot)
-      $('.post, article').each((i, el) => {
+      // Extract municipal council information
+      $('.post, article, .council-item, .legislative-item').each((i, el) => {
         const post = $(el);
         data.documents.push({
-          title: post.find('.post-title, h2, h3').first().text().trim(),
+          title: post.find('.post-title, h2, h3, .title').first().text().trim(),
           date: post.find('.published, .date, time').first().text().trim(),
-          content: post.find('.post-body, .content').first().text().trim().substring(0, 500),
-          url: post.find('.post-title a, h2 a, h3 a').first().attr('href'),
+          content: post.find('.post-body, .content, .summary').first().text().trim().substring(0, 500),
+          url: post.find('.post-title a, h2 a, h3 a, a').first().attr('href'),
           type: 'council_post'
         });
       });
+      break;
+
+    case 'budget':
+      // Handle direct PDF link for budget or extract from page
+      if (url.includes('.pdf')) {
+        data.documents.push({
+          title: 'Presupuesto Municipal 2025',
+          url: url,
+          type: 'budget_document',
+          description: 'Ordenanza de Presupuesto Año 2025 - Ordinance 3280/24',
+          file_size: 'N/A (to be determined after download)'
+        });
+      } else {
+        // Extract budget-related documents from page
+        $('a[href*="pdf"], a[href*="presupuesto"], a[href*="budget"], .budget-item').each((i, el) => {
+          const link = $(el);
+          data.documents.push({
+            title: link.text().trim(),
+            url: link.attr('href'),
+            type: 'budget_document'
+          });
+        });
+      }
       break;
 
     case 'main':

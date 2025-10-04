@@ -39,6 +39,8 @@ import WaterfallChart from '../components/charts/WaterfallChart';
 import QuarterlyExecutionChart from '../components/charts/QuarterlyExecutionChart';
 import GenderBudgetingChart from '../components/charts/GenderBudgetingChart';
 import ErrorBoundary from '../components/common/ErrorBoundary';
+import { StatCard } from '../components/common/StatCard';
+import { ChartContainer } from '../components/common/ChartContainer';
 
 const BudgetUnified: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -88,192 +90,132 @@ const BudgetUnified: React.FC = () => {
     <div className="space-y-6">
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
-        >
-          <div className="flex items-center">
-            <div className="p-3 bg-blue-100 rounded-lg mr-4">
-              <DollarSign className="h-6 w-6 text-blue-600" />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-gray-500">Presupuesto Total</p>
-              <p className="text-2xl font-bold text-gray-900">
-                {budgetData?.total_budget ? formatCurrency(budgetData.total_budget) : 'N/A'}
-              </p>
-            </div>
-          </div>
-        </motion.div>
+        <StatCard
+          title="Presupuesto Total"
+          value={budgetData?.total_budget ? formatCurrency(budgetData.total_budget) : 'N/A'}
+          subtitle="Aprobado para el ejercicio"
+          icon={DollarSign}
+          iconColor="blue"
+          delay={0}
+        />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
-        >
-          <div className="flex items-center">
-            <div className="p-3 bg-green-100 rounded-lg mr-4">
-              <TrendingUp className="h-6 w-6 text-green-600" />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-gray-500">Ejecutado</p>
-              <p className="text-2xl font-bold text-gray-900">
-                {budgetData?.total_executed ? formatCurrency(budgetData.total_executed) : 'N/A'}
-              </p>
-            </div>
-          </div>
-        </motion.div>
+        <StatCard
+          title="Ejecutado"
+          value={budgetData?.total_executed ? formatCurrency(budgetData.total_executed) : 'N/A'}
+          subtitle="Devengado al período"
+          icon={TrendingUp}
+          iconColor="green"
+          delay={0.1}
+        />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
-        >
-          <div className="flex items-center">
-            <div className="p-3 bg-purple-100 rounded-lg mr-4">
-              <Activity className="h-6 w-6 text-purple-600" />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-gray-500">Tasa de Ejecución</p>
-              <p className="text-2xl font-bold text-gray-900">
-                {budgetData?.execution_rate ? formatPercentage(budgetData.execution_rate) : 'N/A'}
-              </p>
-            </div>
-          </div>
-        </motion.div>
+        <StatCard
+          title="Tasa de Ejecución"
+          value={budgetData?.execution_rate ? formatPercentage(budgetData.execution_rate) : 'N/A'}
+          subtitle={budgetData?.execution_rate && budgetData.execution_rate >= 90 ? 'Excelente' : budgetData?.execution_rate && budgetData.execution_rate >= 70 ? 'Buena' : 'Moderada'}
+          icon={Activity}
+          iconColor="purple"
+          trend={budgetData?.execution_rate ? {
+            value: budgetData.execution_rate,
+            direction: budgetData.execution_rate >= 80 ? 'up' : 'down',
+            label: 'del presupuesto'
+          } : undefined}
+          delay={0.2}
+        />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
-        >
-          <div className="flex items-center">
-            <div className="p-3 bg-orange-100 rounded-lg mr-4">
-              <PiggyBank className="h-6 w-6 text-orange-600" />
-            </div>
-            <div>
-              <p className="text-sm font-medium text-gray-500">Ahorro</p>
-              <p className="text-2xl font-bold text-gray-900">
-                {budgetData?.total_budget && budgetData?.total_executed 
-                  ? formatCurrency(budgetData.total_budget - budgetData.total_executed)
-                  : 'N/A'}
-              </p>
-            </div>
-          </div>
-        </motion.div>
+        <StatCard
+          title="Ahorro Presupuestario"
+          value={budgetData?.total_budget && budgetData?.total_executed
+            ? formatCurrency(budgetData.total_budget - budgetData.total_executed)
+            : 'N/A'}
+          subtitle="No ejecutado"
+          icon={PiggyBank}
+          iconColor="orange"
+          delay={0.3}
+        />
       </div>
 
       {/* Enhanced Budget Charts Grid */}
       <div className="space-y-6">
         {/* Main Budget Execution Dashboard */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+        <ChartContainer
+          title={`Dashboard de Ejecución Presupuestaria - ${selectedYear}`}
+          description="Panel integral de análisis presupuestario"
+          icon={BarChart3}
+          delay={0.4}
         >
-          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <BarChart3 className="h-5 w-5 mr-2 text-blue-600" />
-            Dashboard de Ejecución Presupuestaria - {selectedYear}
-          </h3>
           <ErrorBoundary>
             <BudgetExecutionDashboard
               year={selectedYear}
               data={budgetData}
             />
           </ErrorBoundary>
-        </motion.div>
+        </ChartContainer>
 
         {/* Secondary Charts Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          <ChartContainer
+            title="Ejecución por Partida"
+            description="Comparación de presupuesto vs ejecutado"
+            icon={BarChart3}
+            height={280}
+            delay={0.5}
           >
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-              <BarChart3 className="h-5 w-5 mr-2 text-blue-600" />
-              Ejecución por Partida
-            </h3>
             <ErrorBoundary>
-              <div className="h-64">
-                <UnifiedChart
-                  type="bar"
-                  data={budgetData?.budget_execution || []}
-                  height={250}
-                  showLegend={true}
-                />
-              </div>
+              <UnifiedChart
+                type="bar"
+                data={budgetData?.budget_execution || []}
+                height={250}
+                showLegend={true}
+              />
             </ErrorBoundary>
-          </motion.div>
+          </ChartContainer>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          <ChartContainer
+            title="Distribución por Categoría"
+            description="Composición del presupuesto"
+            icon={PiggyBank}
+            height={280}
+            delay={0.6}
           >
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-              <PiggyBank className="h-5 w-5 mr-2 text-green-600" />
-              Distribución por Categoría
-            </h3>
             <ErrorBoundary>
-              <div className="h-64">
-                <UnifiedChart
-                  type="pie"
-                  data={budgetData?.revenue_sources || []}
-                  height={250}
-                  showLegend={true}
-                />
-              </div>
+              <UnifiedChart
+                type="pie"
+                data={budgetData?.revenue_sources || []}
+                height={250}
+                showLegend={true}
+              />
             </ErrorBoundary>
-          </motion.div>
+          </ChartContainer>
 
-          {/* Additional Budget Execution Chart */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          <ChartContainer
+            title="Análisis de Tendencias"
+            description="Evolución de la ejecución"
+            icon={Activity}
+            height={280}
+            delay={0.7}
           >
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-              <Activity className="h-5 w-5 mr-2 text-purple-600" />
-              Análisis de Tendencias
-            </h3>
             <ErrorBoundary>
-              <div className="h-64">
-                <BudgetExecutionChart
-                  data={budgetData?.budget_execution || []}
-                  year={selectedYear}
-                />
-              </div>
+              <BudgetExecutionChart
+                data={budgetData?.budget_execution || []}
+                year={selectedYear}
+              />
             </ErrorBoundary>
-          </motion.div>
+          </ChartContainer>
 
-          {/* Budget Analysis Chart */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          <ChartContainer
+            title="Análisis Presupuestario"
+            description="Métricas de cumplimiento"
+            icon={Scale}
+            height={280}
+            delay={0.8}
           >
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-              <Scale className="h-5 w-5 mr-2 text-orange-600" />
-              Análisis Presupuestario
-            </h3>
             <ErrorBoundary>
-              <div className="h-64">
-                <BudgetAnalysisChart
-                  data={budgetData}
-                  year={selectedYear}
-                />
-              </div>
+              <BudgetAnalysisChart
+                data={budgetData}
+                year={selectedYear}
+              />
             </ErrorBoundary>
-          </motion.div>
+          </ChartContainer>
         </div>
       </div>
     </div>

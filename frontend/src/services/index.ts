@@ -7,7 +7,7 @@
 export { default as dataService, productionDataService } from './dataService';
 export { default as EnhancedDataService } from './EnhancedDataService';
 export { default as githubDataService } from './GitHubDataService';
-export { default as externalAPIsService } from './ExternalAPIsService';
+export { default as externalAPIsService } from "./ExternalDataAdapter";
 export { default as AuditService } from './AuditService';
 export { default as masterDataService } from './MasterDataService';
 export { default as RealDataService, realDataService } from './RealDataService';
@@ -21,7 +21,7 @@ export type {
 export type { 
   ExternalDataResponse, 
   DataSource 
-} from './ExternalAPIsService';
+} from "./ExternalDataAdapter";
 export type { 
   GitHubDataResponse, 
   RepositoryConfig 
