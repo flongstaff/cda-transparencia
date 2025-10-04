@@ -1,10 +1,11 @@
 name: Deploy to GitHub Pages
-# This is the PRIMARY deployment workflow
-# Deploys to GitHub Pages which is accessible via cda-transparencia.org (DNS via Cloudflare)
+# DISABLED: Using GitHub's automatic pages-build-deployment workflow instead
+# The automatic workflow deploys from gh-pages branch to cda-transparencia.org
 
 on:
-  push:
-    branches: [ main ]
+  # Disabled automatic triggers - GitHub Pages uses automatic deployment
+  # push:
+  #   branches: [ main ]
   workflow_dispatch:
 
 # Allow this job to commit to GitHub Pages
