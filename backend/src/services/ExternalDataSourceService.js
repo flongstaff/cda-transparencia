@@ -391,6 +391,163 @@ class ExternalDataSourceService {
             };
         }
 
+        // Get SSPRE Presupuesto Administración Pública Nacional dataset
+        try {
+            const sspreResponse = await axios.get(
+                'https://datos.gob.ar/api/3/action/package_show',
+                {
+                    params: {
+                        id: 'sspre-presupuesto-administracion-publica-nacional'
+                    },
+                    timeout: 15000,
+                    headers: {
+                        'User-Agent': 'Carmen-Transparency-Portal/1.0',
+                        'Accept': 'application/json'
+                    }
+                }
+            );
+            
+            const dataset = sspreResponse.data.result;
+            
+            // Process resources to make them more accessible
+            const processedResources = (dataset.resources || []).map(resource => ({
+                id: resource.id,
+                name: resource.name,
+                title: resource.name,
+                description: resource.description,
+                format: resource.format,
+                url: resource.url,
+                created: resource.created,
+                last_modified: resource.last_modified,
+                size: resource.size,
+                resource_type: resource.resource_type
+            }));
+            
+            endpointData.sspre_presupuesto = {
+                success: true,
+                dataset: {
+                    id: dataset.id,
+                    title: dataset.title,
+                    name: dataset.name,
+                    notes: dataset.notes,
+                    organization: dataset.organization,
+                    license_title: dataset.license_title,
+                    metadata_created: dataset.metadata_created,
+                    metadata_modified: dataset.metadata_modified,
+                    tags: dataset.tags?.map(tag => tag.name) || [],
+                    groups: dataset.groups?.map(group => group.name) || [],
+                    resources: processedResources,
+                    total_resources: processedResources.length
+                },
+                source: 'datos.gob.ar',
+                last_updated: new Date().toISOString()
+            };
+        } catch (error) {
+            console.warn('Could not fetch SSPRE Presupuesto dataset:', error.message);
+            endpointData.sspre_presupuesto = {
+                success: false,
+                error: 'Could not fetch from SSPRE Presupuesto API',
+                source: 'datos.gob.ar (Mock)',
+                last_updated: new Date().toISOString(),
+                mock_data: {
+                    dataset: {
+                        id: 'sspre-presupuesto-administracion-publica-nacional',
+                        title: 'Presupuesto de la Administración Pública Nacional',
+                        name: 'sspre-presupuesto-administracion-publica-nacional',
+                        notes: 'Créditos y Recursos de la Administración Pública Nacional del ejercicio.',
+                        organization: { title: 'Subsecretaría de Presupuesto', name: 'sspre' },
+                        license_title: 'Creative Commons Attribution 4.0',
+                        metadata_created: '2019-11-26T15:03:00.431765',
+                        metadata_modified: new Date().toISOString(),
+                        tags: ['Clasificador Presupuestario', 'Crédito', 'Recurso', 'presupuesto', 'finanzas'],
+                        groups: ['econ'],
+                        resources: [
+                            {
+                                id: 'sspre_144',
+                                name: 'Clasificador presupuestario Unidad Ejecutora',
+                                title: 'Clasificador presupuestario Unidad Ejecutora',
+                                description: 'Unidad Ejecutora. . Formato zip',
+                                format: 'ZIP',
+                                url: 'https://dgsiaf-repo.mecon.gob.ar/repository/pa/datasets/d-unidad-ejecutora.zip',
+                                created: '2018-01-16T00:00:00',
+                                last_modified: new Date().toISOString(),
+                                size: 26457,
+                                resource_type: 'file.upload'
+                            },
+                            {
+                                id: 'sspre_152',
+                                name: 'Total Presupuesto y ejecucion de gastos y recursos',
+                                title: 'Total Presupuesto y ejecucion de gastos y recursos',
+                                description: 'Totales del Presupuesto. . Formato zip',
+                                format: 'ZIP',
+                                url: 'https://dgsiaf-repo.mecon.gob.ar/repository/pa/datasets/totales-de-presupuesto.zip',
+                                created: '2018-01-06T00:00:00',
+                                last_modified: new Date().toISOString(),
+                                size: 2027,
+                                resource_type: 'file.upload'
+                            }
+                        ],
+                        total_resources: 2
+                    }
+                }
+            };
+        }
+
+        // Get other relevant national datasets
+        try {
+            const datasetsResponse = await axios.get(
+                'https://datos.gob.ar/api/3/action/package_search',
+                {
+                    params: {
+                        q: 'sspre OR presupuesto OR administracion publica',
+                        rows: 10
+                    },
+                    timeout: 15000,
+                    headers: {
+                        'User-Agent': 'Carmen-Transparency-Portal/1.0',
+                        'Accept': 'application/json'
+                    }
+                }
+            );
+            
+            const datasets = datasetsResponse.data.result?.results || [];
+            const processedDatasets = datasets.map(dataset => ({
+                id: dataset.id,
+                title: dataset.title,
+                name: dataset.name,
+                description: dataset.notes,
+                organization: dataset.organization?.name,
+                tags: dataset.tags?.map(tag => tag.name) || [],
+                resources: dataset.resources?.map(resource => ({
+                    name: resource.name,
+                    format: resource.format,
+                    url: resource.url
+                })) || [],
+                last_updated: dataset.metadata_modified,
+                created: dataset.metadata_created
+            }));
+            
+            endpointData.national_datasets = {
+                success: true,
+                datasets: processedDatasets,
+                count: datasetsResponse.data.result?.count || 0,
+                source: 'datos.gob.ar',
+                last_updated: new Date().toISOString()
+            };
+        } catch (error) {
+            console.warn('Could not fetch national datasets:', error.message);
+            endpointData.national_datasets = {
+                success: false,
+                error: 'Could not fetch from national datasets API',
+                source: 'datos.gob.ar (Mock)',
+                last_updated: new Date().toISOString(),
+                mock_data: {
+                    datasets: [],
+                    count: 0
+                }
+            };
+        }
+
         return endpointData;
     }
 

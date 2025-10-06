@@ -5,6 +5,7 @@
  */
 
 const { Client } = require('@elastic/elasticsearch');
+// Note: DocumentIndexer is used in AdvancedSearchService, not SemanticSearchService
 require('dotenv').config();
 
 class SemanticSearchService {

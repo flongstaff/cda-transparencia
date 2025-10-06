@@ -5,7 +5,8 @@
 
 const express = require('express');
 const router = express.Router();
-const documentIndexer = require('../services/DocumentIndexer');
+const DocumentIndexer = require('../services/DocumentIndexer');
+const documentIndexer = new DocumentIndexer();
 
 /**
  * Health check for document indexer

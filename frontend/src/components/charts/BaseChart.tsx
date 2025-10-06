@@ -71,7 +71,7 @@ export type SupportedChartType =
 
 // Props for the base chart component
 interface BaseChartProps {
-  data: Record<string, unknown>[];
+  data: Record<string, unknown>[] | null | undefined;
   chartType: SupportedChartType;
   xAxisKey: string;
   yAxisKeys: string[];
@@ -115,8 +115,13 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
   yAxisLabel,
   onDataPointClick
 }) => {
-  // Memoize chart data to prevent unnecessary re-renders
-  const chartData = useMemo(() => data || [], [data]);
+  // Memoize chart data to prevent unnecessary re-renders and filter out null values
+  const chartData = useMemo(() => {
+    if (!data) return [];
+    
+    // Filter out null/undefined entries and entries without required properties
+    return data.filter(item => item != null && typeof item === 'object');
+  }, [data]);
   
   // Memoize chart configuration
   const chartConfig = useMemo(() => ({
@@ -127,6 +132,17 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
   
   // Render appropriate chart based on type
   const renderChart = () => {
+    // If no data, show a message instead of trying to render the chart
+    if (chartData.length === 0) {
+      return (
+        <div className="flex items-center justify-center h-full">
+          <div className="text-center text-gray-500">
+            <p>No hay datos disponibles para mostrar</p>
+          </div>
+        </div>
+      );
+    }
+    
     const commonProps = {
       width: chartConfig.width,
       height: chartConfig.height,

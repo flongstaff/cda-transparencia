@@ -9,6 +9,7 @@ import { YearSelector } from '@components/common/YearSelector';
 import UnifiedTransparencyService from '../services/UnifiedTransparencyService';
 import { AlertTriangle, CheckCircle, Clock, ExternalLink, Loader2, Shield, Search, TrendingUp, RefreshCw } from 'lucide-react';
 import ErrorBoundary from '@components/common/ErrorBoundary';
+import { UnifiedDataViewer } from '@components/data-viewers';
 import ChartAuditReport from '@components/charts/ChartAuditReport';
 import TimeSeriesAnomalyChart from '@components/charts/TimeSeriesAnomalyChart';
 import FiscalBalanceReportChart from '@components/charts/FiscalBalanceReportChart';
@@ -599,6 +600,21 @@ const Audits: React.FC = () => {
             <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Años con discrepancias significativas</p>
           </div>
         </div>
+      </div>
+
+      {/* Unified Data Viewer - Audit Documents and Datasets */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <UnifiedDataViewer
+          title="Documentos y Datasets de Auditorías y Transparencia"
+          description="Acceda a informes de auditoría, datos de control fiscal, reportes de transparencia y datasets de verificación"
+          category="audit"
+          theme={['just', 'justicia-y-seguridad', 'gove', 'gobierno-y-sector-publico']}
+          year={selectedYear}
+          showSearch={true}
+          defaultTab="all"
+          maxPDFs={25}
+          maxDatasets={35}
+        />
       </div>
     </div>
   );

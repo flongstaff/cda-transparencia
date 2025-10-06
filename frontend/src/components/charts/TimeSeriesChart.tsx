@@ -5,6 +5,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import {
   LineChart,
   Line,
@@ -16,7 +17,7 @@ import {
   ReferenceLine
 } from 'recharts';
 import { AlertTriangle, TrendingUp, TrendingDown } from 'lucide-react';
-import useCsvData from '../../hooks/useCsvData';
+import chartDataService from '../../services/charts/ChartDataService';
 import { formatCurrencyARS, formatPercentage, formatNumberARS, formatQuarter } from '../../utils/spanishFormatter';
 import useResponsive from '../../hooks/useResponsive';
 import ResponsiveChartWrapper from './ResponsiveChartWrapper';
@@ -50,13 +51,13 @@ const formatXAxisLabel = (value: any): string => {
 };
 
 interface TimeSeriesChartProps {
-  csvUrl: string;
-  selectedYear?: number;
+  type: string; // Chart type for service (e.g., 'Budget_Execution', 'Personnel_Expenses', etc.)
+  year?: number;
   title?: string;
   description?: string;
   height?: number;
-  dataKey: string;
-  valueKey: string;
+  dataKey?: string;
+  valueKey?: string;
   showAnomalies?: boolean;
   className?: string;
 }
@@ -67,8 +68,8 @@ interface TimeSeriesData {
 }
 
 const TimeSeriesChart: React.FC<TimeSeriesChartProps> = ({
-  csvUrl,
-  selectedYear,
+  type,
+  year,
   title = "Time Series Analysis",
   description,
   height = 400,
@@ -77,8 +78,43 @@ const TimeSeriesChart: React.FC<TimeSeriesChartProps> = ({
   showAnomalies = true,
   className = ""
 }) => {
-  const { data, loading, error } = useCsvData<TimeSeriesData>(csvUrl, {}, selectedYear);
+  const [chartData, setChartData] = useState<TimeSeriesData[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
   const { isMobile, isTablet, isDesktop } = useResponsive();
+
+  // Load chart data using React Query
+  const { data: rawData, isLoading, isError, error: queryError } = useQuery({
+    queryKey: ['chart-data', type, year],
+    queryFn: () => chartDataService.loadChartData(type),
+    staleTime: 1000 * 60 * 5, // 5 minutes
+    gcTime: 1000 * 60 * 10, // 10 minutes
+  });
+
+  // Update component state when data changes
+  useEffect(() => {
+    if (isLoading) {
+      setLoading(true);
+      setError(null);
+    } else if (isError) {
+      setLoading(false);
+      setError(queryError?.message || 'Error loading chart data');
+    } else if (rawData) {
+      setLoading(false);
+      setError(null);
+
+      // Filter data by year if specified
+      let filteredData = rawData;
+      if (year && Array.isArray(rawData)) {
+        filteredData = rawData.filter((item: Record<string, unknown>) => {
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          return itemYear && parseInt(String(itemYear)) === year;
+        });
+      }
+
+      setChartData(filteredData as TimeSeriesData[]);
+    }
+  }, [rawData, isLoading, isError, queryError, year]);
 
   // Calculate anomalies (values that are 50% higher/lower than average)
   const calculateAnomalies = (data: TimeSeriesData[]) => {
@@ -175,7 +211,7 @@ const TimeSeriesChart: React.FC<TimeSeriesChartProps> = ({
       <div className={`flex items-center justify-center h-96 ${className}`}>
         <div className="flex flex-col items-center space-y-2">
           <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-          <p className="text-gray-600 dark:text-gray-400">Loading chart data...</p>
+          <p className="text-gray-600 dark:text-gray-400">Cargando datos del gráfico...</p>
         </div>
       </div>
     );
@@ -186,33 +222,33 @@ const TimeSeriesChart: React.FC<TimeSeriesChartProps> = ({
       <div className={`flex items-center justify-center h-96 ${className}`}>
         <div className="flex flex-col items-center space-y-2 text-center">
           <AlertTriangle className="w-12 h-12 text-red-500" />
-          <p className="text-red-600 dark:text-red-400 font-medium">Error loading chart data</p>
-          <p className="text-gray-500 text-sm">{error.message}</p>
+          <p className="text-red-600 dark:text-red-400 font-medium">Error cargando datos del gráfico</p>
+          <p className="text-gray-500 text-sm">{error}</p>
         </div>
       </div>
     );
   }
 
-  if (!data || data.length === 0) {
+  if (!chartData || chartData.length === 0) {
     return (
       <div className={`flex items-center justify-center h-96 ${className}`}>
         <div className="flex flex-col items-center space-y-2 text-center">
           <TrendingDown className="w-12 h-12 text-gray-400" />
-          <p className="text-gray-600 dark:text-gray-400 font-medium">No data available</p>
+          <p className="text-gray-600 dark:text-gray-400 font-medium">No hay datos disponibles</p>
           <p className="text-gray-500 text-sm">
-            {selectedYear ? `for year ${selectedYear}` : 'for the selected period'}
+            {year ? `para el año ${year}` : 'para el período seleccionado'}
           </p>
         </div>
       </div>
     );
   }
 
-  const anomalies = showAnomalies ? calculateAnomalies(data) : [];
+  const anomalies = showAnomalies ? calculateAnomalies(chartData) : [];
   const hasAnomalies = anomalies.length > 0;
 
   // Calculate trend
-  const firstValue = parseFloat(data[0]?.[valueKey]) || 0;
-  const lastValue = parseFloat(data[data.length - 1]?.[valueKey]) || 0;
+  const firstValue = parseFloat(chartData[0]?.[valueKey]) || 0;
+  const lastValue = parseFloat(chartData[chartData.length - 1]?.[valueKey]) || 0;
   const trend = lastValue > firstValue ? 'up' : 'down';
   const trendPercent = firstValue > 0 ? ((lastValue - firstValue) / firstValue * 100) : 0;
 

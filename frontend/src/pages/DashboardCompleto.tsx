@@ -84,6 +84,11 @@ import DynamicChartLoader from '@components/charts/DynamicChartLoader';
 import ComprehensiveChartGrid from '@components/charts/ComprehensiveChartGrid';
 import ErrorBoundary from '@components/common/ErrorBoundary';
 
+// Import analytics dashboards and data viewers
+import ComprehensiveAnalyticsDashboard from '@components/analytics/ComprehensiveAnalyticsDashboard';
+import FinancialAnalyticsDashboard from '@components/analytics/FinancialAnalyticsDashboard';
+import { UnifiedDataViewer } from '@components/data-viewers';
+
 // Dashboard sections configuration
 const DASHBOARD_SECTIONS = [
   {
@@ -1041,6 +1046,58 @@ const EnhancedTransparencyContent: React.FC<{
   const renderOverview = () => {
     return (
       <div className="space-y-6">
+        {/* Transparency & Accountability Dashboard - Combined visualization of budget execution, program performance, gender equity, and transparency metrics */}
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-2xl shadow-lg p-6 border border-blue-100 dark:border-blue-900/50">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+            <Shield className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
+            Dashboard de Transparencia y Rendición de Cuentas
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Budget Execution Rate */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 border-l-4 border-green-500">
+              <div className="flex items-center">
+                <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-lg mr-4">
+                  <TrendingUp className="h-6 w-6 text-green-600 dark:text-green-400" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Tasa de Ejecución Presupuestaria</p>
+                  <p className="text-3xl font-bold text-gray-800 dark:text-white">94.2%</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Ejecución consistentemente alta</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Families Supported */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 border-l-4 border-blue-500">
+              <div className="flex items-center">
+                <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg mr-4">
+                  <Users className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Familias Apoyadas</p>
+                  <p className="text-3xl font-bold text-gray-800 dark:text-white">2,350</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">A través de programas sociales</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Gender Equity */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 border-l-4 border-purple-500">
+              <div className="flex items-center">
+                <div className="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg mr-4">
+                  <Users className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Equidad de Género</p>
+                  <p className="text-3xl font-bold text-gray-800 dark:text-white">54%</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Representación femenina</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 border-l-4 border-red-500">
@@ -1798,8 +1855,8 @@ const EnhancedFinancialContent: React.FC<{
 
             {/* Revenue Analysis */}
             <RechartsWrapper
-              csvUrl="/data/charts/Revenue_Report_consolidated_2019-2025.csv"
-              selectedYear={selectedYear}
+              type="Revenue_Report"
+              year={selectedYear}
               title="Análisis de Ingresos"
               chartType="area"
               dataKey="year"
@@ -1944,8 +2001,8 @@ const EnhancedFinancialContent: React.FC<{
           <div className="space-y-6">
             {/* Multi-year Budget Execution Trend */}
             <TimeSeriesChart
-              csvUrl="/data/charts/Budget_Execution_consolidated_2019-2025.csv"
-              selectedYear={null} // Show all years
+              type="Budget_Execution"
+              year={null} // Show all years
               title="Tendencia de Ejecución Presupuestaria (2019-2025)"
               description="Evolución completa con detección de anomalías inter-anuales"
               height={450}
@@ -1957,8 +2014,8 @@ const EnhancedFinancialContent: React.FC<{
 
             {/* Multi-year Revenue Comparison */}
             <RechartsWrapper
-              csvUrl="/data/charts/Revenue_Report_consolidated_2019-2025.csv"
-              selectedYear={null} // Show all years
+              type="Revenue_Report"
+              year={null} // Show all years
               title="Comparación de Ingresos Multi-Año"
               description="Análisis completo de tendencias de ingresos"
               height={400}

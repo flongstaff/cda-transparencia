@@ -35,7 +35,7 @@ const RevenueSourcesChart: React.FC<RevenueSourcesChartProps> = ({
   
   // Load chart data using React Query
   const { data, isLoading, isError, error: queryError } = useQuery({
-    queryKey: ['chart-data', 'Revenue_Sources'],
+    queryKey: ['chart-data', 'Revenue_Sources', year],
     queryFn: () => chartDataService.loadChartData('Revenue_Sources'),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
@@ -57,7 +57,8 @@ const RevenueSourcesChart: React.FC<RevenueSourcesChartProps> = ({
       let filteredData = data;
       if (year && Array.isArray(data)) {
         filteredData = data.filter((item: Record<string, unknown>) => {
-          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          // Check for various possible year field names
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
           return itemYear && parseInt(String(itemYear)) === year;
         });
       }
@@ -78,7 +79,7 @@ const RevenueSourcesChart: React.FC<RevenueSourcesChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Revenue Sources data...
+          Cargando datos de Fuentes de Ingresos...
         </Typography>
       </Box>
     );
@@ -88,7 +89,7 @@ const RevenueSourcesChart: React.FC<RevenueSourcesChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Revenue Sources data: {error}
+        Error cargando datos de Fuentes de Ingresos: {error}
       </Alert>
     );
   }
@@ -97,7 +98,7 @@ const RevenueSourcesChart: React.FC<RevenueSourcesChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Revenue Sources data available
+        No hay datos disponibles de Fuentes de Ingresos
       </Alert>
     );
   }
@@ -124,8 +125,8 @@ const RevenueSourcesChart: React.FC<RevenueSourcesChartProps> = ({
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel="Year"
-      yAxisLabel="Amount (ARS)"
+      xAxisLabel="Año"
+      yAxisLabel="Monto (ARS)"
     />
   );
 };

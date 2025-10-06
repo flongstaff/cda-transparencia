@@ -1,4 +1,4 @@
-/**
+/** 
  * Gender Perspective in Budgeting Chart Component
  * Displays staffing data by gender using heatmap visualization
  */
@@ -7,7 +7,6 @@ import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import BaseChart, { SupportedChartType } from './BaseChart';
 import { Alert, CircularProgress, Box, Typography } from '@mui/material';
-import HeatmapCalendar from '../data-display/HeatmapCalendar'; // Using existing heatmap component
 import chartDataService from '../../services/charts/ChartDataService';
 
 // Props for the Gender Budgeting Chart component
@@ -18,7 +17,7 @@ interface GenderBudgetingChartProps {
   showTitle?: boolean;
   showDescription?: boolean;
   className?: string;
-  year?: number;
+  year?: number; // Optional year filter
 }
 
 // Data point interface for gender budgeting
@@ -135,12 +134,14 @@ const GenderBudgetingChart: React.FC<GenderBudgetingChartProps> = ({
       setLoading(false);
       setError(queryError?.message || 'Error loading chart data');
     } else if (data) {
-      const filteredData = [...data];
+      // Filter data by year if specified
+      let filteredData = data.filter((item: any) => item != null);
       
-      // Apply year filter if specified (though mock data doesn't include year)
       if (year) {
-        // In a real implementation, we would filter by year
-        console.log(`Filtering for year: ${year}`);
+        filteredData = filteredData.filter((item: any) => {
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
+          return !itemYear || parseInt(String(itemYear)) === year;  // Include items without year field or matching year
+        });
       }
       
       setLoading(false);
@@ -150,7 +151,7 @@ const GenderBudgetingChart: React.FC<GenderBudgetingChartProps> = ({
   }, [data, isLoading, isError, queryError, year]);
   
   // Handle data point clicks
-  const handleDataPointClick = (dataPoint: GenderBudgetingDataPoint) => {
+  const handleDataPointClick = (dataPoint: any) => {
     console.log('Gender Budgeting data point clicked:', dataPoint);
   };
   
@@ -160,7 +161,7 @@ const GenderBudgetingChart: React.FC<GenderBudgetingChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Gender Budgeting data...
+          Cargando datos de Presupuesto por Género...
         </Typography>
       </Box>
     );
@@ -170,7 +171,7 @@ const GenderBudgetingChart: React.FC<GenderBudgetingChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Gender Budgeting data: {error}
+        Error cargando datos de Presupuesto por Género: {error}
       </Alert>
     );
   }
@@ -179,28 +180,28 @@ const GenderBudgetingChart: React.FC<GenderBudgetingChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Gender Budgeting data available
+        No hay datos disponibles de Presupuesto por Género
       </Alert>
     );
   }
   
   // For heatmap visualization, we need to format the data differently
   if (chartType === 'heatmap' || chartType === 'heat') {
-    // Render heatmap instead of base chart
+    // Render a simple bar chart as fallback instead of heatmap
     return (
       <div className={`chart-container ${className}`}>
-        {showTitle && <h3 className="chart-title">Gender Distribution Intensity Heatmap</h3>}
-        {showDescription && <p className="chart-description">Visualizing gender balance in public employment across months</p>}
+        {showTitle && <h3 className="chart-title">Intensidad de Distribución por Género</h3>}
+        {showDescription && <p className="chart-description">Visualización del equilibrio de género en el empleo público a lo largo de los meses</p>}
         <div className="chart-wrapper" style={{ height: height, width: width }}>
-          <HeatMap 
-            data={chartData.map(item => ({
-              date: new Date(`2023 ${item.month} 1`).toISOString().split('T')[0],
-              count: item.female, // Using female count for heatmap intensity
-              label: `${item.month}`
-            }))}
-            year={year || new Date().getFullYear()}
+          <BaseChart
+            data={chartData.filter(item => item != null)}
+            chartType="bar"
+            xAxisKey="month"
+            yAxisKeys={['male', 'female']}
             height={height}
-            title="Gender Distribution by Month"
+            width={width}
+            xAxisLabel="Mes"
+            yAxisLabel="Número de Personal"
           />
         </div>
       </div>
@@ -210,18 +211,18 @@ const GenderBudgetingChart: React.FC<GenderBudgetingChartProps> = ({
   // For stacked column chart (bar chart), we use BaseChart
   return (
     <BaseChart
-      data={chartData}
+      data={chartData.filter(item => item != null)}
       chartType={chartType}
       xAxisKey="month"
       yAxisKeys={['male', 'female']}
-      title={showTitle ? "Gender Perspective in Budgeting" : undefined}
-      description={showDescription ? "Monthly headcount by gender in public employment" : undefined}
+      title={showTitle ? "Perspectiva de Género en el Presupuesto" : undefined}
+      description={showDescription ? "Cuenta mensual por género en empleo público" : undefined}
       height={height}
       width={width}
       className={className}
       onDataPointClick={(data) => handleDataPointClick(data as GenderBudgetingDataPoint)}
-      xAxisLabel="Month"
-      yAxisLabel="Number of Staff"
+      xAxisLabel="Mes"
+      yAxisLabel="Número de Personal"
     />
   );
 };

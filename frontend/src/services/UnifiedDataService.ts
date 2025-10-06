@@ -387,7 +387,7 @@ class UnifiedDataService {
       const values = lines[i].split(',').map(v => v.trim().replace(/"/g, ''));
       const row: any = {};
       headers.forEach((header, index) => {
-        let value = values[index] || '';
+        const value = values[index] || '';
 
         // Clean currency values: remove $, commas, and percentage signs
         const cleanValue = value.replace(/[$,\s%]/g, '');

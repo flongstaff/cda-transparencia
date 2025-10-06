@@ -1,9 +1,9 @@
 /**
- * Enhanced Home Page - Professional Government Transparency Portal
- * Integrates all organized PDF data and CSV files into a comprehensive dashboard
+ * Simplified Home Page - Professional Government Transparency Portal Landing
+ * Serves as a welcoming introduction to the portal with key information
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Shield,
   FileText,
@@ -22,12 +22,9 @@ import {
 import { Link } from 'react-router-dom';
 import TransparencyHighlights from '@components/transparency/TransparencyHighlights';
 import ErrorBoundary from '@components/common/ErrorBoundary';
-import { useMasterData } from '../hooks/useMasterData';
 import LoadingState from '@components/ui/LoadingState';
 
 const Home: React.FC = () => {
-  const { data, loading, error } = useMasterData();
-
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = (e: React.FormEvent) => {
@@ -139,6 +136,11 @@ const Home: React.FC = () => {
     }
   ];
 
+  // Loading state - for this page it's just a visual placeholder
+  const loading = false;
+  const error = null;
+  const retry = () => {};
+
   return (
     <LoadingState 
       isLoading={loading} 
@@ -206,6 +208,23 @@ const Home: React.FC = () => {
         </div>
 
         <TransparencyHighlights />
+
+        {/* Call to Action for Dashboard Completo */}
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 mb-8 border border-blue-100">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 dark:text-dark-text-primary">Acceda al Dashboard Completo</h2>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto dark:text-dark-text-secondary">
+              Para ver todas las visualizaciones de datos financieros, análisis presupuestarios y documentos organizados en un solo lugar, visite nuestro dashboard integral.
+            </p>
+            <Link
+              to="/completo"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+            >
+              Ir al Dashboard Completo
+              <ChevronRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+        </div>
 
         {/* Real-time Statistics */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 mb-6">

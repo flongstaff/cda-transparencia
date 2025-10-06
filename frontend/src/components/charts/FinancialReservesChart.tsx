@@ -44,7 +44,7 @@ const FinancialReservesChart: React.FC<FinancialReservesChartProps> = ({
   
   // Load chart data using React Query
   const { data, isLoading, isError, error: queryError } = useQuery({
-    queryKey: ['chart-data', 'Financial_Reserves'],
+    queryKey: ['chart-data', 'Financial_Reserves', year],
     queryFn: () => chartDataService.loadChartData('Financial_Reserves'),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
@@ -66,7 +66,8 @@ const FinancialReservesChart: React.FC<FinancialReservesChartProps> = ({
       let filteredData = data;
       if (year && Array.isArray(data)) {
         filteredData = data.filter((item: Record<string, unknown>) => {
-          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          // Check for various possible year field names
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
           return itemYear && parseInt(String(itemYear)) === year;
         });
       }
@@ -87,7 +88,7 @@ const FinancialReservesChart: React.FC<FinancialReservesChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Financial Reserves data...
+          Cargando datos de Reservas Financieras...
         </Typography>
       </Box>
     );
@@ -97,7 +98,7 @@ const FinancialReservesChart: React.FC<FinancialReservesChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Financial Reserves data: {error}
+        Error cargando datos de Reservas Financieras: {error}
       </Alert>
     );
   }
@@ -106,7 +107,7 @@ const FinancialReservesChart: React.FC<FinancialReservesChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Financial Reserves data available
+        No hay datos disponibles de Reservas Financieras
       </Alert>
     );
   }
@@ -133,8 +134,8 @@ const FinancialReservesChart: React.FC<FinancialReservesChartProps> = ({
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel="Year"
-      yAxisLabel="Amount (ARS)"
+      xAxisLabel="Año"
+      yAxisLabel="Monto (ARS)"
     />
   );
 };

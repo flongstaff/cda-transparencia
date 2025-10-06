@@ -1,4 +1,4 @@
-name = "cda-transparencia"
-compatibility_date = "2024-01-01"
+name = 'cda-transparencia'
+compatibility_date = '2024-01-01'
 
 [env.production]

@@ -353,13 +353,13 @@ class DataNormalizationService {
   private applyNormalizationRule(item: any, rule: NormalizationRule): any {
     switch (rule.operation) {
       case 'rename':
-        if (item.hasOwnProperty(rule.field) && rule.target) {
+        if (Object.prototype.hasOwnProperty.call(item, rule.field) && rule.target) {
           item[rule.target] = item[rule.field];
           delete item[rule.field];
         }
         break;
       case 'transform':
-        if (item.hasOwnProperty(rule.field) && rule.formula) {
+        if (Object.prototype.hasOwnProperty.call(item, rule.field) && rule.formula) {
           item[rule.field] = rule.formula(item[rule.field]);
         }
         break;
@@ -383,7 +383,7 @@ class DataNormalizationService {
     ];
 
     for (const field of possibleValueFields) {
-      if (item.hasOwnProperty(field)) {
+      if (Object.prototype.hasOwnProperty.call(item, field)) {
         const rawValue = item[field];
         return this.formatValue(rawValue, config);
       }
@@ -411,7 +411,7 @@ class DataNormalizationService {
     ];
 
     for (const field of possibleCategoryFields) {
-      if (item.hasOwnProperty(field)) {
+      if (Object.prototype.hasOwnProperty.call(item, field)) {
         return String(item[field]);
       }
     }
@@ -435,7 +435,7 @@ class DataNormalizationService {
     ];
 
     for (const field of possibleYearFields) {
-      if (item.hasOwnProperty(field)) {
+      if (Object.prototype.hasOwnProperty.call(item, field)) {
         const yearValue = item[field];
         const year = parseInt(yearValue);
         if (!isNaN(year) && year > 1900 && year < 2100) {
@@ -456,7 +456,7 @@ class DataNormalizationService {
     ];
 
     for (const field of possibleIndicatorFields) {
-      if (item.hasOwnProperty(field)) {
+      if (Object.prototype.hasOwnProperty.call(item, field)) {
         return String(item[field]);
       }
     }
@@ -518,7 +518,7 @@ class DataNormalizationService {
   private calculateConfidence(item: any, config: NormalizationConfig): number {
     const requiredFields = ['value', 'indicator', 'year', 'category'];
     const presentFields = requiredFields.filter(field => 
-      item.hasOwnProperty(field) && item[field] !== null && item[field] !== undefined
+      Object.prototype.hasOwnProperty.call(item, field) && item[field] !== null && item[field] !== undefined
     );
 
     const completenessScore = presentFields.length / requiredFields.length;

@@ -114,7 +114,7 @@ const DynamicChartLoader: React.FC<DynamicChartLoaderProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress size={40} />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading {CHART_TYPE_NAMES[chartType as keyof typeof CHART_TYPE_NAMES] || chartType} data...
+          Cargando datos de {CHART_TYPE_NAMES[chartType as keyof typeof CHART_TYPE_NAMES] || chartType}...
         </Typography>
       </Box>
     );
@@ -124,7 +124,7 @@ const DynamicChartLoader: React.FC<DynamicChartLoaderProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading {CHART_TYPE_NAMES[chartType as keyof typeof CHART_TYPE_NAMES] || chartType} data: {error}
+        Error cargando datos de {CHART_TYPE_NAMES[chartType as keyof typeof CHART_TYPE_NAMES] || chartType}: {error}
       </Alert>
     );
   }
@@ -133,7 +133,7 @@ const DynamicChartLoader: React.FC<DynamicChartLoaderProps> = ({
   if (!hasData) {
     return (
       <Alert severity="warning" className={className}>
-        No data available for {CHART_TYPE_NAMES[chartType as keyof typeof CHART_TYPE_NAMES] || chartType}
+        No hay datos disponibles para {CHART_TYPE_NAMES[chartType as keyof typeof CHART_TYPE_NAMES] || chartType}
       </Alert>
     );
   }
@@ -145,7 +145,7 @@ const DynamicChartLoader: React.FC<DynamicChartLoaderProps> = ({
   if (!ChartComponent) {
     return (
       <Alert severity="warning" className={className}>
-        Chart component not found for {CHART_TYPE_NAMES[chartType as keyof typeof CHART_TYPE_NAMES] || chartType}
+        Componente de gráfico no encontrado para {CHART_TYPE_NAMES[chartType as keyof typeof CHART_TYPE_NAMES] || chartType}
       </Alert>
     );
   }

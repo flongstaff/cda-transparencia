@@ -35,7 +35,7 @@ const PersonnelExpensesChart: React.FC<PersonnelExpensesChartProps> = ({
   
   // Load chart data using React Query
   const { data, isLoading, isError, error: queryError } = useQuery({
-    queryKey: ['chart-data', 'Personnel_Expenses'],
+    queryKey: ['chart-data', 'Personnel_Expenses', year],
     queryFn: () => chartDataService.loadChartData('Personnel_Expenses'),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
@@ -57,7 +57,8 @@ const PersonnelExpensesChart: React.FC<PersonnelExpensesChartProps> = ({
       let filteredData = data;
       if (year && Array.isArray(data)) {
         filteredData = data.filter((item: Record<string, unknown>) => {
-          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          // Check for various possible year field names
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
           return itemYear && parseInt(String(itemYear)) === year;
         });
       }
@@ -78,7 +79,7 @@ const PersonnelExpensesChart: React.FC<PersonnelExpensesChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Personnel Expenses data...
+          Cargando datos de Gastos en Personal...
         </Typography>
       </Box>
     );
@@ -88,7 +89,7 @@ const PersonnelExpensesChart: React.FC<PersonnelExpensesChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Personnel Expenses data: {error}
+        Error cargando datos de Gastos en Personal: {error}
       </Alert>
     );
   }
@@ -97,7 +98,7 @@ const PersonnelExpensesChart: React.FC<PersonnelExpensesChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Personnel Expenses data available
+        No hay datos disponibles de Gastos en Personal
       </Alert>
     );
   }
@@ -112,10 +113,16 @@ const PersonnelExpensesChart: React.FC<PersonnelExpensesChartProps> = ({
       })
     : [];
   
+  // Map custom chart types to supported BaseChart types
+  const getSupportedChartType = (type: string): SupportedChartType => {
+    const supportedTypes: SupportedChartType[] = ['line', 'bar', 'area', 'pie', 'scatter', 'composed'];
+    return supportedTypes.includes(type as SupportedChartType) ? type as SupportedChartType : 'bar';
+  };
+
   return (
     <BaseChart
-      data={chartData}
-      chartType={chartType}
+      data={chartData.filter(item => item != null)}
+      chartType={getSupportedChartType(chartType)}
       xAxisKey="year"
       yAxisKeys={yAxisKeys}
       title={showTitle ? CHART_TYPE_NAMES.Personnel_Expenses : undefined}
@@ -124,8 +131,8 @@ const PersonnelExpensesChart: React.FC<PersonnelExpensesChartProps> = ({
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel="Year"
-      yAxisLabel="Amount (ARS)"
+      xAxisLabel="Año"
+      yAxisLabel="Monto (ARS)"
     />
   );
 };

@@ -486,7 +486,7 @@ const ConsistentDataVisualization: React.FC<ConsistentDataVisualizationProps> = 
           </AreaChart>
         );
 
-      case 'pie':
+      case 'pie': {
         const pieData = combinedData.map((item, index) => ({
           name: item[xAxisKey],
           value: item[yAxisKeys[0]] || 0,
@@ -526,6 +526,7 @@ const ConsistentDataVisualization: React.FC<ConsistentDataVisualizationProps> = 
             <Legend />
           </PieChart>
         );
+      }
 
       default:
         return null;

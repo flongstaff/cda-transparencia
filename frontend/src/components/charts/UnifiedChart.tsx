@@ -27,7 +27,7 @@ import {
   Loader2
 } from 'lucide-react';
 import { formatCurrencyARS } from '../../utils/formatters';
-import { useMasterData } from '../../hooks/useMasterData';
+import { useUnifiedData } from '../../hooks/useUnifiedData';
 
 export type ChartType = 
   | 'budget' 
@@ -74,44 +74,27 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
   const theme = useTheme(); // Access the MUI theme
   const [currentVariant, setCurrentVariant] = useState<ChartVariant>(variant);
   
-  // 🚀 Use the new comprehensive master data service that includes historical data
-  const { 
-    masterData, 
-    currentBudget,
-    currentContracts,
-    currentSalaries,
-    currentDocuments,
-    currentTreasury,
-    currentDebt,
-    multiYearData,
-    budgetHistoricalData,
-    contractsHistoricalData,
-    salariesHistoricalData,
-    documentsHistoricalData,
-    debtHistoricalData,
-    treasuryHistoricalData,
+  // 🚀 Use the unified data service with comprehensive processed data
+  const {
+    structured,
+    documents,
     loading,
-    error 
-  } = useMasterData(year);
+    error
+  } = useUnifiedData({ year });
 
-  // Determine current year data based on the type
+  // Determine current year data based on the type from consolidated processed data
   const currentYearData = useMemo(() => {
-    if (!masterData) return null;
-    
-    if (type.includes('-trend')) {
-      // For trend charts, we don't use current year data but historical
-      return null;
-    }
-    
+    if (!structured) return null;
+
     return {
-      budget: currentBudget,
-      contracts: currentContracts,
-      salaries: currentSalaries,
-      documents: currentDocuments,
-      treasury: currentTreasury,
-      debt: currentDebt
+      budget: structured.budget?.[year],
+      contracts: structured.contracts?.[year],
+      salaries: structured.salaries?.[year],
+      documents: documents?.filter(doc => doc.year === year),
+      treasury: structured.financial?.[year],
+      debt: structured.debt?.[year]
     };
-  }, [masterData, currentBudget, currentContracts, currentSalaries, currentDocuments, currentTreasury, currentDebt, type]);
+  }, [structured, documents, year, type]);
 
   // Update COLORS to use theme palette for consistency
   const themedColors = useMemo(() => [

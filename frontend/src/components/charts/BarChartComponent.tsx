@@ -3,9 +3,10 @@
  * Displays financial data with visual indicators for anomalies and execution rates
  */
 
-import React, { useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
-import useCsvData from '../../hooks/useCsvData';
+import chartDataService from '../../services/charts/ChartDataService';
 import { formatCurrencyARS, getColorForExecutionRate, calculateExecutionRate } from '../../utils/parseCsv';
 
 interface BarChartDataPoint {
@@ -18,7 +19,8 @@ interface BarChartDataPoint {
 }
 
 interface BarChartComponentProps {
-  csvUrl: string;
+  type?: string; // Chart type for service (e.g., 'Budget_Execution', 'Personnel_Expenses', etc.)
+  year?: number;
   title?: string;
   height?: number;
   showLegend?: boolean;
@@ -28,39 +30,70 @@ interface BarChartComponentProps {
 }
 
 const BarChartComponent: React.FC<BarChartComponentProps> = ({
-  csvUrl,
+  type = 'Budget_Execution',
+  year,
   title = "Distribución Presupuestaria",
   showLegend = true,
   showGrid = true,
   dataKey = "budgeted",
   compareMode = false
 }) => {
-  // Use the CSV parsing hook
-  const { data, loading, error } = useCsvData<BarChartDataPoint>(csvUrl);
+  const [chartData, setChartData] = useState<BarChartDataPoint[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
-  // Process data for charting with color coding
-  const chartData = useMemo(() => {
-    if (!data || data.length === 0) return [];
+  // Load chart data using React Query
+  const { data: rawData, isLoading, isError, error: queryError } = useQuery({
+    queryKey: ['chart-data', type, year],
+    queryFn: () => chartDataService.loadChartData(type),
+    staleTime: 1000 * 60 * 5, // 5 minutes
+    gcTime: 1000 * 60 * 10, // 10 minutes
+  });
 
-    return data.map((point) => {
-      const name = point.name || 'Sin nombre';
-      const budgeted = point.budgeted || 0;
-      const executed = point.executed || 0;
-      const executionRate = point.execution_rate !== undefined 
-        ? point.execution_rate 
-        : calculateExecutionRate(budgeted, executed);
+  // Update component state when data changes
+  useEffect(() => {
+    if (isLoading) {
+      setLoading(true);
+      setError(null);
+    } else if (isError) {
+      setLoading(false);
+      setError(queryError?.message || 'Error loading chart data');
+    } else if (rawData) {
+      setLoading(false);
+      setError(null);
 
-      return {
-        ...point,
-        name,
-        budgeted,
-        executed,
-        execution_rate: executionRate,
-        // Color based on execution rate
-        color: getColorForExecutionRate(executionRate)
-      };
-    });
-  }, [data]);
+      // Filter data by year if specified
+      let filteredData = rawData;
+      if (year && Array.isArray(rawData)) {
+        filteredData = rawData.filter((item: Record<string, unknown>) => {
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          return itemYear && parseInt(String(itemYear)) === year;
+        });
+      }
+
+      // Process data for charting with color coding
+      const processedData = filteredData.map((point: Record<string, unknown>) => {
+        const name = point.name || point.Name || point.descripcion || point.Descripcion || 'Sin nombre';
+        const budgeted = parseFloat(point.budgeted || point.Budgeted || point.presupuestado || point.Presupuestado || 0);
+        const executed = parseFloat(point.executed || point.Executed || point.ejecutado || point.Ejecutado || 0);
+        const executionRate = point.execution_rate !== undefined 
+          ? parseFloat(point.execution_rate as string) || 0
+          : calculateExecutionRate(budgeted, executed);
+
+        return {
+          ...point,
+          name,
+          budgeted,
+          executed,
+          execution_rate: executionRate,
+          // Color based on execution rate
+          color: getColorForExecutionRate(executionRate)
+        };
+      });
+
+      setChartData(processedData);
+    }
+  }, [rawData, isLoading, isError, queryError, year]);
 
   // Custom tooltip with color coding
   const CustomTooltip = ({ active, payload, label }: {
@@ -72,7 +105,7 @@ const BarChartComponent: React.FC<BarChartComponentProps> = ({
     label?: string;
   }) => {
     if (active && payload && payload.length) {
-      const dataPoint = payload[0].payload;
+      const dataPoint = payload[0].payload as any;
       const executionRate = dataPoint.execution_rate || 0;
       
       return (
@@ -141,7 +174,7 @@ const BarChartComponent: React.FC<BarChartComponentProps> = ({
           {title}
         </h3>
         <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg p-4">
-          <p className="text-red-800 dark:text-red-200">Error al cargar datos: {error.message}</p>
+          <p className="text-red-800 dark:text-red-200">Error al cargar datos: {error}</p>
         </div>
       </div>
     );

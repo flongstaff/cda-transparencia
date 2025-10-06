@@ -42,7 +42,11 @@ interface BudgetData {
   categories: BudgetCategory[];
 }
 
-const BudgetExecutionDashboard: React.FC = () => {
+interface BudgetExecutionDashboardProps {
+  year?: number;
+}
+
+const BudgetExecutionDashboard: React.FC<BudgetExecutionDashboardProps> = ({ year: propYear }) => {
   const [budgetData, setBudgetData] = useState<BudgetData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -51,7 +55,7 @@ const BudgetExecutionDashboard: React.FC = () => {
     const fetchData = async () => {
       try {
         // Load budget data using the data integration service
-        const year = 2024; // Default to 2024, but this could be parameterized
+        const year = propYear || 2024; // Use provided year or default to 2024
         const integratedData = await dataIntegrationService.loadIntegratedData(year);
         
         // Structure the data to match the expected format
@@ -141,7 +145,9 @@ const BudgetExecutionDashboard: React.FC = () => {
   }
 
   // Prepare data for charts
-  const chartData = budgetData.categories.map(category => ({
+  const chartData = budgetData.categories
+    .filter(category => category != null) // Filter out null categories
+    .map(category => ({
     ...category,
     underspent: category.budgeted - category.executed,
     executionRateFormatted: `${category.percentage.toFixed(2)}%`
@@ -150,10 +156,12 @@ const BudgetExecutionDashboard: React.FC = () => {
   // Colors for the charts
   const COLORS = ['#3B82F6', '#10B981', '#EF4444', '#F59E0B', '#8B5CF6'];
   
-  // Prepare data for pie chart (execution by category)
-  const pieData = budgetData.categories.map((category, index) => ({
-    name: category.name,
-    value: category.executed,
+  // Prepare data for pie chart (execution by distribution)
+  const pieData = chartData
+    .filter(item => item != null && item.executed > 0) // Filter out null items and zero values
+    .map((item, index) => ({
+    name: item.name,
+    value: item.executed,
     color: COLORS[index % COLORS.length]
   }));
 
@@ -179,7 +187,7 @@ const BudgetExecutionDashboard: React.FC = () => {
         >
           <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">Presupuesto Total</h3>
           <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">
-            {formatCurrencyARS(budgetData.totalBudget)}
+            {budgetData && formatCurrencyARS(budgetData.totalBudget)}
           </p>
         </motion.div>
 
@@ -189,39 +197,39 @@ const BudgetExecutionDashboard: React.FC = () => {
         >
           <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">Ejecutado</h3>
           <p className="text-3xl font-bold text-green-600 dark:text-green-400">
-            {formatCurrencyARS(budgetData.totalExecuted)}
+            {budgetData && formatCurrencyARS(budgetData.totalExecuted)}
           </p>
         </motion.div>
 
         <motion.div 
           whileHover={{ scale: 1.02 }}
           className={`bg-white rounded-xl shadow-lg border border-gray-200 p-6 ${
-            budgetData.executionPercentage < 80 ? 'border-red-300' : 
-            budgetData.executionPercentage < 90 ? 'border-yellow-300' : 'border-green-300'
+            budgetData && budgetData.executionPercentage < 80 ? 'border-red-300' : 
+            budgetData && budgetData.executionPercentage < 90 ? 'border-yellow-300' : 'border-green-300'
           }`}
         >
           <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">Tasa de Ejecución</h3>
           <p className={`text-3xl font-bold ${
-            budgetData.executionPercentage < 80 ? 'text-red-600' : 
-            budgetData.executionPercentage < 90 ? 'text-yellow-600' : 'text-green-600'
+            budgetData && budgetData.executionPercentage < 80 ? 'text-red-600' : 
+            budgetData && budgetData.executionPercentage < 90 ? 'text-yellow-600' : 'text-green-600'
           }`}>
-            {budgetData.executionPercentage.toFixed(2)}%
+            {budgetData && budgetData.executionPercentage.toFixed(2)}%
           </p>
         </motion.div>
 
         <motion.div 
           whileHover={{ scale: 1.02 }}
           className={`bg-white rounded-xl shadow-lg border border-gray-200 p-6 ${
-            budgetData.transparencyScore < 50 ? 'border-red-300' : 
-            budgetData.transparencyScore < 70 ? 'border-yellow-300' : 'border-green-300'
+            budgetData && budgetData.transparencyScore < 50 ? 'border-red-300' : 
+            budgetData && budgetData.transparencyScore < 70 ? 'border-yellow-300' : 'border-green-300'
           }`}
         >
           <h3 className="text-lg font-semibold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-2">Puntaje de Transparencia</h3>
           <p className={`text-3xl font-bold ${
-            budgetData.transparencyScore < 50 ? 'text-red-600' : 
-            budgetData.transparencyScore < 70 ? 'text-yellow-600' : 'text-green-600'
+            budgetData && budgetData.transparencyScore < 50 ? 'text-red-600' : 
+            budgetData && budgetData.transparencyScore < 70 ? 'text-yellow-600' : 'text-green-600'
           }`}>
-            {budgetData.transparencyScore.toFixed(0)}/100
+            {budgetData && budgetData.transparencyScore.toFixed(0)}/100
           </p>
         </motion.div>
       </div>

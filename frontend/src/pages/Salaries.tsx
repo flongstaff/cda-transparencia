@@ -23,6 +23,7 @@ import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator'
 import { YearSelector } from '../components/common/YearSelector';
 import ErrorBoundary from '../components/common/ErrorBoundary';
 import { StatCard } from '../components/common/StatCard';
+import { UnifiedDataViewer } from '../components/data-viewers';
 
 interface SalaryPosition {
   code: string;
@@ -578,6 +579,21 @@ const Salaries: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Unified Data Viewer - Salary Documents and Datasets */}
+      <div className="mt-6">
+        <UnifiedDataViewer
+          title="Documentos y Datasets de Sueldos y Remuneraciones"
+          description="Acceda a escalas salariales, datos de personal municipal, remuneraciones y documentación de recursos humanos"
+          category="salaries"
+          theme={['gove', 'gobierno-y-sector-publico']}
+          year={selectedYear}
+          showSearch={true}
+          defaultTab="all"
+          maxPDFs={15}
+          maxDatasets={25}
+        />
       </div>
     </div>
   );

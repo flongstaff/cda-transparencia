@@ -175,7 +175,7 @@ function extractEntities(text: string): string[] {
   }
   
   // Dates
-  const datePattern = /\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}/g;
+  const datePattern = /\d{1,2}[/-]\d{1,2}[/-]\d{2,4}/g;
   const dateMatches = text.match(datePattern);
   if (dateMatches) {
     entities.push(...dateMatches.slice(0, 3));

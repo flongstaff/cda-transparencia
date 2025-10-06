@@ -28,7 +28,10 @@ import {
 
 import { useDocumentsData } from '../hooks/useUnifiedData';
 import PageYearSelector from '../components/forms/PageYearSelector';
+import { PDFGallery } from '../components/data-viewers';
 import ErrorBoundary from '../components/common/ErrorBoundary';
+import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
+import ChartContainer from '../components/common/ChartContainer';
 
 interface Document {
   id: string;
@@ -436,6 +439,39 @@ const DocumentsUnified: React.FC = () => {
           </div>
         </div>
 
+        {/* Document Analysis Charts */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <ChartContainer
+              title="Análisis de Documentos"
+              description="Distribución por categoría"
+              icon={FileText}
+              height={320}
+            >
+              <ErrorBoundary>
+                <DocumentAnalysisChart
+                  year={selectedYear}
+                  className="h-64"
+                />
+              </ErrorBoundary>
+            </ChartContainer>
+
+            <ChartContainer
+              title="Tendencia de Documentos"
+              description="Evolución histórica"
+              icon={BarChart3}
+              height={320}
+            >
+              <ErrorBoundary>
+                <DocumentAnalysisChart
+                  year={selectedYear}
+                  className="h-64"
+                />
+              </ErrorBoundary>
+            </ChartContainer>
+          </div>
+        </div>
+
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Loading State */}
@@ -479,13 +515,23 @@ const DocumentsUnified: React.FC = () => {
           {!loading && !error && (
             <div className="mt-8 text-center text-gray-500">
               <p>
-                Mostrando {filteredDocuments.length} documento{filteredDocuments.length !== 1 ? 's' : ''} 
+                Mostrando {filteredDocuments.length} documento{filteredDocuments.length !== 1 ? 's' : ''}
                 {searchTerm && ` para "${searchTerm}"`}
                 {selectedCategory !== 'all' && ` en la categoría "${selectedCategory}"`}
                 {' '}del año {selectedYear}
               </p>
             </div>
           )}
+
+          {/* PDF Gallery - All Documents */}
+          <div className="mt-12">
+            <PDFGallery
+              searchTerm={searchTerm}
+              year={selectedYear}
+              layout="grid"
+              showThumbnails={false}
+            />
+          </div>
         </div>
       </div>
     </>

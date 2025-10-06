@@ -1,0 +1,67 @@
+{
+  "generated_at": "2025-10-04T11:48:23.251Z",
+  "multi_year_summary": [
+    {
+      "year": 2019,
+      "total_budget": 165000000,
+      "expenses": 161500000,
+      "execution_rate": 97.87878787878788
+    },
+    {
+      "year": 2020,
+      "total_budget": 165000000,
+      "expenses": 161500000,
+      "execution_rate": 97.87878787878788
+    },
+    {
+      "year": 2021,
+      "total_budget": 165000000,
+      "expenses": 161500000,
+      "execution_rate": 97.87878787878788
+    },
+    {
+      "year": 2022,
+      "total_budget": 165000000,
+      "expenses": 161500000,
+      "execution_rate": 97.87878787878788
+    },
+    {
+      "year": 2023,
+      "total_budget": 165000000,
+      "expenses": 161500000,
+      "execution_rate": 97.87878787878788
+    },
+    {
+      "year": 2024,
+      "total_budget": 165000000,
+      "expenses": 161500000,
+      "execution_rate": 97.87878787878788
+    },
+    {
+      "year": 2025,
+      "total_budget": 165000000,
+      "expenses": 161500000,
+      "execution_rate": 97.87878787878788
+    }
+  ],
+  "sources": {
+    "budget": {
+      "structured_data": {}
+    },
+    "contracts": {
+      "structured_data": {}
+    },
+    "documents": {
+      "structured_data": {}
+    },
+    "treasury": {
+      "structured_data": {}
+    },
+    "salaries": {
+      "structured_data": {}
+    },
+    "debt": {
+      "structured_data": {}
+    }
+  }
+}

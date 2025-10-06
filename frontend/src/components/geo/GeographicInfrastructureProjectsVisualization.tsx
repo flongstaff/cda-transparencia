@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { StaticMap } from 'react-map-gl';
+import { Map } from 'react-map-gl';
 import DeckGL from '@deck.gl/react';
 import { ScatterplotLayer } from '@deck.gl/layers';
 import { Alert, CircularProgress, Box, Typography, Paper, FormControl, InputLabel, Select, MenuItem, Chip } from '@mui/material';

@@ -17,6 +17,7 @@ const carmenRoutes = require('./carmenRoutes');
 const pdfExtractionRoutes = require('./pdfExtractionRoutes');
 const scrapingSchedulerRoutes = require('./scrapingSchedulerRoutes');
 const documentIndexRoutes = require('./documentIndexRoutes');
+const mainDataRoutes = require('./mainDataRoutes');
 
 // Main transparency portal for citizens (consolidated PostgreSQL and real documents system)
 router.use('/transparency', comprehensiveTransparencyRoutes);
@@ -62,6 +63,9 @@ router.use('/scraping-scheduler', scrapingSchedulerRoutes);
 
 // Document indexing routes for document management and search
 router.use('/document-index', documentIndexRoutes);
+
+// Main data endpoint for unified data access
+router.use('/main-data', mainDataRoutes);
 
 // Health check endpoint
 router.get('/health', (req, res) => {

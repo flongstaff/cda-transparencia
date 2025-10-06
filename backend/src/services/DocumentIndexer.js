@@ -451,6 +451,5 @@ class DocumentIndexer {
   }
 }
 
-// Export a singleton instance
-const documentIndexer = new DocumentIndexer();
-module.exports = documentIndexer;
+// Export the class so it can be instantiated as needed
+module.exports = DocumentIndexer;

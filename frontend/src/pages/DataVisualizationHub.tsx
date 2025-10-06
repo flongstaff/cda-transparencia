@@ -123,7 +123,7 @@ const DataVisualizationHub: React.FC = () => {
       if (values.length === headers.length) {
         const row: any = {};
         improvedHeaders.forEach((header, index) => {
-          let value = values[index];
+          const value = values[index];
 
           // Clean currency values: remove $, commas, and percentage signs
           const cleanValue = value.replace(/[$,\s%]/g, '');

@@ -1,12 +1,20 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Eye, Download, FileText, RefreshCw } from 'lucide-react';
+import { Search, Eye, Download, FileText, RefreshCw, BarChart3, PieChart, TrendingUp, DollarSign } from 'lucide-react';
 import { useMasterData } from '../hooks/useMasterData';
 import { useReportsData } from '../hooks/useUnifiedData';
 import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator';
 import { YearSelector } from '../components/common/YearSelector';
 import PageYearSelector from '../components/forms/PageYearSelector';
 import ErrorBoundary from '../components/common/ErrorBoundary';
+import { UnifiedDataViewer } from '../components/data-viewers';
+import { ChartContainer } from '../components/common/ChartContainer';
+import UnifiedChart from '../components/charts/UnifiedChart';
+import BudgetExecutionChart from '../components/charts/BudgetExecutionChart';
+import ExpenditureReportChart from '../components/charts/ExpenditureReportChart';
+import PersonnelExpensesChart from '../components/charts/PersonnelExpensesChart';
+import DebtReportChart from '../components/charts/DebtReportChart';
+import TimeSeriesChart from '../components/charts/TimeSeriesChart';
 
 const Reports: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
@@ -219,6 +227,21 @@ const Reports: React.FC = () => {
             </li>
           ))}
         </ul>
+      </div>
+
+      {/* Unified Data Viewer - All Reports PDFs and Datasets */}
+      <div className="mt-8">
+        <UnifiedDataViewer
+          title="Documentos y Datasets de Informes y Reportes"
+          description="Acceda a todos los informes municipales, reportes económicos, auditorías y documentación oficial en formato PDF y datasets estructurados"
+          category="economic_reports"
+          theme={['econ', 'economia-y-finanzas', 'gove']}
+          year={selectedYear}
+          showSearch={true}
+          defaultTab="all"
+          maxPDFs={20}
+          maxDatasets={30}
+        />
       </div>
     </div>
   );

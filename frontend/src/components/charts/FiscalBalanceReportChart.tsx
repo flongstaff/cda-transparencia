@@ -43,7 +43,7 @@ const FiscalBalanceReportChart: React.FC<FiscalBalanceReportChartProps> = ({
   
   // Load chart data using React Query
   const { data, isLoading, isError, error: queryError } = useQuery({
-    queryKey: ['chart-data', 'Fiscal_Balance_Report'],
+    queryKey: ['chart-data', 'Fiscal_Balance_Report', year],
     queryFn: () => chartDataService.loadChartData('Fiscal_Balance_Report'),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
@@ -65,7 +65,8 @@ const FiscalBalanceReportChart: React.FC<FiscalBalanceReportChartProps> = ({
       let filteredData = data;
       if (year && Array.isArray(data)) {
         filteredData = data.filter((item: Record<string, unknown>) => {
-          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          // Check for various possible year field names
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
           return itemYear && parseInt(String(itemYear)) === year;
         });
       }
@@ -86,7 +87,7 @@ const FiscalBalanceReportChart: React.FC<FiscalBalanceReportChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Fiscal Balance Report data...
+          Cargando datos del Balance Fiscal...
         </Typography>
       </Box>
     );
@@ -96,7 +97,7 @@ const FiscalBalanceReportChart: React.FC<FiscalBalanceReportChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Fiscal Balance Report data: {error}
+        Error cargando datos del Balance Fiscal: {error}
       </Alert>
     );
   }
@@ -105,7 +106,7 @@ const FiscalBalanceReportChart: React.FC<FiscalBalanceReportChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Fiscal Balance Report data available
+        No hay datos disponibles del Balance Fiscal
       </Alert>
     );
   }
@@ -132,8 +133,8 @@ const FiscalBalanceReportChart: React.FC<FiscalBalanceReportChartProps> = ({
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel="Year"
-      yAxisLabel="Amount (ARS)"
+      xAxisLabel="Año"
+      yAxisLabel="Monto (ARS)"
     />
   );
 };

@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
 /**
  * Complete Routing Configuration - All Pages Properly Named and Routed
  * This file contains comprehensive routing for the transparency portal
  */
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { DataProvider } from './contexts/DataContext';
@@ -16,7 +17,7 @@ import Sidebar from '@components/layout/Sidebar';
 import Footer from '@components/layout/Footer';
 
 // Core Pages
-import Budget from './pages/BudgetUnified';
+import Budget from './pages/Budget';
 import Treasury from './pages/TreasuryUnified';
 import ExpensesPage from './pages/ExpensesPage';
 import DebtPage from './pages/DebtUnified';
@@ -30,7 +31,6 @@ import SearchPage from './pages/SearchPage';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import PropertyDeclarations from './pages/PropertyDeclarations';
-import TestAllChartsPage from './pages/TestAllChartsPage';
 import DataVerificationPage from './pages/DataVerificationPage';
 import DashboardCompleto from './pages/DashboardCompleto';
 import NotFoundPage from './pages/NotFoundPage';
@@ -43,7 +43,7 @@ import DataRightsPage from './pages/DataRightsPage';
 import StandardizedDashboard from './pages/StandardizedDashboard';
 import Home from './pages/Home';
 
-// Dashboards & Analytics - CONSOLIDATED (removed MonitoringPage, FinancialDashboard, DataSourceMonitoringDashboard duplicates)
+// Dashboards & Analytics 
 import AnalyticsDashboard from './pages/AnalyticsDashboard';
 import MetaTransparencyDashboard from './pages/MetaTransparencyDashboard';
 import DataVisualizationHub from './pages/DataVisualizationHub';
@@ -67,6 +67,51 @@ import YearSelectorDemo from '@components/demos/YearSelectorDemo';
 
 // Carmen de Areco Specific Page
 import CarmenDeArecoPage from './pages/CarmenDeArecoPage';
+
+// Test Components
+import TestAllChartsPage from './pages/TestAllChartsPage';
+import DataConnectivityTest from './pages/DataConnectivityTest';
+import TestDataLoader from './pages/TestDataLoader';
+
+// Advanced Analysis & Visualization Pages
+import GeographicVisualizationPage from './pages/GeographicVisualizationPage';
+import TimeSeriesAnalysisPage from './pages/TimeSeriesAnalysisPage';
+import CustomizableReportingPage from './pages/CustomizableReportingPage';
+import FlaggedAnalysisPage from './pages/FlaggedAnalysisPage';
+import InteractiveDashboard from './pages/InteractiveDashboard';
+
+// Component to handle hash routing for DashboardCompleto
+function DashboardWithHash() {
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Handle hash navigation for dashboard sections
+    const handleHashNavigation = () => {
+      if (location.hash) {
+        const elementId = location.hash.replace('#', '');
+        // Wait for content to load, then scroll to element
+        setTimeout(() => {
+          const element = document.getElementById(elementId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    };
+    
+    // Handle initial load with hash
+    handleHashNavigation();
+    
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashNavigation);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashNavigation);
+    };
+  }, [location]);
+
+  return <DashboardCompleto />;
+}
 
 function App() {
   useEffect(() => {
@@ -113,6 +158,23 @@ function App() {
     };
   }, []);
 
+  // Check if we're running on a custom domain vs GitHub Pages
+  const isCustomDomain = window.location.hostname !== 'flongstaff.github.io' && 
+                         window.location.hostname !== 'localhost' && 
+                         window.location.hostname !== '127.0.0.1';
+
+  // Redirect from /cda-transparencia/ to / when on custom domain
+  useEffect(() => {
+    if (isCustomDomain && window.location.pathname === '/cda-transparencia/') {
+      // On custom domain, redirect from subpath to root
+      window.location.replace('/');
+    } else if (!isCustomDomain && window.location.pathname === '/') {
+      // On GitHub Pages, redirect root to the subpath if needed
+      // Actually, GitHub Pages should be serving from /cda-transparencia/ already
+      // So this shouldn't happen in practice
+    }
+  }, [isCustomDomain]);
+
   return (
     <HelmetProvider>
       <ThemeProvider>
@@ -127,13 +189,13 @@ function App() {
                 <Routes>
                   {/* Main Dashboard Routes */}
                   <Route path="/" element={<Home />} />
-                  <Route path="/dashboard" element={<DashboardCompleto />} />
-                  <Route path="/completo" element={<DashboardCompleto />} />
+                  <Route path="/dashboard" element={<DashboardWithHash />} />
+                  <Route path="/completo" element={<DashboardWithHash />} />
 
                   {/* Financial Management Routes - All redirected to Dashboard Completo */}
-                  <Route path="/finances" element={<DashboardCompleto />} />
-                  <Route path="/financial" element={<DashboardCompleto />} />
-                  <Route path="/financial-analysis" element={<DashboardCompleto />} />
+                  <Route path="/finances" element={<DashboardWithHash />} />
+                  <Route path="/financial" element={<DashboardWithHash />} />
+                  <Route path="/financial-analysis" element={<DashboardWithHash />} />
                   <Route path="/budget" element={<Budget />} />
                   <Route path="/treasury" element={<Treasury />} />
                   <Route path="/expenses" element={<ExpensesPage />} />
@@ -173,8 +235,6 @@ function App() {
                   {/* Data & Charts Routes - All redirected to Dashboard Completo */}
                   <Route path="/database" element={<Database />} />
                   <Route path="/data-hub" element={<DataVisualizationHub />} />
-                  <Route path="/data-hub/all-charts" element={<AllChartsDashboard />} />
-                  <Route path="/data-visualization" element={<DataVisualizationHub />} />
                   <Route path="/search" element={<SearchPage />} />
 
                   {/* Information Pages */}
@@ -217,8 +277,19 @@ function App() {
                   {/* Carmen de Areco Specific Route */}
                   <Route path="/carmen" element={<CarmenDeArecoPage />} />
 
-                  {/* Test Page */}
-                  <Route path="/test-charts" element={<TestAllChartsPage />} />
+                  {/* Advanced Analysis & Visualization Routes */}
+                  <Route path="/geographic" element={<GeographicVisualizationPage />} />
+                  <Route path="/geographic-viz" element={<GeographicVisualizationPage />} />
+                  <Route path="/time-series" element={<TimeSeriesAnalysisPage />} />
+                  <Route path="/custom-reports" element={<CustomizableReportingPage />} />
+                  <Route path="/flagged" element={<FlaggedAnalysisPage />} />
+                  <Route path="/interactive" element={<InteractiveDashboard />} />
+                  <Route path="/interactive-dashboard" element={<InteractiveDashboard />} />
+
+                  {/* Test Pages */}
+                  <Route path="/all-charts" element={<TestAllChartsPage />} />
+                  <Route path="/data-connectivity-test" element={<DataConnectivityTest />} />
+                  <Route path="/test-data-loader" element={<TestDataLoader />} />
 
                   {/* Catch-all route for 404 */}
                   <Route path="*" element={<NotFoundPage />} />

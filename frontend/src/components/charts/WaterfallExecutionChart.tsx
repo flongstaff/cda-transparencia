@@ -155,7 +155,7 @@ const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Waterfall Execution data...
+          Cargando datos de Ejecución en Cascada...
         </Typography>
       </Box>
     );
@@ -165,7 +165,7 @@ const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Waterfall Execution data: {error}
+        Error cargando datos de Ejecución en Cascada: {error}
       </Alert>
     );
   }
@@ -174,7 +174,7 @@ const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Waterfall Execution data available
+        No hay datos disponibles de Ejecución en Cascada
       </Alert>
     );
   }
@@ -185,8 +185,8 @@ const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
   
   return (
     <div className={`chart-container ${className}`}>
-      {showTitle && <h3 className="chart-title">Cumulative Execution Waterfall Chart</h3>}
-      {showDescription && <p className="chart-description">Visualizing cumulative budget execution across quarters</p>}
+      {showTitle && <h3 className="chart-title">Gráfico de Ejecución Acumulativa en Cascada</h3>}
+      {showDescription && <p className="chart-description">Visualización de la ejecución presupuestaria acumulativa a lo largo de los trimestres</p>}
       <div className="chart-wrapper" style={{ height: height, width: width }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
@@ -199,15 +199,15 @@ const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
             <XAxis 
               type="number" 
               domain={domain}
-              label={{ value: 'Amount (ARS)', position: 'insideBottom', offset: -10 }}
+              label={{ value: 'Monto (ARS)', position: 'insideBottom', offset: -10 }}
             />
             <YAxis 
               type="category" 
               dataKey="name" 
             />
             <Tooltip 
-              formatter={(value) => [`ARS ${Number(value).toLocaleString()}`, 'Amount']}
-              labelFormatter={(label) => `Period: ${label}`}
+              formatter={(value) => [`ARS ${Number(value).toLocaleString()}`, 'Monto']}
+              labelFormatter={(label) => `Período: ${label}`}
             />
             <Bar
               dataKey="value"

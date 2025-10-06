@@ -35,7 +35,7 @@ const EducationDataChart: React.FC<EducationDataChartProps> = ({
   
   // Load chart data using React Query
   const { data, isLoading, isError, error: queryError } = useQuery({
-    queryKey: ['chart-data', 'Education_Data'],
+    queryKey: ['chart-data', 'Education_Data', year],
     queryFn: () => chartDataService.loadChartData('Education_Data'),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
@@ -57,7 +57,8 @@ const EducationDataChart: React.FC<EducationDataChartProps> = ({
       let filteredData = data;
       if (year && Array.isArray(data)) {
         filteredData = data.filter((item: Record<string, unknown>) => {
-          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          // Check for various possible year field names
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
           return itemYear && parseInt(String(itemYear)) === year;
         });
       }
@@ -78,7 +79,7 @@ const EducationDataChart: React.FC<EducationDataChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Education Data data...
+          Cargando datos de Educación...
         </Typography>
       </Box>
     );
@@ -88,7 +89,7 @@ const EducationDataChart: React.FC<EducationDataChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Education Data data: {error}
+        Error cargando datos de Educación: {error}
       </Alert>
     );
   }
@@ -97,7 +98,7 @@ const EducationDataChart: React.FC<EducationDataChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Education Data data available
+        No hay datos disponibles de Educación
       </Alert>
     );
   }
@@ -124,8 +125,8 @@ const EducationDataChart: React.FC<EducationDataChartProps> = ({
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel="Year"
-      yAxisLabel="Count/Amount"
+      xAxisLabel="Año"
+      yAxisLabel="Cantidad/Monto"
     />
   );
 };

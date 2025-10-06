@@ -88,7 +88,7 @@ const TimeSeriesAnomalyChart: React.FC<TimeSeriesAnomalyChartProps> = memo(({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Time Series Anomaly data...
+          Cargando datos de Análisis de Anomalías en Series Temporales...
         </Typography>
       </Box>
     );
@@ -98,7 +98,7 @@ const TimeSeriesAnomalyChart: React.FC<TimeSeriesAnomalyChartProps> = memo(({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Time Series Anomaly data: {error}
+        Error cargando datos de Análisis de Anomalías en Series Temporales: {error}
       </Alert>
     );
   }
@@ -107,7 +107,7 @@ const TimeSeriesAnomalyChart: React.FC<TimeSeriesAnomalyChartProps> = memo(({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Time Series Anomaly data available
+        No hay datos disponibles de Análisis de Anomalías en Series Temporales
       </Alert>
     );
   }

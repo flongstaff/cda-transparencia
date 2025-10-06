@@ -80,15 +80,15 @@ class DataSourceIndicatorsService {
     let status: 'online' | 'offline' | 'slow' | 'error' = 'online';
     let dataPoints = 0;
     let lastUpdated = new Date().toISOString();
-    let notes: string[] = [];
+    const notes: string[] = [];
 
     try {
       // Test the data source based on its type
-      let testData: any = null;
+      const testData: any = null;
       let success = false;
 
       switch (id) {
-        case 'carmen-official':
+        case 'carmen-official': {
           const carmenData = await externalAPIsService.getCarmenDeArecoData();
           success = carmenData.success;
           if (success && carmenData.data) {
@@ -100,8 +100,9 @@ class DataSourceIndicatorsService {
             lastUpdated = carmenData.lastModified || lastUpdated;
           }
           break;
+        }
 
-        case 'carmen-transparency':
+        case 'carmen-transparency': {
           const transparencyData = await externalAPIsService.getBuenosAiresProvincialData();
           success = transparencyData.success;
           if (success && transparencyData.data) {
@@ -112,8 +113,9 @@ class DataSourceIndicatorsService {
             lastUpdated = transparencyData.lastModified || lastUpdated;
           }
           break;
+        }
 
-        case 'rafam':
+        case 'rafam': {
           const rafamData = await externalAPIsService.getRAFAMData('270');
           success = rafamData.success;
           if (success && rafamData.data) {
@@ -124,8 +126,9 @@ class DataSourceIndicatorsService {
             lastUpdated = rafamData.lastModified || lastUpdated;
           }
           break;
+        }
 
-        case 'gba-data':
+        case 'gba-data': {
           const gbaData = await externalAPIsService.getBuenosAiresProvincialData();
           success = gbaData.success;
           if (success && gbaData.data) {
@@ -136,8 +139,9 @@ class DataSourceIndicatorsService {
             lastUpdated = gbaData.lastModified || lastUpdated;
           }
           break;
+        }
 
-        case 'datos-gob-ar':
+        case 'datos-gob-ar': {
           const datosData = await externalAPIsService.getNationalBudgetData();
           success = datosData.success;
           if (success && datosData.data) {
@@ -160,8 +164,9 @@ class DataSourceIndicatorsService {
             lastUpdated = contratacionesData.lastModified || lastUpdated;
           }
           break;
+        }
 
-        case 'boletin-nacional':
+        case 'boletin-nacional': {
           const boletinData = await externalAPIsService.getBoletinOficialNacional('Carmen de Areco');
           success = boletinData.success;
           if (success && boletinData.data) {
@@ -172,6 +177,7 @@ class DataSourceIndicatorsService {
             lastUpdated = boletinData.lastModified || lastUpdated;
           }
           break;
+        }
 
         case 'aaip':
           const aaipData = await externalAPIsService.getAAIPData();

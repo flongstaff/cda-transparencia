@@ -57,7 +57,8 @@ const DebtReportChart: React.FC<DebtReportChartProps> = ({
       let filteredData = data;
       if (year && Array.isArray(data)) {
         filteredData = data.filter((item: Record<string, unknown>) => {
-          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          // Check for various possible year field names
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
           return itemYear && parseInt(String(itemYear)) === year;
         });
       }
@@ -78,7 +79,7 @@ const DebtReportChart: React.FC<DebtReportChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Debt Report data...
+          Cargando datos del Informe de Deuda...
         </Typography>
       </Box>
     );
@@ -88,7 +89,7 @@ const DebtReportChart: React.FC<DebtReportChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Debt Report data: {error}
+        Error cargando datos del Informe de Deuda: {error}
       </Alert>
     );
   }
@@ -97,7 +98,7 @@ const DebtReportChart: React.FC<DebtReportChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Debt Report data available
+        No hay datos disponibles del Informe de Deuda
       </Alert>
     );
   }
@@ -112,10 +113,16 @@ const DebtReportChart: React.FC<DebtReportChartProps> = ({
       })
     : [];
   
+  // Map custom chart types to supported BaseChart types
+  const getSupportedChartType = (type: string): SupportedChartType => {
+    const supportedTypes: SupportedChartType[] = ['line', 'bar', 'area', 'pie', 'scatter', 'composed'];
+    return supportedTypes.includes(type as SupportedChartType) ? type as SupportedChartType : 'bar';
+  };
+
   return (
     <BaseChart
       data={chartData}
-      chartType={chartType}
+      chartType={getSupportedChartType(chartType)}
       xAxisKey="year"
       yAxisKeys={yAxisKeys}
       title={showTitle ? CHART_TYPE_NAMES.Debt_Report : undefined}
@@ -124,8 +131,8 @@ const DebtReportChart: React.FC<DebtReportChartProps> = ({
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel="Year"
-      yAxisLabel="Amount (ARS)"
+      xAxisLabel="Año"
+      yAxisLabel="Monto (ARS)"
     />
   );
 };

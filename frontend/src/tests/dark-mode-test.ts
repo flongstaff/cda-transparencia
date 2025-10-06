@@ -117,7 +117,7 @@ function testDarkModeClasses() {
     // Check if all required dark mode classes are present
     let hasAllDarkClasses = true;
     testCase.darkModeClasses.forEach(className => {
-      if (!document.querySelector(\`\${className.replace(/\\s+/g, '.')}\`)) {
+      if (!document.querySelector(`${className.replace(/\s+/g, ".")}`)) {
         console.log(`  ❌ Missing dark mode class: ${className}`);
         hasAllDarkClasses = false;
       }
@@ -126,7 +126,7 @@ function testDarkModeClasses() {
     // Check if all required light mode classes are present
     let hasAllLightClasses = true;
     testCase.lightModeClasses.forEach(className => {
-      if (!document.querySelector(\`\${className.replace(/\\s+/g, '.')}\`)) {
+      if (!document.querySelector(`${className.replace(/\s+/g, ".")}`)) {
         console.log(`  ❌ Missing light mode class: ${className}`);
         hasAllLightClasses = false;
       }

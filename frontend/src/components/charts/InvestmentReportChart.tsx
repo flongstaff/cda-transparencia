@@ -35,7 +35,7 @@ const InvestmentReportChart: React.FC<InvestmentReportChartProps> = ({
   
   // Load chart data using React Query
   const { data, isLoading, isError, error: queryError } = useQuery({
-    queryKey: ['chart-data', 'Investment_Report'],
+    queryKey: ['chart-data', 'Investment_Report', year],
     queryFn: () => chartDataService.loadChartData('Investment_Report'),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
@@ -57,7 +57,8 @@ const InvestmentReportChart: React.FC<InvestmentReportChartProps> = ({
       let filteredData = data;
       if (year && Array.isArray(data)) {
         filteredData = data.filter((item: Record<string, unknown>) => {
-          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          // Check for various possible year field names
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
           return itemYear && parseInt(String(itemYear)) === year;
         });
       }
@@ -78,7 +79,7 @@ const InvestmentReportChart: React.FC<InvestmentReportChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Investment Report data...
+          Cargando datos del Informe de Inversiones...
         </Typography>
       </Box>
     );
@@ -88,7 +89,7 @@ const InvestmentReportChart: React.FC<InvestmentReportChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Investment Report data: {error}
+        Error cargando datos del Informe de Inversiones: {error}
       </Alert>
     );
   }
@@ -97,7 +98,7 @@ const InvestmentReportChart: React.FC<InvestmentReportChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Investment Report data available
+        No hay datos disponibles del Informe de Inversiones
       </Alert>
     );
   }
@@ -124,8 +125,8 @@ const InvestmentReportChart: React.FC<InvestmentReportChartProps> = ({
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel="Year"
-      yAxisLabel="Amount (ARS)"
+      xAxisLabel="Año"
+      yAxisLabel="Monto (ARS)"
     />
   );
 };

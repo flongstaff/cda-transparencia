@@ -7,6 +7,8 @@ import PageYearSelector from '../components/forms/PageYearSelector';
 import { formatCurrencyARS } from '../utils/formatters';
 import { Building, RefreshCw } from 'lucide-react';
 import ErrorBoundary from '../components/common/ErrorBoundary';
+import ChartContainer from '../components/common/ChartContainer';
+import InvestmentReportChart from '../components/charts/InvestmentReportChart';
 
 const InvestmentsPage: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
@@ -76,6 +78,39 @@ const InvestmentsPage: React.FC = () => {
         loading={unifiedLoading}
         className="mb-6"
       />
+
+      {/* Investment Charts */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <ChartContainer
+          title="Análisis de Inversiones"
+          description="Tendencia y distribución de inversiones"
+          icon={Building}
+          height={320}
+        >
+          <ErrorBoundary>
+            <InvestmentReportChart
+              year={selectedYear}
+              height={280}
+              chartType="bar"
+            />
+          </ErrorBoundary>
+        </ChartContainer>
+
+        <ChartContainer
+          title="Evolución de Inversiones"
+          description="Histórico de inversiones por año"
+          icon={Building}
+          height={320}
+        >
+          <ErrorBoundary>
+            <InvestmentReportChart
+              year={selectedYear}
+              height={280}
+              chartType="line"
+            />
+          </ErrorBoundary>
+        </ChartContainer>
+      </div>
 
       {loading && (
         <div className="flex items-center justify-center min-h-screen">

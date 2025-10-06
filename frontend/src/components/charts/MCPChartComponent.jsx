@@ -118,7 +118,7 @@ const MCPChartComponent = ({
   // Render chart with MCP context
   const renderChart = () => {
     if (isLoading) {
-      return <div className="flex justify-center items-center h-64">Loading chart data...</div>;
+      return <div className="flex justify-center items-center h-64">Cargando datos del gráfico...</div>;
     }
     
     if (error) {
@@ -133,7 +133,7 @@ const MCPChartComponent = ({
     if (!chartData || chartData.length === 0) {
       return (
         <div className="text-center py-8 text-gray-500">
-          No data available for this chart
+          No hay datos disponibles para este gráfico
         </div>
       );
     }
@@ -143,11 +143,11 @@ const MCPChartComponent = ({
       <div className="p-4 border rounded-lg bg-white shadow">
         <h3 className="text-lg font-semibold mb-2">{getChartName(chartType)}</h3>
         <p className="text-sm text-gray-600 mb-2">
-          MCP Context: {chartType} | {cacheStats?.cached ? 'Cached' : 'Fresh'}
+          Contexto MCP: {chartType} | {getCacheStatus()}
         </p>
         <div className="h-64 flex items-center justify-center">
           {/* Actual chart rendering would go here */}
-          <div className="text-gray-500">Chart visualization would appear here</div>
+          <div className="text-gray-500">La visualización del gráfico aparecería aquí</div>
         </div>
       </div>
     );
@@ -155,13 +155,17 @@ const MCPChartComponent = ({
   
   const getChartName = (type) => {
     const names = {
-      'Budget_Execution': 'Budget Execution',
-      'Debt_Report': 'Debt Report',
-      'Revenue_Report': 'Revenue Report',
-      'Expenditure_Report': 'Expenditure Report'
+      'Budget_Execution': 'Ejecución Presupuestaria',
+      'Debt_Report': 'Informe de Deuda',
+      'Revenue_Report': 'Informe de Ingresos',
+      'Expenditure_Report': 'Informe de Gastos'
     };
     
     return names[type] || type;
+  };
+  
+  const getCacheStatus = () => {
+    return cacheStats?.cached ? 'Caché' : 'Nuevo';
   };
 
   return (
