@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Building, Clock, AlertTriangle, CheckCircle, DollarSign } from 'lucide-react';
 import { externalAPIsService } from "../services/ExternalDataAdapter";
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 
 interface InfrastructureProject {
   project_name: string;

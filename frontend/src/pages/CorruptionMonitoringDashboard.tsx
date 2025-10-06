@@ -19,9 +19,9 @@ import {
   Target,
   Zap
 } from 'lucide-react';
-import WaterfallChart from '../components/charts/WaterfallChart';
-import FinancialSunburstChart from '../components/charts/FinancialSunburstChart';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import WaterfallChart from '@components/charts/WaterfallChart';
+import FinancialSunburstChart from '@components/charts/FinancialSunburstChart';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 import { useMasterData } from '../hooks/useMasterData';
 
 interface AnomalyDetection {

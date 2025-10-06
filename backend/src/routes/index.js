@@ -14,6 +14,9 @@ const privacyRoutes = require('./privacyRoutes');
 const monitoringRoutes = require('./monitoringRoutes');
 const feedbackRoutes = require('./feedbackRoutes');
 const carmenRoutes = require('./carmenRoutes');
+const pdfExtractionRoutes = require('./pdfExtractionRoutes');
+const scrapingSchedulerRoutes = require('./scrapingSchedulerRoutes');
+const documentIndexRoutes = require('./documentIndexRoutes');
 
 // Main transparency portal for citizens (consolidated PostgreSQL and real documents system)
 router.use('/transparency', comprehensiveTransparencyRoutes);
@@ -50,6 +53,15 @@ router.use('/monitoring', monitoringRoutes);
 
 // User feedback routes for collecting and managing user input
 router.use('/feedback', feedbackRoutes);
+
+// PDF extraction routes for document processing
+router.use('/pdf-extraction', pdfExtractionRoutes);
+
+// Scraping scheduler routes for automated tasks
+router.use('/scraping-scheduler', scrapingSchedulerRoutes);
+
+// Document indexing routes for document management and search
+router.use('/document-index', documentIndexRoutes);
 
 // Health check endpoint
 router.get('/health', (req, res) => {

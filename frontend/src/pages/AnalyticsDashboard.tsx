@@ -28,19 +28,19 @@ import {
 } from 'lucide-react';
 
 // Import analysis components
-import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
-import DebtAnalysisChart from '../components/charts/DebtAnalysisChart';
-import TreasuryAnalysisChart from '../components/charts/TreasuryAnalysisChart';
-import ContractAnalysisChart from '../components/charts/ContractAnalysisChart';
-import SalaryAnalysisChart from '../components/charts/SalaryAnalysisChart';
-import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
+import BudgetAnalysisChart from '@components/charts/BudgetAnalysisChart';
+import DebtAnalysisChart from '@components/charts/DebtAnalysisChart';
+import TreasuryAnalysisChart from '@components/charts/TreasuryAnalysisChart';
+import ContractAnalysisChart from '@components/charts/ContractAnalysisChart';
+import SalaryAnalysisChart from '@components/charts/SalaryAnalysisChart';
+import DocumentAnalysisChart from '@components/charts/DocumentAnalysisChart';
 
 // Import data services
 import { useMasterData } from '../hooks/useMasterData';
 import { useDashboardData } from '../hooks/useUnifiedData';
-import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator';
-import YearSelector from '../components/common/YearSelector';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import { DataSourcesIndicator } from '@components/common/DataSourcesIndicator';
+import YearSelector from '@components/common/YearSelector';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 
 // Define types
 interface AnalyticsSummary {

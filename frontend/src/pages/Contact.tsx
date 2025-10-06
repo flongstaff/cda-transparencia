@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 import { useMasterData } from '../hooks/useMasterData';
 import {
   Shield,

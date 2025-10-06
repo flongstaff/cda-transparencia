@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AlertTriangle, DollarSign, FileText, TrendingDown } from 'lucide-react';
 import { useMasterData } from '../hooks/useMasterData';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 
 interface Anomaly {
   id: string;

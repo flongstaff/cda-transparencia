@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import AnalyticsDashboard from './AnalyticsDashboard';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 
 const TransparencyPage: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(2019);

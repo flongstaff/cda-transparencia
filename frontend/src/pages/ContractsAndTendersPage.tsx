@@ -21,18 +21,18 @@ import {
   RefreshCw,
   ExternalLink
 } from 'lucide-react';
-import SankeyDiagram from '../components/data-display/SankeyDiagram';
+import SankeyDiagram from '@components/data-display/SankeyDiagram';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useMasterData } from '../hooks/useMasterData';
-import ProcurementTimelineChart from '../components/charts/ProcurementTimelineChart';
-import TimeSeriesAnomalyChart from '../components/charts/TimeSeriesAnomalyChart';
-import TreemapChart from '../components/charts/TreemapChart';
-import UnifiedChart from '../components/charts/UnifiedChart';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import ProcurementTimelineChart from '@components/charts/ProcurementTimelineChart';
+import TimeSeriesAnomalyChart from '@components/charts/TimeSeriesAnomalyChart';
+import TreemapChart from '@components/charts/TreemapChart';
+import UnifiedChart from '@components/charts/UnifiedChart';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 import { motion } from 'framer-motion';
 import { externalAPIsService } from "../services/ExternalDataAdapter";
-import { StatCard } from '../components/common/StatCard';
-import { ChartContainer } from '../components/common/ChartContainer';
+import { StatCard } from '@components/common/StatCard';
+import { ChartContainer } from '@components/common/ChartContainer';
 
 // Mock data for demonstration
 const mockTendersData = [

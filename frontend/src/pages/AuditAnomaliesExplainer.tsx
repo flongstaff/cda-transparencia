@@ -20,7 +20,7 @@ import {
 
 // Services
 import dataService from '../services/dataService';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 import { useMasterData } from '../hooks/useMasterData';
 
 interface AuditAnomaly {

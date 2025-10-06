@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-04T11:12:19.283Z",
+  "generatedAt": "2025-10-04T11:48:23.174Z",
   "dataSources": {
     "csv": [
       {
@@ -9652,7 +9652,7 @@
       {
         "path": "consolidated/2024/budget.json",
         "name": "budget.json",
-        "size": 1106
+        "size": 1514
       },
       {
         "path": "consolidated/2023/treasury.json",
@@ -9687,7 +9687,7 @@
       {
         "path": "consolidated/2023/budget.json",
         "name": "budget.json",
-        "size": 1106
+        "size": 1514
       },
       {
         "path": "consolidated/2022/treasury.json",
@@ -9722,7 +9722,7 @@
       {
         "path": "consolidated/2022/budget.json",
         "name": "budget.json",
-        "size": 1104
+        "size": 1512
       },
       {
         "path": "consolidated/2021/treasury.json",
@@ -9757,7 +9757,7 @@
       {
         "path": "consolidated/2021/budget.json",
         "name": "budget.json",
-        "size": 1105
+        "size": 1513
       },
       {
         "path": "consolidated/2020/treasury.json",
@@ -9792,7 +9792,7 @@
       {
         "path": "consolidated/2020/budget.json",
         "name": "budget.json",
-        "size": 1105
+        "size": 1513
       },
       {
         "path": "consolidated/2019/treasury.json",
@@ -9827,7 +9827,7 @@
       {
         "path": "consolidated/2019/budget.json",
         "name": "budget.json",
-        "size": 1104
+        "size": 1512
       },
       {
         "path": "consolidated/2018/treasury.json",
@@ -9862,7 +9862,7 @@
       {
         "path": "consolidated/2018/budget.json",
         "name": "budget.json",
-        "size": 1104
+        "size": 1512
       },
       {
         "path": "consolidated/2017/treasury.json",
@@ -9897,7 +9897,7 @@
       {
         "path": "consolidated/2017/budget.json",
         "name": "budget.json",
-        "size": 1103
+        "size": 1511
       },
       {
         "path": "audit_reports/audit_2025-10-02.json",
@@ -10029,7 +10029,7 @@
           "name": "budget.json",
           "type": "file",
           "extension": ".json",
-          "size": 1103
+          "size": 1511
         },
         {
           "name": "contracts.json",
@@ -10076,7 +10076,7 @@
           "name": "budget.json",
           "type": "file",
           "extension": ".json",
-          "size": 1104
+          "size": 1512
         },
         {
           "name": "contracts.json",
@@ -10123,7 +10123,7 @@
           "name": "budget.json",
           "type": "file",
           "extension": ".json",
-          "size": 1104
+          "size": 1512
         },
         {
           "name": "contracts.json",
@@ -10170,7 +10170,7 @@
           "name": "budget.json",
           "type": "file",
           "extension": ".json",
-          "size": 1105
+          "size": 1513
         },
         {
           "name": "contracts.json",
@@ -10217,7 +10217,7 @@
           "name": "budget.json",
           "type": "file",
           "extension": ".json",
-          "size": 1105
+          "size": 1513
         },
         {
           "name": "contracts.json",
@@ -10264,7 +10264,7 @@
           "name": "budget.json",
           "type": "file",
           "extension": ".json",
-          "size": 1104
+          "size": 1512
         },
         {
           "name": "contracts.json",
@@ -10311,7 +10311,7 @@
           "name": "budget.json",
           "type": "file",
           "extension": ".json",
-          "size": 1106
+          "size": 1514
         },
         {
           "name": "contracts.json",
@@ -10358,7 +10358,7 @@
           "name": "budget.json",
           "type": "file",
           "extension": ".json",
-          "size": 1106
+          "size": 1514
         },
         {
           "name": "contracts.json",

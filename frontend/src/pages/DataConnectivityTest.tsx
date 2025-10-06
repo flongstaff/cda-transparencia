@@ -7,8 +7,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Database, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import DataConnectivityTest from '../components/debug/DataConnectivityTest';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import DataConnectivityTest from '@components/debug/DataConnectivityTest';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 
 const DataConnectivityTestPage: React.FC = () => {
   return (

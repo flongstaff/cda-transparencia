@@ -20,10 +20,10 @@ import {
   Database
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import TransparencyHighlights from '../components/transparency/TransparencyHighlights';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import TransparencyHighlights from '@components/transparency/TransparencyHighlights';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 import { useMasterData } from '../hooks/useMasterData';
-import LoadingState from '../components/ui/LoadingState';
+import LoadingState from '@components/ui/LoadingState';
 
 const Home: React.FC = () => {
   const { data, loading, error } = useMasterData();

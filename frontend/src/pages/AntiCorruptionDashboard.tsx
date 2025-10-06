@@ -9,7 +9,7 @@ import {
   BarChart3,
 } from 'lucide-react';
 import { useMasterData } from '../hooks/useMasterData';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 
 interface AntiCorruptionData {
   risk_level: 'BAJO' | 'MEDIO' | 'ALTO';

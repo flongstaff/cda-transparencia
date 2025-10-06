@@ -22,7 +22,7 @@ import {
 } from 'lucide-react';
 import ComprehensiveDataDisplay from '../components/data-display/ComprehensiveDataDisplay';
 import StandardizedChart from '../components/charts/StandardizedChart';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 import { formatCurrencyARS } from '../utils/formatters';
 import { externalAPIsService } from "../services/ExternalDataAdapter";
 import { carmenScraperService } from '../services/CarmenScraperService';

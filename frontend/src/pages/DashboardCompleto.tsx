@@ -46,43 +46,43 @@ import {
 } from 'lucide-react';
 
 // Import enhanced year selector and data hooks
-import ResponsiveYearSelector from '../components/forms/ResponsiveYearSelector';
+import ResponsiveYearSelector from '@components/forms/ResponsiveYearSelector';
 import { useMultiYearData } from '../hooks/useMultiYearData';
 import { useDashboardData } from '../hooks/useUnifiedData';
-import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator';
-import { YearSelector } from '../components/common/YearSelector';
-import TimeSeriesChart from '../components/charts/TimeSeriesChart';
-import RechartsWrapper from '../components/charts/RechartsWrapper';
+import { DataSourcesIndicator } from '@components/common/DataSourcesIndicator';
+import { YearSelector } from '@components/common/YearSelector';
+import TimeSeriesChart from '@components/charts/TimeSeriesChart';
+import RechartsWrapper from '@components/charts/RechartsWrapper';
 
 // Import all chart components
-import BudgetExecutionChartWrapper from '../components/charts/BudgetExecutionChartWrapper';
-import DebtReportChart from '../components/charts/DebtReportChart';
-import ChartAuditReport from '../components/charts/ChartAuditReport';
+import BudgetExecutionChartWrapper from '@components/charts/BudgetExecutionChartWrapper';
+import DebtReportChart from '@components/charts/DebtReportChart';
+import ChartAuditReport from '@components/charts/ChartAuditReport';
 
 // Import chart integration utilities
 import { ChartsGrid, AuditSection, QuickStats } from '../utils/chartIntegration';
-import EconomicReportChart from '../components/charts/EconomicReportChart';
-import EducationDataChart from '../components/charts/EducationDataChart';
-import ExpenditureReportChart from '../components/charts/ExpenditureReportChart';
-import FinancialReservesChart from '../components/charts/FinancialReservesChart';
-import FiscalBalanceReportChart from '../components/charts/FiscalBalanceReportChart';
-import HealthStatisticsChart from '../components/charts/HealthStatisticsChart';
-import InfrastructureProjectsChart from '../components/charts/InfrastructureProjectsChart';
-import InvestmentReportChart from '../components/charts/InvestmentReportChart';
-import PersonnelExpensesChart from '../components/charts/PersonnelExpensesChart';
-import RevenueReportChart from '../components/charts/RevenueReportChart';
-import RevenueSourcesChart from '../components/charts/RevenueSourcesChart';
+import EconomicReportChart from '@components/charts/EconomicReportChart';
+import EducationDataChart from '@components/charts/EducationDataChart';
+import ExpenditureReportChart from '@components/charts/ExpenditureReportChart';
+import FinancialReservesChart from '@components/charts/FinancialReservesChart';
+import FiscalBalanceReportChart from '@components/charts/FiscalBalanceReportChart';
+import HealthStatisticsChart from '@components/charts/HealthStatisticsChart';
+import InfrastructureProjectsChart from '@components/charts/InfrastructureProjectsChart';
+import InvestmentReportChart from '@components/charts/InvestmentReportChart';
+import PersonnelExpensesChart from '@components/charts/PersonnelExpensesChart';
+import RevenueReportChart from '@components/charts/RevenueReportChart';
+import RevenueSourcesChart from '@components/charts/RevenueSourcesChart';
 
 // Import newer chart components
-import QuarterlyExecutionChart from '../components/charts/QuarterlyExecutionChart';
-import ProgrammaticPerformanceChart from '../components/charts/ProgrammaticPerformanceChart';
-import GenderBudgetingChart from '../components/charts/GenderBudgetingChart';
-import WaterfallExecutionChart from '../components/charts/WaterfallExecutionChart';
+import QuarterlyExecutionChart from '@components/charts/QuarterlyExecutionChart';
+import ProgrammaticPerformanceChart from '@components/charts/ProgrammaticPerformanceChart';
+import GenderBudgetingChart from '@components/charts/GenderBudgetingChart';
+import WaterfallExecutionChart from '@components/charts/WaterfallExecutionChart';
 
 // Import dynamic chart components
-import DynamicChartLoader from '../components/charts/DynamicChartLoader';
-import ComprehensiveChartGrid from '../components/charts/ComprehensiveChartGrid';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import DynamicChartLoader from '@components/charts/DynamicChartLoader';
+import ComprehensiveChartGrid from '@components/charts/ComprehensiveChartGrid';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 
 // Dashboard sections configuration
 const DASHBOARD_SECTIONS = [

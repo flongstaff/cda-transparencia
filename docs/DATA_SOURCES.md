@@ -76,6 +76,8 @@
 - **Argentina API**: [https://github.com/Franqsanz/argentina-api](https://github.com/Franqsanz/argentina-api)
 - **Catálogo de APIs públicas**: [https://apidocs.ar/lista.html](https://apidocs.ar/lista.html)
 - **Repositorio de APIs públicas**: [http://github.com/enzonotario/apidocs.ar](http://github.com/enzonotario/apidocs.ar)
+- **Repositorio de CUIT DB**: [https://github.com/jboirazian/CUIT_DATABASE_SCRAPING]
+- **Backup datasets Argentina**: [https://datos.nulo.lol/]
 
 ## Development Tools
 

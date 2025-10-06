@@ -6,7 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart3, FileText, DollarSign, Calendar, CheckCircle, XCircle, Loader2 } from 'lucide-react';
 import { useMasterData } from '../hooks/useMasterData';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 
 const DataVerificationPage: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());

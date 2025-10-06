@@ -4,15 +4,15 @@ import { useTable } from 'react-table';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useMasterData } from '../hooks/useMasterData';
 import { useAuditsData } from '../hooks/useUnifiedData';
-import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator';
-import { YearSelector } from '../components/common/YearSelector';
+import { DataSourcesIndicator } from '@components/common/DataSourcesIndicator';
+import { YearSelector } from '@components/common/YearSelector';
 import UnifiedTransparencyService from '../services/UnifiedTransparencyService';
 import { AlertTriangle, CheckCircle, Clock, ExternalLink, Loader2, Shield, Search, TrendingUp, RefreshCw } from 'lucide-react';
-import ErrorBoundary from '../components/common/ErrorBoundary';
-import ChartAuditReport from '../components/charts/ChartAuditReport';
-import TimeSeriesAnomalyChart from '../components/charts/TimeSeriesAnomalyChart';
-import FiscalBalanceReportChart from '../components/charts/FiscalBalanceReportChart';
-import UnifiedChart from '../components/charts/UnifiedChart';
+import ErrorBoundary from '@components/common/ErrorBoundary';
+import ChartAuditReport from '@components/charts/ChartAuditReport';
+import TimeSeriesAnomalyChart from '@components/charts/TimeSeriesAnomalyChart';
+import FiscalBalanceReportChart from '@components/charts/FiscalBalanceReportChart';
+import UnifiedChart from '@components/charts/UnifiedChart';
 
 // Define TypeScript interfaces
 interface AuditResult {

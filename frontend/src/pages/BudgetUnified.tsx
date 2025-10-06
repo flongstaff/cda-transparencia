@@ -28,19 +28,19 @@ import {
 } from 'lucide-react';
 
 import { useMultiYearData } from '../hooks/useMultiYearData';
-import ResponsiveYearSelector from '../components/forms/ResponsiveYearSelector';
-import UnifiedChart from '../components/charts/UnifiedChart';
-import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
-import BudgetExecutionDashboard from '../components/charts/BudgetExecutionDashboard';
-import BudgetExecutionChart from '../components/charts/BudgetExecutionChart';
-import TreemapChart from '../components/charts/TreemapChart';
-import TimeSeriesChart from '../components/charts/TimeSeriesChart';
-import WaterfallChart from '../components/charts/WaterfallChart';
-import QuarterlyExecutionChart from '../components/charts/QuarterlyExecutionChart';
-import GenderBudgetingChart from '../components/charts/GenderBudgetingChart';
-import ErrorBoundary from '../components/common/ErrorBoundary';
-import { StatCard } from '../components/common/StatCard';
-import { ChartContainer } from '../components/common/ChartContainer';
+import ResponsiveYearSelector from '@components/forms/ResponsiveYearSelector';
+import UnifiedChart from '@components/charts/UnifiedChart';
+import BudgetAnalysisChart from '@components/charts/BudgetAnalysisChart';
+import BudgetExecutionDashboard from '@components/charts/BudgetExecutionDashboard';
+import BudgetExecutionChart from '@components/charts/BudgetExecutionChart';
+import TreemapChart from '@components/charts/TreemapChart';
+import TimeSeriesChart from '@components/charts/TimeSeriesChart';
+import WaterfallChart from '@components/charts/WaterfallChart';
+import QuarterlyExecutionChart from '@components/charts/QuarterlyExecutionChart';
+import GenderBudgetingChart from '@components/charts/GenderBudgetingChart';
+import ErrorBoundary from '@components/common/ErrorBoundary';
+import { StatCard } from '@components/common/StatCard';
+import { ChartContainer } from '@components/common/ChartContainer';
 
 const BudgetUnified: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');

@@ -50,7 +50,6 @@ import DataVisualizationHub from './pages/DataVisualizationHub';
 import AnomalyDashboard from './pages/AnomalyDashboard';
 import AntiCorruptionDashboard from './pages/AntiCorruptionDashboard';
 import CorruptionMonitoringDashboard from './pages/CorruptionMonitoringDashboard';
-import AllChartsDashboard from './pages/AllChartsDashboard';
 import MultiYearRevenue from './pages/MultiYearRevenue';
 import SectoralStatsDashboard from './pages/SectoralStatsDashboard';
 
@@ -65,6 +64,9 @@ import InfrastructureTracker from './pages/InfrastructureTracker';
 
 // Demo Components
 import YearSelectorDemo from '@components/demos/YearSelectorDemo';
+
+// Carmen de Areco Specific Page
+import CarmenDeArecoPage from './pages/CarmenDeArecoPage';
 
 function App() {
   useEffect(() => {
@@ -211,6 +213,9 @@ function App() {
 
                   {/* Demo Components */}
                   <Route path="/demo/year-selector" element={<YearSelectorDemo />} />
+
+                  {/* Carmen de Areco Specific Route */}
+                  <Route path="/carmen" element={<CarmenDeArecoPage />} />
 
                   {/* Test Page */}
                   <Route path="/test-charts" element={<TestAllChartsPage />} />

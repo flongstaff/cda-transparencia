@@ -4,8 +4,8 @@
  */
 
 import React from 'react';
-import DataRightsForm from '../components/DataRightsForm';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import DataRightsForm from '@components/DataRightsForm';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 
 const DataRightsPage: React.FC = () => {
   return (
