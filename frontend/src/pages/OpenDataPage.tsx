@@ -13,7 +13,7 @@ import { UnifiedDataViewer } from '../components/data-viewers';
 import { getNationalData } from '../services/NationalDataService';
 import { ChartContainer } from '../components/common/ChartContainer';
 import UnifiedChart from '../components/charts/UnifiedChart';
-import DataDistributionChart from '../components/charts/DataDistributionChart';
+
 import TimeSeriesChart from '../components/charts/TimeSeriesChart';
 
 // Generate mock municipal datasets (22 datasets as mentioned)
@@ -379,7 +379,7 @@ const OpenDataPage: React.FC = () => {
               icon={PieChart}
               height={350}
             >
-              <DataDistributionChart
+              <UnifiedChart
                 type="dataset_categories"
                 year={new Date().getFullYear()}
                 height={300}

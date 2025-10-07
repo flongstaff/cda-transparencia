@@ -1,75 +1,90 @@
 /**
- * GITHUB REPOSITORY DATA SERVICE
- *
- * Fetches data directly from GitHub repository files
- * Works in production (GitHub Pages) and development
- * Uses raw.githubusercontent.com URLs instead of local file paths
- *
- * This service replaces all local file access patterns and ensures
- * the app works when deployed to GitHub Pages/Cloudflare
+ * PROXY DATA SERVICE
+ * 
+ * This service fetches data through the backend proxy server instead of 
+ * directly from GitHub raw URLs to avoid CORS issues.
  */
 
-export interface GitHubDataResponse {
+import { GitHubDataResponse } from './GitHubDataService';
+
+export interface ProxyDataResponse {
   success: boolean;
   data: any;
-  source: 'github_raw' | 'cache';
+  source: 'proxy' | 'cache';
   lastModified?: string;
   error?: string;
 }
 
-export interface RepositoryConfig {
-  owner: string;
-  repo: string;
-  branch: string;
-  baseUrl: string;
-}
-
-class GitHubDataService {
-  private static instance: GitHubDataService;
+class ProxyDataService {
+  private static instance: ProxyDataService;
   private cache = new Map<string, { data: any; timestamp: number; etag?: string }>();
   private readonly CACHE_DURATION = 10 * 60 * 1000; // 10 minutes cache
-
-  private config: RepositoryConfig = {
-    owner: 'flongstaff',
-    repo: 'cda-transparencia',
-    branch: 'main',
-    baseUrl: 'https://raw.githubusercontent.com'
-  };
+  private readonly PROXY_BASE_URL = this.getProxyBaseUrl();
 
   private constructor() {}
 
-  public static getInstance(): GitHubDataService {
-    if (!GitHubDataService.instance) {
-      GitHubDataService.instance = new GitHubDataService();
+  public static getInstance(): ProxyDataService {
+    if (!ProxyDataService.instance) {
+      ProxyDataService.instance = new ProxyDataService();
     }
-    return GitHubDataService.instance;
+    return ProxyDataService.instance;
   }
 
   /**
-   * Get raw GitHub URL for file
+   * Determine the proxy base URL based on environment
    */
-  private getFileUrl(filePath: string): string {
-    // Remove leading slash if present
-    const cleanPath = filePath.startsWith('/') ? filePath.substring(1) : filePath;
-    
-    // For data files in production, use relative paths to avoid CORS
-    if (cleanPath.startsWith('data/')) {
-      if (typeof window !== 'undefined') {
-        const hostname = window.location.hostname;
-        // For GitHub Pages deployment or production domain
-        if (hostname === 'cda-transparencia.org' || hostname.endsWith('github.io')) {
-          return `/${cleanPath}`;
-        }
+  private getProxyBaseUrl(): string {
+    if (typeof window !== 'undefined') {
+      // In browser environment
+      const hostname = window.location.hostname;
+      
+      // For production (cda-transparencia.org) or GitHub Pages
+      if (hostname === 'cda-transparencia.org' || hostname.endsWith('github.io')) {
+        return 'https://carmen-transparency-proxy.fly.dev'; // Use the Fly.io deployed proxy
+      }
+      
+      // For local development
+      if (hostname === 'localhost' || hostname === '127.0.0.1') {
+        return 'http://localhost:3002'; // Default proxy port
       }
     }
     
-    return `${this.config.baseUrl}/${this.config.owner}/${this.config.repo}/${this.config.branch}/${cleanPath}`;
+    // Default fallback
+    return 'http://localhost:3002';
   }
 
   /**
-   * Fetch JSON file from GitHub repository or local assets
+   * Get proxy URL for file
    */
-  async fetchJson(filePath: string): Promise<GitHubDataResponse> {
+  private getProxyUrl(filePath: string): string {
+    // Remove leading slash if present
+    const cleanPath = filePath.startsWith('/') ? filePath.substring(1) : filePath;
+    return `${this.PROXY_BASE_URL}/api/external/proxy?url=${encodeURIComponent(`https://raw.githubusercontent.com/flongstaff/cda-transparencia/main/${cleanPath}`)}`;
+  }
+
+  /**
+   * Alternative: Fetch from local data when possible (for deployed site)
+   */
+  private getLocalUrl(filePath: string): string {
+    // For deployed sites, check if the data is available as static assets
+    if (typeof window !== 'undefined') {
+      const hostname = window.location.hostname;
+      
+      // If it's our deployed site, try to use the path directly
+      if (hostname === 'cda-transparencia.org' || hostname.endsWith('github.io')) {
+        // Ensure the path starts with / for the deployed site
+        return filePath.startsWith('/') ? filePath : `/${filePath}`;
+      }
+    }
+    
+    // For development
+    return `/src/${filePath}`;
+  }
+
+  /**
+   * Fetch JSON file through proxy or from local assets
+   */
+  async fetchJson(filePath: string): Promise<ProxyDataResponse> {
     const cacheKey = `json:${filePath}`;
     const cached = this.cache.get(cacheKey);
 
@@ -83,26 +98,57 @@ class GitHubDataService {
     }
 
     try {
-      const url = this.getFileUrl(filePath);
-      console.log(`📥 Fetching JSON from: ${url}`);
-      
-      // Determine if this is a local file path vs GitHub raw URL
-      let response: Response;
-      let sourceType: 'github_raw' | 'local' = 'github_raw';
+      // First try to fetch from local assets (for deployed site)
+      let response: Response | null = null;
+      let sourceType: 'proxy' | 'local' = 'local';
 
-      if (url.startsWith('/') && url.includes('/data/')) {
-        // This is a local path (likely for deployed site)
-        response = await fetch(url);
-        sourceType = 'local';
+      // Determine URL based on environment and file path
+      let urlToUse = this.getLocalUrl(filePath);
+      
+      // If it's a consolidated data file, we can try the local path first
+      if (filePath.startsWith('data/consolidated/') || 
+          filePath.startsWith('data/organized_analysis/')) {
+        try {
+          console.log(`📥 Attempting to fetch from local assets: ${urlToUse}`);
+          response = await fetch(urlToUse);
+          
+          if (!response.ok) {
+            console.log(`Local fetch failed (${response.status}), falling back to proxy`);
+            // If local fetch fails, try proxy
+            urlToUse = this.getProxyUrl(filePath);
+            response = await fetch(urlToUse, {
+              method: 'GET',
+              headers: {
+                'Accept': 'application/json',
+                'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
+              }
+            });
+            sourceType = 'proxy';
+          }
+        } catch (localError) {
+          console.log(`Local fetch error, falling back to proxy:`, localError);
+          // Fallback to proxy
+          urlToUse = this.getProxyUrl(filePath);
+          response = await fetch(urlToUse, {
+            method: 'GET',
+            headers: {
+              'Accept': 'application/json',
+              'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
+            }
+          });
+          sourceType = 'proxy';
+        }
       } else {
-        // This is the GitHub raw URL (for development or when needed)
-        response = await fetch(url, {
+        // For other files, use proxy directly
+        urlToUse = this.getProxyUrl(filePath);
+        response = await fetch(urlToUse, {
           method: 'GET',
           headers: {
             'Accept': 'application/json',
             'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
           }
         });
+        sourceType = 'proxy';
       }
 
       if (!response.ok) {
@@ -126,7 +172,7 @@ class GitHubDataService {
       };
 
     } catch (error) {
-      console.error(`❌ Fetch error for ${filePath}:`, error);
+      console.error(`❌ Proxy fetch error for ${filePath}:`, error);
 
       // Return cached data if available, even if expired
       if (cached) {
@@ -137,57 +183,20 @@ class GitHubDataService {
           source: 'cache'
         };
       }
-      
-      // If it failed as local, try GitHub URL as fallback
-      if (filePath.startsWith('/data/')) {
-        try {
-          console.log(`Trying GitHub URL as fallback for ${filePath}`);
-          const githubUrl = `${this.config.baseUrl}/${this.config.owner}/${this.config.repo}/${this.config.branch}/${filePath.startsWith('/') ? filePath.substring(1) : filePath}`;
-          const response = await fetch(githubUrl, {
-            method: 'GET',
-            headers: {
-              'Accept': 'application/json',
-              'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
-            }
-          });
-
-          if (!response.ok) {
-            throw new Error(`Failed to fetch ${filePath} from GitHub: ${response.status} ${response.statusText}`);
-          }
-
-          const data = await response.json();
-          const lastModified = response.headers.get('last-modified') || new Date().toISOString();
-
-          this.cache.set(cacheKey, {
-            data,
-            timestamp: Date.now(),
-            etag: response.headers.get('etag') || undefined
-          });
-
-          return {
-            success: true,
-            data,
-            source: 'github_raw',
-            lastModified
-          };
-        } catch (githubError) {
-          console.error(`❌ GitHub fallback also failed for ${filePath}:`, githubError);
-        }
-      }
 
       return {
         success: false,
         data: null,
-        source: 'github_raw',
+        source: 'proxy',
         error: (error as Error).message
       };
     }
   }
 
   /**
-   * Fetch markdown file from GitHub repository or local assets
+   * Fetch markdown file through proxy
    */
-  async fetchMarkdown(filePath: string): Promise<GitHubDataResponse> {
+  async fetchMarkdown(filePath: string): Promise<ProxyDataResponse> {
     const cacheKey = `md:${filePath}`;
     const cached = this.cache.get(cacheKey);
 
@@ -200,27 +209,16 @@ class GitHubDataService {
     }
 
     try {
-      const url = this.getFileUrl(filePath);
-      console.log(`📥 Fetching Markdown from: ${url}`);
-      
-      // Determine if this is a local file path vs GitHub raw URL
-      let response: Response;
-      let sourceType: 'github_raw' | 'local' = 'github_raw';
+      const url = this.getProxyUrl(filePath);
+      console.log(`📥 Fetching Markdown from proxy: ${url}`);
 
-      if (url.startsWith('/') && url.includes('/data/')) {
-        // This is a local path (likely for deployed site)
-        response = await fetch(url);
-        sourceType = 'local';
-      } else {
-        // This is the GitHub raw URL (for development or when needed)
-        response = await fetch(url, {
-          method: 'GET',
-          headers: {
-            'Accept': 'text/plain',
-            'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
-          }
-        });
-      }
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Accept': 'text/plain',
+          'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
+        }
+      });
 
       if (!response.ok) {
         throw new Error(`Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
@@ -229,23 +227,20 @@ class GitHubDataService {
       const text = await response.text();
       const lastModified = response.headers.get('last-modified') || new Date().toISOString();
 
-      // Parse markdown to extract structured data
-      const parsedData = this.parseMarkdownContent(text);
-
       this.cache.set(cacheKey, {
-        data: parsedData,
+        data: text,
         timestamp: Date.now()
       });
 
       return {
         success: true,
-        data: parsedData,
-        source: sourceType,
+        data: text,
+        source: 'proxy',
         lastModified
       };
 
     } catch (error) {
-      console.error(`❌ Markdown fetch error for ${filePath}:`, error);
+      console.error(`❌ Proxy markdown fetch error for ${filePath}:`, error);
 
       if (cached) {
         return {
@@ -254,61 +249,22 @@ class GitHubDataService {
           source: 'cache'
         };
       }
-      
-      // If it failed as local, try GitHub URL as fallback
-      if (filePath.startsWith('/data/')) {
-        try {
-          console.log(`Trying GitHub URL as fallback for ${filePath}`);
-          const githubUrl = `${this.config.baseUrl}/${this.config.owner}/${this.config.repo}/${this.config.branch}/${filePath.startsWith('/') ? filePath.substring(1) : filePath}`;
-          const response = await fetch(githubUrl, {
-            method: 'GET',
-            headers: {
-              'Accept': 'text/plain',
-              'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
-            }
-          });
-
-          if (!response.ok) {
-            throw new Error(`Failed to fetch ${filePath} from GitHub: ${response.status} ${response.statusText}`);
-          }
-
-          const text = await response.text();
-          const lastModified = response.headers.get('last-modified') || new Date().toISOString();
-
-          // Parse markdown to extract structured data
-          const parsedData = this.parseMarkdownContent(text);
-
-          this.cache.set(cacheKey, {
-            data: parsedData,
-            timestamp: Date.now()
-          });
-
-          return {
-            success: true,
-            data: parsedData,
-            source: 'github_raw',
-            lastModified
-          };
-        } catch (githubError) {
-          console.error(`❌ GitHub fallback also failed for ${filePath}:`, githubError);
-        }
-      }
 
       return {
         success: false,
         data: null,
-        source: 'github_raw',
+        source: 'proxy',
         error: (error as Error).message
       };
     }
   }
 
   /**
-   * Load comprehensive data for a specific year
+   * Load comprehensive data for a specific year using proxy
    */
-  async loadYearData(year: number): Promise<GitHubDataResponse> {
+  async loadYearData(year: number): Promise<ProxyDataResponse> {
     try {
-      console.log(`🚀 Loading comprehensive data for year ${year} from GitHub`);
+      console.log(`🚀 Loading comprehensive data for year ${year} through proxy`);
 
       // Try multiple data source patterns to find the right files
       const dataPatterns = [
@@ -367,7 +323,7 @@ class GitHubDataService {
               if (result.status === 'fulfilled' && result.value.success) {
                 const data = result.value.data;
                 consolidatedData[key] = data;
-                consolidatedData.sources.push(`github:${pattern[key]}`);
+                consolidatedData.sources.push(`proxy:${pattern[key]}`);
                 foundData = true;
               }
             });
@@ -429,7 +385,7 @@ class GitHubDataService {
               foundData = true;
             }
 
-            consolidatedData.sources.push('github:data/multi_source_report.json');
+            consolidatedData.sources.push('proxy:data/multi_source_report.json');
           }
 
           // Multi-year summary data
@@ -454,7 +410,7 @@ class GitHubDataService {
           // Try to extract year data from comprehensive index
           if (indexData.financial_data?.[year]) {
             consolidatedData.budget = indexData.financial_data[year];
-            consolidatedData.sources.push('github:frontend/src/data/comprehensive_data_index.json');
+            consolidatedData.sources.push('proxy:frontend/src/data/comprehensive_data_index.json');
             foundData = true;
           }
         }
@@ -463,7 +419,7 @@ class GitHubDataService {
       return {
         success: foundData,
         data: consolidatedData,
-        source: 'github_raw',
+        source: 'proxy',
         lastModified: new Date().toISOString()
       };
 
@@ -472,16 +428,16 @@ class GitHubDataService {
       return {
         success: false,
         data: null,
-        source: 'github_raw',
+        source: 'proxy',
         error: (error as Error).message
       };
     }
   }
 
   /**
-   * Load all available data (multi-year)
+   * Load all available data (multi-year) through proxy
    */
-  async loadAllData(): Promise<GitHubDataResponse> {
+  async loadAllData(): Promise<ProxyDataResponse> {
     try {
       // Get years from the repository index first
       const indexResponse = await this.fetchJson('data/index.json');
@@ -510,9 +466,9 @@ class GitHubDataService {
         },
         external_validation: [],
         metadata: {
-          source: 'GitHub Repository',
-          repository: `${this.config.owner}/${this.config.repo}`,
-          branch: this.config.branch,
+          source: 'Proxy Server',
+          repository: 'flongstaff/cda-transparencia',
+          branch: 'main',
           fetched_at: new Date().toISOString()
         }
       };
@@ -541,12 +497,12 @@ class GitHubDataService {
       allData.summary.categories = Array.from(categoriesSet);
       allData.summary.audit_completion_rate = allData.summary.years_covered.length > 0 ?
         Math.round((allData.summary.years_covered.length / years.length) * 100) : 0;
-      allData.summary.external_sources_active = 3; // GitHub + External APIs
+      allData.summary.external_sources_active = 3; // Proxy + External APIs
 
       return {
         success: true,
         data: allData,
-        source: 'github_raw',
+        source: 'proxy',
         lastModified: new Date().toISOString()
       };
 
@@ -555,7 +511,7 @@ class GitHubDataService {
       return {
         success: false,
         data: null,
-        source: 'github_raw',
+        source: 'proxy',
         error: (error as Error).message
       };
     }
@@ -567,7 +523,7 @@ class GitHubDataService {
   async getAvailableYears(): Promise<number[]> {
     try {
       // Try to fetch the index file first
-      const indexResponse = await this.fetchJson('data/index.json');
+      const indexResponse = await this.fetchJson('data/consolidated/index.json');
       if (indexResponse.success && indexResponse.data?.availableYears) {
         return indexResponse.data.availableYears;
       }
@@ -578,92 +534,12 @@ class GitHubDataService {
         return multiSourceResponse.data.multi_year_summary.map((item: any) => item.year).filter((year: number) => year);
       }
 
-      // Try to get available years from directory structure
-      try {
-        const dirResponse = await fetch(`https://api.github.com/repos/${this.config.owner}/${this.config.repo}/contents/data/consolidated`);
-        if (dirResponse.ok) {
-          const dirContents = await dirResponse.json();
-          if (Array.isArray(dirContents)) {
-            const years = dirContents
-              .filter(item => item.type === 'dir' && /^\d{4}$/.test(item.name))
-              .map(item => parseInt(item.name))
-              .filter(year => !isNaN(year));
-            if (years.length > 0) {
-              return years.sort((a, b) => b - a);
-            }
-          }
-        }
-      } catch (dirError) {
-        console.warn('Could not fetch directory structure, using default years');
-      }
+      // Default years if index is not available
+      return [2020, 2021, 2022, 2023, 2024];
     } catch (error) {
       console.warn('Could not fetch data index, using default years');
+      return [2020, 2021, 2022, 2023, 2024];
     }
-
-    // Default years if index is not available
-    return [2020, 2021, 2022, 2023, 2024];
-  }
-
-  /**
-   * Parse markdown content to extract structured data
-   */
-  private parseMarkdownContent(markdown: string) {
-    const lines = markdown.split('\n');
-    const data: any = {
-      title: '',
-      sections: [],
-      links: [],
-      metadata: {
-        lineCount: lines.length,
-        parsed_at: new Date().toISOString()
-      }
-    };
-
-    let currentSection: any = null;
-
-    for (const line of lines) {
-      const trimmedLine = line.trim();
-
-      // Extract title (first H1)
-      if (trimmedLine.startsWith('# ') && !data.title) {
-        data.title = trimmedLine.substring(2);
-      }
-
-      // Extract sections (H2, H3, etc.)
-      if (trimmedLine.startsWith('## ')) {
-        if (currentSection) {
-          data.sections.push(currentSection);
-        }
-        currentSection = {
-          title: trimmedLine.substring(3),
-          content: [],
-          links: []
-        };
-      }
-
-      // Extract links
-      const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-      let match;
-      while ((match = linkRegex.exec(trimmedLine)) !== null) {
-        const linkData = { text: match[1], url: match[2] };
-        data.links.push(linkData);
-        if (currentSection) {
-          currentSection.links.push(linkData);
-        }
-      }
-
-      // Add content to current section
-      if (currentSection && trimmedLine && !trimmedLine.startsWith('#')) {
-        currentSection.content.push(trimmedLine);
-      }
-    }
-
-    // Add the last section
-    if (currentSection) {
-      data.sections.push(currentSection);
-    }
-
-    return data;
   }
 
   /**
@@ -671,7 +547,7 @@ class GitHubDataService {
    */
   clearCache(): void {
     this.cache.clear();
-    console.log('🧹 GitHub data service cache cleared');
+    console.log('🧹 Proxy data service cache cleared');
   }
 
   /**
@@ -686,5 +562,5 @@ class GitHubDataService {
   }
 }
 
-export const githubDataService = GitHubDataService.getInstance();
-export default githubDataService;
+export const proxyDataService = ProxyDataService.getInstance();
+export default proxyDataService;

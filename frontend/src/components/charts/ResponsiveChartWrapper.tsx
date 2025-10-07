@@ -46,10 +46,17 @@ const ResponsiveChartWrapper: React.FC<ResponsiveChartWrapperProps> = ({
     return () => window.removeEventListener('resize', handleResize);
   }, [height]);
 
+  // Check if children is valid before rendering
+  const validChildren = children && React.isValidElement(children) ? children : (
+    <div className="flex items-center justify-center h-full w-full">
+      <p className="text-gray-500">No hay datos disponibles</p>
+    </div>
+  );
+
   return (
     <div className={`w-full ${className}`}>
       <ResponsiveContainer width={containerWidth} height={chartHeight} aspect={aspect}>
-        {children}
+        {validChildren}
       </ResponsiveContainer>
     </div>
   );

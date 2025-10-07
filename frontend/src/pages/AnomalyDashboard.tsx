@@ -4,9 +4,9 @@ import { useMasterData } from '../hooks/useMasterData';
 import ErrorBoundary from '@components/common/ErrorBoundary';
 import { ChartContainer } from '@components/common/ChartContainer';
 import UnifiedChart from '@components/charts/UnifiedChart';
-import AnomalyDetectionChart from '@components/charts/AnomalyDetectionChart';
+
 import TimeSeriesChart from '@components/charts/TimeSeriesChart';
-import RiskAnalysisChart from '@components/charts/RiskAnalysisChart';
+
 
 interface Anomaly {
   id: string;
@@ -253,7 +253,7 @@ const AnomalyDashboard: React.FC = () => {
           icon={PieChart}
           height={350}
         >
-          <AnomalyDetectionChart
+          <UnifiedChart
             type="anomaly_distribution"
             year={selectedYear}
             height={300}
@@ -267,7 +267,7 @@ const AnomalyDashboard: React.FC = () => {
           icon={BarChart3}
           height={350}
         >
-          <RiskAnalysisChart
+          <UnifiedChart
             type="risk_assessment"
             year={selectedYear}
             height={300}
@@ -430,63 +430,19 @@ const AnomalyDashboard: React.FC = () => {
           height={400}
         />
       </ChartContainer>
-                    <h3 className="text-lg font-semibold text-gray-900">{anomaly.title}</h3>
-                    <p className="mt-1 text-gray-600">{anomaly.description}</p>
-                    <div className="mt-2">
-                      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getSeverityColor(anomaly.severity)}`}>
-                        {anomaly.severity.toUpperCase()}
-                      </span>
-                      <span className="ml-2 text-lg font-bold text-gray-900">
-                        {formatCurrency(anomaly.amount)}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="text-sm text-gray-500">
-                  {new Date(anomaly.detection_date).toLocaleDateString('es-AR')}
-                </div>
-              </div>
 
-              {/* Evidence */}
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <h4 className="text-sm font-medium text-gray-900">Análisis de Datos Públicos</h4>
-                <div className="mt-2 text-sm text-gray-600">
-                  <p className="mb-2">
-                    El análisis se basa en datos verificables de fuentes oficiales públicas. 
-                    Cualquier discrepancia o hallazgo debe ser verificado por los organismos competentes.
-                  </p>
-                </div>
-                <ul className="mt-2 space-y-1">
-                  {anomaly.evidence.map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="flex-shrink-0 h-5 w-5 text-green-500">✓</div>
-                      <p className="ml-2 text-sm text-gray-600">{item}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+      {/* Summary */}
+      <div className="bg-white rounded-lg shadow p-6">
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">Resumen del Análisis</h3>
+        <div className="mb-4 p-3 bg-blue-50 rounded-lg">
+          <p className="text-sm text-blue-700">
+            <strong>Guía de Interpretación:</strong> Este análisis se basa únicamente en datos públicos oficiales. 
+            Las cantidades representan discrepancias identificadas entre diferentes fuentes de datos oficiales. 
+            No constituyen acusaciones formales ni juicio de responsabilidad. 
+            Se recomienda su verificación por organismos de control competentes.
+          </p>
+        </div>
 
-              {/* Related Documents */}
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <h4 className="text-sm font-medium text-gray-900">Documentos Públicos Consultados</h4>
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {anomaly.related_documents.map((doc, index) => (
-                    <span 
-                      key={index} 
-                      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
-                    >
-                      <FileText className="h-3 w-3 mr-1" />
-                      {doc}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-3 text-xs text-gray-500">
-                  Todos los documentos mencionados están disponibles en los portales oficiales del municipio.
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
       </div>
 
       {/* Summary */}

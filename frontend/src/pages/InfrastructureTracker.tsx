@@ -6,7 +6,7 @@ import { ChartContainer } from '@components/common/ChartContainer';
 import UnifiedChart from '@components/charts/UnifiedChart';
 import InfrastructureProjectsChart from '@components/charts/InfrastructureProjectsChart';
 import TimeSeriesChart from '@components/charts/TimeSeriesChart';
-import ContractorAnalysisChart from '@components/charts/ContractorAnalysisChart';
+
 import ExpenditureReportChart from '@components/charts/ExpenditureReportChart';
 
 interface InfrastructureProject {
@@ -331,7 +331,7 @@ const InfrastructureTracker: React.FC = () => {
           icon={Users}
           height={350}
         >
-          <ContractorAnalysisChart
+          <UnifiedChart
             type="contractor_distribution"
             year={new Date().getFullYear()}
             height={300}

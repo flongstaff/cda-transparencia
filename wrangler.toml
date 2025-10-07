@@ -7,6 +7,11 @@ main = "worker.js"
 ENVIRONMENT = "production"
 DEBUG = "false"
 
+# Analytics Engine binding
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "transparency_portal_analytics"
+
 # Production environment configuration - using account from CLOUDFLARE_ACCOUNT_ID env var
 [env.production]
 name = "cda-transparencia"
@@ -14,6 +19,11 @@ name = "cda-transparencia"
 [env.production.vars]
 ENVIRONMENT = "production"
 DEBUG = "false"
+
+# Production Analytics Engine binding  
+[[env.production.analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "transparency_portal_analytics"
 
 # Observability configuration
 [observability]

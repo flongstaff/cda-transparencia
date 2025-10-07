@@ -3,7 +3,7 @@ import { useMainData } from '../hooks/useMainData';
 import { BarChart3, PieChart, Database, FileText, TrendingUp } from 'lucide-react';
 import { ChartContainer } from './common/ChartContainer';
 import UnifiedChart from './charts/UnifiedChart';
-import DataDistributionChart from './charts/DataDistributionChart';
+
 import TimeSeriesChart from './charts/TimeSeriesChart';
 
 const MainDataDisplay: React.FC = () => {
@@ -78,7 +78,7 @@ const MainDataDisplay: React.FC = () => {
               icon={PieChart}
               height={350}
             >
-              <DataDistributionChart
+              <UnifiedChart
                 type="dataset_themes"
                 year={new Date().getFullYear()}
                 height={300}

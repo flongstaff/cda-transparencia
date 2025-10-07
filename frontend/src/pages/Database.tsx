@@ -30,7 +30,7 @@ import { ChartContainer } from '../components/common/ChartContainer';
 import UnifiedChart from '../components/charts/UnifiedChart';
 import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
 import TimeSeriesChart from '../components/charts/TimeSeriesChart';
-import DataDistributionChart from '../components/charts/DataDistributionChart';
+
 
 const Database: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
@@ -236,7 +236,7 @@ const Database: React.FC = () => {
             icon={PieChart}
             height={350}
           >
-            <DataDistributionChart
+            <DocumentAnalysisChart
               type="document_types"
               year={selectedYear}
               height={300}

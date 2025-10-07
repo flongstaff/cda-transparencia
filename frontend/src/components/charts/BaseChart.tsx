@@ -24,6 +24,7 @@ import {
   ResponsiveContainer,
   Scatter
 } from 'recharts';
+import { AlertCircle } from 'lucide-react';
 import { formatCurrencyARS, formatPercentage, formatNumberARS, formatQuarter } from '../../utils/spanishFormatter';
 
 // Centralized function for formatting X-axis labels
@@ -398,7 +399,14 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
       }
       
       default:
-        return null;
+        // Return a fallback chart when type is not recognized
+        return (
+          <div className="flex items-center justify-center h-full w-full">
+            <p className="text-gray-500 dark:text-gray-400 text-center">
+              Tipo de gráfico no reconocido: {chartType}
+            </p>
+          </div>
+        );
     }
   };
   

@@ -27,7 +27,7 @@ import LoadingState from '@components/ui/LoadingState';
 import { ChartContainer } from '@components/common/ChartContainer';
 import UnifiedChart from '@components/charts/UnifiedChart';
 import TimeSeriesChart from '@components/charts/TimeSeriesChart';
-import DataDistributionChart from '@components/charts/DataDistributionChart';
+
 
 const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -337,7 +337,7 @@ const Home: React.FC = () => {
             icon={TrendingUp}
             height={350}
           >
-            <DataDistributionChart
+            <UnifiedChart
               type="financial_data_growth"
               year={null}
               height={300}

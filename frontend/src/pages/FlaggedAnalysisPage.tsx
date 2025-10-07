@@ -8,7 +8,7 @@ import { BarChart3, PieChart, TrendingUp, AlertTriangle } from 'lucide-react';
 import { ChartContainer } from '../components/common/ChartContainer';
 import UnifiedChart from '../components/charts/UnifiedChart';
 import RiskAnalysisChart from '../components/charts/RiskAnalysisChart';
-import AnomalyDetectionChart from '../components/charts/AnomalyDetectionChart';
+
 
 /**
  * Flagged Analysis Page

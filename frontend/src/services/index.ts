@@ -42,3 +42,5 @@ export { enhancedDataService } from './EnhancedDataService';
 export { masterDataService } from './MasterDataService';
 export { simpleAnomalyDetectionService } from './SimpleAnomalyDetectionService';
 export { unifiedTransparencyService } from './UnifiedTransparencyService';
+export { proxyDataService } from './ProxyDataService';
+export { cloudflareDataService } from './CloudflareDataService';

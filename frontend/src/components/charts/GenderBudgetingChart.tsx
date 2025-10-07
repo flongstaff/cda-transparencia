@@ -229,12 +229,6 @@ const GenderBudgetingChart: React.FC<GenderBudgetingChartProps> = ({
     );
   }
   
-  // Check if we have valid chart data
-  const validChartData = chartData && Array.isArray(chartData) ? chartData.filter(item => item != null) : [];
-  const hasValidData = validChartData.length > 0 && validChartData.some(item => 
-    item.male !== undefined && item.female !== undefined
-  );
-  
   // For stacked column chart (bar chart), we use BaseChart
   return hasValidData ? (
     <BaseChart

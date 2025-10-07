@@ -1,6 +1,7 @@
 /**
  * Cloudflare Worker for Carmen de Areco Transparency Portal
  * Handles API requests for the frontend and serves as a proxy to external data sources
+ * Includes caching with KV namespace and analytics with Analytics Engine
  */
 
 export default {
@@ -23,7 +24,7 @@ export default {
 
     // Handle API routes with data proxy for transparency portal
     if (path.startsWith('/api/')) {
-      // Proxy for external data sources
+      // Proxy for external data sources with caching
       if (path.startsWith('/api/external-proxy/')) {
         try {
           const targetUrl = path.replace('/api/external-proxy/', '');
@@ -45,24 +46,86 @@ export default {
             });
           }
 
+          // Try to get from cache first
+          const cacheKey = `proxy:${btoa(decodedUrl)}`;
+          let cachedResponse = null;
+          
+          if (env.CACHES) {
+            try {
+              cachedResponse = await env.CACHES.get(cacheKey);
+            } catch (e) {
+              console.warn('Cache get failed:', e);
+            }
+          }
+
+          if (cachedResponse) {
+            // Return cached response
+            const parsed = JSON.parse(cachedResponse);
+            
+            // Record analytics event
+            if (env.ANALYTICS) {
+              env.ANALYTICS.writeDataPoint({
+                blobs: ['api_request', 'cache_hit', 'external-proxy'],
+                doubles: [parsed.size || 1],
+                indexes: [new URL(decodedUrl).hostname || 'unknown']
+              });
+            }
+            
+            return new Response(parsed.body, {
+              status: parsed.status,
+              headers: parsed.headers
+            });
+          }
+
+          // Fetch from origin if not cached
           const response = await fetch(decodedUrl, {
             method: method,
             headers: {
               ...request.headers,
               'User-Agent': 'Carmen de Areco Transparency Portal Worker/1.0',
             },
-            // Add timeout if needed
           });
 
-          return new Response(response.body, {
+          const responseBody = await response.text();
+          const responseHeaders = Object.fromEntries(response.headers.entries());
+          
+          // Add CORS headers
+          responseHeaders['Access-Control-Allow-Origin'] = '*';
+          responseHeaders['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS';
+          responseHeaders['Access-Control-Allow-Headers'] = 'Content-Type';
+          responseHeaders['Cache-Control'] = 'public, max-age=3600'; // Cache for 1 hour
+          
+          // Prepare response data for caching
+          const responseData = {
+            body: responseBody,
             status: response.status,
-            headers: {
-              'Content-Type': response.headers.get('content-type') || 'application/json',
-              'Access-Control-Allow-Origin': '*',
-              'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-              'Access-Control-Allow-Headers': 'Content-Type',
-              'Cache-Control': 'public, max-age=3600', // Cache for 1 hour
-            },
+            headers: responseHeaders,
+            size: responseBody.length
+          };
+
+          // Store in cache if KV is available
+          if (env.CACHES) {
+            try {
+              await env.CACHES.put(cacheKey, JSON.stringify(responseData), {
+                expirationTtl: 3600 // 1 hour
+              });
+            } catch (e) {
+              console.warn('Cache set failed:', e);
+            }
+          }
+
+          // Record analytics event
+          if (env.ANALYTICS) {
+            env.ANALYTICS.writeDataPoint({
+              blobs: ['api_request', 'cache_miss', 'external-proxy'],
+              doubles: [responseBody.length],
+              indexes: [new URL(decodedUrl).hostname || 'unknown']
+            });
+          }
+
+          return new Response(responseBody, {
+            status: response.status,
+            headers: responseHeaders,
           });
         } catch (error) {
           return new Response(JSON.stringify({
@@ -82,120 +145,142 @@ export default {
 
       // Get all external data (cached version)
       else if (path === '/api/external/all-external-data') {
-        const response = await fetch('https://raw.githubusercontent.com/flongstaff/cda-transparencia/main/frontend/public/data/external/cache_manifest.json');
-        const manifest = await response.json();
+        const cacheKey = 'all-external-data';
+        let cachedResponse = null;
         
-        return new Response(JSON.stringify({
-          results: [
-            {
-              name: "Municipalidad de Carmen de Areco",
-              type: "municipal",
-              success: true,
-              data: {
-                budget: [
-                  {"jurisdiccion": "Municipio", "entidad": "Carmen de Areco", "monto": 2150670000, "year": 2024}
-                ]
-              },
-              status: 200,
-              url: "https://carmendeareco.gob.ar/transparencia"
+        if (env.CACHES) {
+          try {
+            cachedResponse = await env.CACHES.get(cacheKey);
+          } catch (e) {
+            console.warn('Cache get failed:', e);
+          }
+        }
+
+        if (cachedResponse) {
+          const parsed = JSON.parse(cachedResponse);
+          
+          // Record analytics event
+          if (env.ANALYTICS) {
+            env.ANALYTICS.writeDataPoint({
+              blobs: ['api_request', 'cache_hit', 'all-external-data'],
+              doubles: [parsed.size || 1],
+              indexes: ['data_aggregation']
+            });
+          }
+          
+          return new Response(cachedResponse, {
+            headers: { 
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': '*',
+              'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+              'Access-Control-Allow-Headers': 'Content-Type',
+              'Cache-Control': 'public, max-age=1800' // Cache for 30 minutes
             },
-            {
-              name: "Carmen de Areco Official Site",
-              type: "municipal",
-              success: true,
-              data: {
-                info: "Municipalidad de Carmen de Areco - Provincia de Buenos Aires"
-              },
-              status: 200,
-              url: "https://carmendeareco.gob.ar"
-            },
-            {
-              name: "GeoRef Argentina",
-              type: "national",
-              success: true,
-              data: {
-                cantidad: 1,
-                inicio: 0,
-                municipios: [
-                  {
-                    centroide: {
-                      lat: -34.4067977840705,
-                      lon: -59.884413320764
-                    },
-                    id: "060161",
-                    nombre: "Carmen de Areco",
-                    provincia: {
-                      id: "06",
-                      nombre: "Buenos Aires"
-                    }
-                  }
-                ],
-                parametros: {
-                  nombre: "carmen-de-areco",
-                  provincia: "buenos-aires"
+          });
+        }
+        
+        try {
+          const response = await fetch('https://raw.githubusercontent.com/flongstaff/cda-transparencia/main/frontend/public/data/external/cache_manifest.json');
+          const manifest = await response.json();
+          
+          const data = {
+            results: [
+              {
+                name: "Municipalidad de Carmen de Areco",
+                type: "municipal",
+                success: true,
+                data: {
+                  budget: [
+                    {"jurisdiccion": "Municipio", "entidad": "Carmen de Areco", "monto": 2150670000, "year": 2024}
+                  ]
                 },
-                total: 1
+                status: 200,
+                url: "https://carmendeareco.gob.ar/transparencia"
               },
-              status: 200,
-              url: "https://apis.datos.gob.ar/georef/api/municipios"
+              {
+                name: "Carmen de Areco Official Site",
+                type: "municipal",
+                success: true,
+                data: {
+                  info: "Municipalidad de Carmen de Areco - Provincia de Buenos Aires"
+                },
+                status: 200,
+                url: "https://carmendeareco.gob.ar"
+              },
+              {
+                name: "GeoRef Argentina",
+                type: "national",
+                success: true,
+                data: {
+                  cantidad: 1,
+                  inicio: 0,
+                  municipios: [
+                    {
+                      centroide: {
+                        lat: -34.4067977840705,
+                        lon: -59.884413320764
+                      },
+                      id: "060161",
+                      nombre: "Carmen de Areco",
+                      provincia: {
+                        id: "06",
+                        nombre: "Buenos Aires"
+                      }
+                    }
+                  ],
+                  parametros: {
+                    nombre: "carmen-de-areco",
+                    provincia: "buenos-aires"
+                  },
+                  total: 1
+                },
+                status: 200,
+                url: "https://apis.datos.gob.ar/georef/api/municipios"
+              }
+            ],
+            summary: {
+              total_sources: manifest.statistics.total_sources,
+              successful_sources: manifest.statistics.successful_sources,
+              failed_sources: manifest.statistics.total_sources - manifest.statistics.successful_sources,
+              last_updated: new Date().toISOString(),
+              manifest
             }
-          ],
-          summary: {
-            total_sources: manifest.statistics.total_sources,
-            successful_sources: manifest.statistics.successful_sources,
-            failed_sources: manifest.statistics.total_sources - manifest.statistics.successful_sources,
-            last_updated: new Date().toISOString(),
-            manifest
+          };
+          
+          const jsonString = JSON.stringify(data);
+          
+          // Store in cache if KV is available
+          if (env.CACHES) {
+            try {
+              await env.CACHES.put(cacheKey, jsonString, {
+                expirationTtl: 1800 // 30 minutes
+              });
+            } catch (e) {
+              console.warn('Cache set failed:', e);
+            }
           }
-        }), {
-          headers: { 
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-            'Access-Control-Allow-Headers': 'Content-Type',
-            'Cache-Control': 'public, max-age=1800' // Cache for 30 minutes
-          },
-        });
-      } 
-      
-      // Budget data
-      else if (path === '/api/data/budget') {
-        // Fetch from the public data directory
-        try {
-          const currentYear = new Date().getFullYear();
-          const response = await fetch(`https://raw.githubusercontent.com/flongstaff/cda-transparencia/main/frontend/public/data/consolidated/${currentYear}/budget.json`);
-          if (response.ok) {
-            const data = await response.json();
-            return new Response(JSON.stringify({ data }), {
-              headers: { 
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Cache-Control': 'public, max-age=3600' // Cache for 1 hour
-              },
-            });
-          } else {
-            // Fallback to mock data if external data is not available
-            return new Response(JSON.stringify({ 
-              data: [
-                {year: 2024, budget: 2150670000, executed: 1950000000, percentage: 90.7},
-                {year: 2023, budget: 1850000000, executed: 1820000000, percentage: 98.4},
-                {year: 2022, budget: 1680000000, executed: 1650000000, percentage: 98.2}
-              ] 
-            }), {
-              headers: { 
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type'
-              },
+
+          // Record analytics event
+          if (env.ANALYTICS) {
+            env.ANALYTICS.writeDataPoint({
+              blobs: ['api_request', 'cache_miss', 'all-external-data'],
+              doubles: [jsonString.length],
+              indexes: ['data_aggregation']
             });
           }
+
+          return new Response(jsonString, {
+            headers: { 
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': '*',
+              'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+              'Access-Control-Allow-Headers': 'Content-Type',
+              'Cache-Control': 'public, max-age=1800' // Cache for 30 minutes
+            },
+          });
         } catch (error) {
           return new Response(JSON.stringify({ 
-            data: [], 
-            error: 'Failed to fetch budget data',
+            error: 'Failed to fetch external data',
             message: error.message
           }), {
             status: 500,
@@ -209,108 +294,7 @@ export default {
         }
       } 
       
-      // Personnel data
-      else if (path === '/api/data/personnel') {
-        try {
-          const currentYear = new Date().getFullYear();
-          const response = await fetch(`https://raw.githubusercontent.com/flongstaff/cda-transparencia/main/frontend/public/data/consolidated/${currentYear}/salaries.json`);
-          if (response.ok) {
-            const data = await response.json();
-            return new Response(JSON.stringify({ data }), {
-              headers: { 
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Cache-Control': 'public, max-age=3600' // Cache for 1 hour
-              },
-            });
-          } else {
-            // Fallback to mock data
-            return new Response(JSON.stringify({ 
-              data: [
-                {name: "Intendente", position: "Intendente Municipal", salary: 1151404.8, year: 2024, employees: 1},
-                {name: "Concejales", position: "Concejales/As", salary: 239876, year: 2024, employees: 10},
-                {name: "Directores", position: "Director", salary: 467758.2, year: 2024, employees: 15}
-              ] 
-            }), {
-              headers: { 
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type'
-              },
-            });
-          }
-        } catch (error) {
-          return new Response(JSON.stringify({ 
-            data: [], 
-            error: 'Failed to fetch personnel data',
-            message: error.message
-          }), {
-            status: 500,
-            headers: { 
-              'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': '*',
-              'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-              'Access-Control-Allow-Headers': 'Content-Type'
-            },
-          });
-        }
-      } 
-      
-      // Contracts data
-      else if (path === '/api/data/contracts') {
-        try {
-          const currentYear = new Date().getFullYear();
-          const response = await fetch(`https://raw.githubusercontent.com/flongstaff/cda-transparencia/main/frontend/public/data/consolidated/${currentYear}/contracts.json`);
-          if (response.ok) {
-            const data = await response.json();
-            return new Response(JSON.stringify({ data }), {
-              headers: { 
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Cache-Control': 'public, max-age=3600' // Cache for 1 hour
-              },
-            });
-          } else {
-            // Fallback to mock data
-            return new Response(JSON.stringify({ 
-              data: [
-                {contract_id: "CT-2024-001", description: "Mantenimiento de espacios verdes", amount: 15000000, supplier: "Jardines del Pueblo S.A.", date: "2024-01-15"},
-                {contract_id: "CT-2024-002", description: "Reparación red cloacal", amount: 45000000, supplier: "Obras Sanitarias del Estado", date: "2024-02-20"},
-                {contract_id: "CT-2024-003", description: "Adquisición mobiliario escolar", amount: 8500000, supplier: "Muebles Educativos S.R.L.", date: "2024-03-10"},
-                {contract_id: "CT-2024-004", description: "Servicio de limpieza", amount: 12000000, supplier: "Limpieza Integral Municipal", date: "2024-04-05"}
-              ] 
-            }), {
-              headers: { 
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type'
-              },
-            });
-          }
-        } catch (error) {
-          return new Response(JSON.stringify({ 
-            data: [], 
-            error: 'Failed to fetch contracts data',
-            message: error.message
-          }), {
-            status: 500,
-            headers: { 
-              'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': '*',
-              'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-              'Access-Control-Allow-Headers': 'Content-Type'
-            },
-          });
-        }
-      } 
-      
-      // Generic API route to fetch various data types
+      // Generic API route to fetch various data types with caching
       else if (path.startsWith('/api/data/')) {
         try {
           const dataType = path.split('/')[3]; // Extract data type after /api/data/
@@ -330,11 +314,69 @@ export default {
 
           if (dataPathMap[dataType]) {
             const dataPath = dataPathMap[dataType];
+            const cacheKey = `data:${dataPath}`;
+            let cachedResponse = null;
+            
+            if (env.CACHES) {
+              try {
+                cachedResponse = await env.CACHES.get(cacheKey);
+              } catch (e) {
+                console.warn('Cache get failed:', e);
+              }
+            }
+
+            if (cachedResponse) {
+              // Return cached response
+              const parsed = JSON.parse(cachedResponse);
+              
+              // Record analytics event
+              if (env.ANALYTICS) {
+                env.ANALYTICS.writeDataPoint({
+                  blobs: ['api_request', 'cache_hit', `data:${dataType}`],
+                  doubles: [parsed.size || 1],
+                  indexes: [dataType]
+                });
+              }
+              
+              return new Response(cachedResponse, {
+                headers: { 
+                  'Content-Type': 'application/json',
+                  'Access-Control-Allow-Origin': '*',
+                  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+                  'Access-Control-Allow-Headers': 'Content-Type',
+                  'Cache-Control': 'public, max-age=3600' // Cache for 1 hour
+                },
+              });
+            }
+            
+            // Fetch from GitHub if not cached
             const response = await fetch(`https://raw.githubusercontent.com/flongstaff/cda-transparencia/main/frontend/public/data/${dataPath}`);
             
             if (response.ok) {
               const data = await response.json();
-              return new Response(JSON.stringify({ data }), {
+              const jsonString = JSON.stringify({ data });
+              
+              // Store in cache if KV is available
+              if (env.CACHES) {
+                try {
+                  await env.CACHES.put(cacheKey, jsonString, {
+                    expirationTtl: 3600 // 1 hour
+                  });
+                } catch (e) {
+                  console.warn('Cache set failed:', e);
+                }
+              }
+
+              // Record analytics event
+              if (env.ANALYTICS) {
+                env.ANALYTICS.writeDataPoint({
+                  blobs: ['api_request', 'cache_miss', `data:${dataType}`],
+                  doubles: [jsonString.length],
+                  indexes: [dataType]
+                });
+              }
+
+              return new Response(jsonString, {
                 headers: { 
                   'Content-Type': 'application/json',
                   'Access-Control-Allow-Origin': '*',
@@ -397,7 +439,8 @@ export default {
           services: {
             data_access: 'active',
             external_proxy: 'active',
-            cache_system: 'active',
+            cache_system: !!env.CACHES,
+            analytics: !!env.ANALYTICS,
             cors_handling: 'active'
           },
           version: '1.0.0',
@@ -427,9 +470,13 @@ export default {
             '/api/data/personnel': 'Personnel/salary data',
             '/api/data/contracts': 'Contract data'
           },
-          cors_enabled: true,
-          rate_limiting: 'Applied',
-          cache_control: 'Enabled for most endpoints'
+          services: {
+            cache_enabled: !!env.CACHES,
+            analytics_enabled: !!env.ANALYTICS,
+            cors_enabled: true,
+            rate_limiting: 'Applied',
+            cache_control: 'Enabled for most endpoints'
+          }
         }), {
           headers: { 
             'Content-Type': 'application/json',
