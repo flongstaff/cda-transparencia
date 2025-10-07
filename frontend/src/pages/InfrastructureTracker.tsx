@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Building, Clock, AlertTriangle, CheckCircle, DollarSign } from 'lucide-react';
+import { Building, Clock, AlertTriangle, CheckCircle, DollarSign, BarChart3, PieChart, TrendingUp, MapPin, Users } from 'lucide-react';
 import { externalAPIsService } from "../services/ExternalDataAdapter";
 import ErrorBoundary from '@components/common/ErrorBoundary';
+import { ChartContainer } from '@components/common/ChartContainer';
+import UnifiedChart from '@components/charts/UnifiedChart';
+import InfrastructureProjectsChart from '@components/charts/InfrastructureProjectsChart';
+import TimeSeriesChart from '@components/charts/TimeSeriesChart';
+import ContractorAnalysisChart from '@components/charts/ContractorAnalysisChart';
+import ExpenditureReportChart from '@components/charts/ExpenditureReportChart';
 
 interface InfrastructureProject {
   project_name: string;
@@ -284,6 +290,84 @@ const InfrastructureTracker: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Infrastructure Charts Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        {/* Project Types Chart */}
+        <ChartContainer
+          title="Distribución por Tipo de Proyecto"
+          description="Clasificación de proyectos por categoría"
+          icon={PieChart}
+          height={350}
+        >
+          <UnifiedChart
+            type="infrastructure_types"
+            year={new Date().getFullYear()}
+            title="Tipos de Proyectos"
+            height={300}
+          />
+        </ChartContainer>
+
+        {/* Budget vs Spent Chart */}
+        <ChartContainer
+          title="Presupuesto vs Ejecutado"
+          description="Comparación entre presupuesto asignado y gastado"
+          icon={BarChart3}
+          height={350}
+        >
+          <InfrastructureProjectsChart
+            type="budget_vs_spent"
+            year={new Date().getFullYear()}
+            height={300}
+          />
+        </ChartContainer>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        {/* Contractor Analysis Chart */}
+        <ChartContainer
+          title="Análisis por Contratistas"
+          description="Distribución de proyectos por contratista"
+          icon={Users}
+          height={350}
+        >
+          <ContractorAnalysisChart
+            type="contractor_distribution"
+            year={new Date().getFullYear()}
+            height={300}
+          />
+        </ChartContainer>
+
+        {/* Project Status Chart */}
+        <ChartContainer
+          title="Estado de Proyectos"
+          description="Distribución por estado de ejecución"
+          icon={TrendingUp}
+          height={350}
+        >
+          <UnifiedChart
+            type="project_status"
+            year={new Date().getFullYear()}
+            title="Estado de Proyectos"
+            height={300}
+          />
+        </ChartContainer>
+      </div>
+
+      {/* Time Series Analysis */}
+      <ChartContainer
+        title="Evolución Histórica de Infraestructura"
+        description="Tendencias de proyectos a lo largo del tiempo"
+        icon={TrendingUp}
+        height={400}
+      >
+        <TimeSeriesChart
+          type="infrastructure_trends"
+          year={null}
+          title="Tendencias de Infraestructura"
+          height={350}
+        />
+      </ChartContainer>
 
       {/* Empty State */}
       {infrastructureData.projects.length === 0 && (

@@ -402,12 +402,27 @@ const BaseChart: React.FC<BaseChartProps> = memo(({
     }
   };
   
-  // Wrap in responsive container if needed
-  const chartElement = responsive ? (
-    <ResponsiveContainer width="100%" height={chartConfig.height}>
-      {renderChart()}
-    </ResponsiveContainer>
-  ) : renderChart();
+  // Render chart element
+  const chartContent = renderChart();
+  
+  // Validate chart content and data before wrapping in responsive container
+  const isValidChartContent = chartContent && React.isValidElement(chartContent);
+  const hasValidData = chartData && Array.isArray(chartData) && chartData.length > 0;
+  
+  // Wrap in responsive container if needed, but only if we have valid content and data
+  const chartElement = isValidChartContent && hasValidData ? (
+    responsive ? (
+      <ResponsiveContainer width="100%" height={chartConfig.height}>
+        {chartContent}
+      </ResponsiveContainer>
+    ) : chartContent
+  ) : (
+    <div className="flex items-center justify-center h-full w-full p-8">
+      <p className="text-gray-500 dark:text-gray-400 text-center">
+        No hay datos disponibles para mostrar
+      </p>
+    </div>
+  );
   
   return (
     <div className={`chart-container ${className} w-full max-w-full`}>

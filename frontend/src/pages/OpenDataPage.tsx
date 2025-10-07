@@ -6,10 +6,15 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { BarChart3, PieChart, Database, FileText, TrendingUp, AlertTriangle, CheckCircle, Download, Search, Filter } from 'lucide-react';
 import OpenDataCatalog from '../components/OpenDataCatalog';
 import ErrorBoundary from '../components/common/ErrorBoundary';
 import { UnifiedDataViewer } from '../components/data-viewers';
 import { getNationalData } from '../services/NationalDataService';
+import { ChartContainer } from '../components/common/ChartContainer';
+import UnifiedChart from '../components/charts/UnifiedChart';
+import DataDistributionChart from '../components/charts/DataDistributionChart';
+import TimeSeriesChart from '../components/charts/TimeSeriesChart';
 
 // Generate mock municipal datasets (22 datasets as mentioned)
 const generateMunicipalDatasets = (count: number) => {
@@ -357,6 +362,92 @@ const OpenDataPage: React.FC = () => {
           {activeTab === 'catalog' && (
             <OpenDataCatalog />
           )}
+        </div>
+
+        {/* Data Visualization Charts Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary mb-6 flex items-center">
+            <BarChart3 className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
+            Visualización de Datos del Catálogo
+          </h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            {/* Dataset Distribution by Category */}
+            <ChartContainer
+              title="Distribución por Categoría"
+              description="Clasificación de datasets por categoría temática"
+              icon={PieChart}
+              height={350}
+            >
+              <DataDistributionChart
+                type="dataset_categories"
+                year={new Date().getFullYear()}
+                height={300}
+              />
+            </ChartContainer>
+
+            {/* Data Formats Distribution */}
+            <ChartContainer
+              title="Formatos de Datos"
+              description="Distribución por formato de archivo"
+              icon={FileText}
+              height={350}
+            >
+              <UnifiedChart
+                type="data_formats"
+                year={new Date().getFullYear()}
+                title="Formatos de Datos"
+                height={300}
+              />
+            </ChartContainer>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            {/* Data Growth Over Time */}
+            <ChartContainer
+              title="Crecimiento de Datos"
+              description="Evolución histórica de datasets publicados"
+              icon={TrendingUp}
+              height={350}
+            >
+              <TimeSeriesChart
+                type="data_growth"
+                year={null}
+                title="Crecimiento de Datasets"
+                height={300}
+              />
+            </ChartContainer>
+
+            {/* Data Quality Analysis */}
+            <ChartContainer
+              title="Análisis de Calidad de Datos"
+              description="Integridad y verificación de datasets"
+              icon={CheckCircle}
+              height={350}
+            >
+              <UnifiedChart
+                type="data_quality"
+                year={new Date().getFullYear()}
+                title="Calidad de Datos"
+                height={300}
+              />
+            </ChartContainer>
+          </div>
+
+          {/* Comprehensive Data Catalog Analysis */}
+          <ChartContainer
+            title="Análisis Integral del Catálogo de Datos"
+            description="Visión completa del estado y calidad del catálogo de datos abiertos"
+            icon={Database}
+            height={450}
+          >
+            <UnifiedChart
+              type="comprehensive_data_catalog"
+              year={new Date().getFullYear()}
+              title="Catálogo de Datos"
+              height={400}
+            />
+          </ChartContainer>
         </div>
 
         {/* AAIP Compliance Information */}

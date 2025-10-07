@@ -79,8 +79,13 @@ const Reports: React.FC = () => {
   const metrics = useMemo(() => ({
     totalDocuments: currentDocuments?.length || 0,
     dataSources: dataSourcesActive,
-    yearsCovered: availableYears
-  }), [currentDocuments, dataSourcesActive, availableYears]);
+    yearsCovered: availableYears,
+    totalBudget: currentBudget?.total_budget || 0,
+    totalExecuted: currentBudget?.total_executed || 0,
+    executionRate: currentBudget && currentBudget.total_budget > 0 
+      ? ((currentBudget.total_executed / currentBudget.total_budget) * 100).toFixed(1) 
+      : '0.0'
+  }), [currentDocuments, dataSourcesActive, availableYears, currentBudget]);
 
   if (loading) return <p className="text-center py-8">Cargando reporte…</p>;
   if (error) return <p className="text-center text-red-600 dark:text-red-400 py-8">Error: {error}</p>;
@@ -182,7 +187,7 @@ const Reports: React.FC = () => {
         </h1>
 
         {/* Métricas rápidas */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-white dark:bg-dark-surface rounded-xl shadow p-4 text-center">
             <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Documentos Totales</p>
             <p className="text-2xl font-semibold">{metrics.totalDocuments}</p>
@@ -192,8 +197,28 @@ const Reports: React.FC = () => {
             <p className="text-2xl font-semibold">{metrics.dataSources}</p>
           </div>
           <div className="bg-white dark:bg-dark-surface rounded-xl shadow p-4 text-center">
-            <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Años Cubiertos</p>
-            <p className="text-2xl font-semibold">{metrics.yearsCovered.join(', ')}</p>
+            <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Año Seleccionado</p>
+            <p className="text-2xl font-semibold">{selectedYear}</p>
+          </div>
+          <div className="bg-white dark:bg-dark-surface rounded-xl shadow p-4 text-center">
+            <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Tasa de Ejecución</p>
+            <p className="text-2xl font-semibold">{metrics.executionRate}%</p>
+          </div>
+        </div>
+        
+        {/* Financial Summary */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl p-4">
+            <p className="text-sm font-medium text-blue-800 dark:text-blue-200">Presupuesto Total</p>
+            <p className="text-xl font-bold text-blue-900 dark:text-blue-100">
+              {new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(metrics.totalBudget)}
+            </p>
+          </div>
+          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-xl p-4">
+            <p className="text-sm font-medium text-green-800 dark:text-green-200">Ejecutado</p>
+            <p className="text-xl font-bold text-green-900 dark:text-green-100">
+              {new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(metrics.totalExecuted)}
+            </p>
           </div>
         </div>
 
@@ -227,6 +252,92 @@ const Reports: React.FC = () => {
             </li>
           ))}
         </ul>
+      </div>
+
+      {/* Financial Charts Section */}
+      <div className="mt-8">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary mb-6 flex items-center">
+          <BarChart3 className="w-6 h-6 mr-2 text-blue-600" />
+          Análisis Financiero {selectedYear}
+        </h2>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          {/* Budget Execution Chart */}
+          <ChartContainer
+            title="Ejecución Presupuestaria"
+            description="Comparación entre presupuesto aprobado y ejecutado"
+            icon={DollarSign}
+            height={350}
+          >
+            <BudgetExecutionChart
+              year={selectedYear}
+              height={300}
+            />
+          </ChartContainer>
+          
+          {/* Expenditure Analysis Chart */}
+          <ChartContainer
+            title="Análisis de Gastos"
+            description="Distribución de gastos por categoría"
+            icon={TrendingUp}
+            height={350}
+          >
+            <ExpenditureReportChart
+              year={selectedYear}
+              height={300}
+            />
+          </ChartContainer>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Personnel Expenses Chart */}
+          <ChartContainer
+            title="Gastos en Personal"
+            description="Evolución de gastos salariales"
+            icon={PieChart}
+            height={350}
+          >
+            <PersonnelExpensesChart
+              year={selectedYear}
+              height={300}
+            />
+          </ChartContainer>
+          
+          {/* Debt Analysis Chart */}
+          <ChartContainer
+            title="Análisis de Deuda"
+            description="Evolución histórica de la deuda municipal"
+            icon={TrendingUp}
+            height={350}
+          >
+            <DebtReportChart
+              year={selectedYear}
+              height={300}
+            />
+          </ChartContainer>
+        </div>
+      </div>
+
+      {/* Time Series Analysis */}
+      <div className="mt-8">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary mb-6 flex items-center">
+          <TrendingUp className="w-6 h-6 mr-2 text-green-600" />
+          Tendencias Históricas
+        </h2>
+        
+        <ChartContainer
+          title="Evolución Financiera Multi-Año"
+          description="Tendencias financieras a lo largo del tiempo"
+          icon={BarChart3}
+          height={400}
+        >
+          <TimeSeriesChart
+            type="Budget_Execution"
+            year={null}
+            title="Evolución de Ejecución Presupuestaria"
+            height={350}
+          />
+        </ChartContainer>
       </div>
 
       {/* Unified Data Viewer - All Reports PDFs and Datasets */}

@@ -28,6 +28,7 @@ import {
 } from 'lucide-react';
 
 import { useMasterData } from '../hooks/useMasterData';
+import { useBudgetData } from '../hooks/useUnifiedData';
 import ResponsiveYearSelector from '@components/forms/ResponsiveYearSelector';
 import UnifiedChart from '@components/charts/UnifiedChart';
 import BudgetAnalysisChart from '@components/charts/BudgetAnalysisChart';
@@ -54,26 +55,43 @@ const BudgetUnified: React.FC = () => {
     masterData,
     currentBudget,
     multiYearData,
-    loading,
-    error,
+    loading: legacyLoading,
+    error: legacyError,
     refetch,
-    availableYears,
+    availableYears: legacyYears,
     switchYear
   } = useMasterData(selectedYear);
 
+  // 🌐 Use new UnifiedDataService with external APIs
+  const {
+    data: unifiedBudgetData,
+    externalData,
+    sources,
+    activeSources,
+    loading: unifiedLoading,
+    error: unifiedError,
+    refetch: unifiedRefetch,
+    availableYears,
+    liveDataEnabled,
+    dataInventory
+  } = useBudgetData(selectedYear);
+
+  const loading = legacyLoading || unifiedLoading;
+  const error = legacyError || unifiedError;
+  
   // Extract current year data
   const currentData = currentBudget;
   const budgetData = currentBudget;
   
-  // Define sources and data inventory based on available data
-  const sources = [
+  // Use actual sources and data inventory from hook, with fallbacks if needed
+  const effectiveSources = sources && sources.length > 0 ? sources : [
     { path: 'presupuesto.csv', type: 'csv', category: 'budget' },
     { path: 'ejecucion.json', type: 'json', category: 'execution' },
     { path: 'balances.pdf', type: 'pdf', category: 'reports' },
     { path: 'gba-api.gov.ar', type: 'external', category: 'government' }
   ];
   
-  const dataInventory = {
+  const effectiveDataInventory = dataInventory || {
     csv: ['presupuesto.csv', 'ingresos.csv', 'gastos.csv'],
     json: ['api-data.json', 'metrics.json'],
     pdf: ['balances.pdf', 'informes.pdf'],
@@ -557,7 +575,7 @@ const BudgetUnified: React.FC = () => {
         </h3>
         
         <div className="space-y-4">
-          {sources.map((source, index) => (
+          {effectiveSources.map((source, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -20 }}
@@ -595,7 +613,7 @@ const BudgetUnified: React.FC = () => {
         </div>
       </div>
 
-      {dataInventory && (
+      {effectiveDataInventory && (
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
             <Scale className="h-5 w-5 mr-2 text-purple-600" />
@@ -604,19 +622,19 @@ const BudgetUnified: React.FC = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center">
-              <p className="text-2xl font-bold text-green-600">{dataInventory.csv.length}</p>
+              <p className="text-2xl font-bold text-green-600">{effectiveDataInventory.csv.length}</p>
               <p className="text-sm text-gray-500">Archivos CSV</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-blue-600">{dataInventory.json.length}</p>
+              <p className="text-2xl font-bold text-blue-600">{effectiveDataInventory.json.length}</p>
               <p className="text-sm text-gray-500">Archivos JSON</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-red-600">{dataInventory.pdf.length}</p>
+              <p className="text-2xl font-bold text-red-600">{effectiveDataInventory.pdf.length}</p>
               <p className="text-sm text-gray-500">Documentos PDF</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-orange-600">{dataInventory.external.length}</p>
+              <p className="text-2xl font-bold text-orange-600">{effectiveDataInventory.external.length}</p>
               <p className="text-sm text-gray-500">Fuentes Externas</p>
             </div>
           </div>

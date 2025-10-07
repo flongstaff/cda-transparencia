@@ -17,12 +17,17 @@ import {
   Search,
   ChevronRight,
   CheckCircle,
-  Database
+  Database,
+  PieChart
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TransparencyHighlights from '@components/transparency/TransparencyHighlights';
 import ErrorBoundary from '@components/common/ErrorBoundary';
 import LoadingState from '@components/ui/LoadingState';
+import { ChartContainer } from '@components/common/ChartContainer';
+import UnifiedChart from '@components/charts/UnifiedChart';
+import TimeSeriesChart from '@components/charts/TimeSeriesChart';
+import DataDistributionChart from '@components/charts/DataDistributionChart';
 
 const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -290,6 +295,86 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
+
+        {/* Key Metrics Charts */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          {/* Document Processing Trends */}
+          <ChartContainer
+            title="Tendencias de Procesamiento de Documentos"
+            description="Evolución histórica de documentos analizados"
+            icon={BarChart3}
+            height={350}
+          >
+            <TimeSeriesChart
+              type="document_processing_trends"
+              year={null}
+              title="Documentos Procesados"
+              height={300}
+            />
+          </ChartContainer>
+
+          {/* Data Categories Distribution */}
+          <ChartContainer
+            title="Distribución por Categorías de Datos"
+            description="Clasificación de información por tipo"
+            icon={PieChart}
+            height={350}
+          >
+            <UnifiedChart
+              type="data_categories"
+              year={new Date().getFullYear()}
+              title="Categorías de Datos"
+              height={300}
+            />
+          </ChartContainer>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          {/* Financial Data Growth */}
+          <ChartContainer
+            title="Crecimiento de Datos Financieros"
+            description="Evolución de datos financieros publicados"
+            icon={TrendingUp}
+            height={350}
+          >
+            <DataDistributionChart
+              type="financial_data_growth"
+              year={null}
+              height={300}
+            />
+          </ChartContainer>
+
+          {/* Data Quality Metrics */}
+          <ChartContainer
+            title="Metrías de Calidad de Datos"
+            description="Integridad y verificación de datos"
+            icon={CheckCircle}
+            height={350}
+          >
+            <UnifiedChart
+              type="data_quality_metrics"
+              year={new Date().getFullYear()}
+              title="Calidad de Datos"
+              height={300}
+            />
+          </ChartContainer>
+        </div>
+
+        {/* Comprehensive Data Overview */}
+        <ChartContainer
+          title="Visión Integral de Datos Públicos"
+          description="Análisis completo del estado y disponibilidad de datos"
+          icon={Database}
+          height={450}
+          className="mb-8"
+        >
+          <UnifiedChart
+            type="comprehensive_data_overview"
+            year={new Date().getFullYear()}
+            title="Visión Integral"
+            height={400}
+          />
+        </ChartContainer>
 
         {/* Advanced Search */}
         <div className="bg-white dark:bg-dark-surface rounded-xl shadow-lg border border-gray-200 dark:border-dark-border p-6 mb-8">

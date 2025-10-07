@@ -1,5 +1,10 @@
 import React from 'react';
 import { useMainData } from '../hooks/useMainData';
+import { BarChart3, PieChart, Database, FileText, TrendingUp } from 'lucide-react';
+import { ChartContainer } from './common/ChartContainer';
+import UnifiedChart from './charts/UnifiedChart';
+import DataDistributionChart from './charts/DataDistributionChart';
+import TimeSeriesChart from './charts/TimeSeriesChart';
 
 const MainDataDisplay: React.FC = () => {
   const { data, loading, error } = useMainData();
@@ -58,6 +63,60 @@ const MainDataDisplay: React.FC = () => {
           </div>
         </div>
         
+        {/* Data Visualization Charts */}
+        <div className="p-6 border-b border-gray-200">
+          <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
+            <BarChart3 className="w-5 h-5 mr-2 text-blue-600" />
+            Visualización de Datos
+          </h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            {/* Dataset Distribution Chart */}
+            <ChartContainer
+              title="Distribución por Tema"
+              description="Clasificación de conjuntos de datos por tema principal"
+              icon={PieChart}
+              height={350}
+            >
+              <DataDistributionChart
+                type="dataset_themes"
+                year={new Date().getFullYear()}
+                height={300}
+              />
+            </ChartContainer>
+            
+            {/* Data Format Distribution Chart */}
+            <ChartContainer
+              title="Formatos de Datos"
+              description="Distribución por formato de archivo"
+              icon={FileText}
+              height={350}
+            >
+              <UnifiedChart
+                type="data_formats"
+                year={new Date().getFullYear()}
+                title="Formatos de Datos"
+                height={300}
+              />
+            </ChartContainer>
+          </div>
+          
+          {/* Dataset Growth Over Time */}
+          <ChartContainer
+            title="Crecimiento de Datos"
+            description="Evolución histórica de conjuntos de datos publicados"
+            icon={TrendingUp}
+            height={400}
+          >
+            <TimeSeriesChart
+              type="dataset_growth"
+              year={null}
+              title="Crecimiento de Conjuntos de Datos"
+              height={350}
+            />
+          </ChartContainer>
+        </div>
+        
         <div className="p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.dataset.map((dataset) => (
@@ -103,6 +162,23 @@ const MainDataDisplay: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
+        
+        {/* Comprehensive Data Catalog Analysis */}
+        <div className="p-6">
+          <ChartContainer
+            title="Análisis Integral del Catálogo de Datos"
+            description="Visión completa del estado y calidad del catálogo de datos abiertos"
+            icon={Database}
+            height={450}
+          >
+            <UnifiedChart
+              type="comprehensive_data_catalog"
+              year={new Date().getFullYear()}
+              title="Catálogo de Datos"
+              height={400}
+            />
+          </ChartContainer>
         </div>
       </div>
     </div>

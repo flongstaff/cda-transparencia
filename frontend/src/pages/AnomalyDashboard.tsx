@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { AlertTriangle, DollarSign, FileText, TrendingDown } from 'lucide-react';
+import { AlertTriangle, DollarSign, FileText, TrendingDown, BarChart3, PieChart, TrendingUp, Activity, Shield, Database } from 'lucide-react';
 import { useMasterData } from '../hooks/useMasterData';
 import ErrorBoundary from '@components/common/ErrorBoundary';
+import { ChartContainer } from '@components/common/ChartContainer';
+import UnifiedChart from '@components/charts/UnifiedChart';
+import AnomalyDetectionChart from '@components/charts/AnomalyDetectionChart';
+import TimeSeriesChart from '@components/charts/TimeSeriesChart';
+import RiskAnalysisChart from '@components/charts/RiskAnalysisChart';
 
 interface Anomaly {
   id: string;
@@ -239,6 +244,81 @@ const AnomalyDashboard: React.FC = () => {
         </div>
       </div>
 
+      {/* Anomaly Charts Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        {/* Anomaly Distribution Chart */}
+        <ChartContainer
+          title="Distribución de Anomalías"
+          description="Clasificación por tipo y severidad"
+          icon={PieChart}
+          height={350}
+        >
+          <AnomalyDetectionChart
+            type="anomaly_distribution"
+            year={selectedYear}
+            height={300}
+          />
+        </ChartContainer>
+
+        {/* Risk Assessment Chart */}
+        <ChartContainer
+          title="Evaluación de Riesgos"
+          description="Análisis de riesgos por categoría"
+          icon={BarChart3}
+          height={350}
+        >
+          <RiskAnalysisChart
+            type="risk_assessment"
+            year={selectedYear}
+            height={300}
+          />
+        </ChartContainer>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        {/* Anomaly Trends Over Time */}
+        <ChartContainer
+          title="Tendencias de Anomalías"
+          description="Evolución histórica de hallazgos"
+          icon={TrendingUp}
+          height={350}
+        >
+          <TimeSeriesChart
+            type="anomaly_trends"
+            year={null}
+            title="Tendencias de Anomalías"
+            height={300}
+          />
+        </ChartContainer>
+
+        {/* Financial Impact Analysis */}
+        <ChartContainer
+          title="Impacto Financiero"
+          description="Análisis monetario de anomalías detectadas"
+          icon={DollarSign}
+          height={350}
+        >
+          <UnifiedChart
+            type="financial_impact"
+            year={selectedYear}
+            title="Impacto Financiero"
+            height={300}
+          />
+        </ChartContainer>
+      </div>
+
+      {/* User Guidance Banner */}
+      <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+        <h3 className="font-medium text-gray-900 mb-2">Cómo Interpretar Esta Información</h3>
+        <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700">
+          <li>Los hallazgos se basan únicamente en datos públicos oficiales disponibles legalmente</li>
+          <li>No constituyen acusaciones formales ni juicio de responsabilidad personal</li>
+          <li>Todos los datos y documentos referenciados están disponibles en portales oficiales</li>
+          <li>Se requiere verificación por organismos competentes para confirmar hallazgos</li>
+          <li>El análisis está sujeto a limitaciones inherentes al uso de datos públicos</li>
+        </ul>
+      </div>
+
       {/* User Guidance Banner */}
       <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
         <h3 className="font-medium text-gray-900 mb-2">Cómo Interpretar Esta Información</h3>
@@ -293,6 +373,63 @@ const AnomalyDashboard: React.FC = () => {
                     {getSeverityIcon(anomaly.severity)}
                   </div>
                   <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-1">{anomaly.title}</h3>
+                    <p className="text-gray-600 mb-3">{anomaly.description}</p>
+                    <div className="flex items-center text-sm text-gray-500 mb-3">
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        anomaly.severity === 'critical' ? 'bg-red-100 text-red-800' :
+                        anomaly.severity === 'high' ? 'bg-orange-100 text-orange-800' :
+                        anomaly.severity === 'medium' ? 'bg-yellow-100 text-yellow-800' : 'bg-blue-100 text-blue-800'
+                      }`}>
+                        {anomaly.severity === 'critical' ? 'Crítica' : 
+                         anomaly.severity === 'high' ? 'Alta' : 
+                         anomaly.severity === 'medium' ? 'Media' : 'Baja'}
+                      </span>
+                      <span className="mx-2">•</span>
+                      <span>{formatCurrency(anomaly.amount)}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Evidence Section */}
+              <div className="mt-4 pt-4 border-t border-gray-100">
+                <h4 className="font-medium text-gray-900 mb-2">Evidencia Analizada</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600 mb-3">
+                  {anomaly.evidence.map((evidence, idx) => (
+                    <li key={idx}>{evidence}</li>
+                  ))}
+                </ul>
+
+                <h4 className="font-medium text-gray-900 mb-2">Documentos Relacionados</h4>
+                <div className="flex flex-wrap gap-2">
+                  {anomaly.related_documents.map((doc, idx) => (
+                    <span key={idx} className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
+                      {doc}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Comprehensive Data Integrity Analysis */}
+      <ChartContainer
+        title="Análisis Integral de Integridad de Datos"
+        description="Visión completa del estado de transparencia y consistencia de datos"
+        icon={Shield}
+        height={450}
+        className="mt-8"
+      >
+        <UnifiedChart
+          type="data_integrity_analysis"
+          year={selectedYear}
+          title="Integridad de Datos"
+          height={400}
+        />
+      </ChartContainer>
                     <h3 className="text-lg font-semibold text-gray-900">{anomaly.title}</h3>
                     <p className="mt-1 text-gray-600">{anomaly.description}</p>
                     <div className="mt-2">

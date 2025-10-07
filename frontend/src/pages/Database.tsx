@@ -15,13 +15,22 @@ import {
   AlertCircle,
   Loader2,
   DollarSign,
-  Users
+  Users,
+  BarChart3,
+  PieChart,
+  TrendingUp,
+  FolderOpen
 } from 'lucide-react';
 import { useMasterData } from '../hooks/useMasterData';
 import DocumentViewer from '../components/viewers/DocumentViewer2';
 import PageYearSelector from '../components/forms/PageYearSelector';
 import { formatFileSize } from '../utils/formatters';
 import ErrorBoundary from '../components/common/ErrorBoundary';
+import { ChartContainer } from '../components/common/ChartContainer';
+import UnifiedChart from '../components/charts/UnifiedChart';
+import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
+import TimeSeriesChart from '../components/charts/TimeSeriesChart';
+import DataDistributionChart from '../components/charts/DataDistributionChart';
 
 const Database: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
@@ -217,6 +226,85 @@ const Database: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Database Charts Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          {/* Document Types Distribution */}
+          <ChartContainer
+            title="Distribución por Tipo de Documento"
+            description="Clasificación de documentos por formato"
+            icon={PieChart}
+            height={350}
+          >
+            <DataDistributionChart
+              type="document_types"
+              year={selectedYear}
+              height={300}
+            />
+          </ChartContainer>
+
+          {/* Category Distribution */}
+          <ChartContainer
+            title="Distribución por Categoría"
+            description="Documentos por categoría temática"
+            icon={BarChart3}
+            height={350}
+          >
+            <UnifiedChart
+              type="document_categories"
+              year={selectedYear}
+              title="Categorías de Documentos"
+              height={300}
+            />
+          </ChartContainer>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          {/* Document Growth Over Time */}
+          <ChartContainer
+            title="Crecimiento de Documentos"
+            description="Evolución histórica de documentos añadidos"
+            icon={TrendingUp}
+            height={350}
+          >
+            <TimeSeriesChart
+              type="document_growth"
+              year={null}
+              title="Crecimiento de Documentos"
+              height={300}
+            />
+          </ChartContainer>
+
+          {/* Data Quality Analysis */}
+          <ChartContainer
+            title="Análisis de Calidad de Datos"
+            description="Integridad y verificación de documentos"
+            icon={CheckCircle}
+            height={350}
+          >
+            <DocumentAnalysisChart
+              type="data_quality"
+              year={selectedYear}
+              height={300}
+            />
+          </ChartContainer>
+        </div>
+
+        {/* Advanced Data Insights */}
+        <ChartContainer
+          title="Insights Avanzados de Datos"
+          description="Análisis de patrones y tendencias en la base de datos"
+          icon={DatabaseIcon}
+          height={400}
+          className="mb-8"
+        >
+          <UnifiedChart
+            type="advanced_insights"
+            year={selectedYear}
+            title="Insights de Datos"
+            height={350}
+          />
+        </ChartContainer>
 
         {/* Filters */}
         <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6 mb-8">

@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { AlertCircle } from 'lucide-react';
 import BaseChart, { SupportedChartType } from './BaseChart';
 import { Alert, CircularProgress, Box, Typography } from '@mui/material';
 import chartDataService from '../../services/charts/ChartDataService';
@@ -185,6 +186,12 @@ const GenderBudgetingChart: React.FC<GenderBudgetingChartProps> = ({
     );
   }
   
+  // Check if we have valid chart data
+  const validChartData = chartData && Array.isArray(chartData) ? chartData.filter(item => item != null) : [];
+  const hasValidData = validChartData.length > 0 && validChartData.some(item => 
+    item.male !== undefined && item.female !== undefined
+  );
+  
   // For heatmap visualization, we need to format the data differently
   if (chartType === 'heatmap' || chartType === 'heat') {
     // Render a simple bar chart as fallback instead of heatmap
@@ -193,25 +200,45 @@ const GenderBudgetingChart: React.FC<GenderBudgetingChartProps> = ({
         {showTitle && <h3 className="chart-title">Intensidad de Distribución por Género</h3>}
         {showDescription && <p className="chart-description">Visualización del equilibrio de género en el empleo público a lo largo de los meses</p>}
         <div className="chart-wrapper" style={{ height: height, width: width }}>
-          <BaseChart
-            data={chartData.filter(item => item != null)}
-            chartType="bar"
-            xAxisKey="month"
-            yAxisKeys={['male', 'female']}
-            height={height}
-            width={width}
-            xAxisLabel="Mes"
-            yAxisLabel="Número de Personal"
-          />
+          {hasValidData ? (
+            <BaseChart
+              data={validChartData}
+              chartType="bar"
+              xAxisKey="month"
+              yAxisKeys={['male', 'female']}
+              height={height}
+              width={width}
+              xAxisLabel="Mes"
+              yAxisLabel="Número de Personal"
+            />
+          ) : (
+            <div className="flex items-center justify-center h-full w-full p-8">
+              <div className="text-center">
+                <AlertCircle className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-lg font-medium text-gray-900 dark:text-dark-text-primary mb-2">
+                  No hay datos disponibles
+                </h3>
+                <p className="text-gray-500 dark:text-dark-text-secondary">
+                  No se encontraron datos para mostrar en la visualización de intensidad por género
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     );
   }
   
+  // Check if we have valid chart data
+  const validChartData = chartData && Array.isArray(chartData) ? chartData.filter(item => item != null) : [];
+  const hasValidData = validChartData.length > 0 && validChartData.some(item => 
+    item.male !== undefined && item.female !== undefined
+  );
+  
   // For stacked column chart (bar chart), we use BaseChart
-  return (
+  return hasValidData ? (
     <BaseChart
-      data={chartData.filter(item => item != null)}
+      data={validChartData}
       chartType={chartType}
       xAxisKey="month"
       yAxisKeys={['male', 'female']}
@@ -224,6 +251,18 @@ const GenderBudgetingChart: React.FC<GenderBudgetingChartProps> = ({
       xAxisLabel="Mes"
       yAxisLabel="Número de Personal"
     />
+  ) : (
+    <div className={`chart-container ${className} flex items-center justify-center h-96`}>
+      <div className="text-center p-8">
+        <AlertCircle className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+        <h3 className="text-lg font-medium text-gray-900 dark:text-dark-text-primary mb-2">
+          No hay datos disponibles
+        </h3>
+        <p className="text-gray-500 dark:text-dark-text-tertiary">
+          No se encontraron datos válidos para la visualización de presupuesto con perspectiva de género
+        </p>
+      </div>
+    </div>
   );
 };
 
