@@ -28,7 +28,7 @@
     "fs-extra": "^11.3.2",
     "glob": "^11.0.3",
     "pdfjs-dist": "^4.0.0",
-    "puppeteer": "^21.0.0",
+    "puppeteer": "^24.23.0",
     "tesseract.js": "^5.0.0"
   },
   "devDependencies": {

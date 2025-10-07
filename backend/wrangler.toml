@@ -1,15 +1,30 @@
 name = "cda-transparency-api"
 main = "src/server.js"
-compatibility_date = "2023-10-01"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
 
 [vars]
+NODE_ENV = "production"
 PORT = "8080"
 
 [build]
 command = "npm install"
 
+[build.upload]
+format = "modules"
+dir = "dist"
+
 [env.production]
-name = "cda-transparency-api"
+name = "cda-transparency-api-prod"
+routes = [
+  { pattern = "api.cda-transparencia.org/*", zone_id = "your-zone-id" }
+]
 
 [observability]
 enabled = true
+
+# KV namespace for caching (optional)
+[[kv_namespaces]]
+binding = "CACHE"
+id = "your-kv-namespace-id"
+preview_id = "your-preview-kv-namespace-id"
