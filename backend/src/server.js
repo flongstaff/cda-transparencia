@@ -1,33 +1,60 @@
-<<<<<<< HEAD
 /**
- * CARMEN DE ARECO TRANSPARENCY PORTAL - CLOUDFLARE WORKERS API
+ * CARMEN DE ARECO TRANSPARENCY PORTAL - UNIFIED API SERVER
  *
- * Cloudflare Workers compatible API server for external data sources
- * Handles CORS bypass, caching, and data integration for production deployment
+ * Unified server that works for both local development and Cloudflare Workers
+ * Automatically detects environment and uses appropriate runtime
  */
-=======
-const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const dotenv = require('dotenv');
-const path = require('path');
-const ErrorHandler = require('./utils/ErrorHandler');
->>>>>>> origin/main
 
-// Cloudflare Workers compatible imports
-import { handleCORS, createResponse } from './utils/cors';
-import { cacheManager } from './utils/cache';
-import { rateLimiter } from './utils/rateLimit';
-import { externalDataService } from './services/externalDataService';
+// Check if running in Cloudflare Workers environment
+const isCloudflareWorkers = typeof WebSocketPair !== 'undefined' || (globalThis && globalThis.constructor && globalThis.constructor.name === 'DedicatedWorkerGlobalScope');
+
+// Global variables for modules
+let handleCORS, createResponse, cacheManager, rateLimiter, externalDataService;
+
+if (isCloudflareWorkers) {
+  // Dynamic imports for Cloudflare Workers are handled in the fetch handler
+} else {
+  // For local development, we'll set up the Express server later
+  // Initialize variables to null for Express environment
+  handleCORS = null;
+  createResponse = null;
+  cacheManager = null;
+  rateLimiter = null;
+  externalDataService = null;
+}
 
 /**
  * Main fetch handler for Cloudflare Workers
  */
 export default {
   async fetch(request, env, ctx) {
+    if (!isCloudflareWorkers) {
+      throw new Error('This should only be called in Cloudflare Workers environment');
+    }
+
+    // Ensure modules are loaded before using them
+    if (!handleCORS || !createResponse || !cacheManager || !rateLimiter || !externalDataService) {
+      const modules = await Promise.all([
+        import('./utils/cors.js'),
+        import('./utils/cache.js'),
+        import('./utils/rateLimit.js'),
+        import('./services/externalDataService.js')
+      ]);
+
+      const { handleCORS: corsHandler, createResponse: responseCreator } = modules[0];
+      const { cacheManager: cacheMgr } = modules[1];
+      const { rateLimiter: rateLimiterMgr } = modules[2];
+      const { externalDataService: extDataService } = modules[3];
+
+      handleCORS = corsHandler;
+      createResponse = responseCreator;
+      cacheManager = cacheMgr;
+      rateLimiter = rateLimiterMgr;
+      externalDataService = extDataService;
+    }
+
     const url = new URL(request.url);
 
-<<<<<<< HEAD
     // Handle CORS preflight requests
     if (request.method === 'OPTIONS') {
       return handleCORS(request);
@@ -41,9 +68,6 @@ export default {
         data: { error: 'Rate limit exceeded', retryAfter: rateLimitResult.retryAfter }
       });
     }
-=======
-console.log('🚀 Initializing Carmen de Areco Comprehensive Transparency API...');
->>>>>>> origin/main
 
     try {
       // Route handling
@@ -51,7 +75,6 @@ console.log('🚀 Initializing Carmen de Areco Comprehensive Transparency API...
         case '/health':
           return handleHealthCheck();
 
-<<<<<<< HEAD
         case '/api/external/all-external-data':
           return handleAllExternalData(request);
 
@@ -102,6 +125,11 @@ console.log('🚀 Initializing Carmen de Areco Comprehensive Transparency API...
  * Health check endpoint
  */
 async function handleHealthCheck() {
+  if (!cacheManager) {
+    const { cacheManager: loadedCacheManager } = await import('./utils/cache.js');
+    cacheManager = loadedCacheManager;
+  }
+
   const cacheStats = cacheManager.getStats();
 
   return createResponse({
@@ -120,52 +148,13 @@ async function handleHealthCheck() {
  * Handle all external data aggregation
  */
 async function handleAllExternalData(request) {
+  if (!externalDataService) {
+    const { externalDataService: loadedExternalDataService } = await import('./services/externalDataService.js');
+    externalDataService = loadedExternalDataService;
+  }
+
   try {
     const data = await externalDataService.loadAllExternalData();
-=======
-// Rate limiting - Increased for development
-const rateLimit = require('express-rate-limit');
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 1000, // Increased limit for development
-  message: { 
-    success: false,
-    error: {
-      type: 'RateLimitError',
-      message: 'Too many requests',
-      details: 'Rate limit exceeded, please try again later.',
-      timestamp: new Date().toISOString()
-    }
-  }
-});
-app.use(limiter);
-
-// Initialize the comprehensive transparency system
-const routes = require('./routes');
-
-// Use comprehensive transparency routes
-app.use('/api', routes);
-
-// Error handling middleware
-app.use((err, req, res, next) => {
-  ErrorHandler.handleExpressError(err, req, res, next);
-});
-
-// 404 handler
-app.use((req, res) => {
-  const notFoundError = new Error('Endpoint not found');
-  notFoundError.name = 'NotFoundError';
-  
-  const { response, statusCode } = ErrorHandler.createErrorResponse(notFoundError, `404 - ${req.method} ${req.path}`, 404);
-  ErrorHandler.logError(notFoundError, `404 - ${req.method} ${req.path}`, {
-    url: req.url,
-    method: req.method,
-    ip: req.ip
-  });
-  
-  res.status(statusCode).json(response);
-});
->>>>>>> origin/main
 
     return createResponse({
       status: 200,
@@ -184,6 +173,11 @@ app.use((req, res) => {
  * Handle Carmen de Areco specific data
  */
 async function handleCarmenDeArecoData(request) {
+  if (!externalDataService) {
+    const { externalDataService: loadedExternalDataService } = await import('./services/externalDataService.js');
+    externalDataService = loadedExternalDataService;
+  }
+
   try {
     const data = await externalDataService.getCarmenDeArecoData();
 
@@ -204,6 +198,11 @@ async function handleCarmenDeArecoData(request) {
  * Handle Buenos Aires Province data
  */
 async function handleBuenosAiresData(request) {
+  if (!externalDataService) {
+    const { externalDataService: loadedExternalDataService } = await import('./services/externalDataService.js');
+    externalDataService = loadedExternalDataService;
+  }
+
   try {
     const data = await externalDataService.getBuenosAiresTransparencyData();
 
@@ -224,6 +223,11 @@ async function handleBuenosAiresData(request) {
  * Handle national data
  */
 async function handleNationalData(request) {
+  if (!externalDataService) {
+    const { externalDataService: loadedExternalDataService } = await import('./services/externalDataService.js');
+    externalDataService = loadedExternalDataService;
+  }
+
   try {
     const data = await externalDataService.getNationalBudgetData();
 
@@ -244,6 +248,11 @@ async function handleNationalData(request) {
  * Handle cache clear
  */
 async function handleCacheClear() {
+  if (!cacheManager) {
+    const { cacheManager: loadedCacheManager } = await import('./utils/cache.js');
+    cacheManager = loadedCacheManager;
+  }
+
   cacheManager.clear();
 
   return createResponse({
@@ -256,6 +265,11 @@ async function handleCacheClear() {
  * Handle cache statistics
  */
 async function handleCacheStats() {
+  if (!cacheManager) {
+    const { cacheManager: loadedCacheManager } = await import('./utils/cache.js');
+    cacheManager = loadedCacheManager;
+  }
+
   const stats = cacheManager.getStats();
 
   return createResponse({
@@ -265,11 +279,163 @@ async function handleCacheStats() {
 }
 
 /**
- * Legacy Express server for local development
+ * Express server for local development
  */
-export class ExpressServer {
-  constructor() {
-    // This would be used for local development only
-    console.log('Express server class available for local development');
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const dotenv = require('dotenv');
+
+// Load environment variables
+dotenv.config();
+
+// Create Express app
+const app = express();
+const PORT = process.env.PORT || 3001;
+
+console.log('🚀 Initializing Carmen de Areco Comprehensive Transparency API...');
+
+// Middleware
+app.use(helmet());
+app.use(cors());
+app.use(express.json({ limit: '10mb' }));
+
+// Rate limiting - Increased for development
+const rateLimit = require('express-rate-limit');
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 1000, // Increased limit for development
+  message: {
+    success: false,
+    error: {
+      type: 'RateLimitError',
+      message: 'Too many requests',
+      details: 'Rate limit exceeded, please try again later.',
+      timestamp: new Date().toISOString()
+    }
+  }
+});
+app.use(limiter);
+
+// Express routes for local development
+app.get('/health', (req, res) => {
+  res.json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    service: 'Carmen de Areco Transparency API (Local Development)',
+    version: '2.0.0'
+  });
+});
+
+// For local development, import the external data service
+let localExternalDataService = null;
+if (!isCloudflareWorkers) {
+  try {
+    const externalDataModule = require('./services/externalDataService.js');
+    localExternalDataService = externalDataModule.externalDataService;
+  } catch (error) {
+    console.error('Failed to load external data service for local development:', error.message);
   }
 }
+
+app.get('/api/external/all-external-data', async (req, res) => {
+  try {
+    if (!localExternalDataService) {
+      return res.status(500).json({ error: 'External data service not available' });
+    }
+    const data = await localExternalDataService.loadAllExternalData();
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load external data', message: error.message });
+  }
+});
+
+app.get('/api/external/carmen-de-areco', async (req, res) => {
+  try {
+    if (!localExternalDataService) {
+      return res.status(500).json({ error: 'External data service not available' });
+    }
+    const data = await localExternalDataService.getCarmenDeArecoData();
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load Carmen de Areco data', message: error.message });
+  }
+});
+
+app.get('/api/external/buenos-aires', async (req, res) => {
+  try {
+    if (!localExternalDataService) {
+      return res.status(500).json({ error: 'External data service not available' });
+    }
+    const data = await localExternalDataService.getBuenosAiresTransparencyData();
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load Buenos Aires data', message: error.message });
+  }
+});
+
+app.get('/api/external/national', async (req, res) => {
+  try {
+    if (!localExternalDataService) {
+      return res.status(500).json({ error: 'External data service not available' });
+    }
+    const data = await localExternalDataService.getNationalBudgetData();
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to load national data', message: error.message });
+  }
+});
+
+let localCacheManager = null;
+if (!isCloudflareWorkers) {
+  try {
+    const cacheModule = require('./utils/cache.js');
+    localCacheManager = cacheModule.cacheManager;
+  } catch (error) {
+    console.error('Failed to load cache manager for local development:', error.message);
+  }
+}
+
+// Cache management endpoints for local development
+app.delete('/api/cache/clear', (req, res) => {
+  if (!localCacheManager) {
+    return res.status(500).json({ error: 'Cache manager not available' });
+  }
+  localCacheManager.clear();
+  res.json({ message: 'Cache cleared successfully' });
+});
+
+app.get('/api/cache/stats', (req, res) => {
+  if (!localCacheManager) {
+    return res.status(500).json({ error: 'Cache manager not available' });
+  }
+  const stats = localCacheManager.getStats();
+  res.json(stats);
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error('Server error:', err);
+  res.status(500).json({
+    error: 'Internal server error',
+    details: process.env.NODE_ENV === 'development' ? err.message : 'Contact administrator'
+  });
+});
+
+// 404 handler
+app.use((req, res) => {
+  res.status(404).json({ error: 'Endpoint not found' });
+});
+
+// Start server only if not in Cloudflare Workers environment
+if (!isCloudflareWorkers) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Carmen de Areco Comprehensive Transparency API running on port ${PORT}`);
+    console.log(`📊 Using comprehensive transparency system`);
+    console.log(`🔗 API available at http://localhost:${PORT}/api/external/`);
+    console.log(`❤️  Health check: http://localhost:${PORT}/health`);
+    console.log(`🏛️  Citizen portal: Full municipal transparency with document access`);
+  });
+}
+
+module.exports = app;
