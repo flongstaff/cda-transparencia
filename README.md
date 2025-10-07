@@ -89,12 +89,13 @@ All deployments are automated through GitHub Actions and updated weekly.
 
 The deployment process is orchestrated through multiple GitHub Actions workflows:
 
-1. **`pages.yml`** - Deploys the main transparency portal to GitHub Pages with custom domain (cda-transparencia.org) on every push to the main branch
-2. **`deploy.yml`** - Backup deployment to GitHub Pages with custom domain (cda-transparencia.org) on a weekly schedule or manual trigger
-3. **`deploy-portal.yml`** - Primary deployment workflow that handles custom domain deployment on pushes to main and weekly schedule
-4. **`cloudflare-deploy.yml`** - Deploys to Cloudflare Pages after successful primary GitHub Pages deployment
-5. **`update-data.yml`** - Updates data files weekly by running data extraction and processing scripts
-6. **`build.yml`** - Tests and builds the application on every push and pull request
+1. **`pages.yml`** - Validates and builds the application for GitHub Pages (non-deploying), triggers on every push and PR
+2. **`cloudflare-deploy.yml`** - Deploys to Cloudflare Pages after successful build validation 
+3. **`deploy.yml`** - Deploys to Cloudflare Pages for custom domain (cda-transparencia.org) on a weekly schedule or manual trigger
+4. **`update-data.yml`** - Updates data files weekly by running data extraction and processing scripts
+5. **`build.yml`** - Tests and builds the application on every push and pull request
+
+The actual GitHub Pages deployment is handled by GitHub's automatic `pages-build-deployment` using the `gh-pages` branch.
 
 For the Cloudflare deployment to work, the following secrets must be configured in the repository settings:
 - `CLOUDFLARE_API_TOKEN`
