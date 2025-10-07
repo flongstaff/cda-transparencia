@@ -31,11 +31,7 @@
     "lucide-react": "^0.544.0",
     "pdf-parse": "^2.1.1",
     "pdfjs-dist": "^4.0.0",
-<<<<<<< HEAD
     "puppeteer": "^24.23.0",
-=======
-    "puppeteer": "^24.22.3",
->>>>>>> origin/main
     "tesseract.js": "^5.0.0"
   },
   "devDependencies": {

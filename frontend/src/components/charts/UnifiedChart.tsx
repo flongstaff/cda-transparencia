@@ -86,15 +86,92 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
   const currentYearData = useMemo(() => {
     if (!structured) return null;
 
+    // Safely access structured data, accounting for various possible structures
+    const budgetData = structured.budget || structured.budgets || structured.financial_overview;
+    const contractsData = structured.contracts || structured.contract_data;
+    const salariesData = structured.salaries || structured.personnel;
+    const debtData = structured.debt || structured.debts;
+    const treasuryData = structured.treasury || structured.financial || structured.cash_flow;
+
     return {
-      budget: structured.budget?.[year],
-      contracts: structured.contracts?.[year],
-      salaries: structured.salaries?.[year],
+      budget: budgetData?.[year] || budgetData,
+      contracts: contractsData?.[year] || contractsData,
+      salaries: salariesData?.[year] || salariesData,
       documents: documents?.filter(doc => doc.year === year),
-      treasury: structured.financial?.[year],
-      debt: structured.debt?.[year]
+      treasury: treasuryData?.[year] || treasuryData,
+      debt: debtData?.[year] || debtData
     };
   }, [structured, documents, year, type]);
+
+  // Extract historical data from structured data with flexible structure handling
+  const budgetHistoricalData = useMemo(() => {
+    if (!structured) return null;
+    
+    // Try multiple possible paths for budget historical data
+    return structured.budget?.historical || 
+           structured.budgets?.historical || 
+           structured.budget?.years || 
+           structured.budgets?.years || 
+           structured.historical_budget || 
+           structured.budget?.data || 
+           null;
+  }, [structured]);
+
+  const contractsHistoricalData = useMemo(() => {
+    if (!structured) return null;
+    
+    // Try multiple possible paths for contracts historical data
+    return structured.contracts?.historical || 
+           structured.contracts?.years || 
+           structured.historical_contracts || 
+           structured.contracts?.data || 
+           null;
+  }, [structured]);
+
+  const salariesHistoricalData = useMemo(() => {
+    if (!structured) return null;
+    
+    // Try multiple possible paths for salaries historical data
+    return structured.salaries?.historical || 
+           structured.salaries?.years || 
+           structured.historical_salaries || 
+           structured.salaries?.data || 
+           null;
+  }, [structured]);
+
+  const documentsHistoricalData = useMemo(() => {
+    if (!structured) return null;
+    
+    // Try multiple possible paths for documents historical data
+    return structured.documents?.historical || 
+           structured.documents?.years || 
+           structured.historical_documents || 
+           structured.documents?.data || 
+           null;
+  }, [structured]);
+
+  const debtHistoricalData = useMemo(() => {
+    if (!structured) return null;
+    
+    // Try multiple possible paths for debt historical data
+    return structured.debt?.historical || 
+           structured.debt?.years || 
+           structured.historical_debt || 
+           structured.debt?.data || 
+           null;
+  }, [structured]);
+
+  const treasuryHistoricalData = useMemo(() => {
+    if (!structured) return null;
+    
+    // Try multiple possible paths for treasury historical data
+    return structured.treasury?.historical || 
+           structured.treasury?.years || 
+           structured.historical_treasury || 
+           structured.financial?.historical || 
+           structured.treasury?.data || 
+           null;
+  }, [structured]);
 
   // Update COLORS to use theme palette for consistency
   const themedColors = useMemo(() => [

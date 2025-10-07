@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Connection Test</title>
+</head>
+<body>
+    <h1>API Connection Test</h1>
+    <div id="result">Testing API connection...</div>
+    
+    <script>
+        // Test the API connection using the configured VITE_API_URL
+        const API_BASE = 'https://cda-transparencia.franco-longstaff.workers.dev';
+        
+        async function testApiConnection() {
+            const resultDiv = document.getElementById('result');
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/health`);
+                if (response.ok) {
+                    const data = await response.json();
+                    resultDiv.innerHTML = `
+                        <h2>✅ API Connection Successful!</h2>
+                        <p>Status: ${data.status}</p>
+                        <p>Message: ${data.message}</p>
+                        <p>Services: ${Object.keys(data.services).filter(key => data.services[key]).length}/${Object.keys(data.services).length} active</p>
+                        <p>Timestamp: ${data.timestamp}</p>
+                    `;
+                    
+                    // Test data fetching
+                    try {
+                        const dataResponse = await fetch(`${API_BASE}/api/external/all-external-data`);
+                        if (dataResponse.ok) {
+                            const dataResult = await dataResponse.json();
+                            resultDiv.innerHTML += `
+                                <h3>📊 Data Fetching Test</h3>
+                                <p>Data sources: ${dataResult.summary.total_sources}</p>
+                                <p>Successful: ${dataResult.summary.successful_sources}</p>
+                                <p>Failed: ${dataResult.summary.failed_sources}</p>
+                            `;
+                        }
+                    } catch (dataError) {
+                        resultDiv.innerHTML += `<p style="color: red;">❌ Data fetching failed: ${dataError.message}</p>`;
+                    }
+                } else {
+                    resultDiv.innerHTML = `<p style="color: red;">❌ API health check failed: ${response.status} ${response.statusText}</p>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<p style="color: red;">❌ API connection failed: ${error.message}</p>`;
+            }
+        }
+        
+        testApiConnection();
+    </script>
+</body>
+</html>
