@@ -41,14 +41,68 @@ const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
   // Load chart data using React Query
   const { data, isLoading, isError, error: queryError } = useQuery({
     queryKey: ['chart-data', 'Waterfall_Execution', year],
-    queryFn: () => 
-      // Mock data for now - in a real implementation, we'd fetch from data service
-      Promise.resolve([
-        { name: 'Q1', budgeted: 500000000, executed: 480000000 },
-        { name: 'Q2', budgeted: 500000000, executed: 520000000 },
-        { name: 'Q3', budgeted: 500000000, executed: 490000000 },
-        { name: 'Q4', budgeted: 500000000, executed: 510000000 }
-      ]),
+    queryFn: async () => {
+      try {
+        // Try to load from the chart data service first
+        const rawData = await chartDataService.loadChartData('Waterfall_Execution');
+        
+        if (!rawData || rawData.length === 0) {
+          throw new Error('No data returned from service');
+        }
+        
+        // Process the raw data to match our expected format
+        return rawData.map((item: any) => ({
+          name: item.name || item.Name || item.quarter || item.Quarter || item.period || 'Unknown',
+          budgeted: parseFloat(item.budgeted || item.Budgeted || item.presupuestado || 0),
+          executed: parseFloat(item.executed || item.Executed || item.ejecutado || item.executed_amount || 0)
+        }));
+      } catch (serviceError) {
+        console.warn('Failed to load from chart data service, falling back to local data:', serviceError);
+        
+        // Fallback to local data if service fails
+        try {
+          const response = await fetch('/data/charts/Waterfall_Execution_consolidated_2019-2025.csv');
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          
+          const csvText = await response.text();
+          const lines = csvText.split('\n').filter(line => line.trim() !== '');
+          
+          if (lines.length < 2) {
+            throw new Error('CSV file is empty or malformed');
+          }
+          
+          // Parse CSV manually since we want to avoid importing PapaParse here
+          const headers = lines[0].split(',').map(h => h.trim());
+          const dataRows = lines.slice(1).map(line => {
+            const values = line.split(',').map(v => v.trim());
+            const obj: any = {};
+            headers.forEach((header, index) => {
+              obj[header] = values[index];
+            });
+            return obj;
+          });
+          
+          // Process the CSV data to match our expected format
+          return dataRows.map((item: any) => ({
+            name: item.name || item.Name || item.quarter || item.Quarter || item.period || 'Unknown',
+            budgeted: parseFloat(item.budgeted || item.Budgeted || item.presupuestado || 0),
+            executed: parseFloat(item.executed || item.Executed || item.ejecutado || item.executed_amount || 0)
+          }));
+        } catch (localError) {
+          console.error('Failed to load local data, using mock data as last resort:', localError);
+          
+          // Final fallback to mock data
+          return [
+            { name: 'Q1', budgeted: 500000000, executed: 480000000 },
+            { name: 'Q2', budgeted: 500000000, executed: 520000000 },
+            { name: 'Q3', budgeted: 500000000, executed: 490000000 },
+            { name: 'Q4', budgeted: 500000000, executed: 510000000 }
+          ];
+        }
+      }
+    },
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
   });
@@ -101,7 +155,7 @@ const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Waterfall Execution data...
+          Cargando datos de Ejecución en Cascada...
         </Typography>
       </Box>
     );
@@ -111,7 +165,7 @@ const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Waterfall Execution data: {error}
+        Error cargando datos de Ejecución en Cascada: {error}
       </Alert>
     );
   }
@@ -120,7 +174,7 @@ const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Waterfall Execution data available
+        No hay datos disponibles de Ejecución en Cascada
       </Alert>
     );
   }
@@ -131,8 +185,8 @@ const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
   
   return (
     <div className={`chart-container ${className}`}>
-      {showTitle && <h3 className="chart-title">Cumulative Execution Waterfall Chart</h3>}
-      {showDescription && <p className="chart-description">Visualizing cumulative budget execution across quarters</p>}
+      {showTitle && <h3 className="chart-title">Gráfico de Ejecución Acumulativa en Cascada</h3>}
+      {showDescription && <p className="chart-description">Visualización de la ejecución presupuestaria acumulativa a lo largo de los trimestres</p>}
       <div className="chart-wrapper" style={{ height: height, width: width }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
@@ -145,15 +199,15 @@ const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
             <XAxis 
               type="number" 
               domain={domain}
-              label={{ value: 'Amount (ARS)', position: 'insideBottom', offset: -10 }}
+              label={{ value: 'Monto (ARS)', position: 'insideBottom', offset: -10 }}
             />
             <YAxis 
               type="category" 
               dataKey="name" 
             />
             <Tooltip 
-              formatter={(value) => [`ARS ${Number(value).toLocaleString()}`, 'Amount']}
-              labelFormatter={(label) => `Period: ${label}`}
+              formatter={(value) => [`ARS ${Number(value).toLocaleString()}`, 'Monto']}
+              labelFormatter={(label) => `Período: ${label}`}
             />
             <Bar
               dataKey="value"

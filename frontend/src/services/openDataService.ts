@@ -1,12 +1,12 @@
 /**
- * Open Data Service
- * Service for retrieving and managing open data in compliance with AAIP standards
+ * Open Data Service for Carmen de Areco Transparency Portal
+ * Provides access to open data catalog and datasets with AAIP compliance
+ * Implements accessibility features and data protection measures
  */
 
 import { buildApiUrl } from '../config/apiConfig';
 
-// Define types for our data structures
-export interface OpenDataCategory {
+interface DataCategory {
   id: string;
   title: string;
   description: string;
@@ -15,10 +15,10 @@ export interface OpenDataCategory {
   lastUpdated: string;
   updateFrequency: string;
   dataTypes: string[];
-  datasets: OpenDataItem[];
+  datasets: Dataset[];
 }
 
-export interface OpenDataItem {
+interface Dataset {
   id: string;
   title: string;
   description: string;
@@ -29,77 +29,68 @@ export interface OpenDataItem {
     compliant: boolean;
     standards: string[];
   };
-}
-
-export interface DataMetadata {
-  title: string;
-  description: string;
-  publisher: {
-    name: string;
-    email: string;
-    url: string;
-  };
-  issued: string;
-  modified: string;
-  identifier: string;
-  theme: string;
-  accessLevel: string;
-  keyword: string[];
-  landingPage: string;
-  license: string;
-  rights: string;
-  spatial: string;
-  temporal: string;
-  distribution: DataDistribution[];
-  contactPoint: ContactPoint;
-  dataQuality: boolean;
-  describedBy?: string;
-  describedByType?: string;
-  accrualPeriodicity: string;
-  language: string[];
-  accessibility: {
-    compliant: boolean;
-    standards: string[];
-    evaluationMethod: string;
+  metadata: {
+    publisher: string;
+    issued: string;
+    modified: string;
+    theme: string;
+    accessLevel: string;
+    keyword: string[];
+    landingPage: string;
+    license: string;
+    rights: string;
   };
 }
 
-export interface DataDistribution {
-  title: string;
-  description: string;
-  downloadURL: string;
-  mediaType: string;
-  format: string;
-  byteSize?: number;
-  accessibilityCompliant: boolean;
-}
-
-export interface ContactPoint {
-  fn: string;
-  hasEmail: string;
-  telephone: string;
-}
-
-export interface OpenDataResponse {
-  categories: OpenDataCategory[];
+interface OpenDataResponse {
+  categories: DataCategory[];
+  metadata: {
+    lastUpdated: string;
+    version: string;
+    totalCategories: number;
+    totalDatasets: number;
+  };
   compliance: {
-    aaipStandards: boolean;
+    aaipGuidelines: boolean;
     itaMethodology: boolean;
     wcagCompliance: string;
-    updatePolicy: string;
-    accessibilityPolicy: string;
+    dataProtection: boolean;
   };
 }
 
-export interface MetadataResponse {
-  schema: any; // The full JSON Schema
+interface DatasetResponse {
+  dataset: Dataset;
+  metadata: {
+    lastUpdated: string;
+    version: string;
+    category: string;
+    categoryId: string;
+  };
   compliance: {
-    follows: string[];
-    aaipAlignment: {
-      transparencyIndex: boolean;
-      publicationStandards: boolean;
-      accessibilityGuidelines: boolean;
-    };
+    aaipGuidelines: boolean;
+    itaMethodology: boolean;
+    wcagCompliance: string;
+    dataProtection: boolean;
+  };
+}
+
+interface SearchResponse {
+  results: {
+    category: string;
+    categoryId: string;
+    datasets: Dataset[];
+  }[];
+  metadata: {
+    lastUpdated: string;
+    version: string;
+    query: string;
+    totalResults: number;
+  };
+  compliance: {
+    aaipGuidelines: boolean;
+    itaMethodology: boolean;
+    wcagCompliance: string;
+    dataProtection: boolean;
   };
 }
 
@@ -114,187 +105,342 @@ class OpenDataService {
   }
 
   /**
-   * Fetch open data categories from the backend
+   * Get all open data categories
    */
-  async getOpenDataCategories(): Promise<OpenDataResponse> {
+  async getCategories(): Promise<OpenDataResponse> {
     try {
-      const response = await fetch('/data/categories-structure.json');
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return await response.json();
-    } catch (error) {
-      console.error('Error fetching open data categories:', error);
-      // In case of error, return a basic structure
-      return {
-        categories: [],
-        compliance: {
-          aaipStandards: true,
-          itaMethodology: true,
-          wcagCompliance: '2.1 AA',
-          updatePolicy: 'Proactive publication following AAIP guidelines',
-          accessibilityPolicy: 'All content meets WCAG 2.1 AA standards'
+      const response = await fetch(buildApiUrl('/open-data/catalog'), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
         }
-      };
+      });
+
+      if (!response.ok) {
+        throw new Error(`Categories request failed: ${response.status} ${response.statusText}`);
+      }
+
+      const data: OpenDataResponse = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Open data categories error:', error);
+      throw error;
     }
   }
 
   /**
-   * Fetch metadata schema from the backend
+   * Get a specific category by ID
    */
-  async getMetadataSchema(): Promise<MetadataResponse> {
+  async getCategoryById(categoryId: string): Promise<DataCategory> {
     try {
-      const response = await fetch('/data/metadata-standards.json');
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return await response.json();
-    } catch (error) {
-      console.error('Error fetching metadata schema:', error);
-      // In case of error, return a basic schema
-      return {
-        schema: {},
-        compliance: {
-          follows: [],
-          aaipAlignment: {
-            transparencyIndex: true,
-            publicationStandards: true,
-            accessibilityGuidelines: true
-          }
+      const response = await fetch(buildApiUrl(`/open-data/catalog/${categoryId}`), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
         }
-      };
+      });
+
+      if (!response.ok) {
+        throw new Error(`Category request failed: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data.category;
+    } catch (error) {
+      console.error(`Open data category error for ${categoryId}:`, error);
+      throw error;
     }
   }
 
   /**
-   * Fetch a specific dataset by ID
+   * Get datasets for a specific category
    */
-  async getDatasetById(datasetId: string): Promise<OpenDataItem | null> {
+  async getDatasetsByCategory(categoryId: string): Promise<Dataset[]> {
     try {
-      const dataResponse = await this.getOpenDataCategories();
-      for (const category of dataResponse.categories) {
-        const dataset = category.datasets.find(d => d.id === datasetId);
-        if (dataset) {
-          return dataset;
+      const response = await fetch(buildApiUrl(`/open-data/catalog/${categoryId}/datasets`), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
         }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Datasets request failed: ${response.status} ${response.statusText}`);
       }
-      return null;
+
+      const data = await response.json();
+      return data.datasets;
     } catch (error) {
-      console.error('Error fetching dataset:', error);
-      return null;
+      console.error(`Open data datasets error for ${categoryId}:`, error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get a specific dataset by ID
+   */
+  async getDatasetById(datasetId: string): Promise<DatasetResponse> {
+    try {
+      const response = await fetch(buildApiUrl(`/open-data/dataset/${datasetId}`), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Dataset request failed: ${response.status} ${response.statusText}`);
+      }
+
+      const data: DatasetResponse = await response.json();
+      return data;
+    } catch (error) {
+      console.error(`Dataset error for ${datasetId}:`, error);
+      throw error;
     }
   }
 
   /**
    * Search datasets by query
    */
-  async searchDatasets(query: string): Promise<OpenDataItem[]> {
+  async searchDatasets(query: string): Promise<SearchResponse> {
     try {
-      const dataResponse = await this.getOpenDataCategories();
-      const results: OpenDataItem[] = [];
-
-      for (const category of dataResponse.categories) {
-        for (const dataset of category.datasets) {
-          if (
-            dataset.title.toLowerCase().includes(query.toLowerCase()) ||
-            dataset.description.toLowerCase().includes(query.toLowerCase())
-          ) {
-            results.push(dataset);
-          }
+      const response = await fetch(buildApiUrl(`/open-data/search?q=${encodeURIComponent(query)}`), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
         }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Search request failed: ${response.status} ${response.statusText}`);
       }
 
-      return results;
+      const data: SearchResponse = await response.json();
+      return data;
     } catch (error) {
-      console.error('Error searching datasets:', error);
-      return [];
+      console.error('Search error:', error);
+      throw error;
     }
   }
 
   /**
-   * Get datasets by category
+   * Get metadata standards
    */
-  async getDatasetsByCategory(categoryId: string): Promise<OpenDataItem[]> {
+  async getMetadataStandards(): Promise<any> {
     try {
-      const dataResponse = await this.getOpenDataCategories();
-      const category = dataResponse.categories.find(c => c.id === categoryId);
-      return category ? category.datasets : [];
-    } catch (error) {
-      console.error('Error fetching datasets by category:', error);
-      return [];
-    }
-  }
-
-  /**
-   * Get all available formats across all datasets
-   */
-  async getAvailableFormats(): Promise<string[]> {
-    try {
-      const dataResponse = await this.getOpenDataCategories();
-      const formats = new Set<string>();
-
-      for (const category of dataResponse.categories) {
-        for (const dataset of category.datasets) {
-          for (const format of dataset.formats) {
-            formats.add(format);
-          }
+      const response = await fetch(buildApiUrl('/open-data/metadata-standards'), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
         }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Metadata standards request failed: ${response.status} ${response.statusText}`);
       }
 
-      return Array.from(formats);
+      const data = await response.json();
+      return data;
     } catch (error) {
-      console.error('Error fetching available formats:', error);
-      return [];
+      console.error('Metadata standards error:', error);
+      throw error;
     }
   }
 
   /**
-   * Validate metadata against AAIP standards
-   */
-  validateMetadata(metadata: any): { valid: boolean; errors: string[] } {
-    try {
-      // This is a simplified validation - in a real implementation, 
-      // we would use a proper JSON Schema validator
-      const errors: string[] = [];
-
-      // Required fields according to our schema
-      if (!metadata.title) errors.push('Title is required');
-      if (!metadata.description) errors.push('Description is required');
-      if (!metadata.publisher) errors.push('Publisher information is required');
-      if (!metadata.issued) errors.push('Issued date is required');
-      if (!metadata.modified) errors.push('Modified date is required');
-      if (!metadata.identifier) errors.push('Identifier is required');
-      if (!metadata.theme) errors.push('Theme is required');
-      if (!metadata.accessLevel) errors.push('Access level is required');
-
-      return {
-        valid: errors.length === 0,
-        errors
-      };
-    } catch (error) {
-      console.error('Error validating metadata:', error);
-      return {
-        valid: false,
-        errors: ['Error validating metadata']
-      };
-    }
-  }
-
-  /**
-   * Get accessibility compliance information
+   * Get accessibility standards
    */
   async getAccessibilityStandards(): Promise<any> {
     try {
-      const response = await fetch('/data/accessibility-standards.json');
+      const response = await fetch(buildApiUrl('/open-data/accessibility-standards'), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
       if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+        throw new Error(`Accessibility standards request failed: ${response.status} ${response.statusText}`);
       }
-      return await response.json();
+
+      const data = await response.json();
+      return data;
     } catch (error) {
-      console.error('Error fetching accessibility standards:', error);
-      return {};
+      console.error('Accessibility standards error:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get compliance status
+   */
+  async getComplianceStatus(): Promise<any> {
+    try {
+      const response = await fetch(buildApiUrl('/open-data/compliance'), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Compliance status request failed: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Compliance status error:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get open data statistics
+   */
+  async getOpenDataStatistics(): Promise<any> {
+    try {
+      const response = await fetch(buildApiUrl('/open-data/statistics'), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Open data statistics request failed: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Open data statistics error:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get recent updates
+   */
+  async getRecentUpdates(limit: number = 10): Promise<any> {
+    try {
+      const response = await fetch(buildApiUrl(`/open-data/recent-updates?limit=${limit}`), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Recent updates request failed: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Recent updates error:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Validate dataset metadata
+   */
+  async validateDatasetMetadata(dataset: any): Promise<any> {
+    try {
+      const response = await fetch(buildApiUrl('/open-data/validate-metadata'), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ dataset })
+      });
+
+      if (!response.ok) {
+        throw new Error(`Metadata validation request failed: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Metadata validation error:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Generate dataset citation
+   */
+  async generateDatasetCitation(datasetId: string): Promise<any> {
+    try {
+      const response = await fetch(buildApiUrl(`/open-data/dataset/${datasetId}/citation`), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Dataset citation request failed: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error(`Dataset citation error for ${datasetId}:`, error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get dataset quality report
+   */
+  async getDatasetQualityReport(datasetId: string): Promise<any> {
+    try {
+      const response = await fetch(buildApiUrl(`/open-data/dataset/${datasetId}/quality-report`), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Dataset quality report request failed: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error(`Dataset quality report error for ${datasetId}:`, error);
+      throw error;
+    }
+  }
+
+  /**
+   * Health check for open data service
+   */
+  async healthCheck(): Promise<any> {
+    try {
+      const response = await fetch(buildApiUrl('/open-data/health'), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Health check request failed: ${response.status} ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Open data health check error:', error);
+      throw error;
     }
   }
 }
 
 export const openDataService = OpenDataService.getInstance();
+export default OpenDataService;

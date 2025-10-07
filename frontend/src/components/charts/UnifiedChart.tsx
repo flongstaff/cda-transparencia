@@ -27,7 +27,7 @@ import {
   Loader2
 } from 'lucide-react';
 import { formatCurrencyARS } from '../../utils/formatters';
-import { useMasterData } from '../../hooks/useMasterData';
+import { useUnifiedData } from '../../hooks/useUnifiedData';
 
 export type ChartType = 
   | 'budget' 
@@ -74,44 +74,27 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
   const theme = useTheme(); // Access the MUI theme
   const [currentVariant, setCurrentVariant] = useState<ChartVariant>(variant);
   
-  // 🚀 Use the new comprehensive master data service that includes historical data
-  const { 
-    masterData, 
-    currentBudget,
-    currentContracts,
-    currentSalaries,
-    currentDocuments,
-    currentTreasury,
-    currentDebt,
-    multiYearData,
-    budgetHistoricalData,
-    contractsHistoricalData,
-    salariesHistoricalData,
-    documentsHistoricalData,
-    debtHistoricalData,
-    treasuryHistoricalData,
+  // 🚀 Use the unified data service with comprehensive processed data
+  const {
+    structured,
+    documents,
     loading,
-    error 
-  } = useMasterData(year);
+    error
+  } = useUnifiedData({ year });
 
-  // Determine current year data based on the type
+  // Determine current year data based on the type from consolidated processed data
   const currentYearData = useMemo(() => {
-    if (!masterData) return null;
-    
-    if (type.includes('-trend')) {
-      // For trend charts, we don't use current year data but historical
-      return null;
-    }
-    
+    if (!structured) return null;
+
     return {
-      budget: currentBudget,
-      contracts: currentContracts,
-      salaries: currentSalaries,
-      documents: currentDocuments,
-      treasury: currentTreasury,
-      debt: currentDebt
+      budget: structured.budget?.[year],
+      contracts: structured.contracts?.[year],
+      salaries: structured.salaries?.[year],
+      documents: documents?.filter(doc => doc.year === year),
+      treasury: structured.financial?.[year],
+      debt: structured.debt?.[year]
     };
-  }, [masterData, currentBudget, currentContracts, currentSalaries, currentDocuments, currentTreasury, currentDebt, type]);
+  }, [structured, documents, year, type]);
 
   // Update COLORS to use theme palette for consistency
   const themedColors = useMemo(() => [
@@ -126,7 +109,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
   // Transform data based on chart type using real data
   const chartData = useMemo(() => {
     // Handle historical trend charts first
-    if (type === 'budget-trend' && budgetHistoricalData.length > 0) {
+    if (type === 'budget-trend' && budgetHistoricalData && budgetHistoricalData.length > 0) {
       return budgetHistoricalData.map((item: Record<string, unknown>) => ({
         year: item.year,
         budget_total: item.budget_total,
@@ -136,7 +119,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       }));
     }
     
-    if (type === 'contract-trend' && contractsHistoricalData.length > 0) {
+    if (type === 'contract-trend' && contractsHistoricalData && contractsHistoricalData.length > 0) {
       return contractsHistoricalData.map((item: Record<string, unknown>) => ({
         year: item.year,
         total_contracts: item.total_contracts,
@@ -145,7 +128,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       }));
     }
     
-    if (type === 'salary-trend' && salariesHistoricalData.length > 0) {
+    if (type === 'salary-trend' && salariesHistoricalData && salariesHistoricalData.length > 0) {
       return salariesHistoricalData.map((item: Record<string, unknown>) => ({
         year: item.year,
         total_employees: item.total_employees,
@@ -155,7 +138,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       }));
     }
     
-    if (type === 'document-trend' && documentsHistoricalData.length > 0) {
+    if (type === 'document-trend' && documentsHistoricalData && documentsHistoricalData.length > 0) {
       return documentsHistoricalData.map((item: Record<string, unknown>) => ({
         year: item.year,
         total_documents: item.total_documents,
@@ -163,7 +146,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       }));
     }
     
-    if (type === 'debt-trend' && debtHistoricalData.length > 0) {
+    if (type === 'debt-trend' && debtHistoricalData && debtHistoricalData.length > 0) {
       return debtHistoricalData.map((item: Record<string, unknown>) => ({
         year: item.year,
         total_debt: item.total_debt,
@@ -171,7 +154,7 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       }));
     }
     
-    if (type === 'treasury-trend' && treasuryHistoricalData.length > 0) {
+    if (type === 'treasury-trend' && treasuryHistoricalData && treasuryHistoricalData.length > 0) {
       return treasuryHistoricalData.map((item: Record<string, unknown>) => ({
         year: item.year,
         total_revenue: item.total_revenue,

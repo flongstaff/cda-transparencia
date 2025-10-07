@@ -76,6 +76,8 @@
 - **Argentina API**: [https://github.com/Franqsanz/argentina-api](https://github.com/Franqsanz/argentina-api)
 - **Catálogo de APIs públicas**: [https://apidocs.ar/lista.html](https://apidocs.ar/lista.html)
 - **Repositorio de APIs públicas**: [http://github.com/enzonotario/apidocs.ar](http://github.com/enzonotario/apidocs.ar)
+- **Repositorio de CUIT DB**: [https://github.com/jboirazian/CUIT_DATABASE_SCRAPING]
+- **Backup datasets Argentina**: [https://datos.nulo.lol/]
 
 ## Development Tools
 
@@ -107,6 +109,7 @@
 
 ## Transparency and Audit Tools
 
+- **RAFAM - Buenos Aires Economic Data**: [https://www.rafam.ec.gba.gov.ar/](https://www.rafam.ec.gba.gov.ar/) - **CRUCIAL FOR AUDITING**
 - **Portal de Transparencia Fiscal PBA**: [https://www.gba.gob.ar/transparencia_fiscal/](https://www.gba.gob.ar/transparencia_fiscal/)
 - **Mapa de inversiones**: [https://www.argentina.gob.ar/jefatura/innovacion-publica/mapa-inversiones](https://www.argentina.gob.ar/jefatura/innovacion-publica/mapa-inversiones)
 - **Directorio Legislativo**: [https://directoriolegislativo.org/](https://directoriolegislativo.org/)

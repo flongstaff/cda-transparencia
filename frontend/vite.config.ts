@@ -108,7 +108,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     optimizeDeps: {
-      exclude: ['lucide-react'],
+      include: ['lucide-react'],
     },
     server: {
       port: 5173,

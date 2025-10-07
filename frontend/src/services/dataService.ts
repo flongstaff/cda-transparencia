@@ -3,7 +3,7 @@
  * Handles data fetching with comprehensive error handling and caching
  */
 
-import externalAPIsService from './ExternalAPIsService';
+import externalAPIsService from "./ExternalDataAdapter";
 import { githubDataService } from './GitHubDataService';
 import EnhancedDataService from './EnhancedDataService';
 
@@ -659,9 +659,15 @@ class ProductionDataService {
    */
   private extractCategories(documents: any[]): string[] {
     const categories = new Set<string>();
-    documents.forEach(doc => {
-      if (doc.category) categories.add(doc.category);
-    });
+    if (documents && Array.isArray(documents)) {
+      documents.forEach(doc => {
+        if (doc && doc.category) {
+          categories.add(doc.category);
+        }
+      });
+    } else {
+      console.warn('Documents is not an array:', documents);
+    }
     return Array.from(categories);
   }
   

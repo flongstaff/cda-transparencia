@@ -1,0 +1,3024 @@
+{
+    "@context": "http://www.w3.org/ns/dcat.jsonld",
+    "version": "1.1",
+    "title": "Datos abiertos Carmen de Areco",
+    "description": "Catálogo exhaustivo de datos públicos del Municipio de Carmen de Areco, con referencias locales a PDFs únicos.",
+    "publisher": {
+        "name": "Municipalidad de Carmen de Areco",
+        "mbox": "municipio@carmendeareco.gob.ar"
+    },
+    "license": "CC-BY-4.0",
+    "superThemeTaxonomy": "http://datos.gob.ar/superThemeTaxonomy.json",
+    "themeTaxonomy": [
+        {
+            "label": "Economía y finanzas",
+            "id": "economia-y-finanzas",
+            "description": "Economía y finanzas"
+        },
+        {
+            "label": "Gobierno y sector público",
+            "id": "gobierno-y-sector-publico",
+            "description": "Gobierno y sector público"
+        }
+    ],
+    "dataset": [
+        {
+            "title": "Boletín Oficial",
+            "description": "Documentos relacionados con boletín oficial.",
+            "modified": "2025-10-04T00:00:00",
+            "issued": "2025-10-04T00:00:00",
+            "landingPage": "https://carmendeareco.gob.ar/transparencia/",
+            "license": "CC-BY-4.0",
+            "publisher": {
+                "name": "Secretaría de Hacienda"
+            },
+            "distribution": [
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_1_2019-Situacion-Economico-Financiero-Carmen-de-Areco",
+                    "description": "Documento boletin_oficial_pdf_1_2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf.",
+                    "fileName": "boletin_oficial_pdf_1_2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_1_2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_1_2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+                    "identifier": "dist-boletín_oficial-1"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_10_Situacion-Economica-Financiera-al-30-06-23",
+                    "description": "Documento boletin_oficial_pdf_10_Situacion-Economica-Financiera-al-30-06-23.pdf.",
+                    "fileName": "boletin_oficial_pdf_10_Situacion-Economica-Financiera-al-30-06-23.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_10_Situacion-Economica-Financiera-al-30-06-23.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_10_Situacion-Economica-Financiera-al-30-06-23.pdf",
+                    "identifier": "dist-boletín_oficial-2"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_11_SITUACION-ECONOMICO-FINANCIERA-DEL-02-01-2023-AL-31-12-2023",
+                    "description": "Documento boletin_oficial_pdf_11_SITUACION-ECONOMICO-FINANCIERA-DEL-02-01-2023-AL-31-12-2023.pdf.",
+                    "fileName": "boletin_oficial_pdf_11_SITUACION-ECONOMICO-FINANCIERA-DEL-02-01-2023-AL-31-12-2023.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_11_SITUACION-ECONOMICO-FINANCIERA-DEL-02-01-2023-AL-31-12-2023.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_11_SITUACION-ECONOMICO-FINANCIERA-DEL-02-01-2023-AL-31-12-2023.pdf",
+                    "identifier": "dist-boletín_oficial-3"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_12_Situacion-Economico-Financiera-al-30-06-24-1",
+                    "description": "Documento boletin_oficial_pdf_12_Situacion-Economico-Financiera-al-30-06-24-1.pdf.",
+                    "fileName": "boletin_oficial_pdf_12_Situacion-Economico-Financiera-al-30-06-24-1.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_12_Situacion-Economico-Financiera-al-30-06-24-1.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_12_Situacion-Economico-Financiera-al-30-06-24-1.pdf",
+                    "identifier": "dist-boletín_oficial-4"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_13_Ordenanza-Fiscal-3057-2021",
+                    "description": "Documento boletin_oficial_pdf_13_Ordenanza-Fiscal-3057-2021.pdf.",
+                    "fileName": "boletin_oficial_pdf_13_Ordenanza-Fiscal-3057-2021.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_13_Ordenanza-Fiscal-3057-2021.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_13_Ordenanza-Fiscal-3057-2021.pdf",
+                    "identifier": "dist-boletín_oficial-5"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_14_Ordenanza-Impositiva-3059-2021",
+                    "description": "Documento boletin_oficial_pdf_14_Ordenanza-Impositiva-3059-2021.pdf.",
+                    "fileName": "boletin_oficial_pdf_14_Ordenanza-Impositiva-3059-2021.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_14_Ordenanza-Impositiva-3059-2021.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_14_Ordenanza-Impositiva-3059-2021.pdf",
+                    "identifier": "dist-boletín_oficial-6"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_15_Ordenanza-Fiscal-3112-2022",
+                    "description": "Documento boletin_oficial_pdf_15_Ordenanza-Fiscal-3112-2022.pdf.",
+                    "fileName": "boletin_oficial_pdf_15_Ordenanza-Fiscal-3112-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_15_Ordenanza-Fiscal-3112-2022.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_15_Ordenanza-Fiscal-3112-2022.pdf",
+                    "identifier": "dist-boletín_oficial-7"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_16_Ordenanza-Impositiva-3135-2022",
+                    "description": "Documento boletin_oficial_pdf_16_Ordenanza-Impositiva-3135-2022.pdf.",
+                    "fileName": "boletin_oficial_pdf_16_Ordenanza-Impositiva-3135-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_16_Ordenanza-Impositiva-3135-2022.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_16_Ordenanza-Impositiva-3135-2022.pdf",
+                    "identifier": "dist-boletín_oficial-8"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_17_Anexo-II-Ordenanza-Impositiva-3135-2022",
+                    "description": "Documento boletin_oficial_pdf_17_Anexo-II-Ordenanza-Impositiva-3135-2022.pdf.",
+                    "fileName": "boletin_oficial_pdf_17_Anexo-II-Ordenanza-Impositiva-3135-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_17_Anexo-II-Ordenanza-Impositiva-3135-2022.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_17_Anexo-II-Ordenanza-Impositiva-3135-2022.pdf",
+                    "identifier": "dist-boletín_oficial-9"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_18_ORGANIGRAMA-2025",
+                    "description": "Documento boletin_oficial_pdf_18_ORGANIGRAMA-2025.pdf.",
+                    "fileName": "boletin_oficial_pdf_18_ORGANIGRAMA-2025.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_18_ORGANIGRAMA-2025.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_18_ORGANIGRAMA-2025.pdf",
+                    "identifier": "dist-boletín_oficial-10"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_2_situacion-economica032",
+                    "description": "Documento boletin_oficial_pdf_2_situacion-economica032.pdf.",
+                    "fileName": "boletin_oficial_pdf_2_situacion-economica032.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_2_situacion-economica032.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_2_situacion-economica032.pdf",
+                    "identifier": "dist-boletín_oficial-11"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_3_SITUACIÓN-ECONÓMICO-FINANCIERA",
+                    "description": "Documento boletin_oficial_pdf_3_SITUACIÓN-ECONÓMICO-FINANCIERA.pdf.",
+                    "fileName": "boletin_oficial_pdf_3_SITUACIÓN-ECONÓMICO-FINANCIERA.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_3_SITUACIÓN-ECONÓMICO-FINANCIERA.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_3_SITUACIÓN-ECONÓMICO-FINANCIERA.pdf",
+                    "identifier": "dist-boletín_oficial-12"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_4_Situacion-financiera",
+                    "description": "Documento boletin_oficial_pdf_4_Situacion-financiera.pdf.",
+                    "fileName": "boletin_oficial_pdf_4_Situacion-financiera.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_4_Situacion-financiera.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_4_Situacion-financiera.pdf",
+                    "identifier": "dist-boletín_oficial-13"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_5_SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021..",
+                    "description": "Documento boletin_oficial_pdf_5_SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021...pdf.",
+                    "fileName": "boletin_oficial_pdf_5_SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021...pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_5_SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021...pdf",
+                    "downloadURL": "./boletin_oficial_pdf_5_SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021...pdf",
+                    "identifier": "dist-boletín_oficial-14"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_6_SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022",
+                    "description": "Documento boletin_oficial_pdf_6_SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022.pdf.",
+                    "fileName": "boletin_oficial_pdf_6_SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_6_SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_6_SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022.pdf",
+                    "identifier": "dist-boletín_oficial-15"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_7_SIT-ECONOMICO-FINANCIERA-TERCER-TRIMESTRE",
+                    "description": "Documento boletin_oficial_pdf_7_SIT-ECONOMICO-FINANCIERA-TERCER-TRIMESTRE.pdf.",
+                    "fileName": "boletin_oficial_pdf_7_SIT-ECONOMICO-FINANCIERA-TERCER-TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_7_SIT-ECONOMICO-FINANCIERA-TERCER-TRIMESTRE.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_7_SIT-ECONOMICO-FINANCIERA-TERCER-TRIMESTRE.pdf",
+                    "identifier": "dist-boletín_oficial-16"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_8_Situacion-Economica-Financiera-al-31-12-22",
+                    "description": "Documento boletin_oficial_pdf_8_Situacion-Economica-Financiera-al-31-12-22.pdf.",
+                    "fileName": "boletin_oficial_pdf_8_Situacion-Economica-Financiera-al-31-12-22.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_8_Situacion-Economica-Financiera-al-31-12-22.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_8_Situacion-Economica-Financiera-al-31-12-22.pdf",
+                    "identifier": "dist-boletín_oficial-17"
+                },
+                {
+                    "format": "PDF",
+                    "title": "boletin_oficial_pdf_9_Situacion-Economica-Financiera-al-31-12-22",
+                    "description": "Documento boletin_oficial_pdf_9_Situacion-Economica-Financiera-al-31-12-22.pdf.",
+                    "fileName": "boletin_oficial_pdf_9_Situacion-Economica-Financiera-al-31-12-22.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./boletin_oficial_pdf_9_Situacion-Economica-Financiera-al-31-12-22.pdf",
+                    "downloadURL": "./boletin_oficial_pdf_9_Situacion-Economica-Financiera-al-31-12-22.pdf",
+                    "identifier": "dist-boletín_oficial-18"
+                }
+            ],
+            "keyword": [
+                [
+                    "boletín",
+                    "oficial"
+                ]
+            ],
+            "superTheme": [
+                "GOB"
+            ],
+            "theme": [
+                "gobierno-y-sector-publico"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "identifier": "ds-boletín_oficial",
+            "spatial": [
+                "ARG",
+                "06",
+                "060161"
+            ]
+        },
+        {
+            "title": "Ejecución Presupuestaria",
+            "description": "Documentos relacionados con ejecución presupuestaria.",
+            "modified": "2025-10-04T00:00:00",
+            "issued": "2025-10-04T00:00:00",
+            "landingPage": "https://carmendeareco.gob.ar/transparencia/",
+            "license": "CC-BY-4.0",
+            "publisher": {
+                "name": "Secretaría de Hacienda"
+            },
+            "distribution": [
+                {
+                    "format": "PDF",
+                    "title": "pdf_1_Estado-de-Ejecucion-de-Recursos-Marzo",
+                    "description": "Documento pdf_1_Estado-de-Ejecucion-de-Recursos-Marzo.pdf.",
+                    "fileName": "pdf_1_Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_1_Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+                    "downloadURL": "./pdf_1_Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-1"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_107_ESTADO-DE-EJECUCION-DE-RECURSOS-2",
+                    "description": "Documento pdf_107_ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf.",
+                    "fileName": "pdf_107_ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_107_ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+                    "downloadURL": "./pdf_107_ESTADO-DE-EJECUCION-DE-RECURSOS-2.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-2"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_108_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2",
+                    "description": "Documento pdf_108_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf.",
+                    "fileName": "pdf_108_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_108_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+                    "downloadURL": "./pdf_108_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-3"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_109_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2",
+                    "description": "Documento pdf_109_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf.",
+                    "fileName": "pdf_109_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_109_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+                    "downloadURL": "./pdf_109_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-4"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_110_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2",
+                    "description": "Documento pdf_110_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf.",
+                    "fileName": "pdf_110_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_110_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+                    "downloadURL": "./pdf_110_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-5"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_111_ESTADO-DE-EJECUCION-DE-GASTOS-2",
+                    "description": "Documento pdf_111_ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf.",
+                    "fileName": "pdf_111_ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_111_ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf",
+                    "downloadURL": "./pdf_111_ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-6"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_112_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2",
+                    "description": "Documento pdf_112_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf.",
+                    "fileName": "pdf_112_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_112_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+                    "downloadURL": "./pdf_112_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-7"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_113_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2",
+                    "description": "Documento pdf_113_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf.",
+                    "fileName": "pdf_113_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_113_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+                    "downloadURL": "./pdf_113_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-8"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_114_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2",
+                    "description": "Documento pdf_114_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf.",
+                    "fileName": "pdf_114_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_114_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+                    "downloadURL": "./pdf_114_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-9"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_115_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2",
+                    "description": "Documento pdf_115_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf.",
+                    "fileName": "pdf_115_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_115_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+                    "downloadURL": "./pdf_115_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-2.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-10"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_118_ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022",
+                    "description": "Documento pdf_118_ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf.",
+                    "fileName": "pdf_118_ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_118_ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+                    "downloadURL": "./pdf_118_ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-11"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_119_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022",
+                    "description": "Documento pdf_119_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf.",
+                    "fileName": "pdf_119_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_119_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+                    "downloadURL": "./pdf_119_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-12"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_12_Estado-de-Ejecucion-de-Recursos-Junio",
+                    "description": "Documento pdf_12_Estado-de-Ejecucion-de-Recursos-Junio.pdf.",
+                    "fileName": "pdf_12_Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_12_Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+                    "downloadURL": "./pdf_12_Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-13"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_120_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022",
+                    "description": "Documento pdf_120_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf.",
+                    "fileName": "pdf_120_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_120_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+                    "downloadURL": "./pdf_120_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-14"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_121_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022",
+                    "description": "Documento pdf_121_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf.",
+                    "fileName": "pdf_121_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_121_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+                    "downloadURL": "./pdf_121_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-4°TRE-2022.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-15"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_122_ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022",
+                    "description": "Documento pdf_122_ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022.pdf.",
+                    "fileName": "pdf_122_ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_122_ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022.pdf",
+                    "downloadURL": "./pdf_122_ESTADO-DE-EJECUCION-DE-GASTOS-4°TRE-2022.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-16"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_123_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022",
+                    "description": "Documento pdf_123_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf.",
+                    "fileName": "pdf_123_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_123_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+                    "downloadURL": "./pdf_123_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-17"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_124_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022",
+                    "description": "Documento pdf_124_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf.",
+                    "fileName": "pdf_124_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_124_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+                    "downloadURL": "./pdf_124_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-4°TRE-2022.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-18"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_125_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022",
+                    "description": "Documento pdf_125_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf.",
+                    "fileName": "pdf_125_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_125_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+                    "downloadURL": "./pdf_125_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-19"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_128_ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022",
+                    "description": "Documento pdf_128_ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf.",
+                    "fileName": "pdf_128_ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_128_ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+                    "downloadURL": "./pdf_128_ESTADOS-DE-EJECUCION-DE-RECURSOS-3°TRI-2022.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-20"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_129_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022",
+                    "description": "Documento pdf_129_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf.",
+                    "fileName": "pdf_129_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_129_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+                    "downloadURL": "./pdf_129_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRI-2022.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-21"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_13_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio",
+                    "description": "Documento pdf_13_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf.",
+                    "fileName": "pdf_13_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_13_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+                    "downloadURL": "./pdf_13_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-22"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_130_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022",
+                    "description": "Documento pdf_130_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf.",
+                    "fileName": "pdf_130_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_130_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+                    "downloadURL": "./pdf_130_ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-23"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_131_ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS",
+                    "description": "Documento pdf_131_ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf.",
+                    "fileName": "pdf_131_ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_131_ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+                    "downloadURL": "./pdf_131_ESTADOS-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-24"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_132_ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022",
+                    "description": "Documento pdf_132_ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022.pdf.",
+                    "fileName": "pdf_132_ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_132_ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022.pdf",
+                    "downloadURL": "./pdf_132_ESTADO-DE-EJECUCION-DE-GASTOS-3°TRI-2022.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-25"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_133_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia",
+                    "description": "Documento pdf_133_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf.",
+                    "fileName": "pdf_133_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_133_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf",
+                    "downloadURL": "./pdf_133_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-copia.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-26"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_134_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia",
+                    "description": "Documento pdf_134_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf.",
+                    "fileName": "pdf_134_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_134_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf",
+                    "downloadURL": "./pdf_134_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-copia.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-27"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_135_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia",
+                    "description": "Documento pdf_135_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf.",
+                    "fileName": "pdf_135_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_135_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+                    "downloadURL": "./pdf_135_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-copia.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-28"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_138_ESTADO-DE-EJECUCION-DE-RECURSOS-1",
+                    "description": "Documento pdf_138_ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf.",
+                    "fileName": "pdf_138_ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_138_ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+                    "downloadURL": "./pdf_138_ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-29"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_139_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1",
+                    "description": "Documento pdf_139_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf.",
+                    "fileName": "pdf_139_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_139_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+                    "downloadURL": "./pdf_139_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-30"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_14_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio",
+                    "description": "Documento pdf_14_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf.",
+                    "fileName": "pdf_14_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_14_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+                    "downloadURL": "./pdf_14_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-31"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_140_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1",
+                    "description": "Documento pdf_140_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf.",
+                    "fileName": "pdf_140_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_140_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+                    "downloadURL": "./pdf_140_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-1.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-32"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_141_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1",
+                    "description": "Documento pdf_141_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf.",
+                    "fileName": "pdf_141_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_141_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+                    "downloadURL": "./pdf_141_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-1.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-33"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_142_ESTADO-DE-EJECUCION-DE-GASTOS-1",
+                    "description": "Documento pdf_142_ESTADO-DE-EJECUCION-DE-GASTOS-1.pdf.",
+                    "fileName": "pdf_142_ESTADO-DE-EJECUCION-DE-GASTOS-1.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_142_ESTADO-DE-EJECUCION-DE-GASTOS-1.pdf",
+                    "downloadURL": "./pdf_142_ESTADO-DE-EJECUCION-DE-GASTOS-1.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-34"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_143_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1",
+                    "description": "Documento pdf_143_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf.",
+                    "fileName": "pdf_143_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_143_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+                    "downloadURL": "./pdf_143_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-1.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-35"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_144_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1",
+                    "description": "Documento pdf_144_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf.",
+                    "fileName": "pdf_144_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_144_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+                    "downloadURL": "./pdf_144_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-1.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-36"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_145_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1",
+                    "description": "Documento pdf_145_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf.",
+                    "fileName": "pdf_145_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_145_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+                    "downloadURL": "./pdf_145_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-37"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_148_ESTADO-DE-EJECUCION-DE-RECURSOS",
+                    "description": "Documento pdf_148_ESTADO-DE-EJECUCION-DE-RECURSOS.pdf.",
+                    "fileName": "pdf_148_ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_148_ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+                    "downloadURL": "./pdf_148_ESTADO-DE-EJECUCION-DE-RECURSOS.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-38"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_15_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio",
+                    "description": "Documento pdf_15_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf.",
+                    "fileName": "pdf_15_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_15_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+                    "downloadURL": "./pdf_15_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-39"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_150_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA",
+                    "description": "Documento pdf_150_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf.",
+                    "fileName": "pdf_150_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_150_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+                    "downloadURL": "./pdf_150_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-40"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_151_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO",
+                    "description": "Documento pdf_151_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf.",
+                    "fileName": "pdf_151_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_151_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+                    "downloadURL": "./pdf_151_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-41"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_152_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS",
+                    "description": "Documento pdf_152_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf.",
+                    "fileName": "pdf_152_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_152_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+                    "downloadURL": "./pdf_152_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-42"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_153_ESTADO-DE-EJECUCION-DE-GASTOS",
+                    "description": "Documento pdf_153_ESTADO-DE-EJECUCION-DE-GASTOS.pdf.",
+                    "fileName": "pdf_153_ESTADO-DE-EJECUCION-DE-GASTOS.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_153_ESTADO-DE-EJECUCION-DE-GASTOS.pdf",
+                    "downloadURL": "./pdf_153_ESTADO-DE-EJECUCION-DE-GASTOS.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-43"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_154_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO",
+                    "description": "Documento pdf_154_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf.",
+                    "fileName": "pdf_154_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_154_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+                    "downloadURL": "./pdf_154_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-44"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_155_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO",
+                    "description": "Documento pdf_155_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf.",
+                    "fileName": "pdf_155_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_155_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+                    "downloadURL": "./pdf_155_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-45"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_156_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION",
+                    "description": "Documento pdf_156_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf.",
+                    "fileName": "pdf_156_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_156_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+                    "downloadURL": "./pdf_156_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-46"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_16_Estado-de-Ejecucion-de-Gastos-Junio",
+                    "description": "Documento pdf_16_Estado-de-Ejecucion-de-Gastos-Junio.pdf.",
+                    "fileName": "pdf_16_Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_16_Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+                    "downloadURL": "./pdf_16_Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-47"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_17_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio",
+                    "description": "Documento pdf_17_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf.",
+                    "fileName": "pdf_17_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_17_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+                    "downloadURL": "./pdf_17_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-48"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_18_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio",
+                    "description": "Documento pdf_18_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf.",
+                    "fileName": "pdf_18_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_18_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+                    "downloadURL": "./pdf_18_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-49"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_19_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio",
+                    "description": "Documento pdf_19_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf.",
+                    "fileName": "pdf_19_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_19_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+                    "downloadURL": "./pdf_19_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-50"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_2_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo",
+                    "description": "Documento pdf_2_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf.",
+                    "fileName": "pdf_2_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_2_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+                    "downloadURL": "./pdf_2_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-51"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_20_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio",
+                    "description": "Documento pdf_20_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf.",
+                    "fileName": "pdf_20_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_20_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+                    "downloadURL": "./pdf_20_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-52"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_23_Estado-de-Ejecucion-de-Recursos-4toTrimestres",
+                    "description": "Documento pdf_23_Estado-de-Ejecucion-de-Recursos-4toTrimestres.pdf.",
+                    "fileName": "pdf_23_Estado-de-Ejecucion-de-Recursos-4toTrimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_23_Estado-de-Ejecucion-de-Recursos-4toTrimestres.pdf",
+                    "downloadURL": "./pdf_23_Estado-de-Ejecucion-de-Recursos-4toTrimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-53"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_25_Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres",
+                    "description": "Documento pdf_25_Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf.",
+                    "fileName": "pdf_25_Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_25_Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf",
+                    "downloadURL": "./pdf_25_Estado-de-Ejecucion-de-Recursos-por-Procedencia-4toTrimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-54"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_26_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre",
+                    "description": "Documento pdf_26_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf.",
+                    "fileName": "pdf_26_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_26_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf",
+                    "downloadURL": "./pdf_26_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-4to-Trimestre.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-55"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_27_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres",
+                    "description": "Documento pdf_27_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf.",
+                    "fileName": "pdf_27_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_27_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+                    "downloadURL": "./pdf_27_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-4toTrimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-56"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_28_Estado-de-Ejecucion-de-Gastos-4to-Trimestres",
+                    "description": "Documento pdf_28_Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf.",
+                    "fileName": "pdf_28_Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_28_Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf",
+                    "downloadURL": "./pdf_28_Estado-de-Ejecucion-de-Gastos-4to-Trimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-57"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_29_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres",
+                    "description": "Documento pdf_29_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf.",
+                    "fileName": "pdf_29_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_29_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+                    "downloadURL": "./pdf_29_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-4toTrimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-58"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_3_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo",
+                    "description": "Documento pdf_3_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf.",
+                    "fileName": "pdf_3_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_3_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+                    "downloadURL": "./pdf_3_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-59"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_30_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre",
+                    "description": "Documento pdf_30_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf.",
+                    "fileName": "pdf_30_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_30_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf",
+                    "downloadURL": "./pdf_30_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-60"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_31_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres",
+                    "description": "Documento pdf_31_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf.",
+                    "fileName": "pdf_31_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_31_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf",
+                    "downloadURL": "./pdf_31_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-4toTrimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-61"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_32_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre",
+                    "description": "Documento pdf_32_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf.",
+                    "fileName": "pdf_32_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_32_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf",
+                    "downloadURL": "./pdf_32_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-4to-Trimestre.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-62"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_36_Estado-de-Ejecucion-de-Recursos-3er-Trimestres",
+                    "description": "Documento pdf_36_Estado-de-Ejecucion-de-Recursos-3er-Trimestres.pdf.",
+                    "fileName": "pdf_36_Estado-de-Ejecucion-de-Recursos-3er-Trimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_36_Estado-de-Ejecucion-de-Recursos-3er-Trimestres.pdf",
+                    "downloadURL": "./pdf_36_Estado-de-Ejecucion-de-Recursos-3er-Trimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-63"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_38_Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres",
+                    "description": "Documento pdf_38_Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf.",
+                    "fileName": "pdf_38_Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_38_Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf",
+                    "downloadURL": "./pdf_38_Estado-de-Ejecucion-de-Recursos-por-Procedencia-3er-Trimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-64"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_39_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre",
+                    "description": "Documento pdf_39_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf.",
+                    "fileName": "pdf_39_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_39_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf",
+                    "downloadURL": "./pdf_39_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-3er-Trimestre.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-65"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_4_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo",
+                    "description": "Documento pdf_4_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf.",
+                    "fileName": "pdf_4_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_4_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+                    "downloadURL": "./pdf_4_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-66"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_40_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres",
+                    "description": "Documento pdf_40_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf.",
+                    "fileName": "pdf_40_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_40_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf",
+                    "downloadURL": "./pdf_40_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-3er-Trimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-67"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_41_Estado-de-Ejecucion-de-Gastos-3er-Trimestres",
+                    "description": "Documento pdf_41_Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf.",
+                    "fileName": "pdf_41_Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_41_Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf",
+                    "downloadURL": "./pdf_41_Estado-de-Ejecucion-de-Gastos-3er-Trimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-68"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_42_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres",
+                    "description": "Documento pdf_42_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf.",
+                    "fileName": "pdf_42_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_42_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+                    "downloadURL": "./pdf_42_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-3er-Trimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-69"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_43_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres",
+                    "description": "Documento pdf_43_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf.",
+                    "fileName": "pdf_43_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_43_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf",
+                    "downloadURL": "./pdf_43_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-3er-Trimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-70"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_44_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres",
+                    "description": "Documento pdf_44_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf.",
+                    "fileName": "pdf_44_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_44_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf",
+                    "downloadURL": "./pdf_44_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-3er-Trimestres.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-71"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_45_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre",
+                    "description": "Documento pdf_45_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf.",
+                    "fileName": "pdf_45_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_45_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf",
+                    "downloadURL": "./pdf_45_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-72"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_49_Estado-de-Ejecucion-de-Recursos-Junio",
+                    "description": "Documento pdf_49_Estado-de-Ejecucion-de-Recursos-Junio.pdf.",
+                    "fileName": "pdf_49_Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_49_Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+                    "downloadURL": "./pdf_49_Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-73"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_5_Estado-de-Ejecucion-de-Gastos-Marzo",
+                    "description": "Documento pdf_5_Estado-de-Ejecucion-de-Gastos-Marzo.pdf.",
+                    "fileName": "pdf_5_Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_5_Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+                    "downloadURL": "./pdf_5_Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-74"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_51_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio",
+                    "description": "Documento pdf_51_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf.",
+                    "fileName": "pdf_51_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_51_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+                    "downloadURL": "./pdf_51_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-75"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_52_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio",
+                    "description": "Documento pdf_52_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf.",
+                    "fileName": "pdf_52_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_52_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+                    "downloadURL": "./pdf_52_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-76"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_53_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio",
+                    "description": "Documento pdf_53_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf.",
+                    "fileName": "pdf_53_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_53_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+                    "downloadURL": "./pdf_53_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-77"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_54_Estado-de-Ejecucion-de-Gastos-Junio",
+                    "description": "Documento pdf_54_Estado-de-Ejecucion-de-Gastos-Junio.pdf.",
+                    "fileName": "pdf_54_Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_54_Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+                    "downloadURL": "./pdf_54_Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-78"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_55_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio",
+                    "description": "Documento pdf_55_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf.",
+                    "fileName": "pdf_55_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_55_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+                    "downloadURL": "./pdf_55_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-79"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_56_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio",
+                    "description": "Documento pdf_56_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf.",
+                    "fileName": "pdf_56_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_56_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+                    "downloadURL": "./pdf_56_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-80"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_57_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio",
+                    "description": "Documento pdf_57_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf.",
+                    "fileName": "pdf_57_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_57_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+                    "downloadURL": "./pdf_57_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-81"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_58_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio",
+                    "description": "Documento pdf_58_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf.",
+                    "fileName": "pdf_58_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_58_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+                    "downloadURL": "./pdf_58_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Junio.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-82"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_6_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo",
+                    "description": "Documento pdf_6_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf.",
+                    "fileName": "pdf_6_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_6_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+                    "downloadURL": "./pdf_6_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-83"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_61_Estado-de-Ejecucion-de-Recursos-Marzo",
+                    "description": "Documento pdf_61_Estado-de-Ejecucion-de-Recursos-Marzo.pdf.",
+                    "fileName": "pdf_61_Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_61_Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+                    "downloadURL": "./pdf_61_Estado-de-Ejecucion-de-Recursos-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-84"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_62_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo",
+                    "description": "Documento pdf_62_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf.",
+                    "fileName": "pdf_62_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_62_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+                    "downloadURL": "./pdf_62_Estado-de-Ejecucion-de-Recursos-por-Procedencia-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-85"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_63_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo",
+                    "description": "Documento pdf_63_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf.",
+                    "fileName": "pdf_63_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_63_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+                    "downloadURL": "./pdf_63_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-86"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_64_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo",
+                    "description": "Documento pdf_64_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf.",
+                    "fileName": "pdf_64_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_64_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+                    "downloadURL": "./pdf_64_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-87"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_65_Estado-de-Ejecucion-de-Gastos-Marzo",
+                    "description": "Documento pdf_65_Estado-de-Ejecucion-de-Gastos-Marzo.pdf.",
+                    "fileName": "pdf_65_Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_65_Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+                    "downloadURL": "./pdf_65_Estado-de-Ejecucion-de-Gastos-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-88"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_66_Estado-de-Ejecucion-de-Gastos-por-Fuente-DE-Financiamiento-Marzo",
+                    "description": "Documento pdf_66_Estado-de-Ejecucion-de-Gastos-por-Fuente-DE-Financiamiento-Marzo.pdf.",
+                    "fileName": "pdf_66_Estado-de-Ejecucion-de-Gastos-por-Fuente-DE-Financiamiento-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_66_Estado-de-Ejecucion-de-Gastos-por-Fuente-DE-Financiamiento-Marzo.pdf",
+                    "downloadURL": "./pdf_66_Estado-de-Ejecucion-de-Gastos-por-Fuente-DE-Financiamiento-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-89"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_67_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo",
+                    "description": "Documento pdf_67_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf.",
+                    "fileName": "pdf_67_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_67_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+                    "downloadURL": "./pdf_67_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-90"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_68_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo",
+                    "description": "Documento pdf_68_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf.",
+                    "fileName": "pdf_68_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_68_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+                    "downloadURL": "./pdf_68_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-91"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_69_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo",
+                    "description": "Documento pdf_69_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf.",
+                    "fileName": "pdf_69_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_69_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+                    "downloadURL": "./pdf_69_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-92"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_7_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo",
+                    "description": "Documento pdf_7_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf.",
+                    "fileName": "pdf_7_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_7_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+                    "downloadURL": "./pdf_7_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-93"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_72_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI",
+                    "description": "Documento pdf_72_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf.",
+                    "fileName": "pdf_72_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_72_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+                    "downloadURL": "./pdf_72_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-94"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_73_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI",
+                    "description": "Documento pdf_73_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf.",
+                    "fileName": "pdf_73_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_73_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+                    "downloadURL": "./pdf_73_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-95"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_74_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI",
+                    "description": "Documento pdf_74_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf.",
+                    "fileName": "pdf_74_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_74_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+                    "downloadURL": "./pdf_74_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-96"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_75_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI",
+                    "description": "Documento pdf_75_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf.",
+                    "fileName": "pdf_75_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_75_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+                    "downloadURL": "./pdf_75_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-2023-4°TRI.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-97"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_76_ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI",
+                    "description": "Documento pdf_76_ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf.",
+                    "fileName": "pdf_76_ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_76_ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf",
+                    "downloadURL": "./pdf_76_ESTADO-DE-EJECUCION-DE-GASTOS-2023-4°TRI.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-98"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_77_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI",
+                    "description": "Documento pdf_77_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf.",
+                    "fileName": "pdf_77_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_77_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+                    "downloadURL": "./pdf_77_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-99"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_78_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI",
+                    "description": "Documento pdf_78_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf.",
+                    "fileName": "pdf_78_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_78_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+                    "downloadURL": "./pdf_78_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-100"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_79_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI",
+                    "description": "Documento pdf_79_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf.",
+                    "fileName": "pdf_79_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_79_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+                    "downloadURL": "./pdf_79_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-101"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_8_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo",
+                    "description": "Documento pdf_8_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf.",
+                    "fileName": "pdf_8_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_8_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+                    "downloadURL": "./pdf_8_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-102"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_80_ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023",
+                    "description": "Documento pdf_80_ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf.",
+                    "fileName": "pdf_80_ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_80_ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+                    "downloadURL": "./pdf_80_ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-103"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_83_ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE",
+                    "description": "Documento pdf_83_ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf.",
+                    "fileName": "pdf_83_ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_83_ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+                    "downloadURL": "./pdf_83_ESTADO-DE-EJECUCION-DE-RECURSOS-3°TRIMESTRE.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-104"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_84_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE",
+                    "description": "Documento pdf_84_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf.",
+                    "fileName": "pdf_84_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_84_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+                    "downloadURL": "./pdf_84_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-105"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_85_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE",
+                    "description": "Documento pdf_85_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf.",
+                    "fileName": "pdf_85_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_85_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+                    "downloadURL": "./pdf_85_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-106"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_86_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE",
+                    "description": "Documento pdf_86_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf.",
+                    "fileName": "pdf_86_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_86_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+                    "downloadURL": "./pdf_86_ESTADO-DE-EJECUCION-DE-RECURSOS-AFECTADOS-VS-GASTOS-3°TRIMESTRE.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-107"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_87_ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE",
+                    "description": "Documento pdf_87_ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE.pdf.",
+                    "fileName": "pdf_87_ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_87_ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE.pdf",
+                    "downloadURL": "./pdf_87_ESTADO-DE-EJECUCION-DE-GASTOS-3°TRIMESTRE.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-108"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_88_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE",
+                    "description": "Documento pdf_88_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf.",
+                    "fileName": "pdf_88_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_88_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+                    "downloadURL": "./pdf_88_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-3°TRIMESTRE.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-109"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_89_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE",
+                    "description": "Documento pdf_89_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf.",
+                    "fileName": "pdf_89_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_89_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+                    "downloadURL": "./pdf_89_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-3°TRIMESTRE.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-110"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_9_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo",
+                    "description": "Documento pdf_9_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf.",
+                    "fileName": "pdf_9_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_9_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+                    "downloadURL": "./pdf_9_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-Marzo.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-111"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_90_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE",
+                    "description": "Documento pdf_90_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf.",
+                    "fileName": "pdf_90_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_90_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+                    "downloadURL": "./pdf_90_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-112"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_91_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE",
+                    "description": "Documento pdf_91_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf.",
+                    "fileName": "pdf_91_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_91_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+                    "downloadURL": "./pdf_91_ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-3°TRIMESTRE.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-113"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_94_EJECUCION-PRESUPUESTARIA-DE-RECURSOS",
+                    "description": "Documento pdf_94_EJECUCION-PRESUPUESTARIA-DE-RECURSOS.pdf.",
+                    "fileName": "pdf_94_EJECUCION-PRESUPUESTARIA-DE-RECURSOS.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_94_EJECUCION-PRESUPUESTARIA-DE-RECURSOS.pdf",
+                    "downloadURL": "./pdf_94_EJECUCION-PRESUPUESTARIA-DE-RECURSOS.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-114"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_99_EJECUCION-DE-GASTOS",
+                    "description": "Documento pdf_99_EJECUCION-DE-GASTOS.pdf.",
+                    "fileName": "pdf_99_EJECUCION-DE-GASTOS.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_99_EJECUCION-DE-GASTOS.pdf",
+                    "downloadURL": "./pdf_99_EJECUCION-DE-GASTOS.pdf",
+                    "identifier": "dist-ejecución_presupuestaria-115"
+                }
+            ],
+            "keyword": [
+                [
+                    "ejecución",
+                    "presupuestaria"
+                ]
+            ],
+            "superTheme": [
+                "ECON"
+            ],
+            "theme": [
+                "economia-y-finanzas"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "identifier": "ds-ejecución_presupuestaria",
+            "spatial": [
+                "ARG",
+                "06",
+                "060161"
+            ]
+        },
+        {
+            "title": "Situación Económico-Financiera",
+            "description": "Documentos relacionados con situación económico-financiera.",
+            "modified": "2025-10-04T00:00:00",
+            "issued": "2025-10-04T00:00:00",
+            "landingPage": "https://carmendeareco.gob.ar/transparencia/",
+            "license": "CC-BY-4.0",
+            "publisher": {
+                "name": "Secretaría de Hacienda"
+            },
+            "distribution": [
+                {
+                    "format": "PDF",
+                    "title": "pdf_10_Situacion-Economico-Financiera-Marzo",
+                    "description": "Documento pdf_10_Situacion-Economico-Financiera-Marzo.pdf.",
+                    "fileName": "pdf_10_Situacion-Economico-Financiera-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_10_Situacion-Economico-Financiera-Marzo.pdf",
+                    "downloadURL": "./pdf_10_Situacion-Economico-Financiera-Marzo.pdf",
+                    "identifier": "dist-situación_económico-financiera-1"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_104_SITUACION-ECONOMICO-FINANCIERA",
+                    "description": "Documento pdf_104_SITUACION-ECONOMICO-FINANCIERA.pdf.",
+                    "fileName": "pdf_104_SITUACION-ECONOMICO-FINANCIERA.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_104_SITUACION-ECONOMICO-FINANCIERA.pdf",
+                    "downloadURL": "./pdf_104_SITUACION-ECONOMICO-FINANCIERA.pdf",
+                    "identifier": "dist-situación_económico-financiera-2"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_21_Situacion-Economico-Financiera-Junio",
+                    "description": "Documento pdf_21_Situacion-Economico-Financiera-Junio.pdf.",
+                    "fileName": "pdf_21_Situacion-Economico-Financiera-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_21_Situacion-Economico-Financiera-Junio.pdf",
+                    "downloadURL": "./pdf_21_Situacion-Economico-Financiera-Junio.pdf",
+                    "identifier": "dist-situación_económico-financiera-3"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_33_Situacion-Economico-Financiera-4to-Trimestre",
+                    "description": "Documento pdf_33_Situacion-Economico-Financiera-4to-Trimestre.pdf.",
+                    "fileName": "pdf_33_Situacion-Economico-Financiera-4to-Trimestre.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_33_Situacion-Economico-Financiera-4to-Trimestre.pdf",
+                    "downloadURL": "./pdf_33_Situacion-Economico-Financiera-4to-Trimestre.pdf",
+                    "identifier": "dist-situación_económico-financiera-4"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_46_Situacion-Economico-Financiera-3er-Trimestre",
+                    "description": "Documento pdf_46_Situacion-Economico-Financiera-3er-Trimestre.pdf.",
+                    "fileName": "pdf_46_Situacion-Economico-Financiera-3er-Trimestre.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_46_Situacion-Economico-Financiera-3er-Trimestre.pdf",
+                    "downloadURL": "./pdf_46_Situacion-Economico-Financiera-3er-Trimestre.pdf",
+                    "identifier": "dist-situación_económico-financiera-5"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_59_Situacion-Economico-Financiera-Junio",
+                    "description": "Documento pdf_59_Situacion-Economico-Financiera-Junio.pdf.",
+                    "fileName": "pdf_59_Situacion-Economico-Financiera-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_59_Situacion-Economico-Financiera-Junio.pdf",
+                    "downloadURL": "./pdf_59_Situacion-Economico-Financiera-Junio.pdf",
+                    "identifier": "dist-situación_económico-financiera-6"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_70_Situacion-Economico-Financiera-Marzo",
+                    "description": "Documento pdf_70_Situacion-Economico-Financiera-Marzo.pdf.",
+                    "fileName": "pdf_70_Situacion-Economico-Financiera-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_70_Situacion-Economico-Financiera-Marzo.pdf",
+                    "downloadURL": "./pdf_70_Situacion-Economico-Financiera-Marzo.pdf",
+                    "identifier": "dist-situación_económico-financiera-7"
+                }
+            ],
+            "keyword": [
+                [
+                    "situación",
+                    "económico-financiera"
+                ]
+            ],
+            "superTheme": [
+                "ECON"
+            ],
+            "theme": [
+                "economia-y-finanzas"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "identifier": "ds-situación_económico-financiera",
+            "spatial": [
+                "ARG",
+                "06",
+                "060161"
+            ]
+        },
+        {
+            "title": "Otros Transparencia",
+            "description": "Documentos relacionados con otros transparencia.",
+            "modified": "2025-10-04T00:00:00",
+            "issued": "2025-10-04T00:00:00",
+            "landingPage": "https://carmendeareco.gob.ar/transparencia/",
+            "license": "CC-BY-4.0",
+            "publisher": {
+                "name": "Secretaría de Hacienda"
+            },
+            "distribution": [
+                {
+                    "format": "PDF",
+                    "title": "pdf_100_GASTOS-POR-FUENTE-DE-FINANCIAMIENTO",
+                    "description": "Documento pdf_100_GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf.",
+                    "fileName": "pdf_100_GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_100_GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+                    "downloadURL": "./pdf_100_GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+                    "identifier": "dist-otros_transparencia-1"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_101_GASTOS-POR-CARACTER-ECONOMICO",
+                    "description": "Documento pdf_101_GASTOS-POR-CARACTER-ECONOMICO.pdf.",
+                    "fileName": "pdf_101_GASTOS-POR-CARACTER-ECONOMICO.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_101_GASTOS-POR-CARACTER-ECONOMICO.pdf",
+                    "downloadURL": "./pdf_101_GASTOS-POR-CARACTER-ECONOMICO.pdf",
+                    "identifier": "dist-otros_transparencia-2"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_102_GASTOS-POR-FINALIDAD-Y-FUNCION",
+                    "description": "Documento pdf_102_GASTOS-POR-FINALIDAD-Y-FUNCION.pdf.",
+                    "fileName": "pdf_102_GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_102_GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+                    "downloadURL": "./pdf_102_GASTOS-POR-FINALIDAD-Y-FUNCION.pdf",
+                    "identifier": "dist-otros_transparencia-3"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_103_GASTOS-CON-PERSPECTIVA-DE-GENERO",
+                    "description": "Documento pdf_103_GASTOS-CON-PERSPECTIVA-DE-GENERO.pdf.",
+                    "fileName": "pdf_103_GASTOS-CON-PERSPECTIVA-DE-GENERO.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_103_GASTOS-CON-PERSPECTIVA-DE-GENERO.pdf",
+                    "downloadURL": "./pdf_103_GASTOS-CON-PERSPECTIVA-DE-GENERO.pdf",
+                    "identifier": "dist-otros_transparencia-4"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_116_SITUACION-ECONOMICA-FINANCIERA-2",
+                    "description": "Documento pdf_116_SITUACION-ECONOMICA-FINANCIERA-2.pdf.",
+                    "fileName": "pdf_116_SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_116_SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+                    "downloadURL": "./pdf_116_SITUACION-ECONOMICA-FINANCIERA-2.pdf",
+                    "identifier": "dist-otros_transparencia-5"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_126_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022",
+                    "description": "Documento pdf_126_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf.",
+                    "fileName": "pdf_126_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_126_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+                    "downloadURL": "./pdf_126_SITUACION-ECONOMICA-FINANCIERA-4°TRE-2022.pdf",
+                    "identifier": "dist-otros_transparencia-6"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_136_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022",
+                    "description": "Documento pdf_136_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf.",
+                    "fileName": "pdf_136_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_136_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+                    "downloadURL": "./pdf_136_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+                    "identifier": "dist-otros_transparencia-7"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_146_SITUACION-ECONOMICA-FINANCIERA-1",
+                    "description": "Documento pdf_146_SITUACION-ECONOMICA-FINANCIERA-1.pdf.",
+                    "fileName": "pdf_146_SITUACION-ECONOMICA-FINANCIERA-1.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_146_SITUACION-ECONOMICA-FINANCIERA-1.pdf",
+                    "downloadURL": "./pdf_146_SITUACION-ECONOMICA-FINANCIERA-1.pdf",
+                    "identifier": "dist-otros_transparencia-8"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_157_SITUACION-ECONOMICA-FINANCIERA",
+                    "description": "Documento pdf_157_SITUACION-ECONOMICA-FINANCIERA.pdf.",
+                    "fileName": "pdf_157_SITUACION-ECONOMICA-FINANCIERA.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_157_SITUACION-ECONOMICA-FINANCIERA.pdf",
+                    "downloadURL": "./pdf_157_SITUACION-ECONOMICA-FINANCIERA.pdf",
+                    "identifier": "dist-otros_transparencia-9"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_163_ANEXO-II-ZONAS-IMPOSITIVAS",
+                    "description": "Documento pdf_163_ANEXO-II-ZONAS-IMPOSITIVAS.pdf.",
+                    "fileName": "pdf_163_ANEXO-II-ZONAS-IMPOSITIVAS.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_163_ANEXO-II-ZONAS-IMPOSITIVAS.pdf",
+                    "downloadURL": "./pdf_163_ANEXO-II-ZONAS-IMPOSITIVAS.pdf",
+                    "identifier": "dist-otros_transparencia-10"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_167_ANEXO-II-ZONAS-IMPOSITIVAS",
+                    "description": "Documento pdf_167_ANEXO-II-ZONAS-IMPOSITIVAS.pdf.",
+                    "fileName": "pdf_167_ANEXO-II-ZONAS-IMPOSITIVAS.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_167_ANEXO-II-ZONAS-IMPOSITIVAS.pdf",
+                    "downloadURL": "./pdf_167_ANEXO-II-ZONAS-IMPOSITIVAS.pdf",
+                    "identifier": "dist-otros_transparencia-11"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_174_ESCALAS-SALARIALES-FEBRERO-2024",
+                    "description": "Documento pdf_174_ESCALAS-SALARIALES-FEBRERO-2024.pdf.",
+                    "fileName": "pdf_174_ESCALAS-SALARIALES-FEBRERO-2024.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_174_ESCALAS-SALARIALES-FEBRERO-2024.pdf",
+                    "downloadURL": "./pdf_174_ESCALAS-SALARIALES-FEBRERO-2024.pdf",
+                    "identifier": "dist-otros_transparencia-12"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_81_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE",
+                    "description": "Documento pdf_81_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf.",
+                    "fileName": "pdf_81_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_81_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+                    "downloadURL": "./pdf_81_SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+                    "identifier": "dist-otros_transparencia-13"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_92_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE",
+                    "description": "Documento pdf_92_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf.",
+                    "fileName": "pdf_92_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_92_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+                    "downloadURL": "./pdf_92_SITUACION-ECONOMICA-FINANCIERA-3°TRIMESTRE.pdf",
+                    "identifier": "dist-otros_transparencia-14"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_96_RECURSOS-POR-PROCEDENCIA",
+                    "description": "Documento pdf_96_RECURSOS-POR-PROCEDENCIA.pdf.",
+                    "fileName": "pdf_96_RECURSOS-POR-PROCEDENCIA.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_96_RECURSOS-POR-PROCEDENCIA.pdf",
+                    "downloadURL": "./pdf_96_RECURSOS-POR-PROCEDENCIA.pdf",
+                    "identifier": "dist-otros_transparencia-15"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_97_RECURSOS-POR-CARACTER-ECONOMICO",
+                    "description": "Documento pdf_97_RECURSOS-POR-CARACTER-ECONOMICO.pdf.",
+                    "fileName": "pdf_97_RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_97_RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+                    "downloadURL": "./pdf_97_RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+                    "identifier": "dist-otros_transparencia-16"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_98_RECURSOS-AFECTADOS-VS-GASTOS",
+                    "description": "Documento pdf_98_RECURSOS-AFECTADOS-VS-GASTOS.pdf.",
+                    "fileName": "pdf_98_RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_98_RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+                    "downloadURL": "./pdf_98_RECURSOS-AFECTADOS-VS-GASTOS.pdf",
+                    "identifier": "dist-otros_transparencia-17"
+                }
+            ],
+            "keyword": [
+                [
+                    "otros",
+                    "transparencia"
+                ]
+            ],
+            "superTheme": [
+                "ECON"
+            ],
+            "theme": [
+                "economia-y-finanzas"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "identifier": "ds-otros_transparencia",
+            "spatial": [
+                "ARG",
+                "06",
+                "060161"
+            ]
+        },
+        {
+            "title": "Balance General",
+            "description": "Documentos relacionados con balance general.",
+            "modified": "2025-10-04T00:00:00",
+            "issued": "2025-10-04T00:00:00",
+            "landingPage": "https://carmendeareco.gob.ar/transparencia/",
+            "license": "CC-BY-4.0",
+            "publisher": {
+                "name": "Secretaría de Hacienda"
+            },
+            "distribution": [
+                {
+                    "format": "PDF",
+                    "title": "pdf_105_BALANCE-GENERAL-2020",
+                    "description": "Documento pdf_105_BALANCE-GENERAL-2020.pdf.",
+                    "fileName": "pdf_105_BALANCE-GENERAL-2020.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_105_BALANCE-GENERAL-2020.pdf",
+                    "downloadURL": "./pdf_105_BALANCE-GENERAL-2020.pdf",
+                    "identifier": "dist-balance_general-1"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_149_BALANCE-GENERAL-2020",
+                    "description": "Documento pdf_149_BALANCE-GENERAL-2020.pdf.",
+                    "fileName": "pdf_149_BALANCE-GENERAL-2020.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_149_BALANCE-GENERAL-2020.pdf",
+                    "downloadURL": "./pdf_149_BALANCE-GENERAL-2020.pdf",
+                    "identifier": "dist-balance_general-2"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_158_BALANCE-GENERAL-2020",
+                    "description": "Documento pdf_158_BALANCE-GENERAL-2020.pdf.",
+                    "fileName": "pdf_158_BALANCE-GENERAL-2020.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_158_BALANCE-GENERAL-2020.pdf",
+                    "downloadURL": "./pdf_158_BALANCE-GENERAL-2020.pdf",
+                    "identifier": "dist-balance_general-3"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_24_BALANCE-GENERAL-2020",
+                    "description": "Documento pdf_24_BALANCE-GENERAL-2020.pdf.",
+                    "fileName": "pdf_24_BALANCE-GENERAL-2020.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_24_BALANCE-GENERAL-2020.pdf",
+                    "downloadURL": "./pdf_24_BALANCE-GENERAL-2020.pdf",
+                    "identifier": "dist-balance_general-4"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_34_BALANCE-GENERAL-2020",
+                    "description": "Documento pdf_34_BALANCE-GENERAL-2020.pdf.",
+                    "fileName": "pdf_34_BALANCE-GENERAL-2020.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_34_BALANCE-GENERAL-2020.pdf",
+                    "downloadURL": "./pdf_34_BALANCE-GENERAL-2020.pdf",
+                    "identifier": "dist-balance_general-5"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_37_BALANCE-GENERAL-2020",
+                    "description": "Documento pdf_37_BALANCE-GENERAL-2020.pdf.",
+                    "fileName": "pdf_37_BALANCE-GENERAL-2020.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_37_BALANCE-GENERAL-2020.pdf",
+                    "downloadURL": "./pdf_37_BALANCE-GENERAL-2020.pdf",
+                    "identifier": "dist-balance_general-6"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_47_BALANCE-GENERAL-2020",
+                    "description": "Documento pdf_47_BALANCE-GENERAL-2020.pdf.",
+                    "fileName": "pdf_47_BALANCE-GENERAL-2020.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_47_BALANCE-GENERAL-2020.pdf",
+                    "downloadURL": "./pdf_47_BALANCE-GENERAL-2020.pdf",
+                    "identifier": "dist-balance_general-7"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_50_BALANCE-GENERAL-2020",
+                    "description": "Documento pdf_50_BALANCE-GENERAL-2020.pdf.",
+                    "fileName": "pdf_50_BALANCE-GENERAL-2020.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_50_BALANCE-GENERAL-2020.pdf",
+                    "downloadURL": "./pdf_50_BALANCE-GENERAL-2020.pdf",
+                    "identifier": "dist-balance_general-8"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_60_BALANCE-GENERAL-2020",
+                    "description": "Documento pdf_60_BALANCE-GENERAL-2020.pdf.",
+                    "fileName": "pdf_60_BALANCE-GENERAL-2020.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_60_BALANCE-GENERAL-2020.pdf",
+                    "downloadURL": "./pdf_60_BALANCE-GENERAL-2020.pdf",
+                    "identifier": "dist-balance_general-9"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_95_BALANCE-GENERAL-2020",
+                    "description": "Documento pdf_95_BALANCE-GENERAL-2020.pdf.",
+                    "fileName": "pdf_95_BALANCE-GENERAL-2020.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_95_BALANCE-GENERAL-2020.pdf",
+                    "downloadURL": "./pdf_95_BALANCE-GENERAL-2020.pdf",
+                    "identifier": "dist-balance_general-10"
+                }
+            ],
+            "keyword": [
+                [
+                    "balance",
+                    "general"
+                ]
+            ],
+            "superTheme": [
+                "ECON"
+            ],
+            "theme": [
+                "economia-y-finanzas"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "identifier": "ds-balance_general",
+            "spatial": [
+                "ARG",
+                "06",
+                "060161"
+            ]
+        },
+        {
+            "title": "Cuenta Ahorro Inversión Financiamiento",
+            "description": "Documentos relacionados con cuenta ahorro inversión financiamiento.",
+            "modified": "2025-10-04T00:00:00",
+            "issued": "2025-10-04T00:00:00",
+            "landingPage": "https://carmendeareco.gob.ar/transparencia/",
+            "license": "CC-BY-4.0",
+            "publisher": {
+                "name": "Secretaría de Hacienda"
+            },
+            "distribution": [
+                {
+                    "format": "PDF",
+                    "title": "pdf_106_CAIF",
+                    "description": "Documento pdf_106_CAIF.pdf.",
+                    "fileName": "pdf_106_CAIF.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_106_CAIF.pdf",
+                    "downloadURL": "./pdf_106_CAIF.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-1"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_11_Cuenta-Ahorro-Inversion-Financiamiento-Marzo",
+                    "description": "Documento pdf_11_Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf.",
+                    "fileName": "pdf_11_Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_11_Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+                    "downloadURL": "./pdf_11_Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-2"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_117_CAIF-3",
+                    "description": "Documento pdf_117_CAIF-3.pdf.",
+                    "fileName": "pdf_117_CAIF-3.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_117_CAIF-3.pdf",
+                    "downloadURL": "./pdf_117_CAIF-3.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-3"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_127_CAIF-4°TRE-2022",
+                    "description": "Documento pdf_127_CAIF-4°TRE-2022.pdf.",
+                    "fileName": "pdf_127_CAIF-4°TRE-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_127_CAIF-4°TRE-2022.pdf",
+                    "downloadURL": "./pdf_127_CAIF-4°TRE-2022.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-4"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_137_CAIF-3°TRI-2022",
+                    "description": "Documento pdf_137_CAIF-3°TRI-2022.pdf.",
+                    "fileName": "pdf_137_CAIF-3°TRI-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_137_CAIF-3°TRI-2022.pdf",
+                    "downloadURL": "./pdf_137_CAIF-3°TRI-2022.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-5"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_147_CAIF-2",
+                    "description": "Documento pdf_147_CAIF-2.pdf.",
+                    "fileName": "pdf_147_CAIF-2.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_147_CAIF-2.pdf",
+                    "downloadURL": "./pdf_147_CAIF-2.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-6"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_159_CAIF-1",
+                    "description": "Documento pdf_159_CAIF-1.pdf.",
+                    "fileName": "pdf_159_CAIF-1.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_159_CAIF-1.pdf",
+                    "downloadURL": "./pdf_159_CAIF-1.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-7"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_22_Cuenta-Ahorro-Inversion-Financiamiento-Junio",
+                    "description": "Documento pdf_22_Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf.",
+                    "fileName": "pdf_22_Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_22_Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+                    "downloadURL": "./pdf_22_Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-8"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_35_Cuenta-Ahorro-Inversion-Financiamiento-4to-Trimestre",
+                    "description": "Documento pdf_35_Cuenta-Ahorro-Inversion-Financiamiento-4to-Trimestre.pdf.",
+                    "fileName": "pdf_35_Cuenta-Ahorro-Inversion-Financiamiento-4to-Trimestre.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_35_Cuenta-Ahorro-Inversion-Financiamiento-4to-Trimestre.pdf",
+                    "downloadURL": "./pdf_35_Cuenta-Ahorro-Inversion-Financiamiento-4to-Trimestre.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-9"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_48_Cuenta-Ahorro-Inversion-Financiamiento-3er-Trimestre",
+                    "description": "Documento pdf_48_Cuenta-Ahorro-Inversion-Financiamiento-3er-Trimestre.pdf.",
+                    "fileName": "pdf_48_Cuenta-Ahorro-Inversion-Financiamiento-3er-Trimestre.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_48_Cuenta-Ahorro-Inversion-Financiamiento-3er-Trimestre.pdf",
+                    "downloadURL": "./pdf_48_Cuenta-Ahorro-Inversion-Financiamiento-3er-Trimestre.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-10"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_71_Cuenta-Ahorro-Inversion-Financiamiento-Marzo",
+                    "description": "Documento pdf_71_Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf.",
+                    "fileName": "pdf_71_Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_71_Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+                    "downloadURL": "./pdf_71_Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-11"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_82_CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023",
+                    "description": "Documento pdf_82_CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023.pdf.",
+                    "fileName": "pdf_82_CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_82_CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023.pdf",
+                    "downloadURL": "./pdf_82_CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-12"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_93_CAIF-3°TRIMESTRE",
+                    "description": "Documento pdf_93_CAIF-3°TRIMESTRE.pdf.",
+                    "fileName": "pdf_93_CAIF-3°TRIMESTRE.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_93_CAIF-3°TRIMESTRE.pdf",
+                    "downloadURL": "./pdf_93_CAIF-3°TRIMESTRE.pdf",
+                    "identifier": "dist-cuenta_ahorro_inversión_financiamiento-13"
+                }
+            ],
+            "keyword": [
+                [
+                    "cuenta",
+                    "ahorro",
+                    "inversión",
+                    "financiamiento"
+                ]
+            ],
+            "superTheme": [
+                "ECON"
+            ],
+            "theme": [
+                "economia-y-finanzas"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "identifier": "ds-cuenta_ahorro_inversión_financiamiento",
+            "spatial": [
+                "ARG",
+                "06",
+                "060161"
+            ]
+        },
+        {
+            "title": "Presupuesto Municipal",
+            "description": "Documentos relacionados con presupuesto municipal.",
+            "modified": "2025-10-04T00:00:00",
+            "issued": "2025-10-04T00:00:00",
+            "landingPage": "https://carmendeareco.gob.ar/transparencia/",
+            "license": "CC-BY-4.0",
+            "publisher": {
+                "name": "Secretaría de Hacienda"
+            },
+            "distribution": [
+                {
+                    "format": "PDF",
+                    "title": "pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24",
+                    "description": "Documento pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf.",
+                    "fileName": "pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+                    "downloadURL": "./pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+                    "identifier": "dist-presupuesto_municipal-1"
+                }
+            ],
+            "keyword": [
+                [
+                    "presupuesto",
+                    "municipal"
+                ]
+            ],
+            "superTheme": [
+                "ECON"
+            ],
+            "theme": [
+                "economia-y-finanzas"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "identifier": "ds-presupuesto_municipal",
+            "spatial": [
+                "ARG",
+                "06",
+                "060161"
+            ]
+        },
+        {
+            "title": "Ordenanzas",
+            "description": "Documentos relacionados con ordenanzas.",
+            "modified": "2025-10-04T00:00:00",
+            "issued": "2025-10-04T00:00:00",
+            "landingPage": "https://carmendeareco.gob.ar/transparencia/",
+            "license": "CC-BY-4.0",
+            "publisher": {
+                "name": "Secretaría de Hacienda"
+            },
+            "distribution": [
+                {
+                    "format": "PDF",
+                    "title": "pdf_161_ORDENANZA-FISCAL-3198-23",
+                    "description": "Documento pdf_161_ORDENANZA-FISCAL-3198-23.pdf.",
+                    "fileName": "pdf_161_ORDENANZA-FISCAL-3198-23.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_161_ORDENANZA-FISCAL-3198-23.pdf",
+                    "downloadURL": "./pdf_161_ORDENANZA-FISCAL-3198-23.pdf",
+                    "identifier": "dist-ordenanzas-1"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_162_ORDENANZA-IMPOSITIVA-3282-25",
+                    "description": "Documento pdf_162_ORDENANZA-IMPOSITIVA-3282-25.pdf.",
+                    "fileName": "pdf_162_ORDENANZA-IMPOSITIVA-3282-25.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_162_ORDENANZA-IMPOSITIVA-3282-25.pdf",
+                    "downloadURL": "./pdf_162_ORDENANZA-IMPOSITIVA-3282-25.pdf",
+                    "identifier": "dist-ordenanzas-2"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_165_ORDENANZA-FISCAL-3198-23",
+                    "description": "Documento pdf_165_ORDENANZA-FISCAL-3198-23.pdf.",
+                    "fileName": "pdf_165_ORDENANZA-FISCAL-3198-23.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_165_ORDENANZA-FISCAL-3198-23.pdf",
+                    "downloadURL": "./pdf_165_ORDENANZA-FISCAL-3198-23.pdf",
+                    "identifier": "dist-ordenanzas-3"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_166_ORDENANZA-IMPOSITIVA-3202-24",
+                    "description": "Documento pdf_166_ORDENANZA-IMPOSITIVA-3202-24.pdf.",
+                    "fileName": "pdf_166_ORDENANZA-IMPOSITIVA-3202-24.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_166_ORDENANZA-IMPOSITIVA-3202-24.pdf",
+                    "downloadURL": "./pdf_166_ORDENANZA-IMPOSITIVA-3202-24.pdf",
+                    "identifier": "dist-ordenanzas-4"
+                }
+            ],
+            "keyword": [
+                [
+                    "ordenanzas"
+                ]
+            ],
+            "superTheme": [
+                "ECON"
+            ],
+            "theme": [
+                "economia-y-finanzas"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "identifier": "ds-ordenanzas",
+            "spatial": [
+                "ARG",
+                "06",
+                "060161"
+            ]
+        },
+        {
+            "title": "Licitaciones",
+            "description": "Documentos relacionados con licitaciones.",
+            "modified": "2025-10-04T00:00:00",
+            "issued": "2025-10-04T00:00:00",
+            "landingPage": "https://carmendeareco.gob.ar/transparencia/",
+            "license": "CC-BY-4.0",
+            "publisher": {
+                "name": "Secretaría de Hacienda"
+            },
+            "distribution": [
+                {
+                    "format": "PDF",
+                    "title": "pdf_168_LICITACION-PUBLICA-N°11",
+                    "description": "Documento pdf_168_LICITACION-PUBLICA-N°11.pdf.",
+                    "fileName": "pdf_168_LICITACION-PUBLICA-N°11.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_168_LICITACION-PUBLICA-N°11.pdf",
+                    "downloadURL": "./pdf_168_LICITACION-PUBLICA-N°11.pdf",
+                    "identifier": "dist-licitaciones-1"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_169_LICITACION-PUBLICA-N°10",
+                    "description": "Documento pdf_169_LICITACION-PUBLICA-N°10.pdf.",
+                    "fileName": "pdf_169_LICITACION-PUBLICA-N°10.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_169_LICITACION-PUBLICA-N°10.pdf",
+                    "downloadURL": "./pdf_169_LICITACION-PUBLICA-N°10.pdf",
+                    "identifier": "dist-licitaciones-2"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_170_LICITACION-PUBLICA-N°9",
+                    "description": "Documento pdf_170_LICITACION-PUBLICA-N°9.pdf.",
+                    "fileName": "pdf_170_LICITACION-PUBLICA-N°9.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_170_LICITACION-PUBLICA-N°9.pdf",
+                    "downloadURL": "./pdf_170_LICITACION-PUBLICA-N°9.pdf",
+                    "identifier": "dist-licitaciones-3"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_171_LICITACION-PUBLICA-N°8",
+                    "description": "Documento pdf_171_LICITACION-PUBLICA-N°8.pdf.",
+                    "fileName": "pdf_171_LICITACION-PUBLICA-N°8.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_171_LICITACION-PUBLICA-N°8.pdf",
+                    "downloadURL": "./pdf_171_LICITACION-PUBLICA-N°8.pdf",
+                    "identifier": "dist-licitaciones-4"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_172_LICITACION-PUBLICA-N°7",
+                    "description": "Documento pdf_172_LICITACION-PUBLICA-N°7.pdf.",
+                    "fileName": "pdf_172_LICITACION-PUBLICA-N°7.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_172_LICITACION-PUBLICA-N°7.pdf",
+                    "downloadURL": "./pdf_172_LICITACION-PUBLICA-N°7.pdf",
+                    "identifier": "dist-licitaciones-5"
+                }
+            ],
+            "keyword": [
+                [
+                    "licitaciones"
+                ]
+            ],
+            "superTheme": [
+                "GOB"
+            ],
+            "theme": [
+                "gobierno-y-sector-publico"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "identifier": "ds-licitaciones",
+            "spatial": [
+                "ARG",
+                "06",
+                "060161"
+            ]
+        },
+        {
+            "title": "Sueldos y Escalas Salariales",
+            "description": "Documentos relacionados con sueldos y escalas salariales.",
+            "modified": "2025-10-04T00:00:00",
+            "issued": "2025-10-04T00:00:00",
+            "landingPage": "https://carmendeareco.gob.ar/transparencia/",
+            "license": "CC-BY-4.0",
+            "publisher": {
+                "name": "Secretaría de Hacienda"
+            },
+            "distribution": [
+                {
+                    "format": "PDF",
+                    "title": "pdf_173_ESCALA-SALARIAL-OCTUBRE-2024",
+                    "description": "Documento pdf_173_ESCALA-SALARIAL-OCTUBRE-2024.pdf.",
+                    "fileName": "pdf_173_ESCALA-SALARIAL-OCTUBRE-2024.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_173_ESCALA-SALARIAL-OCTUBRE-2024.pdf",
+                    "downloadURL": "./pdf_173_ESCALA-SALARIAL-OCTUBRE-2024.pdf",
+                    "identifier": "dist-sueldos_y_escalas_salariales-1"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_175_SUELDOS-SEPTIEMBRE-2023",
+                    "description": "Documento pdf_175_SUELDOS-SEPTIEMBRE-2023.pdf.",
+                    "fileName": "pdf_175_SUELDOS-SEPTIEMBRE-2023.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_175_SUELDOS-SEPTIEMBRE-2023.pdf",
+                    "downloadURL": "./pdf_175_SUELDOS-SEPTIEMBRE-2023.pdf",
+                    "identifier": "dist-sueldos_y_escalas_salariales-2"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_176_SUELDOS-JULIO-2023",
+                    "description": "Documento pdf_176_SUELDOS-JULIO-2023.pdf.",
+                    "fileName": "pdf_176_SUELDOS-JULIO-2023.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_176_SUELDOS-JULIO-2023.pdf",
+                    "downloadURL": "./pdf_176_SUELDOS-JULIO-2023.pdf",
+                    "identifier": "dist-sueldos_y_escalas_salariales-3"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_177_SUELDOS-JUNIO-2023",
+                    "description": "Documento pdf_177_SUELDOS-JUNIO-2023.pdf.",
+                    "fileName": "pdf_177_SUELDOS-JUNIO-2023.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_177_SUELDOS-JUNIO-2023.pdf",
+                    "downloadURL": "./pdf_177_SUELDOS-JUNIO-2023.pdf",
+                    "identifier": "dist-sueldos_y_escalas_salariales-4"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_178_SUELDOS-MAYO-2023",
+                    "description": "Documento pdf_178_SUELDOS-MAYO-2023.pdf.",
+                    "fileName": "pdf_178_SUELDOS-MAYO-2023.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_178_SUELDOS-MAYO-2023.pdf",
+                    "downloadURL": "./pdf_178_SUELDOS-MAYO-2023.pdf",
+                    "identifier": "dist-sueldos_y_escalas_salariales-5"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_179_SUELDOS-MARZO-2023",
+                    "description": "Documento pdf_179_SUELDOS-MARZO-2023.pdf.",
+                    "fileName": "pdf_179_SUELDOS-MARZO-2023.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_179_SUELDOS-MARZO-2023.pdf",
+                    "downloadURL": "./pdf_179_SUELDOS-MARZO-2023.pdf",
+                    "identifier": "dist-sueldos_y_escalas_salariales-6"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_180_SUELDOS-ENERO-2023",
+                    "description": "Documento pdf_180_SUELDOS-ENERO-2023.pdf.",
+                    "fileName": "pdf_180_SUELDOS-ENERO-2023.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_180_SUELDOS-ENERO-2023.pdf",
+                    "downloadURL": "./pdf_180_SUELDOS-ENERO-2023.pdf",
+                    "identifier": "dist-sueldos_y_escalas_salariales-7"
+                }
+            ],
+            "keyword": [
+                [
+                    "sueldos",
+                    "y",
+                    "escalas",
+                    "salariales"
+                ]
+            ],
+            "superTheme": [
+                "ECON"
+            ],
+            "theme": [
+                "economia-y-finanzas"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "identifier": "ds-sueldos_y_escalas_salariales",
+            "spatial": [
+                "ARG",
+                "06",
+                "060161"
+            ]
+        },
+        {
+            "title": "Declaraciones Juradas",
+            "description": "Documentos relacionados con declaraciones juradas.",
+            "modified": "2025-10-04T00:00:00",
+            "issued": "2025-10-04T00:00:00",
+            "landingPage": "https://carmendeareco.gob.ar/transparencia/",
+            "license": "CC-BY-4.0",
+            "publisher": {
+                "name": "Secretaría de Hacienda"
+            },
+            "distribution": [
+                {
+                    "format": "PDF",
+                    "title": "pdf_181_DDJJ-2024",
+                    "description": "Documento pdf_181_DDJJ-2024.pdf.",
+                    "fileName": "pdf_181_DDJJ-2024.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_181_DDJJ-2024.pdf",
+                    "downloadURL": "./pdf_181_DDJJ-2024.pdf",
+                    "identifier": "dist-declaraciones_juradas-1"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_182_ddjj-2023",
+                    "description": "Documento pdf_182_ddjj-2023.pdf.",
+                    "fileName": "pdf_182_ddjj-2023.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_182_ddjj-2023.pdf",
+                    "downloadURL": "./pdf_182_ddjj-2023.pdf",
+                    "identifier": "dist-declaraciones_juradas-2"
+                },
+                {
+                    "format": "PDF",
+                    "title": "pdf_183_ddjj-2022",
+                    "description": "Documento pdf_183_ddjj-2022.pdf.",
+                    "fileName": "pdf_183_ddjj-2022.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_183_ddjj-2022.pdf",
+                    "downloadURL": "./pdf_183_ddjj-2022.pdf",
+                    "identifier": "dist-declaraciones_juradas-3"
+                }
+            ],
+            "keyword": [
+                [
+                    "declaraciones",
+                    "juradas"
+                ]
+            ],
+            "superTheme": [
+                "GOB"
+            ],
+            "theme": [
+                "gobierno-y-sector-publico"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "identifier": "ds-declaraciones_juradas",
+            "spatial": [
+                "ARG",
+                "06",
+                "060161"
+            ]
+        },
+        {
+            "title": "Organigrama",
+            "description": "Documentos relacionados con organigrama.",
+            "modified": "2025-10-04T00:00:00",
+            "issued": "2025-10-04T00:00:00",
+            "landingPage": "https://carmendeareco.gob.ar/transparencia/",
+            "license": "CC-BY-4.0",
+            "publisher": {
+                "name": "Secretaría de Hacienda"
+            },
+            "distribution": [
+                {
+                    "format": "PDF",
+                    "title": "pdf_184_ORGANIGRAMA-2025",
+                    "description": "Documento pdf_184_ORGANIGRAMA-2025.pdf.",
+                    "fileName": "pdf_184_ORGANIGRAMA-2025.pdf",
+                    "type": "file",
+                    "issued": "2025-01-01T00:00:00",
+                    "modified": "2025-10-04T00:00:00",
+                    "license": "CC-BY-4.0",
+                    "accessURL": "./pdf_184_ORGANIGRAMA-2025.pdf",
+                    "downloadURL": "./pdf_184_ORGANIGRAMA-2025.pdf",
+                    "identifier": "dist-organigrama-1"
+                }
+            ],
+            "keyword": [
+                [
+                    "organigrama"
+                ]
+            ],
+            "superTheme": [
+                "GOB"
+            ],
+            "theme": [
+                "gobierno-y-sector-publico"
+            ],
+            "accrualPeriodicity": "R/P3M",
+            "identifier": "ds-organigrama",
+            "spatial": [
+                "ARG",
+                "06",
+                "060161"
+            ]
+        }
+    ]
+}

@@ -4,7 +4,7 @@
  */
 
 import DataService from './dataService';
-import externalAPIsService from './ExternalAPIsService';
+import externalAPIsService from "./ExternalDataAdapter";
 
 // Audit interfaces
 export interface AuditDiscrepancy {

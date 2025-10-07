@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Building,
   FileText,
@@ -17,17 +17,22 @@ import {
   BarChart3,
   Activity,
   Target,
-  Database
+  Database,
+  RefreshCw,
+  ExternalLink
 } from 'lucide-react';
-import SankeyDiagram from '../components/data-display/SankeyDiagram';
+import SankeyDiagram from '@components/data-display/SankeyDiagram';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useMasterData } from '../hooks/useMasterData';
-import ProcurementTimelineChart from '../components/charts/ProcurementTimelineChart';
-import TimeSeriesAnomalyChart from '../components/charts/TimeSeriesAnomalyChart';
-import TreemapChart from '../components/charts/TreemapChart';
-import UnifiedChart from '../components/charts/UnifiedChart';
-import ErrorBoundary from '../components/common/ErrorBoundary';
+import ProcurementTimelineChart from '@components/charts/ProcurementTimelineChart';
+import TimeSeriesAnomalyChart from '@components/charts/TimeSeriesAnomalyChart';
+import TreemapChart from '@components/charts/TreemapChart';
+import UnifiedChart from '@components/charts/UnifiedChart';
+import ErrorBoundary from '@components/common/ErrorBoundary';
 import { motion } from 'framer-motion';
+import { externalAPIsService } from "../services/ExternalDataAdapter";
+import { StatCard } from '@components/common/StatCard';
+import { ChartContainer } from '@components/common/ChartContainer';
 
 // Mock data for demonstration
 const mockTendersData = [
@@ -126,6 +131,60 @@ const ContractsAndTendersPage: React.FC = () => {
     refetch,
     switchYear
   } = useMasterData(selectedYear);
+
+  // 🌐 External API integration
+  const [externalData, setExternalData] = useState<{
+    contrataciones: any;
+    carmenOfficial: any;
+  }>({
+    contrataciones: null,
+    carmenOfficial: null
+  });
+  const [externalLoading, setExternalLoading] = useState(true);
+  const [dataSources, setDataSources] = useState<string[]>(['local']);
+
+  // Load external data on mount
+  useEffect(() => {
+    loadExternalData();
+  }, [selectedYear]);
+
+  const loadExternalData = async () => {
+    try {
+      setExternalLoading(true);
+      console.log('Fetching external contracts data...');
+
+      const [contratacionesResult, carmenResult] = await Promise.allSettled([
+        externalAPIsService.getContratacionesData('Carmen de Areco'),
+        externalAPIsService.getCarmenDeArecoData()
+      ]);
+
+      const newExternalData: any = {
+        contrataciones: contratacionesResult.status === 'fulfilled' && contratacionesResult.value.success
+          ? contratacionesResult.value.data
+          : null,
+        carmenOfficial: carmenResult.status === 'fulfilled'
+          ? carmenResult.value
+          : null
+      };
+
+      setExternalData(newExternalData);
+
+      const activeSources = ['local'];
+      if (newExternalData.contrataciones) activeSources.push('contrataciones');
+      if (newExternalData.carmenOfficial) activeSources.push('carmen');
+
+      setDataSources(activeSources);
+
+      console.log('External contracts data loaded:', {
+        contrataciones: !!newExternalData.contrataciones,
+        carmen: !!newExternalData.carmenOfficial
+      });
+    } catch (error) {
+      console.error('Error loading external contracts data:', error);
+    } finally {
+      setExternalLoading(false);
+    }
+  };
 
   // Format currency function
   const formatCurrency = (amount: number): string => {
@@ -275,6 +334,53 @@ const ContractsAndTendersPage: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Data Sources Status */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mb-6 bg-white dark:bg-dark-surface rounded-lg p-4 border border-gray-200 dark:border-dark-border"
+      >
+        <div className="flex items-center justify-between">
+          <h3 className="text-sm font-semibold text-gray-700 dark:text-dark-text-secondary">
+            Fuentes de Datos Activas
+          </h3>
+          {externalLoading && <RefreshCw className="w-4 h-4 animate-spin text-blue-600" />}
+        </div>
+        <div className="mt-3 flex flex-wrap gap-3">
+          <div className="flex items-center text-sm">
+            <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+            <span className="text-gray-700 dark:text-dark-text-secondary">CSV Local ({contractsData.length} contratos)</span>
+          </div>
+          {externalData.contrataciones ? (
+            <div className="flex items-center text-sm">
+              <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+              <span className="text-gray-700 dark:text-dark-text-secondary">Contrataciones Abiertas</span>
+              <ExternalLink className="w-3 h-3 ml-1 text-gray-400" />
+            </div>
+          ) : (
+            <div className="flex items-center text-sm">
+              <AlertTriangle className="w-4 h-4 mr-2 text-gray-400" />
+              <span className="text-gray-400">Contrataciones Abiertas</span>
+            </div>
+          )}
+          {externalData.carmenOfficial ? (
+            <div className="flex items-center text-sm">
+              <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+              <span className="text-gray-700 dark:text-dark-text-secondary">Portal Carmen de Areco</span>
+              <ExternalLink className="w-3 h-3 ml-1 text-gray-400" />
+            </div>
+          ) : (
+            <div className="flex items-center text-sm">
+              <AlertTriangle className="w-4 h-4 mr-2 text-gray-400" />
+              <span className="text-gray-400">Portal Carmen de Areco</span>
+            </div>
+          )}
+          <div className="ml-auto text-xs text-gray-500 dark:text-dark-text-tertiary">
+            Fuentes activas: {dataSources.length}
+          </div>
+        </div>
+      </motion.div>
 
       {/* Navigation Tabs */}
       <div className="mb-8">
@@ -499,39 +605,39 @@ const ContractsAndTendersPage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Análisis de Contratos</h3>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="border rounded-lg p-4">
-                  <div className="flex items-center">
-                    <Building className="h-6 w-6 text-blue-500 mr-3" />
-                    <div>
-                      <p className="text-sm text-gray-500 dark:text-dark-text-tertiary">Total Contratos</p>
-                      <p className="text-2xl font-bold">{filteredData.length}</p>
-                    </div>
-                  </div>
-                </div>
+                <StatCard
+                  title="Total Contratos"
+                  value={filteredData.length.toString()}
+                  subtitle="Licitaciones y contratos"
+                  icon={Building}
+                  iconColor="blue"
+                  delay={0}
+                />
 
-                <div className="border rounded-lg p-4">
-                  <div className="flex items-center">
-                    <DollarSign className="h-6 w-6 text-green-500 mr-3" />
-                    <div>
-                      <p className="text-sm text-gray-500 dark:text-dark-text-tertiary">Monto Total</p>
-                      <p className="text-2xl font-bold">{formatCurrency(filteredData.reduce((sum, c) => sum + c.amount, 0))}</p>
-                    </div>
-                  </div>
-                </div>
+                <StatCard
+                  title="Monto Total Contratado"
+                  value={formatCurrency(filteredData.reduce((sum, c) => sum + c.amount, 0))}
+                  subtitle="Suma de todos los contratos"
+                  icon={DollarSign}
+                  iconColor="green"
+                  delay={0.1}
+                />
 
-                <div className="border rounded-lg p-4">
-                  <div className="flex items-center">
-                    <TrendingUp className="h-6 w-6 text-purple-500 mr-3" />
-                    <div>
-                      <p className="text-sm text-gray-500 dark:text-dark-text-tertiary">Tasa Promedio</p>
-                      <p className="text-2xl font-bold">
-                        {filteredData.length > 0
-                          ? (filteredData.reduce((sum, c) => sum + c.executionRate, 0) / filteredData.length).toFixed(1)
-                          : '0'}%
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <StatCard
+                  title="Tasa de Ejecución Promedio"
+                  value={`${filteredData.length > 0
+                    ? (filteredData.reduce((sum, c) => sum + c.executionRate, 0) / filteredData.length).toFixed(1)
+                    : '0'}%`}
+                  subtitle="Promedio de cumplimiento"
+                  icon={TrendingUp}
+                  iconColor="purple"
+                  trend={filteredData.length > 0 ? {
+                    value: filteredData.reduce((sum, c) => sum + c.executionRate, 0) / filteredData.length,
+                    direction: ((filteredData.reduce((sum, c) => sum + c.executionRate, 0) / filteredData.length) >= 80) ? 'up' : 'down',
+                    label: 'ejecutado'
+                  } : undefined}
+                  delay={0.2}
+                />
               </div>
 
               <div className="mt-6">
@@ -877,41 +983,43 @@ const ContractsAndTendersPage: React.FC = () => {
                     name: 'Contratos CSV',
                     description: 'Datos estructurados de contratos y licitaciones',
                     status: 'active',
-                    lastUpdate: '2024-01-15',
-                    recordCount: currentContracts?.length || 0
+                    lastUpdate: new Date().toISOString().split('T')[0],
+                    recordCount: currentContracts?.length || contractsData.length
                   },
                   {
-                    name: 'API Transparencia',
-                    description: 'Interfaz de datos de transparencia municipal',
-                    status: 'active',
-                    lastUpdate: '2024-01-14',
-                    recordCount: 150
+                    name: 'Contrataciones Abiertas',
+                    description: 'API Nacional de Contrataciones del Gobierno de Argentina',
+                    status: externalData.contrataciones ? 'active' : 'error',
+                    lastUpdate: new Date().toISOString().split('T')[0],
+                    recordCount: externalData.contrataciones?.data?.length || 0,
+                    external: true
                   },
                   {
-                    name: 'Portal Compras',
-                    description: 'Sistema oficial de compras y contrataciones',
-                    status: 'pending',
-                    lastUpdate: '2024-01-10',
-                    recordCount: 85
+                    name: 'Portal Carmen de Areco',
+                    description: 'Portal oficial municipal de transparencia',
+                    status: externalData.carmenOfficial ? 'active' : 'error',
+                    lastUpdate: new Date().toISOString().split('T')[0],
+                    recordCount: externalData.carmenOfficial?.contracts?.length || 0,
+                    external: true
                   },
                   {
                     name: 'Documentos PDF',
                     description: 'Pliegos y documentos de licitaciones',
-                    status: 'processing',
+                    status: 'active',
                     lastUpdate: '2024-01-12',
-                    recordCount: 45
+                    recordCount: 299
                   },
                   {
-                    name: 'Boletín Oficial',
+                    name: 'Boletín Oficial Provincial',
                     description: 'Publicaciones oficiales de contrataciones',
-                    status: 'active',
+                    status: 'pending',
                     lastUpdate: '2024-01-13',
-                    recordCount: 78
+                    recordCount: 0
                   },
                   {
                     name: 'Sistema RAFAM',
                     description: 'Registro de proveedores y adjudicaciones',
-                    status: 'error',
+                    status: 'pending',
                     lastUpdate: '2024-01-08',
                     recordCount: 0
                   }

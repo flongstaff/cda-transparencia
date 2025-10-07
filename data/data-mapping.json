@@ -1,0 +1,234 @@
+{
+  "dataMapping": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-01",
+    "mappingDate": "2024-12-01",
+    "system": "Carmen de Areco Transparency Portal",
+    "dataFlows": [
+      {
+        "id": "user-session-tracking",
+        "name": "Seguimiento de Sesiones de Usuarios",
+        "description": "Seguimiento básico de sesiones para estadísticas de uso",
+        "dataTypes": [
+          {
+            "name": "IP Address",
+            "category": "Technical",
+            "sensitivity": "Low",
+            "retentionPeriod": "90 days",
+            "isPersonalData": false,
+            "purpose": "Analytics and security monitoring"
+          },
+          {
+            "name": "Browser Information",
+            "category": "Technical", 
+            "sensitivity": "Low",
+            "retentionPeriod": "Permanent in aggregated form",
+            "isPersonalData": false,
+            "purpose": "Analytics and compatibility"
+          }
+        ],
+        "storageLocation": "Server logs, Analytics database",
+        "accessControls": "Internal use only",
+        "sharing": "None - for internal analytics only",
+        "legalBasis": "Legitimate interest for system monitoring",
+        "dataSubjectRights": ["access", "rectification"],
+        "dataProtectionMeasures": ["IP anonymization", "aggregated reporting"]
+      },
+      {
+        "id": "search-query-processing",
+        "name": "Procesamiento de Consultas de Búsqueda",
+        "description": "Procesamiento de consultas de búsqueda para funcionalidades de IA",
+        "dataTypes": [
+          {
+            "name": "Search Query",
+            "category": "Interaction",
+            "sensitivity": "Low",
+            "retentionPeriod": "24 hours",
+            "isPersonalData": false,
+            "purpose": "Search functionality and improvement"
+          },
+          {
+            "name": "Search Timestamp",
+            "category": "Technical",
+            "sensitivity": "Low", 
+            "retentionPeriod": "30 days",
+            "isPersonalData": false,
+            "purpose": "Analytics and performance monitoring"
+          }
+        ],
+        "storageLocation": "Search service temporary storage",
+        "accessControls": "System only, no human access to queries",
+        "sharing": "None - queries are ephemeral",
+        "legalBasis": "Legitimate interest for search service",
+        "dataSubjectRights": ["access", "erasure"],
+        "dataProtectionMeasures": ["No query logging", "ephemeral storage", "automatic deletion"]
+      },
+      {
+        "id": "document-analysis",
+        "name": "Análisis de Documentos",
+        "description": "Procesamiento de documentos subidos para análisis por IA",
+        "dataTypes": [
+          {
+            "name": "Uploaded Document",
+            "category": "Document",
+            "sensitivity": "Variable",
+            "retentionPeriod": "24 hours",
+            "isPersonalData": "Contextual",
+            "purpose": "AI-powered document analysis and classification"
+          },
+          {
+            "name": "Analysis Results",
+            "category": "AI Output",
+            "sensitivity": "Low",
+            "retentionPeriod": "As long as user session",
+            "isPersonalData": false,
+            "purpose": "Document insights and classification"
+          }
+        ],
+        "storageLocation": "Temporary processing location",
+        "accessControls": "Temporary access during processing",
+        "sharing": "None - processing is local",
+        "legalBasis": "User consent for document analysis service",
+        "dataSubjectRights": ["access", "erasure"],
+        "dataProtectionMeasures": ["No permanent storage", "automatic deletion", "secure processing"]
+      },
+      {
+        "id": "contact-form",
+        "name": "Formulario de Contacto",
+        "description": "Captura de información de contacto para consultas",
+        "dataTypes": [
+          {
+            "name": "Name",
+            "category": "Personal",
+            "sensitivity": "Low",
+            "retentionPeriod": "2 years",
+            "isPersonalData": true,
+            "purpose": "Contact and communication"
+          },
+          {
+            "name": "Email",
+            "category": "Personal",
+            "sensitivity": "Low",
+            "retentionPeriod": "2 years",
+            "isPersonalData": true,
+            "purpose": "Contact and communication"
+          },
+          {
+            "name": "Subject",
+            "category": "Communication",
+            "sensitivity": "Variable",
+            "retentionPeriod": "2 years",
+            "isPersonalData": false,
+            "purpose": "Query management"
+          },
+          {
+            "name": "Message",
+            "category": "Communication",
+            "sensitivity": "Variable",
+            "retentionPeriod": "2 years",
+            "isPersonalData": false,
+            "purpose": "Query management and response"
+          }
+        ],
+        "storageLocation": "Secure database",
+        "accessControls": "Authorized municipal staff only",
+        "sharing": "Internal municipal staff for query handling",
+        "legalBasis": "Consent and legitimate interest for communication",
+        "dataSubjectRights": ["access", "rectification", "erasure", "portability"],
+        "dataProtectionMeasures": ["Encryption", "Access controls", "Audit logs"]
+      },
+      {
+        "id": "data-request-form",
+        "name": "Formulario de Solicitud de Datos",
+        "description": "Solicitudes de información pública según Ley 27.275",
+        "dataTypes": [
+          {
+            "name": "Requester Information",
+            "category": "Personal",
+            "sensitivity": "Low",
+            "retentionPeriod": "5 years",
+            "isPersonalData": true,
+            "purpose": "Information request processing under Ley 27.275"
+          },
+          {
+            "name": "Request Details",
+            "category": "Official",
+            "sensitivity": "Variable",
+            "retentionPeriod": "5 years",
+            "isPersonalData": false,
+            "purpose": "Public information request processing"
+          }
+        ],
+        "storageLocation": "Official municipal records system",
+        "accessControls": "As required by Ley 27.275",
+        "sharing": "As required by transparency law",
+        "legalBasis": "Ley 27.275 de Acceso a la Información Pública",
+        "dataSubjectRights": ["access", "rectification"],
+        "dataProtectionMeasures": ["Official record keeping", "Transparency compliance"]
+      }
+    ],
+    "dataCategories": {
+      "technical": {
+        "name": "Técnico",
+        "description": "Datos necesarios para el funcionamiento técnico del sistema",
+        "protectionLevel": "Standard"
+      },
+      "interaction": {
+        "name": "Interacción",
+        "description": "Datos generados por la interacción del usuario con el sistema",
+        "protectionLevel": "Standard"
+      },
+      "personal": {
+        "name": "Personal",
+        "description": "Datos que identifican directamente a una persona",
+        "protectionLevel": "Enhanced"
+      },
+      "document": {
+        "name": "Documento",
+        "description": "Documentos subidos por usuarios para análisis",
+        "protectionLevel": "Enhanced"
+      },
+      "ai_output": {
+        "name": "AI Output",
+        "description": "Resultados generados por sistemas de inteligencia artificial",
+        "protectionLevel": "Standard"
+      },
+      "communication": {
+        "name": "Comunicación",
+        "description": "Datos relacionados con comunicaciones del usuario",
+        "protectionLevel": "Standard"
+      },
+      "official": {
+        "name": "Oficial",
+        "description": "Datos requeridos para procesos oficiales según Ley 27.275",
+        "protectionLevel": "As required by law"
+      }
+    },
+    "retentionPolicies": {
+      "24_hours": "Temporary processing data",
+      "30_days": "Analytics data",
+      "90_days": "Session logs",
+      "2_years": "Contact and communication records",
+      "5_years": "Official requests under Ley 27.275",
+      "permanent_aggregated": "Statistical data in aggregated form"
+    },
+    "compliance": {
+      "gdprAligned": true,
+      "lgpdAligned": true,
+      "aaipCompliant": true,
+      "ley25326Compliant": true,
+      "ley27275Aligned": true
+    },
+    "dataProtectionOfficer": {
+      "name": "Delegado de Protección de Datos",
+      "email": "dpo@carmendeareco.gob.ar",
+      "responsibilities": [
+        "Supervision of data processing activities",
+        "Monitoring compliance with data protection laws",
+        "Serving as contact point for data subjects",
+        "Conducting privacy impact assessments",
+        "Advising on data protection matters"
+      ]
+    }
+  }
+}

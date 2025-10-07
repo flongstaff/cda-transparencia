@@ -35,7 +35,7 @@ const HealthStatisticsChart: React.FC<HealthStatisticsChartProps> = ({
   
   // Load chart data using React Query
   const { data, isLoading, isError, error: queryError } = useQuery({
-    queryKey: ['chart-data', 'Health_Statistics'],
+    queryKey: ['chart-data', 'Health_Statistics', year],
     queryFn: () => chartDataService.loadChartData('Health_Statistics'),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
@@ -57,7 +57,8 @@ const HealthStatisticsChart: React.FC<HealthStatisticsChartProps> = ({
       let filteredData = data;
       if (year && Array.isArray(data)) {
         filteredData = data.filter((item: Record<string, unknown>) => {
-          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          // Check for various possible year field names
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
           return itemYear && parseInt(String(itemYear)) === year;
         });
       }
@@ -78,7 +79,7 @@ const HealthStatisticsChart: React.FC<HealthStatisticsChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Health Statistics data...
+          Cargando datos de Estadísticas de Salud...
         </Typography>
       </Box>
     );
@@ -88,7 +89,7 @@ const HealthStatisticsChart: React.FC<HealthStatisticsChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Health Statistics data: {error}
+        Error cargando datos de Estadísticas de Salud: {error}
       </Alert>
     );
   }
@@ -97,7 +98,7 @@ const HealthStatisticsChart: React.FC<HealthStatisticsChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Health Statistics data available
+        No hay datos disponibles de Estadísticas de Salud
       </Alert>
     );
   }
@@ -124,8 +125,8 @@ const HealthStatisticsChart: React.FC<HealthStatisticsChartProps> = ({
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel="Year"
-      yAxisLabel="Count/Rate"
+      xAxisLabel="Año"
+      yAxisLabel="Cantidad/Tasa"
     />
   );
 };

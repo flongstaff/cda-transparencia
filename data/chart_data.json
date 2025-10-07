@@ -1,0 +1,172 @@
+{
+  "charts": [
+    {
+      "id": "revenue_comparison_2019",
+      "title": "Comparación de Ingresos 2019",
+      "type": "bar",
+      "data": {
+        "labels": ["Presupuestado", "Ejecutado"],
+        "datasets": [
+          {
+            "label": "Ingresos Totales",
+            "data": [243511982.00, 234125273.85],
+            "backgroundColor": ["#3b82f6", "#10b981"]
+          }
+        ]
+      },
+      "options": {
+        "responsive": true,
+        "plugins": {
+          "title": {
+            "display": true,
+            "text": "Comparación de Ingresos 2019"
+          }
+        }
+      }
+    },
+    {
+      "id": "expenditure_comparison_2019",
+      "title": "Comparación de Gastos 2019",
+      "type": "bar",
+      "data": {
+        "labels": ["Presupuestado", "Ejecutado"],
+        "datasets": [
+          {
+            "label": "Gastos Totales",
+            "data": [271899802.33, 266210998.09],
+            "backgroundColor": ["#ef4444", "#f97316"]
+          }
+        ]
+      },
+      "options": {
+        "responsive": true,
+        "plugins": {
+          "title": {
+            "display": true,
+            "text": "Comparación de Gastos 2019"
+          }
+        }
+      }
+    },
+    {
+      "id": "revenue_by_source_2019",
+      "title": "Ingresos por Fuente 2019",
+      "type": "pie",
+      "data": {
+        "labels": [
+          "Participación Impuestos Provinciales",
+          "Inmobiliario Rural No Afectado", 
+          "Ingresos Brutos",
+          "Recursos Ordinarios",
+          "Fondo Vivienda Municipal",
+          "Inmobiliario Rural Afectado",
+          "Fondo Productivo Municipal",
+          "Fondo Tendiend Redes",
+          "Policia Comunal",
+          "Segunda Oportunidad",
+          "Recursos Afectados",
+          "Plan NACER",
+          "Fondo Solidario Pcial Soja",
+          "Coparticipacion Fondo Educativo",
+          "Fondo de Infraestructura",
+          "Sistema de Atención Médica Organizada",
+          "Plan Nacional de Obras Municipales",
+          "Habitat Norte Interior Y Obras Y Vivienda",
+          "Cuenta de Terceros",
+          "Total Disponibilidades"
+        ],
+        "datasets": [
+          {
+            "label": "Ingresos por Fuente (Ejecutado)",
+            "data": [
+              379449.30,
+              177861.13,
+              428.24,
+              60532.50,
+              190780.09,
+              858657.57,
+              43966.04,
+              2548.20,
+              4380.14,
+              586.04,
+              3509966.87,
+              3310.50,
+              462.10,
+              42141.33,
+              22842.71,
+              80299.94,
+              284875.02,
+              0.80,
+              733710.68,
+              6396799.20
+            ],
+            "backgroundColor": [
+              "#3b82f6", "#10b981", "#f59e0b", "#ef4444", "#8b5cf6",
+              "#ec4899", "#06b6d4", "#84cc16", "#f97316", "#6366f1",
+              "#14b8a6", "#f43f5e", "#a855f7", "#0ea5e9", "#84cc16",
+              "#f59e0b", "#ef4444", "#3b82f6", "#10b981", "#f97316"
+            ]
+          }
+        ]
+      },
+      "options": {
+        "responsive": true,
+        "plugins": {
+          "title": {
+            "display": true,
+            "text": "Ingresos por Fuente 2019"
+          },
+          "legend": {
+            "position": "bottom"
+          }
+        }
+      }
+    },
+    {
+      "id": "expenditure_by_program_2019",
+      "title": "Gastos por Programa 2019 (Top 5)",
+      "type": "bar",
+      "data": {
+        "labels": [
+          "Servicios Urbanos",
+          "Actividades Centrales",
+          "Fondo Educativo",
+          "Desarrollo de Políticas Sociales",
+          "Planificacion y desarrollo de politicas sociales, salu"
+        ],
+        "datasets": [
+          {
+            "label": "Gastos Ejecutados",
+            "data": [
+              61327344.23,
+              88741630.12,
+              25358513.52,
+              10745925.77,
+              16736420.07
+            ],
+            "backgroundColor": "#3b82f6"
+          }
+        ]
+      },
+      "options": {
+        "responsive": true,
+        "plugins": {
+          "title": {
+            "display": true,
+            "text": "Gastos por Programa 2019 (Top 5)"
+          }
+        },
+        "scales": {
+          "y": {
+            "beginAtZero": true
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "generated_date": "2025-09-27",
+    "version": "1.0",
+    "total_charts": 4
+  }
+}

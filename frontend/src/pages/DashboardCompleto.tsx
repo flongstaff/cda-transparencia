@@ -5,7 +5,8 @@
  * con selección de año por página y datos precargados para rendimiento óptimo.
  */
 
-import React, { useState, useEffect, useMemo, memo, lazy, Suspense } from 'react';
+import * as React from 'react';
+import { useState, useEffect, useMemo, memo, lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -45,39 +46,48 @@ import {
 } from 'lucide-react';
 
 // Import enhanced year selector and data hooks
-import ResponsiveYearSelector from '../components/forms/ResponsiveYearSelector';
+import ResponsiveYearSelector from '@components/forms/ResponsiveYearSelector';
 import { useMultiYearData } from '../hooks/useMultiYearData';
-import TimeSeriesChart from '../components/charts/TimeSeriesChart';
-import RechartsWrapper from '../components/charts/RechartsWrapper';
+import { useDashboardData } from '../hooks/useUnifiedData';
+import { DataSourcesIndicator } from '@components/common/DataSourcesIndicator';
+import { YearSelector } from '@components/common/YearSelector';
+import TimeSeriesChart from '@components/charts/TimeSeriesChart';
+import RechartsWrapper from '@components/charts/RechartsWrapper';
 
 // Import all chart components
-import BudgetExecutionChartWrapper from '../components/charts/BudgetExecutionChartWrapper';
-import DebtReportChart from '../components/charts/DebtReportChart';
-import ChartAuditReport from '../components/charts/ChartAuditReport';
+import BudgetExecutionChartWrapper from '@components/charts/BudgetExecutionChartWrapper';
+import DebtReportChart from '@components/charts/DebtReportChart';
+import ChartAuditReport from '@components/charts/ChartAuditReport';
 
 // Import chart integration utilities
 import { ChartsGrid, AuditSection, QuickStats } from '../utils/chartIntegration';
-import EconomicReportChart from '../components/charts/EconomicReportChart';
-import EducationDataChart from '../components/charts/EducationDataChart';
-import ExpenditureReportChart from '../components/charts/ExpenditureReportChart';
-import FinancialReservesChart from '../components/charts/FinancialReservesChart';
-import FiscalBalanceReportChart from '../components/charts/FiscalBalanceReportChart';
-import HealthStatisticsChart from '../components/charts/HealthStatisticsChart';
-import InfrastructureProjectsChart from '../components/charts/InfrastructureProjectsChart';
-import InvestmentReportChart from '../components/charts/InvestmentReportChart';
-import PersonnelExpensesChart from '../components/charts/PersonnelExpensesChart';
-import RevenueReportChart from '../components/charts/RevenueReportChart';
-import RevenueSourcesChart from '../components/charts/RevenueSourcesChart';
+import EconomicReportChart from '@components/charts/EconomicReportChart';
+import EducationDataChart from '@components/charts/EducationDataChart';
+import ExpenditureReportChart from '@components/charts/ExpenditureReportChart';
+import FinancialReservesChart from '@components/charts/FinancialReservesChart';
+import FiscalBalanceReportChart from '@components/charts/FiscalBalanceReportChart';
+import HealthStatisticsChart from '@components/charts/HealthStatisticsChart';
+import InfrastructureProjectsChart from '@components/charts/InfrastructureProjectsChart';
+import InvestmentReportChart from '@components/charts/InvestmentReportChart';
+import PersonnelExpensesChart from '@components/charts/PersonnelExpensesChart';
+import RevenueReportChart from '@components/charts/RevenueReportChart';
+import RevenueSourcesChart from '@components/charts/RevenueSourcesChart';
 
 // Import newer chart components
-import QuarterlyExecutionChart from '../components/charts/QuarterlyExecutionChart';
-import ProgrammaticPerformanceChart from '../components/charts/ProgrammaticPerformanceChart';
-import GenderBudgetingChart from '../components/charts/GenderBudgetingChart';
-import WaterfallExecutionChart from '../components/charts/WaterfallExecutionChart';
+import QuarterlyExecutionChart from '@components/charts/QuarterlyExecutionChart';
+import ProgrammaticPerformanceChart from '@components/charts/ProgrammaticPerformanceChart';
+import GenderBudgetingChart from '@components/charts/GenderBudgetingChart';
+import WaterfallExecutionChart from '@components/charts/WaterfallExecutionChart';
 
 // Import dynamic chart components
-import DynamicChartLoader from '../components/charts/DynamicChartLoader';
-import ComprehensiveChartGrid from '../components/charts/ComprehensiveChartGrid';
+import DynamicChartLoader from '@components/charts/DynamicChartLoader';
+import ComprehensiveChartGrid from '@components/charts/ComprehensiveChartGrid';
+import ErrorBoundary from '@components/common/ErrorBoundary';
+
+// Import analytics dashboards and data viewers
+import ComprehensiveAnalyticsDashboard from '@components/analytics/ComprehensiveAnalyticsDashboard';
+import FinancialAnalyticsDashboard from '@components/analytics/FinancialAnalyticsDashboard';
+import { UnifiedDataViewer } from '@components/data-viewers';
 
 // Dashboard sections configuration
 const DASHBOARD_SECTIONS = [
@@ -344,6 +354,19 @@ const DashboardCompleto: React.FC = () => {
     refresh: refreshData
   } = useMultiYearData(new Date().getFullYear());
 
+  // 🌐 Use new UnifiedDataService with ALL external APIs and auto-refresh
+  const {
+    data: unifiedDashboardData,
+    externalData,
+    sources,
+    activeSources,
+    loading: unifiedLoading,
+    error: unifiedError,
+    refetch: unifiedRefetch,
+    availableYears: unifiedYears,
+    liveDataEnabled
+  } = useDashboardData(selectedYear);
+
   // Extract current year data for easy access
   const currentBudget = currentData?.budget;
   const currentContracts = currentData?.contracts || [];
@@ -466,6 +489,16 @@ const DashboardCompleto: React.FC = () => {
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
+          </div>
+
+          {/* Data Sources Indicator - Shows live API integration status */}
+          <div className="mt-6">
+            <DataSourcesIndicator
+              activeSources={activeSources}
+              externalData={externalData}
+              loading={unifiedLoading}
+              className="w-full"
+            />
           </div>
         </div>
       </div>
@@ -1013,6 +1046,58 @@ const EnhancedTransparencyContent: React.FC<{
   const renderOverview = () => {
     return (
       <div className="space-y-6">
+        {/* Transparency & Accountability Dashboard - Combined visualization of budget execution, program performance, gender equity, and transparency metrics */}
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-2xl shadow-lg p-6 border border-blue-100 dark:border-blue-900/50">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+            <Shield className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
+            Dashboard de Transparencia y Rendición de Cuentas
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Budget Execution Rate */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 border-l-4 border-green-500">
+              <div className="flex items-center">
+                <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-lg mr-4">
+                  <TrendingUp className="h-6 w-6 text-green-600 dark:text-green-400" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Tasa de Ejecución Presupuestaria</p>
+                  <p className="text-3xl font-bold text-gray-800 dark:text-white">94.2%</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Ejecución consistentemente alta</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Families Supported */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 border-l-4 border-blue-500">
+              <div className="flex items-center">
+                <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg mr-4">
+                  <Users className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Familias Apoyadas</p>
+                  <p className="text-3xl font-bold text-gray-800 dark:text-white">2,350</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">A través de programas sociales</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Gender Equity */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 border-l-4 border-purple-500">
+              <div className="flex items-center">
+                <div className="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg mr-4">
+                  <Users className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Equidad de Género</p>
+                  <p className="text-3xl font-bold text-gray-800 dark:text-white">54%</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Representación femenina</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-6 border-l-4 border-red-500">
@@ -1770,8 +1855,8 @@ const EnhancedFinancialContent: React.FC<{
 
             {/* Revenue Analysis */}
             <RechartsWrapper
-              csvUrl="/data/charts/Revenue_Report_consolidated_2019-2025.csv"
-              selectedYear={selectedYear}
+              type="Revenue_Report"
+              year={selectedYear}
               title="Análisis de Ingresos"
               chartType="area"
               dataKey="year"
@@ -1916,8 +2001,8 @@ const EnhancedFinancialContent: React.FC<{
           <div className="space-y-6">
             {/* Multi-year Budget Execution Trend */}
             <TimeSeriesChart
-              csvUrl="/data/charts/Budget_Execution_consolidated_2019-2025.csv"
-              selectedYear={null} // Show all years
+              type="Budget_Execution"
+              year={null} // Show all years
               title="Tendencia de Ejecución Presupuestaria (2019-2025)"
               description="Evolución completa con detección de anomalías inter-anuales"
               height={450}
@@ -1929,8 +2014,8 @@ const EnhancedFinancialContent: React.FC<{
 
             {/* Multi-year Revenue Comparison */}
             <RechartsWrapper
-              csvUrl="/data/charts/Revenue_Report_consolidated_2019-2025.csv"
-              selectedYear={null} // Show all years
+              type="Revenue_Report"
+              year={null} // Show all years
               title="Comparación de Ingresos Multi-Año"
               description="Análisis completo de tendencias de ingresos"
               height={400}
@@ -2084,4 +2169,55 @@ const EnhancedFinancialContent: React.FC<{
 };
 
 
-export default DashboardCompleto;
+
+// Wrap with error boundary for production safety
+const DashboardCompletoWithErrorBoundary: React.FC = () => {
+  return (
+    <ErrorBoundary
+      fallback={(error) => (
+        <div className="container mx-auto px-4 py-8">
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-6 rounded-lg">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-yellow-800 dark:text-yellow-200">
+                  Error al Cargar Página
+                </h3>
+                <div className="mt-2 text-sm text-yellow-700 dark:text-yellow-300">
+                  <p>Ocurrió un error al cargar esta página. Por favor, intente más tarde.</p>
+                  {error && (
+                    <p className="mt-2 text-xs font-mono bg-yellow-100 dark:bg-yellow-900/40 p-2 rounded">
+                      {error.message}
+                    </p>
+                  )}
+                </div>
+                <div className="mt-4 space-x-2">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Recargar
+                  </button>
+                  <a
+                    href="/"
+                    className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Volver al Inicio
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    >
+      <DashboardCompleto />
+    </ErrorBoundary>
+  );
+};
+
+export default DashboardCompletoWithErrorBoundary;

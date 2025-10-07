@@ -1,0 +1,1738 @@
+[
+  {
+    "file": "BarChartComponent.tsx",
+    "lines": 265,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": true,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart"
+    ],
+    "dataIntegration": "integrated",
+    "needsUpdate": false
+  },
+  {
+    "file": "BaseChart.tsx",
+    "lines": 409,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "LineChart",
+      "AreaChart",
+      "PieChart",
+      "ScatterChart",
+      "ComposedChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "BudgetAnalysisChart.tsx",
+    "lines": 22,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "BudgetAnalysisChartEnhanced.tsx",
+    "lines": 22,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "BudgetExecutionChart.tsx",
+    "lines": 141,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": true,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart"
+    ],
+    "dataIntegration": "integrated",
+    "needsUpdate": true
+  },
+  {
+    "file": "BudgetExecutionChartWrapper.tsx",
+    "lines": 132,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "BudgetExecutionChartWrapperStandardized.tsx",
+    "lines": 234,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "BudgetExecutionDashboard.tsx",
+    "lines": 461,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "PieChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "ChartAuditReport.tsx",
+    "lines": 937,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "AreaChart",
+      "PieChart",
+      "ScatterChart",
+      "ComposedChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "ChartWrapper.tsx",
+    "lines": 133,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "ComplianceChart.tsx",
+    "lines": 266,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "PieChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "ComprehensiveChart.tsx",
+    "lines": 571,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": true,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "LineChart",
+      "AreaChart",
+      "PieChart"
+    ],
+    "dataIntegration": "integrated",
+    "needsUpdate": false
+  },
+  {
+    "file": "ComprehensiveChartGrid.tsx",
+    "lines": 271,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "ConsistentDataVisualization.tsx",
+    "lines": 680,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": true,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "LineChart",
+      "AreaChart",
+      "PieChart"
+    ],
+    "dataIntegration": "integrated",
+    "needsUpdate": false
+  },
+  {
+    "file": "ContractAnalysisChart.tsx",
+    "lines": 22,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "DebtAnalysisChart.tsx",
+    "lines": 22,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "DebtReportChart.tsx",
+    "lines": 134,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "DebtReportChartStandardized.tsx",
+    "lines": 138,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "DocumentAnalysisChart.tsx",
+    "lines": 22,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "DynamicChartLoader.tsx",
+    "lines": 166,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "EconomicReportChart.tsx",
+    "lines": 134,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "EducationDataChart.tsx",
+    "lines": 134,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "EnhancedDataVisualization.tsx",
+    "lines": 910,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": true,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "LineChart",
+      "AreaChart",
+      "PieChart",
+      "RadarChart",
+      "ScatterChart",
+      "ComposedChart"
+    ],
+    "dataIntegration": "mock",
+    "needsUpdate": true
+  },
+  {
+    "file": "ExpenditureByProgramChart.tsx",
+    "lines": 76,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "ExpenditureReportChart.tsx",
+    "lines": 134,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "FinancialReservesChart.tsx",
+    "lines": 143,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "FiscalBalanceReportChart.tsx",
+    "lines": 142,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "FunnelChart.tsx",
+    "lines": 68,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "GanttChart.tsx",
+    "lines": 58,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "GenderBudgetingChart.tsx",
+    "lines": 229,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "HealthStatisticsChart.tsx",
+    "lines": 134,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "ImprovedBarChartComponent.tsx",
+    "lines": 273,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": true,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart"
+    ],
+    "dataIntegration": "integrated",
+    "needsUpdate": false
+  },
+  {
+    "file": "ImprovedBudgetExecutionChart.tsx",
+    "lines": 129,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "InfrastructureProjectsChart.tsx",
+    "lines": 134,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "InvestmentReportChart.tsx",
+    "lines": 134,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "MultiYearRevenueChart.tsx",
+    "lines": 449,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": false,
+      "importsHook": true,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "LineChart",
+      "AreaChart",
+      "PieChart"
+    ],
+    "dataIntegration": "integrated",
+    "needsUpdate": false
+  },
+  {
+    "file": "PersonnelExpensesChart.tsx",
+    "lines": 134,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "ProcurementTimelineChart.tsx",
+    "lines": 181,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "ProgrammaticPerformanceChart.tsx",
+    "lines": 171,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "PropertyDeclarationsChart.tsx",
+    "lines": 22,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "QuarterlyExecutionChart.tsx",
+    "lines": 180,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "RadarChart.tsx",
+    "lines": 54,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "RadarChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "RechartsWrapper.tsx",
+    "lines": 394,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": true,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "LineChart",
+      "AreaChart",
+      "PieChart",
+      "ScatterChart"
+    ],
+    "dataIntegration": "integrated",
+    "needsUpdate": false
+  },
+  {
+    "file": "ResponsiveChartWrapper.tsx",
+    "lines": 58,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": true,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "RevenueBySourceChart.tsx",
+    "lines": 71,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "RevenueReportChart.tsx",
+    "lines": 122,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "RevenueSourcesChart.tsx",
+    "lines": 134,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "SalaryAnalysisChart.tsx",
+    "lines": 22,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "StandardizedChart.tsx",
+    "lines": 562,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": true
+    },
+    "chartTypes": [
+      "BarChart",
+      "LineChart",
+      "AreaChart",
+      "PieChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "TimeSeriesAnomalyChart.tsx",
+    "lines": 195,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "TimeSeriesChart.tsx",
+    "lines": 341,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": true,
+      "importsService": false,
+      "importsHook": true,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "LineChart"
+    ],
+    "dataIntegration": "integrated",
+    "needsUpdate": true
+  },
+  {
+    "file": "TransparencyDashboard.tsx",
+    "lines": 235,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "PieChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "TreasuryAnalysisChart.tsx",
+    "lines": 22,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "TreemapChart.tsx",
+    "lines": 98,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "Treemap"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "UnifiedChart.tsx",
+    "lines": 874,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": true,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "LineChart",
+      "AreaChart",
+      "PieChart"
+    ],
+    "dataIntegration": "integrated",
+    "needsUpdate": false
+  },
+  {
+    "file": "UnifiedDashboardChart.tsx",
+    "lines": 101,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": true,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "integrated",
+    "needsUpdate": true
+  },
+  {
+    "file": "UniversalChart.tsx",
+    "lines": 543,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": true,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": false,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "LineChart",
+      "AreaChart",
+      "PieChart",
+      "RadarChart",
+      "ScatterChart",
+      "ComposedChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "UserEngagementChart.tsx",
+    "lines": 514,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": true,
+      "importsService": true,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart",
+      "LineChart",
+      "AreaChart",
+      "PieChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "ValidatedChart.tsx",
+    "lines": 113,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "WaterfallChart.tsx",
+    "lines": 127,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": true,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "WaterfallExecutionChart.tsx",
+    "lines": 257,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": true,
+      "usesEffect": true,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "BarChart"
+    ],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  },
+  {
+    "file": "YearlyComparisonChart.tsx",
+    "lines": 79,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": true,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "recharts",
+    "ui": {
+      "responsive": true,
+      "hasLoading": true,
+      "hasError": true,
+      "hasTooltip": true,
+      "hasLegend": true,
+      "hasAnimation": false
+    },
+    "chartTypes": [
+      "LineChart"
+    ],
+    "dataIntegration": "integrated",
+    "needsUpdate": false
+  },
+  {
+    "file": "YearlyDataChart.tsx",
+    "lines": 23,
+    "dataSource": {
+      "usesProps": false,
+      "usesMockData": false,
+      "usesState": false,
+      "usesEffect": false,
+      "importsService": false,
+      "importsHook": false,
+      "usesExternalAPI": false,
+      "usesUnifiedData": false
+    },
+    "chartLibrary": "unknown",
+    "ui": {
+      "responsive": false,
+      "hasLoading": false,
+      "hasError": false,
+      "hasTooltip": false,
+      "hasLegend": false,
+      "hasAnimation": false
+    },
+    "chartTypes": [],
+    "dataIntegration": "unknown",
+    "needsUpdate": true
+  }
+]

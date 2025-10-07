@@ -1,86 +1,86 @@
 {
-  "year": 2020,
-  "total_budget": 294000000,
-  "total_executed": 272685000,
-  "execution_rate": 92.75,
-  "executed_infra": 51975000,
-  "personnel": 136500000,
-  "budget_execution": [
-    [
-      "Q1",
-      "$74M",
-      "$65M",
-      "96%"
+    "year": 2020,
+    "total_budget": 294000000,
+    "total_executed": 272685000,
+    "execution_rate": 92.75,
+    "executed_infra": 51975000,
+    "personnel": 136500000,
+    "budget_execution": [
+        [
+            "Q1",
+            "$74M",
+            "$65M",
+            "96%"
+        ],
+        [
+            "Q2",
+            "$74M",
+            "$68M",
+            "100%"
+        ],
+        [
+            "Q3",
+            "$74M",
+            "$71M",
+            "104%"
+        ],
+        [
+            "Q4",
+            "$74M",
+            "$68M",
+            "100%"
+        ]
     ],
-    [
-      "Q2",
-      "$74M",
-      "$68M",
-      "100%"
+    "revenue_sources": [
+        [
+            "Property Tax",
+            "$103M",
+            "35%",
+            "+3.2%"
+        ],
+        [
+            "Business Tax",
+            "$74M",
+            "25%",
+            "+4.1%"
+        ],
+        [
+            "Fees and Charges",
+            "$59M",
+            "20%",
+            "+2.8%"
+        ],
+        [
+            "Transfers",
+            "$59M",
+            "20%",
+            "+3.5%"
+        ]
     ],
-    [
-      "Q3",
-      "$74M",
-      "$71M",
-      "104%"
-    ],
-    [
-      "Q4",
-      "$74M",
-      "$68M",
-      "100%"
+    "expenditure_breakdown": [
+        [
+            "Personnel",
+            "$137M",
+            "45%",
+            "50%"
+        ],
+        [
+            "Services",
+            "$88M",
+            "30%",
+            "100%"
+        ],
+        [
+            "Infrastructure",
+            "$52M",
+            "20%",
+            "95%"
+        ],
+        [
+            "Others",
+            "$29M",
+            "5%",
+            "100%"
+        ]
     ]
-  ],
-  "revenue_sources": [
-    [
-      "Property Tax",
-      "$103M",
-      "35%",
-      "+3.2%"
-    ],
-    [
-      "Business Tax",
-      "$74M",
-      "25%",
-      "+4.1%"
-    ],
-    [
-      "Fees and Charges",
-      "$59M",
-      "20%",
-      "+2.8%"
-    ],
-    [
-      "Transfers",
-      "$59M",
-      "20%",
-      "+3.5%"
-    ]
-  ],
-  "expenditure_breakdown": [
-    [
-      "Personnel",
-      "$137M",
-      "45%",
-      "50%"
-    ],
-    [
-      "Services",
-      "$88M",
-      "30%",
-      "100%"
-    ],
-    [
-      "Infrastructure",
-      "$52M",
-      "20%",
-      "95%"
-    ],
-    [
-      "Others",
-      "$29M",
-      "5%",
-      "100%"
-    ]
-  ]
 }

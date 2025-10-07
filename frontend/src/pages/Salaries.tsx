@@ -10,13 +10,20 @@ import {
   Building,
   BarChart3,
   Loader2,
-  Download
+  Download,
+  RefreshCw
 } from 'lucide-react';
 import SalaryAnalysisChart from '../components/charts/SalaryAnalysisChart';
 import SalaryScaleVisualization from '../components/data-display/SalaryScaleVisualization';
 import PageYearSelector from '../components/forms/PageYearSelector';
 import { formatCurrencyARS } from '../utils/formatters';
 import { useMasterData } from '../hooks/useMasterData';
+import { useSalariesData } from '../hooks/useUnifiedData';
+import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator';
+import { YearSelector } from '../components/common/YearSelector';
+import ErrorBoundary from '../components/common/ErrorBoundary';
+import { StatCard } from '../components/common/StatCard';
+import { UnifiedDataViewer } from '../components/data-viewers';
 
 interface SalaryPosition {
   code: string;
@@ -42,7 +49,7 @@ interface SalaryData {
 const Salaries: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
   
-  // Use unified master data service
+  // Use unified master data service (legacy)
   const {
     masterData,
     currentBudget,
@@ -50,15 +57,31 @@ const Salaries: React.FC = () => {
     currentTreasury,
     currentContracts,
     currentSalaries,
-    loading,
-    error,
+    loading: legacyLoading,
+    error: legacyError,
     totalDocuments,
-    availableYears,
+    availableYears: legacyYears,
     categories,
     dataSourcesActive,
     refetch,
     switchYear
   } = useMasterData(selectedYear);
+
+  // 🌐 Use new UnifiedDataService with external APIs
+  const {
+    data: unifiedSalariesData,
+    externalData,
+    sources,
+    activeSources,
+    loading: unifiedLoading,
+    error: unifiedError,
+    refetch: unifiedRefetch,
+    availableYears,
+    liveDataEnabled
+  } = useSalariesData(selectedYear);
+
+  const loading = legacyLoading || unifiedLoading;
+  const error = legacyError || unifiedError;
 
   // Process salary data from comprehensive data service
   const salaryData: SalaryData | null = useMemo(() => {
@@ -72,7 +95,7 @@ const Salaries: React.FC = () => {
     const allPositions: SalaryPosition[] = [];
 
     if (yearSalaryData.positions && Array.isArray(yearSalaryData.positions)) {
-      yearSalaryData.positions.forEach((props: Record<string, unknown>) => {
+      yearSalaryData.positions.forEach((pos: Record<string, unknown>) => {
         const position: SalaryPosition = {
           code: pos.code || pos.codigo || 'N/A',
           name: pos.name || pos.nombre || pos.puesto || 'Posición sin nombre',
@@ -142,7 +165,7 @@ const Salaries: React.FC = () => {
     }, {} as Record<string, any>);
 
     // Calculate averages
-    Object.values(categoryGroups).forEach((props: Record<string, unknown>) => {
+    Object.values(categoryGroups).forEach((group: any) => {
       group.avgSalary = group.totalGross / group.totalEmployees;
     });
 
@@ -223,69 +246,63 @@ const Salaries: React.FC = () => {
               )}
             </p>
           </div>
-          <PageYearSelector
-            availableYears={availableYears}
+          <YearSelector
             selectedYear={selectedYear}
-            onYearChange={switchYear}
+            availableYears={availableYears}
+            onChange={(year) => {
+              setSelectedYear(year);
+              switchYear(year);
+            }}
+            label="Año Salarios"
           />
         </div>
       </div>
 
+      {/* Data Sources Indicator */}
+      <DataSourcesIndicator
+        activeSources={activeSources}
+        externalData={externalData}
+        loading={unifiedLoading}
+        className="mb-6"
+      />
+
       {/* General Statistics */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <Users className="h-8 w-8 text-blue-500" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Total Empleados</p>
-              <p className="text-2xl font-semibold text-blue-600 dark:text-blue-400">{totalStats.totalEmployees}</p>
-            </div>
-          </div>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <StatCard
+          title="Total Empleados"
+          value={totalStats.totalEmployees.toString()}
+          subtitle="Personal municipal"
+          icon={Users}
+          iconColor="blue"
+          delay={0}
+        />
 
-        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <DollarSign className="h-8 w-8 text-green-500" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Salario Promedio</p>
-              <p className="text-2xl font-semibold text-green-600 dark:text-green-400">
-                {formatCurrencyARS(totalStats.averageSalary)}
-              </p>
-            </div>
-          </div>
-        </div>
+        <StatCard
+          title="Salario Promedio"
+          value={formatCurrencyARS(totalStats.averageSalary)}
+          subtitle="Remuneración media"
+          icon={DollarSign}
+          iconColor="green"
+          delay={0.1}
+        />
 
-        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <TrendingUp className="h-8 w-8 text-purple-500" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Costo Mensual</p>
-              <p className="text-2xl font-semibold text-purple-600 dark:text-purple-400">
-                {formatCurrencyARS(totalStats.totalMonthlyCost)}
-              </p>
-            </div>
-          </div>
-        </div>
+        <StatCard
+          title="Costo Mensual"
+          value={formatCurrencyARS(totalStats.totalMonthlyCost)}
+          subtitle="Masa salarial del mes"
+          icon={TrendingUp}
+          iconColor="purple"
+          delay={0.2}
+        />
 
-        <div className="bg-white dark:bg-dark-surface rounded-lg p-6 shadow-sm border border-gray-200 dark:border-dark-border">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <BarChart3 className="h-8 w-8 text-orange-500" />
-            </div>
-            <div className="ml-4">
-              <p className="text-sm font-medium text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">Costo Anual</p>
-              <p className="text-2xl font-semibold text-orange-600 dark:text-orange-400">
-                {formatCurrencyARS(totalStats.totalAnnualCost)}
-              </p>
-            </div>
-          </div>
-        </div>
+        <StatCard
+          title="Costo Anual"
+          value={formatCurrencyARS(totalStats.totalAnnualCost)}
+          subtitle="Incluye aguinaldo (13 sueldos)"
+          icon={BarChart3}
+          iconColor="orange"
+          delay={0.3}
+        />
       </div>
 
       {/* Module Value Information */}
@@ -563,8 +580,74 @@ const Salaries: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Unified Data Viewer - Salary Documents and Datasets */}
+      <div className="mt-6">
+        <UnifiedDataViewer
+          title="Documentos y Datasets de Sueldos y Remuneraciones"
+          description="Acceda a escalas salariales, datos de personal municipal, remuneraciones y documentación de recursos humanos"
+          category="salaries"
+          theme={['gove', 'gobierno-y-sector-publico']}
+          year={selectedYear}
+          showSearch={true}
+          defaultTab="all"
+          maxPDFs={15}
+          maxDatasets={25}
+        />
+      </div>
     </div>
   );
 };
 
-export default Salaries;
+
+// Wrap with error boundary for production safety
+const SalariesWithErrorBoundary: React.FC = () => {
+  return (
+    <ErrorBoundary
+      fallback={(error) => (
+        <div className="container mx-auto px-4 py-8">
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-6 rounded-lg">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-yellow-800 dark:text-yellow-200">
+                  Error al Cargar Página
+                </h3>
+                <div className="mt-2 text-sm text-yellow-700 dark:text-yellow-300">
+                  <p>Ocurrió un error al cargar esta página. Por favor, intente más tarde.</p>
+                  {error && (
+                    <p className="mt-2 text-xs font-mono bg-yellow-100 dark:bg-yellow-900/40 p-2 rounded">
+                      {error.message}
+                    </p>
+                  )}
+                </div>
+                <div className="mt-4 space-x-2">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Recargar
+                  </button>
+                  <a
+                    href="/"
+                    className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Volver al Inicio
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    >
+      <Salaries />
+    </ErrorBoundary>
+  );
+};
+
+export default SalariesWithErrorBoundary;

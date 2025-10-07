@@ -1,0 +1,60 @@
+name: Release
+# DISABLED: Using deploy.yml workflow instead
+
+on:
+  # Disabled automatic releases on push
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: frontend
+
+      - name: Build frontend
+        run: npm run build
+        working-directory: frontend
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Release v${{ github.run_number }}
+          body: |
+            ## Release Notes
+            
+            This release includes:
+            - Updated transparency data
+            - Improved visualization components
+            - Enhanced accessibility features
+            - Performance optimizations
+            
+            ### Features
+            - Dual deployment to GitHub Pages and Cloudflare Pages
+            - Automated data processing pipeline
+            - Weekly data updates
+            - Responsive design for all devices
+            
+            ### Bug Fixes
+            - Fixed deployment workflow issues
+            - Improved error handling
+            - Enhanced data validation
+          draft: false
+          prerelease: false

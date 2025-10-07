@@ -83,7 +83,7 @@ const ProgrammaticPerformanceChart: React.FC<ProgrammaticPerformanceChartProps> 
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Programmatic Performance data...
+          Cargando datos de Rendimiento Programático...
         </Typography>
       </Box>
     );
@@ -93,7 +93,7 @@ const ProgrammaticPerformanceChart: React.FC<ProgrammaticPerformanceChartProps> 
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Programmatic Performance data: {error}
+        Error cargando datos de Rendimiento Programático: {error}
       </Alert>
     );
   }
@@ -102,7 +102,7 @@ const ProgrammaticPerformanceChart: React.FC<ProgrammaticPerformanceChartProps> 
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Programmatic Performance data available
+        No hay datos disponibles de Rendimiento Programático
       </Alert>
     );
   }
@@ -139,8 +139,9 @@ const ProgrammaticPerformanceChart: React.FC<ProgrammaticPerformanceChartProps> 
     }
   }
   
-  // Default to 'quarter' or 'period' for x-axis if available, else use 'indicator'
-  const xAxisKey = chartData[0]?.quarter ? 'quarter' : 
+  // Default to 'quarterLabel' if available, else fall back to 'quarter' or 'period' for x-axis if available, else use 'indicator'
+  const xAxisKey = chartData[0]?.quarterLabel ? 'quarterLabel' : 
+                   chartData[0]?.quarter ? 'quarter' : 
                    chartData[0]?.period ? 'period' : 
                    chartData[0]?.indicator ? 'indicator' : 
                    chartData[0]?.name ? 'name' : 
@@ -152,17 +153,17 @@ const ProgrammaticPerformanceChart: React.FC<ProgrammaticPerformanceChartProps> 
       chartType={chartType}
       xAxisKey={xAxisKey}
       yAxisKeys={yAxisKeys}
-      title={showTitle ? "Programmatic Performance Dashboard" : undefined}
-      description={showDescription ? "Tracking programmatic indicators from category_caif.csv data" : undefined}
+      title={showTitle ? "Rendimiento Programático" : undefined}
+      description={showDescription ? "Seguimiento de indicadores programáticos desde datos de category_caif.csv" : undefined}
       height={height}
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel={xAxisKey === 'quarter' ? 'Quarter' : 
-                  xAxisKey === 'period' ? 'Period' : 
-                  xAxisKey === 'indicator' ? 'Indicator' : 
-                  xAxisKey === 'name' ? 'Program' : 'Year'}
-      yAxisLabel="Value / Percentage"
+      xAxisLabel={xAxisKey === 'quarterLabel' || xAxisKey === 'quarter' || xAxisKey === 'trimestre' ? 'Trimestre' : 
+                  xAxisKey === 'period' ? 'Período' : 
+                  xAxisKey === 'indicator' ? 'Indicador' : 
+                  xAxisKey === 'name' ? 'Programa' : 'Año'}
+      yAxisLabel="Valor / Porcentaje"
     />
   );
 };

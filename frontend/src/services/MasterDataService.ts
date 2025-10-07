@@ -4,15 +4,23 @@ import { DEFAULT_YEAR } from '../utils/yearConfig';
 import DataService from './dataService';
 import AuditService from './AuditService';
 import EnhancedDataService from './EnhancedDataService';
-import externalAPIsService from './ExternalAPIsService';
+import externalAPIsService from "./ExternalDataAdapter";
 import { githubDataService } from './GitHubDataService';
 import { dataSyncService } from './DataSyncService';
+import {
+  DATA_LOCATIONS,
+  AVAILABLE_YEARS as CONFIGURED_YEARS,
+  getConsolidatedDataPath,
+  getGitHubRawUrl,
+  getDataPath,
+  EXTERNAL_APIS as CONFIGURED_EXTERNAL_APIS
+} from '../config/dataConfig';
 
-// GitHub repository configuration
-const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/flongstaff/cda-transparencia/main';
+// GitHub repository configuration from centralized config
+const GITHUB_RAW_BASE = DATA_LOCATIONS.GITHUB_RAW;
 
-// Available years for data - focusing on 2000-2025 for comprehensive coverage
-const AVAILABLE_YEARS = Array.from({ length: 26 }, (_, i) => 2000 + i); // 2000 to 2025
+// Available years for data - from configuration (2017-2025)
+const AVAILABLE_YEARS = CONFIGURED_YEARS;
 
 // GitHub API configuration for dynamic resource discovery
 const GITHUB_API_CONFIG = {
@@ -24,12 +32,8 @@ const GITHUB_API_CONFIG = {
   }
 };
 
-// External API configurations
-const EXTERNAL_APIS = {
-  PRESUPUESTO_ABIERTO: 'https://api.presupuestoabierto.gob.ar',
-  GEOREF: 'https://apis.datos.gob.ar/georef/api',
-  INDEC: 'https://apis.datos.gob.ar/series/api'
-};
+// External API configurations from centralized config
+const EXTERNAL_APIS = CONFIGURED_EXTERNAL_APIS;
 
 export interface Document {
   id: string;
@@ -439,8 +443,14 @@ class MasterDataService {
    * Load data for a specific file pattern with comprehensive error handling
    */
   private async loadYearlyDataByPattern(year: number, dataType: string, target: Record<number, any>): Promise<void> {
+    // Normalize dataType for different naming conventions
+    const normalizedType = dataType === 'salary' ? 'salaries' : dataType;
+
     // Define multiple search patterns for robust data discovery
+    // Priority order: consolidated processed data -> organized analysis -> frontend data
     const patterns = [
+      `data/consolidated/${year}/${normalizedType}.json`, // HIGHEST PRIORITY - Processed PDF data
+      `data/consolidated/${year}/${dataType}.json`,
       `data/organized_analysis/financial_oversight/${dataType}_analysis/${dataType}_data_${year}.json`,
       `data/organized_analysis/financial_oversight/${dataType}_monitoring/${dataType}_data_${year}.json`,
       `data/organized_analysis/financial_oversight/${dataType}_oversight/${dataType}_data_${year}.json`,
@@ -515,6 +525,39 @@ class MasterDataService {
    */
   private async loadAllDocuments(githubResources: any[] = []): Promise<Document[]> {
     const allDocuments: Document[] = [];
+
+    // PRIORITY 1: Load from main catalog datasets (data.json - 1,213 datasets)
+    try {
+      const dataJsonResponse = await fetch(`${GITHUB_RAW_BASE}/data/data.json`);
+      if (dataJsonResponse.ok) {
+        const catalogData = await dataJsonResponse.json();
+        if (catalogData.dataset && Array.isArray(catalogData.dataset)) {
+          catalogData.dataset.forEach((dataset: any, index: number) => {
+            allDocuments.push({
+              id: dataset.identifier || `catalog-${index}`,
+              title: dataset.title || dataset.name || `Dataset ${index + 1}`,
+              category: dataset.theme?.join(', ') || dataset.keyword?.join(', ') || 'General',
+              type: this.determineFileType(dataset.distribution?.[0]?.downloadURL),
+              filename: dataset.distribution?.[0]?.title || dataset.title || '',
+              size_mb: dataset.distribution?.[0]?.byteSize ? parseFloat(dataset.distribution[0].byteSize) / (1024 * 1024) : 2.0,
+              url: dataset.distribution?.[0]?.downloadURL || dataset.landingPage || '',
+              year: this.extractYearFromDataset(dataset) || DEFAULT_YEAR,
+              verified: true,
+              processing_date: dataset.issued || dataset.modified || new Date().toISOString(),
+              integrity_verified: true,
+              source: dataset.publisher?.name || 'data.json_catalog'
+            });
+          });
+          this.logAuditEvent('catalog_loaded', {
+            source: 'data.json',
+            datasets: catalogData.dataset.length
+          });
+        }
+      }
+    } catch (error) {
+      console.warn('data.json catalog not available:', error);
+      this.logAuditEvent('catalog_load_error', { source: 'data.json', error: error.message });
+    }
 
     // Load from comprehensive data index
     try {
@@ -1020,6 +1063,29 @@ class MasterDataService {
     if (!filename) return null;
     const yearMatch = filename.match(/20\d{2}/);
     return yearMatch ? parseInt(yearMatch[0]) : null;
+  }
+
+  private extractYearFromDataset(dataset: any): number | null {
+    // Try temporal coverage first
+    if (dataset.temporal) {
+      const yearMatch = dataset.temporal.match(/20\d{2}/);
+      if (yearMatch) return parseInt(yearMatch[0]);
+    }
+    // Try issued/modified dates
+    if (dataset.issued) {
+      const yearMatch = dataset.issued.match(/20\d{2}/);
+      if (yearMatch) return parseInt(yearMatch[0]);
+    }
+    if (dataset.modified) {
+      const yearMatch = dataset.modified.match(/20\d{2}/);
+      if (yearMatch) return parseInt(yearMatch[0]);
+    }
+    // Try title
+    if (dataset.title) {
+      const yearMatch = dataset.title.match(/20\d{2}/);
+      if (yearMatch) return parseInt(yearMatch[0]);
+    }
+    return null;
   }
 
   private formatTitle(pattern: string, year: number): string {

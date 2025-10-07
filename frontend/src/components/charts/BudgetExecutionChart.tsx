@@ -6,11 +6,12 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
-  ResponsiveContainer
+  Legend
 } from 'recharts';
 import { formatCurrencyARS } from '../../utils/formatters';
 import StandardizedSection from '../ui/StandardizedSection';
+import useResponsive from '../../hooks/useResponsive';
+import ResponsiveChartWrapper from './ResponsiveChartWrapper';
 
 interface BudgetExecutionData {
   sector: string;
@@ -33,6 +34,8 @@ const BudgetExecutionChart: React.FC<BudgetExecutionChartProps> = ({
   title = "Presupuesto vs Ejecución",
   className = ""
 }) => {
+  const { isMobile, isTablet, isDesktop } = useResponsive();
+  
   const chartData = useMemo(() => {
     return data.map(item => ({
       ...item,
@@ -47,32 +50,45 @@ const BudgetExecutionChart: React.FC<BudgetExecutionChartProps> = ({
       description="Comparación entre presupuesto aprobado y ejecutado por sector"
       className={className}
     >
-      <div className="h-80 w-full max-w-full overflow-x-auto">
-        <ResponsiveContainer width="100%" height="100%">
+      <div className="w-full max-w-full">
+        <ResponsiveChartWrapper height={400}>
           <BarChart
             data={chartData}
-            margin={{ top: 20, right: 30, left: 20, bottom: 100 }}
+            margin={{ 
+              top: 20, 
+              right: 30, 
+              left: 20, 
+              bottom: isMobile ? 120 : 100 
+            }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" className="dark:stroke-gray-700" />
             <XAxis 
               dataKey="sector" 
               tick={{ 
-                fontSize: 10,
+                fontSize: isMobile ? 8 : 10,
                 fill: '#4b5563',
                 className: 'dark:fill-gray-300'
               }} 
-              height={70}
-              angle={-45}
+              height={isMobile ? 90 : 70}
+              angle={isMobile ? -50 : -45}
               textAnchor="end"
               interval={0}
             />
             <YAxis 
               tick={{ 
-                fontSize: 10,
+                fontSize: isMobile ? 8 : 10,
                 fill: '#4b5563',
                 className: 'dark:fill-gray-300'
               }} 
-              tickFormatter={(value) => formatCurrencyARS(value).replace('ARS', '').trim()}
+              tickFormatter={(value) => {
+                const formatted = formatCurrencyARS(value).replace('ARS', '').trim();
+                // On mobile, show shorter format
+                if (isMobile) {
+                  if (value >= 1000000) return `${(value / 1000000).toFixed(1)}M`;
+                  if (value >= 1000) return `${(value / 1000).toFixed(1)}K`;
+                }
+                return formatted;
+              }}
             />
             <Tooltip 
               contentStyle={{ 
@@ -81,7 +97,8 @@ const BudgetExecutionChart: React.FC<BudgetExecutionChartProps> = ({
                 color: '#000',
                 borderRadius: '0.5rem',
                 boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-                minWidth: '150px'
+                minWidth: isMobile ? '120px' : '150px',
+                fontSize: isMobile ? '12px' : '14px'
               }}
               className="dark:bg-dark-surface dark:border-dark-border dark:text-dark-text-primary"
               formatter={(value, name) => [
@@ -89,11 +106,16 @@ const BudgetExecutionChart: React.FC<BudgetExecutionChartProps> = ({
                 name === 'budget' ? 'Presupuesto' : 'Ejecutado'
               ]}
             />
-            <Legend />
+            <Legend 
+              wrapperStyle={{ 
+                paddingTop: isMobile ? 20 : 10,
+                fontSize: isMobile ? '12px' : '14px'
+              }}
+            />
             <Bar dataKey="budget" name="Presupuesto" fill="#3B82F6" radius={[4, 4, 0, 0]} />
             <Bar dataKey="execution" name="Ejecutado" fill="#10B981" radius={[4, 4, 0, 0]} />
           </BarChart>
-        </ResponsiveContainer>
+        </ResponsiveChartWrapper>
       </div>
 
       <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">

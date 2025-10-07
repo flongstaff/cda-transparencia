@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Building, Clock, AlertTriangle, CheckCircle, DollarSign } from 'lucide-react';
+import { Building, Clock, AlertTriangle, CheckCircle, DollarSign, BarChart3, PieChart, TrendingUp, MapPin, Users } from 'lucide-react';
+import { externalAPIsService } from "../services/ExternalDataAdapter";
+import ErrorBoundary from '@components/common/ErrorBoundary';
+import { ChartContainer } from '@components/common/ChartContainer';
+import UnifiedChart from '@components/charts/UnifiedChart';
+import InfrastructureProjectsChart from '@components/charts/InfrastructureProjectsChart';
+import TimeSeriesChart from '@components/charts/TimeSeriesChart';
+
+import ExpenditureReportChart from '@components/charts/ExpenditureReportChart';
 
 interface InfrastructureProject {
   project_name: string;
@@ -62,22 +70,38 @@ const InfrastructureTracker: React.FC = () => {
     try {
       setLoading(true);
       
-      // Try to load real infrastructure data from API
-      const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+      // Try to load infrastructure data from external APIs service
+      console.log('Loading infrastructure data from external APIs...');
       
       try {
-        const response = await fetch(`${API_BASE}/api/audit/infrastructure`, {
-          headers: { 'Accept': 'application/json' }
-        });
+        const externalResult = await externalAPIsService.getObrasPublicasData();
+        console.log('Obras Públicas data:', externalResult);
         
-        if (response.ok) {
-          const realData = await response.json();
-          setInfrastructureData(realData);
+        // Process Obras Públicas data
+        if (externalResult.success && externalResult.data) {
+          console.log('Found Obras Públicas data:', externalResult);
+          
+          // Process the actual data structure
+          const infrastructureData: InfrastructureData = {
+            timestamp: new Date().toISOString(),
+            projects: externalResult.data.projects || [],
+            contractor_analysis: externalResult.data.contractor_analysis || [],
+            flags: externalResult.data.flags || [],
+            summary: {
+              total_projects: externalResult.data.summary?.total_projects || 0,
+              total_budget: externalResult.data.summary?.total_budget || 0,
+              delayed_projects: externalResult.data.summary?.delayed_projects || 0,
+              flagged_projects: externalResult.data.summary?.flagged_projects || 0,
+              completion_rate: externalResult.data.summary?.completion_rate || 0,
+            }
+          };
+          
+          setInfrastructureData(infrastructureData);
           setLoading(false);
           return;
         }
-      } catch (_apiError) {
-    // // console.log('API not available, showing empty state');
+      } catch (externalError) {
+        console.warn('Obras Públicas API not available:', externalError);
       }
       
       // Show empty state when no real data is available
@@ -267,6 +291,84 @@ const InfrastructureTracker: React.FC = () => {
         </div>
       </div>
 
+      {/* Infrastructure Charts Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        {/* Project Types Chart */}
+        <ChartContainer
+          title="Distribución por Tipo de Proyecto"
+          description="Clasificación de proyectos por categoría"
+          icon={PieChart}
+          height={350}
+        >
+          <UnifiedChart
+            type="infrastructure_types"
+            year={new Date().getFullYear()}
+            title="Tipos de Proyectos"
+            height={300}
+          />
+        </ChartContainer>
+
+        {/* Budget vs Spent Chart */}
+        <ChartContainer
+          title="Presupuesto vs Ejecutado"
+          description="Comparación entre presupuesto asignado y gastado"
+          icon={BarChart3}
+          height={350}
+        >
+          <InfrastructureProjectsChart
+            type="budget_vs_spent"
+            year={new Date().getFullYear()}
+            height={300}
+          />
+        </ChartContainer>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        {/* Contractor Analysis Chart */}
+        <ChartContainer
+          title="Análisis por Contratistas"
+          description="Distribución de proyectos por contratista"
+          icon={Users}
+          height={350}
+        >
+          <UnifiedChart
+            type="contractor_distribution"
+            year={new Date().getFullYear()}
+            height={300}
+          />
+        </ChartContainer>
+
+        {/* Project Status Chart */}
+        <ChartContainer
+          title="Estado de Proyectos"
+          description="Distribución por estado de ejecución"
+          icon={TrendingUp}
+          height={350}
+        >
+          <UnifiedChart
+            type="project_status"
+            year={new Date().getFullYear()}
+            title="Estado de Proyectos"
+            height={300}
+          />
+        </ChartContainer>
+      </div>
+
+      {/* Time Series Analysis */}
+      <ChartContainer
+        title="Evolución Histórica de Infraestructura"
+        description="Tendencias de proyectos a lo largo del tiempo"
+        icon={TrendingUp}
+        height={400}
+      >
+        <TimeSeriesChart
+          type="infrastructure_trends"
+          year={null}
+          title="Tendencias de Infraestructura"
+          height={350}
+        />
+      </ChartContainer>
+
       {/* Empty State */}
       {infrastructureData.projects.length === 0 && (
         <div className="text-center py-12 bg-white dark:bg-gray-800 rounded-xl shadow">
@@ -283,4 +385,55 @@ const InfrastructureTracker: React.FC = () => {
   );
 };
 
-export default InfrastructureTracker;
+
+// Wrap with error boundary for production safety
+const InfrastructureTrackerWithErrorBoundary: React.FC = () => {
+  return (
+    <ErrorBoundary
+      fallback={(error) => (
+        <div className="container mx-auto px-4 py-8">
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-6 rounded-lg">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-yellow-800 dark:text-yellow-200">
+                  Error al Cargar Página
+                </h3>
+                <div className="mt-2 text-sm text-yellow-700 dark:text-yellow-300">
+                  <p>Ocurrió un error al cargar esta página. Por favor, intente más tarde.</p>
+                  {error && (
+                    <p className="mt-2 text-xs font-mono bg-yellow-100 dark:bg-yellow-900/40 p-2 rounded">
+                      {error.message}
+                    </p>
+                  )}
+                </div>
+                <div className="mt-4 space-x-2">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Recargar
+                  </button>
+                  <a
+                    href="/"
+                    className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Volver al Inicio
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    >
+      <InfrastructureTracker />
+    </ErrorBoundary>
+  );
+};
+
+export default InfrastructureTrackerWithErrorBoundary;

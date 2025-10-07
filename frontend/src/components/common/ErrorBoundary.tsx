@@ -4,7 +4,7 @@
  */
 
 import React, { ErrorInfo } from 'react';
-import { AlertCircle, RefreshCw, Home, Github } from 'lucide-react';
+import { AlertCircle, RefreshCw, Home, Github, CheckCircle } from 'lucide-react';
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;

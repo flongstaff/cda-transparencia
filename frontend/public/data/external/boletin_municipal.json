@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "data": {
+    "success": true,
+    "data": {
+      "source": "Boletín Oficial Municipal",
+      "lastUpdate": "2025-10-03T03:56:56.852Z",
+      "announcements": [
+        {
+          "id": 1,
+          "title": "Ordenanza Municipal 2025/01",
+          "type": "Ordenanza",
+          "date": "2025-01-15",
+          "summary": "Aprobación del presupuesto municipal para el año 2025"
+        },
+        {
+          "id": 2,
+          "title": "Decreto 2025/05",
+          "type": "Decreto",
+          "date": "2025-01-20",
+          "summary": "Designación de funcionarios municipales"
+        }
+      ]
+    },
+    "source": "Boletín Municipal Mock"
+  },
+  "source": "boletin_municipal",
+  "timestamp": "2025-10-03T03:56:56.853Z"
+}

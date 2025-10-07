@@ -57,26 +57,42 @@ const BudgetExecutionChartWrapper: React.FC<BudgetExecutionChartWrapperProps> = 
     } else if (data) {
       setLoading(false);
       setError(null);
-      // Transform the raw data to match BudgetExecutionChart expectations
-      // Group by sector and aggregate budgeted/executed amounts
-      const filteredData = year ? data.filter(item => 
-        item.year === year || item.year === String(year)
-      ) : data;
+      
+      // Filter data by year if specified
+      let filteredData = data;
+      if (year) {
+        filteredData = data.filter((item: Record<string, unknown>) => {
+          // Check for various possible year field names
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
+          return itemYear && parseInt(String(itemYear)) === year;
+        });
+      }
       
       // Group by sector and aggregate budgeted/executed amounts
       const transformedData = filteredData.reduce((acc: BudgetExecutionData[], row: Record<string, unknown>) => {
-        const sectorKey = row.Concept || row.concept || row.sector || 'Unknown';
+        // Check for various possible sector/concept field names
+        const sectorKey = row.Concept || row.concept || row.sector || row.Sector || row.Area || row.area || row['Área'] || row['area'] || 'Unknown';
+        
         const existingSectorIndex = acc.findIndex(item => item.sector === sectorKey);
         
+        // Check for various possible budget and execution field names
+        const budgetValue = row.Budgeted || row.budgeted || row.Budget || row.budget || row.Presupuesto || row.presupuesto || 0;
+        const executionValue = row.Executed || row.executed || row.Executed || row.executed || row.Ejecutado || row.ejecutado || 0;
+        const percentageValue = row.Percentage || row.percentage || row.Percentage || row.porcentaje || row.Porcentaje || 0;
+        
         if (existingSectorIndex !== -1) {
-          acc[existingSectorIndex].budget += parseFloat(row.Budgeted?.replace(/[$,]/g, '')?.replace('ARS', '') || '0');
-          acc[existingSectorIndex].execution += parseFloat(row.Executed?.replace(/[$,]/g, '')?.replace('ARS', '') || '0');
+          acc[existingSectorIndex].budget += parseFloat(String(budgetValue).replace(/[$,]/g, '')?.replace('ARS', '') || '0');
+          acc[existingSectorIndex].execution += parseFloat(String(executionValue).replace(/[$,]/g, '')?.replace('ARS', '') || '0');
+          // Update execution rate if it exists
+          if (typeof row.execution_rate !== 'undefined') {
+            acc[existingSectorIndex].execution_rate = parseFloat(String(percentageValue).replace('%', '') || '0');
+          }
         } else {
           acc.push({
-            sector: sectorKey,
-            budget: parseFloat(row.Budgeted?.replace(/[$,]/g, '')?.replace('ARS', '') || '0') || 0,
-            execution: parseFloat(row.Executed?.replace(/[$,]/g, '')?.replace('ARS', '') || '0') || 0,
-            execution_rate: parseFloat(row.Percentage?.replace('%', '') || '0') || 0
+            sector: String(sectorKey),
+            budget: parseFloat(String(budgetValue).replace(/[$,]/g, '')?.replace('ARS', '') || '0') || 0,
+            execution: parseFloat(String(executionValue).replace(/[$,]/g, '')?.replace('ARS', '') || '0') || 0,
+            execution_rate: parseFloat(String(percentageValue).replace('%', '') || '0') || 0
           });
         }
         
@@ -95,7 +111,7 @@ const BudgetExecutionChartWrapper: React.FC<BudgetExecutionChartWrapperProps> = 
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Budget Execution data...
+          Cargando datos de Ejecución Presupuestaria...
         </Typography>
       </Box>
     );
@@ -105,7 +121,7 @@ const BudgetExecutionChartWrapper: React.FC<BudgetExecutionChartWrapperProps> = 
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Budget Execution data: {error}
+        Error cargando datos de Ejecución Presupuestaria: {error}
       </Alert>
     );
   }
@@ -114,7 +130,7 @@ const BudgetExecutionChartWrapper: React.FC<BudgetExecutionChartWrapperProps> = 
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Budget Execution data available
+        No hay datos disponibles de Ejecución Presupuestaria
       </Alert>
     );
   }

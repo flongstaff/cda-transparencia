@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 /**
  * CARMEN DE ARECO TRANSPARENCY PORTAL - CLOUDFLARE WORKERS API
  *
  * Cloudflare Workers compatible API server for external data sources
  * Handles CORS bypass, caching, and data integration for production deployment
  */
+=======
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const dotenv = require('dotenv');
+const path = require('path');
+const ErrorHandler = require('./utils/ErrorHandler');
+>>>>>>> origin/main
 
 // Cloudflare Workers compatible imports
 import { handleCORS, createResponse } from './utils/cors';
@@ -18,6 +27,7 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
+<<<<<<< HEAD
     // Handle CORS preflight requests
     if (request.method === 'OPTIONS') {
       return handleCORS(request);
@@ -31,6 +41,9 @@ export default {
         data: { error: 'Rate limit exceeded', retryAfter: rateLimitResult.retryAfter }
       });
     }
+=======
+console.log('🚀 Initializing Carmen de Areco Comprehensive Transparency API...');
+>>>>>>> origin/main
 
     try {
       // Route handling
@@ -38,6 +51,7 @@ export default {
         case '/health':
           return handleHealthCheck();
 
+<<<<<<< HEAD
         case '/api/external/all-external-data':
           return handleAllExternalData(request);
 
@@ -108,6 +122,50 @@ async function handleHealthCheck() {
 async function handleAllExternalData(request) {
   try {
     const data = await externalDataService.loadAllExternalData();
+=======
+// Rate limiting - Increased for development
+const rateLimit = require('express-rate-limit');
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 1000, // Increased limit for development
+  message: { 
+    success: false,
+    error: {
+      type: 'RateLimitError',
+      message: 'Too many requests',
+      details: 'Rate limit exceeded, please try again later.',
+      timestamp: new Date().toISOString()
+    }
+  }
+});
+app.use(limiter);
+
+// Initialize the comprehensive transparency system
+const routes = require('./routes');
+
+// Use comprehensive transparency routes
+app.use('/api', routes);
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  ErrorHandler.handleExpressError(err, req, res, next);
+});
+
+// 404 handler
+app.use((req, res) => {
+  const notFoundError = new Error('Endpoint not found');
+  notFoundError.name = 'NotFoundError';
+  
+  const { response, statusCode } = ErrorHandler.createErrorResponse(notFoundError, `404 - ${req.method} ${req.path}`, 404);
+  ErrorHandler.logError(notFoundError, `404 - ${req.method} ${req.path}`, {
+    url: req.url,
+    method: req.method,
+    ip: req.ip
+  });
+  
+  res.status(statusCode).json(response);
+});
+>>>>>>> origin/main
 
     return createResponse({
       status: 200,

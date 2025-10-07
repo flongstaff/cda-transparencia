@@ -9,7 +9,7 @@
  * 4. Generated data as fallback
  */
 
-import externalAPIsService from './ExternalAPIsService';
+import externalAPIsService from "./ExternalDataAdapter";
 import yearSpecificDataService from './YearSpecificDataService';
 import Papa from 'papaparse';
 

@@ -3,13 +3,17 @@ import { useState, useEffect } from 'react';
 import { useTable } from 'react-table';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useMasterData } from '../hooks/useMasterData';
+import { useAuditsData } from '../hooks/useUnifiedData';
+import { DataSourcesIndicator } from '@components/common/DataSourcesIndicator';
+import { YearSelector } from '@components/common/YearSelector';
 import UnifiedTransparencyService from '../services/UnifiedTransparencyService';
-import { AlertTriangle, CheckCircle, Clock, ExternalLink, Loader2, Shield, Search, TrendingUp } from 'lucide-react';
-import ErrorBoundary from '../components/common/ErrorBoundary';
-import ChartAuditReport from '../components/charts/ChartAuditReport';
-import TimeSeriesAnomalyChart from '../components/charts/TimeSeriesAnomalyChart';
-import FiscalBalanceReportChart from '../components/charts/FiscalBalanceReportChart';
-import UnifiedChart from '../components/charts/UnifiedChart';
+import { AlertTriangle, CheckCircle, Clock, ExternalLink, Loader2, Shield, Search, TrendingUp, RefreshCw } from 'lucide-react';
+import ErrorBoundary from '@components/common/ErrorBoundary';
+import { UnifiedDataViewer } from '@components/data-viewers';
+import ChartAuditReport from '@components/charts/ChartAuditReport';
+import TimeSeriesAnomalyChart from '@components/charts/TimeSeriesAnomalyChart';
+import FiscalBalanceReportChart from '@components/charts/FiscalBalanceReportChart';
+import UnifiedChart from '@components/charts/UnifiedChart';
 
 // Define TypeScript interfaces
 interface AuditResult {
@@ -53,7 +57,7 @@ const Audits: React.FC = () => {
   const [dataFlags, setDataFlags] = useState<DataFlag[]>([]);
   const [loadingAudits, setLoadingAudits] = useState<boolean>(true);
   
-  // Use unified master data service
+  // Use unified master data service (legacy)
   const {
     masterData,
     currentBudget,
@@ -62,15 +66,31 @@ const Audits: React.FC = () => {
     currentContracts,
     currentSalaries,
     currentDebt,
-    loading,
-    error,
+    loading: legacyLoading,
+    error: legacyError,
     totalDocuments,
-    availableYears,
+    availableYears: legacyYears,
     categories,
     dataSourcesActive,
     refetch,
     switchYear
   } = useMasterData(selectedYear);
+
+  // 🌐 Use new UnifiedDataService with external APIs
+  const {
+    data: unifiedAuditsData,
+    externalData,
+    sources,
+    activeSources,
+    loading: unifiedLoading,
+    error: unifiedError,
+    refetch: unifiedRefetch,
+    availableYears,
+    liveDataEnabled
+  } = useAuditsData(selectedYear);
+
+  const loading = legacyLoading || unifiedLoading;
+  const error = legacyError || unifiedError;
 
   // Load audit data
   useEffect(() => {
@@ -580,6 +600,21 @@ const Audits: React.FC = () => {
             <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Años con discrepancias significativas</p>
           </div>
         </div>
+      </div>
+
+      {/* Unified Data Viewer - Audit Documents and Datasets */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <UnifiedDataViewer
+          title="Documentos y Datasets de Auditorías y Transparencia"
+          description="Acceda a informes de auditoría, datos de control fiscal, reportes de transparencia y datasets de verificación"
+          category="audit"
+          theme={['just', 'justicia-y-seguridad', 'gove', 'gobierno-y-sector-publico']}
+          year={selectedYear}
+          showSearch={true}
+          defaultTab="all"
+          maxPDFs={25}
+          maxDatasets={35}
+        />
       </div>
     </div>
   );

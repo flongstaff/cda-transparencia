@@ -1,0 +1,55 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Setup Python (for backend scripts)
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Install frontend dependencies
+        run: npm ci
+        working-directory: frontend
+
+      - name: Verify glob module is available
+        run: node -e "require('glob'); console.log('glob module is available')"
+
+      - name: Run frontend tests
+        run: npm run test:run
+        working-directory: frontend
+
+      - name: Build frontend
+        run: npm run build
+        working-directory: frontend
+        env:
+          NODE_ENV: production
+
+      - name: Run type checking
+        run: npm run typecheck
+        working-directory: frontend
+
+      - name: Run linting
+        run: npm run lint
+        working-directory: frontend

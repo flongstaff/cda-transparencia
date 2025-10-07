@@ -51,6 +51,8 @@ import {
   XCircle,
   Info
 } from 'lucide-react';
+import dataIntegrationService from '../../services/DataIntegrationService';
+import chartDataService from '../../services/charts/ChartDataService';
 
 // Types
 interface FinancialData {
@@ -127,48 +129,159 @@ const EnhancedDataVisualization: React.FC<EnhancedDataVisualizationProps> = ({
     loadData();
   }, [year, dataType]);
 
+  // Helper function to map data types to chart type names
+  const getChartTypeName = (dataType: string): string => {
+    const typeMap: Record<string, string> = {
+      'budget': 'Budget_Execution',
+      'revenue': 'Revenue_Sources',
+      'expenditure': 'Expenditure_Report',
+      'debt': 'Debt_Report',
+      'personnel': 'Personnel_Expenses',
+      'contracts': 'Infrastructure_Projects',
+      'infrastructure': 'Infrastructure_Projects'
+    };
+    return typeMap[dataType] || 'Budget_Execution';
+  };
+
+  // Process raw chart data from CSV files
+  const processRawChartData = (rawData: any[], type: string): FinancialData[] => {
+    switch (type) {
+      case 'budget':
+        return rawData.map((item: any, index: number) => ({
+          category: item.category || item.Category || item.sector || item.Sector || `Category ${index + 1}`,
+          budgeted: parseFloat(item.budgeted || item.Budgeted || item.presupuestado || '0'),
+          executed: parseFloat(item.executed || item.Executed || item.ejecutado || '0'),
+          percentage: parseFloat(item.percentage || item.Percentage || item.execution_rate || '0'),
+          variance: parseFloat(item.variance || item.Variance || '0'),
+          trend: item.trend || item.Trend || (Math.random() > 0.5 ? 'up' : 'down')
+        }));
+      
+      case 'revenue':
+        return rawData.map((item: any, index: number) => ({
+          category: item.source || item.Source || item.category || item.Category || `Source ${index + 1}`,
+          budgeted: parseFloat(item.budgeted || item.Budgeted || item.presupuestado || '0'),
+          executed: parseFloat(item.executed || item.Executed || item.ejecutado || item.amount || '0'),
+          percentage: parseFloat(item.percentage || item.Percentage || item.execution_rate || '0'),
+          variance: parseFloat(item.variance || item.Variance || '0'),
+          trend: item.trend || item.Trend || (Math.random() > 0.5 ? 'up' : 'down')
+        }));
+      
+      case 'expenditure':
+        return rawData.map((item: any, index: number) => ({
+          category: item.category || item.Category || item.sector || item.Sector || `Category ${index + 1}`,
+          budgeted: parseFloat(item.budgeted || item.Budgeted || item.presupuestado || '0'),
+          executed: parseFloat(item.executed || item.Executed || item.ejecutado || item.amount || '0'),
+          percentage: parseFloat(item.percentage || item.Percentage || item.execution_rate || '0'),
+          variance: parseFloat(item.variance || item.Variance || '0'),
+          trend: item.trend || item.Trend || (Math.random() > 0.5 ? 'up' : 'down')
+        }));
+      
+      default:
+        return rawData.map((item: any, index: number) => ({
+          category: item.category || item.Category || item.name || item.Name || `Item ${index + 1}`,
+          budgeted: parseFloat(item.budgeted || item.Budgeted || item.presupuestado || '0'),
+          executed: parseFloat(item.executed || item.Executed || item.ejecutado || item.amount || '0'),
+          percentage: parseFloat(item.percentage || item.Percentage || item.execution_rate || '0'),
+          variance: parseFloat(item.variance || item.Variance || '0'),
+          trend: item.trend || item.Trend || (Math.random() > 0.5 ? 'up' : 'down')
+        }));
+    }
+  };
+
   const loadData = async () => {
     setLoading(true);
     setError(null);
 
     try {
-      // Load data from your existing data structure
-      const response = await fetch(`/data/processed/${year}/consolidated_data.json`);
-      if (!response.ok) {
-        throw new Error(`Failed to load data for ${year}`);
+      // Try to load data from the chart data service first (highest priority)
+      const chartTypeName = getChartTypeName(dataType);
+      const rawData = await chartDataService.loadChartData(chartTypeName as any);
+      
+      if (rawData && rawData.length > 0) {
+        // Process the raw chart data directly
+        const processedData = processRawChartData(rawData, dataType);
+        setData(processedData);
+      } else {
+        // Fallback to data integration service
+        const integratedData = await dataIntegrationService.loadIntegratedData(year);
+        const processedData = processDataForType(integratedData, dataType);
+        setData(processedData);
       }
+    } catch (chartDataError) {
+      console.warn('Failed to load data from chart data service:', chartDataError);
+      
+      try {
+        // Fallback to data integration service
+        const integratedData = await dataIntegrationService.loadIntegratedData(year);
+        const processedData = processDataForType(integratedData, dataType);
+        setData(processedData);
+      } catch (integrationError) {
+        console.warn('Failed to load data from integration service:', integrationError);
+        
+        try {
+          // Fallback to loading from local JSON if service fails
+          const response = await fetch(`/data/processed/${year}/consolidated_data.json`);
+          if (!response.ok) {
+            throw new Error(`Failed to load data for ${year}`);
+          }
 
-      const consolidatedData = await response.json();
-      const processedData = processDataForType(consolidatedData, dataType);
-      setData(processedData);
-    } catch (err) {
-      console.error('Error loading data:', err);
-      setError(err instanceof Error ? err.message : 'Error loading data');
-      // Fallback to sample data
-      setData(generateSampleData(dataType));
+          const consolidatedData = await response.json();
+          const processedData = processDataForType(consolidatedData, dataType);
+          setData(processedData);
+        } catch (localError) {
+          console.error('Error loading data from local JSON:', localError);
+          setError(localError instanceof Error ? localError.message : 'Error loading data');
+          // Fallback to sample data only as last resort
+          setData(generateSampleData(dataType));
+        }
+      }
     } finally {
       setLoading(false);
     }
   };
 
   const processDataForType = (consolidatedData: any, type: string): FinancialData[] => {
-    switch (type) {
-      case 'budget':
-        return processBudgetData(consolidatedData);
-      case 'revenue':
-        return processRevenueData(consolidatedData);
-      case 'expenditure':
-        return processExpenditureData(consolidatedData);
-      case 'debt':
-        return processDebtData(consolidatedData);
-      case 'personnel':
-        return processPersonnelData(consolidatedData);
-      case 'contracts':
-        return processContractsData(consolidatedData);
-      case 'infrastructure':
-        return processInfrastructureData(consolidatedData);
-      default:
-        return [];
+    // Check if the input is from the data integration service
+    if (consolidatedData.budget || consolidatedData.metadata) {
+      // Handle integrated data format
+      switch (type) {
+        case 'budget':
+          return processIntegratedBudgetData(consolidatedData);
+        case 'revenue':
+          return processIntegratedRevenueData(consolidatedData);
+        case 'expenditure':
+          return processIntegratedExpenditureData(consolidatedData);
+        case 'debt':
+          return processIntegratedDebtData(consolidatedData);
+        case 'personnel':
+          return processIntegratedPersonnelData(consolidatedData);
+        case 'contracts':
+          return processIntegratedContractsData(consolidatedData);
+        case 'infrastructure':
+          return processIntegratedInfrastructureData(consolidatedData);
+        default:
+          return [];
+      }
+    } else {
+      // Handle original consolidated data format
+      switch (type) {
+        case 'budget':
+          return processBudgetData(consolidatedData);
+        case 'revenue':
+          return processRevenueData(consolidatedData);
+        case 'expenditure':
+          return processExpenditureData(consolidatedData);
+        case 'debt':
+          return processDebtData(consolidatedData);
+        case 'personnel':
+          return processPersonnelData(consolidatedData);
+        case 'contracts':
+          return processContractsData(consolidatedData);
+        case 'infrastructure':
+          return processInfrastructureData(consolidatedData);
+        default:
+          return [];
+      }
     }
   };
 
@@ -278,6 +391,115 @@ const EnhancedDataVisualization: React.FC<EnhancedDataVisualizationProps> = ({
 
   const processInfrastructureData = (data: any): FinancialData[] => {
     return processContractsData(data); // Same structure as contracts
+  };
+
+  // Functions to process integrated data from DataIntegrationService
+  const processIntegratedBudgetData = (data: any): FinancialData[] => {
+    if (!data.budget || !data.budget.quarterly_data) {
+      // If no quarterly data, create a basic budget entry
+      return [{
+        category: 'Total Budget',
+        budgeted: data.budget?.total_budget || 0,
+        executed: data.budget?.total_executed || 0,
+        percentage: data.budget?.execution_rate || 0,
+        variance: (data.budget?.total_executed || 0) - (data.budget?.total_budget || 0),
+        trend: (data.budget?.total_executed || 0) >= (data.budget?.total_budget || 0) ? 'up' : 'down'
+      }];
+    }
+
+    // Process quarterly data if available
+    return data.budget.quarterly_data.map((item: any, index: number) => ({
+      category: item.name || item.category || `Categoría ${index + 1}`,
+      budgeted: item.budgeted || item.total_budget || 0,
+      executed: item.executed || item.total_executed || 0,
+      percentage: item.execution_rate || item.executionRate || 0,
+      variance: (item.executed || item.total_executed || 0) - (item.budgeted || item.total_budget || 0),
+      trend: ((item.executed || item.total_executed || 0) >= (item.budgeted || item.total_budget || 0)) ? 'up' : 'down'
+    }));
+  };
+
+  const processIntegratedRevenueData = (data: any): FinancialData[] => {
+    // Extract revenue data from treasury section
+    if (data.treasury?.income || data.treasury?.total_revenue) {
+      return [{
+        category: 'Ingresos Totales',
+        budgeted: data.treasury.total_revenue || data.treasury.income || 0,
+        executed: data.treasury.total_revenue || data.treasury.income || 0,
+        percentage: 100, // Placeholder
+        variance: 0, // Placeholder
+        trend: 'stable'
+      }];
+    }
+
+    // If no specific revenue data, return empty
+    return [];
+  };
+
+  const processIntegratedExpenditureData = (data: any): FinancialData[] => {
+    // Extract expenditure data from treasury section
+    if (data.treasury?.expenses || data.treasury?.total_expenses) {
+      return [{
+        category: 'Gastos Totales',
+        budgeted: data.treasury.total_expenses || data.treasury.expenses || 0,
+        executed: data.treasury.total_expenses || data.treasury.expenses || 0,
+        percentage: 100, // Placeholder
+        variance: 0, // Placeholder
+        trend: 'stable'
+      }];
+    }
+
+    // If no specific expenditure data, return empty
+    return [];
+  };
+
+  const processIntegratedDebtData = (data: any): FinancialData[] => {
+    if (data.debt?.total_debt) {
+      return [{
+        category: 'Deuda Total',
+        budgeted: data.debt.total_debt || 0,
+        executed: data.debt.total_debt || 0,
+        percentage: 100, // Placeholder
+        variance: 0, // Placeholder
+        trend: 'stable'
+      }];
+    }
+
+    return [];
+  };
+
+  const processIntegratedPersonnelData = (data: any): FinancialData[] => {
+    if (data.salaries) {
+      return [{
+        category: 'Costo de Personal',
+        budgeted: data.salaries.totalPayroll || 0,
+        executed: data.salaries.totalPayroll || 0,
+        percentage: 100, // Placeholder
+        variance: 0, // Placeholder
+        trend: 'stable'
+      }];
+    }
+
+    return [];
+  };
+
+  const processIntegratedContractsData = (data: any): FinancialData[] => {
+    if (data.contracts && Array.isArray(data.contracts)) {
+      return data.contracts.map((contract: any, index: number) => ({
+        category: contract.name || contract.description || `Contrato ${index + 1}`,
+        budgeted: contract.budgeted || contract.total || 0,
+        executed: contract.executed || contract.total || 0,
+        percentage: 100, // Placeholder
+        variance: 0, // Placeholder
+        trend: 'stable'
+      }));
+    }
+
+    return [];
+  };
+
+  const processIntegratedInfrastructureData = (data: any): FinancialData[] => {
+    // Use the same approach as contracts for infrastructure
+    return processIntegratedContractsData(data);
   };
 
   const generateSampleData = (type: string): FinancialData[] => {

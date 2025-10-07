@@ -17,6 +17,7 @@ interface RevenueReportChartProps {
   showTitle?: boolean;
   showDescription?: boolean;
   className?: string;
+  year?: number; // Optional year filter
 }
 
 const RevenueReportChart: React.FC<RevenueReportChartProps> = ({
@@ -25,7 +26,8 @@ const RevenueReportChart: React.FC<RevenueReportChartProps> = ({
   chartType = 'line',
   showTitle = true,
   showDescription = true,
-  className = ''
+  className = '',
+  year
 }) => {
   const [chartData, setChartData] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -33,7 +35,7 @@ const RevenueReportChart: React.FC<RevenueReportChartProps> = ({
   
   // Load chart data using React Query
   const { data, isLoading, isError, error: queryError } = useQuery({
-    queryKey: ['chart-data', 'Revenue_Report'],
+    queryKey: ['chart-data', 'Revenue_Report', year],
     queryFn: () => chartDataService.loadChartData('Revenue_Report'),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
@@ -50,9 +52,20 @@ const RevenueReportChart: React.FC<RevenueReportChartProps> = ({
     } else if (data) {
       setLoading(false);
       setError(null);
-      setChartData(data);
+
+      // Filter data by year if specified
+      let filteredData = data;
+      if (year && Array.isArray(data)) {
+        filteredData = data.filter((item: Record<string, unknown>) => {
+          // Check for various possible year field names
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
+          return itemYear && parseInt(String(itemYear)) === year;
+        });
+      }
+
+      setChartData(filteredData);
     }
-  }, [data, isLoading, isError, queryError]);
+  }, [data, isLoading, isError, queryError, year]);
   
   // Handle data point clicks
   const handleDataPointClick = (dataPoint: any) => {
@@ -66,7 +79,7 @@ const RevenueReportChart: React.FC<RevenueReportChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Revenue Report data...
+          Cargando datos del Informe de Ingresos...
         </Typography>
       </Box>
     );
@@ -76,7 +89,7 @@ const RevenueReportChart: React.FC<RevenueReportChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Revenue Report data: {error}
+        Error cargando datos del Informe de Ingresos: {error}
       </Alert>
     );
   }
@@ -85,7 +98,7 @@ const RevenueReportChart: React.FC<RevenueReportChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Revenue Report data available
+        No hay datos disponibles del Informe de Ingresos
       </Alert>
     );
   }
@@ -112,8 +125,8 @@ const RevenueReportChart: React.FC<RevenueReportChartProps> = ({
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel="Year"
-      yAxisLabel="Amount (ARS)"
+      xAxisLabel="Año"
+      yAxisLabel="Monto (ARS)"
     />
   );
 };

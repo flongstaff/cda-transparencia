@@ -4,7 +4,7 @@
  * Ensures the portal fetches authentic and up-to-date data as required by law
  */
 
-import externalAPIsService from '../ExternalAPIsService';
+import externalAPIsService from '../ExternalDataAdapter';
 import { githubDataService } from '../GitHubDataService';
 import RealDataService from '../RealDataService';
 import comprehensiveDataIntegrationService from '../ComprehensiveDataIntegrationService';

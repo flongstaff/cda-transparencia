@@ -78,7 +78,7 @@ const EconomicReportChart: React.FC<EconomicReportChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Economic Report data...
+          Cargando datos del Informe Económico...
         </Typography>
       </Box>
     );
@@ -88,7 +88,7 @@ const EconomicReportChart: React.FC<EconomicReportChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Economic Report data: {error}
+        Error cargando datos del Informe Económico: {error}
       </Alert>
     );
   }
@@ -97,7 +97,7 @@ const EconomicReportChart: React.FC<EconomicReportChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Economic Report data available
+        No hay datos disponibles del Informe Económico
       </Alert>
     );
   }

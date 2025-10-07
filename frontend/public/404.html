@@ -54,24 +54,43 @@
         background-color: #2563eb;
         text-decoration: none;
       }
+      .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-left-color: #3b82f6;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 1rem;
+        display: none;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <h1>Página no encontrada</h1>
       <p>La página que estás buscando no existe o ha sido movida.</p>
-      <p><a href="/" class="button">Volver a la página principal</a></p>
-      <p>O puedes <a href="/">visitar nuestra página de inicio</a>.</p>
+      <div class="spinner" id="spinner"></div>
+      <p><a href="/cda-transparencia/" class="button">Volver a la página principal</a></p>
+      <p>O puedes <a href="/cda-transparencia/">visitar nuestra página de inicio</a>.</p>
     </div>
     <script>
-      // For GitHub Pages SPA routing, redirect to index.html
+      // For GitHub Pages SPA routing, redirect to index.html for client-side routes
       (function() {
         var path = window.location.pathname;
-        if (path !== '/' && path.indexOf('.') === -1) {
+        var basePath = '/cda-transparencia/';
+        
+        // Check if this looks like a client-side route (not a file extension)
+        if (path !== basePath && path.indexOf('.') === -1 && path.startsWith(basePath)) {
           // This is likely a client-side route, redirect to index.html
-          window.history.replaceState(null, null, '/');
-          // Reload to let the SPA handle the route
-          window.location.reload();
+          // Let the SPA handle the route
+          document.getElementById('spinner').style.display = 'block';
+          setTimeout(function() {
+            window.location.replace(basePath);
+          }, 1000);
         }
       })();
     </script>

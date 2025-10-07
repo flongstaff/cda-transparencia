@@ -1,5 +1,6 @@
 // services/ComprehensiveTransparencyService.js
 const ComprehensiveTransparencyService = require('../services/ComprehensiveTransparencyService');
+const ErrorHandler = require('../utils/ErrorHandler');
 const path = require('path');
 const fs = require('fs').promises;
 
@@ -17,34 +18,43 @@ class ComprehensiveTransparencyController {
      * Get citizen-focused financial overview
      */
     async getCitizenFinancialOverview(req, res) {
+        const context = 'getCitizenFinancialOverview';
+        
         try {
             const { year } = req.params;
             const yearInt = parseInt(year);
 
             if (!yearInt || isNaN(yearInt)) {
                 return res.status(400).json({
-                    error: 'Invalid year parameter',
-                    message: 'Year must be a valid number'
+                    success: false,
+                    error: {
+                        type: 'ValidationError',
+                        message: 'Invalid year parameter',
+                        details: 'Year must be a valid number',
+                        timestamp: new Date().toISOString(),
+                        context: context
+                    }
                 });
             }
 
             const result = await this.service.getCitizenFinancialOverview(yearInt);
             
             res.json({
-                ...result,
-                api_info: {
-                    endpoint: 'citizen_financial_overview',
-                    purpose: 'Provide citizen-friendly financial summary with real impact explanations',
-                    year: yearInt,
-                    generated_at: new Date().toISOString()
+                success: true,
+                data: {
+                    ...result,
+                    api_info: {
+                        endpoint: 'citizen_financial_overview',
+                        purpose: 'Provide citizen-friendly financial summary with real impact explanations',
+                        year: yearInt,
+                        generated_at: new Date().toISOString()
+                    }
                 }
             });
         } catch (error) {
-            console.error('Error in getCitizenFinancialOverview:', error);
-            res.status(500).json({
-                error: 'Failed to get citizen financial overview',
-                details: error.message
-            });
+            const { response, statusCode } = ErrorHandler.createErrorResponse(error, context, 500);
+            ErrorHandler.logError(error, context, { year: req.params.year });
+            res.status(statusCode).json(response);
         }
     }
 
@@ -52,35 +62,44 @@ class ComprehensiveTransparencyController {
      * Get budget breakdown with citizen explanations
      */
     async getBudgetBreakdownForCitizens(req, res) {
+        const context = 'getBudgetBreakdownForCitizens';
+        
         try {
             const { year } = req.params;
             const yearInt = parseInt(year);
 
             if (!yearInt || isNaN(yearInt)) {
                 return res.status(400).json({
-                    error: 'Invalid year parameter',
-                    message: 'Year must be a valid number'
+                    success: false,
+                    error: {
+                        type: 'ValidationError',
+                        message: 'Invalid year parameter',
+                        details: 'Year must be a valid number',
+                        timestamp: new Date().toISOString(),
+                        context: context
+                    }
                 });
             }
 
             const budgetData = await this.service.getBudgetBreakdownForCitizens(yearInt);
             
             res.json({
-                year: yearInt,
-                budget_breakdown: budgetData,
-                api_info: {
-                    endpoint: 'budget_breakdown_for_citizens',
-                    purpose: 'Provide detailed budget breakdown with citizen-friendly explanations',
+                success: true,
+                data: {
                     year: yearInt,
-                    generated_at: new Date().toISOString()
+                    budget_breakdown: budgetData,
+                    api_info: {
+                        endpoint: 'budget_breakdown_for_citizens',
+                        purpose: 'Provide detailed budget breakdown with citizen-friendly explanations',
+                        year: yearInt,
+                        generated_at: new Date().toISOString()
+                    }
                 }
             });
         } catch (error) {
-            console.error('Error in getBudgetBreakdownForCitizens:', error);
-            res.status(500).json({
-                error: 'Failed to get budget breakdown for citizens',
-                details: error.message
-            });
+            const { response, statusCode } = ErrorHandler.createErrorResponse(error, context, 500);
+            ErrorHandler.logError(error, context, { year: req.params.year });
+            res.status(statusCode).json(response);
         }
     }
 
@@ -88,6 +107,8 @@ class ComprehensiveTransparencyController {
      * Get all documents with filters
      */
     async getDocumentsWithFilters(req, res) {
+        const context = 'getDocumentsWithFilters';
+        
         try {
             const { year, category, type, search, limit } = req.query;
             
@@ -101,21 +122,22 @@ class ComprehensiveTransparencyController {
             const documents = await this.service.getAllDocuments(filters);
             
             res.json({
-                documents: documents,
-                total: documents.length,
-                filters: filters,
-                api_info: {
-                    endpoint: 'documents_with_filters',
-                    purpose: 'Get all documents with optional filtering',
-                    generated_at: new Date().toISOString()
+                success: true,
+                data: {
+                    documents: documents,
+                    total: documents.length,
+                    filters: filters,
+                    api_info: {
+                        endpoint: 'documents_with_filters',
+                        purpose: 'Get all documents with optional filtering',
+                        generated_at: new Date().toISOString()
+                    }
                 }
             });
         } catch (error) {
-            console.error('Error in getDocumentsWithFilters:', error);
-            res.status(500).json({
-                error: 'Failed to get documents with filters',
-                details: error.message
-            });
+            const { response, statusCode } = ErrorHandler.createErrorResponse(error, context, 500);
+            ErrorHandler.logError(error, context, { filters: req.query });
+            res.status(statusCode).json(response);
         }
     }
 
@@ -123,33 +145,42 @@ class ComprehensiveTransparencyController {
      * Get document with all access methods and citizen relevance
      */
     async getDocumentWithAccess(req, res) {
+        const context = 'getDocumentWithAccess';
+        
         try {
             const { id } = req.params;
             
             if (!id) {
                 return res.status(400).json({
-                    error: 'Missing document ID',
-                    message: 'Document ID is required'
+                    success: false,
+                    error: {
+                        type: 'ValidationError',
+                        message: 'Missing document ID',
+                        details: 'Document ID is required',
+                        timestamp: new Date().toISOString(),
+                        context: context
+                    }
                 });
             }
 
             const documentData = await this.service.getDocumentWithAccess(id);
             
             res.json({
-                ...documentData,
-                api_info: {
-                    endpoint: 'document_with_access',
-                    purpose: 'Get document with all access methods, financial impact, and citizen relevance',
-                    document_id: id,
-                    generated_at: new Date().toISOString()
+                success: true,
+                data: {
+                    ...documentData,
+                    api_info: {
+                        endpoint: 'document_with_access',
+                        purpose: 'Get document with all access methods, financial impact, and citizen relevance',
+                        document_id: id,
+                        generated_at: new Date().toISOString()
+                    }
                 }
             });
         } catch (error) {
-            console.error('Error in getDocumentWithAccess:', error);
-            res.status(500).json({
-                error: 'Failed to get document with access',
-                details: error.message
-            });
+            const { response, statusCode } = ErrorHandler.createErrorResponse(error, context, 500);
+            ErrorHandler.logError(error, context, { document_id: req.params.id });
+            res.status(statusCode).json(response);
         }
     }
 
@@ -217,6 +248,8 @@ class ComprehensiveTransparencyController {
      * Get comparative analysis between years
      */
     async getComparativeAnalysis(req, res) {
+        const context = 'getComparativeAnalysis';
+        
         try {
             const { startYear, endYear } = req.params;
             const startYearInt = parseInt(startYear);
@@ -224,29 +257,36 @@ class ComprehensiveTransparencyController {
 
             if (!startYearInt || isNaN(startYearInt) || !endYearInt || isNaN(endYearInt)) {
                 return res.status(400).json({
-                    error: 'Invalid year parameters',
-                    message: 'Both start year and end year must be valid numbers'
+                    success: false,
+                    error: {
+                        type: 'ValidationError',
+                        message: 'Invalid year parameters',
+                        details: 'Both start year and end year must be valid numbers',
+                        timestamp: new Date().toISOString(),
+                        context: context
+                    }
                 });
             }
 
             const analysis = await this.service.getComparativeAnalysis(startYearInt, endYearInt);
             
             res.json({
-                ...analysis,
-                api_info: {
-                    endpoint: 'comparative_analysis',
-                    purpose: 'Provide comparative analysis between years with trends and recommendations',
-                    start_year: startYearInt,
-                    end_year: endYearInt,
-                    generated_at: new Date().toISOString()
+                success: true,
+                data: {
+                    ...analysis,
+                    api_info: {
+                        endpoint: 'comparative_analysis',
+                        purpose: 'Provide comparative analysis between years with trends and recommendations',
+                        start_year: startYearInt,
+                        end_year: endYearInt,
+                        generated_at: new Date().toISOString()
+                    }
                 }
             });
         } catch (error) {
-            console.error('Error in getComparativeAnalysis:', error);
-            res.status(500).json({
-                error: 'Failed to get comparative analysis',
-                details: error.message
-            });
+            const { response, statusCode } = ErrorHandler.createErrorResponse(error, context, 500);
+            ErrorHandler.logError(error, context, { startYear: req.params.startYear, endYear: req.params.endYear });
+            res.status(statusCode).json(response);
         }
     }
 
@@ -254,23 +294,26 @@ class ComprehensiveTransparencyController {
      * Get real-time transparency dashboard with key metrics
      */
     async getTransparencyDashboard(req, res) {
+        const context = 'getTransparencyDashboard';
+        
         try {
             const dashboardData = await this.service.getTransparencyDashboard();
             
             res.json({
-                ...dashboardData,
-                api_info: {
-                    endpoint: 'transparency_dashboard',
-                    purpose: 'Provide real-time dashboard with overview, recent additions, and key metrics',
-                    generated_at: new Date().toISOString()
+                success: true,
+                data: {
+                    ...dashboardData,
+                    api_info: {
+                        endpoint: 'transparency_dashboard',
+                        purpose: 'Provide real-time dashboard with overview, recent additions, and key metrics',
+                        generated_at: new Date().toISOString()
+                    }
                 }
             });
         } catch (error) {
-            console.error('Error in getTransparencyDashboard:', error);
-            res.status(500).json({
-                error: 'Failed to get transparency dashboard',
-                details: error.message
-            });
+            const { response, statusCode } = ErrorHandler.createErrorResponse(error, context, 500);
+            ErrorHandler.logError(error, context);
+            res.status(statusCode).json(response);
         }
     }
 
@@ -278,34 +321,43 @@ class ComprehensiveTransparencyController {
      * Search documents with citizen-friendly results
      */
     async searchDocumentsForCitizens(req, res) {
+        const context = 'searchDocumentsForCitizens';
+        
         try {
             const { q, category, year } = req.query;
             
             if (!q) {
                 return res.status(400).json({
-                    error: 'Missing search query',
-                    message: 'Search query (q) is required'
+                    success: false,
+                    error: {
+                        type: 'ValidationError',
+                        message: 'Missing search query',
+                        details: 'Search query (q) is required',
+                        timestamp: new Date().toISOString(),
+                        context: context
+                    }
                 });
             }
 
             const searchResults = await this.service.searchDocuments(q, { category, year });
             
             res.json({
-                results: searchResults,
-                query: q,
-                filters: { category, year },
-                api_info: {
-                    endpoint: 'search_documents_for_citizens',
-                    purpose: 'Search documents with citizen-friendly formatting and access methods',
-                    generated_at: new Date().toISOString()
+                success: true,
+                data: {
+                    results: searchResults,
+                    query: q,
+                    filters: { category, year },
+                    api_info: {
+                        endpoint: 'search_documents_for_citizens',
+                        purpose: 'Search documents with citizen-friendly formatting and access methods',
+                        generated_at: new Date().toISOString()
+                    }
                 }
             });
         } catch (error) {
-            console.error('Error in searchDocumentsForCitizens:', error);
-            res.status(500).json({
-                error: 'Failed to search documents for citizens',
-                details: error.message
-            });
+            const { response, statusCode } = ErrorHandler.createErrorResponse(error, context, 500);
+            ErrorHandler.logError(error, context, { query: req.query.q, filters: { category, year } });
+            res.status(statusCode).json(response);
         }
     }
 
@@ -337,14 +389,22 @@ class ComprehensiveTransparencyController {
      * Get municipal debt data by year
      */
     async getMunicipalDebtByYear(req, res) {
+        const context = 'getMunicipalDebtByYear';
+        
         try {
             const { year } = req.params;
             const yearInt = parseInt(year);
 
             if (!yearInt || isNaN(yearInt)) {
                 return res.status(400).json({
-                    error: 'Invalid year parameter',
-                    message: 'Year must be a valid number'
+                    success: false,
+                    error: {
+                        type: 'ValidationError',
+                        message: 'Invalid year parameter',
+                        details: 'Year must be a valid number',
+                        timestamp: new Date().toISOString(),
+                        context: context
+                    }
                 });
             }
 
@@ -352,20 +412,21 @@ class ComprehensiveTransparencyController {
             const debtData = await this.service.getMunicipalDebtByYear(yearInt);
             
             res.json({
-                ...debtData,
-                api_info: {
-                    endpoint: 'municipal_debt_analysis',
-                    purpose: 'Provide comprehensive debt analysis for municipal transparency',
-                    year: yearInt,
-                    generated_at: new Date().toISOString()
+                success: true,
+                data: {
+                    ...debtData,
+                    api_info: {
+                        endpoint: 'municipal_debt_analysis',
+                        purpose: 'Provide comprehensive debt analysis for municipal transparency',
+                        year: yearInt,
+                        generated_at: new Date().toISOString()
+                    }
                 }
             });
         } catch (error) {
-            console.error('Error in getMunicipalDebtByYear:', error);
-            res.status(500).json({
-                error: 'Failed to get municipal debt data',
-                details: error.message
-            });
+            const { response, statusCode } = ErrorHandler.createErrorResponse(error, context, 500);
+            ErrorHandler.logError(error, context, { year: req.params.year });
+            res.status(statusCode).json(response);
         }
     }
 

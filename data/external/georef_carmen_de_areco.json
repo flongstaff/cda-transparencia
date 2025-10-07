@@ -1,0 +1,13 @@
+{
+  "id": "060161",
+  "nombre": "Carmen de Areco",
+  "provincia": {
+    "id": "06",
+    "nombre": "Buenos Aires"
+  },
+  "centroide": {
+    "lat": -34.4067977840705,
+    "lon": -59.884413320764
+  },
+  "fetchedAt": "2025-10-02T08:02:37.348Z"
+}

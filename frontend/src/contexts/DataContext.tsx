@@ -219,6 +219,7 @@ const DataContext = createContext<{
   setSearchQuery: (query: string) => void;
   setCategory: (category: string) => void;
   loadMasterData: (year?: number) => Promise<void>;
+  retryLoadMasterData: (year?: number) => Promise<void>;
   refreshData: () => Promise<void>;
   clearCache: () => void;
 
@@ -275,10 +276,16 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
       });
 
     } catch (error) {
-      dispatch({ type: 'SET_ERROR', payload: (error as Error).message });
+      const errorMessage = error instanceof Error ? error.message : 'Error desconocido al cargar los datos';
+      dispatch({ type: 'SET_ERROR', payload: errorMessage });
     } finally {
       dispatch({ type: 'SET_LOADING', payload: false });
     }
+  };
+
+  const retryLoadMasterData = async (year?: number) => {
+    dispatch({ type: 'SET_ERROR', payload: null });
+    await loadMasterData(year);
   };
 
   const refreshData = async () => {
@@ -394,6 +401,7 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
     setSearchQuery,
     setCategory,
     loadMasterData,
+    retryLoadMasterData,
     refreshData,
     clearCache,
     getCsvData,

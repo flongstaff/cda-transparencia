@@ -1,7 +1,7 @@
 // BudgetChartExample.tsx
 import React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
+import BudgetAnalysisChart from '@components/charts/BudgetAnalysisChart';
 
 // Create a query client
 const queryClient = new QueryClient();

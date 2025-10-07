@@ -3,38 +3,44 @@
  * Provides unified access to all data services in the application
  */
 
-// Main data services
-export { default as dataService, productionDataService } from './dataService';
-export { default as EnhancedDataService } from './EnhancedDataService';
-export { default as githubDataService } from './GitHubDataService';
-export { default as externalAPIsService } from './ExternalAPIsService';
-export { default as AuditService } from './AuditService';
-export { default as masterDataService } from './MasterDataService';
-export { default as RealDataService, realDataService } from './RealDataService';
-export { dataSyncService } from './DataSyncService';
-export { default as UnifiedTransparencyService } from './UnifiedTransparencyService';
 
-// Service interfaces and types
-export type { 
-  UnifiedTransparencyData 
-} from './UnifiedTransparencyService';
-export type { 
-  ExternalDataResponse, 
-  DataSource 
-} from './ExternalAPIsService';
-export type { 
-  GitHubDataResponse, 
-  RepositoryConfig 
-} from './GitHubDataService';
-export type { 
-  SyncResult, 
-  SyncReport 
-} from './DataSyncService';
-export type { 
-  Document, 
-  UnifiedDataState 
-} from './MasterDataService';
-export type { 
-  RealDataResponse, 
-  RealDataSources 
-} from './RealDataService';
+export { externalAPIsService } from './ExternalAPIsService';
+export { dataCachingService } from './DataCachingService';
+export { unifiedDataService } from './UnifiedDataService';
+export { yearSpecificDataService } from './YearSpecificDataService';
+export { dataValidationService } from './DataValidationService';
+export { dataSyncService } from './DataSyncService';
+export { monitoringService } from './monitoringService';
+export { smartDataLoader } from './SmartDataLoader';
+export { dataNormalizationService } from './DataNormalizationService';
+export { dataSourceIndicatorsService } from './DataSourceIndicatorsService';
+export { dataAuditService } from './DataAuditService';
+export { dataAnonymizationService } from './DataAnonymizationService';
+export { documentAnalysisService } from './documentAnalysisService';
+export { semanticSearchService } from './semanticSearchService';
+export { privacyService } from './privacyService';
+export { osintDataService } from './OSINTDataService';
+export { openDataService } from './openDataService';
+export { officialDocumentService } from './OfficialDocumentService';
+export { multiYearDataService } from './MultiYearDataService';
+export { carmenScraperService } from './CarmenScraperService';
+export { comprehensiveDataIntegrationService } from './ComprehensiveDataIntegrationService';
+export { enhancedDataIntegrationService } from './EnhancedDataIntegrationService';
+export { unifiedDataIntegrationService } from './UnifiedDataIntegrationService.ts.disabled';
+export { comprehensiveExternalDataIntegrationService } from './ComprehensiveExternalDataIntegrationService';
+export { realDataService } from './RealDataService';
+export { quickIntegrationTest } from './quick-integration-test';
+export { productionDataManager } from './ProductionDataManager';
+export { routingService } from './routingService';
+export { resourceService } from './resourceService';
+export { integrationTestSuite } from './IntegrationTestSuite';
+export { financialDataService } from './FinancialDataService';
+export { githubDataService } from './GitHubDataService';
+export { dataService } from './dataService';
+export { yearDataService } from './yearDataService';
+export { enhancedDataService } from './EnhancedDataService';
+export { masterDataService } from './MasterDataService';
+export { simpleAnomalyDetectionService } from './SimpleAnomalyDetectionService';
+export { unifiedTransparencyService } from './UnifiedTransparencyService';
+export { proxyDataService } from './ProxyDataService';
+export { cloudflareDataService } from './CloudflareDataService';

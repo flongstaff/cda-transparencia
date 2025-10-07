@@ -121,9 +121,9 @@ class ChartDataService {
           return [];
         }
         
-        var csvText = await localResponse.text();
+        const csvText = await localResponse.text();
       } else {
-        csvText = await response.text();
+        const csvText = await response.text();
       }
       
       // Parse the CSV data

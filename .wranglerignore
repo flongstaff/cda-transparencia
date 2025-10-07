@@ -1,0 +1,11 @@
+# Ignore large PDFs (over 25MB limit for Cloudflare Pages)
+**/*.pdf
+
+# Ignore other large files
+**/*.zip
+**/*.tar.gz
+**/*.mp4
+**/*.mov
+
+# Ignore source maps in production
+**/*.map

@@ -4,7 +4,8 @@
  * Uses enhanced CSV data loading with responsive year selector integration
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import {
   LineChart,
   Line,
@@ -26,17 +27,17 @@ import {
   Scatter
 } from 'recharts';
 import { AlertTriangle, TrendingUp, TrendingDown, Info } from 'lucide-react';
-import useCsvData from '../../hooks/useCsvData';
+import chartDataService from '../../services/charts/ChartDataService';
 
 export type ChartType = 'line' | 'bar' | 'area' | 'pie' | 'scatter';
 
 interface RechartsWrapperProps {
-  csvUrl: string;
-  selectedYear?: number;
+  type: string; // Chart type for service (e.g., 'Budget_Execution', 'Personnel_Expenses', etc.)
+  year?: number;
   title?: string;
   description?: string;
   height?: number;
-  chartType: ChartType;
+  chartType?: ChartType;
   dataKey: string;
   valueKey: string | string[];
   categoryKey?: string;
@@ -52,12 +53,12 @@ interface ChartData {
 }
 
 const RechartsWrapper: React.FC<RechartsWrapperProps> = ({
-  csvUrl,
-  selectedYear,
+  type,
+  year,
   title = "Data Visualization",
   description,
   height = 400,
-  chartType,
+  chartType = 'line',
   dataKey,
   valueKey,
   categoryKey,
@@ -67,7 +68,42 @@ const RechartsWrapper: React.FC<RechartsWrapperProps> = ({
   colors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6'],
   className = ""
 }) => {
-  const { data, loading, error } = useCsvData<ChartData>(csvUrl, {}, selectedYear);
+  const [chartData, setChartData] = useState<ChartData[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Load chart data using React Query
+  const { data: rawData, isLoading, isError, error: queryError } = useQuery({
+    queryKey: ['chart-data', type, year],
+    queryFn: () => chartDataService.loadChartData(type),
+    staleTime: 1000 * 60 * 5, // 5 minutes
+    gcTime: 1000 * 60 * 10, // 10 minutes
+  });
+
+  // Update component state when data changes
+  useEffect(() => {
+    if (isLoading) {
+      setLoading(true);
+      setError(null);
+    } else if (isError) {
+      setLoading(false);
+      setError(queryError?.message || 'Error loading chart data');
+    } else if (rawData) {
+      setLoading(false);
+      setError(null);
+
+      // Filter data by year if specified
+      let filteredData = rawData;
+      if (year && Array.isArray(rawData)) {
+        filteredData = rawData.filter((item: Record<string, unknown>) => {
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          return itemYear && parseInt(String(itemYear)) === year;
+        });
+      }
+
+      setChartData(filteredData);
+    }
+  }, [rawData, isLoading, isError, queryError, year]);
 
   // Calculate anomalies for line and bar charts
   const calculateAnomalies = (data: ChartData[], valueKey: string) => {
@@ -151,7 +187,7 @@ const RechartsWrapper: React.FC<RechartsWrapperProps> = ({
       <div className={`flex items-center justify-center h-96 ${className}`}>
         <div className="flex flex-col items-center space-y-2">
           <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-          <p className="text-gray-600 dark:text-gray-400">Loading chart data...</p>
+          <p className="text-gray-600 dark:text-gray-400">Cargando datos del gráfico...</p>
         </div>
       </div>
     );
@@ -162,21 +198,21 @@ const RechartsWrapper: React.FC<RechartsWrapperProps> = ({
       <div className={`flex items-center justify-center h-96 ${className}`}>
         <div className="flex flex-col items-center space-y-2 text-center">
           <AlertTriangle className="w-12 h-12 text-red-500" />
-          <p className="text-red-600 dark:text-red-400 font-medium">Error loading chart data</p>
-          <p className="text-gray-500 text-sm">{error.message}</p>
+          <p className="text-red-600 dark:text-red-400 font-medium">Error cargando datos del gráfico</p>
+          <p className="text-gray-500 text-sm">{error}</p>
         </div>
       </div>
     );
   }
 
-  if (!data || data.length === 0) {
+  if (!chartData || chartData.length === 0) {
     return (
       <div className={`flex items-center justify-center h-96 ${className}`}>
         <div className="flex flex-col items-center space-y-2 text-center">
           <Info className="w-12 h-12 text-gray-400" />
-          <p className="text-gray-600 dark:text-gray-400 font-medium">No data available</p>
+          <p className="text-gray-600 dark:text-gray-400 font-medium">No hay datos disponibles</p>
           <p className="text-gray-500 text-sm">
-            {selectedYear ? `for year ${selectedYear}` : 'for the selected period'}
+            {year ? `para el año ${year}` : 'para el período seleccionado'}
           </p>
         </div>
       </div>
@@ -185,14 +221,14 @@ const RechartsWrapper: React.FC<RechartsWrapperProps> = ({
 
   // Calculate anomalies and trends
   const primaryValueKey = Array.isArray(valueKey) ? valueKey[0] : valueKey;
-  const anomalies = showAnomalies ? calculateAnomalies(data, primaryValueKey) : [];
-  const trend = showTrend ? calculateTrend(data, primaryValueKey) : null;
+  const anomalies = showAnomalies ? calculateAnomalies(chartData, primaryValueKey) : [];
+  const trend = showTrend ? calculateTrend(chartData, primaryValueKey) : null;
   const hasAnomalies = anomalies.length > 0;
 
   // Render chart based on type
   const renderChart = () => {
     const commonProps = {
-      data,
+      data: chartData,
       margin: { top: 5, right: 30, left: 20, bottom: 5 }
     };
 
@@ -354,7 +390,7 @@ const RechartsWrapper: React.FC<RechartsWrapperProps> = ({
         {hasAnomalies && (
           <div className="flex items-center mt-2 text-red-600 dark:text-red-400 text-sm">
             <AlertTriangle className="w-4 h-4 mr-1" />
-            <span>{anomalies.length} anomal{anomalies.length === 1 ? 'y' : 'ies'} detected</span>
+            <span>Se detectaron {anomalies.length} anomalia{anomalies.length === 1 ? '' : 's'}</span>
           </div>
         )}
       </div>
@@ -369,7 +405,7 @@ const RechartsWrapper: React.FC<RechartsWrapperProps> = ({
       {/* Anomaly details */}
       {hasAnomalies && (
         <div className="mt-4 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-200 dark:border-red-800">
-          <h4 className="text-sm font-medium text-red-800 dark:text-red-200 mb-2">Detected Anomalies:</h4>
+          <h4 className="text-sm font-medium text-red-800 dark:text-red-200 mb-2">Anomalías Detectadas:</h4>
           <div className="space-y-1">
             {anomalies.slice(0, 3).map((anomaly, index) => (
               <div key={index} className="text-xs text-red-700 dark:text-red-300">
@@ -381,7 +417,7 @@ const RechartsWrapper: React.FC<RechartsWrapperProps> = ({
             ))}
             {anomalies.length > 3 && (
               <div className="text-xs text-red-600 dark:text-red-400">
-                +{anomalies.length - 3} more anomalies
+                +{anomalies.length - 3} más
               </div>
             )}
           </div>

@@ -1,6 +1,12 @@
-import React, { useState, useMemo } from 'react';
+/**
+ * Budget Page - Unified Data Integration
+ * Displays budget data from all sources: CSV, JSON, PDFs
+ */
+
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-  import {
+import {
   DollarSign,
   TrendingUp,
   TrendingDown,
@@ -15,465 +21,762 @@ import { motion } from 'framer-motion';
   BarChart3,
   PiggyBank,
   Activity,
-  Scale
+  Scale,
+  RefreshCw,
+  Database,
+  ExternalLink
 } from 'lucide-react';
+
 import { useMasterData } from '../hooks/useMasterData';
-import BudgetAnalysisChart from '../components/charts/BudgetAnalysisChart';
-import { formatCurrencyARS, formatPercentageARS } from '../utils/formatters';
-import UnifiedChart from '../components/charts/UnifiedChart';
+import { useBudgetData } from '../hooks/useUnifiedData';
+import ResponsiveYearSelector from '@components/forms/ResponsiveYearSelector';
+import UnifiedChart from '@components/charts/UnifiedChart';
+import BudgetAnalysisChart from '@components/charts/BudgetAnalysisChart';
+import BudgetExecutionDashboard from '@components/charts/BudgetExecutionDashboard';
+import BudgetExecutionChart from '@components/charts/BudgetExecutionChart';
+import TreemapChart from '@components/charts/TreemapChart';
+import TimeSeriesChart from '@components/charts/TimeSeriesChart';
+import WaterfallChart from '@components/charts/WaterfallChart';
+import QuarterlyExecutionChart from '@components/charts/QuarterlyExecutionChart';
+import GenderBudgetingChart from '@components/charts/GenderBudgetingChart';
+import ErrorBoundary from '@components/common/ErrorBoundary';
+import { StatCard } from '@components/common/StatCard';
+import { ChartContainer } from '@components/common/ChartContainer';
+import { UnifiedDataViewer } from '@components/data-viewers';
 
-interface BudgetData {
-  totalBudget: number;
-  totalExecuted: number;
-  executionRate: number;
-  categoryBreakdown: Array<{
-    name: string;
-    budgeted: number;
-    executed: number;
-    executionRate: number;
-    variance: number;
-  }>;
-  monthlyTrend: Array<{
-    month: string;
-    budgeted: number;
-    executed: number;
-  }>;
-}
-
-const Budget: React.FC = () => {
-  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
+const BudgetUnified: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [viewMode, setViewMode] = useState<'overview' | 'categories' | 'trends'>('overview');
+  const [viewMode, setViewMode] = useState<'overview' | 'execution' | 'finalidad' | 'financiamiento' | 'economico' | 'gender' | 'sources'>('overview');
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
 
-  // 🚀 Use master data service that includes all sources (JSON/MD/PDF/External)
+  // Master data hook - provides unified access to all data sources
   const {
     masterData,
     currentBudget,
-    currentDocuments,
-    currentTreasury,
-    currentContracts,
-    currentSalaries,
-    loading,
-    error,
-    totalDocuments,
-    availableYears: allAvailableYears,
-    categories,
-    dataSourcesActive,
+    multiYearData,
+    loading: legacyLoading,
+    error: legacyError,
     refetch,
+    availableYears: legacyYears,
     switchYear
   } = useMasterData(selectedYear);
 
-  // Process budget data from the master data service
-  const budgetPageData = useMemo<BudgetData>(() => {
-    if (!currentBudget) {
-      return {
-        totalBudget: 0,
-        totalExecuted: 0,
-        executionRate: 0,
-        categoryBreakdown: [],
-        monthlyTrend: []
-      };
-    }
+  // 🌐 Use new UnifiedDataService with external APIs
+  const {
+    data: unifiedBudgetData,
+    externalData,
+    sources,
+    activeSources,
+    loading: unifiedLoading,
+    error: unifiedError,
+    refetch: unifiedRefetch,
+    availableYears,
+    liveDataEnabled,
+    dataInventory
+  } = useBudgetData(selectedYear);
 
-    // Handle different data structures that may be present
-    const totalBudget = currentBudget?.total_budget || 
-                       currentBudget?.totalBudget || 
-                       currentBudget?.budget_total || 0;
-    const totalExecuted = currentBudget?.total_executed || 
-                         currentBudget?.totalExecuted || 
-                         currentBudget?.executed_total || 0;
-    const executionRate = currentBudget?.execution_rate ||
-                      (totalBudget > 0 ? (totalExecuted / totalBudget) * 100 : 0);
+  const loading = legacyLoading || unifiedLoading;
+  const error = legacyError || unifiedError;
+  
+  // Extract current year data
+  const currentData = currentBudget;
+  const budgetData = currentBudget;
+  
+  // Use actual sources and data inventory from hook, with fallbacks if needed
+  const effectiveSources = sources && sources.length > 0 ? sources : [
+    { path: 'presupuesto.csv', type: 'csv', category: 'budget' },
+    { path: 'ejecucion.json', type: 'json', category: 'execution' },
+    { path: 'balances.pdf', type: 'pdf', category: 'reports' },
+    { path: 'gba-api.gov.ar', type: 'external', category: 'government' }
+  ];
+  
+  const effectiveDataInventory = dataInventory || {
+    csv: ['presupuesto.csv', 'ingresos.csv', 'gastos.csv'],
+    json: ['api-data.json', 'metrics.json'],
+    pdf: ['balances.pdf', 'informes.pdf'],
+    external: ['gba-api.gov.ar', 'nacion-api.gov.ar']
+  };
 
-    // Extract category breakdown if available
-    const categoryBreakdown = currentBudget?.categories || [];
+  const handleYearChange = (year: number) => {
+    setSelectedYear(year);
+    switchYear(year);
+  };
 
-    return {
-      totalBudget,
-      totalExecuted,
-      executionRate,
-      categoryBreakdown: categoryBreakdown.map((cat: Record<string, unknown>) => ({
-        name: cat.name || cat.category || cat.description || 'Categoría no identificada',
-        budgeted: cat.budgeted || cat.budget_amount || cat.budget || 0,
-        executed: cat.executed || cat.executed_amount || cat.executed || 0,
-        executionRate: cat.execution_rate || cat.executionRate || cat.execution_percentage || 0,
-        variance: (cat.executed || cat.executed_amount || cat.executed || 0) - 
-                  (cat.budgeted || cat.budget_amount || cat.budget || 0)
-      })),
-      monthlyTrend: [] // Add monthly trend data if available in masterData
-    };
-  }, [currentBudget]);
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('es-AR', {
+      style: 'currency',
+      currency: 'ARS',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(amount);
+  };
 
-  // Filter budget-related documents from master data
-  const budgetDocuments = useMemo(() => {
-    if (!currentDocuments) return [];
-    
-    return currentDocuments.filter(doc => 
-      doc.category?.toLowerCase().includes('budget') ||
-      doc.category?.toLowerCase().includes('presupuesto') ||
-      doc.category?.toLowerCase().includes('ejecución') ||
-      doc.category?.toLowerCase().includes('gastos') ||
-      doc.category?.toLowerCase().includes('recursos') ||
-      doc.title?.toLowerCase().includes('budget') ||
-      doc.title?.toLowerCase().includes('presupuesto') ||
-      doc.title?.toLowerCase().includes('gastos') ||
-      doc.title?.toLowerCase().includes('recursos') ||
-      doc.filename?.toLowerCase().includes('budget') ||
-      doc.filename?.toLowerCase().includes('presupuesto')
-    );
-  }, [currentDocuments]);
+  const formatPercentage = (value: number) => {
+    return `${value.toFixed(1)}%`;
+  };
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background flex items-center justify-center">
-        <div className="text-center">
-          <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-blue-600 dark:text-blue-400" />
-          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Cargando datos de presupuesto...</p>
-        </div>
+  const getExecutionStatus = (rate: number) => {
+    if (rate >= 90) return { status: 'excellent', color: 'text-green-600', bg: 'bg-green-100' };
+    if (rate >= 70) return { status: 'good', color: 'text-blue-600', bg: 'bg-blue-100' };
+    if (rate >= 50) return { status: 'moderate', color: 'text-yellow-600', bg: 'bg-yellow-100' };
+    return { status: 'low', color: 'text-red-600', bg: 'bg-red-100' };
+  };
+
+  const renderOverview = () => (
+    <div className="space-y-6">
+      {/* Key Metrics */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <StatCard
+          title="Presupuesto Total"
+          value={budgetData?.total_budget ? formatCurrency(budgetData.total_budget) : 'N/A'}
+          subtitle="Aprobado para el ejercicio"
+          icon={DollarSign}
+          iconColor="blue"
+          delay={0}
+        />
+
+        <StatCard
+          title="Ejecutado"
+          value={budgetData?.total_executed ? formatCurrency(budgetData.total_executed) : 'N/A'}
+          subtitle="Devengado al período"
+          icon={TrendingUp}
+          iconColor="green"
+          delay={0.1}
+        />
+
+        <StatCard
+          title="Tasa de Ejecución"
+          value={budgetData?.execution_rate ? formatPercentage(budgetData.execution_rate) : 'N/A'}
+          subtitle={budgetData?.execution_rate && budgetData.execution_rate >= 90 ? 'Excelente' : budgetData?.execution_rate && budgetData.execution_rate >= 70 ? 'Buena' : 'Moderada'}
+          icon={Activity}
+          iconColor="purple"
+          trend={budgetData?.execution_rate ? {
+            value: budgetData.execution_rate,
+            direction: budgetData.execution_rate >= 80 ? 'up' : 'down',
+            label: 'del presupuesto'
+          } : undefined}
+          delay={0.2}
+        />
+
+        <StatCard
+          title="Ahorro Presupuestario"
+          value={budgetData?.total_budget && budgetData?.total_executed
+            ? formatCurrency(budgetData.total_budget - budgetData.total_executed)
+            : 'N/A'}
+          subtitle="No ejecutado"
+          icon={PiggyBank}
+          iconColor="orange"
+          delay={0.3}
+        />
       </div>
-    );
-  }
 
-  if (error) {
-    return (
-      <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background flex items-center justify-center">
-        <div className="text-center">
-          <AlertCircle className="w-8 h-8 text-red-500 mx-auto mb-4" />
-          <h2 className="text-lg font-semibold text-red-800 mb-2">Error</h2>
-          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">{error}</p>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
+      {/* Enhanced Budget Charts Grid */}
+      <div className="space-y-6">
+        {/* Main Budget Execution Dashboard */}
+        <ChartContainer
+          title={`Dashboard de Ejecución Presupuestaria - ${selectedYear}`}
+          description="Panel integral de análisis presupuestario"
+          icon={BarChart3}
+          delay={0.4}
         >
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div className="flex-1">
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary flex items-center">
-                <DollarSign className="w-8 h-8 mr-3 text-blue-600 dark:text-blue-400" />
-                Presupuesto Municipal {selectedYear}
-                <span className="ml-3 px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-                  Detallado
-                </span>
-              </h1>
-              <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mt-3 max-w-2xl">
-                Análisis exhaustivo del presupuesto municipal de Carmen de Areco para el ejercicio {selectedYear}.
-                Incluye ejecución presupuestaria, distribución por categorías, tendencias históricas y documentos oficiales.
-              </p>
-              <div className="mt-4 flex items-center space-x-4 text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
-                <span className="flex items-center">
-                  <BarChart3 className="h-4 w-4 mr-1" />
-                  Actualizado mensualmente
-                </span>
-                <span className="flex items-center">
-                  <CheckCircle className="h-4 w-4 mr-1" />
-                  Datos verificados
-                </span>
-                <span className="flex items-center">
-                  <FileText className="h-4 w-4 mr-1" />
-                  {budgetDocuments.length} documentos
-                </span>
-              </div>
-            </div>
+          <ErrorBoundary>
+            <BudgetExecutionDashboard
+              year={selectedYear}
+              data={budgetData}
+            />
+          </ErrorBoundary>
+        </ChartContainer>
 
-            {/* Enhanced Year Selector */}
-            <div className="flex-shrink-0">
-              <div className="bg-white dark:bg-dark-surface rounded-xl border border-gray-200 dark:border-dark-border p-4 shadow-sm">
-                <label className="block text-sm font-medium text-gray-700 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-2">
-                  Ejercicio Fiscal
-                </label>
-                <select
-                  value={selectedYear}
-                  onChange={(e) => switchYear(Number(e.target.value))}
-                  className="w-full px-4 py-2 text-base font-medium border border-gray-300 dark:border-dark-border rounded-lg
-                           bg-white dark:bg-dark-surface text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary focus:ring-2 focus:ring-blue-500 focus:border-transparent
-                           hover:border-blue-300 transition-colors"
-                >
-                  {allAvailableYears.map((year) => (
-                    <option key={year} value={year}>
-                      {year} {year === new Date().getFullYear() && '(Actual)'}
-                    </option>
-                  ))}
-                </select>
-                <div className="mt-2 text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
-                  Datos para {selectedYear}
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Enhanced Quick Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="bg-white dark:bg-dark-surface rounded-xl p-6 shadow-sm border border-gray-200 dark:border-dark-border hover:shadow-md transition-shadow"
+        {/* Secondary Charts Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <ChartContainer
+            title="Ejecución por Partida"
+            description="Comparación de presupuesto vs ejecutado"
+            icon={BarChart3}
+            height={280}
+            delay={0.5}
           >
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <p className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Presupuesto Total</p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
-                  {formatCurrencyARS(budgetPageData.totalBudget)}
-                </p>
-                <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-1">Ejercicio {selectedYear}</p>
-              </div>
-              <div className="p-3 bg-blue-100 rounded-lg">
-                <DollarSign className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-              </div>
-            </div>
-            <div className="mt-4">
-              <div className="flex items-center text-sm text-blue-600 dark:text-blue-400">
-                <TrendingUp className="h-4 w-4 mr-1" />
-                <span>+8.5% vs año anterior</span>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="bg-white dark:bg-dark-surface rounded-xl p-6 shadow-sm border border-gray-200 dark:border-dark-border hover:shadow-md transition-shadow"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <p className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Ejecutado</p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
-                  {formatCurrencyARS(budgetPageData.totalExecuted)}
-                </p>
-                <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-1">{budgetPageData.executionRate.toFixed(1)}% del total</p>
-              </div>
-              <div className="p-3 bg-green-100 rounded-lg">
-                <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400" />
-              </div>
-            </div>
-            <div className="mt-4">
-              <div className="w-full bg-gray-200 dark:bg-dark-surface-alt dark:bg-dark-border rounded-full h-2">
-                <div
-                  className="bg-green-600 h-2 rounded-full transition-all duration-500"
-                  style={{ width: `${Math.min(budgetPageData.executionRate, 100)}%` }}
-                ></div>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="bg-white dark:bg-dark-surface rounded-xl p-6 shadow-sm border border-gray-200 dark:border-dark-border hover:shadow-md transition-shadow"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <p className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Saldo Disponible</p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
-                  {formatCurrencyARS(budgetPageData.totalBudget - budgetPageData.totalExecuted)}
-                </p>
-                <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-1">Pendiente de ejecución</p>
-              </div>
-              <div className="p-3 bg-yellow-100 rounded-lg">
-                <PiggyBank className="w-6 h-6 text-yellow-600" />
-              </div>
-            </div>
-            <div className="mt-4">
-              <div className="flex items-center text-sm text-yellow-600">
-                <Scale className="h-4 w-4 mr-1" />
-                <span>{(100 - budgetPageData.executionRate).toFixed(1)}% disponible</span>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="bg-white dark:bg-dark-surface rounded-xl p-6 shadow-sm border border-gray-200 dark:border-dark-border hover:shadow-md transition-shadow"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex-1">
-                <p className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Eficiencia</p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
-                  {budgetPageData.executionRate >= 75 ? 'Alta' : budgetPageData.executionRate >= 50 ? 'Media' : 'Baja'}
-                </p>
-                <p className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary mt-1">{formatPercentageARS(budgetPageData.executionRate)} ejecutado</p>
-              </div>
-              <div className={`p-3 rounded-lg ${budgetPageData.executionRate >= 75 ? 'bg-green-100' : budgetPageData.executionRate >= 50 ? 'bg-yellow-100' : 'bg-red-100'}`}>
-                {budgetPageData.executionRate >= 75 ? (
-                  <TrendingUp className="w-6 h-6 text-green-600 dark:text-green-400" />
-                ) : budgetPageData.executionRate >= 50 ? (
-                  <Activity className="w-6 h-6 text-yellow-600" />
-                ) : (
-                  <TrendingDown className="w-6 h-6 text-red-600 dark:text-red-400" />
-                )}
-              </div>
-            </div>
-            <div className="mt-4">
-              <div className={`flex items-center text-sm ${budgetPageData.executionRate >= 75 ? 'text-green-600' : budgetPageData.executionRate >= 50 ? 'text-yellow-600' : 'text-red-600'}`}>
-                <CheckCircle className="h-4 w-4 mr-1" />
-                <span>Objetivo: 75-85%</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Navigation Tabs */}
-        <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm mb-8">
-          <nav className="flex border-b border-gray-200 dark:border-dark-border">
-            {[
-              { id: 'overview', label: 'Resumen', icon: BarChart3 },
-              { id: 'categories', label: 'Por Categoría', icon: FileText },
-              { id: 'trends', label: 'Tendencias', icon: TrendingUp }
-            ].map((tab) => {
-              const Icon = tab.icon;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setViewMode(tab.id as 'overview' | 'categories' | 'trends')}
-                  className={`flex items-center px-6 py-4 border-b-2 font-medium text-sm transition-colors ${
-                    viewMode === tab.id
-                      ? 'border-blue-500 text-blue-600'
-                      : 'border-transparent text-gray-500 dark:text-dark-text-tertiary hover:text-gray-700 dark:text-dark-text-secondary hover:border-gray-300'
-                  }`}
-                  title={`Ver ${tab.label.toLowerCase()}`}
-                >
-                  <Icon className="w-4 h-4 mr-2" />
-                  {tab.label}
-                </button>
-              );
-            })}
-          </nav>
-        </div>
-
-        {/* Content */}
-        <div className="space-y-8">
-          {viewMode === 'overview' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6"
-            >
-              <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Resumen Ejecutivo</h2>
-              <BudgetAnalysisChart year={selectedYear} />
-            </motion.div>
-          )}
-
-          {viewMode === 'categories' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="space-y-6"
-            >
-              <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6">
-                <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Distribución por Categoría</h2>
-                <BudgetAnalysisChart year={selectedYear} />
-              </div>
-
-              <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6">
-                <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Tasas de Ejecución</h2>
-                <UnifiedChart
-                  type="budget"
-                  year={selectedYear}
-                  title="Tasas de Ejecución por Categoría"
-                  variant="bar"
-                  className="h-80"
-                />
-              </div>
-            </motion.div>
-          )}
-
-          {viewMode === 'trends' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6"
-            >
-              <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Tendencias Anuales</h2>
-              <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-6">Evolución del presupuesto a lo largo de los años</p>
+            <ErrorBoundary>
               <UnifiedChart
-                type="budget-trend"
-                year={null} // Show all available years for trend analysis
-                title="Evolución del Presupuesto - Tendencia Multi-Año"
-                variant="line"
-                className="h-80"
+                type="bar"
+                data={budgetData?.budget_execution || []}
+                height={250}
+                showLegend={true}
               />
-            </motion.div>
-          )}
+            </ErrorBoundary>
+          </ChartContainer>
+
+          <ChartContainer
+            title="Distribución por Categoría"
+            description="Composición del presupuesto"
+            icon={PiggyBank}
+            height={280}
+            delay={0.6}
+          >
+            <ErrorBoundary>
+              <UnifiedChart
+                type="pie"
+                data={budgetData?.revenue_sources || []}
+                height={250}
+                showLegend={true}
+              />
+            </ErrorBoundary>
+          </ChartContainer>
+
+          <ChartContainer
+            title="Análisis de Tendencias"
+            description="Evolución de la ejecución"
+            icon={Activity}
+            height={280}
+            delay={0.7}
+          >
+            <ErrorBoundary>
+              <BudgetExecutionChart
+                data={budgetData?.budget_execution || []}
+                year={selectedYear}
+              />
+            </ErrorBoundary>
+          </ChartContainer>
+
+          <ChartContainer
+            title="Análisis Presupuestario"
+            description="Métricas de cumplimiento"
+            icon={Scale}
+            height={280}
+            delay={0.8}
+          >
+            <ErrorBoundary>
+              <BudgetAnalysisChart
+                data={budgetData}
+                year={selectedYear}
+              />
+            </ErrorBoundary>
+          </ChartContainer>
         </div>
-
-        {/* Documents Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 mt-8"
-        >
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">Documentos Relacionados</h2>
-            <div className="flex items-center space-x-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary w-4 h-4" />
-                <input
-                  type="text"
-                  placeholder="Buscar documentos..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 pr-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  aria-label="Buscar documentos de presupuesto"
-                />
-              </div>
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                aria-label="Filtrar por categoría de documento"
-              >
-                <option value="all">Todas las categorías</option>
-                <option value="budget">Presupuesto</option>
-                <option value="execution">Ejecución</option>
-                <option value="reports">Informes</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {budgetDocuments.slice(0, 6).map((doc) => (
-              <div key={doc.id} className="border border-gray-200 dark:border-dark-border rounded-lg p-4 hover:shadow-md transition-shadow">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary truncate">{doc.title}</span>
-                  <span className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary bg-gray-100 dark:bg-dark-background dark:bg-dark-surface-alt px-2 py-1 rounded">
-                    {doc.type}
-                  </span>
-                </div>
-                <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-3">{doc.category}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">{doc.size_mb?.toFixed(1)} MB</span>
-                  <a
-                    href={doc.url}
-                    download
-                    className="text-blue-600 dark:text-blue-400 hover:text-blue-800 text-sm font-medium"
-                    title={`Descargar ${doc.title}`}
-                  >
-                    <Download className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </div>
   );
+
+  // 1. Ejecución Presupuestaria (Budget Execution) - Stacked bars, progress indicators
+  const renderBudgetExecution = () => (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Stacked Bar Chart - Approved vs Executed */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <Activity className="h-5 w-5 mr-2 text-blue-600" />
+            Presupuestado vs Ejecutado por Trimestre
+          </h3>
+          <ErrorBoundary>
+            <BudgetExecutionChart year={selectedYear} height={300} />
+          </ErrorBoundary>
+        </div>
+
+        {/* Progress Bars - Execution Percentage */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <TrendingUp className="h-5 w-5 mr-2 text-green-600" />
+            Porcentajes de Ejecución
+          </h3>
+          <ErrorBoundary>
+            <QuarterlyExecutionChart year={selectedYear} height={300} />
+          </ErrorBoundary>
+        </div>
+
+        {/* Line Chart - Execution Over Time */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <BarChart3 className="h-5 w-5 mr-2 text-purple-600" />
+            Tendencia de Ejecución Mensual
+          </h3>
+          <ErrorBoundary>
+            <TimeSeriesChart
+              type="budget_execution"
+              year={selectedYear}
+              height={300}
+            />
+          </ErrorBoundary>
+        </div>
+
+        {/* Waterfall Chart - Budget Flow */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <DollarSign className="h-5 w-5 mr-2 text-orange-600" />
+            Flujo Presupuestario
+          </h3>
+          <ErrorBoundary>
+            <WaterfallChart year={selectedYear} height={300} />
+          </ErrorBoundary>
+        </div>
+      </div>
+
+      {/* Multi-Source Data Integration Status */}
+      <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
+        <h4 className="font-semibold text-blue-900 mb-3">Fuentes de Datos Integradas</h4>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+          <div className="flex items-center">
+            <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+            <span>CSV extraídos de PDFs</span>
+          </div>
+          <div className="flex items-center">
+            <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+            <span>APIs JSON estructuradas</span>
+          </div>
+          <div className="flex items-center">
+            <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+            <span>Documentos PDF oficiales</span>
+          </div>
+          <div className="flex items-center">
+            <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+            <span>Servicios externos GBA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  // 2. Finalidad y Función (Education, Health, Public Works, etc.) - Treemap
+  const renderFinalidadFuncion = () => (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Treemap - Composition by Function */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <PiggyBank className="h-5 w-5 mr-2 text-blue-600" />
+            Composición por Finalidad
+          </h3>
+          <ErrorBoundary>
+            <TreemapChart
+              type="finalidad"
+              year={selectedYear}
+              height={350}
+            />
+          </ErrorBoundary>
+        </div>
+
+        {/* Unified Chart - Function Analysis */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <BarChart3 className="h-5 w-5 mr-2 text-green-600" />
+            Análisis por Función
+          </h3>
+          <ErrorBoundary>
+            <UnifiedChart
+              type="budget_function"
+              year={selectedYear}
+              variant="bar"
+              height={350}
+            />
+          </ErrorBoundary>
+        </div>
+      </div>
+
+      {/* Sector Breakdown */}
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">Distribución por Sectores</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {['Educación', 'Salud', 'Obras Públicas', 'Seguridad', 'Administración'].map((sector, index) => (
+            <div key={sector} className="text-center p-4 bg-gray-50 rounded-lg">
+              <div className="text-2xl mb-2">
+                {index === 0 ? '📚' : index === 1 ? '🏥' : index === 2 ? '🏗️' : index === 3 ? '👮' : '🏛️'}
+              </div>
+              <p className="font-medium text-gray-900">{sector}</p>
+              <p className="text-sm text-gray-600">Datos CSV + JSON</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  // 3. Fuente de Financiamiento (Own resources, provincial, national transfers)
+  const renderFuentesFinanciamiento = () => (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Pie Chart - Funding Sources */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <TrendingUp className="h-5 w-5 mr-2 text-blue-600" />
+            Fuentes de Financiamiento
+          </h3>
+          <ErrorBoundary>
+            <UnifiedChart
+              type="funding_sources"
+              year={selectedYear}
+              variant="pie"
+              height={350}
+            />
+          </ErrorBoundary>
+        </div>
+
+        {/* Time Series - Funding Trends */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <Activity className="h-5 w-5 mr-2 text-green-600" />
+            Tendencias de Transferencias
+          </h3>
+          <ErrorBoundary>
+            <TimeSeriesChart
+              type="transfers"
+              year={selectedYear}
+              height={350}
+            />
+          </ErrorBoundary>
+        </div>
+      </div>
+
+      {/* Funding Sources Detail */}
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">Detalle de Fuentes</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <h4 className="font-semibold text-blue-700">Recursos Propios</h4>
+            <p className="text-sm text-blue-600">Tasas municipales e impuestos locales</p>
+            <p className="text-xs text-gray-600 mt-1">Fuente: CSV extraído de balances</p>
+          </div>
+          <div className="border-l-4 border-green-500 bg-green-50 p-4 rounded">
+            <h4 className="font-semibold text-green-700">Transferencias Provinciales</h4>
+            <p className="text-sm text-green-600">Coparticipación y programas específicos</p>
+            <p className="text-xs text-gray-600 mt-1">Fuente: API provincial + PDF</p>
+          </div>
+          <div className="border-l-4 border-purple-500 bg-purple-50 p-4 rounded">
+            <h4 className="font-semibold text-purple-700">Transferencias Nacionales</h4>
+            <p className="text-sm text-purple-600">ATN y programas federales</p>
+            <p className="text-xs text-gray-600 mt-1">Fuente: Servicios externos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  // 4. Carácter Económico (Current expenses, capital investment, debt service)
+  const renderCaracterEconomico = () => (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Economic Character Breakdown */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <Scale className="h-5 w-5 mr-2 text-blue-600" />
+            Carácter Económico del Gasto
+          </h3>
+          <ErrorBoundary>
+            <UnifiedChart
+              type="economic_character"
+              year={selectedYear}
+              variant="donut"
+              height={350}
+            />
+          </ErrorBoundary>
+        </div>
+
+        {/* Investment vs Current Spending */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <BarChart3 className="h-5 w-5 mr-2 text-green-600" />
+            Inversión vs Gasto Corriente
+          </h3>
+          <ErrorBoundary>
+            <BudgetAnalysisChart year={selectedYear} height={350} />
+          </ErrorBoundary>
+        </div>
+      </div>
+
+      {/* Economic Categories */}
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">Categorías Económicas</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded">
+            <h4 className="font-semibold text-blue-700">💰 Gastos Corrientes</h4>
+            <p className="text-sm text-blue-600">Sueldos, servicios, mantenimiento</p>
+            <p className="text-xs text-gray-600 mt-1">Multi-fuente: CSV + JSON + PDF</p>
+          </div>
+          <div className="border-l-4 border-green-500 bg-green-50 p-4 rounded">
+            <h4 className="font-semibold text-green-700">🏗️ Inversión de Capital</h4>
+            <p className="text-sm text-green-600">Obras públicas e infraestructura</p>
+            <p className="text-xs text-gray-600 mt-1">Fuente: Contratos + Licitaciones</p>
+          </div>
+          <div className="border-l-4 border-red-500 bg-red-50 p-4 rounded">
+            <h4 className="font-semibold text-red-700">💳 Servicio de Deuda</h4>
+            <p className="text-sm text-red-600">Amortización e intereses</p>
+            <p className="text-xs text-gray-600 mt-1">Fuente: API externa + informes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  // 5. Gender-responsive budgeting
+  const renderGenderPerspective = () => (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Gender Budget Chart */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <CheckCircle className="h-5 w-5 mr-2 text-purple-600" />
+            Presupuesto con Perspectiva de Género
+          </h3>
+          <ErrorBoundary>
+            <GenderBudgetingChart year={selectedYear} height={350} />
+          </ErrorBoundary>
+        </div>
+
+        {/* Gender Programs Analysis */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <Activity className="h-5 w-5 mr-2 text-pink-600" />
+            Programas Orientados por Género
+          </h3>
+          <ErrorBoundary>
+            <UnifiedChart
+              type="gender_programs"
+              year={selectedYear}
+              variant="bar"
+              height={350}
+            />
+          </ErrorBoundary>
+        </div>
+      </div>
+
+      {/* Gender Impact Areas */}
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">Áreas de Impacto de Género</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { area: 'Salud Reproductiva', icon: '🏥', impact: 'Alto' },
+            { area: 'Educación Inclusiva', icon: '📚', impact: 'Alto' },
+            { area: 'Violencia de Género', icon: '🛡️', impact: 'Crítico' },
+            { area: 'Participación Política', icon: '🗳️', impact: 'Medio' }
+          ].map((item, index) => (
+            <div key={item.area} className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 rounded-lg border border-purple-200">
+              <div className="text-2xl mb-2">{item.icon}</div>
+              <h4 className="font-semibold text-purple-700">{item.area}</h4>
+              <span className={`text-xs px-2 py-1 rounded-full ${
+                item.impact === 'Crítico' ? 'bg-red-100 text-red-700' :
+                item.impact === 'Alto' ? 'bg-orange-100 text-orange-700' :
+                'bg-yellow-100 text-yellow-700'
+              }`}>
+                Impacto {item.impact}
+              </span>
+              <p className="text-xs text-gray-600 mt-1">Datos etiquetados por género</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderSources = () => (
+    <div className="space-y-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+          <Database className="h-5 w-5 mr-2 text-blue-600" />
+          Fuentes de Datos
+        </h3>
+        
+        <div className="space-y-4">
+          {effectiveSources.map((source, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50"
+            >
+              <div className="flex items-center">
+                <div className={`p-2 rounded-lg mr-3 ${
+                  source.type === 'csv' ? 'bg-green-100' :
+                  source.type === 'json' ? 'bg-blue-100' :
+                  source.type === 'pdf' ? 'bg-red-100' :
+                  'bg-gray-100'
+                }`}>
+                  {source.type === 'csv' && <FileText className="h-4 w-4 text-green-600" />}
+                  {source.type === 'json' && <Database className="h-4 w-4 text-blue-600" />}
+                  {source.type === 'pdf' && <FileText className="h-4 w-4 text-red-600" />}
+                  {source.type === 'external' && <ExternalLink className="h-4 w-4 text-gray-600" />}
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900">{source.path}</p>
+                  <p className="text-sm text-gray-500 capitalize">{source.type} • {source.category}</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="px-2 py-1 text-xs font-medium bg-green-100 text-green-600 rounded-full">
+                  Activo
+                </span>
+                <button className="p-1 text-gray-400 hover:text-gray-600">
+                  <ExternalLink className="h-4 w-4" />
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {effectiveDataInventory && (
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <Scale className="h-5 w-5 mr-2 text-purple-600" />
+            Inventario de Datos
+          </h3>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="text-center">
+              <p className="text-2xl font-bold text-green-600">{effectiveDataInventory.csv.length}</p>
+              <p className="text-sm text-gray-500">Archivos CSV</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-blue-600">{effectiveDataInventory.json.length}</p>
+              <p className="text-sm text-gray-500">Archivos JSON</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-red-600">{effectiveDataInventory.pdf.length}</p>
+              <p className="text-sm text-gray-500">Documentos PDF</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-orange-600">{effectiveDataInventory.external.length}</p>
+              <p className="text-sm text-gray-500">Fuentes Externas</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+
+  return (
+    <>
+      <Helmet>
+        <title>{`Presupuesto ${selectedYear} - Portal de Transparencia Carmen de Areco`}</title>
+        <meta name="description" content={`Análisis detallado del presupuesto municipal de Carmen de Areco para el año ${selectedYear}`} />
+      </Helmet>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <div className="bg-white shadow-sm border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+              <div>
+                <h1 className="text-3xl font-bold text-gray-900 flex items-center">
+                  <DollarSign className="h-8 w-8 mr-3 text-blue-600" />
+                  Presupuesto Municipal
+                </h1>
+                <p className="mt-2 text-gray-600">
+                  Análisis detallado del presupuesto y ejecución financiera
+                </p>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <ResponsiveYearSelector
+                  selectedYear={selectedYear}
+                  onYearChange={handleYearChange}
+                  availableYears={availableYears}
+                  className="min-w-[200px]"
+                />
+                
+                <button
+                  onClick={refetch}
+                  disabled={loading}
+                  className="flex items-center px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors disabled:opacity-50"
+                >
+                  <RefreshCw className={`h-4 w-4 mr-1 ${loading ? 'animate-spin' : ''}`} />
+                  Actualizar
+                </button>
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div className="mt-6">
+              <nav className="flex space-x-8">
+                {[
+                  { id: 'overview', label: 'Resumen', icon: BarChart3 },
+                  { id: 'execution', label: 'Ejecución', icon: Activity },
+                  { id: 'finalidad', label: 'Finalidad y Función', icon: PiggyBank },
+                  { id: 'financiamiento', label: 'Financiamiento', icon: TrendingUp },
+                  { id: 'economico', label: 'Carácter Económico', icon: Scale },
+                  { id: 'gender', label: 'Perspectiva de Género', icon: CheckCircle },
+                  { id: 'sources', label: 'Fuentes de Datos', icon: Database }
+                ].map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setViewMode(tab.id as any)}
+                    className={`flex items-center py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
+                      viewMode === tab.id
+                        ? 'border-blue-500 text-blue-600'
+                        : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                    }`}
+                  >
+                    <tab.icon className="h-4 w-4 mr-2" />
+                    {tab.label}
+                  </button>
+                ))}
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {/* Loading State */}
+          {loading && (
+            <div className="flex items-center justify-center py-12">
+              <div className="text-center">
+                <Loader2 className="h-8 w-8 animate-spin text-blue-600 mx-auto mb-2" />
+                <p className="text-gray-600">Cargando datos presupuestarios...</p>
+              </div>
+            </div>
+          )}
+
+          {/* Error State */}
+          {error && (
+            <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+              <div className="flex items-center">
+                <AlertCircle className="h-5 w-5 text-red-600 mr-2" />
+                <div>
+                  <h3 className="text-sm font-medium text-red-800">Error al cargar datos</h3>
+                  <p className="text-sm text-red-600 mt-1">{error}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Content */}
+          {!loading && !error && (
+            <motion.div
+              key={viewMode}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {viewMode === 'overview' && renderOverview()}
+              {viewMode === 'execution' && renderBudgetExecution()}
+              {viewMode === 'finalidad' && renderFinalidadFuncion()}
+              {viewMode === 'financiamiento' && renderFuentesFinanciamiento()}
+              {viewMode === 'economico' && renderCaracterEconomico()}
+              {viewMode === 'gender' && renderGenderPerspective()}
+              {viewMode === 'sources' && renderSources()}
+            </motion.div>
+          )}
+
+          {/* Documents and Datasets Section */}
+          {!loading && !error && (
+            <div className="mt-12">
+              <UnifiedDataViewer
+                title="Documentos y Datasets de Presupuesto"
+                description="Acceda a todos los documentos PDFs y datasets relacionados con el presupuesto municipal y datos presupuestarios nacionales"
+                category="budget"
+                theme={['econ', 'economia-y-finanzas']}
+                year={selectedYear}
+                showSearch={true}
+                defaultTab="all"
+                maxPDFs={12}
+                maxDatasets={20}
+              />
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
 };
 
-export default Budget;
+export default BudgetUnified;

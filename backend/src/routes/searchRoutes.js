@@ -7,9 +7,11 @@
 const express = require('express');
 const router = express.Router();
 const SemanticSearchService = require('../services/semanticSearchService');
+const AdvancedSearchService = require('../services/advancedSearchService');
 
-// Initialize the semantic search service
+// Initialize the search services
 const semanticSearchService = new SemanticSearchService();
+const advancedSearchService = new AdvancedSearchService();
 
 // POST route for semantic search
 router.post('/semantic', async (req, res) => {
@@ -169,6 +171,130 @@ router.post('/index', async (req, res) => {
     res.status(500).json({
       error: 'Indexing service error',
       details: process.env.NODE_ENV === 'development' ? error.message : 'Indexing temporarily unavailable'
+    });
+  }
+});
+
+// GET route for faceted filtering options
+router.get('/facets', async (req, res) => {
+  try {
+    const { q = '', category, year, type, source } = req.query;
+    
+    const options = {
+      category: category || undefined,
+      year: year ? parseInt(year) : undefined,
+      type: type || undefined,
+      source: source || undefined
+    };
+
+    const facets = await advancedSearchService.getFacetFilters(q, options);
+    
+    res.json({
+      ...facets,
+      // Add transparency information
+      aiProcessing: {
+        method: 'content analysis for faceted filtering',
+        privacyProtection: true
+      }
+    });
+  } catch (error) {
+    console.error('Facets error:', error);
+    res.status(500).json({ 
+      error: 'Faceted filtering service error',
+      details: process.env.NODE_ENV === 'development' ? error.message : 'Faceted filtering temporarily unavailable'
+    });
+  }
+});
+
+// POST route for advanced search with multiple filters
+router.post('/advanced', async (req, res) => {
+  try {
+    const { query, options = {} } = req.body;
+    
+    if (query && (typeof query !== 'string' || query.length < 1)) {
+      return res.status(400).json({
+        error: 'Query parameter must be a string with at least 1 character if provided'
+      });
+    }
+
+    const searchResults = await advancedSearchService.advancedSearch(query, {
+      ...options,
+      // Include IP for anonymization in search service
+      ip: req.ip
+    });
+
+    res.json({
+      ...searchResults,
+      // Add transparency information
+      aiProcessing: {
+        method: 'advanced search with multiple filters and options',
+        privacyProtection: true
+      }
+    });
+  } catch (error) {
+    console.error('Advanced search error:', error);
+    res.status(500).json({
+      error: 'Advanced search service error',
+      details: process.env.NODE_ENV === 'development' ? error.message : 'Advanced search temporarily unavailable'
+    });
+  }
+});
+
+// GET route for document clustering
+router.get('/clusters', async (req, res) => {
+  try {
+    const { q, filters = {} } = req.query;
+    
+    // First, get search results
+    const searchResults = await advancedSearchService.advancedSearch(q || '', { filters });
+    
+    // Then cluster the results
+    const clusters = await advancedSearchService.getDocumentClusters(searchResults.results);
+    
+    res.json({
+      ...clusters,
+      totalResults: searchResults.total,
+      // Add transparency information
+      aiProcessing: {
+        method: 'document clustering based on content similarity',
+        privacyProtection: true
+      }
+    });
+  } catch (error) {
+    console.error('Clustering error:', error);
+    res.status(500).json({
+      error: 'Document clustering service error',
+      details: process.env.NODE_ENV === 'development' ? error.message : 'Document clustering temporarily unavailable'
+    });
+  }
+});
+
+// POST route for clustering specific documents
+router.post('/cluster-documents', async (req, res) => {
+  try {
+    const { documents, maxClusters = 5 } = req.body;
+    
+    if (!documents || !Array.isArray(documents)) {
+      return res.status(400).json({
+        error: 'Documents array is required'
+      });
+    }
+
+    const clusters = await advancedSearchService.clusterDocuments(documents, maxClusters);
+    
+    res.json({
+      ...clusters,
+      // Add transparency information
+      aiProcessing: {
+        method: 'content-based document clustering',
+        privacyProtection: true
+      }
+    });
+  } catch (error) {
+    console.error('Document clustering error:', error);
+    res.status(500).json({
+      error: 'Document clustering service error',
+      details: process.env.NODE_ENV === 'development' ? error.message : 'Document clustering temporarily unavailable'
     });
   }
 });

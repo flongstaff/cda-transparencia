@@ -1,0 +1,341 @@
+[
+  {
+    "file": "About.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "AllChartsDashboard.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "AnalyticsDashboard.tsx",
+    "services": [
+      "UnifiedDataService"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": false,
+    "needsUpdate": false
+  },
+  {
+    "file": "AnomalyDashboard.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": true,
+    "needsUpdate": true
+  },
+  {
+    "file": "AntiCorruptionDashboard.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "AuditAnomaliesExplainer.tsx",
+    "services": [
+      "dataService"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": true,
+    "needsUpdate": true
+  },
+  {
+    "file": "Audits.tsx",
+    "services": [
+      "UnifiedDataService",
+      "UnifiedTransparencyService"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": true,
+    "needsUpdate": true
+  },
+  {
+    "file": "AuditsAndDiscrepanciesPage.tsx",
+    "services": [
+      "externalAPIsService",
+      "ExternalDataAdapter"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": true,
+    "needsUpdate": true
+  },
+  {
+    "file": "BudgetUnified.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "Contact.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "ContractsAndTendersPage.tsx",
+    "services": [
+      "externalAPIsService",
+      "ExternalDataAdapter"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": true,
+    "needsUpdate": true
+  },
+  {
+    "file": "CorruptionMonitoringDashboard.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "DashboardCompleto.tsx",
+    "services": [
+      "UnifiedDataService"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": false,
+    "needsUpdate": false
+  },
+  {
+    "file": "DataConnectivityTest.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "DataRightsPage.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "DataVerificationPage.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": true,
+    "needsUpdate": true
+  },
+  {
+    "file": "DataVisualizationHub.tsx",
+    "services": [
+      "externalAPIsService",
+      "ExternalDataAdapter"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": true,
+    "needsUpdate": true
+  },
+  {
+    "file": "Database.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "DebtUnified.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "DocumentAnalysisPage.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "DocumentsUnified.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "EnhancedTransparencyDashboard.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "ExpensesPage.tsx",
+    "services": [
+      "UnifiedDataService"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": false,
+    "needsUpdate": false
+  },
+  {
+    "file": "FlaggedAnalysisPage.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "Home.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "InfrastructureTracker.tsx",
+    "services": [
+      "externalAPIsService",
+      "ExternalDataAdapter"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": false,
+    "needsUpdate": false
+  },
+  {
+    "file": "InvestmentsPage.tsx",
+    "services": [
+      "UnifiedDataService"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": false,
+    "needsUpdate": false
+  },
+  {
+    "file": "MetaTransparencyDashboard.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "MonitoringDashboard.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "MultiYearRevenue.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "NotFoundPage.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "OpenDataCatalogPage.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": true,
+    "needsUpdate": true
+  },
+  {
+    "file": "OpenDataPage.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "PrivacyPolicyPage.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "PropertyDeclarations.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "Reports.tsx",
+    "services": [
+      "UnifiedDataService"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": false,
+    "needsUpdate": false
+  },
+  {
+    "file": "Salaries.tsx",
+    "services": [
+      "UnifiedDataService"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": false,
+    "needsUpdate": false
+  },
+  {
+    "file": "SearchPage.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": true,
+    "needsUpdate": true
+  },
+  {
+    "file": "SectoralStatsDashboard.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "StandardizedDashboard.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "TestAllChartsPage.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "TransparencyPage.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  },
+  {
+    "file": "TransparencyPortal.tsx",
+    "services": [
+      "UnifiedDataService"
+    ],
+    "hasServiceImport": true,
+    "usesLocalData": false,
+    "needsUpdate": false
+  },
+  {
+    "file": "TreasuryUnified.tsx",
+    "services": [],
+    "hasServiceImport": false,
+    "usesLocalData": false,
+    "needsUpdate": true
+  }
+]

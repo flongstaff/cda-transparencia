@@ -76,7 +76,7 @@ const ProcurementTimelineChart: React.FC<ProcurementTimelineChartProps> = memo((
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Procurement Timeline data...
+          Cargando datos de Línea de Tiempo de Contrataciones...
         </Typography>
       </Box>
     );
@@ -86,7 +86,7 @@ const ProcurementTimelineChart: React.FC<ProcurementTimelineChartProps> = memo((
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Procurement Timeline data: {error}
+        Error cargando datos de Línea de Tiempo de Contrataciones: {error}
       </Alert>
     );
   }
@@ -95,7 +95,7 @@ const ProcurementTimelineChart: React.FC<ProcurementTimelineChartProps> = memo((
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Procurement Timeline data available
+        No hay datos disponibles de Línea de Tiempo de Contrataciones
       </Alert>
     );
   }
@@ -133,14 +133,14 @@ const ProcurementTimelineChart: React.FC<ProcurementTimelineChartProps> = memo((
       chartType={chartType}
       xAxisKey={xAxisKey}
       yAxisKeys={yAxisKeys}
-      title={showTitle ? "Procurement Timeline Analysis" : undefined}
-      description={showDescription ? "Analyzing tender concentration patterns, particularly the November 2023 cluster (5 tenders in 15 days)" : undefined}
+      title={showTitle ? "Análisis de Línea de Tiempo de Contrataciones" : undefined}
+      description={showDescription ? "Análisis de patrones de concentración de licitaciones, particularmente el cluster de Noviembre 2023 (5 licitaciones en 15 días)" : undefined}
       height={height}
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel={xAxisKey === 'date' || xAxisKey === 'tender_date' ? 'Date' : 'Year'}
-      yAxisLabel="Tender Value (ARS) / Category"
+      xAxisLabel={xAxisKey === 'date' || xAxisKey === 'tender_date' ? 'Fecha' : 'Año'}
+      yAxisLabel="Valor de Licitación (ARS) / Categoría"
       // Special configuration for procurement timeline highlighting
       config={{
         // Size encoding for tender values

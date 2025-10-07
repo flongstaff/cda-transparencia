@@ -15,12 +15,22 @@ import {
   AlertCircle,
   Loader2,
   DollarSign,
-  Users
+  Users,
+  BarChart3,
+  PieChart,
+  TrendingUp,
+  FolderOpen
 } from 'lucide-react';
 import { useMasterData } from '../hooks/useMasterData';
 import DocumentViewer from '../components/viewers/DocumentViewer2';
 import PageYearSelector from '../components/forms/PageYearSelector';
 import { formatFileSize } from '../utils/formatters';
+import ErrorBoundary from '../components/common/ErrorBoundary';
+import { ChartContainer } from '../components/common/ChartContainer';
+import UnifiedChart from '../components/charts/UnifiedChart';
+import DocumentAnalysisChart from '../components/charts/DocumentAnalysisChart';
+import TimeSeriesChart from '../components/charts/TimeSeriesChart';
+
 
 const Database: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
@@ -216,6 +226,85 @@ const Database: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Database Charts Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          {/* Document Types Distribution */}
+          <ChartContainer
+            title="Distribución por Tipo de Documento"
+            description="Clasificación de documentos por formato"
+            icon={PieChart}
+            height={350}
+          >
+            <DocumentAnalysisChart
+              type="document_types"
+              year={selectedYear}
+              height={300}
+            />
+          </ChartContainer>
+
+          {/* Category Distribution */}
+          <ChartContainer
+            title="Distribución por Categoría"
+            description="Documentos por categoría temática"
+            icon={BarChart3}
+            height={350}
+          >
+            <UnifiedChart
+              type="document_categories"
+              year={selectedYear}
+              title="Categorías de Documentos"
+              height={300}
+            />
+          </ChartContainer>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          {/* Document Growth Over Time */}
+          <ChartContainer
+            title="Crecimiento de Documentos"
+            description="Evolución histórica de documentos añadidos"
+            icon={TrendingUp}
+            height={350}
+          >
+            <TimeSeriesChart
+              type="document_growth"
+              year={null}
+              title="Crecimiento de Documentos"
+              height={300}
+            />
+          </ChartContainer>
+
+          {/* Data Quality Analysis */}
+          <ChartContainer
+            title="Análisis de Calidad de Datos"
+            description="Integridad y verificación de documentos"
+            icon={CheckCircle}
+            height={350}
+          >
+            <DocumentAnalysisChart
+              type="data_quality"
+              year={selectedYear}
+              height={300}
+            />
+          </ChartContainer>
+        </div>
+
+        {/* Advanced Data Insights */}
+        <ChartContainer
+          title="Insights Avanzados de Datos"
+          description="Análisis de patrones y tendencias en la base de datos"
+          icon={DatabaseIcon}
+          height={400}
+          className="mb-8"
+        >
+          <UnifiedChart
+            type="advanced_insights"
+            year={selectedYear}
+            title="Insights de Datos"
+            height={350}
+          />
+        </ChartContainer>
 
         {/* Filters */}
         <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm border border-gray-200 dark:border-dark-border p-6 mb-8">
@@ -558,4 +647,55 @@ const Database: React.FC = () => {
   );
 };
 
-export default Database;
+
+// Wrap with error boundary for production safety
+const DatabaseWithErrorBoundary: React.FC = () => {
+  return (
+    <ErrorBoundary
+      fallback={(error) => (
+        <div className="container mx-auto px-4 py-8">
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-6 rounded-lg">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-yellow-800 dark:text-yellow-200">
+                  Error al Cargar Página
+                </h3>
+                <div className="mt-2 text-sm text-yellow-700 dark:text-yellow-300">
+                  <p>Ocurrió un error al cargar esta página. Por favor, intente más tarde.</p>
+                  {error && (
+                    <p className="mt-2 text-xs font-mono bg-yellow-100 dark:bg-yellow-900/40 p-2 rounded">
+                      {error.message}
+                    </p>
+                  )}
+                </div>
+                <div className="mt-4 space-x-2">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Recargar
+                  </button>
+                  <a
+                    href="/"
+                    className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Volver al Inicio
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    >
+      <Database />
+    </ErrorBoundary>
+  );
+};
+
+export default DatabaseWithErrorBoundary;

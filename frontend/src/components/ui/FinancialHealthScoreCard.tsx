@@ -47,7 +47,7 @@ const FinancialHealthScoreCard: React.FC<FinancialHealthScoreCardProps> = ({
 
   return (
     <div 
-      className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg border-2 ${getBgColor()} p-6 ${className} transition-all duration-300 hover:shadow-xl cursor-pointer`}
+      className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg border-2 ${getBgColor()} p-4 sm:p-6 ${className} transition-all duration-300 hover:shadow-xl cursor-pointer`}
       onClick={onClick}
       role="button"
       tabIndex={0}
@@ -57,41 +57,46 @@ const FinancialHealthScoreCard: React.FC<FinancialHealthScoreCardProps> = ({
         }
       }}
     >
-      <div className="flex items-center justify-between mb-4">
-        <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl">
-          {icon}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+        <div className="flex items-center">
+          <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl">
+            {icon}
+          </div>
+          <div className="ml-3">
+            <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">
+              {title}
+            </h3>
+            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1">
+              {description}
+            </p>
+          </div>
         </div>
         {trend && changeValue && (
-          <div className={`flex items-center space-x-1 text-sm font-medium ${trend === 'up' ? 'text-green-600' : trend === 'down' ? 'text-red-600' : 'text-gray-600'}`}>
-            {getTrendIcon()}
+          <div className={`flex items-center sm:justify-end text-xs sm:text-sm font-medium ${trend === 'up' ? 'text-green-600' : trend === 'down' ? 'text-red-600' : 'text-gray-600'}`}>
+            <span className="mr-1">{getTrendIcon()}</span>
             <span>{changeValue}</span>
           </div>
         )}
       </div>
       
-      <div className="mb-4">
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
-          {title}
-        </h3>
-        <p className="text-gray-600 dark:text-gray-400 text-sm">
-          {description}
-        </p>
-      </div>
-      
-      <div className="flex items-end justify-between">
-        <div className="text-3xl font-bold text-gray-900 dark:text-white">
-          {score}
-          <span className="text-lg text-gray-500 dark:text-gray-400">/100</span>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div className="flex items-baseline">
+          <div className="text-xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+            {score}
+          </div>
+          <div className="text-xs sm:text-lg text-gray-500 dark:text-gray-400 ml-1">
+            /100
+          </div>
         </div>
-        <div className={`text-2xl font-bold ${getScoreColor()}`}>
+        <div className={`text-lg sm:text-2xl font-bold ${getScoreColor()}`}>
           {score}%
         </div>
       </div>
       
       {/* Progress bar */}
-      <div className="mt-4 w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+      <div className="mt-3 sm:mt-4 w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 sm:h-2.5">
         <div 
-          className={`h-2.5 rounded-full ${getScoreColor().replace('text', 'bg')}`} 
+          className={`h-2 sm:h-2.5 rounded-full ${getScoreColor().replace('text', 'bg')}`} 
           style={{ width: `${score}%` }}
         ></div>
       </div>

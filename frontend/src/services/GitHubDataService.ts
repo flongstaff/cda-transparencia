@@ -51,11 +51,23 @@ class GitHubDataService {
   private getFileUrl(filePath: string): string {
     // Remove leading slash if present
     const cleanPath = filePath.startsWith('/') ? filePath.substring(1) : filePath;
+    
+    // For data files in production, use relative paths to avoid CORS
+    if (cleanPath.startsWith('data/')) {
+      if (typeof window !== 'undefined') {
+        const hostname = window.location.hostname;
+        // For GitHub Pages deployment or production domain
+        if (hostname === 'cda-transparencia.org' || hostname.endsWith('github.io')) {
+          return `/${cleanPath}`;
+        }
+      }
+    }
+    
     return `${this.config.baseUrl}/${this.config.owner}/${this.config.repo}/${this.config.branch}/${cleanPath}`;
   }
 
   /**
-   * Fetch JSON file from GitHub repository
+   * Fetch JSON file from GitHub repository or local assets
    */
   async fetchJson(filePath: string): Promise<GitHubDataResponse> {
     const cacheKey = `json:${filePath}`;
@@ -72,15 +84,26 @@ class GitHubDataService {
 
     try {
       const url = this.getFileUrl(filePath);
-      console.log(`📥 Fetching JSON from GitHub: ${url}`);
+      console.log(`📥 Fetching JSON from: ${url}`);
+      
+      // Determine if this is a local file path vs GitHub raw URL
+      let response: Response;
+      let sourceType: 'github_raw' | 'local' = 'github_raw';
 
-      const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-          'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
-        }
-      });
+      if (url.startsWith('/') && url.includes('/data/')) {
+        // This is a local path (likely for deployed site)
+        response = await fetch(url);
+        sourceType = 'local';
+      } else {
+        // This is the GitHub raw URL (for development or when needed)
+        response = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+            'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
+          }
+        });
+      }
 
       if (!response.ok) {
         throw new Error(`Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
@@ -98,12 +121,12 @@ class GitHubDataService {
       return {
         success: true,
         data,
-        source: 'github_raw',
+        source: sourceType,
         lastModified
       };
 
     } catch (error) {
-      console.error(`❌ GitHub fetch error for ${filePath}:`, error);
+      console.error(`❌ Fetch error for ${filePath}:`, error);
 
       // Return cached data if available, even if expired
       if (cached) {
@@ -113,6 +136,43 @@ class GitHubDataService {
           data: cached.data,
           source: 'cache'
         };
+      }
+      
+      // If it failed as local, try GitHub URL as fallback
+      if (filePath.startsWith('/data/')) {
+        try {
+          console.log(`Trying GitHub URL as fallback for ${filePath}`);
+          const githubUrl = `${this.config.baseUrl}/${this.config.owner}/${this.config.repo}/${this.config.branch}/${filePath.startsWith('/') ? filePath.substring(1) : filePath}`;
+          const response = await fetch(githubUrl, {
+            method: 'GET',
+            headers: {
+              'Accept': 'application/json',
+              'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
+            }
+          });
+
+          if (!response.ok) {
+            throw new Error(`Failed to fetch ${filePath} from GitHub: ${response.status} ${response.statusText}`);
+          }
+
+          const data = await response.json();
+          const lastModified = response.headers.get('last-modified') || new Date().toISOString();
+
+          this.cache.set(cacheKey, {
+            data,
+            timestamp: Date.now(),
+            etag: response.headers.get('etag') || undefined
+          });
+
+          return {
+            success: true,
+            data,
+            source: 'github_raw',
+            lastModified
+          };
+        } catch (githubError) {
+          console.error(`❌ GitHub fallback also failed for ${filePath}:`, githubError);
+        }
       }
 
       return {
@@ -125,7 +185,7 @@ class GitHubDataService {
   }
 
   /**
-   * Fetch markdown file from GitHub repository
+   * Fetch markdown file from GitHub repository or local assets
    */
   async fetchMarkdown(filePath: string): Promise<GitHubDataResponse> {
     const cacheKey = `md:${filePath}`;
@@ -141,15 +201,26 @@ class GitHubDataService {
 
     try {
       const url = this.getFileUrl(filePath);
-      console.log(`📥 Fetching Markdown from GitHub: ${url}`);
+      console.log(`📥 Fetching Markdown from: ${url}`);
+      
+      // Determine if this is a local file path vs GitHub raw URL
+      let response: Response;
+      let sourceType: 'github_raw' | 'local' = 'github_raw';
 
-      const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'Accept': 'text/plain',
-          'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
-        }
-      });
+      if (url.startsWith('/') && url.includes('/data/')) {
+        // This is a local path (likely for deployed site)
+        response = await fetch(url);
+        sourceType = 'local';
+      } else {
+        // This is the GitHub raw URL (for development or when needed)
+        response = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'Accept': 'text/plain',
+            'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
+          }
+        });
+      }
 
       if (!response.ok) {
         throw new Error(`Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
@@ -169,12 +240,12 @@ class GitHubDataService {
       return {
         success: true,
         data: parsedData,
-        source: 'github_raw',
+        source: sourceType,
         lastModified
       };
 
     } catch (error) {
-      console.error(`❌ GitHub markdown fetch error for ${filePath}:`, error);
+      console.error(`❌ Markdown fetch error for ${filePath}:`, error);
 
       if (cached) {
         return {
@@ -182,6 +253,45 @@ class GitHubDataService {
           data: cached.data,
           source: 'cache'
         };
+      }
+      
+      // If it failed as local, try GitHub URL as fallback
+      if (filePath.startsWith('/data/')) {
+        try {
+          console.log(`Trying GitHub URL as fallback for ${filePath}`);
+          const githubUrl = `${this.config.baseUrl}/${this.config.owner}/${this.config.repo}/${this.config.branch}/${filePath.startsWith('/') ? filePath.substring(1) : filePath}`;
+          const response = await fetch(githubUrl, {
+            method: 'GET',
+            headers: {
+              'Accept': 'text/plain',
+              'User-Agent': 'Carmen-de-Areco-Transparency-Portal'
+            }
+          });
+
+          if (!response.ok) {
+            throw new Error(`Failed to fetch ${filePath} from GitHub: ${response.status} ${response.statusText}`);
+          }
+
+          const text = await response.text();
+          const lastModified = response.headers.get('last-modified') || new Date().toISOString();
+
+          // Parse markdown to extract structured data
+          const parsedData = this.parseMarkdownContent(text);
+
+          this.cache.set(cacheKey, {
+            data: parsedData,
+            timestamp: Date.now()
+          });
+
+          return {
+            success: true,
+            data: parsedData,
+            source: 'github_raw',
+            lastModified
+          };
+        } catch (githubError) {
+          console.error(`❌ GitHub fallback also failed for ${filePath}:`, githubError);
+        }
       }
 
       return {

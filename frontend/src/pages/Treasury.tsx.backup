@@ -1,0 +1,445 @@
+import React, { useState, useMemo, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import {
+  DollarSign,
+  TrendingUp,
+  Download,
+  Search,
+  AlertCircle,
+  Loader2,
+  FileText,
+  BarChart3,
+  PiggyBank,
+  Landmark,
+  Receipt,
+  ArrowDownUp,
+  RefreshCw
+} from 'lucide-react';
+import { useMasterData } from '../hooks/useMasterData';
+import { useTreasuryData } from '../hooks/useUnifiedData';
+import { DataSourcesIndicator } from '../components/common/DataSourcesIndicator';
+import { YearSelector } from '../components/common/YearSelector';
+import { formatCurrencyARS } from '../utils/formatters';
+import UnifiedChart from '../components/charts/UnifiedChart';
+import ErrorBoundary from '../components/common/ErrorBoundary';
+
+interface RevenueData {
+  totalRevenue: number;
+  taxRevenue: number;
+  nonTaxRevenue: number;
+  transfers: number;
+  sourceBreakdown: Array<{
+    name: string;
+    amount: number;
+  }>;
+  monthlyTrend: Array<{
+    month: string;
+    revenue: number;
+  }>;
+}
+
+// Helper function to generate monthly trend data
+const generateMonthlyTrendData = (totalRevenue: number, selectedYear: number) => {
+  if(!totalRevenue) return [];
+  return Array.from({ length: 12 }, (_, i) => ({
+    month: new Date(selectedYear, i, 1).toLocaleDateString('es-AR', { month: 'long' }),
+    revenue: Math.floor(Math.random() * (totalRevenue / 10)) + (totalRevenue / 15)
+  }));
+};
+
+const Treasury: React.FC = () => {
+  const [selectedYear, setSelectedYear] = useState<number>(new Date().getFullYear());
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [viewMode, setViewMode] = useState<'overview' | 'sources' | 'trends'>('overview');
+
+  // Use unified master data service (legacy)
+  const {
+    masterData,
+    currentBudget,
+    currentDocuments,
+    currentTreasury,
+    currentContracts,
+    currentSalaries,
+    loading: legacyLoading,
+    error: legacyError,
+    totalDocuments,
+    availableYears: legacyYears,
+    categories,
+    dataSourcesActive,
+    refetch: legacyRefetch,
+    switchYear
+  } = useMasterData(selectedYear);
+
+  // 🌐 Use new UnifiedDataService with external APIs
+  const {
+    data: unifiedTreasuryData,
+    externalData,
+    sources,
+    activeSources,
+    loading: unifiedLoading,
+    error: unifiedError,
+    refetch: unifiedRefetch,
+    availableYears,
+    liveDataEnabled
+  } = useTreasuryData(selectedYear);
+
+  const loading = legacyLoading || unifiedLoading;
+  const error = legacyError || unifiedError;
+
+  // Process revenue data from master data service
+  const revenueData = useMemo<RevenueData>(() => {
+    const treasuryData = currentTreasury;
+
+    if (!treasuryData) {
+      return {
+        totalRevenue: 0,
+        taxRevenue: 0,
+        nonTaxRevenue: 0,
+        transfers: 0,
+        sourceBreakdown: [],
+        monthlyTrend: []
+      };
+    }
+
+    const totalRevenue = treasuryData.totalRevenue || treasuryData.total_revenue || treasuryData.ingresos_totales || treasuryData.revenue_total || 0;
+    const taxRevenue = treasuryData.taxRevenue || treasuryData.tax_revenue || treasuryData.ingresos_tributarios || 0;
+    const nonTaxRevenue = treasuryData.nonTaxRevenue || treasuryData.non_tax_revenue || treasuryData.ingresos_no_tributarios || 0;
+    const transfers = treasuryData.transfers || treasuryData.transferencias || 0;
+
+    const sourceBreakdown = [
+      { name: 'Ingresos Tributarios', amount: taxRevenue },
+      { name: 'Ingresos No Tributarios', amount: nonTaxRevenue },
+      { name: 'Transferencias', amount: transfers },
+    ];
+
+    return {
+      totalRevenue,
+      taxRevenue,
+      nonTaxRevenue,
+      transfers,
+      sourceBreakdown,
+      monthlyTrend: generateMonthlyTrendData(totalRevenue, selectedYear)
+    };
+  }, [currentTreasury, selectedYear]);
+
+  // Filter revenue-related documents from master data
+  const revenueDocuments = useMemo(() => {
+    if (!currentDocuments) return [];
+    return currentDocuments.filter(doc => 
+      doc.category?.toLowerCase().includes('revenue') ||
+      doc.category?.toLowerCase().includes('ingresos') ||
+      doc.title?.toLowerCase().includes('recursos') ||
+      doc.category?.toLowerCase().includes('tesorería') ||
+      doc.category?.toLowerCase().includes('treasury')
+    );
+  }, [currentDocuments]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background flex items-center justify-center">
+        <div className="text-center">
+          <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-blue-600 dark:text-blue-400" />
+          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Cargando datos de tesorería...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background flex items-center justify-center">
+        <div className="text-center">
+          <AlertCircle className="w-8 h-8 text-red-500 mx-auto mb-4" />
+          <h2 className="text-lg font-semibold text-red-800 mb-2">Error</h2>
+          <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-dark-background dark:bg-dark-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-6"
+        >
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+            <div className="flex-1">
+              <h1 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">
+                Tesorería Municipal {selectedYear}
+              </h1>
+              <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mt-2 text-sm">
+                Gestión integral de recursos financieros municipales de Carmen de Areco.
+                Análisis detallado de ingresos tributarios, no tributarios, transferencias y flujo de fondos para el ejercicio {selectedYear}.
+              </p>
+              <div className="mt-3 flex items-center flex-wrap gap-3 text-xs sm:text-sm text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">
+                <span className="flex items-center">
+                  <Landmark className="h-3 w-3 mr-1" />
+                  Recaudación diaria
+                </span>
+                <span className="flex items-center">
+                  <Receipt className="h-3 w-3 mr-1" />
+                  Control automatizado
+                </span>
+                <span className="flex items-center">
+                  <ArrowDownUp className="h-3 w-3 mr-1" />
+                  Flujo en tiempo real
+                </span>
+              </div>
+            </div>
+
+            {/* Year Selector */}
+            <div className="w-full md:w-auto">
+              <YearSelector
+                selectedYear={selectedYear}
+                availableYears={availableYears}
+                onChange={(year) => {
+                  setSelectedYear(year);
+                  switchYear(year);
+                }}
+                label="Año Tesorería"
+              />
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Data Sources Indicator */}
+        <DataSourcesIndicator
+          activeSources={activeSources}
+          externalData={externalData}
+          loading={unifiedLoading}
+          className="mb-6"
+        />
+
+
+        {/* Enhanced Treasury Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white dark:bg-dark-surface rounded-xl p-6 shadow-sm border border-gray-200 dark:border-dark-border">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Ingresos Totales</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{formatCurrencyARS(revenueData.totalRevenue)}</p>
+              </div>
+              <DollarSign className="w-8 h-8 text-green-500" />
+            </div>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-white dark:bg-dark-surface rounded-xl p-6 shadow-sm border border-gray-200 dark:border-dark-border">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Ingresos Tributarios</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{formatCurrencyARS(revenueData.taxRevenue)}</p>
+              </div>
+              <Receipt className="w-8 h-8 text-blue-500" />
+            </div>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="bg-white dark:bg-dark-surface rounded-xl p-6 shadow-sm border border-gray-200 dark:border-dark-border">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Ingresos No Tributarios</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{formatCurrencyARS(revenueData.nonTaxRevenue)}</p>
+              </div>
+              <PiggyBank className="w-8 h-8 text-indigo-500" />
+            </div>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="bg-white dark:bg-dark-surface rounded-xl p-6 shadow-sm border border-gray-200 dark:border-dark-border">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">Transferencias</p>
+                <p className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">{formatCurrencyARS(revenueData.transfers)}</p>
+              </div>
+              <Landmark className="w-8 h-8 text-orange-500" />
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Navigation Tabs */}
+        <div className="bg-white dark:bg-dark-surface rounded-xl shadow-sm mb-8">
+          <nav className="flex border-b border-gray-200 dark:border-dark-border">
+            {[
+              { id: 'overview', label: 'Resumen', icon: BarChart3 },
+              { id: 'sources', label: 'Por Origen', icon: FileText },
+              { id: 'trends', label: 'Tendencias', icon: TrendingUp }
+            ].map((tab) => {
+              const Icon = tab.icon;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setViewMode(tab.id as 'overview' | 'sources' | 'trends')}
+                  className={`flex items-center px-6 py-4 border-b-2 font-medium text-sm transition-colors ${
+                    viewMode === tab.id
+                      ? 'border-blue-500 text-blue-600'
+                      : 'border-transparent text-gray-500 dark:text-dark-text-tertiary hover:text-gray-700 dark:text-dark-text-secondary hover:border-gray-300'
+                  }`}
+                  title={`Ver ${tab.label.toLowerCase()}`}
+                >
+                  <Icon className="w-4 h-4 mr-2" />
+                  {tab.label}
+                </button>
+              );
+            })}
+          </nav>
+        </div>
+
+        {/* Content */}
+        <div className="space-y-8">
+          {viewMode === 'overview' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6"
+            >
+              <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Resumen de Ingresos</h2>
+              <UnifiedChart
+                type="revenue"
+                year={selectedYear}
+                title={`Resumen de Ingresos - ${selectedYear}`}
+                variant="bar"
+                className="h-80"
+              />
+            </motion.div>
+          )}
+
+          {viewMode === 'sources' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6"
+            >
+              <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Distribución por Origen</h2>
+              <UnifiedChart
+                type="revenue"
+                year={selectedYear}
+                title={`Distribución de Ingresos por Origen - ${selectedYear}`}
+                variant="pie"
+                className="h-80"
+              />
+            </motion.div>
+          )}
+
+          {viewMode === 'trends' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6"
+            >
+              <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary mb-6">Tendencias Anuales</h2>
+              <p className="text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-6">Evolución de los ingresos a lo largo de los años</p>
+              <UnifiedChart
+                type="treasury-trend"
+                year={selectedYear}
+                title={`Evolución de Ingresos - ${selectedYear}`}
+                variant="line"
+                className="h-80"
+              />
+            </motion.div>
+          )}
+        </div>
+
+        {/* Documents Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="bg-white dark:bg-dark-surface rounded-xl shadow-sm p-6 mt-8"
+        >
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary">Documentos Relacionados</h2>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-dark-text-tertiary dark:text-dark-text-tertiary w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Buscar documentos..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10 pr-4 py-2 border border-gray-300 dark:border-dark-border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                aria-label="Buscar documentos de ingresos"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {revenueDocuments.slice(0, 6).map((doc) => (
+              <div key={doc.id} className="border border-gray-200 dark:border-dark-border rounded-lg p-4 hover:shadow-md transition-shadow">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-900 dark:text-dark-text-primary dark:text-dark-text-primary truncate">{doc.title}</span>
+                  <span className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary bg-gray-100 dark:bg-dark-background dark:bg-dark-surface-alt px-2 py-1 rounded">
+                    {doc.type}
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary mb-3">{doc.category}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-500 dark:text-dark-text-tertiary dark:text-dark-text-tertiary">{doc.size_mb?.toFixed(1)} MB</span>
+                  <a
+                    href={doc.url}
+                    download
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-800 text-sm font-medium flex items-center"
+                    title={`Descargar ${doc.title}`}
+                    aria-label={`Descargar documento ${doc.title}`}
+                  >
+                    <Download className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+
+// Wrap with error boundary for production safety
+const TreasuryWithErrorBoundary: React.FC = () => {
+  return (
+    <ErrorBoundary
+      fallback={(error) => (
+        <div className="container mx-auto px-4 py-8">
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-6 rounded-lg">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-yellow-800 dark:text-yellow-200">
+                  Error al Cargar Página
+                </h3>
+                <div className="mt-2 text-sm text-yellow-700 dark:text-yellow-300">
+                  <p>Ocurrió un error al cargar esta página. Por favor, intente más tarde.</p>
+                  {error && (
+                    <p className="mt-2 text-xs font-mono bg-yellow-100 dark:bg-yellow-900/40 p-2 rounded">
+                      {error.message}
+                    </p>
+                  )}
+                </div>
+                <div className="mt-4 space-x-2">
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="inline-flex items-center px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Recargar
+                  </button>
+                  <a
+                    href="/"
+                    className="inline-flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-md"
+                  >
+                    Volver al Inicio
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    >
+      <Treasury />
+    </ErrorBoundary>
+  );
+};
+
+export default TreasuryWithErrorBoundary;

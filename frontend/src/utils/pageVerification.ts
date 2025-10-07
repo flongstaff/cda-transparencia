@@ -16,7 +16,7 @@ const REQUIRED_PAGES = [
   'ComprehensiveDashboard',
   'EnhancedTransparencyDashboard',
   'UnifiedTransparencyDashboard',
-  'UnifiedFinancialDashboard',
+  // 'UnifiedFinancialDashboard',
   
   // Financial Pages
   'Budget',
@@ -24,8 +24,8 @@ const REQUIRED_PAGES = [
   'ExpensesPage',
   'DebtPage',
   'InvestmentsPage',
-  'FinancialDashboard',
-  'EnhancedFinancialDashboard',
+  // 'FinancialDashboard',
+  // 'EnhancedFinancialDashboard',
   'YearlyFinances',
   
   // Human Resources

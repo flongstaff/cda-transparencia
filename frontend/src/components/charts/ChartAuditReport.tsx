@@ -512,11 +512,22 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
           <ResponsiveContainer width="100%" height={chartConfig.height}>
             <ComposedChart data={analysisData} margin={chartConfig.margin}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="year" tick={{ fill: '#333' }} className="dark:tick-fill-gray-300" />
+              <XAxis 
+                dataKey="year" 
+                tick={{ fill: '#333' }} 
+                className="dark:tick-fill-gray-300"
+                tickFormatter={(value) => {
+                  // Format quarterly data using the utility function if it looks like quarterly data
+                  if (typeof value === 'string' && value.startsWith('Q') && (value.includes(' ') || value.length <= 3)) {
+                    return formatQuarter(value);
+                  }
+                  return value;
+                }}
+              />
               <YAxis 
                 yAxisId="left" 
                 tick={{ fill: '#333' }} 
-                tickFormatter={(value) => `${(value / 1000000).toFixed(0)}M`}
+                tickFormatter={(value) => `$${(value / 1000000).toFixed(0)}M`}
                 className="dark:tick-fill-gray-300"
               />
               <YAxis 
@@ -683,7 +694,7 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
               />
               <YAxis 
                 tick={{ fill: '#333' }} 
-                tickFormatter={(value) => `${(value / 1000000).toFixed(1)}M`}
+                tickFormatter={(value) => `$${(value / 1000000).toFixed(1)}M`}
                 className="dark:tick-fill-gray-300"
               />
               <Tooltip 
@@ -711,11 +722,12 @@ const ChartAuditReport: React.FC<ChartAuditReportProps> = memo(({
                 dataKey="quarterLabel" 
                 tick={{ fill: '#333' }} 
                 className="dark:tick-fill-gray-300"
+                tickFormatter={(value) => formatQuarter(value)}
               />
               <YAxis 
                 yAxisId="left"
                 tick={{ fill: '#333' }} 
-                tickFormatter={(value) => `${(value / 1000000).toFixed(0)}M`}
+                tickFormatter={(value) => `$${(value / 1000000).toFixed(0)}M`}
                 className="dark:tick-fill-gray-300"
               />
               <YAxis 

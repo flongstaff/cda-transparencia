@@ -35,7 +35,7 @@ const ExpenditureReportChart: React.FC<ExpenditureReportChartProps> = ({
   
   // Load chart data using React Query
   const { data, isLoading, isError, error: queryError } = useQuery({
-    queryKey: ['chart-data', 'Expenditure_Report'],
+    queryKey: ['chart-data', 'Expenditure_Report', year],
     queryFn: () => chartDataService.loadChartData('Expenditure_Report'),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
@@ -57,7 +57,8 @@ const ExpenditureReportChart: React.FC<ExpenditureReportChartProps> = ({
       let filteredData = data;
       if (year && Array.isArray(data)) {
         filteredData = data.filter((item: Record<string, unknown>) => {
-          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
+          // Check for various possible year field names
+          const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
           return itemYear && parseInt(String(itemYear)) === year;
         });
       }
@@ -78,7 +79,7 @@ const ExpenditureReportChart: React.FC<ExpenditureReportChartProps> = ({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Expenditure Report data...
+          Cargando datos del Informe de Gastos...
         </Typography>
       </Box>
     );
@@ -88,7 +89,7 @@ const ExpenditureReportChart: React.FC<ExpenditureReportChartProps> = ({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Expenditure Report data: {error}
+        Error cargando datos del Informe de Gastos: {error}
       </Alert>
     );
   }
@@ -97,7 +98,7 @@ const ExpenditureReportChart: React.FC<ExpenditureReportChartProps> = ({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Expenditure Report data available
+        No hay datos disponibles del Informe de Gastos
       </Alert>
     );
   }
@@ -112,10 +113,16 @@ const ExpenditureReportChart: React.FC<ExpenditureReportChartProps> = ({
       })
     : [];
   
+  // Map custom chart types to supported BaseChart types
+  const getSupportedChartType = (type: string): SupportedChartType => {
+    const supportedTypes: SupportedChartType[] = ['line', 'bar', 'area', 'pie', 'scatter', 'composed'];
+    return supportedTypes.includes(type as SupportedChartType) ? type as SupportedChartType : 'bar';
+  };
+
   return (
     <BaseChart
       data={chartData}
-      chartType={chartType}
+      chartType={getSupportedChartType(chartType)}
       xAxisKey="year"
       yAxisKeys={yAxisKeys}
       title={showTitle ? CHART_TYPE_NAMES.Expenditure_Report : undefined}
@@ -124,8 +131,8 @@ const ExpenditureReportChart: React.FC<ExpenditureReportChartProps> = ({
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel="Year"
-      yAxisLabel="Amount (ARS)"
+      xAxisLabel="Año"
+      yAxisLabel="Monto (ARS)"
     />
   );
 };

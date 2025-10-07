@@ -48,6 +48,14 @@ export const MAIN_NAV_ITEMS: NavItem[] = [
     priority: 100
   },
   {
+    id: 'carmen',
+    label: 'Carmen de Areco',
+    icon: Building,
+    path: '/carmen',
+    description: 'Datos específicos del municipio de Carmen de Areco',
+    priority: 95
+  },
+  {
     id: 'dashboard',
     label: 'Dashboard',
     icon: BarChart3,
@@ -313,6 +321,13 @@ export const NAV_CATEGORIES: NavCategory[] = [
         icon: Eye,
         path: '/monitoring',
         description: 'Sistema de monitoreo OSINT y análisis'
+      },
+      {
+        id: 'open-data-catalog',
+        label: 'Catálogo de Datos Abiertos',
+        icon: Database,
+        path: '/open-data',
+        description: 'Catálogo de datos abiertos y reutilizables'
       },
       {
         id: 'audit-dashboard',

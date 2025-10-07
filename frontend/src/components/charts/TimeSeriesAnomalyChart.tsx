@@ -59,9 +59,21 @@ const TimeSeriesAnomalyChart: React.FC<TimeSeriesAnomalyChartProps> = memo(({
         );
       }
       
+      // Process quarterly data to combine quarter and year fields for proper display
+      const processedData = filteredData.map(item => {
+        if (item.quarter && item.year) {
+          // Create a quarterLabel field with the combined formatted value
+          return {
+            ...item,
+            quarterLabel: `${item.quarter} ${item.year}`
+          };
+        }
+        return item;
+      });
+      
       setLoading(false);
       setError(null);
-      setChartData(filteredData);
+      setChartData(processedData);
     }
   }, [data, isLoading, isError, queryError, years]);
   
@@ -76,7 +88,7 @@ const TimeSeriesAnomalyChart: React.FC<TimeSeriesAnomalyChartProps> = memo(({
       <Box display="flex" justifyContent="center" alignItems="center" height={height} className={className}>
         <CircularProgress />
         <Typography variant="body1" sx={{ ml: 2 }}>
-          Loading Time Series Anomaly data...
+          Cargando datos de Análisis de Anomalías en Series Temporales...
         </Typography>
       </Box>
     );
@@ -86,7 +98,7 @@ const TimeSeriesAnomalyChart: React.FC<TimeSeriesAnomalyChartProps> = memo(({
   if (error) {
     return (
       <Alert severity="error" className={className}>
-        Error loading Time Series Anomaly data: {error}
+        Error cargando datos de Análisis de Anomalías en Series Temporales: {error}
       </Alert>
     );
   }
@@ -95,7 +107,7 @@ const TimeSeriesAnomalyChart: React.FC<TimeSeriesAnomalyChartProps> = memo(({
   if (!chartData || chartData.length === 0) {
     return (
       <Alert severity="warning" className={className}>
-        No Time Series Anomaly data available
+        No hay datos disponibles de Análisis de Anomalías en Series Temporales
       </Alert>
     );
   }
@@ -131,10 +143,12 @@ const TimeSeriesAnomalyChart: React.FC<TimeSeriesAnomalyChartProps> = memo(({
     }
   }
   
-  // Default to 'date' or 'period' for x-axis if available, else use 'year'
-  const xAxisKey = chartData[0]?.date ? 'date' : 
+  // Default to 'quarterLabel' if available, else fall back to 'quarter' or 'period' for x-axis if available, else use 'year'
+  const xAxisKey = chartData[0]?.quarterLabel ? 'quarterLabel' : 
+                   chartData[0]?.quarter ? 'quarter' : 
+                   chartData[0]?.date ? 'date' : 
                    chartData[0]?.period ? 'period' : 
-                   chartData[0]?.quarter ? 'quarter' :
+                   chartData[0]?.trimestre ? 'trimestre' :
                    'year';
   
   return (
@@ -149,7 +163,7 @@ const TimeSeriesAnomalyChart: React.FC<TimeSeriesAnomalyChartProps> = memo(({
       width={width}
       className={className}
       onDataPointClick={handleDataPointClick}
-      xAxisLabel={xAxisKey === 'date' ? 'Fecha' : xAxisKey === 'quarter' ? 'Trimestre' : xAxisKey === 'period' ? 'Período' : 'Año'}
+      xAxisLabel={xAxisKey === 'date' ? 'Fecha' : xAxisKey === 'quarterLabel' || xAxisKey === 'quarter' || xAxisKey === 'trimestre' ? 'Trimestre' : xAxisKey === 'period' ? 'Período' : 'Año'}
       yAxisLabel="Monto (ARS) / Puntaje de Anomalía"
       // Special configuration for anomaly highlighting
       config={{

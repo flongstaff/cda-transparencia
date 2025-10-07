@@ -1,0 +1,928 @@
+{
+  "municipality": {
+    "code": "270",
+    "name": "Carmen de Areco",
+    "province": "Buenos Aires"
+  },
+  "years": {
+    "2019": {
+      "year": 2019,
+      "budget": {
+        "budget_by_partida": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "year": 2019,
+        "monthly_execution": [
+          {
+            "month": 1,
+            "month_name": "enero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 2,
+            "month_name": "febrero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 3,
+            "month_name": "marzo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 4,
+            "month_name": "abril",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 5,
+            "month_name": "mayo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 6,
+            "month_name": "junio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 7,
+            "month_name": "julio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 8,
+            "month_name": "agosto",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 9,
+            "month_name": "septiembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 10,
+            "month_name": "octubre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 11,
+            "month_name": "noviembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 12,
+            "month_name": "diciembre",
+            "executed": 0,
+            "accumulated": 0
+          }
+        ]
+      },
+      "extracted_at": "2025-10-03T03:21:01.100Z"
+    },
+    "2020": {
+      "year": 2020,
+      "budget": {
+        "budget_by_partida": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "year": 2020,
+        "monthly_execution": [
+          {
+            "month": 1,
+            "month_name": "enero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 2,
+            "month_name": "febrero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 3,
+            "month_name": "marzo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 4,
+            "month_name": "abril",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 5,
+            "month_name": "mayo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 6,
+            "month_name": "junio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 7,
+            "month_name": "julio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 8,
+            "month_name": "agosto",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 9,
+            "month_name": "septiembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 10,
+            "month_name": "octubre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 11,
+            "month_name": "noviembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 12,
+            "month_name": "diciembre",
+            "executed": 0,
+            "accumulated": 0
+          }
+        ]
+      },
+      "extracted_at": "2025-10-03T03:24:19.126Z"
+    },
+    "2021": {
+      "year": 2021,
+      "budget": {
+        "budget_by_partida": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "year": 2021,
+        "monthly_execution": [
+          {
+            "month": 1,
+            "month_name": "enero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 2,
+            "month_name": "febrero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 3,
+            "month_name": "marzo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 4,
+            "month_name": "abril",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 5,
+            "month_name": "mayo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 6,
+            "month_name": "junio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 7,
+            "month_name": "julio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 8,
+            "month_name": "agosto",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 9,
+            "month_name": "septiembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 10,
+            "month_name": "octubre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 11,
+            "month_name": "noviembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 12,
+            "month_name": "diciembre",
+            "executed": 0,
+            "accumulated": 0
+          }
+        ]
+      },
+      "extracted_at": "2025-10-03T03:27:37.180Z"
+    },
+    "2022": {
+      "year": 2022,
+      "budget": {
+        "budget_by_partida": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "year": 2022,
+        "monthly_execution": [
+          {
+            "month": 1,
+            "month_name": "enero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 2,
+            "month_name": "febrero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 3,
+            "month_name": "marzo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 4,
+            "month_name": "abril",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 5,
+            "month_name": "mayo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 6,
+            "month_name": "junio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 7,
+            "month_name": "julio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 8,
+            "month_name": "agosto",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 9,
+            "month_name": "septiembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 10,
+            "month_name": "octubre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 11,
+            "month_name": "noviembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 12,
+            "month_name": "diciembre",
+            "executed": 0,
+            "accumulated": 0
+          }
+        ]
+      },
+      "extracted_at": "2025-10-03T03:30:55.207Z"
+    },
+    "2023": {
+      "year": 2023,
+      "budget": {
+        "budget_by_partida": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "year": 2023,
+        "monthly_execution": [
+          {
+            "month": 1,
+            "month_name": "enero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 2,
+            "month_name": "febrero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 3,
+            "month_name": "marzo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 4,
+            "month_name": "abril",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 5,
+            "month_name": "mayo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 6,
+            "month_name": "junio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 7,
+            "month_name": "julio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 8,
+            "month_name": "agosto",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 9,
+            "month_name": "septiembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 10,
+            "month_name": "octubre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 11,
+            "month_name": "noviembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 12,
+            "month_name": "diciembre",
+            "executed": 0,
+            "accumulated": 0
+          }
+        ]
+      },
+      "extracted_at": "2025-10-03T03:34:13.274Z"
+    },
+    "2024": {
+      "year": 2024,
+      "budget": {
+        "budget_by_partida": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "year": 2024,
+        "monthly_execution": [
+          {
+            "month": 1,
+            "month_name": "enero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 2,
+            "month_name": "febrero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 3,
+            "month_name": "marzo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 4,
+            "month_name": "abril",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 5,
+            "month_name": "mayo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 6,
+            "month_name": "junio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 7,
+            "month_name": "julio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 8,
+            "month_name": "agosto",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 9,
+            "month_name": "septiembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 10,
+            "month_name": "octubre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 11,
+            "month_name": "noviembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 12,
+            "month_name": "diciembre",
+            "executed": 0,
+            "accumulated": 0
+          }
+        ]
+      },
+      "extracted_at": "2025-10-03T03:37:31.302Z"
+    },
+    "2025": {
+      "year": 2025,
+      "budget": {
+        "budget_by_partida": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "revenue": {
+        "revenue_by_source": [],
+        "total_budgeted": 0,
+        "total_actual": 0
+      },
+      "expenses": {
+        "expenses_by_category": [],
+        "total_budgeted": 0,
+        "total_executed": 0
+      },
+      "monthly": {
+        "year": 2025,
+        "monthly_execution": [
+          {
+            "month": 1,
+            "month_name": "enero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 2,
+            "month_name": "febrero",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 3,
+            "month_name": "marzo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 4,
+            "month_name": "abril",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 5,
+            "month_name": "mayo",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 6,
+            "month_name": "junio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 7,
+            "month_name": "julio",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 8,
+            "month_name": "agosto",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 9,
+            "month_name": "septiembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 10,
+            "month_name": "octubre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 11,
+            "month_name": "noviembre",
+            "executed": 0,
+            "accumulated": 0
+          },
+          {
+            "month": 12,
+            "month_name": "diciembre",
+            "executed": 0,
+            "accumulated": 0
+          }
+        ]
+      },
+      "extracted_at": "2025-10-03T03:40:49.327Z"
+    }
+  },
+  "metadata": {
+    "scraped_at": "2025-10-03T03:17:46.026Z",
+    "source": "https://www.rafam.ec.gba.gov.ar",
+    "years_extracted": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "errors": [
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/presupuesto.php?mun=270&anio=2019",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:21:01.069Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/recursos.php?mun=270&anio=2019",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:21:01.070Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/gastos.php?mun=270&anio=2019",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:21:01.070Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/ejecucion_mensual.php?mun=270&anio=2019",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:21:01.073Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/presupuesto.php?mun=270&anio=2020",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:24:19.120Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/recursos.php?mun=270&anio=2020",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:24:19.120Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/gastos.php?mun=270&anio=2020",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:24:19.120Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/ejecucion_mensual.php?mun=270&anio=2020",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:24:19.122Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/presupuesto.php?mun=270&anio=2021",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:27:37.147Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/recursos.php?mun=270&anio=2021",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:27:37.170Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/gastos.php?mun=270&anio=2021",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:27:37.178Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/ejecucion_mensual.php?mun=270&anio=2021",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:27:37.178Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/presupuesto.php?mun=270&anio=2022",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:30:55.202Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/recursos.php?mun=270&anio=2022",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:30:55.203Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/gastos.php?mun=270&anio=2022",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:30:55.203Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/ejecucion_mensual.php?mun=270&anio=2022",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:30:55.205Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/presupuesto.php?mun=270&anio=2023",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:34:13.241Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/recursos.php?mun=270&anio=2023",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:34:13.244Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/gastos.php?mun=270&anio=2023",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:34:13.252Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/ejecucion_mensual.php?mun=270&anio=2023",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:34:13.260Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/presupuesto.php?mun=270&anio=2024",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:37:31.298Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/recursos.php?mun=270&anio=2024",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:37:31.298Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/gastos.php?mun=270&anio=2024",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:37:31.299Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/ejecucion_mensual.php?mun=270&anio=2024",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:37:31.301Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/presupuesto.php?mun=270&anio=2025",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:40:49.324Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/recursos.php?mun=270&anio=2025",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:40:49.324Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/gastos.php?mun=270&anio=2025",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:40:49.325Z"
+      },
+      {
+        "url": "https://www.rafam.ec.gba.gov.ar/ejecucion_mensual.php?mun=270&anio=2025",
+        "error": "timeout of 60000ms exceeded",
+        "timestamp": "2025-10-03T03:40:49.325Z"
+      }
+    ]
+  },
+  "year_over_year_analysis": [
+    {
+      "year": 2020,
+      "budget_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "revenue_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "expenses_change": {
+        "absolute": 0,
+        "percentage": null
+      }
+    },
+    {
+      "year": 2021,
+      "budget_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "revenue_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "expenses_change": {
+        "absolute": 0,
+        "percentage": null
+      }
+    },
+    {
+      "year": 2022,
+      "budget_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "revenue_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "expenses_change": {
+        "absolute": 0,
+        "percentage": null
+      }
+    },
+    {
+      "year": 2023,
+      "budget_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "revenue_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "expenses_change": {
+        "absolute": 0,
+        "percentage": null
+      }
+    },
+    {
+      "year": 2024,
+      "budget_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "revenue_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "expenses_change": {
+        "absolute": 0,
+        "percentage": null
+      }
+    },
+    {
+      "year": 2025,
+      "budget_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "revenue_change": {
+        "absolute": 0,
+        "percentage": null
+      },
+      "expenses_change": {
+        "absolute": 0,
+        "percentage": null
+      }
+    }
+  ]
+}

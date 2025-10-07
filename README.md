@@ -67,7 +67,39 @@ The portal is deployed to three platforms for redundancy and performance:
 2. **Cloudflare Pages** - Secondary deployment for improved global performance
 3. **Cloudflare Workers** - API endpoint for external data integration
 
+### Custom Domain Deployment Note
+
+When deploying to GitHub Pages with a custom domain (cda-transparencia.org), ensure the build uses production mode to avoid subdirectory routing issues:
+
+```bash
+# For custom domains - use production mode (base: "/")
+npm run build:production
+
+# For username.github.io/repo-name - use github mode (base: "/repo-name/")
+npm run build:github
+```
+
+The build process automatically sets the correct base path:
+- Production mode: base path is "/" (for custom domains)
+- GitHub mode: base path is "/cda-transparencia/" (for GitHub Pages subdirectories)
+
 All deployments are automated through GitHub Actions and updated weekly.
+
+### GitHub Actions Workflows
+
+The deployment process is orchestrated through multiple GitHub Actions workflows:
+
+1. **`pages.yml`** - Validates and builds the application for GitHub Pages (non-deploying), triggers on every push and PR
+2. **`cloudflare-deploy.yml`** - Deploys to Cloudflare Pages after successful build validation 
+3. **`deploy.yml`** - Deploys to Cloudflare Pages for custom domain (cda-transparencia.org) on a weekly schedule or manual trigger
+4. **`update-data.yml`** - Updates data files weekly by running data extraction and processing scripts
+5. **`build.yml`** - Tests and builds the application on every push and pull request
+
+The actual GitHub Pages deployment is handled by GitHub's automatic `pages-build-deployment` using the `gh-pages` branch.
+
+For the Cloudflare deployment to work, the following secrets must be configured in the repository settings:
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
 
 ## Data Sources
 
@@ -142,3 +174,4 @@ Each page receives complementary data from multiple sources:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+# Deployment Verification

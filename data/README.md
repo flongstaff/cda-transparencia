@@ -1,72 +1,71 @@
-# Carmen de Areco Transparency Data
+# Portal de Transparencia - Estructura de Datos
 
-This directory contains all the processed and organized data for the Carmen de Areco Transparency Portal.
+## Descripción
 
-## Directory Structure
+Este directorio contiene todos los datos estructurados utilizados por el Portal de Transparencia del Municipio de Carmen de Areco. Los datos han sido extraídos de documentos oficiales del municipio y organizados en formatos fáciles de consumir para aplicaciones web.
+
+## Estructura de Directorios
 
 ```
-data/
-├── processed/                 # Processed data files organized by year
-│   ├── 2017/
-│   ├── 2018/
-│   ├── 2019/
-│   ├── 2020/
-│   ├── 2021/
-│   ├── 2022/
-│   ├── 2023/
-│   ├── 2024/
-│   └── 2025/
-├── web_accessible/           # Web-accessible versions of data files
-│   ├── 2017/
-│   ├── 2018/
-│   ├── 2019/
-│   ├── 2020/
-│   ├── 2021/
-│   ├── 2022/
-│   ├── 2023/
-│   ├── 2024/
-│   └── 2025/
-├── api/                      # API-compatible JSON files
-│   ├── financial/
-│   │   ├── 2017/
-│   │   ├── 2018/
-│   │   ├── 2019/
-│   │   ├── 2020/
-│   │   ├── 2021/
-│   │   ├── 2022/
-│   │   ├── 2023/
-│   │   ├── 2024/
-│   │   └── 2025/
-│   ├── transparency/
-│   ├── statistics/
-│   ├── tenders/
-│   └── index.json            # API index file
-└── master_index.json         # Master index of all data files
+/public/
+├── api/                    # API endpoints simulados
+│   └── financial/         # Datos financieros accesibles vía API
+│       └── 2019/         # Datos del año 2019
+├── data/                  # Datos estructurados
+│   ├── financial/         # Datos financieros principales
+│   │   └── 2019/         # Datos financieros del año 2019
+│   ├── api_routes.json    # Mapa de rutas de la API
+│   ├── chart_data.json    # Datos preparados para gráficos
+│   ├── master_index.json  # Índice maestro de todas las fuentes de datos
+│   └── ...
+└── ...
 ```
 
-## Data Organization
+## Datos Financieros (2019)
 
-Each year directory contains:
+Los datos financieros del año 2019 están organizados en los siguientes archivos:
 
-- **CSV files**: Structured data in CSV format
-- **JSON files**: Structured data in JSON format
-- **consolidated_data.json**: Comprehensive consolidation of all data for that year
+### Archivos Principales
 
-## API Access
+1. **summary.json** - Resumen financiero completo con ingresos, gastos y resultados
+2. **revenue_by_source.json** - Desglose de ingresos por diferentes fuentes
+3. **expenditure_by_program.json** - Desglose de gastos por programas
+4. **consolidated.json** - Todos los datos financieros en un solo archivo
 
-API endpoints are available at:
-- `/api/index.json` - API index
-- `/api/financial/{year}/financial_summary.json` - Financial summary for a specific year
-- `/api/financial/{year}/revenue_by_source.json` - Revenue breakdown by source
-- `/api/financial/{year}/expenditure_by_program.json` - Expenditure breakdown by program
+### Acceso a los Datos
 
-## Data Standards
+#### Vía API
+```
+GET /api/financial/2019/summary.json
+GET /api/financial/2019/revenue_by_source.json
+GET /api/financial/2019/expenditure_by_program.json
+GET /api/financial/2019/consolidated.json
+```
 
-- All monetary values are in Argentine Pesos (ARS)
-- All data is UTF-8 encoded
-- Decimal separator is period (.)
-- Thousands separator is comma (,)
+#### Vía Frontend Components
+```typescript
+import { useFinancialData } from '../hooks/useFinancialData';
+import FinancialDashboard from '../components/FinancialDashboard';
+```
 
-## Last Updated
+## Componentes del Frontend
 
-Data was last organized on September 27, 2025.
+### Hooks
+- `useFinancialData.ts` - Hook personalizado para acceder a los datos financieros
+- `useFinancialSummary.ts` - Hook para acceder al resumen financiero
+- `useRevenueBySource.ts` - Hook para acceder a ingresos por fuente
+- `useExpenditureByProgram.ts` - Hook para acceder a gastos por programa
+
+### Componentes
+- `FinancialDashboard.tsx` - Panel principal de visualización de datos
+- `FinancialSummaryCard.tsx` - Tarjeta con resumen financiero
+- `RevenueBySourceChart.tsx` - Gráfico de ingresos por fuente
+- `ExpenditureByProgramChart.tsx` - Gráfico de gastos por programa
+
+## Actualizaciones
+
+Los datos se actualizaron por última vez el 2025-09-27, basados en el Informe Económico Financiero 2019 del Municipio de Carmen de Areco.
+
+## Licencia
+
+Los datos son de dominio público y provienen de documentos oficiales del municipio. Se proporcionan bajo la licencia MIT para su uso en este proyecto.

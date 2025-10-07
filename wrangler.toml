@@ -1,8 +1,41 @@
-{
-  "name": "cda-transparencia",
-  "compatibility_date": "2024-01-01",
-  "pages": {
-    "build_command": "cd frontend && npm run build",
-    "build_output_dir": "./frontend/dist-light"
-  }
-}
+name = "cda-transparencia"
+compatibility_date = "2024-01-01"
+main = "worker.js"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "production"
+DEBUG = "false"
+
+# Analytics Engine binding
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "transparency_portal_analytics"
+
+# Production environment configuration - using account from CLOUDFLARE_ACCOUNT_ID env var
+[env.production]
+name = "cda-transparencia"
+# Environment-specific variables
+[env.production.vars]
+ENVIRONMENT = "production"
+DEBUG = "false"
+
+# Production Analytics Engine binding  
+[[env.production.analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "transparency_portal_analytics"
+
+# Observability configuration
+[observability]
+enabled = true
+
+# Define routes for the worker
+routes = [
+  "https://cda-transparencia.flongstaff.workers.dev/*"
+]
+
+# Compatibility flags for latest features
+[triggers]
+crons = []
+
+# Remove limits section as it's not supported on free plan
