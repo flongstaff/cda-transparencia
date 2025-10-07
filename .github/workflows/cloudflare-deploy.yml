@@ -1,15 +1,22 @@
 name: Deploy to Cloudflare Pages
-# DISABLED: Cloudflare now pulls from GitHub Pages automatically
 
 on:
-  # Disabled automatic triggers - Cloudflare uses GitHub Pages as source
-  # push:
-  #   branches: [ main ]
+  # Trigger when GitHub Pages workflow completes successfully
+  workflow_run:
+    workflows: ["Deploy Transparency Portal to GitHub Pages", "Deploy to GitHub Pages (Custom Domain)"]  # Updated to match current workflow names
+    types:
+      - completed
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -17,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'  # Updated to match other workflows
           cache: 'npm'
           cache-dependency-path: frontend/package-lock.json
 
@@ -41,11 +48,13 @@ jobs:
           python scripts/generate-data-index.py
           python scripts/transform-processed-data.py
           
-          # Build frontend
+          # Build frontend for production
           cd frontend
-          npm run build
+          npm run build:production  # Use production build for consistency
         env:
           NODE_ENV: production
+          VITE_API_URL: "https://api.cda-transparencia.org"
+          VITE_USE_API: "true"
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1

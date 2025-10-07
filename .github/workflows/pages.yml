@@ -1,11 +1,10 @@
-# Simple workflow for deploying static content to GitHub Pages
-# DISABLED: Using GitHub's automatic pages-build-deployment workflow instead
-name: Deploy static content to Pages
+# Workflow for deploying the transparency portal to GitHub Pages
+name: Deploy Transparency Portal to GitHub Pages
 
 on:
-  # Disabled automatic triggers - only manual runs
-  # push:
-  #   branches: ["main"]
+  # Enable pushes to main branch to trigger deployment
+  push:
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,7 +35,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
           cache-dependency-path: frontend/package-lock.json
           
@@ -59,10 +58,10 @@ jobs:
           python scripts/generate-data-index.py
           python scripts/transform-processed-data.py
           
-      - name: Build frontend
+      - name: Build frontend for custom domain
         run: |
           cd frontend
-          npm run build:github
+          npm run build:production  # Use production build for custom domain
         env:
           VITE_API_URL: "https://api.cda-transparencia.org"
           VITE_USE_API: "true"
@@ -73,7 +72,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload dist folder
+          # Upload dist folder from frontend build
           path: 'frontend/dist'
           
       - name: Deploy to GitHub Pages

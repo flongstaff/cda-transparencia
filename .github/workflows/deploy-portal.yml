@@ -1,14 +1,16 @@
-name: Deploy to GitHub Pages (Custom Domain)
-# This workflow is for custom domain deployment to cda-transparencia.org
+name: Deploy Transparency Portal to GitHub Pages
 
 on:
-  # Runs when triggered manually or by schedule
+  # Run on pushes to main branch - TRIGGERED BY COMMIT
+  push:
+    branches: [ main ]
+  # Allow manual triggering
   workflow_dispatch:
+  # Run weekly on Sundays at 2 AM UTC to refresh data
   schedule:
-    # Run weekly on Sundays at 2 AM UTC to refresh data
     - cron: "0 2 * * 0"
 
-# Allow this job to commit to GitHub Pages
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -55,7 +57,7 @@ jobs:
           python scripts/generate-data-index.py
           python scripts/transform-processed-data.py
           
-      - name: Build frontend for custom domain
+      - name: Build frontend for production (custom domain)
         run: |
           cd frontend
           npm run build:production
@@ -69,9 +71,13 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload dist folder from frontend build
+          # Upload dist folder
           path: 'frontend/dist'
-
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify deployment
+        run: |
+          echo "Site deployed to: ${{ steps.deployment.outputs.page_url }}"
