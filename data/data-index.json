@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-08T07:31:29.144Z",
+  "generatedAt": "2025-10-08T08:57:34.904Z",
   "dataSources": {
     "csv": [
       {
@@ -10643,22 +10643,6 @@
         }
       ]
     },
-    "external/municipal": {
-      "type": "directory",
-      "contents": []
-    },
-    "external/national": {
-      "type": "directory",
-      "contents": []
-    },
-    "external/national/catalogo": {
-      "type": "directory",
-      "contents": []
-    },
-    "external/national/monitoreo": {
-      "type": "directory",
-      "contents": []
-    },
     "external/provincial": {
       "type": "directory",
       "contents": []
@@ -10891,50 +10875,6 @@
           "size": 0
         }
       ]
-    },
-    "ocr_extracted": {
-      "type": "directory",
-      "contents": []
-    },
-    "ocr_extracted/csv": {
-      "type": "directory",
-      "contents": []
-    },
-    "ocr_extracted/images": {
-      "type": "directory",
-      "contents": []
-    },
-    "ocr_extracted/json": {
-      "type": "directory",
-      "contents": []
-    },
-    "ocr_extracted/pdfs": {
-      "type": "directory",
-      "contents": []
-    },
-    "ocr_extracted/text": {
-      "type": "directory",
-      "contents": []
-    },
-    "ocr_processing": {
-      "type": "directory",
-      "contents": []
-    },
-    "ocr_processing/input": {
-      "type": "directory",
-      "contents": []
-    },
-    "ocr_processing/logs": {
-      "type": "directory",
-      "contents": []
-    },
-    "ocr_processing/output": {
-      "type": "directory",
-      "contents": []
-    },
-    "ocr_processing/temp": {
-      "type": "directory",
-      "contents": []
     },
     "processed": {
       "type": "directory",
@@ -21690,10 +21630,6 @@
           "size": 398
         }
       ]
-    },
-    "processed/cleaned": {
-      "type": "directory",
-      "contents": []
     },
     "processed/csv": {
       "type": "directory",
