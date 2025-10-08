@@ -1,0 +1,42 @@
+{
+  "year": 2021,
+  "municipalityCode": "270",
+  "municipalityName": "Carmen de Areco",
+  "extractedDate": "2025-10-03T04:43:18.867Z",
+  "budget": {
+    "total": 80000000,
+    "approved": 80000000,
+    "executed": 78000000,
+    "executionRate": 97.5
+  },
+  "revenue": {
+    "bySource": [],
+    "total": 0
+  },
+  "expenses": {
+    "byCategory": [],
+    "byFunction": [],
+    "total": 0
+  },
+  "transfers": {
+    "coparticipation": null,
+    "provincial": null,
+    "national": null
+  },
+  "rawTables": [],
+  "source": "mock_data_fallback",
+  "budget_execution": [
+    {
+      "quarter": "Q2",
+      "budgeted": 80000000,
+      "executed": 78000000,
+      "percentage": 97.5
+    },
+    {
+      "quarter": "Q3",
+      "budgeted": 85000000,
+      "executed": 83500000,
+      "percentage": 98.2
+    }
+  ]
+}

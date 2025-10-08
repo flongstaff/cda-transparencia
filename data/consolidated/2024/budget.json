@@ -1,0 +1,86 @@
+{
+    "year": 2024,
+    "total_budget": 357358838,
+    "total_executed": 338214614,
+    "execution_rate": 94.64,
+    "executed_infra": 60623374,
+    "personnel": 165916603,
+    "budget_execution": [
+        [
+            "Q1",
+            "$89M",
+            "$81M",
+            "96%"
+        ],
+        [
+            "Q2",
+            "$89M",
+            "$85M",
+            "100%"
+        ],
+        [
+            "Q3",
+            "$89M",
+            "$88M",
+            "104%"
+        ],
+        [
+            "Q4",
+            "$89M",
+            "$85M",
+            "100%"
+        ]
+    ],
+    "revenue_sources": [
+        [
+            "Property Tax",
+            "$125M",
+            "35%",
+            "+3.2%"
+        ],
+        [
+            "Business Tax",
+            "$89M",
+            "25%",
+            "+4.1%"
+        ],
+        [
+            "Fees and Charges",
+            "$71M",
+            "20%",
+            "+2.8%"
+        ],
+        [
+            "Transfers",
+            "$71M",
+            "20%",
+            "+3.5%"
+        ]
+    ],
+    "expenditure_breakdown": [
+        [
+            "Personnel",
+            "$166M",
+            "45%",
+            "49%"
+        ],
+        [
+            "Services",
+            "$107M",
+            "30%",
+            "100%"
+        ],
+        [
+            "Infrastructure",
+            "$61M",
+            "20%",
+            "95%"
+        ],
+        [
+            "Others",
+            "$36M",
+            "5%",
+            "100%"
+        ]
+    ]
+}

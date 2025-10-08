@@ -1,0 +1,73 @@
+{
+  "timestamp": "2025-09-26T20:24:38.075782",
+  "system_stats": {
+    "pdfs_processed": 5,
+    "tables_extracted": 15,
+    "documents_in_database": 0,
+    "external_sources_checked": 0,
+    "anomalies_detected": 0,
+    "start_time": "2025-09-26 20:24:29.562094"
+  },
+  "module_availability": {
+    "pdf_processing": true,
+    "database_operations": true,
+    "web_scraping": true,
+    "external_apis": true
+  },
+  "document_analysis": {
+    "documents_by_year": {},
+    "documents_by_category": {},
+    "average_tables_per_document": 0,
+    "average_pages_per_document": 0
+  },
+  "external_comparison": {
+    "asap": {
+      "source": "ASAP",
+      "data": [
+        {
+          "Municipio": "Carmen de Areco",
+          "Indice": 100,
+          "Municipio.1": "Rauch",
+          "Indice.1": 100.0
+        }
+      ],
+      "last_updated": "2025-09-26T20:24:54.028370"
+    },
+    "national": [
+      {
+        "api_url": "https://datos.gob.ar/api/3/action/package_search?q=presupuesto+municipal",
+        "status": "success",
+        "data_sample": "{'help': 'https://datos.gob.ar/api/3/action/help_show?name=package_search', 'success': True, 'result': {'count': 0, 'sort': 'score desc, metadata_modified desc', 'facets': {}, 'results': [], 'search_facets': {}}}"
+      }
+    ]
+  },
+  "anomalies": [],
+  "recommendations": [],
+  "file_system": {
+    "pdf_directories": {
+      "/Users/flong/Developer/cda-transparencia/frontend/dist/data/organized_pdfs": {
+        "file_count": 257,
+        "total_size_mb": 36.10975456237793
+      },
+      "/Users/flong/Developer/cda-transparencia/frontend/dist/data/local": {
+        "file_count": 71,
+        "total_size_mb": 11.579660415649414
+      }
+    },
+    "data_directories": {
+      "/Users/flong/Developer/cda-transparencia/frontend/dist/data/extracted_comprehensive": {
+        "file_count": 13,
+        "subdirectories": 2
+      },
+      "/Users/flong/Developer/cda-transparencia/frontend/dist/data/organized_pdfs": {
+        "file_count": 267,
+        "subdirectories": 92
+      },
+      "/Users/flong/Developer/cda-transparencia/frontend/dist/data/unified_output": {
+        "file_count": 32,
+        "subdirectories": 3
+      }
+    },
+    "total_files": 328
+  }
+}

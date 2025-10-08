@@ -1,0 +1,171 @@
+{
+  "documentCategories": [
+    {
+      "id": "budget-financial",
+      "name": "Presupuesto y Financiero",
+      "description": "Documentos relacionados con presupuestos, ejecución financiera, estados contables",
+      "keywords": [
+        "presupuesto", "gasto", "ingreso", "contable", "financiero", "tesorería", "caja", "multas",
+        "aranceles", "tarifas", "recaudación", "egreso", "partida", "credito", "amortizacion",
+        "deuda", "endeudamiento", "rentas", "excedente", "deficit", "superavit"
+      ],
+      "requiredFields": ["year", "amount", "description"],
+      "aiProcessing": {
+        "extractionEnabled": true,
+        "fields": ["total_amount", "budget_class", "execution_rate", "fiscal_period"]
+      },
+      "compliance": {
+        "aaipCategory": true,
+        "transparencyIndex": true
+      }
+    },
+    {
+      "id": "procurement-contracts",
+      "name": "Contrataciones y Licitaciones",
+      "description": "Documentos sobre contratos, licitaciones, proveedores y adquisiciones",
+      "keywords": [
+        "licitacion", "contrato", "proveedor", "contratista", "adjudicacion", "oferta",
+        "pliego", "convocatoria", "adquisicion", "compra", "contratacion", "bien",
+        "servicio", "obra", "cuadro", "base", "resolucion", "expediente"
+      ],
+      "requiredFields": ["contract_number", "parties", "value", "date"],
+      "aiProcessing": {
+        "extractionEnabled": true,
+        "fields": ["contractor_name", "contract_value", "contract_type", "signing_date", "duration"]
+      },
+      "compliance": {
+        "aaipCategory": true,
+        "transparencyIndex": true
+      }
+    },
+    {
+      "id": "personnel-salaries",
+      "name": "Personal y Remuneraciones",
+      "description": "Documentos sobre empleados municipales, salarios y declaraciones",
+      "keywords": [
+        "empleado", "funcionario", "cargo", "remuneracion", "sueldo", "salario",
+        "contratacion", "despido", "licencia", "jubilacion", "declaracion", "patrimonio",
+        "intereses", "designacion", "destitucion", "escalafon", "antiguedad"
+      ],
+      "requiredFields": ["employee_name", "position", "salary", "period"],
+      "aiProcessing": {
+        "extractionEnabled": true,
+        "fields": ["employee_count", "total_payroll", "position_types", "salary_ranges"]
+      },
+      "compliance": {
+        "aaipCategory": true,
+        "transparencyIndex": true
+      }
+    },
+    {
+      "id": "legal-regulatory",
+      "name": "Legal y Reglamentario",
+      "description": "Ordenanzas, resoluciones, decretos y documentos legales",
+      "keywords": [
+        "ordenanza", "resolucion", "decreto", "ley", "norma", "reglamento", "disposicion",
+        "articulo", "inciso", "capitulo", "seccion", "codigo", "constitucion", "estatuto",
+        "protocolo", "convenio", "acuerdo", "tratado", "regimen", "rige", "deroga"
+      ],
+      "requiredFields": ["document_type", "number", "date", "subject"],
+      "aiProcessing": {
+        "extractionEnabled": true,
+        "fields": ["document_number", "publish_date", "validity", "affected_areas"]
+      },
+      "compliance": {
+        "aaipCategory": true,
+        "transparencyIndex": true
+      }
+    },
+    {
+      "id": "infrastructure-works",
+      "name": "Infraestructura y Obras",
+      "description": "Documentos sobre obras públicas, proyectos de infraestructura",
+      "keywords": [
+        "obra", "infraestructura", "proyecto", "construccion", "reparacion", "mejora",
+        "asfalto", "calle", "avenida", "pavimento", "cloaca", "agua", "luz", "gas",
+        "urbanizacion", "drenaje", "puente", "ciclovia", "vereda", "planta", "estacion"
+      ],
+      "requiredFields": ["project_name", "budget", "timeline", "location"],
+      "aiProcessing": {
+        "extractionEnabled": true,
+        "fields": ["project_cost", "start_date", "end_date", "location", "contractor"]
+      },
+      "compliance": {
+        "aaipCategory": true,
+        "transparencyIndex": true
+      }
+    },
+    {
+      "id": "transparency-reporting",
+      "name": "Transparencia y Reportes",
+      "description": "Documentos de reporte, auditoría y transparencia activa",
+      "keywords": [
+        "transparencia", "reporte", "auditoria", "control", "evaluacion", "indicador",
+        "estadistica", "estudio", "investigacion", "monitoreo", "supervision", "informe",
+        "balance", "memoria", "cuenta", "gestion", "rendicion", "cifras", "metricas"
+      ],
+      "requiredFields": ["report_type", "period", "author", "findings"],
+      "aiProcessing": {
+        "extractionEnabled": true,
+        "fields": ["report_period", "key_findings", "recommendations", "compliance_rate"]
+      },
+      "compliance": {
+        "aaipCategory": true,
+        "transparencyIndex": true
+      }
+    },
+    {
+      "id": "social-programs",
+      "name": "Programas Sociales",
+      "description": "Documentos sobre programas sociales, asistencia y bienestar",
+      "keywords": [
+        "programa", "social", "asistencia", "ayuda", "subsidio", "beneficiario", "asignacion",
+        "familia", "niño", "adulto", "discapacidad", "salud", "educacion", "empleo",
+        "vivienda", "alimentacion", "emergencia", "inclusion", "trabajo", "jubilado"
+      ],
+      "requiredFields": ["program_name", "target_group", "budget", "beneficiaries"],
+      "aiProcessing": {
+        "extractionEnabled": true,
+        "fields": ["program_budget", "beneficiary_count", "coverage_area", "evaluation_results"]
+      },
+      "compliance": {
+        "aaipCategory": true,
+        "transparencyIndex": true
+      }
+    }
+  ],
+  "classificationModel": {
+    "version": "1.0",
+    "trainingDate": "2025-01-15",
+    "accuracyMetrics": {
+      "overallAccuracy": 0.92,
+      "precision": 0.89,
+      "recall": 0.91,
+      "f1Score": 0.90
+    },
+    "languages": ["es"],
+    "featuresUsed": [
+      "keywords",
+      "documentStructure",
+      "metadata",
+      "textPatterns"
+    ]
+  },
+  "processingStandards": {
+    "compliance": {
+      "aaipGuidelines": true,
+      "dataProtection": true,
+      "transparencyRequirements": true
+    },
+    "privacy": {
+      "noPersonalData": true,
+      "anonymizationApplied": true,
+      "dataMinimization": true
+    },
+    "quality": {
+      "accuracyThreshold": 0.85,
+      "verificationRequired": true,
+      "humanReview": true
+    }
+  }
+}

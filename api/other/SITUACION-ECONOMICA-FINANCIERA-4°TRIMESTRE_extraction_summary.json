@@ -1,0 +1,21 @@
+{
+  "document_info": {
+    "filename": "SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE.pdf",
+    "category": "Estados Financieros",
+    "year": null,
+    "quarter": "4Q"
+  },
+  "extraction_stats": {
+    "text_pages": 3,
+    "tables_found": 5,
+    "methods_used": [
+      "pdfplumber"
+    ],
+    "output_files_count": 7
+  },
+  "financial_summary": {
+    "amounts_found": 0,
+    "dates_found": 9,
+    "percentages_found": 0
+  }
+}

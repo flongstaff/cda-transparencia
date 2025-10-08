@@ -1,0 +1,36 @@
+{
+  "api_version": "1.0",
+  "generated_at": "2025-09-28T18:31:08.967449",
+  "endpoints": {
+    "financial": {
+      "base": "/api/financial",
+      "description": "Financial data organized by year",
+      "available_years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "transparency": {
+      "base": "/api/transparency",
+      "description": "Transparency portal data",
+      "routes": {}
+    },
+    "statistics": {
+      "base": "/api/statistics",
+      "description": "Statistical reports and data",
+      "routes": {}
+    },
+    "tenders": {
+      "base": "/api/tenders",
+      "description": "Public tender data",
+      "routes": {}
+    }
+  }
+}

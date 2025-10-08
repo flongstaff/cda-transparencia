@@ -1,0 +1,32 @@
+{
+  "year": 2021,
+  "total_salaries": 143325000,
+  "average_salary": 511875,
+  "employee_count": 290,
+  "salary_breakdown": [
+    [
+      "Administration",
+      "$57M",
+      "40%",
+      "98%"
+    ],
+    [
+      "Operations",
+      "$50M",
+      "35%",
+      "97%"
+    ],
+    [
+      "Healthcare",
+      "$21M",
+      "15%",
+      "99%"
+    ],
+    [
+      "Education",
+      "$14M",
+      "10%",
+      "100%"
+    ]
+  ]
+}

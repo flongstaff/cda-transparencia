@@ -1,0 +1,17 @@
+{
+  "year": 2020,
+  "total_debt": 80000000,
+  "debt_service": 0,
+  "debt_by_type": {
+    "Bank Loans": {
+      "amount": 50000000,
+      "interest_rate": "8.0%",
+      "maturity": "7 years"
+    },
+    "Development Bank": {
+      "amount": 30000000,
+      "interest_rate": "6.5%",
+      "maturity": "10 years"
+    }
+  }
+}

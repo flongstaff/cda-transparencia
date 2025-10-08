@@ -1,0 +1,21 @@
+{
+  "document_info": {
+    "filename": "GASTOS-POR-FUENTE-DE-FINANCIAMIENTO.pdf",
+    "category": "Documentos Municipales",
+    "year": null,
+    "quarter": null
+  },
+  "extraction_stats": {
+    "text_pages": 1,
+    "tables_found": 1,
+    "methods_used": [
+      "pdfplumber"
+    ],
+    "output_files_count": 3
+  },
+  "financial_summary": {
+    "amounts_found": 0,
+    "dates_found": 5,
+    "percentages_found": 0
+  }
+}

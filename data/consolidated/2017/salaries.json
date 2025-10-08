@@ -1,0 +1,32 @@
+{
+  "year": 2017,
+  "total_salaries": 117913832,
+  "average_salary": 421121,
+  "employee_count": 270,
+  "salary_breakdown": [
+    [
+      "Administration",
+      "$47M",
+      "40%",
+      "98%"
+    ],
+    [
+      "Operations",
+      "$41M",
+      "35%",
+      "97%"
+    ],
+    [
+      "Healthcare",
+      "$18M",
+      "15%",
+      "99%"
+    ],
+    [
+      "Education",
+      "$12M",
+      "10%",
+      "100%"
+    ]
+  ]
+}

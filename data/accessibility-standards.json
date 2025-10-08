@@ -1,0 +1,628 @@
+{
+  "accessibilityStandards": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-01",
+    "wcagCompliance": {
+      "level": "AA",
+      "version": "2.1",
+      "principles": [
+        {
+          "id": "perceivable",
+          "name": "Perceptible",
+          "description": "La información y los componentes de la interfaz deben presentarse a los usuarios de formas que puedan percibir",
+          "guidelines": [
+            {
+              "id": "1.1",
+              "name": "Alternativas de texto",
+              "description": "Proporcionar alternativas de texto para cualquier contenido no textual",
+              "successCriteria": [
+                {
+                  "id": "1.1.1",
+                  "level": "A",
+                  "name": "Contenido no textual",
+                  "description": "Todo el contenido no textual que se presenta al usuario tiene una alternativa de texto que sirve con el mismo propósito",
+                  "techniques": [
+                    "G94", "G95", "G82", "H37", "H67", "H36", "H24", "H44", "H65", "ARIA6", "ARIA10"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1.2",
+              "name": "Medios temporizados",
+              "description": "Proporcionar alternativas para medios temporizados",
+              "successCriteria": [
+                {
+                  "id": "1.2.1",
+                  "level": "A",
+                  "name": "Audio solamente y vídeo solamente (preregrabados)",
+                  "description": "Para el contenido de solo audio que no es multimedia, se proporciona una alternativa para el contenido que presenta información equivalente",
+                  "techniques": [
+                    "G158", "G159", "G166", "H96"
+                  ]
+                },
+                {
+                  "id": "1.2.2",
+                  "level": "A",
+                  "name": "Leyendas (preregrabadas)",
+                  "description": "Se proporcionan leyendas para todo el contenido de audio sincronizado preregrabado",
+                  "techniques": [
+                    "G93", "G87", "H95", "SM11", "SM12", "G87", "G93"
+                  ]
+                },
+                {
+                  "id": "1.2.3",
+                  "level": "A",
+                  "name": "Audio descripción o medio alternativo (preregrabado)",
+                  "description": "Se proporciona una alternativa para medios temporizados o una audio descripción del contenido de vídeo preregrabado",
+                  "techniques": [
+                    "G69", "G78", "H96", "SM6", "SM7"
+                  ]
+                },
+                {
+                  "id": "1.2.4",
+                  "level": "AA",
+                  "name": "Leyendas (en vivo)",
+                  "description": "Se proporcionan leyendas para todo el contenido de audio sincronizado en vivo",
+                  "techniques": [
+                    "G9", "G87", "G93", "H95"
+                  ]
+                },
+                {
+                  "id": "1.2.5",
+                  "level": "AA",
+                  "name": "Audio descripción (preregrabada)",
+                  "description": "Se proporciona audio descripción para todo el contenido de vídeo preregrabado",
+                  "techniques": [
+                    "G78", "G173", "SM6", "SM7"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1.3",
+              "name": "Adaptable",
+              "description": "Crear contenido que pueda presentarse de diferentes formas sin perder información o estructura",
+              "successCriteria": [
+                {
+                  "id": "1.3.1",
+                  "level": "A",
+                  "name": "Información y relaciones",
+                  "description": "La información, estructura y relaciones transmitidas mediante presentación pueden determinarse por programación o están disponibles en texto",
+                  "techniques": [
+                    "G115", "G117", "G140", "H49", "H49", "H51", "H39", "H73", "H63", "H43", "H44", "H65"
+                  ]
+                },
+                {
+                  "id": "1.3.2",
+                  "level": "A",
+                  "name": "Secuencia con sentido",
+                  "description": "Cuando la secuencia en la que se presenta el contenido afecta su significado, una secuencia con sentido puede determinarse por programación",
+                  "techniques": [
+                    "G57", "H34", "H56"
+                  ]
+                },
+                {
+                  "id": "1.3.3",
+                  "level": "A",
+                  "name": "Características sensoriales",
+                  "description": "Las instrucciones proporcionadas para comprender y operar el contenido no dependen únicamente de características sensoriales de los componentes como la forma, el tamaño, la ubicación visual, la orientación o el sonido",
+                  "techniques": [
+                    "G96", "H43", "H65"
+                  ]
+                },
+                {
+                  "id": "1.3.4",
+                  "level": "AA",
+                  "name": "Orientación",
+                  "description": "El contenido no restringe su vista y operación a una sola orientación de pantalla, tal como vertical u horizontal, a menos que esa orientación sea esencial",
+                  "techniques": [
+                    "G214", "C34", "F97"
+                  ]
+                },
+                {
+                  "id": "1.3.5",
+                  "level": "AA",
+                  "name": "Identificar propósito de la entrada",
+                  "description": "El propósito de cada campo de entrada que recolecta información sobre el usuario puede determinarse por programación cuando corresponde",
+                  "techniques": [
+                    "H98", "G167"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "1.4",
+              "name": "Distinguible",
+              "description": "Facilitar que los usuarios vean y oigan el contenido",
+              "successCriteria": [
+                {
+                  "id": "1.4.1",
+                  "level": "A",
+                  "name": "Uso del color",
+                  "description": "El color no se utiliza como único medio visual para transmitir información, indicar una acción, provocar una respuesta o distinguir un elemento visual",
+                  "techniques": [
+                    "G14", "G111", "G182", "G183"
+                  ]
+                },
+                {
+                  "id": "1.4.2",
+                  "level": "A",
+                  "name": "Control de audio",
+                  "description": "Si algún audio en una página web se reproduce automáticamente durante más de 3 segundos, debe haber un mecanismo para pausarlo o detenerlo",
+                  "techniques": [
+                    "G60", "G170", "G171"
+                  ]
+                },
+                {
+                  "id": "1.4.3",
+                  "level": "AA",
+                  "name": "Contraste (mínimo)",
+                  "description": "La presentación visual del texto y las imágenes de texto tiene una relación de contraste de al menos 4.5:1",
+                  "techniques": [
+                    "G18", "G145", "G148", "G156", "G174"
+                  ]
+                },
+                {
+                  "id": "1.4.4",
+                  "level": "AA",
+                  "name": "Redimensionar texto",
+                  "description": "El texto puede redimensionarse sin tecnología de asistencia hasta un 200 por ciento sin pérdida de contenido o funcionalidad",
+                  "techniques": [
+                    "G142", "G178", "G179"
+                  ]
+                },
+                {
+                  "id": "1.4.5",
+                  "level": "AA",
+                  "name": "Imágenes de texto",
+                  "description": "Si las tecnologías utilizadas pueden lograr los efectos visuales, se utiliza texto para transmitir la información en lugar de imágenes de texto",
+                  "techniques": [
+                    "G140", "C22", "C30"
+                  ]
+                },
+                {
+                  "id": "1.4.10",
+                  "level": "AA",
+                  "name": "Reflujo",
+                  "description": "El contenido puede refluirse sin pérdida de información o funcionalidad, y sin requerir desplazamiento en dos dimensiones",
+                  "techniques": [
+                    "C32", "C31", "C38", "G216", "F102"
+                  ]
+                },
+                {
+                  "id": "1.4.11",
+                  "level": "AA",
+                  "name": "Contraste no textual",
+                  "description": "La presentación visual de componentes de la interfaz de usuario y objetos gráficos tiene una relación de contraste de al menos 3:1 respecto al color adyacente",
+                  "techniques": [
+                    "G195", "G207", "G209", "G18", "G145"
+                  ]
+                },
+                {
+                  "id": "1.4.12",
+                  "level": "AA",
+                  "name": "Espaciado de texto",
+                  "description": "No se pierde contenido ni funcionalidad especificando ninguno de los siguientes espaciados de texto en estilos y aplicando a todo el texto en párrafos",
+                  "techniques": [
+                    "C36", "C35", "G172"
+                  ]
+                },
+                {
+                  "id": "1.4.13",
+                  "level": "AA",
+                  "name": "Contenido en hover o focus",
+                  "description": "Cuando se recibe hover o focus, aparece contenido adicional y desaparece cuando se elimina hover o focus",
+                  "techniques": [
+                    "SCR39", "F95"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "operable",
+          "name": "Operable",
+          "description": "Los componentes de la interfaz de usuario y la navegación deben ser operables",
+          "guidelines": [
+            {
+              "id": "2.1",
+              "name": "Accesible por teclado",
+              "description": "Hacer que todas las funcionalidades estén disponibles desde un teclado",
+              "successCriteria": [
+                {
+                  "id": "2.1.1",
+                  "level": "A",
+                  "name": "Teclado",
+                  "description": "Toda la funcionalidad del contenido se opera mediante una interfaz de teclado",
+                  "techniques": [
+                    "G202", "G90", "H91", "H93", "SCR2", "SCR20", "SCR35"
+                  ]
+                },
+                {
+                  "id": "2.1.2",
+                  "level": "A",
+                  "name": "Sin trampa de teclado",
+                  "description": "Si el foco del teclado puede ser movido a un componente de la página usando una interfaz de teclado, entonces el foco puede ser retirado del componente usando solo una interfaz de teclado",
+                  "techniques": [
+                    "G21", "H91", "SCR35"
+                  ]
+                },
+                {
+                  "id": "2.1.4",
+                  "level": "A",
+                  "name": "Atajos de caracteres",
+                  "description": "Si se implementa un atajo de teclado utilizando solamente letras, signos de puntuación, números o símbolos, entonces al menos uno de los siguientes es verdadero",
+                  "techniques": [
+                    "G217", "F99"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2.2",
+              "name": "Tiempo suficiente",
+              "description": "Proporcionar a los usuarios tiempo suficiente para leer y usar el contenido",
+              "successCriteria": [
+                {
+                  "id": "2.2.1",
+                  "level": "A",
+                  "name": "Ajustable de tiempo",
+                  "description": "Para cada límite de tiempo establecido por el contenido, al menos una de las siguientes opciones es verdadera",
+                  "techniques": [
+                    "G133", "G198", "G180", "SCR36", "SCR33", "SCR16", "F61", "F52"
+                  ]
+                },
+                {
+                  "id": "2.2.2",
+                  "level": "A",
+                  "name": "Pausa, detener, ocultar",
+                  "description": "Para la información en movimiento, parpadeante o desplazándose que se actualiza automáticamente",
+                  "techniques": [
+                    "G4", "G11", "G187", "G152", "SCR33", "F7"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2.3",
+              "name": "Convulsiones y reacciones físicas",
+              "description": "No diseñar contenido de una manera que sepa que causa convulsiones o reacciones físicas",
+              "successCriteria": [
+                {
+                  "id": "2.3.1",
+                  "level": "A",
+                  "name": "Tres destellos o menos",
+                  "description": "Las páginas web no contienen nada que destelle más de tres veces en cualquier período de un segundo",
+                  "techniques": [
+                    "G19", "G176"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2.4",
+              "name": "Navegable",
+              "description": "Proporcionar formas de ayudar a los usuarios a navegar, encontrar contenido y determinar dónde están",
+              "successCriteria": [
+                {
+                  "id": "2.4.1",
+                  "level": "A",
+                  "name": "Bloques de omisión",
+                  "description": "Hay un mecanismo para omitir bloques de contenido que se repiten en varias páginas web",
+                  "techniques": [
+                    "G1", "G123", "G124", "H69", "SCR28", "SL25"
+                  ]
+                },
+                {
+                  "id": "2.4.2",
+                  "level": "A",
+                  "name": "Título de página",
+                  "description": "Las páginas web tienen títulos que describen el tema o propósito",
+                  "techniques": [
+                    "G88", "H25"
+                  ]
+                },
+                {
+                  "id": "2.4.3",
+                  "level": "A",
+                  "name": "Orden del foco",
+                  "description": "Si se puede mover el foco del teclado a un componente de la página, entonces hay una secuencia lógica para moverse a través de ese componente",
+                  "techniques": [
+                    "G59", "H4", "C27"
+                  ]
+                },
+                {
+                  "id": "2.4.4",
+                  "level": "A",
+                  "name": "Propósito del enlace (en contexto)",
+                  "description": "El propósito de cada enlace puede determinarse a partir del enlace solo, excepto cuando el propósito del enlace sea ambiguo para los usuarios en general",
+                  "techniques": [
+                    "G91", "H30", "H77", "H78", "H79", "H80", "H81", "G53", "ARIA7", "ARIA8"
+                  ]
+                },
+                {
+                  "id": "2.4.5",
+                  "level": "AA",
+                  "name": "Múltiples maneras",
+                  "description": "Hay más de una manera de localizar una página web dentro de un conjunto de páginas web",
+                  "techniques": [
+                    "G125", "G63", "G64", "G126", "G185", "H59"
+                  ]
+                },
+                {
+                  "id": "2.4.6",
+                  "level": "AA",
+                  "name": "Encabezados y etiquetas",
+                  "description": "Los encabezados y etiquetas describen el tema o propósito",
+                  "techniques": [
+                    "G130", "H42", "G131"
+                  ]
+                },
+                {
+                  "id": "2.4.7",
+                  "level": "AA",
+                  "name": "Foco visible",
+                  "description": "Cualquier interfaz de usuario operable por teclado tiene un modo de operación donde el indicador de foco del teclado es visible",
+                  "techniques": [
+                    "G149", "G165", "G195", "H65", "SCR31", "C15"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "2.5",
+              "name": "Modalidades de entrada",
+              "description": "Facilitar la entrada de datos mediante diferentes modalidades de entrada además del teclado",
+              "successCriteria": [
+                {
+                  "id": "2.5.1",
+                  "level": "A",
+                  "name": "Gestos por puntero",
+                  "description": "Todas las funcionalidades que utilizan gestos multipunto o basados en trayectoria pueden operarse con una sola entrada de puntero sin gestos basados en trayectoria",
+                  "techniques": [
+                    "G215", "G216"
+                  ]
+                },
+                {
+                  "id": "2.5.2",
+                  "level": "A",
+                  "name": "Cancelación por puntero",
+                  "description": "Para funcionalidad que puede ejecutarse usando una entrada de puntero único, al menos una de las siguientes opciones es verdadera",
+                  "techniques": [
+                    "G210", "G212"
+                  ]
+                },
+                {
+                  "id": "2.5.3",
+                  "level": "A",
+                  "name": "Etiqueta en nombre",
+                  "description": "Para componentes de interfaz de usuario con etiquetas que incluyen texto o imágenes de texto, el nombre contiene el texto que se presenta visualmente",
+                  "techniques": [
+                    "G208", "G211", "ARIA7", "ARIA9", "ARIA14", "ARIA16"
+                  ]
+                },
+                {
+                  "id": "2.5.4",
+                  "level": "A",
+                  "name": "Movimiento para operar",
+                  "description": "La funcionalidad que puede operarse mediante el movimiento del dispositivo o del usuario también puede operarse mediante componentes de interfaz de usuario",
+                  "techniques": [
+                    "G213", "F106"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "understandable",
+          "name": "Comprensible",
+          "description": "La información y el manejo de la operación deben ser comprensibles",
+          "guidelines": [
+            {
+              "id": "3.1",
+              "name": "Legible",
+              "description": "Hacer que el contenido del texto sea legible y comprensible",
+              "successCriteria": [
+                {
+                  "id": "3.1.1",
+                  "level": "A",
+                  "name": "Idioma de la página",
+                  "description": "El idioma humano predeterminado de cada página web puede determinarse por programación",
+                  "techniques": [
+                    "H57"
+                  ]
+                },
+                {
+                  "id": "3.1.2",
+                  "level": "AA",
+                  "name": "Idioma de las partes",
+                  "description": "El idioma humano de cada pasaje o frase en el contenido puede determinarse por programación",
+                  "techniques": [
+                    "H58"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "3.2",
+              "name": "Predecible",
+              "description": "Hacer que las páginas web aparezcan y operen de manera predecible",
+              "successCriteria": [
+                {
+                  "id": "3.2.1",
+                  "level": "A",
+                  "name": "En foco",
+                  "description": "Cuando cualquier componente de la interfaz de usuario recibe el foco, no se inicia un cambio de contexto",
+                  "techniques": [
+                    "G107", "F52", "F55"
+                  ]
+                },
+                {
+                  "id": "3.2.2",
+                  "level": "A",
+                  "name": "Al ingresar datos",
+                  "description": "Cambiar la configuración de cualquier componente de la interfaz de usuario no inicia automáticamente un cambio de contexto",
+                  "techniques": [
+                    "G80", "H32", "H84", "G13", "F36", "F37"
+                  ]
+                },
+                {
+                  "id": "3.2.3",
+                  "level": "AA",
+                  "name": "Navegación consistente",
+                  "description": "Los mecanismos de navegación que se repiten en múltiples páginas web ocurren en el mismo orden relativo cada vez que se repiten",
+                  "techniques": [
+                    "G61", "F66", "H70"
+                  ]
+                },
+                {
+                  "id": "3.2.4",
+                  "level": "AA",
+                  "name": "Identificación consistente",
+                  "description": "Los componentes que tienen la misma funcionalidad dentro de un conjunto de páginas web se identifican de manera consistente",
+                  "techniques": [
+                    "G197", "F31"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "3.3",
+              "name": "Asistencia de entrada",
+              "description": "Ayudar a los usuarios a evitar y corregir errores",
+              "successCriteria": [
+                {
+                  "id": "3.3.1",
+                  "level": "A",
+                  "name": "Identificación de errores",
+                  "description": "Si se detecta automáticamente un error de entrada, se identifica el ítem que está en error y se describe el error al usuario en texto",
+                  "techniques": [
+                    "G83", "G84", "G85", "ARIA18", "ARIA19", "ARIA21"
+                  ]
+                },
+                {
+                  "id": "3.3.2",
+                  "level": "A",
+                  "name": "Etiquetas o instrucciones",
+                  "description": "Se proporcionan etiquetas o instrucciones cuando el contenido requiere entrada de usuario",
+                  "techniques": [
+                    "G131", "G89", "G184", "H90", "G162", "G167"
+                  ]
+                },
+                {
+                  "id": "3.3.3",
+                  "level": "AA",
+                  "name": "Sugerencia de corrección",
+                  "description": "Si se detecta automáticamente un error de entrada y se conocen sugerencias para su corrección, entonces se proporcionan las sugerencias al usuario",
+                  "techniques": [
+                    "G177", "G194", "SCR18", "SCR32"
+                  ]
+                },
+                {
+                  "id": "3.3.4",
+                  "level": "AA",
+                  "name": "Prevención de errores (legal, financiera, datos)",
+                  "description": "Para páginas web que causan compromisos legales o transacciones financieras para el usuario",
+                  "techniques": [
+                    "G164", "G98", "G155", "G168", "G199"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "robust",
+          "name": "Robusto",
+          "description": "El contenido debe ser lo suficientemente robusto como para poder interpretarse de forma fiable por una amplia variedad de agentes de usuario, incluyendo tecnologías de asistencia",
+          "guidelines": [
+            {
+              "id": "4.1",
+              "name": "Compatible",
+              "description": "Maximizar la compatibilidad con agentes de usuario actuales y futuros",
+              "successCriteria": [
+                {
+                  "id": "4.1.1",
+                  "level": "A",
+                  "name": "Análisis",
+                  "description": "En contenido implementado usando lenguajes de marcado, los elementos tienen etiquetas de inicio y fin completas",
+                  "techniques": [
+                    "H74", "H93", "H94", "G192", "H88"
+                  ]
+                },
+                {
+                  "id": "4.1.2",
+                  "level": "A",
+                  "name": "Nombre, rol, valor",
+                  "description": "Para todos los componentes de la interfaz de usuario (incluidos pero no limitados a elementos de formulario, enlaces y componentes generados por scripts)",
+                  "techniques": [
+                    "G108", "G135", "H44", "H64", "H65", "H88", "H91", "ARIA14", "ARIA16", "ARIA9", "ARIA10", "ARIA17", "ARIA19", "ARIA5", "F59", "F15", "F20", "F68", "F79", "F86", "F89"
+                  ]
+                },
+                {
+                  "id": "4.1.3",
+                  "level": "AA",
+                  "name": "Mensaje de estado",
+                  "description": "En contenido implementado usando tecnologías de scripting, el mensaje de estado puede determinarse por programación a través del rol o las propiedades",
+                  "techniques": [
+                    "ARIA22", "ARIA23"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "implementation": {
+      "keyboardNavigation": {
+        "enabled": true,
+        "skipLinks": true,
+        "focusIndicators": true,
+        "tabOrder": "logical"
+      },
+      "screenReaderSupport": {
+        "ariaLabels": true,
+        "semanticHTML": true,
+        "landmarks": true,
+        "headingsHierarchy": true
+      },
+      "visualAccessibility": {
+        "colorContrast": "4.5:1 minimum",
+        "textResizing": "up to 200%",
+        "responsiveDesign": true,
+        "noFlashingContent": true
+      },
+      "alternativeText": {
+        "images": true,
+        "charts": true,
+        "graphs": true,
+        "icons": true
+      }
+    },
+    "compliance": {
+      "aaipGuidelines": true,
+      "itaMethodology": true,
+      "wcagCompliance": "2.1 AA",
+      "dataProtection": true
+    },
+    "testing": {
+      "automatedTools": [
+        "axe-core",
+        "pa11y",
+        "lighthouse"
+      ],
+      "manualTesting": true,
+      "screenReaderTesting": [
+        "NVDA",
+        "JAWS",
+        "VoiceOver"
+      ],
+      "keyboardTesting": true,
+      "colorContrastTesting": true
+    }
+  }
+}

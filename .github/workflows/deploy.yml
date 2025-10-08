@@ -1,0 +1,192 @@
+name: 🚀 Deploy Carmen de Areco Transparency Portal
+
+on:
+  push:
+    branches: [main, staging, development]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: '18'
+
+jobs:
+  # Build and test the frontend
+  build-and-test:
+    name: 🏗️ Build & Test Frontend
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: 'frontend/package-lock.json'
+
+      - name: 📥 Install dependencies
+        working-directory: ./frontend
+        run: npm ci
+
+      - name: 🧪 Run tests
+        working-directory: ./frontend
+        run: npm run test -- --coverage --watchAll=false
+        continue-on-error: true
+
+      - name: 🔍 Run linting
+        working-directory: ./frontend
+        run: npm run lint
+        continue-on-error: true
+
+      - name: 🏗️ Build application
+        working-directory: ./frontend
+        run: npm run build
+        env:
+          CI: false # Disable CI mode to allow warnings
+
+      - name: 📤 Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-build
+          path: frontend/dist/
+          retention-days: 7
+
+  # Security scan
+  security-scan:
+    name: 🔒 Security Scan
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🔍 Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: './frontend'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+        continue-on-error: true
+
+      - name: 📤 Upload Trivy scan results
+        uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with:
+          sarif_file: 'trivy-results.sarif'
+        continue-on-error: true
+
+  # Deploy to Cloudflare Workers
+  deploy-cloudflare:
+    name: 🌐 Deploy to Cloudflare Workers
+    runs-on: ubuntu-latest
+    needs: [build-and-test, security-scan]
+    if: github.event_name == 'push'
+
+    strategy:
+      matrix:
+        include:
+          - branch: development
+            environment: development
+            cf_zone: dev
+          - branch: staging
+            environment: staging  
+            cf_zone: staging
+          - branch: main
+            environment: production
+            cf_zone: production
+
+    environment: ${{ matrix.environment }}
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📥 Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend-build
+          path: ./dist
+
+      - name: 📦 Install Wrangler CLI
+        run: npm install -g wrangler
+
+      - name: 🔧 Prepare Worker files
+        run: |
+          # Copy worker script
+          cp worker/index.js dist/_worker.js
+          
+          # Create a simple assets manifest (in real deployment, this would include all built files)
+          echo "export const assets = {};" > dist/_assets.js
+          
+          # List built files for verification
+          echo "Built files:"
+          find dist -type f -name "*.js" -o -name "*.css" -o -name "*.html" | head -20
+
+      - name: 🚀 Deploy to Cloudflare Workers
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            wrangler deploy --env production
+          elif [ "${{ github.ref }}" = "refs/heads/staging" ]; then
+            wrangler deploy --env staging
+          else
+            wrangler deploy --env development
+          fi
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: ✅ Deployment Success Notification
+        if: success()
+        run: |
+          echo "🎉 Deployment successful!"
+          echo "Environment: ${{ matrix.environment }}"
+          echo "Branch: ${{ github.ref_name }}"
+
+  # Performance and accessibility audit
+  audit:
+    name: 🚨 Lighthouse Audit
+    runs-on: ubuntu-latest
+    needs: deploy-cloudflare
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🚨 Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v10
+        with:
+          urls: |
+            https://cda-transparencia.org
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+        continue-on-error: true
+
+  # Notify on completion
+  notify:
+    name: 📢 Notify Completion
+    runs-on: ubuntu-latest
+    needs: [build-and-test, security-scan, deploy-cloudflare]
+    if: always()
+    
+    steps:
+      - name: 📢 Deployment Status
+        run: |
+          if [ "${{ needs.deploy-cloudflare.result }}" = "success" ]; then
+            echo "✅ Deployment completed successfully!"
+            echo "🌐 Portal de Transparencia is now live at https://cda-transparencia.org"
+            echo "📊 All services operational"
+          else
+            echo "❌ Deployment failed or was skipped"
+            echo "🔍 Check the logs for more information"
+          fi

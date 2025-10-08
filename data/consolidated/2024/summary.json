@@ -1,0 +1,24 @@
+{
+  "year": 2024,
+  "financial_overview": {
+    "total_budget": 357358838,
+    "total_executed": 338214614,
+    "execution_rate": 94.64,
+    "executed_infra": 60623374,
+    "personnel": 165916603
+  },
+  "key_metrics": {
+    "budget_per_capita": 11167,
+    "documents_processed": 45,
+    "contracts_managed": 40
+  },
+  "data_quality": {
+    "completeness": 94,
+    "accuracy": 99,
+    "last_validated": "2025-09-28T18:50:04.350Z"
+  },
+  "metadata": {
+    "processed_date": "2025-09-28T18:50:04.350Z",
+    "data_sources": 12
+  }
+}

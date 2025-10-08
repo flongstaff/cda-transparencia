@@ -1,0 +1,52 @@
+{
+  "year": 2020,
+  "contracts": [
+    {
+      "id": "2020-contract-1",
+      "title": "Infrastructure Project 1",
+      "status": "Completed",
+      "budget": 8820000,
+      "executed": 8232000,
+      "completion": "100%",
+      "year": 2020
+    },
+    {
+      "id": "2020-contract-2",
+      "title": "Infrastructure Project 2",
+      "status": "In Progress",
+      "budget": 8820000,
+      "executed": 8232000,
+      "completion": "85%",
+      "year": 2020
+    },
+    {
+      "id": "2020-contract-3",
+      "title": "Infrastructure Project 3",
+      "status": "Planning",
+      "budget": 8820000,
+      "executed": 8232000,
+      "completion": "30%",
+      "year": 2020
+    },
+    {
+      "id": "2020-contract-4",
+      "title": "Infrastructure Project 4",
+      "status": "Completed",
+      "budget": 8820000,
+      "executed": 8232000,
+      "completion": "100%",
+      "year": 2020
+    },
+    {
+      "id": "2020-contract-5",
+      "title": "Infrastructure Project 5",
+      "status": "In Progress",
+      "budget": 8820000,
+      "executed": 8232000,
+      "completion": "85%",
+      "year": 2020
+    }
+  ],
+  "total_contracts": 5,
+  "total_value": 44100000
+}

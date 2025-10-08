@@ -1,0 +1,32 @@
+{
+  "year": 2023,
+  "total_salaries": 158015813,
+  "average_salary": 564342,
+  "employee_count": 300,
+  "salary_breakdown": [
+    [
+      "Administration",
+      "$63M",
+      "40%",
+      "98%"
+    ],
+    [
+      "Operations",
+      "$55M",
+      "35%",
+      "97%"
+    ],
+    [
+      "Healthcare",
+      "$24M",
+      "15%",
+      "99%"
+    ],
+    [
+      "Education",
+      "$16M",
+      "10%",
+      "100%"
+    ]
+  ]
+}

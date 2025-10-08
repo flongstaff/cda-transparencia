@@ -1,0 +1,25 @@
+{
+  "api_routes": {
+    "/data/api/index.json": "Main API index",
+    "/data/api/documents.json": "Documents catalog",
+    "/data/api/categories.json": "Document categories",
+    "/data/api/csv_data.json": "CSV data information",
+    "/data/api/enhanced_summary.json": "Enhanced data summary"
+  },
+  "csv_routes": {
+    "/data/csv/transparency_data_complete.csv": "Complete transparency data",
+    "/data/csv/revenue_summary.csv": "Revenue summary data",
+    "/data/csv/expenses_summary.csv": "Expenses summary data"
+  },
+  "pdf_routes": {
+    "/data/documents/pdfs/budget_execution/": "Budget execution documents",
+    "/data/documents/pdfs/financial_statements/": "Financial statements",
+    "/data/documents/pdfs/revenue_reports/": "Revenue reports",
+    "/data/documents/pdfs/contracts/": "Contracts and tenders"
+  },
+  "usage_examples": {
+    "fetch_all_documents": "fetch(\"/data/api/documents.json\")",
+    "get_revenue_data": "fetch(\"/data/csv/revenue_summary.csv\")",
+    "load_transparency_data": "fetch(\"/data/csv/transparency_data_complete.csv\")"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": {
+    "success": true,
+    "data": {
+      "variables": [
+        {
+          "idVariable": 1,
+          "descripcion": "Reservas Internacionales",
+          "valor": 45000,
+          "fecha": "2025-10-03"
+        },
+        {
+          "idVariable": 4,
+          "descripcion": "Tipo de Cambio Mayorista",
+          "valor": 1050,
+          "fecha": "2025-10-03"
+        },
+        {
+          "idVariable": 7,
+          "descripcion": "Inflación Mensual",
+          "valor": 3.2,
+          "fecha": "2025-10-03"
+        }
+      ]
+    },
+    "source": "BCRA Mock Data"
+  },
+  "source": "bcra",
+  "timestamp": "2025-10-03T03:56:52.346Z"
+}
