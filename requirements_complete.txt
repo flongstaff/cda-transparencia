@@ -22,7 +22,7 @@ opencv-python>=4.5.0
 Pillow>=8.0.0
 
 # Database
-sqlite3
+# sqlite3 (part of Python standard library, no need to install)
 
 # Web Scraping & APIs
 selenium>=4.0.0

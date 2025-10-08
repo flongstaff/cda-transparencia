@@ -7,15 +7,20 @@ main = "worker.js"
 ENVIRONMENT = "production"
 DEBUG = "false"
 
-# Analytics Engine binding
+# Define routes for the worker
+routes = [
+  "https://cda-transparencia.franco-longstaff.workers.dev/*",
+  "https://cda-transparencia.org/api/*"
+]
+
+# CORS configuration
+[cloudflare]
+# Enable CORS headers for all responses
+cors = true
+
 [[analytics_engine_datasets]]
 binding = "ANALYTICS"
 dataset = "transparency_portal_analytics"
-
-# Define routes for the worker
-routes = [
-  "https://cda-transparencia.franco-longstaff.workers.dev/*"
-]
 
 # Compatibility flags for latest features
 [triggers]
