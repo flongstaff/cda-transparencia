@@ -60,7 +60,7 @@ jobs:
           cd frontend
           npm run build:production
         env:
-          VITE_API_URL: "https://api.cda-transparencia.org"
+          VITE_API_URL: "https://cda-transparencia.franco-longstaff.workers.dev"
           VITE_USE_API: "true"
           
       - name: Setup Pages

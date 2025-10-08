@@ -53,7 +53,7 @@ jobs:
           npm run build:production  # Use production build for consistency
         env:
           NODE_ENV: production
-          VITE_API_URL: "https://api.cda-transparencia.org"
+          VITE_API_URL: "https://cda-transparencia.flongstaff.workers.dev"
           VITE_USE_API: "true"
 
       - name: Publish to Cloudflare Pages

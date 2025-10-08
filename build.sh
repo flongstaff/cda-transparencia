@@ -25,18 +25,18 @@ else
 fi
 
 echo "📊 Running data preprocessing..."
-# Use python3 explicitly (more common in CI environments)
-if command -v python3 &> /dev/null; then
-    python3 scripts/generate-data-index.py
-    python3 scripts/transform-processed-data.py
+# Use node to run JavaScript scripts
+if command -v node &> /dev/null; then
+    node scripts/generate-data-index.js
+    node scripts/transform-processed-data.js
 else
-    python scripts/generate-data-index.py
-    python scripts/transform-processed-data.py
+    echo "❌ Node.js is required to run preprocessing scripts"
+    exit 1
 fi
 
 echo "📦 Installing frontend dependencies..."
 cd frontend
-npm install
+npm install --legacy-peer-deps
 
 echo "🏗️  Building frontend..."
 npm run build:production
