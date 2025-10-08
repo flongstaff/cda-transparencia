@@ -13,9 +13,13 @@ node_modules/
 *.swo
 .roo/
 .claude/
-.github/
 .kilocode/
 .qwen/
+
+# GitHub - but keep workflows for GitHub Actions
+.github/
+!.github/workflows/
+!.github/actions/
 
 # OS generated files
 .DS_Store

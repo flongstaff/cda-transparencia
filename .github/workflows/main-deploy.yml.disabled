@@ -1,0 +1,68 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly Sundays
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Setup Python (for backend scripts)
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Install frontend dependencies
+        run: npm ci
+        working-directory: frontend
+
+      - name: Verify glob module is available
+        run: node -e "require('glob'); console.log('glob module is available')"
+
+      - name: Build frontend for GitHub Pages
+        run: npm run build:github
+        working-directory: frontend
+        env:
+          NODE_ENV: production
+
+      - name: Verify build output exists
+        run: |
+          if [ ! -d "frontend/dist" ]; then
+            echo "Build failed: dist directory does not exist"
+            exit 1
+          fi
+          echo "Build successful. Files in dist:"
+          ls -la frontend/dist
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./frontend/dist
+          cname: cda-transparencia.org
+          enable_jekyll: false
+          allow_empty_commit: false
+          keep_files: false
+          force_orphan: true

@@ -1,0 +1,88 @@
+name: Update Data
+on:
+  schedule:
+    - cron: '0 0 * * 1'  # Weekly on Monday at 00:00 UTC
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          cd backend && npm ci
+          pip install -r requirements_complete.txt
+
+      - name: Run data extraction scripts
+        run: |
+          # Run budget PDF parsing
+          node backend/scripts/parse-pdf.js
+          
+          # Run licitaciones scraping
+          node backend/scripts/scrape-licitaciones.js
+          
+          # Run any other data collection scripts
+          npm run extract --if-present
+          
+          # Run Python data processing scripts for the frontend
+          python scripts/generate-data-index.py
+          python scripts/transform-processed-data.py
+
+      - name: Verify data structure
+        run: |
+          ls -la backend/data/structured/
+          ls -la backend/data/
+          ls -la public/data/ || echo "public/data directory does not exist or is empty"
+          echo "Data files created successfully"
+
+      - name: Commit updated data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          
+          # Check if there are changes to commit
+          if ! git diff --staged --quiet; then
+            git commit -m "Automated data update: $(date +'%Y-%m-%d %H:%M:%S UTC')"
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Push changes
+        run: |
+          # Only push if there are commits to push
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Changes detected, pushing to remote..."
+            git push
+          else
+            echo "No changes to push"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run tests
+        run: npm test
+
+      - name: Report status
+        run: |
+          echo "Data update workflow completed successfully"
+          echo "Updated data files for Carmen de Areco Transparency Portal"
