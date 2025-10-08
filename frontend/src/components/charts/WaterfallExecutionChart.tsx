@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Alert, CircularProgress, Box, Typography } from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LabelList } from 'recharts';
+import unifiedDataService from '../../services/UnifiedDataService';
 
 // Props for the Waterfall Execution Chart component
 interface WaterfallExecutionChartProps {
@@ -43,8 +44,8 @@ const WaterfallExecutionChart: React.FC<WaterfallExecutionChartProps> = ({
     queryKey: ['chart-data', 'Waterfall_Execution', year],
     queryFn: async () => {
       try {
-        // Try to load from the chart data service first
-        const rawData = await chartDataService.loadChartData('Waterfall_Execution');
+        // Try to load from the unified data service first
+        const rawData = await unifiedDataService.getChartData('Waterfall_Execution', year || new Date().getFullYear());
         
         if (!rawData || rawData.length === 0) {
           throw new Error('No data returned from service');
