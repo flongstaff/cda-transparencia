@@ -91,6 +91,7 @@ export default defineConfig(({ mode }) => {
       sourcemap: mode === 'development',
       minify: mode === 'production' ? 'terser' : false,
       rollupOptions: {
+        external: ['@deck.gl/widgets'],
         output: {
           manualChunks: {
             vendor: ['react', 'react-dom', 'react-router-dom'],
