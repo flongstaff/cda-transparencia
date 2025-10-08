@@ -40,7 +40,7 @@ jobs:
           
           # Install frontend dependencies
           cd frontend
-          npm ci
+          npm ci --legacy-peer-deps
 
       - name: Build
         run: |
