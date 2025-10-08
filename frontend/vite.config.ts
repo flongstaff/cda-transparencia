@@ -1,3 +1,4 @@
+//// Trigger deployment after @deck.gl/widgets fix
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
@@ -91,6 +92,7 @@ export default defineConfig(({ mode }) => {
       sourcemap: mode === 'development',
       minify: mode === 'production' ? 'terser' : false,
       rollupOptions: {
+        external: ['@deck.gl/widgets'],
         output: {
           manualChunks: {
             vendor: ['react', 'react-dom', 'react-router-dom'],
