@@ -39,7 +39,11 @@ jobs:
       - name: Install frontend dependencies
         run: |
           cd frontend
-          npm ci --legacy-peer-deps
+          npm ci
+          
+      - name: Install script dependencies
+        run: |
+          npm install glob --legacy-peer-deps
           
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -58,7 +62,7 @@ jobs:
       - name: Build frontend for custom domain
         run: |
           cd frontend
-          npm run build:production
+          npm run build:custom-domain
         env:
           VITE_API_URL: "https://cda-transparencia.franco-longstaff.workers.dev"
           VITE_USE_API: "true"
