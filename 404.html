@@ -74,23 +74,46 @@
       <h1>Página no encontrada</h1>
       <p>La página que estás buscando no existe o ha sido movida.</p>
       <div class="spinner" id="spinner"></div>
-      <p><a href="/cda-transparencia/" class="button">Volver a la página principal</a></p>
-      <p>O puedes <a href="/cda-transparencia/">visitar nuestra página de inicio</a>.</p>
+      <p><a href="/" class="button">Volver a la página principal</a></p>
+      <p>O puedes <a href="/">visitar nuestra página de inicio</a>.</p>
     </div>
     <script>
       // For GitHub Pages SPA routing, redirect to index.html for client-side routes
       (function() {
         var path = window.location.pathname;
         var basePath = '/cda-transparencia/';
+        var hostname = window.location.hostname;
         
-        // Check if this looks like a client-side route (not a file extension)
-        if (path !== basePath && path.indexOf('.') === -1 && path.startsWith(basePath)) {
-          // This is likely a client-side route, redirect to index.html
-          // Let the SPA handle the route
-          document.getElementById('spinner').style.display = 'block';
-          setTimeout(function() {
+        // Check if we're on a custom domain (not GitHub Pages)
+        var isCustomDomain = hostname !== 'flongstaff.github.io' && 
+                            hostname !== 'localhost' && 
+                            hostname !== '127.0.0.1';
+        
+        // Handle redirects for custom domain vs GitHub Pages
+        if (isCustomDomain) {
+          // On custom domain, all paths should work from root
+          // But if someone accesses a GitHub Pages style path, redirect to root equivalent
+          if (path.startsWith('/cda-transparencia/')) {
+            var newPath = path.replace('/cda-transparencia/', '/');
+            window.location.replace(newPath + window.location.search + window.location.hash);
+          }
+          // For all other 404s on custom domain, go to home
+          // The SPA router will handle the route appropriately
+        } else {
+          // On GitHub Pages, handle SPA routing
+          // Special case: if we're on the root, redirect to the basePath
+          if (path === '/') {
             window.location.replace(basePath);
-          }, 1000);
+          }
+          // Check if this looks like a client-side route (not a file extension)
+          else if (path !== basePath && path.indexOf('.') === -1 && path.startsWith(basePath)) {
+            // This is likely a client-side route, redirect to index.html
+            // Let the SPA handle the route
+            document.getElementById('spinner').style.display = 'block';
+            setTimeout(function() {
+              window.location.replace(basePath);
+            }, 1000);
+          }
         }
       })();
     </script>
