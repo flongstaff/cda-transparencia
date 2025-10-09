@@ -44,8 +44,8 @@ jobs:
           npm run extract --if-present
           
           # Run Python data processing scripts for the frontend
-          python scripts/generate-data-index.py
-          python scripts/transform-processed-data.py
+          node scripts/generate-data-index.js
+          node scripts/transform-processed-data.js
 
       - name: Verify data structure
         run: |

@@ -52,8 +52,8 @@ jobs:
           
       - name: Run data preprocessing scripts
         run: |
-          python scripts/generate-data-index.py
-          python scripts/transform-processed-data.py
+          node scripts/generate-data-index.js
+          node scripts/transform-processed-data.js
           
       - name: Build frontend for custom domain
         run: |

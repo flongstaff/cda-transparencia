@@ -45,8 +45,8 @@ jobs:
       - name: Build
         run: |
           # Run data preprocessing
-          python scripts/generate-data-index.py
-          python scripts/transform-processed-data.py
+          node scripts/generate-data-index.js
+          node scripts/transform-processed-data.js
           
           # Build frontend for production
           cd frontend
