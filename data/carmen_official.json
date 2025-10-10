@@ -1,0 +1,183 @@
+{
+  "success": true,
+  "data": {
+    "municipality": "Carmen de Areco",
+    "code": "270",
+    "province": "Buenos Aires",
+    "geographic": {
+      "id": "060161",
+      "name": "Carmen de Areco",
+      "province": {
+        "id": "06",
+        "name": "Buenos Aires"
+      },
+      "centroid": {
+        "lat": -34.4067977840705,
+        "lon": -59.884413320764
+      },
+      "fetchedAt": "2025-10-02T08:02:37.348Z"
+    },
+    "financial": {
+      "latest_year": 2024,
+      "total_budget": 357358838,
+      "total_executed": 338214614,
+      "execution_rate": 94.64,
+      "executed_infra": 60623374,
+      "personnel": 165916603,
+      "budget_execution": [
+        [
+          "Q1",
+          "$89M",
+          "$81M",
+          "96%"
+        ],
+        [
+          "Q2",
+          "$89M",
+          "$85M",
+          "100%"
+        ],
+        [
+          "Q3",
+          "$89M",
+          "$85M",
+          "100%"
+        ],
+        [
+          "Q4",
+          "$89M",
+          "$87M",
+          "102%"
+        ]
+      ]
+    },
+    "contracts": {
+      "year": 2024,
+      "contracts": [
+        {
+          "id": "2024-contract-1",
+          "title": "Infrastructure Project 1",
+          "status": "Completed",
+          "budget": 10720765,
+          "executed": 10006047,
+          "completion": "100%",
+          "year": 2024
+        },
+        {
+          "id": "2024-contract-2",
+          "title": "Infrastructure Project 2",
+          "status": "In Progress",
+          "budget": 10720765,
+          "executed": 10006047,
+          "completion": "85%",
+          "year": 2024
+        }
+      ]
+    },
+    "salaries": {
+      "year": 2024,
+      "total_salaries": 165916603,
+      "average_salary": 592559,
+      "employee_count": 305,
+      "salary_breakdown": [
+        [
+          "Administration",
+          "$66M",
+          "40%",
+          "98%"
+        ],
+        [
+          "Operations",
+          "$58M",
+          "35%",
+          "97%"
+        ],
+        [
+          "Healthcare",
+          "$33M",
+          "20%",
+          "96%"
+        ],
+        [
+          "Education",
+          "$8M",
+          "5%",
+          "95%"
+        ]
+      ]
+    },
+    "documents": {
+      "year": 2024,
+      "total_documents": 45,
+      "categories": [
+        {
+          "name": "Budget",
+          "count": 7
+        },
+        {
+          "name": "Contracts",
+          "count": 9
+        },
+        {
+          "name": "Personnel",
+          "count": 7
+        },
+        {
+          "name": "Treasury",
+          "count": 7
+        }
+      ]
+    },
+    "treasury": {
+      "year": 2024,
+      "income": 357358838,
+      "expenses": 338214614,
+      "balance": 19144224,
+      "treasury_movements": [
+        [
+          "January",
+          "$29M",
+          "$24M"
+        ],
+        [
+          "February",
+          "$32M",
+          "$27M"
+        ],
+        [
+          "March",
+          "$29M",
+          "$30M"
+        ]
+      ]
+    },
+    "debt": {
+      "year": 2024,
+      "total_debt": 78618944,
+      "debt_service": 14294354,
+      "debt_by_type": [
+        [
+          "Municipal Bonds",
+          "$43M",
+          "6.5%",
+          "10 years"
+        ],
+        [
+          "Bank Loans",
+          "$25M",
+          "8.0%",
+          "7 years"
+        ],
+        [
+          "Development Bank",
+          "$11M",
+          "5.5%",
+          "15 years"
+        ]
+      ]
+    }
+  },
+  "source": "carmen_official",
+  "timestamp": "2025-10-09T09:00:00.000Z",
+  "cached": true
+}
