@@ -1,6 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 import StandardizedSection from '../ui/StandardizedSection';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface WaterfallDataItem {
   name: string;

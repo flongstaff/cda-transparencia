@@ -6,16 +6,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import {
-  LineChart,
+import { LineChart,
   Line,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
   Legend,
-  ReferenceLine
-} from 'recharts';
+  ReferenceLine, ResponsiveContainer } from 'recharts';
 import { AlertTriangle, TrendingUp, TrendingDown } from 'lucide-react';
 import chartDataService from '../../services/charts/ChartDataService';
 import { formatCurrencyARS, formatPercentage, formatNumberARS, formatQuarter } from '../../utils/spanishFormatter';

@@ -8,6 +8,7 @@ import { useQuery } from '@tanstack/react-query';
 import BudgetExecutionChart from './BudgetExecutionChart';
 import chartDataService from '../../services/charts/ChartDataService';
 import { Alert, CircularProgress, Box, Typography } from '@mui/material';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 // Define the expected data structure
 interface BudgetExecutionData {

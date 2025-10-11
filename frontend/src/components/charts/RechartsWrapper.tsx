@@ -28,6 +28,7 @@ import {
 } from 'recharts';
 import { AlertTriangle, TrendingUp, TrendingDown, Info } from 'lucide-react';
 import chartDataService from '../../services/charts/ChartDataService';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 export type ChartType = 'line' | 'bar' | 'area' | 'pie' | 'scatter';
 

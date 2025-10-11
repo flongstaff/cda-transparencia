@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { RevenueBySource } from '../../services/FinancialDataService';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface RevenueBySourceChartProps {
   data: RevenueBySource;

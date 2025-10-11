@@ -9,6 +9,7 @@ import { AlertCircle } from 'lucide-react';
 import BaseChart, { SupportedChartType } from './BaseChart';
 import { Alert, CircularProgress, Box, Typography } from '@mui/material';
 import chartDataService from '../../services/charts/ChartDataService';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 // Props for the Gender Budgeting Chart component
 interface GenderBudgetingChartProps {

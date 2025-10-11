@@ -15,6 +15,7 @@ import {
   ReferenceLine
 } from 'recharts';
 import dataIntegrationService from '../../services/DataIntegrationService';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 // Utility function for currency formatting
 const formatCurrencyARS = (value: number): string => {

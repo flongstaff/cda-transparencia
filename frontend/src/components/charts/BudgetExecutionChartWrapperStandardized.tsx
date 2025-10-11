@@ -6,6 +6,7 @@ import StandardizedSection from '../ui/StandardizedSection';
 import StandardizedDataDisplay from '../ui/StandardizedDataDisplay';
 import { formatCurrencyARS, formatPercentageARS } from '../../utils/formatters';
 import { TrendingUp, DollarSign, BarChart3 } from 'lucide-react';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 // Props for the Budget Execution Chart wrapper
 interface BudgetExecutionChartWrapperProps {

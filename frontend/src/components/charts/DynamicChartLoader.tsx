@@ -27,6 +27,7 @@ import QuarterlyExecutionChart from './QuarterlyExecutionChart';
 import ProgrammaticPerformanceChart from './ProgrammaticPerformanceChart';
 import GenderBudgetingChart from './GenderBudgetingChart';
 import WaterfallExecutionChart from './WaterfallExecutionChart';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 // Map chart types to components
 interface ChartComponentProps {

@@ -8,6 +8,7 @@ import { useQuery } from '@tanstack/react-query';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
 import chartDataService from '../../services/charts/ChartDataService';
 import { formatCurrencyARS, getColorForExecutionRate, calculateExecutionRate } from '../../utils/parseCsv';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface BarChartDataPoint {
   name: string;

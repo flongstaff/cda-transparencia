@@ -1,5 +1,6 @@
 import React from 'react';
 import UnifiedChart from '../charts/UnifiedChart';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface Props {
   year: number;

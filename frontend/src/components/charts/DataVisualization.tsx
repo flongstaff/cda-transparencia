@@ -14,6 +14,7 @@ import {
   Filler
 } from 'chart.js';
 import { Download, ExternalLink } from 'lucide-react';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 ChartJS.register(
   CategoryScale,

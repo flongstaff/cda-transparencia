@@ -7,6 +7,7 @@
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface ComplianceChartProps {
   complianceData: any;

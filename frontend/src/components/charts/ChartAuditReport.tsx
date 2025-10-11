@@ -61,6 +61,7 @@ import DataService from '../../services/dataService';
 
 import { RedFlagAnalysis } from '../../types/charts';
 import { formatCurrencyARS, formatPercentage, formatQuarter } from '../../utils/spanishFormatter';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 // Props for the Chart Audit Report component
 interface ChartAuditReportProps {

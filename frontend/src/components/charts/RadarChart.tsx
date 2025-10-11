@@ -1,6 +1,7 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
 import StandardizedSection from '../ui/StandardizedSection';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface RadarDataItem {
   subject: string;

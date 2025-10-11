@@ -29,6 +29,7 @@ import {
 } from 'lucide-react';
 import DynamicChartLoader from './DynamicChartLoader';
 import { CHART_TYPES, CHART_TYPE_NAMES, CHART_TYPE_DESCRIPTIONS } from '../../services/charts/ChartDataService';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 // Chart category mapping
 const CHART_CATEGORIES: Record<string, { icon: React.ReactNode; color: string }> = {

@@ -2,6 +2,7 @@ import React from 'react';
 import { ResponsiveTreeMap } from '@nivo/treemap';
 import { formatCurrencyARS } from '../../utils/formatters';
 import StandardizedSection from '../ui/StandardizedSection';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface TreemapNode {
   id: string;

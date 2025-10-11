@@ -8,6 +8,7 @@ import React, { useState, useEffect } from 'react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, AreaChart, Area } from 'recharts';
 import { Users, Activity, Search, Download, Eye, TrendingUp, TrendingDown, Minus, PieChart as PieChartIcon } from 'lucide-react';
 import { monitoringService } from '../../services/monitoringService';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface UserEngagementChartProps {
   period?: string; // '1d' | '7d' | '30d' | '90d'
