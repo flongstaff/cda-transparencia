@@ -1,0 +1,102 @@
+{
+  "files": {
+    "seguimiento-particular-2016.csv": {
+      "datasetId": "acumar_91d85da2-601e-4cba-a444-6ec80404afe7",
+      "datasetTitle": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo (2016-2023)",
+      "fileName": "seguimiento-particular-2016.csv",
+      "format": "CSV",
+      "title": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo - 2016",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91d85da2-601e-4cba-a444-6ec80404afe7/resource/babca927-0f16-4973-8fa8-a5c7f87765f1",
+      "lastProcessed": "2025-10-09T07:57:03.517Z",
+      "status": "processed"
+    },
+    "seguimiento-particular-2017.csv": {
+      "datasetId": "acumar_91d85da2-601e-4cba-a444-6ec80404afe7",
+      "datasetTitle": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo (2016-2023)",
+      "fileName": "seguimiento-particular-2017.csv",
+      "format": "CSV",
+      "title": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo - 2017",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91d85da2-601e-4cba-a444-6ec80404afe7/resource/830c3c6d-8e7e-41f5-93c4-a59c3ac013c9",
+      "lastProcessed": "2025-10-09T07:57:05.946Z",
+      "status": "processed"
+    },
+    "seguimiento-particular-2018.csv": {
+      "datasetId": "acumar_91d85da2-601e-4cba-a444-6ec80404afe7",
+      "datasetTitle": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo (2016-2023)",
+      "fileName": "seguimiento-particular-2018.csv",
+      "format": "CSV",
+      "title": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo - 2018",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91d85da2-601e-4cba-a444-6ec80404afe7/resource/94b40cff-0793-4ba9-818c-aa822b4b5673",
+      "lastProcessed": "2025-10-09T07:57:08.436Z",
+      "status": "processed"
+    },
+    "seguimiento-particular-2019.csv": {
+      "datasetId": "acumar_91d85da2-601e-4cba-a444-6ec80404afe7",
+      "datasetTitle": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo (2016-2023)",
+      "fileName": "seguimiento-particular-2019.csv",
+      "format": "CSV",
+      "title": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo - 2019",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91d85da2-601e-4cba-a444-6ec80404afe7/resource/6cc99a07-a200-4be6-a2ac-ab708ad0b1fc",
+      "lastProcessed": "2025-10-09T07:57:10.945Z",
+      "status": "processed"
+    },
+    "seguimiento-particular-2020.csv": {
+      "datasetId": "acumar_91d85da2-601e-4cba-a444-6ec80404afe7",
+      "datasetTitle": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo (2016-2023)",
+      "fileName": "seguimiento-particular-2020.csv",
+      "format": "CSV",
+      "title": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo - 2020",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91d85da2-601e-4cba-a444-6ec80404afe7/resource/40d657e4-7aa6-49e1-8dfc-368c9b7b7e7b",
+      "lastProcessed": "2025-10-09T07:57:13.413Z",
+      "status": "processed"
+    },
+    "seguimiento-particular-2021.csv": {
+      "datasetId": "acumar_91d85da2-601e-4cba-a444-6ec80404afe7",
+      "datasetTitle": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo (2016-2023)",
+      "fileName": "seguimiento-particular-2021.csv",
+      "format": "CSV",
+      "title": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo - 2021",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91d85da2-601e-4cba-a444-6ec80404afe7/resource/c9921b1f-fb21-4a5f-a6cb-bc6915e5c077",
+      "lastProcessed": "2025-10-09T07:57:15.921Z",
+      "status": "processed"
+    },
+    "seguimiento-particular-2022.csv": {
+      "datasetId": "acumar_91d85da2-601e-4cba-a444-6ec80404afe7",
+      "datasetTitle": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo (2016-2023)",
+      "fileName": "seguimiento-particular-2022.csv",
+      "format": "CSV",
+      "title": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo - 2022",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91d85da2-601e-4cba-a444-6ec80404afe7/resource/fa88a8f2-448f-41d0-b707-d7d4d2e55234",
+      "lastProcessed": "2025-10-09T07:57:18.473Z",
+      "status": "processed"
+    },
+    "seguimiento-particular-2023.csv": {
+      "datasetId": "acumar_91d85da2-601e-4cba-a444-6ec80404afe7",
+      "datasetTitle": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo (2016-2023)",
+      "fileName": "seguimiento-particular-2023.csv",
+      "format": "CSV",
+      "title": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo - 2023",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91d85da2-601e-4cba-a444-6ec80404afe7/resource/d5a33786-eb3d-451b-8db5-fed39b0a7485",
+      "lastProcessed": "2025-10-09T07:57:21.030Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_91d85da2-601e-4cba-a444-6ec80404afe7",
+    "title": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo (2016-2023)",
+    "description": "Datos correspondientes a los establecimientos catalogados por ACUMAR como de \"Seguimiento Particular\"; categoría otorgada a aquellos que requieren de una verificación más exhaustiva por considerarse de mayor relevancia ambiental, por su complejidad intrínseca, por su ubicación geográfica, por el entorno socioambiental en el que se emplazan y/o por la necesidad de intervención de otros organismos para la mejora de la situación existente.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2025-01-07T20:36:30.003896",
+    "modified": "2025-02-07T16:45:11.034291",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección de Fiscalización y Adecuación Ambiental"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/establecimientos-de-seguimiento-particular-en-la-cuenca-matanza-riachuelo-2016-2023"
+  }
+}

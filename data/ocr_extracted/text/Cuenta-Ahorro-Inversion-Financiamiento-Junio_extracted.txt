@@ -1,0 +1,54 @@
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.
+10/07/2025 10:09
+Presupuesto: 2025DE EJECUCION PRESUPUESTARIA 
+02/01/2025 al 30/06/2025
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+I. INGRESOS CORRIENTES
+Ingresos tributarios 2.570.810.664,06
+Contribuciones a la Seguridad Social
+Ingresos no Tributarios 1.363.000.495,26
+Ventas de Bienes y Servicios
+Ingresos de Operación
+Rentas de la Propiedad 7.458.012,84
+Transferencias Corrientes 332.681.336,68
+Contribuciones Figurativas para Financiaciones Corrientes
+TOTAL  INGRESOS CORRIENTES 4.273.950.508,84
+II. GASTOS CORRIENTES
+Gastos de Operación
+Gastos de Consumo 3.877.841.796,99
+Rentas de la Propiedad 834.211,01
+Prestaciones de la Seguridad Social
+Impuestos Directos
+Otras Pérdidas
+Transferencias Corrientes 113.142.436,00
+Gastos Figurativos para Transacciones Corrientes
+TOTAL  GASTOS CORRIENTES 3.991.818.444,00
+III. AHORRO CORRIENTE: (I - II) 282.132.064,84
+Resultado Corriente Primario (Ingresos Corrientes - Gastos Corrientes netos de Int. de la deuda) 282.966.275,85
+IV. RECURSOS DE CAPITAL
+Recursos Propios de Capital
+Transferencias de Capital 351.861.816,88
+Disminución de la Inversión Financiera 3.628.813,06
+Filtro aplicado: Presupuesto: 2025 -  Fechas: 02/01/2025 al 30/06/2025
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 2 de 3 R.A.F.A.M.
+10/07/2025 10:09
+Presupuesto: 2025DE EJECUCION PRESUPUESTARIA 
+02/01/2025 al 30/06/2025
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+Contribuciones Figurativas para Financiaciones de Capital
+TOTAL  RECURSOS DE CAPITAL 355.490.629,94
+V. GASTOS DE CAPITAL
+Inversión Real Directa 462.836.187,47
+Transferencias de Capital 16.076.084,00
+Inversión Financiera 16.344.652,11
+Gastos Figurativos para Transacciones de Capital
+TOTAL  GASTOS DE CAPITAL 495.256.923,58
+VI. INGRESOS TOTALES 4.629.441.138,78
+TOTAL  INGRESOS TOTALES 4.629.441.138,78 4.629.441.138,78
+VII. GASTOS TOTALES 4.487.075.367,58
+TOTAL  GASTOS TOTALES 4.487.075.367,58 4.487.075.367,58
+VIII. RESULTADO FINANCI...

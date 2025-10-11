@@ -1,0 +1,612 @@
+{
+  "files": {
+    "clima-financiero-trimestral_2023_2-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "clima-financiero-trimestral_2023_2-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero en cambio climático segundo trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.285Z",
+      "status": "processed"
+    },
+    "ambiente-financiero-trimestral_2023_2-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ambiente-financiero-trimestral_2023_2-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero en políticas ambientales segundo trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.285Z",
+      "status": "processed"
+    },
+    "ninez-financiero-trimestral_2023_4-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ninez-financiero-trimestral_2023_4-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de niñez cuarto trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.285Z",
+      "status": "processed"
+    },
+    "d-servicio-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "d-servicio-2023.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Servicio Administrativo Financiero 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.285Z",
+      "status": "processed"
+    },
+    "credito-mensual-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "credito-mensual-2023.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación mensual 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.285Z",
+      "status": "processed"
+    },
+    "recursos-mensual-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "recursos-mensual-2023.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación mensual 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.285Z",
+      "status": "processed"
+    },
+    "d-apertura-programatica-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "d-apertura-programatica-2023.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Apertura Programática 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.285Z",
+      "status": "processed"
+    },
+    "d-fuente-financiamiento-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "d-fuente-financiamiento-2023.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Fuente de Financiamiento 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.285Z",
+      "status": "processed"
+    },
+    "d-institucion-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "d-institucion-2023.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Institución 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.285Z",
+      "status": "processed"
+    },
+    "d-sector-institucional-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "d-sector-institucional-2023.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Sector Institucional 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.285Z",
+      "status": "processed"
+    },
+    "d-rubro-recurso-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "d-rubro-recurso-2023.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Rubro del recurso 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.286Z",
+      "status": "processed"
+    },
+    "etiqueta-medicion-fisico-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "etiqueta-medicion-fisico-2023.zip",
+      "format": "ZIP",
+      "title": "Etiquetas de medicion física anual 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.286Z",
+      "status": "processed"
+    },
+    "etiqueta-medicion-financiero-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "etiqueta-medicion-financiero-2023.zip",
+      "format": "ZIP",
+      "title": "Etiquetas de medicion financiera anual 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.286Z",
+      "status": "processed"
+    },
+    "credito-anual-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "credito-anual-2023.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación anual 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.286Z",
+      "status": "processed"
+    },
+    "recursos-anual-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "recursos-anual-2023.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación anual 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.286Z",
+      "status": "processed"
+    },
+    "d-clasificador-economico-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "d-clasificador-economico-2023.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Clasificador económico 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.286Z",
+      "status": "processed"
+    },
+    "d-finalidad-funcion-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "d-finalidad-funcion-2023.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Finalidad y Función 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.286Z",
+      "status": "processed"
+    },
+    "d-objeto-gasto-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "d-objeto-gasto-2023.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Objeto del gasto 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.286Z",
+      "status": "processed"
+    },
+    "d-ubicacion-geografica-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "d-ubicacion-geografica-2023.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Ubicación geográfica 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.286Z",
+      "status": "processed"
+    },
+    "ninez-metas-trimestral_2023_1-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ninez-metas-trimestral_2023_1-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de niñez primer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.286Z",
+      "status": "processed"
+    },
+    "ninez-financiero-trimestral_2023_1-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ninez-financiero-trimestral_2023_1-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de niñez primer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.286Z",
+      "status": "processed"
+    },
+    "genero-metas-trimestral_2023_1-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "genero-metas-trimestral_2023_1-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de género primer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.287Z",
+      "status": "processed"
+    },
+    "genero-financiero-trimestral_2023_1-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "genero-financiero-trimestral_2023_1-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de género primer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.287Z",
+      "status": "processed"
+    },
+    "discapacidad-metas-trimestral_2023_4-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "discapacidad-metas-trimestral_2023_4-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico del gasto vinculado a la atención de personas con discapacidad cuarto trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.287Z",
+      "status": "processed"
+    },
+    "discapacidad-financiero-trimestral_2023_4-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "discapacidad-financiero-trimestral_2023_4-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero del gasto vinculado a la atención de personas con discapacidad cuarto trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.287Z",
+      "status": "processed"
+    },
+    "clima-metas-trimestral_2023_1-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "clima-metas-trimestral_2023_1-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico en políticas ambientales y atención del cambio climático primer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.287Z",
+      "status": "processed"
+    },
+    "clima-financiero-trimestral_2023_1-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "clima-financiero-trimestral_2023_1-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero en políticas ambientales y atención del cambio climático primer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.287Z",
+      "status": "processed"
+    },
+    "discapacidad-metas-trimestral_2023_2-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "discapacidad-metas-trimestral_2023_2-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de discapacidad segundo trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.287Z",
+      "status": "processed"
+    },
+    "discapacidad-financiero-trimestral_2023_2-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "discapacidad-financiero-trimestral_2023_2-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de discapacidad segundo trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.288Z",
+      "status": "processed"
+    },
+    "discapacidad-metas-trimestral_2023_3-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "discapacidad-metas-trimestral_2023_3-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de discapacidad tercer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.288Z",
+      "status": "processed"
+    },
+    "discapacidad-financiero-trimestral_2023_3-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "discapacidad-financiero-trimestral_2023_3-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de discapacidad tercer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.288Z",
+      "status": "processed"
+    },
+    "ninez-financiero-trimestral_2023_3-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ninez-financiero-trimestral_2023_3-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de niñez tercer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.288Z",
+      "status": "processed"
+    },
+    "ninez-metas-trimestral_2023_4-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ninez-metas-trimestral_2023_4-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de niñez cuarto trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.288Z",
+      "status": "processed"
+    },
+    "discapacidad-metas-trimestral_2023_1-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "discapacidad-metas-trimestral_2023_1-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de discapacidad primer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.288Z",
+      "status": "processed"
+    },
+    "discapacidad-financiero-trimestral_2023_1-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "discapacidad-financiero-trimestral_2023_1-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de discapacidad primer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.289Z",
+      "status": "processed"
+    },
+    "genero-metas-trimestral_2023_3-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "genero-metas-trimestral_2023_3-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de género tercer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.289Z",
+      "status": "processed"
+    },
+    "genero-financiero-trimestral_2023_3-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "genero-financiero-trimestral_2023_3-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de género tercer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.289Z",
+      "status": "processed"
+    },
+    "ambiente-metas-trimestral_2023_3-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ambiente-metas-trimestral_2023_3-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico en políticas ambientales tercer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.289Z",
+      "status": "processed"
+    },
+    "clima-financiero-trimestral_2023_3-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "clima-financiero-trimestral_2023_3-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero en cambio climático tercer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.289Z",
+      "status": "processed"
+    },
+    "ambiente-financiero-trimestral_2023_3-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ambiente-financiero-trimestral_2023_3-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero en políticas ambientales tercer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.289Z",
+      "status": "processed"
+    },
+    "ambiente-metas-trimestral_2023_4-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ambiente-metas-trimestral_2023_4-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico en políticas ambientales cuarto trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.290Z",
+      "status": "processed"
+    },
+    "clima-financiero-trimestral_2023_4-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "clima-financiero-trimestral_2023_4-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero en cambio climático cuarto trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.290Z",
+      "status": "processed"
+    },
+    "ambiente-financiero-trimestral_2023_4-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ambiente-financiero-trimestral_2023_4-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero en políticas ambientales cuarto trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.290Z",
+      "status": "processed"
+    },
+    "pc-proy23-finfun-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "pc-proy23-finfun-2023.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto Finalidad Función 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.290Z",
+      "status": "processed"
+    },
+    "pc-proy23-finrecursosxrubro-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "pc-proy23-finrecursosxrubro-2023.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto de Recursos 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.290Z",
+      "status": "processed"
+    },
+    "pc-proy23-finxaperprog-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "pc-proy23-finxaperprog-2023.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto de Gastos por Apertura Programatica 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.290Z",
+      "status": "processed"
+    },
+    "pc-proy23-finxobjdelgasto-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "pc-proy23-finxobjdelgasto-2023.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto de Gastos por Partida Presupuestaria 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.290Z",
+      "status": "processed"
+    },
+    "pc-proy23-metasfisicas-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "pc-proy23-metasfisicas-2023.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto Metas Físicas 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.291Z",
+      "status": "processed"
+    },
+    "genero-metas-trimestral_2023_2-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "genero-metas-trimestral_2023_2-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de género segundo trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.291Z",
+      "status": "processed"
+    },
+    "genero-financiero-trimestral_2023_2-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "genero-financiero-trimestral_2023_2-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de género segundo trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.291Z",
+      "status": "processed"
+    },
+    "ninez-metas-trimestral_2023_2-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ninez-metas-trimestral_2023_2-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de niñez segundo trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.291Z",
+      "status": "processed"
+    },
+    "ninez-financiero-trimestral_2023_2-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ninez-financiero-trimestral_2023_2-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de niñez segundo trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.291Z",
+      "status": "processed"
+    },
+    "ambiente-metas-trimestral_2023_2-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ambiente-metas-trimestral_2023_2-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico en políticas ambientales segundo trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.291Z",
+      "status": "processed"
+    },
+    "mapeo-interanual-partidas-gasto-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "mapeo-interanual-partidas-gasto-2023.zip",
+      "format": "ZIP",
+      "title": "Mapeo Jurisdiccional 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.291Z",
+      "status": "processed"
+    },
+    "ninez-metas-trimestral_2023_3-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ninez-metas-trimestral_2023_3-2023.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de niñez tercer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.292Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-trimestre-1-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ejecucion-fisica-trimestre-1-2023.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física primer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.292Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-trimestre-2-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ejecucion-fisica-trimestre-2-2023.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física segundo trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.292Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-trimestre-3-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ejecucion-fisica-trimestre-3-2023.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física tercer trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.292Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-trimestre-4-2023.zip": {
+      "datasetId": "sspre_2023",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2023.",
+      "fileName": "ejecucion-fisica-trimestre-4-2023.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física cuarto trimestre 2023",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.292Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspre_2023",
+    "title": "Presupuesto de la Administración Pública Nacional 2023.",
+    "description": "Créditos y Recursos de la Administración Pública Nacional del ejercicio 2023.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2022-12-19T03:00:00Z",
+    "modified": "2024-06-30T03:00:00Z",
+    "publisher": {
+      "mbox": "info@presupuestoabierto.gob.ar",
+      "name": "Ministerio de Economía. Secretaría de Hacienda. Subsecretaría de Presupuesto."
+    },
+    "landingPage": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos"
+  }
+}

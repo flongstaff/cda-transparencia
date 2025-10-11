@@ -1,0 +1,62 @@
+{
+  "files": {
+    "arg_def_15_21.rar": {
+      "datasetId": "salud_c1643775-18e1-40fd-9e7f-0cebb5b1abe6",
+      "datasetTitle": "Defunciones Generales Mensuales ocurridas y registradas en la República Argentina.",
+      "fileName": "arg_def_15_21.rar",
+      "format": "RAR",
+      "title": "Defunciones mensuales ocurridas en la República Argentina 2015-2021",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c1643775-18e1-40fd-9e7f-0cebb5b1abe6/resource/41691186-72d2-4c3b-a353-7e93fd50a7ed",
+      "lastProcessed": "2025-10-09T06:37:43.531Z",
+      "status": "processed"
+    },
+    "defunciones-generales-mensuales_2021.pdf": {
+      "datasetId": "salud_c1643775-18e1-40fd-9e7f-0cebb5b1abe6",
+      "datasetTitle": "Defunciones Generales Mensuales ocurridas y registradas en la República Argentina.",
+      "fileName": "defunciones-generales-mensuales_2021.pdf",
+      "format": "PDF",
+      "title": "Infomación de defunciones mensuales ocurridas en la República Argentina 2015-2021",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c1643775-18e1-40fd-9e7f-0cebb5b1abe6/resource/9b760561-83e3-460b-a2c3-4f092da872bd",
+      "lastProcessed": "2025-10-09T06:37:48.350Z",
+      "status": "processed"
+    },
+    "arg_def_m_15_22.csv": {
+      "datasetId": "salud_c1643775-18e1-40fd-9e7f-0cebb5b1abe6",
+      "datasetTitle": "Defunciones Generales Mensuales ocurridas y registradas en la República Argentina.",
+      "fileName": "arg_def_m_15_22.csv",
+      "format": "CSV",
+      "title": "Defunciones mensuales ocurridas en la República Argentina 2015-2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c1643775-18e1-40fd-9e7f-0cebb5b1abe6/resource/5b21a088-3c04-4fdd-8741-82ab6add2730",
+      "lastProcessed": "2025-10-09T06:37:52.439Z",
+      "status": "processed"
+    },
+    "base_def_23_men.csv": {
+      "datasetId": "salud_c1643775-18e1-40fd-9e7f-0cebb5b1abe6",
+      "datasetTitle": "Defunciones Generales Mensuales ocurridas y registradas en la República Argentina.",
+      "fileName": "base_def_23_men.csv",
+      "format": "CSV",
+      "title": "Defunciones mensuales 2023 (Datos Deis)",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c1643775-18e1-40fd-9e7f-0cebb5b1abe6/resource/615c454b-c02c-4011-b55a-86e8a28167bf",
+      "lastProcessed": "2025-10-09T06:37:56.453Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_c1643775-18e1-40fd-9e7f-0cebb5b1abe6",
+    "title": "Defunciones Generales Mensuales ocurridas y registradas en la República Argentina.",
+    "description": "Cantidad de defunciones Generales Mensuales ocurridas y registradas en la República Argentina.  Incluye Variables Sociodemográficas: Región, jurisdicción, año y mes de defunción, mes de defunción, año de defunción, sexo, grupo etario, causa de defunción, y cantidad",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2022-07-02T00:16:22.833991",
+    "modified": "2023-06-30T13:49:52.320607",
+    "publisher": {
+      "mbox": "karloia555@gmail.com",
+      "name": "Ministerio de Salud de la Nación"
+    },
+    "landingPage": "https://www.argentina.gob.ar/salud/deis"
+  }
+}

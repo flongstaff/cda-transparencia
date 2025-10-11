@@ -1,0 +1,63 @@
+{
+  "file_name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_9.csv",
+  "row_count": 3,
+  "column_count": 9,
+  "columns": [
+    "Unnamed: 0",
+    "Unnamed: 1",
+    "Recurso",
+    "Unnamed: 2",
+    "Unnamed: 3",
+    "Unnamed: 4",
+    "Dif. entre Recursos",
+    "Dif. entre",
+    "Dif. entre.1"
+  ],
+  "sample_data": [
+    {
+      "Unnamed: 0": "Rubro - Descripción",
+      "Unnamed: 1": "Procedencia",
+      "Recurso": NaN,
+      "Unnamed: 2": "Modifica",
+      "Unnamed: 3": "Recurso",
+      "Unnamed: 4": "Recurso",
+      "Dif. entre Recursos": NaN,
+      "Dif. entre": NaN,
+      "Dif. entre.1": NaN
+    },
+    {
+      "Unnamed: 0": NaN,
+      "Unnamed: 1": NaN,
+      "Recurso": "Estimado",
+      "Unnamed: 2": "Vigente yciones",
+      "Unnamed: 3": "Vigente",
+      "Unnamed: 4": "Devengado",
+      "Dif. entre Recursos": "Vigente y Percibido",
+      "Dif. entre": "Devengado y",
+      "Dif. entre.1": NaN
+    },
+    {
+      "Unnamed: 0": NaN,
+      "Unnamed: 1": NaN,
+      "Recurso": NaN,
+      "Unnamed: 2": NaN,
+      "Unnamed: 3": NaN,
+      "Unnamed: 4": NaN,
+      "Dif. entre Recursos": "Devengado",
+      "Dif. entre": "Percibido",
+      "Dif. entre.1": "Percibido"
+    }
+  ],
+  "data_types": {
+    "Unnamed: 0": "object",
+    "Unnamed: 1": "object",
+    "Recurso": "object",
+    "Unnamed: 2": "object",
+    "Unnamed: 3": "object",
+    "Unnamed: 4": "object",
+    "Dif. entre Recursos": "object",
+    "Dif. entre": "object",
+    "Dif. entre.1": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

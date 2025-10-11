@@ -1,0 +1,13 @@
+{
+  "file_name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2.pdf",
+  "file_hash": "9dfc9719467ef9f3eb76c398d0cc5087",
+  "page_count": 2,
+  "text_length": 6040,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS\nEjercicio: Hoja: 1 de 2R.A.F.A.M.\n19/09/2023 10:08\nDel 02/01/2023 al 31/03/2023(POR FINALIDAD Y FUNCIÓN)\n 2023\nDevengado \nno pagado Crédito \nDisponible Pagado Devengado Compromiso Preventivo Crédito \nVigente Modifica \nciones Crédito \nAprobado Finalidades y FuncionesCrédito Vig. \n- Devengado \n100 - Administración Gubernamental\n120 Judicial 5.094.516,82 207.244,24 5.301.761,06 0,00 2.246.294,66 2.246.294,66 2.039.294,66 3.055.466,40 207,000.00 3.055.466,40\n130 Dirección superior ejecutiva 61.178.742,20 15.558.756,20 76.737.498,40 1.737.226,28 22.182.180,89 21.186.010,89 19.387.811,67 52.818.091,23 1,798,199.22 55.551.487,51\n150 Relaciones interiores 15.680.462,98 0,00 15.680.462,98 892.712,18 2.845.898,30 1.771.731,63 1.729.554,30 11.941.852,50 42,177.33 13.908.731,35\n160 Administración Fiscal 94.522.032,49 0,00 94.522.032,49 2.039.657,57 38.319.539,57 37.382.103,57 31.951.500,44 54.162.835,35 5,430,603.13 57.139.928,92\n   Total  Administración Gubernamental 7.477.979,68 129.655.614,18 121.978.245,48 55.108.161,07 62.586.140,75 65.593.913,42 4.669.596,03 192.241.754,93 15.766.000,44 176.475.754,49\n200 - Servicios de seguridad\n210 Seguridad interior 36.033.673,00 1.588.014,92 37.621.687,92 2.998.416,13 22.230.385,93 21.543.185,93 19.053.136,61 12.392.885,86 2,490,049.32 16.078.501,99\n   Total  Servicios de seguridad 2.490.049,32 16.078.501,99 12.392.885,86 19.053.136,61 21.543.185,93 22.230.385,93 2.998.416,13 37.621.687,92 1.588.014,92 36.033.673,00\n300 - Servicios sociales\n310 Salud 75.611.190,09 1.330.464,34 76.941.654,43 5.330.824,34 32.826.388,54 28.949.671,86 24.653.031,88 38.784.441,55 4,296,639.98 47.991.982,57\n320 Promoción y asistencia social 43.961.684,27 9.405.696,37 53.367.380,64 1.050.969,67 18.465.850,06 18.318.615,06 17.101.528,28 33.850.560,91 1,217,086.78 35.048.765,58\n330 Seguridad social 19.438.371,78 2.702.519,72 22.140.891,50 345.350,00 8.553.111,94 8.074.423,94 7.156.06...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:41.640725"
+}

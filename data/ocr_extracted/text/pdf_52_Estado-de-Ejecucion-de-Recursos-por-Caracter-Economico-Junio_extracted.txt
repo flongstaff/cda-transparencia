@@ -1,0 +1,38 @@
+R.A.F.A.M.
+ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 3
+26/08/202412:46
+Municipalidad de
+Carmen de Areco Del 02/01/2024 al 30/06/2024 Ejercicio: 2024(POR CARACTER ECONÓMICO)
+CONSOLIDADO
+Descripción ModificacionesRecurso
+EstimadoRecurso
+VigenteRecurso
+DevengadoDif. entre
+Vigente y
+DevengadoRecursos
+PercibidoDif. entre
+Devengado y
+Percibido
+RECURSOS
+INGRESOS CORRIENTES
+Ingresos tributarios
+Impuestos provinciales y nacionales 2.366.975.383,01 50.014.728,20 2.416.990.111,21 1.437.505.792,39 979.484.318,82 1.437.505.792,39 0,00
+Otros impuestos 272.693.746,34 24.945.455,36 297.639.201,70 159.223.198,17 138.416.003,53 149.354.823,28 9.868.374,89
+2.639.669.129,35 74.960.183,56 2.714.629.312,91 1.596.728.990,56 1.117.900.322,35 1.586.860.615,67 9.868.374,89 TotalIngresos tributarios
+Ingresos no tributarios
+Tasas 1.156.536.291,27 38.007.938,07 1.194.544.229,34 875.061.712,21 319.482.517,13 368.043.351,26 507.018.360,95
+Derechos 229.832.680,39 1.971.979,84 231.804.660,23 31.043.343,16 200.761.317,07 31.700.696,23 -657.353,07
+Otros no tributarios 280.175.468,34 466.520,56 280.641.988,90 127.340.327,61 153.301.661,29 127.340.327,61 0,00
+1.666.544.440,00 40.446.438,47 1.706.990.878,47 1.033.445.382,98 673.545.495,49 527.084.375,10 506.361.007,88 TotalIngresos no tributarios
+Rentas de la propiedad
+Intereses
+Intereses internos
+Intereses por depósitos 260.166.770,67 0,00 260.166.770,67 2.041.618,01 258.125.152,66 2.041.618,01 0,00
+260.166.770,67 0,00 260.166.770,67 2.041.618,01 258.125.152,66 2.041.618,01 0,00 Total Intereses internos
+260.166.770,67 0,00 260.166.770,67 2.041.618,01 258.125.152,66 2.041.618,01 0,00 Total Intereses
+260.166.770,67 0,00 260.166.770,67 2.041.618,01 258.125.152,66 2.041.618,01 0,00 TotalRentas de la propiedad
+Transferencias Corrientes
+Del sector privado
+De empresas privadas 0,00 1.374.366,67 1.374.366,67 1.374.366,67 0,00 1.374.366,67 0,00
+0,00 1.374.366,67 1.374.366,67 1.374.366,67 0,00 1.374.366,67 0,00 Total Del sector privado
+Del sector ...

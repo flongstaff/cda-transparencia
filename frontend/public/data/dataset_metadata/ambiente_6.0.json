@@ -1,0 +1,71 @@
+{
+  "files": {
+    "ATMpm10_2023_nuevo": {
+      "datasetId": "ambiente_6.0",
+      "datasetTitle": "Calidad del aire",
+      "fileName": "ATMpm10_2023_nuevo",
+      "format": "CSV",
+      "title": "Emisiones de PM10. Promedio mensual. Año 2023",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=2&stid=6&did=420",
+      "lastProcessed": "2025-10-09T06:57:31.362Z",
+      "status": "processed"
+    },
+    "AtC_estaciones_monitoreo_2023": {
+      "datasetId": "ambiente_6.0",
+      "datasetTitle": "Calidad del aire",
+      "fileName": "AtC_estaciones_monitoreo_2023",
+      "format": "CSV",
+      "title": "Estaciones de medición de calidad de aire",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=2&stid=6&did=240",
+      "lastProcessed": "2025-10-09T06:57:32.688Z",
+      "status": "processed"
+    },
+    "AtC_ODS_1162_equipos": {
+      "datasetId": "ambiente_6.0",
+      "datasetTitle": "Calidad del aire",
+      "fileName": "AtC_ODS_1162_equipos",
+      "format": "CSV",
+      "title": "Cantidad de equipos disponibles para medición de calidad de aire en ciudades de más de 300.000 habitantes.",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=2&stid=6&did=239",
+      "lastProcessed": "2025-10-09T06:57:34.015Z",
+      "status": "processed"
+    },
+    "AtC_tendencias_paramet_acumar": {
+      "datasetId": "ambiente_6.0",
+      "datasetTitle": "Calidad del aire",
+      "fileName": "AtC_tendencias_paramet_acumar",
+      "format": "CSV",
+      "title": "Tendencias y variabilidad horaria de parámetros medidos en las estaciones de monitoreo continuo-CMR",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=2&stid=6&did=278",
+      "lastProcessed": "2025-10-09T06:57:35.375Z",
+      "status": "processed"
+    },
+    "AtAAumbrales_referencia1973": {
+      "datasetId": "ambiente_6.0",
+      "datasetTitle": "Calidad del aire",
+      "fileName": "AtAAumbrales_referencia1973",
+      "format": "CSV",
+      "title": "Umbrales de referencia establecidos por la Ley Nacional N.° 20284",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=2&stid=6&did=237",
+      "lastProcessed": "2025-10-09T06:57:36.632Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_6.0",
+    "title": "Calidad del aire",
+    "description": "Muestra parámetros y estaciones de calidad del aire",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2021-12-31T00:00:00",
+    "modified": "2021-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

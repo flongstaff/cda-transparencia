@@ -1,0 +1,20 @@
+Municipalidad de
+Carmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS
+Ejercicio 
+:Hoja: 1 de 1 R.A.F.A.M.
+20/09/2023 08:41
+Del 01/07/2022 al 30/09/20222022
+Devengado 
+no pagado Crédito 
+Disponible Pagado Devengado Compromiso Preventivo Crédito 
+Vigente Modifica 
+ciones Crédito 
+Aprobado Crédito Vig. 
+- Devengado Fuente de Financiamiento
+110 - Tesoro Municipal 588.042.625,00 0,00 588.042.625,00 6.973.667,10 221.166.989,94 203.892.847,36 202.641.963,91 1.250.883,45
+131 - Rec. Afec. Espec. - De origen municipal 14.431.878,00 589.163,85 15.021.041,85 65.259,16 1.249.498,91 1.449.498,91 1.166.485,21 283.013,70
+132 - Rec. Afec. Espec. - De origen provincial 118.483.043,00 47.978.733,57 166.461.776,57 54.204.966,99 70.017.685,14 85.219.847,84 84.370.956,59 848.891,25
+133 - Rec. Afec. Espec. - De origen nacional 0,00 96.199.480,28 96.199.480,28 -47.497.571,39 226.715.312,17 115.737.924,51 109.884.026,03 5.853.898,48
+140 - Transferencias internas 0,00 0,00 0,00 0,00 157.435,00 157.435,00 157.435,00 0,00
+865.724.923,70 13.746.321,86 519.306.921,16 406.457.553,62 398.220.866,74 8.236.686,88 TOTALES GENERALES 720.957.546,00 144.767.377,70
+Filtro aplicado: Ejercicio: 2022 -  Fechas: 01/07/2022 al 30/09/2022

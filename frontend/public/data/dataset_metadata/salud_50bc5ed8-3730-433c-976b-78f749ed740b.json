@@ -1,0 +1,62 @@
+{
+  "files": {
+    "casos-chagas-agudos-vectoriales-notificados-confirmados (1).csv": {
+      "datasetId": "salud_50bc5ed8-3730-433c-976b-78f749ed740b",
+      "datasetTitle": "Vigilancia de Chagas agudo vectorial",
+      "fileName": "casos-chagas-agudos-vectoriales-notificados-confirmados (1).csv",
+      "format": "CSV",
+      "title": "Vigilancia de Chagas agudo vectorial",
+      "accessURL": "http://datos.salud.gob.ar/dataset/50bc5ed8-3730-433c-976b-78f749ed740b/resource/2c72e717-0ca9-4aad-a674-79e4bc132ebe",
+      "lastProcessed": "2025-10-09T06:38:00.532Z",
+      "status": "processed"
+    },
+    "informacion-publica-chagas-vectorial-nacional-hasta-20220309.xlsx": {
+      "datasetId": "salud_50bc5ed8-3730-433c-976b-78f749ed740b",
+      "datasetTitle": "Vigilancia de Chagas agudo vectorial",
+      "fileName": "informacion-publica-chagas-vectorial-nacional-hasta-20220309.xlsx",
+      "format": "XLSX",
+      "title": "Vigilancia de chagas vectorial hasta el 3 de Marzo de 2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/50bc5ed8-3730-433c-976b-78f749ed740b/resource/45565d3b-90a8-426d-ae95-04054318798f",
+      "lastProcessed": "2025-10-09T06:38:00.532Z",
+      "status": "processed"
+    },
+    "informacion-publica-chagas-vectorial-nacional-hasta-20220905.xlsx": {
+      "datasetId": "salud_50bc5ed8-3730-433c-976b-78f749ed740b",
+      "datasetTitle": "Vigilancia de Chagas agudo vectorial",
+      "fileName": "informacion-publica-chagas-vectorial-nacional-hasta-20220905.xlsx",
+      "format": "XLSX",
+      "title": "Vigilancia de chagas vectorial hasta el 5 de Septiembre de 2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/50bc5ed8-3730-433c-976b-78f749ed740b/resource/5be348a7-5459-4d6d-a337-fd83bc76d2eb",
+      "lastProcessed": "2025-10-09T06:38:00.532Z",
+      "status": "processed"
+    },
+    "casos-chagas-agudos-vectoriales-notificados-confirmados_-_2022.xlsx": {
+      "datasetId": "salud_50bc5ed8-3730-433c-976b-78f749ed740b",
+      "datasetTitle": "Vigilancia de Chagas agudo vectorial",
+      "fileName": "casos-chagas-agudos-vectoriales-notificados-confirmados_-_2022.xlsx",
+      "format": "XLSX",
+      "title": "Vigilancia de Chagas agudo vectorial 2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/50bc5ed8-3730-433c-976b-78f749ed740b/resource/a3a55c05-3663-4147-8ed1-895dfefe82eb",
+      "lastProcessed": "2025-10-09T06:38:00.532Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_50bc5ed8-3730-433c-976b-78f749ed740b",
+    "title": "Vigilancia de Chagas agudo vectorial",
+    "description": "Datos correspondientes al Registro Sistema Nacional de Vigilancia de la Salud 2.0 a partir del año 1996\r\n",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2018-07-27T10:08:14.046176",
+    "modified": "2023-08-30T01:56:43.551540",
+    "publisher": {
+      "mbox": "areavigilanciamsal@gmail.com",
+      "name": "Ministerio de Salud. Secretaría de Promoción de la Salud, Prevención y Control de Riesgos. Subsecretaría de Prevención y Control de Enfermedades Comunicables e Inmunoprevenibles. Dirección Nacional de Epidemiología y Análisis de la Situación de Salud. Área de Vigilancia."
+    },
+    "landingPage": "https://www.argentina.gob.ar/salud/epidemiologia/boletinesepidemiologicos"
+  }
+}

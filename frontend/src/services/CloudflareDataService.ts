@@ -61,6 +61,11 @@ class CloudflareDataService {
    * Determine the appropriate Cloudflare worker URL based on environment
    */
   private getWorkerProxyUrl(): string {
+    // Use environment variable if available
+    if (typeof window !== 'undefined' && process.env.VITE_API_URL) {
+      return process.env.VITE_API_URL.replace('/api', ''); // Remove /api suffix to get base URL
+    }
+    
     if (typeof window !== 'undefined') {
       const hostname = window.location.hostname;
       
@@ -377,6 +382,9 @@ class CloudflareDataService {
     if (fileName.includes('treasury')) return 'treasury';
     if (fileName.includes('debt')) return 'debt';
     if (fileName.includes('summary')) return 'summary';
+    if (fileName.includes('sitemap')) return 'sitemap';
+    if (fileName.includes('main-data')) return 'main-data';
+    if (fileName.includes('main')) return 'main'; // Additional check for 'main' in filename
     
     // Default to the second-to-last part as type (for paths like data/consolidated/2024/budget.json)
     return pathParts[pathParts.length - 2] || 'general';

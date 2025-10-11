@@ -1,0 +1,312 @@
+{
+  "files": {
+    "precios-eess-2025-.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2025-.csv",
+      "format": "CSV",
+      "title": "Precios EESS Diciembre2024-2025",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/3cbdd364-a12c-46b7-b791-dd8e8bcfb32d",
+      "lastProcessed": "2025-10-09T06:20:56.307Z",
+      "status": "processed"
+    },
+    "precios-eess-2024.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2024.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2024",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/6472fd51-2e61-4a40-aeef-acede56e5578",
+      "lastProcessed": "2025-10-09T06:20:57.855Z",
+      "status": "processed"
+    },
+    "precios-eess-2023.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2023.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2023",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/517a3213-e3fd-447c-899b-6ba54fe511d7",
+      "lastProcessed": "2025-10-09T06:21:01.771Z",
+      "status": "processed"
+    },
+    "precios-eess-2022.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2022.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2022",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/d3c9d1b5-fb89-4d2e-9303-f649e6a93506",
+      "lastProcessed": "2025-10-09T06:21:04.839Z",
+      "status": "processed"
+    },
+    "precios-eess-2021.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2021.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2021",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/07c9d10f-fd2b-4962-b96b-6e04a5c60b67",
+      "lastProcessed": "2025-10-09T06:21:07.878Z",
+      "status": "processed"
+    },
+    "precios-eess-2020.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2020.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2020",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/15067e62-47ad-4a26-a2c8-daeecb7ac043",
+      "lastProcessed": "2025-10-09T06:21:11.662Z",
+      "status": "processed"
+    },
+    "precios-eess-2019.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2019.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2019",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/51bda70a-199b-4499-84ff-76ef63c01040",
+      "lastProcessed": "2025-10-09T06:21:15.125Z",
+      "status": "processed"
+    },
+    "precios-eess-2018.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2018.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2018",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/b35744f0-909d-42cc-b7a5-cc0ca3ba4377",
+      "lastProcessed": "2025-10-09T06:21:18.123Z",
+      "status": "processed"
+    },
+    "precios-eess-2017.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2017.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2017",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/d0d01143-fb95-4ee4-993e-0ff178e33aa8",
+      "lastProcessed": "2025-10-09T06:21:21.052Z",
+      "status": "processed"
+    },
+    "precios-eess-2016.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2016.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2016",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/90a3b870-f25b-4cf3-ab0f-d3ea76a1c371",
+      "lastProcessed": "2025-10-09T06:21:24.371Z",
+      "status": "processed"
+    },
+    "precios-eess-2015.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2015.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2015",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/71491e1e-0a19-402c-a93c-3e8ee776654c",
+      "lastProcessed": "2025-10-09T06:21:25.628Z",
+      "status": "processed"
+    },
+    "precios-eess-2014.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2014.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2014",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/d80df148-d3fe-43c3-a72a-2bc7e209440a",
+      "lastProcessed": "2025-10-09T06:21:27.246Z",
+      "status": "processed"
+    },
+    "precios-eess-2013.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2013.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2013",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/84ad5396-d1ff-4d4c-9912-17807ce76eba",
+      "lastProcessed": "2025-10-09T06:21:28.983Z",
+      "status": "processed"
+    },
+    "precios-eess-2012.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2012.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2012",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/0952fcff-d7b9-4f71-8452-574aa13d8669",
+      "lastProcessed": "2025-10-09T06:21:30.330Z",
+      "status": "processed"
+    },
+    "precios-eess-2011.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2011.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2011",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/ee2465fe-8e86-4a5c-96a4-74ba52bc077a",
+      "lastProcessed": "2025-10-09T06:21:31.758Z",
+      "status": "processed"
+    },
+    "precios-eess-2010.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2010.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2010",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/b24ffb36-65c2-44c1-ab23-886616aa1e79",
+      "lastProcessed": "2025-10-09T06:21:34.041Z",
+      "status": "processed"
+    },
+    "precios-eess-2009.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2009.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/ef921324-7cdc-48fb-98af-ebb8dc4d93ed",
+      "lastProcessed": "2025-10-09T06:21:35.299Z",
+      "status": "processed"
+    },
+    "precios-eess-2005.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2005.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2005",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/9bd03aa4-d861-441f-9b2e-5bc4b64ceccc",
+      "lastProcessed": "2025-10-09T06:21:36.686Z",
+      "status": "processed"
+    },
+    "precios-eess-2008.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2008.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2008",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/246d3c83-ae66-4513-906f-272b8e317437",
+      "lastProcessed": "2025-10-09T06:21:38.190Z",
+      "status": "processed"
+    },
+    "precios-eess-2007.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2007.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2007",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/958f6a26-5467-4fe0-879f-07a1b9f69b78",
+      "lastProcessed": "2025-10-09T06:21:39.931Z",
+      "status": "processed"
+    },
+    "precios-eess-2006.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2006.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2006",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/f173c4c8-5f36-4dff-88d7-ed586e39f202",
+      "lastProcessed": "2025-10-09T06:21:41.335Z",
+      "status": "processed"
+    },
+    "precios-eess-2004-.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-eess-2004-.csv",
+      "format": "CSV",
+      "title": "Precios EESS 2004 ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/2329af53-ecfe-4fb6-9628-34f339a83cd5",
+      "lastProcessed": "2025-10-09T06:21:42.998Z",
+      "status": "processed"
+    },
+    "precio-final-con-impuestos-en-eess.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precio-final-con-impuestos-en-eess.csv",
+      "format": "CSV",
+      "title": "Precio final con impuestos en EESS",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/d279e209-b8a3-4cfd-9fb0-09ccb54f2aae",
+      "lastProcessed": "2025-10-09T06:21:45.046Z",
+      "status": "processed"
+    },
+    "volumenes-en-eess.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "volumenes-en-eess.csv",
+      "format": "CSV",
+      "title": "Volumenes en EESS",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/6487545c-6256-4079-aee5-403db41ee22b",
+      "lastProcessed": "2025-10-09T06:21:47.109Z",
+      "status": "processed"
+    },
+    "precios-combustibles-por-perodo-res-1104-en-arslitro.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-combustibles-por-perodo-res-1104-en-arslitro.csv",
+      "format": "CSV",
+      "title": "Precios combustibles por período (Res. 1104) en ARS/litro",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/4affa530-e0f4-4ee2-bded-ca23976a6e43",
+      "lastProcessed": "2025-10-09T06:21:48.527Z",
+      "status": "processed"
+    },
+    "ventas-a-vehiculos-con-chapa-patente-extranjera-desde-el-2015.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "ventas-a-vehiculos-con-chapa-patente-extranjera-desde-el-2015.csv",
+      "format": "CSV",
+      "title": "Ventas a vehiculos con chapa patente extranjera desde el 2015",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/0d0451dc-0091-4fa3-a93d-441145cc3ae2",
+      "lastProcessed": "2025-10-09T06:21:49.960Z",
+      "status": "processed"
+    },
+    "eess-y-operadores-res-1104-.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "eess-y-operadores-res-1104-.csv",
+      "format": "CSV",
+      "title": "EESS Y Operadores (Res 1104)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/57d8be8f-520e-4ac3-a59b-8458623e8385",
+      "lastProcessed": "2025-10-09T06:21:51.349Z",
+      "status": "processed"
+    },
+    "shapefile-de-eess-res-1104-.zip": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "shapefile-de-eess-res-1104-.zip",
+      "format": "SHP",
+      "title": "Shapefile de EESS Y Operadores (Res 1104)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/88a3518a-dec4-4f55-943a-35cd8fe90eca",
+      "lastProcessed": "2025-10-09T06:21:51.349Z",
+      "status": "processed"
+    },
+    "precios-y-volumenes-a-partir-de-2018.csv": {
+      "datasetId": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+      "datasetTitle": "Precios y volúmenes EESS - Resolución 1104/04",
+      "fileName": "precios-y-volumenes-a-partir-de-2018.csv",
+      "format": "CSV",
+      "title": "Precios y volumenes a partir de 2018",
+      "accessURL": "http://datos.energia.gob.ar/dataset/708f9ab4-829b-4f02-b507-f303c5bc4800/resource/d6ecf302-049b-459d-bca2-b638ea70518b",
+      "lastProcessed": "2025-10-09T06:21:56.621Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_708f9ab4-829b-4f02-b507-f303c5bc4800",
+    "title": "Precios y volúmenes EESS - Resolución 1104/04",
+    "description": "Precios de venta de los hidrocarburos en los distintos canales de comercialización para todo el territorio nacional, según informan mensualmente los operadores inscriptos en el padrón creado por la Resolución 1104/2004.  (Volúmenes en  m3 y precios en pesos).",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-02-02T18:41:10.020781",
+    "modified": "2021-07-12T11:32:53.291510",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

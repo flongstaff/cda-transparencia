@@ -1,0 +1,32 @@
+{
+  "files": {
+    "distribucion-laboratorios.csv": {
+      "datasetId": "inti_2.0",
+      "datasetTitle": "Distribución de Laboratorios del Instituto Nacional de Tecnología Industrial",
+      "fileName": "distribucion-laboratorios.csv",
+      "format": "CSV",
+      "title": "Distribución de laboratorios",
+      "accessURL": "https://www.argentina.gob.ar/inti/transparencia-activa-instituto-nacional-de-tecnologia-industrial/catalogos-de-datos-abiertos",
+      "lastProcessed": "2025-10-09T06:42:11.411Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "inti_2.0",
+    "title": "Distribución de Laboratorios del Instituto Nacional de Tecnología Industrial",
+    "description": "Distribución de Laboratorios del INTI",
+    "theme": [
+      "tech"
+    ],
+    "superTheme": [
+      "TECH"
+    ],
+    "issued": "2023-08-15",
+    "modified": "2023-08-15",
+    "publisher": {
+      "mbox": "ucg@inti.gob.ar",
+      "name": "Instituto Nacional de Tecnologia Industrial. Unidad de Control de Gestión"
+    },
+    "landingPage": "https://www.argentina.gob.ar/inti/transparencia-activa-instituto-nacional-de-tecnologia-industrial/catalogos-de-datos-abiertos"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "files": {
+    "2021 CAPS ESTADISTICAS.pdf": {
+      "datasetId": "ds-estadisticas-salud-2021",
+      "datasetTitle": "Estadísticas de Salud 2021",
+      "fileName": "2021 CAPS ESTADISTICAS.pdf",
+      "lastProcessed": "2025-10-09T06:14:32.713Z",
+      "status": "error",
+      "error": "Failed to download PDF: 2021 CAPS ESTADISTICAS.pdf"
+    },
+    "ESTADISTICAS-SALUD.pdf": {
+      "datasetId": "ds-estadisticas-salud-2021",
+      "datasetTitle": "Estadísticas de Salud 2021",
+      "fileName": "ESTADISTICAS-SALUD.pdf",
+      "format": "PDF",
+      "title": "Evolución Prestaciones CAPS",
+      "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/ESTADISTICAS-SALUD.pdf",
+      "lastProcessed": "2025-10-09T06:14:36.355Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ds-estadisticas-salud-2021",
+    "title": "Estadísticas de Salud 2021",
+    "description": "Evolución de prestaciones en CAPS y estadísticas generales de salud.",
+    "theme": [
+      "salud-y-asistencia-social"
+    ],
+    "superTheme": [
+      "SALU"
+    ],
+    "issued": "2022-01-01T00:00:00",
+    "modified": "2022-01-01T00:00:00",
+    "publisher": {
+      "name": "Oficina de Estadísticas"
+    },
+    "landingPage": "https://carmendeareco.gob.ar/estadisticas/"
+  }
+}

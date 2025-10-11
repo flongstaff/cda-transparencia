@@ -1,0 +1,41 @@
+{
+  "files": {
+    "gavade_20251001_091834.xlsx": {
+      "datasetId": "pami_b7a2600f-94e0-48ba-8042-0cd4b556423b",
+      "datasetTitle": "Listado de precios de medicamentos para entidades",
+      "fileName": "gavade_20251001_091834.xlsx",
+      "format": "XLSX",
+      "title": "Listado de precios de Medicamentos para Entidades",
+      "accessURL": "https://datos.pami.org.ar/dataset/b7a2600f-94e0-48ba-8042-0cd4b556423b/resource/e72a9026-a971-46c1-b828-2638b2b2be37/download/gavade_20251001_091834.xlsx",
+      "lastProcessed": "2025-10-09T06:33:12.912Z",
+      "status": "processed"
+    },
+    "gavade_20251001_091834.csv": {
+      "datasetId": "pami_b7a2600f-94e0-48ba-8042-0cd4b556423b",
+      "datasetTitle": "Listado de precios de medicamentos para entidades",
+      "fileName": "gavade_20251001_091834.csv",
+      "lastProcessed": "2025-10-09T06:36:19.574Z",
+      "status": "error",
+      "error": "Failed to download CSV: gavade_20251001_091834.csv"
+    }
+  },
+  "info": {
+    "identifier": "pami_b7a2600f-94e0-48ba-8042-0cd4b556423b",
+    "title": "Listado de precios de medicamentos para entidades",
+    "description": "Listado de precios de medicamentos para los laboratorios, farmacias, droguerías y otras entidades.",
+    "theme": [
+      "gove",
+      "heal"
+    ],
+    "superTheme": [
+      "GOVE",
+      "HEAL"
+    ],
+    "issued": "2022-06-23T14:58:58.957810",
+    "modified": "2022-10-03T18:38:11.835155",
+    "publisher": {
+      "name": "INSSJP"
+    },
+    "landingPage": "http://datos.pami.org.ar/dataset/medicamentos-para-entidades"
+  }
+}

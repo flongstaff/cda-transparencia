@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_37c9ad39-f092-44be-9b7f-1201b3c4b7a8",
+      "datasetTitle": "Inscripciones iniciales de autos",
+      "format": "ZIP",
+      "title": "DNRPA. Inscripciones iniciales de autos - 2018",
+      "accessURL": "https://datos.jus.gob.ar/dataset/37c9ad39-f092-44be-9b7f-1201b3c4b7a8/resource/0648ef53-b00c-4446-8e73-cd24e8bad2a7",
+      "lastProcessed": "2025-10-09T06:40:57.484Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_37c9ad39-f092-44be-9b7f-1201b3c4b7a8",
+    "title": "Inscripciones iniciales de autos",
+    "description": "Trámites de inscripciones iniciales de automotores inscriptos en los Registros Seccionales de la Propiedad del Automotor y Créditos Prendarios (cero kilómetro, subastados, armados fuera de fábrica, etc.)",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2018-03-23T13:53:25.532647",
+    "modified": "2025-09-11T14:51:03.539671",
+    "publisher": {
+      "mbox": "accesobd@dnrpa.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Dirección Nacional de los Registros Nacionales de la Propiedad del Automotor y Créditos Prendarios"
+    },
+    "landingPage": "https://www.dnrpa.gov.ar"
+  }
+}

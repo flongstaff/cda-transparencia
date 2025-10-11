@@ -1,0 +1,32 @@
+{
+  "files": {
+    "tasa-mortalidad-infantil-deis-1990-2023.csv": {
+      "datasetId": "salud_2eff770c-1c2b-4a22-9281-c3b5e9412086",
+      "datasetTitle": "Tasa de Mortalidad Infantil",
+      "fileName": "tasa-mortalidad-infantil-deis-1990-2023.csv",
+      "format": "CSV",
+      "title": "Tasa de Mortalidad Infantil 1990-2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/2eff770c-1c2b-4a22-9281-c3b5e9412086/resource/c1253897-d507-41f7-a3e1-6ed756e7243b",
+      "lastProcessed": "2025-10-09T07:16:14.241Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_2eff770c-1c2b-4a22-9281-c3b5e9412086",
+    "title": "Tasa de Mortalidad Infantil",
+    "description": "Tasa de Mortalidad Infantil por 1000 nacidos vivos por jurisdicción de residencia de la madre ocurridos en Argentina",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2019-04-03T16:15:33.787131",
+    "modified": "2022-09-06T00:12:42.450742",
+    "publisher": {
+      "mbox": "informaciondeis@gmail.com",
+      "name": "Ministerio de Salud. Dirección de Estadística e Información en Salud (DEIS) "
+    },
+    "landingPage": "https://www.argentina.gob.ar/salud/deis"
+  }
+}

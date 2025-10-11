@@ -1,0 +1,268 @@
+{
+  "files": {
+    "comercializacin-hidrocarburos-glp-plantas-fraccionadoras.zip": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "comercializacin-hidrocarburos-glp-plantas-fraccionadoras.zip",
+      "format": "SHP",
+      "title": "Plantas Fraccionadoras de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/f43f691f-8564-416d-ab89-8a40248241ae",
+      "lastProcessed": "2025-10-09T06:27:07.162Z",
+      "status": "processed"
+    },
+    "comercializacin-hidrocarburos-glp-plantas-fraccionadoras.csv": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "comercializacin-hidrocarburos-glp-plantas-fraccionadoras.csv",
+      "format": "CSV",
+      "title": "Plantas Fraccionadoras de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/e9064ba2-1fcf-44e8-aa0a-54a1a770586a",
+      "lastProcessed": "2025-10-09T06:27:08.640Z",
+      "status": "processed"
+    },
+    "aerosoleras-del-mercado-de-glp.zip": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "aerosoleras-del-mercado-de-glp.zip",
+      "format": "SHP",
+      "title": "Aerosoleras del mercado de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/39299661-7f4a-4714-b7fc-a2a90f1a5c55",
+      "lastProcessed": "2025-10-09T06:27:08.640Z",
+      "status": "processed"
+    },
+    "aerosoleras-del-mercado-de-glp.csv": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "aerosoleras-del-mercado-de-glp.csv",
+      "format": "CSV",
+      "title": "Aerosoleras del mercado de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/9d2999fe-3f8d-4018-9137-e01cbc9e2e5f",
+      "lastProcessed": "2025-10-09T06:27:10.051Z",
+      "status": "processed"
+    },
+    "almacenadoras-de-glp.zip": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "almacenadoras-de-glp.zip",
+      "format": "SHP",
+      "title": "Almacenadoras de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/818a9bdc-edfe-4ad1-a4ad-6257d28da965",
+      "lastProcessed": "2025-10-09T06:27:10.052Z",
+      "status": "processed"
+    },
+    "almacenadoras-de-glp.csv": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "almacenadoras-de-glp.csv",
+      "format": "CSV",
+      "title": "Almacenadoras de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/80871473-f1a6-425b-9cd4-a4c0e7d1fead",
+      "lastProcessed": "2025-10-09T06:27:11.515Z",
+      "status": "processed"
+    },
+    "centros-de-canje-de-envases-de-glp.zip": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "centros-de-canje-de-envases-de-glp.zip",
+      "format": "SHP",
+      "title": "Centros de Canje de envases de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/0dbb48c1-d826-464c-abdd-471d21ddbf26",
+      "lastProcessed": "2025-10-09T06:27:11.515Z",
+      "status": "processed"
+    },
+    "centros-de-canje-de-envases-de-glp.csv": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "centros-de-canje-de-envases-de-glp.csv",
+      "format": "CSV",
+      "title": "Centros de Canje de envases de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/0a1cbf99-a626-411d-86ff-76249e00d6b3",
+      "lastProcessed": "2025-10-09T06:27:13.141Z",
+      "status": "processed"
+    },
+    "fabricantes-de-envases-de-glp.zip": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "fabricantes-de-envases-de-glp.zip",
+      "format": "SHP",
+      "title": "Fabricantes  de envases de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/8c1e158f-ac9d-4462-82eb-c1d32899d77a",
+      "lastProcessed": "2025-10-09T06:27:13.141Z",
+      "status": "processed"
+    },
+    "fabricantes-de-envases-de-glp.csv": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "fabricantes-de-envases-de-glp.csv",
+      "format": "CSV",
+      "title": "Fabricantes de envases de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/ae89fb12-ee64-4f19-8bbf-74258fe93647",
+      "lastProcessed": "2025-10-09T06:27:14.489Z",
+      "status": "processed"
+    },
+    "glpa.zip": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "glpa.zip",
+      "format": "SHP",
+      "title": "GLPA",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/360eabde-9ed2-4110-8ba6-d23802a99b37",
+      "lastProcessed": "2025-10-09T06:27:14.489Z",
+      "status": "processed"
+    },
+    "glpa.csv": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "glpa.csv",
+      "format": "CSV",
+      "title": "GLPA",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/d05e4485-1cfa-4321-85bf-cd031da67c74",
+      "lastProcessed": "2025-10-09T06:27:15.842Z",
+      "status": "processed"
+    },
+    "grandes-consumidores-de-glp.zip": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "grandes-consumidores-de-glp.zip",
+      "format": "SHP",
+      "title": "Grandes Consumidores de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/6a8d54d2-b060-4ca9-8d4c-651ecf649dda",
+      "lastProcessed": "2025-10-09T06:27:15.842Z",
+      "status": "processed"
+    },
+    "grandes-consumidores-de-glp.csv": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "grandes-consumidores-de-glp.csv",
+      "format": "CSV",
+      "title": "Grandes Consumidores de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/bfd22b80-6c4b-4b5c-a2d3-eabfa56b66f2",
+      "lastProcessed": "2025-10-09T06:27:17.105Z",
+      "status": "processed"
+    },
+    "petroqumicas-del-mercado-de-glp.zip": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "petroqumicas-del-mercado-de-glp.zip",
+      "format": "SHP",
+      "title": "Petroquímicas del mercado de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/3a838665-5522-485b-a89e-0826e026808d",
+      "lastProcessed": "2025-10-09T06:27:17.105Z",
+      "status": "processed"
+    },
+    "petroqumicas-del-mercado-de-glp.csv": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "petroqumicas-del-mercado-de-glp.csv",
+      "format": "CSV",
+      "title": "Petroquímicas del mercado de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/c92c57f2-bb73-48ec-b39f-05def3c87121",
+      "lastProcessed": "2025-10-09T06:27:18.367Z",
+      "status": "processed"
+    },
+    "procesadoras-de-glp-.zip": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "procesadoras-de-glp-.zip",
+      "format": "SHP",
+      "title": "Procesadoras de GLP\r ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/76a7da79-696c-462c-8c3b-9146f47b10e7",
+      "lastProcessed": "2025-10-09T06:27:18.367Z",
+      "status": "processed"
+    },
+    "procesadoras-de-glp.csv": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "procesadoras-de-glp.csv",
+      "format": "CSV",
+      "title": "Procesadoras de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/7877bac9-7474-401e-ac40-6f8e1c47596e",
+      "lastProcessed": "2025-10-09T06:27:19.667Z",
+      "status": "processed"
+    },
+    "talleres-de-envases-de-glp-.zip": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "talleres-de-envases-de-glp-.zip",
+      "format": "SHP",
+      "title": "Talleres de envases de GLP\r ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/aef4c80d-11a6-41d4-bf15-f77730496aad",
+      "lastProcessed": "2025-10-09T06:27:19.667Z",
+      "status": "processed"
+    },
+    "talleres-de-envases-de-glp.csv": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "talleres-de-envases-de-glp.csv",
+      "format": "CSV",
+      "title": "Talleres de envases de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/263eba29-d0a2-46a9-bb89-3b14b3cb5e68",
+      "lastProcessed": "2025-10-09T06:27:21.018Z",
+      "status": "processed"
+    },
+    "productores-de-glp.zip": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "productores-de-glp.zip",
+      "format": "SHP",
+      "title": "Productores de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/7128388a-cd00-443f-87d5-8a3926db026f",
+      "lastProcessed": "2025-10-09T06:27:21.018Z",
+      "status": "processed"
+    },
+    "productores-de-glp.csv": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "productores-de-glp.csv",
+      "format": "CSV",
+      "title": "Productores de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/7c0901e0-2ec5-42b9-82c4-102016cec4dd",
+      "lastProcessed": "2025-10-09T06:27:22.356Z",
+      "status": "processed"
+    },
+    "distribuidoras-de-glp.csv": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "distribuidoras-de-glp.csv",
+      "format": "CSV",
+      "title": "Distribuidoras de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/7f0464ef-9067-4f00-91b3-00b46fde1c39",
+      "lastProcessed": "2025-10-09T06:27:23.827Z",
+      "status": "processed"
+    },
+    "distribuidoras-de-glp.zip": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "fileName": "distribuidoras-de-glp.zip",
+      "format": "SHP",
+      "title": "Distribuidoras de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/075c393d-5ad1-4cb0-a653-e953c313796d/resource/5055dad0-ed2f-4a60-855c-3a08af2151cd",
+      "lastProcessed": "2025-10-09T06:27:23.828Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+      "datasetTitle": "Operadores de GLP",
+      "lastProcessed": "2025-10-09T06:27:28.081Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_075c393d-5ad1-4cb0-a653-e953c313796d",
+    "title": "Operadores de GLP",
+    "description": "Registro Nacional de la Industria del GLP - Res. SE 800/2004.\r\nUbicación de operadores de Gas Licuado de Petróleo (GLP). ISO 19126: PowerSupplies.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-06-11T10:58:38.315721",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información.\r\n\r\n"
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/operadores_glp"
+  }
+}

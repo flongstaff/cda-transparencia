@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "energia_d2c5f860-548c-44f5-a63c-03a66189a345",
+      "title": "Mapas de Generación y Transporte Eléctrico",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/energia_d2c5f860-548c-44f5-a63c-03a66189a345/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/energia_d2c5f860-548c-44f5-a63c-03a66189a345/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

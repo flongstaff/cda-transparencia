@@ -1,0 +1,32 @@
+{
+  "files": {
+    "flujos-de-inversion-extranjera-directa-por-sector-bcra.csv": {
+      "datasetId": "sspm_317",
+      "datasetTitle": "Flujos de Inversión Extranjera Directa por sector - BCRA",
+      "fileName": "flujos-de-inversion-extranjera-directa-por-sector-bcra.csv",
+      "format": "CSV",
+      "title": "Flujos de Inversión Extranjera Directa por sector. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:23.658Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_317",
+    "title": "Flujos de Inversión Extranjera Directa por sector - BCRA",
+    "description": "Flujos de Inversión Extranjera Directa por sector - BCRA",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-30",
+    "modified": "2025-03-24T10:01:54.127142",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

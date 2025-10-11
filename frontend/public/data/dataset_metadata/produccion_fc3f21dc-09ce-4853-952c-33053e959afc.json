@@ -1,0 +1,32 @@
+{
+  "files": {
+    "proyectos-aprobados-soluciona-012023.xlsx": {
+      "datasetId": "produccion_fc3f21dc-09ce-4853-952c-33053e959afc",
+      "datasetTitle": "Programa SOLUCIONA",
+      "fileName": "proyectos-aprobados-soluciona-012023.xlsx",
+      "format": "XLS",
+      "title": "Proyectos aprobados del Programa SOLUCIONA",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/fc3f21dc-09ce-4853-952c-33053e959afc/resource/9a07b52f-9b66-40b4-92db-7b07d14cff68",
+      "lastProcessed": "2025-10-09T08:07:01.205Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_fc3f21dc-09ce-4853-952c-33053e959afc",
+    "title": "Programa SOLUCIONA",
+    "description": "El Programa SOLUCIONA brinda asistencia financiera a personas jurídicas para favorecer la reactivación económica del país mediante el desarrollo, la implementación y/o adopción de soluciones, productos y/o servicios innovadores generados por los sectores de la economía del conocimiento con el fin de atender las problemáticas económicas,  sociales y productivas que se generaron a partir de la pandemia.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-04-27T17:06:46.389299",
+    "modified": "2023-07-13T14:24:36.027575",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa. Subsecretaría de Economía del Conocimiento. Dirección Nacional de Desarrollo de la Economía del Conocimiento. Dirección de Generación de Nuevas Empresas de la Economía del Conocimiento."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/programa-soluciona"
+  }
+}

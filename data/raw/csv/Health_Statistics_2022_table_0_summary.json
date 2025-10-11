@@ -1,0 +1,50 @@
+{
+  "file_name": "Health_Statistics_2022_table_0.csv",
+  "row_count": 5,
+  "column_count": 4,
+  "columns": [
+    "Column_0",
+    "Column_1",
+    "Column_2",
+    "Column_3"
+  ],
+  "sample_data": [
+    {
+      "Column_0": "Indicator",
+      "Column_1": "2022",
+      "Column_2": "2021",
+      "Column_3": "Variation"
+    },
+    {
+      "Column_0": "Health Centers",
+      "Column_1": "12",
+      "Column_2": "11",
+      "Column_3": "9.1%"
+    },
+    {
+      "Column_0": "Health Personnel",
+      "Column_1": "180",
+      "Column_2": "165",
+      "Column_3": "9.1%"
+    },
+    {
+      "Column_0": "Patient Visits (000)",
+      "Column_1": "240",
+      "Column_2": "225",
+      "Column_3": "6.7%"
+    },
+    {
+      "Column_0": "Health Budget %",
+      "Column_1": "8.5%",
+      "Column_2": "8.2%",
+      "Column_3": "0.3%"
+    }
+  ],
+  "data_types": {
+    "Column_0": "object",
+    "Column_1": "object",
+    "Column_2": "object",
+    "Column_3": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

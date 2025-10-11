@@ -1,0 +1,42 @@
+{
+  "files": {
+    "Portabilidad completadas.xls": {
+      "datasetId": "enacom_24",
+      "datasetTitle": "Portabilidad",
+      "fileName": "Portabilidad completadas.xls",
+      "format": "XLS",
+      "title": "Portabilidad Portaciones Móviles totales-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Portabilidad/moviles-totales",
+      "lastProcessed": "2025-10-09T06:28:20.223Z",
+      "status": "processed"
+    },
+    "Portabilidad completadas.csv": {
+      "datasetId": "enacom_24",
+      "datasetTitle": "Portabilidad",
+      "fileName": "Portabilidad completadas.csv",
+      "format": "CSV",
+      "title": "Portabilidad Portaciones Móviles totales-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Portabilidad/moviles-totales",
+      "lastProcessed": "2025-10-09T06:28:21.305Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "enacom_24",
+    "title": "Portabilidad",
+    "description": "Principales Indicadores de Mercado, Portabilidad",
+    "theme": [
+      "tech"
+    ],
+    "superTheme": [
+      "TECH"
+    ],
+    "issued": "2017-01-01",
+    "modified": "2025-09-08",
+    "publisher": {
+      "mbox": "indicadores@enacom.gob.ar",
+      "name": "Enacom.Direccion Nacional De Planificación Y Desarrollo."
+    },
+    "landingPage": "https://indicadores.enacom.gob.ar/DatosAbiertos/Portabilidad/default"
+  }
+}

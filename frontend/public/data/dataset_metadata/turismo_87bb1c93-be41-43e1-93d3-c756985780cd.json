@@ -1,0 +1,82 @@
+{
+  "files": {
+    "parques_chubut.csv": {
+      "datasetId": "turismo_87bb1c93-be41-43e1-93d3-c756985780cd",
+      "datasetTitle": "Áreas Protegidas Provinciales",
+      "fileName": "parques_chubut.csv",
+      "format": "CSV",
+      "title": "Visitas a Áreas Naturales Protegidas del Chubut según tipo de residencia del visitante",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/87bb1c93-be41-43e1-93d3-c756985780cd/resource/d51a430f-d020-4999-85cf-7ae367b90ee9",
+      "lastProcessed": "2025-10-09T07:07:35.947Z",
+      "status": "processed"
+    },
+    "parque_ischigualasto.csv": {
+      "datasetId": "turismo_87bb1c93-be41-43e1-93d3-c756985780cd",
+      "datasetTitle": "Áreas Protegidas Provinciales",
+      "fileName": "parque_ischigualasto.csv",
+      "format": "CSV",
+      "title": "Visitas al Parque Provincial Ischigualasto en San Juan",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/87bb1c93-be41-43e1-93d3-c756985780cd/resource/b1c5ea42-fcda-44c3-9003-f798c4181659",
+      "lastProcessed": "2025-10-09T07:07:39.322Z",
+      "status": "processed"
+    },
+    "parques_prov.pdf": {
+      "datasetId": "turismo_87bb1c93-be41-43e1-93d3-c756985780cd",
+      "datasetTitle": "Áreas Protegidas Provinciales",
+      "fileName": "parques_prov.pdf",
+      "format": "PDF",
+      "title": "Ficha Técnica: Áreas Protegidas Provinciales",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/87bb1c93-be41-43e1-93d3-c756985780cd/resource/5496bde6-29ee-4594-9f5a-ef3283418c61",
+      "lastProcessed": "2025-10-09T07:07:43.511Z",
+      "status": "processed"
+    },
+    "novedades.csv": {
+      "datasetId": "turismo_87bb1c93-be41-43e1-93d3-c756985780cd",
+      "datasetTitle": "Áreas Protegidas Provinciales",
+      "fileName": "novedades.csv",
+      "format": "CSV",
+      "title": "Novedades",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/87bb1c93-be41-43e1-93d3-c756985780cd/resource/a3f08b26-cc42-42c9-b7ac-250f571131fa",
+      "lastProcessed": "2025-10-09T07:07:46.885Z",
+      "status": "processed"
+    },
+    "gran_parque_ibera.csv": {
+      "datasetId": "turismo_87bb1c93-be41-43e1-93d3-c756985780cd",
+      "datasetTitle": "Áreas Protegidas Provinciales",
+      "fileName": "gran_parque_ibera.csv",
+      "format": "CSV",
+      "title": "Visitas al Parque Provincial Iberá en Corrientes",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/87bb1c93-be41-43e1-93d3-c756985780cd/resource/058235b3-31fd-4700-8b9a-2a2822f333b9",
+      "lastProcessed": "2025-10-09T07:07:50.171Z",
+      "status": "processed"
+    },
+    "parques_misiones.csv": {
+      "datasetId": "turismo_87bb1c93-be41-43e1-93d3-c756985780cd",
+      "datasetTitle": "Áreas Protegidas Provinciales",
+      "fileName": "parques_misiones.csv",
+      "format": "CSV",
+      "title": "Visitas a Parques Provinciales de Misiones",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/87bb1c93-be41-43e1-93d3-c756985780cd/resource/3a8ae38e-eadf-4398-8304-a210157d3b1d",
+      "lastProcessed": "2025-10-09T07:07:53.540Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "turismo_87bb1c93-be41-43e1-93d3-c756985780cd",
+    "title": "Áreas Protegidas Provinciales",
+    "description": "Visitas a Áreas Protegidas Provinciales en base a datos del Departamento Observatorio Turístico del Chubut y el Parque Provincial Ischigualasto de San Juan.",
+    "theme": [
+      "soci"
+    ],
+    "superTheme": [
+      "SOCI"
+    ],
+    "issued": "2023-10-27T15:47:53.477782",
+    "modified": "2024-07-24T15:40:52.218124",
+    "publisher": {
+      "mbox": "estadistica@turismo.gob.ar",
+      "name": "Subsecretaría de Turismo. Dirección Nacional de Mercados y Estadística"
+    },
+    "landingPage": "http://datos.yvera.gob.ar/dataset/"
+  }
+}

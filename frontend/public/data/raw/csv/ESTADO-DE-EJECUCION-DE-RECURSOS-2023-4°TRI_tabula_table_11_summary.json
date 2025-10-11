@@ -1,0 +1,92 @@
+{
+  "file_name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_11.csv",
+  "row_count": 18,
+  "column_count": 10,
+  "columns": [
+    "16.2.01.04 - Intereses por Fondos Comunes de",
+    "11 - Origen Municipal - De",
+    "42.988.154,74",
+    "0,00",
+    "42.988.154,74.1",
+    "48.226.550,86",
+    "-5.238.396,12",
+    "48.226.550,86.1",
+    "0,00.1",
+    "-5.238.396,12.1"
+  ],
+  "sample_data": [
+    {
+      "16.2.01.04 - Intereses por Fondos Comunes de": "Inversion",
+      "11 - Origen Municipal - De": "libre disponibilidad",
+      "42.988.154,74": NaN,
+      "0,00": NaN,
+      "42.988.154,74.1": NaN,
+      "48.226.550,86": NaN,
+      "-5.238.396,12": NaN,
+      "48.226.550,86.1": NaN,
+      "0,00.1": NaN,
+      "-5.238.396,12.1": NaN
+    },
+    {
+      "16.2.01.04 - Intereses por Fondos Comunes de": "Total Intereses por depósitos internos",
+      "11 - Origen Municipal - De": NaN,
+      "42.988.154,74": "42.988.154,74",
+      "0,00": "0,00",
+      "42.988.154,74.1": "42.988.154,74",
+      "48.226.550,86": "48.226.550,86",
+      "-5.238.396,12": "-5.238.396,12",
+      "48.226.550,86.1": "48.226.550,86",
+      "0,00.1": "0,00",
+      "-5.238.396,12.1": "-5.238.396,12"
+    },
+    {
+      "16.2.01.04 - Intereses por Fondos Comunes de": "Total Intereses por depósitos",
+      "11 - Origen Municipal - De": NaN,
+      "42.988.154,74": "42.988.154,74",
+      "0,00": "0,00",
+      "42.988.154,74.1": "42.988.154,74",
+      "48.226.550,86": "48.226.550,86",
+      "-5.238.396,12": "-5.238.396,12",
+      "48.226.550,86.1": "48.226.550,86",
+      "0,00.1": "0,00",
+      "-5.238.396,12.1": "-5.238.396,12"
+    },
+    {
+      "16.2.01.04 - Intereses por Fondos Comunes de": "Total Rentas de la propiedad",
+      "11 - Origen Municipal - De": NaN,
+      "42.988.154,74": "42.988.154,74",
+      "0,00": "0,00",
+      "42.988.154,74.1": "42.988.154,74",
+      "48.226.550,86": "48.226.550,86",
+      "-5.238.396,12": "-5.238.396,12",
+      "48.226.550,86.1": "48.226.550,86",
+      "0,00.1": "0,00",
+      "-5.238.396,12.1": "-5.238.396,12"
+    },
+    {
+      "16.2.01.04 - Intereses por Fondos Comunes de": "17.0.00.00 - Transferencias corrientes",
+      "11 - Origen Municipal - De": NaN,
+      "42.988.154,74": NaN,
+      "0,00": NaN,
+      "42.988.154,74.1": NaN,
+      "48.226.550,86": NaN,
+      "-5.238.396,12": NaN,
+      "48.226.550,86.1": NaN,
+      "0,00.1": NaN,
+      "-5.238.396,12.1": NaN
+    }
+  ],
+  "data_types": {
+    "16.2.01.04 - Intereses por Fondos Comunes de": "object",
+    "11 - Origen Municipal - De": "object",
+    "42.988.154,74": "object",
+    "0,00": "object",
+    "42.988.154,74.1": "object",
+    "48.226.550,86": "object",
+    "-5.238.396,12": "object",
+    "48.226.550,86.1": "object",
+    "0,00.1": "object",
+    "-5.238.396,12.1": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

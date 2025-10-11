@@ -1,0 +1,222 @@
+{
+  "files": {
+    "distribucin-elctrica-edenor-at-puentes-al-vuelo.csv": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "distribucin-elctrica-edenor-at-puentes-al-vuelo.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edenor Alta Tensión  Puentes Al Vuelo",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/c7720f88-3959-4e31-ac80-cecb794c75cb",
+      "lastProcessed": "2025-10-09T07:22:29.182Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edenor-at-empalmes-trifsicos.csv": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "distribucin-elctrica-edenor-at-empalmes-trifsicos.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edenor Alta Tensión Empalmes Trifásicos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/98ec1505-2583-4587-8714-554c8f814b7a",
+      "lastProcessed": "2025-10-09T07:22:30.515Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edenor-at-subestaciones.csv": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "distribucin-elctrica-edenor-at-subestaciones.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edenor Alta Tensión Subestaciones",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/5ca0accc-cb87-4e4c-83f2-e8b8421b0f15",
+      "lastProcessed": "2025-10-09T07:22:31.956Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edenor-at-cables-subterrneos.csv": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "distribucin-elctrica-edenor-at-cables-subterrneos.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edenor Alta Tensión Cables Subterráneos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/1ff3dbc8-3df1-491c-a9ce-f06b0f75e0a3",
+      "lastProcessed": "2025-10-09T07:22:33.315Z",
+      "status": "processed"
+    },
+    "at-lneas.zip": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "at-lneas.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edenor Alta Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/74dacfc0-3881-4684-a477-c0ad7ad8bfb2",
+      "lastProcessed": "2025-10-09T07:22:33.315Z",
+      "status": "processed"
+    },
+    "at-piquetes.zip": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "at-piquetes.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edenor Alta Tensión Piquetes",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/d380533e-a0f9-43f9-a41f-e74c7f478c8d",
+      "lastProcessed": "2025-10-09T07:22:33.315Z",
+      "status": "processed"
+    },
+    "at-empalmes-trifsicos.zip": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "at-empalmes-trifsicos.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edenor Alta Tensión Empalmes Trifásicos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/57cf212d-cdc5-42b3-aa4a-7142eed1bfa5",
+      "lastProcessed": "2025-10-09T07:22:33.316Z",
+      "status": "processed"
+    },
+    "at-empalmes-monofsicos.zip": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "at-empalmes-monofsicos.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edenor Alta Tensión Empalmes Monofásicos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/977cdc2f-863b-4c47-ab07-3f2dbc2eb395",
+      "lastProcessed": "2025-10-09T07:22:33.316Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edenor-mt-at-at-at-subestaciones-transformadoras.csv": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "distribucin-elctrica-edenor-mt-at-at-at-subestaciones-transformadoras.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edenor Media Tensión - Alta Tensión Alta Tenión - Alta Tensión  Subestaciones Transformadoras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/3af84235-d4e1-48eb-90a8-cc8fe0f39f03",
+      "lastProcessed": "2025-10-09T07:22:34.581Z",
+      "status": "processed"
+    },
+    "mt-at-at-at-subestaciones-transformadoras.zip": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "mt-at-at-at-subestaciones-transformadoras.zip",
+      "format": "SHP",
+      "title": "Media Tensión -Alta Tensión Alta Tensión- Alta Tensión Subestaciones Transformadoras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/ce8743cd-1534-4bb2-a177-9aa337f636b6",
+      "lastProcessed": "2025-10-09T07:22:34.581Z",
+      "status": "processed"
+    },
+    "at-subestaciones.zip": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "at-subestaciones.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edenor Alta Tensión Subestaciones",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/81a8ef34-c0ef-4a48-a153-085a24b9f476",
+      "lastProcessed": "2025-10-09T07:22:34.581Z",
+      "status": "processed"
+    },
+    "at-puentes-al-vuelo.zip": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "at-puentes-al-vuelo.zip",
+      "format": "SHP",
+      "title": " Distribución Eléctrica Edenor Alta Tensión Puentes Al Vuelo",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/a2e187a1-722e-48ec-8fe4-53fe1cba1b77",
+      "lastProcessed": "2025-10-09T07:22:34.582Z",
+      "status": "processed"
+    },
+    "at-cables-subterrneos.zip": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "at-cables-subterrneos.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edenor Alta Tensión Cables Subterráneos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/bf35a1e2-2f14-4eeb-9708-91df8cdda2d9",
+      "lastProcessed": "2025-10-09T07:22:34.582Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edenor-at-lneas.csv": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "distribucin-elctrica-edenor-at-lneas.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edenor Alta Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/7a962443-eef1-4ccf-83f7-05456740169e",
+      "lastProcessed": "2025-10-09T07:22:36.350Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edenor-at-piquetes.csv": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "distribucin-elctrica-edenor-at-piquetes.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edenor Alta Tensión Piquetes",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/9037530b-11d4-494c-8fb5-669aae4bbe5b",
+      "lastProcessed": "2025-10-09T07:22:37.680Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edenor-at-empalmes-monofsicos.csv": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "distribucin-elctrica-edenor-at-empalmes-monofsicos.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edenor Alta Tensión  Empalmes Monofásicos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/d246eeaf-b9c4-4419-8aae-e5f19d40cfdd",
+      "lastProcessed": "2025-10-09T07:22:38.962Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edenor-media-tensin-cables-subterrneos.zip": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "distribucin-elctrica-edenor-media-tensin-cables-subterrneos.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edenor Media Tensión Cables Subterráneos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/5591b4e7-a56f-4243-9212-aee7d1a2971a",
+      "lastProcessed": "2025-10-09T07:22:38.963Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edenor-media-tensin-cables-subterrneos.csv": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "distribucin-elctrica-edenor-media-tensin-cables-subterrneos.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edenor Media Tensión Cables Subterráneos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/727f6312-31ef-41ea-8d78-c0a2634442be",
+      "lastProcessed": "2025-10-09T07:22:41.033Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edenor-media-tensin-cables-areos.zip": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "distribucin-elctrica-edenor-media-tensin-cables-areos.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edenor Media Tensión Cables Aéreos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/1efa0103-caf0-4b05-8655-9b8f22b256d2",
+      "lastProcessed": "2025-10-09T07:22:41.033Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edenor-media-tensin-cables-areos.csv": {
+      "datasetId": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+      "datasetTitle": "Distribución Eléctrica Edenor",
+      "fileName": "distribucin-elctrica-edenor-media-tensin-cables-areos.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edenor Media Tensión Cables Aéreos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/70f994f6-fde6-4e09-b3a4-72f5f7145181/resource/fd6146ca-0ce1-4654-92e8-fbc9e7e938e5",
+      "lastProcessed": "2025-10-09T07:22:43.624Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_70f994f6-fde6-4e09-b3a4-72f5f7145181",
+    "title": "Distribución Eléctrica Edenor",
+    "description": "Empalmes trifásicos de Alta tensión de EDENOR. ISO 19126: DistributionNetworks, Este subgrupo se compone de conceptos que se relacionan con el transporte en las redes, tales como tuberías o canales, por encima o por debajo de la superficie.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2022-12-27T09:41:49.486816",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

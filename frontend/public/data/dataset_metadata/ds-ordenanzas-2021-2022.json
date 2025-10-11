@@ -1,0 +1,51 @@
+{
+  "files": {
+    "Ordenanza-Fiscal-3057-2021.pdf": {
+      "datasetId": "ds-ordenanzas-2021-2022",
+      "datasetTitle": "Ordenanzas Fiscales e Impositivas 2021-2022",
+      "fileName": "Ordenanza-Fiscal-3057-2021.pdf",
+      "format": "PDF",
+      "title": "Fiscal 3057/2021",
+      "accessURL": "https://carmendeareco.gob.ar/download/Ordenanza-Fiscal-3057-2021.pdf",
+      "lastProcessed": "2025-10-09T06:13:51.846Z",
+      "status": "processed"
+    },
+    "Ordenanza-Impositiva-3059-2021.pdf": {
+      "datasetId": "ds-ordenanzas-2021-2022",
+      "datasetTitle": "Ordenanzas Fiscales e Impositivas 2021-2022",
+      "fileName": "Ordenanza-Impositiva-3059-2021.pdf",
+      "format": "PDF",
+      "title": "Impositiva 3059/2021",
+      "accessURL": "https://carmendeareco.gob.ar/download/Ordenanza-Impositiva-3059-2021.pdf",
+      "lastProcessed": "2025-10-09T06:13:55.941Z",
+      "status": "processed"
+    },
+    "Ordenanza-Fiscal-3112-2022.pdf": {
+      "datasetId": "ds-ordenanzas-2021-2022",
+      "datasetTitle": "Ordenanzas Fiscales e Impositivas 2021-2022",
+      "fileName": "Ordenanza-Fiscal-3112-2022.pdf",
+      "format": "PDF",
+      "title": "Fiscal 3112/2022",
+      "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2022/07/Ordenanza-Fiscal-3112-2022.pdf",
+      "lastProcessed": "2025-10-09T06:14:01.027Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ds-ordenanzas-2021-2022",
+    "title": "Ordenanzas Fiscales e Impositivas 2021-2022",
+    "description": "Ordenanzas fiscales 3057/21 y 3112/22, e impositiva 3059/21.",
+    "theme": [
+      "economia-y-finanzas"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-12-01T00:00:00",
+    "modified": "2022-07-01T00:00:00",
+    "publisher": {
+      "name": "Secretaría de Hacienda"
+    },
+    "landingPage": "https://carmendeareco.gob.ar/transparencia/ordenanzas-fiscales/"
+  }
+}

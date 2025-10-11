@@ -1,0 +1,13 @@
+{
+  "file_name": "boletin_oficial_pdf_2_situacion-economica032.pdf",
+  "file_hash": "008ab4bb202391b7801348de41907538",
+  "page_count": 2,
+  "text_length": 2,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:59.079665"
+}

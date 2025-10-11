@@ -1,0 +1,32 @@
+{
+  "files": {
+    "ejecucion-trimestral-metas-fisicas-programas.csv": {
+      "datasetId": "sspm_191",
+      "datasetTitle": "Prestaciones de la seguridad social. Seguimiento Físico-Financiero.",
+      "fileName": "ejecucion-trimestral-metas-fisicas-programas.csv",
+      "format": "CSV",
+      "title": "Política de Ingresos. Prestaciones de la seguridad social y otros programas de transferencia de ingresos. Seguimiento Físico-Financiero. Oficina Nacional de Presupuesto. Secretaría de Hacienda",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:31.341Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_191",
+    "title": "Prestaciones de la seguridad social. Seguimiento Físico-Financiero.",
+    "description": "Ejecución trimestral de metas físicas de programas presupuestarios sociales nacionales seleccionados: PROG.R.ES.AR. Datos de ejecución acumulada promedio",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-03",
+    "modified": "2025-03-24T10:01:43.051901",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

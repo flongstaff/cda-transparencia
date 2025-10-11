@@ -1,0 +1,42 @@
+{
+  "files": {
+    "trigo-serie-1923-2024-anual.csv": {
+      "datasetId": "agroindustria_10105e94-c560-4b02-b15f-ef3ef764b833",
+      "datasetTitle": "Trigo - siembra, cosecha, producción, rendimiento",
+      "fileName": "trigo-serie-1923-2024-anual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo de trigo",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/10105e94-c560-4b02-b15f-ef3ef764b833/resource/dc3ae069-af81-4bdd-82cb-2f57f2c296dd",
+      "lastProcessed": "2025-10-09T06:56:50.192Z",
+      "status": "processed"
+    },
+    "trigo-serie-1927-2024.csv": {
+      "datasetId": "agroindustria_10105e94-c560-4b02-b15f-ef3ef764b833",
+      "datasetTitle": "Trigo - siembra, cosecha, producción, rendimiento",
+      "fileName": "trigo-serie-1927-2024.csv",
+      "format": "CSV",
+      "title": "Trigo - serie siembra, cosecha, producción, rendimiento",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/10105e94-c560-4b02-b15f-ef3ef764b833/resource/50f0edcc-4dfc-4afb-b78a-b164601d36ae",
+      "lastProcessed": "2025-10-09T06:56:53.627Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_10105e94-c560-4b02-b15f-ef3ef764b833",
+    "title": "Trigo - siembra, cosecha, producción, rendimiento",
+    "description": "Serie histórica de la superficie sembrada, superficie cosechada, producción y rendimiento de trigo en la Argentina desde 1923.",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2021-04-28T20:08:47.563406",
+    "modified": "2025-05-12T14:11:24.483842",
+    "publisher": {
+      "mbox": "direstiagri@magyp.gob.ar",
+      "name": "Secretaría de Agricultura, Ganadería y Pesca - Dirección Nacional de Agricultura"
+    },
+    "landingPage": "https://datos.agroindustria.gob.ar/dataset/trigo-siembra-cosecha-produccion-rendimiento"
+  }
+}

@@ -147,7 +147,7 @@ class ChartDataService {
       return parsed.data;
     } catch (error) {
       console.error(`[CHART DATA SERVICE] ❌ Failed to load ${chartType}:`, error);
-      return null;
+      return []; // Return empty array instead of null to allow graceful degradation
     }
   }
 

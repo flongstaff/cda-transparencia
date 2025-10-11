@@ -1,0 +1,33 @@
+{
+  "files": {
+    "afiliados20251001_091812.xlsx": {
+      "datasetId": "pami_b40f7569-3a23-46bf-8a45-dd7cff41e725",
+      "datasetTitle": "Listado de precios de medicamentos para afiliados",
+      "fileName": "afiliados20251001_091812.xlsx",
+      "format": "XLSX",
+      "title": "Listado de precios de medicamentos para Afiliados",
+      "accessURL": "https://datos.pami.org.ar/dataset/b40f7569-3a23-46bf-8a45-dd7cff41e725/resource/92ad6862-af8e-4047-b2cb-4bfef705feb3/download/afiliados20251001_091812.xlsx",
+      "lastProcessed": "2025-10-09T06:33:12.911Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "pami_b40f7569-3a23-46bf-8a45-dd7cff41e725",
+    "title": "Listado de precios de medicamentos para afiliados",
+    "description": "Listado de medicamentos que cubre PAMI, con el detalle de droga, marca, presentación, laboratorio, precio, cobertura y copago (costo a cargo del afiliado).",
+    "theme": [
+      "gove",
+      "heal"
+    ],
+    "superTheme": [
+      "GOVE",
+      "HEAL"
+    ],
+    "issued": "2022-08-03T17:47:12.801817",
+    "modified": "2022-11-03T14:06:42.864846",
+    "publisher": {
+      "name": "INSSJP"
+    },
+    "landingPage": "http://datos.pami.ar/dataset/medicamentos-para-afiliados"
+  }
+}

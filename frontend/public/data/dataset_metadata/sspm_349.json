@@ -1,0 +1,42 @@
+{
+  "files": {
+    "liquidacion-divisas-exportaciones-oleaginosas-cereales-anual.csv": {
+      "datasetId": "sspm_349",
+      "datasetTitle": "Liquidación de divisas por Exportaciones de Oleaginosas y Cereales",
+      "fileName": "liquidacion-divisas-exportaciones-oleaginosas-cereales-anual.csv",
+      "format": "CSV",
+      "title": "Liquidación de divisas por Exportaciones de Oleaginosas y Cereales. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:01.872Z",
+      "status": "processed"
+    },
+    "liquidacion-divisas-exportaciones-oleaginosas-cereales-mensual.csv": {
+      "datasetId": "sspm_349",
+      "datasetTitle": "Liquidación de divisas por Exportaciones de Oleaginosas y Cereales",
+      "fileName": "liquidacion-divisas-exportaciones-oleaginosas-cereales-mensual.csv",
+      "format": "CSV",
+      "title": "Liquidación de divisas por Exportaciones de Oleaginosas y Cereales. Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:02.924Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_349",
+    "title": "Liquidación de divisas por Exportaciones de Oleaginosas y Cereales",
+    "description": "Serie liquidación de divisas por Exportaciones de Oleaginosas y Cereales",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-12-05",
+    "modified": "2025-03-24T10:01:13.468342",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

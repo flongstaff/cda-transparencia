@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_031d3827-927e-47af-b679-7fda70aa44a7",
+      "datasetTitle": "Poderes judiciales - Causas no penales",
+      "format": "gráfico",
+      "title": "Causas no penales en los Poderes Judiciales Provinciales - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/031d3827-927e-47af-b679-7fda70aa44a7/resource/c4c665ac-a367-4383-9531-cb607dbaf1e2",
+      "lastProcessed": "2025-10-09T06:37:12.943Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_031d3827-927e-47af-b679-7fda70aa44a7",
+    "title": "Poderes judiciales - Causas no penales",
+    "description": "Datos elaborados a partir de datos primarios remitidos por los poderes judiciales provinciales, correspondientes a causas no penales, siguiendo el Protocolo Técnico de Datos y de Procesos, en el marco del Convenio Interjurisdiccional de Datos Abiertos de Justicia.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2019-05-10T12:37:44.400037",
+    "modified": "2025-09-30T19:11:56.778803",
+    "publisher": {
+      "mbox": "datosjusticia@jus.gob.ar",
+      "name": "Ministerio de Justicia"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/poderes-judiciales-causas-no-penales"
+  }
+}

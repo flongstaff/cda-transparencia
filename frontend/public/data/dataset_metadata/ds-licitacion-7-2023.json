@@ -1,0 +1,31 @@
+{
+  "files": {
+    "LICITACION-PUBLICA-N°7.pdf": {
+      "datasetId": "ds-licitacion-7-2023",
+      "datasetTitle": "Licitación Pública N°7/2023 - Refuerzo de Sistema de Producción y Almacenamiento",
+      "fileName": "LICITACION-PUBLICA-N°7.pdf",
+      "format": "PDF",
+      "title": "Pliego N°7",
+      "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf",
+      "lastProcessed": "2025-10-09T06:14:04.691Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ds-licitacion-7-2023",
+    "title": "Licitación Pública N°7/2023 - Refuerzo de Sistema de Producción y Almacenamiento",
+    "description": "Llamado a licitación para refuerzo en Gouin y Carmen de Areco (Norte y Marín). Apertura: 27/11/2023.",
+    "theme": [
+      "gobierno-y-sector-publico"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2023-11-03T00:00:00",
+    "modified": "2023-11-27T00:00:00",
+    "publisher": {
+      "name": "Secretaría de Planificación y Obras Públicas"
+    },
+    "landingPage": "https://carmendeareco.gob.ar/transparencia/licitaciones/"
+  }
+}

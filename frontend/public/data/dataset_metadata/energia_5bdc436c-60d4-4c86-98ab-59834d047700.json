@@ -1,0 +1,211 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "format": "ZIP",
+      "title": "Ventas por Jurisdicción",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/355ad1e6-250b-4acd-93b9-bb2e6be4b37c",
+      "lastProcessed": "2025-10-09T06:22:20.386Z",
+      "status": "processed"
+    },
+    "consumo-propio.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "consumo-propio.csv",
+      "format": "CSV",
+      "title": "Consumo Propio",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/afec7812-9254-4d94-869a-d8313e7bf5ea",
+      "lastProcessed": "2025-10-09T06:22:23.024Z",
+      "status": "processed"
+    },
+    "existencias-.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "existencias-.csv",
+      "format": "CSV",
+      "title": "Existencias\r ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/10934b1f-cae0-4687-a613-e18c62660473",
+      "lastProcessed": "2025-10-09T06:22:26.212Z",
+      "status": "processed"
+    },
+    "productos-procesados.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "productos-procesados.csv",
+      "format": "CSV",
+      "title": "Productos procesados",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/23e6d79d-0cf3-4b4c-bb5a-d776bece8ffd",
+      "lastProcessed": "2025-10-09T06:22:28.558Z",
+      "status": "processed"
+    },
+    "otras-operaciones.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "otras-operaciones.csv",
+      "format": "CSV",
+      "title": "Otras operaciones",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/6514ba61-e224-46ae-9ffe-6cc63398f238",
+      "lastProcessed": "2025-10-09T06:22:37.183Z",
+      "status": "processed"
+    },
+    "ventas-a-empresas-del-sector.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "ventas-a-empresas-del-sector.csv",
+      "format": "CSV",
+      "title": "Ventas a empresas del sector",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/8ab9d8ac-bf09-412f-88bf-501b996a9247",
+      "lastProcessed": "2025-10-09T06:22:40.560Z",
+      "status": "processed"
+    },
+    "importaciones-exportaciones.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "importaciones-exportaciones.csv",
+      "format": "CSV",
+      "title": "Importaciones / Exportaciones desde 2010 al 2015",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/89279fc5-0b5e-427a-934c-3f238745b403",
+      "lastProcessed": "2025-10-09T06:22:44.642Z",
+      "status": "processed"
+    },
+    "importaciones-exportaciones-a-partir-del-2016-.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "importaciones-exportaciones-a-partir-del-2016-.csv",
+      "format": "CSV",
+      "title": "Importaciones / Exportaciones a partir del 2016 ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/ea145b70-c78f-4c94-8df0-27e3acfda3fc",
+      "lastProcessed": "2025-10-09T06:22:49.838Z",
+      "status": "processed"
+    },
+    "subproductos-obtenidos.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "subproductos-obtenidos.csv",
+      "format": "CSV",
+      "title": "Subproductos Obtenidos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/78c4648c-0c26-4db8-94ca-d271ab687f9b",
+      "lastProcessed": "2025-10-09T06:22:52.201Z",
+      "status": "processed"
+    },
+    "compras.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "compras.csv",
+      "format": "CSV",
+      "title": "Compras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/6282dbf1-93d7-4fd3-a63a-61a8f8a95475",
+      "lastProcessed": "2025-10-09T06:22:53.753Z",
+      "status": "processed"
+    },
+    "ventas-excluye-ventas-a-empresas-del-sector-.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "ventas-excluye-ventas-a-empresas-del-sector-.csv",
+      "format": "CSV",
+      "title": "Ventas, (excluye ventas a empresas del sector)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/f0e4e10a-e4b8-44e6-bd16-763a43742107",
+      "lastProcessed": "2025-10-09T06:22:55.086Z",
+      "status": "processed"
+    },
+    "ventas-mercado-aerokerosene-provincia.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "ventas-mercado-aerokerosene-provincia.csv",
+      "format": "CSV",
+      "title": "Serie histórica de ventas de aerokerosene por provincia (excluye ventas a empresas del sector)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/3da9b172-1a47-46f3-8bc5-f6d244bee8d2",
+      "lastProcessed": "2025-10-09T06:22:56.443Z",
+      "status": "processed"
+    },
+    "ventas-mercado-producto-provincia.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "ventas-mercado-producto-provincia.csv",
+      "format": "CSV",
+      "title": "Serie histórica de Ventas por provincia, (excluye ventas a empresas del sector)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/400eb2e9-2546-4343-90b4-8812604762ec",
+      "lastProcessed": "2025-10-09T06:22:59.900Z",
+      "status": "processed"
+    },
+    "ventas-mercado-producto-empresa.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "ventas-mercado-producto-empresa.csv",
+      "format": "CSV",
+      "title": "Serie histórica de Ventas por empresa, (excluye ventas a empresas del sector)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/fb393537-5613-4331-919c-641393924a4e",
+      "lastProcessed": "2025-10-09T06:23:02.266Z",
+      "status": "processed"
+    },
+    "petroleo-procesado-por-refinera-m3-.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "petroleo-procesado-por-refinera-m3-.csv",
+      "format": "CSV",
+      "title": "Petroleo Procesado por refinería (m3)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/b9eeff60-3de3-4459-be69-907a88330d78",
+      "lastProcessed": "2025-10-09T06:23:03.688Z",
+      "status": "processed"
+    },
+    "petroleo-procesado-por-cuenca-m3-.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "petroleo-procesado-por-cuenca-m3-.csv",
+      "format": "CSV",
+      "title": "Petroleo Procesado por cuenca (m3)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/c1e7a903-9ad6-4aee-a57c-a0516c80e0ce",
+      "lastProcessed": "2025-10-09T06:23:05.095Z",
+      "status": "processed"
+    },
+    "importaciones-de-combustibles-m3-.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "importaciones-de-combustibles-m3-.csv",
+      "format": "CSV",
+      "title": "Importaciones de Combustibles (m3)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/61af83bd-46ee-49ee-9a92-670277d328c9",
+      "lastProcessed": "2025-10-09T06:23:06.480Z",
+      "status": "processed"
+    },
+    "exportaciones-de-combustibles-m3-.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "exportaciones-de-combustibles-m3-.csv",
+      "format": "CSV",
+      "title": "Exportaciones de combustibles (m3)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/47e0123a-6115-484d-939c-db390d44d43e",
+      "lastProcessed": "2025-10-09T06:23:07.813Z",
+      "status": "processed"
+    },
+    "-ventas-al-mercado-y-bunker-de-principales-subproductos-m3-.csv": {
+      "datasetId": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+      "datasetTitle": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+      "fileName": "-ventas-al-mercado-y-bunker-de-principales-subproductos-m3-.csv",
+      "format": "CSV",
+      "title": " Ventas al mercado y bunker de principales subproductos (m3)\t",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5bdc436c-60d4-4c86-98ab-59834d047700/resource/0b4ba490-d588-4b3d-b097-6710ef73ccbe",
+      "lastProcessed": "2025-10-09T06:23:09.189Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_5bdc436c-60d4-4c86-98ab-59834d047700",
+    "title": "Refinación y Comercialización de petróleo, gas y derivados (Tablas Dinámicas)",
+    "description": "Tablas Dinámicas SESCO Downstream.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-12-22T14:21:24.342559",
+    "modified": "2025-09-30T15:51:12.717159",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/edit/refinacion-y-comercializacion-de-petroleo-gas-y-derivados-tablas-dinamicas"
+  }
+}

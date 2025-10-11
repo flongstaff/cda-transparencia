@@ -1,0 +1,36 @@
+{
+  "file_name": "2019_article_44_result.csv",
+  "row_count": 10,
+  "column_count": 2,
+  "columns": [
+    "Resultado Artículo 44",
+    "Importe"
+  ],
+  "sample_data": [
+    {
+      "Resultado Artículo 44": "234.125.273",
+      "Importe": 85.0
+    },
+    {
+      "Resultado Artículo 44": "270.542.007",
+      "Importe": 49.0
+    },
+    {
+      "Resultado Artículo 44": "-36.416.733",
+      "Importe": 64.0
+    },
+    {
+      "Resultado Artículo 44": "0",
+      "Importe": 0.0
+    },
+    {
+      "Resultado Artículo 44": "37.748.812",
+      "Importe": 76.0
+    }
+  ],
+  "data_types": {
+    "Resultado Artículo 44": "object",
+    "Importe": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

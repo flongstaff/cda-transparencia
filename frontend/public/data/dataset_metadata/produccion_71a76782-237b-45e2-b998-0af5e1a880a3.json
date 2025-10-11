@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "produccion_71a76782-237b-45e2-b998-0af5e1a880a3",
+      "datasetTitle": "Registro Nacional de Parques Industriales (RENPI)",
+      "format": "ODS",
+      "title": "Parques Industriales inscriptos en el RENPI",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/71a76782-237b-45e2-b998-0af5e1a880a3/resource/13c5e3df-bf43-439a-bfa5-55fa2f0ed618",
+      "lastProcessed": "2025-10-09T08:07:51.217Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_71a76782-237b-45e2-b998-0af5e1a880a3",
+    "title": "Registro Nacional de Parques Industriales (RENPI)",
+    "description": "El Registro Nacional de Parques Industriales (RENPI) tiene como objetivo recolectar, monitorear y sistematizar información sobre los Parques Industriales en el país y las empresas radicadas en ellos.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-04-27T15:47:54.164312",
+    "modified": "2021-05-11T15:55:39.417706",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa. Subsecretaría de Industria. Dirección Nacional de Desarrollo Regional y Sectorial. Dirección de Desarrollo Regional. Coordinación de Parques Industriales."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/registro-nacional-de-parques-industriales-renpi"
+  }
+}

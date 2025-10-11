@@ -1,0 +1,55 @@
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.
+19/09/2023 13:26
+Presupuesto: 2022DE EJECUCION PRESUPUESTARIA 
+01/04/2022 al 30/06/2022
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+I. INGRESOS CORRIENTES
+Ingresos tributarios 127.289.059,18
+Contribuciones a la Seguridad Social
+Ingresos no Tributarios 38.463.918,36
+Ventas de Bienes y Servicios
+Ingresos de Operación
+Rentas de la Propiedad 13.953.704,45
+Transferencias Corrientes 57.578.398,96
+Contribuciones Figurativas para Financiaciones Corrientes
+TOTAL  INGRESOS CORRIENTES 237.285.080,95
+II. GASTOS CORRIENTES
+Gastos de Operación
+Gastos de Consumo 187.160.689,94
+Rentas de la Propiedad 5.741,03
+Prestaciones de la Seguridad Social
+Impuestos Directos
+Otras Pérdidas
+Transferencias Corrientes 12.373.203,43
+Gastos Figurativos para Transacciones Corrientes
+TOTAL  GASTOS CORRIENTES 199.539.634,40
+III. AHORRO CORRIENTE: (I - II) 37.745.446,55
+Resultado Corriente Primario (Ingresos Corrientes - Gastos Corrientes netos de Int. de la deuda) 37.758.509,95
+TOTAL  AHORRO CORRIENTE: (I - II) 75.503.956,50 37.745.446,55
+IV. RECURSOS DE CAPITAL
+Recursos Propios de Capital
+Transferencias de Capital 133.623.634,89
+Disminución de la Inversión Financiera 740.476,69
+Contribuciones Figurativas para Financiaciones de Capital
+Filtro aplicado: Presupuesto: 2022 -  Fechas: 01/04/2022 al 30/06/2022
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 2 de 3 R.A.F.A.M.
+19/09/2023 13:26
+Presupuesto: 2022DE EJECUCION PRESUPUESTARIA 
+01/04/2022 al 30/06/2022
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+TOTAL  RECURSOS DE CAPITAL 134.364.111,58
+V. GASTOS DE CAPITAL
+Inversión Real Directa 125.948.242,89
+Transferencias de Capital 2.460.861,08
+Inversión Financiera
+Gastos Figurativos para Transacciones de Capital
+TOTAL  GASTOS DE CAPITAL 128.409.103,97
+VI. INGRESOS TOTALES 371.649.192,53
+TOTAL  INGRESOS TOTALES 371.649.192,53 371.649.192,53
+VII. GASTOS TOTALES 327.948.738,37
+TOTAL  GASTOS TOTALES 327.948.738,37 327.948.738,37
+VIII. ...

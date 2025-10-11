@@ -1,0 +1,32 @@
+{
+  "files": {
+    "tasa-mortalidad-fetal-total-deis-2006-2023.csv": {
+      "datasetId": "salud_7fd3f531-9aeb-45ea-9395-cfcc4af61515",
+      "datasetTitle": "Tasa de Mortalidad Fetal Total",
+      "fileName": "tasa-mortalidad-fetal-total-deis-2006-2023.csv",
+      "format": "CSV",
+      "title": "Tasa de mortalidad fetal total 2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/7fd3f531-9aeb-45ea-9395-cfcc4af61515/resource/8e1b9165-aa43-4a7f-8753-ee38ad52b8a8",
+      "lastProcessed": "2025-10-09T07:25:04.022Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_7fd3f531-9aeb-45ea-9395-cfcc4af61515",
+    "title": "Tasa de Mortalidad Fetal Total",
+    "description": "Tasa de Mortalidad Fetal total (Series)",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2022-06-06T22:13:44.341899",
+    "modified": "2023-06-30T13:49:15.568677",
+    "publisher": {
+      "mbox": "karloia555@gmail.com",
+      "name": "Ministerio de Salud de la Nación. Dirección de Estadística e Información en Salud"
+    },
+    "landingPage": "https://www.argentina.gob.ar/salud/deis"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "files": {
+    "linea-base-basurales-2017.csv": {
+      "datasetId": "acumar_d2ce17a7-431c-493c-83d5-3388265ccb73",
+      "datasetTitle": "Línea de Base de Basurales 2017 en la Cuenca Matanza Riachuelo",
+      "fileName": "linea-base-basurales-2017.csv",
+      "format": "CSV",
+      "title": "Línea de base de basurales 2017 en la Cuenca Matanza Riachuelo",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/d2ce17a7-431c-493c-83d5-3388265ccb73/resource/38cd6b43-f169-44ae-85c8-0a29f3301d32",
+      "lastProcessed": "2025-10-09T07:57:01.009Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_d2ce17a7-431c-493c-83d5-3388265ccb73",
+    "title": "Línea de Base de Basurales 2017 en la Cuenca Matanza Riachuelo",
+    "description": "Datos correspondientes a la Línea de Base de Basurales realizada por ACUMAR en 2017.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2024-11-26T14:01:40.185595",
+    "modified": "2025-02-07T16:58:52.942582",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección de Gestión Integral de Residuos Sólidos"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/linea-de-base-de-basurales-2017-cmr"
+  }
+}

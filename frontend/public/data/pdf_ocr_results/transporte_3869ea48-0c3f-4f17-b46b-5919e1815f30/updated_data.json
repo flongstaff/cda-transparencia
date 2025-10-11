@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30",
+      "title": "Matriz Origen-Destino vial de Transporte de Cargas - años 2012, 2014, 2016 y 2018",
+      "distribution": [
+        {
+          "title": "Informe_Metodologico_Matrices_Origen_y_Destino_de_Cargas_2018_Final.pdf",
+          "format": "PDF",
+          "fileName": "Informe_Metodologico_Matrices_Origen_y_Destino_de_Cargas_2018_Final.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30/Informe_Metodologico_Matrices_Origen_y_Destino_de_Cargas_2018_Final.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30/Informe_Metodologico_Matrices_Origen_y_Destino_de_Cargas_2018_Final_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

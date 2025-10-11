@@ -1,0 +1,82 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "produccion_b294cacb-a01d-42fd-b92f-dad4c929641b",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por provincia y sector de actividad",
+      "lastProcessed": "2025-10-09T08:05:53.751Z",
+      "status": "processed"
+    },
+    "puestos_todos.csv": {
+      "datasetId": "produccion_b294cacb-a01d-42fd-b92f-dad4c929641b",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por provincia y sector de actividad",
+      "fileName": "puestos_todos.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo asalariados registrados por provincia y por clae2, total",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/b294cacb-a01d-42fd-b92f-dad4c929641b/resource/83cc98a1-ff10-4805-9070-3da3d29e9ad1",
+      "lastProcessed": "2025-10-09T08:05:37.838Z",
+      "status": "processed"
+    },
+    "puestos_priv": {
+      "datasetId": "produccion_b294cacb-a01d-42fd-b92f-dad4c929641b",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por provincia y sector de actividad",
+      "fileName": "puestos_priv",
+      "format": "CSV",
+      "title": "Puestos de trabajo asalariados registrados por provincia, sector privado",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/b294cacb-a01d-42fd-b92f-dad4c929641b/resource/53a01566-824a-4488-8725-8c297e50b830",
+      "lastProcessed": "2025-10-09T08:05:45.668Z",
+      "status": "processed"
+    },
+    "puestos_prod": {
+      "datasetId": "produccion_b294cacb-a01d-42fd-b92f-dad4c929641b",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por provincia y sector de actividad",
+      "fileName": "puestos_prod",
+      "format": "CSV",
+      "title": "Puestos de trabajo asalariados registrados por provincia, total empresas",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/b294cacb-a01d-42fd-b92f-dad4c929641b/resource/550d8ce4-2627-4e7b-9fe5-777f9cc1fb46",
+      "lastProcessed": "2025-10-09T08:05:47.515Z",
+      "status": "processed"
+    },
+    "puestos_todos": {
+      "datasetId": "produccion_b294cacb-a01d-42fd-b92f-dad4c929641b",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por provincia y sector de actividad",
+      "fileName": "puestos_todos",
+      "format": "CSV",
+      "title": "Puestos de trabajo asalariados registrados por provincia, total",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/b294cacb-a01d-42fd-b92f-dad4c929641b/resource/f5d44fc0-7c63-418b-a60b-584844173f9e",
+      "lastProcessed": "2025-10-09T08:05:49.379Z",
+      "status": "processed"
+    },
+    "clae_agg.csv": {
+      "datasetId": "produccion_b294cacb-a01d-42fd-b92f-dad4c929641b",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por provincia y sector de actividad",
+      "fileName": "clae_agg.csv",
+      "format": "CSV",
+      "title": "Diccionario de claes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/b294cacb-a01d-42fd-b92f-dad4c929641b/resource/ca205c98-f8e6-44d3-b47a-fe380efd69da",
+      "lastProcessed": "2025-10-09T08:05:51.231Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_b294cacb-a01d-42fd-b92f-dad4c929641b",
+    "title": "Puestos de trabajo asalariados registrados, por provincia y sector de actividad",
+    "description": "Datos correspondientes a los puestos de trabajo asalariados registrados por provincia (de acuerdo a la ubicación del establecimiento donde tiene lugar la relación laboral) y por sector de actividad. Las series se presentan para tres universos: sector privado,  \"total empresas\" (sector privado + empresas públicas) y total. Los datos tienen una frecuencia mensual y van desde 2007 hasta la actualidad (con excepción de la serie total, que inicia en 2013).",
+    "theme": [
+      "econ",
+      "gove",
+      "regi"
+    ],
+    "superTheme": [
+      "ECON",
+      "GOVE",
+      "REGI"
+    ],
+    "issued": "2021-11-09T15:10:09.403717",
+    "modified": "2021-11-09T15:40:57.053605",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la Producción."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/puestos-de-trabajo-registrados-por-provincia-y-sector-de-actividad"
+  }
+}

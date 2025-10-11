@@ -1,0 +1,32 @@
+{
+  "files": {
+    "importaciones-clasificadas-nomenclador-comun-mercosur-ncm-2-digitos.csv": {
+      "datasetId": "sspm_163",
+      "datasetTitle": "Importaciones según el Nomenclador Común del Mercosur (NCM)",
+      "fileName": "importaciones-clasificadas-nomenclador-comun-mercosur-ncm-2-digitos.csv",
+      "format": "CSV",
+      "title": "Importaciones según el Nomenclador Común del Mercosur (NCM), a 2 dígitos. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:35.791Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_163",
+    "title": "Importaciones según el Nomenclador Común del Mercosur (NCM)",
+    "description": "Importaciones clasificadas según el Nomenclador Común del Mercosur (NCM), a 2 dígitos",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:01:35.791119",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

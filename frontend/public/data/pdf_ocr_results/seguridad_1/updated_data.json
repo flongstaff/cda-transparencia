@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "seguridad_1",
+      "title": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "distribution": [
+        {
+          "title": "Informe_SNIC_Nacional_2023.pdf",
+          "format": "PDF",
+          "fileName": "Informe_SNIC_Nacional_2023.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/seguridad_1/Informe_SNIC_Nacional_2023.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/seguridad_1/Informe_SNIC_Nacional_2023_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

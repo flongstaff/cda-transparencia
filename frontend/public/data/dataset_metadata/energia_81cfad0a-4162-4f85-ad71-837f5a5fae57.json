@@ -1,0 +1,51 @@
+{
+  "files": {
+    "produccin-hidrocarburos-concesiones-de-explotacin.zip": {
+      "datasetId": "energia_81cfad0a-4162-4f85-ad71-837f5a5fae57",
+      "datasetTitle": "Producción de hidrocarburos - Concesiones de Explotación",
+      "fileName": "produccin-hidrocarburos-concesiones-de-explotacin.zip",
+      "format": "SHP",
+      "title": "Producción Hidrocarburos Concesiones de Explotación",
+      "accessURL": "http://datos.energia.gob.ar/dataset/81cfad0a-4162-4f85-ad71-837f5a5fae57/resource/48a306a3-d5da-4f28-8ab5-7f80767ffdec",
+      "lastProcessed": "2025-10-09T06:36:31.772Z",
+      "status": "processed"
+    },
+    "produccin-hidrocarburos-concesiones-de-explotacin.csv": {
+      "datasetId": "energia_81cfad0a-4162-4f85-ad71-837f5a5fae57",
+      "datasetTitle": "Producción de hidrocarburos - Concesiones de Explotación",
+      "fileName": "produccin-hidrocarburos-concesiones-de-explotacin.csv",
+      "format": "CSV",
+      "title": "Producción Hidrocarburos Concesiones de Explotación",
+      "accessURL": "http://datos.energia.gob.ar/dataset/81cfad0a-4162-4f85-ad71-837f5a5fae57/resource/b6af0c0e-e463-4cb7-b458-373aafc0ac08",
+      "lastProcessed": "2025-10-09T06:36:33.077Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "energia_81cfad0a-4162-4f85-ad71-837f5a5fae57",
+      "datasetTitle": "Producción de hidrocarburos - Concesiones de Explotación",
+      "format": "PHP",
+      "title": "Mapa de Exploración de Hidrocarburos - Pozos, Concesiones de Explotación, Yacimientos y Cuencas Sedimentarias",
+      "accessURL": "http://datos.energia.gob.ar/dataset/81cfad0a-4162-4f85-ad71-837f5a5fae57/resource/76d1244d-94c6-40a4-9f28-9aca2fd7a3ad",
+      "lastProcessed": "2025-10-09T06:36:33.077Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_81cfad0a-4162-4f85-ad71-837f5a5fae57",
+    "title": "Producción de hidrocarburos - Concesiones de Explotación",
+    "description": "Ubicación y polígonos de concesiones de explotación. ISO 19126: Extraction, Este subgrupo se compone de conceptos que se refieren a la extracción de materias primas y la excavación del suelo.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2022-02-16T14:54:41.884044",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

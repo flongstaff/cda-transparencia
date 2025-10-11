@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "turismo_4cbf7d4a-702a-4911-8c1e-717a45214902",
+      "title": "Turismo Internacional - Total País",
+      "distribution": [
+        {
+          "title": "tur-inter-data.pdf",
+          "format": "PDF",
+          "fileName": "tur-inter-data.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/turismo_4cbf7d4a-702a-4911-8c1e-717a45214902/tur-inter-data.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/turismo_4cbf7d4a-702a-4911-8c1e-717a45214902/tur-inter-data_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

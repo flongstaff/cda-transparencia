@@ -1,0 +1,32 @@
+{
+  "files": {
+    "obras-electricas.csv": {
+      "datasetId": "energia_a94977b7-d6a2-4501-b422-a20c909cc60f",
+      "datasetTitle": "Obras de transmisión y distribución",
+      "fileName": "obras-electricas.csv",
+      "format": "CSV",
+      "title": "Obras de transmisión y distribución",
+      "accessURL": "http://datos.energia.gob.ar/dataset/a94977b7-d6a2-4501-b422-a20c909cc60f/resource/2ada83a0-7fb1-4dca-a9cd-c6ac7f75d1b6",
+      "lastProcessed": "2025-10-09T07:21:21.904Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_a94977b7-d6a2-4501-b422-a20c909cc60f",
+    "title": "Obras de transmisión y distribución",
+    "description": "Listado de obras vigentes que se desarrollan con aporte de fondos del Estado Nacional. Incluye obras de tendido de líneas de alta, media y baja tensión, estaciones transformadoras, centros de transformación, adquisición de transformadores, etc.Este listado fue confeccionado por la Subsecretaría de Infraestructura Energética del Ministerio de Energía y Minería de la Nación y surge del seguimiento que la Coordinación de Transmisión y Distribución de Electricidad realiza del desarrollo de las obras",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2021-06-29T14:28:07.293699",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

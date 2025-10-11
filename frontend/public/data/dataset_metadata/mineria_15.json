@@ -1,0 +1,30 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_15",
+      "datasetTitle": "Indicadores de sustentabilidad del SIACAM",
+      "lastProcessed": "2025-10-09T07:09:49.739Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_15",
+    "title": "Indicadores de sustentabilidad del SIACAM",
+    "description": "Datos correspondientes al tablero de Sustentabilidad del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM). Elaborado por la Dirección de Transparencia e Información Minera y la Dirección Nacional de Producción Minera Sustentable en base a los últimos informes de la Global Reporting Initiative disponibles.",
+    "theme": [
+      "econ",
+      "envi"
+    ],
+    "superTheme": [
+      "ECON",
+      "ENVI"
+    ],
+    "issued": "2022-12-07",
+    "modified": "2022-12-07",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

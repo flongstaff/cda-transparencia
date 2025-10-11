@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-ejecucion-recursos-2025-h1",
+      "title": "Ejecución Presupuestaria de Recursos 2025 - Primer Semestre",
+      "distribution": [
+        {
+          "title": "Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+          "format": "PDF",
+          "fileName": "Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-ejecucion-recursos-2025-h1/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-ejecucion-recursos-2025-h1/Estado-de-Ejecucion-de-Recursos-Junio_extraction.json",
+            "pageCount": 12,
+            "textLength": 35168,
+            "extractedPreview": "R.A.F.A.M.\nESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 12\n10/07/202510:23\nMunicipalidad de\nCarmen de ArecoDel 02/01/2025 al 30/06/2025\nEjercicio: 2025\nRubro - Descripción ProcedenciaModif...",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

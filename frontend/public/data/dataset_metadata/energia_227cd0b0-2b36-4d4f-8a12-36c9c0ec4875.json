@@ -1,0 +1,41 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_227cd0b0-2b36-4d4f-8a12-36c9c0ec4875",
+      "datasetTitle": "Precios de bioetanol",
+      "format": "PHP",
+      "title": "Biocombustibles - Precios de bioetanol",
+      "accessURL": "http://datos.energia.gob.ar/dataset/227cd0b0-2b36-4d4f-8a12-36c9c0ec4875/resource/72685628-9fef-4e72-8097-6b65ee036b5f",
+      "lastProcessed": "2025-10-09T06:52:08.508Z",
+      "status": "processed"
+    },
+    "biocombustible-precios-de-bioetanol.csv": {
+      "datasetId": "energia_227cd0b0-2b36-4d4f-8a12-36c9c0ec4875",
+      "datasetTitle": "Precios de bioetanol",
+      "fileName": "biocombustible-precios-de-bioetanol.csv",
+      "format": "CSV",
+      "title": "Biocombustibles - Precios de bioetanol",
+      "accessURL": "http://datos.energia.gob.ar/dataset/227cd0b0-2b36-4d4f-8a12-36c9c0ec4875/resource/a03c0076-d089-447d-9659-cf54bb89c725",
+      "lastProcessed": "2025-10-09T06:52:10.222Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_227cd0b0-2b36-4d4f-8a12-36c9c0ec4875",
+    "title": "Precios de bioetanol",
+    "description": "Detalle mensual de precios de bioetanol por tipo (caña, maíz), en AR$/l.\r\n",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:26.708783",
+    "modified": "2025-07-14T12:44:42.204369",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

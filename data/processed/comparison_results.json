@@ -1,0 +1,246 @@
+{
+  "summary": {},
+  "discrepancies": [
+    {
+      "type": "description_content_mismatch",
+      "dataset_id": "ds-ejecucion-gastos-2023-q4",
+      "file_name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+      "missing_terms": [
+        "ejecución",
+        "finalidad,",
+        "función,",
+        "perspectiva",
+        "género"
+      ],
+      "description": "estado de ejecución de gastos por finalidad, función, perspectiva de género y fuente de financiamien..."
+    },
+    {
+      "type": "description_content_mismatch",
+      "dataset_id": "ds-cuenta-ahorro-2025",
+      "file_name": "Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+      "missing_terms": [
+        "reporte",
+        "ahorro,",
+        "marzo",
+        "junio",
+        "2025."
+      ],
+      "description": "reporte de cuenta ahorro, inversión y financiamiento para marzo y junio 2025."
+    },
+    {
+      "type": "year_mismatch",
+      "dataset_id": "ds-estadisticas-salud-2021",
+      "file_name": "2021 CAPS ESTADISTICAS.pdf",
+      "pub_year": "2022",
+      "description": "Publication year 2022 not found in extracted text"
+    },
+    {
+      "type": "year_mismatch",
+      "dataset_id": "ds-estadisticas-salud-2021",
+      "file_name": "ESTADISTICAS-SALUD.pdf",
+      "pub_year": "2022",
+      "description": "Publication year 2022 not found in extracted text"
+    },
+    {
+      "type": "year_mismatch",
+      "dataset_id": "ds-estadisticas-omic-2021",
+      "file_name": "2021 ESTADISTICAS OMIC.pdf",
+      "pub_year": "2022",
+      "description": "Publication year 2022 not found in extracted text"
+    },
+    {
+      "type": "description_content_mismatch",
+      "dataset_id": "ds-estadisticas-seguridad-2021-2022",
+      "file_name": "2021 SEGURIDAD URBANA.pdf",
+      "missing_terms": [
+        "reportes",
+        "sueltos,",
+        "infracciones",
+        "monitoreo",
+        "policial."
+      ],
+      "description": "reportes de animales sueltos, infracciones y monitoreo policial."
+    },
+    {
+      "type": "year_mismatch",
+      "dataset_id": "ds-estadisticas-seguridad-2021-2022",
+      "file_name": "2021 SEGURIDAD URBANA.pdf",
+      "pub_year": "2022",
+      "description": "Publication year 2022 not found in extracted text"
+    },
+    {
+      "type": "description_content_mismatch",
+      "dataset_id": "ds-estadisticas-seguridad-2021-2022",
+      "file_name": "SEGURIDAD URBANA 2022.pdf",
+      "missing_terms": [
+        "reportes",
+        "sueltos,",
+        "infracciones",
+        "monitoreo",
+        "policial."
+      ],
+      "description": "reportes de animales sueltos, infracciones y monitoreo policial."
+    },
+    {
+      "type": "description_content_mismatch",
+      "dataset_id": "ds-ejecucion-gastos-2023-q4",
+      "file_name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+      "missing_terms": [
+        "ejecución",
+        "finalidad,",
+        "función,",
+        "perspectiva",
+        "género"
+      ],
+      "description": "estado de ejecución de gastos por finalidad, función, perspectiva de género y fuente de financiamien..."
+    },
+    {
+      "type": "description_content_mismatch",
+      "dataset_id": "ds-cuenta-ahorro-2025",
+      "file_name": "Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+      "missing_terms": [
+        "reporte",
+        "ahorro,",
+        "marzo",
+        "junio",
+        "2025."
+      ],
+      "description": "reporte de cuenta ahorro, inversión y financiamiento para marzo y junio 2025."
+    },
+    {
+      "type": "year_mismatch",
+      "dataset_id": "ds-estadisticas-salud-2021",
+      "file_name": "2021 CAPS ESTADISTICAS.pdf",
+      "pub_year": "2022",
+      "description": "Publication year 2022 not found in extracted text"
+    },
+    {
+      "type": "year_mismatch",
+      "dataset_id": "ds-estadisticas-salud-2021",
+      "file_name": "ESTADISTICAS-SALUD.pdf",
+      "pub_year": "2022",
+      "description": "Publication year 2022 not found in extracted text"
+    },
+    {
+      "type": "year_mismatch",
+      "dataset_id": "ds-estadisticas-omic-2021",
+      "file_name": "2021 ESTADISTICAS OMIC.pdf",
+      "pub_year": "2022",
+      "description": "Publication year 2022 not found in extracted text"
+    },
+    {
+      "type": "description_content_mismatch",
+      "dataset_id": "ds-estadisticas-seguridad-2021-2022",
+      "file_name": "2021 SEGURIDAD URBANA.pdf",
+      "missing_terms": [
+        "reportes",
+        "sueltos,",
+        "infracciones",
+        "monitoreo",
+        "policial."
+      ],
+      "description": "reportes de animales sueltos, infracciones y monitoreo policial."
+    },
+    {
+      "type": "year_mismatch",
+      "dataset_id": "ds-estadisticas-seguridad-2021-2022",
+      "file_name": "2021 SEGURIDAD URBANA.pdf",
+      "pub_year": "2022",
+      "description": "Publication year 2022 not found in extracted text"
+    },
+    {
+      "type": "description_content_mismatch",
+      "dataset_id": "ds-estadisticas-seguridad-2021-2022",
+      "file_name": "SEGURIDAD URBANA 2022.pdf",
+      "missing_terms": [
+        "reportes",
+        "sueltos,",
+        "infracciones",
+        "monitoreo",
+        "policial."
+      ],
+      "description": "reportes de animales sueltos, infracciones y monitoreo policial."
+    },
+    {
+      "type": "description_content_mismatch",
+      "dataset_id": "ds-ejecucion-gastos-2023-q4",
+      "file_name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+      "missing_terms": [
+        "ejecución",
+        "finalidad,",
+        "función,",
+        "perspectiva",
+        "género"
+      ],
+      "description": "estado de ejecución de gastos por finalidad, función, perspectiva de género y fuente de financiamien..."
+    },
+    {
+      "type": "description_content_mismatch",
+      "dataset_id": "ds-cuenta-ahorro-2025",
+      "file_name": "Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+      "missing_terms": [
+        "reporte",
+        "ahorro,",
+        "marzo",
+        "junio",
+        "2025."
+      ],
+      "description": "reporte de cuenta ahorro, inversión y financiamiento para marzo y junio 2025."
+    },
+    {
+      "type": "year_mismatch",
+      "dataset_id": "ds-estadisticas-salud-2021",
+      "file_name": "2021 CAPS ESTADISTICAS.pdf",
+      "pub_year": "2022",
+      "description": "Publication year 2022 not found in extracted text"
+    },
+    {
+      "type": "year_mismatch",
+      "dataset_id": "ds-estadisticas-salud-2021",
+      "file_name": "ESTADISTICAS-SALUD.pdf",
+      "pub_year": "2022",
+      "description": "Publication year 2022 not found in extracted text"
+    },
+    {
+      "type": "year_mismatch",
+      "dataset_id": "ds-estadisticas-omic-2021",
+      "file_name": "2021 ESTADISTICAS OMIC.pdf",
+      "pub_year": "2022",
+      "description": "Publication year 2022 not found in extracted text"
+    },
+    {
+      "type": "description_content_mismatch",
+      "dataset_id": "ds-estadisticas-seguridad-2021-2022",
+      "file_name": "2021 SEGURIDAD URBANA.pdf",
+      "missing_terms": [
+        "reportes",
+        "sueltos,",
+        "infracciones",
+        "monitoreo",
+        "policial."
+      ],
+      "description": "reportes de animales sueltos, infracciones y monitoreo policial."
+    },
+    {
+      "type": "year_mismatch",
+      "dataset_id": "ds-estadisticas-seguridad-2021-2022",
+      "file_name": "2021 SEGURIDAD URBANA.pdf",
+      "pub_year": "2022",
+      "description": "Publication year 2022 not found in extracted text"
+    },
+    {
+      "type": "description_content_mismatch",
+      "dataset_id": "ds-estadisticas-seguridad-2021-2022",
+      "file_name": "SEGURIDAD URBANA 2022.pdf",
+      "missing_terms": [
+        "reportes",
+        "sueltos,",
+        "infracciones",
+        "monitoreo",
+        "policial."
+      ],
+      "description": "reportes de animales sueltos, infracciones y monitoreo policial."
+    }
+  ],
+  "consistencies": []
+}

@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_b40d586b-fda3-4746-a79a-c437fbdded76",
+      "datasetTitle": "Embargos y levantamiento de embargos de autos",
+      "format": "ZIP",
+      "title": "DNRPA. Embargos y levantamiento de embargos de autos - 2018",
+      "accessURL": "https://datos.jus.gob.ar/dataset/b40d586b-fda3-4746-a79a-c437fbdded76/resource/3206031d-bb26-457b-864c-5286da4da00a",
+      "lastProcessed": "2025-10-09T06:41:13.497Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_b40d586b-fda3-4746-a79a-c437fbdded76",
+    "title": "Embargos y levantamiento de embargos de autos",
+    "description": "Trámites de embargos y levantamientos de embargo de automotores inscriptos en los Registros Seccionales de la Propiedad del Automotor y Créditos Prendarios.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2019-01-04T13:46:27.873357",
+    "modified": "2025-09-11T14:35:59.767779",
+    "publisher": {
+      "mbox": "accesobd@dnrpa.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Dirección Nacional de los Registros Nacionales de la Propiedad del Automotor y Créditos Prendarios"
+    },
+    "landingPage": "https://www.dnrpa.gov.ar"
+  }
+}

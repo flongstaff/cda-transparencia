@@ -1,0 +1,82 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "produccion_803a2436-0240-4f87-916b-25cad0213918",
+      "datasetTitle": "Percentiles de salarios por género y actividad",
+      "lastProcessed": "2025-10-09T08:10:37.816Z",
+      "status": "processed"
+    },
+    "percentiles_todos_total_total.csv": {
+      "datasetId": "produccion_803a2436-0240-4f87-916b-25cad0213918",
+      "datasetTitle": "Percentiles de salarios por género y actividad",
+      "fileName": "percentiles_todos_total_total.csv",
+      "format": "CSV",
+      "title": "Percentiles de salario total",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/803a2436-0240-4f87-916b-25cad0213918/resource/18641586-5dc7-4d26-bb13-5cf0c54339ca",
+      "lastProcessed": "2025-10-09T08:10:08.575Z",
+      "status": "processed"
+    },
+    "percentiles_mujer_total_total.csv": {
+      "datasetId": "produccion_803a2436-0240-4f87-916b-25cad0213918",
+      "datasetTitle": "Percentiles de salarios por género y actividad",
+      "fileName": "percentiles_mujer_total_total.csv",
+      "format": "CSV",
+      "title": "Percentiles de salario total por género",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/803a2436-0240-4f87-916b-25cad0213918/resource/8b431ad8-4d2d-4003-a8d7-6cd5280569d3",
+      "lastProcessed": "2025-10-09T08:10:17.340Z",
+      "status": "processed"
+    },
+    "percentiles_todos_letra_tot_emp.csv": {
+      "datasetId": "produccion_803a2436-0240-4f87-916b-25cad0213918",
+      "datasetTitle": "Percentiles de salarios por género y actividad",
+      "fileName": "percentiles_todos_letra_tot_emp.csv",
+      "format": "CSV",
+      "title": "Percentiles de salario total empresas por letra",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/803a2436-0240-4f87-916b-25cad0213918/resource/8874883c-f1b9-405d-9028-4af7170020dc",
+      "lastProcessed": "2025-10-09T08:10:39.712Z",
+      "status": "processed"
+    },
+    "percentiles_todos_letra_total.csv": {
+      "datasetId": "produccion_803a2436-0240-4f87-916b-25cad0213918",
+      "datasetTitle": "Percentiles de salarios por género y actividad",
+      "fileName": "percentiles_todos_letra_total.csv",
+      "format": "CSV",
+      "title": "Percentiles de salario total por letra",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/803a2436-0240-4f87-916b-25cad0213918/resource/e1396abc-0574-422b-a5d5-8796f2046e08",
+      "lastProcessed": "2025-10-09T08:10:41.817Z",
+      "status": "processed"
+    },
+    "clae_agg.csv": {
+      "datasetId": "produccion_803a2436-0240-4f87-916b-25cad0213918",
+      "datasetTitle": "Percentiles de salarios por género y actividad",
+      "fileName": "clae_agg.csv",
+      "format": "CSV",
+      "title": "Diccionario de claes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/803a2436-0240-4f87-916b-25cad0213918/resource/82c6602b-0138-4de5-a7c3-33e397750dec",
+      "lastProcessed": "2025-10-09T08:10:43.684Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_803a2436-0240-4f87-916b-25cad0213918",
+    "title": "Percentiles de salarios por género y actividad",
+    "description": "Datos correspondientes a percentiles de salarios de los trabajadores asalariados registrados, desagregados por género y sector de actividad (letra y clae a dos dígitos). Las series se presentan para cuatro universos: sector privado, \"total empresas\", sector público y total. Los datos tienen una frecuencia mensual y van desde 2013 hasta la actualidad. Para más información, consultar metodología.",
+    "theme": [
+      "econ",
+      "gove",
+      "soci"
+    ],
+    "superTheme": [
+      "ECON",
+      "GOVE",
+      "SOCI"
+    ],
+    "issued": "2022-09-29T14:54:43.487261",
+    "modified": "2022-10-05T17:22:37.161639",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Economía. Secretaría de Industria y Desarrollo Productivo. Dirección Nacional de Estudios para la Producción."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/percentiles-de-salarios-por-genero-y-actividad"
+  }
+}

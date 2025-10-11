@@ -1,0 +1,118 @@
+{
+  "files": {
+    "boyeros.zip": {
+      "datasetId": "energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef",
+      "datasetTitle": "PERMER II",
+      "fileName": "boyeros.zip",
+      "format": "SHP",
+      "title": "Boyeros",
+      "accessURL": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/73cd7be2-6131-40ae-9bee-cb7b71b0b897",
+      "lastProcessed": "2025-10-09T06:24:59.612Z",
+      "status": "processed"
+    },
+    "hogares-2g.zip": {
+      "datasetId": "energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef",
+      "datasetTitle": "PERMER II",
+      "fileName": "hogares-2g.zip",
+      "format": "SHP",
+      "title": "Hogares 2G",
+      "accessURL": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/d5731284-3cad-4aea-b34a-6d3ffa25731f",
+      "lastProcessed": "2025-10-09T06:24:59.612Z",
+      "status": "processed"
+    },
+    "hogares-3g.zip": {
+      "datasetId": "energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef",
+      "datasetTitle": "PERMER II",
+      "fileName": "hogares-3g.zip",
+      "format": "SHP",
+      "title": "Hogares 3G",
+      "accessURL": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/e69608c5-a1d3-45b1-acb8-189b45784c55",
+      "lastProcessed": "2025-10-09T06:24:59.613Z",
+      "status": "processed"
+    },
+    "escuelas.zip": {
+      "datasetId": "energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef",
+      "datasetTitle": "PERMER II",
+      "fileName": "escuelas.zip",
+      "format": "SHP",
+      "title": "Escuelas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/337d1ee9-97a8-4e82-a68f-5906fe23d416",
+      "lastProcessed": "2025-10-09T06:24:59.613Z",
+      "status": "processed"
+    },
+    "miniredes.zip": {
+      "datasetId": "energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef",
+      "datasetTitle": "PERMER II",
+      "fileName": "miniredes.zip",
+      "format": "SHP",
+      "title": "Miniredes",
+      "accessURL": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/1aa84f05-ff18-4326-bc63-a6948ce8132d",
+      "lastProcessed": "2025-10-09T06:24:59.613Z",
+      "status": "processed"
+    },
+    "instituciones-pblicas.zip": {
+      "datasetId": "energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef",
+      "datasetTitle": "PERMER II",
+      "fileName": "instituciones-pblicas.zip",
+      "format": "SHP",
+      "title": "Instituciones Públicas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/39517e45-51ee-4a0d-9809-b1417f1a712c",
+      "lastProcessed": "2025-10-09T06:24:59.613Z",
+      "status": "processed"
+    },
+    "escuelas.csv": {
+      "datasetId": "energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef",
+      "datasetTitle": "PERMER II",
+      "fileName": "escuelas.csv",
+      "format": "CSV",
+      "title": "Escuelas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/959e6856-6b28-4d5d-868a-5be4a3e7b3db",
+      "lastProcessed": "2025-10-09T06:25:01.208Z",
+      "status": "processed"
+    },
+    "instituciones-pblicas.csv": {
+      "datasetId": "energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef",
+      "datasetTitle": "PERMER II",
+      "fileName": "instituciones-pblicas.csv",
+      "format": "CSV",
+      "title": "Instituciones Públicas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/cfd24ef3-25ed-488b-a098-76f9f2efee8b",
+      "lastProcessed": "2025-10-09T06:25:02.807Z",
+      "status": "processed"
+    },
+    "miniredes.csv": {
+      "datasetId": "energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef",
+      "datasetTitle": "PERMER II",
+      "fileName": "miniredes.csv",
+      "format": "CSV",
+      "title": "Miniredes",
+      "accessURL": "http://datos.energia.gob.ar/dataset/f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/resource/e9bb6c50-0e84-4500-b886-ba57f2a3d6bf",
+      "lastProcessed": "2025-10-09T06:25:04.260Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef",
+      "datasetTitle": "PERMER II",
+      "lastProcessed": "2025-10-09T06:26:31.038Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef",
+    "title": "PERMER II",
+    "description": "Proyecto de Energías Renovables en Mercados Rurales II\r\nPeríodo: 2015-2023",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2024-07-23T13:12:47.935670",
+    "modified": "2024-07-26T09:54:19.762186",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética. Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/permer-ii"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "turismo_c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb",
+      "title": "Base de Datos de Alojamientos Colectivos en Argentina",
+      "distribution": [
+        {
+          "title": "data-oferta-alojamiento.pdf",
+          "format": "PDF",
+          "fileName": "data-oferta-alojamiento.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/turismo_c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb/data-oferta-alojamiento.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/turismo_c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb/data-oferta-alojamiento_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

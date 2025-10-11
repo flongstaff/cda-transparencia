@@ -1,0 +1,32 @@
+{
+  "files": {
+    "seguimiento-particular-2024.csv": {
+      "datasetId": "acumar_58c0afee-1c67-4279-be16-1223ac0e0a78",
+      "datasetTitle": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo (2024)",
+      "fileName": "seguimiento-particular-2024.csv",
+      "format": "CSV",
+      "title": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo - 2024",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/58c0afee-1c67-4279-be16-1223ac0e0a78/resource/7e281459-af0a-4e79-8d9f-f4b52b43717b",
+      "lastProcessed": "2025-10-09T07:42:58.626Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_58c0afee-1c67-4279-be16-1223ac0e0a78",
+    "title": "Establecimientos de Seguimiento Particular en la Cuenca Matanza Riachuelo (2024)",
+    "description": "Datos correspondientes a los establecimientos catalogados por ACUMAR como de \"Seguimiento Particular\"; categoría otorgada a aquellos que requieren de una verificación más exhaustiva por considerarse de mayor relevancia ambiental, por su complejidad intrínseca, por su ubicación geográfica, por el entorno socioambiental en el que se emplazan y/o por la necesidad de intervención de otros organismos para la mejora de la situación existente.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2024-12-19T16:34:59.422458",
+    "modified": "2025-02-07T17:02:18.460999",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección de Fiscalización y Adecuación Ambiental"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/establecimientos-seguimiento-particular-cuenca-matanza-riachuelo"
+  }
+}

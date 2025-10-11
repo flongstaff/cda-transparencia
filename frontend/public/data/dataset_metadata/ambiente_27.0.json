@@ -1,0 +1,121 @@
+{
+  "files": {
+    "CCEGEI_consumohcfc_tn_f": {
+      "datasetId": "ambiente_27.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero (GEI)",
+      "fileName": "CCEGEI_consumohcfc_tn_f",
+      "format": "CSV",
+      "title": "Consumo de hidroclorofluorocarbonados en toneladas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=211",
+      "lastProcessed": "2025-10-09T06:57:37.900Z",
+      "status": "processed"
+    },
+    "CCEGEI_inventario_provincia": {
+      "datasetId": "ambiente_27.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero (GEI)",
+      "fileName": "CCEGEI_inventario_provincia",
+      "format": "CSV",
+      "title": "Emisiones anuales de GEI desagregadas por provincia. Periodo 2010-2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=394",
+      "lastProcessed": "2025-10-09T06:57:39.155Z",
+      "status": "processed"
+    },
+    "emisiones_sector_1990_2022": {
+      "datasetId": "ambiente_27.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero (GEI)",
+      "fileName": "emisiones_sector_1990_2022",
+      "format": "CSV",
+      "title": "Emisiones anuales de GEI por sector. Periodo 1990-2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=388",
+      "lastProcessed": "2025-10-09T06:57:40.425Z",
+      "status": "processed"
+    },
+    "icegei_emis_subs_no_ipcc_1990_2022": {
+      "datasetId": "ambiente_27.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero (GEI)",
+      "fileName": "icegei_emis_subs_no_ipcc_1990_2022",
+      "format": "CSV",
+      "title": "Emisiones anuales de GEI por subsector. Periodo 1990-2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=389",
+      "lastProcessed": "2025-10-09T06:57:41.802Z",
+      "status": "processed"
+    },
+    "icegei_emis_tipo_gas_1990_2022": {
+      "datasetId": "ambiente_27.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero (GEI)",
+      "fileName": "icegei_emis_tipo_gas_1990_2022",
+      "format": "CSV",
+      "title": "Emisiones anuales de GEI por tipo de gas. Periodo 1990-2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=416",
+      "lastProcessed": "2025-10-09T06:57:43.132Z",
+      "status": "processed"
+    },
+    "emisiones_sector_tipo_gas_1990_2022": {
+      "datasetId": "ambiente_27.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero (GEI)",
+      "fileName": "emisiones_sector_tipo_gas_1990_2022",
+      "format": "CSV",
+      "title": "Emisiones anuales de GEI por sector y gas. Periodo 1990-2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=36&stid=36&did=390",
+      "lastProcessed": "2025-10-09T06:57:44.566Z",
+      "status": "processed"
+    },
+    "CCEGEI_relacioncon_PBI_ODS0941": {
+      "datasetId": "ambiente_27.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero (GEI)",
+      "fileName": "CCEGEI_relacioncon_PBI_ODS0941",
+      "format": "CSV",
+      "title": "Emisiones gases efecto invernadero en relación al PIB",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=260",
+      "lastProcessed": "2025-10-09T06:57:45.836Z",
+      "status": "processed"
+    },
+    "CCEGEI_emisiones_ODS1321": {
+      "datasetId": "ambiente_27.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero (GEI)",
+      "fileName": "CCEGEI_emisiones_ODS1321",
+      "format": "CSV",
+      "title": "Emisiones de gases efecto invernadero. Periodo 1990-2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=259",
+      "lastProcessed": "2025-10-09T06:57:47.126Z",
+      "status": "processed"
+    },
+    "emisiones_datos_totales_1990_2022": {
+      "datasetId": "ambiente_27.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero (GEI)",
+      "fileName": "emisiones_datos_totales_1990_2022",
+      "format": "CSV",
+      "title": "Inventario de GEI - Datos totales. Periodo 1990-2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=391",
+      "lastProcessed": "2025-10-09T06:57:48.471Z",
+      "status": "processed"
+    },
+    "emisiones_fluorados_1991_2022": {
+      "datasetId": "ambiente_27.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero (GEI)",
+      "fileName": "emisiones_fluorados_1991_2022",
+      "format": "CSV",
+      "title": "Emisiones anuales de GEI fluorados. Periodo 1990-2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=417",
+      "lastProcessed": "2025-10-09T06:57:49.982Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_27.0",
+    "title": "Emisiones de gases de efecto invernadero (GEI)",
+    "description": "Muestra las emisiones GEI por sector, subsector y el inventario de gases efecto invernadero",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2022-10-20T00:00:00",
+    "modified": "2022-10-20T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

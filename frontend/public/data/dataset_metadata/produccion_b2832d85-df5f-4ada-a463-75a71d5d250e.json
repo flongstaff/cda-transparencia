@@ -1,0 +1,42 @@
+{
+  "files": {
+    "empleo-ael-anual.csv": {
+      "datasetId": "produccion_b2832d85-df5f-4ada-a463-75a71d5d250e",
+      "datasetTitle": "Archivo 2008-2017: Áreas Económicas Locales (OEDE)",
+      "fileName": "empleo-ael-anual.csv",
+      "format": "CSV",
+      "title": "Evolución del empleo registrado privado según área económica local (panel)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/b2832d85-df5f-4ada-a463-75a71d5d250e/resource/8b2e418b-2ca2-4279-ad07-59b50c5d0e9a",
+      "lastProcessed": "2025-10-09T08:09:07.582Z",
+      "status": "processed"
+    },
+    "empresas-ael-anual.csv": {
+      "datasetId": "produccion_b2832d85-df5f-4ada-a463-75a71d5d250e",
+      "datasetTitle": "Archivo 2008-2017: Áreas Económicas Locales (OEDE)",
+      "fileName": "empresas-ael-anual.csv",
+      "format": "CSV",
+      "title": "Evolución de la cantidad de empleadores privados según área económica local (panel)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/b2832d85-df5f-4ada-a463-75a71d5d250e/resource/8eef50a2-3449-4612-9c03-791228b8547a",
+      "lastProcessed": "2025-10-09T08:09:09.514Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_b2832d85-df5f-4ada-a463-75a71d5d250e",
+    "title": "Archivo 2008-2017: Áreas Económicas Locales (OEDE)",
+    "description": "Datos trimestrales y anuales de actividad, población económicamente activa, empleo, ocupación, desocupación, subocupación, empleo no registrado y dinámica de empleo del total nacional urbano, total país y por aglomerado",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-04-28T14:26:26.117107",
+    "modified": "2021-05-11T15:52:45.105830",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Producción y Trabajo. Secretaría de Transformación Productiva. Subsecretaría de Desarrollo y Planeamiento Productivo."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/historico-2008-2017-areas-economicas-locales-oede"
+  }
+}

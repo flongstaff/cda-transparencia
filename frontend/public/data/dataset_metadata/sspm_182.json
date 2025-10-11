@@ -1,0 +1,32 @@
+{
+  "files": {
+    "balance-cambiario.csv": {
+      "datasetId": "sspm_182",
+      "datasetTitle": "Balance Cambiario",
+      "fileName": "balance-cambiario.csv",
+      "format": "CSV",
+      "title": "Balance Cambiario. Valores mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:14.049Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_182",
+    "title": "Balance Cambiario",
+    "description": "Balance Cambiario",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-03",
+    "modified": "2025-03-24T10:01:59.074130",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

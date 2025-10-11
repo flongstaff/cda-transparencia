@@ -1,0 +1,50 @@
+{
+  "workflow_start": "2025-10-10T17:15:11.261046",
+  "steps": [
+    {
+      "name": "Synchronize PDFs",
+      "description": "Synchronizing PDF files to central storage...",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/flong/Developer/cda-transparencia/manage_pdfs.py"
+      ],
+      "success": true,
+      "timestamp": "2025-10-10T17:15:15.323764"
+    },
+    {
+      "name": "Process PDFs with docstrange",
+      "description": "Processing all PDFs with docstrange OCR...",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/flong/Developer/cda-transparencia/backend/scripts/advanced_pdf_ocr_processor.py",
+        "/Users/flong/Developer/cda-transparencia"
+      ],
+      "success": true,
+      "timestamp": "2025-10-10T17:16:12.882621"
+    },
+    {
+      "name": "Integrate Data Sources",
+      "description": "Integrating OCR-extracted data with existing datasets...",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/flong/Developer/cda-transparencia/backend/scripts/data_integration_manager.py",
+        "/Users/flong/Developer/cda-transparencia"
+      ],
+      "success": true,
+      "timestamp": "2025-10-10T17:16:13.445301"
+    },
+    {
+      "name": "Update Data Indices",
+      "description": "Updating data indices with processed information...",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/flong/Developer/cda-transparencia/backend/scripts/comprehensive-data-processor.py",
+        "/Users/flong/Developer/cda-transparencia"
+      ],
+      "success": true,
+      "timestamp": "2025-10-10T17:17:10.205526"
+    }
+  ],
+  "workflow_end": "2025-10-10T17:17:10.205549",
+  "success": true
+}

@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="es" class="ie ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="ie ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="es" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es"> <!--<![endif]-->
+  <head>
+    <!--[if lte ie 8]><script type="text/javascript" src="/fanstatic/vendor/:version:2019-12-02T16:58:12/html5.min.js"></script><![endif]-->
+<link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2019-12-02T16:58:12/select2/select2.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/css/:version:2019-12-02T16:58:12/main.min.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2019-12-02T16:58:12/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/gobar_css/:version:2019-12-02T17:16:31/:bundle:gobar_style.css;table.css" />
+
+    <meta charset="utf-8" />
+      <meta name="generator" content="ckan 2.7.6" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta property="og:url" content="https://datos.yvera.gob.ar/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Datos Abiertos de Turismo de la República Argentina">
+    <meta property="og:site_name" content="Datos Abiertos de Turismo de la República Argentina">
+    <meta property="og:description" content="Subsecretaría de Turismo">
+    <meta property="og:image" content="https://datos.yvera.gob.ar/user_images/portada.PNG">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="2400">
+    <meta property="og:image:height" content="1260">
+    <meta property="og:locale" content="es_AR">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site:id" content="@TurDepAR"/>
+    <meta name="twitter:image:src" content="https://datos.yvera.gob.ar/user_images/portada.PNG">
+    <meta name="twitter:title" content="Datos Abiertos de Turismo de la República Argentina | Ficha Técnica: EOH">
+    <meta name="twitter:description" content="Aspectos conceptuales y metodológicos de la fuente de datos">
+    <title>
+    Datos Abiertos de Turismo - Ficha Técnica: EOH</title>
+
+    
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    
+        <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101681828-1', 'auto', {});
+     
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+    
+      
+    
+
+    
+      
+      
+    
+    
+  </head>
+
+  
+  <body data-site-root="https://datos.yvera.gob.ar/" data-locale-root="https://datos.yvera.gob.ar/" >
+
+    
+    <style type="text/css">
+        
+    </style>
+
+    <div class="footer-down">
+            
+<div id="header" class="container-fluid">
+    <div class="restricted-max-width">
+        <div id="header-spacing" class="col-xs-12 col-sm-10 col-sm-offset-1">
+
+            
+
+            <div class="col-xs-12 col-sm-5 no-padding logo-header">
+                <div class="logo-and-xs-icon">
+                    <i class="icon-reorder fa fa-bars" aria-hidden="true"></i>
+                    <a href="/">
+                        
+                        <img src="/user_images/sinta_header.png" alt="/" class="logo-ministerio">
+                    </a>
+                    
+                </div>
+                <div class="xs-navbar hidden">
+                    <div class="navbar-link">
+                        <a href="/dataset">
+                            DATASETS
+                        </a>
+                    </div>
+                    <hr>
+                    
+                        <div class="navbar-link">
+                            <a href="/series/api">
+                                SERIES
+                            </a>
+                        </div>
+                    
+                    
+
+                    
+
+                    
+
+                        
+                            <a class="header-link" href="/about">ACERCA</a>
+                        
+
+                        <hr><div class="navbar-link dropdown-navbar-link">
+                        <span class="username"></span> <svg class="user-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.46 128.46"><path d="M128.46,64.23A63.15,63.15,0,0,0,119.84,32,64.21,64.21,0,0,0,96.48,8.62,63.12,63.12,0,0,0,64.23,0,63.12,63.12,0,0,0,32,8.62,64.2,64.2,0,0,0,8.62,32,63.15,63.15,0,0,0,0,64.23,63.15,63.15,0,0,0,8.62,96.48a64.76,64.76,0,0,0,9.82,12.86l-.16.27a70.09,70.09,0,0,0,9.2,7.34c1.46,1,3,2,4.51,2.91a63.17,63.17,0,0,0,32.25,8.62,63.17,63.17,0,0,0,32.25-8.62,66.19,66.19,0,0,0,7-4.74,72.41,72.41,0,0,0,6.61-5.51l-.14-.23a64.76,64.76,0,0,0,9.85-12.89A63.15,63.15,0,0,0,128.46,64.23Zm-20.52,41.89C101.56,96.56,88,81,66.73,79.8a26.25,26.25,0,0,0,16.88-7.9,26.44,26.44,0,0,0,8-19.41,26.44,26.44,0,0,0-8-19.4,26.42,26.42,0,0,0-19.4-8,26.41,26.41,0,0,0-19.4,8,26.44,26.44,0,0,0-8,19.4,26.44,26.44,0,0,0,8,19.41,26.25,26.25,0,0,0,16.87,7.9C40.48,81,26.88,96.52,20.49,106.09a61.14,61.14,0,0,1-8.66-11.48A59.48,59.48,0,0,1,3.71,64.23a59.48,59.48,0,0,1,8.11-30.37,60.53,60.53,0,0,1,22-22A59.45,59.45,0,0,1,64.23,3.71,59.46,59.46,0,0,1,94.6,11.83a60.54,60.54,0,0,1,22,22,59.48,59.48,0,0,1,8.11,30.37,59.48,59.48,0,0,1-8.11,30.37A61.14,61.14,0,0,1,107.94,106.12Z" style="fill:#0695d6"/></svg>
+                    </div>
+                    <div class="dropdown-navbar hidden">
+                        <div class="navbar-link">
+                            <a href="/configurar/mi_cuenta">
+                                MI CUENTA
+                            </a>
+                        </div><div class="navbar-link">
+                            <a href="https://datosgobar.github.io/portal-andino/quickstart/" target="_blank">
+                                AYUDA
+                            </a>
+                        </div>
+
+                        <div class="navbar-link">
+                            <a href="/logout">
+                                SALIR
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-7 no-padding header-links"><a class="header-link" href="/dataset">Datasets</a><a class="header-link" href="/series/api">Series</a>
+
+                        
+                            <a class="header-link" href="/about">Acerca</a>
+                        </div>
+        </div>
+    </div>
+</div>
+        
+
+    <div class="resource-container container-fluid">
+        <div class="restricted-max-width">
+            <div class="resource col-xs-12 col-md-10 col-md-offset-1">
+                <div class="col-md-12 back-to-pkg">
+                    
+                    <a href="/dataset">Datos Abiertos de Turismo</a> / <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh">Dataset</a> / Recurso
+
+                    
+                    
+                </div>
+                <div class="col-md-10 col-xs-12 title">
+                    <h1>Ficha Técnica: EOH</h1>
+
+                    <p>Aspectos conceptuales y metodológicos de la fuente de datos</p>
+                </div>
+                <div class="col-md-2 col-xs-12 resource-actions">
+                    <a class="btn btn-green btn-block" href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/c9307d07-4f64-4b76-a189-468aba1d2caf/download/eoh-data-.pdf">DESCARGAR</a>
+
+                    
+                    
+                </div>
+
+                <div class="resource-previsualization hidden-xs hidden-sm" style="display: None">
+                    <div class="resource-additional-info col-xs-12 col-md-12 row"
+                         style="border-bottom: 0; width: 103%; margin-bottom: 20px; margin-top: 30px;">
+                        <h2 class="title-h" style="padding-bottom: 0 !important;">Previsualización</h2>
+                    </div>
+
+                    <div class="data-preview hidden-xs hidden-sm col-md-12">
+                        
+                        
+
+                        
+                        
+                        
+                            
+                        
+                    </div>
+                </div>
+
+                
+                    <div class="hidden-xs hidden-sm attributes-table">
+                       
+
+
+
+
+
+
+
+
+
+                    </div>
+                
+
+                <div class="resource-additional-info col-xs-12 col-md-12 row" style="width: 102% !important;">
+                    <h2 class="title-h">Información adicional</h2>
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Responsable
+                            </div>
+                            <div class="col-xs-8 value">
+                                Subsecretaría de Turismo. Dirección Nacional de Mercados y Estadística
+                            </div>
+                        </div>
+                    
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Formato
+                            </div>
+                            <div class="col-xs-8 value">
+                                
+                                <span class="label" data-format="application/pdf">application/pdf</span>
+                            </div>
+                        </div>
+                    
+
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Temas
+                            </div>
+                                    SECTOR HOTELERO
+                        </div>
+                    
+
+                    
+                        
+                            
+                        
+                            
+                                <div class="resource-additional col-xs-12">
+                                    <div class="col-xs-4 key">
+                                        Frecuencia de actualización
+                                    </div>
+                                    <div class="col-xs-8 value">
+                                        Mensualmente
+                                    </div>
+                                </div>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                    
+
+
+                    <div class="resource-additional col-xs-12">
+                        <div class="col-xs-4 key">
+                            Fecha de creación
+                        </div>
+                        <div class="col-xs-8 value">
+                            
+                                7 de enero de 2021
+                            
+                        </div>
+                    </div>
+
+                    <div class="resource-additional col-xs-12">
+                        <div class="col-xs-4 key">
+                            Último cambio
+                        </div>
+                        <div class="col-xs-8 value">
+                            
+                                18 de abril de 2022
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                
+
+                
+                    <div class="resource-alternative-packages col-xs-12 col-md-12 row" style="border-bottom: 0; width: 103%;">
+                        <h2 class="title-h">Otros recursos de este dataset</h2>
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/d1624c27-4b0d-4b73-b0f8-e7db5c56386f">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/d1624c27-4b0d-4b73-b0f8-e7db5c56386f/download/viajeros-hospedados-residentes-y-no-residentes.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/d1624c27-4b0d-4b73-b0f8-e7db5c56386f">
+        <div class="package-info">
+
+            <h3>Viajeros hospedados en hoteles y parahoteles según tipo de residencia</h3>
+
+            <p>Cantidad de viajeros alojados en establecimientos hoteleros y parahoteleros según residencia en formato de series de tiempo.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/1f6b78aa-d3b4-440a-bd7d-30d76e1728aa">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/1f6b78aa-d3b4-440a-bd7d-30d76e1728aa/download/viajeros-hospedados-residentes-y-no-residentes-por-destino.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/1f6b78aa-d3b4-440a-bd7d-30d76e1728aa">
+        <div class="package-info">
+
+            <h3>Viajeros hospedados en hoteles y parahoteles por región de destino según tipo de residencia</h3>
+
+            <p>Cantidad de viajeros alojados en establecimientos hoteleros y parahoteleros por región de destino según tipo de residencia en formato de series...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/86098160-840e-4191-a0fc-b3923bf2b0b0">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/86098160-840e-4191-a0fc-b3923bf2b0b0/download/pernoctes-residentes-y-no-residentes.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/86098160-840e-4191-a0fc-b3923bf2b0b0">
+        <div class="package-info">
+
+            <h3>Pernoctes en hoteles y parahoteles según tipo de residencia</h3>
+
+            <p>Cantidad de noches en establecimientos hoteleros y parahoteleros por tipo de residencia en formato de series de tiempo.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/a54e2f69-a5b1-42b4-a7bb-ead40338c28f">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/a54e2f69-a5b1-42b4-a7bb-ead40338c28f/download/pernoctes-residentes-y-no-residentes-por-destino.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/a54e2f69-a5b1-42b4-a7bb-ead40338c28f">
+        <div class="package-info">
+
+            <h3>Pernoctes en hoteles y parahoteles por región de destino según tipo de residencia</h3>
+
+            <p>Cantidad de noches en establecimientos hoteleros y parahoteleros por región de destino según tipo de residencia en formato de series de tiem...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/eace228a-aeb6-466d-9d13-49823e1a9ff3">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/eace228a-aeb6-466d-9d13-49823e1a9ff3/download/estadia-media-residentes-y-no-residentes.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/eace228a-aeb6-466d-9d13-49823e1a9ff3">
+        <div class="package-info">
+
+            <h3>Estadía media de los viajeros hospedados en hoteles y parahoteles según tipo de residencia</h3>
+
+            <p>Estadía promedio de permanencia en los establecimientos hoteleros y parahoteleros del país por tipo de residencia en formato de series de ti...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/46a0b45c-9f22-455a-9328-6c8bd51710b2">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/46a0b45c-9f22-455a-9328-6c8bd51710b2/download/estadia-media-residentes-y-no-residentes-por-destino.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/46a0b45c-9f22-455a-9328-6c8bd51710b2">
+        <div class="package-info">
+
+            <h3>Estadía media en hoteles y parahoteles por región de destino según tipo de residencia</h3>
+
+            <p>Estadía promedio en establecimientos hoteleros y parahoteleros por región de destino según tipo de residencia en formato de series de tiempo...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/7f68d6ee-fece-471a-b92c-5f04cd3706b1">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/7f68d6ee-fece-471a-b92c-5f04cd3706b1/download/tasas-de-ocupacion-plazas-por-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/7f68d6ee-fece-471a-b92c-5f04cd3706b1">
+        <div class="package-info">
+
+            <h3>Tasa de ocupación de plazas por tipo de categoría de alojamiento</h3>
+
+            <p>Tasa de ocupación de plazas de los establecimientos hoteleros y parahoteleros por categoría de alojamiento en formato de serie de tiempo</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/ffc7f951-dd04-4796-a1e9-b75908163285">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/ffc7f951-dd04-4796-a1e9-b75908163285/download/tasas-de-ocupacion-plazas-por-region-y-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/ffc7f951-dd04-4796-a1e9-b75908163285">
+        <div class="package-info">
+
+            <h3>Tasa de ocupación de plazas por región de destino según tipo de categoría de alojamiento</h3>
+
+            <p>Tasa de ocupación de plazas de los establecimientos hoteleros y parahoteleros por región de destino según categoría de alojamiento en formato...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/a8b3a099-f9e5-4bdf-826a-9ff17a730be7">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/a8b3a099-f9e5-4bdf-826a-9ff17a730be7/download/serie-tiempo-eoh-mensual.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/a8b3a099-f9e5-4bdf-826a-9ff17a730be7">
+        <div class="package-info">
+
+            <h3>Serie de tiempo - Mensual</h3>
+
+            <p>Evolución de los principales indicadores producidos por la Encuesta de Ocupación Hotelera y Parahotelera (EOH), desde el año 2004 a la última...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/81cfbbee-4485-4a40-a31b-c98382100f3d">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/81cfbbee-4485-4a40-a31b-c98382100f3d/download/tasas-de-ocupacion-habitacion-por-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/81cfbbee-4485-4a40-a31b-c98382100f3d">
+        <div class="package-info">
+
+            <h3>Tasa de ocupación de habitaciones por tipo de categoría de alojamiento</h3>
+
+            <p>Tasa de ocupación de habitaciones de los establecimientos hoteleros y parahoteleros por categoría de alojamiento en formato de serie de tiem...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/e465c1a9-1564-4747-9500-3bf6aa36b87a">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/e465c1a9-1564-4747-9500-3bf6aa36b87a/download/tasas-de-ocupacion-habitacion-por-region-y-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/e465c1a9-1564-4747-9500-3bf6aa36b87a">
+        <div class="package-info">
+
+            <h3>Tasa de ocupación de habitaciones por región de destino según tipo de categoría de alojamiento</h3>
+
+            <p>Tasa de ocupación de habitaciones de los establecimientos hoteleros y parahoteleros por región de destino según categoría de alojamiento en formato...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/c60b1deb-aed7-42a9-b39e-4395d421a65a">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/c60b1deb-aed7-42a9-b39e-4395d421a65a/download/facturacion-total-en-pesos.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/c60b1deb-aed7-42a9-b39e-4395d421a65a">
+        <div class="package-info">
+
+            <h3>Facturación total en hoteles y parahoteles</h3>
+
+            <p>Ingresos totales (en pesos y a precios corrientes) de los establecimientos hoteleros y parahoteleros por los servicios de alojamiento y otros...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/bae842e8-6555-4390-b854-7b533c4c6bdc">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/bae842e8-6555-4390-b854-7b533c4c6bdc/download/facturacion-total-en-pesos-por-region-y-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/bae842e8-6555-4390-b854-7b533c4c6bdc">
+        <div class="package-info">
+
+            <h3>Facturación total en hoteles y parahoteles por categoría del alojamiento según región de destino</h3>
+
+            <p>Ingresos totales (en pesos y a precios corrientes) de los hoteleros y parahoteleros por los servicios de alojamiento y otros servicios secundarios...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/b773fa8a-0839-4a46-98f0-b583327ebffc">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/b773fa8a-0839-4a46-98f0-b583327ebffc/download/ingresos-por-habitacion-disponible-en-usd-por-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/b773fa8a-0839-4a46-98f0-b583327ebffc">
+        <div class="package-info">
+
+            <h3>Ingresos por habitación disponible en USD por categoría del alojamiento</h3>
+
+            <p>Ingreso promedio por habitación disponible (Revenue Per Available Room -RevPar-) en dólares estadounidenses por categoría del alojamiento.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/97e8eea7-e7dc-452b-bd8c-c22b6efebbd1">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/97e8eea7-e7dc-452b-bd8c-c22b6efebbd1/download/ingresos-por-habitacion-disponible-en-usd-por-region-y-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/97e8eea7-e7dc-452b-bd8c-c22b6efebbd1">
+        <div class="package-info">
+
+            <h3>Ingresos por habitación disponible en USD por categoría del alojamiento  según región de destino</h3>
+
+            <p>Ingreso promedio por habitación disponible (Revenue Per Available Room -RevPar-) en dólares estadounidenses por categoría del alojamiento según...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/3b9dbd16-cbf7-43e5-9679-ce6c550eff90">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/3b9dbd16-cbf7-43e5-9679-ce6c550eff90/download/tarifa-media-diaria-en-usd-por-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/3b9dbd16-cbf7-43e5-9679-ce6c550eff90">
+        <div class="package-info">
+
+            <h3>Tarifa media diaria en USD por categoría del alojamiento</h3>
+
+            <p>Precio promedio diario (Average Daily Rate -ADR-) en dólares estadounidenses por categoría del alojamiento.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/d3aece2a-431d-4165-9623-6b8ce38dca02">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/d3aece2a-431d-4165-9623-6b8ce38dca02/download/tarifa-media-diaria-en-usd-por-region-y-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/d3aece2a-431d-4165-9623-6b8ce38dca02">
+        <div class="package-info">
+
+            <h3>Tarifa media diaria en USD por categoría del alojamiento según región de destino</h3>
+
+            <p>Precio promedio diario (Average Daily Rate -ADR-) en dólares estadounidenses por categoría del alojamiento según región de destino</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/72a85e1d-2f37-4338-95b8-a1ddceb5c859">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/72a85e1d-2f37-4338-95b8-a1ddceb5c859/download/puestos-de-trabajo-equivalentes-totales.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/72a85e1d-2f37-4338-95b8-a1ddceb5c859">
+        <div class="package-info">
+
+            <h3>Puestos de trabajo equivalentes en hoteles y parahoteles</h3>
+
+            <p>Cantidad de puestos de trabajo a tiempo completo (45 horas semanales) en hoteles y parahoteles</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/76a8cfed-89f7-4cc0-baf4-9a2f2374fa5e">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/76a8cfed-89f7-4cc0-baf4-9a2f2374fa5e/download/puestos-de-trabajo-equivalentes-totales-por-region-y-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/76a8cfed-89f7-4cc0-baf4-9a2f2374fa5e">
+        <div class="package-info">
+
+            <h3>Puestos de trabajo equivalentes en hoteles y parahoteles por categoría del alojamiento según región de destino</h3>
+
+            <p>Cantidad de puestos de trabajo a tiempo completo (45 horas semanales) en hoteles y parahoteles por categoría del alojamiento según región de...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/36775b32-0c74-4c35-ae06-6fdd53761b48">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/36775b32-0c74-4c35-ae06-6fdd53761b48/download/establecimientos-abiertos-covid-por-region.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/36775b32-0c74-4c35-ae06-6fdd53761b48">
+        <div class="package-info">
+
+            <h3>Establecimientos que permanecieron abiertos afectados a la COVID 19</h3>
+
+            <p>Cantidad de establecimientos que permanecieron abiertos afectados a la COVID 19 por región.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/5b33e730-2ec7-4d3b-bef3-00a03b530292">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/5b33e730-2ec7-4d3b-bef3-00a03b530292/download/puestos-de-trabajo-totales.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/5b33e730-2ec7-4d3b-bef3-00a03b530292">
+        <div class="package-info">
+
+            <h3>Puestos de trabajo en hoteles y parahoteles</h3>
+
+            <p>Cantidad de puestos de trabajo en hoteles y para hoteles.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/29f52b38-6d09-462d-b200-f1eab9703b79">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/29f52b38-6d09-462d-b200-f1eab9703b79/download/puestos-de-trabajo-totales-por-region-y-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/29f52b38-6d09-462d-b200-f1eab9703b79">
+        <div class="package-info">
+
+            <h3>Puestos de trabajo en hoteles y parahoteles por categoría del alojamiento según región de destino</h3>
+
+            <p>Cantidad de puestos de trabajo en hoteles y para hoteles por categoría del alojamiento según región de destino.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/7b6ba47f-4aa9-4743-96be-d0e6157cfc5e">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/7b6ba47f-4aa9-4743-96be-d0e6157cfc5e/download/pernoctes_por_localidad_segun_residencia.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/7b6ba47f-4aa9-4743-96be-d0e6157cfc5e">
+        <div class="package-info">
+
+            <h3>Pernoctaciones en hoteles y parahoteles por localidad de destino según tipo de residencia</h3>
+
+            <p>Cantidad de noches en hoteles y parahoteles por localidad de destino según tipo de residencia en formato de series de tiempo</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/57b5deae-026e-4413-9f90-89a428496bfb">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/57b5deae-026e-4413-9f90-89a428496bfb/download/viajeros_por_localidad_segun_residencia.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/57b5deae-026e-4413-9f90-89a428496bfb">
+        <div class="package-info">
+
+            <h3>Viajeros hospedados en hoteles y parahoteles por localidad de destino según tipo de residencia</h3>
+
+            <p>Cantidad de viajeros hospedados en hoteles y parahoteles por localidad de destino según tipo de residencia en formato de series de tiempo</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/61d3ddc5-3554-4a21-a55b-00228ca2efa5">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/61d3ddc5-3554-4a21-a55b-00228ca2efa5/download/ingresos-por-habitacion-disponible-por-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/61d3ddc5-3554-4a21-a55b-00228ca2efa5">
+        <div class="package-info">
+
+            <h3>Ingresos por habitación disponible en pesos por categoría del alojamiento</h3>
+
+            <p>Ingreso promedio por habitación disponible (Revenue Per Available Room -RevPar-) en pesos argentinos por categoría del alojamiento.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/4e0dd9b1-8f06-48c3-9645-e394fb6d9db5">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/4e0dd9b1-8f06-48c3-9645-e394fb6d9db5/download/ingresos-por-habitacion-disponible-por-region-y-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/4e0dd9b1-8f06-48c3-9645-e394fb6d9db5">
+        <div class="package-info">
+
+            <h3>Ingresos por habitación disponible en pesos por categoría del alojamiento según región de destino</h3>
+
+            <p>Ingreso promedio por habitación disponible (Revenue Per Available Room -RevPar-) en pesos argentinos por categoría del alojamiento según región...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/08762488-c267-4c83-b8fc-aa12fca1c60d">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/08762488-c267-4c83-b8fc-aa12fca1c60d/download/tarifa-media-diaria-por-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/08762488-c267-4c83-b8fc-aa12fca1c60d">
+        <div class="package-info">
+
+            <h3>Tarifa media diaria en pesos por categoría del alojamiento</h3>
+
+            <p>Precio promedio diario (Average Daily Rate -ADR-) en pesos argentinos por categoría del alojamiento.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/43519401-66e0-4bc1-9ac8-1a3feedb83f8">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/43519401-66e0-4bc1-9ac8-1a3feedb83f8/download/tarifa-media-diaria-por-region-y-categoria.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh/archivo/43519401-66e0-4bc1-9ac8-1a3feedb83f8">
+        <div class="package-info">
+
+            <h3>Tarifa media diaria en pesos por categoría del alojamiento según región de destino</h3>
+
+            <p>Precio promedio diario (Average Daily Rate -ADR-) en pesos argentinos por categoría del alojamiento según región de destino</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                    </div>
+                
+            
+            </div>
+        </div>
+    </div>
+    
+
+            <div id="footer" class="container-fluid">
+    <div class="restricted-max-width">
+        <div id="footer-spacer" class="col-xs-10 col-xs-offset-1">
+            <div class="footer-section logo col-xs-12 col-sm-6 col-md-6">
+                <p>
+                    
+                    
+                    
+                        <a href="https://twitter.com/turdepar" target="_blank" class="social-link">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+                        <a href="https://www.facebook.com/TurismoNacionAR" target="_blank" class="social-link">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+                        <a href="https://github.com/dnme-minturdep" target="_blank" class="social-link">
+                            <i class="fa fa-github-alt" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+                        <a href="https://www.instagram.com/turdepar/" target="_blank" class="social-link">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+                        <a href="https://www.youtube.com/channel/UCAygKy4loHm_5r1gAaMsiIg" target="_blank" class="social-link">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+                        <a href="http://bitacora.yvera.tur.ar/" target="_blank" class="social-link">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                </p>
+                <div class="logo-edit-container">
+                    
+                    
+                    <a href="https://yvera.tur.ar/sinta/" target="_blank">
+                        <img src="/user_images/sinta_footer.png" alt="https://yvera.tur.ar/sinta/" class="logo-ministerio">
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="footer-section links-internos hidden-xs hidden-sm col-md-3">
+                
+                
+            </div>
+            <div class="footer-section links-externos col-xs-12 col-sm-6 col-md-3">
+                
+                
+                    <p><a href="mailto:estadistica@turismo.gob.ar">Contactanos</a></p>
+                
+                <p class="ckan-link">
+                    Desarrollado por<br><a href="https://github.com/datosgobar/distribuible.datos.gob.ar" target="_blank">Andino</a> con <a href="http://ckan.org/" target="_blank"><span class="ckan-name">CKAN</span></a>
+                </p>
+                <p class="ckan-link">
+                    Versión: 2.6.3
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+  
+    
+    <div class="js-hide" data-module="google-analytics"
+      data-module-googleanalytics_resource_prefix="">
+    </div>
+  
+
+
+      
+  <script>document.getElementsByTagName('html')[0].className += ' js';</script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2019-12-02T16:58:12/jquery.min.js"></script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2019-12-02T16:58:12/:bundle:bootstrap/js/bootstrap.min.js;jed.min.js;moment-with-locales.js;select2/select2.min.js"></script>
+<script type="text/javascript" src="/fanstatic/base/:version:2019-12-02T16:58:12/:bundle:plugins/jquery.inherit.min.js;plugins/jquery.proxy-all.min.js;plugins/jquery.url-helpers.min.js;plugins/jquery.date-helpers.min.js;plugins/jquery.slug.min.js;plugins/jquery.slug-preview.min.js;plugins/jquery.truncator.min.js;plugins/jquery.masonry.min.js;plugins/jquery.form-warning.min.js;sandbox.min.js;module.min.js;pubsub.min.js;client.min.js;notify.min.js;i18n.min.js;main.min.js;modules/select-switch.min.js;modules/slug-preview.min.js;modules/basic-form.min.js;modules/confirm-action.min.js;modules/api-info.min.js;modules/autocomplete.min.js;modules/custom-fields.min.js;modules/data-viewer.min.js;modules/table-selectable-rows.min.js;modules/resource-form.min.js;modules/resource-upload-field.min.js;modules/resource-reorder.min.js;modules/resource-view-reorder.min.js;modules/follow.min.js;modules/activity-stream.min.js;modules/dashboard.min.js;modules/resource-view-embed.min.js;view-filters.min.js;modules/resource-view-filters-form.min.js;modules/resource-view-filters.min.js;modules/table-toggle-more.min.js;modules/dataset-visibility.min.js;modules/media-grid.min.js;modules/image-upload.min.js"></script>
+<script type="text/javascript" src="/fanstatic/ckanext-googleanalytics/:version:2019-12-02T16:58:24/googleanalytics_event_tracking.js"></script>
+<script type="text/javascript" src="/fanstatic/gobar_js/:version:2019-12-02T17:16:31/:bundle:console_message.js;header.js;replace_svg.js;forms/custom_popup.js;libs/BootstrapMenu.js;libs/bootstrap_scripts.js;libs/clamp.js;package/resource/resource_view.js"></script></body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "files": {
+    "precios-paquetes-cigarrillos-vendidos-equivalentes.csv": {
+      "datasetId": "sspm_399",
+      "datasetTitle": "Precios de paquetes de cigarrillos vendidos equivalentes a veinte unidades",
+      "fileName": "precios-paquetes-cigarrillos-vendidos-equivalentes.csv",
+      "format": "CSV",
+      "title": "Precios de paquetes de cigarrillos vendidos equivalentes a veinte unidades. Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:26.638Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_399",
+    "title": "Precios de paquetes de cigarrillos vendidos equivalentes a veinte unidades",
+    "description": "Precios de paquetes de cigarrillos vendidos equivalentes a veinte unidades. Precio inferior, superior y promedio ponderado",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2018-03-28",
+    "modified": "2025-03-24T10:00:49.454198",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

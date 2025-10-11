@@ -1,0 +1,32 @@
+{
+  "files": {
+    "indice-salario-minimo-vital-movil-valores-mensuales-pesos-corrientes-desde-1988.csv": {
+      "datasetId": "sspm_57",
+      "datasetTitle": "Salario mínimo, vital y móvil en pesos corrientes",
+      "fileName": "indice-salario-minimo-vital-movil-valores-mensuales-pesos-corrientes-desde-1988.csv",
+      "format": "CSV",
+      "title": "Índice de salario mínimo vital y movil. Pesos corrientes. Valores mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:52.876Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_57",
+    "title": "Salario mínimo, vital y móvil en pesos corrientes",
+    "description": "Índice de salario mínimo vital y movil. Valores mensuales en pesos corrientes desde 1988",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:02:15.605416",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

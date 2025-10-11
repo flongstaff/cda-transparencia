@@ -1,0 +1,550 @@
+{
+  "files": {
+    "redes-de-distribucin-elctrica-del-consejo-federal-jujuy-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-jujuy-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de JUJUY - EJESA – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/8e905b25-0228-4817-9df0-3d4ae30f8d1a",
+      "lastProcessed": "2025-10-09T07:21:29.835Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-santa-f-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-santa-f-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica del Consejo Federal - Santa Fé - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/56acbb40-e574-4152-9f34-c7370873f2d5",
+      "lastProcessed": "2025-10-09T07:21:33.377Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-tierra-del-fuego-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-tierra-del-fuego-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica del Consejo Federal - Tierra Del Fuego - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/4412099b-5b80-4646-abd6-68028869639c",
+      "lastProcessed": "2025-10-09T07:21:35.058Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-buenos-aires-alta-tensin-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-buenos-aires-alta-tensin-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de BUENOS AIRES (solo cooperativas) - CFEE – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/fdbc559b-ee83-4122-853d-c21327fc43e0",
+      "lastProcessed": "2025-10-09T07:21:38.290Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-salta-alta-tensin-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-salta-alta-tensin-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de SALTA - EDESA – Líneas  Media y Alta Tensión  ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/171374c1-777d-45b5-bd55-67b6354c144c",
+      "lastProcessed": "2025-10-09T07:21:39.729Z",
+      "status": "processed"
+    },
+    "chaco-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "chaco-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de CHACO - SECHEEP – Líneas Media y Alta Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/96991b24-0aea-41c0-ba1d-83d550415567",
+      "lastProcessed": "2025-10-09T07:21:41.314Z",
+      "status": "processed"
+    },
+    "crdoba-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "crdoba-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica del Consejo Federal - Córdoba - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/6e3dc493-1972-4365-bcf2-c172a6644c75",
+      "lastProcessed": "2025-10-09T07:21:42.898Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-corrientes-alta-tensin-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-corrientes-alta-tensin-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica del Consejo Federal - Corrientes - Alta Tensión - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/0dde07de-1243-47ac-91d3-5352410013c4",
+      "lastProcessed": "2025-10-09T07:21:44.488Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-misiones-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-misiones-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de MISIONES -EMSA - Líneas de Media y Alta Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/8c205746-d9f8-4048-aa91-034444a823aa",
+      "lastProcessed": "2025-10-09T07:21:45.997Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-neuqun-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-neuqun-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de NEUQUÉN - EPEN – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/902627e0-2033-457c-a930-3ef5149e340d",
+      "lastProcessed": "2025-10-09T07:21:47.542Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-ro-negro-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-ro-negro-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica del Consejo Federal - Río Negro - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/f57abe94-0f46-455f-9d84-0cf71d56e9ab",
+      "lastProcessed": "2025-10-09T07:21:49.150Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-santiago-del-estero-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-santiago-del-estero-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica del SANTIAGO DEL ESTERO – EDESE - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/2d238baf-fde1-4724-a518-77447c25adfd",
+      "lastProcessed": "2025-10-09T07:21:51.125Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-tucumn-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-tucumn-media-tensin-lneas.csv",
+      "lastProcessed": "2025-10-09T07:22:02.249Z",
+      "status": "error",
+      "error": "Failed to download CSV: redes-de-distribucin-elctrica-del-consejo-federal-tucumn-media-tensin-lneas.csv"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-santa-cruz-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-santa-cruz-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de SANTA CRUZ – SP - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/acb6264e-29c1-444c-bca4-4c872105aebf",
+      "lastProcessed": "2025-10-09T07:22:04.403Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-formosa-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-formosa-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de FORMOSA- REFSA – Líneas Alta y Media Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/6b1d6760-66bd-45cb-8bee-db23adcde301",
+      "lastProcessed": "2025-10-09T07:22:05.995Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-san-juan-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-san-juan-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de SAN JUAN - ENERGÍA SAN JUAN – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/eeec03a4-a55e-49b3-b05f-0ea98b1e6f78",
+      "lastProcessed": "2025-10-09T07:22:07.782Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-mendoza-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-mendoza-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de MENDOZA – EDEMSA - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/bdb73bfa-f79a-4738-a384-144957543ed3",
+      "lastProcessed": "2025-10-09T07:22:09.319Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-entre-ros-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-entre-ros-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de ENTRE RIOS - ENERSA – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/af7594ee-4418-499e-a2dd-7933a6775ca4",
+      "lastProcessed": "2025-10-09T07:22:10.959Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-la-rioja-alta-tensin-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-la-rioja-alta-tensin-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de LA RIOJA - EDELAR – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/89656a46-da29-41d7-b075-65f91c4a9542",
+      "lastProcessed": "2025-10-09T07:22:12.598Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-de-chaco-secheep-lneas-media-y-alta-tensin.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-de-chaco-secheep-lneas-media-y-alta-tensin.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de CHACO - SECHEEP – Líneas Media y Alta Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/f79cdbd1-4a65-4829-a039-7516824371a8",
+      "lastProcessed": "2025-10-09T07:22:12.599Z",
+      "status": "processed"
+    },
+    "-crdoba-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-crdoba-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica del Consejo Federal - Córdoba - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/413cfdbd-181b-4d9e-8e6a-46ff81e75856",
+      "lastProcessed": "2025-10-09T07:22:12.599Z",
+      "status": "processed"
+    },
+    "-formosa-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-formosa-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de FORMOSA- REFSA – Líneas Alta y Media Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/9b451d38-f808-454b-9624-aa8473a1e88b",
+      "lastProcessed": "2025-10-09T07:22:12.599Z",
+      "status": "processed"
+    },
+    "-jujuy-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-jujuy-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de JUJUY - EJESA – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/a69fecf6-20e7-4450-8297-1fa65dca4b15",
+      "lastProcessed": "2025-10-09T07:22:12.600Z",
+      "status": "processed"
+    },
+    "-mendoza-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-mendoza-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de MENDOZA – EDEMSA - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/c175c7a2-6263-4fbf-adcb-e9eed99fa4bd",
+      "lastProcessed": "2025-10-09T07:22:12.600Z",
+      "status": "processed"
+    },
+    "-neuqun-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-neuqun-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de NEUQUÉN - EPEN – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/b5d796d5-dce0-4c7f-874c-a503f027e313",
+      "lastProcessed": "2025-10-09T07:22:12.600Z",
+      "status": "processed"
+    },
+    "-misiones-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-misiones-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de MISIONES -EMSA - Líneas de Media y Alta Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/c8c0c8ff-5597-46d0-8b49-bbacd1560f29",
+      "lastProcessed": "2025-10-09T07:22:12.601Z",
+      "status": "processed"
+    },
+    "-buenos-aires-alta-tensin-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-buenos-aires-alta-tensin-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de BUENOS AIRES (solo cooperativas) - CFEE – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/be371445-5d0a-4ad7-8346-f1cdfb89c66f",
+      "lastProcessed": "2025-10-09T07:22:12.601Z",
+      "status": "processed"
+    },
+    "-ro-negro-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-ro-negro-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica del Consejo Federal - Río Negro - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/62b3bdd7-a85e-4086-8704-aac46a3034d9",
+      "lastProcessed": "2025-10-09T07:22:12.602Z",
+      "status": "processed"
+    },
+    "-corrientes-alta-tensin-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-corrientes-alta-tensin-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica del Consejo Federal - Corrientes - Alta Tensión - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/ffca0c2e-90cd-4c01-bc90-6a5d9a4183f2",
+      "lastProcessed": "2025-10-09T07:22:12.602Z",
+      "status": "processed"
+    },
+    "-santa-cruz-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-santa-cruz-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de SANTA CRUZ – SP - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/b5f68990-58c1-4bcd-be58-170f0f813fd5",
+      "lastProcessed": "2025-10-09T07:22:12.602Z",
+      "status": "processed"
+    },
+    "-santa-f-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-santa-f-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de SANTA FE - EPE – Líneas de Alta y Media Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/7288cc4f-9156-4be9-bfdb-f1ab4597b3da",
+      "lastProcessed": "2025-10-09T07:22:12.603Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-salta-alta-tensin-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-salta-alta-tensin-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de SALTA - EDESA – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/d1247e2a-62ae-42fe-b19c-2cc9ba292b89",
+      "lastProcessed": "2025-10-09T07:22:12.603Z",
+      "status": "processed"
+    },
+    "-santiago-del-estero-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-santiago-del-estero-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica del SANTIAGO DEL ESTERO – EDESE - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/23e5cbc5-d0ba-4aa2-a026-e3dfba087f01",
+      "lastProcessed": "2025-10-09T07:22:12.603Z",
+      "status": "processed"
+    },
+    "-tierra-del-fuego-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-tierra-del-fuego-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica del Consejo Federal - Tierra Del Fuego - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/5177fbfe-28a8-45af-bd67-467c7ac5a850",
+      "lastProcessed": "2025-10-09T07:22:12.604Z",
+      "status": "processed"
+    },
+    "-san-juan-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-san-juan-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de SAN JUAN - ENERGIA SAN JUAN – Líneas  Media y Alta Tensión  ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/a94b7764-5132-4980-a5d8-3fa360f36863",
+      "lastProcessed": "2025-10-09T07:22:12.604Z",
+      "status": "processed"
+    },
+    "-entre-ros-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-entre-ros-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de ENTRE RIOS - ENERSA – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/98f6ac3d-aeda-49b0-91f4-5e17eeed28e8",
+      "lastProcessed": "2025-10-09T07:22:12.605Z",
+      "status": "processed"
+    },
+    "-tucumn-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "-tucumn-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica del Consejo Federal - Tucumán - Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/17678a51-0b0d-4632-9428-719f690d79e9",
+      "lastProcessed": "2025-10-09T07:22:12.605Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-catamarca-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-catamarca-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Cables eléctricos de Media Tensión de Catamarca - EC SAPEM",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/b02572cd-fb66-4f17-938d-04eaaee91953",
+      "lastProcessed": "2025-10-09T07:22:12.605Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-la-rioja-alta-tensin-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-la-rioja-alta-tensin-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de LA RIOJA - EDELAR – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/9b73a7f0-fa2f-4edb-aec3-bc1ec6c6081c",
+      "lastProcessed": "2025-10-09T07:22:12.606Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-san-luis-alta-tensin-media-tensin-lneas.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-san-luis-alta-tensin-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de SAN LUIS - EDESAL - Líneas de Media Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/4f43748a-0f4d-4b8b-b2e8-cae04f4d915a",
+      "lastProcessed": "2025-10-09T07:22:14.321Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-del-consejo-federal-san-luis-alta-tensin-media-tensin-lneas.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-del-consejo-federal-san-luis-alta-tensin-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de SAN LUIS - EDESAL - Líneas de Media Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/70ace347-51fb-4527-9707-e39130516068",
+      "lastProcessed": "2025-10-09T07:22:14.322Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-de-buenos-aires-edes-lneas-media-y-alta-tensin-.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-de-buenos-aires-edes-lneas-media-y-alta-tensin-.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de BUENOS AIRES  - EDES – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/4607e6a9-1448-4733-a13c-f263692685ef",
+      "lastProcessed": "2025-10-09T07:22:15.864Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-de-buenos-aires-edes-lneas-media-y-alta-tensin.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-de-buenos-aires-edes-lneas-media-y-alta-tensin.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de BUENOS AIRES  - EDES – Líneas  Media y Alta Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/81c6d3ac-ab3c-4f9b-ae13-589fd772655e",
+      "lastProcessed": "2025-10-09T07:22:15.865Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-de-buenos-aires-edensa-lneas-media-y-alta-tensin-.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-de-buenos-aires-edensa-lneas-media-y-alta-tensin-.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de BUENOS AIRES  - EDENSA – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/96f4976e-3833-4286-a8ad-030b0dc3f134",
+      "lastProcessed": "2025-10-09T07:22:18.055Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-de-buenos-aires-edensa-lneas-media-y-alta-tensin.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-de-buenos-aires-edensa-lneas-media-y-alta-tensin.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de BUENOS AIRES  - EDENSA – Líneas  Media y Alta Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/280930b6-aa1c-4026-8b84-716f12d1e45b",
+      "lastProcessed": "2025-10-09T07:22:18.055Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-de-buenos-aires-edea-lneas-media-y-alta-tensin-.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-de-buenos-aires-edea-lneas-media-y-alta-tensin-.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de BUENOS AIRES  - EDEA – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/496c93a2-5cfb-47ec-b2fd-96cae5191f32",
+      "lastProcessed": "2025-10-09T07:22:20.017Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-de-buenos-aires-edea-lneas-media-y-alta-tensin.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-de-buenos-aires-edea-lneas-media-y-alta-tensin.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de BUENOS AIRES  - EDEA – Líneas  Media y Alta Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/a7f6a0fa-6ec5-4bc8-8940-c22f08742d6b",
+      "lastProcessed": "2025-10-09T07:22:20.018Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-de-neuqun-capital-cooperativa-calf-lneas-media-tensin-.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-de-neuqun-capital-cooperativa-calf-lneas-media-tensin-.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de NEUQUÉN CAPITAL - Cooperativa CALF – Líneas  Media Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/43cee182-05b7-47db-b988-2f1d0c9610d5",
+      "lastProcessed": "2025-10-09T07:22:21.675Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-de-neuqun-capital-cooperativa-calf-lneas-media-tensin.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-de-neuqun-capital-cooperativa-calf-lneas-media-tensin.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de NEUQUÉN CAPITAL - Cooperativa CALF – Líneas  Media Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/c7866729-0a27-498b-a81c-a85ec0b091e2",
+      "lastProcessed": "2025-10-09T07:22:21.675Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-de-la-pampa-apelp-y-cooperativas-lneas-media-y-alta-tensin-.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-de-la-pampa-apelp-y-cooperativas-lneas-media-y-alta-tensin-.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica de LA PAMPA - APELP y Cooperativas – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/7176d310-f182-4650-83f5-e28ef7e6fec8",
+      "lastProcessed": "2025-10-09T07:22:23.454Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-de-la-pampa-apelp-y-cooperativas-lneas-media-y-alta-tensin-.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-de-la-pampa-apelp-y-cooperativas-lneas-media-y-alta-tensin-.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica de LA PAMPA - APELP y Cooperativas – Líneas  Media y Alta Tensión ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/fbf8659e-3a74-4235-bc6f-06d6dfdd4e06",
+      "lastProcessed": "2025-10-09T07:22:23.455Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-chubut-enre-lineas-de-media-y-alta-tensin-.csv": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-chubut-enre-lineas-de-media-y-alta-tensin-.csv",
+      "format": "CSV",
+      "title": "Redes de distribución eléctrica CHUBUT - ENRE - Lineas de Media y Alta Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/c684e603-428d-408b-8d12-cfcd4eb4ff01",
+      "lastProcessed": "2025-10-09T07:22:25.048Z",
+      "status": "processed"
+    },
+    "redes-de-distribucin-elctrica-chubut-enre-lineas-de-media-y-alta-tensin-.zip": {
+      "datasetId": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+      "datasetTitle": "Redes de distribución eléctrica",
+      "fileName": "redes-de-distribucin-elctrica-chubut-enre-lineas-de-media-y-alta-tensin-.zip",
+      "format": "SHP",
+      "title": "Redes de distribución eléctrica CHUBUT - ENRE - Lineas de Media y Alta Tensión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ff99e7be-7bab-4617-9588-9a74ae046a40/resource/229e33f0-c207-43aa-9d66-efa3d1a06fd3",
+      "lastProcessed": "2025-10-09T07:22:25.048Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_ff99e7be-7bab-4617-9588-9a74ae046a40",
+    "title": "Redes de distribución eléctrica",
+    "description": "Redes de distribución provistas por el Consejo Federal de la Energía Eléctrica,  empresas de distribución eléctrica provinciales y entes reguladores.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-04-11T10:14:34.324407",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

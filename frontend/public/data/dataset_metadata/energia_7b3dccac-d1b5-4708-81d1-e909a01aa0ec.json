@@ -1,0 +1,42 @@
+{
+  "files": {
+    "empresas-y-cooperativas-distribuidoras-de-energa-elctrica.csv": {
+      "datasetId": "energia_7b3dccac-d1b5-4708-81d1-e909a01aa0ec",
+      "datasetTitle": "Empresas y Cooperativas Distribuidoras",
+      "fileName": "empresas-y-cooperativas-distribuidoras-de-energa-elctrica.csv",
+      "format": "CSV",
+      "title": "Empresas y Cooperativas distribuidoras de energía eléctrica",
+      "accessURL": "http://datos.energia.gob.ar/dataset/7b3dccac-d1b5-4708-81d1-e909a01aa0ec/resource/0b901267-ad62-417b-a48f-54c0d553d45c",
+      "lastProcessed": "2025-10-09T06:42:13.323Z",
+      "status": "processed"
+    },
+    "empresas-y-cooperativas-distribuidoras-de-energa-elctrica.zip": {
+      "datasetId": "energia_7b3dccac-d1b5-4708-81d1-e909a01aa0ec",
+      "datasetTitle": "Empresas y Cooperativas Distribuidoras",
+      "fileName": "empresas-y-cooperativas-distribuidoras-de-energa-elctrica.zip",
+      "format": "SHP",
+      "title": "Empresas y Cooperativas distribuidoras de energía eléctrica",
+      "accessURL": "http://datos.energia.gob.ar/dataset/7b3dccac-d1b5-4708-81d1-e909a01aa0ec/resource/ff372106-5249-4cc1-b2a4-95d184636c9f",
+      "lastProcessed": "2025-10-09T06:42:13.323Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_7b3dccac-d1b5-4708-81d1-e909a01aa0ec",
+    "title": "Empresas y Cooperativas Distribuidoras",
+    "description": "Empresas, cooperativas y organismos provinciales distribuidores de energía eléctrica georreferenciadas por la Dirección de Información Energética de la Secretaría de Energía, en base a al padrón de entidades proveedoras de energía eléctrica.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2023-07-26T14:31:35.922111",
+    "modified": "2023-07-26T18:46:18.466690",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/empresas-y-cooperativas-distribuidoras"
+  }
+}

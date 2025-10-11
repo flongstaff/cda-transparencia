@@ -1,0 +1,161 @@
+{
+  "files": {
+    "volumnenes-de-transporte-de-hidrocarburos-planilla-20.csv": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "volumnenes-de-transporte-de-hidrocarburos-planilla-20.csv",
+      "format": "CSV",
+      "title": "Volumenes de Transporte de Hidrocarburos - Planilla 20",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/f1d13dac-fca5-4464-940d-ce86c16cbff3",
+      "lastProcessed": "2025-10-09T06:22:05.006Z",
+      "status": "processed"
+    },
+    "volumenes-de-transporte-de-hidrocarburos-planilla-21.csv": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "volumenes-de-transporte-de-hidrocarburos-planilla-21.csv",
+      "format": "CSV",
+      "title": "Volumenes operados por Terminales Marítimas - Planilla 21",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/2144967c-07c5-4ec1-8659-21bd7c1ba89e",
+      "lastProcessed": "2025-10-09T06:22:06.684Z",
+      "status": "processed"
+    },
+    "registro-del-midstream-ductos-empresas.csv": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "registro-del-midstream-ductos-empresas.csv",
+      "format": "CSV",
+      "title": "Registro Midstream (Anexo 3 Reg. 385/21)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/7e58c5e3-4ee7-45d2-a896-1a772bb762ff",
+      "lastProcessed": "2025-10-09T06:22:08.291Z",
+      "status": "processed"
+    },
+    "anexo-2a-capacidad-de-transporte-de-hidrocarburos-a-travs-de-ductos.csv": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "anexo-2a-capacidad-de-transporte-de-hidrocarburos-a-travs-de-ductos.csv",
+      "format": "CSV",
+      "title": "Anexo 2A Capacidad de Transporte de Hidrocarburos a través de ductos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/2a93eec0-32a1-48f9-bcf7-614f203b1918",
+      "lastProcessed": "2025-10-09T06:22:09.732Z",
+      "status": "processed"
+    },
+    "anexo-2b-capacidad-de-tanques-de-almacenamiento-de-hidrocarburos.csv": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "anexo-2b-capacidad-de-tanques-de-almacenamiento-de-hidrocarburos.csv",
+      "format": "CSV",
+      "title": "Anexo 2B Capacidad de Tanques de almacenamiento de Hidrocarburos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/ac9ba2a8-06fd-4e27-a1b1-484df07dc992",
+      "lastProcessed": "2025-10-09T06:22:11.478Z",
+      "status": "processed"
+    },
+    "anexo-2b-por-plantas-capacidad-de-plantas-de-almacenamiento-de-hidrocarburos.csv": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "anexo-2b-por-plantas-capacidad-de-plantas-de-almacenamiento-de-hidrocarburos.csv",
+      "format": "CSV",
+      "title": "Anexo 2B por Plantas: Capacidad de Plantas de Almacenamiento de Hidrocarburos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/6189946b-fb12-4e0e-b6dd-a5a098d1fde9",
+      "lastProcessed": "2025-10-09T06:22:12.828Z",
+      "status": "processed"
+    },
+    "tramos-de-integridad.csv": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "tramos-de-integridad.csv",
+      "format": "CSV",
+      "title": "Tramos de Integridad",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/fdbfd2ab-30d7-48fe-a1cc-74f6e379a535",
+      "lastProcessed": "2025-10-09T06:22:14.215Z",
+      "status": "processed"
+    },
+    "ductos-informacin-general.csv": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "ductos-informacin-general.csv",
+      "format": "CSV",
+      "title": "Ductos información general",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/46f1101d-1f19-40fe-971e-a5b1925ef55b",
+      "lastProcessed": "2025-10-09T06:22:15.572Z",
+      "status": "processed"
+    },
+    "nodos.csv": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "nodos.csv",
+      "format": "CSV",
+      "title": "Nodos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/40292750-9915-4bfb-9b8a-cb1b342c4c5e",
+      "lastProcessed": "2025-10-09T06:22:17.103Z",
+      "status": "processed"
+    },
+    "nodos-de-transporte-de-hidrocarburos-planillas-2021-de-la-res-31993.csv": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "nodos-de-transporte-de-hidrocarburos-planillas-2021-de-la-res-31993.csv",
+      "format": "CSV",
+      "title": "Información georeferenciada de Nodos de Transporte de Hidrocarburos - Planillas 20/21 de la Res. 319/93",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/e328a247-fcc5-48e5-a5d6-cd15d2aff936",
+      "lastProcessed": "2025-10-09T06:22:18.624Z",
+      "status": "processed"
+    },
+    "nodos-de-transporte-de-hidrocarburos-planillas-2021-de-la-res-31993.zip": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "nodos-de-transporte-de-hidrocarburos-planillas-2021-de-la-res-31993.zip",
+      "format": "SHP",
+      "title": "Información georeferenciada de Nodos de Transporte de Hidrocarburos  - Planillas 20/21 de la Res. 319/93",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/71373c69-380a-416c-b4f8-c39f7c1e5605",
+      "lastProcessed": "2025-10-09T06:22:18.624Z",
+      "status": "processed"
+    },
+    "ductos-de-transporte-de-hidrocarburos-planillas-2021-de-la-res-31993.csv": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "ductos-de-transporte-de-hidrocarburos-planillas-2021-de-la-res-31993.csv",
+      "format": "CSV",
+      "title": "Información georeferenciada de Tramos de Ductos de Transporte de Hidrocarburos  - Planillas 20/21 de la Res. 319/93",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/47abb0b5-5bae-4ef3-b140-6d4178c35854",
+      "lastProcessed": "2025-10-09T06:22:20.374Z",
+      "status": "processed"
+    },
+    "ductos-de-transporte-de-hidrocarburos-planillas-2021-de-la-res-31993.zip": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "fileName": "ductos-de-transporte-de-hidrocarburos-planillas-2021-de-la-res-31993.zip",
+      "format": "SHP",
+      "title": "Información georeferenciada de Tramos de Ductos de Transporte de Hidrocarburos  - Planillas 20/21 de la Res. 319/93",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/fe6426c5-fd29-475e-8d62-4de1a80db4d6",
+      "lastProcessed": "2025-10-09T06:22:20.375Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+      "datasetTitle": "Transporte de Hidrocarburos",
+      "format": "PHP",
+      "title": "Tablero de Transporte de Hidrocarburos a través de Terminales Marítimas - Res SE 319/93 Planilla 21",
+      "accessURL": "http://datos.energia.gob.ar/dataset/25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b/resource/961de81f-fdad-4a36-8427-1f220d715371",
+      "lastProcessed": "2025-10-09T06:22:20.376Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_25a691da-fc1d-4ae3-bee5-ec5c5f9aa08b",
+    "title": "Transporte de Hidrocarburos",
+    "description": "Datos de volúmenes de Transporte proporcionados mensualmente por las empresas transportistas.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2019-11-01T12:22:18.004099",
+    "modified": "2024-12-06T13:43:20.484295",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información.\r\n\r\n"
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/transporte-de-hidrocarburos"
+  }
+}

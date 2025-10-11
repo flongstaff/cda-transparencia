@@ -1,0 +1,32 @@
+{
+  "files": {
+    "stock-de-inversion-extranjera-directa-por-pais-primer-nivel-de-residencia-bcra.csv": {
+      "datasetId": "sspm_319",
+      "datasetTitle": "Stock de Inversión Extranjera Directa por país primer nivel de residencia - BCRA",
+      "fileName": "stock-de-inversion-extranjera-directa-por-pais-primer-nivel-de-residencia-bcra.csv",
+      "format": "CSV",
+      "title": "Stock de Inversión Extranjera Directa por país primer nivel de residencia. Valores semestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:49.078Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_319",
+    "title": "Stock de Inversión Extranjera Directa por país primer nivel de residencia - BCRA",
+    "description": "Posición pasiva bruta de IED en Argentina - Clasificación por pais primer nivel de residencia - BCRA",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-30",
+    "modified": "2025-03-24T10:01:23.448078",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

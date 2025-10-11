@@ -1,0 +1,212 @@
+{
+  "files": {
+    "actas-consejo-directivo-2007.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2007.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2007",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/32fa932f-b3c5-44de-8dda-f69fa06acd5f",
+      "lastProcessed": "2025-10-09T06:28:27.993Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2008.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2008.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2008",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/67a5b170-a786-4535-8218-dd77b966853f",
+      "lastProcessed": "2025-10-09T06:28:27.993Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2009.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2009.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2009",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/e4dba553-6aa5-462e-9c7e-e83d6c7c6011",
+      "lastProcessed": "2025-10-09T06:28:27.993Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2010.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2010.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2010",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/282227c2-0569-4d03-84f6-6b6bbe801532",
+      "lastProcessed": "2025-10-09T06:28:27.993Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2011.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2011.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2011",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/8919bb6d-388f-4bb8-9434-c4abfb86ab9b",
+      "lastProcessed": "2025-10-09T06:28:27.993Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2012.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2012.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2012",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/ef1b3474-d18d-45ba-b5cc-c90988eddd99",
+      "lastProcessed": "2025-10-09T06:28:27.994Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2013.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2013.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2013",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/c6ed319e-4238-44c4-8707-c768fae31cb0",
+      "lastProcessed": "2025-10-09T06:28:27.994Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2014.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2014.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2014",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/531aeef1-1b0e-483e-908f-2c695bf08024",
+      "lastProcessed": "2025-10-09T06:28:27.994Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2015.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2015.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2015",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/f2ef6057-5d89-42e8-b625-1b8296167d66",
+      "lastProcessed": "2025-10-09T06:28:27.994Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2016.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2016.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2016",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/1d1ca71d-581f-4056-bb9e-ee39539dc92d",
+      "lastProcessed": "2025-10-09T06:28:27.994Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2017.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2017.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2017",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/6889c477-aaba-46b9-a4b4-2032cd4c1585",
+      "lastProcessed": "2025-10-09T06:28:27.994Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2018.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2018.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2018",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/f6f8b516-1f8a-4dc7-a320-27d419bbf88c",
+      "lastProcessed": "2025-10-09T06:28:27.994Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2019.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2019.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2019",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/c8ba8098-3abc-4806-8a4a-061ef714cfd3",
+      "lastProcessed": "2025-10-09T06:28:27.994Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2020.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2020.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2020",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/2c583456-1496-4fef-978f-d8fcfddfe726",
+      "lastProcessed": "2025-10-09T06:28:27.995Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2021.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2021.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2021",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/cd28b85b-3c52-4e2a-8e59-ea0869232584",
+      "lastProcessed": "2025-10-09T06:28:27.995Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2022.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2022.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2022",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/0f8b1854-c8c0-4eff-8ffd-7d08e07d708f",
+      "lastProcessed": "2025-10-09T06:28:27.995Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2023.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2023.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2023",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/e92d539e-7820-4da5-87bd-eb46e51baedb",
+      "lastProcessed": "2025-10-09T06:28:27.995Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2024.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2024.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2024",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/681eeadd-7f0b-43cf-8171-7a51c9136fa2",
+      "lastProcessed": "2025-10-09T06:28:27.995Z",
+      "status": "processed"
+    },
+    "actas-consejo-directivo-2025.zip": {
+      "datasetId": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+      "datasetTitle": "Actas del Consejo Directivo de ACUMAR",
+      "fileName": "actas-consejo-directivo-2025.zip",
+      "format": "ZIP",
+      "title": "Actas del Consejo Directivo de ACUMAR - 2025",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/800662ea-95bf-4c7f-8f42-3a8edf70e66b/resource/f0f5b9d9-d66e-486d-b9b6-446dcdb168e4",
+      "lastProcessed": "2025-10-09T06:28:27.995Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_800662ea-95bf-4c7f-8f42-3a8edf70e66b",
+    "title": "Actas del Consejo Directivo de ACUMAR",
+    "description": "Datos correspondientes a las reuniones del Consejo Directivo de ACUMAR celebradas a partir del 2007.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2024-10-10T16:52:32.776398",
+    "modified": "2025-09-25T15:26:45.563345",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Consejo Directivo"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/actas-del-consejo-directivo-de-acumar"
+  }
+}

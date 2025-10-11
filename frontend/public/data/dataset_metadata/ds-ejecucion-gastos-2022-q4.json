@@ -1,0 +1,47 @@
+{
+  "files": {
+    "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf": {
+      "datasetId": "ds-ejecucion-gastos-2022-q4",
+      "datasetTitle": "Ejecución Presupuestaria de Gastos 2022 - 4to Trimestre",
+      "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+      "lastProcessed": "2025-10-09T06:12:12.023Z",
+      "status": "error",
+      "error": "Failed to download PDF: ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf"
+    },
+    "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf": {
+      "datasetId": "ds-ejecucion-gastos-2022-q4",
+      "datasetTitle": "Ejecución Presupuestaria de Gastos 2022 - 4to Trimestre",
+      "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
+      "lastProcessed": "2025-10-09T06:12:21.344Z",
+      "status": "error",
+      "error": "Failed to download PDF: ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf"
+    },
+    "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-copia.pdf": {
+      "datasetId": "ds-ejecucion-gastos-2022-q4",
+      "datasetTitle": "Ejecución Presupuestaria de Gastos 2022 - 4to Trimestre",
+      "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-copia.pdf",
+      "format": "PDF",
+      "title": "Con Perspectiva de Género (Q3 2022)",
+      "accessURL": "https://www.carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-copia.pdf",
+      "lastProcessed": "2025-10-09T06:12:24.288Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ds-ejecucion-gastos-2022-q4",
+    "title": "Ejecución Presupuestaria de Gastos 2022 - 4to Trimestre",
+    "description": "Estado de ejecución de gastos por finalidad, función y fuente de financiamiento (Q4 2022).",
+    "theme": [
+      "economia-y-finanzas"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2023-09-20T00:00:00",
+    "modified": "2023-09-20T00:00:00",
+    "publisher": {
+      "name": "Secretaría de Hacienda"
+    },
+    "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/"
+  }
+}

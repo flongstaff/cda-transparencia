@@ -1,0 +1,32 @@
+{
+  "files": {
+    "remuneracion-bruta-asalariados-registrados-sector-privado-mensual-pesos-base-2009.csv": {
+      "datasetId": "sspm_153",
+      "datasetTitle": "Remuneración bruta de los asalariados registrados del sector privado",
+      "fileName": "remuneracion-bruta-asalariados-registrados-sector-privado-mensual-pesos-base-2009.csv",
+      "format": "CSV",
+      "title": "Remuneración bruta de los asalariados registrados del sector privado. Pesos corrientes. Valores mensuales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:37.436Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_153",
+    "title": "Remuneración bruta de los asalariados registrados del sector privado",
+    "description": "Remuneración bruta de los asalariados registrados del sector privado. Total del país en pesos. Base 2009",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:02:37.513682",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

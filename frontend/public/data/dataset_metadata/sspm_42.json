@@ -1,0 +1,52 @@
+{
+  "files": {
+    "evolucion-principales-variables-ocupacionales-eph-puntual-continua-valores-anuales.csv": {
+      "datasetId": "sspm_42",
+      "datasetTitle": "Principales variables ocupacionales. EPH puntual y continua.",
+      "fileName": "evolucion-principales-variables-ocupacionales-eph-puntual-continua-valores-anuales.csv",
+      "format": "CSV",
+      "title": "Principales variables ocupacionales. EPH puntual y continua. Valores anuales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:34:34.139Z",
+      "status": "processed"
+    },
+    "evolucion-principales-variables-ocupacionales-eph-puntual-valores-mensuales.csv": {
+      "datasetId": "sspm_42",
+      "datasetTitle": "Principales variables ocupacionales. EPH puntual y continua.",
+      "fileName": "evolucion-principales-variables-ocupacionales-eph-puntual-valores-mensuales.csv",
+      "format": "CSV",
+      "title": "Principales variables ocupacionales. EPH puntual. Valores mensuales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:34:35.187Z",
+      "status": "processed"
+    },
+    "evolucion-principales-variables-ocupacionales-eph-continua-valores-trimestrales.csv": {
+      "datasetId": "sspm_42",
+      "datasetTitle": "Principales variables ocupacionales. EPH puntual y continua.",
+      "fileName": "evolucion-principales-variables-ocupacionales-eph-continua-valores-trimestrales.csv",
+      "format": "CSV",
+      "title": "Principales variables ocupacionales. EPH continua. Valores trimestrales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:34:36.241Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_42",
+    "title": "Principales variables ocupacionales. EPH puntual y continua.",
+    "description": "Principales variables ocupacionales por aglomerados urbanos.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-11T20:54:57.913723",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

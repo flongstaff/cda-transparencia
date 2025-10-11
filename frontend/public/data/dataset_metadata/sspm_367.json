@@ -1,0 +1,52 @@
+{
+  "files": {
+    "demanda-de-electricidad-datos-anuales.csv": {
+      "datasetId": "sspm_367",
+      "datasetTitle": "Demanda de electricidad",
+      "fileName": "demanda-de-electricidad-datos-anuales.csv",
+      "format": "CSV",
+      "title": "Demanda de electricidad. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:18.774Z",
+      "status": "processed"
+    },
+    "demanda-de-electricidad-datos-trimestrales.csv": {
+      "datasetId": "sspm_367",
+      "datasetTitle": "Demanda de electricidad",
+      "fileName": "demanda-de-electricidad-datos-trimestrales.csv",
+      "format": "CSV",
+      "title": "Demanda de electricidad. Datos trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:19.858Z",
+      "status": "processed"
+    },
+    "demanda-de-electricidad-datos-mensuales.csv": {
+      "datasetId": "sspm_367",
+      "datasetTitle": "Demanda de electricidad",
+      "fileName": "demanda-de-electricidad-datos-mensuales.csv",
+      "format": "CSV",
+      "title": "Demanda de electricidad. Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:21.052Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_367",
+    "title": "Demanda de electricidad",
+    "description": "Datos de demanda de electricidad",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-12-26",
+    "modified": "2025-03-24T10:02:51.975561",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

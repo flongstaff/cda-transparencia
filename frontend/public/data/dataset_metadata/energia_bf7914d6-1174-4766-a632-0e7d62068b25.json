@@ -1,0 +1,41 @@
+{
+  "files": {
+    "instalaciones-hidrocarburos-puertos-regasificadores-de-gnl.zip": {
+      "datasetId": "energia_bf7914d6-1174-4766-a632-0e7d62068b25",
+      "datasetTitle": "Instalaciones de hidrocarburos - Puertos regasificadores de GNL",
+      "fileName": "instalaciones-hidrocarburos-puertos-regasificadores-de-gnl.zip",
+      "format": "SHP",
+      "title": "Instalaciones de hidrocarburos - Puertos regasificadores de GNL",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bf7914d6-1174-4766-a632-0e7d62068b25/resource/c34d2b0a-977a-4c30-b86b-8c9b9d5ed662",
+      "lastProcessed": "2025-10-09T07:18:56.719Z",
+      "status": "processed"
+    },
+    "instalaciones-hidrocarburos-puertos-regasificadores-de-gnl.csv": {
+      "datasetId": "energia_bf7914d6-1174-4766-a632-0e7d62068b25",
+      "datasetTitle": "Instalaciones de hidrocarburos - Puertos regasificadores de GNL",
+      "fileName": "instalaciones-hidrocarburos-puertos-regasificadores-de-gnl.csv",
+      "format": "CSV",
+      "title": "Instalaciones de hidrocarburos - Puertos regasificadores de GNL",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bf7914d6-1174-4766-a632-0e7d62068b25/resource/7f981b43-2c74-4d66-8288-a974955585cc",
+      "lastProcessed": "2025-10-09T07:18:58.136Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_bf7914d6-1174-4766-a632-0e7d62068b25",
+    "title": "Instalaciones de hidrocarburos - Puertos regasificadores de GNL",
+    "description": "Puertos regasificadores de GNL. ISO 19126: PowerSupplies, Este subgrupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-06-11T10:56:55.047292",
+    "publisher": {
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

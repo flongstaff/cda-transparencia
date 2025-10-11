@@ -1,0 +1,55 @@
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.
+26/08/2024 13:02
+Presupuesto: 2024DE EJECUCION PRESUPUESTARIA 
+02/01/2024 al 31/03/2024
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+I. INGRESOS CORRIENTES
+Ingresos tributarios 511.369.159,68
+Contribuciones a la Seguridad Social
+Ingresos no Tributarios 146.889.930,39
+Ventas de Bienes y Servicios
+Ingresos de Operación
+Rentas de la Propiedad 887.430,93
+Transferencias Corrientes 81.243.595,83
+Contribuciones Figurativas para Financiaciones Corrientes
+TOTAL  INGRESOS CORRIENTES 740.390.116,83
+II. GASTOS CORRIENTES
+Gastos de Operación
+Gastos de Consumo 689.736.683,92
+Rentas de la Propiedad 2.249,58
+Prestaciones de la Seguridad Social
+Impuestos Directos
+Otras Pérdidas
+Transferencias Corrientes 15.236.020,00
+Gastos Figurativos para Transacciones Corrientes
+TOTAL  GASTOS CORRIENTES 704.974.953,50
+III. AHORRO CORRIENTE: (I - II) 35.415.163,33
+Resultado Corriente Primario (Ingresos Corrientes - Gastos Corrientes netos de Int. de la deuda) 35.417.412,91
+IV. RECURSOS DE CAPITAL
+Recursos Propios de Capital 100,00
+Transferencias de Capital 11.664.750,63
+Disminución de la Inversión Financiera 839.165,26
+Filtro aplicado: Presupuesto: 2024 -  Fechas: 02/01/2024 al 31/03/2024
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 2 de 3 R.A.F.A.M.
+26/08/2024 13:02
+Presupuesto: 2024DE EJECUCION PRESUPUESTARIA 
+02/01/2024 al 31/03/2024
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+Contribuciones Figurativas para Financiaciones de Capital
+TOTAL  RECURSOS DE CAPITAL 12.504.015,89
+V. GASTOS DE CAPITAL
+Inversión Real Directa 28.444.537,25
+Transferencias de Capital 5.639.626,43
+Inversión Financiera
+Gastos Figurativos para Transacciones de Capital
+TOTAL  GASTOS DE CAPITAL 34.084.163,68
+VI. INGRESOS TOTALES 752.894.132,72
+TOTAL  INGRESOS TOTALES 752.894.132,72 752.894.132,72
+VII. GASTOS TOTALES 739.059.117,18
+TOTAL  GASTOS TOTALES 739.059.117,18 739.059.117,18
+VIII. RESULTADO FINANCIERO (VI - VII) 13.835.015,54
+Resultado Prima...

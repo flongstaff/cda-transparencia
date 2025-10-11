@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_6",
+      "datasetTitle": "Producción minera de Argentina y participación en el total de la economía (SIACAM)",
+      "lastProcessed": "2025-10-09T06:50:40.266Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_6",
+    "title": "Producción minera de Argentina y participación en el total de la economía (SIACAM)",
+    "description": "Datos correspondientes al tablero de Producción Minera Nacional del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM). Elaborado por la Dirección Nacional de Promoción y Economia Minera (Subsecretaría de Desarrollo Minero, Secretaría de Minería, Ministerio de Economía de la Nación) con base a INDEC.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2023-04-27",
+    "modified": "2025-08-05",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

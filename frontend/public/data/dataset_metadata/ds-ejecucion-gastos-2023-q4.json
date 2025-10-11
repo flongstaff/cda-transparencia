@@ -1,0 +1,42 @@
+{
+  "files": {
+    "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf": {
+      "datasetId": "ds-ejecucion-gastos-2023-q4",
+      "datasetTitle": "Ejecución Presupuestaria de Gastos 2023 - 4to Trimestre",
+      "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+      "lastProcessed": "2025-10-09T06:11:43.753Z",
+      "status": "error",
+      "error": "Failed to download PDF: ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf"
+    },
+    "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf": {
+      "datasetId": "ds-ejecucion-gastos-2023-q4",
+      "datasetTitle": "Ejecución Presupuestaria de Gastos 2023 - 4to Trimestre",
+      "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+      "lastProcessed": "2025-10-09T06:11:53.276Z",
+      "status": "error",
+      "error": "Failed to download PDF: ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf"
+    },
+    "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf": {
+      "datasetId": "ds-ejecucion-gastos-2023-q4",
+      "datasetTitle": "Ejecución Presupuestaria de Gastos 2023 - 4to Trimestre",
+      "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+      "lastProcessed": "2025-10-09T06:12:02.676Z",
+      "status": "error",
+      "error": "Failed to download PDF: ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf"
+    }
+  },
+  "info": {
+    "identifier": "ds-ejecucion-gastos-2023-q4",
+    "title": "Ejecución Presupuestaria de Gastos 2023 - 4to Trimestre",
+    "description": "Estado de ejecución de gastos por finalidad, función, perspectiva de género y fuente de financiamiento (Q4 2023).",
+    "theme": [
+      "economia-y-finanzas"
+    ],
+    "keywords": [],
+    "issued": "2024-04-23T00:00:00",
+    "modified": "2024-04-23T00:00:00",
+    "publisher": {
+      "name": "Secretaría de Hacienda"
+    }
+  }
+}

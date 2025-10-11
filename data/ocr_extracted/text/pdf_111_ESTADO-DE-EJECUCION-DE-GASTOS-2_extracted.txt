@@ -1,0 +1,32 @@
+Municipalidad de
+Carmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS
+Ejercicio 
+:Hoja: 1 de 254 R.A.F.A.M.
+19/09/2023 10:05
+Del 02/01/2023 al 31/03/2023
+2023Partidas Incluidas respecto al Crédito Disponible: Todas
+Partidas Incluidas respecto al Crédito Vigente: Todas
+Devengado 
+no pagado Crédito 
+Disponible Pagado Devengado Compromiso Preventivo Crédito 
+Vigente Modifica 
+ciones Crédito 
+Aprobado Fuen. 
+Fin. Objeto del GastoCrédito Vig. 
+- Devengado 
+Jurisdicción: 1110101000 - Conduccion Superior 
+Apertura Programática: 01.00.00 - Desarrallo politicas centrales01.01.00 - Cond. y Gest. de Politicas Centrales (110)
+110 - Tesoro Municipal
+1.0.0.0 - Gastos en personal 1.1.0.0 - Personal permanente1.1.1.0 - Retribuciones del cargo 1.1.1.1 - Personal Superior
+5.223.293,24 0,00 5.223.293,24 0,00 2.005.875,20 2.005.875,20 2.005.875,20 3.217.418,04 0,00 3.217.418,04
+1.1.1.2 - Personal Jerárquico 0,00 0,00 0,00 0,00 305.578,00 305.578,00 305.578,00 -305.578,00 0,00 -305.578,00
+1.1.1.5 - Personal Administrativo 244.395,00 0,00 244.395,00 0,00 223.870,00 223.870,00 223.870,00 20.525,00 0,00 20.525,00
+1.1.1.9 - Gastos Reservados 783.493,97 0,00 783.493,97 0,00 300.881,28 300.881,28 300.881,28 482.612,69 0,00 482.612,69
+6.251.182,21 0,00 6.251.182,21 0,00 2.836.204,48 2.836.204,48 2.836.204,48 3.414.977,73 0,00 Total Retribuciones del cargo 3.414.977,73
+1.1.3.0 - Retribuciones que no hacen al cargo 1.1.3.1 - Antiguedad
+412.178,40 0,00 412.178,40 0,00 227.362,36 227.362,36 227.362,36 184.816,04 0,00 184.816,04 412.178,40 0,00 412.178,40 0,00 227.362,36 227.362,36 227.362,36 184.816,04 0,00
+Total Retribuciones que no hacen al cargo 184.816,04
+1.1.4.0 - Sueldo anual complementario 597.062,47 0,00 597.062,47 0,00 0,00 0,00 0,00 597.062,47 0,00 597.062,47
+1.1.6.0 - Contribuciones patronales 1.1.6.1 - IPS
+595.368,80 0,00 595.368,80 0,00 0,00 0,00 0,00 595.368,80 0,00 595.368,80
+1.1.6.2 - IOMA 233.186,11 0,00 233.186,11 0,00 0,00 0,00 0,00 233.186,11 0,00 233.186,11 828.554,91 ...

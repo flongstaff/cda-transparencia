@@ -1,0 +1,142 @@
+{
+  "files": {
+    "distribucin-elctrica-edelap-at-cabeceras.csv": {
+      "datasetId": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+      "datasetTitle": "Distribución Eléctrica Edelap",
+      "fileName": "distribucin-elctrica-edelap-at-cabeceras.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edelap Alta Tensión  Cabeceras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e0fe150-8cf4-4707-927d-94bfaf95bb53/resource/27c446ce-ca2b-47ed-b287-94c0c2024da4",
+      "lastProcessed": "2025-10-09T06:41:44.381Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edelap-at-mt-subestaciones-transformadoras.csv": {
+      "datasetId": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+      "datasetTitle": "Distribución Eléctrica Edelap",
+      "fileName": "distribucin-elctrica-edelap-at-mt-subestaciones-transformadoras.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edelap Alta Tensión  Media Tensión  Subestaciones Transformadoras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e0fe150-8cf4-4707-927d-94bfaf95bb53/resource/33fa6520-f489-4edc-a785-934e0dc385b1",
+      "lastProcessed": "2025-10-09T06:41:45.999Z",
+      "status": "processed"
+    },
+    "at-lneas.zip": {
+      "datasetId": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+      "datasetTitle": "Distribución Eléctrica Edelap",
+      "fileName": "at-lneas.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edelap Alta Tensión  Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e0fe150-8cf4-4707-927d-94bfaf95bb53/resource/46941bf1-e2d0-4dad-9f10-4cc7b11b682b",
+      "lastProcessed": "2025-10-09T06:41:45.999Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edelap-at-lneas.csv": {
+      "datasetId": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+      "datasetTitle": "Distribución Eléctrica Edelap",
+      "fileName": "distribucin-elctrica-edelap-at-lneas.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edelap Alta Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e0fe150-8cf4-4707-927d-94bfaf95bb53/resource/8f36f439-767d-4b03-8733-5ed73004acf2",
+      "lastProcessed": "2025-10-09T06:41:47.304Z",
+      "status": "processed"
+    },
+    "at-acometidas.zip": {
+      "datasetId": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+      "datasetTitle": "Distribución Eléctrica Edelap",
+      "fileName": "at-acometidas.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edelap Alta Tensión  Acometidas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e0fe150-8cf4-4707-927d-94bfaf95bb53/resource/cdfc5409-2553-4622-a5b6-674a9eb8e0cf",
+      "lastProcessed": "2025-10-09T06:41:47.304Z",
+      "status": "processed"
+    },
+    "at-cabeceras.zip": {
+      "datasetId": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+      "datasetTitle": "Distribución Eléctrica Edelap",
+      "fileName": "at-cabeceras.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edelap Alta Tensión  Cabeceras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e0fe150-8cf4-4707-927d-94bfaf95bb53/resource/d2e74d8d-4cef-45d2-aac6-4cc604f48bfe",
+      "lastProcessed": "2025-10-09T06:41:47.304Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edelap-at-acometidas.csv": {
+      "datasetId": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+      "datasetTitle": "Distribución Eléctrica Edelap",
+      "fileName": "distribucin-elctrica-edelap-at-acometidas.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edelap Alta Tensión Acometidas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e0fe150-8cf4-4707-927d-94bfaf95bb53/resource/fb2dc63e-f059-4b1c-99ec-bcd5e76e641f",
+      "lastProcessed": "2025-10-09T06:41:48.573Z",
+      "status": "processed"
+    },
+    "at-mt-subestaciones-transformadoras.zip": {
+      "datasetId": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+      "datasetTitle": "Distribución Eléctrica Edelap",
+      "fileName": "at-mt-subestaciones-transformadoras.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edelap AltaTensión  Media Tensión  Subestaciones Transformadoras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e0fe150-8cf4-4707-927d-94bfaf95bb53/resource/85bc7f7a-b957-463b-ab2a-227401980e7f",
+      "lastProcessed": "2025-10-09T06:41:48.573Z",
+      "status": "processed"
+    },
+    "at-at-subestaciones-transformadoras.zip": {
+      "datasetId": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+      "datasetTitle": "Distribución Eléctrica Edelap",
+      "fileName": "at-at-subestaciones-transformadoras.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edelap Alta Tensión- Alta Tensión  Subestaciones Transformadoras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e0fe150-8cf4-4707-927d-94bfaf95bb53/resource/e06ecf4b-e234-4520-a767-3354c58f19b1",
+      "lastProcessed": "2025-10-09T06:41:48.574Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edelap-at-at-subestaciones-transformadoras.csv": {
+      "datasetId": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+      "datasetTitle": "Distribución Eléctrica Edelap",
+      "fileName": "distribucin-elctrica-edelap-at-at-subestaciones-transformadoras.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edelap Alta Tensión -  Alta Tensión  Subestaciones Transformadoras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e0fe150-8cf4-4707-927d-94bfaf95bb53/resource/f05191cf-8f41-42b3-b4c4-d34f3ca2d37a",
+      "lastProcessed": "2025-10-09T06:41:49.809Z",
+      "status": "processed"
+    },
+    "distribucin-electrica-media-tension-lneas.zip": {
+      "datasetId": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+      "datasetTitle": "Distribución Eléctrica Edelap",
+      "fileName": "distribucin-electrica-media-tension-lneas.zip",
+      "format": "SHP",
+      "title": "Distribución Electrica Media Tension Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e0fe150-8cf4-4707-927d-94bfaf95bb53/resource/05c663dd-f433-4fd7-a13f-13e2cd572dac",
+      "lastProcessed": "2025-10-09T06:41:49.809Z",
+      "status": "processed"
+    },
+    "distribucin-electrica-media-tension-lneas.csv": {
+      "datasetId": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+      "datasetTitle": "Distribución Eléctrica Edelap",
+      "fileName": "distribucin-electrica-media-tension-lneas.csv",
+      "format": "CSV",
+      "title": "Distribución Electrica Media Tension Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e0fe150-8cf4-4707-927d-94bfaf95bb53/resource/a130e209-2437-4470-a456-c35dafec25c9",
+      "lastProcessed": "2025-10-09T06:41:51.472Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_2e0fe150-8cf4-4707-927d-94bfaf95bb53",
+    "title": "Distribución Eléctrica Edelap",
+    "description": "Este grupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-06-11T11:00:13.732772",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

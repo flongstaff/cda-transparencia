@@ -1,0 +1,208 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "lastProcessed": "2025-10-09T08:07:46.498Z",
+      "status": "processed"
+    },
+    "w_median_privado_mensual_por_clae3.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_median_privado_mensual_por_clae3.csv",
+      "format": "CSV",
+      "title": "Salario mediano en el sector privado (CLAE a 3 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/9f8c2469-bbb1-4a9b-ab69-5a38e928a90f",
+      "lastProcessed": "2025-10-09T08:07:08.932Z",
+      "status": "processed"
+    },
+    "w_median_privado_mensual_por_clae2.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_median_privado_mensual_por_clae2.csv",
+      "format": "CSV",
+      "title": "Salario mediano en el sector privado (CLAE a 2 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/f02a96ce-437d-46e6-bb2a-aa366253d248",
+      "lastProcessed": "2025-10-09T08:07:10.799Z",
+      "status": "processed"
+    },
+    "w_median_privado_mensual_por_letra.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_median_privado_mensual_por_letra.csv",
+      "format": "CSV",
+      "title": "Salario mediano en el sector privado (por letra)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/c3ac1993-ae0b-4099-8ff1-e60212e1cd25",
+      "lastProcessed": "2025-10-09T08:07:12.664Z",
+      "status": "processed"
+    },
+    "w_median_privado_total.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_median_privado_total.csv",
+      "format": "CSV",
+      "title": "Salario mediano en el sector privado (total)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/f8821898-d9bc-4ea4-aa0a-1894c35ac112",
+      "lastProcessed": "2025-10-09T08:07:14.614Z",
+      "status": "processed"
+    },
+    "w_median_total_empresas_mensual_por_clae6.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_median_total_empresas_mensual_por_clae6.csv",
+      "format": "CSV",
+      "title": "Salario mediano total empresas (CLAE a 6 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/dfb7a113-e19a-40ca-8dd2-08deb9a47cec",
+      "lastProcessed": "2025-10-09T08:07:16.587Z",
+      "status": "processed"
+    },
+    "w_median_total_empresas_mensual_por_clae3.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_median_total_empresas_mensual_por_clae3.csv",
+      "format": "CSV",
+      "title": "Salario mediano total empresas (CLAE a 3 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/f29be214-346c-4c2c-8f56-56d6e16a094d",
+      "lastProcessed": "2025-10-09T08:07:18.471Z",
+      "status": "processed"
+    },
+    "w_median_total_empresas_mensual_por_clae2.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_median_total_empresas_mensual_por_clae2.csv",
+      "format": "CSV",
+      "title": "Salario mediano total empresas (CLAE a 2 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/60417866-e1bb-41e8-b441-a0b200855348",
+      "lastProcessed": "2025-10-09T08:07:20.697Z",
+      "status": "processed"
+    },
+    "w_median_total_empresas_mensual_por_letra.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_median_total_empresas_mensual_por_letra.csv",
+      "format": "CSV",
+      "title": "Salario mediano total empresas (por letra)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/c9f24c30-fead-4e6e-b00a-aa46eb0c70cf",
+      "lastProcessed": "2025-10-09T08:07:22.695Z",
+      "status": "processed"
+    },
+    "w_mean_privado_mensual_por_clae6": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_mean_privado_mensual_por_clae6",
+      "format": "CSV",
+      "title": "Salario promedio en el sector privado (CLAE a 6 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/5dce08e9-9408-4f28-8c97-30c964b7abc5",
+      "lastProcessed": "2025-10-09T08:07:26.942Z",
+      "status": "processed"
+    },
+    "w_mean_privado_mensual_por_clae3.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_mean_privado_mensual_por_clae3.csv",
+      "format": "CSV",
+      "title": "Salario promedio en el sector privado (CLAE a 3 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/531dd4fc-ae6d-4683-8c60-ed7b58b8b281",
+      "lastProcessed": "2025-10-09T08:07:29.145Z",
+      "status": "processed"
+    },
+    "w_mean_privado_mensual_por_clae2.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_mean_privado_mensual_por_clae2.csv",
+      "format": "CSV",
+      "title": "Salario promedio en el sector privado (CLAE a 2 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/a3b5f1b9-122a-4e93-bdc7-f4791aa26061",
+      "lastProcessed": "2025-10-09T08:07:31.259Z",
+      "status": "processed"
+    },
+    "w_mean_privado_mensual_por_letra.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_mean_privado_mensual_por_letra.csv",
+      "format": "CSV",
+      "title": "Salario promedio en el sector privado (por letra)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/37d77521-9a0c-4916-8f9c-1f724891039a",
+      "lastProcessed": "2025-10-09T08:07:33.228Z",
+      "status": "processed"
+    },
+    "w_mean_total_empresas_mensual_por_clae6.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_mean_total_empresas_mensual_por_clae6.csv",
+      "format": "CSV",
+      "title": "Salario promedio total empresas (CLAE a 6 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/f56ef468-c9c2-418c-b36d-70466a23f71a",
+      "lastProcessed": "2025-10-09T08:07:37.864Z",
+      "status": "processed"
+    },
+    "w_mean_total_empresas_mensual_por_clae3.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_mean_total_empresas_mensual_por_clae3.csv",
+      "format": "CSV",
+      "title": "Salario promedio total empresas (CLAE a 3 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/a3d04b68-f02f-450c-baec-bfae125e90ef",
+      "lastProcessed": "2025-10-09T08:07:40.052Z",
+      "status": "processed"
+    },
+    "w_mean_total_empresas_mensual_por_clae2.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_mean_total_empresas_mensual_por_clae2.csv",
+      "format": "CSV",
+      "title": "Salario promedio total empresas (CLAE a 2 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/66f257dc-3ef9-4689-8d44-5761963457d2",
+      "lastProcessed": "2025-10-09T08:07:41.994Z",
+      "status": "processed"
+    },
+    "w_mean_total_empresas_mensual_por_letra.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "w_mean_total_empresas_mensual_por_letra.csv",
+      "format": "CSV",
+      "title": "Salario promedio total empresas (por letra)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/8db7c2bb-c943-4ba1-b401-a4e371af5623",
+      "lastProcessed": "2025-10-09T08:07:44.077Z",
+      "status": "processed"
+    },
+    "clae_agg.csv": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "clae_agg.csv",
+      "format": "CSV",
+      "title": "Diccionario de claes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/c0b9e6f3-8334-4c20-ade9-57ad743e95bb",
+      "lastProcessed": "2025-10-09T08:07:48.548Z",
+      "status": "processed"
+    },
+    "metodologia.pdf": {
+      "datasetId": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+      "datasetTitle": "Salarios promedio y mediano, por sector de actividad",
+      "fileName": "metodologia.pdf",
+      "format": "PDF",
+      "title": "Metodología",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d20b873e-c4da-44e4-a625-9f43c1a068a5/resource/4c7263bd-9d82-4b07-9871-32e67047abac",
+      "lastProcessed": "2025-10-09T08:07:51.217Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_d20b873e-c4da-44e4-a625-9f43c1a068a5",
+    "title": "Salarios promedio y mediano, por sector de actividad",
+    "description": "Consiste en el promedio y la mediana de la remuneración bruta de cada sector. Está expresada en\r\npesos corrientes, e incluye la remuneración por todo concepto (por ejemplo, incluye sueldo anual\r\ncomplementario, horas extras e indemnizaciones, entre otros). Las remuneraciones con valores\r\nnegativos, nulos o vacíos, no se toman en cuenta para el cálculo de estas series.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-10-07T16:47:04.472378",
+    "modified": "2021-12-09T15:39:32.919934",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la Producción."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/salarios-promedio-y-mediano-por-sector-de-actividad"
+  }
+}

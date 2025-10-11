@@ -1,1239 +1,278 @@
 {
-    "@context": "http://www.w3.org/ns/dcat.jsonld",
-    "version": "1.1",
-    "title": "Datos abiertos Carmen de Areco",
-    "description": "Catálogo exhaustivo de datos públicos del Municipio de Carmen de Areco, incluyendo presupuestos, ejecuciones, ordenanzas, licitaciones y estadísticas. Para uso en cda-transparencia.org.",
-    "publisher": {
-        "name": "Municipalidad de Carmen de Areco",
-        "mbox": "municipio@carmendeareco.gob.ar"
+  "title": "Datos abiertos Carmen de Areco - Catálogo Principal",
+  "description": "Catálogo unificado de datos públicos del Municipio de Carmen de Areco. Incluye presupuestos, ejecuciones, licitaciones y estadísticas (2019-2025).",
+  "lastUpdated": "2025-10-04T00:00:00Z",
+  "dataset": [
+    {
+      "identifier": "ds-presupuesto-2025",
+      "title": "Presupuesto Municipal 2025",
+      "description": "Presupuesto de gastos y recursos aprobado para 2025 (Ordenanza 3280/24). Incluye créditos por partida.",
+      "theme": "economia-y-finanzas",
+      "superTheme": "ECON",
+      "keywords": [
+        "Presupuesto",
+        "2025"
+      ],
+      "issued": "2025-02-21T00:00:00",
+      "modified": "2025-02-21T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/transparencia/presupuesto/",
+      "publisher": "Secretaría de Hacienda",
+      "distribution": [
+        {
+          "title": "Presupuesto 2025 Aprobado",
+          "format": "PDF",
+          "fileName": "PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/02/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/02/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf"
+        }
+      ]
     },
-    "license": "CC-BY-4.0",
-    "superThemeTaxonomy": "http://datos.gob.ar/superThemeTaxonomy.json",
-    "themeTaxonomy": [
+    {
+      "identifier": "ds-ejecucion-gastos-2023-q4",
+      "title": "Ejecución Presupuestaria de Gastos 2023 - 4to Trimestre",
+      "description": "Estado de ejecución de gastos por finalidad, función, perspectiva de género y fuente de financiamiento (Q4 2023).",
+      "theme": "economia-y-finanzas",
+      "superTheme": "ECON",
+      "keywords": [
+        "Ejecución",
+        "Gastos",
+        "2023"
+      ],
+      "issued": "2024-04-23T00:00:00",
+      "modified": "2024-04-23T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
+      "publisher": "Secretaría de Hacienda",
+      "distribution": [
         {
-            "label": "Economía y finanzas",
-            "id": "economia-y-finanzas",
-            "description": "Economía y finanzas"
+          "title": "Por Finalidad y Función",
+          "format": "PDF",
+          "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4%C2%B0TRI.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4%C2%B0TRI.pdf"
         },
         {
-            "label": "Gobierno y sector público",
-            "id": "gobierno-y-sector-publico",
-            "description": "Gobierno y sector público"
+          "title": "Por Perspectiva de Género",
+          "format": "PDF",
+          "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4%C2%B0TRIMESTRE-2023.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4%C2%B0TRIMESTRE-2023.pdf"
         },
         {
-            "label": "Salud y asistencia social",
-            "id": "salud-y-asistencia-social",
-            "description": "Salud y asistencia social"
-        },
-        {
-            "label": "Justicia, seguridad y asuntos legales",
-            "id": "justicia-seguridad-y-asuntos-legales",
-            "description": "Justicia, seguridad y asuntos legales"
+          "title": "Por Fuente de Financiamiento",
+          "format": "PDF",
+          "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4%C2%B0TRI.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4%C2%B0TRI.pdf"
         }
-    ],
-    "dataset": [
+      ]
+    },
+    {
+      "identifier": "ds-cuenta-ahorro-2025",
+      "title": "Cuenta Ahorro Inversión Financiamiento 2025",
+      "description": "Reporte de cuenta ahorro, inversión y financiamiento para marzo y junio 2025.",
+      "theme": "economia-y-finanzas",
+      "superTheme": "ECON",
+      "keywords": [
+        "Ahorro",
+        "Inversión",
+        "Financiamiento",
+        "2025"
+      ],
+      "issued": "2025-04-26T00:00:00",
+      "modified": "2025-07-10T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
+      "publisher": "Secretaría de Hacienda",
+      "distribution": [
         {
-            "title": "Presupuesto Municipal 2025",
-            "description": "Presupuesto de gastos y recursos aprobado para 2025 (Ordenanza 3280/24). Incluye créditos por partida.",
-            "modified": "2025-02-21T00:00:00",
-            "issued": "2025-02-21T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/presupuesto/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Secretaría de Hacienda"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Presupuesto 2025 Aprobado",
-                    "description": "Documento completo.",
-                    "fileName": "PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
-                    "type": "file",
-                    "issued": "2025-02-21T00:00:00",
-                    "modified": "2025-02-21T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/02/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/02/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
-                    "identifier": "dist-pres-2025-01"
-                }
-            ],
-            "keyword": [
-                "Presupuesto",
-                "2025"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "R/P1Y",
-            "identifier": "ds-presupuesto-2025",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ]
+          "title": "Marzo 2025",
+          "format": "PDF",
+          "fileName": "Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/04/Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/04/Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf"
         },
         {
-            "title": "Ejecución Presupuestaria de Gastos 2023 - 4to Trimestre",
-            "description": "Estado de ejecución de gastos por finalidad, función, perspectiva de género y fuente de financiamiento (Q4 2023).",
-            "modified": "2024-04-23T00:00:00",
-            "issued": "2024-04-23T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Secretaría de Hacienda"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Por Finalidad y Función",
-                    "description": "Ejecución por finalidad y función.",
-                    "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
-                    "type": "file",
-                    "issued": "2024-04-23T00:00:00",
-                    "modified": "2024-04-23T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4%25C2%25B0TRI.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4%25C2%25B0TRI.pdf",
-                    "identifier": "dist-ejec-gast-2023-q4-01"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Por Perspectiva de Género",
-                    "description": "Ejecución con perspectiva de género.",
-                    "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
-                    "type": "file",
-                    "issued": "2024-04-23T00:00:00",
-                    "modified": "2024-04-23T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4%25C2%25B0TRIMESTRE-2023.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4%25C2%25B0TRIMESTRE-2023.pdf",
-                    "identifier": "dist-ejec-gast-2023-q4-02"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Por Fuente de Financiamiento",
-                    "description": "Ejecución por fuente de financiamiento.",
-                    "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
-                    "type": "file",
-                    "issued": "2024-04-23T00:00:00",
-                    "modified": "2024-04-23T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4%25C2%25B0TRI.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4%25C2%25B0TRI.pdf",
-                    "identifier": "dist-ejec-gast-2023-q4-03"
-                }
-            ],
-            "keyword": [
-                "Ejecución",
-                "Gastos",
-                "2023"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "R/P3M",
-            "identifier": "ds-ejecucion-gastos-2023-q4",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2023-10-01T00:00:00/2023-12-31T00:00:00"
-        },
-        {
-            "title": "Ejecución Presupuestaria de Gastos 2022 - 4to Trimestre",
-            "description": "Estado de ejecución de gastos por finalidad, función y fuente de financiamiento (Q4 2022).",
-            "modified": "2023-09-20T00:00:00",
-            "issued": "2023-09-20T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Secretaría de Hacienda"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Por Finalidad y Función",
-                    "description": "Ejecución por finalidad y función.",
-                    "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
-                    "type": "file",
-                    "issued": "2023-09-20T00:00:00",
-                    "modified": "2023-09-20T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4%25C2%25B0TRE-2022.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4%25C2%25B0TRE-2022.pdf",
-                    "identifier": "dist-ejec-gast-2022-q4-01"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Por Fuente de Financiamiento",
-                    "description": "Ejecución por fuente de financiamiento.",
-                    "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4°TRE-2022.pdf",
-                    "type": "file",
-                    "issued": "2023-09-20T00:00:00",
-                    "modified": "2023-09-20T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4%25C2%25B0TRE-2022.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-4%25C2%25B0TRE-2022.pdf",
-                    "identifier": "dist-ejec-gast-2022-q4-02"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Con Perspectiva de Género (Q3 2022)",
-                    "description": "Ejecución con perspectiva de género.",
-                    "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-copia.pdf",
-                    "type": "file",
-                    "issued": "2023-09-20T00:00:00",
-                    "modified": "2023-09-20T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://www.carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-copia.pdf",
-                    "downloadURL": "https://www.carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-GASTOS-CON-PERSPECTIVA-DE-GENERO-copia.pdf",
-                    "identifier": "dist-ejec-gast-2022-q3-01"
-                }
-            ],
-            "keyword": [
-                "Ejecución",
-                "Gastos",
-                "2022"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "R/P3M",
-            "identifier": "ds-ejecucion-gastos-2022-q4",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2022-10-01T00:00:00/2022-12-31T00:00:00"
-        },
-        {
-            "title": "Cuenta Ahorro Inversión Financiamiento 2025",
-            "description": "Reporte de cuenta ahorro, inversión y financiamiento para marzo y junio 2025.",
-            "modified": "2025-07-10T00:00:00",
-            "issued": "2025-04-26T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Secretaría de Hacienda"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Marzo 2025",
-                    "description": "Reporte marzo.",
-                    "fileName": "Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
-                    "type": "file",
-                    "issued": "2025-04-26T00:00:00",
-                    "modified": "2025-04-26T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/04/Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/04/Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
-                    "identifier": "dist-caif-2025-mar"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Junio 2025",
-                    "description": "Reporte junio.",
-                    "fileName": "Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
-                    "type": "file",
-                    "issued": "2025-07-10T00:00:00",
-                    "modified": "2025-07-10T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/07/Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/07/Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
-                    "identifier": "dist-caif-2025-jun"
-                }
-            ],
-            "keyword": [
-                "Ahorro",
-                "Inversión",
-                "Financiamiento",
-                "2025"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "R/PM",
-            "identifier": "ds-cuenta-ahorro-2025",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2025-01-01T00:00:00/2025-06-30T00:00:00"
-        },
-        {
-            "title": "Cuenta Ahorro Inversión Financiamiento 2023 - 4to Trimestre",
-            "description": "Reporte de cuenta ahorro, inversión y financiamiento para Q4 2023.",
-            "modified": "2024-04-23T00:00:00",
-            "issued": "2024-04-23T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Secretaría de Hacienda"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "4to Trimestre 2023",
-                    "description": "Reporte completo.",
-                    "fileName": "CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023.pdf",
-                    "type": "file",
-                    "issued": "2024-04-23T00:00:00",
-                    "modified": "2024-04-23T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4%25C2%25B0TRIMESTRE-2023.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4%25C2%25B0TRIMESTRE-2023.pdf",
-                    "identifier": "dist-caif-2023-q4"
-                }
-            ],
-            "keyword": [
-                "Ahorro",
-                "Inversión",
-                "Financiamiento",
-                "2023"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "R/P3M",
-            "identifier": "ds-cuenta-ahorro-2023-q4",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2023-10-01T00:00:00/2023-12-31T00:00:00"
-        },
-        {
-            "title": "Ejecución Presupuestaria de Recursos 2023 - 4to Trimestre",
-            "description": "Estado de ejecución de recursos por carácter económico y procedencia (Q4 2023).",
-            "modified": "2024-04-23T00:00:00",
-            "issued": "2024-04-23T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Secretaría de Hacienda"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Por Carácter Económico",
-                    "description": "Ejecución por carácter económico.",
-                    "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
-                    "type": "file",
-                    "issued": "2024-04-23T00:00:00",
-                    "modified": "2024-04-23T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4%25C2%25B0TRI.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4%25C2%25B0TRI.pdf",
-                    "identifier": "dist-ejec-rec-2023-q4-01"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Por Procedencia",
-                    "description": "Ejecución por procedencia.",
-                    "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
-                    "type": "file",
-                    "issued": "2024-04-23T00:00:00",
-                    "modified": "2024-04-23T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4%25C2%25B0TRI.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4%25C2%25B0TRI.pdf",
-                    "identifier": "dist-ejec-rec-2023-q4-02"
-                }
-            ],
-            "keyword": [
-                "Ejecución",
-                "Recursos",
-                "2023"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "R/P3M",
-            "identifier": "ds-ejecucion-recursos-2023-q4",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2023-10-01T00:00:00/2023-12-31T00:00:00"
-        },
-        {
-            "title": "Ejecución Presupuestaria de Recursos 2025 - Primer Semestre",
-            "description": "Estado de ejecución de recursos para enero-junio 2025.",
-            "modified": "2025-07-10T00:00:00",
-            "issued": "2025-07-10T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Secretaría de Hacienda"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Junio 2025",
-                    "description": "Ejecución hasta junio.",
-                    "fileName": "Estado-de-Ejecucion-de-Recursos-Junio.pdf",
-                    "type": "file",
-                    "issued": "2025-07-10T00:00:00",
-                    "modified": "2025-07-10T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
-                    "identifier": "dist-ejec-rec-2025-h1"
-                }
-            ],
-            "keyword": [
-                "Ejecución",
-                "Recursos",
-                "2025"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "R/P6M",
-            "identifier": "ds-ejecucion-recursos-2025-h1",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2025-01-01T00:00:00/2025-06-30T00:00:00"
-        },
-        {
-            "title": "Ejecución Presupuestaria de Recursos 2022",
-            "description": "Estados de ejecución de recursos por carácter económico, procedencia y trimestres (2022).",
-            "modified": "2023-10-20T00:00:00",
-            "issued": "2023-09-19T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Secretaría de Hacienda"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Por Carácter Económico Q3 2022",
-                    "description": "Q3 por carácter económico.",
-                    "fileName": "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
-                    "type": "file",
-                    "issued": "2023-09-20T00:00:00",
-                    "modified": "2023-09-20T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3%25C2%25B0TRI-2022.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3%25C2%25B0TRI-2022.pdf",
-                    "identifier": "dist-ejec-rec-2022-q3-01"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Q2 Por Carácter Económico",
-                    "description": "Q2 por carácter económico.",
-                    "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
-                    "type": "file",
-                    "issued": "2023-09-19T00:00:00",
-                    "modified": "2023-09-19T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
-                    "identifier": "dist-ejec-rec-2022-q2-01"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Q2 Por Procedencia",
-                    "description": "Q2 por procedencia.",
-                    "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
-                    "type": "file",
-                    "issued": "2023-09-19T00:00:00",
-                    "modified": "2023-09-19T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
-                    "identifier": "dist-ejec-rec-2022-q2-02"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Q4 2022",
-                    "description": "Ejecución Q4 completa.",
-                    "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
-                    "type": "file",
-                    "issued": "2023-10-20T00:00:00",
-                    "modified": "2023-10-20T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-4%25C2%25B0TRE-2022.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/ESTADO-DE-EJECUCION-DE-RECURSOS-4%25C2%25B0TRE-2022.pdf",
-                    "identifier": "dist-ejec-rec-2022-q4-01"
-                }
-            ],
-            "keyword": [
-                "Ejecución",
-                "Recursos",
-                "2022"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "R/P3M",
-            "identifier": "ds-ejecucion-recursos-2022",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2022-01-01T00:00:00/2022-12-31T00:00:00"
-        },
-        {
-            "title": "Ordenanza Fiscal 2023 (Vigente)",
-            "description": "Ordenanza fiscal 3198/23 para el ejercicio 2023, con determinación de obligaciones fiscales.",
-            "modified": "2024-03-01T00:00:00",
-            "issued": "2023-12-01T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/ordenanzas-fiscales/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Secretaría de Hacienda"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Ordenanza Fiscal 3198/23",
-                    "description": "Texto completo.",
-                    "fileName": "ORDENANZA-FISCAL-3198-23.pdf",
-                    "type": "file",
-                    "issued": "2023-12-01T00:00:00",
-                    "modified": "2024-03-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-FISCAL-3198-23.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-FISCAL-3198-23.pdf",
-                    "identifier": "dist-ord-fisc-2023"
-                }
-            ],
-            "keyword": [
-                "Ordenanza",
-                "Fiscal",
-                "2023"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "eventual",
-            "identifier": "ds-ordenanza-fiscal-2023",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ]
-        },
-        {
-            "title": "Ordenanza Impositiva 2024",
-            "description": "Ordenanza impositiva 3202/24, con rubros comerciales, servicios e industriales.",
-            "modified": "2024-03-01T00:00:00",
-            "issued": "2024-01-01T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/ordenanzas-fiscales/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Secretaría de Hacienda"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Ordenanza Impositiva 3202/24",
-                    "description": "Texto completo con alícuotas.",
-                    "fileName": "ORDENANZA-IMPOSITIVA-3202-24.pdf",
-                    "type": "file",
-                    "issued": "2024-01-01T00:00:00",
-                    "modified": "2024-03-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-IMPOSITIVA-3202-24.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-IMPOSITIVA-3202-24.pdf",
-                    "identifier": "dist-ord-imp-2024"
-                }
-            ],
-            "keyword": [
-                "Ordenanza",
-                "Impositiva",
-                "2024"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "eventual",
-            "identifier": "ds-ordenanza-impositiva-2024",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ]
-        },
-        {
-            "title": "Ordenanzas Fiscales e Impositivas 2021-2022",
-            "description": "Ordenanzas fiscales 3057/21 y 3112/22, e impositiva 3059/21.",
-            "modified": "2022-07-01T00:00:00",
-            "issued": "2021-12-01T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/ordenanzas-fiscales/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Secretaría de Hacienda"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Fiscal 3057/2021",
-                    "description": "Parte general y títulos.",
-                    "fileName": "Ordenanza-Fiscal-3057-2021.pdf",
-                    "type": "file",
-                    "issued": "2021-12-01T00:00:00",
-                    "modified": "2021-12-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/download/Ordenanza-Fiscal-3057-2021.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/download/Ordenanza-Fiscal-3057-2021.pdf",
-                    "identifier": "dist-ord-fisc-2021"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Impositiva 3059/2021",
-                    "description": "Capítulos y tasas.",
-                    "fileName": "Ordenanza-Impositiva-3059-2021.pdf",
-                    "type": "file",
-                    "issued": "2021-12-01T00:00:00",
-                    "modified": "2021-12-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/download/Ordenanza-Impositiva-3059-2021.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/download/Ordenanza-Impositiva-3059-2021.pdf",
-                    "identifier": "dist-ord-imp-2021"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Fiscal 3112/2022",
-                    "description": "Ordenanza fiscal 2022.",
-                    "fileName": "Ordenanza-Fiscal-3112-2022.pdf",
-                    "type": "file",
-                    "issued": "2022-07-01T00:00:00",
-                    "modified": "2022-07-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2022/07/Ordenanza-Fiscal-3112-2022.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2022/07/Ordenanza-Fiscal-3112-2022.pdf",
-                    "identifier": "dist-ord-fisc-2022"
-                }
-            ],
-            "keyword": [
-                "Ordenanza",
-                "Fiscal",
-                "Impositiva",
-                "2021",
-                "2022"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "eventual",
-            "identifier": "ds-ordenanzas-2021-2022",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2021-01-01T00:00:00/2022-12-31T00:00:00"
-        },
-        {
-            "title": "Licitación Pública N°7/2023 - Refuerzo de Sistema de Producción y Almacenamiento",
-            "description": "Llamado a licitación para refuerzo en Gouin y Carmen de Areco (Norte y Marín). Apertura: 27/11/2023.",
-            "modified": "2023-11-27T00:00:00",
-            "issued": "2023-11-03T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/licitaciones/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Secretaría de Planificación y Obras Públicas"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Pliego N°7",
-                    "description": "Documento completo.",
-                    "fileName": "LICITACION-PUBLICA-N°7.pdf",
-                    "type": "file",
-                    "issued": "2023-11-03T00:00:00",
-                    "modified": "2023-11-27T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf",
-                    "identifier": "dist-lic-7-2023"
-                }
-            ],
-            "keyword": [
-                "Licitación",
-                "Obras",
-                "Energía",
-                "2023"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "gobierno-y-sector-publico"
-            ],
-            "accrualPeriodicity": "R/PT1S",
-            "identifier": "ds-licitacion-7-2023",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ]
-        },
-        {
-            "title": "Licitación Pública N°8/2023 - Adquisición de Camión Compactador",
-            "description": "Llamado para adquisición de camión compactador. Apertura: 17/11/2023.",
-            "modified": "2023-10-23T00:00:00",
-            "issued": "2023-10-23T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/licitaciones/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Oficina de Compras"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Pliego N°8",
-                    "description": "Documento completo.",
-                    "fileName": "LICITACION-PUBLICA-N°8.pdf",
-                    "type": "file",
-                    "issued": "2023-10-23T00:00:00",
-                    "modified": "2023-10-23T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°8.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°8.pdf",
-                    "identifier": "dist-lic-8-2023"
-                }
-            ],
-            "keyword": [
-                "Licitación",
-                "Adquisición",
-                "Compactador",
-                "2023"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "gobierno-y-sector-publico"
-            ],
-            "accrualPeriodicity": "R/PT1S",
-            "identifier": "ds-licitacion-8-2023",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ]
-        },
-        {
-            "title": "Licitación Pública N°9/2023 - Adquisición de Camioneta Utilitaria",
-            "description": "Llamado para adquisición de camioneta utilitaria. Apertura: 17/11/2023.",
-            "modified": "2023-10-23T00:00:00",
-            "issued": "2023-10-23T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/licitaciones/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Oficina de Compras"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Pliego N°9",
-                    "description": "Documento completo.",
-                    "fileName": "LICITACION-PUBLICA-N°9.pdf",
-                    "type": "file",
-                    "issued": "2023-10-23T00:00:00",
-                    "modified": "2023-10-23T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°9.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°9.pdf",
-                    "identifier": "dist-lic-9-2023"
-                }
-            ],
-            "keyword": [
-                "Licitación",
-                "Adquisición",
-                "Camioneta",
-                "2023"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "gobierno-y-sector-publico"
-            ],
-            "accrualPeriodicity": "R/PT1S",
-            "identifier": "ds-licitacion-9-2023",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ]
-        },
-        {
-            "title": "Licitación Pública N°10/2023 - Adquisición de Combi Mini Bus",
-            "description": "Llamado para adquisición de combi mini bus. Apertura: 13/11/2023.",
-            "modified": "2023-10-23T00:00:00",
-            "issued": "2023-10-23T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/licitaciones/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Oficina de Compras"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Pliego N°10",
-                    "description": "Documento completo.",
-                    "fileName": "LICITACION-PUBLICA-N°10.pdf",
-                    "type": "file",
-                    "issued": "2023-10-23T00:00:00",
-                    "modified": "2023-10-23T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°10.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°10.pdf",
-                    "identifier": "dist-lic-10-2023"
-                }
-            ],
-            "keyword": [
-                "Licitación",
-                "Adquisición",
-                "Combi",
-                "2023"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "gobierno-y-sector-publico"
-            ],
-            "accrualPeriodicity": "R/PT1S",
-            "identifier": "ds-licitacion-10-2023",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ]
-        },
-        {
-            "title": "Licitación Pública N°11/2023 - Adquisición de Equipo de Nefrología",
-            "description": "Llamado para adquisición de equipo de nefrología. Apertura: 13/11/2023.",
-            "modified": "2023-11-13T00:00:00",
-            "issued": "2023-11-13T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/transparencia/licitaciones/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Oficina de Compras"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Pliego N°11",
-                    "description": "Documento completo.",
-                    "fileName": "LICITACION-PUBLICA-N°11.pdf",
-                    "type": "file",
-                    "issued": "2023-11-13T00:00:00",
-                    "modified": "2023-11-13T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°11.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°11.pdf",
-                    "identifier": "dist-lic-11-2023"
-                }
-            ],
-            "keyword": [
-                "Licitación",
-                "Adquisición",
-                "Nefrología",
-                "2023"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "gobierno-y-sector-publico"
-            ],
-            "accrualPeriodicity": "R/PT1S",
-            "identifier": "ds-licitacion-11-2023",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ]
-        },
-        {
-            "title": "Estadísticas de Salud 2021",
-            "description": "Evolución de prestaciones en CAPS y estadísticas generales de salud.",
-            "modified": "2022-01-01T00:00:00",
-            "issued": "2022-01-01T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/estadisticas/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Oficina de Estadísticas"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Estadísticas CAPS 2021",
-                    "description": "Prestaciones mensuales por CAPS.",
-                    "fileName": "2021 CAPS ESTADISTICAS.pdf",
-                    "type": "file",
-                    "issued": "2022-01-01T00:00:00",
-                    "modified": "2022-01-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/2021%2520CAPS%2520ESTADISTICAS.pdf",
-                    "downloadURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/2021%2520CAPS%2520ESTADISTICAS.pdf",
-                    "identifier": "dist-stats-salud-2021-caps"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Evolución Prestaciones CAPS",
-                    "description": "Evolución general de servicios.",
-                    "fileName": "ESTADISTICAS-SALUD.pdf",
-                    "type": "file",
-                    "issued": "2022-01-01T00:00:00",
-                    "modified": "2022-01-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/ESTADISTICAS-SALUD.pdf",
-                    "downloadURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/ESTADISTICAS-SALUD.pdf",
-                    "identifier": "dist-stats-salud-2021-evol"
-                }
-            ],
-            "keyword": [
-                "Salud",
-                "CAPS",
-                "Prestaciones",
-                "2021"
-            ],
-            "superTheme": [
-                "SALU"
-            ],
-            "theme": [
-                "salud-y-asistencia-social"
-            ],
-            "accrualPeriodicity": "R/P1Y",
-            "identifier": "ds-estadisticas-salud-2021",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2021-01-01T00:00:00/2021-12-31T00:00:00"
-        },
-        {
-            "title": "Estadísticas de Salud 2022",
-            "description": "Estadísticas de CAPS y bromatología para 2022.",
-            "modified": "2023-01-01T00:00:00",
-            "issued": "2023-01-01T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/estadisticas/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Oficina de Estadísticas"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Estadísticas CAPS 2022",
-                    "description": "Prestaciones mensuales por CAPS.",
-                    "fileName": "ESTADISTICAS CAPS 2022.pdf",
-                    "type": "file",
-                    "issued": "2023-01-01T00:00:00",
-                    "modified": "2023-01-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2022/ESTADISTICAS%2520CAPS%25202022.pdf",
-                    "downloadURL": "https://www.carmendeareco.gob.ar/estadisticas/2022/ESTADISTICAS%2520CAPS%25202022.pdf",
-                    "identifier": "dist-stats-salud-2022-caps"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Bromatología 2022",
-                    "description": "Cirugías, vacunaciones y controles.",
-                    "fileName": "BROMATOLOGIA.pdf",
-                    "type": "file",
-                    "issued": "2023-01-01T00:00:00",
-                    "modified": "2023-01-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2022/BROMATOLOGIA.pdf",
-                    "downloadURL": "https://www.carmendeareco.gob.ar/estadisticas/2022/BROMATOLOGIA.pdf",
-                    "identifier": "dist-stats-salud-2022-broma"
-                }
-            ],
-            "keyword": [
-                "Salud",
-                "CAPS",
-                "Bromatología",
-                "2022"
-            ],
-            "superTheme": [
-                "SALU"
-            ],
-            "theme": [
-                "salud-y-asistencia-social"
-            ],
-            "accrualPeriodicity": "R/P1Y",
-            "identifier": "ds-estadisticas-salud-2022",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2022-01-01T00:00:00/2022-12-31T00:00:00"
-        },
-        {
-            "title": "Estadísticas OMIC 2021",
-            "description": "Casos ingresados en Oficina Municipal de Información al Consumidor (OMIC) 2021.",
-            "modified": "2022-01-01T00:00:00",
-            "issued": "2022-01-01T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/estadisticas/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Oficina de Estadísticas"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Casos OMIC 2021",
-                    "description": "Cantidad mensual de casos.",
-                    "fileName": "2021 ESTADISTICAS OMIC.pdf",
-                    "type": "file",
-                    "issued": "2022-01-01T00:00:00",
-                    "modified": "2022-01-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/estadisticas/2021/2021%2520ESTADISTICAS%2520OMIC.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/estadisticas/2021/2021%2520ESTADISTICAS%2520OMIC.pdf",
-                    "identifier": "dist-stats-omic-2021"
-                }
-            ],
-            "keyword": [
-                "OMIC",
-                "Consumidor",
-                "2021"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "R/P1Y",
-            "identifier": "ds-estadisticas-omic-2021",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2021-01-01T00:00:00/2021-12-31T00:00:00"
-        },
-        {
-            "title": "Estadísticas de Seguridad Urbana 2021-2022",
-            "description": "Reportes de animales sueltos, infracciones y monitoreo policial.",
-            "modified": "2023-01-01T00:00:00",
-            "issued": "2022-01-12T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/estadisticas/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Oficina de Estadísticas"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Seguridad Urbana 2021",
-                    "description": "Infracciones y animales sueltos.",
-                    "fileName": "2021 SEGURIDAD URBANA.pdf",
-                    "type": "file",
-                    "issued": "2022-01-12T00:00:00",
-                    "modified": "2022-01-12T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/estadisticas/2021/2021%2520SEGURIDAD%2520URBANA.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/estadisticas/2021/2021%2520SEGURIDAD%2520URBANA.pdf",
-                    "identifier": "dist-stats-segur-2021"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Seguridad Urbana 2022",
-                    "description": "Infracciones mensuales.",
-                    "fileName": "SEGURIDAD URBANA 2022.pdf",
-                    "type": "file",
-                    "issued": "2023-01-01T00:00:00",
-                    "modified": "2023-01-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2022/SEGURIDAD%2520URBANA%25202022.pdf",
-                    "downloadURL": "https://www.carmendeareco.gob.ar/estadisticas/2022/SEGURIDAD%2520URBANA%25202022.pdf",
-                    "identifier": "dist-stats-segur-2022"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Monitoreo 2021",
-                    "description": "Llamadas positivas/negativas policiales.",
-                    "fileName": "2021 ESTADISTICAS MONITOREO.pdf",
-                    "type": "file",
-                    "issued": "2022-01-01T00:00:00",
-                    "modified": "2022-01-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/2021%2520ESTADISTICAS%2520MONITOREO.pdf",
-                    "downloadURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/2021%2520ESTADISTICAS%2520MONITOREO.pdf",
-                    "identifier": "dist-stats-monit-2021"
-                }
-            ],
-            "keyword": [
-                "Seguridad",
-                "Urbana",
-                "Infracciones",
-                "2021",
-                "2022"
-            ],
-            "superTheme": [
-                "SEGU"
-            ],
-            "theme": [
-                "justicia-seguridad-y-asuntos-legales"
-            ],
-            "accrualPeriodicity": "R/P1Y",
-            "identifier": "ds-estadisticas-seguridad-2021-2022",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2021-01-01T00:00:00/2022-12-31T00:00:00"
-        },
-        {
-            "title": "Reportes Ciudadanos y Siembras 2022",
-            "description": "Reportes ciudadanos (barrido, cortes de pasto) y siembra agrícola 2012-2021.",
-            "modified": "2023-01-01T00:00:00",
-            "issued": "2023-01-01T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/estadisticas/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Oficina de Estadísticas"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Reportes Ciudadanos 2022",
-                    "description": "Reportes mensuales de servicios.",
-                    "fileName": "REPORTES CIUDADANOS 2022.pdf",
-                    "type": "file",
-                    "issued": "2023-01-01T00:00:00",
-                    "modified": "2023-01-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/estadisticas/2022/REPORTES%2520CIUDADANOS%25202022.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/estadisticas/2022/REPORTES%2520CIUDADANOS%25202022.pdf",
-                    "identifier": "dist-stats-rep-ciud-2022"
-                },
-                {
-                    "format": "PDF",
-                    "title": "Siembras 2012-2021",
-                    "description": "Superficie sembrada con maíz por municipio.",
-                    "fileName": "SIEMBRA 2012-2021.pdf",
-                    "type": "file",
-                    "issued": "2023-01-01T00:00:00",
-                    "modified": "2023-01-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/estadisticas/2022/SIEMBRA%25202012-2021.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/estadisticas/2022/SIEMBRA%25202012-2021.pdf",
-                    "identifier": "dist-stats-siem-2012-2021"
-                }
-            ],
-            "keyword": [
-                "Reportes",
-                "Ciudadanos",
-                "Siembras",
-                "Agricultura"
-            ],
-            "superTheme": [
-                "ECON"
-            ],
-            "theme": [
-                "economia-y-finanzas"
-            ],
-            "accrualPeriodicity": "R/P1Y",
-            "identifier": "ds-estadisticas-reportes-2022",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2012-01-01T00:00:00/2022-12-31T00:00:00"
-        },
-        {
-            "title": "Administración Pública 2022",
-            "description": "Estadísticas de personal y estructura orgánica en administración pública.",
-            "modified": "2023-01-01T00:00:00",
-            "issued": "2023-01-01T00:00:00",
-            "landingPage": "https://carmendeareco.gob.ar/estadisticas/",
-            "license": "CC-BY-4.0",
-            "publisher": {
-                "name": "Oficina de Estadísticas"
-            },
-            "distribution": [
-                {
-                    "format": "PDF",
-                    "title": "Administración Pública",
-                    "description": "Personal por secretaría.",
-                    "fileName": "ADMINISTRACION PUBLICA.pdf",
-                    "type": "file",
-                    "issued": "2023-01-01T00:00:00",
-                    "modified": "2023-01-01T00:00:00",
-                    "license": "CC-BY-4.0",
-                    "accessURL": "https://carmendeareco.gob.ar/estadisticas/2022/ADMINISTRACION%2520PUBLICA.pdf",
-                    "downloadURL": "https://carmendeareco.gob.ar/estadisticas/2022/ADMINISTRACION%2520PUBLICA.pdf",
-                    "identifier": "dist-stats-admin-2022"
-                }
-            ],
-            "keyword": [
-                "Administración",
-                "Personal",
-                "2022"
-            ],
-            "superTheme": [
-                "GOB"
-            ],
-            "theme": [
-                "gobierno-y-sector-publico"
-            ],
-            "accrualPeriodicity": "R/P1Y",
-            "identifier": "ds-estadisticas-admin-2022",
-            "spatial": [
-                "ARG",
-                "06",
-                "060161"
-            ],
-            "temporal": "2022-01-01T00:00:00/2022-12-31T00:00:00"
+          "title": "Junio 2025",
+          "format": "PDF",
+          "fileName": "Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/07/Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/07/Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf"
         }
-    ]
+      ]
+    },
+    {
+      "identifier": "ds-ejecucion-recursos-2023-q4",
+      "title": "Ejecución Presupuestaria de Recursos 2023 - 4to Trimestre",
+      "description": "Estado de ejecución de recursos por carácter económico y procedencia (Q4 2023).",
+      "theme": "economia-y-finanzas",
+      "superTheme": "ECON",
+      "keywords": [
+        "Ejecución",
+        "Recursos",
+        "2023"
+      ],
+      "issued": "2024-04-23T00:00:00",
+      "modified": "2024-04-23T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
+      "publisher": "Secretaría de Hacienda",
+      "distribution": [
+        {
+          "title": "Por Carácter Económico",
+          "format": "PDF",
+          "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4%C2%B0TRI.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4%C2%B0TRI.pdf"
+        },
+        {
+          "title": "Por Procedencia",
+          "format": "PDF",
+          "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4%C2%B0TRI.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4%C2%B0TRI.pdf"
+        }
+      ]
+    },
+    {
+      "identifier": "ds-ordenanza-fiscal-2023",
+      "title": "Ordenanza Fiscal 2023 (Vigente)",
+      "description": "Ordenanza fiscal 3198/23 para el ejercicio 2023, con determinación de obligaciones fiscales.",
+      "theme": "economia-y-finanzas",
+      "superTheme": "ECON",
+      "keywords": [
+        "Ordenanza",
+        "Fiscal",
+        "2023"
+      ],
+      "issued": "2023-12-01T00:00:00",
+      "modified": "2024-03-01T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/transparencia/ordenanzas-fiscales/",
+      "publisher": "Secretaría de Hacienda",
+      "distribution": [
+        {
+          "title": "Ordenanza Fiscal 3198/23",
+          "format": "PDF",
+          "fileName": "ORDENANZA-FISCAL-3198-23.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-FISCAL-3198-23.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-FISCAL-3198-23.pdf"
+        }
+      ]
+    },
+    {
+      "identifier": "ds-licitacion-7-2023",
+      "title": "Licitación Pública N°7/2023 - Refuerzo de Sistema de Producción y Almacenamiento",
+      "description": "Llamado a licitación para refuerzo en Gouin y Carmen de Areco (Norte y Marín). Apertura: 27/11/2023.",
+      "theme": "gobierno-y-sector-publico",
+      "superTheme": "ECON",
+      "keywords": [
+        "Licitación",
+        "Obras",
+        "Energía",
+        "2023"
+      ],
+      "issued": "2023-11-03T00:00:00",
+      "modified": "2023-11-27T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/transparencia/licitaciones/",
+      "publisher": "Secretaría de Planificación y Obras Públicas",
+      "distribution": [
+        {
+          "title": "Pliego N°7",
+          "format": "PDF",
+          "fileName": "LICITACION-PUBLICA-N°7.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf"
+        }
+      ]
+    },
+    {
+      "identifier": "ds-estadisticas-salud-2021",
+      "title": "Estadísticas de Salud 2021",
+      "description": "Evolución de prestaciones en CAPS y estadísticas generales de salud.",
+      "theme": "salud-y-asistencia-social",
+      "superTheme": "SALU",
+      "keywords": [
+        "Salud",
+        "CAPS",
+        "Prestaciones",
+        "2021"
+      ],
+      "issued": "2022-01-01T00:00:00",
+      "modified": "2022-01-01T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/estadisticas/",
+      "publisher": "Oficina de Estadísticas",
+      "distribution": [
+        {
+          "title": "Estadísticas CAPS 2021",
+          "format": "PDF",
+          "fileName": "2021 CAPS ESTADISTICAS.pdf",
+          "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/2021%20CAPS%20ESTADISTICAS.pdf",
+          "downloadURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/2021%20CAPS%20ESTADISTICAS.pdf"
+        },
+        {
+          "title": "Evolución Prestaciones CAPS",
+          "format": "PDF",
+          "fileName": "ESTADISTICAS-SALUD.pdf",
+          "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/ESTADISTICAS-SALUD.pdf",
+          "downloadURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/ESTADISTICAS-SALUD.pdf"
+        }
+      ]
+    },
+    {
+      "identifier": "ds-estadisticas-omic-2021",
+      "title": "Estadísticas OMIC 2021",
+      "description": "Casos ingresados en Oficina Municipal de Información al Consumidor (OMIC) 2021.",
+      "theme": "economia-y-finanzas",
+      "superTheme": "ECON",
+      "keywords": [
+        "OMIC",
+        "Consumidor",
+        "2021"
+      ],
+      "issued": "2022-01-01T00:00:00",
+      "modified": "2022-01-01T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/estadisticas/",
+      "publisher": "Oficina de Estadísticas",
+      "distribution": [
+        {
+          "title": "Casos OMIC 2021",
+          "format": "PDF",
+          "fileName": "2021 ESTADISTICAS OMIC.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/estadisticas/2021/2021%20ESTADISTICAS%20OMIC.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/estadisticas/2021/2021%20ESTADISTICAS%20OMIC.pdf"
+        }
+      ]
+    },
+    {
+      "identifier": "ds-estadisticas-seguridad-2021-2022",
+      "title": "Estadísticas de Seguridad Urbana 2021-2022",
+      "description": "Reportes de animales sueltos, infracciones y monitoreo policial.",
+      "theme": "justicia-seguridad-y-asuntos-legales",
+      "superTheme": "SEGU",
+      "keywords": [
+        "Seguridad",
+        "Urbana",
+        "Infracciones",
+        "2021",
+        "2022"
+      ],
+      "issued": "2022-01-12T00:00:00",
+      "modified": "2023-01-01T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/estadisticas/",
+      "publisher": "Oficina de Estadísticas",
+      "distribution": [
+        {
+          "title": "Seguridad Urbana 2021",
+          "format": "PDF",
+          "fileName": "2021 SEGURIDAD URBANA.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/estadisticas/2021/2021%20SEGURIDAD%20URBANA.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/estadisticas/2021/2021%20SEGURIDAD%20URBANA.pdf"
+        },
+        {
+          "title": "Seguridad Urbana 2022",
+          "format": "PDF",
+          "fileName": "SEGURIDAD URBANA 2022.pdf",
+          "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2022/SEGURIDAD%20URBANA%202022.pdf",
+          "downloadURL": "https://www.carmendeareco.gob.ar/estadisticas/2022/SEGURIDAD%20URBANA%202022.pdf"
+        }
+      ]
+    }
+  ]
 }

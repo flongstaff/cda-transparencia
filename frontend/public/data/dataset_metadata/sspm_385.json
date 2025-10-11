@@ -1,0 +1,42 @@
+{
+  "files": {
+    "volumen-fisico-importaciones-precios-constantes-1950-anual.csv": {
+      "datasetId": "sspm_385",
+      "datasetTitle": "Volumen Físico de Exportaciones e Importaciones 1935-1954",
+      "fileName": "volumen-fisico-importaciones-precios-constantes-1950-anual.csv",
+      "format": "CSV",
+      "title": "Volumen Físico de importaciones. Precios constantes. Base 1950. Valores anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:37.710Z",
+      "status": "processed"
+    },
+    "volumen-fisico-exportaciones-precios-constantes-1950-anual.csv": {
+      "datasetId": "sspm_385",
+      "datasetTitle": "Volumen Físico de Exportaciones e Importaciones 1935-1954",
+      "fileName": "volumen-fisico-exportaciones-precios-constantes-1950-anual.csv",
+      "format": "CSV",
+      "title": "Volumen Físico de Exportaciones. Precios constantes. Base 1950. Valores anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:38.793Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_385",
+    "title": "Volumen Físico de Exportaciones e Importaciones 1935-1954",
+    "description": "Volumen Físico de Exportaciones e Importaciones a precios constantes de 1950",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2018-02-21",
+    "modified": "2025-04-02T16:48:51.836135",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://infra.datos.gob.ar/dataset/sspm-volumen-fisico-exportaciones-e-importaciones-1935-1954"
+  }
+}

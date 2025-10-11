@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_6ad46541-089e-4638-933b-4785a358cdc5",
+      "datasetTitle": "Precios de Comercio Exterior",
+      "format": "ZIP",
+      "title": "Precios Comercio exterior 2010 - 2019",
+      "accessURL": "http://datos.energia.gob.ar/dataset/6ad46541-089e-4638-933b-4785a358cdc5/resource/02126265-4310-4ab5-9c04-f5bf3267a1f4",
+      "lastProcessed": "2025-10-09T06:51:32.286Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_6ad46541-089e-4638-933b-4785a358cdc5",
+    "title": "Precios de Comercio Exterior",
+    "description": "Detalle de Importaciones/Exportaciones en USD, miles de m3 y Tn por empresa y país de destino.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2019-07-29T09:14:20.918319",
+    "modified": "2025-07-24T12:11:08.606914",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/precios-de-comercio-exterior2"
+  }
+}

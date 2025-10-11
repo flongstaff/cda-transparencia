@@ -1,0 +1,32 @@
+{
+  "files": {
+    "plan-apertura-desarrollo-productivo-1.xlsx": {
+      "datasetId": "produccion_eb4f3e0a-3f9c-4941-b613-0de1d0db584c",
+      "datasetTitle": "Plan de Apertura de Datos del Ministerio de Desarrollo Productivo",
+      "fileName": "plan-apertura-desarrollo-productivo-1.xlsx",
+      "format": "XLS",
+      "title": "Plan de Apertura del Ministerio de Desarrollo Productivo",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb4f3e0a-3f9c-4941-b613-0de1d0db584c/resource/cdac3414-3be2-48f2-9a66-d79de50407f4",
+      "lastProcessed": "2025-10-09T08:05:32.254Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_eb4f3e0a-3f9c-4941-b613-0de1d0db584c",
+    "title": "Plan de Apertura de Datos del Ministerio de Desarrollo Productivo",
+    "description": "Se publica información acerca de las próximos datasets que el Ministerio de Desarrollo Productivo pondrá a disposición en la plataforma de Datos Abiertos.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2021-08-23T16:18:12.415400",
+    "modified": "2021-08-23T16:18:12.415400",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Mejora de la Gestión Productiva. "
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/plan-de-apertura-de-datos-del-ministerio-de-desarrollo-productivo"
+  }
+}

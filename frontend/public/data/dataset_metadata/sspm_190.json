@@ -1,0 +1,32 @@
+{
+  "files": {
+    "ejecucion-anual-de-metas-fisicas-programas.csv": {
+      "datasetId": "sspm_190",
+      "datasetTitle": "Prestaciones de la seguridad social. Cuenta de Inversión.",
+      "fileName": "ejecucion-anual-de-metas-fisicas-programas.csv",
+      "format": "CSV",
+      "title": "Política de Ingresos.  Prestaciones de la seguridad social y otros programas de transferencia de ingresos. Cuenta de Inversión. Secretaría de Hacienda.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:42.502Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_190",
+    "title": "Prestaciones de la seguridad social. Cuenta de Inversión.",
+    "description": "Ejecución anual definitiva de metas físicas de programas presupuestarios sociales nacionales seleccionados: BECAS y Prestaciones previsionales de otros regímenes nacionales no SIPA. Datos de ejecución promedio anual. Desde 2002",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-03",
+    "modified": "2025-03-24T10:01:27.117536",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

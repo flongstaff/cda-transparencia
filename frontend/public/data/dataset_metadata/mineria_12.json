@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_12",
+      "datasetTitle": "Producción mundial de litio (Tablero global del litio - SIACAM)",
+      "lastProcessed": "2025-10-09T06:49:46.100Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_12",
+    "title": "Producción mundial de litio (Tablero global del litio - SIACAM)",
+    "description": "Datos correspondientes a la sección \"Producción mundial de litio\" del Tablero global del Litio del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM), con información sobre la producción mundial de litio. Elaborado por la Dirección Nacional de Promoción y Economía Minera con base en BP, Energy Institute y USGS.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2023-03-03",
+    "modified": "2025-09-02",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

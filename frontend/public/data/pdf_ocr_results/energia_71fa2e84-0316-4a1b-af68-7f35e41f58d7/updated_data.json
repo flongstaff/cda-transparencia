@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "energia_71fa2e84-0316-4a1b-af68-7f35e41f58d7",
+      "title": "Datos de fractura de pozos de hidrocarburos (Adjunto IV)",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/energia_71fa2e84-0316-4a1b-af68-7f35e41f58d7/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/energia_71fa2e84-0316-4a1b-af68-7f35e41f58d7/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5",
+      "title": "Precios Claros - Base SEPA",
+      "distribution": [
+        {
+          "title": "anexo_6201340_2.pdf",
+          "format": "PDF",
+          "fileName": "anexo_6201340_2.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5/anexo_6201340_2.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5/anexo_6201340_2_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

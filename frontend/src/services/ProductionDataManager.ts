@@ -182,13 +182,13 @@ class ProductionDataManager {
    */
   public async getLocalDataSources(year: number): Promise<string[]> {
     return [
-      `/data/consolidated/${year}/summary.json`,
-      `/data/consolidated/${year}/budget.json`,
-      `/data/consolidated/${year}/treasury.json`,
-      `/data/consolidated/${year}/debt.json`,
-      `/data/consolidated/${year}/salaries.json`,
-      `/data/consolidated/${year}/contracts.json`,
-      `/data/consolidated/${year}/documents.json`,
+      `/data/api/enhanced_summary.json`,
+      `/data/main.json`,
+      `/data/api/financial/${year}/consolidated.json`,
+      `/data/api/financial/${year}/summary.json`,
+      `/data/api/financial/${year}/expenditure_by_program.json`,
+      `/data/api/financial/${year}/revenue_by_source.json`,
+      `/data/api/documents.json`,
       `/data/charts/Budget_Execution_consolidated_2019-2025.csv`,
       `/data/charts/Expenditure_Report_consolidated_2019-2025.csv`,
       `/data/charts/Personnel_Expenses_consolidated_2019-2025.csv`
@@ -297,32 +297,41 @@ class ProductionDataManager {
   private async loadLocalDataForPage(pageName: string, year: number): Promise<any> {
     const pagePaths: Record<string, string[]> = {
       budget: [
-        `/data/consolidated/${year}/budget.json`,
-        `/data/charts/Budget_Execution_consolidated_2019-2025.csv`
+        `/data/api/financial/${year}/consolidated.json`,
+        `/data/api/financial/${year}/summary.json`,
+        `/data/charts/Budget_Execution_consolidated_2019-2025.csv`,
+        `/data/main.json`
       ],
       treasury: [
-        `/data/consolidated/${year}/treasury.json`
+        `/data/api/financial/${year}/consolidated.json`,
+        `/data/api/financial/${year}/revenue_by_source.json`,
+        `/data/main.json`
       ],
       debt: [
-        `/data/consolidated/${year}/debt.json`
+        `/data/api/financial/${year}/consolidated.json`,
+        `/data/main.json`
       ],
       expenses: [
-        `/data/charts/Expenditure_Report_consolidated_2019-2025.csv`
+        `/data/api/financial/${year}/expenditure_by_program.json`,
+        `/data/charts/Expenditure_Report_consolidated_2019-2025.csv`,
+        `/data/main.json`
       ],
       salaries: [
-        `/data/consolidated/${year}/salaries.json`,
-        `/data/charts/Personnel_Expenses_consolidated_2019-2025.csv`
+        `/data/api/financial/${year}/consolidated.json`,
+        `/data/charts/Personnel_Expenses_consolidated_2019-2025.csv`,
+        `/data/main.json`
       ],
       contracts: [
-        `/data/consolidated/${year}/contracts.json`
+        `/data/api/documents.json`,
+        `/data/main.json`
       ],
       documents: [
-        `/data/consolidated/${year}/documents.json`,
-        `/data/web_accessible_pdfs/pdf_index.json`
+        `/data/api/documents.json`,
+        `/data/api/pdf_metadata.json`
       ]
     };
 
-    const paths = pagePaths[pageName.toLowerCase()] || [`/data/consolidated/${year}/summary.json`];
+    const paths = pagePaths[pageName.toLowerCase()] || [`/data/api/enhanced_summary.json`, `/data/main.json`];
 
     const results = await Promise.all(
       paths.map(path => smartDataLoader.load(path, undefined, {

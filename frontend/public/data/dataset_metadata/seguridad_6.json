@@ -1,0 +1,112 @@
+{
+  "files": {
+    "SAT-HD-BU_2017-2023.xlsx": {
+      "datasetId": "seguridad_6",
+      "datasetTitle": "Homicidios dolosos. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "SAT-HD-BU_2017-2023.xlsx",
+      "format": "XLSX",
+      "title": "Hechos y víctimas de homicidios dolosos en la República Argentina. Total nacional (panel) (.xlsx).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:52.208Z",
+      "status": "processed"
+    },
+    "SAT-HD-BU_2017-2023.csv": {
+      "datasetId": "seguridad_6",
+      "datasetTitle": "Homicidios dolosos. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "SAT-HD-BU_2017-2023.csv",
+      "format": "CSV",
+      "title": "Hechos y víctimas de homicidios dolosos en la República Argentina. Total nacional (panel) (.csv).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:52.266Z",
+      "status": "processed"
+    },
+    "SAT-HD-BU_2017-2023.dta": {
+      "datasetId": "seguridad_6",
+      "datasetTitle": "Homicidios dolosos. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "SAT-HD-BU_2017-2023.dta",
+      "format": "dta",
+      "title": "Hechos y víctimas de homicidios dolosos en la República Argentina. Total nacional (panel) (.dta).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:52.267Z",
+      "status": "processed"
+    },
+    "SAT-HD-BU_2017-2023.sav": {
+      "datasetId": "seguridad_6",
+      "datasetTitle": "Homicidios dolosos. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "SAT-HD-BU_2017-2023.sav",
+      "format": "sav",
+      "title": "Hechos y víctimas de homicidios dolosos en la República Argentina. Total nacional (panel) (.sav).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:52.267Z",
+      "status": "processed"
+    },
+    "Manual_de_usuario_Base_SAT-HD_2024.pdf": {
+      "datasetId": "seguridad_6",
+      "datasetTitle": "Homicidios dolosos. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "Manual_de_usuario_Base_SAT-HD_2024.pdf",
+      "format": "PDF",
+      "title": "Manual de usuario. Base Sistema de Alerta Temprana - Homicidios dolosos.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:52.979Z",
+      "status": "processed"
+    },
+    "Informe_Homicidios_Dolosos_2020.pdf": {
+      "datasetId": "seguridad_6",
+      "datasetTitle": "Homicidios dolosos. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "Informe_Homicidios_Dolosos_2020.pdf",
+      "format": "PDF",
+      "title": "Informe Homicidios dolosos (2017-2020).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:53.751Z",
+      "status": "processed"
+    },
+    "Informe_Homicidios-Dolosos_2021.pdf": {
+      "datasetId": "seguridad_6",
+      "datasetTitle": "Homicidios dolosos. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "Informe_Homicidios-Dolosos_2021.pdf",
+      "format": "PDF",
+      "title": "Informe Homicidios dolosos (2017-2021).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:54.485Z",
+      "status": "processed"
+    },
+    "Informe_Homicidios-Dolosos_2022.pdf": {
+      "datasetId": "seguridad_6",
+      "datasetTitle": "Homicidios dolosos. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "Informe_Homicidios-Dolosos_2022.pdf",
+      "format": "PDF",
+      "title": "Informe Homicidios dolosos (2017-2022).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:55.191Z",
+      "status": "processed"
+    },
+    "Informe_Homicidios-Dolosos_2023.pdf": {
+      "datasetId": "seguridad_6",
+      "datasetTitle": "Homicidios dolosos. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "Informe_Homicidios-Dolosos_2023.pdf",
+      "format": "PDF",
+      "title": "Informe Homicidios dolosos (2017-2023).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:55.889Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "seguridad_6",
+    "title": "Homicidios dolosos. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+    "description": "Microdatos e informe de homicidios dolosos informados al Sistema de Alerta Temprana (SAT) del Sistema Nacional de Información Criminal (SNIC).",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2022-02-10T00:00:00",
+    "modified": "2024-12-20T00:00:00",
+    "publisher": {
+      "mbox": "snic-sat@minseg.gob.ar",
+      "name": "Ministerio de Seguridad de la Nación. Dirección Nacional de Estadística Criminal."
+    },
+    "landingPage": "https://www.argentina.gob.ar/seguridad/estadisticascriminales"
+  }
+}

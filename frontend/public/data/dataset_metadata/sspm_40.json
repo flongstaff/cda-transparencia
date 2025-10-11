@@ -1,0 +1,52 @@
+{
+  "files": {
+    "faena-pecuaria-por-especies-valores-anuales.csv": {
+      "datasetId": "sspm_40",
+      "datasetTitle": "Faena pecuaria",
+      "fileName": "faena-pecuaria-por-especies-valores-anuales.csv",
+      "format": "CSV",
+      "title": "Faena pecuaria por especie. Valores anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:16.744Z",
+      "status": "processed"
+    },
+    "faena-pecuaria-por-especies-valores-trimestrales.csv": {
+      "datasetId": "sspm_40",
+      "datasetTitle": "Faena pecuaria",
+      "fileName": "faena-pecuaria-por-especies-valores-trimestrales.csv",
+      "format": "CSV",
+      "title": "Faena pecuaria por especie. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:17.998Z",
+      "status": "processed"
+    },
+    "faena-pecuaria-por-especies-valores-mensuales.csv": {
+      "datasetId": "sspm_40",
+      "datasetTitle": "Faena pecuaria",
+      "fileName": "faena-pecuaria-por-especies-valores-mensuales.csv",
+      "format": "CSV",
+      "title": "Faena pecuaria por especie. Valores mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:19.048Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_40",
+    "title": "Faena pecuaria",
+    "description": "Faena pecuaria",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:00:58.544843",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "2021 ESTADISTICAS OMIC.pdf",
+  "file_hash": "63915e29d7d437172cb3ae3df48e04a4",
+  "page_count": 4,
+  "text_length": 6603,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Oficina Municipal de Información al Consumidor ENERO FEBRERO MARZO ABRIL MAYO JUNIO JULIO AGOSTO SEPTIEMBRE OCTUBRE NOVIEMBRE DICIEMBRE TOTAL\nTOTAL DE CASOS INGRESADOS\n2020 0 0 0 0 7 6 7 12 23 15 12 13 95\nRECLAMANTES POR GÉNERO\nMasculino 0 0 0 0 0 4 4 3 8 7 4 7 37\nFemenino 0 0 0 0 7 2 3 9 15 8 8 6 58\nOtros 0 0 0 0 0 0 0 0 0 0 0 0 0\nDISTRIBUCIÓN PORCENTUAL SEGÚN LOS CASOS TRATADOS 0% 0% 0% 0% 7% 6% 7% 12% 23% 15% 12% 13% 95%\nAcuerdo homologado 0% 0% 0% 0% 3% 4% 1% 9% 20% 14% 9% 11% 71%\nAcuerdo no homologado 0% 0% 0% 0% 0% 0% 1% 2% 2% 1% 1% 0% 7%\nDerivación a otra dependencia 0% 0% 0% 0% 2% 2% 1% 0% 0% 0% 1% 1% 7%\nRechazo a la denuncia 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%\nSanción 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%\nEn trámite 0% 0% 0% 0% 2% 0% 2% 1% 1% 0% 1% 1% 8%\nAcuerdo conciliatorio 0% 0% 0% 0% 0% 0% 2% 0% 0% 0% 0% 0% 2%\nPrescripción 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%\nSin competencia 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%\nPendiente 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%\nDesistimiento 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%\nTOTALES 0 0 0 0 7 6 7 12 23 15 12 13 95\nPeriodicidad:  mensual-anual\nVariable:  cantidad de casos ingresados\nUnidad de medida:  absoluto\nDescripcion:  indica la cantidad de casos ingresados a la Oficina de OMIC.\nLa Oficina de OMIC empezó a funcionar a partir de mayo del año 2020. Es por eso que no hay datos a comienzos del año.\nFuente de datos:  se recolectan los datos a través de la Oficina de OMIC.\n7671223\n15\n1213\nM A Y O J U N I O J U L I O A G O S T O S E P T I E M B R E O C T U B R E N O V I E M B R E D I C I E M B R EEVOLUCIÓN DE LOS CASOS INGRESADOS\n(OMIC)\nPERÍODO 2020\nCASOS INGRESADOS 2020\n00004438747\n0000723915886\nE N E R O  F E B R E R OM A R Z OA B R I LM A Y OJ U N I OJ U L I OA G O S T OS E P T I E M B R EO C T U B R EN O V I E M B R ED I C I E M B R ECANTIDAD DE CASOS SEGÚN GÉNERO\n(OMIC)\nPERÍODO 2020\nMasculino Femenino\n\nOficina Municipal de Información al Consumidor ENERO FEBRERO MARZO ABRIL MAYO JUNIO JULIO AGOSTO SEPTIEMBR...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:58.618082"
+}

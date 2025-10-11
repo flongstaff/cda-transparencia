@@ -1,0 +1,32 @@
+{
+  "files": {
+    "tipos-de-cambio-historicos.csv": {
+      "datasetId": "sspm_175",
+      "datasetTitle": "Tipos de Cambio Históricos",
+      "fileName": "tipos-de-cambio-historicos.csv",
+      "format": "CSV",
+      "title": "Tipos de Cambio Históricos, Banco Central",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:15.104Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_175",
+    "title": "Tipos de Cambio Históricos",
+    "description": "Tipos de Cambio Históricos, Banco Central",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:01:57.413281",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

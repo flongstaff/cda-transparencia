@@ -152,8 +152,9 @@ class DataSourceIndicatorsService {
             lastUpdated = datosData.lastModified || lastUpdated;
           }
           break;
+        }
 
-        case 'contrataciones':
+        case 'contrataciones': {
           const contratacionesData = await externalAPIsService.getContratacionesData('Carmen de Areco');
           success = contratacionesData.success;
           if (success && contratacionesData.data) {
@@ -179,7 +180,7 @@ class DataSourceIndicatorsService {
           break;
         }
 
-        case 'aaip':
+        case 'aaip': {
           const aaipData = await externalAPIsService.getAAIPData();
           success = aaipData.success;
           if (success && aaipData.data) {

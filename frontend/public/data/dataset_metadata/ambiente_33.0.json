@@ -1,0 +1,31 @@
+{
+  "files": {
+    "EAG_participacion_publica": {
+      "datasetId": "ambiente_33.0",
+      "datasetTitle": "Gobernanza en evaluación ambiental",
+      "fileName": "EAG_participacion_publica",
+      "format": "CSV",
+      "title": "Características de los procesos de participación pública por provincia",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=16&stid=32&did=93",
+      "lastProcessed": "2025-10-09T07:00:40.134Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_33.0",
+    "title": "Gobernanza en evaluación ambiental",
+    "description": "Muestra los procesos de participación pública por provincia",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2018-12-31T00:00:00",
+    "modified": "2018-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

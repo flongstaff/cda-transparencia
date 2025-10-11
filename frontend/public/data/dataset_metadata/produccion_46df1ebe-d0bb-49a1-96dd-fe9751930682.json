@@ -1,0 +1,56 @@
+{
+  "files": {
+    "base_araucano.csv": {
+      "datasetId": "produccion_46df1ebe-d0bb-49a1-96dd-fe9751930682",
+      "datasetTitle": "Graduados universitarios del sistema Araucano (2016-2018)",
+      "fileName": "base_araucano.csv",
+      "format": "CSV",
+      "title": "Base de datos de graduados universitarios",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/46df1ebe-d0bb-49a1-96dd-fe9751930682/resource/afbfc04e-6130-448c-953f-ef601f3e8bda",
+      "lastProcessed": "2025-10-09T08:04:53.852Z",
+      "status": "processed"
+    },
+    "Metodología Araucano DA.pdf": {
+      "datasetId": "produccion_46df1ebe-d0bb-49a1-96dd-fe9751930682",
+      "datasetTitle": "Graduados universitarios del sistema Araucano (2016-2018)",
+      "fileName": "Metodología Araucano DA.pdf",
+      "format": "PDF",
+      "title": "Metodología",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/46df1ebe-d0bb-49a1-96dd-fe9751930682/resource/a2b14e98-9874-4b2a-b641-cdba6676de45",
+      "lastProcessed": "2025-10-09T08:04:56.299Z",
+      "status": "processed"
+    },
+    "Diccionario.xlsx": {
+      "datasetId": "produccion_46df1ebe-d0bb-49a1-96dd-fe9751930682",
+      "datasetTitle": "Graduados universitarios del sistema Araucano (2016-2018)",
+      "fileName": "Diccionario.xlsx",
+      "format": "XLSX",
+      "title": "Diccionario",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/46df1ebe-d0bb-49a1-96dd-fe9751930682/resource/2976f8e2-eb30-412f-a3cf-0a445452a037",
+      "lastProcessed": "2025-10-09T08:04:56.300Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_46df1ebe-d0bb-49a1-96dd-fe9751930682",
+    "title": "Graduados universitarios del sistema Araucano (2016-2018)",
+    "description": "Base de datos que contiene,  para el período 2019-2021, información sociolaboral de un conjunto de graduados de carreras universitarias de universidades argentinas entre 2016 y 2018.",
+    "theme": [
+      "econ",
+      "educ",
+      "soci"
+    ],
+    "superTheme": [
+      "ECON",
+      "EDUC",
+      "SOCI"
+    ],
+    "issued": "2022-03-15T17:24:18.511303",
+    "modified": "2022-03-15T18:40:06.435778",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la Producción (CEP XXI)"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/graduados-universitarios-del-sistema-araucano-2016-2018"
+  }
+}

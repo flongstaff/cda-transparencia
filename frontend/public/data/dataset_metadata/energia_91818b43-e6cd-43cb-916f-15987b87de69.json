@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_91818b43-e6cd-43cb-916f-15987b87de69",
+      "datasetTitle": "Regalías de Petróleo Crudo, Gas Natural, GLP, Gasolina y de Condensado",
+      "format": "ZIP",
+      "title": "Regalías de Gasolina y Condensado",
+      "accessURL": "http://datos.energia.gob.ar/dataset/91818b43-e6cd-43cb-916f-15987b87de69/resource/d68cb9aa-16f8-4b47-baa5-57bc98bc9c27",
+      "lastProcessed": "2025-10-09T06:27:28.081Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_91818b43-e6cd-43cb-916f-15987b87de69",
+    "title": "Regalías de Petróleo Crudo, Gas Natural, GLP, Gasolina y de Condensado",
+    "description": "Regalías y precios de Petróleo Crudo, Gas Natural, GLP, Gasolina y Condensado ",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-12-22T17:10:24.812802",
+    "modified": "2025-10-03T14:11:59.096956",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/edit/regalias-de-petroleo-crudo-gas-natural-glp-gasolina-y-condensado"
+  }
+}

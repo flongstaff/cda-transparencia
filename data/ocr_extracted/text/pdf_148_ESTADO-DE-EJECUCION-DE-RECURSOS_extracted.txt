@@ -1,0 +1,33 @@
+R.A.F.A.M.
+ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOS Hoja: 1 de 12
+19/09/202311:56
+Municipalidad de
+Carmen de ArecoDel 01/01/2022 al 31/03/2022
+Ejercicio: 2022
+Rubro - Descripción ProcedenciaModifica 
+ciones Recurso 
+Estimado Recurso 
+Vigente Recurso 
+Devengado Dif. entre 
+Vigente y 
+Devengado Recursos 
+Percibido Dif. entre 
+Devengado y 
+Percibido Dif. entre 
+Vigente y 
+Percibido 
+11.0.00.00 - Ingresos Tributarios
+11.4.00.00 - Coparticipación de impuestos
+11.4.01.00 - Coparticipación Pcial. de ImpuestoLey 10.559 306.427.211,00 0,00 63.074.151,18 63.074.151,18 306.427.211,00 243.353.059,82 0,00 243.353.059,82 21 - Origen Provincial - De
+libre disponibilidad
+11.4.02.00 - Fondo para el fortalecimiento deRecurso Municipales 16.034.694,00 0,00 3.721.501,50 3.721.501,50 16.034.694,00 12.313.192,50 0,00 12.313.192,50 21 - Origen Provincial - De
+libre disponibilidad
+11.4.03.00 - Fondo Municipal de Inclusion Social 6.510.038,00 0,00 1.521.916,34 1.521.916,34 6.510.038,00 4.988.121,66 0,00 4.988.121,66 21 - Origen Provincial - De
+libre disponibilidad11.4.05.00 - Fondo Educativo 64.454.955,00 0,00 8.130.669,41 8.130.669,41 64.454.955,00 56.324.285,59 0,00 56.324.285,59 22 - Origen Provincial -
+Afectados393.426.898,00 0,00 393.426.898,00 76.448.238,43 316.978.659,57 76.448.238,43 0,00 Total Coparticipación de impuestos 316.978.659,57
+11.9.00.00 - Otros tributarios
+11.9.01.00 - Ley 9226 200.000,00 0,00 4.259,57 4.259,57 200.000,00 195.740,43 0,00 195.740,43 21 - Origen Provincial - De
+libre disponibilidad11.9.03.00 - Juegos de azar 500.000,00 0,00 0,00 0,00 500.000,00 500.000,00 0,00 500.000,00 21 - Origen Provincial - De
+libre disponibilidad11.9.04.00 - Inmobiliario Rural.Afectado 16.799.431,00 0,00 1.233.297,94 1.233.297,94 16.799.431,00 15.566.133,06 0,00 15.566.133,06 22 - Origen Provincial -
+Afectados11.9.05.00 - Inmobiliario Rural. No afectado 53.879.681,00 0,00 1.092.811,94 1.092.811,94 53.879.681,00 52.786.869,06 0,00 52.786.869,06 21 - Origen Provincial - De
+libre ...

@@ -1,0 +1,20 @@
+{
+  "project": "cda-transparencia",
+  "version": "1.0.0",
+  "deployment_type": "github-pages",
+  "custom_domain": "cda-transparencia.org",
+  "github_pages_url": "https://flongstaff.github.io/cda-transparencia/",
+  "deploy_timestamp": "2025-10-10T17:17:10Z",
+  "frontend_config": {
+    "build_target": "github-pages",
+    "output_dir": "frontend/dist",
+    "static_data_dir": "frontend/public/data",
+    "api_proxy": "https://cda-transparencia.franco-longstaff.workers.dev/api"
+  },
+  "data_org": {
+    "structured": true,
+    "organized_by_category": true,
+    "total_json_files": 394,
+    "total_csv_files": 2204
+  }
+}

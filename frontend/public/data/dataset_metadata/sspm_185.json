@@ -1,0 +1,32 @@
+{
+  "files": {
+    "cobros-pagos-bienes-servicios.csv": {
+      "datasetId": "sspm_185",
+      "datasetTitle": "Cobros y pagos por tipo de servicio - Balance Cambiario",
+      "fileName": "cobros-pagos-bienes-servicios.csv",
+      "format": "CSV",
+      "title": "Cobros y pagos por tipo de servicio. Valores mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:25.460Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_185",
+    "title": "Cobros y pagos por tipo de servicio - Balance Cambiario",
+    "description": "Cobros y pagos por tipo de servicio - Balance Cambiario",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-03",
+    "modified": "2025-03-24T10:00:54.252411",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

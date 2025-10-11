@@ -1,0 +1,32 @@
+{
+  "files": {
+    "empresas-inscriptas-regimen-integracion-motocicletas.xlsx": {
+      "datasetId": "produccion_ab770a3b-dfc8-4851-9ae4-d849382da317",
+      "datasetTitle": "Régimen de Integración de Motocicletas",
+      "fileName": "empresas-inscriptas-regimen-integracion-motocicletas.xlsx",
+      "format": "XLS",
+      "title": "Empresas adheridas al Régimen",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/ab770a3b-dfc8-4851-9ae4-d849382da317/resource/60b0cf45-94e5-449a-b6c2-eb35b018eb1a",
+      "lastProcessed": "2025-10-09T08:04:25.798Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_ab770a3b-dfc8-4851-9ae4-d849382da317",
+    "title": "Régimen de Integración de Motocicletas",
+    "description": "Las empresas adheridas al Régimen (Dto. 81/2019)  pueden importar motos incompletas, totalmente desarmadas, exentas de derechos de importación. Con esta medida se busca promover la integración nacional de  motocicletas.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-07-19T15:29:52.842844",
+    "modified": "2022-07-26T12:54:47.368931",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo, Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa, Subsecretaría de Industria, Dirección Nacional de Gestión de la Política Industrial, Dirección de Política Automotriz y Regímenes Especiales."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/regimen-de-integracion-de-motocicletas"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "files": {
+    "BiC_e_mamiferos_especies_cat_conserv_2025": {
+      "datasetId": "ambiente_12.0",
+      "datasetTitle": "Conservación de la biodiversidad",
+      "fileName": "BiC_e_mamiferos_especies_cat_conserv_2025",
+      "format": "CSV",
+      "title": "Cantidad de especies de mamíferos por categoría de conservación",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=12&did=424",
+      "lastProcessed": "2025-10-09T06:41:20.809Z",
+      "status": "processed"
+    },
+    "BiC_a_indvulner_anfibios_flia_2012n": {
+      "datasetId": "ambiente_12.0",
+      "datasetTitle": "Conservación de la biodiversidad",
+      "fileName": "BiC_a_indvulner_anfibios_flia_2012n",
+      "format": "CSV",
+      "title": "Índice de vulnerabilidad por familia de anfibios",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=12&did=198",
+      "lastProcessed": "2025-10-09T06:41:22.344Z",
+      "status": "processed"
+    },
+    "BiC_c_indvulner_mamifsubg_2019": {
+      "datasetId": "ambiente_12.0",
+      "datasetTitle": "Conservación de la biodiversidad",
+      "fileName": "BiC_c_indvulner_mamifsubg_2019",
+      "format": "CSV",
+      "title": "Índice de vulnerabilidad por subgrupo de mamiferos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=12&did=201",
+      "lastProcessed": "2025-10-09T06:41:23.881Z",
+      "status": "processed"
+    },
+    "BiC_d_indvulner_reptiles_flia_2012": {
+      "datasetId": "ambiente_12.0",
+      "datasetTitle": "Conservación de la biodiversidad",
+      "fileName": "BiC_d_indvulner_reptiles_flia_2012",
+      "format": "CSV",
+      "title": "Índice de vulnerabilidad por familia de reptiles",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=12&did=205",
+      "lastProcessed": "2025-10-09T06:41:25.317Z",
+      "status": "processed"
+    },
+    "BiC_b_indvulner_aves_flia_2015": {
+      "datasetId": "ambiente_12.0",
+      "datasetTitle": "Conservación de la biodiversidad",
+      "fileName": "BiC_b_indvulner_aves_flia_2015",
+      "format": "CSV",
+      "title": "Índice de vulnerabilidad por familia de aves",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=12&did=200",
+      "lastProcessed": "2025-10-09T06:41:26.662Z",
+      "status": "processed"
+    },
+    "BiI_especietaxon_numero_01122022": {
+      "datasetId": "ambiente_12.0",
+      "datasetTitle": "Conservación de la biodiversidad",
+      "fileName": "BiI_especietaxon_numero_01122022",
+      "format": "CSV",
+      "title": "Categorías de riesgo de extinción para mamíferos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=12&did=281",
+      "lastProcessed": "2025-10-09T06:41:28.089Z",
+      "status": "processed"
+    },
+    "BiC_ODS1551_indlistaroja_grupotaxonomico_2024": {
+      "datasetId": "ambiente_12.0",
+      "datasetTitle": "Conservación de la biodiversidad",
+      "fileName": "BiC_ODS1551_indlistaroja_grupotaxonomico_2024",
+      "format": "CSV",
+      "title": ".Índice Nacional de la Lista Roja por grupo taxonómico",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=12&did=266",
+      "lastProcessed": "2025-10-09T06:41:29.420Z",
+      "status": "processed"
+    },
+    "BiC_ODS1561": {
+      "datasetId": "ambiente_12.0",
+      "datasetTitle": "Conservación de la biodiversidad",
+      "fileName": "BiC_ODS1561",
+      "format": "CSV",
+      "title": "Número de acciones por año de promoción del Protocolo de Nagoya en Argentina",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=12&did=302",
+      "lastProcessed": "2025-10-09T06:41:30.843Z",
+      "status": "processed"
+    },
+    "BiC_e_CITES_Apendices_2024": {
+      "datasetId": "ambiente_12.0",
+      "datasetTitle": "Conservación de la biodiversidad",
+      "fileName": "BiC_e_CITES_Apendices_2024",
+      "format": "CSV",
+      "title": "Número de especies de fauna y flora silvestres amenazadas, incluidas en CITES",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=12&did=432",
+      "lastProcessed": "2025-10-09T06:41:32.378Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_12.0",
+    "title": "Conservación de la biodiversidad",
+    "description": "Muestra los índices de vulnerabilidad o amenaza de los mamíferos, aves, anfibios y reptiles",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2020-12-31T00:00:00",
+    "modified": "2020-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

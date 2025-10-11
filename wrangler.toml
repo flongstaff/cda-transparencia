@@ -10,7 +10,7 @@ DEBUG = "false"
 # Define routes for the worker
 routes = [
   "https://cda-transparencia.franco-longstaff.workers.dev/*",
-  "https://cda-transparencia.org/api/*"
+  "https://cda-transparencia.org/*"
 ]
 
 # CORS configuration

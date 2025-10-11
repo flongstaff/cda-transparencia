@@ -1,0 +1,42 @@
+{
+  "files": {
+    "poblacion-empleada-total-por-sector-actividad-encuesta-indicadores-laborales-anual.csv": {
+      "datasetId": "sspm_50",
+      "datasetTitle": "Empleo total y por sector de actividad",
+      "fileName": "poblacion-empleada-total-por-sector-actividad-encuesta-indicadores-laborales-anual.csv",
+      "format": "CSV",
+      "title": "Población empleada total y por sector de actividad de la Encuesta de Indicadores Laborales. Valores anuales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:50.132Z",
+      "status": "processed"
+    },
+    "poblacion-empleada-total-por-sector-actividad-encuesta-indicadores-laborales-trimestral.csv": {
+      "datasetId": "sspm_50",
+      "datasetTitle": "Empleo total y por sector de actividad",
+      "fileName": "poblacion-empleada-total-por-sector-actividad-encuesta-indicadores-laborales-trimestral.csv",
+      "format": "CSV",
+      "title": "Población empleada total y por sector de actividad de la Encuesta de Indicadores Laborales. Valores trimestrales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:52.265Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_50",
+    "title": "Empleo total y por sector de actividad",
+    "description": "Estimaciones anuales de población empleada total y por sector de actividad de la Encuesta de Indicadores Laborales",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:01:22.986017",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

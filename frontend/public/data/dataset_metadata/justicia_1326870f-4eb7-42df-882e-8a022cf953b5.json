@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_1326870f-4eb7-42df-882e-8a022cf953b5",
+      "datasetTitle": "Lucha contra la trata de personas - Llamados línea 145 - Denuncias",
+      "format": "ZIP",
+      "title": "Lucha contra la trata de personas denuncias línea 145 - 2017",
+      "accessURL": "https://datos.jus.gob.ar/dataset/1326870f-4eb7-42df-882e-8a022cf953b5/resource/82d364d4-7779-4612-a61c-80caef987be4",
+      "lastProcessed": "2025-10-09T06:39:35.848Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_1326870f-4eb7-42df-882e-8a022cf953b5",
+    "title": "Lucha contra la trata de personas - Llamados línea 145 - Denuncias",
+    "description": "Llamados atendidos por personal técnico del Programa Nacional de Rescate y Acompañamiento a las Personas Damnificadas por el Delito de Trata, de la Línea 145.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2018-03-07T17:28:52.068322",
+    "modified": "2025-09-16T13:40:49.873181",
+    "publisher": {
+      "mbox": "programarescate@jus.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Política Criminal. Programa Nacional de Rescate y Acompañamiento a las Personas Damnificadas por el Delito de Trata"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/lucha-contra-la-trata-de-personas-llamados-linea-145-denuncias"
+  }
+}

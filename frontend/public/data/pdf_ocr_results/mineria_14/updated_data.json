@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "mineria_14",
+      "title": "Comercio de Minerales de Argentina (SIACAM)",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/mineria_14/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/mineria_14/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

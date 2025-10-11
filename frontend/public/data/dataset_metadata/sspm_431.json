@@ -1,0 +1,32 @@
+{
+  "files": {
+    "expectativas-inflacion-a-doce-mes.csv": {
+      "datasetId": "sspm_431",
+      "datasetTitle": "Expectativas de Inflación",
+      "fileName": "expectativas-inflacion-a-doce-mes.csv",
+      "format": "CSV",
+      "title": "Expectativas de Inflación. Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:56.469Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_431",
+    "title": "Expectativas de Inflación",
+    "description": "Expectativas de Inflación  a 12 meses",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2018-01-14",
+    "modified": "2025-03-24T10:01:19.918202",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

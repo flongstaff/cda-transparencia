@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_64_Estado-de-Ejecucion-de-Recursos-Afectados-vs-Gastos-Marzo.pdf",
+  "file_hash": "bb1031265c4a91ca2a22c6c301b63268",
+  "page_count": 5,
+  "text_length": 14550,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Hoja: 1 de 5\nVigente26/08/2024R.A.F.A.M.\n12:50\nMunicipalidad de\nCarmen de Areco\nCompromiso Devengado Pagado Devengado PercibidoESTADO DE EJECUCION DE RECURSOS AFECTADOS VS. GASTOS\nRecursos GastosDel 02/01/2024 al 31/03/2024\nDevengado\nno  PagadoRubro - DescripciónDif. entre\nRec.Percibidos\ny Gastos\nPagados( * )2024 Ejercicio:\n50.921,88 50.921,88 50.921,88 2.624.700,00 156.156,00 12.1.15.03 - Serv. Sanitarios Mant. Ampliacion y Conexion 156.156,00 0,00 105.234,12\n0,00 0,00 0,00 583.500,00 765.500,00 12.1.15.04 - Contribucion para la prevencion Zoonótica 765.500,00 0,00 765.500,00\n0,00 0,00 0,00 709.851,84 709.851,84 12.2.17.02 - Venta ambulante afectado 709.851,84 0,00 709.851,84\n582.329,37 582.329,37 582.329,37 3.354.108,00 1.041.606,25 12.6.04.00 - (10096/0) Infracciones normativas vigentes  y REBA 1.041.606,25 0,00 459.276,88\n12.273.356,11 12.273.356,11 12.273.356,11 48.581.742,00 19.152.795,90 12.9.01.00 - Balneario Municipal Ord. Nro.2355/08-Dec.733/08 19.152.795,90 0,00 6.879.439,79\n0,00 0,00 0,00 2.235.206,20 100.515,20 12.9.03.00 - Percepciones judiciales normativas vigentes 100.515,20 0,00 100.515,20\n138.000,00 138.000,00 138.000,00 2.811.307,20 138.040,98 34.1.06.00 - PRESTAMOS DE MATERIALES 138.040,98 0,00 40,98\n0,00 0,00 0,00 61.409,72 0,00 35.1.01.12 - ( 10089/)Fondo Productivo Municipal 0,00 0,00 61.409,72\n0,00 0,00 0,00 5.000,00 0,00 35.1.01.19 - Banco de Fondos Rotatorios Ord.3155/22 0,00 0,00 5.000,00\n0,00 0,00 0,00 298.832,27 0,00 35.1.01.31 - Infracc. normativas REBA 0,00 0,00 298.832,27\n0,00 0,00 0,00 307.152,29 0,00 35.1.01.32 - Percepciones judiciales normativas vigentes 0,00 0,00 307.152,29\n0,00 0,00 0,00 1.363.552,59 0,00 35.1.01.43 - Venta Ambulante-SISA 0,00 0,00 1.363.552,59\n170.000,00 170.000,00 170.000,00 311.889,42 0,00 35.1.01.45 - Balneario Municipal 0,00 0,00 141.889,42\n0,00 0,00 0,00 3.814.467,05 0,00 35.1.01.57 - Sector Ind.Planificado Carmen de Areco 0,00 0,00 3.814.467,05\n230.800,68 230.800,68 230.800,68 230.800,68 0,00 35.1.01.58 -...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:23.567813"
+}

@@ -1,0 +1,32 @@
+{
+  "files": {
+    "inventario-de-textos-y-planos-correspondientes-a-proyectos-hidroelctricos.csv": {
+      "datasetId": "energia_b33aca04-81d8-44ef-8842-162aa69330ca",
+      "datasetTitle": "Proyectos hidroeléctricos",
+      "fileName": "inventario-de-textos-y-planos-correspondientes-a-proyectos-hidroelctricos.csv",
+      "format": "CSV",
+      "title": "Inventario de documentos y planos correspondientes a proyectos hidroeléctricos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/b33aca04-81d8-44ef-8842-162aa69330ca/resource/ddcd82c5-318e-4bf2-8a2c-c637048d4b03",
+      "lastProcessed": "2025-10-09T07:23:36.003Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_b33aca04-81d8-44ef-8842-162aa69330ca",
+    "title": "Proyectos hidroeléctricos",
+    "description": "Inventario de documentos y planos de los Proyectos Hidroeléctricos.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:33:25.473968",
+    "modified": "2021-07-06T13:54:43.104913",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

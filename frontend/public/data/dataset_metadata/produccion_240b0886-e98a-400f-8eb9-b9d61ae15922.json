@@ -1,0 +1,32 @@
+{
+  "files": {
+    "Catálogo Diciembre23.xlsx": {
+      "datasetId": "produccion_240b0886-e98a-400f-8eb9-b9d61ae15922",
+      "datasetTitle": "Catálogo de programas",
+      "fileName": "Catálogo Diciembre23.xlsx",
+      "format": "XLS",
+      "title": "Catálogo de Programas a noviembre 2023",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/240b0886-e98a-400f-8eb9-b9d61ae15922/resource/dbc0ad1b-5533-4fc4-aed2-6c00f82c128c",
+      "lastProcessed": "2025-10-09T08:05:32.253Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_240b0886-e98a-400f-8eb9-b9d61ae15922",
+    "title": "Catálogo de programas",
+    "description": "Listado de las iniciativas en ejecución que lleva adelante la Secretaria de Industria y Desarrollo Productivo",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2021-09-21T11:10:09.495146",
+    "modified": "2023-09-07T16:00:00.028189",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Secretaría de Industria y Desarrollo Productivo. Subsecretaría de Análisis y Planificación Productiva. Dirección Nacional de Seguimiento y Evaluación de la Gestión"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/catalogo-de-programas"
+  }
+}

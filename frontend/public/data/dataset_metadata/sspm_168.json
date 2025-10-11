@@ -1,0 +1,32 @@
+{
+  "files": {
+    "datos-tipo-cambio-usd-futuro-dolar-frecuencia-diaria.csv": {
+      "datasetId": "sspm_168",
+      "datasetTitle": "Tipo de Cambio $-USD - Futuro Dólar",
+      "fileName": "datos-tipo-cambio-usd-futuro-dolar-frecuencia-diaria.csv",
+      "format": "CSV",
+      "title": "Tipo de cambio $-USD - futuro dólar. Valores diarios",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:58.609Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_168",
+    "title": "Tipo de Cambio $-USD - Futuro Dólar",
+    "description": "Datos de tipo de cambio $-USD - futuro dólar . Con respecto al dólar de Estados Unidos. Frecuencia diaria.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:01:17.807183",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

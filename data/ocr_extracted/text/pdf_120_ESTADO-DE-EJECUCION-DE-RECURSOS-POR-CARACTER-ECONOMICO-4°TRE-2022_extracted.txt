@@ -1,0 +1,38 @@
+R.A.F.A.M.
+ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOS Hoja: 1 de 3
+20/09/202309:10
+Municipalidad de
+Carmen de Areco Del 01/10/2022 al 31/12/2022 Ejercicio: 2022(POR CARACTER ECONÓMICO) 
+CONSOLIDADO
+Descripción ModificacionesRecurso 
+Estimado Recurso 
+Vigente Recurso 
+Devengado Dif. entre 
+Vigente y 
+Devengado Recursos 
+Percibido Dif. entre 
+Devengado y 
+Percibido 
+RECURSOS
+INGRESOS CORRIENTES
+Ingresos tributarios
+Impuestos provinciales y nacionales 393.426.898,00 91.503.726,22 484.930.624,22 160.380.353,34 324.550.270,88 160.380.353,34 0,00
+Otros impuestos 82.635.806,00 4.144.181,53 86.779.987,53 44.676.694,08 42.103.293,45 36.143.564,12 8.533.129,96
+476.062.704,00 95.647.907,75 571.710.611,75 205.057.047,42 366.653.564,33 196.523.917,46 8.533.129,96 Total Ingresos tributarios
+Ingresos no tributarios
+Tasas 117.741.160,00 1.314.442,96 119.055.602,96 52.182.832,69 66.872.770,27 43.559.212,61 8.623.620,08
+Derechos 21.441.034,00 -4.415.138,50 17.025.895,50 5.906.757,07 11.119.138,43 5.969.315,80 -62.558,73
+Otros no tributarios 43.839.782,00 12.100.866,56 55.940.648,56 13.635.639,36 42.305.009,20 13.635.639,36 0,00
+183.021.976,00 9.000.171,02 192.022.147,02 71.725.229,12 120.296.917,90 63.164.167,77 8.561.061,35 Total Ingresos no tributarios
+Rentas de la propiedad
+Intereses
+Intereses internos
+Intereses por depósitos 20.617.059,00 22.371.095,74 42.988.154,74 15.044.024,25 27.944.130,49 15.044.024,25 0,0020.617.059,00 22.371.095,74 42.988.154,74 15.044.024,25 27.944.130,49 15.044.024,25 0,00
+Total Intereses internos
+20.617.059,00 22.371.095,74 42.988.154,74 15.044.024,25 27.944.130,49 15.044.024,25 0,00 Total Intereses
+20.617.059,00 22.371.095,74 42.988.154,74 15.044.024,25 27.944.130,49 15.044.024,25 0,00 Total Rentas de la propiedad
+Transferencias Corrientes
+Del sector privado
+De empresas privadas 0,00 1.500.000,00 1.500.000,00 1.500.000,00 0,00 1.500.000,00 0,000,00 1.500.000,00 1.500.000,00 1.500.000,00 0,00 1.500.000,00 0,00
+Total Del sector privado
+Del sector púb...

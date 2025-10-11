@@ -1,0 +1,55 @@
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.
+20/09/2023 09:07
+Presupuesto: 2022DE EJECUCION PRESUPUESTARIA 
+01/10/2022 al 31/12/2022
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+I. INGRESOS CORRIENTES
+Ingresos tributarios 196.523.917,46
+Contribuciones a la Seguridad Social
+Ingresos no Tributarios 63.164.167,77
+Ventas de Bienes y Servicios
+Ingresos de Operación
+Rentas de la Propiedad 15.044.024,25
+Transferencias Corrientes 110.782.954,09
+Contribuciones Figurativas para Financiaciones Corrientes
+TOTAL  INGRESOS CORRIENTES 385.515.063,57
+II. GASTOS CORRIENTES
+Gastos de Operación
+Gastos de Consumo 337.853.666,92
+Rentas de la Propiedad 8.836,61
+Prestaciones de la Seguridad Social
+Impuestos Directos
+Otras Pérdidas
+Transferencias Corrientes 21.555.430,42
+Gastos Figurativos para Transacciones Corrientes
+TOTAL  GASTOS CORRIENTES 359.417.933,95
+III. AHORRO CORRIENTE: (I - II) 26.097.129,62
+Resultado Corriente Primario (Ingresos Corrientes - Gastos Corrientes netos de Int. de la deuda) 26.127.117,13
+TOTAL  AHORRO CORRIENTE: (I - II) 52.224.246,75 26.097.129,62
+IV. RECURSOS DE CAPITAL
+Recursos Propios de Capital
+Transferencias de Capital 219.313.959,81
+Disminución de la Inversión Financiera 570.104,02
+Contribuciones Figurativas para Financiaciones de Capital
+Filtro aplicado: Presupuesto: 2022 -  Fechas: 01/10/2022 al 31/12/2022
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 2 de 3 R.A.F.A.M.
+20/09/2023 09:07
+Presupuesto: 2022DE EJECUCION PRESUPUESTARIA 
+01/10/2022 al 31/12/2022
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+TOTAL  RECURSOS DE CAPITAL 219.884.063,83
+V. GASTOS DE CAPITAL
+Inversión Real Directa 134.260.525,06
+Transferencias de Capital 1.101.683,62
+Inversión Financiera
+Gastos Figurativos para Transacciones de Capital
+TOTAL  GASTOS DE CAPITAL 135.362.208,68
+VI. INGRESOS TOTALES 605.399.127,40
+TOTAL  INGRESOS TOTALES 605.399.127,40 605.399.127,40
+VII. GASTOS TOTALES 494.780.142,63
+TOTAL  GASTOS TOTALES 494.780.142,63 494.780.142,63
+VIII....

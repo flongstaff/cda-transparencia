@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_918f4187-1a4c-4b68-a0e2-3ea8077509af",
+      "datasetTitle": "Precio de exportación de petróleo crudo",
+      "format": "XLSX",
+      "title": "Precio de exportación de petróleo crudo",
+      "accessURL": "http://datos.energia.gob.ar/dataset/918f4187-1a4c-4b68-a0e2-3ea8077509af/resource/605580fd-ff0b-4c1e-93e7-9ea9cc748175",
+      "lastProcessed": "2025-10-09T07:18:36.122Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_918f4187-1a4c-4b68-a0e2-3ea8077509af",
+    "title": "Precio de exportación de petróleo crudo",
+    "description": "Precio de exportación de petróleo crudo",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2019-07-16T14:45:38.064140",
+    "modified": "2020-02-20T14:38:01.583542",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/precio-de-exportacion-de-petroleo-crudo"
+  }
+}

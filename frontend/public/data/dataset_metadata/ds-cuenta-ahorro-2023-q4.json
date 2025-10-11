@@ -1,0 +1,26 @@
+{
+  "files": {
+    "CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023.pdf": {
+      "datasetId": "ds-cuenta-ahorro-2023-q4",
+      "datasetTitle": "Cuenta Ahorro Inversión Financiamiento 2023 - 4to Trimestre",
+      "fileName": "CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023.pdf",
+      "lastProcessed": "2025-10-09T06:12:40.785Z",
+      "status": "error",
+      "error": "Failed to download PDF: CUENTA-AHORRO-INVERSION-FINANCIAMIENTO-4°TRIMESTRE-2023.pdf"
+    }
+  },
+  "info": {
+    "identifier": "ds-cuenta-ahorro-2023-q4",
+    "title": "Cuenta Ahorro Inversión Financiamiento 2023 - 4to Trimestre",
+    "description": "Reporte de cuenta ahorro, inversión y financiamiento para Q4 2023.",
+    "theme": [
+      "economia-y-finanzas"
+    ],
+    "keywords": [],
+    "issued": "2024-04-23T00:00:00",
+    "modified": "2024-04-23T00:00:00",
+    "publisher": {
+      "name": "Secretaría de Hacienda"
+    }
+  }
+}

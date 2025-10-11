@@ -1,0 +1,51 @@
+{
+  "files": {
+    "APG_a_existencias_bovinas_2023": {
+      "datasetId": "ambiente_29.0",
+      "datasetTitle": "Actividad ganadera",
+      "fileName": "APG_a_existencias_bovinas_2023",
+      "format": "CSV",
+      "title": "Existencias bovinas. Año 2021",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=27&did=335",
+      "lastProcessed": "2025-10-09T06:57:27.174Z",
+      "status": "processed"
+    },
+    "APG_b_evolucion_existencias": {
+      "datasetId": "ambiente_29.0",
+      "datasetTitle": "Actividad ganadera",
+      "fileName": "APG_b_evolucion_existencias",
+      "format": "CSV",
+      "title": "Evolución del ganado bovino",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=27&did=370",
+      "lastProcessed": "2025-10-09T06:57:28.603Z",
+      "status": "processed"
+    },
+    "APG_c_existencias_ganaderas_2023": {
+      "datasetId": "ambiente_29.0",
+      "datasetTitle": "Actividad ganadera",
+      "fileName": "APG_c_existencias_ganaderas_2023",
+      "format": "CSV",
+      "title": "Existencias ganaderas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=27&did=425",
+      "lastProcessed": "2025-10-09T06:57:29.865Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_29.0",
+    "title": "Actividad ganadera",
+    "description": "Muestra la evolución y las existencias bovinas.",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2022-11-11T00:00:00",
+    "modified": "2022-11-11T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

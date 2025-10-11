@@ -1,0 +1,164 @@
+{
+  "files": {
+    "Montos totales de subsidios al transporte automotor - Año 2023.xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "Montos totales de subsidios al transporte automotor - Año 2023.xlsx",
+      "format": "XLSX",
+      "title": "Montos totales de Subsidios al Transporte Automotor de Pasajeros 2023",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/7ff97c7f-6ad3-408a-9cf6-7c381873d952",
+      "lastProcessed": "2025-10-09T07:34:32.939Z",
+      "status": "processed"
+    },
+    "montos totales de subsidios al transporte automotor-2022 (1).xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "montos totales de subsidios al transporte automotor-2022 (1).xlsx",
+      "format": "XLSX",
+      "title": "Montos totales de Subsidios al Transporte Automotor de Pasajeros 2022",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/63ace92f-f6cc-40a6-ad80-d529348a9a07",
+      "lastProcessed": "2025-10-09T07:34:32.939Z",
+      "status": "processed"
+    },
+    "montos_totales_09_2021.xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "montos_totales_09_2021.xlsx",
+      "format": "XLSX",
+      "title": "Montos totales de Subsidios al Transporte Automotor de Pasajeros 2021",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/9e83afd0-1c9c-4e78-b3e6-fe9a8fe4fe1c",
+      "lastProcessed": "2025-10-09T07:34:32.940Z",
+      "status": "processed"
+    },
+    "montos_totales_2020_1.xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "montos_totales_2020_1.xlsx",
+      "format": "XLSX",
+      "title": "Montos totales de Subsidios al Transporte Automotor de Pasajeros 2020",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/43bb8694-7f97-468d-9ba9-4acd355b06a2",
+      "lastProcessed": "2025-10-09T07:34:32.940Z",
+      "status": "processed"
+    },
+    "montos_totales_2019.xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "montos_totales_2019.xlsx",
+      "format": "XLSX",
+      "title": "Montos totales de Subsidios al Transporte Automotor de Pasajeros 2019",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/9f7e27c8-66c4-48d7-b7ef-764c131f589e",
+      "lastProcessed": "2025-10-09T07:34:32.940Z",
+      "status": "processed"
+    },
+    "Compensación gasoil -2023.xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "Compensación gasoil -2023.xlsx",
+      "format": "XLSX",
+      "title": "Compensación Precio diferencial del Gas oil por Petrolera 2023",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/eaa3f1c6-568f-44ef-b956-055b13b426dc",
+      "lastProcessed": "2025-10-09T07:34:32.940Z",
+      "status": "processed"
+    },
+    "compensacion_gasoil_septiembre_2022.xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "compensacion_gasoil_septiembre_2022.xlsx",
+      "format": "XLSX",
+      "title": "Compensación Precio diferencial del Gas oil por Petrolera 2022",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/dc82740e-618c-47d6-9592-1c120bc5af8b",
+      "lastProcessed": "2025-10-09T07:34:32.941Z",
+      "status": "processed"
+    },
+    "compensacion_precio_diferencial09_2021.xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "compensacion_precio_diferencial09_2021.xlsx",
+      "format": "XLSX",
+      "title": "Compensación Precio diferencial del Gas oil por Petrolera 2021",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/84f19d9f-54f0-4b2e-ad1e-6dbf88c4ae26",
+      "lastProcessed": "2025-10-09T07:34:32.941Z",
+      "status": "processed"
+    },
+    "compensacion_precio_diferencial_2020_1.xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "compensacion_precio_diferencial_2020_1.xlsx",
+      "format": "XLSX",
+      "title": "Compensación Precio diferencial del Gas oil por Petrolera 2020",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/d8f1aa4b-ef04-4679-86ee-a40b369c5145",
+      "lastProcessed": "2025-10-09T07:34:32.941Z",
+      "status": "processed"
+    },
+    "compensacion_precio_diferencial_2019_1.xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "compensacion_precio_diferencial_2019_1.xlsx",
+      "format": "XLSX",
+      "title": "Compensación Precio diferencial del Gas oil por Petrolera 2019",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/e7c752e1-65a5-4eaa-b810-c3bf7a82539c",
+      "lastProcessed": "2025-10-09T07:34:32.941Z",
+      "status": "processed"
+    },
+    "compensaciones_cuit_amba_2020.xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "compensaciones_cuit_amba_2020.xlsx",
+      "format": "XLSX",
+      "title": "Compensaciones por CUIT - AMBA 2020",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/206ed955-123a-45bc-9831-0d5c2515f044",
+      "lastProcessed": "2025-10-09T07:34:32.941Z",
+      "status": "processed"
+    },
+    "compensaciones_cuit_amba_2019.xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "compensaciones_cuit_amba_2019.xlsx",
+      "format": "XLSX",
+      "title": "Compensaciones por CUIT - AMBA 2019",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/faf34ae2-b5fc-4c1c-b40e-7d8a89a5f790",
+      "lastProcessed": "2025-10-09T07:34:32.942Z",
+      "status": "processed"
+    },
+    "Montos totales al subsidio de transporte automotor de pasajeros al 28-01-2025 (1).xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "Montos totales al subsidio de transporte automotor de pasajeros al 28-01-2025 (1).xlsx",
+      "format": "XLSX",
+      "title": "Montos totales de Subsidios al Transporte Automotor de Pasajeros 2024",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/a00323bd-8b87-4cdc-af81-b391765fb42b",
+      "lastProcessed": "2025-10-09T07:34:32.942Z",
+      "status": "processed"
+    },
+    "Compensaciones Gasoil al 28-01-2025.xlsx": {
+      "datasetId": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+      "datasetTitle": "Sistema Integrado de Transporte Automotor (SISTAU)",
+      "fileName": "Compensaciones Gasoil al 28-01-2025.xlsx",
+      "format": "XLSX",
+      "title": "Compensación Precio diferencial del Gas oil por Petrolera 2024",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/06207146-7570-4a9e-a959-e645e071f40d/resource/b8145749-a58a-4c75-92a7-32057510c6be",
+      "lastProcessed": "2025-10-09T07:34:32.942Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "transporte_06207146-7570-4a9e-a959-e645e071f40d",
+    "title": "Sistema Integrado de Transporte Automotor (SISTAU)",
+    "description": "Subsidios y Compensaciones Transporte Automotor de Pasajeros. Son aquellas transferencias realizadas por la Adm. Pública a empresas o consumidores, para permitir que determinados servicios sean provistos a un costo inferior al necesario para cubrir los costos de producción. Estas transferencias suelen tener dos objetivos principales: fomentar el acceso a esos bienes o servicios por parte de segmentos específicos de la población e impulsar el desarrollo de sectores productivos determinados.-",
+    "theme": [
+      "econ",
+      "tran"
+    ],
+    "superTheme": [
+      "ECON",
+      "TRAN"
+    ],
+    "issued": "2022-04-01T14:38:03.614678",
+    "modified": "2023-04-12T14:03:06.852902",
+    "publisher": {
+      "mbox": "accesoalainformacion@transporte.gob.ar",
+      "name": "Dirección de Acceso a la Información Pública y Transparencia"
+    },
+    "landingPage": "https://datos.transporte.gob.ar/dataset/subsidios-sistau"
+  }
+}

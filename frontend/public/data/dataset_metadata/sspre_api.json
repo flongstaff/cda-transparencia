@@ -1,0 +1,32 @@
+{
+  "files": {
+    "api_presupuestoabierto": {
+      "datasetId": "sspre_api",
+      "datasetTitle": "API de Presupuesto Abierto",
+      "fileName": "api_presupuestoabierto",
+      "format": "csv, zip, json",
+      "title": "API de Presupuesto Abierto",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/api/",
+      "lastProcessed": "2025-10-09T07:25:00.162Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspre_api",
+    "title": "API de Presupuesto Abierto",
+    "description": "Accedé a la documentación de la API de Presupuesto Abierto",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2019-07-15",
+    "modified": "2025-03-18",
+    "publisher": {
+      "mbox": "info@presupuestoabierto.gob.ar",
+      "name": "Ministerio de Economía. Secretaría de Hacienda. Subsecretaría de Presupuesto."
+    },
+    "landingPage": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos"
+  }
+}

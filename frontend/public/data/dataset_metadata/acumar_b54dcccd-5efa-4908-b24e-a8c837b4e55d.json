@@ -1,0 +1,102 @@
+{
+  "files": {
+    "compras-contrataciones-acumar-2018.csv": {
+      "datasetId": "acumar_b54dcccd-5efa-4908-b24e-a8c837b4e55d",
+      "datasetTitle": "Compras y Contrataciones de ACUMAR",
+      "fileName": "compras-contrataciones-acumar-2018.csv",
+      "format": "CSV",
+      "title": "Listado de Compras y Contrataciones de ACUMAR - 2018",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/b54dcccd-5efa-4908-b24e-a8c837b4e55d/resource/5884e1a7-7711-4a75-9ea9-80d180bf24fc",
+      "lastProcessed": "2025-10-09T06:28:30.595Z",
+      "status": "processed"
+    },
+    "compras-contrataciones-acumar-2019.csv": {
+      "datasetId": "acumar_b54dcccd-5efa-4908-b24e-a8c837b4e55d",
+      "datasetTitle": "Compras y Contrataciones de ACUMAR",
+      "fileName": "compras-contrataciones-acumar-2019.csv",
+      "format": "CSV",
+      "title": "Listado de Compras y Contrataciones de ACUMAR - 2019",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/b54dcccd-5efa-4908-b24e-a8c837b4e55d/resource/f3c1b802-579b-4cdc-a359-ddfb345b08fe",
+      "lastProcessed": "2025-10-09T06:28:33.015Z",
+      "status": "processed"
+    },
+    "compras-contrataciones-acumar-2020.csv": {
+      "datasetId": "acumar_b54dcccd-5efa-4908-b24e-a8c837b4e55d",
+      "datasetTitle": "Compras y Contrataciones de ACUMAR",
+      "fileName": "compras-contrataciones-acumar-2020.csv",
+      "format": "CSV",
+      "title": "Listado de Compras y Contrataciones de ACUMAR - 2020",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/b54dcccd-5efa-4908-b24e-a8c837b4e55d/resource/57026a5a-fe6c-4d44-abd2-3832159bc838",
+      "lastProcessed": "2025-10-09T06:28:35.533Z",
+      "status": "processed"
+    },
+    "compras-contrataciones-acumar-2021.csv": {
+      "datasetId": "acumar_b54dcccd-5efa-4908-b24e-a8c837b4e55d",
+      "datasetTitle": "Compras y Contrataciones de ACUMAR",
+      "fileName": "compras-contrataciones-acumar-2021.csv",
+      "format": "CSV",
+      "title": "Listado de Compras y Contrataciones de ACUMAR - 2021",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/b54dcccd-5efa-4908-b24e-a8c837b4e55d/resource/18c6b3d9-194e-4b7a-9ba8-1dc9f86ddb56",
+      "lastProcessed": "2025-10-09T06:28:38.041Z",
+      "status": "processed"
+    },
+    "compras-contrataciones-acumar-2022.csv": {
+      "datasetId": "acumar_b54dcccd-5efa-4908-b24e-a8c837b4e55d",
+      "datasetTitle": "Compras y Contrataciones de ACUMAR",
+      "fileName": "compras-contrataciones-acumar-2022.csv",
+      "format": "CSV",
+      "title": "Listado de Compras y Contrataciones de ACUMAR - 2022",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/b54dcccd-5efa-4908-b24e-a8c837b4e55d/resource/947213aa-45a6-4fa5-8b6f-ca3cab0a3f97",
+      "lastProcessed": "2025-10-09T06:28:40.544Z",
+      "status": "processed"
+    },
+    "compras-contrataciones-acumar-2023.csv": {
+      "datasetId": "acumar_b54dcccd-5efa-4908-b24e-a8c837b4e55d",
+      "datasetTitle": "Compras y Contrataciones de ACUMAR",
+      "fileName": "compras-contrataciones-acumar-2023.csv",
+      "format": "CSV",
+      "title": "Listado de Compras y Contrataciones de ACUMAR - 2023",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/b54dcccd-5efa-4908-b24e-a8c837b4e55d/resource/8f8e913d-e4d5-4cd8-b792-cd9f023a3d31",
+      "lastProcessed": "2025-10-09T06:28:43.051Z",
+      "status": "processed"
+    },
+    "compras-contrataciones-acumar-2024.csv": {
+      "datasetId": "acumar_b54dcccd-5efa-4908-b24e-a8c837b4e55d",
+      "datasetTitle": "Compras y Contrataciones de ACUMAR",
+      "fileName": "compras-contrataciones-acumar-2024.csv",
+      "format": "CSV",
+      "title": "Listado de Compras y Contrataciones de ACUMAR - 2024",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/b54dcccd-5efa-4908-b24e-a8c837b4e55d/resource/655b8780-a073-4586-9576-cec4b8c425d7",
+      "lastProcessed": "2025-10-09T06:28:45.548Z",
+      "status": "processed"
+    },
+    "compras-contrataciones-acumar-2025.csv": {
+      "datasetId": "acumar_b54dcccd-5efa-4908-b24e-a8c837b4e55d",
+      "datasetTitle": "Compras y Contrataciones de ACUMAR",
+      "fileName": "compras-contrataciones-acumar-2025.csv",
+      "format": "CSV",
+      "title": "Listado de Compras y Contrataciones de ACUMAR - 2025",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/b54dcccd-5efa-4908-b24e-a8c837b4e55d/resource/03ba44ac-df7d-4a1e-b6b0-ffeff9335caa",
+      "lastProcessed": "2025-10-09T06:28:48.143Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_b54dcccd-5efa-4908-b24e-a8c837b4e55d",
+    "title": "Compras y Contrataciones de ACUMAR",
+    "description": "Datos correspondientes a los procesos de compras y contrataciones realizados por ACUMAR, desde 2018 hasta la fecha.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2018-12-18T16:25:11.968993",
+    "modified": "2025-02-07T17:02:47.664395",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección General Administrativa"
+    },
+    "landingPage": "http://datos.acumar.gob.ar/dataset/listado-de-compras-y-contrataciones-de-acumar"
+  }
+}

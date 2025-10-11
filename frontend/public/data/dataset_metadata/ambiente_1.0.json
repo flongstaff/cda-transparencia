@@ -1,0 +1,81 @@
+{
+  "files": {
+    "agd_f_acuiferos_pais_2022.csv": {
+      "datasetId": "ambiente_1.0",
+      "datasetTitle": "Disponibilidad de agua",
+      "fileName": "agd_f_acuiferos_pais_2022.csv",
+      "format": "CSV",
+      "title": "Acuíferos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=1&did=147",
+      "lastProcessed": "2025-10-09T07:00:57.391Z",
+      "status": "processed"
+    },
+    "agd_a_bcehid_cuenca.csv": {
+      "datasetId": "ambiente_1.0",
+      "datasetTitle": "Disponibilidad de agua",
+      "fileName": "agd_a_bcehid_cuenca.csv",
+      "format": "CSV",
+      "title": "Balance hídrico por cuenca",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=1&did=50",
+      "lastProcessed": "2025-10-09T07:00:58.663Z",
+      "status": "processed"
+    },
+    "agd_g_caudales_medios_mes.csv": {
+      "datasetId": "ambiente_1.0",
+      "datasetTitle": "Disponibilidad de agua",
+      "fileName": "agd_g_caudales_medios_mes.csv",
+      "format": "CSV",
+      "title": "Caudal medio anual por cuenca",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=1&did=148",
+      "lastProcessed": "2025-10-09T07:01:00.147Z",
+      "status": "processed"
+    },
+    "agd_b_pobdens_cuenca.csv": {
+      "datasetId": "ambiente_1.0",
+      "datasetTitle": "Disponibilidad de agua",
+      "fileName": "agd_b_pobdens_cuenca.csv",
+      "format": "CSV",
+      "title": "Densidad de población por cuenca",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=1&did=139",
+      "lastProcessed": "2025-10-09T07:01:01.497Z",
+      "status": "processed"
+    },
+    "agd_c_lagos_pais.csv": {
+      "datasetId": "ambiente_1.0",
+      "datasetTitle": "Disponibilidad de agua",
+      "fileName": "agd_c_lagos_pais.csv",
+      "format": "CSV",
+      "title": "Lagos principales",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=1&did=143",
+      "lastProcessed": "2025-10-09T07:01:02.759Z",
+      "status": "processed"
+    },
+    "agd_d_embalses_pais.csv": {
+      "datasetId": "ambiente_1.0",
+      "datasetTitle": "Disponibilidad de agua",
+      "fileName": "agd_d_embalses_pais.csv",
+      "format": "CSV",
+      "title": "Principales embalses",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=1&did=146",
+      "lastProcessed": "2025-10-09T07:01:04.036Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_1.0",
+    "title": "Disponibilidad de agua",
+    "description": "Muestra datos sobre acuíferos, balance hídrico, caudales",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2020-12-31T00:00:00",
+    "modified": "2020-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

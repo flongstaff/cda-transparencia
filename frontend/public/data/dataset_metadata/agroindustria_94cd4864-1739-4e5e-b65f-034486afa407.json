@@ -1,0 +1,42 @@
+{
+  "files": {
+    "establecimientos-nivel-departamental-vinculados-actividad-vitivinicola-acuerdo-al-inv.csv": {
+      "datasetId": "agroindustria_94cd4864-1739-4e5e-b65f-034486afa407",
+      "datasetTitle": "INV - Actividad vitivinícola",
+      "fileName": "establecimientos-nivel-departamental-vinculados-actividad-vitivinicola-acuerdo-al-inv.csv",
+      "format": "CSV",
+      "title": "Establecimientos vinculados a la actividad vitivinícola",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/94cd4864-1739-4e5e-b65f-034486afa407/resource/16e20ac2-e396-4a30-ba71-45e1cb10c284",
+      "lastProcessed": "2025-10-09T06:51:46.757Z",
+      "status": "processed"
+    },
+    "INV-mercado-interno-2024.csv": {
+      "datasetId": "agroindustria_94cd4864-1739-4e5e-b65f-034486afa407",
+      "datasetTitle": "INV - Actividad vitivinícola",
+      "fileName": "INV-mercado-interno-2024.csv",
+      "format": "CSV",
+      "title": "Mercado interno 2024",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/94cd4864-1739-4e5e-b65f-034486afa407/resource/90f42554-1305-4c2e-9a2d-ea12b07b82e9",
+      "lastProcessed": "2025-10-09T06:51:50.571Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_94cd4864-1739-4e5e-b65f-034486afa407",
+    "title": "INV - Actividad vitivinícola",
+    "description": "Anuarios, informes y datos de la actividad vitivinícola a cargo del Instituto Nacional de Vitivinicultura (INV).",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2018-12-07T21:20:57.320674",
+    "modified": "2025-07-18T13:23:01.691281",
+    "publisher": {
+      "mbox": "estadisticas@inv.gov.ar",
+      "name": "Dirección de Información y Estadística Pública - Secretaría de Mercados Agroindustriales"
+    },
+    "landingPage": "https://datos.magyp.gob.ar/dataset/inv-actividad-vitivinicola"
+  }
+}

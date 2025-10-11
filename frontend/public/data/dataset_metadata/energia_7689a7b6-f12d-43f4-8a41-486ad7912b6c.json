@@ -1,0 +1,32 @@
+{
+  "files": {
+    "registro-de-tanques-mviles-de-glp.csv": {
+      "datasetId": "energia_7689a7b6-f12d-43f4-8a41-486ad7912b6c",
+      "datasetTitle": "Registro de empresas e instalaciones de GLP",
+      "fileName": "registro-de-tanques-mviles-de-glp.csv",
+      "format": "CSV",
+      "title": "Registro de Tanques Móviles de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/7689a7b6-f12d-43f4-8a41-486ad7912b6c/resource/3aac94a8-d394-4cc9-91e2-2ea435a9a828",
+      "lastProcessed": "2025-10-09T06:54:40.963Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_7689a7b6-f12d-43f4-8a41-486ad7912b6c",
+    "title": "Registro de empresas e instalaciones de GLP",
+    "description": "Registro de Tanques Móviles de GLP",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:40.028606",
+    "modified": "2023-07-31T11:26:10.312417",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

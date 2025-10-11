@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "energia_91cff942-0fd8-487b-a805-e525b1bfcb02",
+      "title": "Anuarios de Cooperativas Eléctricas",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/energia_91cff942-0fd8-487b-a805-e525b1bfcb02/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/energia_91cff942-0fd8-487b-a805-e525b1bfcb02/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

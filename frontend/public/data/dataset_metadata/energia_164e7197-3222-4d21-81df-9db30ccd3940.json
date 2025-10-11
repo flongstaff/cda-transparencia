@@ -1,0 +1,42 @@
+{
+  "files": {
+    "instalaciones-hidrocarburos-instalaciones-res-318.csv": {
+      "datasetId": "energia_164e7197-3222-4d21-81df-9db30ccd3940",
+      "datasetTitle": "Instalaciones de hidrocarburos - Instalaciones empadronadas Res. 318/2010",
+      "fileName": "instalaciones-hidrocarburos-instalaciones-res-318.csv",
+      "format": "CSV",
+      "title": "Instalaciones Hidrocarburos Instalaciones Res.318",
+      "accessURL": "http://datos.energia.gob.ar/dataset/164e7197-3222-4d21-81df-9db30ccd3940/resource/f80f01ac-1e50-49d9-974c-8b89b7de8b43",
+      "lastProcessed": "2025-10-09T06:39:14.240Z",
+      "status": "processed"
+    },
+    "instalaciones-hidrocarburos-instalaciones-res-318.zip": {
+      "datasetId": "energia_164e7197-3222-4d21-81df-9db30ccd3940",
+      "datasetTitle": "Instalaciones de hidrocarburos - Instalaciones empadronadas Res. 318/2010",
+      "fileName": "instalaciones-hidrocarburos-instalaciones-res-318.zip",
+      "format": "SHP",
+      "title": "Instalaciones Hidrocarburos Instalaciones Res.318",
+      "accessURL": "http://datos.energia.gob.ar/dataset/164e7197-3222-4d21-81df-9db30ccd3940/resource/601bccb9-5e24-4ea1-9d90-e4d72da11d1f",
+      "lastProcessed": "2025-10-09T06:39:14.241Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_164e7197-3222-4d21-81df-9db30ccd3940",
+    "title": "Instalaciones de hidrocarburos - Instalaciones empadronadas Res. 318/2010",
+    "description": "Instalaciones empadronadas por la Res. 318/2010. ISO 19126: PowerSupplies, Este subgrupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía , mientras que la energía es en su mayoría de la electricidad.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2023-05-02T11:11:52.319263",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

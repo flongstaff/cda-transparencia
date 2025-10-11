@@ -1,20 +1,23 @@
-"program_code","program_name","budgeted","executed","paid","year"
-"1110101000-17","Planificacion y desarrollo de politicas sociales, salu",17185446.15,17143446.15,16736420.07,"2019"
-"111010100018","Desarrollo Productivo en el Ambito Local",1739912.03,1739912.03,1701912.03,"2019"
-"111010100019","Desarrollo de Políticas Sociales",10930343.69,10930343.69,10745925.77,"2019"
-"1110101000-20","Desarrollo de Políticas de Educación",10265427.08,10265427.08,10265427.08,"2019"
-"111010300026","Fondo Educativo",25464554.77,25358513.52,25358513.52,"2019"
-"1110106000-61","Mantenimiento y ampliación de la red cloacal",2635695.35,2635695.35,2635695.35,"2019"
-"1110106000-62","Mantenimiento y ampliación de la Red de agua pot",303047.28,303047.28,303047.28,"2019"
-"1110111000-25","Desarrollo de Políticas Culturales",10223678.46,10223678.46,10062466.11,"2019"
-"1110111000-26","Desarrollo de Políticas Deportivas",4158320.27,4158320.27,4136430.27,"2019"
-"1110111000-27","Desarrollo de Politicas de Turismo",1098951.45,1098951.45,1010543.45,"2019"
-"1110112000-24","Servicios Urbanos",61379244.23,61327344.23,61327344.23,"2019"
-"1110112000-51","Obras Infraestructura y Vivienda",10397281.49,9846526.99,9846526.99,"2019"
-"1110112000-52","Obras Infraestructuras y Viviendas II",12944070.37,12944070.37,12944070.37,"2019"
-"1110112000-53","Mantenimiento y reparacion de caminos",6344786.29,6344786.29,6344786.29,"2019"
-"1110112000-55","Fondo de Pavimentacion Urbana Pcia. de Bs As",1664279.43,1664279.43,1664279.43,"2019"
-"central_activities","Actividades Centrales",88744150.53,88741630.12,84747188.39,"2019"
-"non_programmable","Partidas no asignables a programas",499288.68,499288.68,499288.68,"2019"
-"legislative","H.C.D. - Actividades Centrales",5921324.78,5921324.78,5881132.78,"2019"
-"total","Total General",271899802.33,271146586.17,266210998.09,"2019"
+program_code,program_name,budgeted,executed,paid,year
+1110101000-17,"Planificacion y desarrollo de politicas sociales, salu",17185446.15,17143446.15,16736420.07,2019
+111010100018,Desarrollo Productivo en el Ambito Local,1739912.03,1739912.03,1701912.03,2019
+111010100019,Desarrollo de Políticas Sociales,10930343.69,10930343.69,10745925.77,2019
+1110101000-20,Desarrollo de Políticas de Educación,10265427.08,10265427.08,10265427.08,2019
+111010300026,Fondo Educativo,25464554.77,25358513.52,25358513.52,2019
+1110106000-61,Mantenimiento y ampliación de la red cloacal,2635695.35,2635695.35,2635695.35,2019
+1110106000-62,Mantenimiento y ampliación de la Red de agua pot,303047.28,303047.28,303047.28,2019
+1110111000-25,Desarrollo de Políticas Culturales,10223678.46,10223678.46,10062466.11,2019
+1110111000-26,Desarrollo de Políticas Deportivas,4158320.27,4158320.27,4136430.27,2019
+1110111000-27,Desarrollo de Politicas de Turismo,1098951.45,1098951.45,1010543.45,2019
+1110112000-24,Servicios Urbanos,61379244.23,61327344.23,61327344.23,2019
+1110112000-51,Obras Infraestructura y Vivienda,10397281.49,9846526.99,9846526.99,2019
+1110112000-52,Obras Infraestructuras y Viviendas II,12944070.37,12944070.37,12944070.37,2019
+1110112000-53,Mantenimiento y reparacion de caminos,6344786.29,6344786.29,6344786.29,2019
+1110112000-55,Fondo de Pavimentacion Urbana Pcia. de Bs As,1664279.43,1664279.43,1664279.43,2019
+central_activities,Actividades Centrales,88744150.53,88741630.12,84747188.39,2019
+non_programmable,Partidas no asignables a programas,499288.68,499288.68,499288.68,2019
+legislative,H.C.D. - Actividades Centrales,5921324.78,5921324.78,5881132.78,2019
+total,Total General,271899802.33,271146586.17,266210998.09,2019
+,,,,,2019
+,,,,,2024
+,,,,,2016

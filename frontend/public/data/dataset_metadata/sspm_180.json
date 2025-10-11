@@ -1,0 +1,32 @@
+{
+  "files": {
+    "indices-bursatiles.csv": {
+      "datasetId": "sspm_180",
+      "datasetTitle": "Indices Bursátiles Argentina. Desagregación sectorial",
+      "fileName": "indices-bursatiles.csv",
+      "format": "CSV",
+      "title": "Indices Bursátiles Argentina. Desagregación sectorial",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:04.468Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_180",
+    "title": "Indices Bursátiles Argentina. Desagregación sectorial",
+    "description": "Indices Bursátiles Argentina. Indices de cotizaciones. Desagregación sectorial",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-03",
+    "modified": "2025-03-24T10:02:05.569949",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

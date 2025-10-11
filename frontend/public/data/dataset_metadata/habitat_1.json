@@ -1,0 +1,32 @@
+{
+  "files": {
+    "mi-pieza.xlsx": {
+      "datasetId": "habitat_1",
+      "datasetTitle": "Listado de participantes de los Sorteos Mi Pieza",
+      "fileName": "mi-pieza.xlsx",
+      "format": "XLS",
+      "title": "Listado de participantes de los Sorteos Mi Pieza",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu/mi-pieza",
+      "lastProcessed": "2025-10-09T06:50:35.510Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "habitat_1",
+    "title": "Listado de participantes de los Sorteos Mi Pieza",
+    "description": "Nómina de las mujeres participantes de la Línea Mi Pieza del Fondo de Integración Socio Urbana (FISU)",
+    "theme": [
+      "soci"
+    ],
+    "superTheme": [
+      "SOCI"
+    ],
+    "issued": "2021-10-16T10:09:37.311216",
+    "modified": "2024-08-29T00:00:00",
+    "publisher": {
+      "mbox": "datosabiertos@infraestructura.gob.ar",
+      "name": "Ministerio de Economía, Secretaría de Obras Públicas, Subsecretaría de Integración Socio Urbana"
+    },
+    "landingPage": "https://www.argentina.gob.ar/obras-publicas/sisu/mi-pieza"
+  }
+}

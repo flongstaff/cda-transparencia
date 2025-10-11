@@ -1,0 +1,42 @@
+{
+  "files": {
+    "transporte-elctrico-at-estaciones-transformadoras.csv": {
+      "datasetId": "energia_5ae5fbf9-5ab3-407b-a047-625bf27835aa",
+      "datasetTitle": "Transporte Eléctrico AT Estaciones Transformadoras",
+      "fileName": "transporte-elctrico-at-estaciones-transformadoras.csv",
+      "format": "CSV",
+      "title": "Transporte Eléctrico AT Estaciones Transformadoras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5ae5fbf9-5ab3-407b-a047-625bf27835aa/resource/cedb62c4-4a4c-4124-bdc9-48f611a59862",
+      "lastProcessed": "2025-10-09T06:50:42.370Z",
+      "status": "processed"
+    },
+    "transporte-elctrico-at-estaciones-transformadoras.zip": {
+      "datasetId": "energia_5ae5fbf9-5ab3-407b-a047-625bf27835aa",
+      "datasetTitle": "Transporte Eléctrico AT Estaciones Transformadoras",
+      "fileName": "transporte-elctrico-at-estaciones-transformadoras.zip",
+      "format": "SHP",
+      "title": "Transporte Eléctrico AT Estaciones Transformadoras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5ae5fbf9-5ab3-407b-a047-625bf27835aa/resource/669e80b9-6d4b-45cc-ba96-60ffc2fcfa5d",
+      "lastProcessed": "2025-10-09T06:50:42.370Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_5ae5fbf9-5ab3-407b-a047-625bf27835aa",
+    "title": "Transporte Eléctrico AT Estaciones Transformadoras",
+    "description": "Estaciones transformadoras de Alta tensión. ISO 19126: PowerSupplies, Este subgrupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía , mientras que la energía es en su mayoría de la electricidad.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-07-16T13:03:37.728977",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía.Subsecretaría de Transición y Planeamiento Energético.Dirección Nacional de Información Energética. \r\n\r\n"
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

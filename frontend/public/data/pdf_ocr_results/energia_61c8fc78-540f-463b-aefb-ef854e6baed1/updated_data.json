@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "energia_61c8fc78-540f-463b-aefb-ef854e6baed1",
+      "title": "Reservas de Petróleo y Gas",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/energia_61c8fc78-540f-463b-aefb-ef854e6baed1/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/energia_61c8fc78-540f-463b-aefb-ef854e6baed1/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef",
+      "title": "PERMER II",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/energia_f4ebdf8b-4e11-4eaa-bd1a-b312429e9eef/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

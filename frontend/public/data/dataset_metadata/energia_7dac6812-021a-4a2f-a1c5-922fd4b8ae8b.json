@@ -1,0 +1,48 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_7dac6812-021a-4a2f-a1c5-922fd4b8ae8b",
+      "datasetTitle": "Evolución de la Demanda Eléctrica de Grandes Usuarios",
+      "lastProcessed": "2025-10-09T07:20:59.176Z",
+      "status": "processed"
+    },
+    "gu97.zip": {
+      "datasetId": "energia_7dac6812-021a-4a2f-a1c5-922fd4b8ae8b",
+      "datasetTitle": "Evolución de la Demanda Eléctrica de Grandes Usuarios",
+      "fileName": "gu97.zip",
+      "format": "ZIP",
+      "title": "Evolución de la demanda eléctrica de Grandes Usuarios 1997",
+      "accessURL": "http://datos.energia.gob.ar/dataset/7dac6812-021a-4a2f-a1c5-922fd4b8ae8b/resource/b7294ca9-e630-4b87-8e76-b3ba61964f07",
+      "lastProcessed": "2025-10-09T07:20:59.177Z",
+      "status": "processed"
+    },
+    "infdem96.zip": {
+      "datasetId": "energia_7dac6812-021a-4a2f-a1c5-922fd4b8ae8b",
+      "datasetTitle": "Evolución de la Demanda Eléctrica de Grandes Usuarios",
+      "fileName": "infdem96.zip",
+      "format": "ZIP",
+      "title": "Evolución de la demanda eléctrica de Grandes Usuarios 1996",
+      "accessURL": "http://datos.energia.gob.ar/dataset/7dac6812-021a-4a2f-a1c5-922fd4b8ae8b/resource/f7088cf4-d22b-4954-ad27-fdaebaa281ef",
+      "lastProcessed": "2025-10-09T07:20:59.177Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_7dac6812-021a-4a2f-a1c5-922fd4b8ae8b",
+    "title": "Evolución de la Demanda Eléctrica de Grandes Usuarios",
+    "description": "__PUBLICACIÓN DISCONTINUADA__ \r\n",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-12-28T17:24:59.188595",
+    "modified": "2020-04-20T12:49:12.374692",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_5ddf7915-47c7-44d1-9246-30573ec05f95",
+      "datasetTitle": "Registro de viajes financiados por terceros",
+      "format": "ZIP",
+      "title": "Registro de viajes financiados por terceros - 2018",
+      "accessURL": "https://datos.jus.gob.ar/dataset/5ddf7915-47c7-44d1-9246-30573ec05f95/resource/aa0b3c87-092f-4663-b82a-4f8b64304028",
+      "lastProcessed": "2025-10-09T06:33:07.731Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_5ddf7915-47c7-44d1-9246-30573ec05f95",
+    "title": "Registro de viajes financiados por terceros",
+    "description": "Viajes de los funcionarios públicos financiados por terceros registrados en el ámbito de la Oficina Anticorrupción.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-05-03T19:19:38.230133",
+    "modified": "2025-10-01T14:12:08.240575",
+    "publisher": {
+      "mbox": "aferrer@anticorrupcion.gob.ar",
+      "name": "Ministerio de Justicia. Oficina Anticorrupción"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/registro-de-viajes-financiados-por-terceros"
+  }
+}

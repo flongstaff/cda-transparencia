@@ -1,0 +1,31 @@
+{
+  "files": {
+    "Estado-de-Ejecucion-de-Recursos-Junio.pdf": {
+      "datasetId": "ds-ejecucion-recursos-2025-h1",
+      "datasetTitle": "Ejecución Presupuestaria de Recursos 2025 - Primer Semestre",
+      "fileName": "Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+      "format": "PDF",
+      "title": "Junio 2025",
+      "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/07/Estado-de-Ejecucion-de-Recursos-Junio.pdf",
+      "lastProcessed": "2025-10-09T06:13:03.446Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ds-ejecucion-recursos-2025-h1",
+    "title": "Ejecución Presupuestaria de Recursos 2025 - Primer Semestre",
+    "description": "Estado de ejecución de recursos para enero-junio 2025.",
+    "theme": [
+      "economia-y-finanzas"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2025-07-10T00:00:00",
+    "modified": "2025-07-10T00:00:00",
+    "publisher": {
+      "name": "Secretaría de Hacienda"
+    },
+    "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/"
+  }
+}

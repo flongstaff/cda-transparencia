@@ -1,0 +1,50 @@
+{
+  "file_name": "Financial_Reserves_2021_table_0.csv",
+  "row_count": 4,
+  "column_count": 5,
+  "columns": [
+    "Reserve Type",
+    "Beginning",
+    "Additions",
+    "Withdrawals",
+    "Ending"
+  ],
+  "sample_data": [
+    {
+      "Reserve Type": "General Reserve",
+      "Beginning": "$20,000,000",
+      "Additions": "$5,000,000",
+      "Withdrawals": "$2,000,000",
+      "Ending": "$23,000,000"
+    },
+    {
+      "Reserve Type": "Infrastructure Fund",
+      "Beginning": "$15,000,000",
+      "Additions": "$3,000,000",
+      "Withdrawals": "$4,000,000",
+      "Ending": "$14,000,000"
+    },
+    {
+      "Reserve Type": "Emergency Fund",
+      "Beginning": "$10,000,000",
+      "Additions": "$2,000,000",
+      "Withdrawals": "$1,500,000",
+      "Ending": "$10,500,000"
+    },
+    {
+      "Reserve Type": "Total",
+      "Beginning": "$45,000,000",
+      "Additions": "$10,000,000",
+      "Withdrawals": "$7,500,000",
+      "Ending": "$47,500,000"
+    }
+  ],
+  "data_types": {
+    "Reserve Type": "object",
+    "Beginning": "object",
+    "Additions": "object",
+    "Withdrawals": "object",
+    "Ending": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

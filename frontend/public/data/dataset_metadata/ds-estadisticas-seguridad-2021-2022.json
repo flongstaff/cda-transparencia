@@ -1,0 +1,42 @@
+{
+  "files": {
+    "2021 SEGURIDAD URBANA.pdf": {
+      "datasetId": "ds-estadisticas-seguridad-2021-2022",
+      "datasetTitle": "Estadísticas de Seguridad Urbana 2021-2022",
+      "fileName": "2021 SEGURIDAD URBANA.pdf",
+      "lastProcessed": "2025-10-09T06:15:11.946Z",
+      "status": "error",
+      "error": "Failed to download PDF: 2021 SEGURIDAD URBANA.pdf"
+    },
+    "SEGURIDAD URBANA 2022.pdf": {
+      "datasetId": "ds-estadisticas-seguridad-2021-2022",
+      "datasetTitle": "Estadísticas de Seguridad Urbana 2021-2022",
+      "fileName": "SEGURIDAD URBANA 2022.pdf",
+      "lastProcessed": "2025-10-09T06:15:24.687Z",
+      "status": "error",
+      "error": "Failed to download PDF: SEGURIDAD URBANA 2022.pdf"
+    },
+    "2021 ESTADISTICAS MONITOREO.pdf": {
+      "datasetId": "ds-estadisticas-seguridad-2021-2022",
+      "datasetTitle": "Estadísticas de Seguridad Urbana 2021-2022",
+      "fileName": "2021 ESTADISTICAS MONITOREO.pdf",
+      "lastProcessed": "2025-10-09T06:15:37.534Z",
+      "status": "error",
+      "error": "Failed to download PDF: 2021 ESTADISTICAS MONITOREO.pdf"
+    }
+  },
+  "info": {
+    "identifier": "ds-estadisticas-seguridad-2021-2022",
+    "title": "Estadísticas de Seguridad Urbana 2021-2022",
+    "description": "Reportes de animales sueltos, infracciones y monitoreo policial.",
+    "theme": [
+      "justicia-seguridad-y-asuntos-legales"
+    ],
+    "keywords": [],
+    "issued": "2022-01-12T00:00:00",
+    "modified": "2023-01-01T00:00:00",
+    "publisher": {
+      "name": "Oficina de Estadísticas"
+    }
+  }
+}

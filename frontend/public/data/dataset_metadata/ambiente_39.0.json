@@ -1,0 +1,51 @@
+{
+  "files": {
+    "LEYEDUC_conversatorios_2022": {
+      "datasetId": "ambiente_39.0",
+      "datasetTitle": "Ley de educación ambiental integral",
+      "fileName": "LEYEDUC_conversatorios_2022",
+      "format": "CSV",
+      "title": "Conversatorios de Educación Ambiental",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=11&stid=75&did=338",
+      "lastProcessed": "2025-10-09T06:58:11.693Z",
+      "status": "processed"
+    },
+    "LEYEDUC_encuentros_region_2022": {
+      "datasetId": "ambiente_39.0",
+      "datasetTitle": "Ley de educación ambiental integral",
+      "fileName": "LEYEDUC_encuentros_region_2022",
+      "format": "CSV",
+      "title": "Encuentros regionales en el marco de la implementación de la Ley de Educación Ambiental Integral",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=11&stid=75&did=340",
+      "lastProcessed": "2025-10-09T06:58:13.054Z",
+      "status": "processed"
+    },
+    "LEYEDUC_encuentros_prov_2023": {
+      "datasetId": "ambiente_39.0",
+      "datasetTitle": "Ley de educación ambiental integral",
+      "fileName": "LEYEDUC_encuentros_prov_2023",
+      "format": "CSV",
+      "title": "Encuentros provinciales en el marco de la implementación de la Ley de Educación Ambiental Integral",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=11&stid=75&did=339",
+      "lastProcessed": "2025-10-09T06:58:14.400Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_39.0",
+    "title": "Ley de educación ambiental integral",
+    "description": "Muestra los conversatorios y encuentros regionales y provinciales realizados para la implementación de la Ley",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2023-05-02T00:00:00",
+    "modified": "2023-05-02T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

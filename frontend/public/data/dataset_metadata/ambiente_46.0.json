@@ -1,0 +1,41 @@
+{
+  "files": {
+    "TR_AIP_escazu_capacitaciones_2024": {
+      "datasetId": "ambiente_46.0",
+      "datasetTitle": "Acuerdo de Escazú",
+      "fileName": "TR_AIP_escazu_capacitaciones_2024",
+      "format": "CSV",
+      "title": "Acuerdo de Escazú, capacitaciones",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=88&did=399",
+      "lastProcessed": "2025-10-09T06:58:28.394Z",
+      "status": "processed"
+    },
+    "TR_AIP_escazu_instancias_partic_2023": {
+      "datasetId": "ambiente_46.0",
+      "datasetTitle": "Acuerdo de Escazú",
+      "fileName": "TR_AIP_escazu_instancias_partic_2023",
+      "format": "CSV",
+      "title": "Acuerdo de Escazú, instancias participativas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=88&did=400",
+      "lastProcessed": "2025-10-09T06:58:30.033Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_46.0",
+    "title": "Acuerdo de Escazú",
+    "description": "El conjunto de datos muestra las capacitaciones y las instancias participativas, en el marco del Acuerdo de Escazú",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2024-02-06T00:00:00",
+    "modified": "2024-02-06T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

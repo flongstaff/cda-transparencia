@@ -170,14 +170,14 @@ const BudgetAnalyticsDashboard: React.FC<BudgetAnalyticsDashboardProps> = ({
                         (budgetForecastData[budgetForecastData.length - 2]?.executed || 0)) >= 0 
                           ? 'bg-green-500' 
                           : 'bg-red-500'
-                      }`} 
+                      )}`} 
                       style={{ 
                         width: `${Math.min(100, 
                           Math.abs(
                             (((budgetForecastData[budgetForecastData.length - 1]?.executed || 0) - 
                             (budgetForecastData[budgetForecastData.length - 2]?.executed || 0)) / 
                             (budgetForecastData[budgetForecastData.length - 2]?.executed || 1))
-                          ) * 100)
+                          ) * 100
                         )}%` 
                       }}
                     ></div>
@@ -205,7 +205,7 @@ const BudgetAnalyticsDashboard: React.FC<BudgetAnalyticsDashboardProps> = ({
                             (budgetForecastData[budgetForecastData.length - 1]?.executed || 0)) / 
                             (budgetForecastData[budgetForecastData.length - 1]?.budgeted || 1)
                           ) * 100
-                        )}%` 
+                        ))}%` 
                       }}
                     ></div>
                   </div>

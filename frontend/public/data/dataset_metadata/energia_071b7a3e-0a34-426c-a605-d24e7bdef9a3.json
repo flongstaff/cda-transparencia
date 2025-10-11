@@ -1,0 +1,42 @@
+{
+  "files": {
+    "exploracin-hidrocarburos-lineas-ssmicas-2d.csv": {
+      "datasetId": "energia_071b7a3e-0a34-426c-a605-d24e7bdef9a3",
+      "datasetTitle": "Exploración de Hidrocarburos -  Inventario de Líneas Sísmicas 2D",
+      "fileName": "exploracin-hidrocarburos-lineas-ssmicas-2d.csv",
+      "format": "CSV",
+      "title": "Exploración Hidrocarburos Lineas Sísmicas 2D",
+      "accessURL": "http://datos.energia.gob.ar/dataset/071b7a3e-0a34-426c-a605-d24e7bdef9a3/resource/fb01c3ae-dc61-4845-885a-457ea9c5f796",
+      "lastProcessed": "2025-10-09T06:36:39.112Z",
+      "status": "processed"
+    },
+    "exploracin-hidrocarburos-lineas-ssmicas-2d.zip": {
+      "datasetId": "energia_071b7a3e-0a34-426c-a605-d24e7bdef9a3",
+      "datasetTitle": "Exploración de Hidrocarburos -  Inventario de Líneas Sísmicas 2D",
+      "fileName": "exploracin-hidrocarburos-lineas-ssmicas-2d.zip",
+      "format": "SHP",
+      "title": "Exploración Hidrocarburos Lineas Sísmicas 2D",
+      "accessURL": "http://datos.energia.gob.ar/dataset/071b7a3e-0a34-426c-a605-d24e7bdef9a3/resource/30038505-6226-4383-b165-d27f5f6dcc9c",
+      "lastProcessed": "2025-10-09T06:36:39.112Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_071b7a3e-0a34-426c-a605-d24e7bdef9a3",
+    "title": "Exploración de Hidrocarburos -  Inventario de Líneas Sísmicas 2D",
+    "description": "Inventario de Sísmicas 2D. ISO 19126: Extraction, Este subgrupo se compone de conceptos que se refieren a la extracción de materias primas y la excavación del suelo.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2020-04-22T17:40:02.318942",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "file_name": "Economic_Report_2021_table_0.csv",
+  "row_count": 5,
+  "column_count": 4,
+  "columns": [
+    "Column_0",
+    "Column_1",
+    "Column_2",
+    "Column_3"
+  ],
+  "sample_data": [
+    {
+      "Column_0": "Indicator",
+      "Column_1": "2021",
+      "Column_2": "2020",
+      "Column_3": "Variation"
+    },
+    {
+      "Column_0": "GDP Growth",
+      "Column_1": "3.2%",
+      "Column_2": "2.8%",
+      "Column_3": "0.4%"
+    },
+    {
+      "Column_0": "Inflation Rate",
+      "Column_1": "7.5%",
+      "Column_2": "8.2%",
+      "Column_3": "-0.7%"
+    },
+    {
+      "Column_0": "Unemployment Rate",
+      "Column_1": "7.1%",
+      "Column_2": "7.8%",
+      "Column_3": "-0.7%"
+    },
+    {
+      "Column_0": "Municipal Revenue Growth",
+      "Column_1": "6.5%",
+      "Column_2": "5.8%",
+      "Column_3": "0.7%"
+    }
+  ],
+  "data_types": {
+    "Column_0": "object",
+    "Column_1": "object",
+    "Column_2": "object",
+    "Column_3": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

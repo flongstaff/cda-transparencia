@@ -1,0 +1,38 @@
+{
+  "files": {
+    "datos-de-fractura-de-pozos-de-hidrocarburos-adjunto-iv-actualizacin-diaria.csv": {
+      "datasetId": "energia_71fa2e84-0316-4a1b-af68-7f35e41f58d7",
+      "datasetTitle": "Datos de fractura de pozos de hidrocarburos (Adjunto IV)",
+      "fileName": "datos-de-fractura-de-pozos-de-hidrocarburos-adjunto-iv-actualizacin-diaria.csv",
+      "format": "CSV",
+      "title": "Datos de fractura de pozos de hidrocarburos (Adjunto IV) - Actualización diaria",
+      "accessURL": "http://datos.energia.gob.ar/dataset/71fa2e84-0316-4a1b-af68-7f35e41f58d7/resource/2280ad92-6ed3-403e-a095-50139863ab0d",
+      "lastProcessed": "2025-10-09T06:31:19.413Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "energia_71fa2e84-0316-4a1b-af68-7f35e41f58d7",
+      "datasetTitle": "Datos de fractura de pozos de hidrocarburos (Adjunto IV)",
+      "lastProcessed": "2025-10-09T06:31:21.385Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_71fa2e84-0316-4a1b-af68-7f35e41f58d7",
+    "title": "Datos de fractura de pozos de hidrocarburos (Adjunto IV)",
+    "description": "Detalle por pozo, formación, tipo de reservorio, yacimiento, concesión y provincia de: longitud de rama horizontal (m), cantidad de etapas de fractura, tipo de terminación, toneladas de arena bombeada nacional e importada (t), agua inyectada (m3), CO2 inyectado (m3), presión máxima (psi), potencia de equipos de fractura (hp), fechas de inicio y fin de fractura, y empresa informante.\r\n\r\nDatos preliminares sujetos a revisión.\r\n",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2019-10-25T16:53:11.167642",
+    "modified": "2024-09-05T07:46:42.404354",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía.  Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/datos-de-fractura-de-pozos-adjunto-iv"
+  }
+}

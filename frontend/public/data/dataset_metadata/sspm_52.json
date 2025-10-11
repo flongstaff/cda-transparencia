@@ -1,0 +1,42 @@
+{
+  "files": {
+    "tasas-asalariados-asalariados-sin-descuento-jubilatorio-eph-anual.csv": {
+      "datasetId": "sspm_52",
+      "datasetTitle": "Tasa de asalarización y de asalariados sin descuento jubilatorio",
+      "fileName": "tasas-asalariados-asalariados-sin-descuento-jubilatorio-eph-anual.csv",
+      "format": "CSV",
+      "title": "Tasa de asalariados y asalariados sin descuento jubilatorio de la EPH. Valores anuales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:09:16.586Z",
+      "status": "processed"
+    },
+    "tasas-asalariados-asalariados-sin-descuento-jubilatorio-eph-trimestral.csv": {
+      "datasetId": "sspm_52",
+      "datasetTitle": "Tasa de asalarización y de asalariados sin descuento jubilatorio",
+      "fileName": "tasas-asalariados-asalariados-sin-descuento-jubilatorio-eph-trimestral.csv",
+      "format": "CSV",
+      "title": "Tasa de asalariados y asalariados sin descuento jubilatorio de la EPH. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:09:17.751Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_52",
+    "title": "Tasa de asalarización y de asalariados sin descuento jubilatorio",
+    "description": "Evolución de la tasa de asalarización y de asalariados sin descuento jubilatorio",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-05-16T21:40:47.933143",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

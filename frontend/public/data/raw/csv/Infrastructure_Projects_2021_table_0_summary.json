@@ -1,0 +1,50 @@
+{
+  "file_name": "Infrastructure_Projects_2021_table_0.csv",
+  "row_count": 4,
+  "column_count": 5,
+  "columns": [
+    "Project",
+    "Status",
+    "Budget",
+    "Executed",
+    "Completion"
+  ],
+  "sample_data": [
+    {
+      "Project": "Road Expansion",
+      "Status": "In Progress",
+      "Budget": "$15,000,000",
+      "Executed": "$12,000,000",
+      "Completion": "80%"
+    },
+    {
+      "Project": "School Renovation",
+      "Status": "Completed",
+      "Budget": "$8,000,000",
+      "Executed": "$8,000,000",
+      "Completion": "100%"
+    },
+    {
+      "Project": "Water System",
+      "Status": "Planning",
+      "Budget": "$20,000,000",
+      "Executed": "$0",
+      "Completion": "0%"
+    },
+    {
+      "Project": "Total",
+      "Status": "-",
+      "Budget": "$43,000,000",
+      "Executed": "$20,000,000",
+      "Completion": "46.5%"
+    }
+  ],
+  "data_types": {
+    "Project": "object",
+    "Status": "object",
+    "Budget": "object",
+    "Executed": "object",
+    "Completion": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

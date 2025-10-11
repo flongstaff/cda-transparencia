@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "seguridad_4",
+      "title": "Estadísticas criminales en la República Argentina. Muertes violentas de mujeres",
+      "distribution": [
+        {
+          "title": "Informe_Muertes_violentas_y_otras_violencias_contra_mujeres_2022.pdf",
+          "format": "PDF",
+          "fileName": "Informe_Muertes_violentas_y_otras_violencias_contra_mujeres_2022.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/seguridad_4/Informe_Muertes_violentas_y_otras_violencias_contra_mujeres_2022.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/seguridad_4/Informe_Muertes_violentas_y_otras_violencias_contra_mujeres_2022_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

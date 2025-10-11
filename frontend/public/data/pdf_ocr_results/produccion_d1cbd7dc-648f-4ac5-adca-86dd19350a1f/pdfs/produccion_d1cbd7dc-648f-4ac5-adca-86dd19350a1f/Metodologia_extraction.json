@@ -1,0 +1,11 @@
+{
+  "page_count": 1,
+  "text_length": 0,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "failed",
+  "error": "EOF marker not found"
+}

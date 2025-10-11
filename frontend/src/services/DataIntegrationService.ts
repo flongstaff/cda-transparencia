@@ -161,6 +161,34 @@ class DataIntegrationService {
 
       console.log(`🌐 Loading external API data for year ${year}...`);
 
+      // Try to load from Cloudflare Workers API first
+      let cloudflareData = null;
+      try {
+        const cloudflareResponse = await fetch(`https://cda-transparencia-api.flongstaff.workers.dev/api/data/${year}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (cloudflareResponse.ok) {
+          cloudflareData = await cloudflareResponse.json();
+          console.log(`✅ Cloudflare Workers data loaded for year ${year}`);
+          
+          return {
+            name: 'Cloudflare Workers API',
+            data: cloudflareData,
+            success: true,
+            timestamp: new Date().toISOString(),
+            source_type: 'external'
+          };
+        }
+      } catch (cloudflareError) {
+        console.log(`⚠️ Cloudflare Workers API not available:`, cloudflareError.message);
+      }
+
+      // If Cloudflare Workers API failed, try the external API services
       const [carmenData, nationalData, geoData] = await Promise.allSettled([
         externalAPIsService.getCarmenDeArecoData(),
         externalAPIsService.getNationalBudgetData(),
@@ -267,17 +295,29 @@ class DataIntegrationService {
       console.log(`📊 Loading local CSV data for year ${year}...`);
 
       const csvFiles = [
-        'Budget_Execution_consolidated_2019-2025.csv',
-        'Personnel_Expenses_consolidated_2019-2025.csv',
-        'Revenue_Report_consolidated_2019-2025.csv',
-        'Debt_Report_consolidated_2019-2025.csv'
+        'budget_execution_2019.csv',
+        'Budget_Execution_2021_table_0.csv',
+        'Personnel_Expenses_2019_table_0.csv',
+        'Revenue_Report_2025_table_0.csv',
+        'Debt_Report_2025_table_0.csv',
+        'Economic_Report_2020_table_0.csv',
+        'Fiscal_Balance_Report_2020_table_0.csv'
       ];
 
       const csvData: any = {};
 
       for (const file of csvFiles) {
         try {
-          const response = await fetch(`/data/charts/${file}`);
+          // First try the charts directory (original path)
+          let response = await fetch(`/data/charts/${file}`);
+          if (!response.ok) {
+            // If not found in charts, try raw/csv directory
+            response = await fetch(`/data/raw/csv/${file}`);
+            if (!response.ok) {
+              // If not found in raw/csv, try processed/csv directory
+              response = await fetch(`/data/processed/csv/${file}`);
+            }
+          }
           if (response.ok) {
             const csvText = await response.text();
             const parsed = Papa.parse(csvText, { header: true, skipEmptyLines: true });

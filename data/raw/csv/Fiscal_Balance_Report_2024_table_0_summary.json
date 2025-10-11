@@ -1,0 +1,50 @@
+{
+  "file_name": "Fiscal_Balance_Report_2024_table_0.csv",
+  "row_count": 5,
+  "column_count": 4,
+  "columns": [
+    "Column_0",
+    "Column_1",
+    "Column_2",
+    "Column_3"
+  ],
+  "sample_data": [
+    {
+      "Column_0": "Category",
+      "Column_1": "2024",
+      "Column_2": "2023",
+      "Column_3": "Variation"
+    },
+    {
+      "Column_0": "Total Revenue",
+      "Column_1": "$330,000,000",
+      "Column_2": "$310,000,000",
+      "Column_3": "6.5%"
+    },
+    {
+      "Column_0": "Total Expenditure",
+      "Column_1": "$315,000,000",
+      "Column_2": "$300,000,000",
+      "Column_3": "5.0%"
+    },
+    {
+      "Column_0": "Fiscal Balance",
+      "Column_1": "$15,000,000",
+      "Column_2": "$10,000,000",
+      "Column_3": "50.0%"
+    },
+    {
+      "Column_0": "Balance % Revenue",
+      "Column_1": "4.5%",
+      "Column_2": "3.2%",
+      "Column_3": "40.6%"
+    }
+  ],
+  "data_types": {
+    "Column_0": "object",
+    "Column_1": "object",
+    "Column_2": "object",
+    "Column_3": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

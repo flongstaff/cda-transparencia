@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_a9767469-d903-4158-aa76-b21dd37e8aff",
+      "datasetTitle": "Estadística de mediaciones prejudiciales y judiciales",
+      "format": "ZIP",
+      "title": "Estadística de mediaciones prejudiciales y judiciales - 2017",
+      "accessURL": "https://datos.jus.gob.ar/dataset/a9767469-d903-4158-aa76-b21dd37e8aff/resource/433e320d-fea5-45ab-ad10-77e788573f1e",
+      "lastProcessed": "2025-10-09T06:32:26.031Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_a9767469-d903-4158-aa76-b21dd37e8aff",
+    "title": "Estadística de mediaciones prejudiciales y judiciales",
+    "description": "Cantidad de mediaciones prejudiciales y judiciales registradas en el Sistema MEPRE.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2016-07-12T13:51:29.820576",
+    "modified": "2025-10-01T15:36:42.319559",
+    "publisher": {
+      "mbox": "allamosa@jus.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Acceso a la Justicia. Dirección Nacional de Mediación y Métodos Participativos de Resolución de Conflictos"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/estadistica-mediaciones-prejudiciales-y-judiciales"
+  }
+}

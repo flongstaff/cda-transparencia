@@ -1,0 +1,314 @@
+{
+  "files": {
+    "viajeros-hospedados-residentes-y-no-residentes.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "viajeros-hospedados-residentes-y-no-residentes.csv",
+      "format": "CSV",
+      "title": "Viajeros hospedados en hoteles y parahoteles según tipo de residencia",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/d1624c27-4b0d-4b73-b0f8-e7db5c56386f",
+      "lastProcessed": "2025-10-09T06:18:49.032Z",
+      "status": "processed"
+    },
+    "viajeros-hospedados-residentes-y-no-residentes-por-destino.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "viajeros-hospedados-residentes-y-no-residentes-por-destino.csv",
+      "format": "CSV",
+      "title": "Viajeros hospedados en hoteles y parahoteles por región de destino según tipo de residencia",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/1f6b78aa-d3b4-440a-bd7d-30d76e1728aa",
+      "lastProcessed": "2025-10-09T06:18:53.285Z",
+      "status": "processed"
+    },
+    "pernoctes-residentes-y-no-residentes.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "pernoctes-residentes-y-no-residentes.csv",
+      "format": "CSV",
+      "title": "Pernoctes en hoteles y parahoteles según tipo de residencia",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/86098160-840e-4191-a0fc-b3923bf2b0b0",
+      "lastProcessed": "2025-10-09T06:18:57.429Z",
+      "status": "processed"
+    },
+    "pernoctes-residentes-y-no-residentes-por-destino.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "pernoctes-residentes-y-no-residentes-por-destino.csv",
+      "format": "CSV",
+      "title": "Pernoctes en hoteles y parahoteles por región de destino según tipo de residencia",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/a54e2f69-a5b1-42b4-a7bb-ead40338c28f",
+      "lastProcessed": "2025-10-09T06:19:01.560Z",
+      "status": "processed"
+    },
+    "estadia-media-residentes-y-no-residentes.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "estadia-media-residentes-y-no-residentes.csv",
+      "format": "CSV",
+      "title": "Estadía media de los viajeros hospedados en hoteles y parahoteles según tipo de residencia",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/eace228a-aeb6-466d-9d13-49823e1a9ff3",
+      "lastProcessed": "2025-10-09T06:19:05.360Z",
+      "status": "processed"
+    },
+    "estadia-media-residentes-y-no-residentes-por-destino.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "estadia-media-residentes-y-no-residentes-por-destino.csv",
+      "format": "CSV",
+      "title": "Estadía media en hoteles y parahoteles por región de destino según tipo de residencia",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/46a0b45c-9f22-455a-9328-6c8bd51710b2",
+      "lastProcessed": "2025-10-09T06:19:08.653Z",
+      "status": "processed"
+    },
+    "eoh-data-.pdf": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "eoh-data-.pdf",
+      "format": "PDF",
+      "title": "Ficha Técnica: EOH",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/c9307d07-4f64-4b76-a189-468aba1d2caf",
+      "lastProcessed": "2025-10-09T06:19:12.527Z",
+      "status": "processed"
+    },
+    "tasas-de-ocupacion-plazas-por-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "tasas-de-ocupacion-plazas-por-categoria.csv",
+      "format": "CSV",
+      "title": "Tasa de ocupación de plazas por tipo de categoría de alojamiento",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/7f68d6ee-fece-471a-b92c-5f04cd3706b1",
+      "lastProcessed": "2025-10-09T06:19:15.864Z",
+      "status": "processed"
+    },
+    "tasas-de-ocupacion-plazas-por-region-y-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "tasas-de-ocupacion-plazas-por-region-y-categoria.csv",
+      "format": "CSV",
+      "title": "Tasa de ocupación de plazas por región de destino según tipo de categoría de alojamiento",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/ffc7f951-dd04-4796-a1e9-b75908163285",
+      "lastProcessed": "2025-10-09T06:19:19.164Z",
+      "status": "processed"
+    },
+    "serie-tiempo-eoh-mensual.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "serie-tiempo-eoh-mensual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo - Mensual",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/a8b3a099-f9e5-4bdf-826a-9ff17a730be7",
+      "lastProcessed": "2025-10-09T06:19:24.072Z",
+      "status": "processed"
+    },
+    "tasas-de-ocupacion-habitacion-por-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "tasas-de-ocupacion-habitacion-por-categoria.csv",
+      "format": "CSV",
+      "title": "Tasa de ocupación de habitaciones por tipo de categoría de alojamiento",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/81cfbbee-4485-4a40-a31b-c98382100f3d",
+      "lastProcessed": "2025-10-09T06:19:27.432Z",
+      "status": "processed"
+    },
+    "tasas-de-ocupacion-habitacion-por-region-y-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "tasas-de-ocupacion-habitacion-por-region-y-categoria.csv",
+      "format": "CSV",
+      "title": "Tasa de ocupación de habitaciones por región de destino según tipo de categoría de alojamiento",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/e465c1a9-1564-4747-9500-3bf6aa36b87a",
+      "lastProcessed": "2025-10-09T06:19:30.701Z",
+      "status": "processed"
+    },
+    "facturacion-total-en-pesos.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "facturacion-total-en-pesos.csv",
+      "format": "CSV",
+      "title": "Facturación total en hoteles y parahoteles",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/c60b1deb-aed7-42a9-b39e-4395d421a65a",
+      "lastProcessed": "2025-10-09T06:19:33.893Z",
+      "status": "processed"
+    },
+    "facturacion-total-en-pesos-por-region-y-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "facturacion-total-en-pesos-por-region-y-categoria.csv",
+      "format": "CSV",
+      "title": "Facturación total en hoteles y parahoteles por categoría del alojamiento según región de destino",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/bae842e8-6555-4390-b854-7b533c4c6bdc",
+      "lastProcessed": "2025-10-09T06:19:37.272Z",
+      "status": "processed"
+    },
+    "ingresos-por-habitacion-disponible-en-usd-por-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "ingresos-por-habitacion-disponible-en-usd-por-categoria.csv",
+      "format": "CSV",
+      "title": "Ingresos por habitación disponible en USD por categoría del alojamiento",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/b773fa8a-0839-4a46-98f0-b583327ebffc",
+      "lastProcessed": "2025-10-09T06:19:40.658Z",
+      "status": "processed"
+    },
+    "ingresos-por-habitacion-disponible-en-usd-por-region-y-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "ingresos-por-habitacion-disponible-en-usd-por-region-y-categoria.csv",
+      "format": "CSV",
+      "title": "Ingresos por habitación disponible en USD por categoría del alojamiento  según región de destino",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/97e8eea7-e7dc-452b-bd8c-c22b6efebbd1",
+      "lastProcessed": "2025-10-09T06:19:44.026Z",
+      "status": "processed"
+    },
+    "tarifa-media-diaria-en-usd-por-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "tarifa-media-diaria-en-usd-por-categoria.csv",
+      "format": "CSV",
+      "title": "Tarifa media diaria en USD por categoría del alojamiento",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/3b9dbd16-cbf7-43e5-9679-ce6c550eff90",
+      "lastProcessed": "2025-10-09T06:19:47.412Z",
+      "status": "processed"
+    },
+    "tarifa-media-diaria-en-usd-por-region-y-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "tarifa-media-diaria-en-usd-por-region-y-categoria.csv",
+      "format": "CSV",
+      "title": "Tarifa media diaria en USD por categoría del alojamiento según región de destino",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/d3aece2a-431d-4165-9623-6b8ce38dca02",
+      "lastProcessed": "2025-10-09T06:19:50.746Z",
+      "status": "processed"
+    },
+    "puestos-de-trabajo-equivalentes-totales.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "puestos-de-trabajo-equivalentes-totales.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo equivalentes en hoteles y parahoteles",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/72a85e1d-2f37-4338-95b8-a1ddceb5c859",
+      "lastProcessed": "2025-10-09T06:19:54.155Z",
+      "status": "processed"
+    },
+    "puestos-de-trabajo-equivalentes-totales-por-region-y-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "puestos-de-trabajo-equivalentes-totales-por-region-y-categoria.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo equivalentes en hoteles y parahoteles por categoría del alojamiento según región de destino",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/76a8cfed-89f7-4cc0-baf4-9a2f2374fa5e",
+      "lastProcessed": "2025-10-09T06:19:57.364Z",
+      "status": "processed"
+    },
+    "establecimientos-abiertos-covid-por-region.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "establecimientos-abiertos-covid-por-region.csv",
+      "format": "CSV",
+      "title": "Establecimientos que permanecieron abiertos afectados a la COVID 19",
+      "accessURL": "http://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/36775b32-0c74-4c35-ae06-6fdd53761b48",
+      "lastProcessed": "2025-10-09T06:20:01.446Z",
+      "status": "processed"
+    },
+    "puestos-de-trabajo-totales.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "puestos-de-trabajo-totales.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo en hoteles y parahoteles",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/5b33e730-2ec7-4d3b-bef3-00a03b530292",
+      "lastProcessed": "2025-10-09T06:20:04.824Z",
+      "status": "processed"
+    },
+    "puestos-de-trabajo-totales-por-region-y-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "puestos-de-trabajo-totales-por-region-y-categoria.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo en hoteles y parahoteles por categoría del alojamiento según región de destino",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/29f52b38-6d09-462d-b200-f1eab9703b79",
+      "lastProcessed": "2025-10-09T06:20:08.974Z",
+      "status": "processed"
+    },
+    "pernoctes_por_localidad_segun_residencia.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "pernoctes_por_localidad_segun_residencia.csv",
+      "format": "CSV",
+      "title": "Pernoctaciones en hoteles y parahoteles por localidad de destino según tipo de residencia",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/7b6ba47f-4aa9-4743-96be-d0e6157cfc5e",
+      "lastProcessed": "2025-10-09T06:20:12.303Z",
+      "status": "processed"
+    },
+    "viajeros_por_localidad_segun_residencia.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "viajeros_por_localidad_segun_residencia.csv",
+      "format": "CSV",
+      "title": "Viajeros hospedados en hoteles y parahoteles por localidad de destino según tipo de residencia",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/57b5deae-026e-4413-9f90-89a428496bfb",
+      "lastProcessed": "2025-10-09T06:20:15.669Z",
+      "status": "processed"
+    },
+    "ingresos-por-habitacion-disponible-por-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "ingresos-por-habitacion-disponible-por-categoria.csv",
+      "format": "CSV",
+      "title": "Ingresos por habitación disponible en pesos por categoría del alojamiento",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/61d3ddc5-3554-4a21-a55b-00228ca2efa5",
+      "lastProcessed": "2025-10-09T06:20:19.044Z",
+      "status": "processed"
+    },
+    "ingresos-por-habitacion-disponible-por-region-y-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "ingresos-por-habitacion-disponible-por-region-y-categoria.csv",
+      "format": "CSV",
+      "title": "Ingresos por habitación disponible en pesos por categoría del alojamiento según región de destino",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/4e0dd9b1-8f06-48c3-9645-e394fb6d9db5",
+      "lastProcessed": "2025-10-09T06:20:22.425Z",
+      "status": "processed"
+    },
+    "tarifa-media-diaria-por-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "tarifa-media-diaria-por-categoria.csv",
+      "format": "CSV",
+      "title": "Tarifa media diaria en pesos por categoría del alojamiento",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/08762488-c267-4c83-b8fc-aa12fca1c60d",
+      "lastProcessed": "2025-10-09T06:20:25.773Z",
+      "status": "processed"
+    },
+    "tarifa-media-diaria-por-region-y-categoria.csv": {
+      "datasetId": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "datasetTitle": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "fileName": "tarifa-media-diaria-por-region-y-categoria.csv",
+      "format": "CSV",
+      "title": "Tarifa media diaria en pesos por categoría del alojamiento según región de destino",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/93db331e-6970-4d74-8589-c1223ac9c282/resource/43519401-66e0-4bc1-9ac8-1a3feedb83f8",
+      "lastProcessed": "2025-10-09T06:20:29.110Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+    "title": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+    "description": "Operativo de encuesta continuo desde el año 2004 realizado conjuntamente el INDEC y la Subsecretaría de Turismo. Refiere a estadísticas de la actividad de los establecimientos hoteleros y parahoteleros del país: viajeros hospedados, pernoctaciones (noches) de turistas residentes y no residentes,  estadía media, tasas de ocupación en habitaciones y en plazas, tarifa media diaria, ingresos por habitación disponible, puestos de trabajo equivalente y facturación total.",
+    "theme": [
+      "gove",
+      "soci"
+    ],
+    "superTheme": [
+      "GOVE",
+      "SOCI"
+    ],
+    "issued": "2020-12-28T21:16:56.174094",
+    "modified": "2024-07-24T15:35:54.367094",
+    "publisher": {
+      "mbox": "estadistica@turismo.gob.ar",
+      "name": "Subsecretaría de Turismo. Dirección Nacional de Mercados y Estadística"
+    },
+    "landingPage": "http://datos.yvera.gob.ar/dataset/encuesta-ocupacion-hotelera-parahotelera-eoh"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "file_name": "2019_revenue_sources_evolution.csv",
+  "row_count": 6,
+  "column_count": 3,
+  "columns": [
+    "year",
+    "impuestos",
+    "tasas"
+  ],
+  "sample_data": [
+    {
+      "year": 2017,
+      "impuestos": 900000000.0,
+      "tasas": 200000000.0
+    },
+    {
+      "year": 2018,
+      "impuestos": 1050000000.0,
+      "tasas": 220000000.0
+    },
+    {
+      "year": 2019,
+      "impuestos": 1200000000.0,
+      "tasas": 240000000.0
+    },
+    {
+      "year": 2019,
+      "impuestos": NaN,
+      "tasas": NaN
+    },
+    {
+      "year": 2024,
+      "impuestos": NaN,
+      "tasas": NaN
+    }
+  ],
+  "data_types": {
+    "year": "int64",
+    "impuestos": "float64",
+    "tasas": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

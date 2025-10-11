@@ -1,0 +1,74 @@
+{
+  "files": {
+    "reclamos_prestadoras_2022.csv": {
+      "datasetId": "enargas_b4d85de6-21f0-4597-998f-5dd69c82c54f",
+      "datasetTitle": "Reclamos resueltos por las Distribuidoras de gas natural",
+      "fileName": "reclamos_prestadoras_2022.csv",
+      "format": "CSV",
+      "title": "Reclamos de Distribuidoras resueltos en 2022",
+      "accessURL": "https://transparencia.enargas.gov.ar/dataset/b4d85de6-21f0-4597-998f-5dd69c82c54f/resource/5107413d-bd05-4b1a-9e68-b125b576a0cf",
+      "lastProcessed": "2025-10-09T08:03:51.167Z",
+      "status": "processed"
+    },
+    "reclamos_prestadoras_2021.csv": {
+      "datasetId": "enargas_b4d85de6-21f0-4597-998f-5dd69c82c54f",
+      "datasetTitle": "Reclamos resueltos por las Distribuidoras de gas natural",
+      "fileName": "reclamos_prestadoras_2021.csv",
+      "format": "CSV",
+      "title": "Reclamos de Distribuidoras resueltos en 2021",
+      "accessURL": "https://transparencia.enargas.gov.ar/dataset/b4d85de6-21f0-4597-998f-5dd69c82c54f/resource/0531f67a-5635-43fc-ab22-30d427c183a7",
+      "lastProcessed": "2025-10-09T08:03:53.639Z",
+      "status": "processed"
+    },
+    "reclamos_prestadoras_2020.csv": {
+      "datasetId": "enargas_b4d85de6-21f0-4597-998f-5dd69c82c54f",
+      "datasetTitle": "Reclamos resueltos por las Distribuidoras de gas natural",
+      "fileName": "reclamos_prestadoras_2020.csv",
+      "format": "CSV",
+      "title": "Reclamos de Distribuidoras resueltos en 2020",
+      "accessURL": "https://transparencia.enargas.gov.ar/dataset/b4d85de6-21f0-4597-998f-5dd69c82c54f/resource/7e1ff68b-6906-4e78-964c-22d705e51c69",
+      "lastProcessed": "2025-10-09T08:03:56.146Z",
+      "status": "processed"
+    },
+    "reclamos_prestadoras_2019.csv": {
+      "datasetId": "enargas_b4d85de6-21f0-4597-998f-5dd69c82c54f",
+      "datasetTitle": "Reclamos resueltos por las Distribuidoras de gas natural",
+      "fileName": "reclamos_prestadoras_2019.csv",
+      "format": "CSV",
+      "title": "Reclamos de Distribuidoras resueltos en 2019",
+      "accessURL": "https://transparencia.enargas.gov.ar/dataset/b4d85de6-21f0-4597-998f-5dd69c82c54f/resource/1faa9ba2-26f1-47c3-a3f0-a92b80775c4f",
+      "lastProcessed": "2025-10-09T08:03:58.658Z",
+      "status": "processed"
+    },
+    "reclamos_prestadoras_2018.csv": {
+      "datasetId": "enargas_b4d85de6-21f0-4597-998f-5dd69c82c54f",
+      "datasetTitle": "Reclamos resueltos por las Distribuidoras de gas natural",
+      "fileName": "reclamos_prestadoras_2018.csv",
+      "format": "CSV",
+      "title": "Reclamos de Distribuidoras resueltos en 2018",
+      "accessURL": "https://transparencia.enargas.gov.ar/dataset/b4d85de6-21f0-4597-998f-5dd69c82c54f/resource/b9f0e8d1-1994-473d-b128-6f82888734f2",
+      "lastProcessed": "2025-10-09T08:04:01.141Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "enargas_b4d85de6-21f0-4597-998f-5dd69c82c54f",
+    "title": "Reclamos resueltos por las Distribuidoras de gas natural",
+    "description": "Incluye el total de reclamos resueltos por Prestadoras del servicio de distribución de gas natural, Grupo, Vía de ingreso, Clasificación, Provincia y Mes/Año.",
+    "theme": [
+      "ener",
+      "gove"
+    ],
+    "superTheme": [
+      "ENER",
+      "GOVE"
+    ],
+    "issued": "2019-11-13T15:10:11.942051",
+    "modified": "2022-07-29T14:49:37.332011",
+    "publisher": {
+      "mbox": "msvesprini@enargas.gov.ar",
+      "name": "Gerencia de Protección del Usuario (GPU)"
+    },
+    "landingPage": "https://transparencia.enargas.gov.ar/dataset/reclamos-resueltos-distribuidoras-gas-natural"
+  }
+}

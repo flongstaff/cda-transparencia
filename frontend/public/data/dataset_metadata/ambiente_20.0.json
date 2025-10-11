@@ -1,0 +1,51 @@
+{
+  "files": {
+    "APRI_b_resbiosf_2025": {
+      "datasetId": "ambiente_20.0",
+      "datasetTitle": "Áreas protegidas de categoría internacional",
+      "fileName": "APRI_b_resbiosf_2025",
+      "format": "CSV",
+      "title": "Reservas de biosfera en Argentina",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=22&did=60",
+      "lastProcessed": "2025-10-09T06:57:04.977Z",
+      "status": "processed"
+    },
+    "APRI_a_redresbiosf_gestion": {
+      "datasetId": "ambiente_20.0",
+      "datasetTitle": "Áreas protegidas de categoría internacional",
+      "fileName": "APRI_a_redresbiosf_gestion",
+      "format": "CSV",
+      "title": "Gestion de Reservas de Biosfera",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=22&did=176",
+      "lastProcessed": "2025-10-09T06:57:06.473Z",
+      "status": "processed"
+    },
+    "APRTI_sitiosramsar_pcia_superf_AgH": {
+      "datasetId": "ambiente_20.0",
+      "datasetTitle": "Áreas protegidas de categoría internacional",
+      "fileName": "APRTI_sitiosramsar_pcia_superf_AgH",
+      "format": "CSV",
+      "title": "Sitios Ramsar de Argentina",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=22&did=128",
+      "lastProcessed": "2025-10-09T06:57:07.727Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_20.0",
+    "title": "Áreas protegidas de categoría internacional",
+    "description": "Muestra las reservas de Biósfera y los sitios Ramsar",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2022-08-04T00:00:00",
+    "modified": "2022-08-04T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

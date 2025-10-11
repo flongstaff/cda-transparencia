@@ -1,0 +1,52 @@
+{
+  "files": {
+    "exportaciones-actividad-saldocomercial-rangos-exportacion-empresa-exportadora-anual.csv": {
+      "datasetId": "sspm_364",
+      "datasetTitle": "Producción y consumo de gas natural",
+      "fileName": "exportaciones-actividad-saldocomercial-rangos-exportacion-empresa-exportadora-anual.csv",
+      "format": "CSV",
+      "title": "Exportaciones por sector de actividad, saldo comercial y rangos de exportación de la empresa exportadora. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:03.979Z",
+      "status": "processed"
+    },
+    "exportaciones-actividad-saldocomercial-rangos-exportacion-empresa-exportadora-trimestral.csv": {
+      "datasetId": "sspm_364",
+      "datasetTitle": "Producción y consumo de gas natural",
+      "fileName": "exportaciones-actividad-saldocomercial-rangos-exportacion-empresa-exportadora-trimestral.csv",
+      "format": "CSV",
+      "title": "Exportaciones por sector de actividad, saldo comercial y rangos de exportación de la empresa exportadora. Datos trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:05.037Z",
+      "status": "processed"
+    },
+    "exportaciones-actividad-saldocomercial-rangos-exportacion-empresa-exportadora-mensual.csv": {
+      "datasetId": "sspm_364",
+      "datasetTitle": "Producción y consumo de gas natural",
+      "fileName": "exportaciones-actividad-saldocomercial-rangos-exportacion-empresa-exportadora-mensual.csv",
+      "format": "CSV",
+      "title": "Exportaciones por sector de actividad, saldo comercial y rangos de exportación de la empresa exportadora. Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:06.095Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_364",
+    "title": "Producción y consumo de gas natural",
+    "description": "Datos producción y  Consumo de Gas Natural",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-12-20",
+    "modified": "2025-03-24T10:01:12.591687",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

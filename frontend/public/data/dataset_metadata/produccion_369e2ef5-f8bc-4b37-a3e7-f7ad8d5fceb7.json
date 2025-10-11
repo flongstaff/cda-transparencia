@@ -1,0 +1,84 @@
+{
+  "files": {
+    "empresas-mas-innovadoras-del-sector-tecnologico.xlsx": {
+      "datasetId": "produccion_369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7",
+      "datasetTitle": "Innovación productiva: empresas que más invierten en I+D a nivel mundial",
+      "fileName": "empresas-mas-innovadoras-del-sector-tecnologico.xlsx",
+      "format": "XLS",
+      "title": "Empresas más innovadoras del sector tecnológico",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7/resource/d8a3b5c6-7037-4372-b0e0-c73b3052dcb4",
+      "lastProcessed": "2025-10-09T08:05:28.620Z",
+      "status": "processed"
+    },
+    "empresas-mas-innovadoras-del-sector-salud.xlsx": {
+      "datasetId": "produccion_369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7",
+      "datasetTitle": "Innovación productiva: empresas que más invierten en I+D a nivel mundial",
+      "fileName": "empresas-mas-innovadoras-del-sector-salud.xlsx",
+      "format": "XLS",
+      "title": "Empresas más innovadoras del sector salud",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7/resource/604b2540-9383-45bc-add5-c140919c564c",
+      "lastProcessed": "2025-10-09T08:05:28.620Z",
+      "status": "processed"
+    },
+    "empresas-mas-innovadoras-del-sector-de-bienes-y-servicios-industriales.xlsx": {
+      "datasetId": "produccion_369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7",
+      "datasetTitle": "Innovación productiva: empresas que más invierten en I+D a nivel mundial",
+      "fileName": "empresas-mas-innovadoras-del-sector-de-bienes-y-servicios-industriales.xlsx",
+      "format": "XLS",
+      "title": "Empresas más innovadoras del sector de bienes y servicios industriales",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7/resource/0f6f1310-5e4d-4517-ac56-fda43848362c",
+      "lastProcessed": "2025-10-09T08:05:28.621Z",
+      "status": "processed"
+    },
+    "empresas-mas-innovadoras-del-sector-automotriz.xlsx": {
+      "datasetId": "produccion_369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7",
+      "datasetTitle": "Innovación productiva: empresas que más invierten en I+D a nivel mundial",
+      "fileName": "empresas-mas-innovadoras-del-sector-automotriz.xlsx",
+      "format": "XLS",
+      "title": "Empresas más innovadoras del sector automotriz",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7/resource/78405df7-dd9d-4bc0-9065-7cab0f48b863",
+      "lastProcessed": "2025-10-09T08:05:28.621Z",
+      "status": "processed"
+    },
+    "empresas-mas-innovadoras-del-sector-de-bienes-y-servicios-finales.xlsx": {
+      "datasetId": "produccion_369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7",
+      "datasetTitle": "Innovación productiva: empresas que más invierten en I+D a nivel mundial",
+      "fileName": "empresas-mas-innovadoras-del-sector-de-bienes-y-servicios-finales.xlsx",
+      "format": "XLS",
+      "title": "Empresas más innovadoras del sector de bienes y servicios finales",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7/resource/3d5a2d4e-caea-4aa0-870b-9037b22edec8",
+      "lastProcessed": "2025-10-09T08:05:28.621Z",
+      "status": "processed"
+    },
+    "las-50-empresas-mas-innovadoras-entre-2013-y-2019.xlsx": {
+      "datasetId": "produccion_369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7",
+      "datasetTitle": "Innovación productiva: empresas que más invierten en I+D a nivel mundial",
+      "fileName": "las-50-empresas-mas-innovadoras-entre-2013-y-2019.xlsx",
+      "format": "XLS",
+      "title": "Las 50 empresas más innovadoras entre 2013 y 2019",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7/resource/64aa7c24-2adc-46f1-b60d-1d34e2c7dbee",
+      "lastProcessed": "2025-10-09T08:05:28.621Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_369e2ef5-f8bc-4b37-a3e7-f7ad8d5fceb7",
+    "title": "Innovación productiva: empresas que más invierten en I+D a nivel mundial",
+    "description": "Monto acumulado de inversión en I+D y distribución porcentual anual de la inversión en I+D de las empresas más innovadoras en distintos sectores productivos entre 2013 y 2019",
+    "theme": [
+      "tech",
+      "econ"
+    ],
+    "superTheme": [
+      "ECON",
+      "TECH"
+    ],
+    "issued": "2021-10-12T10:56:45.121041",
+    "modified": "2021-10-12T10:56:45.121041",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la Producción (CEP XXI)"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/empresas-mas-innovadoras-a-nivel-mundial"
+  }
+}

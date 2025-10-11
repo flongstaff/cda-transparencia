@@ -1,0 +1,31 @@
+{
+  "files": {
+    "ORDENANZA-IMPOSITIVA-3202-24.pdf": {
+      "datasetId": "ds-ordenanza-impositiva-2024",
+      "datasetTitle": "Ordenanza Impositiva 2024",
+      "fileName": "ORDENANZA-IMPOSITIVA-3202-24.pdf",
+      "format": "PDF",
+      "title": "Ordenanza Impositiva 3202/24",
+      "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-IMPOSITIVA-3202-24.pdf",
+      "lastProcessed": "2025-10-09T06:13:47.846Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ds-ordenanza-impositiva-2024",
+    "title": "Ordenanza Impositiva 2024",
+    "description": "Ordenanza impositiva 3202/24, con rubros comerciales, servicios e industriales.",
+    "theme": [
+      "economia-y-finanzas"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2024-01-01T00:00:00",
+    "modified": "2024-03-01T00:00:00",
+    "publisher": {
+      "name": "Secretaría de Hacienda"
+    },
+    "landingPage": "https://carmendeareco.gob.ar/transparencia/ordenanzas-fiscales/"
+  }
+}

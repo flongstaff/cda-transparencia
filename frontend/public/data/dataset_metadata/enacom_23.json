@@ -1,0 +1,122 @@
+{
+  "files": {
+    "Telefonía Fija Accesos Provincias.xls": {
+      "datasetId": "enacom_23",
+      "datasetTitle": "Telefonía Fija",
+      "fileName": "Telefonía Fija Accesos Provincias.xls",
+      "format": "XLS",
+      "title": "Telefonía Fija Accesos Provincias-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TelefoniaFija/accesos-provincias",
+      "lastProcessed": "2025-10-09T06:28:21.305Z",
+      "status": "processed"
+    },
+    "Telefonía Fija Accesos Provincias.csv": {
+      "datasetId": "enacom_23",
+      "datasetTitle": "Telefonía Fija",
+      "fileName": "Telefonía Fija Accesos Provincias.csv",
+      "format": "CSV",
+      "title": "Telefonía Fija Accesos Provincias-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TelefoniaFija/accesos-provincias",
+      "lastProcessed": "2025-10-09T06:28:23.135Z",
+      "status": "processed"
+    },
+    "Telefonía Fija Accesos Totales.xls": {
+      "datasetId": "enacom_23",
+      "datasetTitle": "Telefonía Fija",
+      "fileName": "Telefonía Fija Accesos Totales.xls",
+      "format": "XLS",
+      "title": "Telefonía Fija Accesos Totales-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TelefoniaFija/accesos-totales",
+      "lastProcessed": "2025-10-09T06:28:23.135Z",
+      "status": "processed"
+    },
+    "Telefonía Fija Accesos Totales.csv": {
+      "datasetId": "enacom_23",
+      "datasetTitle": "Telefonía Fija",
+      "fileName": "Telefonía Fija Accesos Totales.csv",
+      "format": "CSV",
+      "title": "Telefonía Fija Accesos Totales-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TelefoniaFija/accesos-totales",
+      "lastProcessed": "2025-10-09T06:28:24.262Z",
+      "status": "processed"
+    },
+    "Telefonía Fija Ingresos .xls": {
+      "datasetId": "enacom_23",
+      "datasetTitle": "Telefonía Fija",
+      "fileName": "Telefonía Fija Ingresos .xls",
+      "format": "XLS",
+      "title": "Telefonía Fija Ingresos-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TelefoniaFija/ingresos",
+      "lastProcessed": "2025-10-09T06:28:24.262Z",
+      "status": "processed"
+    },
+    "Telefonía Fija Ingresos .csv": {
+      "datasetId": "enacom_23",
+      "datasetTitle": "Telefonía Fija",
+      "fileName": "Telefonía Fija Ingresos .csv",
+      "format": "CSV",
+      "title": "Telefonía Fija Ingresos-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TelefoniaFija/ingresos",
+      "lastProcessed": "2025-10-09T06:28:25.324Z",
+      "status": "processed"
+    },
+    "Telefonía Fija Penetración Provincias.xls": {
+      "datasetId": "enacom_23",
+      "datasetTitle": "Telefonía Fija",
+      "fileName": "Telefonía Fija Penetración Provincias.xls",
+      "format": "XLS",
+      "title": "Telefonía Fija Penetracion Provincias-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TelefoniaFija/penetracion-provincias",
+      "lastProcessed": "2025-10-09T06:28:25.324Z",
+      "status": "processed"
+    },
+    "Telefonía Fija Penetración Provincias.csv": {
+      "datasetId": "enacom_23",
+      "datasetTitle": "Telefonía Fija",
+      "fileName": "Telefonía Fija Penetración Provincias.csv",
+      "format": "CSV",
+      "title": "Telefonía Fija Penetracion Provincias-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TelefoniaFija/penetracion-provincias",
+      "lastProcessed": "2025-10-09T06:28:26.794Z",
+      "status": "processed"
+    },
+    "Telefonía Fija Penetración Totales.xls": {
+      "datasetId": "enacom_23",
+      "datasetTitle": "Telefonía Fija",
+      "fileName": "Telefonía Fija Penetración Totales.xls",
+      "format": "XLS",
+      "title": "Telefonía Fija Penetracion Totales-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TelefoniaFija/penetracion-totales",
+      "lastProcessed": "2025-10-09T06:28:26.794Z",
+      "status": "processed"
+    },
+    "Telefonía Fija Penetración Totales.csv": {
+      "datasetId": "enacom_23",
+      "datasetTitle": "Telefonía Fija",
+      "fileName": "Telefonía Fija Penetración Totales.csv",
+      "format": "CSV",
+      "title": "Telefonía Fija Penetracion Totales-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TelefoniaFija/penetracion-totales",
+      "lastProcessed": "2025-10-09T06:28:27.992Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "enacom_23",
+    "title": "Telefonía Fija",
+    "description": "Principales Indicadores de Mercado, Telefonia Fija",
+    "theme": [
+      "tech"
+    ],
+    "superTheme": [
+      "TECH"
+    ],
+    "issued": "2017-01-01",
+    "modified": "2025-09-08",
+    "publisher": {
+      "mbox": "indicadores@enacom.gob.ar",
+      "name": "Enacom.Direccion Nacional De Planificación Y Desarrollo."
+    },
+    "landingPage": "https://indicadores.enacom.gob.ar/DatosAbiertos/TelefoniaFija/default"
+  }
+}

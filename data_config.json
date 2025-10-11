@@ -1,0 +1,46 @@
+{
+  "data_directories": [
+    "data",
+    "data/raw",
+    "data/processed",
+    "data/consolidated",
+    "data/ocr_extracted",
+    "data/organized_pdfs",
+    "frontend/public/data",
+    "cloudflare-deploy/public/data"
+  ],
+  "central_data_location": "central_data",
+  "file_types": [".csv", ".json"],
+  "excluded_patterns": [
+    ".git",
+    "node_modules",
+    "__pycache__",
+    "*.log",
+    "*.tmp",
+    "*.bak"
+  ],
+  "organization_rules": {
+    "by_type": ["csv", "json"],
+    "by_year": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+    "by_category": [
+      "budget",
+      "contracts",
+      "debt",
+      "documents",
+      "salaries",
+      "summary",
+      "treasury",
+      "revenue",
+      "expenditure",
+      "investments",
+      "personnel",
+      "statistics",
+      "reports",
+      "audit"
+    ]
+  },
+  "sync_locations": [
+    "frontend/public/data/organized_data",
+    "cloudflare-deploy/public/data/organized_data"
+  ]
+}

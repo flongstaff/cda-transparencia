@@ -1,0 +1,144 @@
+{
+  "files": {
+    "CSC01-vbp-sector-k.csv": {
+      "datasetId": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+      "datasetTitle": "Cuenta Satélite de Cultura: producción",
+      "fileName": "CSC01-vbp-sector-k.csv",
+      "format": "CSV",
+      "title": "Valor bruto de producción a precios constantes por sector cultural",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/7cede781-9d4d-42d7-9329-b6c487dc405a/resource/633a2260-c077-4e98-9a1e-a02798bb5176",
+      "lastProcessed": "2025-10-09T07:04:13.371Z",
+      "status": "processed"
+    },
+    "CSC03-vab-sector-k.csv": {
+      "datasetId": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+      "datasetTitle": "Cuenta Satélite de Cultura: producción",
+      "fileName": "CSC03-vab-sector-k.csv",
+      "format": "CSV",
+      "title": "Valor agregado bruto a precios constantes por sector cultural",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/7cede781-9d4d-42d7-9329-b6c487dc405a/resource/f578de77-e544-4f35-9afb-b43ba4cfe5aa",
+      "lastProcessed": "2025-10-09T07:04:14.414Z",
+      "status": "processed"
+    },
+    "CSC02-c-i-sector-k.csv": {
+      "datasetId": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+      "datasetTitle": "Cuenta Satélite de Cultura: producción",
+      "fileName": "CSC02-c-i-sector-k.csv",
+      "format": "CSV",
+      "title": "Consumo intermedio a precios constantes por sector cultural",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/7cede781-9d4d-42d7-9329-b6c487dc405a/resource/7b945d7b-7933-468e-8aac-aef5b75e11c5",
+      "lastProcessed": "2025-10-09T07:04:15.446Z",
+      "status": "processed"
+    },
+    "CSC04-vbp-sector-c.csv": {
+      "datasetId": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+      "datasetTitle": "Cuenta Satélite de Cultura: producción",
+      "fileName": "CSC04-vbp-sector-c.csv",
+      "format": "CSV",
+      "title": "Valor bruto de producción a precios corrientes por sector cultural",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/7cede781-9d4d-42d7-9329-b6c487dc405a/resource/7c445d75-832c-44b3-a19f-1185c55136f2",
+      "lastProcessed": "2025-10-09T07:04:16.494Z",
+      "status": "processed"
+    },
+    "CSC05-c-i-sector-c.csv": {
+      "datasetId": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+      "datasetTitle": "Cuenta Satélite de Cultura: producción",
+      "fileName": "CSC05-c-i-sector-c.csv",
+      "format": "CSV",
+      "title": "Consumo intermedio a precios corrientes por sector cultural",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/7cede781-9d4d-42d7-9329-b6c487dc405a/resource/2ede885d-43d2-49b8-a77c-5c52d583ab7a",
+      "lastProcessed": "2025-10-09T07:04:17.553Z",
+      "status": "processed"
+    },
+    "CSC06-vab-sector-c.csv": {
+      "datasetId": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+      "datasetTitle": "Cuenta Satélite de Cultura: producción",
+      "fileName": "CSC06-vab-sector-c.csv",
+      "format": "CSV",
+      "title": "Valor agregado bruto a precios corrientes por sector cultural",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/7cede781-9d4d-42d7-9329-b6c487dc405a/resource/2f34ce56-0e31-4446-90d7-17af1840d662",
+      "lastProcessed": "2025-10-09T07:04:18.569Z",
+      "status": "processed"
+    },
+    "CSC09-part-vab-cult-k-total.csv": {
+      "datasetId": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+      "datasetTitle": "Cuenta Satélite de Cultura: producción",
+      "fileName": "CSC09-part-vab-cult-k-total.csv",
+      "format": "CSV",
+      "title": "Participación de la cultura en la economía total en valores constantes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/7cede781-9d4d-42d7-9329-b6c487dc405a/resource/e0234a5e-9991-4019-bcfe-a207f33e5e22",
+      "lastProcessed": "2025-10-09T07:04:19.574Z",
+      "status": "processed"
+    },
+    "CSC10-part-vab-cult-c-eco-total.csv": {
+      "datasetId": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+      "datasetTitle": "Cuenta Satélite de Cultura: producción",
+      "fileName": "CSC10-part-vab-cult-c-eco-total.csv",
+      "format": "CSV",
+      "title": "Participación de la cultura en la economía total en valores corrientes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/7cede781-9d4d-42d7-9329-b6c487dc405a/resource/a8a781e1-1382-48cb-97c4-d2f4555478f0",
+      "lastProcessed": "2025-10-09T07:04:20.664Z",
+      "status": "processed"
+    },
+    "CSC12-var-anual-indice-precios-implicitos-vab-cult-sector.csv": {
+      "datasetId": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+      "datasetTitle": "Cuenta Satélite de Cultura: producción",
+      "fileName": "CSC12-var-anual-indice-precios-implicitos-vab-cult-sector.csv",
+      "format": "CSV",
+      "title": "Variación interanual del índice de precios ímplicitos por sector cultural ",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/7cede781-9d4d-42d7-9329-b6c487dc405a/resource/b0e24aee-0719-4630-902a-ab221f4e6029",
+      "lastProcessed": "2025-10-09T07:04:21.676Z",
+      "status": "processed"
+    },
+    "CSC11-indice-precios-implicitos-vab-cult-sector.csv": {
+      "datasetId": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+      "datasetTitle": "Cuenta Satélite de Cultura: producción",
+      "fileName": "CSC11-indice-precios-implicitos-vab-cult-sector.csv",
+      "format": "CSV",
+      "title": "Índice de precios implícitos por sector cultural",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/7cede781-9d4d-42d7-9329-b6c487dc405a/resource/27acdbee-253e-4db6-b024-f40b5c31e7d1",
+      "lastProcessed": "2025-10-09T07:04:22.699Z",
+      "status": "processed"
+    },
+    "CSC08-var-anual-vab-sectores-k.csv": {
+      "datasetId": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+      "datasetTitle": "Cuenta Satélite de Cultura: producción",
+      "fileName": "CSC08-var-anual-vab-sectores-k.csv",
+      "format": "CSV",
+      "title": "Variación  interanual del valor agregado bruto a precios constantes por sector cultural",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/7cede781-9d4d-42d7-9329-b6c487dc405a/resource/7ce5c393-c703-41d2-a2ef-5e7a88592a4b",
+      "lastProcessed": "2025-10-09T07:04:23.829Z",
+      "status": "processed"
+    },
+    "CSC07-participacion-sectores-vab-c.csv": {
+      "datasetId": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+      "datasetTitle": "Cuenta Satélite de Cultura: producción",
+      "fileName": "CSC07-participacion-sectores-vab-c.csv",
+      "format": "CSV",
+      "title": "Participación de los sectores culturales en el valor agregado bruto cultural a precios corrientes ",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/7cede781-9d4d-42d7-9329-b6c487dc405a/resource/fe2f277c-af74-471e-9684-c9b7a9e0a563",
+      "lastProcessed": "2025-10-09T07:04:24.894Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "cultura_7cede781-9d4d-42d7-9329-b6c487dc405a",
+    "title": "Cuenta Satélite de Cultura: producción",
+    "description": "Datos productivos de los sectores culturales en valores monetarios. Los datos abarcan: valor bruto de producción (VBP), consumo intermedio (CI) y Valor agregado bruto (VAB). Incluye también el índice de precios implícito (IPI) de cada sector cultural, las variaciones interanuales de la producción cultural y su participación  en la producción total de la economía.  \r\nLos datos son provisorios para 2022 y preliminares para 2023.",
+    "theme": [
+      "econ",
+      "educ"
+    ],
+    "superTheme": [
+      "ECON",
+      "EDUC"
+    ],
+    "issued": "2021-10-20T12:32:37.720711",
+    "modified": "2025-05-29T10:40:41.047994",
+    "publisher": {
+      "mbox": "sinca@cultura.gob.ar",
+      "name": "Sistema de Información Cultural de la Argentina (SINCA)-Ministerio de Cultura de la Nación "
+    },
+    "landingPage": "https://datos.cultura.gob.ar/dataset/cuenta-satelite-de-cultura-produccion"
+  }
+}

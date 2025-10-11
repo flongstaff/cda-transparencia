@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_21.0",
+      "datasetTitle": "Indice de producción minero (IPIM)",
+      "lastProcessed": "2025-10-09T06:50:06.364Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_21.0",
+    "title": "Indice de producción minero (IPIM)",
+    "description": "Datos correspondientes al Indice de producción minero del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM), en base a datos de Indec",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2023-04-27",
+    "modified": "2025-08-21",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

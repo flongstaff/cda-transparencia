@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "title": "Encuesta de Turismo Internacional (ETI)",
+      "distribution": [
+        {
+          "title": "ficha_eti.pdf",
+          "format": "PDF",
+          "fileName": "ficha_eti.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2/ficha_eti.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2/ficha_eti_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

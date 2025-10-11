@@ -1,0 +1,42 @@
+{
+  "files": {
+    "instalaciones-hidrocarburos-instalaciones-res-319-93-p-caractersticos-.zip": {
+      "datasetId": "energia_e5c525ff-6dbd-4e1e-a52e-14e9d742c4f1",
+      "datasetTitle": "Instalaciones de hidrocarburos - Instalaciones Res. 319/1993 (P. Característicos)",
+      "fileName": "instalaciones-hidrocarburos-instalaciones-res-319-93-p-caractersticos-.zip",
+      "format": "SHP",
+      "title": "Instalaciones Hidrocarburos Instalaciones Res.319 93 (P. Característicos)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/e5c525ff-6dbd-4e1e-a52e-14e9d742c4f1/resource/9029e1ae-77f2-4aee-8e40-c30943ac9d1b",
+      "lastProcessed": "2025-10-09T06:36:28.203Z",
+      "status": "processed"
+    },
+    "instalaciones-hidrocarburos-instalaciones-res-319-93-p-caractersticos-.csv": {
+      "datasetId": "energia_e5c525ff-6dbd-4e1e-a52e-14e9d742c4f1",
+      "datasetTitle": "Instalaciones de hidrocarburos - Instalaciones Res. 319/1993 (P. Característicos)",
+      "fileName": "instalaciones-hidrocarburos-instalaciones-res-319-93-p-caractersticos-.csv",
+      "format": "CSV",
+      "title": "Instalaciones Hidrocarburos Instalaciones Res.319 93 (P. Característicos)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/e5c525ff-6dbd-4e1e-a52e-14e9d742c4f1/resource/44614bdf-e212-4ab2-8772-318706579cae",
+      "lastProcessed": "2025-10-09T06:36:30.280Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_e5c525ff-6dbd-4e1e-a52e-14e9d742c4f1",
+    "title": "Instalaciones de hidrocarburos - Instalaciones Res. 319/1993 (P. Característicos)",
+    "description": "Puntos característicos Res. 319/1993. ISO 19126: PowerSupplies, Este subgrupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía , mientras que la energía es en su mayoría de la electricidad.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2023-02-01T14:04:57.447534",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

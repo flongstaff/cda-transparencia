@@ -4,9 +4,10 @@ import UnifiedChart from './UnifiedChart';
 interface Props {
   year: number;
   className?: string;
+  data?: any; // Optional data prop to override default data loading
 }
 
-const TreasuryAnalysisChart: React.FC<Props> = ({ year, className }) => {
+const TreasuryAnalysisChart: React.FC<Props> = ({ year, className, data }) => {
   return (
     <UnifiedChart
       type="treasury"
@@ -15,6 +16,7 @@ const TreasuryAnalysisChart: React.FC<Props> = ({ year, className }) => {
       className={className}
       variant="bar"
       showControls={true}
+      data={data}
     />
   );
 };

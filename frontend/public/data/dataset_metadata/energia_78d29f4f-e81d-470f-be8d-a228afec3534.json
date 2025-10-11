@@ -1,0 +1,61 @@
+{
+  "files": {
+    "precios-mayoristas-res-1104-desde-diciembre-2024.csv": {
+      "datasetId": "energia_78d29f4f-e81d-470f-be8d-a228afec3534",
+      "datasetTitle": "Precios Mayoristas - Resolución 1104/04",
+      "fileName": "precios-mayoristas-res-1104-desde-diciembre-2024.csv",
+      "format": "CSV",
+      "title": "Precios Mayoristas Res 1104 desde Diciembre 2024",
+      "accessURL": "http://datos.energia.gob.ar/dataset/78d29f4f-e81d-470f-be8d-a228afec3534/resource/1259e17f-aee6-4858-9811-ba8efb7f4b9f",
+      "lastProcessed": "2025-10-09T06:37:36.085Z",
+      "status": "processed"
+    },
+    "precios-mayoristas-res-1104.csv": {
+      "datasetId": "energia_78d29f4f-e81d-470f-be8d-a228afec3534",
+      "datasetTitle": "Precios Mayoristas - Resolución 1104/04",
+      "fileName": "precios-mayoristas-res-1104.csv",
+      "format": "CSV",
+      "title": "Precios Mayoristas Res 1104",
+      "accessURL": "http://datos.energia.gob.ar/dataset/78d29f4f-e81d-470f-be8d-a228afec3534/resource/6872e948-43e8-42a7-820d-03f315831e35",
+      "lastProcessed": "2025-10-09T06:37:42.233Z",
+      "status": "processed"
+    },
+    "distribuidores-mayoristas-de-combustibles-lquidos-res-110404-.csv": {
+      "datasetId": "energia_78d29f4f-e81d-470f-be8d-a228afec3534",
+      "datasetTitle": "Precios Mayoristas - Resolución 1104/04",
+      "fileName": "distribuidores-mayoristas-de-combustibles-lquidos-res-110404-.csv",
+      "format": "CSV",
+      "title": "Distribuidores mayoristas de combustibles líquidos (Res. 1104/04)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/78d29f4f-e81d-470f-be8d-a228afec3534/resource/1db7f27f-c23a-4873-8da2-cfe6be72f7e2",
+      "lastProcessed": "2025-10-09T06:37:43.531Z",
+      "status": "processed"
+    },
+    "distribuidores-mayoristas-de-combustibles-lquidos-res-110404-.zip": {
+      "datasetId": "energia_78d29f4f-e81d-470f-be8d-a228afec3534",
+      "datasetTitle": "Precios Mayoristas - Resolución 1104/04",
+      "fileName": "distribuidores-mayoristas-de-combustibles-lquidos-res-110404-.zip",
+      "format": "SHP",
+      "title": "Distribuidores mayoristas de combustibles líquidos (Res. 1104/04)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/78d29f4f-e81d-470f-be8d-a228afec3534/resource/87da78b8-a814-4c30-93e5-25963be79864",
+      "lastProcessed": "2025-10-09T06:37:43.531Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_78d29f4f-e81d-470f-be8d-a228afec3534",
+    "title": "Precios Mayoristas - Resolución 1104/04",
+    "description": "Precios del módulo mayorista de la Resolución 1104.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2021-10-29T19:13:55.847663",
+    "modified": "2025-02-06T10:18:18.894387",
+    "publisher": {
+      "name": "Secretaría de Energía"
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/precios-mayoristas-resolucion-1104-04"
+  }
+}

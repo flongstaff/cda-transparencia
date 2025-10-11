@@ -1,0 +1,81 @@
+{
+  "files": {
+    "CCEGEI_relacioncon_PBI_ODS0941_2020": {
+      "datasetId": "ambiente_8.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero",
+      "fileName": "CCEGEI_relacioncon_PBI_ODS0941_2020",
+      "format": "CSV",
+      "title": "Emisiones de Gases de Efecto Invernadero (GEI) en relación al PIB. Periodo 1990-2020",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=2&stid=8&did=260",
+      "lastProcessed": "2025-10-09T06:59:49.110Z",
+      "status": "processed"
+    },
+    "CCEGEI_emisiones_ODS1321_n": {
+      "datasetId": "ambiente_8.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero",
+      "fileName": "CCEGEI_emisiones_ODS1321_n",
+      "format": "CSV",
+      "title": "Emisiones de gases efecto invernadero",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=2&stid=8&did=259",
+      "lastProcessed": "2025-10-09T06:59:50.526Z",
+      "status": "processed"
+    },
+    "emisiones_gei_sector_1990_2020": {
+      "datasetId": "ambiente_8.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero",
+      "fileName": "emisiones_gei_sector_1990_2020",
+      "format": "CSV",
+      "title": "Emisiones anuales de GEI por sector. Periodo 1990-2020",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=388",
+      "lastProcessed": "2025-10-09T06:59:51.781Z",
+      "status": "processed"
+    },
+    "emisiones_gei_subsector_1990_2020_nuevo": {
+      "datasetId": "ambiente_8.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero",
+      "fileName": "emisiones_gei_subsector_1990_2020_nuevo",
+      "format": "CSV",
+      "title": "Emisiones anuales de GEI por subsector. Periodo 1990-2020",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=389",
+      "lastProcessed": "2025-10-09T06:59:53.077Z",
+      "status": "processed"
+    },
+    "emisiones_sector_tipo_gas_1990_2020": {
+      "datasetId": "ambiente_8.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero",
+      "fileName": "emisiones_sector_tipo_gas_1990_2020",
+      "format": "CSV",
+      "title": "Emisiones anuales de GEI por sector y gas. Periodo 1990-2020",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=390",
+      "lastProcessed": "2025-10-09T06:59:54.410Z",
+      "status": "processed"
+    },
+    "emisiones_gei_inventario_datos_totales_1990_2020": {
+      "datasetId": "ambiente_8.0",
+      "datasetTitle": "Emisiones de gases de efecto invernadero",
+      "fileName": "emisiones_gei_inventario_datos_totales_1990_2020",
+      "format": "CSV",
+      "title": "Inventario de GEI - Datos totales. Periodo 1990-2020",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=9&stid=36&did=391",
+      "lastProcessed": "2025-10-09T06:59:55.761Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_8.0",
+    "title": "Emisiones de gases de efecto invernadero",
+    "description": "Muestra las emisiones de GEI",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2020-10-28T00:00:00",
+    "modified": "2020-10-28T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

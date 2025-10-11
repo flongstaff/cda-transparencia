@@ -1,0 +1,43 @@
+{
+  "file_name": "2019_personnel_expenses.csv",
+  "row_count": 6,
+  "column_count": 3,
+  "columns": [
+    "category",
+    "amount",
+    "percentage"
+  ],
+  "sample_data": [
+    {
+      "category": "Salarios",
+      "amount": 200000000.0,
+      "percentage": 22.0
+    },
+    {
+      "category": "Beneficios sociales",
+      "amount": 50000000.0,
+      "percentage": 5.5
+    },
+    {
+      "category": "Jubilaciones propias",
+      "amount": 40000000.0,
+      "percentage": 4.4
+    },
+    {
+      "category": NaN,
+      "amount": 201.0,
+      "percentage": NaN
+    },
+    {
+      "category": NaN,
+      "amount": 195.0,
+      "percentage": NaN
+    }
+  ],
+  "data_types": {
+    "category": "object",
+    "amount": "float64",
+    "percentage": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

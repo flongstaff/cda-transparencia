@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Transparencia - Carmen de Areco</title>
-    <meta name="description" content="Portal oficial de transparencia financiera de la Municipalidad de Carmen de Areco, Buenos Aires, Argentina.">
+    <title>Acceso a Datos - Portal de Transparencia Carmen de Areco</title>
+    <meta name="description" content="Acceso completo a todos los documentos organizados del Portal de Transparencia de Carmen de Areco.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -65,32 +65,6 @@
             margin-bottom: 1.5rem;
         }
         
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .stat-item {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
         nav {
             background-color: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -135,108 +109,66 @@
             color: var(--primary-color);
         }
         
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-        
-        .card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        }
-        
-        .card-header {
-            background: var(--primary-color);
-            color: white;
-            padding: 1rem;
-        }
-        
-        .card-body {
-            padding: 1.5rem;
-        }
-        
-        .card-title {
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        
-        .card-content ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .card-content li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .card-content li:last-child {
-            border-bottom: none;
-        }
-        
-        .card-content a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        
-        .card-content a:hover {
-            color: var(--primary-color);
-            text-decoration: underline;
-        }
-        
-        .download-btn {
-            display: inline-block;
-            background: var(--success-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 0.5rem;
-            transition: background 0.3s ease;
-        }
-        
-        .download-btn:hover {
-            background: #2f855a;
-        }
-        
-        .btn-primary {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 1rem 0;
-            transition: background 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-primary:hover {
-            background: #2a4365;
-        }
-        
         .data-section {
             background: white;
             border-radius: 10px;
             padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .category-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            border-color: var(--secondary-color);
+        }
+        
+        .category-title {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .year-links {
+            list-style: none;
+        }
+        
+        .year-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .year-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .year-links a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .year-links a::before {
+            content: "📁";
+            margin-right: 0.5rem;
         }
         
         .data-table {
@@ -261,6 +193,85 @@
             background-color: var(--light-color);
         }
         
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1rem 0;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #2a4365;
+        }
+        
+        .btn-secondary {
+            background: var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: #2c5282;
+        }
+        
+        .btn-success {
+            background: var(--success-color);
+        }
+        
+        .btn-success:hover {
+            background: #2f855a;
+        }
+        
+        .search-box {
+            margin-bottom: 2rem;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--dark-color);
+            opacity: 0.8;
+        }
+        
         footer {
             background: var(--dark-color);
             color: white;
@@ -269,29 +280,7 @@
             margin-top: 2rem;
         }
         
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .contact-info {
-            margin: 1rem 0;
-        }
-        
-        .contact-info a {
-            color: #63b3ed;
-            text-decoration: none;
-        }
-        
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        
         @media (max-width: 768px) {
-            .header-content h1 {
-                font-size: 2rem;
-            }
-            
             .nav-container {
                 flex-direction: column;
             }
@@ -301,16 +290,8 @@
                 border-bottom: 1px solid #eee;
             }
             
-            .stats {
-                gap: 1rem;
-            }
-            
-            .stat-item {
-                padding: 0.75rem 1rem;
-            }
-            
-            .stat-number {
-                font-size: 1.5rem;
+            .category-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -319,22 +300,8 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>Portal de Transparencia</h1>
-                <p class="subtitle">Municipalidad de Carmen de Areco, Buenos Aires, Argentina</p>
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Documentos Organizados</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">9</span>
-                        <span class="stat-label">Años de Datos</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label">Categorías</span>
-                    </div>
-                </div>
+                <h1>Acceso Completo a Datos</h1>
+                <p class="subtitle">Todos los documentos organizados del Portal de Transparencia de Carmen de Areco</p>
             </div>
         </div>
     </header>
@@ -342,275 +309,295 @@
     <nav>
         <div class="container">
             <div class="nav-container">
-                <a href="#inicio" class="nav-link active">Inicio</a>
-                <a href="#documentos" class="nav-link">Documentos</a>
-                <a href="#datos" class="nav-link">Datos Abiertos</a>
-                <a href="#visualizaciones" class="nav-link">Visualizaciones</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
+                <a href="index.html" class="nav-link">← Volver al Inicio</a>
+                <a href="#categorias" class="nav-link active">Categorías</a>
+                <a href="#busqueda" class="nav-link">Búsqueda</a>
+                <a href="#descargas" class="nav-link">Descargas Masivas</a>
             </div>
         </div>
     </nav>
     
     <main class="container">
-        <section id="inicio">
-            <h2 class="section-title">Bienvenido al Portal de Transparencia</h2>
-            <div class="data-section">
-                <p>Este portal proporciona acceso público a documentos oficiales, informes financieros y datos de transparencia de la Municipalidad de Carmen de Areco. Todos los documentos han sido recolectados, organizados y categorizados para facilitar el acceso a la información pública.</p>
-                
-                <p>El portal contiene información financiera desde 2017 hasta 2025, incluyendo:</p>
-                
-                <ul>
-                    <li>Ejecución presupuestaria y estados financieros</li>
-                    <li>Informes de ejecución de gastos y recursos</li>
-                    <li>Documentos de personal y recursos humanos</li>
-                    <li>Contrataciones públicas y licitaciones</li>
-                    <li>Declaraciones patrimoniales</li>
-                    <li>Informes de salud pública y programas sociales</li>
-                </ul>
-                
-                <p>Todos los datos están disponibles en formatos abiertos y pueden ser descargados para análisis independiente.</p>
-                
-                <div style="text-align: center;">
-                    <a href="#documentos" class="btn-primary">Explorar Documentos</a>
+        <section class="data-section">
+            <h2 class="section-title">Estadísticas de Documentos</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Documentos Totales</span>
                 </div>
+                <div class="stat-card">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Años Cubiertos</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15</span>
+                    <span class="stat-label">Categorías</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">PDFs Procesados</span>
+                </div>
+            </div>
+            
+            <p>Todos los documentos han sido recolectados, organizados y convertidos a formatos abiertos para facilitar el acceso y análisis. Esta colección representa la información más completa disponible sobre la gestión financiera y administrativa de la Municipalidad de Carmen de Areco.</p>
+        </section>
+        
+        <section id="categorias" class="data-section">
+            <h2 class="section-title">Documentos por Categoría y Año</h2>
+            
+            <div class="category-grid">
+                <div class="category-card">
+                    <h3 class="category-title">Ejecución de Gastos</h3>
+                    <ul class="year-links">
+                        <li><a href="frontend/public/data/organized_documents/2025/Ejecución_de_Gastos/markdown/">2025</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2024/Ejecución_de_Gastos/markdown/">2024</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2023/Ejecución_de_Gastos/markdown/">2023</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2022/Ejecución_de_Gastos/markdown/">2022</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2021/Ejecución_de_Gastos/markdown/">2021</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2020/Ejecución_de_Gastos/markdown/">2020</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2019/Ejecución_de_Gastos/markdown/">2019</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2018/Ejecución_de_Gastos/markdown/">2018</a></li>
+                    </ul>
+                    <a href="frontend/public/data/organized_documents/" class="btn btn-secondary">Ver Todos los Años</a>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="category-title">Ejecución de Recursos</h3>
+                    <ul class="year-links">
+                        <li><a href="frontend/public/data/organized_documents/2025/Ejecución_de_Recursos/markdown/">2025</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2024/Ejecución_de_Recursos/markdown/">2024</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2023/Ejecución_de_Recursos/markdown/">2023</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2022/Ejecución_de_Recursos/markdown/">2022</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2021/Ejecución_de_Recursos/markdown/">2021</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2020/Ejecución_de_Recursos/markdown/">2020</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2019/Ejecución_de_Recursos/markdown/">2019</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2018/Ejecución_de_Recursos/markdown/">2018</a></li>
+                    </ul>
+                    <a href="frontend/public/data/organized_documents/" class="btn btn-secondary">Ver Todos los Años</a>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="category-title">Estados Financieros</h3>
+                    <ul class="year-links">
+                        <li><a href="frontend/public/data/organized_documents/2025/Estados_Financieros/markdown/">2025</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2024/Estados_Financieros/markdown/">2024</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2023/Estados_Financieros/markdown/">2023</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2022/Estados_Financieros/markdown/">2022</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2021/Estados_Financieros/markdown/">2021</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2020/Estados_Financieros/markdown/">2020</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2019/Estados_Financieros/markdown/">2019</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2018/Estados_Financieros/markdown/">2018</a></li>
+                    </ul>
+                    <a href="frontend/public/data/organized_documents/" class="btn btn-secondary">Ver Todos los Años</a>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="category-title">Documentos Generales</h3>
+                    <ul class="year-links">
+                        <li><a href="frontend/public/data/organized_documents/2025/Documentos_Generales/markdown/">2025</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2024/Documentos_Generales/markdown/">2024</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2023/Documentos_Generales/markdown/">2023</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2022/Documentos_Generales/markdown/">2022</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2021/Documentos_Generales/markdown/">2021</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2020/Documentos_Generales/markdown/">2020</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2019/Documentos_Generales/markdown/">2019</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2018/Documentos_Generales/markdown/">2018</a></li>
+                    </ul>
+                    <a href="frontend/public/data/organized_documents/" class="btn btn-secondary">Ver Todos los Años</a>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="category-title">Declaraciones Patrimoniales</h3>
+                    <ul class="year-links">
+                        <li><a href="frontend/public/data/organized_documents/2025/Declaraciones_Patrimoniales/markdown/">2025</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2024/Declaraciones_Patrimoniales/markdown/">2024</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2023/Declaraciones_Patrimoniales/markdown/">2023</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2022/Declaraciones_Patrimoniales/markdown/">2022</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2021/Declaraciones_Patrimoniales/markdown/">2021</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2020/Declaraciones_Patrimoniales/markdown/">2020</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2019/Declaraciones_Patrimoniales/markdown/">2019</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2018/Declaraciones_Patrimoniales/markdown/">2018</a></li>
+                    </ul>
+                    <a href="frontend/public/data/organized_documents/" class="btn btn-secondary">Ver Todos los Años</a>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="category-title">Salud Pública</h3>
+                    <ul class="year-links">
+                        <li><a href="frontend/public/data/organized_documents/2025/Salud_Pública/markdown/">2025</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2024/Salud_Pública/markdown/">2024</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2023/Salud_Pública/markdown/">2023</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2022/Salud_Pública/markdown/">2022</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2021/Salud_Pública/markdown/">2021</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2020/Salud_Pública/markdown/">2020</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2019/Salud_Pública/markdown/">2019</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2018/Salud_Pública/markdown/">2018</a></li>
+                    </ul>
+                    <a href="frontend/public/data/organized_documents/" class="btn btn-secondary">Ver Todos los Años</a>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="category-title">Recursos Humanos</h3>
+                    <ul class="year-links">
+                        <li><a href="frontend/public/data/organized_documents/2025/Recursos_Humanos/markdown/">2025</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2024/Recursos_Humanos/markdown/">2024</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2023/Recursos_Humanos/markdown/">2023</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2022/Recursos_Humanos/markdown/">2022</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2021/Recursos_Humanos/markdown/">2021</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2020/Recursos_Humanos/markdown/">2020</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2019/Recursos_Humanos/markdown/">2019</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2018/Recursos_Humanos/markdown/">2018</a></li>
+                    </ul>
+                    <a href="frontend/public/data/organized_documents/" class="btn btn-secondary">Ver Todos los Años</a>
+                </div>
+                
+                <div class="category-card">
+                    <h3 class="category-title">Contrataciones</h3>
+                    <ul class="year-links">
+                        <li><a href="frontend/public/data/organized_documents/2025/Contrataciones/markdown/">2025</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2024/Contrataciones/markdown/">2024</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2023/Contrataciones/markdown/">2023</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2022/Contrataciones/markdown/">2022</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2021/Contrataciones/markdown/">2021</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2020/Contrataciones/markdown/">2020</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2019/Contrataciones/markdown/">2019</a></li>
+                        <li><a href="frontend/public/data/organized_documents/2018/Contrataciones/markdown/">2018</a></li>
+                    </ul>
+                    <a href="frontend/public/data/organized_documents/" class="btn btn-secondary">Ver Todos los Años</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="frontend/public/data/organized_documents/" class="btn btn-success">Explorar Todos los Documentos</a>
+                <a href="frontend/public/data/organized_documents/document_inventory.csv" class="btn">Descargar Inventario Completo (CSV)</a>
             </div>
         </section>
         
-        <section id="documentos">
-            <h2 class="section-title">Documentos Organizados por Categoría</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Documentos Generales</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-content">
-                            <p>Documentos administrativos, ordenanzas y resoluciones municipales.</p>
-                            <ul>
-                                <li><a href="frontend/public/data/organized_documents/2023/Documentos_Generales/markdown/">2023</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2022/Documentos_Generales/markdown/">2022</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2021/Documentos_Generales/markdown/">2021</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2020/Documentos_Generales/markdown/">2020</a></li>
-                            </ul>
-                            <a href="frontend/public/data/organized_documents/" class="download-btn">Explorar Todos</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Ejecución de Gastos</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-content">
-                            <p>Informes detallados de ejecución de gastos municipales por período.</p>
-                            <ul>
-                                <li><a href="frontend/public/data/organized_documents/2023/Ejecución_de_Gastos/markdown/">2023</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2022/Ejecución_de_Gastos/markdown/">2022</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2021/Ejecución_de_Gastos/markdown/">2021</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2020/Ejecución_de_Gastos/markdown/">2020</a></li>
-                            </ul>
-                            <a href="frontend/public/data/organized_documents/" class="download-btn">Ver Todos los Años</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Ejecución de Recursos</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-content">
-                            <p>Informes de ingresos y ejecución de recursos municipales.</p>
-                            <ul>
-                                <li><a href="frontend/public/data/organized_documents/2023/Ejecución_de_Recursos/markdown/">2023</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2022/Ejecución_de_Recursos/markdown/">2022</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2021/Ejecución_de_Recursos/markdown/">2021</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2020/Ejecución_de_Recursos/markdown/">2020</a></li>
-                            </ul>
-                            <a href="frontend/public/data/organized_documents/" class="download-btn">Explorar Datos</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Estados Financieros</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-content">
-                            <p>Balances generales y estados financieros completos.</p>
-                            <ul>
-                                <li><a href="frontend/public/data/organized_documents/2023/Estados_Financieros/markdown/">2023</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2022/Estados_Financieros/markdown/">2022</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2021/Estados_Financieros/markdown/">2021</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2020/Estados_Financieros/markdown/">2020</a></li>
-                            </ul>
-                            <a href="frontend/public/data/organized_documents/" class="download-btn">Ver Estados</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Declaraciones Patrimoniales</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-content">
-                            <p>Declaraciones juradas de funcionarios municipales.</p>
-                            <ul>
-                                <li><a href="frontend/public/data/organized_documents/2023/Declaraciones_Patrimoniales/markdown/">2023</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2022/Declaraciones_Patrimoniales/markdown/">2022</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2021/Declaraciones_Patrimoniales/markdown/">2021</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2020/Declaraciones_Patrimoniales/markdown/">2020</a></li>
-                            </ul>
-                            <a href="frontend/public/data/organized_documents/" class="download-btn">Acceder a DDJJ</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Salud Pública</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-content">
-                            <p>Informes de salud y programas de atención primaria.</p>
-                            <ul>
-                                <li><a href="frontend/public/data/organized_documents/2023/Salud_Pública/markdown/">2023</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2022/Salud_Pública/markdown/">2022</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2021/Salud_Pública/markdown/">2021</a></li>
-                                <li><a href="frontend/public/data/organized_documents/2020/Salud_Pública/markdown/">2020</a></li>
-                            </ul>
-                            <a href="frontend/public/data/organized_documents/" class="download-btn">Ver Informes</a>
-                        </div>
-                    </div>
-                </div>
+        <section id="busqueda" class="data-section">
+            <h2 class="section-title">Búsqueda Avanzada</h2>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Buscar documentos por título, año, categoría...">
+            </div>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Título del Documento</th>
+                        <th>Categoría</th>
+                        <th>Año</th>
+                        <th>Formato</th>
+                        <th>Acceso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Estado de Ejecución de Gastos - 3er Trimestre</td>
+                        <td>Ejecución de Gastos</td>
+                        <td>2024</td>
+                        <td>PDF, Markdown</td>
+                        <td><a href="#">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>Situación Económico Financiera - Junio</td>
+                        <td>Estados Financieros</td>
+                        <td>2024</td>
+                        <td>PDF, Markdown</td>
+                        <td><a href="#">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>Resolución 1536/2023 - Ministerio de Desarrollo</td>
+                        <td>Documentos Generales</td>
+                        <td>2023</td>
+                        <td>PDF, Markdown</td>
+                        <td><a href="#">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>Declaración Jurada 2023 - Funcionario X</td>
+                        <td>Declaraciones Patrimoniales</td>
+                        <td>2023</td>
+                        <td>PDF, Markdown</td>
+                        <td><a href="#">Acceder</a></td>
+                    </tr>
+                    <tr>
+                        <td>Programa de Salud CAP - 3er Trimestre</td>
+                        <td>Salud Pública</td>
+                        <td>2024</td>
+                        <td>PDF, Markdown</td>
+                        <td><a href="#">Acceder</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="text-align: center;">
+                <button class="btn">Buscar en Todos los Documentos</button>
             </div>
         </section>
         
-        <section id="datos">
-            <h2 class="section-title">Datos Abiertos</h2>
-            <div class="data-section">
-                <p>Todos los documentos y datos están disponibles en formatos abiertos para descarga y análisis independiente:</p>
+        <section id="descargas" class="data-section">
+            <h2 class="section-title">Descargas Masivas</h2>
+            <p>Para investigadores y analistas que necesitan acceder a grandes volúmenes de datos:</p>
+            
+            <div class="category-grid">
+                <div class="category-card">
+                    <h3 class="category-title">Datos Estructurados</h3>
+                    <ul>
+                        <li>Formato JSON para análisis automatizado</li>
+                        <li>Estructura estandarizada</li>
+                        <li>Metadatos completos</li>
+                    </ul>
+                    <a href="frontend/public/data/organized_documents/json/" class="btn">Acceder a JSON</a>
+                </div>
                 
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Recurso</th>
-                            <th>Formato</th>
-                            <th>Descripción</th>
-                            <th>Enlace</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Inventario Completo de Documentos</td>
-                            <td>CSV, JSON</td>
-                            <td>Listado completo de todos los documentos organizados</td>
-                            <td><a href="frontend/public/data/organized_documents/document_inventory.csv">Descargar</a></td>
-                        </tr>
-                        <tr>
-                            <td>Documentos en Texto Plano</td>
-                            <td>Markdown</td>
-                            <td>Versiones en texto de todos los documentos PDF</td>
-                            <td><a href="frontend/public/data/organized_documents/">Explorar</a></td>
-                        </tr>
-                        <tr>
-                            <td>Datos Estructurados</td>
-                            <td>JSON</td>
-                            <td>Datos extraídos en formato estructurado</td>
-                            <td><a href="frontend/public/data/organized_documents/json/">Acceder</a></td>
-                        </tr>
-                        <tr>
-                            <td>Metadatos de Documentos</td>
-                            <td>JSON</td>
-                            <td>Información sobre cada documento (fecha, tipo, tamaño)</td>
-                            <td><a href="frontend/public/data/organized_documents/inventory_summary.json">Ver</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="category-card">
+                    <h3 class="category-title">Texto Extraído</h3>
+                    <ul>
+                        <li>Versiones en texto plano de todos los PDFs</li>
+                        <li>Formato Markdown para fácil lectura</li>
+                        <li>Compatible con motores de búsqueda</li>
+                    </ul>
+                    <a href="frontend/public/data/organized_documents/markdown/" class="btn">Ver Markdown</a>
+                </div>
                 
-                <h3 style="margin-top: 2rem;">API de Datos</h3>
-                <p>Los datos también están disponibles a través de una API REST:</p>
-                <pre style="background: #f5f5f5; padding: 1rem; border-radius: 5px; overflow-x: auto;">
-// Ejemplo de acceso a documentos por año
-GET /api/documents/2023
-GET /api/documents/category/execucion-gastos
-GET /api/documents/search?q=presupuesto</pre>
-                
-                <div style="text-align: center; margin-top: 1.5rem;">
-                    <a href="#" class="btn-primary">Documentación de la API</a>
+                <div class="category-card">
+                    <h3 class="category-title">Metadatos</h3>
+                    <ul>
+                        <li>Inventario completo de documentos</li>
+                        <li>Información de fechas y tamaños</li>
+                        <li>Datos de clasificación y categorización</li>
+                    </ul>
+                    <a href="frontend/public/data/organized_documents/inventory_summary.json" class="btn">Ver Metadatos</a>
                 </div>
             </div>
-        </section>
-        
-        <section id="visualizaciones">
-            <h2 class="section-title">Visualizaciones de Datos</h2>
-            <div class="data-section">
-                <p>Para acceder al portal de visualización interactiva con gráficos y análisis de datos:</p>
-                
-                <div style="text-align: center; margin: 2rem 0;">
-                    <a href="frontend/dist/index.html" class="btn-primary" style="padding: 1rem 2rem; font-size: 1.2rem;">
-                        Acceder al Portal Interactivo
-                    </a>
-                </div>
-                
-                <p>El portal interactivo incluye:</p>
-                <ul>
-                    <li>Gráficos de evolución presupuestaria</li>
-                    <li>Análisis comparativo entre períodos</li>
-                    <li>Visualización de estructura de gastos</li>
-                    <li>Indicadores de transparencia financiera</li>
-                    <li>Herramientas de búsqueda y filtrado avanzado</li>
-                </ul>
+            
+            <h3 style="margin-top: 2rem;">API de Datos</h3>
+            <p>Para desarrolladores e investigadores técnicos:</p>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+# Endpoints de la API
+GET /api/documents           # Listar todos los documentos
+GET /api/documents/year/2024    # Documentos de 2024
+GET /api/documents/category/gastos   # Documentos de ejecución de gastos
+GET /api/documents/search?q=presupuesto  # Búsqueda por palabra clave
+
+# Formatos disponibles
+Accept: application/json
+Accept: text/markdown
+Accept: text/plain</pre>
+            
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="#" class="btn">Documentación de la API</a>
+                <a href="#" class="btn btn-secondary">Ejemplos de Uso</a>
             </div>
         </section>
     </main>
     
-    <footer id="contacto">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <h3>Portal de Transparencia - Carmen de Areco</h3>
                 <p>Este portal es una iniciativa ciudadana para facilitar el acceso a información pública municipal.</p>
-                
-                <div class="contact-info">
-                    <p><strong>Fuente Oficial:</strong> <a href="https://carmendeareco.gob.ar/transparencia" target="_blank">Municipalidad de Carmen de Areco - Transparencia</a></p>
-                    <p><strong>Repositorio en GitHub:</strong> <a href="https://github.com/flongstaff/cda-transparencia" target="_blank">flongstaff/cda-transparencia</a></p>
-                    <p><strong>Dominio:</strong> <a href="https://cda-transparencia.org" target="_blank">cda-transparencia.org</a></p>
-                </div>
-                
                 <p>© 2025 Portal de Transparencia Carmen de Areco. Los datos publicados son de acceso público y provienen de fuentes oficiales.</p>
             </div>
         </div>
     </footer>
-    
-    <script>
-        // Simple navigation highlighting
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>

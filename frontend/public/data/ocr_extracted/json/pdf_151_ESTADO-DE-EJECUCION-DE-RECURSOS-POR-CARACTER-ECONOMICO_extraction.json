@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_151_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+  "file_hash": "799233f889eeba8f9dc23a2ea5c911ba",
+  "page_count": 3,
+  "text_length": 6042,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "R.A.F.A.M.\nESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOS Hoja: 1 de 3\n19/09/202311:58\nMunicipalidad de\nCarmen de Areco Del 01/01/2022 al 31/03/2022 Ejercicio: 2022(POR CARACTER ECONÓMICO) \nCONSOLIDADO\nDescripción ModificacionesRecurso \nEstimado Recurso \nVigente Recurso \nDevengado Dif. entre \nVigente y \nDevengado Recursos \nPercibido Dif. entre \nDevengado y \nPercibido \nRECURSOS\nINGRESOS CORRIENTES\nIngresos tributarios\nImpuestos provinciales y nacionales 393.426.898,00 0,00 393.426.898,00 76.448.238,43 316.978.659,57 76.448.238,43 0,00\nOtros impuestos 82.635.806,00 0,00 82.635.806,00 3.490.499,93 79.145.306,07 4.438.443,27 -947.943,34\n476.062.704,00 0,00 476.062.704,00 79.938.738,36 396.123.965,64 80.886.681,70 -947.943,34 Total Ingresos tributarios\nIngresos no tributarios\nTasas 117.741.160,00 0,00 117.741.160,00 22.173.484,17 95.567.675,83 18.016.895,13 4.156.589,04\nDerechos 21.441.034,00 0,00 21.441.034,00 2.204.612,56 19.236.421,44 2.252.510,95 -47.898,39\nOtros no tributarios 43.839.782,00 209.104,00 44.048.886,00 10.803.029,52 33.245.856,48 10.803.029,52 0,00\n183.021.976,00 209.104,00 183.231.080,00 35.181.126,25 148.049.953,75 31.072.435,60 4.108.690,65 Total Ingresos no tributarios\nRentas de la propiedad\nIntereses\nIntereses internos\nIntereses por depósitos 20.617.059,00 0,00 20.617.059,00 361.548,91 20.255.510,09 361.548,91 0,0020.617.059,00 0,00 20.617.059,00 361.548,91 20.255.510,09 361.548,91 0,00\nTotal Intereses internos\n20.617.059,00 0,00 20.617.059,00 361.548,91 20.255.510,09 361.548,91 0,00 Total Intereses\n20.617.059,00 0,00 20.617.059,00 361.548,91 20.255.510,09 361.548,91 0,00 Total Rentas de la propiedad\nTransferencias Corrientes\nDel sector público\nDel sector público nacional\nDe la administración central 0,00 27.503.563,95 27.503.563,95 28.503.563,96 -1.000.000,01 28.503.563,96 0,000,00 27.503.563,95 27.503.563,95 28.503.563,96 -1.000.000,01 28.503.563,96 0,00\nTotal Del sector público nacionalDe provincias y municipios\nDe gobiernos provinciales\n38.443....",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:16:01.157582"
+}

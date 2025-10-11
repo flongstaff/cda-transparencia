@@ -1,0 +1,50 @@
+{
+  "file_name": "Debt_Report_2025_table_0.csv",
+  "row_count": 40,
+  "column_count": 4,
+  "columns": [
+    "Debt Type",
+    "Amount",
+    "Interest Rate",
+    "Maturity"
+  ],
+  "sample_data": [
+    {
+      "Debt Type": "Municipal Bonds",
+      "Amount": "$100,000,000",
+      "Interest Rate": "7.5%",
+      "Maturity": "5 years"
+    },
+    {
+      "Debt Type": "Bank Loans",
+      "Amount": "$50,000,000",
+      "Interest Rate": "8.0%",
+      "Maturity": "7 years"
+    },
+    {
+      "Debt Type": "Development Bank",
+      "Amount": "$30,000,000",
+      "Interest Rate": "6.5%",
+      "Maturity": "10 years"
+    },
+    {
+      "Debt Type": "Total Debt",
+      "Amount": "$180,000,000",
+      "Interest Rate": "-",
+      "Maturity": "-"
+    },
+    {
+      "Debt Type": NaN,
+      "Amount": "1.0",
+      "Interest Rate": NaN,
+      "Maturity": NaN
+    }
+  ],
+  "data_types": {
+    "Debt Type": "object",
+    "Amount": "object",
+    "Interest Rate": "object",
+    "Maturity": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

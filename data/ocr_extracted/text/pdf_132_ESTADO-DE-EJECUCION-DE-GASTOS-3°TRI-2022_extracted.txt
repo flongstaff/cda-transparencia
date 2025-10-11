@@ -1,0 +1,35 @@
+Municipalidad de
+Carmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS
+Ejercicio 
+:Hoja: 1 de 266 R.A.F.A.M.
+20/09/2023 08:40
+Del 01/07/2022 al 30/09/2022
+2022Partidas Incluidas respecto al Crédito Disponible: Todas
+Partidas Incluidas respecto al Crédito Vigente: Todas
+Devengado 
+no pagado Crédito 
+Disponible Pagado Devengado Compromiso Preventivo Crédito 
+Vigente Modifica 
+ciones Crédito 
+Aprobado Fuen. 
+Fin. Objeto del GastoCrédito Vig. 
+- Devengado 
+Jurisdicción: 1110101000 - Conduccion Superior 
+Apertura Programática: 01.00.00 - Desarrallo politicas centrales01.01.00 - Cond. y Gest. de Politicas Centrales
+110 - Tesoro Municipal
+1.0.0.0 - Gastos en personal 1.1.0.0 - Personal permanente1.1.1.0 - Retribuciones del cargo 1.1.1.1 - Personal Superior
+6.464.511,00 0,00 6.464.511,00 0,00 1.291.674,36 1.291.674,36 1.291.674,36 0,00
+1.1.1.5 - Personal Administrativo 242.188,80 0,00 242.188,80 0,00 50.455,00 50.455,00 50.455,00 0,00
+1.1.1.9 - Gastos Reservados 0,00 0,00 0,00 0,00 193.751,15 193.751,15 193.751,15 0,00
+6.706.699,80 0,00 6.706.699,80 0,00 1.535.880,51 1.535.880,51 1.535.880,51 0,00 Total Retribuciones del cargo
+1.1.3.0 - Retribuciones que no hacen al cargo 1.1.3.1 - Antiguedad
+412.178,40 0,00 412.178,40 0,00 130.681,11 130.681,11 130.681,11 0,00 412.178,40 0,00 412.178,40 0,00 130.681,11 130.681,11 130.681,11 0,00
+Total Retribuciones que no hacen al cargo
+1.1.4.0 - Sueldo anual complementario 401.829,07 0,00 401.829,07 0,00 0,00 0,00 0,00 0,00
+1.1.6.0 - Contribuciones patronales 1.1.6.1 - IPS
+595.368,80 0,00 595.368,80 0,00 292.150,14 292.150,14 292.150,14 0,00
+1.1.6.2 - IOMA 233.186,11 0,00 233.186,11 0,00 118.849,23 118.849,23 118.849,23 0,00 828.554,91 0,00 828.554,91 0,00 410.999,37 410.999,37 410.999,37 0,00
+Total Contribuciones patronales
+1.1.7.0 - Complementos 1.1.7.1 - Presentismo
+0,00 0,00 0,00 0,00 2.421,88 2.421,88 2.421,88 0,00
+1.1.7.3 - Bonif.Tareas Funcionales y determ. 0,00 0,00 0,00 0,00 58.500,00 58.500,00 58.500,00 0,00 0,00 0,00 0,0...

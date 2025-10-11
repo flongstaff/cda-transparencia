@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_90178b26-0796-403e-b90b-d71d993db7ff",
+      "datasetTitle": "Archivos recibidos de los poderes judiciales provinciales - Justicia penal",
+      "format": "ZIP",
+      "title": "Archivos recibidos de los poderes judiciales provinciales referidos a causas penales 2018",
+      "accessURL": "https://datos.jus.gob.ar/dataset/90178b26-0796-403e-b90b-d71d993db7ff/resource/7c6cbf6c-faa5-473c-9ed5-51f123537bc5",
+      "lastProcessed": "2025-10-09T06:53:02.772Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_90178b26-0796-403e-b90b-d71d993db7ff",
+    "title": "Archivos recibidos de los poderes judiciales provinciales - Justicia penal",
+    "description": "Archivos recibidos de los poderes judiciales referidos a causas penales según lo establecido en el Protocolo de implementación del convenio interjurisdiccional de datos abiertos de justicia (tabla5, tabla5.1, tabla6, tabla6.1 y tabla6.2).\r\n\r\n\r\n",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2019-05-20T19:27:59.183069",
+    "modified": "2025-07-01T17:52:38.759072",
+    "publisher": {
+      "mbox": "datosjusticia@jus.gob.ar",
+      "name": "Ministerio de Justicia"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/archivos-recibidos-de-los-poderes-judiciales-provinciales-justicia-penal"
+  }
+}

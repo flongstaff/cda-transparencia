@@ -1,0 +1,50 @@
+{
+  "file_name": "2019_expenditure.csv",
+  "row_count": 7,
+  "column_count": 4,
+  "columns": [
+    "sector",
+    "budget",
+    "execution",
+    "percentage"
+  ],
+  "sample_data": [
+    {
+      "sector": "Salud",
+      "budget": 400000000,
+      "execution": 380000000,
+      "percentage": 95.0
+    },
+    {
+      "sector": "Educación",
+      "budget": 350000000,
+      "execution": 330000000,
+      "percentage": 94.3
+    },
+    {
+      "sector": "Obras Públicas",
+      "budget": 300000000,
+      "execution": 285000000,
+      "percentage": 95.0
+    },
+    {
+      "sector": "Administración",
+      "budget": 250000000,
+      "execution": 240000000,
+      "percentage": 96.0
+    },
+    {
+      "sector": "Desarrollo Social",
+      "budget": 150000000,
+      "execution": 140000000,
+      "percentage": 93.3
+    }
+  ],
+  "data_types": {
+    "sector": "object",
+    "budget": "int64",
+    "execution": "int64",
+    "percentage": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

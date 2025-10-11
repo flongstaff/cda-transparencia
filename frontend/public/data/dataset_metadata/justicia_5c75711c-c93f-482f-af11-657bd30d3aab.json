@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_5c75711c-c93f-482f-af11-657bd30d3aab",
+      "datasetTitle": "Listado de mediaciones prejudiciales y judiciales. Ley 26.589",
+      "format": "ZIP",
+      "title": "Listado de mediaciones prejudiciales y judiciales - 2017",
+      "accessURL": "https://datos.jus.gob.ar/dataset/5c75711c-c93f-482f-af11-657bd30d3aab/resource/a2686703-7122-40e8-95e0-6929a7070773",
+      "lastProcessed": "2025-10-09T06:33:12.911Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_5c75711c-c93f-482f-af11-657bd30d3aab",
+    "title": "Listado de mediaciones prejudiciales y judiciales. Ley 26.589",
+    "description": "Listado de las mediaciones prejudiciales y judiciales que están registradas en el Sistema MEPRE desde febrero de 2014.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-05-19T18:15:55.648665",
+    "modified": "2025-10-01T16:33:00.897571",
+    "publisher": {
+      "mbox": "allamosa@jus.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Acceso a la Justicia. Dirección Nacional de Mediación y Métodos Participativos de Resolución de Conflictos"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/mediaciones-prejudiciales-y-judiciales"
+  }
+}

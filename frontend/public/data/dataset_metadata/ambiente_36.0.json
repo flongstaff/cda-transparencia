@@ -1,0 +1,71 @@
+{
+  "files": {
+    "TR_AIA_metadata_geografica": {
+      "datasetId": "ambiente_36.0",
+      "datasetTitle": "Acceso a la información pública",
+      "fileName": "TR_AIA_metadata_geografica",
+      "format": "CSV",
+      "title": "Listado de capas del IDE ambiental, con metadata geografica",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=39&did=404",
+      "lastProcessed": "2025-10-09T07:00:50.729Z",
+      "status": "processed"
+    },
+    "TR_AIA_mapas": {
+      "datasetId": "ambiente_36.0",
+      "datasetTitle": "Acceso a la información pública",
+      "fileName": "TR_AIA_mapas",
+      "format": "CSV",
+      "title": "Mapas ambientales",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=39&did=402",
+      "lastProcessed": "2025-10-09T07:00:52.070Z",
+      "status": "processed"
+    },
+    "TR_AIP_publicaciones_ambiente": {
+      "datasetId": "ambiente_36.0",
+      "datasetTitle": "Acceso a la información pública",
+      "fileName": "TR_AIP_publicaciones_ambiente",
+      "format": "CSV",
+      "title": "Publicaciones de estadísticas ambientales",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=39&did=337",
+      "lastProcessed": "2025-10-09T07:00:53.330Z",
+      "status": "processed"
+    },
+    "TR_AIP_solicitudes_2023": {
+      "datasetId": "ambiente_36.0",
+      "datasetTitle": "Acceso a la información pública",
+      "fileName": "TR_AIP_solicitudes_2023",
+      "format": "CSV",
+      "title": "Solicitudes de acceso a la información",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=39&did=350",
+      "lastProcessed": "2025-10-09T07:00:54.635Z",
+      "status": "processed"
+    },
+    "TR_AIP_solicitudes_2023_temas": {
+      "datasetId": "ambiente_36.0",
+      "datasetTitle": "Acceso a la información pública",
+      "fileName": "TR_AIP_solicitudes_2023_temas",
+      "format": "CSV",
+      "title": "Solicitudes de acceso a la información por tema. 2020-2023",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=39&did=387",
+      "lastProcessed": "2025-10-09T07:00:55.957Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_36.0",
+    "title": "Acceso a la información pública",
+    "description": "Muesta la cantidad de solicitudes de acceso a la información solicitadas y las publicaciones de estadísticas ambientales",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2023-02-15T00:00:00",
+    "modified": "1900-01-02T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

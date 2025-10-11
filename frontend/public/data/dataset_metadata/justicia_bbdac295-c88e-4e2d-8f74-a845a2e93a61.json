@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_bbdac295-c88e-4e2d-8f74-a845a2e93a61",
+      "datasetTitle": "Registros Seccionales de la Propiedad Automotor",
+      "format": "gráfico",
+      "title": "Registros Seccionales de la Propiedad del Automotor y Créditos Prendarios - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/bbdac295-c88e-4e2d-8f74-a845a2e93a61/resource/b6500e7d-8b2d-47c4-a5b9-effa8c99f4e4",
+      "lastProcessed": "2025-10-09T06:31:45.565Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_bbdac295-c88e-4e2d-8f74-a845a2e93a61",
+    "title": "Registros Seccionales de la Propiedad Automotor",
+    "description": "Listados de Registros Seccionales de la Propiedad del Automotor y Créditos Prendarios, con competencia en automotores, motovehículos, maquinarias agrícolas, viales e industriales y de créditos prendarios de todo el país.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2016-07-11T17:42:30.442323",
+    "modified": "2025-10-01T14:34:40.939181",
+    "publisher": {
+      "mbox": "accesobd@dnrpa.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Dirección Nacional de los Registros Nacionales de la Propiedad del Automotor y Créditos Prendarios"
+    },
+    "landingPage": "https://www.dnrpa.gov.ar"
+  }
+}

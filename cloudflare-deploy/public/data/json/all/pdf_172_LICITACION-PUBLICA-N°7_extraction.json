@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_172_LICITACION-PUBLICA-N°7.pdf",
+  "file_hash": "af3a6676727c47097c27c6057244d316",
+  "page_count": 2,
+  "text_length": 2,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:21.938319"
+}

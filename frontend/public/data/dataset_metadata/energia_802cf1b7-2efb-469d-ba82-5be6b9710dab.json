@@ -1,0 +1,88 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_802cf1b7-2efb-469d-ba82-5be6b9710dab",
+      "datasetTitle": "Balances Energéticos",
+      "lastProcessed": "2025-10-09T06:56:46.428Z",
+      "status": "processed"
+    },
+    "sintesisbalancesenergeticos2021v1.pdf": {
+      "datasetId": "energia_802cf1b7-2efb-469d-ba82-5be6b9710dab",
+      "datasetTitle": "Balances Energéticos",
+      "fileName": "sintesisbalancesenergeticos2021v1.pdf",
+      "format": "PDF",
+      "title": "Balance Energético Nacional - Síntesis histórica 1960 - 2021",
+      "accessURL": "http://datos.energia.gob.ar/dataset/802cf1b7-2efb-469d-ba82-5be6b9710dab/resource/b641b231-d255-4b8e-8bb2-065841b88dc4",
+      "lastProcessed": "2025-10-09T06:55:03.299Z",
+      "status": "processed"
+    },
+    "balance_2020_V0_horizontal.xlsx": {
+      "datasetId": "energia_802cf1b7-2efb-469d-ba82-5be6b9710dab",
+      "datasetTitle": "Balances Energéticos",
+      "fileName": "balance_2020_V0_horizontal.xlsx",
+      "format": "XLSX",
+      "title": "Balances Energéticos Nacionales Año 2020",
+      "accessURL": "http://datos.energia.gob.ar/dataset/802cf1b7-2efb-469d-ba82-5be6b9710dab/resource/643964db-0c58-4b6d-9a8b-edc2bdb6e51c",
+      "lastProcessed": "2025-10-09T06:55:03.299Z",
+      "status": "processed"
+    },
+    "2019_11_10_sintesis_balances_energeticos_2018_pub.pdf": {
+      "datasetId": "energia_802cf1b7-2efb-469d-ba82-5be6b9710dab",
+      "datasetTitle": "Balances Energéticos",
+      "fileName": "2019_11_10_sintesis_balances_energeticos_2018_pub.pdf",
+      "format": "PDF",
+      "title": "Balance Energético Nacional Serie histórica – Indicadores Desde 1960 actualizado al año 2018",
+      "accessURL": "http://datos.energia.gob.ar/dataset/802cf1b7-2efb-469d-ba82-5be6b9710dab/resource/56d81a40-aef3-4558-a875-f0b501fe8d95",
+      "lastProcessed": "2025-10-09T06:55:05.398Z",
+      "status": "processed"
+    },
+    "balance_2017_V0_horiz.xlsx": {
+      "datasetId": "energia_802cf1b7-2efb-469d-ba82-5be6b9710dab",
+      "datasetTitle": "Balances Energéticos",
+      "fileName": "balance_2017_V0_horiz.xlsx",
+      "format": "XLSX",
+      "title": "Balance Energético Nacional de la República Argentina, año 2018",
+      "accessURL": "http://datos.energia.gob.ar/dataset/802cf1b7-2efb-469d-ba82-5be6b9710dab/resource/d2670029-ad14-4504-8f4c-6878a967c54e",
+      "lastProcessed": "2025-10-09T06:55:07.602Z",
+      "status": "processed"
+    },
+    "series-ben-1960-2016.csv": {
+      "datasetId": "energia_802cf1b7-2efb-469d-ba82-5be6b9710dab",
+      "datasetTitle": "Balances Energéticos",
+      "fileName": "series-ben-1960-2016.csv",
+      "format": "CSV",
+      "title": "Serie BEN 1960-2016",
+      "accessURL": "http://datos.energia.gob.ar/dataset/802cf1b7-2efb-469d-ba82-5be6b9710dab/resource/a3536c35-964d-43ff-bbfe-88fdfe60e200",
+      "lastProcessed": "2025-10-09T06:55:16.344Z",
+      "status": "processed"
+    },
+    "ben-2009.csv": {
+      "datasetId": "energia_802cf1b7-2efb-469d-ba82-5be6b9710dab",
+      "datasetTitle": "Balances Energéticos",
+      "fileName": "ben-2009.csv",
+      "format": "CSV",
+      "title": "Balance Energético Nacional - 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/802cf1b7-2efb-469d-ba82-5be6b9710dab/resource/7bacffcf-fdf4-4822-8476-ac963304baa1",
+      "lastProcessed": "2025-10-09T06:55:29.305Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_802cf1b7-2efb-469d-ba82-5be6b9710dab",
+    "title": "Balances Energéticos",
+    "description": "El BEN resume la información relativa a la producción, importación, exportación, transformación y consumo de energía en Argentina, siendo el principal instrumento estadístico para la planificación energética nacional. Todas las cifras se muestran en kTEP (miles de toneladas equivalentes de petróleo)...",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2018-03-21T15:15:02.115182",
+    "modified": "2025-06-25T11:28:34.518331",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

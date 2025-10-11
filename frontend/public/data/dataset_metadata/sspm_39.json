@@ -1,0 +1,52 @@
+{
+  "files": {
+    "captura-pesquera-por-categorias-valores-anuales.csv": {
+      "datasetId": "sspm_39",
+      "datasetTitle": "Captura pesquera",
+      "fileName": "captura-pesquera-por-categorias-valores-anuales.csv",
+      "format": "CSV",
+      "title": "Captura pesquera por categorías. Valores anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:20.378Z",
+      "status": "processed"
+    },
+    "captura-pesquera-por-categorias-valores-trimestrales.csv": {
+      "datasetId": "sspm_39",
+      "datasetTitle": "Captura pesquera",
+      "fileName": "captura-pesquera-por-categorias-valores-trimestrales.csv",
+      "format": "CSV",
+      "title": "Captura pesquera por categorías. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:21.437Z",
+      "status": "processed"
+    },
+    "captura-pesquera-por-categorias-valores-mensuales.csv": {
+      "datasetId": "sspm_39",
+      "datasetTitle": "Captura pesquera",
+      "fileName": "captura-pesquera-por-categorias-valores-mensuales.csv",
+      "format": "CSV",
+      "title": "Captura pesquera por categorías. Valores mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:22.487Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_39",
+    "title": "Captura pesquera",
+    "description": "Captura pesquera abierta por categorías",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:01:54.905206",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

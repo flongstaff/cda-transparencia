@@ -1,0 +1,42 @@
+{
+  "files": {
+    "distribucin-gas-concesiones-de-empresas-distribuidoras.zip": {
+      "datasetId": "energia_7e8aab1c-cacb-4739-bdef-a3932dcced99",
+      "datasetTitle": "Distribución de gas natural - Concesiones de empresas distribuidoras",
+      "fileName": "distribucin-gas-concesiones-de-empresas-distribuidoras.zip",
+      "format": "SHP",
+      "title": "Distribución de gas natural - Concesiones de empresas distribuidoras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/7e8aab1c-cacb-4739-bdef-a3932dcced99/resource/e2c61c57-9b2d-418d-b779-0076bec5d3e5",
+      "lastProcessed": "2025-10-09T07:20:50.028Z",
+      "status": "processed"
+    },
+    "distribucin-gas-concesiones-de-empresas-distribuidoras.csv": {
+      "datasetId": "energia_7e8aab1c-cacb-4739-bdef-a3932dcced99",
+      "datasetTitle": "Distribución de gas natural - Concesiones de empresas distribuidoras",
+      "fileName": "distribucin-gas-concesiones-de-empresas-distribuidoras.csv",
+      "format": "CSV",
+      "title": "Distribución de gas natural - Concesiones de empresas distribuidoras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/7e8aab1c-cacb-4739-bdef-a3932dcced99/resource/d29fdf3f-4f8a-4bb1-8e74-9039c1a22044",
+      "lastProcessed": "2025-10-09T07:20:51.261Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_7e8aab1c-cacb-4739-bdef-a3932dcced99",
+    "title": "Distribución de gas natural - Concesiones de empresas distribuidoras",
+    "description": "Concesiones de empresas distribuidoras de gas. ISO 19126: PowerSupplies, Este subgrupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-06-11T10:56:04.386614",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

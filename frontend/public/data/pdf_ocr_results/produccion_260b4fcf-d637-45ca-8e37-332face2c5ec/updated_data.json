@@ -1,0 +1,27 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "produccion_260b4fcf-d637-45ca-8e37-332face2c5ec",
+      "title": "Salarios promedio y mediano, por provincia y sector de actividad",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/produccion_260b4fcf-d637-45ca-8e37-332face2c5ec/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/produccion_260b4fcf-d637-45ca-8e37-332face2c5ec/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    }
+  ]
+}

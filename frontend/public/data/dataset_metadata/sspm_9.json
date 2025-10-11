@@ -1,0 +1,42 @@
+{
+  "files": {
+    "producto-interno-bruto-precios-corrientes-valores-anuales-base-2004.csv": {
+      "datasetId": "sspm_9",
+      "datasetTitle": "Producto Interno Bruto en dólares, Producto Interno Bruto per cápita y población",
+      "fileName": "producto-interno-bruto-precios-corrientes-valores-anuales-base-2004.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto. Precios corrientes. Base 1993. Valores anuales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:28.535Z",
+      "status": "processed"
+    },
+    "producto-interno-bruto-precios-corrientes-valores-trimestrales-base-2004.csv": {
+      "datasetId": "sspm_9",
+      "datasetTitle": "Producto Interno Bruto en dólares, Producto Interno Bruto per cápita y población",
+      "fileName": "producto-interno-bruto-precios-corrientes-valores-trimestrales-base-2004.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto. Precios corrientes. Base 1993. Valores trimestrales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:29.586Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_9",
+    "title": "Producto Interno Bruto en dólares, Producto Interno Bruto per cápita y población",
+    "description": "PBI y PBI percápita medido en dólares estadunidenses y Población",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:02:44.279686",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "files": {
+    "indicadores-evolucion-sector-agropecuario-valores-por-campana.csv": {
+      "datasetId": "sspm_34",
+      "datasetTitle": "Indicadores de evolución del sector agropecuario",
+      "fileName": "indicadores-evolucion-sector-agropecuario-valores-por-campana.csv",
+      "format": "CSV",
+      "title": "Evolución del sector agropecuario. Valores por campaña",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:08.202Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_34",
+    "title": "Indicadores de evolución del sector agropecuario",
+    "description": "Superficie sembrada y producción de cereales, oleaginosas y cultivos industriales",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:01:09.147180",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

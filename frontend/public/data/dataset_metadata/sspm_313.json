@@ -1,0 +1,32 @@
+{
+  "files": {
+    "deuda-externa-privada-bcra.csv": {
+      "datasetId": "sspm_313",
+      "datasetTitle": "Deuda externa privada - BCRA",
+      "fileName": "deuda-externa-privada-bcra.csv",
+      "format": "CSV",
+      "title": "Stock deuda externa privada. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:38.518Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_313",
+    "title": "Deuda externa privada - BCRA",
+    "description": "Stock deuda externa privada - BCRA",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-30",
+    "modified": "2025-03-24T10:02:37.109261",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

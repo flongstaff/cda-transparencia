@@ -1,0 +1,962 @@
+{
+  "files": {
+    "snic-provincias.xlsx": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "snic-provincias.xlsx",
+      "format": "XLSX",
+      "title": "Estadísticas criminales en la República Argentina por provincias (panel) (.xlsx).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:09.546Z",
+      "status": "processed"
+    },
+    "snic-provincias.csv": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "snic-provincias.csv",
+      "format": "CSV",
+      "title": "Estadísticas criminales en la República Argentina por provincias (panel) (.csv).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:09.618Z",
+      "status": "processed"
+    },
+    "snic-provincias.dta": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "snic-provincias.dta",
+      "format": "dta",
+      "title": "Estadísticas criminales en la República Argentina por provincias (panel) (.dta).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:09.618Z",
+      "status": "processed"
+    },
+    "snic-provincias.sav": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "snic-provincias.sav",
+      "format": "sav",
+      "title": "Estadísticas criminales en la República Argentina por provincias (panel) (.sav).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:09.618Z",
+      "status": "processed"
+    },
+    "snic-provincias-delitos-personas-victimas-series.csv": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "snic-provincias-delitos-personas-victimas-series.csv",
+      "format": "CSV",
+      "title": "Víctimas de delitos en la República Argentina por provincias (series).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:09.695Z",
+      "status": "processed"
+    },
+    "snic-provincias-delitos-personas-hechos-series.csv": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "snic-provincias-delitos-personas-hechos-series.csv",
+      "format": "CSV",
+      "title": "Hechos delictivos contra las personas, el honor, la integridad sexual y la libertad en la República Argentina por provincias (series).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:09.765Z",
+      "status": "processed"
+    },
+    "snic-provincias-delitos-propiedad-hechos-series.csv": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "snic-provincias-delitos-propiedad-hechos-series.csv",
+      "format": "CSV",
+      "title": "Hechos delictivos contra la propiedad en la República Argentina por provincias (series).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:09.858Z",
+      "status": "processed"
+    },
+    "snic-provincias-delitos-estado-hechos-series.csv": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "snic-provincias-delitos-estado-hechos-series.csv",
+      "format": "CSV",
+      "title": "Hechos delictivos contra el Estado, Ley 27.737 (estupefacientes) y Leyes especiales, en la República Argentina por provincias (series).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:09.942Z",
+      "status": "processed"
+    },
+    "tasa-snic-provincias-delitos-personas-victimas-series.csv": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "tasa-snic-provincias-delitos-personas-victimas-series.csv",
+      "format": "CSV",
+      "title": "Tasas (cada 100 mil habitantes) de víctimas de delitos en la República Argentina por provincias (series).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:10.022Z",
+      "status": "processed"
+    },
+    "tasa-snic-provincias-delitos-personas-hechos-series.csv": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "tasa-snic-provincias-delitos-personas-hechos-series.csv",
+      "format": "CSV",
+      "title": "Tasas (cada 100 mil habitantes) de hechos delictivos contra las personas, el honor, la integridad sexual y la libertad en la República Argentina por provincias (series).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:10.096Z",
+      "status": "processed"
+    },
+    "tasa-snic-provincias-delitos-propiedad-hechos-series.csv": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "tasa-snic-provincias-delitos-propiedad-hechos-series.csv",
+      "format": "CSV",
+      "title": "Tasas (cada 100 mil habitantes) de hechos delictivos contra la propiedad en la República Argentina por provincias (series).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:10.166Z",
+      "status": "processed"
+    },
+    "tasa-snic-provincias-delitos-estado-hechos-series.csv": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "tasa-snic-provincias-delitos-estado-hechos-series.csv",
+      "format": "CSV",
+      "title": "Tasas (cada 100 mil habitantes) de hechos delictivos contra el Estado en la República Argentina por provincias (series).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:10.250Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Buenos_Aires_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Buenos_Aires_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Buenos Aires 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:11.026Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_CABA_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_CABA_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la Ciudad Autónoma de Buenos Aires 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:12.013Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Catamarca_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Catamarca_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Catamarca 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:13.056Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Chaco_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Chaco_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Chaco 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:14.149Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Chubut_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Chubut_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Chubut 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:15.184Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Cordoba_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Cordoba_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Córdoba 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:16.257Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Corrientes_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Corrientes_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Corrientes 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:17.103Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Entre_Rios_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Entre_Rios_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Entre Ríos 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:17.789Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Formosa_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Formosa_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Formosa 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:18.506Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Jujuy_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Jujuy_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Jujuy 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:19.195Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_La_Pampa_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_La_Pampa_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de La Pampa 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:19.886Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_La_Rioja_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_La_Rioja_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de La Rioja 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:20.580Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Mendoza_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Mendoza_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Mendoza 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:21.291Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Misiones_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Misiones_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Misiones 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:22.032Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Neuquen_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Neuquen_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Neuquén 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:22.818Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Rio_Negro_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Rio_Negro_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Río Negro 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:23.541Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Salta_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Salta_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Salta 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:24.235Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_San_Juan_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_San_Juan_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de San Juan 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:24.963Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_San_Luis_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_San_Luis_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de San Luis 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:25.708Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Santa_Cruz_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Santa_Cruz_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Santa Cruz 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:26.475Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Santa_Fe_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Santa_Fe_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Santa Fe 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:27.243Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Santiago_del_Estero_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Santiago_del_Estero_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Santiago del Estero 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:27.939Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Tierra_del_Fuego_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Tierra_del_Fuego_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Tierra del Fuego 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:28.640Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Tucuman_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Tucuman_2021.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Tucumán 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:29.342Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Región_Centro_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Región_Centro_2021.pdf",
+      "format": "PDF",
+      "title": "Informe regional. Estadísticas criminales en la región Centro 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:30.039Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Región_Cuyo_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Región_Cuyo_2021.pdf",
+      "format": "PDF",
+      "title": "Informe regional. Estadísticas criminales en la región Cuyo 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:30.730Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Región_NEA_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Región_NEA_2021.pdf",
+      "format": "PDF",
+      "title": "Informe regional. Estadísticas criminales en la región NEA 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:31.433Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Región_NOA_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Región_NOA_2021.pdf",
+      "format": "PDF",
+      "title": "Informe regional. Estadísticas criminales en la región NOA 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:32.124Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Región_Patagonia_2021.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Región_Patagonia_2021.pdf",
+      "format": "PDF",
+      "title": "Informe regional. Estadísticas criminales en la región Patagonia 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:32.841Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Buenos_Aires_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Buenos_Aires_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Buenos Aires 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:33.550Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_CABA_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_CABA_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la Ciudad Autónoma de Buenos Aires 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:34.319Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Catamarca_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Catamarca_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Catamarca 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:35.004Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Chaco_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Chaco_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Chaco 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:35.648Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Chubut_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Chubut_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Chubut 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:36.407Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Cordoba_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Cordoba_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Córdoba 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:37.094Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Corrientes_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Corrientes_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Corrientes 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:37.793Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Entre_Rios_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Entre_Rios_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Entre Ríos 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:38.546Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Formosa_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Formosa_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Formosa 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:39.214Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Jujuy_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Jujuy_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Jujuy 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:39.910Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_La_Pampa_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_La_Pampa_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de La Pampa 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:40.676Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_La_Rioja_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_La_Rioja_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de La Rioja 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:41.359Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Mendoza_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Mendoza_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Mendoza 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:42.040Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Misiones_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Misiones_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Misiones 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:42.767Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Neuquen_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Neuquen_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Neuquén 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:43.476Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Rio_Negro_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Rio_Negro_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Río Negro 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:44.154Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Salta_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Salta_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Salta 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:44.899Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_San_Juan_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_San_Juan_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de San Juan 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:45.594Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_San_Luis_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_San_Luis_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de San Luis 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:46.282Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Santa_Cruz_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Santa_Cruz_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Santa Cruz 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:46.976Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Santa_Fe_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Santa_Fe_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Santa Fe 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:47.667Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Santiago_del_Estero_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Santiago_del_Estero_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Santiago del Estero 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:48.323Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Tierra_del_Fuego_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Tierra_del_Fuego_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Tierra del Fuego 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:49.040Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Tucuman_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Tucuman_2022.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Tucumán 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:49.711Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Región_Centro_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Región_Centro_2022.pdf",
+      "format": "PDF",
+      "title": "Informe regional. Estadísticas criminales en la región Centro 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:50.462Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Región_Cuyo_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Región_Cuyo_2022.pdf",
+      "format": "PDF",
+      "title": "Informe regional. Estadísticas criminales en la región Cuyo 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:51.210Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Región_NEA_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Región_NEA_2022.pdf",
+      "format": "PDF",
+      "title": "Informe regional. Estadísticas criminales en la región NEA 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:51.898Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Región_NOA_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Región_NOA_2022.pdf",
+      "format": "PDF",
+      "title": "Informe regional. Estadísticas criminales en la región NOA 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:52.699Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Región_Patagonia_2022.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Región_Patagonia_2022.pdf",
+      "format": "PDF",
+      "title": "Informe regional. Estadísticas criminales en la región Patagonia 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:53.376Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Provincia_de_Buenos_Aires_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Provincia_de_Buenos_Aires_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Buenos Aires 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:54.057Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Caba_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Caba_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la Ciudad Autónoma de Buenos Aires 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:54.824Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Catamarca_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Catamarca_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Catamarca 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:55.514Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Chaco_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Chaco_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Chaco 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:56.227Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Chubut_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Chubut_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Chubut 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:56.946Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Cordoba_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Cordoba_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Córdoba 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:57.666Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Corrientes_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Corrientes_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Corrientes 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:58.452Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Entre_Rios_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Entre_Rios_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Entre Ríos 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:59.166Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Formosa_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Formosa_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Formosa 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:59.906Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Jujuy_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Jujuy_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Jujuy 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:00.587Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_La_Pampa_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_La_Pampa_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de La Pampa 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:01.254Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_La_Rioja_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_La_Rioja_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de La Rioja 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:01.929Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Mendoza_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Mendoza_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Mendoza 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:02.682Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Misiones_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Misiones_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Misiones 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:03.347Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Neuquen_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Neuquen_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Neuquén 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:04.073Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Rio_Negro_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Rio_Negro_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Río Negro 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:04.825Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Salta_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Salta_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Salta 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:05.529Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_San_Juan_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_San_Juan_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de San Juan 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:06.309Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_San_Luis_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_San_Luis_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de San Luis 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:07.049Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Santa_Cruz_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Santa_Cruz_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Santa Cruz 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:07.767Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Santa_Fe_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Santa_Fe_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Santa Fe 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:08.475Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Santiago_del_Estero_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Santiago_del_Estero_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Santiago del Estero 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:09.213Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Tierra_del_Fuego_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Tierra_del_Fuego_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Tierra del Fuego 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:10.000Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Tucuman_2023.pdf": {
+      "datasetId": "seguridad_2",
+      "datasetTitle": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "fileName": "Informe_SNIC_Tucuman_2023.pdf",
+      "format": "PDF",
+      "title": "Informe provincial. Estadísticas criminales en la provincia de Tucumán 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:09:10.859Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "seguridad_2",
+    "title": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+    "description": "Hechos delictivos y víctimas por tipo de delito, informados al Sistema Nacional de Información Criminal (SNIC). Por provincias. Cantidades y tasas desde 2014.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-07-14T00:00:00",
+    "modified": "2025-05-21T00:00:00",
+    "publisher": {
+      "mbox": "snic-sat@minseg.gob.ar",
+      "name": "Ministerio de Seguridad de la Nación. Dirección Nacional de Estadística Criminal."
+    },
+    "landingPage": "https://www.argentina.gob.ar/seguridad/estadisticascriminales"
+  }
+}

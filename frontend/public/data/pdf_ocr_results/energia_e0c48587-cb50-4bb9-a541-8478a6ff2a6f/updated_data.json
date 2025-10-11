@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "energia_e0c48587-cb50-4bb9-a541-8478a6ff2a6f",
+      "title": "Anuarios de Energía Eléctrica",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/energia_e0c48587-cb50-4bb9-a541-8478a6ff2a6f/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/energia_e0c48587-cb50-4bb9-a541-8478a6ff2a6f/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "files": {
+    "cobros-pagos-bienes-modalidad.csv": {
+      "datasetId": "sspm_183",
+      "datasetTitle": "Cobros y pagos por bienes por modalidad de pago - Balance Cambiario",
+      "fileName": "cobros-pagos-bienes-modalidad.csv",
+      "format": "CSV",
+      "title": "Cobros y pagos por bienes por modalidad de pago. Valores mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:44.758Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_183",
+    "title": "Cobros y pagos por bienes por modalidad de pago - Balance Cambiario",
+    "description": "Cobros y pagos por bienes por modalidad de pago - Balance Cambiario",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-03",
+    "modified": "2025-03-24T10:01:25.290344",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

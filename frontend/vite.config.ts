@@ -13,7 +13,9 @@ export default defineConfig(({ mode }) => {
   const getBasePath = () => {
     if (mode === 'development') return '/';
     if (mode === 'github') return '/cda-transparencia/'; // GitHub Pages requires repo name as base path
-    if (mode === 'production') return '/';
+    if (mode === 'cloudflare') return '/'; // Cloudflare Pages uses root path
+    if (mode === 'custom-domain') return '/'; // For custom domain deployments
+    if (mode === 'production') return '/'; // Legacy production mode also uses root path
     return '/'; // default fallback
   };
 

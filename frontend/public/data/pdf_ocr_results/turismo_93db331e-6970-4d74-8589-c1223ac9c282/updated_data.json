@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "turismo_93db331e-6970-4d74-8589-c1223ac9c282",
+      "title": "Encuesta de Ocupación Hotelera y Parahotelera (EOH)",
+      "distribution": [
+        {
+          "title": "eoh-data-.pdf",
+          "format": "PDF",
+          "fileName": "eoh-data-.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/turismo_93db331e-6970-4d74-8589-c1223ac9c282/eoh-data-.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/turismo_93db331e-6970-4d74-8589-c1223ac9c282/eoh-data-_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

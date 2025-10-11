@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-presupuesto-2025",
+      "title": "Presupuesto Municipal 2025",
+      "distribution": [
+        {
+          "title": "PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+          "format": "PDF",
+          "fileName": "PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-presupuesto-2025/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-presupuesto-2025/PRESUPUESTO-2025-APROBADO-ORD-3280-24_extraction.json",
+            "pageCount": 331,
+            "textLength": 458647,
+            "extractedPreview": "\n\n\n\n\n\n\n\n \nPRESUPUESTO MUNICIPAL  \nCARMEN DE ARECO  \n2025  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nCALCULO DE RECURSOS MUNICIPALES   \n \n \n \n \n \n \n \n \n \nANEXO I INFORMACION CONS...",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

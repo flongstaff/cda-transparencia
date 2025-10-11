@@ -1,0 +1,142 @@
+{
+  "files": {
+    "cantidad-de-prestaciones-financiadas-por-el-programa-sumar-20181219.csv": {
+      "datasetId": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+      "datasetTitle": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+      "fileName": "cantidad-de-prestaciones-financiadas-por-el-programa-sumar-20181219.csv",
+      "format": "CSV",
+      "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción y por grupo etario. Periodo 2017-12",
+      "accessURL": "http://datos.salud.gob.ar/dataset/6d5fe887-62a2-4064-9259-d20e4ff2a064/resource/12317faf-98b1-4318-a4fa-43dd31d33f7d",
+      "lastProcessed": "2025-10-09T07:55:27.906Z",
+      "status": "processed"
+    },
+    "prestaciones-financiadas-sumar-201806.csv": {
+      "datasetId": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+      "datasetTitle": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+      "fileName": "prestaciones-financiadas-sumar-201806.csv",
+      "format": "CSV",
+      "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción y por grupo etario,. Periodo 2018-06",
+      "accessURL": "http://datos.salud.gob.ar/dataset/6d5fe887-62a2-4064-9259-d20e4ff2a064/resource/4b8d7175-c1de-4851-ab47-25b047511aae",
+      "lastProcessed": "2025-10-09T07:55:32.144Z",
+      "status": "processed"
+    },
+    "prestaciones-programa-sumar-201812.csv": {
+      "datasetId": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+      "datasetTitle": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+      "fileName": "prestaciones-programa-sumar-201812.csv",
+      "format": "CSV",
+      "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción y por grupo etario,. Periodo 2018-12",
+      "accessURL": "http://datos.salud.gob.ar/dataset/6d5fe887-62a2-4064-9259-d20e4ff2a064/resource/911e8443-f4c5-467c-8f1a-02658c06a7e8",
+      "lastProcessed": "2025-10-09T07:55:36.662Z",
+      "status": "processed"
+    },
+    "prestaciones-programa-sumar-201812.xls": {
+      "datasetId": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+      "datasetTitle": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+      "fileName": "prestaciones-programa-sumar-201812.xls",
+      "format": "XLS",
+      "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción y por grupo etario,. Periodo 2018-12",
+      "accessURL": "http://datos.salud.gob.ar/dataset/6d5fe887-62a2-4064-9259-d20e4ff2a064/resource/3253371c-381a-4c99-a155-6ee88f26c2a5",
+      "lastProcessed": "2025-10-09T07:55:36.662Z",
+      "status": "processed"
+    },
+    "prestaciones-programa-sumar-201812.json": {
+      "datasetId": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+      "datasetTitle": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+      "fileName": "prestaciones-programa-sumar-201812.json",
+      "format": "JSON",
+      "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción y por grupo etario,. Periodo 2018-12",
+      "accessURL": "http://datos.salud.gob.ar/dataset/6d5fe887-62a2-4064-9259-d20e4ff2a064/resource/75d872a4-591e-4de0-af03-01cb3bca16ab",
+      "lastProcessed": "2025-10-09T07:55:36.662Z",
+      "status": "processed"
+    },
+    "prestaciones-programa-sumar-201906.csv": {
+      "datasetId": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+      "datasetTitle": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+      "fileName": "prestaciones-programa-sumar-201906.csv",
+      "format": "CSV",
+      "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción y por grupo etario,. Entre julio 2018 y junio 2019",
+      "accessURL": "http://datos.salud.gob.ar/dataset/6d5fe887-62a2-4064-9259-d20e4ff2a064/resource/7aa51d9d-95d3-4bec-99c4-02cef1384b0f",
+      "lastProcessed": "2025-10-09T07:55:41.581Z",
+      "status": "processed"
+    },
+    "prestaciones-programa-sumar-201912.csv": {
+      "datasetId": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+      "datasetTitle": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+      "fileName": "prestaciones-programa-sumar-201912.csv",
+      "format": "CSV",
+      "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción y por grupo etario,. Año 2019",
+      "accessURL": "http://datos.salud.gob.ar/dataset/6d5fe887-62a2-4064-9259-d20e4ff2a064/resource/f60a82f2-efac-4042-8151-b860d688c9b5",
+      "lastProcessed": "2025-10-09T07:55:45.700Z",
+      "status": "processed"
+    },
+    "prestaciones-financiadas-programa-sumar-junio-2020.csv": {
+      "datasetId": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+      "datasetTitle": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+      "fileName": "prestaciones-financiadas-programa-sumar-junio-2020.csv",
+      "format": "CSV",
+      "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción y por grupo etario,. Año 2020",
+      "accessURL": "http://datos.salud.gob.ar/dataset/6d5fe887-62a2-4064-9259-d20e4ff2a064/resource/d24515c1-1853-412b-b7a2-a1f281510d27",
+      "lastProcessed": "2025-10-09T07:55:49.770Z",
+      "status": "processed"
+    },
+    "prestaciones-financiadas-programa-sumar-periodo-julio-2020-diciembre-2020.csv": {
+      "datasetId": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+      "datasetTitle": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+      "fileName": "prestaciones-financiadas-programa-sumar-periodo-julio-2020-diciembre-2020.csv",
+      "format": "CSV",
+      "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción y por grupo etario,. Año 2020",
+      "accessURL": "http://datos.salud.gob.ar/dataset/6d5fe887-62a2-4064-9259-d20e4ff2a064/resource/ce2b8f34-5c9d-4c7c-9a9d-d448ebaecf4f",
+      "lastProcessed": "2025-10-09T07:55:53.783Z",
+      "status": "processed"
+    },
+    "prestaciones-financiadas-programa-sumar-periodo-enero-2022-diciembre-2022.csv": {
+      "datasetId": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+      "datasetTitle": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+      "fileName": "prestaciones-financiadas-programa-sumar-periodo-enero-2022-diciembre-2022.csv",
+      "format": "CSV",
+      "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción y por grupo etario,. Año 2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/6d5fe887-62a2-4064-9259-d20e4ff2a064/resource/4fcfde6e-cd06-49b2-855e-f9e439c45d41",
+      "lastProcessed": "2025-10-09T07:55:57.992Z",
+      "status": "processed"
+    },
+    "prestaciones-financiadas-programa-sumar-periodo-enero-2023-junio-2023 (1).csv": {
+      "datasetId": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+      "datasetTitle": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+      "fileName": "prestaciones-financiadas-programa-sumar-periodo-enero-2023-junio-2023 (1).csv",
+      "format": "CSV",
+      "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción y por grupo etario,. Año 2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/6d5fe887-62a2-4064-9259-d20e4ff2a064/resource/ea1979e8-c698-4a41-827f-aa58c5316a5b",
+      "lastProcessed": "2025-10-09T07:56:01.945Z",
+      "status": "processed"
+    },
+    "prestaciones-financiadas-programa-sumar-periodo-julio-2023-diciembre-2023.csv": {
+      "datasetId": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+      "datasetTitle": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+      "fileName": "prestaciones-financiadas-programa-sumar-periodo-julio-2023-diciembre-2023.csv",
+      "format": "CSV",
+      "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción y por grupo etario,. Año 2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/6d5fe887-62a2-4064-9259-d20e4ff2a064/resource/dce54f5d-8cd9-428b-8fb6-2c8764c8a2b3",
+      "lastProcessed": "2025-10-09T07:56:06.374Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_6d5fe887-62a2-4064-9259-d20e4ff2a064",
+    "title": "Cantidad de prestaciones financiadas por el Programa Sumar y su monto, desagregado por jurisdicción",
+    "description": "Número de prestaciones financiadas por los SPS del Programa Sumar y su monto (en pesos ARS), desagregado por jurisdicción y por grupo etario: niños de 0 a 5 años, niños de 6 a 9 años, adolescentes de 10 a 19 años, mujeres de 20 a 64 años y hombres de 20 a 64 años, en el período observado.",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2018-06-21T11:09:46.438843",
+    "modified": "2025-02-11T10:11:53.477424",
+    "publisher": {
+      "mbox": "pe.sumaruec@gmail.com",
+      "name": "Ministerio de Salud de la Nación. Secretaría de Gestión Sanitaria. Subsecretaría de Relaciones Sectoriales y Articulación. "
+    },
+    "landingPage": "http://www.datos.deis.msal.gov.ar/dataset/cantidad-de-prestaciones-financiadas-por-el-programa-sumar-y-su-monto-desagregado-por-jurisdiccion"
+  }
+}

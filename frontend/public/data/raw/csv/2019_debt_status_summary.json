@@ -1,0 +1,43 @@
+{
+  "file_name": "2019_debt_status.csv",
+  "row_count": 5,
+  "column_count": 3,
+  "columns": [
+    "type",
+    "amount",
+    "due_date"
+  ],
+  "sample_data": [
+    {
+      "type": "Deuda flotante",
+      "amount": 30000000.0,
+      "due_date": "2020-12-31"
+    },
+    {
+      "type": "Deuda consolidada",
+      "amount": 50000000.0,
+      "due_date": "2025-12-31"
+    },
+    {
+      "type": NaN,
+      "amount": 201.0,
+      "due_date": NaN
+    },
+    {
+      "type": NaN,
+      "amount": 195.0,
+      "due_date": NaN
+    },
+    {
+      "type": NaN,
+      "amount": 201.0,
+      "due_date": NaN
+    }
+  ],
+  "data_types": {
+    "type": "object",
+    "amount": "float64",
+    "due_date": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

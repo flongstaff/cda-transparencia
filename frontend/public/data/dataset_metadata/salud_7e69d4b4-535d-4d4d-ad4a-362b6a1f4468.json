@@ -1,0 +1,42 @@
+{
+  "files": {
+    "2024-11-26-actas-de-recepcion-vacunas_1.xlsx": {
+      "datasetId": "salud_7e69d4b4-535d-4d4d-ad4a-362b6a1f4468",
+      "datasetTitle": "Actas de recepción de vacunas COVID-19",
+      "fileName": "2024-11-26-actas-de-recepcion-vacunas_1.xlsx",
+      "format": "XLSX",
+      "title": "Actas de recepcion de vacunas",
+      "accessURL": "http://datos.salud.gob.ar/dataset/7e69d4b4-535d-4d4d-ad4a-362b6a1f4468/resource/d2851fa6-b105-4f15-b352-dd3d792bd526",
+      "lastProcessed": "2025-10-09T07:42:55.834Z",
+      "status": "processed"
+    },
+    "2025-02-20-actas-de-recepcion-vacunas.xlsx": {
+      "datasetId": "salud_7e69d4b4-535d-4d4d-ad4a-362b6a1f4468",
+      "datasetTitle": "Actas de recepción de vacunas COVID-19",
+      "fileName": "2025-02-20-actas-de-recepcion-vacunas.xlsx",
+      "format": "XLSX",
+      "title": "Actas de recepcion de vacunas 20/02/2025",
+      "accessURL": "http://datos.salud.gob.ar/dataset/7e69d4b4-535d-4d4d-ad4a-362b6a1f4468/resource/efa38ecf-6ae3-42eb-afae-212544b03f51",
+      "lastProcessed": "2025-10-09T07:42:55.834Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_7e69d4b4-535d-4d4d-ad4a-362b6a1f4468",
+    "title": "Actas de recepción de vacunas COVID-19",
+    "description": "Número de actuación administrativa, fecha de creación, número de acta de recepción, número de guía aérea,  cantidad de dosis recibidas",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2021-06-03T18:52:59.853163",
+    "modified": "2024-10-09T12:01:43.887972",
+    "publisher": {
+      "mbox": "sgestion@msal.gov.ar",
+      "name": "Ministerio de Salud de la Nación. Secretaría de Gestión Administrativa. "
+    },
+    "landingPage": "http://datos.salud.gob.ar/dataset/actas-de-recepcion-de-vacunas-covid-19"
+  }
+}

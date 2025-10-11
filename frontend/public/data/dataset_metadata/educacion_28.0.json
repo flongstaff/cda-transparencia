@@ -1,0 +1,84 @@
+{
+  "files": {
+    "censo-94.rar": {
+      "datasetId": "educacion_28.0",
+      "datasetTitle": "Censos Docentes",
+      "fileName": "censo-94.rar",
+      "format": "RAR",
+      "title": "Base de Datos del Censo Nacional 1994",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/censo-nacional-del-personal-de-los-establecimientos-educativos-cenpe",
+      "lastProcessed": "2025-10-09T06:41:13.501Z",
+      "status": "processed"
+    },
+    "docentes_1994-2014.pdf": {
+      "datasetId": "educacion_28.0",
+      "datasetTitle": "Censos Docentes",
+      "fileName": "docentes_1994-2014.pdf",
+      "format": "PDF",
+      "title": "Docentes de nivel secundario",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/censo-nacional-del-personal-de-los-establecimientos-educativos-cenpe",
+      "lastProcessed": "2025-10-09T06:41:14.443Z",
+      "status": "processed"
+    },
+    "cenpe-2014-resultados-preliminares_0.pdf": {
+      "datasetId": "educacion_28.0",
+      "datasetTitle": "Censos Docentes",
+      "fileName": "cenpe-2014-resultados-preliminares_0.pdf",
+      "format": "PDF",
+      "title": "Personal de establecimientos educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/censo-nacional-del-personal-de-los-establecimientos-educativos-cenpe",
+      "lastProcessed": "2025-10-09T06:41:15.122Z",
+      "status": "processed"
+    },
+    "censo_resultados_definitivos_2004.pdf": {
+      "datasetId": "educacion_28.0",
+      "datasetTitle": "Censos Docentes",
+      "fileName": "censo_resultados_definitivos_2004.pdf",
+      "format": "PDF",
+      "title": "Resultados definitivos del Censo Nacional Docente 2014",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/censo-nacional-del-personal-de-los-establecimientos-educativos-cenpe",
+      "lastProcessed": "2025-10-09T06:41:15.915Z",
+      "status": "processed"
+    },
+    "cenpe_2014.zip": {
+      "datasetId": "educacion_28.0",
+      "datasetTitle": "Censos Docentes",
+      "fileName": "cenpe_2014.zip",
+      "format": "ZIP",
+      "title": "Resultados por provincia",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/censo-nacional-del-personal-de-los-establecimientos-educativos-cenpe",
+      "lastProcessed": "2025-10-09T06:41:15.915Z",
+      "status": "processed"
+    },
+    "cnd_2004.pdf": {
+      "datasetId": "educacion_28.0",
+      "datasetTitle": "Censos Docentes",
+      "fileName": "cnd_2004.pdf",
+      "format": "PDF",
+      "title": "Resultados preliminares del Censo Nacional Docente 2014",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/censo-nacional-del-personal-de-los-establecimientos-educativos-cenpe",
+      "lastProcessed": "2025-10-09T06:41:16.609Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "educacion_28.0",
+    "title": "Censos Docentes",
+    "description": "Información estadística sobre el CENPE 2014 que es el censo nacional del personal docente y no docente del sistema educativo argentino. Involucró a todo el personal de las escuelas de todos los niveles y modalidades: inicial, primario, secundario y superior, excepto las universidades. Comprendió a escuelas de gestión pública y privada de todo el país. Permitió relevar información estratégica sobre un universo de 1.200.000 personas aproximadamente.",
+    "theme": [
+      "educ",
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE",
+      "EDUC"
+    ],
+    "issued": "2019-10-04",
+    "modified": "2025-07-15T00:00:00",
+    "publisher": {
+      "mbox": "gestioninfo@educacion.gob.ar",
+      "name": "Secretaría de Educación de la Nación\nSubsecretaría de Evaluación e Información Educativa"
+    },
+    "landingPage": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/censo-nacional-del-personal-de-los-establecimientos-educativos-cenpe"
+  }
+}

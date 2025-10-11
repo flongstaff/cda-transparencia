@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const pdf = require('pdf-parse');
+const { exec } = require('child_process');
+const { promisify } = require('util');
+
+const execPromise = promisify(exec);
 
 /**
  * Extract numbers from text using regex
@@ -21,11 +25,11 @@ function extractNumbers(text) {
 }
 
 /**
- * Parse budget PDF and extract structured data
+ * Parse budget PDF and extract structured data using basic PDF parsing
  * @param {string} pdfPath - Path to the PDF file
  * @returns {Promise<Object>} - Parsed budget data
  */
-async function parseBudget(pdfPath) {
+async function parseBudgetBasic(pdfPath) {
   try {
     const dataBuffer = fs.readFileSync(pdfPath);
     const data = await pdf(dataBuffer);
@@ -40,7 +44,8 @@ async function parseBudget(pdfPath) {
       numPages: data.numpages,
       metadata: data.metadata,
       extractedNumbers: extractNumbers(text),
-      fullTextLength: text.length
+      fullTextLength: text.length,
+      source: 'basic-pdf-parse'  // Indicate the source of extraction
     };
     
     // Create structured data directory if it doesn't exist
@@ -50,21 +55,124 @@ async function parseBudget(pdfPath) {
     }
     
     // Write the structured data to a JSON file
-    const outputPath = path.join(structuredDir, 'budget-2025.json');
+    const outputPath = path.join(structuredDir, 'budget-2025-basic.json');
     fs.writeFileSync(outputPath, JSON.stringify(budgetData, null, 2));
     
-    console.log(`Budget data extracted and saved to ${outputPath}`);
+    console.log(`Basic budget data extracted and saved to ${outputPath}`);
     console.log(`Pages: ${budgetData.numPages}, Numbers extracted: ${budgetData.extractedNumbers.length}`);
     
     return budgetData;
   } catch (error) {
-    console.error('Error parsing budget PDF:', error);
+    console.error('Error parsing budget PDF with basic method:', error);
     throw error;
+  }
+}
+
+/**
+ * Parse budget PDF using advanced OCR (docstrange) and extract structured data
+ * @param {string} pdfPath - Path to the PDF file
+ * @returns {Promise<Object>} - Parsed budget data
+ */
+async function parseBudgetAdvanced(pdfPath) {
+  try {
+    // Use the Python docstrange script to process the PDF
+    const pythonScriptPath = path.join(__dirname, 'process_pdfs_with_docstrange.py');
+    const outputDir = path.join(__dirname, '..', 'data', 'ocr_extracted');
+    
+    // Create a temporary data file with a single PDF entry for processing
+    const tempData = {
+      title: "Temporary Single PDF Processing",
+      description: "Data structure for processing a single PDF with docstrange",
+      dataset: [
+        {
+          identifier: "temp-single-pdf",
+          title: "Temporarily created for single PDF processing",
+          distribution: [
+            {
+              title: "Input PDF",
+              format: "PDF",
+              fileName: path.basename(pdfPath),
+              downloadURL: pdfPath,
+              localPath: pdfPath  // For local files
+            }
+          ]
+        }
+      ]
+    };
+    
+    // Write temporary data file
+    const tempDataPath = path.join(outputDir, 'temp_single_pdf.json');
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+    fs.writeFileSync(tempDataPath, JSON.stringify(tempData, null, 2));
+    
+    // Run the docstrange processing on the temporary data file
+    const command = `python3 ${pythonScriptPath} "${tempDataPath}" "${outputDir}"`;
+    console.log(`Running advanced OCR processing command: ${command}`);
+    
+    const { stdout, stderr } = await execPromise(command);
+    
+    if (stderr) {
+      console.error('STDERR from docstrange:', stderr);
+    }
+    
+    // Look for the extraction result file
+    const extractionResultPath = path.join(outputDir, 'temp-single-pdf', `${path.basename(pdfPath, '.pdf')}_extraction.json`);
+    if (fs.existsSync(extractionResultPath)) {
+      const extractionResult = JSON.parse(fs.readFileSync(extractionResultPath, 'utf8'));
+      
+      const budgetData = {
+        year: 2025, // Based on the filename
+        textSample: extractionResult.extracted_text.substring(0, 500), // First 500 characters as sample
+        numPages: extractionResult.page_count,
+        extractedNumbers: extractNumbers(extractionResult.extracted_text),
+        fullTextLength: extractionResult.text_length,
+        source: 'advanced-ocr-docstrange',  // Indicate the source of extraction
+        extractionDetails: extractionResult
+      };
+      
+      // Write the structured data to a JSON file
+      const outputPath = path.join(__dirname, '..', 'data', 'structured', 'budget-2025-advanced.json');
+      fs.writeFileSync(outputPath, JSON.stringify(budgetData, null, 2));
+      
+      console.log(`Advanced budget data extracted and saved to ${outputPath}`);
+      console.log(`Pages: ${budgetData.numPages}, Numbers extracted: ${budgetData.extractedNumbers.length}`);
+      
+      // Clean up temporary file
+      fs.unlinkSync(tempDataPath);
+      
+      return budgetData;
+    } else {
+      throw new Error(`Extraction result not found at: ${extractionResultPath}`);
+    }
+  } catch (error) {
+    console.error('Error parsing budget PDF with advanced OCR:', error);
+    throw error;
+  }
+}
+
+/**
+ * Parse budget PDF using the best available method (defaults to basic, with option for advanced)
+ * @param {string} pdfPath - Path to the PDF file
+ * @param {boolean} useAdvancedOCR - Whether to use advanced OCR (docstrange) or basic parsing
+ * @returns {Promise<Object>} - Parsed budget data
+ */
+async function parseBudget(pdfPath, useAdvancedOCR = false) {
+  if (useAdvancedOCR) {
+    console.log('Using advanced OCR (docstrange) for PDF parsing...');
+    return await parseBudgetAdvanced(pdfPath);
+  } else {
+    console.log('Using basic PDF parsing...');
+    return await parseBudgetBasic(pdfPath);
   }
 }
 
 // If this script is run directly, parse the budget PDF
 if (require.main === module) {
+  // Check command line arguments to see if advanced OCR is requested
+  const useAdvancedOCR = process.argv.includes('--advanced') || process.argv.includes('--ocr');
+  
   // Look for the PDF in both potential locations
   const pdfPath1 = path.join(__dirname, '..', 'data', 'raw', 'budget-2025.pdf'); // backend/data/raw
   const pdfPath2 = path.join(__dirname, '..', '..', 'data', 'raw', 'budget-2025.pdf'); // root data/raw
@@ -80,7 +188,9 @@ if (require.main === module) {
     process.exit(1);
   }
   
-  parseBudget(pdfPath)
+  console.log(`Using ${useAdvancedOCR ? 'advanced' : 'basic'} PDF parsing method`);
+  
+  parseBudget(pdfPath, useAdvancedOCR)
     .then(result => {
       console.log('Budget parsing completed successfully');
     })
@@ -90,4 +200,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = { parseBudget, extractNumbers };
+module.exports = { parseBudget, parseBudgetBasic, parseBudgetAdvanced, extractNumbers };

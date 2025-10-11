@@ -23,6 +23,7 @@ import {
 import ComprehensiveDataDisplay from '../components/data-display/ComprehensiveDataDisplay';
 import StandardizedChart from '../components/charts/StandardizedChart';
 import ErrorBoundary from '@components/common/ErrorBoundary';
+import UnifiedDataViewer from '@components/data-viewers/UnifiedDataViewer';
 import { formatCurrencyARS } from '../utils/formatters';
 import { externalAPIsService } from "../services/ExternalDataAdapter";
 import { carmenScraperService } from '../services/CarmenScraperService';
@@ -149,7 +150,21 @@ const DataVisualizationHub: React.FC = () => {
 
     for (const fileName of csvFiles) {
       try {
-        const response = await fetch(`/data/charts/${fileName}`);
+        // First try the charts directory (original path)
+        let response = await fetch(`/data/charts/${fileName}`);
+        if (!response.ok) {
+          // If not found in charts, try raw/csv directory
+          response = await fetch(`/data/raw/csv/${fileName}`);
+          if (!response.ok) {
+            // If not found in raw/csv, try processed/csv directory
+            response = await fetch(`/data/processed/csv/${fileName}`);
+            if (!response.ok) {
+              // If not found in processed/csv, try using GitHub raw URL
+              const githubUrl = `https://raw.githubusercontent.com/flongstaff/cda-transparencia/main/data/raw/csv/${fileName}`;
+              response = await fetch(githubUrl);
+            }
+          }
+        }
         if (response.ok) {
           const csvText = await response.text();
           const parsedData = parseCSV(csvText);
@@ -160,6 +175,9 @@ const DataVisualizationHub: React.FC = () => {
             parseInt(row.Year) === selectedYear ||
             parseInt(row.Año) === selectedYear
           );
+        } else {
+          // If all attempts failed, use empty array
+          loadedData[fileName] = [];
         }
       } catch (error) {
         console.error(`Error loading ${fileName}:`, error);
@@ -728,6 +746,34 @@ const DataVisualizationHub: React.FC = () => {
             </motion.div>
           )}
         </div>
+
+        {/* Unified Data Viewer Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="mt-12"
+        >
+          <ErrorBoundary>
+            <div className="bg-white dark:bg-dark-surface rounded-xl shadow-lg border border-gray-200 dark:border-dark-border p-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-dark-text-primary mb-6 flex items-center">
+                <Database className="w-6 h-6 mr-3 text-blue-600 dark:text-blue-400" />
+                Datos Abiertos del Portal
+              </h2>
+              <UnifiedDataViewer
+                title="Conjunto Completo de Datos Abiertos"
+                description="Accede a todos los conjuntos de datos estructurados y documentos oficiales relacionados con la transparencia municipal"
+                category="transparency"
+                theme={['gov', 'transparency', 'municipal']}
+                year={selectedYear}
+                showSearch={true}
+                defaultTab="all"
+                maxPDFs={20}
+                maxDatasets={30}
+              />
+            </div>
+          </ErrorBoundary>
+        </motion.div>
 
         {/* Summary Stats */}
         <motion.div

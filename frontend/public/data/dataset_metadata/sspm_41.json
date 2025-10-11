@@ -1,0 +1,52 @@
+{
+  "files": {
+    "indicadores-produccion-industria-manufacturera-valores-mensuales.csv": {
+      "datasetId": "sspm_41",
+      "datasetTitle": "Indicadores de producción de la Industria manufacturera",
+      "fileName": "indicadores-produccion-industria-manufacturera-valores-mensuales.csv",
+      "format": "CSV",
+      "title": "Producción de la Industria manufacturera. Valores mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:30.657Z",
+      "status": "processed"
+    },
+    "indicadores-produccion-industria-manufacturera-valores-trimestrales.csv": {
+      "datasetId": "sspm_41",
+      "datasetTitle": "Indicadores de producción de la Industria manufacturera",
+      "fileName": "indicadores-produccion-industria-manufacturera-valores-trimestrales.csv",
+      "format": "CSV",
+      "title": "Producción de la Industria manufacturera. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:31.803Z",
+      "status": "processed"
+    },
+    "indicadores-produccion-industria-manufacturera-valores-anuales.csv": {
+      "datasetId": "sspm_41",
+      "datasetTitle": "Indicadores de producción de la Industria manufacturera",
+      "fileName": "indicadores-produccion-industria-manufacturera-valores-anuales.csv",
+      "format": "CSV",
+      "title": "Producción de la Industria manufacturera. Valores anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:32.934Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_41",
+    "title": "Indicadores de producción de la Industria manufacturera",
+    "description": "Indicadores desagregados de producción de productos de la industria manufacturera",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:02:41.815875",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_e0c48587-cb50-4bb9-a541-8478a6ff2a6f",
+      "datasetTitle": "Anuarios de Energía Eléctrica",
+      "lastProcessed": "2025-10-09T07:20:50.028Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_e0c48587-cb50-4bb9-a541-8478a6ff2a6f",
+    "title": "Anuarios de Energía Eléctrica",
+    "description": "Informes estadísticos anuales del sector eléctrico.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-12-23T17:00:01.930783",
+    "modified": "2023-09-26T17:29:52.922213",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

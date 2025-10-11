@@ -1,0 +1,162 @@
+{
+  "files": {
+    "credito-anual-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "credito-anual-2006.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación anual 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.249Z",
+      "status": "processed"
+    },
+    "credito-mensual-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "credito-mensual-2006.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación mensual 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.249Z",
+      "status": "processed"
+    },
+    "d-apertura-programatica-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "d-apertura-programatica-2006.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Apertura Programática 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.249Z",
+      "status": "processed"
+    },
+    "d-clasificador-economico-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "d-clasificador-economico-2006.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Clasificador económico 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.249Z",
+      "status": "processed"
+    },
+    "d-finalidad-funcion-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "d-finalidad-funcion-2006.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Finalidad y Función 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.249Z",
+      "status": "processed"
+    },
+    "d-fuente-financiamiento-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "d-fuente-financiamiento-2006.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Fuente de Financiamiento 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.249Z",
+      "status": "processed"
+    },
+    "d-institucion-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "d-institucion-2006.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Institución 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.249Z",
+      "status": "processed"
+    },
+    "d-objeto-gasto-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "d-objeto-gasto-2006.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Objeto del gasto 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.249Z",
+      "status": "processed"
+    },
+    "d-rubro-recurso-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "d-rubro-recurso-2006.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Rubro del recurso 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.250Z",
+      "status": "processed"
+    },
+    "d-sector-institucional-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "d-sector-institucional-2006.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Sector Institucional 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.250Z",
+      "status": "processed"
+    },
+    "d-servicio-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "d-servicio-2006.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Servicio Administrativo Financiero 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.250Z",
+      "status": "processed"
+    },
+    "d-ubicacion-geografica-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "d-ubicacion-geografica-2006.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Ubicación geográfica 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.250Z",
+      "status": "processed"
+    },
+    "recursos-anual-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "recursos-anual-2006.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación anual 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.250Z",
+      "status": "processed"
+    },
+    "recursos-mensual-2006.zip": {
+      "datasetId": "sspre_2006",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2006.",
+      "fileName": "recursos-mensual-2006.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación mensual 2006",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.250Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspre_2006",
+    "title": "Presupuesto de la Administración Pública Nacional 2006.",
+    "description": "Créditos y Recursos de la Administración Pública Nacional del ejercicio 2006.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2020-07-16T03:00:00Z",
+    "modified": "2020-07-03T17:09:18Z",
+    "publisher": {
+      "mbox": "info@presupuestoabierto.gob.ar",
+      "name": "Ministerio de Economía. Secretaría de Hacienda. Subsecretaría de Presupuesto."
+    },
+    "landingPage": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos"
+  }
+}

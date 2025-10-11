@@ -1,0 +1,27 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "acumar_ceba000d-184f-4f36-9bc4-611f22ed2faf",
+      "title": "Índice de Calidad de Vida (ICV) de la Cuenca Matanza Riachuelo",
+      "distribution": [
+        {
+          "title": "informe-final-icv-unlp-2017.pdf",
+          "format": "PDF",
+          "fileName": "informe-final-icv-unlp-2017.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/acumar_ceba000d-184f-4f36-9bc4-611f22ed2faf/informe-final-icv-unlp-2017.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/acumar_ceba000d-184f-4f36-9bc4-611f22ed2faf/informe-final-icv-unlp-2017_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    }
+  ]
+}

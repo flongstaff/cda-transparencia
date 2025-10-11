@@ -1,0 +1,102 @@
+{
+  "files": {
+    "cofesa-datos-hasta-2018.csv": {
+      "datasetId": "salud_56eff847-9044-4157-8a74-378e8bc5d946",
+      "datasetTitle": "COFESA Actas (Consejo Federal de Salud de la República Argentina)",
+      "fileName": "cofesa-datos-hasta-2018.csv",
+      "format": "CSV",
+      "title": "COFESA - Información desde el año 2003",
+      "accessURL": "http://datos.salud.gob.ar/dataset/56eff847-9044-4157-8a74-378e8bc5d946/resource/b0a51220-e905-4168-b9b8-3bdd5921e007",
+      "lastProcessed": "2025-10-09T07:42:35.487Z",
+      "status": "processed"
+    },
+    "cofesa-2019.xls": {
+      "datasetId": "salud_56eff847-9044-4157-8a74-378e8bc5d946",
+      "datasetTitle": "COFESA Actas (Consejo Federal de Salud de la República Argentina)",
+      "fileName": "cofesa-2019.xls",
+      "format": "XLS",
+      "title": "COFESA - Información desde el año 2003",
+      "accessURL": "http://datos.salud.gob.ar/dataset/56eff847-9044-4157-8a74-378e8bc5d946/resource/0a1799d1-6907-4157-8b7c-d223ef15be84",
+      "lastProcessed": "2025-10-09T07:42:35.488Z",
+      "status": "processed"
+    },
+    "cofesa-datos-hasta-2018.json": {
+      "datasetId": "salud_56eff847-9044-4157-8a74-378e8bc5d946",
+      "datasetTitle": "COFESA Actas (Consejo Federal de Salud de la República Argentina)",
+      "fileName": "cofesa-datos-hasta-2018.json",
+      "format": "JSON",
+      "title": "COFESA - Información desde el año 2003",
+      "accessURL": "http://datos.salud.gob.ar/dataset/56eff847-9044-4157-8a74-378e8bc5d946/resource/fc78ce36-2177-4c8d-b0c5-406019515f1b",
+      "lastProcessed": "2025-10-09T07:42:35.489Z",
+      "status": "processed"
+    },
+    "1648498825-4ff090a845abff658dbed5341f1db6a2171c0b28-cofesa-datos-2022.csv": {
+      "datasetId": "salud_56eff847-9044-4157-8a74-378e8bc5d946",
+      "datasetTitle": "COFESA Actas (Consejo Federal de Salud de la República Argentina)",
+      "fileName": "1648498825-4ff090a845abff658dbed5341f1db6a2171c0b28-cofesa-datos-2022.csv",
+      "format": "CSV",
+      "title": "COFESA - Información Años 2003-2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/56eff847-9044-4157-8a74-378e8bc5d946/resource/48f06113-4470-4dac-9637-3923c0f41a17",
+      "lastProcessed": "2025-10-09T07:42:39.599Z",
+      "status": "processed"
+    },
+    "cofesa-20221227.csv": {
+      "datasetId": "salud_56eff847-9044-4157-8a74-378e8bc5d946",
+      "datasetTitle": "COFESA Actas (Consejo Federal de Salud de la República Argentina)",
+      "fileName": "cofesa-20221227.csv",
+      "format": "CSV",
+      "title": "COFESA - Información a Diciembre 2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/56eff847-9044-4157-8a74-378e8bc5d946/resource/4f61d7d8-4e57-449f-bbd9-15e916c5d999",
+      "lastProcessed": "2025-10-09T07:42:43.532Z",
+      "status": "processed"
+    },
+    "cofesa-datos-2023.csv": {
+      "datasetId": "salud_56eff847-9044-4157-8a74-378e8bc5d946",
+      "datasetTitle": "COFESA Actas (Consejo Federal de Salud de la República Argentina)",
+      "fileName": "cofesa-datos-2023.csv",
+      "format": "CSV",
+      "title": "COFESA - Información a Junio 2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/56eff847-9044-4157-8a74-378e8bc5d946/resource/5c81e355-aa2e-4cfe-afa4-0dabc7cb0738",
+      "lastProcessed": "2025-10-09T07:42:47.468Z",
+      "status": "processed"
+    },
+    "cofesa-datos-2024.csv": {
+      "datasetId": "salud_56eff847-9044-4157-8a74-378e8bc5d946",
+      "datasetTitle": "COFESA Actas (Consejo Federal de Salud de la República Argentina)",
+      "fileName": "cofesa-datos-2024.csv",
+      "format": "CSV",
+      "title": "COFESA - Información 2024",
+      "accessURL": "http://datos.salud.gob.ar/dataset/56eff847-9044-4157-8a74-378e8bc5d946/resource/943aa4df-2b08-48f7-8e68-fb44822e9560",
+      "lastProcessed": "2025-10-09T07:42:51.662Z",
+      "status": "processed"
+    },
+    "cofesa-datos-2025.csv": {
+      "datasetId": "salud_56eff847-9044-4157-8a74-378e8bc5d946",
+      "datasetTitle": "COFESA Actas (Consejo Federal de Salud de la República Argentina)",
+      "fileName": "cofesa-datos-2025.csv",
+      "format": "CSV",
+      "title": "COFESA - Información 2025",
+      "accessURL": "http://datos.salud.gob.ar/dataset/56eff847-9044-4157-8a74-378e8bc5d946/resource/275eb294-f8d0-473f-9292-50f56d6fa3a5",
+      "lastProcessed": "2025-10-09T07:42:55.833Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_56eff847-9044-4157-8a74-378e8bc5d946",
+    "title": "COFESA Actas (Consejo Federal de Salud de la República Argentina)",
+    "description": "Datos correspondientes a las actas del Consejo Federal de Salud de la República Argentina.",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2019-08-26T13:20:58.758408",
+    "modified": "2020-05-15T15:49:51.103424",
+    "publisher": {
+      "mbox": "obaggini@msal.gov.ar",
+      "name": "Ministerio de Salud. Dirección Nacional de Calidad en Servicios de Salud y Regulación Sanitaria"
+    },
+    "landingPage": "http://datos.salud.gob.ar/dataset/cofesa"
+  }
+}

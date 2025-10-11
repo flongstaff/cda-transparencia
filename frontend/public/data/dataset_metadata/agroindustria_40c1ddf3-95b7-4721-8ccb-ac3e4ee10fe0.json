@@ -1,0 +1,32 @@
+{
+  "files": {
+    "lino-serie-1895-2024-anual.csv": {
+      "datasetId": "agroindustria_40c1ddf3-95b7-4721-8ccb-ac3e4ee10fe0",
+      "datasetTitle": "Lino - siembra, cosecha, producción, rendimiento",
+      "fileName": "lino-serie-1895-2024-anual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo de lino",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/40c1ddf3-95b7-4721-8ccb-ac3e4ee10fe0/resource/adf416f1-9f5a-4b24-94c2-4aa183bee19b",
+      "lastProcessed": "2025-10-09T07:09:56.908Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_40c1ddf3-95b7-4721-8ccb-ac3e4ee10fe0",
+    "title": "Lino - siembra, cosecha, producción, rendimiento",
+    "description": "Serie histórica de la superficie sembrada, superficie cosechada, producción y rendimiento de lino en la Argentina desde 1895.",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2025-01-16T10:37:54.224340",
+    "modified": "2025-05-07T13:09:08.333575",
+    "publisher": {
+      "mbox": "direstiagri@magyp.gob.ar",
+      "name": "Secretaría de Agricultura, Ganadería y Pesca - Dirección Nacional de Agricultura"
+    },
+    "landingPage": "https://datos.magyp.gob.ar/dataset/lino-siembra-cosecha-produccion-rendimiento"
+  }
+}

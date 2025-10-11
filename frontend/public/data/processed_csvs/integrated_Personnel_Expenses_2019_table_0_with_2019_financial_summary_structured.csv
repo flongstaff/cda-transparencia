@@ -1,0 +1,24 @@
+Category_from_Personnel_Expenses_2019_table_0,Budgeted_from_Personnel_Expenses_2019_table_0,Executed_from_Personnel_Expenses_2019_table_0,Percentage_from_Personnel_Expenses_2019_table_0,category_from_2019_financial_summary_structured,subcategory_from_2019_financial_summary_structured,description_from_2019_financial_summary_structured,budgeted_from_2019_financial_summary_structured,executed_from_2019_financial_summary_structured,percentage_from_2019_financial_summary_structured,year_from_2019_financial_summary_structured
+Salaries,"$80,000,000","$79,000,000",98.8%,revenue,current,Ingresos corrientes,241879702.14,232492993.99,96.12,2019
+Social Charges,"$25,000,000","$24,500,000",98.0%,revenue,capital,Recursos de capital,1632279.86,1632279.86,100.0,2019
+Pensions,"$15,000,000","$14,800,000",98.7%,revenue,financial_sources,Fuentes Financieras,0.0,0.0,0.0,2019
+Total,"$120,000,000","$118,300,000",98.6%,revenue,total,Total Recursos,243511982.0,234125273.85,96.15,2019
+,,,,revenue,discretionary,De libre disponibilidad,185792776.35,176406068.2,95.0,2019
+,,,,revenue,earmarked,Afectados,57719205.65,57719205.65,100.0,2019
+,,,,expenditure,personnel,Gastos en personal,115221488.53,115221488.53,100.0,2019
+,,,,expenditure,consumables,Bienes de consumo,48292633.9,45006222.39,93.19,2019
+,,,,expenditure,services,Servicios no personales,66281069.41,64584379.32,97.44,2019
+,,,,expenditure,capital_goods,Bienes de uso,30571005.55,29993727.4,98.11,2019
+,,,,expenditure,transfers,Transferencias,10376925.15,10248500.66,98.76,2019
+,,,,expenditure,financial_assets,Activos financieros,517575.61,517575.61,100.0,2019
+,,,,expenditure,debt_service,Servicio de la deuda,639104.18,639104.18,100.0,2019
+,,,,expenditure,total,Total Gastos,271899802.33,266210998.09,97.91,2019
+,,,,financial_position,current_assets,ACTIVO CORRIENTE,0.0,72871274.53,0.0,2019
+,,,,financial_position,non_current_assets,ACTIVO NO CORRIENTE,0.0,127190883.34,0.0,2019
+,,,,financial_position,current_liabilities,PASIVO CORRIENTE,0.0,-5669298.76,0.0,2019
+,,,,financial_position,non_current_liabilities,PASIVO NO CORRIENTE,0.0,-1484819.59,0.0,2019
+,,,,financial_result,operating_result,Resultado Artículo 44,0.0,832790.44,0.0,2019
+,,,,financial_result,net_result,Resultado del ejercicio,0.0,-14721351.66,0.0,2019
+,,,,,,,,,,2019
+,,,,,,,,,,2024
+,,,,,,,,,,2016

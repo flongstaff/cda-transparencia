@@ -1,0 +1,32 @@
+{
+  "files": {
+    "brasil-pib-oferta-y-demanda-global.csv": {
+      "datasetId": "sspm_308",
+      "datasetTitle": "Brasil PIB Oferta y demanda global",
+      "fileName": "brasil-pib-oferta-y-demanda-global.csv",
+      "format": "CSV",
+      "title": "Brasil PIB Oferta y demanda global. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:05.519Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_308",
+    "title": "Brasil PIB Oferta y demanda global",
+    "description": "Brasil PIB Oferta y demanda global",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-30",
+    "modified": "2025-03-24T10:02:03.849429",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

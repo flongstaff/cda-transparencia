@@ -1,0 +1,82 @@
+{
+  "files": {
+    "d-unidad-ejecutora.zip": {
+      "datasetId": "sspre_Clasificadores presupuestarios",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional .",
+      "fileName": "d-unidad-ejecutora.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Unidad Ejecutora ",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:24:55.755Z",
+      "status": "processed"
+    },
+    "totales-de-presupuesto.zip": {
+      "datasetId": "sspre_Clasificadores presupuestarios",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional .",
+      "fileName": "totales-de-presupuesto.zip",
+      "format": "ZIP",
+      "title": "Total Presupuesto y ejecucion de gastos y recursos ",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:24:55.755Z",
+      "status": "processed"
+    },
+    "serie_pib_anual.csv": {
+      "datasetId": "sspre_Clasificadores presupuestarios",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional .",
+      "fileName": "serie_pib_anual.csv",
+      "format": "CSV",
+      "title": "Serie anual gastos, recursos y PIB ",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:24:58.708Z",
+      "status": "processed"
+    },
+    "serie_finfun_anual.csv": {
+      "datasetId": "sspre_Clasificadores presupuestarios",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional .",
+      "fileName": "serie_finfun_anual.csv",
+      "format": "CSV",
+      "title": "Serie anual de gastos por finalidad y función ",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:25:00.160Z",
+      "status": "processed"
+    },
+    "d-codigo-bapin.zip": {
+      "datasetId": "sspre_Clasificadores presupuestarios",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional .",
+      "fileName": "d-codigo-bapin.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Código Bapin ",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:25:00.161Z",
+      "status": "processed"
+    },
+    "d-prestamo-externo.zip": {
+      "datasetId": "sspre_Clasificadores presupuestarios",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional .",
+      "fileName": "d-prestamo-externo.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Prestamo Externo ",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:25:00.161Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspre_Clasificadores presupuestarios",
+    "title": "Presupuesto de la Administración Pública Nacional .",
+    "description": "Créditos y Recursos de la Administración Pública Nacional del ejercicio .",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2018-01-06T03:00:00Z",
+    "modified": "2025-03-18T10:42:10Z",
+    "publisher": {
+      "mbox": "info@presupuestoabierto.gob.ar",
+      "name": "Ministerio de Economía. Secretaría de Hacienda. Subsecretaría de Presupuesto."
+    },
+    "landingPage": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos"
+  }
+}

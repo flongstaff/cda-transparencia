@@ -1,0 +1,13 @@
+{
+  "file_name": "LICITACION-PUBLICA-N°11.pdf",
+  "file_hash": "aa15b8935c66152f556a2030db7db023",
+  "page_count": 2,
+  "text_length": 2,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:21.940136"
+}

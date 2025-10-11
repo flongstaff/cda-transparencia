@@ -1,0 +1,30 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_3",
+      "datasetTitle": "Empleo del Sector Minero (SIACAM)",
+      "lastProcessed": "2025-10-09T06:49:49.109Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_3",
+    "title": "Empleo del Sector Minero (SIACAM)",
+    "description": "Datos correspondientes a los tableros \"Empleo\" y \"Género\" del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM), con información mensual de cantidad de puestos de trabajo  del sector minero, por rubro y género. Elaborado por la Dirección Nacional de Promoción y Economía Minera con base a MECTRA.",
+    "theme": [
+      "econ",
+      "soci"
+    ],
+    "superTheme": [
+      "ECON",
+      "SOCI"
+    ],
+    "issued": "2022-12-07",
+    "modified": "2025-09-01",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

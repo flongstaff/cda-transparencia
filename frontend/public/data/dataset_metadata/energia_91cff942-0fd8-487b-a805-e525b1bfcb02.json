@@ -1,0 +1,108 @@
+{
+  "files": {
+    "informecooperativas2014.zip": {
+      "datasetId": "energia_91cff942-0fd8-487b-a805-e525b1bfcb02",
+      "datasetTitle": "Anuarios de Cooperativas Eléctricas",
+      "fileName": "informecooperativas2014.zip",
+      "format": "ZIP",
+      "title": "Informe de Cooperativas Eléctricas 2014",
+      "accessURL": "http://datos.energia.gob.ar/dataset/91cff942-0fd8-487b-a805-e525b1bfcb02/resource/7a19d400-c669-4171-9110-b032ce524912",
+      "lastProcessed": "2025-10-09T07:23:36.004Z",
+      "status": "processed"
+    },
+    "informecooperativas2013.zip": {
+      "datasetId": "energia_91cff942-0fd8-487b-a805-e525b1bfcb02",
+      "datasetTitle": "Anuarios de Cooperativas Eléctricas",
+      "fileName": "informecooperativas2013.zip",
+      "format": "ZIP",
+      "title": "Informe de Cooperativas Eléctricas 2013",
+      "accessURL": "http://datos.energia.gob.ar/dataset/91cff942-0fd8-487b-a805-e525b1bfcb02/resource/889b2919-cade-41dc-b869-714997d80df6",
+      "lastProcessed": "2025-10-09T07:23:36.004Z",
+      "status": "processed"
+    },
+    "informecooperativas2012.zip": {
+      "datasetId": "energia_91cff942-0fd8-487b-a805-e525b1bfcb02",
+      "datasetTitle": "Anuarios de Cooperativas Eléctricas",
+      "fileName": "informecooperativas2012.zip",
+      "format": "ZIP",
+      "title": "Informe de Cooperativas Eléctricas 2012",
+      "accessURL": "http://datos.energia.gob.ar/dataset/91cff942-0fd8-487b-a805-e525b1bfcb02/resource/480114aa-8b9f-4dfe-bf35-21d84766a24a",
+      "lastProcessed": "2025-10-09T07:23:36.004Z",
+      "status": "processed"
+    },
+    "informecooperativas2011.zip": {
+      "datasetId": "energia_91cff942-0fd8-487b-a805-e525b1bfcb02",
+      "datasetTitle": "Anuarios de Cooperativas Eléctricas",
+      "fileName": "informecooperativas2011.zip",
+      "format": "ZIP",
+      "title": "Informe de Cooperativas Eléctricas 2011",
+      "accessURL": "http://datos.energia.gob.ar/dataset/91cff942-0fd8-487b-a805-e525b1bfcb02/resource/9f88694b-2ba7-45eb-9428-50fe260d98fd",
+      "lastProcessed": "2025-10-09T07:23:36.004Z",
+      "status": "processed"
+    },
+    "informecooperativas2010.zip": {
+      "datasetId": "energia_91cff942-0fd8-487b-a805-e525b1bfcb02",
+      "datasetTitle": "Anuarios de Cooperativas Eléctricas",
+      "fileName": "informecooperativas2010.zip",
+      "format": "ZIP",
+      "title": "Informe de Cooperativas Eléctricas 2010",
+      "accessURL": "http://datos.energia.gob.ar/dataset/91cff942-0fd8-487b-a805-e525b1bfcb02/resource/8fc3ca82-a5a5-42b9-82df-0e9bb0c3c33a",
+      "lastProcessed": "2025-10-09T07:23:36.004Z",
+      "status": "processed"
+    },
+    "informecooperativas2009.zip": {
+      "datasetId": "energia_91cff942-0fd8-487b-a805-e525b1bfcb02",
+      "datasetTitle": "Anuarios de Cooperativas Eléctricas",
+      "fileName": "informecooperativas2009.zip",
+      "format": "ZIP",
+      "title": "Informe de Cooperativas Eléctricas 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/91cff942-0fd8-487b-a805-e525b1bfcb02/resource/8ade3e9c-8661-4bd3-8ea6-e7496b083fe9",
+      "lastProcessed": "2025-10-09T07:23:36.005Z",
+      "status": "processed"
+    },
+    "informecooperativas2008.zip": {
+      "datasetId": "energia_91cff942-0fd8-487b-a805-e525b1bfcb02",
+      "datasetTitle": "Anuarios de Cooperativas Eléctricas",
+      "fileName": "informecooperativas2008.zip",
+      "format": "ZIP",
+      "title": "Informe de Cooperativas Eléctricas 2008",
+      "accessURL": "http://datos.energia.gob.ar/dataset/91cff942-0fd8-487b-a805-e525b1bfcb02/resource/a52c5444-ad21-4cd6-9024-d81ff0a59994",
+      "lastProcessed": "2025-10-09T07:23:36.005Z",
+      "status": "processed"
+    },
+    "informecooperativas2007.zip": {
+      "datasetId": "energia_91cff942-0fd8-487b-a805-e525b1bfcb02",
+      "datasetTitle": "Anuarios de Cooperativas Eléctricas",
+      "fileName": "informecooperativas2007.zip",
+      "format": "ZIP",
+      "title": "Informe de Cooperativas Eléctricas 2007",
+      "accessURL": "http://datos.energia.gob.ar/dataset/91cff942-0fd8-487b-a805-e525b1bfcb02/resource/7e98d34b-f339-49d0-b04e-38a48e141d2d",
+      "lastProcessed": "2025-10-09T07:23:36.006Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "energia_91cff942-0fd8-487b-a805-e525b1bfcb02",
+      "datasetTitle": "Anuarios de Cooperativas Eléctricas",
+      "lastProcessed": "2025-10-09T07:23:55.381Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_91cff942-0fd8-487b-a805-e525b1bfcb02",
+    "title": "Anuarios de Cooperativas Eléctricas",
+    "description": "Anuarios de cooperativas eléctricas de la República Argentina.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-12-28T15:48:22.458702",
+    "modified": "2021-06-29T14:57:58.630749",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

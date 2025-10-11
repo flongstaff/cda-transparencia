@@ -1,0 +1,42 @@
+{
+  "files": {
+    "Metodologia.pdf": {
+      "datasetId": "produccion_d1cbd7dc-648f-4ac5-adca-86dd19350a1f",
+      "datasetTitle": "Complejidad Económica Provincial",
+      "fileName": "Metodologia.pdf",
+      "format": "PDF",
+      "title": "Metodología",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d1cbd7dc-648f-4ac5-adca-86dd19350a1f/resource/ec2c03c4-04e2-412b-9989-0178f7853e69",
+      "lastProcessed": "2025-10-09T08:07:53.665Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "produccion_d1cbd7dc-648f-4ac5-adca-86dd19350a1f",
+      "datasetTitle": "Complejidad Económica Provincial",
+      "lastProcessed": "2025-10-09T08:07:57.746Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_d1cbd7dc-648f-4ac5-adca-86dd19350a1f",
+    "title": "Complejidad Económica Provincial",
+    "description": "Se proporcionan distintas métricas derivadas de las estimaciones de Complejidad Económica Provincial para el año 2021, consistentes con la herramienta interactiva publicada por el Centro de Estudios para la Producción. Desagregación a 6 dígitos NCM.   \r\n",
+    "theme": [
+      "econ",
+      "gove",
+      "regi"
+    ],
+    "superTheme": [
+      "ECON",
+      "GOVE",
+      "REGI"
+    ],
+    "issued": "2023-11-29T12:06:07.843323",
+    "modified": "2023-12-05T11:21:51.528591",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Economía. Secretaría de Industria y Desarrollo Productivo. Dirección Nacional de Estudios para la Producción."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/complejidad-economica-provincial"
+  }
+}

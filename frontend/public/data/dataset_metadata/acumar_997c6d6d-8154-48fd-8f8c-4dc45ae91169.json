@@ -1,0 +1,32 @@
+{
+  "files": {
+    "normativa-acumar.csv": {
+      "datasetId": "acumar_997c6d6d-8154-48fd-8f8c-4dc45ae91169",
+      "datasetTitle": "Normativa de ACUMAR",
+      "fileName": "normativa-acumar.csv",
+      "format": "CSV",
+      "title": "Normativa de ACUMAR",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/997c6d6d-8154-48fd-8f8c-4dc45ae91169/resource/a0fe0cd7-1f14-4915-bbe3-f4d624f86ccf",
+      "lastProcessed": "2025-10-09T07:57:23.551Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_997c6d6d-8154-48fd-8f8c-4dc45ae91169",
+    "title": "Normativa de ACUMAR",
+    "description": "Datos correspondientes a la normativa emitida por ACUMAR y publicada en el Boletín Oficial de la República Argentina, desde 2007 hasta la fecha.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2017-10-26T19:40:25.310333",
+    "modified": "2025-02-07T17:02:09.135828",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Coordinación de Normativa"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/"
+  }
+}

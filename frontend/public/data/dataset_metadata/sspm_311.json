@@ -1,0 +1,32 @@
+{
+  "files": {
+    "brasil-tipo-de-cambio-nominal-real.csv": {
+      "datasetId": "sspm_311",
+      "datasetTitle": "Brasil Tipo de cambio nominal y real",
+      "fileName": "brasil-tipo-de-cambio-nominal-real.csv",
+      "format": "CSV",
+      "title": "Tipo de cambio nominal y real. Valores mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:20.186Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_311",
+    "title": "Brasil Tipo de cambio nominal y real",
+    "description": "Brasil Tipo de cambio nominal y real",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-30",
+    "modified": "2025-03-24T10:00:58.206313",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

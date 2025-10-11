@@ -1,0 +1,56 @@
+{
+  "file_name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_4.csv",
+  "row_count": 2,
+  "column_count": 10,
+  "columns": [
+    "11.9.04.00 - Inmobiliario Rural.Afectado",
+    "22 - Origen Provincial -",
+    "0,00",
+    "9.555.173,15",
+    "9.555.173,15.1",
+    "9.555.173,15.2",
+    "0,00.1",
+    "9.555.173,15.3",
+    "0,00.2",
+    "0,00.3"
+  ],
+  "sample_data": [
+    {
+      "11.9.04.00 - Inmobiliario Rural.Afectado": NaN,
+      "22 - Origen Provincial -": "Afectados",
+      "0,00": NaN,
+      "9.555.173,15": NaN,
+      "9.555.173,15.1": NaN,
+      "9.555.173,15.2": NaN,
+      "0,00.1": NaN,
+      "9.555.173,15.3": NaN,
+      "0,00.2": NaN,
+      "0,00.3": NaN
+    },
+    {
+      "11.9.04.00 - Inmobiliario Rural.Afectado": "11.9.05.00 - Inmobiliario Rural. No afectado",
+      "22 - Origen Provincial -": "21 - Origen Provincial - De",
+      "0,00": "53.879.681,00",
+      "9.555.173,15": "0,00",
+      "9.555.173,15.1": "53.879.681,00",
+      "9.555.173,15.2": "31.771.717,07",
+      "0,00.1": "22.107.963,93",
+      "9.555.173,15.3": "31.771.717,07",
+      "0,00.2": "0,00",
+      "0,00.3": "22.107.963,93"
+    }
+  ],
+  "data_types": {
+    "11.9.04.00 - Inmobiliario Rural.Afectado": "object",
+    "22 - Origen Provincial -": "object",
+    "0,00": "object",
+    "9.555.173,15": "object",
+    "9.555.173,15.1": "object",
+    "9.555.173,15.2": "object",
+    "0,00.1": "object",
+    "9.555.173,15.3": "object",
+    "0,00.2": "object",
+    "0,00.3": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

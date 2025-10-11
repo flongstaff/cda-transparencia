@@ -18,6 +18,7 @@ interface FiscalBalanceReportChartProps {
   showDescription?: boolean;
   className?: string;
   year?: number; // Optional year filter
+  data?: any; // Optional data prop to override default data loading
 }
 
 const FiscalBalanceReportChart: React.FC<FiscalBalanceReportChartProps> = ({
@@ -41,30 +42,34 @@ const FiscalBalanceReportChart: React.FC<FiscalBalanceReportChartProps> = ({
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   
-  // Load chart data using React Query
-  const { data, isLoading, isError, error: queryError } = useQuery({
+  // Load chart data using React Query or use provided data
+  const { data: queryData, isLoading, isError, error: queryError } = useQuery({
     queryKey: ['chart-data', 'Fiscal_Balance_Report', year],
     queryFn: () => chartDataService.loadChartData('Fiscal_Balance_Report'),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
+    enabled: !data // Only run query if no data prop is provided
   });
+  
+  // Use provided data or query data
+  const effectiveData = data || queryData;
   
   // Update component state when data changes
   useEffect(() => {
-    if (isLoading) {
+    if (isLoading && !data) {
       setLoading(true);
       setError(null);
-    } else if (isError) {
+    } else if (isError && !data) {
       setLoading(false);
       setError(queryError?.message || 'Error loading chart data');
-    } else if (data) {
+    } else if (effectiveData || data) {
       setLoading(false);
       setError(null);
 
       // Filter data by year if specified
-      let filteredData = data;
-      if (year && Array.isArray(data)) {
-        filteredData = data.filter((item: Record<string, unknown>) => {
+      let filteredData = effectiveData;
+      if (year && Array.isArray(effectiveData)) {
+        filteredData = effectiveData.filter((item: Record<string, unknown>) => {
           // Check for various possible year field names
           const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año || item['año'] || item['Year'];
           return itemYear && parseInt(String(itemYear)) === year;
@@ -73,7 +78,7 @@ const FiscalBalanceReportChart: React.FC<FiscalBalanceReportChartProps> = ({
 
       setChartData(filteredData);
     }
-  }, [data, isLoading, isError, queryError, year]);
+  }, [effectiveData, isLoading, isError, queryError, year, data]);
   
   // Handle data point clicks
   const handleDataPointClick = (dataPoint: FiscalBalanceData) => {

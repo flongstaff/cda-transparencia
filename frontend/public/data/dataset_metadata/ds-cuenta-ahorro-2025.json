@@ -1,0 +1,41 @@
+{
+  "files": {
+    "Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf": {
+      "datasetId": "ds-cuenta-ahorro-2025",
+      "datasetTitle": "Cuenta Ahorro Inversión Financiamiento 2025",
+      "fileName": "Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+      "format": "PDF",
+      "title": "Marzo 2025",
+      "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/04/Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+      "lastProcessed": "2025-10-09T06:12:27.613Z",
+      "status": "processed"
+    },
+    "Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf": {
+      "datasetId": "ds-cuenta-ahorro-2025",
+      "datasetTitle": "Cuenta Ahorro Inversión Financiamiento 2025",
+      "fileName": "Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+      "format": "PDF",
+      "title": "Junio 2025",
+      "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/07/Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+      "lastProcessed": "2025-10-09T06:12:31.213Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ds-cuenta-ahorro-2025",
+    "title": "Cuenta Ahorro Inversión Financiamiento 2025",
+    "description": "Reporte de cuenta ahorro, inversión y financiamiento para marzo y junio 2025.",
+    "theme": [
+      "economia-y-finanzas"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2025-04-26T00:00:00",
+    "modified": "2025-07-10T00:00:00",
+    "publisher": {
+      "name": "Secretaría de Hacienda"
+    },
+    "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "file_name": "programmatic_indicators.csv",
+  "row_count": 22,
+  "column_count": 5,
+  "columns": [
+    "indicator",
+    "source_file",
+    "period",
+    "planned",
+    "executed"
+  ],
+  "sample_data": [
+    {
+      "indicator": "families_assisted",
+      "source_file": "unknown",
+      "period": "Unknown",
+      "planned": 2.08,
+      "executed": 0.0
+    },
+    {
+      "indicator": "families_assisted",
+      "source_file": "unknown",
+      "period": "Unknown",
+      "planned": 2.08,
+      "executed": NaN
+    },
+    {
+      "indicator": "security_cameras",
+      "source_file": "unknown",
+      "period": "Unknown",
+      "planned": 198.0,
+      "executed": NaN
+    },
+    {
+      "indicator": "families_assisted",
+      "source_file": "unknown",
+      "period": "Unknown",
+      "planned": 2.35,
+      "executed": NaN
+    },
+    {
+      "indicator": "security_cameras",
+      "source_file": "unknown",
+      "period": "Unknown",
+      "planned": 198.0,
+      "executed": NaN
+    }
+  ],
+  "data_types": {
+    "indicator": "object",
+    "source_file": "object",
+    "period": "object",
+    "planned": "float64",
+    "executed": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

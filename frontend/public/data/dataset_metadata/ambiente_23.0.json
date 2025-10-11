@@ -1,0 +1,31 @@
+{
+  "files": {
+    "APRPR_a_reservasprivadas_jurisdiccion_2024": {
+      "datasetId": "ambiente_23.0",
+      "datasetTitle": "Áreas protegidas privadas",
+      "fileName": "APRPR_a_reservasprivadas_jurisdiccion_2024",
+      "format": "CSV",
+      "title": "Reservas privadas por jurisdicción",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=25&did=194",
+      "lastProcessed": "2025-10-09T06:58:26.970Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_23.0",
+    "title": "Áreas protegidas privadas",
+    "description": "Muestra la cantidad de reservas privadas por provincia, la superficie y el porcentaje protegido por provincia",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2022-12-31T00:00:00",
+    "modified": "2022-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

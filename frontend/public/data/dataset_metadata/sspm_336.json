@@ -1,0 +1,32 @@
+{
+  "files": {
+    "activos-externos-componentes-datos-historicos.csv": {
+      "datasetId": "sspm_336",
+      "datasetTitle": "Activos externos en millones de dólares",
+      "fileName": "activos-externos-componentes-datos-historicos.csv",
+      "format": "CSV",
+      "title": "Activos externos en millones de dólares. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:25.769Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_336",
+    "title": "Activos externos en millones de dólares",
+    "description": "Activos externos en millones de dólares. Valores anuales",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-11-28",
+    "modified": "2025-04-02T16:48:13.994682",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

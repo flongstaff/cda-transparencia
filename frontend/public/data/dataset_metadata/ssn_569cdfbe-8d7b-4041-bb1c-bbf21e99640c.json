@@ -1,0 +1,27 @@
+{
+  "files": {
+    "vehiculos-expuestos.csv": {
+      "datasetId": "ssn_569cdfbe-8d7b-4041-bb1c-bbf21e99640c",
+      "datasetTitle": "Vehículos expuestos a riesgos",
+      "fileName": "vehiculos-expuestos.csv",
+      "lastProcessed": "2025-10-09T07:42:09.741Z",
+      "status": "error",
+      "error": "Failed to download CSV: vehiculos-expuestos.csv"
+    }
+  },
+  "info": {
+    "identifier": "ssn_569cdfbe-8d7b-4041-bb1c-bbf21e99640c",
+    "title": "Vehículos expuestos a riesgos",
+    "description": "Datos sobre vehículos expuestos a riesgos de los ramos Automotores, Motos y Transporte Público de Pasajeros reportados por las Entidades Aseguradoras dentro del “Sistema de Información de las Entidades Supervisadas – SINENSUP”.",
+    "theme": [
+      "econ"
+    ],
+    "keywords": [],
+    "issued": "2024-09-18T14:22:18.496162",
+    "modified": "2024-09-22T10:38:09.503978",
+    "publisher": {
+      "mbox": "datosabiertos@ssn.gob.ar",
+      "name": "Ministerio de Economía, Superintendencia de Seguros de la Nación"
+    }
+  }
+}

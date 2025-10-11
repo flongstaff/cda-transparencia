@@ -1,0 +1,27 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "title": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "distribution": [
+        {
+          "title": "metodologia.pdf",
+          "format": "PDF",
+          "fileName": "metodologia.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779/metodologia.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779/metodologia_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    }
+  ]
+}

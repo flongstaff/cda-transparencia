@@ -1,0 +1,32 @@
+{
+  "files": {
+    "pac-llamados-especificos-2020.xlsx": {
+      "datasetId": "produccion_4e749416-750d-48a5-b885-15e9cd8e5438",
+      "datasetTitle": "Programa de Apoyo a la Competitividad (PAC): Proyectos aprobados en llamados específicos.",
+      "fileName": "pac-llamados-especificos-2020.xlsx",
+      "format": "XLS",
+      "title": "PAC: Proyectos aprobados en llamados específicos 2020.:",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/4e749416-750d-48a5-b885-15e9cd8e5438/resource/f95e4273-2c78-45a2-8613-ab1d7c917990",
+      "lastProcessed": "2025-10-09T08:07:01.205Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_4e749416-750d-48a5-b885-15e9cd8e5438",
+    "title": "Programa de Apoyo a la Competitividad (PAC): Proyectos aprobados en llamados específicos.",
+    "description": "Información de proyectos aprobados en la convocatoria de PAC llamados específicos - Calidad e inocuidad alimentaria, eficiencia energética, Kaizen, Diseño e Innovación y Transformación Digital.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-05-07T09:59:22.507375",
+    "modified": "2021-05-11T15:56:53.351701",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo.Secretaría de la Pequeña y Mediana Empresa y los Emprendedores. Subsecretaría de Emprendedores. Dirección Nacional de Gestión y Política Pyme. Dirección de Políticas Pyme"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/programa-de-apoyo-a-la-competitividad-pac-proyectos-aprobados-en-llamados-especificos"
+  }
+}

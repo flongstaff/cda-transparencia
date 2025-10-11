@@ -1,0 +1,192 @@
+{
+  "files": {
+    "snic-pais.xlsx": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "snic-pais.xlsx",
+      "format": "XLSX",
+      "title": "Estadísticas criminales en la República Argentina (panel) (.xlsx).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:01.448Z",
+      "status": "processed"
+    },
+    "snic-pais.csv": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "snic-pais.csv",
+      "format": "CSV",
+      "title": "Estadísticas criminales en la República Argentina (panel) (.csv).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:01.526Z",
+      "status": "processed"
+    },
+    "snic-pais.dta": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "snic-pais.dta",
+      "format": "dta",
+      "title": "Estadísticas criminales en la República Argentina (panel) (.dta).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:01.526Z",
+      "status": "processed"
+    },
+    "snic-pais.sav": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "snic-pais.sav",
+      "format": "sav",
+      "title": "Estadísticas criminales en la República Argentina (panel) (.sav).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:01.526Z",
+      "status": "processed"
+    },
+    "snic-pais-series.csv": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "snic-pais-series.csv",
+      "format": "CSV",
+      "title": "Estadísticas criminales en la República Argentina (series).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:01.619Z",
+      "status": "processed"
+    },
+    "tasa-snic-pais-series.csv": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "tasa-snic-pais-series.csv",
+      "format": "CSV",
+      "title": "Estadísticas criminales en la República Argentina (tasa series).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:01.777Z",
+      "status": "processed"
+    },
+    "Manual_de_usuario_Base_SNIC_2023.pdf": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "Manual_de_usuario_Base_SNIC_2023.pdf",
+      "format": "PDF",
+      "title": "Manual de usuario. Base Sistema Nacional de Información Criminal.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:02.458Z",
+      "status": "processed"
+    },
+    "Glosario_Delictual_2022_usuario.pdf": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "Glosario_Delictual_2022_usuario.pdf",
+      "format": "PDF",
+      "title": "Glosario delictual. Base Sistema Nacional de Información Criminal.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:03.156Z",
+      "status": "processed"
+    },
+    "Informe%20SNIC%202016.pdf": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "Informe%20SNIC%202016.pdf",
+      "format": "PDF",
+      "title": "Informe. Estadísticas criminales en la República Argentina 2016.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:03.854Z",
+      "status": "processed"
+    },
+    "Informe%20SNIC%202017.pdf": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "Informe%20SNIC%202017.pdf",
+      "format": "PDF",
+      "title": "Informe. Estadísticas criminales en la República Argentina 2017.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:04.587Z",
+      "status": "processed"
+    },
+    "Informe%20Nacional%20Estadisticas%20Criminales%202018_V10.pdf": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "Informe%20Nacional%20Estadisticas%20Criminales%202018_V10.pdf",
+      "format": "PDF",
+      "title": "Informe. Estadísticas criminales en la República Argentina 2018.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:05.291Z",
+      "status": "processed"
+    },
+    "Informe%20Nacional%20Estadisticas%20Criminales%202019.pdf": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "Informe%20Nacional%20Estadisticas%20Criminales%202019.pdf",
+      "format": "PDF",
+      "title": "Informe. Estadísticas criminales en la República Argentina 2019.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:06.005Z",
+      "status": "processed"
+    },
+    "InformeSNIC2020[v3a](1).pdf": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "InformeSNIC2020[v3a](1).pdf",
+      "format": "PDF",
+      "title": "Informe. Estadísticas criminales en la República Argentina 2020.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:06.701Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Nacional_2021.pdf": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "Informe_SNIC_Nacional_2021.pdf",
+      "format": "PDF",
+      "title": "Informe. Estadísticas criminales en la República Argentina 2021.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:07.445Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Nacional_2022.pdf": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "Informe_SNIC_Nacional_2022.pdf",
+      "format": "PDF",
+      "title": "Informe. Estadísticas criminales en la República Argentina 2022.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:08.137Z",
+      "status": "processed"
+    },
+    "Informe Series históricas de SNIC.pdf": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "Informe Series históricas de SNIC.pdf",
+      "format": "PDF",
+      "title": "Informe. Series históricas de SNIC - Años 2000-2022",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:08.824Z",
+      "status": "processed"
+    },
+    "Informe_SNIC_Nacional_2023.pdf": {
+      "datasetId": "seguridad_1",
+      "datasetTitle": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+      "fileName": "Informe_SNIC_Nacional_2023.pdf",
+      "format": "PDF",
+      "title": "Informe. Estadísticas criminales en la República Argentina 2023.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:09.546Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "seguridad_1",
+    "title": "SNIC - Total país. Estadísticas criminales en la República Argentina",
+    "description": "Hechos delictivos y víctimas por tipo de delito, informados al Sistema Nacional de Información Criminal (SNIC). Total país. Cantidades y tasas desde 2014.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-07-14T00:00:00",
+    "modified": "2025-05-21T00:00:00",
+    "publisher": {
+      "mbox": "snic-sat@minseg.gob.ar",
+      "name": "Ministerio de Seguridad de la Nación. Dirección Nacional de Estadística Criminal."
+    },
+    "landingPage": "https://www.argentina.gob.ar/seguridad/estadisticascriminales"
+  }
+}

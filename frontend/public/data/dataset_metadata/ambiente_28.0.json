@@ -1,0 +1,111 @@
+{
+  "files": {
+    "APA_fertilizante_ca": {
+      "datasetId": "ambiente_28.0",
+      "datasetTitle": "Actividad agrícola",
+      "fileName": "APA_fertilizante_ca",
+      "format": "CSV",
+      "title": "Consumo aparente de fertilizantes",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=26&did=244",
+      "lastProcessed": "2025-10-09T06:58:31.403Z",
+      "status": "processed"
+    },
+    "APA_agroq_fertil_ha_censos": {
+      "datasetId": "ambiente_28.0",
+      "datasetTitle": "Actividad agrícola",
+      "fileName": "APA_agroq_fertil_ha_censos",
+      "format": "CSV",
+      "title": "Superficie tratada con agroquímicos y fertilizantes",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=26&did=322",
+      "lastProcessed": "2025-10-09T06:58:32.655Z",
+      "status": "processed"
+    },
+    "APA_partic_relativa_cultivos": {
+      "datasetId": "ambiente_28.0",
+      "datasetTitle": "Actividad agrícola",
+      "fileName": "APA_partic_relativa_cultivos",
+      "format": "CSV",
+      "title": "Participación porcentual para los principales cultivos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=26&did=246",
+      "lastProcessed": "2025-10-09T06:58:33.924Z",
+      "status": "processed"
+    },
+    "APA_evol_sup_cult": {
+      "datasetId": "ambiente_28.0",
+      "datasetTitle": "Actividad agrícola",
+      "fileName": "APA_evol_sup_cult",
+      "format": "CSV",
+      "title": "Superficie cultivada total en relación al cultivo de Soja",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=26&did=245",
+      "lastProcessed": "2025-10-09T06:58:35.276Z",
+      "status": "processed"
+    },
+    "BqI_plantaciones_superf2023": {
+      "datasetId": "ambiente_28.0",
+      "datasetTitle": "Actividad agrícola",
+      "fileName": "BqI_plantaciones_superf2023",
+      "format": "CSV",
+      "title": "Superficie de bosques cultivados",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=26&did=249",
+      "lastProcessed": "2025-10-09T06:58:36.644Z",
+      "status": "processed"
+    },
+    "APA_cereales_oleaginosas_21092022": {
+      "datasetId": "ambiente_28.0",
+      "datasetTitle": "Actividad agrícola",
+      "fileName": "APA_cereales_oleaginosas_21092022",
+      "format": "CSV",
+      "title": "Superficie destinada a la producción de cereales y oleaginosas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=26&did=243",
+      "lastProcessed": "2025-10-09T06:58:37.928Z",
+      "status": "processed"
+    },
+    "APA_organico_cosecha_ha": {
+      "datasetId": "ambiente_28.0",
+      "datasetTitle": "Actividad agrícola",
+      "fileName": "APA_organico_cosecha_ha",
+      "format": "CSV",
+      "title": "Superficie orgánica cosechada",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=26&did=242",
+      "lastProcessed": "2025-10-09T06:58:39.369Z",
+      "status": "processed"
+    },
+    "APA_uso_tierra_prov_2022": {
+      "datasetId": "ambiente_28.0",
+      "datasetTitle": "Actividad agrícola",
+      "fileName": "APA_uso_tierra_prov_2022",
+      "format": "CSV",
+      "title": "Uso de la tierra",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=26&did=319",
+      "lastProcessed": "2025-10-09T06:58:40.687Z",
+      "status": "processed"
+    },
+    "APA_uso_tierra_censos": {
+      "datasetId": "ambiente_28.0",
+      "datasetTitle": "Actividad agrícola",
+      "fileName": "APA_uso_tierra_censos",
+      "format": "CSV",
+      "title": "Uso de la tierra. Superficie implantada en las explotaciones agropecuarias, según período de ocupación",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=26&did=348",
+      "lastProcessed": "2025-10-09T06:58:41.996Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_28.0",
+    "title": "Actividad agrícola",
+    "description": "Muestra el uso de la tierra, el consumo de fertilizantes, la superficie cultivada con cultivos y la superficie orgánica cosechada",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2021-05-02T00:00:00",
+    "modified": "2021-05-02T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

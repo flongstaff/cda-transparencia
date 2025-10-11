@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_30f36834-49f0-4d9e-91d9-33621fb52b6d",
+      "datasetTitle": "IGJ. Autoridades género",
+      "format": "gráfico",
+      "title": "IGJ. Autoridades de entidades por género - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/30f36834-49f0-4d9e-91d9-33621fb52b6d/resource/a928d672-cb61-4805-a943-2ccdd5231d31",
+      "lastProcessed": "2025-10-09T06:50:05.963Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_30f36834-49f0-4d9e-91d9-33621fb52b6d",
+    "title": "IGJ. Autoridades género",
+    "description": "Autoridades constituidas en la Inspección General de Justicia (IGJ) con el agregado del tipo de sociedad a la que pertenece y el dato de género de la autoridad.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2018-03-21T18:21:02.653033",
+    "modified": "2025-08-22T17:05:57.993356",
+    "publisher": {
+      "mbox": "dmiralles@jus.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Inspección General de Justicia"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/igj-autoridades-genero"
+  }
+}

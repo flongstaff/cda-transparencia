@@ -1,0 +1,52 @@
+{
+  "files": {
+    "recursos-tributarios-totales-por-tributo-anual-base-2001.csv": {
+      "datasetId": "sspm_142",
+      "datasetTitle": "Recursos tributarios totales y por tributo",
+      "fileName": "recursos-tributarios-totales-por-tributo-anual-base-2001.csv",
+      "format": "CSV",
+      "title": "Recursos tributarios totales y por tributo. Valores anuales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:59.192Z",
+      "status": "processed"
+    },
+    "recursos-tributarios-totales-por-tributo-trimestral-base-2001.csv": {
+      "datasetId": "sspm_142",
+      "datasetTitle": "Recursos tributarios totales y por tributo",
+      "fileName": "recursos-tributarios-totales-por-tributo-trimestral-base-2001.csv",
+      "format": "CSV",
+      "title": "Recursos tributarios totales y por tributo. Valores trimestrales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:00.253Z",
+      "status": "processed"
+    },
+    "recursos-tributarios-totales-por-tributo-mensual-base-2001.csv": {
+      "datasetId": "sspm_142",
+      "datasetTitle": "Recursos tributarios totales y por tributo",
+      "fileName": "recursos-tributarios-totales-por-tributo-mensual-base-2001.csv",
+      "format": "CSV",
+      "title": "Recursos tributarios totales y por tributo. Valores mensuales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:01.299Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_142",
+    "title": "Recursos tributarios totales y por tributo",
+    "description": "Recursos tributarios totales y por tributo en millones de pesos",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:02:09.866271",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

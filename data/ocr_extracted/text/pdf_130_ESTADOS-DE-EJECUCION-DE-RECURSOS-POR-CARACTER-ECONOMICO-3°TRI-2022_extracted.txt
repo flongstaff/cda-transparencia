@@ -1,0 +1,39 @@
+R.A.F.A.M.
+ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOS Hoja: 1 de 3
+20/09/202308:37
+Municipalidad de
+Carmen de Areco Del 01/07/2022 al 30/09/2022 Ejercicio: 2022(POR CARACTER ECONÓMICO) 
+CONSOLIDADO
+Descripción ModificacionesRecurso 
+Estimado Recurso 
+Vigente Recurso 
+Devengado Dif. entre 
+Vigente y 
+Devengado Recursos 
+Percibido Dif. entre 
+Devengado y 
+Percibido 
+RECURSOS
+INGRESOS CORRIENTES
+Ingresos tributarios
+Impuestos provinciales y nacionales 393.426.898,00 0,00 393.426.898,00 141.370.223,29 252.056.674,71 141.370.223,29 0,00
+Otros impuestos 82.635.806,00 0,00 82.635.806,00 23.311.268,47 59.324.537,53 21.161.726,61 2.149.541,86
+476.062.704,00 0,00 476.062.704,00 164.681.491,76 311.381.212,24 162.531.949,90 2.149.541,86 Total Ingresos tributarios
+Ingresos no tributarios
+Tasas 117.741.160,00 0,00 117.741.160,00 53.570.544,62 64.170.615,38 33.559.520,25 20.011.024,37
+Derechos 21.441.034,00 223.740,00 21.664.774,00 6.273.471,97 15.391.302,03 5.794.598,81 478.873,16
+Otros no tributarios 43.839.782,00 363.463,43 44.203.245,43 14.200.567,77 30.002.677,66 14.200.567,77 0,00
+183.021.976,00 587.203,43 183.609.179,43 74.044.584,36 109.564.595,07 53.554.686,83 20.489.897,53 Total Ingresos no tributarios
+Rentas de la propiedad
+Intereses
+Intereses internos
+Intereses por depósitos 20.617.059,00 0,00 20.617.059,00 13.628.877,13 6.988.181,87 13.628.877,13 0,0020.617.059,00 0,00 20.617.059,00 13.628.877,13 6.988.181,87 13.628.877,13 0,00
+Total Intereses internos
+20.617.059,00 0,00 20.617.059,00 13.628.877,13 6.988.181,87 13.628.877,13 0,00 Total Intereses
+20.617.059,00 0,00 20.617.059,00 13.628.877,13 6.988.181,87 13.628.877,13 0,00 Total Rentas de la propiedad
+Transferencias Corrientes
+Del sector público
+Del sector público nacional
+De la administración central 0,00 28.507.376,54 28.507.376,54 27.819.626,54 687.750,00 27.819.626,54 0,000,00 28.507.376,54 28.507.376,54 27.819.626,54 687.750,00 27.819.626,54 0,00
+Total Del sector público nacionalDe provincias y municipios
+De ...

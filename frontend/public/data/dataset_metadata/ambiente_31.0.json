@@ -1,0 +1,81 @@
+{
+  "files": {
+    "APE_d_demanda_2025": {
+      "datasetId": "ambiente_31.0",
+      "datasetTitle": "Actividad energética",
+      "fileName": "APE_d_demanda_2025",
+      "format": "CSV",
+      "title": "Demanda de energía",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=29&did=309",
+      "lastProcessed": "2025-10-09T06:49:02.738Z",
+      "status": "processed"
+    },
+    "APE_a_generacion_fuente_GWh1_20221": {
+      "datasetId": "ambiente_31.0",
+      "datasetTitle": "Actividad energética",
+      "fileName": "APE_a_generacion_fuente_GWh1_20221",
+      "format": "CSV",
+      "title": "Generación de energía",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=29&did=250",
+      "lastProcessed": "2025-10-09T06:49:04.068Z",
+      "status": "processed"
+    },
+    "APE_e_renovables_2025": {
+      "datasetId": "ambiente_31.0",
+      "datasetTitle": "Actividad energética",
+      "fileName": "APE_e_renovables_2025",
+      "format": "CSV",
+      "title": "Generación Renovable por tipo de tecnología.",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=29&did=346",
+      "lastProcessed": "2025-10-09T06:49:05.498Z",
+      "status": "processed"
+    },
+    "APE_b_electrica_pot_inst_MW_2023": {
+      "datasetId": "ambiente_31.0",
+      "datasetTitle": "Actividad energética",
+      "fileName": "APE_b_electrica_pot_inst_MW_2023",
+      "format": "CSV",
+      "title": "Potencia instalada por tecnología",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=29&did=251",
+      "lastProcessed": "2025-10-09T06:49:06.953Z",
+      "status": "processed"
+    },
+    "APE_f_prod_gas_2025": {
+      "datasetId": "ambiente_31.0",
+      "datasetTitle": "Actividad energética",
+      "fileName": "APE_f_prod_gas_2025",
+      "format": "CSV",
+      "title": "Producción de gas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=29&did=431",
+      "lastProcessed": "2025-10-09T06:49:08.471Z",
+      "status": "processed"
+    },
+    "APE_f_prod_petroleo_2025": {
+      "datasetId": "ambiente_31.0",
+      "datasetTitle": "Actividad energética",
+      "fileName": "APE_f_prod_petroleo_2025",
+      "format": "CSV",
+      "title": "Producción de petróleo",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=29&did=430",
+      "lastProcessed": "2025-10-09T06:49:09.816Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_31.0",
+    "title": "Actividad energética",
+    "description": "Muestra la potencia instalada, la generación de energía y la demanda energética",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2023-06-08T00:00:00",
+    "modified": "2023-06-08T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

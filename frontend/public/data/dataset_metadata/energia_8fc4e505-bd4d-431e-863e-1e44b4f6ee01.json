@@ -1,0 +1,42 @@
+{
+  "files": {
+    "refinacin-hidrocarburos-petroqumicas.csv": {
+      "datasetId": "energia_8fc4e505-bd4d-431e-863e-1e44b4f6ee01",
+      "datasetTitle": "Refinación de hidrocarburos -  Petroquímicas",
+      "fileName": "refinacin-hidrocarburos-petroqumicas.csv",
+      "format": "CSV",
+      "title": "Refinación Hidrocarburos Petroquímicas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/8fc4e505-bd4d-431e-863e-1e44b4f6ee01/resource/f4a44571-73ae-4e91-b7e2-22f71b752bd6",
+      "lastProcessed": "2025-10-09T06:50:55.645Z",
+      "status": "processed"
+    },
+    "refinacin-hidrocarburos-petroqumicas.zip": {
+      "datasetId": "energia_8fc4e505-bd4d-431e-863e-1e44b4f6ee01",
+      "datasetTitle": "Refinación de hidrocarburos -  Petroquímicas",
+      "fileName": "refinacin-hidrocarburos-petroqumicas.zip",
+      "format": "SHP",
+      "title": "Refinación Hidrocarburos Petroquímicas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/8fc4e505-bd4d-431e-863e-1e44b4f6ee01/resource/56d05927-5025-4bda-8679-356f97f7d03f",
+      "lastProcessed": "2025-10-09T06:50:55.645Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_8fc4e505-bd4d-431e-863e-1e44b4f6ee01",
+    "title": "Refinación de hidrocarburos -  Petroquímicas",
+    "description": "Ubicación de Petroquímicas. ISO 19126: PowerSupplies, Este subgrupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2023-06-16T14:01:20.309232",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

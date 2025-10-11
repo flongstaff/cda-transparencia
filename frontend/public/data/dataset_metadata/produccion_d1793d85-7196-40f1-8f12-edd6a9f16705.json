@@ -1,0 +1,52 @@
+{
+  "files": {
+    "autom-expos-series.csv": {
+      "datasetId": "produccion_d1793d85-7196-40f1-8f12-edd6a9f16705",
+      "datasetTitle": "Archivo 2003-2019: Indicadores Sectoriales de Automotores",
+      "fileName": "autom-expos-series.csv",
+      "format": "CSV",
+      "title": "Automotriz: exportaciones de vehículos en unidades (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d1793d85-7196-40f1-8f12-edd6a9f16705/resource/cad68a66-f3d8-44e0-9419-2087bd925da9",
+      "lastProcessed": "2025-10-09T08:10:50.223Z",
+      "status": "processed"
+    },
+    "autom-ipa-series.csv": {
+      "datasetId": "produccion_d1793d85-7196-40f1-8f12-edd6a9f16705",
+      "datasetTitle": "Archivo 2003-2019: Indicadores Sectoriales de Automotores",
+      "fileName": "autom-ipa-series.csv",
+      "format": "CSV",
+      "title": "Automotriz: Índice de Precios del Automóvil (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d1793d85-7196-40f1-8f12-edd6a9f16705/resource/7dbcf60d-a9cb-45bc-b43f-5bf9968d1cd1",
+      "lastProcessed": "2025-10-09T08:10:52.154Z",
+      "status": "processed"
+    },
+    "autom-paten-series.csv": {
+      "datasetId": "produccion_d1793d85-7196-40f1-8f12-edd6a9f16705",
+      "datasetTitle": "Archivo 2003-2019: Indicadores Sectoriales de Automotores",
+      "fileName": "autom-paten-series.csv",
+      "format": "CSV",
+      "title": "Automotriz: patentamientos de autos de origen argentino, brasileño y del resto del mundo (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d1793d85-7196-40f1-8f12-edd6a9f16705/resource/ab589fa0-e384-4f5c-b8cb-0ccfa5a723eb",
+      "lastProcessed": "2025-10-09T08:10:54.001Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_d1793d85-7196-40f1-8f12-edd6a9f16705",
+    "title": "Archivo 2003-2019: Indicadores Sectoriales de Automotores",
+    "description": "Resumen de los principales indicadores del sector Automotriz.\r\n\r\n",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-04-29T13:52:10.040357",
+    "modified": "2021-05-11T15:49:47.644033",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Producción. Secretaría de Transformación Productiva. Subsecretaría de Desarrollo y Planeamiento Productivo. "
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/archivo-2003-2019-indicadores-sectoriales-de-automotores"
+  }
+}

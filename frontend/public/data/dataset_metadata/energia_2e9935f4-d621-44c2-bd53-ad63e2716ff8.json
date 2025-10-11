@@ -1,0 +1,30 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_2e9935f4-d621-44c2-bd53-ad63e2716ff8",
+      "datasetTitle": "Precio Internacional (PI)  del petróleo crudo",
+      "format": "XLS",
+      "title": "Precio Internacional (PI) del petróleo crudo (Res. MEyFP 1077/2014)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2e9935f4-d621-44c2-bd53-ad63e2716ff8/resource/601273d5-7723-40ca-8d69-a95acee6400f",
+      "lastProcessed": "2025-10-09T06:31:47.345Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_2e9935f4-d621-44c2-bd53-ad63e2716ff8",
+    "title": "Precio Internacional (PI)  del petróleo crudo",
+    "description": " ",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2020-11-03T12:45:23.480562",
+    "modified": "2025-10-01T16:55:38.940506",
+    "publisher": {
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Información Energética. \r\n\r\n\r\n\r\n"
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/precio-internacional-pi-del-petroleo-crudo"
+  }
+}

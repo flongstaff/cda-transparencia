@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "renaper_8",
+      "title": "Nombres propios en Argentina",
+      "distribution": [
+        {
+          "title": "Metodologia_nombres_propios_Argentina.pdf",
+          "format": "PDF",
+          "fileName": "Metodologia_nombres_propios_Argentina.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/renaper_8/Metodologia_nombres_propios_Argentina.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/renaper_8/Metodologia_nombres_propios_Argentina_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

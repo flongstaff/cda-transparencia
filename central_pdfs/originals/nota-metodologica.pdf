@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="es" class="ie ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="ie ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="es" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es"> <!--<![endif]-->
+  <head>
+    <!--[if lte ie 8]><script type="text/javascript" src="/fanstatic/vendor/:version:2019-12-02T16:58:12/html5.min.js"></script><![endif]-->
+<link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2019-12-02T16:58:12/select2/select2.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/css/:version:2019-12-02T16:58:12/main.min.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2019-12-02T16:58:12/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/gobar_css/:version:2019-12-02T17:16:31/:bundle:gobar_style.css;table.css" />
+
+    <meta charset="utf-8" />
+      <meta name="generator" content="ckan 2.7.6" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta property="og:url" content="https://datos.produccion.gob.ar/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://datos.produccion.gob.ar">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="2400">
+    <meta property="og:image:height" content="1260">
+    <meta property="og:locale" content="es_AR">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site:id" content="@"/>
+    <meta name="twitter:image:src" content="https://datos.produccion.gob.ar">
+    <meta name="twitter:title" content="Datos Producción | Nota metodológica &#34;Asistencia al sector productivo otorgada por el Estado Nacional en el contexto de la pandemia (2020)&#34;">
+    <meta name="twitter:description" content="Detalle de la metodología utilizada en el recurso &#34;Asistencia al sector productivo otorgada por el Estado Nacional en el contexto de la pandemia (2020)&#34; de este dataset.
+">
+    <title>
+    Datos Abiertos de Desarrollo Productivo - Nota metodológica &#34;Asistencia al sector productivo otorgada por el Estado Nacional en el contexto de la pandemia (2020)&#34;</title>
+
+    
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    
+        <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-185890531-1', 'auto', {});
+     
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+    
+      
+    
+
+    
+      
+      
+    
+    
+  </head>
+
+  
+  <body data-site-root="https://datos.produccion.gob.ar/" data-locale-root="https://datos.produccion.gob.ar/" >
+
+    
+    <style type="text/css">
+        
+    </style>
+
+    <div class="footer-down">
+            
+<div id="header" class="container-fluid">
+    <div class="restricted-max-width">
+        <div id="header-spacing" class="col-xs-12 col-sm-10 col-sm-offset-1">
+
+            
+
+            <div class="col-xs-12 col-sm-5 no-padding logo-header">
+                <div class="logo-and-xs-icon">
+                    <i class="icon-reorder fa fa-bars" aria-hidden="true"></i>
+                    <a href="/">
+                        
+                        <img src="/user_images/SIC4.png" alt="/" class="logo-ministerio">
+                    </a>
+                    
+                </div>
+                <div class="xs-navbar hidden">
+                    <div class="navbar-link">
+                        <a href="/dataset">
+                            DATASETS
+                        </a>
+                    </div>
+                    <hr>
+                    
+                    
+                        <div class="navbar-link">
+                            <a href="/organizaciones">
+                                ORGANIZACIONES
+                            </a>
+                        </div>
+                    
+
+                    
+
+                    <div class="navbar-link dropdown-navbar-link">
+                        <span class="username"></span> <svg class="user-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.46 128.46"><path d="M128.46,64.23A63.15,63.15,0,0,0,119.84,32,64.21,64.21,0,0,0,96.48,8.62,63.12,63.12,0,0,0,64.23,0,63.12,63.12,0,0,0,32,8.62,64.2,64.2,0,0,0,8.62,32,63.15,63.15,0,0,0,0,64.23,63.15,63.15,0,0,0,8.62,96.48a64.76,64.76,0,0,0,9.82,12.86l-.16.27a70.09,70.09,0,0,0,9.2,7.34c1.46,1,3,2,4.51,2.91a63.17,63.17,0,0,0,32.25,8.62,63.17,63.17,0,0,0,32.25-8.62,66.19,66.19,0,0,0,7-4.74,72.41,72.41,0,0,0,6.61-5.51l-.14-.23a64.76,64.76,0,0,0,9.85-12.89A63.15,63.15,0,0,0,128.46,64.23Zm-20.52,41.89C101.56,96.56,88,81,66.73,79.8a26.25,26.25,0,0,0,16.88-7.9,26.44,26.44,0,0,0,8-19.41,26.44,26.44,0,0,0-8-19.4,26.42,26.42,0,0,0-19.4-8,26.41,26.41,0,0,0-19.4,8,26.44,26.44,0,0,0-8,19.4,26.44,26.44,0,0,0,8,19.41,26.25,26.25,0,0,0,16.87,7.9C40.48,81,26.88,96.52,20.49,106.09a61.14,61.14,0,0,1-8.66-11.48A59.48,59.48,0,0,1,3.71,64.23a59.48,59.48,0,0,1,8.11-30.37,60.53,60.53,0,0,1,22-22A59.45,59.45,0,0,1,64.23,3.71,59.46,59.46,0,0,1,94.6,11.83a60.54,60.54,0,0,1,22,22,59.48,59.48,0,0,1,8.11,30.37,59.48,59.48,0,0,1-8.11,30.37A61.14,61.14,0,0,1,107.94,106.12Z" style="fill:#0695d6"/></svg>
+                    </div>
+                    <div class="dropdown-navbar hidden">
+                        <div class="navbar-link">
+                            <a href="/configurar/mi_cuenta">
+                                MI CUENTA
+                            </a>
+                        </div><div class="navbar-link">
+                            <a href="https://datosgobar.github.io/portal-andino/quickstart/" target="_blank">
+                                AYUDA
+                            </a>
+                        </div>
+
+                        <div class="navbar-link">
+                            <a href="/logout">
+                                SALIR
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-7 no-padding header-links"><a class="header-link" href="/dataset">Datasets</a><a class="header-link" href="/organizaciones">Organizaciones</a></div>
+        </div>
+    </div>
+</div>
+        
+
+    <div class="resource-container container-fluid">
+        <div class="restricted-max-width">
+            <div class="resource col-xs-12 col-md-10 col-md-offset-1">
+                <div class="col-md-12 back-to-pkg">
+                    
+                    <a href="/dataset">Datos Abiertos de Desarrollo Productivo</a> / <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp">Dataset</a> / Recurso
+
+                    
+                    
+                </div>
+                <div class="col-md-10 col-xs-12 title">
+                    <h1>Nota metodológica &#34;Asistencia al sector productivo otorgada por el Estado Nacional en el contexto de la pandemia (2020)&#34;</h1>
+
+                    <p>Detalle de la metodología utilizada en el recurso &#34;Asistencia al sector productivo otorgada por el Estado Nacional en el contexto de la pandemia (2020)&#34; de este dataset.
+</p>
+                </div>
+                <div class="col-md-2 col-xs-12 resource-actions">
+                    <a class="btn btn-green btn-block" href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/9351d119-89e9-4cbe-8cdf-3ae5f68f7d73/download/nota-metodologica.pdf">DESCARGAR</a>
+
+                    
+                    
+                </div>
+
+                <div class="resource-previsualization hidden-xs hidden-sm" style="display: None">
+                    <div class="resource-additional-info col-xs-12 col-md-12 row"
+                         style="border-bottom: 0; width: 103%; margin-bottom: 20px; margin-top: 30px;">
+                        <h2 class="title-h" style="padding-bottom: 0 !important;">Previsualización</h2>
+                    </div>
+
+                    <div class="data-preview hidden-xs hidden-sm col-md-12">
+                        
+                        
+
+                        
+                        
+                        
+                            
+                        
+                    </div>
+                </div>
+
+                
+                    <div class="hidden-xs hidden-sm attributes-table">
+                       
+
+
+
+
+
+
+
+
+
+                    </div>
+                
+
+                <div class="resource-additional-info col-xs-12 col-md-12 row" style="width: 102% !important;">
+                    <h2 class="title-h">Información adicional</h2>
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Responsable
+                            </div>
+                            <div class="col-xs-8 value">
+                                Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la Producción (CEP XXI).
+                            </div>
+                        </div>
+                    
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Formato
+                            </div>
+                            <div class="col-xs-8 value">
+                                
+                                <span class="label" data-format="application/pdf">application/pdf</span>
+                            </div>
+                        </div>
+                    
+
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Temas
+                            </div>
+                                    Industria
+                                    PyMEs y emprendedores
+                        </div>
+                    
+
+                    
+                        
+                            
+                        
+                            
+                                <div class="resource-additional col-xs-12">
+                                    <div class="col-xs-4 key">
+                                        Frecuencia de actualización
+                                    </div>
+                                    <div class="col-xs-8 value">
+                                        Eventual
+                                    </div>
+                                </div>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                    
+
+
+                    <div class="resource-additional col-xs-12">
+                        <div class="col-xs-4 key">
+                            Fecha de creación
+                        </div>
+                        <div class="col-xs-8 value">
+                            
+                                8 de junio de 2021
+                            
+                        </div>
+                    </div>
+
+                    <div class="resource-additional col-xs-12">
+                        <div class="col-xs-4 key">
+                            Último cambio
+                        </div>
+                        <div class="col-xs-8 value">
+                            
+                                8 de junio de 2021
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                
+
+                
+                    <div class="resource-alternative-packages col-xs-12 col-md-12 row" style="border-bottom: 0; width: 103%;">
+                        <h2 class="title-h">Otros recursos de este dataset</h2>
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/2726de1d-11e9-41ef-9067-98f676d179e1">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/2726de1d-11e9-41ef-9067-98f676d179e1/download/creditos_a_tasa_cero-1.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/2726de1d-11e9-41ef-9067-98f676d179e1">
+        <div class="package-info">
+
+            <h3>Créditos a tasa cero</h3>
+
+            <p>Total acumulado de casos y montos de créditos a tasa cero desde el inicio del Programa ATP para Monotributistas y Autónomos. Fuente: AFIP</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/6f738555-b4a7-43a9-9023-32846b508c87">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/6f738555-b4a7-43a9-9023-32846b508c87/download/devoluciones-1.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/6f738555-b4a7-43a9-9023-32846b508c87">
+        <div class="package-info">
+
+            <h3>Devoluciones</h3>
+
+            <p>Listado de empresas que devolvieron en tiempo y forma de manera completa las rondas 1 a 9 de la ATP (de acuerdo a lo que indica la Resolución...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/e2b12485-5017-4903-ad71-0edac04f6255">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/e2b12485-5017-4903-ad71-0edac04f6255/download/atp_provincias_1-1.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/e2b12485-5017-4903-ad71-0edac04f6255">
+        <div class="package-info">
+
+            <h3>Beneficios por provincia - Etapa 1</h3>
+
+            <p>Listado con los beneficios otorgados clasificados por provincia - Incluye datos correspondientes a la Etapa 1 de este beneficio</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/1829ab1c-30f8-411d-9e37-4ef15f61ed31">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/1829ab1c-30f8-411d-9e37-4ef15f61ed31/download/atp_provincias_2-1.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/1829ab1c-30f8-411d-9e37-4ef15f61ed31">
+        <div class="package-info">
+
+            <h3>Beneficios por provincia - Etapa 2</h3>
+
+            <p>Listado con los beneficios otorgados clasificados por provincia - Incluye datos correspondientes a la Etapa 2 de este beneficio</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/3df5624f-40d7-4aa8-bc57-ff7240a8f8df">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3df5624f-40d7-4aa8-bc57-ff7240a8f8df/download/atp_provincias_3-1.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/3df5624f-40d7-4aa8-bc57-ff7240a8f8df">
+        <div class="package-info">
+
+            <h3>Beneficios por provincia - Etapa 3</h3>
+
+            <p>Listado con los beneficios otorgados clasificados por provincia - Incluye datos correspondientes a la Etapa 3 de este beneficio</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/a386dafc-f60d-4ddf-a662-411b97161a88">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/a386dafc-f60d-4ddf-a662-411b97161a88/download/atp_provincias_4-1.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/a386dafc-f60d-4ddf-a662-411b97161a88">
+        <div class="package-info">
+
+            <h3>Beneficios por provincia - Etapa 4</h3>
+
+            <p>Listado con los beneficios otorgados clasificados por provincia - Incluye datos correspondientes a la Etapa 4 de este beneficio</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/64ab4196-1257-43f0-8c56-39d8c7bbd020">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/64ab4196-1257-43f0-8c56-39d8c7bbd020/download/atp_provincias_5-1.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/64ab4196-1257-43f0-8c56-39d8c7bbd020">
+        <div class="package-info">
+
+            <h3>Beneficios por provincia - Etapa 5</h3>
+
+            <p>Listado con los beneficios otorgados clasificados por provincia - Incluye datos correspondientes a la Etapa 5 de este beneficio</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/3f84c615-25e9-4699-bc02-d16db9290118">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3f84c615-25e9-4699-bc02-d16db9290118/download/creditos_a_tasa_cero_provincias-1.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/3f84c615-25e9-4699-bc02-d16db9290118">
+        <div class="package-info">
+
+            <h3>Créditos a tasa cero - por provincia</h3>
+
+            <p>Total acumulado de casos y montos de créditos a tasa cero desde el inicio del Programa ATP desagregado por provincia.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/87323f9a-4c3a-4870-bb10-835b8ec7ec80">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/87323f9a-4c3a-4870-bb10-835b8ec7ec80/download/creditos_a_tasa_24_provincias-1.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/87323f9a-4c3a-4870-bb10-835b8ec7ec80">
+        <div class="package-info">
+
+            <h3>Créditos tasa fija 24% - Por provincia</h3>
+
+            <p>Total acumulado de casos y montos de créditos a tasa fija del 24% desde el inicio del Programa ATP desagregado por provincia.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/e338b7e6-43fa-4e71-ba5d-da3b2d4bacb4">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/e338b7e6-43fa-4e71-ba5d-da3b2d4bacb4/download/pyme_plus_provincias-1.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/e338b7e6-43fa-4e71-ba5d-da3b2d4bacb4">
+        <div class="package-info">
+
+            <h3>Línea de financiamiento PyMEs Plus - Por provincia</h3>
+
+            <p>Cantidad de empresas que accedieron a la línea de finaciamiento PyME Plus desagregado por provincia.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/0a83eca2-c705-4ce1-9738-7498482d7329">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://infra.datos.gob.ar/catalog/jgm/dataset/17/distribution/17.1/download/contribuciones.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/0a83eca2-c705-4ce1-9738-7498482d7329">
+        <div class="package-info">
+
+            <h3>Contribuciones</h3>
+
+            <p>Listado de empresas beneficiarias de la postergación o reducción de las contribuciones patronales. Fuente: CEP-XXI en base a información de AFIP...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/d2b7f903-fb2a-4a66-8877-681cdce60a05">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://infra.datos.gob.ar/catalog/jgm/dataset/17/distribution/17.4/download/salarios-rondaatp-1a5.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/d2b7f903-fb2a-4a66-8877-681cdce60a05">
+        <div class="package-info">
+
+            <h3>Salarios - Ronda ATP 1 a 5</h3>
+
+            <p>Listado que corresponde a empleadores con al menos un empleado con salario complementario abonado en cuenta bancaria (por salarios devengados...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/93cf1dc6-97df-4d9d-ab88-7cdf4b14443d">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://infra.datos.gob.ar/catalog/jgm/dataset/17/distribution/17.13/download/salarios-rondaatp-6a9.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/93cf1dc6-97df-4d9d-ab88-7cdf4b14443d">
+        <div class="package-info">
+
+            <h3>Salarios - Ronda ATP 6 a 9</h3>
+
+            <p>Listado que corresponde a empleadores con al menos un empleado con salario complementario abonado en cuenta bancaria (por salarios devengados...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/1fd87414-c28f-4ee2-a129-9028cef3e17f">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://infra.datos.gob.ar/catalog/jgm/dataset/17/distribution/17.14/download/creditos-tasa-subsidiada.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/1fd87414-c28f-4ee2-a129-9028cef3e17f">
+        <div class="package-info">
+
+            <h3>Empresas beneficiarias de créditos a tasa subsidiada</h3>
+
+            <p>Listado de empresas beneficiarias de créditos a tasa subsidiada, herramienta del ATP que empezó a correr a partir de la cuarta etapa del mis...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/a299620b-0b7e-4935-853b-827a04d7b3c0">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/a299620b-0b7e-4935-853b-827a04d7b3c0/download/datos-abiertos-atp-tasa-subsididada-cero-y-24.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/a299620b-0b7e-4935-853b-827a04d7b3c0">
+        <div class="package-info">
+
+            <h3>Asistencia al sector productivo otorgada por el Estado Nacional en el contexto de la pandemia (2020)</h3>
+
+            <p>Información sobre la asistencia otorgada por el Estado Nacional durante 2020 en carácter de ATP y créditos a tasa 24, tasa 0 y tasa subsidiada,...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/3fbe3800-2ac6-4f87-ab05-b7be5fe9a0d3">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3fbe3800-2ac6-4f87-ab05-b7be5fe9a0d3/download/cant-empleadoras-sector-sede.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/3fbe3800-2ac6-4f87-ab05-b7be5fe9a0d3">
+        <div class="package-info">
+
+            <h3>Cantidad de firmas empleadoras que obtuvieron al menos un ATP</h3>
+
+            <p>Se presenta la información desagregada por grandes sectores (Industria, Comercio, Hoteles y Restaurantes y Resto de sectores) y a nivel partido/departamento,...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/05da7fd9-4459-4ae4-90b9-f7c30fcac1f0">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/05da7fd9-4459-4ae4-90b9-f7c30fcac1f0/download/cant-personas-sector-sede.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/05da7fd9-4459-4ae4-90b9-f7c30fcac1f0">
+        <div class="package-info">
+
+            <h3>Cantidad de puestos de trabajo en los que se pagó al menos un ATP</h3>
+
+            <p>Se presenta la información desagregada por grandes sectores y a nivel partido/departamento (sede fiscal). Difiere con la cantidad total de personas...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/5605b3f0-ced6-4765-9942-031cfb1a5c83">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/5605b3f0-ced6-4765-9942-031cfb1a5c83/download/monto-sector-sede.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp/archivo/5605b3f0-ced6-4765-9942-031cfb1a5c83">
+        <div class="package-info">
+
+            <h3>Monto en pesos abonado a las empresas de un determinado sector en un determinado partido/departamento</h3>
+
+            <p>Se presenta la información desagregada por grandes sectores (Industria, Comercio, Hoteles y Restaurantes y Resto de sectores) y a nivel partido/departamento,...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                    </div>
+                
+            
+            </div>
+        </div>
+    </div>
+    
+
+            <div id="footer" class="container-fluid">
+    <div class="restricted-max-width">
+        <div id="footer-spacer" class="col-xs-10 col-xs-offset-1">
+            <div class="footer-section logo col-xs-12 col-sm-6 col-md-6">
+                <p>
+                    
+                    
+                    
+                        <a href="https://twitter.com/MinEconomia_Ar" target="_blank" class="social-link">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+                        <a href="https://www.instagram.com/economia_arg" target="_blank" class="social-link">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+                        <a href="https://www.youtube.com/user/@MinEconom%C3%ADa_AR" target="_blank" class="social-link">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+                        <a href="http://www.linkedin.com/company/ministerio-de-economia-argentina" target="_blank" class="social-link">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+
+                    
+                </p>
+                <div class="logo-edit-container">
+                    
+                    
+                    <a href="https://www.argentina.gob.ar/economia" target="_blank">
+                        <img src="/user_images/SIC.png" alt="https://www.argentina.gob.ar/economia" class="logo-ministerio">
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="footer-section links-internos hidden-xs hidden-sm col-md-3">
+                
+                
+            </div>
+            <div class="footer-section links-externos col-xs-12 col-sm-6 col-md-3">
+                
+                
+                    <p><a href="mailto:dnmejoradelagestion@produccion.gob.ar">Contactanos</a></p>
+                
+                <p class="ckan-link">
+                    Desarrollado por<br><a href="https://github.com/datosgobar/distribuible.datos.gob.ar" target="_blank">Andino</a> con <a href="http://ckan.org/" target="_blank"><span class="ckan-name">CKAN</span></a>
+                </p>
+                <p class="ckan-link">
+                    Versión: 2.6.3
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+            <script type="application/ld+json">
+            {
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/87323f9a-4c3a-4870-bb10-835b8ec7ec80",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 1172,
+            "schema:dateModified": "2021-05-19T16:17:22.981789",
+            "schema:datePublished": "2021-05-19T16:17:22.981789",
+            "schema:description": "Total acumulado de casos y montos de cr\u00e9ditos a tasa fija del 24% desde el inicio del Programa ATP desagregado por provincia.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Cr\u00e9ditos tasa fija 24% - Por provincia",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/87323f9a-4c3a-4870-bb10-835b8ec7ec80/download/creditos_a_tasa_24_provincias-1.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/organization/33bb6091-482e-4a96-aa6c-aa78f3af1793",
+            "@type": "schema:Organization",
+            "schema:contactPoint": {
+                "@id": "_:Nd2611501bbc84e1b8bafc820821ec65e"
+            },
+            "schema:name": "Direcci\u00f3n Nacional de Estudios para la Producci\u00f3n (CEP XXI)"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/05da7fd9-4459-4ae4-90b9-f7c30fcac1f0",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 19364,
+            "schema:dateModified": "2021-10-22T10:15:13.112590",
+            "schema:datePublished": "2021-10-22T10:08:09.611463",
+            "schema:description": "Se presenta la informaci\u00f3n desagregada por grandes sectores y a nivel partido/departamento (sede fiscal). Difiere con la cantidad total de personas que recibieron ATP por casos de pluriempleo.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Cantidad de puestos de trabajo en los que se pag\u00f3 al menos un ATP",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/05da7fd9-4459-4ae4-90b9-f7c30fcac1f0/download/cant-personas-sector-sede.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/6f738555-b4a7-43a9-9023-32846b508c87",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 136809,
+            "schema:dateModified": "2021-05-19T11:31:22.075342",
+            "schema:datePublished": "2021-05-19T11:31:22.075342",
+            "schema:description": "Listado de empresas que devolvieron en tiempo y forma de manera completa las rondas 1 a 9 de la ATP (de acuerdo a lo que indica la Resoluci\u00f3n General AFIP 4719).",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Devoluciones",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/6f738555-b4a7-43a9-9023-32846b508c87/download/devoluciones-1.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/64ab4196-1257-43f0-8c56-39d8c7bbd020",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 1989,
+            "schema:dateModified": "2021-05-19T16:13:04.490797",
+            "schema:datePublished": "2021-05-19T16:13:04.490797",
+            "schema:description": "Listado con los beneficios otorgados clasificados por provincia - Incluye datos correspondientes a la Etapa 5 de este beneficio",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Beneficios por provincia - Etapa 5",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/64ab4196-1257-43f0-8c56-39d8c7bbd020/download/atp_provincias_5-1.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/9351d119-89e9-4cbe-8cdf-3ae5f68f7d73",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 49569,
+            "schema:dateModified": "2021-06-08T14:04:34.340087",
+            "schema:datePublished": "2021-06-08T14:04:34.340087",
+            "schema:description": "Detalle de la metodolog\u00eda utilizada en el recurso \"Asistencia al sector productivo otorgada por el Estado Nacional en el contexto de la pandemia (2020)\" de este dataset.\r\n",
+            "schema:encodingFormat": "PDF",
+            "schema:name": "Nota metodol\u00f3gica \"Asistencia al sector productivo otorgada por el Estado Nacional en el contexto de la pandemia (2020)\"",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/9351d119-89e9-4cbe-8cdf-3ae5f68f7d73/download/nota-metodologica.pdf"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/a299620b-0b7e-4935-853b-827a04d7b3c0",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 53754,
+            "schema:dateModified": "2021-06-08T14:01:42.193728",
+            "schema:datePublished": "2021-06-08T14:01:42.193728",
+            "schema:description": "Informaci\u00f3n sobre la asistencia otorgada por el Estado Nacional durante 2020 en car\u00e1cter de ATP y cr\u00e9ditos a tasa 24, tasa 0 y tasa subsidiada, diferenciando por provincia y por rama de actividad.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Asistencia al sector productivo otorgada por el Estado Nacional en el contexto de la pandemia (2020)",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/a299620b-0b7e-4935-853b-827a04d7b3c0/download/datos-abiertos-atp-tasa-subsididada-cero-y-24.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/1fd87414-c28f-4ee2-a129-9028cef3e17f",
+            "@type": "schema:DataDownload",
+            "schema:dateModified": "2021-06-09T12:28:25.461255",
+            "schema:datePublished": "2021-06-08T13:56:33.633077",
+            "schema:description": "Listado de empresas beneficiarias de cr\u00e9ditos a tasa subsidiada, herramienta del ATP que empez\u00f3 a correr a partir de la cuarta etapa del mismo",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Empresas beneficiarias de cr\u00e9ditos a tasa subsidiada",
+            "schema:url": "https://infra.datos.gob.ar/catalog/jgm/dataset/17/distribution/17.14/download/creditos-tasa-subsidiada.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/1829ab1c-30f8-411d-9e37-4ef15f61ed31",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 2005,
+            "schema:dateModified": "2021-05-19T16:02:30.417910",
+            "schema:datePublished": "2021-05-19T16:02:30.417910",
+            "schema:description": "Listado con los beneficios otorgados clasificados por provincia - Incluye datos correspondientes a la Etapa 2 de este beneficio",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Beneficios por provincia - Etapa 2",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/1829ab1c-30f8-411d-9e37-4ef15f61ed31/download/atp_provincias_2-1.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3fbe3800-2ac6-4f87-ab05-b7be5fe9a0d3",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 17802,
+            "schema:dateModified": "2021-10-22T10:05:45.513273",
+            "schema:datePublished": "2021-10-22T09:58:28.374442",
+            "schema:description": "Se presenta la informaci\u00f3n desagregada por grandes sectores (Industria, Comercio, Hoteles y Restaurantes y Resto de sectores) y a nivel partido/departamento, con el criterio de sede fiscal.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Cantidad de firmas empleadoras que obtuvieron al menos un ATP",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3fbe3800-2ac6-4f87-ab05-b7be5fe9a0d3/download/cant-empleadoras-sector-sede.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+            "@type": "schema:Dataset",
+            "schema:dateModified": "2021-06-08T14:06:04.385469",
+            "schema:datePublished": "2021-06-08T14:06:04.385469",
+            "schema:description": "Listado de beneficios otorgados por el Programa de Asistencia de Emergencia al Trabajo y la Producci\u00f3n en marco de la Emergencia Sanitaria. ",
+            "schema:distribution": [
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/6f738555-b4a7-43a9-9023-32846b508c87"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/1fd87414-c28f-4ee2-a129-9028cef3e17f"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/5605b3f0-ced6-4765-9942-031cfb1a5c83"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/1829ab1c-30f8-411d-9e37-4ef15f61ed31"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/e2b12485-5017-4903-ad71-0edac04f6255"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/a386dafc-f60d-4ddf-a662-411b97161a88"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/a299620b-0b7e-4935-853b-827a04d7b3c0"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/05da7fd9-4459-4ae4-90b9-f7c30fcac1f0"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/93cf1dc6-97df-4d9d-ab88-7cdf4b14443d"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3df5624f-40d7-4aa8-bc57-ff7240a8f8df"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3fbe3800-2ac6-4f87-ab05-b7be5fe9a0d3"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/9351d119-89e9-4cbe-8cdf-3ae5f68f7d73"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/64ab4196-1257-43f0-8c56-39d8c7bbd020"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/0a83eca2-c705-4ce1-9738-7498482d7329"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/e338b7e6-43fa-4e71-ba5d-da3b2d4bacb4"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/87323f9a-4c3a-4870-bb10-835b8ec7ec80"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3f84c615-25e9-4699-bc02-d16db9290118"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/2726de1d-11e9-41ef-9067-98f676d179e1"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/d2b7f903-fb2a-4a66-8877-681cdce60a05"
+                }
+            ],
+            "schema:keywords": [
+                "Cr\u00e9ditos a tasa subsidiada",
+                "Coronavirus",
+                "ATP",
+                "Cr\u00e9ditos a tasa 24",
+                "Covid",
+                "Cr\u00e9ditos a tasa 0"
+            ],
+            "schema:name": "Asistencia de Emergencia al Trabajo y la Producci\u00f3n (ATP)",
+            "schema:publisher": {
+                "@id": "https://datos.produccion.gob.ar/organization/33bb6091-482e-4a96-aa6c-aa78f3af1793"
+            }
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/5605b3f0-ced6-4765-9942-031cfb1a5c83",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 38370,
+            "schema:dateModified": "2021-10-22T10:14:19.985361",
+            "schema:datePublished": "2021-10-22T10:14:19.985361",
+            "schema:description": "Se presenta la informaci\u00f3n desagregada por grandes sectores (Industria, Comercio, Hoteles y Restaurantes y Resto de sectores) y a nivel partido/departamento, con el criterio de sede fiscal.\r\n",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Monto en pesos abonado a las empresas de un determinado sector en un determinado partido/departamento",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/5605b3f0-ced6-4765-9942-031cfb1a5c83/download/monto-sector-sede.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3f84c615-25e9-4699-bc02-d16db9290118",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 1258,
+            "schema:dateModified": "2021-05-19T16:15:34.271942",
+            "schema:datePublished": "2021-05-19T16:15:34.271942",
+            "schema:description": "Total acumulado de casos y montos de cr\u00e9ditos a tasa cero desde el inicio del Programa ATP desagregado por provincia.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Cr\u00e9ditos a tasa cero - por provincia",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3f84c615-25e9-4699-bc02-d16db9290118/download/creditos_a_tasa_cero_provincias-1.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/d2b7f903-fb2a-4a66-8877-681cdce60a05",
+            "@type": "schema:DataDownload",
+            "schema:dateModified": "2021-06-08T14:11:31.998808",
+            "schema:datePublished": "2021-06-08T13:50:00.273449",
+            "schema:description": "Listado que corresponde a empleadores con al menos un empleado con salario complementario abonado en cuenta bancaria (por salarios devengados en diciembre). Incluye a quienes luego devolvieron montos.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Salarios - Ronda ATP 1 a 5",
+            "schema:url": "https://infra.datos.gob.ar/catalog/jgm/dataset/17/distribution/17.4/download/salarios-rondaatp-1a5.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/e338b7e6-43fa-4e71-ba5d-da3b2d4bacb4",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 523,
+            "schema:dateModified": "2021-05-19T16:18:36.447035",
+            "schema:datePublished": "2021-05-19T16:18:36.447035",
+            "schema:description": "Cantidad de empresas que accedieron a la l\u00ednea de finaciamiento PyME Plus desagregado por provincia.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "L\u00ednea de financiamiento PyMEs Plus - Por provincia",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/e338b7e6-43fa-4e71-ba5d-da3b2d4bacb4/download/pyme_plus_provincias-1.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/e2b12485-5017-4903-ad71-0edac04f6255",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 2466,
+            "schema:dateModified": "2021-05-19T15:58:09.312934",
+            "schema:datePublished": "2021-05-19T15:58:09.312934",
+            "schema:description": "Listado con los beneficios otorgados clasificados por provincia - Incluye datos correspondientes a la Etapa 1 de este beneficio",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Beneficios por provincia - Etapa 1",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/e2b12485-5017-4903-ad71-0edac04f6255/download/atp_provincias_1-1.csv"
+        },
+        {
+            "@id": "_:Nd2611501bbc84e1b8bafc820821ec65e",
+            "@type": "schema:ContactPoint",
+            "schema:contactType": "customer service",
+            "schema:email": "dnmejoradelagestion@produccion.gob.ar",
+            "schema:name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Direcci\u00f3n Nacional de Estudios para la Producci\u00f3n (CEP XXI).",
+            "schema:url": "https://datos.produccion.gob.ar"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/0a83eca2-c705-4ce1-9738-7498482d7329",
+            "@type": "schema:DataDownload",
+            "schema:dateModified": "2021-06-08T14:08:13.029492",
+            "schema:datePublished": "2021-06-08T13:46:08.441166",
+            "schema:description": "Listado de empresas beneficiarias de la postergaci\u00f3n o reducci\u00f3n de las contribuciones patronales. Fuente: CEP-XXI en base a informaci\u00f3n de AFIP y ANSES. Listado PROVISORIO al 28/10, sujeto a revisi\u00f3n",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Contribuciones",
+            "schema:url": "https://infra.datos.gob.ar/catalog/jgm/dataset/17/distribution/17.1/download/contribuciones.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/2726de1d-11e9-41ef-9067-98f676d179e1",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 585,
+            "schema:dateModified": "2021-05-19T11:15:05.075545",
+            "schema:datePublished": "2021-05-19T11:15:05.075545",
+            "schema:description": "Total acumulado de casos y montos de cr\u00e9ditos a tasa cero desde el inicio del Programa ATP para Monotributistas y Aut\u00f3nomos. Fuente: AFIP",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Cr\u00e9ditos a tasa cero",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/2726de1d-11e9-41ef-9067-98f676d179e1/download/creditos_a_tasa_cero-1.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/a386dafc-f60d-4ddf-a662-411b97161a88",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 1982,
+            "schema:dateModified": "2021-05-19T16:09:38.981621",
+            "schema:datePublished": "2021-05-19T16:09:38.981621",
+            "schema:description": "Listado con los beneficios otorgados clasificados por provincia - Incluye datos correspondientes a la Etapa 4 de este beneficio",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Beneficios por provincia - Etapa 4",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/a386dafc-f60d-4ddf-a662-411b97161a88/download/atp_provincias_4-1.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/93cf1dc6-97df-4d9d-ab88-7cdf4b14443d",
+            "@type": "schema:DataDownload",
+            "schema:dateModified": "2021-06-09T12:26:59.758341",
+            "schema:datePublished": "2021-06-08T13:53:08.416867",
+            "schema:description": "Listado que corresponde a empleadores con al menos un empleado con salario complementario abonado en cuenta bancaria (por salarios devengados en diciembre). Incluye a quienes luego devolvieron montos.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Salarios - Ronda ATP 6 a 9",
+            "schema:url": "https://infra.datos.gob.ar/catalog/jgm/dataset/17/distribution/17.13/download/salarios-rondaatp-6a9.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3df5624f-40d7-4aa8-bc57-ff7240a8f8df",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 1988,
+            "schema:dateModified": "2021-05-19T16:06:04.738593",
+            "schema:datePublished": "2021-05-19T16:06:04.738593",
+            "schema:description": "Listado con los beneficios otorgados clasificados por provincia - Incluye datos correspondientes a la Etapa 3 de este beneficio",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Beneficios por provincia - Etapa 3",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3df5624f-40d7-4aa8-bc57-ff7240a8f8df/download/atp_provincias_3-1.csv"
+        }
+    ]
+}
+            </script>
+            
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+  
+    
+    <div class="js-hide" data-module="google-analytics"
+      data-module-googleanalytics_resource_prefix="">
+    </div>
+  
+
+
+      
+  <script>document.getElementsByTagName('html')[0].className += ' js';</script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2019-12-02T16:58:12/jquery.min.js"></script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2019-12-02T16:58:12/:bundle:bootstrap/js/bootstrap.min.js;jed.min.js;moment-with-locales.js;select2/select2.min.js"></script>
+<script type="text/javascript" src="/fanstatic/base/:version:2019-12-02T16:58:12/:bundle:plugins/jquery.inherit.min.js;plugins/jquery.proxy-all.min.js;plugins/jquery.url-helpers.min.js;plugins/jquery.date-helpers.min.js;plugins/jquery.slug.min.js;plugins/jquery.slug-preview.min.js;plugins/jquery.truncator.min.js;plugins/jquery.masonry.min.js;plugins/jquery.form-warning.min.js;sandbox.min.js;module.min.js;pubsub.min.js;client.min.js;notify.min.js;i18n.min.js;main.min.js;modules/select-switch.min.js;modules/slug-preview.min.js;modules/basic-form.min.js;modules/confirm-action.min.js;modules/api-info.min.js;modules/autocomplete.min.js;modules/custom-fields.min.js;modules/data-viewer.min.js;modules/table-selectable-rows.min.js;modules/resource-form.min.js;modules/resource-upload-field.min.js;modules/resource-reorder.min.js;modules/resource-view-reorder.min.js;modules/follow.min.js;modules/activity-stream.min.js;modules/dashboard.min.js;modules/resource-view-embed.min.js;view-filters.min.js;modules/resource-view-filters-form.min.js;modules/resource-view-filters.min.js;modules/table-toggle-more.min.js;modules/dataset-visibility.min.js;modules/media-grid.min.js;modules/image-upload.min.js"></script>
+<script type="text/javascript" src="/fanstatic/ckanext-googleanalytics/:version:2019-12-02T16:58:24/googleanalytics_event_tracking.js"></script>
+<script type="text/javascript" src="/fanstatic/gobar_js/:version:2019-12-02T17:16:31/:bundle:header.js;replace_svg.js;console_message.js;package/resource/resource_view.js;forms/custom_popup.js;libs/BootstrapMenu.js;libs/bootstrap_scripts.js;libs/clamp.js"></script></body>
+</html>

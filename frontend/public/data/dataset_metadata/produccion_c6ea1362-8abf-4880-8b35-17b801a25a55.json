@@ -1,0 +1,32 @@
+{
+  "files": {
+    "Proyectos-aprobados-vdj-012024.xlsx": {
+      "datasetId": "produccion_c6ea1362-8abf-4880-8b35-17b801a25a55",
+      "datasetTitle": "Programa POTENCIAR INDUSTRIA DEL VIDEOJUEGO",
+      "fileName": "Proyectos-aprobados-vdj-012024.xlsx",
+      "format": "XLS",
+      "title": "Beneficiarios del Programa POTENCIAR Videojuegos",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/c6ea1362-8abf-4880-8b35-17b801a25a55/resource/c5ba5bfb-f3f4-4659-a26f-3a62480bd620",
+      "lastProcessed": "2025-10-09T08:08:26.333Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_c6ea1362-8abf-4880-8b35-17b801a25a55",
+    "title": "Programa POTENCIAR INDUSTRIA DEL VIDEOJUEGO",
+    "description": "El objetivo consiste en fomentar el desarrollo y propiciar el fortalecimiento de la industria del videojuego contribuyendo a la consolidación de este sector estratégico. Se busca promover el empleo y la producción nacional de desarrollos de entretenimiento digital e interactivo; incentivar la inversión y fomentar el desarrollo de recursos técnicos y humanos especializados en la implementación de esta actividad de la economía del conocimiento y mejorar los estándares de calidad de los videojuegos",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2023-01-30T12:57:49.521988",
+    "modified": "2023-07-13T15:00:06.861309",
+    "publisher": {
+      "mbox": "asanta@produccion.gob.ar",
+      "name": "Secretaría Economía del Conocimiento, Dirección Nacional de Innovación Abierta, Dirección de Consolidación de Sectores Estratégicos."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/programa-potenciar-industria-del-videojuego"
+  }
+}

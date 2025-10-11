@@ -1,0 +1,112 @@
+{
+  "files": {
+    "odg-total-millones-australes-precios-1970-trimestral.csv": {
+      "datasetId": "sspm_382",
+      "datasetTitle": "Cuentas Nacionales 1980-1990",
+      "fileName": "odg-total-millones-australes-precios-1970-trimestral.csv",
+      "format": "CSV",
+      "title": "Oferta y Demanda Global. Millones de australes. Precios constantes. Base 1970. Valores Trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:15.823Z",
+      "status": "processed"
+    },
+    "ibi-australes-precios-1970-trimestral.csv": {
+      "datasetId": "sspm_382",
+      "datasetTitle": "Cuentas Nacionales 1980-1990",
+      "fileName": "ibi-australes-precios-1970-trimestral.csv",
+      "format": "CSV",
+      "title": "Inversión Bruta interna. Australes. Base 1970. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:16.893Z",
+      "status": "processed"
+    },
+    "ibi-variacion-existencias-australes-precios-1970-trimestral.csv": {
+      "datasetId": "sspm_382",
+      "datasetTitle": "Cuentas Nacionales 1980-1990",
+      "fileName": "ibi-variacion-existencias-australes-precios-1970-trimestral.csv",
+      "format": "CSV",
+      "title": "Inversión Bruta interna. Variación de Existencias. Australes. Base 1970. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:17.954Z",
+      "status": "processed"
+    },
+    "ibi-equipo-durable-produccion-nacional-australes-precios-1970-trimestral.csv": {
+      "datasetId": "sspm_382",
+      "datasetTitle": "Cuentas Nacionales 1980-1990",
+      "fileName": "ibi-equipo-durable-produccion-nacional-australes-precios-1970-trimestral.csv",
+      "format": "CSV",
+      "title": "Inversión Bruta interna. Equipo Durable de Producción Nacional. Australes. Base 1970. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:19.103Z",
+      "status": "processed"
+    },
+    "oferta-demanda-global-externa-australes-precios-1970-trimestral.csv": {
+      "datasetId": "sspm_382",
+      "datasetTitle": "Cuentas Nacionales 1980-1990",
+      "fileName": "oferta-demanda-global-externa-australes-precios-1970-trimestral.csv",
+      "format": "CSV",
+      "title": "Oferta y Demanda Global Externa.  En australes constantes. Base 1970. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:20.265Z",
+      "status": "processed"
+    },
+    "pib-costo-factores-industria-manufacturera-australes-precios-1970-trimestral.csv": {
+      "datasetId": "sspm_382",
+      "datasetTitle": "Cuentas Nacionales 1980-1990",
+      "fileName": "pib-costo-factores-industria-manufacturera-australes-precios-1970-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto a costo de factores Industria Manufacturera. Australes constantes. Base 1970. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:21.338Z",
+      "status": "processed"
+    },
+    "pib-costo-factores-australes-precios-1970-trimestral.csv": {
+      "datasetId": "sspm_382",
+      "datasetTitle": "Cuentas Nacionales 1980-1990",
+      "fileName": "pib-costo-factores-australes-precios-1970-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto a costo de factores. Austales constantes. Base 1970. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:22.482Z",
+      "status": "processed"
+    },
+    "ibi-equipo-durable-produccion-importado-australes-precios-1970-trimestral.csv": {
+      "datasetId": "sspm_382",
+      "datasetTitle": "Cuentas Nacionales 1980-1990",
+      "fileName": "ibi-equipo-durable-produccion-importado-australes-precios-1970-trimestral.csv",
+      "format": "CSV",
+      "title": "Inversión Bruta interna. Equipo Durable de Producción Importado. Australes. Base 1970. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:23.545Z",
+      "status": "processed"
+    },
+    "ibif-total-desagregada-australes-precios-1970.csv": {
+      "datasetId": "sspm_382",
+      "datasetTitle": "Cuentas Nacionales 1980-1990",
+      "fileName": "ibif-total-desagregada-australes-precios-1970.csv",
+      "format": "CSV",
+      "title": "Inversión Bruta interna Fija. Total y desagregada. Australes. Base 1970. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:24.672Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_382",
+    "title": "Cuentas Nacionales 1980-1990",
+    "description": "Cuentas Nacionales 1980-1990 a Precios de 1970",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2018-02-19",
+    "modified": "2025-04-02T16:48:28.971250",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

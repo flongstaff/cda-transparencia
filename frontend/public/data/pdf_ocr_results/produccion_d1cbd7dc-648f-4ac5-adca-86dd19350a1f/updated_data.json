@@ -1,0 +1,27 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "produccion_d1cbd7dc-648f-4ac5-adca-86dd19350a1f",
+      "title": "Complejidad Económica Provincial",
+      "distribution": [
+        {
+          "title": "Metodologia.pdf",
+          "format": "PDF",
+          "fileName": "Metodologia.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/produccion_d1cbd7dc-648f-4ac5-adca-86dd19350a1f/Metodologia.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/produccion_d1cbd7dc-648f-4ac5-adca-86dd19350a1f/Metodologia_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    }
+  ]
+}

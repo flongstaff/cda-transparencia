@@ -1,0 +1,92 @@
+{
+  "files": {
+    "acero-consumo-series.csv": {
+      "datasetId": "produccion_185ec73a-e69a-4646-b110-65915c34de34",
+      "datasetTitle": "Archivo 1992-2019: Indicadores Sectoriales de Acero",
+      "fileName": "acero-consumo-series.csv",
+      "format": "CSV",
+      "title": "Acero: consumo aparente por categoría según la publicación de la CAA (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/185ec73a-e69a-4646-b110-65915c34de34/resource/86e6cc26-0785-471a-a508-29f12e396590",
+      "lastProcessed": "2025-10-09T08:06:49.134Z",
+      "status": "processed"
+    },
+    "acero-consumo-panel.csv": {
+      "datasetId": "produccion_185ec73a-e69a-4646-b110-65915c34de34",
+      "datasetTitle": "Archivo 1992-2019: Indicadores Sectoriales de Acero",
+      "fileName": "acero-consumo-panel.csv",
+      "format": "CSV",
+      "title": "Acero: consumo aparente por categoría según la publicación de la CAA (panel)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/185ec73a-e69a-4646-b110-65915c34de34/resource/72d9ae22-bba5-473e-85ed-89831ebe6d2c",
+      "lastProcessed": "2025-10-09T08:06:51.100Z",
+      "status": "processed"
+    },
+    "acero-exportaciones-series.csv": {
+      "datasetId": "produccion_185ec73a-e69a-4646-b110-65915c34de34",
+      "datasetTitle": "Archivo 1992-2019: Indicadores Sectoriales de Acero",
+      "fileName": "acero-exportaciones-series.csv",
+      "format": "CSV",
+      "title": "Acero: exportaciones por categoría (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/185ec73a-e69a-4646-b110-65915c34de34/resource/6ddfd706-d7cf-4f95-9762-482ec1263efe",
+      "lastProcessed": "2025-10-09T08:06:53.048Z",
+      "status": "processed"
+    },
+    "acero-exportaciones-panel.csv": {
+      "datasetId": "produccion_185ec73a-e69a-4646-b110-65915c34de34",
+      "datasetTitle": "Archivo 1992-2019: Indicadores Sectoriales de Acero",
+      "fileName": "acero-exportaciones-panel.csv",
+      "format": "CSV",
+      "title": "Acero: exportaciones por categoría (panel)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/185ec73a-e69a-4646-b110-65915c34de34/resource/bbf25305-136a-4583-804f-b4de3505822a",
+      "lastProcessed": "2025-10-09T08:06:54.906Z",
+      "status": "processed"
+    },
+    "acero-importaciones-panel.csv": {
+      "datasetId": "produccion_185ec73a-e69a-4646-b110-65915c34de34",
+      "datasetTitle": "Archivo 1992-2019: Indicadores Sectoriales de Acero",
+      "fileName": "acero-importaciones-panel.csv",
+      "format": "CSV",
+      "title": "Acero: importaciones por categoría (panel)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/185ec73a-e69a-4646-b110-65915c34de34/resource/ab43dabf-7565-4207-a3ce-8db363b0cfb2",
+      "lastProcessed": "2025-10-09T08:06:56.989Z",
+      "status": "processed"
+    },
+    "acero-importaciones-series.csv": {
+      "datasetId": "produccion_185ec73a-e69a-4646-b110-65915c34de34",
+      "datasetTitle": "Archivo 1992-2019: Indicadores Sectoriales de Acero",
+      "fileName": "acero-importaciones-series.csv",
+      "format": "CSV",
+      "title": "Acero: importaciones por categoría (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/185ec73a-e69a-4646-b110-65915c34de34/resource/af020ba7-9b1a-4a6c-a577-e2612adbf01f",
+      "lastProcessed": "2025-10-09T08:06:59.099Z",
+      "status": "processed"
+    },
+    "acero-produccion-series.csv": {
+      "datasetId": "produccion_185ec73a-e69a-4646-b110-65915c34de34",
+      "datasetTitle": "Archivo 1992-2019: Indicadores Sectoriales de Acero",
+      "fileName": "acero-produccion-series.csv",
+      "format": "CSV",
+      "title": "Acero: producción en toneladas (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/185ec73a-e69a-4646-b110-65915c34de34/resource/2bf34987-c273-4b24-a1ff-f6d33a85fce8",
+      "lastProcessed": "2025-10-09T08:07:01.204Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_185ec73a-e69a-4646-b110-65915c34de34",
+    "title": "Archivo 1992-2019: Indicadores Sectoriales de Acero",
+    "description": "Resumen de los principales indicadores del sector del Acero.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-04-28T17:30:16.274799",
+    "modified": "2021-05-11T15:52:05.211714",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Producción. Secretaría de Transformación Productiva. Subsecretaría de Desarrollo y Planeamiento Productivo."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/archivo-2008-2019-indicadores-sectoriales-de-acero"
+  }
+}

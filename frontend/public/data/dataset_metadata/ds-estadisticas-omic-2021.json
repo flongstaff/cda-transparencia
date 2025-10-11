@@ -1,0 +1,26 @@
+{
+  "files": {
+    "2021 ESTADISTICAS OMIC.pdf": {
+      "datasetId": "ds-estadisticas-omic-2021",
+      "datasetTitle": "Estadísticas OMIC 2021",
+      "fileName": "2021 ESTADISTICAS OMIC.pdf",
+      "lastProcessed": "2025-10-09T06:15:02.480Z",
+      "status": "error",
+      "error": "Failed to download PDF: 2021 ESTADISTICAS OMIC.pdf"
+    }
+  },
+  "info": {
+    "identifier": "ds-estadisticas-omic-2021",
+    "title": "Estadísticas OMIC 2021",
+    "description": "Casos ingresados en Oficina Municipal de Información al Consumidor (OMIC) 2021.",
+    "theme": [
+      "economia-y-finanzas"
+    ],
+    "keywords": [],
+    "issued": "2022-01-01T00:00:00",
+    "modified": "2022-01-01T00:00:00",
+    "publisher": {
+      "name": "Oficina de Estadísticas"
+    }
+  }
+}

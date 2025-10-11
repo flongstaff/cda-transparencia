@@ -1,0 +1,164 @@
+{
+  "files": {
+    "2011_padron_oficial_establecimientos_educativos.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2011_padron_oficial_establecimientos_educativos.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.523Z",
+      "status": "processed"
+    },
+    "2012_padron_oficial_establecimientos_educativos.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2012_padron_oficial_establecimientos_educativos.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.523Z",
+      "status": "processed"
+    },
+    "2013_padron_oficial_establecimientos_educativos.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2013_padron_oficial_establecimientos_educativos.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.524Z",
+      "status": "processed"
+    },
+    "2014_padron_oficial_establecimientos_educativos.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2014_padron_oficial_establecimientos_educativos.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.524Z",
+      "status": "processed"
+    },
+    "2015_padron_oficial_establecimientos_educativos.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2015_padron_oficial_establecimientos_educativos.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.524Z",
+      "status": "processed"
+    },
+    "2016_padron_oficial_establecimientos_educativos_1.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2016_padron_oficial_establecimientos_educativos_1.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.524Z",
+      "status": "processed"
+    },
+    "2017_padron_oficial_establecimientos_educativos.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2017_padron_oficial_establecimientos_educativos.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.524Z",
+      "status": "processed"
+    },
+    "2018_padron_oficial_establecimientos_educativos.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2018_padron_oficial_establecimientos_educativos.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.524Z",
+      "status": "processed"
+    },
+    "2019_padron_oficial_establecimientos_educativos.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2019_padron_oficial_establecimientos_educativos.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.524Z",
+      "status": "processed"
+    },
+    "2020_padron_oficial_establecimientos_educativos.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2020_padron_oficial_establecimientos_educativos.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.524Z",
+      "status": "processed"
+    },
+    "2021_padron_oficial_establecimientos_educativos.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2021_padron_oficial_establecimientos_educativos.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.525Z",
+      "status": "processed"
+    },
+    "2022_padron_oficial_establecimientos_educativos.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2022_padron_oficial_establecimientos_educativos.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.525Z",
+      "status": "processed"
+    },
+    "2023_padron_oficial_establecimientos_educativos.xlsx": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "2023_padron_oficial_establecimientos_educativos.xlsx",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.525Z",
+      "status": "processed"
+    },
+    "20257.07_padron_oficial_establecimientos_educativos_die": {
+      "datasetId": "educacion_30.0",
+      "datasetTitle": "Padrón Oficial de Establecimientos Educativos",
+      "fileName": "20257.07_padron_oficial_establecimientos_educativos_die",
+      "format": "XLSX",
+      "title": "Padrón Oficial de Establecimientos Educativos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos",
+      "lastProcessed": "2025-10-09T06:41:18.525Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "educacion_30.0",
+    "title": "Padrón Oficial de Establecimientos Educativos",
+    "description": "Nomenclador unificado de escuelas que incluye ofertas educativas, universos de los distintos planes y programas, carreras, títulos, entre otras variables. Este sistema de carga virtual es actualizado en forma continua por cada una de las Unidades de Estadística Educativa de las jurisdicciones y utilizado como herramienta de consulta de información.",
+    "theme": [
+      "educ",
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE",
+      "EDUC"
+    ],
+    "issued": "2019-10-31",
+    "modified": "2025-07-15T00:00:00",
+    "publisher": {
+      "mbox": "gestioninfo@educacion.gob.ar",
+      "name": "Secretaría de Educación de la Nación\nSubsecretaría de Evaluación e Información Educativa"
+    },
+    "landingPage": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/padron-oficial-de-establecimientos-educativos"
+  }
+}

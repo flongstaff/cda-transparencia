@@ -1,0 +1,62 @@
+{
+  "files": {
+    "renabap-datos-barrios-csv.csv": {
+      "datasetId": "habitat_3",
+      "datasetTitle": "Registro Nacional de Barrios Populares",
+      "fileName": "renabap-datos-barrios-csv.csv",
+      "format": "CSV",
+      "title": "Barrios Populares de Argentina",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu/renabap/mapa",
+      "lastProcessed": "2025-10-09T06:41:19.235Z",
+      "status": "processed"
+    },
+    "renabap-datos-barrios-geojson": {
+      "datasetId": "habitat_3",
+      "datasetTitle": "Registro Nacional de Barrios Populares",
+      "fileName": "renabap-datos-barrios-geojson",
+      "format": "GeoJSON",
+      "title": "Barrios Populares de Argentina - GeoJSON",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu/renabap/mapa",
+      "lastProcessed": "2025-10-09T06:41:19.235Z",
+      "status": "processed"
+    },
+    "renabap-datos-barrios-gpkg.gpkg": {
+      "datasetId": "habitat_3",
+      "datasetTitle": "Registro Nacional de Barrios Populares",
+      "fileName": "renabap-datos-barrios-gpkg.gpkg",
+      "format": "gpkg",
+      "title": "Barrios Populares de Argentina - GPKG",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu/renabap/mapa",
+      "lastProcessed": "2025-10-09T06:41:19.236Z",
+      "status": "processed"
+    },
+    "renabap-datos-barrios-referencias.csv": {
+      "datasetId": "habitat_3",
+      "datasetTitle": "Registro Nacional de Barrios Populares",
+      "fileName": "renabap-datos-barrios-referencias.csv",
+      "format": "CSV",
+      "title": "Referencias",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu/renabap/mapa",
+      "lastProcessed": "2025-10-09T06:41:19.307Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "habitat_3",
+    "title": "Registro Nacional de Barrios Populares",
+    "description": "Mapa de los barrios populares de Argentina.",
+    "theme": [
+      "soci"
+    ],
+    "superTheme": [
+      "SOCI"
+    ],
+    "issued": "2021-04-17T16:11:36.938004",
+    "modified": "2025-08-27T00:00:00",
+    "publisher": {
+      "mbox": "datosabiertos@infraestructura.gob.ar",
+      "name": "Ministerio de Economía, Secretaría de Obras Públicas, Subsecretaría de Integración Socio Urbana"
+    },
+    "landingPage": "https://www.argentina.gob.ar/obras-publicas/sisu/renabap/mapa"
+  }
+}

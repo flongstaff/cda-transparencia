@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-licitacion-10-2023",
+      "title": "Licitación Pública N°10/2023 - Adquisición de Combi Mini Bus",
+      "distribution": [
+        {
+          "title": "LICITACION-PUBLICA-N°10.pdf",
+          "format": "PDF",
+          "fileName": "LICITACION-PUBLICA-N°10.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-licitacion-10-2023/LICITACION-PUBLICA-N°10.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-licitacion-10-2023/LICITACION-PUBLICA-N°10_extraction.json",
+            "pageCount": 2,
+            "textLength": 2,
+            "extractedPreview": "\n\n",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

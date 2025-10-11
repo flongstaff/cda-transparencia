@@ -1,0 +1,32 @@
+{
+  "files": {
+    "registro-de-empresas-e-instalaciones-con-tanques-areos-de-hidrocarburos-lquidos.csv": {
+      "datasetId": "energia_c9611150-ed6d-4751-9a61-2dbb6dcfebb7",
+      "datasetTitle": "Registro de empresas e instalaciones con tanques aéreos de hidrocarburos líquidos",
+      "fileName": "registro-de-empresas-e-instalaciones-con-tanques-areos-de-hidrocarburos-lquidos.csv",
+      "format": "CSV",
+      "title": "Registro de empresas e instalaciones con tanques aéreos de hidrocarburos líquidos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/c9611150-ed6d-4751-9a61-2dbb6dcfebb7/resource/f5043aae-cdda-4b5a-b4ae-a5797769d637",
+      "lastProcessed": "2025-10-09T07:18:56.718Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_c9611150-ed6d-4751-9a61-2dbb6dcfebb7",
+    "title": "Registro de empresas e instalaciones con tanques aéreos de hidrocarburos líquidos",
+    "description": "Registro de empresas e instalaciones con tanques aéreos de hidrocarburos líquidos.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:35.657397",
+    "modified": "2023-05-19T14:52:16.107473",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

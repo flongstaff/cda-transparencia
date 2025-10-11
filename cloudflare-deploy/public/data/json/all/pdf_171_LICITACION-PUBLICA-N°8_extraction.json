@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_171_LICITACION-PUBLICA-N°8.pdf",
+  "file_hash": "7a048b16537da0f87a240689124a7572",
+  "page_count": 2,
+  "text_length": 2,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:34.884610"
+}

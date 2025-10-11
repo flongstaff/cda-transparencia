@@ -1,0 +1,72 @@
+{
+  "files": {
+    "ventas-de-comercializadores-de-glp.csv": {
+      "datasetId": "energia_63ab43cc-7055-4969-87d3-6a969f1d5386",
+      "datasetTitle": "Ventas GLP",
+      "fileName": "ventas-de-comercializadores-de-glp.csv",
+      "format": "CSV",
+      "title": "Ventas de Comercializadores de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/63ab43cc-7055-4969-87d3-6a969f1d5386/resource/e0853d15-124c-423a-bc1b-dca18e5a9449",
+      "lastProcessed": "2025-10-09T06:40:34.111Z",
+      "status": "processed"
+    },
+    "ventas-de-distribuidor-envases-de-glp.csv": {
+      "datasetId": "energia_63ab43cc-7055-4969-87d3-6a969f1d5386",
+      "datasetTitle": "Ventas GLP",
+      "fileName": "ventas-de-distribuidor-envases-de-glp.csv",
+      "format": "CSV",
+      "title": "Ventas de Distribuidor Envases de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/63ab43cc-7055-4969-87d3-6a969f1d5386/resource/0c4c4557-3b10-4028-ae96-a4d1b35b5103",
+      "lastProcessed": "2025-10-09T06:40:37.825Z",
+      "status": "processed"
+    },
+    "ventas-de-fraccionadores-de-glp.csv": {
+      "datasetId": "energia_63ab43cc-7055-4969-87d3-6a969f1d5386",
+      "datasetTitle": "Ventas GLP",
+      "fileName": "ventas-de-fraccionadores-de-glp.csv",
+      "format": "CSV",
+      "title": "Ventas de fraccionadores de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/63ab43cc-7055-4969-87d3-6a969f1d5386/resource/9528ad8d-c783-48f4-b4c2-40519c1f24ce",
+      "lastProcessed": "2025-10-09T06:40:39.039Z",
+      "status": "processed"
+    },
+    "ventas-de-petroqumicas-de-glp.csv": {
+      "datasetId": "energia_63ab43cc-7055-4969-87d3-6a969f1d5386",
+      "datasetTitle": "Ventas GLP",
+      "fileName": "ventas-de-petroqumicas-de-glp.csv",
+      "format": "CSV",
+      "title": "Ventas de petroquímicas de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/63ab43cc-7055-4969-87d3-6a969f1d5386/resource/31520e06-fc0a-4699-86b7-5c10616133d0",
+      "lastProcessed": "2025-10-09T06:40:40.330Z",
+      "status": "processed"
+    },
+    "ventas-de-productores-de-glp.csv": {
+      "datasetId": "energia_63ab43cc-7055-4969-87d3-6a969f1d5386",
+      "datasetTitle": "Ventas GLP",
+      "fileName": "ventas-de-productores-de-glp.csv",
+      "format": "CSV",
+      "title": "Ventas de productores de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/63ab43cc-7055-4969-87d3-6a969f1d5386/resource/877151f3-c534-4bbb-85db-a5807f20b26d",
+      "lastProcessed": "2025-10-09T06:40:41.694Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_63ab43cc-7055-4969-87d3-6a969f1d5386",
+    "title": "Ventas GLP",
+    "description": "Detalle mensual de ventas de GLP por tipo de vendedor y tipo de producto.  (Pesos y toneladas).\r\n\r\n",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:33.853590",
+    "modified": "2023-07-31T11:07:31.076881",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

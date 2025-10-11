@@ -1,0 +1,27 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "produccion_803a2436-0240-4f87-916b-25cad0213918",
+      "title": "Percentiles de salarios por género y actividad",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/produccion_803a2436-0240-4f87-916b-25cad0213918/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/produccion_803a2436-0240-4f87-916b-25cad0213918/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "files": {
+    "salud-fuentes-secundarias-renac.csv": {
+      "datasetId": "acumar_720cab2c-beb1-42a2-ac88-07355be33d81",
+      "datasetTitle": "Datos Demográficos y de Salud en la Cuenca Matanza Riachuelo",
+      "fileName": "salud-fuentes-secundarias-renac.csv",
+      "format": "CSV",
+      "title": "Registro de anomalías congénitas y nacimientos en la Cuenca Matanza Riachuelo - 2022",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/720cab2c-beb1-42a2-ac88-07355be33d81/resource/41b4400e-502e-4ecc-af48-611d26d1c69d",
+      "lastProcessed": "2025-10-09T08:02:34.668Z",
+      "status": "processed"
+    },
+    "salud-fuentes-secundarias-censo-2022.csv": {
+      "datasetId": "acumar_720cab2c-beb1-42a2-ac88-07355be33d81",
+      "datasetTitle": "Datos Demográficos y de Salud en la Cuenca Matanza Riachuelo",
+      "fileName": "salud-fuentes-secundarias-censo-2022.csv",
+      "format": "CSV",
+      "title": "Población de la Cuenca Matanza Riachuelo - 2022",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/720cab2c-beb1-42a2-ac88-07355be33d81/resource/10b00441-e4fd-4d8f-940c-7365dc678fff",
+      "lastProcessed": "2025-10-09T08:02:37.457Z",
+      "status": "processed"
+    },
+    "salud-fuentes-secundarias-snvs.csv": {
+      "datasetId": "acumar_720cab2c-beb1-42a2-ac88-07355be33d81",
+      "datasetTitle": "Datos Demográficos y de Salud en la Cuenca Matanza Riachuelo",
+      "fileName": "salud-fuentes-secundarias-snvs.csv",
+      "format": "CSV",
+      "title": "Registro de eventos de notificación obligatoria en la Cuenca Matanza Riachuelo - 2016-2023",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/720cab2c-beb1-42a2-ac88-07355be33d81/resource/19e79874-ccdb-400a-947d-0a1e29367a66",
+      "lastProcessed": "2025-10-09T08:02:40.219Z",
+      "status": "processed"
+    },
+    "salud-fuentes-secundarias-deis-mortalidad-general-.csv": {
+      "datasetId": "acumar_720cab2c-beb1-42a2-ac88-07355be33d81",
+      "datasetTitle": "Datos Demográficos y de Salud en la Cuenca Matanza Riachuelo",
+      "fileName": "salud-fuentes-secundarias-deis-mortalidad-general-.csv",
+      "format": "CSV",
+      "title": "Mortalidad general en la Cuenca Matanza Riachuelo - 2022",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/720cab2c-beb1-42a2-ac88-07355be33d81/resource/ec641967-bdef-42e2-8247-0678ab3bbba1",
+      "lastProcessed": "2025-10-09T08:02:42.925Z",
+      "status": "processed"
+    },
+    "salud-fuentes-secundarias-deis-nacimientos.csv": {
+      "datasetId": "acumar_720cab2c-beb1-42a2-ac88-07355be33d81",
+      "datasetTitle": "Datos Demográficos y de Salud en la Cuenca Matanza Riachuelo",
+      "fileName": "salud-fuentes-secundarias-deis-nacimientos.csv",
+      "format": "CSV",
+      "title": "Natalidad en la Cuenca Matanza Riachuelo - 2022",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/720cab2c-beb1-42a2-ac88-07355be33d81/resource/6811c2a8-7c03-44bd-895d-c16b9a74c0e4",
+      "lastProcessed": "2025-10-09T08:02:45.486Z",
+      "status": "processed"
+    },
+    "salud-fuentes-secundarias-deis-mortalidad-infantil.csv": {
+      "datasetId": "acumar_720cab2c-beb1-42a2-ac88-07355be33d81",
+      "datasetTitle": "Datos Demográficos y de Salud en la Cuenca Matanza Riachuelo",
+      "fileName": "salud-fuentes-secundarias-deis-mortalidad-infantil.csv",
+      "format": "CSV",
+      "title": "Mortalidad infantil en la Cuenca Matanza Riachuelo - 2022",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/720cab2c-beb1-42a2-ac88-07355be33d81/resource/55321d46-8831-44c3-9163-3bfbf76cc7cf",
+      "lastProcessed": "2025-10-09T08:02:48.117Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_720cab2c-beb1-42a2-ac88-07355be33d81",
+    "title": "Datos Demográficos y de Salud en la Cuenca Matanza Riachuelo",
+    "description": "Datos correspondientes a eventos de notificación obligatoria, anomalías congénitas, defunciones, nacimientos y población para la Cuenca Matanza Riachuelo, desglosados por departamento.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2024-12-03T17:07:22.261538",
+    "modified": "2025-02-07T16:59:07.292544",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección de Salud"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/datos-demograficos-y-de-salud-en-la-cuenca-matanza-riachuelo"
+  }
+}

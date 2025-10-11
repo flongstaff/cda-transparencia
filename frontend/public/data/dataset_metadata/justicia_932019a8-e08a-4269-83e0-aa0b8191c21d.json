@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_932019a8-e08a-4269-83e0-aa0b8191c21d",
+      "datasetTitle": "Solicitudes de Autorización de Portación de Armas de Fuego",
+      "format": "gráfico",
+      "title": "ANMaC - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/932019a8-e08a-4269-83e0-aa0b8191c21d/resource/7eef133a-3cae-4831-a1b7-9408f6de6513",
+      "lastProcessed": "2025-10-09T07:04:11.143Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_932019a8-e08a-4269-83e0-aa0b8191c21d",
+    "title": "Solicitudes de Autorización de Portación de Armas de Fuego",
+    "description": "Solicitudes de Autorización de Portación de Armas de Fuego comprendidas en el \"Sistema de Control Ciudadano para Autorizaciones\"",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-08-22T18:33:16.495717",
+    "modified": "2025-06-02T17:05:18.934470",
+    "publisher": {
+      "mbox": "informatica@anmac.gob.ar",
+      "name": "Ministerio de Justicia. Agencia Nacional de Materiales Controlados - ANMaC. Coordinación de Sistemas"
+    },
+    "landingPage": "http://datos.jus.gob.ar/dataset/autorizacion-portacion-armas-fuego"
+  }
+}

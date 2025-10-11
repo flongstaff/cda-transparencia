@@ -1,0 +1,32 @@
+{
+  "files": {
+    "brasil-salario-medio-real.csv": {
+      "datasetId": "sspm_310",
+      "datasetTitle": "Brasil Salario medio real",
+      "fileName": "brasil-salario-medio-real.csv",
+      "format": "CSV",
+      "title": "Salario medio real. Valores mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:15.624Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_310",
+    "title": "Brasil Salario medio real",
+    "description": "Brasil Salario medio real",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-30",
+    "modified": "2025-03-24T10:00:58.979714",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

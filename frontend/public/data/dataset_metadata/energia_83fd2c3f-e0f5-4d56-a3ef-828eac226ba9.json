@@ -1,0 +1,81 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_83fd2c3f-e0f5-4d56-a3ef-828eac226ba9",
+      "datasetTitle": "Inversiones en mercado de hidrocarburos upstream",
+      "format": "ZIP",
+      "title": "Inversiones (2005 a 2012)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/83fd2c3f-e0f5-4d56-a3ef-828eac226ba9/resource/48cda908-ff3f-4116-acbf-4bea142a9900",
+      "lastProcessed": "2025-10-09T06:21:56.623Z",
+      "status": "processed"
+    },
+    "td_2057_2020.zip": {
+      "datasetId": "energia_83fd2c3f-e0f5-4d56-a3ef-828eac226ba9",
+      "datasetTitle": "Inversiones en mercado de hidrocarburos upstream",
+      "fileName": "td_2057_2020.zip",
+      "format": "ZIP",
+      "title": "Inversiones (2020)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/83fd2c3f-e0f5-4d56-a3ef-828eac226ba9/resource/38b2cedc-66d7-4951-b1d7-bfe059d05fef",
+      "lastProcessed": "2025-10-09T06:21:56.622Z",
+      "status": "processed"
+    },
+    "resolucin-2057-inversiones-realizadas-fin-de-concesin.csv": {
+      "datasetId": "energia_83fd2c3f-e0f5-4d56-a3ef-828eac226ba9",
+      "datasetTitle": "Inversiones en mercado de hidrocarburos upstream",
+      "fileName": "resolucin-2057-inversiones-realizadas-fin-de-concesin.csv",
+      "format": "CSV",
+      "title": "Resolución 2057 - Inversiones realizadas fin de concesión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/83fd2c3f-e0f5-4d56-a3ef-828eac226ba9/resource/c0bb56ec-7fcf-4dd0-aee6-0e075f756638",
+      "lastProcessed": "2025-10-09T06:21:58.154Z",
+      "status": "processed"
+    },
+    "resolucin-2057-inversiones-realizadas-ao-anterior.csv": {
+      "datasetId": "energia_83fd2c3f-e0f5-4d56-a3ef-828eac226ba9",
+      "datasetTitle": "Inversiones en mercado de hidrocarburos upstream",
+      "fileName": "resolucin-2057-inversiones-realizadas-ao-anterior.csv",
+      "format": "CSV",
+      "title": "Resolución 2057 - Inversiones realizadas año anterior",
+      "accessURL": "http://datos.energia.gob.ar/dataset/83fd2c3f-e0f5-4d56-a3ef-828eac226ba9/resource/285d45e5-1b88-4dae-8e5c-c01843c7c8c0",
+      "lastProcessed": "2025-10-09T06:21:59.704Z",
+      "status": "processed"
+    },
+    "resolucin-2057-inversiones-previstas-ao-actual.csv": {
+      "datasetId": "energia_83fd2c3f-e0f5-4d56-a3ef-828eac226ba9",
+      "datasetTitle": "Inversiones en mercado de hidrocarburos upstream",
+      "fileName": "resolucin-2057-inversiones-previstas-ao-actual.csv",
+      "format": "CSV",
+      "title": "Resolución 2057 - Inversiones previstas año actual",
+      "accessURL": "http://datos.energia.gob.ar/dataset/83fd2c3f-e0f5-4d56-a3ef-828eac226ba9/resource/8ab4098a-842b-42f7-bf1a-b7b3637d226d",
+      "lastProcessed": "2025-10-09T06:22:01.338Z",
+      "status": "processed"
+    },
+    "resolucin-2057-inversiones-realizadas-mensual.csv": {
+      "datasetId": "energia_83fd2c3f-e0f5-4d56-a3ef-828eac226ba9",
+      "datasetTitle": "Inversiones en mercado de hidrocarburos upstream",
+      "fileName": "resolucin-2057-inversiones-realizadas-mensual.csv",
+      "format": "CSV",
+      "title": "Resolución 2057 - Inversiones realizadas mensual",
+      "accessURL": "http://datos.energia.gob.ar/dataset/83fd2c3f-e0f5-4d56-a3ef-828eac226ba9/resource/c0a6f94a-6052-48db-9dc8-4d6ce64ecf62",
+      "lastProcessed": "2025-10-09T06:22:03.361Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_83fd2c3f-e0f5-4d56-a3ef-828eac226ba9",
+    "title": "Inversiones en mercado de hidrocarburos upstream",
+    "description": "Resolución 2057 - Inversiones previstas año actual",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:33.150835",
+    "modified": "2025-05-15T11:18:16.091372",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

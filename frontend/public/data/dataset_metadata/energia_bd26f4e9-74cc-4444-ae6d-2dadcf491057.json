@@ -1,0 +1,42 @@
+{
+  "files": {
+    "produccin-hidrocarburos-yacimientos-segn-profundidad-promedio.csv": {
+      "datasetId": "energia_bd26f4e9-74cc-4444-ae6d-2dadcf491057",
+      "datasetTitle": "Producción Hidrocarburos - Yacimientos Según Profundidad Promedio",
+      "fileName": "produccin-hidrocarburos-yacimientos-segn-profundidad-promedio.csv",
+      "format": "CSV",
+      "title": "Producción Hidrocarburos Yacimientos Según Profundidad Promedio",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bd26f4e9-74cc-4444-ae6d-2dadcf491057/resource/3f13c499-cb5a-4998-a87a-c87d8367caec",
+      "lastProcessed": "2025-10-09T07:21:20.525Z",
+      "status": "processed"
+    },
+    "produccin-hidrocarburos-yacimientos-segn-profundidad-promedio.zip": {
+      "datasetId": "energia_bd26f4e9-74cc-4444-ae6d-2dadcf491057",
+      "datasetTitle": "Producción Hidrocarburos - Yacimientos Según Profundidad Promedio",
+      "fileName": "produccin-hidrocarburos-yacimientos-segn-profundidad-promedio.zip",
+      "format": "SHP",
+      "title": "Producción Hidrocarburos Yacimientos Según Profundidad Promedio",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bd26f4e9-74cc-4444-ae6d-2dadcf491057/resource/303d2deb-63b3-4c62-8c2c-32e44bf87f66",
+      "lastProcessed": "2025-10-09T07:21:20.525Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_bd26f4e9-74cc-4444-ae6d-2dadcf491057",
+    "title": "Producción Hidrocarburos - Yacimientos Según Profundidad Promedio",
+    "description": "Yacimientos según profundidad. ISO 19126: NaturalResources. Este subgrupo se compone de conceptos que se refieren a materias primas y sus depósitos.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2018-04-24T21:24:49.530750",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/produccion-hidrocarburos-yacimientos-segun-profundidad-promedio"
+  }
+}

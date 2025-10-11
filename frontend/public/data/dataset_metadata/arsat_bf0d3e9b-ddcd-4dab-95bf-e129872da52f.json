@@ -1,0 +1,74 @@
+{
+  "files": {
+    "balance legalizado 2019.pdf": {
+      "datasetId": "arsat_bf0d3e9b-ddcd-4dab-95bf-e129872da52f",
+      "datasetTitle": "Balances",
+      "fileName": "balance legalizado 2019.pdf",
+      "format": "PDF",
+      "title": "Balance 2019",
+      "accessURL": "https://datos.arsat.com.ar/dataset/bf0d3e9b-ddcd-4dab-95bf-e129872da52f/resource/e179028a-89e0-4056-9427-5f2212f77db0",
+      "lastProcessed": "2025-10-09T07:38:39.058Z",
+      "status": "processed"
+    },
+    "Balance 2018 Legalizado.cleaned.pdf": {
+      "datasetId": "arsat_bf0d3e9b-ddcd-4dab-95bf-e129872da52f",
+      "datasetTitle": "Balances",
+      "fileName": "Balance 2018 Legalizado.cleaned.pdf",
+      "format": "PDF",
+      "title": "Balance 2018",
+      "accessURL": "https://datos.arsat.com.ar/dataset/bf0d3e9b-ddcd-4dab-95bf-e129872da52f/resource/05f8fe86-5c4e-4091-a5e0-0ab6d887458a",
+      "lastProcessed": "2025-10-09T07:38:44.396Z",
+      "status": "processed"
+    },
+    "Balance Arsat 2017 Legalizado.cleaned.pdf": {
+      "datasetId": "arsat_bf0d3e9b-ddcd-4dab-95bf-e129872da52f",
+      "datasetTitle": "Balances",
+      "fileName": "Balance Arsat 2017 Legalizado.cleaned.pdf",
+      "format": "PDF",
+      "title": "Balance 2017",
+      "accessURL": "https://datos.arsat.com.ar/dataset/bf0d3e9b-ddcd-4dab-95bf-e129872da52f/resource/12d4343d-73f8-42df-831c-8c9d3ac48875",
+      "lastProcessed": "2025-10-09T07:38:50.732Z",
+      "status": "processed"
+    },
+    "Balance 2016 Legalizado.cleaned.pdf": {
+      "datasetId": "arsat_bf0d3e9b-ddcd-4dab-95bf-e129872da52f",
+      "datasetTitle": "Balances",
+      "fileName": "Balance 2016 Legalizado.cleaned.pdf",
+      "format": "PDF",
+      "title": "Balance 2016",
+      "accessURL": "https://datos.arsat.com.ar/dataset/bf0d3e9b-ddcd-4dab-95bf-e129872da52f/resource/43e0f5b0-5339-4012-93ed-c1bf90acc2c7",
+      "lastProcessed": "2025-10-09T07:38:58.099Z",
+      "status": "processed"
+    },
+    "Balance 2015 completo legalizado.pdf": {
+      "datasetId": "arsat_bf0d3e9b-ddcd-4dab-95bf-e129872da52f",
+      "datasetTitle": "Balances",
+      "fileName": "Balance 2015 completo legalizado.pdf",
+      "format": "PDF",
+      "title": "Balance 2015",
+      "accessURL": "https://datos.arsat.com.ar/dataset/bf0d3e9b-ddcd-4dab-95bf-e129872da52f/resource/ad1407c4-e9a3-44c7-b16e-4a5b9f5f7284",
+      "lastProcessed": "2025-10-09T07:39:03.730Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "arsat_bf0d3e9b-ddcd-4dab-95bf-e129872da52f",
+    "title": "Balances",
+    "description": "Balances de la compañía  ",
+    "theme": [
+      "tech",
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE",
+      "TECH"
+    ],
+    "issued": "2024-04-25T07:50:41.583474",
+    "modified": "2025-02-27T10:32:45.126615",
+    "publisher": {
+      "mbox": "datosabiertos@arsat.com.ar",
+      "name": "ARSAT"
+    },
+    "landingPage": "https://datos.arsat.com.ar/dataset/balances"
+  }
+}

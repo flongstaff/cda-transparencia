@@ -1,0 +1,51 @@
+{
+  "files": {
+    "RSU_l_produccion_aceros": {
+      "datasetId": "ambiente_30.0",
+      "datasetTitle": "Actividad industrial",
+      "fileName": "RSU_l_produccion_aceros",
+      "format": "CSV",
+      "title": "Evolución de la producción de acero",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=30&did=234",
+      "lastProcessed": "2025-10-09T06:58:53.585Z",
+      "status": "processed"
+    },
+    "RSU_h_plasticos_prod_cons_2024": {
+      "datasetId": "ambiente_30.0",
+      "datasetTitle": "Actividad industrial",
+      "fileName": "RSU_h_plasticos_prod_cons_2024",
+      "format": "CSV",
+      "title": "Producción nacional y consumo aparente de plásticos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=30&did=231",
+      "lastProcessed": "2025-10-09T06:58:54.997Z",
+      "status": "processed"
+    },
+    "RSU_s_produccion_cons_aparente": {
+      "datasetId": "ambiente_30.0",
+      "datasetTitle": "Actividad industrial",
+      "fileName": "RSU_s_produccion_cons_aparente",
+      "format": "CSV",
+      "title": "Producción nacional y consumo aparente de papel y cartón",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=7&stid=30&did=229",
+      "lastProcessed": "2025-10-09T06:58:56.461Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_30.0",
+    "title": "Actividad industrial",
+    "description": "Muestra la evolución de la producción y consumo de acero, papel y plástocos en argentina",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2020-12-31T00:00:00",
+    "modified": "2020-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

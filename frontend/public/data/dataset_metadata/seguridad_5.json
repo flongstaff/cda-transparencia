@@ -1,0 +1,82 @@
+{
+  "files": {
+    "Informe_Programa_sobre_Uso_de_la_Fuerza_y_Empleo_de_Armas_de_Fuego_2020.pdf": {
+      "datasetId": "seguridad_5",
+      "datasetTitle": "Estadísticas sobre uso racional de la fuerza y empleo de armas de fuego en Fuerzas Federales",
+      "fileName": "Informe_Programa_sobre_Uso_de_la_Fuerza_y_Empleo_de_Armas_de_Fuego_2020.pdf",
+      "format": "PDF",
+      "title": "Informe del Programa sobre Uso de la Fuerza y empleo de armas de fuego (año 2020).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:37.411Z",
+      "status": "processed"
+    },
+    "Glosario_conceptual_PUFEAF_2020.pdf": {
+      "datasetId": "seguridad_5",
+      "datasetTitle": "Estadísticas sobre uso racional de la fuerza y empleo de armas de fuego en Fuerzas Federales",
+      "fileName": "Glosario_conceptual_PUFEAF_2020.pdf",
+      "format": "PDF",
+      "title": "Hechos con uso de armas de fuego por fuerza federal y por mes (glosario conceptual).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:38.140Z",
+      "status": "processed"
+    },
+    "Informe_Programa_sobre_Uso_de_la_Fuerza_y_Empleo_de_Armas_de_Fuego_2021.pdf": {
+      "datasetId": "seguridad_5",
+      "datasetTitle": "Estadísticas sobre uso racional de la fuerza y empleo de armas de fuego en Fuerzas Federales",
+      "fileName": "Informe_Programa_sobre_Uso_de_la_Fuerza_y_Empleo_de_Armas_de_Fuego_2021.pdf",
+      "format": "PDF",
+      "title": "Informe del Programa sobre Uso de la Fuerza y empleo de armas de fuego (año 2021).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:38.817Z",
+      "status": "processed"
+    },
+    "Informe_Programa_sobre_Uso_de_la_Fuerza_y_Empleo_de_Armas_de_Fuego_2022.pdf": {
+      "datasetId": "seguridad_5",
+      "datasetTitle": "Estadísticas sobre uso racional de la fuerza y empleo de armas de fuego en Fuerzas Federales",
+      "fileName": "Informe_Programa_sobre_Uso_de_la_Fuerza_y_Empleo_de_Armas_de_Fuego_2022.pdf",
+      "format": "PDF",
+      "title": "Informe del Programa sobre Uso de la Fuerza y empleo de armas de fuego (año 2022).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:39.546Z",
+      "status": "processed"
+    },
+    "Base_PUFEAF.xlsx": {
+      "datasetId": "seguridad_5",
+      "datasetTitle": "Estadísticas sobre uso racional de la fuerza y empleo de armas de fuego en Fuerzas Federales",
+      "fileName": "Base_PUFEAF.xlsx",
+      "format": "XLSX",
+      "title": "Hechos con uso de armas de fuego por fuerza federal y por mes (panel).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:39.547Z",
+      "status": "processed"
+    },
+    "Informe_Programa_sobre_Uso_de_la_Fuerza_y_Empleo_de_Armas_de_Fuego_2023.pdf": {
+      "datasetId": "seguridad_5",
+      "datasetTitle": "Estadísticas sobre uso racional de la fuerza y empleo de armas de fuego en Fuerzas Federales",
+      "fileName": "Informe_Programa_sobre_Uso_de_la_Fuerza_y_Empleo_de_Armas_de_Fuego_2023.pdf",
+      "format": "PDF",
+      "title": "Informe del Programa sobre Uso de la Fuerza y empleo de armas de fuego (2020-2023).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:40.229Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "seguridad_5",
+    "title": "Estadísticas sobre uso racional de la fuerza y empleo de armas de fuego en Fuerzas Federales",
+    "description": "Hechos con uso de armas de fuego. Fuerzas Federales de la República Argentina (PUFEAF).",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2021-07-30T00:00:00",
+    "modified": "2025-01-15T00:00:00",
+    "publisher": {
+      "mbox": "dypp@minseg.gob.ar",
+      "name": "Ministerio de Seguridad de la Nación. Dirección Nacional de Estadística Criminal."
+    },
+    "landingPage": "https://www.argentina.gob.ar/seguridad/estadisticascriminales"
+  }
+}

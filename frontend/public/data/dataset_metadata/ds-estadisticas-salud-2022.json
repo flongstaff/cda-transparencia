@@ -1,0 +1,39 @@
+{
+  "files": {
+    "ESTADISTICAS CAPS 2022.pdf": {
+      "datasetId": "ds-estadisticas-salud-2022",
+      "datasetTitle": "Estadísticas de Salud 2022",
+      "fileName": "ESTADISTICAS CAPS 2022.pdf",
+      "lastProcessed": "2025-10-09T06:14:49.409Z",
+      "status": "error",
+      "error": "Failed to download PDF: ESTADISTICAS CAPS 2022.pdf"
+    },
+    "BROMATOLOGIA.pdf": {
+      "datasetId": "ds-estadisticas-salud-2022",
+      "datasetTitle": "Estadísticas de Salud 2022",
+      "fileName": "BROMATOLOGIA.pdf",
+      "format": "PDF",
+      "title": "Bromatología 2022",
+      "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2022/BROMATOLOGIA.pdf",
+      "lastProcessed": "2025-10-09T06:14:53.074Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ds-estadisticas-salud-2022",
+    "title": "Estadísticas de Salud 2022",
+    "description": "Estadísticas de CAPS y bromatología para 2022.",
+    "theme": [
+      "salud-y-asistencia-social"
+    ],
+    "superTheme": [
+      "SALU"
+    ],
+    "issued": "2023-01-01T00:00:00",
+    "modified": "2023-01-01T00:00:00",
+    "publisher": {
+      "name": "Oficina de Estadísticas"
+    },
+    "landingPage": "https://carmendeareco.gob.ar/estadisticas/"
+  }
+}

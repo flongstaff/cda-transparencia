@@ -1,3 +1,6 @@
 type,amount,percentage
-Gasto corriente,700000000,77.8
-Gasto de capital,200000000,22.2
+Gasto corriente,700000000.0,77.8
+Gasto de capital,200000000.0,22.2
+,201.0,
+,195.0,
+,201.0,

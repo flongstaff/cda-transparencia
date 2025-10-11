@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_d9a963ea-8b1d-4ca3-9dd9-07a4773e8c23",
+      "datasetTitle": "Base Infoleg de Normativa Nacional",
+      "format": "ZIP",
+      "title": "Base Complementaria Infoleg de Normas Modificatorias",
+      "accessURL": "https://datos.jus.gob.ar/dataset/d9a963ea-8b1d-4ca3-9dd9-07a4773e8c23/resource/dea3c247-5a5d-408f-a224-39ae0f8eb371",
+      "lastProcessed": "2025-10-09T06:32:09.799Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_d9a963ea-8b1d-4ca3-9dd9-07a4773e8c23",
+    "title": "Base Infoleg de Normativa Nacional",
+    "description": "Base de documentos digitales normativos nacionales: leyes, decisiones administrativas, decretos, resoluciones, disposiciones, acordadas y todo acto administrativo publicado en la primera sección del Boletín Oficial de la República Argentina desde mayo 1997 más la normativa referenciada.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2016-09-05T18:25:21.249967",
+    "modified": "2025-10-01T14:06:46.062119",
+    "publisher": {
+      "mbox": "datosabiertos@saij.gob.ar",
+      "name": "Ministerio de Justicia. Secretaría de Justicia. Dirección Nacional del Sistema Argentino de Información Jurídica"
+    },
+    "landingPage": "https://www.infoleg.gob.ar"
+  }
+}

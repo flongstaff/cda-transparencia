@@ -1,0 +1,54 @@
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.
+18/09/2023 20:36
+Presupuesto: 2023DE EJECUCION PRESUPUESTARIA 
+02/01/2023 al 30/06/2023
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+I. INGRESOS CORRIENTES
+Ingresos tributarios 456.338.717,05
+Contribuciones a la Seguridad Social
+Ingresos no Tributarios 152.953.804,92
+Ventas de Bienes y Servicios
+Ingresos de Operación
+Rentas de la Propiedad 26.951.862,65
+Transferencias Corrientes 264.125.600,07
+Contribuciones Figurativas para Financiaciones Corrientes
+TOTAL  INGRESOS CORRIENTES 900.369.984,69
+II. GASTOS CORRIENTES
+Gastos de Operación
+Gastos de Consumo 778.952.173,58
+Rentas de la Propiedad 11.716,70
+Prestaciones de la Seguridad Social
+Impuestos Directos
+Otras Pérdidas
+Transferencias Corrientes 68.183.747,30
+Gastos Figurativos para Transacciones Corrientes
+TOTAL  GASTOS CORRIENTES 847.147.637,58
+III. AHORRO CORRIENTE: (I - II) 53.222.347,11
+Resultado Corriente Primario (Ingresos Corrientes - Gastos Corrientes netos de Int. de la deuda) 53.234.063,81
+TOTAL  AHORRO CORRIENTE: (I - II) 106.456.410,92 53.222.347,11
+IV. RECURSOS DE CAPITAL
+Recursos Propios de Capital 1.800,00
+Transferencias de Capital 263.737.162,87
+Filtro aplicado: Presupuesto: 2023 -  Fechas: 02/01/2023 al 30/06/2023
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 2 de 3 R.A.F.A.M.
+18/09/2023 20:36
+Presupuesto: 2023DE EJECUCION PRESUPUESTARIA 
+02/01/2023 al 30/06/2023
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+Disminución de la Inversión Financiera 2.132.581,78
+Contribuciones Figurativas para Financiaciones de Capital
+TOTAL  RECURSOS DE CAPITAL 265.871.544,65
+V. GASTOS DE CAPITAL
+Inversión Real Directa 375.933.403,92
+Transferencias de Capital 26.533.698,15
+Inversión Financiera
+Gastos Figurativos para Transacciones de Capital
+TOTAL  GASTOS DE CAPITAL 402.467.102,07
+VI. INGRESOS TOTALES 1.166.241.529,34
+TOTAL  INGRESOS TOTALES 1.166.241.529,34 1.166.241.529,34
+VII. GASTOS TOTALES 1.249.614.739,65
+TOTAL  GASTOS TOTALES 1.249.614.73...

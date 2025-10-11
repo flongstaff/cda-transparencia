@@ -1,0 +1,198 @@
+{
+  "files": {
+    "creditos_a_tasa_cero (1).csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "creditos_a_tasa_cero (1).csv",
+      "format": "CSV",
+      "title": "Créditos a tasa cero",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/2726de1d-11e9-41ef-9067-98f676d179e1",
+      "lastProcessed": "2025-10-09T08:08:28.586Z",
+      "status": "processed"
+    },
+    "devoluciones-1.csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "devoluciones-1.csv",
+      "format": "CSV",
+      "title": "Devoluciones",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/6f738555-b4a7-43a9-9023-32846b508c87",
+      "lastProcessed": "2025-10-09T08:08:30.643Z",
+      "status": "processed"
+    },
+    "atp_provincias_1 (1).csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "atp_provincias_1 (1).csv",
+      "format": "CSV",
+      "title": "Beneficios por provincia - Etapa 1",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/e2b12485-5017-4903-ad71-0edac04f6255",
+      "lastProcessed": "2025-10-09T08:08:32.520Z",
+      "status": "processed"
+    },
+    "atp_provincias_2 (1).csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "atp_provincias_2 (1).csv",
+      "format": "CSV",
+      "title": "Beneficios por provincia - Etapa 2",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/1829ab1c-30f8-411d-9e37-4ef15f61ed31",
+      "lastProcessed": "2025-10-09T08:08:34.376Z",
+      "status": "processed"
+    },
+    "atp_provincias_3 (1).csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "atp_provincias_3 (1).csv",
+      "format": "CSV",
+      "title": "Beneficios por provincia - Etapa 3",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3df5624f-40d7-4aa8-bc57-ff7240a8f8df",
+      "lastProcessed": "2025-10-09T08:08:36.368Z",
+      "status": "processed"
+    },
+    "atp_provincias_4 (1).csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "atp_provincias_4 (1).csv",
+      "format": "CSV",
+      "title": "Beneficios por provincia - Etapa 4",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/a386dafc-f60d-4ddf-a662-411b97161a88",
+      "lastProcessed": "2025-10-09T08:08:38.393Z",
+      "status": "processed"
+    },
+    "atp_provincias_5 (1).csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "atp_provincias_5 (1).csv",
+      "format": "CSV",
+      "title": "Beneficios por provincia - Etapa 5",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/64ab4196-1257-43f0-8c56-39d8c7bbd020",
+      "lastProcessed": "2025-10-09T08:08:40.479Z",
+      "status": "processed"
+    },
+    "creditos_a_tasa_cero_provincias (1).csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "creditos_a_tasa_cero_provincias (1).csv",
+      "format": "CSV",
+      "title": "Créditos a tasa cero - por provincia",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3f84c615-25e9-4699-bc02-d16db9290118",
+      "lastProcessed": "2025-10-09T08:08:42.430Z",
+      "status": "processed"
+    },
+    "creditos_a_tasa_24_provincias (1).csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "creditos_a_tasa_24_provincias (1).csv",
+      "format": "CSV",
+      "title": "Créditos tasa fija 24% - Por provincia",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/87323f9a-4c3a-4870-bb10-835b8ec7ec80",
+      "lastProcessed": "2025-10-09T08:08:44.425Z",
+      "status": "processed"
+    },
+    "pyme_plus_provincias (1).csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "pyme_plus_provincias (1).csv",
+      "format": "CSV",
+      "title": "Línea de financiamiento PyMEs Plus - Por provincia",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/e338b7e6-43fa-4e71-ba5d-da3b2d4bacb4",
+      "lastProcessed": "2025-10-09T08:08:46.404Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "lastProcessed": "2025-10-09T08:08:50.367Z",
+      "status": "processed"
+    },
+    "salarios-rondaatp-6a9.csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "salarios-rondaatp-6a9.csv",
+      "format": "CSV",
+      "title": "Salarios - Ronda ATP 6 a 9",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/93cf1dc6-97df-4d9d-ab88-7cdf4b14443d",
+      "lastProcessed": "2025-10-09T08:08:52.343Z",
+      "status": "processed"
+    },
+    "creditos-tasa-subsidiada.csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "creditos-tasa-subsidiada.csv",
+      "format": "CSV",
+      "title": "Empresas beneficiarias de créditos a tasa subsidiada",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/1fd87414-c28f-4ee2-a129-9028cef3e17f",
+      "lastProcessed": "2025-10-09T08:08:54.371Z",
+      "status": "processed"
+    },
+    "datos-abiertos-atp-tasa-subsididada-cero-y-24.csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "datos-abiertos-atp-tasa-subsididada-cero-y-24.csv",
+      "format": "CSV",
+      "title": "Asistencia al sector productivo otorgada por el Estado Nacional en el contexto de la pandemia (2020)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/a299620b-0b7e-4935-853b-827a04d7b3c0",
+      "lastProcessed": "2025-10-09T08:08:56.893Z",
+      "status": "processed"
+    },
+    "nota-metodologica.pdf": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "nota-metodologica.pdf",
+      "format": "PDF",
+      "title": "Nota metodológica \"Asistencia al sector productivo otorgada por el Estado Nacional en el contexto de la pandemia (2020)\"",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/9351d119-89e9-4cbe-8cdf-3ae5f68f7d73",
+      "lastProcessed": "2025-10-09T08:08:59.635Z",
+      "status": "processed"
+    },
+    "cant-empleadoras-sector-sede.csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "cant-empleadoras-sector-sede.csv",
+      "format": "CSV",
+      "title": "Cantidad de firmas empleadoras que obtuvieron al menos un ATP",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/3fbe3800-2ac6-4f87-ab05-b7be5fe9a0d3",
+      "lastProcessed": "2025-10-09T08:09:01.560Z",
+      "status": "processed"
+    },
+    "cant-personas-sector-sede.csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "cant-personas-sector-sede.csv",
+      "format": "CSV",
+      "title": "Cantidad de puestos de trabajo en los que se pagó al menos un ATP",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/05da7fd9-4459-4ae4-90b9-f7c30fcac1f0",
+      "lastProcessed": "2025-10-09T08:09:03.419Z",
+      "status": "processed"
+    },
+    "monto-sector-sede.csv": {
+      "datasetId": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "datasetTitle": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "fileName": "monto-sector-sede.csv",
+      "format": "CSV",
+      "title": "Monto en pesos abonado a las empresas de un determinado sector en un determinado partido/departamento",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/eb540680-66a2-47d4-9508-d54f7ff5a4dd/resource/5605b3f0-ced6-4765-9942-031cfb1a5c83",
+      "lastProcessed": "2025-10-09T08:09:05.516Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+    "title": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+    "description": "Listado de beneficios otorgados por el Programa de Asistencia de Emergencia al Trabajo y la Producción en marco de la Emergencia Sanitaria. ",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2021-06-08T14:06:04.385469",
+    "modified": "2021-06-08T14:06:04.385469",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la Producción (CEP XXI)."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/asistencia-de-emergencia-al-trabajo-y-la-produccion-atp"
+  }
+}

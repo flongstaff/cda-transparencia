@@ -1,0 +1,42 @@
+{
+  "files": {
+    "A12-facturacion(3).xlsx": {
+      "datasetId": "produccion_f3de9daa-f899-4132-9b42-5d245249bba2",
+      "datasetTitle": "Programa Ahora 12",
+      "fileName": "A12-facturacion(3).xlsx",
+      "format": "CSV",
+      "title": "Programa Ahora 12: Facturacion. Febrero 2022",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/f3de9daa-f899-4132-9b42-5d245249bba2/resource/644bd06d-b7d0-4d63-a00b-88561dc6079c",
+      "lastProcessed": "2025-10-09T08:05:30.443Z",
+      "status": "processed"
+    },
+    "A12-operaciones(2).xlsx": {
+      "datasetId": "produccion_f3de9daa-f899-4132-9b42-5d245249bba2",
+      "datasetTitle": "Programa Ahora 12",
+      "fileName": "A12-operaciones(2).xlsx",
+      "format": "CSV",
+      "title": "Programa Ahora 12. Operaciones. Febrero 2022",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/f3de9daa-f899-4132-9b42-5d245249bba2/resource/6080be80-d728-4164-99cd-69f9f9d2cc0b",
+      "lastProcessed": "2025-10-09T08:05:32.253Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_f3de9daa-f899-4132-9b42-5d245249bba2",
+    "title": "Programa Ahora 12",
+    "description": "Información sobre operaciones y facturación del Programa Ahora 12, desagregados por rubro y provincia.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-04-30T09:45:02.073854",
+    "modified": "2021-05-11T15:53:50.174806",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Secretaria de Comercio Interior. Subsecretaría de Políticas para el Mercado Interno. Dirección Nacional de Políticas para el Desarrollo del Mercado Interno."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/programa-ahora-12"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "turismo_87bb1c93-be41-43e1-93d3-c756985780cd",
+      "title": "Áreas Protegidas Provinciales",
+      "distribution": [
+        {
+          "title": "parques_prov.pdf",
+          "format": "PDF",
+          "fileName": "parques_prov.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/turismo_87bb1c93-be41-43e1-93d3-c756985780cd/parques_prov.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/turismo_87bb1c93-be41-43e1-93d3-c756985780cd/parques_prov_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

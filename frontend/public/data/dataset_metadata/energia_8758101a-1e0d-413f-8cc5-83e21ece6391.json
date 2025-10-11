@@ -1,0 +1,92 @@
+{
+  "files": {
+    "gasoductos-de-transporte-enargas-.csv": {
+      "datasetId": "energia_8758101a-1e0d-413f-8cc5-83e21ece6391",
+      "datasetTitle": "Gasoductos de transporte (ENARGAS)",
+      "fileName": "gasoductos-de-transporte-enargas-.csv",
+      "format": "CSV",
+      "title": "Gasoductos de Transporte (ENARGAS)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/8758101a-1e0d-413f-8cc5-83e21ece6391/resource/e3459bc5-4aaa-4065-9b06-c169fbd0ec74",
+      "lastProcessed": "2025-10-09T06:50:37.430Z",
+      "status": "processed"
+    },
+    "gasoductos-de-transporte-enargas-.zip": {
+      "datasetId": "energia_8758101a-1e0d-413f-8cc5-83e21ece6391",
+      "datasetTitle": "Gasoductos de transporte (ENARGAS)",
+      "fileName": "gasoductos-de-transporte-enargas-.zip",
+      "format": "SHP",
+      "title": "Gasoductos de Transporte (ENARGAS)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/8758101a-1e0d-413f-8cc5-83e21ece6391/resource/5af07e15-f356-40b9-a369-63dbf38a938a",
+      "lastProcessed": "2025-10-09T06:50:37.430Z",
+      "status": "processed"
+    },
+    "ductos-proyectados.zip": {
+      "datasetId": "energia_8758101a-1e0d-413f-8cc5-83e21ece6391",
+      "datasetTitle": "Gasoductos de transporte (ENARGAS)",
+      "fileName": "ductos-proyectados.zip",
+      "format": "SHP",
+      "title": "Ductos Proyectados",
+      "accessURL": "http://datos.energia.gob.ar/dataset/8758101a-1e0d-413f-8cc5-83e21ece6391/resource/593aa83c-717d-40fb-9e33-93e87bdda370",
+      "lastProcessed": "2025-10-09T06:50:37.431Z",
+      "status": "processed"
+    },
+    "plantas-compresoras-de-transporte-de-gas-enargas-.zip": {
+      "datasetId": "energia_8758101a-1e0d-413f-8cc5-83e21ece6391",
+      "datasetTitle": "Gasoductos de transporte (ENARGAS)",
+      "fileName": "plantas-compresoras-de-transporte-de-gas-enargas-.zip",
+      "format": "SHP",
+      "title": "Plantas compresoras de transporte de gas (ENARGAS)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/8758101a-1e0d-413f-8cc5-83e21ece6391/resource/741aebfd-2fc5-4668-9293-a5ad81b31330",
+      "lastProcessed": "2025-10-09T06:50:37.431Z",
+      "status": "processed"
+    },
+    "plantas-compresoras-de-transporte-de-gas-enargas-.csv": {
+      "datasetId": "energia_8758101a-1e0d-413f-8cc5-83e21ece6391",
+      "datasetTitle": "Gasoductos de transporte (ENARGAS)",
+      "fileName": "plantas-compresoras-de-transporte-de-gas-enargas-.csv",
+      "format": "CSV",
+      "title": "Plantas compresoras de transporte de gas (ENARGAS)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/8758101a-1e0d-413f-8cc5-83e21ece6391/resource/7b0c0bc3-4bc5-4aac-8004-348619a39c26",
+      "lastProcessed": "2025-10-09T06:50:38.879Z",
+      "status": "processed"
+    },
+    "plantas-compresoras-de-distribucin-de-gas.zip": {
+      "datasetId": "energia_8758101a-1e0d-413f-8cc5-83e21ece6391",
+      "datasetTitle": "Gasoductos de transporte (ENARGAS)",
+      "fileName": "plantas-compresoras-de-distribucin-de-gas.zip",
+      "format": "SHP",
+      "title": "Plantas Compresoras de distribución de gas (ENARGAS)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/8758101a-1e0d-413f-8cc5-83e21ece6391/resource/e34ed7b7-848b-4c15-9e86-6e49bae7efc0",
+      "lastProcessed": "2025-10-09T06:50:38.879Z",
+      "status": "processed"
+    },
+    "plantas-compresoras-de-distribucin-de-gas.csv": {
+      "datasetId": "energia_8758101a-1e0d-413f-8cc5-83e21ece6391",
+      "datasetTitle": "Gasoductos de transporte (ENARGAS)",
+      "fileName": "plantas-compresoras-de-distribucin-de-gas.csv",
+      "format": "CSV",
+      "title": "Plantas Compresoras de distribución de gas (ENARGAS)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/8758101a-1e0d-413f-8cc5-83e21ece6391/resource/28f7f17e-399b-43cf-b7e4-a8277d1648b2",
+      "lastProcessed": "2025-10-09T06:50:40.186Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_8758101a-1e0d-413f-8cc5-83e21ece6391",
+    "title": "Gasoductos de transporte (ENARGAS)",
+    "description": "Ductos de transporte de hidrocarburos. Datos provenientes de ENARGAS y Resolución 120/17 del ex Ministerio de Energía y Minería. ",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2023-06-29T15:09:03.387358",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

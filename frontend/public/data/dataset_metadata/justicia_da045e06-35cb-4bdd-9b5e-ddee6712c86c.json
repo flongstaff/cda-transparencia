@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_da045e06-35cb-4bdd-9b5e-ddee6712c86c",
+      "datasetTitle": "Entidades constituidas en la Inspección General de Justicia",
+      "format": "ZIP",
+      "title": "IGJ - 2016 cuatrimestre 3",
+      "accessURL": "https://datos.jus.gob.ar/dataset/da045e06-35cb-4bdd-9b5e-ddee6712c86c/resource/ba669676-6e53-4c87-a65e-f5165e5366da",
+      "lastProcessed": "2025-10-09T06:49:44.893Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_da045e06-35cb-4bdd-9b5e-ddee6712c86c",
+    "title": "Entidades constituidas en la Inspección General de Justicia",
+    "description": "Entidades constituidas en la Inspección General de Justicia -IGJ.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2016-09-19T13:46:06.092494",
+    "modified": "2025-09-03T18:22:53.892374",
+    "publisher": {
+      "mbox": "dmiralles@jus.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Inspección General de Justicia"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/entidades-constituidas-en-la-inspeccion-general-de-justicia-igj"
+  }
+}

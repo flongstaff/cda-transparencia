@@ -1,0 +1,42 @@
+{
+  "files": {
+    "pib-precios-mercado-costo-factores-precios-constantes-1960-anual.csv": {
+      "datasetId": "sspm_386",
+      "datasetTitle": "Producto Interno Bruto 1950-1964",
+      "fileName": "pib-precios-mercado-costo-factores-precios-constantes-1960-anual.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto a precios de mercado y a costo de factores.  Precios constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:26.893Z",
+      "status": "processed"
+    },
+    "pib-precios-mercado-costo-factores-precios-corrientes-anual.csv": {
+      "datasetId": "sspm_386",
+      "datasetTitle": "Producto Interno Bruto 1950-1964",
+      "fileName": "pib-precios-mercado-costo-factores-precios-corrientes-anual.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto a precios de mercado y a costo de factores.  Precios corrientes. Valores anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:28.118Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_386",
+    "title": "Producto Interno Bruto 1950-1964",
+    "description": "PIB a precios de mercado y a costo de factores a precios corrientes y constantes de 1960. Anual",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-04-02T16:48:05.371511",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://infra.datos.gob.ar/dataset/sspm-producto-interno-bruto-1950-1964"
+  }
+}

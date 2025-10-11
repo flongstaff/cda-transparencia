@@ -1,0 +1,37 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "transporte_58873535-ff10-42bd-8db8-72f8ae15960f",
+      "datasetTitle": "SUBE - Cantidad de transacciones (usos) por fecha",
+      "lastProcessed": "2025-10-09T07:13:06.396Z",
+      "status": "processed"
+    },
+    "dat-ab-usos-2025.csv": {
+      "datasetId": "transporte_58873535-ff10-42bd-8db8-72f8ae15960f",
+      "datasetTitle": "SUBE - Cantidad de transacciones (usos) por fecha",
+      "fileName": "dat-ab-usos-2025.csv",
+      "format": "CSV",
+      "title": "Cantidad de transacciones SUBE (usos) por día en 2025",
+      "accessURL": "https://archivos-datos.transporte.gob.ar/upload/Dat_Ab_Usos/dat-ab-usos-2025.csv",
+      "lastProcessed": "2025-10-09T07:14:34.288Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "transporte_58873535-ff10-42bd-8db8-72f8ae15960f",
+    "title": "SUBE - Cantidad de transacciones (usos) por fecha",
+    "description": "SUBE - Cantidad de transacciones (usos) por fecha.",
+    "theme": [
+      "tran"
+    ],
+    "superTheme": [
+      "TRAN"
+    ],
+    "issued": "2022-04-01T18:09:35.724704",
+    "modified": "2025-01-20T20:19:48.430313",
+    "publisher": {
+      "name": "Dirección Nacional de Desarrollo Tecnológico - Ministerio de Transporte."
+    },
+    "landingPage": "https://datos.transporte.gob.ar/dataset/sube-cantidad-de-transacciones-usos-por-fecha"
+  }
+}

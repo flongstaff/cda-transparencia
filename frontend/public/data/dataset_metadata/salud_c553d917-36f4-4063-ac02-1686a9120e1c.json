@@ -1,0 +1,172 @@
+{
+  "files": {
+    "informacion-publica-respiratorias-nacional-hasta-20180626.csv": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "informacion-publica-respiratorias-nacional-hasta-20180626.csv",
+      "format": "CSV",
+      "title": "Vigilancia de Infecciones respiratorias agudas de enero a junio 2018",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/9a62f016-ba4e-4366-a883-22e9dc785d39",
+      "lastProcessed": "2025-10-09T06:41:55.625Z",
+      "status": "processed"
+    },
+    "vigilancia-de-dengue-y-zika-201812.xls": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "vigilancia-de-dengue-y-zika-201812.xls",
+      "format": "XLS",
+      "title": "Vigilancia de Infecciones respiratorias agudas a diciembre 2018",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/65843a31-498c-4525-bd7b-9a08f7d985b6",
+      "lastProcessed": "2025-10-09T06:41:55.625Z",
+      "status": "processed"
+    },
+    "vigilancia-de-infecciones-respiratorias-agudas-20181228.csv": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "vigilancia-de-infecciones-respiratorias-agudas-20181228.csv",
+      "format": "CSV",
+      "title": "Vigilancia de Infecciones respiratorias agudas a diciembre 2018",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/0c29cc75-d81e-4f87-9257-4c30c24bfe55",
+      "lastProcessed": "2025-10-09T06:41:59.623Z",
+      "status": "processed"
+    },
+    "vigilancia-de-infecciones-respiratorias-agudas.csv": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "vigilancia-de-infecciones-respiratorias-agudas.csv",
+      "format": "CSV",
+      "title": "Vigilancia de Infecciones respiratorias agudas a julio 2019",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/1270980e-df00-4734-a382-3c8f40dec8e9",
+      "lastProcessed": "2025-10-09T06:42:03.480Z",
+      "status": "processed"
+    },
+    "vigilancia-de-infecciones-respiratorias-agudas.xls": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "vigilancia-de-infecciones-respiratorias-agudas.xls",
+      "format": "XLS",
+      "title": "Vigilancia de Infecciones respiratorias agudas a julio 2019",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/9b08c77f-5e83-484b-907a-53168a2c3f7e",
+      "lastProcessed": "2025-10-09T06:42:03.480Z",
+      "status": "processed"
+    },
+    "vigilancia-de-infecciones-respiratorias-agudas.json": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "vigilancia-de-infecciones-respiratorias-agudas.json",
+      "format": "JSON",
+      "title": "Vigilancia de Infecciones respiratorias agudas a julio 2019",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/26c85a05-d4e3-4124-b7d2-e087a6cc5f24",
+      "lastProcessed": "2025-10-09T06:42:03.480Z",
+      "status": "processed"
+    },
+    "vigilancia-respiratorias-agudas-2018-hasta-20200106.csv": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "vigilancia-respiratorias-agudas-2018-hasta-20200106.csv",
+      "format": "CSV",
+      "title": "Vigilancia de Infecciones respiratorias agudas desde 2018 hasta primeras semanas enero 2020",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/f4096f8b-1692-4d5f-a6d8-09cae47931a4",
+      "lastProcessed": "2025-10-09T06:42:07.377Z",
+      "status": "processed"
+    },
+    "informacion-publica-respiratorias-nacional.csv": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "informacion-publica-respiratorias-nacional.csv",
+      "format": "CSV",
+      "title": "Informacion publica respiratorias nacional hasta 29 Marzo 2021",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/b7db0713-1c13-45b1-9b4f-6dec194d67b0",
+      "lastProcessed": "2025-10-09T06:42:11.344Z",
+      "status": "processed"
+    },
+    "informacion-publica-respiratorias-nacional-hasta-20210902.xlsx": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "informacion-publica-respiratorias-nacional-hasta-20210902.xlsx",
+      "format": "XLS",
+      "title": "Informacion publica respiratorias nacional hasta 2 Septiembre 2021",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/327a476f-b71e-4d57-a5cc-6beb59601a6c",
+      "lastProcessed": "2025-10-09T06:42:11.344Z",
+      "status": "processed"
+    },
+    "informacion-publica-respiratorias-nacional-hasta-20220309.xlsx": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "informacion-publica-respiratorias-nacional-hasta-20220309.xlsx",
+      "format": "XLSX",
+      "title": "Vigilancia de Infecciones respiratorias agudas hasta el 3 de Marzo de 2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/cda1ba2a-955a-42b0-9d45-8ce4439d2106",
+      "lastProcessed": "2025-10-09T06:42:11.345Z",
+      "status": "processed"
+    },
+    "informacion-publica-respiratorias-nacional-hasta-20220905.xls": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "informacion-publica-respiratorias-nacional-hasta-20220905.xls",
+      "format": "XLS",
+      "title": "Informacion publica respiratorias nacional hasta el 5 de Septiembre de 2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/f2998314-9087-4641-aec7-f2f67c9ba865",
+      "lastProcessed": "2025-10-09T06:42:11.345Z",
+      "status": "processed"
+    },
+    "informacion-publica-respiratorias-nacional-hasta-20230706.xlsx": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "informacion-publica-respiratorias-nacional-hasta-20230706.xlsx",
+      "format": "XLSX",
+      "title": "Vigilancia de Infecciones respiratorias agudas nacional desde 01 de enero de 2022, hasta 02 de julio de 2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/37feeed4-dfcd-4f39-a403-93a6b4bd90d2",
+      "lastProcessed": "2025-10-09T06:42:11.345Z",
+      "status": "processed"
+    },
+    "dataset_informacion-publica-respiratorias-nacional-hasta-20230921.xlsx": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "dataset_informacion-publica-respiratorias-nacional-hasta-20230921.xlsx",
+      "format": "XLSX",
+      "title": "Vigilancia de Infecciones respiratorias agudas hasta el 21/9/2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/e501ff13-467e-4df5-a673-c6200f354dfd",
+      "lastProcessed": "2025-10-09T06:42:11.345Z",
+      "status": "processed"
+    },
+    "informacion-publica-respiratorias-nacional-hasta-20240405.xlsx": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "informacion-publica-respiratorias-nacional-hasta-20240405.xlsx",
+      "format": "XLSX",
+      "title": "Informacion publica respiratorias nacional hasta el 5 de Abril de 2024",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/5ffccc51-83a5-40a7-af7d-6d2071ed04ab",
+      "lastProcessed": "2025-10-09T06:42:11.345Z",
+      "status": "processed"
+    },
+    "informacion-publica-respiratorias-nacional-hasta-20250904.xlsx": {
+      "datasetId": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+      "datasetTitle": "Vigilancia de Infecciones respiratorias agudas",
+      "fileName": "informacion-publica-respiratorias-nacional-hasta-20250904.xlsx",
+      "format": "XLSX",
+      "title": "Informacion publica respiratorias nacional hasta el 4 de Septiembre de 2025",
+      "accessURL": "http://datos.salud.gob.ar/dataset/c553d917-36f4-4063-ac02-1686a9120e1c/resource/1dc6b4f6-35bc-4e83-aade-d5d1c98b153b",
+      "lastProcessed": "2025-10-09T06:42:11.346Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_c553d917-36f4-4063-ac02-1686a9120e1c",
+    "title": "Vigilancia de Infecciones respiratorias agudas",
+    "description": "“Datos correspondientes a Infecciones respiratorias agudas según Registro Sistema Nacional de Vigilancia de la Salud 2.0\r\n",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2018-07-26T09:57:09.496223",
+    "modified": "2025-09-08T13:52:58.148254",
+    "publisher": {
+      "mbox": "areavigilanciamsal@gmail.com",
+      "name": "Ministerio de Salud. Secretaría de Promoción de la Salud, Prevención y Control de Riesgos. Subsecretaría de Prevención y Control de Enfermedades Comunicables e Inmunoprevenibles. Dirección Nacional de Epidemiología y Análisis de la Situación de Salud. Área de Vigilancia."
+    },
+    "landingPage": "https://www.argentina.gob.ar/salud/epidemiologia/boletinesepidemiologicos"
+  }
+}

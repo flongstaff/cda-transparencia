@@ -1,0 +1,32 @@
+{
+  "files": {
+    "exportaciones-sector-de-actividad-saldo-comercial-rangos-de-exportacion.csv": {
+      "datasetId": "sspm_362",
+      "datasetTitle": "Indice de difusión de las exportaciones por producto y destino",
+      "fileName": "exportaciones-sector-de-actividad-saldo-comercial-rangos-de-exportacion.csv",
+      "format": "CSV",
+      "title": "Exportaciones por sector de actividad, saldo comercial y rangos de exportación de la empresa exportadora. Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:57.095Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_362",
+    "title": "Indice de difusión de las exportaciones por producto y destino",
+    "description": "Datos indice de difusión de las exportaciones por producto y destino",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-12-19",
+    "modified": "2025-03-24T10:02:13.462881",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

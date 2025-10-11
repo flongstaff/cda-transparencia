@@ -1,0 +1,42 @@
+{
+  "files": {
+    "proyectos-mineros-ubicacin-aproximada-.zip": {
+      "datasetId": "energia_05ceffb0-98f3-462b-98f9-96d655f76cef",
+      "datasetTitle": "Proyectos Mineros (Ubicación aproximada)",
+      "fileName": "proyectos-mineros-ubicacin-aproximada-.zip",
+      "format": "SHP",
+      "title": "Proyectos Mineros (Ubicación aproximada)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/05ceffb0-98f3-462b-98f9-96d655f76cef/resource/14ae10ff-8750-4019-b837-ba34778f8d23",
+      "lastProcessed": "2025-10-09T06:40:31.255Z",
+      "status": "processed"
+    },
+    "proyectos-mineros-ubicacin-aproximada-.csv": {
+      "datasetId": "energia_05ceffb0-98f3-462b-98f9-96d655f76cef",
+      "datasetTitle": "Proyectos Mineros (Ubicación aproximada)",
+      "fileName": "proyectos-mineros-ubicacin-aproximada-.csv",
+      "format": "CSV",
+      "title": "Proyectos Mineros (Ubicación aproximada)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/05ceffb0-98f3-462b-98f9-96d655f76cef/resource/0c8317ac-eacb-4826-b7e7-8f0a15a62ac1",
+      "lastProcessed": "2025-10-09T06:40:32.693Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_05ceffb0-98f3-462b-98f9-96d655f76cef",
+    "title": "Proyectos Mineros (Ubicación aproximada)",
+    "description": "Ubicación de los proyectos mineros según tipo de mineral, estado de actividad, empresa operadora y provincia.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2019-04-16T18:53:17.874136",
+    "modified": "2024-07-16T12:56:43.150011",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía.Subsecretaría de Transición y Planeamiento Energético.Dirección Nacional de Información Energética.  "
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

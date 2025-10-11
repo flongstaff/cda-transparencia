@@ -1,0 +1,32 @@
+{
+  "files": {
+    "beneficios-otorgados-nodosII-edc-072023.xlsx": {
+      "datasetId": "produccion_ea764a23-bd04-42bb-a8ba-a601c9b684fd",
+      "datasetTitle": "Programa NODOS de la Economía del Conocimiento",
+      "fileName": "beneficios-otorgados-nodosII-edc-072023.xlsx",
+      "format": "XLS",
+      "title": "Beneficiarios del Programa NODOS de la Economía del Conocimiento",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/ea764a23-bd04-42bb-a8ba-a601c9b684fd/resource/5104571d-5a4d-49aa-9855-b875c07c2ba0",
+      "lastProcessed": "2025-10-09T08:04:50.053Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_ea764a23-bd04-42bb-a8ba-a601c9b684fd",
+    "title": "Programa NODOS de la Economía del Conocimiento",
+    "description": "El objetivo del Programa consiste en otorgar financiamiento a los fines de consolidar los polos tecnológicos y clusters existentes mediante inversiones en equipamiento e instalaciones productivas, mejoras en la gestión de la calidad y acceso a los mercados internacionales.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2022-01-21T10:20:51.662153",
+    "modified": "2023-07-11T12:45:58.220637",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo, Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa, Subsecretaría de Economía del Conocimiento, Dirección Nacional de Fortalecimiento Regional de la Economía del Conocimiento, Dirección para la Federalización de la Innovación Productiva"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/programa-nodos-de-la-economia-del-conocimiento"
+  }
+}

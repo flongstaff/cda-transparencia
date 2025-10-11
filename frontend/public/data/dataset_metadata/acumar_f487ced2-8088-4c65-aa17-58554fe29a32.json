@@ -1,0 +1,52 @@
+{
+  "files": {
+    "red-monitoreo-agua-superficial.csv": {
+      "datasetId": "acumar_f487ced2-8088-4c65-aa17-58554fe29a32",
+      "datasetTitle": "Redes de Monitoreo de Agua",
+      "fileName": "red-monitoreo-agua-superficial.csv",
+      "format": "CSV",
+      "title": "Red de monitoreo de agua superficial",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/f487ced2-8088-4c65-aa17-58554fe29a32/resource/1b70d63c-fc5e-4591-a5fb-87139bf211cb",
+      "lastProcessed": "2025-10-09T07:56:53.312Z",
+      "status": "processed"
+    },
+    "red-monitoreo-agua-subterranea.csv": {
+      "datasetId": "acumar_f487ced2-8088-4c65-aa17-58554fe29a32",
+      "datasetTitle": "Redes de Monitoreo de Agua",
+      "fileName": "red-monitoreo-agua-subterranea.csv",
+      "format": "CSV",
+      "title": "Red de monitoreo de agua subterránea",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/f487ced2-8088-4c65-aa17-58554fe29a32/resource/7dabdf63-3d13-4dc6-8c04-5f4b2c140693",
+      "lastProcessed": "2025-10-09T07:56:55.833Z",
+      "status": "processed"
+    },
+    "red-monitoreo-humedales.csv": {
+      "datasetId": "acumar_f487ced2-8088-4c65-aa17-58554fe29a32",
+      "datasetTitle": "Redes de Monitoreo de Agua",
+      "fileName": "red-monitoreo-humedales.csv",
+      "format": "CSV",
+      "title": "Red de monitoreo de humedales (cuerpos de agua)",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/f487ced2-8088-4c65-aa17-58554fe29a32/resource/81f3d716-cb86-4cf3-8bf5-638406322dac",
+      "lastProcessed": "2025-10-09T07:56:58.435Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_f487ced2-8088-4c65-aa17-58554fe29a32",
+    "title": "Redes de Monitoreo de Agua",
+    "description": "Datos correspondientes a las redes de monitoreo de agua superficial, subterránea y humedales (cuerpos de agua) de ACUMAR. La información detallada se halla disponible en la Base de Datos Hidrológicos (BDH), http://www.bdh.acumar.gov.ar/bdh3/index_contenido.php, que incluye parámetros hidráulicos (caudales y niveles), de calidad de agua y sedimentos, utilizados para evaluar la calidad ambiental en la Cuenca Matanza Riachuelo.\r\n",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2025-01-24T14:01:16.064690",
+    "modified": "2025-02-07T17:03:11.959883",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Coordinación de Calidad Ambiental\t"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/redes-de-monitoreo-de-agua"
+  }
+}

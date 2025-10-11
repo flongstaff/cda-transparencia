@@ -1,0 +1,32 @@
+{
+  "files": {
+    "registro-midstream-inscripciones-anuales.csv": {
+      "datasetId": "energia_c126ad73-399a-4fa4-be8e-bd0142f3608c",
+      "datasetTitle": "Registro de empresas de transporte de hidrocarburos por ductos",
+      "fileName": "registro-midstream-inscripciones-anuales.csv",
+      "format": "CSV",
+      "title": "Registro Midstream - Inscripciones Anuales",
+      "accessURL": "http://datos.energia.gob.ar/dataset/c126ad73-399a-4fa4-be8e-bd0142f3608c/resource/5e6dc33f-ccf1-4a14-af1d-0c78e9dd7c3a",
+      "lastProcessed": "2025-10-09T06:49:57.315Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_c126ad73-399a-4fa4-be8e-bd0142f3608c",
+    "title": "Registro de empresas de transporte de hidrocarburos por ductos",
+    "description": "Registro Midstream - Inscripciones Anuales",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:42.172569",
+    "modified": "2024-02-01T13:18:37.526714",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

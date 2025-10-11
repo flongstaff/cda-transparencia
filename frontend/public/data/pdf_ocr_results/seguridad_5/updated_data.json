@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "seguridad_5",
+      "title": "Estadísticas sobre uso racional de la fuerza y empleo de armas de fuego en Fuerzas Federales",
+      "distribution": [
+        {
+          "title": "Informe_Programa_sobre_Uso_de_la_Fuerza_y_Empleo_de_Armas_de_Fuego_2023.pdf",
+          "format": "PDF",
+          "fileName": "Informe_Programa_sobre_Uso_de_la_Fuerza_y_Empleo_de_Armas_de_Fuego_2023.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/seguridad_5/Informe_Programa_sobre_Uso_de_la_Fuerza_y_Empleo_de_Armas_de_Fuego_2023.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/seguridad_5/Informe_Programa_sobre_Uso_de_la_Fuerza_y_Empleo_de_Armas_de_Fuego_2023_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

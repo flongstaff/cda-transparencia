@@ -1,0 +1,43 @@
+{
+  "file_name": "budget_execution_2019.csv",
+  "row_count": 10,
+  "column_count": 3,
+  "columns": [
+    "Resultado Artículo 44",
+    "Importe",
+    "year"
+  ],
+  "sample_data": [
+    {
+      "Resultado Artículo 44": "234.125.273",
+      "Importe": 85.0,
+      "year": 2019
+    },
+    {
+      "Resultado Artículo 44": "270.542.007",
+      "Importe": 49.0,
+      "year": 2019
+    },
+    {
+      "Resultado Artículo 44": "-36.416.733",
+      "Importe": 64.0,
+      "year": 2019
+    },
+    {
+      "Resultado Artículo 44": "0",
+      "Importe": 0.0,
+      "year": 2019
+    },
+    {
+      "Resultado Artículo 44": "37.748.812",
+      "Importe": 76.0,
+      "year": 2019
+    }
+  ],
+  "data_types": {
+    "Resultado Artículo 44": "object",
+    "Importe": "float64",
+    "year": "int64"
+  },
+  "processing_method": "pandas-read_csv"
+}

@@ -1,0 +1,42 @@
+{
+  "files": {
+    "arroz-serie-1924-2023-anual.csv": {
+      "datasetId": "agroindustria_1efdadba-d9b9-4437-9306-1dcf322b7bc1",
+      "datasetTitle": "Arroz - siembra, cosecha, producción, rendimiento",
+      "fileName": "arroz-serie-1924-2023-anual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo de arroz",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/1efdadba-d9b9-4437-9306-1dcf322b7bc1/resource/9c53f8c5-886a-43b7-a929-8939161138b4",
+      "lastProcessed": "2025-10-09T07:10:16.974Z",
+      "status": "processed"
+    },
+    "arroz-serie-1924-2023.csv": {
+      "datasetId": "agroindustria_1efdadba-d9b9-4437-9306-1dcf322b7bc1",
+      "datasetTitle": "Arroz - siembra, cosecha, producción, rendimiento",
+      "fileName": "arroz-serie-1924-2023.csv",
+      "format": "CSV",
+      "title": "Arroz - serie siembra, cosecha, producción, rendimiento",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/1efdadba-d9b9-4437-9306-1dcf322b7bc1/resource/b113402b-35fe-4dcd-9ee4-9cbfd356d03c",
+      "lastProcessed": "2025-10-09T07:10:20.602Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_1efdadba-d9b9-4437-9306-1dcf322b7bc1",
+    "title": "Arroz - siembra, cosecha, producción, rendimiento",
+    "description": "Serie histórica de la superficie sembrada, superficie cosechada, producción y rendimiento de arroz en la Argentina desde 1924.",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2024-09-24T13:50:45.161362",
+    "modified": "2024-09-26T12:54:42.050563",
+    "publisher": {
+      "mbox": "direstiagri@magyp.gob.ar",
+      "name": "Secretaría de Agricultura, Ganadería y Pesca - Dirección Nacional de Agricultura"
+    },
+    "landingPage": "https://datos.magyp.gob.ar/dataset/arroz-siembra-cosecha-produccion-rendimiento"
+  }
+}

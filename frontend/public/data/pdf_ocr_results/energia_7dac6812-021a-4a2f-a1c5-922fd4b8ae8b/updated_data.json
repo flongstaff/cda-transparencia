@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "energia_7dac6812-021a-4a2f-a1c5-922fd4b8ae8b",
+      "title": "Evolución de la Demanda Eléctrica de Grandes Usuarios",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/energia_7dac6812-021a-4a2f-a1c5-922fd4b8ae8b/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/energia_7dac6812-021a-4a2f-a1c5-922fd4b8ae8b/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

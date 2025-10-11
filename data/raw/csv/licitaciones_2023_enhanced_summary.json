@@ -1,0 +1,92 @@
+{
+  "file_name": "licitaciones_2023_enhanced.csv",
+  "row_count": 93,
+  "column_count": 10,
+  "columns": [
+    "tender_number",
+    "object",
+    "expedient",
+    "opening_date",
+    "budget_amount",
+    "document_fee",
+    "source_file",
+    "status",
+    "contract_type",
+    "year"
+  ],
+  "sample_data": [
+    {
+      "tender_number": "Licitación Nº7/2023",
+      "object": "Reparación de edificios escolares",
+      "expedient": "EXP-2023-0007",
+      "opening_date": "2023-11-15",
+      "budget_amount": 20000000.0,
+      "document_fee": 300000.0,
+      "source_file": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf",
+      "status": "completed",
+      "contract_type": "public_bid",
+      "year": 2023
+    },
+    {
+      "tender_number": "Licitación Nº8/2023",
+      "object": "Mantenimiento de red eléctrica",
+      "expedient": "EXP-2023-0008",
+      "opening_date": "2023-10-20",
+      "budget_amount": 15000000.0,
+      "document_fee": 250000.0,
+      "source_file": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°8.pdf",
+      "status": "completed",
+      "contract_type": "public_bid",
+      "year": 2023
+    },
+    {
+      "tender_number": "Licitación Nº9/2023",
+      "object": "Servicios de limpieza municipal",
+      "expedient": "EXP-2023-0009",
+      "opening_date": "2023-10-05",
+      "budget_amount": 8000000.0,
+      "document_fee": 150000.0,
+      "source_file": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°9.pdf",
+      "status": "completed",
+      "contract_type": "public_bid",
+      "year": 2023
+    },
+    {
+      "tender_number": "Licitación Nº10/2023",
+      "object": "Construcción de centro de salud",
+      "expedient": "EXP-2023-0010",
+      "opening_date": "2023-10-10",
+      "budget_amount": 35000000.0,
+      "document_fee": 500000.0,
+      "source_file": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°10.pdf",
+      "status": "completed",
+      "contract_type": "public_bid",
+      "year": 2023
+    },
+    {
+      "tender_number": "Licitación Nº11/2023",
+      "object": "Adquisición de vehículos para el municipio",
+      "expedient": "EXP-2023-0011",
+      "opening_date": "2023-10-25",
+      "budget_amount": 25000000.0,
+      "document_fee": 400000.0,
+      "source_file": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°11.pdf",
+      "status": "completed",
+      "contract_type": "public_bid",
+      "year": 2023
+    }
+  ],
+  "data_types": {
+    "tender_number": "object",
+    "object": "object",
+    "expedient": "object",
+    "opening_date": "object",
+    "budget_amount": "float64",
+    "document_fee": "float64",
+    "source_file": "object",
+    "status": "object",
+    "contract_type": "object",
+    "year": "int64"
+  },
+  "processing_method": "pandas-read_csv"
+}

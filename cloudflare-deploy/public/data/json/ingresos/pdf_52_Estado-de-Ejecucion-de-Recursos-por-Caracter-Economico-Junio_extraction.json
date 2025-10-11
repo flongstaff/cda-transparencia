@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_52_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Junio.pdf",
+  "file_hash": "fea8c689dd9ebd09c4c6ecc33016ac3f",
+  "page_count": 3,
+  "text_length": 5879,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "R.A.F.A.M.\nESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 3\n26/08/202412:46\nMunicipalidad de\nCarmen de Areco Del 02/01/2024 al 30/06/2024 Ejercicio: 2024(POR CARACTER ECONÓMICO)\nCONSOLIDADO\nDescripción ModificacionesRecurso\nEstimadoRecurso\nVigenteRecurso\nDevengadoDif. entre\nVigente y\nDevengadoRecursos\nPercibidoDif. entre\nDevengado y\nPercibido\nRECURSOS\nINGRESOS CORRIENTES\nIngresos tributarios\nImpuestos provinciales y nacionales 2.366.975.383,01 50.014.728,20 2.416.990.111,21 1.437.505.792,39 979.484.318,82 1.437.505.792,39 0,00\nOtros impuestos 272.693.746,34 24.945.455,36 297.639.201,70 159.223.198,17 138.416.003,53 149.354.823,28 9.868.374,89\n2.639.669.129,35 74.960.183,56 2.714.629.312,91 1.596.728.990,56 1.117.900.322,35 1.586.860.615,67 9.868.374,89 TotalIngresos tributarios\nIngresos no tributarios\nTasas 1.156.536.291,27 38.007.938,07 1.194.544.229,34 875.061.712,21 319.482.517,13 368.043.351,26 507.018.360,95\nDerechos 229.832.680,39 1.971.979,84 231.804.660,23 31.043.343,16 200.761.317,07 31.700.696,23 -657.353,07\nOtros no tributarios 280.175.468,34 466.520,56 280.641.988,90 127.340.327,61 153.301.661,29 127.340.327,61 0,00\n1.666.544.440,00 40.446.438,47 1.706.990.878,47 1.033.445.382,98 673.545.495,49 527.084.375,10 506.361.007,88 TotalIngresos no tributarios\nRentas de la propiedad\nIntereses\nIntereses internos\nIntereses por depósitos 260.166.770,67 0,00 260.166.770,67 2.041.618,01 258.125.152,66 2.041.618,01 0,00\n260.166.770,67 0,00 260.166.770,67 2.041.618,01 258.125.152,66 2.041.618,01 0,00 Total Intereses internos\n260.166.770,67 0,00 260.166.770,67 2.041.618,01 258.125.152,66 2.041.618,01 0,00 Total Intereses\n260.166.770,67 0,00 260.166.770,67 2.041.618,01 258.125.152,66 2.041.618,01 0,00 TotalRentas de la propiedad\nTransferencias Corrientes\nDel sector privado\nDe empresas privadas 0,00 1.374.366,67 1.374.366,67 1.374.366,67 0,00 1.374.366,67 0,00\n0,00 1.374.366,67 1.374.366,67 1.374.366,67 0,00 1.374.366,67 0,00 Total Del sector privado\nDel sector ...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:58.973523"
+}

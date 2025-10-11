@@ -1,0 +1,102 @@
+{
+  "files": {
+    "SAT-Propiedad-BU_2017-2023.xlsx": {
+      "datasetId": "seguridad_9",
+      "datasetTitle": "Delitos contra la propiedad. Sistema de Alerta Temprana. Estadísticas criminales",
+      "fileName": "SAT-Propiedad-BU_2017-2023.xlsx",
+      "format": "XLSX",
+      "title": "Estadísticas criminales de delitos contra la propiedad en la República Argentina por departamentos (panel). (.xlsx).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:46.439Z",
+      "status": "processed"
+    },
+    "SAT-Propiedad-BU_2017-2023.csv": {
+      "datasetId": "seguridad_9",
+      "datasetTitle": "Delitos contra la propiedad. Sistema de Alerta Temprana. Estadísticas criminales",
+      "fileName": "SAT-Propiedad-BU_2017-2023.csv",
+      "format": "CSV",
+      "title": "Estadísticas criminales de delitos contra la propiedad en la República Argentina por departamentos (panel) (.csv).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:46.551Z",
+      "status": "processed"
+    },
+    "SAT-Propiedad-BU_2017-2023.dta": {
+      "datasetId": "seguridad_9",
+      "datasetTitle": "Delitos contra la propiedad. Sistema de Alerta Temprana. Estadísticas criminales",
+      "fileName": "SAT-Propiedad-BU_2017-2023.dta",
+      "format": "dta",
+      "title": "Estadísticas criminales de delitos contra la propiedad en la República Argentina por departamentos (panel) (.dta).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:46.551Z",
+      "status": "processed"
+    },
+    "SAT-Propiedad-BU_2017-2023.sav": {
+      "datasetId": "seguridad_9",
+      "datasetTitle": "Delitos contra la propiedad. Sistema de Alerta Temprana. Estadísticas criminales",
+      "fileName": "SAT-Propiedad-BU_2017-2023.sav",
+      "format": "sav",
+      "title": "Estadísticas criminales de delitos contra la propiedad en la República Argentina por departamentos (panel) (.sav).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:46.551Z",
+      "status": "processed"
+    },
+    "Manual_de_usuario_Base_SAT_Prop_2024.pdf": {
+      "datasetId": "seguridad_9",
+      "datasetTitle": "Delitos contra la propiedad. Sistema de Alerta Temprana. Estadísticas criminales",
+      "fileName": "Manual_de_usuario_Base_SAT_Prop_2024.pdf",
+      "format": "PDF",
+      "title": "Manual de usuario. Base sistema de alerta temprana - Delitos contra la propiedad.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:47.237Z",
+      "status": "processed"
+    },
+    "Informe_SAT-Propiedad_2021.pdf": {
+      "datasetId": "seguridad_9",
+      "datasetTitle": "Delitos contra la propiedad. Sistema de Alerta Temprana. Estadísticas criminales",
+      "fileName": "Informe_SAT-Propiedad_2021.pdf",
+      "format": "PDF",
+      "title": "Informe Delitos contra la Propiedad (2017-2021).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:47.922Z",
+      "status": "processed"
+    },
+    "Informe_SAT-Propiedad_2022.pdf": {
+      "datasetId": "seguridad_9",
+      "datasetTitle": "Delitos contra la propiedad. Sistema de Alerta Temprana. Estadísticas criminales",
+      "fileName": "Informe_SAT-Propiedad_2022.pdf",
+      "format": "PDF",
+      "title": "Informe Delitos contra la Propiedad (2017-2022).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:48.646Z",
+      "status": "processed"
+    },
+    "Informe_SAT-Propiedad_2023.pdf": {
+      "datasetId": "seguridad_9",
+      "datasetTitle": "Delitos contra la propiedad. Sistema de Alerta Temprana. Estadísticas criminales",
+      "fileName": "Informe_SAT-Propiedad_2023.pdf",
+      "format": "PDF",
+      "title": "Informe Delitos contra la Propiedad (2017-2023).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:49.357Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "seguridad_9",
+    "title": "Delitos contra la propiedad. Sistema de Alerta Temprana. Estadísticas criminales",
+    "description": "Cantidades de delitos contra la propiedad seleccionados informados al Sistema de Alerta Temprana (SAT) por departamento del Sistema Nacional de Información Criminal (SNIC).",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2023-02-28T00:00:00",
+    "modified": "2023-12-09T00:00:00",
+    "publisher": {
+      "mbox": "snic-sat@minseg.gob.ar",
+      "name": "Ministerio de Seguridad de la Nación. Dirección Nacional de Estadística Criminal."
+    },
+    "landingPage": "https://www.argentina.gob.ar/seguridad/estadisticascriminales"
+  }
+}

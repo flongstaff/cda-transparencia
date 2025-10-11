@@ -1,0 +1,17 @@
+{
+  "workflow_start": "2025-10-10T17:14:51.698762",
+  "steps": [
+    {
+      "name": "Synchronize PDFs",
+      "description": "Synchronizing PDF files to central storage...",
+      "command": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "/Users/flong/Developer/cda-transparencia/backend/scripts/manage_pdfs.py"
+      ],
+      "success": false,
+      "timestamp": "2025-10-10T17:14:51.718541"
+    }
+  ],
+  "workflow_end": "2025-10-10T17:14:51.718564",
+  "success": false
+}

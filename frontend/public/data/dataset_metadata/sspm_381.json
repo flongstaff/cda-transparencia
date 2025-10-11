@@ -1,0 +1,82 @@
+{
+  "files": {
+    "odg-total-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_381",
+      "datasetTitle": "Cuentas Nacionales 1970-1980. Base 1960",
+      "fileName": "odg-total-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Oferta y Demanda Global. Millones de pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:29.239Z",
+      "status": "processed"
+    },
+    "ibi-total-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_381",
+      "datasetTitle": "Cuentas Nacionales 1970-1980. Base 1960",
+      "fileName": "ibi-total-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Inversión Bruta interna. Millones de Pesos. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:30.298Z",
+      "status": "processed"
+    },
+    "ibi-equipo-durable-produccion-importado-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_381",
+      "datasetTitle": "Cuentas Nacionales 1970-1980. Base 1960",
+      "fileName": "ibi-equipo-durable-produccion-importado-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Inversión Bruta interna. Equipo Durable de Producción Importado. Pesos. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:31.386Z",
+      "status": "processed"
+    },
+    "ibi-equipo-durable-produccion-nacional-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_381",
+      "datasetTitle": "Cuentas Nacionales 1970-1980. Base 1960",
+      "fileName": "ibi-equipo-durable-produccion-nacional-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Inversión Bruta interna. Equipo Durable de Producción Nacional. Pesos. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:32.494Z",
+      "status": "processed"
+    },
+    "ibi-variacion-existencias-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_381",
+      "datasetTitle": "Cuentas Nacionales 1970-1980. Base 1960",
+      "fileName": "ibi-variacion-existencias-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Inversión Bruta interna. Variación de Existencias. Pesos. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:33.684Z",
+      "status": "processed"
+    },
+    "pib-costo-factores-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_381",
+      "datasetTitle": "Cuentas Nacionales 1970-1980. Base 1960",
+      "fileName": "pib-costo-factores-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto a costo de factores, Precios constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:34.743Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_381",
+    "title": "Cuentas Nacionales 1970-1980. Base 1960",
+    "description": "Cuentas Nacionales 1970-1980 a Precios de 1960",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2018-02-15",
+    "modified": "2025-04-02T16:48:04.455966",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

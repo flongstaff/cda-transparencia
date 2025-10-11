@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_16",
+      "datasetTitle": "Anuncios de Inversión en el Sector Minero de Argentina del SIACAM",
+      "lastProcessed": "2025-10-09T07:09:48.690Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_16",
+    "title": "Anuncios de Inversión en el Sector Minero de Argentina del SIACAM",
+    "description": "Datos correspondientes al tablero de Anuncios de Inversión del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM). Elaborado por la Dirección Nacional de Promoción y Economía Minera (Subsecretaría de Desarrollo Minero, Secretaría de Minería, Ministerio de Economía de la Nación).",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2022-12-07",
+    "modified": "2025-05-09",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

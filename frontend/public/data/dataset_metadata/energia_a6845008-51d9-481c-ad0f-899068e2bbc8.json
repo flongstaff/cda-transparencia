@@ -1,0 +1,52 @@
+{
+  "files": {
+    "pozos-productivos-de-gas-ant-2009.csv": {
+      "datasetId": "energia_a6845008-51d9-481c-ad0f-899068e2bbc8",
+      "datasetTitle": "Estado de pozos de petróleo y gas",
+      "fileName": "pozos-productivos-de-gas-ant-2009.csv",
+      "format": "CSV",
+      "title": "Pozos productivos de gas ant. 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/a6845008-51d9-481c-ad0f-899068e2bbc8/resource/0f0c67f1-5ec4-4e6c-8fbe-ef0c16983447",
+      "lastProcessed": "2025-10-09T07:24:02.693Z",
+      "status": "processed"
+    },
+    "estado-de-pozos-ant-a-2009.csv": {
+      "datasetId": "energia_a6845008-51d9-481c-ad0f-899068e2bbc8",
+      "datasetTitle": "Estado de pozos de petróleo y gas",
+      "fileName": "estado-de-pozos-ant-a-2009.csv",
+      "format": "CSV",
+      "title": "Estado de pozos ant. a 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/a6845008-51d9-481c-ad0f-899068e2bbc8/resource/936ab048-160f-4c42-b5fe-b1dce471ea11",
+      "lastProcessed": "2025-10-09T07:24:04.368Z",
+      "status": "processed"
+    },
+    "pozos-productivos-de-petrleo-ant-2009.csv": {
+      "datasetId": "energia_a6845008-51d9-481c-ad0f-899068e2bbc8",
+      "datasetTitle": "Estado de pozos de petróleo y gas",
+      "fileName": "pozos-productivos-de-petrleo-ant-2009.csv",
+      "format": "CSV",
+      "title": "Pozos productivos de petróleo ant. 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/a6845008-51d9-481c-ad0f-899068e2bbc8/resource/9d15b39b-1f72-4d3f-84cf-d131dbb908dc",
+      "lastProcessed": "2025-10-09T07:24:05.707Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_a6845008-51d9-481c-ad0f-899068e2bbc8",
+    "title": "Estado de pozos de petróleo y gas",
+    "description": "Cantidad de Pozos productivos de Petróleo por mes",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:22.214385",
+    "modified": "2024-12-12T14:42:21.518102",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información"
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

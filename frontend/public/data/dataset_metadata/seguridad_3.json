@@ -1,0 +1,92 @@
+{
+  "files": {
+    "snic-departamentos-anual.xlsx": {
+      "datasetId": "seguridad_3",
+      "datasetTitle": "SNIC - Departamental. Estadísticas criminales en la República Argentina por departamentos",
+      "fileName": "snic-departamentos-anual.xlsx",
+      "format": "XLSX",
+      "title": "Estadísticas criminales en la República Argentina por departamentos (panel) (.xlsx).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:07:59.303Z",
+      "status": "processed"
+    },
+    "snic-departamentos-anual.csv": {
+      "datasetId": "seguridad_3",
+      "datasetTitle": "SNIC - Departamental. Estadísticas criminales en la República Argentina por departamentos",
+      "fileName": "snic-departamentos-anual.csv",
+      "format": "CSV",
+      "title": "Estadísticas criminales en la República Argentina por departamentos (panel) (.csv).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:01.366Z",
+      "status": "processed"
+    },
+    "snic-departamentos-anual.dta": {
+      "datasetId": "seguridad_3",
+      "datasetTitle": "SNIC - Departamental. Estadísticas criminales en la República Argentina por departamentos",
+      "fileName": "snic-departamentos-anual.dta",
+      "format": "dta",
+      "title": "Estadísticas criminales en la República Argentina por departamentos (panel) (.dta).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:01.366Z",
+      "status": "processed"
+    },
+    "snic-departamentos-anual.sav": {
+      "datasetId": "seguridad_3",
+      "datasetTitle": "SNIC - Departamental. Estadísticas criminales en la República Argentina por departamentos",
+      "fileName": "snic-departamentos-anual.sav",
+      "format": "sav",
+      "title": "Estadísticas criminales en la República Argentina por departamentos (panel) (.sav).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:01.367Z",
+      "status": "processed"
+    },
+    "snic-departamentos-mes-sexo.csv": {
+      "datasetId": "seguridad_3",
+      "datasetTitle": "SNIC - Departamental. Estadísticas criminales en la República Argentina por departamentos",
+      "fileName": "snic-departamentos-mes-sexo.csv",
+      "format": "CSV",
+      "title": "Estadísticas criminales en la República Argentina por departamentos y mes (panel) (.csv).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:01.448Z",
+      "status": "processed"
+    },
+    "snic-departamentos-mes-sexo.dta": {
+      "datasetId": "seguridad_3",
+      "datasetTitle": "SNIC - Departamental. Estadísticas criminales en la República Argentina por departamentos",
+      "fileName": "snic-departamentos-mes-sexo.dta",
+      "format": "dta",
+      "title": "Estadísticas criminales en la República Argentina por departamentos por mes y sexo (panel) (.dta).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:01.448Z",
+      "status": "processed"
+    },
+    "snic-departamentos-mes-sexo.sav": {
+      "datasetId": "seguridad_3",
+      "datasetTitle": "SNIC - Departamental. Estadísticas criminales en la República Argentina por departamentos",
+      "fileName": "snic-departamentos-mes-sexo.sav",
+      "format": "sav",
+      "title": "Estadísticas criminales en la República Argentina por departamentos por mes y sexo (panel) (.sav).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:08:01.448Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "seguridad_3",
+    "title": "SNIC - Departamental. Estadísticas criminales en la República Argentina por departamentos",
+    "description": "Hechos delictivos y víctimas por tipo de delito, informados al Sistema Nacional de Información Criminal (SNIC). Por departamentos. Cantidades y tasas desde 2014.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-07-14T00:00:00",
+    "modified": "2025-05-21T00:00:00",
+    "publisher": {
+      "mbox": "snic-sat@minseg.gob.ar",
+      "name": "Ministerio de Seguridad de la Nación. Dirección Nacional de Estadística Criminal."
+    },
+    "landingPage": "https://www.argentina.gob.ar/seguridad/estadisticascriminales"
+  }
+}

@@ -1,0 +1,512 @@
+{
+  "files": {
+    "pc-proy21-finfun-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "pc-proy21-finfun-2021.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto Finalidad Función 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "pc-proy21-finrecursosxrubro-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "pc-proy21-finrecursosxrubro-2021.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto de Recursos 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "pc-proy21-finxaperprog-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "pc-proy21-finxaperprog-2021.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto de Gastos por Apertura Programatica 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "pc-proy21-finxobjdelgasto-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "pc-proy21-finxobjdelgasto-2021.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto de Gastos por Partida Presupuestaria 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "pc-proy21-metasfisicas-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "pc-proy21-metasfisicas-2021.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto Metas Físicas 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "d-apertura-programatica-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "d-apertura-programatica-2021.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Apertura Programática 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "d-finalidad-funcion-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "d-finalidad-funcion-2021.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Finalidad y Función 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "d-objeto-gasto-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "d-objeto-gasto-2021.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Objeto del gasto 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "d-ubicacion-geografica-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "d-ubicacion-geografica-2021.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Ubicación geográfica 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "d-rubro-recurso-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "d-rubro-recurso-2021.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Rubro del recurso 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "d-institucion-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "d-institucion-2021.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Institución 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "d-sector-institucional-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "d-sector-institucional-2021.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Sector Institucional 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "d-servicio-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "d-servicio-2021.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Servicio Administrativo Financiero 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.255Z",
+      "status": "processed"
+    },
+    "d-fuente-financiamiento-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "d-fuente-financiamiento-2021.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Fuente de Financiamiento 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.256Z",
+      "status": "processed"
+    },
+    "d-clasificador-economico-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "d-clasificador-economico-2021.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Clasificador económico 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.256Z",
+      "status": "processed"
+    },
+    "credito-mensual-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "credito-mensual-2021.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación mensual 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.256Z",
+      "status": "processed"
+    },
+    "credito-anual-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "credito-anual-2021.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación anual 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.256Z",
+      "status": "processed"
+    },
+    "recursos-mensual-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "recursos-mensual-2021.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación mensual 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.256Z",
+      "status": "processed"
+    },
+    "discapacidad-metas-trimestral_2021_4-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "discapacidad-metas-trimestral_2021_4-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico del gasto vinculado a la atención de personas con discapacidad cuarto trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.256Z",
+      "status": "processed"
+    },
+    "discapacidad-financiero-trimestral_2021_4-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "discapacidad-financiero-trimestral_2021_4-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero del gasto vinculado a la atención de personas con discapacidad cuarto trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.256Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-trimestre-1-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ejecucion-fisica-trimestre-1-2021.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física primer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.256Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-trimestre-2-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ejecucion-fisica-trimestre-2-2021.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física segundo trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.256Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-trimestre-3-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ejecucion-fisica-trimestre-3-2021.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física tercer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.256Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-trimestre-4-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ejecucion-fisica-trimestre-4-2021.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física cuarto trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.257Z",
+      "status": "processed"
+    },
+    "discapacidad-financiero-trimestral_2021_1-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "discapacidad-financiero-trimestral_2021_1-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de la atención de personas con discapacidad primer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.257Z",
+      "status": "processed"
+    },
+    "discapacidad-metas-trimestral_2021_1-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "discapacidad-metas-trimestral_2021_1-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de la atención de personas con discapacidad primer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.257Z",
+      "status": "processed"
+    },
+    "discapacidad-financiero-trimestral_2021_3-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "discapacidad-financiero-trimestral_2021_3-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de la atención de personas con discapacidad tercer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.257Z",
+      "status": "processed"
+    },
+    "discapacidad-metas-trimestral_2021_3-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "discapacidad-metas-trimestral_2021_3-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de la atención de personas con discapacidad tercer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.257Z",
+      "status": "processed"
+    },
+    "genero-metas-trimestral_2021_4-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "genero-metas-trimestral_2021_4-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de género cuarto trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.257Z",
+      "status": "processed"
+    },
+    "genero-financiero-trimestral_2021_4-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "genero-financiero-trimestral_2021_4-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de género cuarto trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.257Z",
+      "status": "processed"
+    },
+    "ninez-metas-trimestral_2021_4-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ninez-metas-trimestral_2021_4-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de niñez cuarto trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.257Z",
+      "status": "processed"
+    },
+    "ninez-financiero-trimestral_2021_4-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ninez-financiero-trimestral_2021_4-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de niñez cuarto trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.258Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-cierre-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ejecucion-fisica-cierre-2021.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física cierre anual 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.258Z",
+      "status": "processed"
+    },
+    "genero-financiero-trimestral_2021_1-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "genero-financiero-trimestral_2021_1-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de género primer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.258Z",
+      "status": "processed"
+    },
+    "genero-metas-trimestral_2021_1-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "genero-metas-trimestral_2021_1-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de género primer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.258Z",
+      "status": "processed"
+    },
+    "genero-financiero-trimestral_2021_2-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "genero-financiero-trimestral_2021_2-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de género segundo trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.258Z",
+      "status": "processed"
+    },
+    "genero-metas-trimestral_2021_2-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "genero-metas-trimestral_2021_2-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de género segundo trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.258Z",
+      "status": "processed"
+    },
+    "genero-financiero-trimestral_2021_3-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "genero-financiero-trimestral_2021_3-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de género tercer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.258Z",
+      "status": "processed"
+    },
+    "genero-metas-trimestral_2021_3-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "genero-metas-trimestral_2021_3-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de género tercer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.259Z",
+      "status": "processed"
+    },
+    "recursos-anual-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "recursos-anual-2021.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación anual 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.259Z",
+      "status": "processed"
+    },
+    "ninez-financiero-trimestral_2021_1-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ninez-financiero-trimestral_2021_1-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de niñez primer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.259Z",
+      "status": "processed"
+    },
+    "ninez-metas-trimestral_2021_1-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ninez-metas-trimestral_2021_1-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de niñez primer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.259Z",
+      "status": "processed"
+    },
+    "discapacidad-financiero-trimestral_2021_2-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "discapacidad-financiero-trimestral_2021_2-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de la atención de personas con discapacidad segundo trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.259Z",
+      "status": "processed"
+    },
+    "discapacidad-metas-trimestral_2021_2-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "discapacidad-metas-trimestral_2021_2-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de la atención de personas con discapacidad segundo trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.259Z",
+      "status": "processed"
+    },
+    "mapeo-interanual-partidas-gasto-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "mapeo-interanual-partidas-gasto-2021.zip",
+      "format": "ZIP",
+      "title": "Mapeo Jurisdiccional 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.260Z",
+      "status": "processed"
+    },
+    "ninez-financiero-trimestral_2021_2-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ninez-financiero-trimestral_2021_2-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de niñez segundo trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.260Z",
+      "status": "processed"
+    },
+    "ninez-metas-trimestral_2021_2-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ninez-metas-trimestral_2021_2-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de niñez segundo trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.260Z",
+      "status": "processed"
+    },
+    "ninez-financiero-trimestral_2021_3-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ninez-financiero-trimestral_2021_3-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de niñez tercer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.260Z",
+      "status": "processed"
+    },
+    "ninez-metas-trimestral_2021_3-2021.zip": {
+      "datasetId": "sspre_2021",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2021.",
+      "fileName": "ninez-metas-trimestral_2021_3-2021.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de niñez tercer trimestre 2021",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.260Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspre_2021",
+    "title": "Presupuesto de la Administración Pública Nacional 2021.",
+    "description": "Créditos y Recursos de la Administración Pública Nacional del ejercicio 2021.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-01-01T03:00:00Z",
+    "modified": "2022-07-04T03:00:00Z",
+    "publisher": {
+      "mbox": "info@presupuestoabierto.gob.ar",
+      "name": "Ministerio de Economía. Secretaría de Hacienda. Subsecretaría de Presupuesto."
+    },
+    "landingPage": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos"
+  }
+}

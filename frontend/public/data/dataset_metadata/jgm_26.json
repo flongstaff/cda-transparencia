@@ -1,0 +1,73 @@
+{
+  "files": {
+    "lista-tramites-vigentes-total.csv": {
+      "datasetId": "jgm_26",
+      "datasetTitle": "Plataforma de Trámites a Distancia - TAD",
+      "fileName": "lista-tramites-vigentes-total.csv",
+      "format": "CSV",
+      "title": "Lista de trámites vigentes",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-plataforma-tramites-distancia---tad/archivo/jgm_26.1",
+      "lastProcessed": "2025-10-09T06:31:31.498Z",
+      "status": "processed"
+    },
+    "lista-tramites-vigentes-arancelados.csv": {
+      "datasetId": "jgm_26",
+      "datasetTitle": "Plataforma de Trámites a Distancia - TAD",
+      "fileName": "lista-tramites-vigentes-arancelados.csv",
+      "format": "CSV",
+      "title": "Lista de trámites vigentes arancelados",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-plataforma-tramites-distancia---tad/archivo/jgm_26.2",
+      "lastProcessed": "2025-10-09T06:31:33.423Z",
+      "status": "processed"
+    },
+    "lista-tramites-vigentes-no-arancelados.csv": {
+      "datasetId": "jgm_26",
+      "datasetTitle": "Plataforma de Trámites a Distancia - TAD",
+      "fileName": "lista-tramites-vigentes-no-arancelados.csv",
+      "format": "CSV",
+      "title": "Lista de trámites vigentes no arancelados",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-plataforma-tramites-distancia---tad/archivo/jgm_26.3",
+      "lastProcessed": "2025-10-09T06:31:35.387Z",
+      "status": "processed"
+    },
+    "lista-tramites-vigentes-vuce.csv": {
+      "datasetId": "jgm_26",
+      "datasetTitle": "Plataforma de Trámites a Distancia - TAD",
+      "fileName": "lista-tramites-vigentes-vuce.csv",
+      "format": "CSV",
+      "title": "Lista de trámites vigentes en ventanilla VUCE",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-plataforma-tramites-distancia---tad/archivo/jgm_26.4",
+      "lastProcessed": "2025-10-09T06:31:38.156Z",
+      "status": "processed"
+    },
+    "lista-tramites-vigentes-mi-argentina.csv": {
+      "datasetId": "jgm_26",
+      "datasetTitle": "Plataforma de Trámites a Distancia - TAD",
+      "fileName": "lista-tramites-vigentes-mi-argentina.csv",
+      "format": "CSV",
+      "title": "Lista de trámites vigentes en mi ARGENTINA",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-plataforma-tramites-distancia---tad/archivo/jgm_26.5",
+      "lastProcessed": "2025-10-09T06:31:40.199Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "jgm_26",
+    "title": "Plataforma de Trámites a Distancia - TAD",
+    "description": "Trámites a Distancia “TAD” es una plataforma donde cualquier persona puede realizar sus trámites ante organismos nacionales desde cualquier dispositivo. Los trámites son 100% digitales, sin necesidad de papel, ni acudir de forma presencial, permitiendo ahorrar tiempo y dinero en la gestión de los mismos.",
+    "theme": [
+      "tech",
+      "gove"
+    ],
+    "superTheme": [
+      "TECH",
+      "GOVE"
+    ],
+    "issued": "2023-01-03T18:38:21.940714",
+    "modified": "2025-10-03",
+    "publisher": {
+      "name": "Jefatura de Gabinete de Ministros. Secretaría de Innovación, Ciencia y Tecnología. Subsecretaría de Innovación."
+    },
+    "landingPage": "https://www.argentina.gob.ar/jefatura/innovacion-publica/innovacion-administrativa"
+  }
+}

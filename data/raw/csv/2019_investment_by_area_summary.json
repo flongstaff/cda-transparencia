@@ -1,0 +1,36 @@
+{
+  "file_name": "2019_investment_by_area.csv",
+  "row_count": 6,
+  "column_count": 2,
+  "columns": [
+    "area",
+    "amount"
+  ],
+  "sample_data": [
+    {
+      "area": "Infraestructura",
+      "amount": 150000000.0
+    },
+    {
+      "area": "Equipamiento",
+      "amount": 75000000.0
+    },
+    {
+      "area": "Software/Hardware",
+      "amount": 25000000.0
+    },
+    {
+      "area": NaN,
+      "amount": 201.0
+    },
+    {
+      "area": NaN,
+      "amount": 195.0
+    }
+  ],
+  "data_types": {
+    "area": "object",
+    "amount": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

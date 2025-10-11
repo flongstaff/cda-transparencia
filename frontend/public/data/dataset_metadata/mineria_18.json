@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_18",
+      "datasetTitle": "Pago de Impuestos Nacionales de Grandes Empresas Mineras (SIACAM)",
+      "lastProcessed": "2025-10-09T07:09:49.476Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_18",
+    "title": "Pago de Impuestos Nacionales de Grandes Empresas Mineras (SIACAM)",
+    "description": "Datos correspondientes al tablero de Impuestos del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM). Elaborado por la Dirección Nacional de Promoción y Economía Minera (Subsecretaría de Desarrollo Minero, Secretaría de Minería, Ministerio de Economía de la Nación) en base a EITI.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2022-12-07",
+    "modified": "2025-04-11",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

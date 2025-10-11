@@ -1,0 +1,84 @@
+{
+  "files": {
+    "turistas-no-residentes-serie.csv": {
+      "datasetId": "turismo_4cbf7d4a-702a-4911-8c1e-717a45214902",
+      "datasetTitle": "Turismo Internacional - Total País",
+      "fileName": "turistas-no-residentes-serie.csv",
+      "format": "CSV",
+      "title": "Turismo receptivo",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/4cbf7d4a-702a-4911-8c1e-717a45214902/resource/fdfe0ae4-4acc-4421-aa48-6149a02bc615",
+      "lastProcessed": "2025-10-09T06:18:28.588Z",
+      "status": "processed"
+    },
+    "turistas-residentes-serie.csv": {
+      "datasetId": "turismo_4cbf7d4a-702a-4911-8c1e-717a45214902",
+      "datasetTitle": "Turismo Internacional - Total País",
+      "fileName": "turistas-residentes-serie.csv",
+      "format": "CSV",
+      "title": "Turismo emisivo",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/4cbf7d4a-702a-4911-8c1e-717a45214902/resource/fd710cb7-1981-43ea-aba3-7a14c356446b",
+      "lastProcessed": "2025-10-09T06:18:31.803Z",
+      "status": "processed"
+    },
+    "saldo-turistas-serie.csv": {
+      "datasetId": "turismo_4cbf7d4a-702a-4911-8c1e-717a45214902",
+      "datasetTitle": "Turismo Internacional - Total País",
+      "fileName": "saldo-turistas-serie.csv",
+      "format": "CSV",
+      "title": "Balanza turística",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/4cbf7d4a-702a-4911-8c1e-717a45214902/resource/7f96ec00-9300-4ea3-88b4-073fd4fa6d71",
+      "lastProcessed": "2025-10-09T06:18:35.080Z",
+      "status": "processed"
+    },
+    "serie-tiempo-turismo-internacional.csv": {
+      "datasetId": "turismo_4cbf7d4a-702a-4911-8c1e-717a45214902",
+      "datasetTitle": "Turismo Internacional - Total País",
+      "fileName": "serie-tiempo-turismo-internacional.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo - Mensual",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/4cbf7d4a-702a-4911-8c1e-717a45214902/resource/39455901-5488-4a01-8594-7b2b0a1e85a1",
+      "lastProcessed": "2025-10-09T06:18:38.548Z",
+      "status": "processed"
+    },
+    "tur-inter-data.pdf": {
+      "datasetId": "turismo_4cbf7d4a-702a-4911-8c1e-717a45214902",
+      "datasetTitle": "Turismo Internacional - Total País",
+      "fileName": "tur-inter-data.pdf",
+      "format": "PDF",
+      "title": "Ficha Técnica: Turismo Internacional - Total País",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/4cbf7d4a-702a-4911-8c1e-717a45214902/resource/200bf770-d6f2-4847-af20-678fc0f13a0f",
+      "lastProcessed": "2025-10-09T06:18:42.484Z",
+      "status": "processed"
+    },
+    "novedades.csv": {
+      "datasetId": "turismo_4cbf7d4a-702a-4911-8c1e-717a45214902",
+      "datasetTitle": "Turismo Internacional - Total País",
+      "fileName": "novedades.csv",
+      "format": "CSV",
+      "title": "Novedades",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/4cbf7d4a-702a-4911-8c1e-717a45214902/resource/56801eb5-12c6-4cf2-b20a-b3d48399bf1f",
+      "lastProcessed": "2025-10-09T06:18:45.842Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "turismo_4cbf7d4a-702a-4911-8c1e-717a45214902",
+    "title": "Turismo Internacional - Total País",
+    "description": "Estadísticas de turismo internacional referidas a los viajes de turistas no residentes (turismo receptivo), residentes (emisivos) y saldo entre receptivo y emisivo (balanza) a nivel país, por todos los medios de transporte utilizados (aéreos, terrestres, fluviales y marítimos). Datos en base a la información de la Dirección Nacional de Migraciones y de la Encuesta de Turismo Internacional (INDEC-Subsecretaría de Turismo).",
+    "theme": [
+      "gove",
+      "soci"
+    ],
+    "superTheme": [
+      "GOVE",
+      "SOCI"
+    ],
+    "issued": "2022-05-19T17:37:54.434081",
+    "modified": "2024-07-24T15:40:26.084962",
+    "publisher": {
+      "mbox": "estadistica@turismo.gob.ar",
+      "name": "Subsecretaría de Turismo. Dirección Nacional de Mercados y Estadística"
+    },
+    "landingPage": "http://datos.yvera.gob.ar/dataset/"
+  }
+}

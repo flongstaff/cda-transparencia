@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "energia_f91e3405-2bd0-47eb-81bd-5d73835ec005",
+      "title": "Producción de Petróleo desde 1950",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/energia_f91e3405-2bd0-47eb-81bd-5d73835ec005/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/energia_f91e3405-2bd0-47eb-81bd-5d73835ec005/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

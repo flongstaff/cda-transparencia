@@ -1,0 +1,51 @@
+{
+  "files": {
+    "RSU_j_rellenosanitario_cobertura": {
+      "datasetId": "ambiente_41.0",
+      "datasetTitle": "Aspectos socioeconómicos de la población",
+      "fileName": "RSU_j_rellenosanitario_cobertura",
+      "format": "CSV",
+      "title": "Porcentaje de la población con servicio de disposición adecuada. Año 2017",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=12&stid=59&did=108",
+      "lastProcessed": "2025-10-09T06:59:58.333Z",
+      "status": "processed"
+    },
+    "APSp_pobreza": {
+      "datasetId": "ambiente_41.0",
+      "datasetTitle": "Aspectos socioeconómicos de la población",
+      "fileName": "APSp_pobreza",
+      "format": "CSV",
+      "title": "Porcentaje de población que vive bajo la línea de pobreza",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=12&stid=59&did=252",
+      "lastProcessed": "2025-10-09T06:59:59.586Z",
+      "status": "processed"
+    },
+    "APSp_empleo": {
+      "datasetId": "ambiente_41.0",
+      "datasetTitle": "Aspectos socioeconómicos de la población",
+      "fileName": "APSp_empleo",
+      "format": "CSV",
+      "title": "Tasa de empleo",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=12&stid=59&did=254",
+      "lastProcessed": "2025-10-09T07:00:00.862Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_41.0",
+    "title": "Aspectos socioeconómicos de la población",
+    "description": "Muestra algunos los aspectos de la población, como pobreza, empleo, población con servicio de disposición final de residuos",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2023-02-02T00:00:00",
+    "modified": "2023-02-02T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

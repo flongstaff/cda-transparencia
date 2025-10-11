@@ -1,0 +1,44 @@
+{
+  "file_name": "Expenditure_Report_2023_table_0.csv",
+  "row_count": 4,
+  "column_count": 4,
+  "columns": [
+    "Category",
+    "Budgeted",
+    "Executed",
+    "Percentage"
+  ],
+  "sample_data": [
+    {
+      "Category": "Current Expenses",
+      "Budgeted": "$180,000,000",
+      "Executed": "$175,000,000",
+      "Percentage": "97.2%"
+    },
+    {
+      "Category": "Capital Expenses",
+      "Budgeted": "$120,000,000",
+      "Executed": "$118,000,000",
+      "Percentage": "98.3%"
+    },
+    {
+      "Category": "Interest Payment",
+      "Budgeted": "$15,000,000",
+      "Executed": "$14,500,000",
+      "Percentage": "96.7%"
+    },
+    {
+      "Category": "Total",
+      "Budgeted": "$315,000,000",
+      "Executed": "$307,500,000",
+      "Percentage": "97.6%"
+    }
+  ],
+  "data_types": {
+    "Category": "object",
+    "Budgeted": "object",
+    "Executed": "object",
+    "Percentage": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

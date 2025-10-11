@@ -1,0 +1,55 @@
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.
+19/09/2023 11:52
+Presupuesto: 2022DE EJECUCION PRESUPUESTARIA 
+01/01/2022 al 31/03/2022
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+I. INGRESOS CORRIENTES
+Ingresos tributarios 80.886.681,70
+Contribuciones a la Seguridad Social
+Ingresos no Tributarios 31.072.435,60
+Ventas de Bienes y Servicios
+Ingresos de Operación
+Rentas de la Propiedad 361.548,91
+Transferencias Corrientes 91.398.721,16
+Contribuciones Figurativas para Financiaciones Corrientes
+TOTAL  INGRESOS CORRIENTES 203.719.387,37
+II. GASTOS CORRIENTES
+Gastos de Operación
+Gastos de Consumo 151.291.248,89
+Rentas de la Propiedad 7.322,37
+Prestaciones de la Seguridad Social
+Impuestos Directos
+Otras Pérdidas
+Transferencias Corrientes 6.152.938,70
+Gastos Figurativos para Transacciones Corrientes
+TOTAL  GASTOS CORRIENTES 157.451.509,96
+III. AHORRO CORRIENTE: (I - II) 46.267.877,41
+Resultado Corriente Primario (Ingresos Corrientes - Gastos Corrientes netos de Int. de la deuda) 46.275.199,78
+TOTAL  AHORRO CORRIENTE: (I - II) 92.543.077,19 46.267.877,41
+IV. RECURSOS DE CAPITAL
+Recursos Propios de Capital 10,00
+Transferencias de Capital 72.740.465,16
+Disminución de la Inversión Financiera 543.536,98
+Contribuciones Figurativas para Financiaciones de Capital
+Filtro aplicado: Presupuesto: 2022 -  Fechas: 01/01/2022 al 31/03/2022
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 2 de 3 R.A.F.A.M.
+19/09/2023 11:52
+Presupuesto: 2022DE EJECUCION PRESUPUESTARIA 
+01/01/2022 al 31/03/2022
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+TOTAL  RECURSOS DE CAPITAL 73.284.012,14
+V. GASTOS DE CAPITAL
+Inversión Real Directa 107.084.202,35
+Transferencias de Capital 40.306,41
+Inversión Financiera
+Gastos Figurativos para Transacciones de Capital
+TOTAL  GASTOS DE CAPITAL 107.124.508,76
+VI. INGRESOS TOTALES 277.003.399,51
+TOTAL  INGRESOS TOTALES 277.003.399,51 277.003.399,51
+VII. GASTOS TOTALES 264.576.018,72
+TOTAL  GASTOS TOTALES 264.576.018,72 264.576.018,72
+VIII. RESU...

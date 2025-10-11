@@ -1,0 +1,27 @@
+{
+  "files": {
+    "entidades-activas-022025.csv": {
+      "datasetId": "ssn_f74d96ca-094f-4b3c-be8f-890214c0df91",
+      "datasetTitle": "Entidades aseguradoras y reaseguradoras",
+      "fileName": "entidades-activas-022025.csv",
+      "lastProcessed": "2025-10-09T07:38:33.372Z",
+      "status": "error",
+      "error": "Failed to download CSV: entidades-activas-022025.csv"
+    }
+  },
+  "info": {
+    "identifier": "ssn_f74d96ca-094f-4b3c-be8f-890214c0df91",
+    "title": "Entidades aseguradoras y reaseguradoras",
+    "description": "Datos sobre las entidades aseguradoras y reaseguradoras registradas ante la Superintendencia de Seguros de la Nación (SSN).",
+    "theme": [
+      "econ"
+    ],
+    "keywords": [],
+    "issued": "2024-09-22T10:53:08.602721",
+    "modified": "2025-02-27T11:00:32.718266",
+    "publisher": {
+      "mbox": "datosabiertos@ssn.gob.ar",
+      "name": "Ministerio de Economía, Superintendencia de Seguros de la Nación"
+    }
+  }
+}

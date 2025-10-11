@@ -91,7 +91,7 @@ export const useMasterData = (selectedYear?: number) => {
       console.log(`✅ Integrated data loaded:`, {
         sources: integratedData.metadata.sources_used,
         external_available: integratedData.metadata.external_data_available,
-        budget: integratedData.budget.total_budget
+        budget: integratedData.budget?.total_budget
       });
 
       // Build master data structure with integrated data
@@ -99,43 +99,43 @@ export const useMasterData = (selectedYear?: number) => {
         financialData: {
           [currentYear]: {
             budget: {
-              total_budget: integratedData.budget.total_budget,
-              total_executed: integratedData.budget.total_executed,
-              execution_rate: integratedData.budget.execution_rate,
-              quarterly_data: integratedData.budget.quarterly_data
+              total_budget: integratedData.budget?.total_budget || 0,
+              total_executed: integratedData.budget?.total_executed || 0,
+              execution_rate: integratedData.budget?.execution_rate || 0,
+              quarterly_data: integratedData.budget?.quarterly_data || []
             },
-            contracts: integratedData.contracts,
-            salaries: integratedData.salaries,
-            treasury: integratedData.treasury,
-            debt: integratedData.debt,
-            documents: integratedData.documents
+            contracts: integratedData.contracts || [],
+            salaries: integratedData.salaries || [],
+            treasury: integratedData.treasury || {},
+            debt: integratedData.debt || {},
+            documents: integratedData.documents || []
           }
         },
         audit: {
           discrepancies: [],
           summary: {
-            sources_used: integratedData.metadata.sources_used,
-            integration_success: integratedData.metadata.integration_success,
-            external_data_available: integratedData.metadata.external_data_available
+            sources_used: integratedData.metadata?.sources_used || [],
+            integration_success: integratedData.metadata?.integration_success || false,
+            external_data_available: integratedData.metadata?.external_data_available || false
           },
           flags: [],
-          external_datasets: integratedData.external_validation
+          external_datasets: integratedData.external_validation || []
         },
         documents: {
-          all: integratedData.documents,
+          all: integratedData.documents || [],
           byYear: {
-            [currentYear]: integratedData.documents
+            [currentYear]: integratedData.documents || []
           },
           byCategory: {},
           byType: {}
         },
         metadata: {
-          last_updated: integratedData.metadata.last_sync,
-          total_documents: integratedData.documents.length,
+          last_updated: integratedData.metadata?.last_sync || new Date().toISOString(),
+          total_documents: integratedData.documents?.length || 0,
           available_years: yearSpecificDataService.getAvailableYears(),
           categories: ['Presupuesto', 'Finanzas', 'Recursos Humanos', 'Contratos', 'Informes'],
-          data_sources_active: integratedData.metadata.sources_used.length,
-          coverage_percentage: integratedData.metadata.integration_success ? 95 : 75
+          data_sources_active: integratedData.metadata?.sources_used?.length || 0,
+          coverage_percentage: integratedData.metadata?.integration_success ? 95 : 75
         },
         loading: false,
         error: null

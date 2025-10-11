@@ -1,0 +1,32 @@
+R.A.F.A.M.
+ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOS Hoja: 1 de 9
+23/04/202409:25
+Municipalidad de
+Carmen de ArecoDel 01/10/2023 al 31/12/2023
+Ejercicio: 2023
+Rubro - Descripción ProcedenciaModifica 
+ciones Recurso 
+Estimado Recurso 
+Vigente Recurso 
+Devengado Dif. entre 
+Vigente y 
+Devengado Recursos 
+Percibido Dif. entre 
+Devengado y 
+Percibido Dif. entre 
+Vigente y 
+Percibido 
+11.0.00.00 - Ingresos Tributarios
+11.4.00.00 - Coparticipación de impuestos
+11.4.01.00 - Coparticipación Pcial. de ImpuestoLey 10.559 387.924.873,00 0,00 286.673.585,93 286.673.585,93 387.924.873,00 101.251.287,07 0,00 101.251.287,07 21 - Origen Provincial - De
+libre disponibilidad
+11.4.02.00 - Fondo para el fortalecimiento deRecurso Municipales 20.198.398,39 0,00 16.391.713,46 16.391.713,46 20.198.398,39 3.806.684,93 0,00 3.806.684,93 21 - Origen Provincial - De
+libre disponibilidad
+11.4.03.00 - Fondo Municipal de Inclusion Social 8.232.276,23 0,00 6.607.978,78 6.607.978,78 8.232.276,23 1.624.297,45 0,00 1.624.297,45 21 - Origen Provincial - De
+libre disponibilidad11.4.05.00 - Fondo Educativo 0,00 43.376.685,82 42.665.592,61 42.665.592,61 43.376.685,82 711.093,21 0,00 711.093,21 22 - Origen Provincial -
+Afectados416.355.547,62 43.376.685,82 459.732.233,44 352.338.870,78 107.393.362,66 352.338.870,78 0,00 Total Coparticipación de impuestos 107.393.362,66
+11.9.00.00 - Otros tributarios
+11.9.01.00 - Ley 9226 200.000,00 0,00 26.762,61 26.762,61 200.000,00 173.237,39 0,00 173.237,39 21 - Origen Provincial - De
+libre disponibilidad11.9.03.00 - Juegos de azar 4.124.257,95 0,00 4.730.250,53 4.730.250,53 4.124.257,95 -605.992,58 0,00 -605.992,58 21 - Origen Provincial - De
+libre disponibilidad11.9.04.00 - Inmobiliario Rural.Afectado 0,00 9.555.173,15 9.555.173,15 9.555.173,15 9.555.173,15 0,00 0,00 0,00 22 - Origen Provincial -
+Afectados11.9.05.00 - Inmobiliario Rural. No afectado 53.879.681,00 0,00 31.771.717,07 31.771.717,07 53.879.681,00 22.107.963,93 0,00 22.107.963,93 21 - Origen Provinci...

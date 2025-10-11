@@ -1,0 +1,32 @@
+{
+  "files": {
+    "ingreso-de-la-inversion-extranjera-directa-por-sector-bcra.csv": {
+      "datasetId": "sspm_318",
+      "datasetTitle": "Ingreso de la inversión extranjera directa por sector - BCRA",
+      "fileName": "ingreso-de-la-inversion-extranjera-directa-por-sector-bcra.csv",
+      "format": "CSV",
+      "title": "Ingreso de la inversión extranjera directa por sector. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:58.142Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_318",
+    "title": "Ingreso de la inversión extranjera directa por sector - BCRA",
+    "description": "Ingreso de la IED de acciones y otras participaciones de capital por sector - BCRA",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-30",
+    "modified": "2025-03-24T10:02:11.905753",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

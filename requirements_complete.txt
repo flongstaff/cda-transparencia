@@ -48,3 +48,6 @@ mypy>=0.800
 
 # Optional Advanced PDF Processing
 # camelot-py[cv]>=0.9.0  # Uncomment if needed
+
+# OCR Processing with docstrange
+docstrange>=0.1.0

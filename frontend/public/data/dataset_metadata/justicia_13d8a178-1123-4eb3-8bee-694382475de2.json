@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_13d8a178-1123-4eb3-8bee-694382475de2",
+      "datasetTitle": "Bajas de autos",
+      "format": "ZIP",
+      "title": "DNRPA. Bajas de autos  - 2018",
+      "accessURL": "https://datos.jus.gob.ar/dataset/13d8a178-1123-4eb3-8bee-694382475de2/resource/1550a2bd-9757-4381-a5e1-0e2a76b3ffbc",
+      "lastProcessed": "2025-10-09T06:41:08.118Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_13d8a178-1123-4eb3-8bee-694382475de2",
+    "title": "Bajas de autos",
+    "description": "Trámites de baja de automotores inscriptos en los Registros Seccionales de la Propiedad del Automotor y Créditos Prendarios",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2019-01-04T13:31:21.398515",
+    "modified": "2025-09-11T14:37:45.410839",
+    "publisher": {
+      "mbox": "accesobd@dnrpa.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Dirección Nacional de los Registros Nacionales de la Propiedad del Automotor y Créditos Prendarios"
+    },
+    "landingPage": "https://www.dnrpa.gov.ar"
+  }
+}

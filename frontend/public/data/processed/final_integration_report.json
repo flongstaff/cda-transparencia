@@ -1,0 +1,4262 @@
+{
+  "report_timestamp": "2025-10-10T17:16:13.418337",
+  "integration_results": {
+    "updated_files": [],
+    "new_combined_files": [
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Fiscal_Balance_Report_2025_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Fiscal_Balance_Report_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Health_Statistics_2020_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Health_Statistics_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Economic_Report_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Economic_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Economic_Report_2021_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Economic_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Health_Statistics_2025_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Health_Statistics_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Fiscal_Balance_Report_2020_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Fiscal_Balance_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Fiscal_Balance_Report_2023_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Fiscal_Balance_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Education_Data_2025_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Education_Data_2025_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Economic_Report_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Economic_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Economic_Report_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Economic_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Health_Statistics_2023_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Health_Statistics_2023_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Education_Data_2020_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Education_Data_2020_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2023_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2023_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Revenue_Report_2025_table_0_with_Personnel_Expenses_2019_table_0.csv",
+        "input_files": [
+          "Revenue_Report_2025_table_0",
+          "Personnel_Expenses_2019_table_0"
+        ],
+        "rows": 8,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Revenue_Report_2025_table_0_with_Budget_Execution_2021_table_0.csv",
+        "input_files": [
+          "Revenue_Report_2025_table_0",
+          "Budget_Execution_2021_table_0"
+        ],
+        "rows": 9,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Revenue_Report_2025_table_0_with_Investment_Report_2023_table_0.csv",
+        "input_files": [
+          "Revenue_Report_2025_table_0",
+          "Investment_Report_2023_table_0"
+        ],
+        "rows": 8,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Revenue_Report_2025_table_0_with_Expenditure_Report_2023_table_0.csv",
+        "input_files": [
+          "Revenue_Report_2025_table_0",
+          "Expenditure_Report_2023_table_0"
+        ],
+        "rows": 8,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Revenue_Report_2025_table_0_with_2019_revenue_by_source_structured.csv",
+        "input_files": [
+          "Revenue_Report_2025_table_0",
+          "2019_revenue_by_source_structured"
+        ],
+        "rows": 23,
+        "columns": 11,
+        "similarity": 0.375
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Revenue_Report_2025_table_0_with_budget_execution_2021.csv",
+        "input_files": [
+          "Revenue_Report_2025_table_0",
+          "budget_execution_2021"
+        ],
+        "rows": 9,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Revenue_Report_2025_table_0_with_2019_financial_summary_structured.csv",
+        "input_files": [
+          "Revenue_Report_2025_table_0",
+          "2019_financial_summary_structured"
+        ],
+        "rows": 23,
+        "columns": 11,
+        "similarity": 0.375
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Personnel_Expenses_2019_table_0_with_Budget_Execution_2021_table_0.csv",
+        "input_files": [
+          "Personnel_Expenses_2019_table_0",
+          "Budget_Execution_2021_table_0"
+        ],
+        "rows": 9,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Personnel_Expenses_2019_table_0_with_2019_personnel_expenses.csv",
+        "input_files": [
+          "Personnel_Expenses_2019_table_0",
+          "2019_personnel_expenses"
+        ],
+        "rows": 6,
+        "columns": 7,
+        "similarity": 0.4
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Personnel_Expenses_2019_table_0_with_Investment_Report_2023_table_0.csv",
+        "input_files": [
+          "Personnel_Expenses_2019_table_0",
+          "Investment_Report_2023_table_0"
+        ],
+        "rows": 8,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Personnel_Expenses_2019_table_0_with_Expenditure_Report_2023_table_0.csv",
+        "input_files": [
+          "Personnel_Expenses_2019_table_0",
+          "Expenditure_Report_2023_table_0"
+        ],
+        "rows": 8,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Personnel_Expenses_2019_table_0_with_2019_revenue_by_source_structured.csv",
+        "input_files": [
+          "Personnel_Expenses_2019_table_0",
+          "2019_revenue_by_source_structured"
+        ],
+        "rows": 23,
+        "columns": 11,
+        "similarity": 0.375
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Personnel_Expenses_2019_table_0_with_budget_execution_2021.csv",
+        "input_files": [
+          "Personnel_Expenses_2019_table_0",
+          "budget_execution_2021"
+        ],
+        "rows": 9,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Personnel_Expenses_2019_table_0_with_2019_financial_summary_structured.csv",
+        "input_files": [
+          "Personnel_Expenses_2019_table_0",
+          "2019_financial_summary_structured"
+        ],
+        "rows": 23,
+        "columns": 11,
+        "similarity": 0.5714285714285714
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Budget_Execution_2021_table_0_with_Investment_Report_2023_table_0.csv",
+        "input_files": [
+          "Budget_Execution_2021_table_0",
+          "Investment_Report_2023_table_0"
+        ],
+        "rows": 9,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Budget_Execution_2021_table_0_with_Expenditure_Report_2023_table_0.csv",
+        "input_files": [
+          "Budget_Execution_2021_table_0",
+          "Expenditure_Report_2023_table_0"
+        ],
+        "rows": 9,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Budget_Execution_2021_table_0_with_2019_revenue_by_source_structured.csv",
+        "input_files": [
+          "Budget_Execution_2021_table_0",
+          "2019_revenue_by_source_structured"
+        ],
+        "rows": 23,
+        "columns": 11,
+        "similarity": 0.375
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Budget_Execution_2021_table_0_with_budget_execution_2021.csv",
+        "input_files": [
+          "Budget_Execution_2021_table_0",
+          "budget_execution_2021"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Budget_Execution_2021_table_0_with_2019_financial_summary_structured.csv",
+        "input_files": [
+          "Budget_Execution_2021_table_0",
+          "2019_financial_summary_structured"
+        ],
+        "rows": 23,
+        "columns": 11,
+        "similarity": 0.375
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Health_Statistics_2020_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Health_Statistics_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Economic_Report_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Economic_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Economic_Report_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Economic_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Health_Statistics_2025_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Health_Statistics_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Fiscal_Balance_Report_2020_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Fiscal_Balance_Report_2020_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Fiscal_Balance_Report_2023_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Fiscal_Balance_Report_2023_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Education_Data_2025_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Education_Data_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Economic_Report_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Economic_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Economic_Report_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Economic_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Health_Statistics_2023_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Health_Statistics_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Education_Data_2020_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Education_Data_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2025_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2025_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_personnel_expenses_with_2019_capital_current_expenditure.csv",
+        "input_files": [
+          "2019_personnel_expenses",
+          "2019_capital_current_expenditure"
+        ],
+        "rows": 7,
+        "columns": 4,
+        "similarity": 0.5
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_personnel_expenses_with_Expenditure_Report_2023_table_0.csv",
+        "input_files": [
+          "2019_personnel_expenses",
+          "Expenditure_Report_2023_table_0"
+        ],
+        "rows": 6,
+        "columns": 7,
+        "similarity": 0.4
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_personnel_expenses_with_2019_revenue_by_type.csv",
+        "input_files": [
+          "2019_personnel_expenses",
+          "2019_revenue_by_type"
+        ],
+        "rows": 7,
+        "columns": 4,
+        "similarity": 0.5
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_personnel_expenses_with_2019_expenditure_admin_level.csv",
+        "input_files": [
+          "2019_personnel_expenses",
+          "2019_expenditure_admin_level"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 0.5
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Economic_Report_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Economic_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Economic_Report_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Economic_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Health_Statistics_2025_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Health_Statistics_2025_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Fiscal_Balance_Report_2020_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Fiscal_Balance_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Fiscal_Balance_Report_2023_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Fiscal_Balance_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Education_Data_2025_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Education_Data_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Economic_Report_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Economic_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Economic_Report_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Economic_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Health_Statistics_2023_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Health_Statistics_2023_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Education_Data_2020_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Education_Data_2020_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2020_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2020_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Economic_Report_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Economic_Report_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Health_Statistics_2025_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Health_Statistics_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Fiscal_Balance_Report_2020_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Fiscal_Balance_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Fiscal_Balance_Report_2023_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Fiscal_Balance_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Education_Data_2025_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Education_Data_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Economic_Report_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Economic_Report_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Economic_Report_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Economic_Report_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Health_Statistics_2023_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Health_Statistics_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Education_Data_2020_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Education_Data_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2024_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2024_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_expenditure_by_function_with_2019_expenditure.csv",
+        "input_files": [
+          "2019_expenditure_by_function",
+          "2019_expenditure"
+        ],
+        "rows": 11,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_financial_reserves_with_2019_investment_by_area.csv",
+        "input_files": [
+          "2019_financial_reserves",
+          "2019_investment_by_area"
+        ],
+        "rows": 8,
+        "columns": 3,
+        "similarity": 0.3333333333333333
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Investment_Report_2023_table_0_with_Expenditure_Report_2023_table_0.csv",
+        "input_files": [
+          "Investment_Report_2023_table_0",
+          "Expenditure_Report_2023_table_0"
+        ],
+        "rows": 8,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Investment_Report_2023_table_0_with_2019_revenue_by_source_structured.csv",
+        "input_files": [
+          "Investment_Report_2023_table_0",
+          "2019_revenue_by_source_structured"
+        ],
+        "rows": 23,
+        "columns": 11,
+        "similarity": 0.375
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Investment_Report_2023_table_0_with_budget_execution_2021.csv",
+        "input_files": [
+          "Investment_Report_2023_table_0",
+          "budget_execution_2021"
+        ],
+        "rows": 9,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Investment_Report_2023_table_0_with_2019_financial_summary_structured.csv",
+        "input_files": [
+          "Investment_Report_2023_table_0",
+          "2019_financial_summary_structured"
+        ],
+        "rows": 23,
+        "columns": 11,
+        "similarity": 0.375
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Health_Statistics_2025_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Health_Statistics_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Fiscal_Balance_Report_2020_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Fiscal_Balance_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Fiscal_Balance_Report_2023_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Fiscal_Balance_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Education_Data_2025_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Education_Data_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Economic_Report_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Economic_Report_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Economic_Report_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Economic_Report_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Health_Statistics_2023_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Health_Statistics_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Education_Data_2020_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Education_Data_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2021_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2021_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Fiscal_Balance_Report_2020_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Fiscal_Balance_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Fiscal_Balance_Report_2023_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Fiscal_Balance_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Education_Data_2025_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Education_Data_2025_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Economic_Report_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Economic_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Economic_Report_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Economic_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Health_Statistics_2023_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Health_Statistics_2023_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Education_Data_2020_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Education_Data_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2025_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2025_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_capital_current_expenditure_with_2019_revenue_by_type.csv",
+        "input_files": [
+          "2019_capital_current_expenditure",
+          "2019_revenue_by_type"
+        ],
+        "rows": 6,
+        "columns": 3,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_capital_current_expenditure_with_2019_expenditure_admin_level.csv",
+        "input_files": [
+          "2019_capital_current_expenditure",
+          "2019_expenditure_admin_level"
+        ],
+        "rows": 7,
+        "columns": 4,
+        "similarity": 0.5
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_capital_current_expenditure_with_2019_debt_status.csv",
+        "input_files": [
+          "2019_capital_current_expenditure",
+          "2019_debt_status"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 0.5
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Expenditure_Report_2023_table_0_with_2019_revenue_by_source_structured.csv",
+        "input_files": [
+          "Expenditure_Report_2023_table_0",
+          "2019_revenue_by_source_structured"
+        ],
+        "rows": 23,
+        "columns": 11,
+        "similarity": 0.375
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Expenditure_Report_2023_table_0_with_budget_execution_2021.csv",
+        "input_files": [
+          "Expenditure_Report_2023_table_0",
+          "budget_execution_2021"
+        ],
+        "rows": 9,
+        "columns": 5,
+        "similarity": 0.6
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Expenditure_Report_2023_table_0_with_2019_financial_summary_structured.csv",
+        "input_files": [
+          "Expenditure_Report_2023_table_0",
+          "2019_financial_summary_structured"
+        ],
+        "rows": 23,
+        "columns": 11,
+        "similarity": 0.5714285714285714
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Fiscal_Balance_Report_2023_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Fiscal_Balance_Report_2023_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Education_Data_2025_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Education_Data_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Economic_Report_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Economic_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Economic_Report_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Economic_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Health_Statistics_2023_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Health_Statistics_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Education_Data_2020_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Education_Data_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2020_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2020_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Education_Data_2025_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Education_Data_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Economic_Report_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Economic_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Economic_Report_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Economic_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Health_Statistics_2023_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Health_Statistics_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Education_Data_2020_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Education_Data_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2023_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2023_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_6_with_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_1.csv",
+        "input_files": [
+          "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_6",
+          "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_1"
+        ],
+        "rows": 3,
+        "columns": 13,
+        "similarity": 0.38461538461538464
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_6_with_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_10.csv",
+        "input_files": [
+          "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_6",
+          "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_10"
+        ],
+        "rows": 4,
+        "columns": 14,
+        "similarity": 0.35714285714285715
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_6_with_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_9.csv",
+        "input_files": [
+          "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_6",
+          "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_9"
+        ],
+        "rows": 5,
+        "columns": 12,
+        "similarity": 0.5
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Economic_Report_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Economic_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Economic_Report_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Economic_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Health_Statistics_2023_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Health_Statistics_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Education_Data_2020_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Education_Data_2020_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2025_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2025_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Economic_Report_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Economic_Report_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Health_Statistics_2023_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Health_Statistics_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Education_Data_2020_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Education_Data_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2019_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2019_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Health_Statistics_2023_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Health_Statistics_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Education_Data_2020_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Education_Data_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2022_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2022_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Education_Data_2020_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Education_Data_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2023_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2023_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_1_with_ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_10.csv",
+        "input_files": [
+          "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_1",
+          "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4\u00b0TRI_tabula_table_10"
+        ],
+        "rows": 3,
+        "columns": 11,
+        "similarity": 0.7272727272727273
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Fiscal_Balance_Report_2021_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Fiscal_Balance_Report_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2020_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2020_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_revenue_by_source_structured_with_budget_execution_2021.csv",
+        "input_files": [
+          "2019_revenue_by_source_structured",
+          "budget_execution_2021"
+        ],
+        "rows": 23,
+        "columns": 11,
+        "similarity": 0.375
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_revenue_by_source_structured_with_2019_financial_summary_structured.csv",
+        "input_files": [
+          "2019_revenue_by_source_structured",
+          "2019_financial_summary_structured"
+        ],
+        "rows": 443,
+        "columns": 9,
+        "similarity": 0.5555555555555556
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Economic_Report_2020_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Economic_Report_2020_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2021_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2021_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_treasury_movements_with_2019_article_44_result.csv",
+        "input_files": [
+          "2019_treasury_movements",
+          "2019_article_44_result"
+        ],
+        "rows": 14,
+        "columns": 3,
+        "similarity": 0.3333333333333333
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Health_Statistics_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Health_Statistics_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2020_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2020_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2024_table_0_with_Health_Statistics_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2024_table_0",
+          "Health_Statistics_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2024_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2024_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2024_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2024_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2024_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2024_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2024_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2024_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2024_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2024_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2024_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2024_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2024_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2024_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2024_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2024_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2024_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2024_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2024_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2024_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2024_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2024_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2021_table_0_with_Education_Data_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2021_table_0",
+          "Education_Data_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2021_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2021_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2021_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2021_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2021_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2021_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2021_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2021_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2021_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2021_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2021_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2021_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2021_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2021_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2021_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2021_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2021_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2021_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2021_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2021_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2019_table_0_with_Economic_Report_2025_table_0.csv",
+        "input_files": [
+          "Education_Data_2019_table_0",
+          "Economic_Report_2025_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2019_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2019_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2019_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2019_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2019_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2019_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2019_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Education_Data_2019_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2019_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2019_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2019_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2019_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2019_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Education_Data_2019_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2019_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2019_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2019_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2019_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2025_table_0_with_Fiscal_Balance_Report_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2025_table_0",
+          "Fiscal_Balance_Report_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2025_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2025_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2025_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2025_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2025_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Economic_Report_2025_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2025_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2025_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2025_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Economic_Report_2025_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2025_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Economic_Report_2025_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2025_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2025_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2025_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2025_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_revenue_by_type_with_2019_expenditure_admin_level.csv",
+        "input_files": [
+          "2019_revenue_by_type",
+          "2019_expenditure_admin_level"
+        ],
+        "rows": 8,
+        "columns": 4,
+        "similarity": 0.5
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_revenue_by_type_with_2019_debt_status.csv",
+        "input_files": [
+          "2019_revenue_by_type",
+          "2019_debt_status"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 0.5
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2024_table_0_with_Education_Data_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2024_table_0",
+          "Education_Data_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2024_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2024_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2024_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2024_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2024_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2024_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2024_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2024_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2024_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2024_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2024_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2024_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2024_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2024_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2022_table_0_with_Health_Statistics_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2022_table_0",
+          "Health_Statistics_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2022_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Education_Data_2022_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2022_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2022_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 9,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2022_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2022_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2022_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Education_Data_2022_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2022_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2022_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2022_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2022_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2019_table_0_with_Education_Data_2021_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2019_table_0",
+          "Education_Data_2021_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2019_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2019_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2019_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2019_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2019_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2019_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2019_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2019_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2019_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2019_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2021_table_0_with_Health_Statistics_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2021_table_0",
+          "Health_Statistics_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2021_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Education_Data_2021_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2021_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Education_Data_2021_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2021_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Education_Data_2021_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2021_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2021_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_budget_execution_2021_with_2019_financial_summary_structured.csv",
+        "input_files": [
+          "budget_execution_2021",
+          "2019_financial_summary_structured"
+        ],
+        "rows": 23,
+        "columns": 11,
+        "similarity": 0.375
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2022_table_0_with_Fiscal_Balance_Report_2019_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2022_table_0",
+          "Fiscal_Balance_Report_2019_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2022_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2022_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2022_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2022_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Health_Statistics_2022_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Health_Statistics_2022_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2019_table_0_with_Economic_Report_2023_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2019_table_0",
+          "Economic_Report_2023_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2019_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2019_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Fiscal_Balance_Report_2019_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Fiscal_Balance_Report_2019_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 6,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_2019_article_44_result_with_budget_execution_2019.csv",
+        "input_files": [
+          "2019_article_44_result",
+          "budget_execution_2019"
+        ],
+        "rows": 9,
+        "columns": 3,
+        "similarity": 0.6666666666666666
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2023_table_0_with_Education_Data_2024_table_0.csv",
+        "input_files": [
+          "Economic_Report_2023_table_0",
+          "Education_Data_2024_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Economic_Report_2023_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Economic_Report_2023_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      },
+      {
+        "output_file": "/Users/flong/Developer/cda-transparencia/data/processed/integrated_Education_Data_2024_table_0_with_Fiscal_Balance_Report_2022_table_0.csv",
+        "input_files": [
+          "Education_Data_2024_table_0",
+          "Fiscal_Balance_Report_2022_table_0"
+        ],
+        "rows": 10,
+        "columns": 4,
+        "similarity": 1.0
+      }
+    ],
+    "errors": []
+  },
+  "comparison_results": {
+    "summary": {
+      "total_files_compared": 72,
+      "total_comparisons_performed": 495,
+      "comparisons_with_discrepancies": 68
+    },
+    "comparison_timestamp": "2025-10-10T17:16:13.323043"
+  },
+  "notes": [
+    "This report details the integration of OCR-extracted data with existing CSV datasets",
+    "New combined files are stored in the processed directory",
+    "Comparison identifies potential inconsistencies between data sources"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "files": {
+    "serie-tiempo-inv-superficie-de-vinedos-por-pcia-2012-2017.csv": {
+      "datasetId": "agroindustria_5f97a0b9-f677-4657-9e07-0cd3b98da754",
+      "datasetTitle": "INV - Superficie implantada con viñedos",
+      "fileName": "serie-tiempo-inv-superficie-de-vinedos-por-pcia-2012-2017.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/5f97a0b9-f677-4657-9e07-0cd3b98da754/resource/221859a8-c51e-47c2-95ab-a8525bb2b55d",
+      "lastProcessed": "2025-10-09T06:51:36.093Z",
+      "status": "processed"
+    },
+    "INV-superficie-viniedos-2012-2017.csv": {
+      "datasetId": "agroindustria_5f97a0b9-f677-4657-9e07-0cd3b98da754",
+      "datasetTitle": "INV - Superficie implantada con viñedos",
+      "fileName": "INV-superficie-viniedos-2012-2017.csv",
+      "format": "CSV",
+      "title": "Superficie implantada con viñedos en la República Argentina",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/5f97a0b9-f677-4657-9e07-0cd3b98da754/resource/a0d05450-4dd1-4ce4-bfaf-6d9a72af6eb4",
+      "lastProcessed": "2025-10-09T06:51:39.816Z",
+      "status": "processed"
+    },
+    "INV-superficie-id-2024.csv": {
+      "datasetId": "agroindustria_5f97a0b9-f677-4657-9e07-0cd3b98da754",
+      "datasetTitle": "INV - Superficie implantada con viñedos",
+      "fileName": "INV-superficie-id-2024.csv",
+      "format": "CSV",
+      "title": "Superficie con viñedos 2024",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/5f97a0b9-f677-4657-9e07-0cd3b98da754/resource/dac76751-3dfd-4291-868c-658a8368908e",
+      "lastProcessed": "2025-10-09T06:51:43.255Z",
+      "status": "processed"
+    },
+    "INV-superficie-vitivinicola-anuario-2024.pdf": {
+      "datasetId": "agroindustria_5f97a0b9-f677-4657-9e07-0cd3b98da754",
+      "datasetTitle": "INV - Superficie implantada con viñedos",
+      "fileName": "INV-superficie-vitivinicola-anuario-2024.pdf",
+      "format": "pff",
+      "title": "Anuario de superficie vitivinícola 2024",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/5f97a0b9-f677-4657-9e07-0cd3b98da754/resource/07a2168a-2681-4244-821b-fdee8f760138",
+      "lastProcessed": "2025-10-09T06:51:43.255Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_5f97a0b9-f677-4657-9e07-0cd3b98da754",
+    "title": "INV - Superficie implantada con viñedos",
+    "description": "Superficie implantada de viñedos existentes en la República Argentina desde el año 2012 a la última actualización. La información se encuentra en hectáreas y desagregada por provincia, departamento y localidad.",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2018-12-07T21:20:51.395494",
+    "modified": "2025-07-08T12:54:18.020143",
+    "publisher": {
+      "mbox": "datosabiertos@inv.gov.ar",
+      "name": "Instituto Nacional de Vitivinicultura"
+    },
+    "landingPage": "https://datos.agroindustria.gob.ar/dataset/superficie-implantada-con-vinedos-republica-argentina"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "file_name": "Investment_Report_2023_table_0.csv",
+  "row_count": 4,
+  "column_count": 4,
+  "columns": [
+    "Project",
+    "Budgeted",
+    "Executed",
+    "Percentage"
+  ],
+  "sample_data": [
+    {
+      "Project": "Road Infrastructure",
+      "Budgeted": "$40,000,000",
+      "Executed": "$38,500,000",
+      "Percentage": "96.3%"
+    },
+    {
+      "Project": "Educational Infrastructure",
+      "Budgeted": "$25,000,000",
+      "Executed": "$24,000,000",
+      "Percentage": "96.0%"
+    },
+    {
+      "Project": "Health Infrastructure",
+      "Budgeted": "$20,000,000",
+      "Executed": "$19,500,000",
+      "Percentage": "97.5%"
+    },
+    {
+      "Project": "Total",
+      "Budgeted": "$85,000,000",
+      "Executed": "$82,000,000",
+      "Percentage": "96.5%"
+    }
+  ],
+  "data_types": {
+    "Project": "object",
+    "Budgeted": "object",
+    "Executed": "object",
+    "Percentage": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

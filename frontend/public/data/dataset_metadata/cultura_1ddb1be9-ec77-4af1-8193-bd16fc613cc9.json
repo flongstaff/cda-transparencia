@@ -1,0 +1,164 @@
+{
+  "files": {
+    "csc13-expo-bienes-cult-sector-pesos-c.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "csc13-expo-bienes-cult-sector-pesos-c.csv",
+      "format": "CSV",
+      "title": "Exportaciones de bienes culturales característicos por sector en pesos corrientes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/fdc81983-c30e-4e07-ba2c-5c500b4abe08",
+      "lastProcessed": "2025-10-09T06:54:43.370Z",
+      "status": "processed"
+    },
+    "CSC14_impo_bienes_cult_por_sector_pesos_corrientes.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC14_impo_bienes_cult_por_sector_pesos_corrientes.csv",
+      "format": "CSV",
+      "title": "Importaciones de bienes culturales característicos por sector en pesos corrientes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/c7340e8c-13fa-42f4-b792-496acba42ba4",
+      "lastProcessed": "2025-10-09T06:54:44.419Z",
+      "status": "processed"
+    },
+    "CSC15-saldo-bienes-cult-sector-pesos-c.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC15-saldo-bienes-cult-sector-pesos-c.csv",
+      "format": "CSV",
+      "title": "Saldo comercial por sector cultural en pesos corrientes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/f888e319-f40f-40d4-a046-659454546e6e",
+      "lastProcessed": "2025-10-09T06:54:45.485Z",
+      "status": "processed"
+    },
+    "CSC16_expo_bienes_cult_sector_pesos_k.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC16_expo_bienes_cult_sector_pesos_k.csv",
+      "format": "CSV",
+      "title": "Exportaciones de bienes culturales característicos en pesos constantes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/0a569b68-2e32-47f2-b435-48374a158290",
+      "lastProcessed": "2025-10-09T06:54:46.492Z",
+      "status": "processed"
+    },
+    "CSC17_impo_bienes_cult_sector_pesos_k.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC17_impo_bienes_cult_sector_pesos_k.csv",
+      "format": "CSV",
+      "title": "Importaciones de bienes culturales característicos en pesos constantes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/8a23b7cf-52d3-44a4-bc03-d93513e0f8ad",
+      "lastProcessed": "2025-10-09T06:54:47.594Z",
+      "status": "processed"
+    },
+    "CSC18_saldo_bienes_culturales_por_sector_pesos_k.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC18_saldo_bienes_culturales_por_sector_pesos_k.csv",
+      "format": "CSV",
+      "title": "Saldo comercial por sector cultural en pesos constantes  ",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/0f9bcd04-3bd0-4ab3-aaf0-ca4be33d619b",
+      "lastProcessed": "2025-10-09T06:54:49.795Z",
+      "status": "processed"
+    },
+    "CSC19_expo_impo_servicios_culturales_pesos_c.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC19_expo_impo_servicios_culturales_pesos_c.csv",
+      "format": "CSV",
+      "title": "Exportaciones e importaciones de servicios culturales en pesos corrientes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/b7a7b751-fb71-46de-95a2-f0815e2c4384",
+      "lastProcessed": "2025-10-09T06:54:50.810Z",
+      "status": "processed"
+    },
+    "CSC20_expo_impo_servicios_culturales_pesos_k.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC20_expo_impo_servicios_culturales_pesos_k.csv",
+      "format": "CSV",
+      "title": "Exportaciones e importaciones de servicios culturales en pesos constantes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/93725056-94f6-4d74-8bca-d74f905316ff",
+      "lastProcessed": "2025-10-09T06:54:51.926Z",
+      "status": "processed"
+    },
+    "CSC21_expo_impo_bienes_caracteristicos_y_servicios_culturales_pesos_c.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC21_expo_impo_bienes_caracteristicos_y_servicios_culturales_pesos_c.csv",
+      "format": "CSV",
+      "title": "Exportaciones e importaciones de bienes y servicios culturales en pesos corrientes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/c873e2aa-465e-43fc-bb9b-dfad43da2c2d",
+      "lastProcessed": "2025-10-09T06:54:53.045Z",
+      "status": "processed"
+    },
+    "CSC22_expo_impo_bienes_caracteristicos_y_servicios_culturales_pesos_k.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC22_expo_impo_bienes_caracteristicos_y_servicios_culturales_pesos_k.csv",
+      "format": "CSV",
+      "title": "Exportaciones e importaciones de bienes y servicios culturales en pesos constantes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/deabe9b6-1166-4b7d-8ae8-bd51fc8a3eec",
+      "lastProcessed": "2025-10-09T06:54:54.128Z",
+      "status": "processed"
+    },
+    "CSC23_participacion_expo_culturales_total_expo.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC23_participacion_expo_culturales_total_expo.csv",
+      "format": "CSV",
+      "title": "Participación de las exportaciones culturales en total de exportaciones ",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/81c0f4ab-8b99-480c-80bc-e1552de5954f",
+      "lastProcessed": "2025-10-09T06:54:55.156Z",
+      "status": "processed"
+    },
+    "CSC24_participacion_impo_culturales_total_impo.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC24_participacion_impo_culturales_total_impo.csv",
+      "format": "CSV",
+      "title": "Participación de las importaciones culturales en total de importaciones ",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/2e53c6d6-4ce2-4335-8c71-8d95bcaf3662",
+      "lastProcessed": "2025-10-09T06:54:56.224Z",
+      "status": "processed"
+    },
+    "CSC25_participacion_expos_culturales_en_vbp_cultural_pesos_c.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC25_participacion_expos_culturales_en_vbp_cultural_pesos_c.csv",
+      "format": "CSV",
+      "title": "Participación de las exportaciones culturales en el valor bruto de producción cultural a precios corrientes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/03ff98ee-6b58-44c7-89d7-81ce5c215bbd",
+      "lastProcessed": "2025-10-09T06:54:57.326Z",
+      "status": "processed"
+    },
+    "CSC26_expos_culturales_en_vbp_cultural_pesos_k.csv": {
+      "datasetId": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+      "datasetTitle": "Cuenta satélite de cultura: comercio exterior",
+      "fileName": "CSC26_expos_culturales_en_vbp_cultural_pesos_k.csv",
+      "format": "CSV",
+      "title": "Participación de las exportaciones culturales en el valor bruto de producción cultural a precios constantes",
+      "accessURL": "https://datos.cultura.gob.ar/dataset/1ddb1be9-ec77-4af1-8193-bd16fc613cc9/resource/46ac86cf-bc24-43b0-b3ab-eecd6008cf1e",
+      "lastProcessed": "2025-10-09T06:54:58.433Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "cultura_1ddb1be9-ec77-4af1-8193-bd16fc613cc9",
+    "title": "Cuenta satélite de cultura: comercio exterior",
+    "description": "Información sobre el intercambio comercial de bienes característicos y servicios culturales con el resto del mundo. \r\nLos bienes característicos son aquellos típicamente culturales, como libros, discos, obras de arte y películas.\r\nLos datos son provisorios para 2021 y preliminares para 2022.",
+    "theme": [
+      "econ",
+      "educ"
+    ],
+    "superTheme": [
+      "ECON",
+      "EDUC"
+    ],
+    "issued": "2021-10-22T16:06:32.017893",
+    "modified": "2023-12-11T11:11:28.445962",
+    "publisher": {
+      "mbox": "sinca@cultura.gob.ar",
+      "name": "Sistema de Información Cultural de la Argentina (SINCA)-Ministerio de Cultura de la Nación "
+    },
+    "landingPage": "https://datos.cultura.gob.ar/dataset/cuenta-satelite-de-cultura-comercio-exterior"
+  }
+}

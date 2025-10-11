@@ -1,0 +1,71 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_dbb36686-fb66-4364-bded-d55ff4de516c",
+      "datasetTitle": "Pronósticos de Producción de Petróleo y Gas",
+      "format": "ZIP",
+      "title": "Pronósticos de Producción de Petróleo y Gas (Tablas Dinámicas)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/dbb36686-fb66-4364-bded-d55ff4de516c/resource/e194f736-0e20-45b0-a1f5-039d1c749b2f",
+      "lastProcessed": "2025-10-09T06:39:00.322Z",
+      "status": "processed"
+    },
+    "pronstico-de-produccin-de-petrleo.csv": {
+      "datasetId": "energia_dbb36686-fb66-4364-bded-d55ff4de516c",
+      "datasetTitle": "Pronósticos de Producción de Petróleo y Gas",
+      "fileName": "pronstico-de-produccin-de-petrleo.csv",
+      "format": "CSV",
+      "title": "Pronóstico de producción de petróleo",
+      "accessURL": "http://datos.energia.gob.ar/dataset/dbb36686-fb66-4364-bded-d55ff4de516c/resource/9817510c-e50b-4650-bc22-01018f108579",
+      "lastProcessed": "2025-10-09T06:39:02.164Z",
+      "status": "processed"
+    },
+    "pronstico-de-produccin-de-petrleo-anterior-al-2009.csv": {
+      "datasetId": "energia_dbb36686-fb66-4364-bded-d55ff4de516c",
+      "datasetTitle": "Pronósticos de Producción de Petróleo y Gas",
+      "fileName": "pronstico-de-produccin-de-petrleo-anterior-al-2009.csv",
+      "format": "CSV",
+      "title": "Pronóstico de producción de petróleo anterior al 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/dbb36686-fb66-4364-bded-d55ff4de516c/resource/980a5dfd-3692-43fb-b201-7c7cea5a612f",
+      "lastProcessed": "2025-10-09T06:39:03.951Z",
+      "status": "processed"
+    },
+    "pronstico-de-produccin-de-gas-natural.csv": {
+      "datasetId": "energia_dbb36686-fb66-4364-bded-d55ff4de516c",
+      "datasetTitle": "Pronósticos de Producción de Petróleo y Gas",
+      "fileName": "pronstico-de-produccin-de-gas-natural.csv",
+      "format": "CSV",
+      "title": "Pronóstico de producción de gas natural",
+      "accessURL": "http://datos.energia.gob.ar/dataset/dbb36686-fb66-4364-bded-d55ff4de516c/resource/1f9412c3-e265-4d65-a3c0-6e4b10ed9af4",
+      "lastProcessed": "2025-10-09T06:39:06.553Z",
+      "status": "processed"
+    },
+    "pronstico-de-produccin-de-gas-natural-anterior-al-2009.csv": {
+      "datasetId": "energia_dbb36686-fb66-4364-bded-d55ff4de516c",
+      "datasetTitle": "Pronósticos de Producción de Petróleo y Gas",
+      "fileName": "pronstico-de-produccin-de-gas-natural-anterior-al-2009.csv",
+      "format": "CSV",
+      "title": "Pronóstico de producción de gas natural anterior al 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/dbb36686-fb66-4364-bded-d55ff4de516c/resource/6090b8a6-00ce-4285-a746-390f83fd2776",
+      "lastProcessed": "2025-10-09T06:39:07.993Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_dbb36686-fb66-4364-bded-d55ff4de516c",
+    "title": "Pronósticos de Producción de Petróleo y Gas",
+    "description": "Pronósticos de Producción de Petróleo y Gas.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-12-22T14:37:49.009900",
+    "modified": "2025-06-27T13:21:32.447941",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía.  Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

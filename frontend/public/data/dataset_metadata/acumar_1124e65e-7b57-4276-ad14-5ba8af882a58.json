@@ -1,0 +1,32 @@
+{
+  "files": {
+    "escuelas-por-la-cuenca.csv": {
+      "datasetId": "acumar_1124e65e-7b57-4276-ad14-5ba8af882a58",
+      "datasetTitle": "Instituciones Educativas Alcanzadas por el Programa \"Escuelas por la Cuenca\" de ACUMAR",
+      "fileName": "escuelas-por-la-cuenca.csv",
+      "format": "CSV",
+      "title": "Instituciones educativas alcanzadas por el programa \"Escuelas por la Cuenca\" de ACUMAR",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/1124e65e-7b57-4276-ad14-5ba8af882a58/resource/569969e9-1819-438a-8cbd-6c69fcff9978",
+      "lastProcessed": "2025-10-09T07:56:50.712Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_1124e65e-7b57-4276-ad14-5ba8af882a58",
+    "title": "Instituciones Educativas Alcanzadas por el Programa \"Escuelas por la Cuenca\" de ACUMAR",
+    "description": "Datos correspondientes a las instituciones educativas que se hallan dentro del Programa \"Escuelas por la Cuenca\", aprobado por la Resolución ACUMAR 261/2023. Dichas instituciones se emplazan en alguno de los 14 municipios de la provincia de Buenos Aires ubicados en la Cuenca, así como en la Ciudad Autónoma de Buenos Aires.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2024-11-29T14:23:56.215722",
+    "modified": "2025-02-07T17:01:36.518658",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Coordinación de Educación Ambiental, Cultura y Patrimonio"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/instituciones-educativas-escuelas-por-la-cuenca-acumar"
+  }
+}

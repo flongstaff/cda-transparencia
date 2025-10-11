@@ -1,0 +1,42 @@
+{
+  "files": {
+    "geologa-climatologa-curvas-de-nivel-ign.csv": {
+      "datasetId": "energia_915c306b-e1c4-42e1-ae10-bc1285e7e72c",
+      "datasetTitle": "Geología Climatología Curvas de Nivel del IGN (Instituto Geográfico Nacional)",
+      "fileName": "geologa-climatologa-curvas-de-nivel-ign.csv",
+      "format": "CSV",
+      "title": "Geología Climatología Curvas de Nivel IGN",
+      "accessURL": "http://datos.energia.gob.ar/dataset/915c306b-e1c4-42e1-ae10-bc1285e7e72c/resource/786556f2-b6b1-4fab-ab00-a8b9b251353b",
+      "lastProcessed": "2025-10-09T07:22:46.508Z",
+      "status": "processed"
+    },
+    "geologa-climatologa-curvas-de-nivel-ign.zip": {
+      "datasetId": "energia_915c306b-e1c4-42e1-ae10-bc1285e7e72c",
+      "datasetTitle": "Geología Climatología Curvas de Nivel del IGN (Instituto Geográfico Nacional)",
+      "fileName": "geologa-climatologa-curvas-de-nivel-ign.zip",
+      "format": "SHP",
+      "title": "Geología Climatología Curvas de Nivel IGN",
+      "accessURL": "http://datos.energia.gob.ar/dataset/915c306b-e1c4-42e1-ae10-bc1285e7e72c/resource/e28d5cc1-b1ac-4d44-b947-6196f66fcb28",
+      "lastProcessed": "2025-10-09T07:22:46.509Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_915c306b-e1c4-42e1-ae10-bc1285e7e72c",
+    "title": "Geología Climatología Curvas de Nivel del IGN (Instituto Geográfico Nacional)",
+    "description": "Curvas de nivel del Instituto Geográfico Nacional. Para mayor información visitar la página ign.gob.ar/sig. ISO 19126: Hypsography, Este subgrupo se compone de conceptos que describen la forma (posiciones y alturas) de la superficie del terreno.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2020-01-22T11:12:24.881592",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

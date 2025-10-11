@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_4e7f024d-5855-492a-8d8e-eb72ecc98d77",
+      "datasetTitle": "Poderes judiciales - Causas penales",
+      "format": "gráfico",
+      "title": "Causas penales en los Poderes Judiciales Provinciales - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/4e7f024d-5855-492a-8d8e-eb72ecc98d77/resource/1b3e060d-17a9-4054-952f-fd3f78c97c6f",
+      "lastProcessed": "2025-10-09T06:37:28.938Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_4e7f024d-5855-492a-8d8e-eb72ecc98d77",
+    "title": "Poderes judiciales - Causas penales",
+    "description": "Datos elaborados a partir de datos primarios remitidos por los poderes judiciales provinciales, correspondientes a causas penales, siguiendo el Protocolo Técnico de Datos y de Procesos, en el marco del Convenio Interjurisdiccional de Datos Abiertos de Justicia.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2019-05-10T13:41:41.585266",
+    "modified": "2025-09-30T19:09:14.159256",
+    "publisher": {
+      "mbox": "datosjusticia@jus.gob.ar",
+      "name": "Ministerio de Justicia"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/poderes-judiciales-causas-penales"
+  }
+}

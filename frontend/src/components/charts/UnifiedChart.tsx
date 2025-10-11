@@ -56,6 +56,7 @@ interface UnifiedChartProps {
   variant?: ChartVariant;
   showControls?: boolean;
   height?: number;
+  data?: any; // Optional data prop to override default data loading
 }
 
 import { useTheme } from '@mui/material/styles'; // Import useTheme hook
@@ -69,7 +70,8 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
   className = '',
   variant = 'bar',
   showControls = false,
-  height = 300
+  height = 300,
+  data
 }) => {
   const theme = useTheme(); // Access the MUI theme
   const [currentVariant, setCurrentVariant] = useState<ChartVariant>(variant);
@@ -183,8 +185,20 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
     '#EC4899', '#6B7280', '#14B8A6' // Fallback for additional colors
   ], [theme]);
 
-  // Transform data based on chart type using real data
+  // Transform data based on chart type using real data or provided data
   const chartData = useMemo(() => {
+    // If data prop is provided, use it directly
+    if (data) {
+      // Normalize the provided data
+      if (Array.isArray(data)) {
+        return data.map((item: any, index: number) => ({
+          ...item,
+          fill: themedColors[index % themedColors.length]
+        }));
+      }
+      return [data];
+    }
+    
     // Handle historical trend charts first
     if (type === 'budget-trend' && budgetHistoricalData && budgetHistoricalData.length > 0) {
       return budgetHistoricalData.map((item: Record<string, unknown>) => ({
@@ -459,26 +473,43 @@ const UnifiedChart: React.FC<UnifiedChartProps> = ({
       default:
         return [];
     }
-  }, [type, currentYearData, themedColors, budgetHistoricalData, contractsHistoricalData, salariesHistoricalData, documentsHistoricalData, debtHistoricalData, treasuryHistoricalData]);
+  }, [type, currentYearData, themedColors, budgetHistoricalData, contractsHistoricalData, salariesHistoricalData, documentsHistoricalData, debtHistoricalData, treasuryHistoricalData, data]);
 
   const renderChart = () => {
-    if (loading) {
-      return (
-        <div className="flex items-center justify-center h-64">
-          <Loader2 className="h-8 w-8 animate-spin text-blue-600 dark:text-blue-400" />
-        </div>
-      );
-    }
-
-    if (error || chartData.length === 0) {
-      return (
-        <div className="flex items-center justify-center h-64">
-          <div className="text-center">
-            <AlertTriangle className="h-8 w-8 text-amber-500 mx-auto mb-2" />
-            <p className="text-sm text-gray-600 dark:text-dark-text-secondary dark:text-dark-text-secondary">No hay datos disponibles para mostrar</p>
+    // If data prop is provided, bypass loading state but still check for errors
+    if (data) {
+      if (chartData.length === 0) {
+        return (
+          <div className="flex items-center justify-center h-64">
+            <div className="text-center">
+              <AlertTriangle className="h-8 w-8 text-amber-500 mx-auto mb-2" />
+              <p className="text-sm text-gray-600 dark:text-dark-text-secondary">No hay datos disponibles para mostrar</p>
+            </div>
           </div>
-        </div>
-      );
+        );
+      }
+    } else {
+      // Original loading and error handling when no data prop is provided
+      if (loading) {
+        return (
+          <div className="flex items-center justify-center h-64">
+            <Loader2 className="h-8 w-8 animate-spin text-blue-600 dark:text-blue-400" />
+          </div>
+        );
+      }
+
+      if (error || chartData.length === 0) {
+        return (
+          <div className="flex items-center justify-center h-64">
+            <div className="text-center">
+              <AlertTriangle className="h-8 w-8 text-amber-500 mx-auto mb-2" />
+              <p className="text-sm text-gray-600 dark:text-dark-text-secondary">
+                {error ? `Error: ${error}` : 'No hay datos disponibles para mostrar'}
+              </p>
+            </div>
+          </div>
+        );
+      }
     }
 
     const commonProps = {

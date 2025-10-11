@@ -1,0 +1,32 @@
+{
+  "files": {
+    "ambito_aplicacion_tratado_argchile.zip": {
+      "datasetId": "energia_d0dbf80d-30a4-40dc-bc23-a4f32fc230a0",
+      "datasetTitle": "Ámbito de aplicación del Tratado Argentina–Chile",
+      "fileName": "ambito_aplicacion_tratado_argchile.zip",
+      "format": "ZIP",
+      "title": "Ámbito de aplicación del Tratado Chile – Argentina",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d0dbf80d-30a4-40dc-bc23-a4f32fc230a0/resource/72a51989-40b0-438d-b985-b4c660a00b72",
+      "lastProcessed": "2025-10-09T07:24:01.380Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_d0dbf80d-30a4-40dc-bc23-a4f32fc230a0",
+    "title": "Ámbito de aplicación del Tratado Argentina–Chile",
+    "description": "Área geográfica definida como ámbito de aplicación del Tratado de Cooperación e Integración Minera entre Argentina y Chile. (Anexo II, Ley Nº 25.243).",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2019-04-16T18:06:19.330660",
+    "modified": "2019-12-27T07:48:58.728144",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

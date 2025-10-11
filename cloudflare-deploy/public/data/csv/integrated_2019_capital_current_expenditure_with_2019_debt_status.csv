@@ -1,0 +1,7 @@
+type,amount,percentage,due_date
+Gasto corriente,700000000.0,77.8,
+Gasto de capital,200000000.0,22.2,
+,201.0,,
+,195.0,,
+Deuda flotante,30000000.0,,2020-12-31
+Deuda consolidada,50000000.0,,2025-12-31

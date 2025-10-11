@@ -1,0 +1,109 @@
+{
+  "nationalSearch": {
+    "national_datasets": {
+      "search_urls": [
+        "https://datos.gob.ar/dataset?organization=carmen-de-areco",
+        "https://datos.gob.ar/dataset?q=carmen de areco"
+      ],
+      "found_datasets": [],
+      "recommendations": "Check for budget, contract, and demographic data"
+    },
+    "provincial_data": {
+      "fiscal_transparency": "https://www.gba.gob.ar/transparencia_fiscal/",
+      "municipal_portal": "https://www.gba.gob.ar/municipios",
+      "open_data": "https://www.gba.gob.ar/datos_abiertos",
+      "contracts": "https://pbac.cgp.gba.gov.ar/Default.aspx"
+    }
+  },
+  "monitoringConfig": {
+    "change_detection": {
+      "tool": "https://github.com/dgtlmoon/changedetection.io",
+      "targets": [
+        "https://carmendeareco.gob.ar/transparencia",
+        "https://carmendeareco.gob.ar/gobierno/boletin-oficial/",
+        "https://carmendeareco.gob.ar/licitaciones/",
+        "https://carmendeareco.gob.ar/presupuesto-participativo/"
+      ],
+      "frequency": "daily",
+      "alerts": [
+        "new_pdf_documents",
+        "budget_updates",
+        "contract_announcements"
+      ]
+    },
+    "bora_monitoring": {
+      "tool": "https://github.com/juancarlospaco/borapp",
+      "purpose": "Monitor Boletín Oficial for Carmen de Areco entries",
+      "setup_command": "git clone https://github.com/juancarlospaco/borapp"
+    },
+    "social_monitoring": {
+      "twitter_bot": "@BoletinMGP",
+      "purpose": "Monitor social media for municipal announcements"
+    }
+  },
+  "comparisonFramework": {
+    "peerMunicipalities": {
+      "similar_size": [
+        {
+          "name": "Chacabuco",
+          "url": "https://chacabuco.gob.ar/",
+          "population": "~45,000"
+        },
+        {
+          "name": "Chivilcoy",
+          "url": "https://chivilcoy.gob.ar/",
+          "population": "~65,000"
+        },
+        {
+          "name": "San Antonio de Areco",
+          "url": "https://www.sanantoniodeareco.gob.ar/",
+          "population": "~25,000"
+        }
+      ]
+    },
+    "bestPracticeModels": [
+      {
+        "name": "Bahía Blanca",
+        "url": "https://transparencia.bahia.gob.ar/",
+        "strength": "Comprehensive transparency"
+      },
+      {
+        "name": "Pilar",
+        "url": "https://datosabiertos.pilar.gob.ar/",
+        "strength": "Open data portal"
+      },
+      {
+        "name": "Rafaela",
+        "url": "https://rafaela-gob-ar.github.io/",
+        "strength": "Digital government"
+      }
+    ]
+  },
+  "legalCompliance": {
+    "ley_27275": {
+      "name": "Ley de Acceso a la Información Pública",
+      "url": "https://www.argentina.gob.ar/aaip",
+      "requirements": [
+        "Proactive publication of budget information",
+        "Contract disclosure requirements",
+        "Public official declarations",
+        "Response timeframes for information requests"
+      ]
+    },
+    "municipal_organic_law": {
+      "requirements": [
+        "Budget publication deadlines",
+        "Council session minutes publication",
+        "Ordinance publication requirements"
+      ]
+    },
+    "compliance_checklist": [
+      "✓ Annual budget published within legal timeframe",
+      "✓ Quarterly execution reports available",
+      "✓ Contracts above threshold published",
+      "✓ Official declarations up to date",
+      "✓ Public participation mechanisms active"
+    ]
+  },
+  "lastUpdated": "2025-10-09T08:38:14.029Z"
+}

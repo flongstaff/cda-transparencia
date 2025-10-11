@@ -15,7 +15,7 @@ interface PDFDocument {
 }
 
 interface PDFGalleryProps {
-  documents: PDFDocument[];
+  documents?: PDFDocument[];
   title?: string;
   description?: string;
   maxDocuments?: number;
@@ -34,11 +34,11 @@ const PDFGallery: React.FC<PDFGalleryProps> = ({
   const docsPerPage = maxDocuments || 12;
 
   // Get unique categories for filter dropdown
-  const categories = Array.from(new Set(documents.map(doc => doc.category)));
+  const categories = Array.from(new Set(documents?.map(doc => doc.category) || []));
 
   // Filter documents based on search and category
   useEffect(() => {
-    let result = documents;
+    let result = documents || [];
 
     if (searchTerm) {
       result = result.filter(doc =>

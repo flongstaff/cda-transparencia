@@ -1,0 +1,112 @@
+{
+  "files": {
+    "base_microdatos.csv": {
+      "datasetId": "turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5",
+      "datasetTitle": "Conectividad Aérea",
+      "fileName": "base_microdatos.csv",
+      "format": "CSV",
+      "title": "Base agregada de frecuencias aéreas",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c0e7bc3d-553c-405c-8b32-79282b28ffd5/resource/aab49234-28c9-48ab-a978-a83485139290",
+      "lastProcessed": "2025-10-09T06:16:29.704Z",
+      "status": "processed"
+    },
+    "vuelos_asientos_pasajeros.csv": {
+      "datasetId": "turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5",
+      "datasetTitle": "Conectividad Aérea",
+      "fileName": "vuelos_asientos_pasajeros.csv",
+      "format": "CSV",
+      "title": "Vuelos, asientos y pasajeros por día",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c0e7bc3d-553c-405c-8b32-79282b28ffd5/resource/03b4176f-a065-450a-b411-101d2a884720",
+      "lastProcessed": "2025-10-09T06:16:32.984Z",
+      "status": "processed"
+    },
+    "aerolineas_por_trimestre.csv": {
+      "datasetId": "turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5",
+      "datasetTitle": "Conectividad Aérea",
+      "fileName": "aerolineas_por_trimestre.csv",
+      "format": "CSV",
+      "title": "Aerolíneas por trimestre",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c0e7bc3d-553c-405c-8b32-79282b28ffd5/resource/81d7d664-d54b-4e34-aae6-c3cdd00e8728",
+      "lastProcessed": "2025-10-09T06:16:36.413Z",
+      "status": "processed"
+    },
+    "rutas_por_mes.csv": {
+      "datasetId": "turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5",
+      "datasetTitle": "Conectividad Aérea",
+      "fileName": "rutas_por_mes.csv",
+      "format": "CSV",
+      "title": "Rutas aéreas por mes",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c0e7bc3d-553c-405c-8b32-79282b28ffd5/resource/a37f611a-b7cf-450a-aaa9-7d02ae685ee9",
+      "lastProcessed": "2025-10-09T06:16:39.694Z",
+      "status": "processed"
+    },
+    "principales_aeros_cabotaje.csv": {
+      "datasetId": "turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5",
+      "datasetTitle": "Conectividad Aérea",
+      "fileName": "principales_aeros_cabotaje.csv",
+      "format": "CSV",
+      "title": "Principales aerolíneas de cabotaje por mes",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c0e7bc3d-553c-405c-8b32-79282b28ffd5/resource/26bf262e-3f1b-4043-a012-870988073c4e",
+      "lastProcessed": "2025-10-09T06:16:42.980Z",
+      "status": "processed"
+    },
+    "magnitudes_por_ruta.csv": {
+      "datasetId": "turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5",
+      "datasetTitle": "Conectividad Aérea",
+      "fileName": "magnitudes_por_ruta.csv",
+      "format": "CSV",
+      "title": "Principales rutas por año",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c0e7bc3d-553c-405c-8b32-79282b28ffd5/resource/bdb24072-a463-4305-9fde-f38f753ebf26",
+      "lastProcessed": "2025-10-09T06:16:46.262Z",
+      "status": "processed"
+    },
+    "2023.08.24_conectividad.pdf": {
+      "datasetId": "turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5",
+      "datasetTitle": "Conectividad Aérea",
+      "fileName": "2023.08.24_conectividad.pdf",
+      "format": "PDF",
+      "title": "Ficha Técnica: Conectividad Aérea",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c0e7bc3d-553c-405c-8b32-79282b28ffd5/resource/b23e3a61-f80d-44cf-a71b-ef7c2b9324c2",
+      "lastProcessed": "2025-10-09T06:16:50.175Z",
+      "status": "processed"
+    },
+    "aeropuertos.csv": {
+      "datasetId": "turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5",
+      "datasetTitle": "Conectividad Aérea",
+      "fileName": "aeropuertos.csv",
+      "format": "CSV",
+      "title": "Aeropuertos",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c0e7bc3d-553c-405c-8b32-79282b28ffd5/resource/d406a6fa-c209-4b15-b648-6bcceb1d040c",
+      "lastProcessed": "2025-10-09T06:16:53.528Z",
+      "status": "processed"
+    },
+    "novedades.csv": {
+      "datasetId": "turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5",
+      "datasetTitle": "Conectividad Aérea",
+      "fileName": "novedades.csv",
+      "format": "CSV",
+      "title": "Novedades",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c0e7bc3d-553c-405c-8b32-79282b28ffd5/resource/6d021c08-2d9e-45f2-8030-aeb178877541",
+      "lastProcessed": "2025-10-09T06:16:56.895Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5",
+    "title": "Conectividad Aérea",
+    "description": "Datos de transporte aéreo de pasajeros en el país provenientes del Sistema Integrado de Aviación Civil (SIAC) dependiente de la Administración Nacional de Aviación Civil (ANAC). Se cuenta con información de vuelos, pasajeros, asientos, rutas y aerolíneas desde el año 2017 al presente.",
+    "theme": [
+      "tran"
+    ],
+    "superTheme": [
+      "TRAN"
+    ],
+    "issued": "2023-08-23T16:15:06.623852",
+    "modified": "2024-07-24T15:34:55.932875",
+    "publisher": {
+      "mbox": "estadistica@turismo.gob.ar",
+      "name": "Subsecretaría de Turismo. Dirección Nacional de Mercados y Estadística"
+    },
+    "landingPage": "http://datos.yvera.gob.ar/dataset/"
+  }
+}

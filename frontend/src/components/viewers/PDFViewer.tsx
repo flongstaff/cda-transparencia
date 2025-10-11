@@ -14,7 +14,8 @@ import {
   AlertCircle,
   Loader2,
   Eye,
-  Share2
+  Share2,
+  Bookmark
 } from 'lucide-react';
 import { DocumentMetadata } from '../../types/documents';
 

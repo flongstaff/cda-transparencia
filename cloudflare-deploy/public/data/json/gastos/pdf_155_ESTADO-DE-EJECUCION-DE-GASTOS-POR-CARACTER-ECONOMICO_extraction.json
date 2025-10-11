@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_155_ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO.pdf",
+  "file_hash": "eb4ace4a927673e85c9ef8aaf2fa65bd",
+  "page_count": 3,
+  "text_length": 8953,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DE GASTOS\nEjercicio \n:Hoja: 1 de 3 R.A.F.A.M.\n19/09/2023 12:05\nDel 01/01/2022 al 31/03/20222022POR CARACTER ECONOMICO\nDevengado \nno pagado Crédito \nDisponible Pagado Devengado Compromiso Preventivo Crédito \nVigente Modifica \nciones Crédito \nAprobado DescripciónCrédito Vig. \n- Devengado \nGASTOS\nGASTOS CORRIENTES\n  Gastos de consumo\n    Remuneraciones\n2.839.507,45 368.230.324,27 0,00 69.538.185,51 69.538.185,51 69.538.185,51 298.692.138,76 298.692.138,76 0,00 365.390.816,82       Sueldos y salarios\n0,00 42.965.953,66 0,00 7.648.437,06 7.648.437,06 7.648.437,06 35.317.516,60 35.317.516,60 0,00 42.965.953,66       Contribuciones patronales\n337.282,00 20.300.542,00 0,00 6.128.174,00 6.128.174,00 6.128.174,00 14.172.368,00 14.172.368,00 0,00 19.963.260,00       Prestaciones sociales\n431.496.819,93 0,00 83.314.796,57 83.314.796,57 83.314.796,57 348.182.023,36 348.182.023,36 0,00     Total Remuneraciones 428.320.030,48 3.176.789,45\n    Bienes y servicios\n23.347.127,76 168.521.691,76 33.936.514,34 37.412.898,61 37.412.360,61 22.045.178,60 97.172.278,81 131.109.331,15 15.367.182,01 145.174.564,00       Bienes de consumo\n8.194.523,62 90.844.521,76 30.815.394,54 38.023.413,23 30.564.091,71 26.619.511,17 22.005.713,99 60.280.430,05 3.944.580,54 82.649.998,14       Servicios no personales\n259.366.213,52 64.751.908,88 75.436.311,84 67.976.452,32 48.664.689,77 119.177.992,80 191.389.761,20 19.311.762,55     Total Bienes y servicios 227.824.562,14 31.541.651,38\n690.863.033,45 64.751.908,88 158.751.108,41 151.291.248,89 131.979.486,34 467.360.016,16 539.571.784,56 19.311.762,55   Total Gastos de consumo 656.144.592,62 34.718.440,83\n  Rentas de la propiedad\n    Intereses\n      Intereses internos\n69.960,00 0,00 69.960,00 0,00 7.322,37 7.322,37 7.322,37 62.637,63 62.637,63 0,00         Intereses por deuda\n69.960,00 0,00 7.322,37 7.322,37 7.322,37 62.637,63 62.637,63 0,00 69.960,00 0,00       Total Intereses internos \n69.960,00 0,00 7.3...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:36.413266"
+}

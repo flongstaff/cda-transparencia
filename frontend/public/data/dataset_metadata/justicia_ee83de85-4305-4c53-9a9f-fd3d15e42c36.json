@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_ee83de85-4305-4c53-9a9f-fd3d15e42c36",
+      "datasetTitle": "Registro Nacional de Sociedades",
+      "format": "gráfico",
+      "title": "Registro Nacional de Sociedades - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/ee83de85-4305-4c53-9a9f-fd3d15e42c36/resource/6aade8f9-818f-4a68-b898-39f291bc69bc",
+      "lastProcessed": "2025-10-09T06:31:15.907Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_ee83de85-4305-4c53-9a9f-fd3d15e42c36",
+    "title": "Registro Nacional de Sociedades",
+    "description": "Datos del Registro Nacional de Sociedades.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2019-10-09T16:25:26.149990",
+    "modified": "2025-09-26T16:10:46.533686",
+    "publisher": {
+      "mbox": "rscq@jus.gob.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Dirección del Registro Nacional de Sociedades y Concursos y Quiebras – Fuente: Padrón Federal de Personas Jurídicas de la AFIP"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/registro-nacional-de-sociedades"
+  }
+}

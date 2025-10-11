@@ -1,0 +1,31 @@
+{
+  "files": {
+    "TRBib_consultas_ano": {
+      "datasetId": "ambiente_45.0",
+      "datasetTitle": "Biblioteca",
+      "fileName": "TRBib_consultas_ano",
+      "format": "CSV",
+      "title": "Consultas temáticas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=89&did=401",
+      "lastProcessed": "2025-10-09T06:59:57.015Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_45.0",
+    "title": "Biblioteca",
+    "description": "El conjunto de datos muestra las consultas temáticas a la biblioteca del Organismo",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2018-01-01T00:00:00",
+    "modified": "2023-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

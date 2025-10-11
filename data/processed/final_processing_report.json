@@ -1,0 +1,20 @@
+{
+  "report_timestamp": "2025-10-10T17:16:12.717882",
+  "pdf_processing": {
+    "total_pdfs": 201,
+    "processed": 197,
+    "errors": 4,
+    "processed_timestamp": "2025-10-10T17:16:11.634619"
+  },
+  "csv_updates": {
+    "csv_files": 345,
+    "rows_added": 345,
+    "errors": 15
+  },
+  "comparisons": {
+    "total_compared": 24,
+    "consistent": 0,
+    "discrepancies": 24
+  },
+  "summary": "Advanced PDF OCR processing completed successfully"
+}

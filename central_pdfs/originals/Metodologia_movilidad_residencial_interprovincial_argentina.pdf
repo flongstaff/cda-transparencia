@@ -1,0 +1,439 @@
+
+ <!DOCTYPE html>
+<html lang="es" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+<head>
+  <link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Nav and address bar color -->
+  <meta name="theme-color" content="#242C4F">
+  <meta name="msapplication-navbutton-color" content="#242C4F">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#242C4F">
+  <script>
+  dataLayer = [{
+    'userIPaddress': '192.168.32.104',
+  }];
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P68ZXT');</script>
+  <!-- End Google Tag Manager -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="gtm-id" content="248834" />
+<meta name="gtm-tipo" content="area" />
+<meta name="gtm-padres" content="146343 134907 11887" />
+<meta name="gtm-padre" content="Renaper" />
+<meta name="gtm-raiz" content="Ministerio del Interior" />
+<meta name="google-site-verification" content="fr0vldZfY64iDak0RkGzC7B2MBqjWAChwEIr8xTJomU" />
+<link href="https://www.argentina.gob.ar/manifest.json" rel="manifest" />
+<meta name="description" content="Analiza la información sociodemográfica del país en diversas escalas geográficas, utiliza registros administrativos del RENAPER como fuente continua de datos y genera estudios y estadísticas en distintos formatos. Es el organismo público de referencia sobre temas de Población y Desarrollo." />
+<meta name="keywords" content="gobierno, argentino, nacional, gobierno argentino, gobierno nacional, República Argentina, administración, gestión, pública, administración pública, gestión pública, digital, trámites, servicios, trámites en línea, gobierno digital, servicios en línea, servicios digitales, Estado, transparencia, ciudadanos, modernización, organismo, organismo público, organismos públicos, organismos, beneficios, beneficios" />
+<link rel="image_src" href="https://www.argentina.gob.ar/sites/default/files/poblacion-header.jpg" />
+<link rel="canonical" href="https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion" />
+<link rel="shortlink" href="https://www.argentina.gob.ar/node/248834" />
+<meta property="og:type" content="government" />
+<meta property="og:site_name" content="Argentina.gob.ar" />
+<meta property="og:url" content="https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion" />
+<meta property="og:title" content="Dirección Nacional de Población" />
+<meta property="og:description" content="Analiza la información sociodemográfica del país en diversas escalas geográficas, utiliza registros administrativos del RENAPER como fuente continua de datos y genera estudios y estadísticas en distintos formatos. Es el organismo público de referencia sobre temas de Población y Desarrollo." />
+<meta property="og:updated_time" content="2025-02-05T11:30:24-03:00" />
+<meta property="og:image" content="https://www.argentina.gob.ar/sites/default/files/poblacion-header.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@CasaRosada" />
+<meta name="twitter:url" content="https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion" />
+<meta name="twitter:title" content="Dirección Nacional de Población" />
+<meta name="twitter:description" content="Analiza la información sociodemográfica del país en diversas escalas geográficas, utiliza registros administrativos del RENAPER como fuente continua de datos y genera estudios y estadísticas en" />
+<meta name="twitter:image" content="https://www.argentina.gob.ar/sites/default/files/poblacion-header.jpg" />
+<meta property="article:published_time" content="2021-03-29T14:19:01-03:00" />
+<meta property="article:modified_time" content="2025-02-05T11:30:24-03:00" />
+<meta itemprop="image" content="https://www.argentina.gob.ar/sites/default/files/poblacion-header.jpg" />
+<link rel="shortcut icon" href="https://www.argentina.gob.ar/profiles/argentinagobar/themes/argentinagobar/argentinagobar_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="apple-touch-icon" href="https://www.argentina.gob.ar/sites/default/files/icon/icon-180x180.png" sizes="180x180" />
+<link rel="apple-touch-icon-precomposed" href="https://www.argentina.gob.ar/sites/default/files/icon/icon-180x180.png" sizes="180x180" />
+  <title>Dirección Nacional de Población | Argentina.gob.ar</title>
+  <style>
+@import url("https://www.argentina.gob.ar/modules/system/system.base.css?t37pc8");
+</style>
+<style>
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_search/css/search.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_webform/css/custom-chosen.css?t37pc8");
+@import url("https://www.argentina.gob.ar/modules/field/theme/field.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/field_hidden/field_hidden.css?t37pc8");
+@import url("https://www.argentina.gob.ar/modules/node/node.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/user_prune/css/user_prune.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/views/css/views.css?t37pc8");
+</style>
+<style>
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/ctools/css/ctools.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/drupar_filtros/css/galeria.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/jgm_subastas/css/aabe.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/panels/css/panels.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/rate/rate.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_campana_gubernamental/css/argentinagobar_campana_gubernamental.css?t37pc8");
+</style>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" media="all" />
+<style>
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/vendor/bootstrap/css/bootstrap.min.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/css/icono-arg.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/css/poncho.min.css?t37pc8");
+</style>
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="/profiles/argentinagobar/libraries/jquery.jquery-371/jquery-3.7.1.min.js?v=3.7.1"></script>
+<script>jQuery.migrateMute=true;jQuery.migrateTrace=false;</script>
+<script src="/profiles/argentinagobar/libraries/jquery.jquery-migrate/jquery-migrate-3.5.2.min.js?v=3.5.2"></script>
+<script src="https://www.argentina.gob.ar/misc/jquery-extend-3.4.0.js?v=3.7.1"></script>
+<script src="https://www.argentina.gob.ar/misc/jquery-html-prefilter-3.5.0-backport.js?v=3.7.1"></script>
+<script src="https://www.argentina.gob.ar/misc/jquery.once.js?v=1.2"></script>
+<script src="https://www.argentina.gob.ar/misc/drupal.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/jquery_update/js/jquery_browser.js?v=0.0.1"></script>
+<script src="https://www.argentina.gob.ar/misc/form-single-submit.js?v=7.103"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_areas/js/colorFondoGrupoAtajos.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_tramites/js/resize_media.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_usuarios/js/limpiarCampo.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/entityreference/js/entityreference.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/sites/default/files/languages/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/drupar_filtros/js/mdBlank.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/drupar_filtros/js/galeria.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/drupar_filtros/js/jquery.touchSwipe.min.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/jgm_subastas/js/aabe.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_webform/js/button.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/vuce_calendario/js/button.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_campana_gubernamental/js/argentinagobar_campana_gubernamental.js?t37pc8"></script>
+<script>dataLayer.push({
+          'event_name': 'trackPageview',
+          'nodo_id': '248834',
+          'nodos_padres': '146343 134907 11887',
+          'org_dependencia': 'Renaper',
+          'ministerio': 'Ministerio del Interior',
+          'cont_tipo': 'area',
+        });</script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/vendor/bootstrap/js/bootstrap.min.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/js/scrolltotop.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/js/datatables.min.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/js/intl.min.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/js/device-breadcrumb.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/js/device-breadcrumb-listener.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/jquery_update/js/jquery_position.js?v=0.0.1"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"argentinagobar_theme","theme_token":"oDhbyRHf7FskDYTUxbsiw4BxLM_7oegIcPoaIliqovw","js":{"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_search\/js\/solr_search.js":1,"profiles\/argentinagobar\/themes\/contrib\/bootstrap\/js\/bootstrap.js":1,"\/profiles\/argentinagobar\/libraries\/jquery.jquery-371\/jquery-3.7.1.min.js":1,"0":1,"\/profiles\/argentinagobar\/libraries\/jquery.jquery-migrate\/jquery-migrate-3.5.2.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/argentinagobar\/modules\/contrib\/jquery_update\/js\/jquery_browser.js":1,"misc\/form-single-submit.js":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_areas\/js\/colorFondoGrupoAtajos.js":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_tramites\/js\/resize_media.js":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_usuarios\/js\/limpiarCampo.js":1,"profiles\/argentinagobar\/modules\/contrib\/entityreference\/js\/entityreference.js":1,"public:\/\/languages\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js":1,"profiles\/argentinagobar\/modules\/contrib\/drupar_filtros\/js\/mdBlank.js":1,"profiles\/argentinagobar\/modules\/contrib\/drupar_filtros\/js\/galeria.js":1,"profiles\/argentinagobar\/modules\/contrib\/drupar_filtros\/js\/jquery.touchSwipe.min.js":1,"profiles\/argentinagobar\/modules\/contrib\/jgm_subastas\/js\/aabe.js":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_webform\/js\/button.js":1,"profiles\/argentinagobar\/modules\/contrib\/vuce_calendario\/js\/button.js":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_campana_gubernamental\/js\/argentinagobar_campana_gubernamental.js":1,"1":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/vendor\/bootstrap\/js\/bootstrap.min.js":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/js\/scrolltotop.js":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/js\/datatables.min.js":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/js\/intl.min.js":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/js\/device-breadcrumb.js":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/js\/device-breadcrumb-listener.js":1,"profiles\/argentinagobar\/modules\/contrib\/jquery_update\/js\/jquery_position.js":1},"css":{"modules\/system\/system.base.css":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_search\/css\/search.css":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_webform\/css\/custom-chosen.css":1,"modules\/field\/theme\/field.css":1,"profiles\/argentinagobar\/modules\/contrib\/field_hidden\/field_hidden.css":1,"modules\/node\/node.css":1,"profiles\/argentinagobar\/modules\/contrib\/user_prune\/css\/user_prune.css":1,"profiles\/argentinagobar\/modules\/contrib\/views\/css\/views.css":1,"profiles\/argentinagobar\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/argentinagobar\/modules\/contrib\/drupar_filtros\/css\/galeria.css":1,"profiles\/argentinagobar\/modules\/contrib\/jgm_subastas\/css\/aabe.css":1,"profiles\/argentinagobar\/modules\/contrib\/panels\/css\/panels.css":1,"profiles\/argentinagobar\/modules\/contrib\/rate\/rate.css":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_campana_gubernamental\/css\/argentinagobar_campana_gubernamental.css":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/4.7.0\/css\/font-awesome.css":1,"https:\/\/fonts.googleapis.com\/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900\u0026display=swap":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/vendor\/bootstrap\/css\/bootstrap.min.css":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/css\/icono-arg.css":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/css\/poncho.min.css":1}},"urlIsAjaxTrusted":{"\/interior\/renaper\/estadistica-de-poblacion":true},"argentinagobar_campana_gubernamental":{"id_campaign":{},"ci_jgm_category":"Comunicaci\u00f3n interna - JGM","ci_jgm_action":"Elecciones legislativas 2025","ci_jgm_nodo":{},"ci_jgm_fecha_difusion":"20250728","ci_jgm_label":"https:\/\/www.argentina.gob.ar\/interior\/renaper\/estadistica-de-poblacion"},"ogContext":{"groupType":"node","gid":"248834"},"bootstrap":{"anchorsFix":"0","anchorsSmoothScrolling":"0","formHasError":1,"popoverEnabled":1,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"focus hover","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-248834 node-type-area og-context og-context-node og-context-node-248834 i18n-es">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe title="Script GTM" aria-hidden="true" src="//www.googletagmanager.com/ns.html?id=GTM-P68ZXT" style="display:none;visibility:hidden;height:0;width:0"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <h1 class="sr-only"><small>Presidencia de la Nación</small></h1>
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Pasar al contenido principal</a>
+  </div>
+    <div class="region region-page-top">
+    <section id="campaign" role="dialog" aria-labelledby="campaign01" aria-describedby="campaign02" style="padding:0px">
+  <a href="/elecciones-2025?utm_source=argentinaGobAr&utm_medium=web&utm_campaign=elecciones2025" title="Enlace a Campaña Nacional" id="js-titulo">
+    <div class="container-fluid> bg-warning">
+      <header class="sr-only">
+        <h1 id="campaign01">Campañas Nacionales</h1>
+      </header>
+      <div class="container">
+        <h2 id="campaign02" class="tituloContainerCam">
+          <strong>Elecciones legislativas 2025</strong> <span class="c_bajada"> | Este 26 de octubre votamos con Boleta Única Papel. Conocé más.</span>
+        </h2>
+      </div>
+    </div>
+  </a>
+</section>
+  </div>
+  
+<header>
+    <nav class="navbar navbar-top navbar-default border-bottom-amarillo">
+      <div class="container">
+        <div>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/" id="navbar-brand" aria-label="Argentina.gob.ar Presidencia de la Nación">
+                              <img src="/profiles/argentinagobar/themes/argentinagobar/argentinagobar_theme/logo_argentina-azul.svg" alt="Argentina.gob.ar" height="50" width="254" />
+                                                      </a>
+              <a class="btn btn-mi-argentina btn-login visible-xs bg-miarg-azul" href="https://mi.argentina.gob.ar" title="Ingresar a Mi Argentina">
+                  <i class="icono-arg-mi-argentina text-white"></i><span class="sr-only">Ir a Mi Argentina</span></a>
+                                      <button onclick="jQuery('.navbar.navbar-top').addClass('state-search');" class="btn btn-mi-argentina btn-login visible-xs" aria-labelledby="edit-keys"><span class="fa fa-search fa-fw"></span><span class="sr-only">Buscar</span></button>       
+                            </div>
+
+                                          <div class="nav navbar-nav navbar-right hidden-xs">
+    <button onclick="jQuery('.navbar.navbar-top').removeClass('state-search');" class="btn btn-link btn-search-reset visible-xs"> <i class="fa fa-times"><span class="sr-only">Cerrar el buscador</span></i></button>
+    <div id="cd-login">
+      
+  <a href="https://mi.argentina.gob.ar/" id="btn-mi-argentina" class="btn hidden-xs p-l-1  btn-login bg-miarg-azul" aria-label="Ingresar a Mi Argentina">
+<i class=" fa-3x fa icono-arg-mi-argentina-extended text-white p-t-0"><span class="sr-only">Mi Argentina</span></i></a>
+</div>
+<!-- <section id="block-argentinagobar-search-apache-solr-search-navbar" class="block block-argentinagobar-search clearfix"> -->
+
+      
+  <div class="pull-left">
+  <form class="main-form" role="search" action="/interior/renaper/estadistica-de-poblacion" method="post" id="apachesolr-search-custom-page-search-form" accept-charset="UTF-8"><div><input type="hidden" name="form_build_id" value="form--aApe7UCEWXr-JE7qAB3ygClPWlkUJ4Wk6744LtxCRg" />
+<input type="hidden" name="form_id" value="apachesolr_search_custom_page_search_form" />
+<div style="display:none;"><div class="form-item form-item-tarro-de-miel form-type-textfield form-group"> <label class="control-label" for="edit-tarro-de-miel">Dejar en blanco</label>
+<input class="form-control form-text" type="text" id="edit-tarro-de-miel" name="tarro_de_miel" value="" size="60" maxlength="128" /></div></div><div class="input-group">
+  <label class="sr-only" for="edit-keys">Buscar en el sitio</label><input placeholder="Buscá en el sitio" id="edit-keys" class="input-search form-control form-text" aria-label="Buscá en el sitio" type="text" name="keys" value="" size="20" maxlength="255" /><span class="input-group-btn"><button class="bg-white btn-search-reset btn btn-primary form-submit" aria-labelledby="edit-keys" aria-label="Buscar" type="submit" id="edit-submit" name="op" value="&lt;i class=&quot;fa fa-search text-primary&quot;&gt;&lt;/i&gt;&lt;span class=&quot;sr-only&quot;&gt;Buscar en el sitio&lt;/span&gt;"><i class="fa fa-search text-primary"></i><span class="sr-only">Buscar en el sitio</span></button>
+</span></div>
+</div></form></div>
+
+<!-- </section> -->
+</div>
+                        
+        </div>
+      </div>
+    </nav>
+  </header>
+<main>
+
+    
+            <span id="main-content"></span>
+      <div class="container">
+                        </div>
+        <div class="region region-content">
+     <div id="block-system-main" class="block block-system clearfix">
+
+      
+    <div class="panel-pane pane-imagen-destacada"  >
+  
+  
+  <div class="pane-content">
+      <div class="jumbotron m-t-0" >
+
+    <div class="jumbotron_bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+              <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" ><a itemprop="item" href="/"><span itemprop="name">Inicio</span></a><meta itemprop="position" content="1" /></li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" ><a itemprop="item" href="/interior"><span itemprop="name">Ministerio del Interior</span></a><meta itemprop="position" content="2" /></li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" ><a itemprop="item" href="/interior/secretaria"><span itemprop="name">Secretaría de Interior</span></a><meta itemprop="position" content="3" /></li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" ><a itemprop="item" href="/interior/renaper"><span itemprop="name">Renaper</span></a><meta itemprop="position" content="4" /></li>
+<li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" ><span itemprop="name">Dirección Nacional de Población</span><meta itemprop="position" content="5" /></li>
+</ol>          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="encabezado">
+      <div class="bg-arg-azul container-fluid p-y-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-xs-12 col-sm-12">
+              <h1>Dirección Nacional de Población</h1>
+                                 <p>Analiza la información sociodemográfica del país en diversas escalas geográficas, utiliza registros administrativos del RENAPER como fuente continua de datos y genera estudios y estadísticas en distintos formatos.  Es el organismo público de referencia sobre temas de Población y Desarrollo.</p>
+                          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+   
+  </div>
+
+  
+  </div>
+<section>
+  <div class="container">
+    <div class="panel-pane pane-atajos"  >
+  
+  
+  <div class="pane-content">
+    <div class="row panels-row m-t-2 ">
+              <div class="col-xs-12 col-sm-6 col-md-6"><a href="/interior/renaper/estadistica-de-poblacion/centro-nacional-de-estudios-de-poblacion" class="panel panel-default"><div style="background-image:url(https://www.argentina.gob.ar/sites/default/files/styles/listado/public/imagenAtajo/miniaturas_nuevas_01.png?itok=tCZGGNel);" class="panel-heading"></div>
+  <div class="panel-body">
+  <h3>Centro Nacional de Estudios de Población</h3>
+  </div>
+</a></div>
+              <div class="col-xs-12 col-sm-6 col-md-6"><a href="/interior/renaper/observatorio-poblacion/mapas-interactivos" class="panel panel-default"><div style="background-image:url(https://www.argentina.gob.ar/sites/default/files/styles/listado/public/imagenAtajo/miniaturas_nuevas_02.png?itok=YlAq746h);" class="panel-heading"></div>
+  <div class="panel-body">
+  <h3>Sistema Estadístico de Población</h3>
+  </div>
+</a></div>
+                    <div class="col-xs-12 col-sm-6 col-md-6"><a href="https://poblacion.idear.gov.ar/" class="panel panel-default" target="_blank" rel="noopener noreferrer"><div style="background-image:url(https://www.argentina.gob.ar/sites/default/files/styles/listado/public/imagenAtajo/miniaturas_nuevas_03.png?itok=6iVg4Spc);" class="panel-heading"></div>
+  <div class="panel-body">
+  <h3>Infraestructura de Datos Espaciales</h3>
+  </div>
+</a></div>
+              <div class="col-xs-12 col-sm-6 col-md-6"><a href="/interior/renaper/estadistica-de-poblacion/consenso-de-montevideo-sobre-poblacion-y-desarrollo" class="panel panel-default"><div style="background-image:url(https://www.argentina.gob.ar/sites/default/files/styles/listado/public/imagenAtajo/miniaturas_nuevas_04_2.png?itok=_9BhDUp6);" class="panel-heading"></div>
+  <div class="panel-body">
+  <h3>Consenso de Montevideo sobre Población y Desarrollo</h3>
+  </div>
+</a></div>
+      </div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-atajos"  >
+  
+  
+  <div class="pane-content">
+    <div class="row panels-row m-t-2 ">
+              <div class="col-xs-12 col-sm-6 col-md-6"><a href="https://www.argentina.gob.ar/interior/renaper/observatorio-poblacion/datos-abiertos" class="panel panel-default"><div class="panel-body">
+  <div class="media">
+        <div class="media-left padding-20">
+      <i class="fa fa-fw fa-2x icono-arg-lupa text-primary"></i>
+    </div>
+        <div class="media-body">
+      <h3>Buscador</h3>
+            <div class="text-muted">
+        <p>Aquí podrás encontrar todos los informes, diagnósticos, reportes sociodemográficos e información procesada por la Dirección Nacional de Población.</p>
+      </div>
+          </div>
+  </div>
+</div>
+</a></div>
+              <div class="col-xs-12 col-sm-6 col-md-6"><a href="https://datos.gob.ar/dataset?q=%22Direcci%C3%B3n+Nacional+de+Poblaci%C3%B3n+del+Renaper%22" class="panel panel-default" target="_blank" rel="noopener noreferrer"><div class="panel-body">
+  <div class="media">
+        <div class="media-left padding-20">
+      <i class="fa fa-fw fa-2x icono-arg-datos-abiertos-2 text-primary"></i>
+    </div>
+        <div class="media-body">
+      <h3>Datos Abiertos</h3>
+            <div class="text-muted">
+        <p>Datos públicos de la Dirección Nacional de Población del RENAPER en formatos abiertos.</p>
+      </div>
+          </div>
+  </div>
+</div>
+</a></div>
+      </div>
+  </div>
+
+  
+  </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="panel-pane pane-atajos"  >
+  
+  
+  <div class="pane-content">
+    <div class="row">
+  <div class="col-xs-12 text-center">
+      <a href="https://www.argentina.gob.ar/interior/registro-nacional-de-las-personas/direccion-nacional-de-poblacion" class="btn btn-default">Dirección Nacional de Población</a>    </div>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+</section>
+<section class="bg-gray">
+  <div class="container">
+    <div class="panel-pane pane-area-estructura"  >
+  
+  
+  <div class="pane-content">
+      <div class="row">
+        <div class="col-md-9 col-xs-12">
+                </div>
+  </div>
+
+  
+  
+  
+  </div>
+
+  
+  </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+        <div class="row">
+    <div class="col-sm-6">
+      <div class="panel-pane pane-area-contacto"  >
+  
+  
+  <div class="pane-content">
+    <h2 class="h3 section-title">Contacto</h2>
+<p class="margin-40">
+  <strong>Dirección:</strong> Av. Roque Sáenz Peña N ° 671, 3er piso, Of.314<br>  <strong>Código postal:</strong> 1038<br>  <strong>Teléfono:</strong>  011-2206-4600<br>  <strong>Correo electrónico:</strong> <a href="/cdn-cgi/l/email-protection#583c312a3d3b3b31373636393b313736393428373a34393b313736182a3d3639283d2a763f373a76392a" target="blank" rel="noreferrer"><span class="__cf_email__" data-cfemail="5c38352e393f3f353332323d3f3533323d302c333e303d3f3533321c2e39323d2c392e723b333e723d2e">[email&#160;protected]</span></a><br>    </div>
+
+  
+  </div>
+    </div>
+    <div class="col-sm-6">
+          </div>
+    </div>
+  </div>
+</section>
+
+</div>
+  </div>
+
+    
+</main>
+
+<footer class="main-footer">
+  <div class="container">
+  <div class="row">
+      <div class="col-md-4 col-sm-12">
+                        <div class="region region-footer1">
+    <section id="block-menu-menu-footer-1" class="block block-menu clearfix">
+
+        <h2 class="block-title h3 section-title h3 section-title">Trámites</h2>
+    
+  <ul class="menu nav"><li class="first leaf"><a href="/turnos">Turnos</a></li>
+<li class="leaf"><a href="/innovacion/tramites-distancia-tad">Trámites a distancia</a></li>
+<li class="last leaf"><a href="/miargentina/mesadeayuda">Atención a la ciudadanía</a></li>
+</ul>
+</section>
+  </div>
+                </div>
+      <div class="col-md-4 col-sm-12">
+                        <div class="region region-footer2">
+    <section id="block-menu-menu-footer-2" class="block block-menu clearfix">
+
+        <h2 class="block-title h3 section-title h3 section-title">Acerca de la República Argentina</h2>
+    
+  <ul class="menu nav"><li class="first leaf"><a href="/pais">Nuestro país</a></li>
+<li class="leaf"><a href="/normativa">Leyes argentinas</a></li>
+<li class="leaf"><a href="/organismos">Organismos</a></li>
+<li class="last leaf"><a href="/desregulacion/mapa-del-estado">Mapa del Estado</a></li>
+</ul>
+</section>
+  </div>
+                </div>
+      <div class="col-md-4 col-sm-12">
+                        <div class="region region-footer3">
+    <section id="block-menu-menu-footer-3" class="block block-menu clearfix">
+
+        <h2 class="block-title h3 section-title h3 section-title">Acerca de Argentina.gob.ar</h2>
+    
+  <ul class="menu nav"><li class="first leaf"><a href="/acerca">Acerca de este sitio</a></li>
+<li class="leaf"><a href="/terminos-y-condiciones">Términos y condiciones</a></li>
+<li class="last leaf"><a href="/sugerencias">Sugerencias</a></li>
+</ul>
+</section>
+  </div>
+                </div>
+  </div>
+  </div>
+  <div class="container-fluid border-top-amarillo">
+    <div class="row sub-footer">
+      <div class="container">
+        <div class="col-sm-6 m-y-1 p-x-0">
+                        <!-- <p class="text-muted small m-b-2">
+              <a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank" rel="noreferrer">Los contenidos de Argentina.gob.ar están licenciados bajo Creative Commons Atribución 4.0 Internacional</a>            </p> -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_search/js/solr_search.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/bootstrap/js/bootstrap.js?t37pc8"></script>
+  <div id="scrolltotop_parent">
+      <div tabindex="0" id="scrolltotop_arrow">
+        <i class="icono fa fa-arrow-circle-up" title="Scroll hacia arriba"></i><span class="sr-only">Scroll hacia arriba</span>
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+{
+  "files": {
+    "2021 Matricula - agregada.csv": {
+      "datasetId": "educacion_23.0",
+      "datasetTitle": "Base de Datos por Escuela 2021",
+      "fileName": "2021 Matricula - agregada.csv",
+      "format": "CSV",
+      "title": "2021 Base usuaria 2 - Matrícula y secciones",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/datos-abiertos-de-la-secretaria-de-educacion",
+      "lastProcessed": "2025-10-09T06:41:18.155Z",
+      "status": "processed"
+    },
+    "2021 Trayectoria - agregada.csv": {
+      "datasetId": "educacion_23.0",
+      "datasetTitle": "Base de Datos por Escuela 2021",
+      "fileName": "2021 Trayectoria - agregada.csv",
+      "format": "CSV",
+      "title": "2021 Base usuaria 3 - Trayectoria por sexo",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/datos-abiertos-de-la-secretaria-de-educacion",
+      "lastProcessed": "2025-10-09T06:41:18.212Z",
+      "status": "processed"
+    },
+    "2021 Cargos - agregada.csv": {
+      "datasetId": "educacion_23.0",
+      "datasetTitle": "Base de Datos por Escuela 2021",
+      "fileName": "2021 Cargos - agregada.csv",
+      "format": "CSV",
+      "title": "2021 Base usuaria 4 - Cargos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/datos-abiertos-de-la-secretaria-de-educacion",
+      "lastProcessed": "2025-10-09T06:41:18.277Z",
+      "status": "processed"
+    },
+    "2021 Cargos Bis - agregada.csv": {
+      "datasetId": "educacion_23.0",
+      "datasetTitle": "Base de Datos por Escuela 2021",
+      "fileName": "2021 Cargos Bis - agregada.csv",
+      "format": "CSV",
+      "title": "2021 Base usuaria 4bis - Cargos por tipo",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/datos-abiertos-de-la-secretaria-de-educacion",
+      "lastProcessed": "2025-10-09T06:41:18.353Z",
+      "status": "processed"
+    },
+    "2021 Caracteristicas - agregada.csv": {
+      "datasetId": "educacion_23.0",
+      "datasetTitle": "Base de Datos por Escuela 2021",
+      "fileName": "2021 Caracteristicas - agregada.csv",
+      "format": "CSV",
+      "title": "2021 Base usuaria 5 - Características del establecimiento",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/datos-abiertos-de-la-secretaria-de-educacion",
+      "lastProcessed": "2025-10-09T06:41:18.405Z",
+      "status": "processed"
+    },
+    "2021 Poblacion - agregada.csv": {
+      "datasetId": "educacion_23.0",
+      "datasetTitle": "Base de Datos por Escuela 2021",
+      "fileName": "2021 Poblacion - agregada.csv",
+      "format": "CSV",
+      "title": "2021 Base usuaria 6 - Población",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/datos-abiertos-de-la-secretaria-de-educacion",
+      "lastProcessed": "2025-10-09T06:41:18.459Z",
+      "status": "processed"
+    },
+    "2021 Matricula por edad - agregada.csv": {
+      "datasetId": "educacion_23.0",
+      "datasetTitle": "Base de Datos por Escuela 2021",
+      "fileName": "2021 Matricula por edad - agregada.csv",
+      "format": "CSV",
+      "title": "2021 Base usuaria 7 - Matrícula por edad",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/datos-abiertos-de-la-secretaria-de-educacion",
+      "lastProcessed": "2025-10-09T06:41:18.522Z",
+      "status": "processed"
+    },
+    "Diccionario de bases RA anonimizadas.xlsx": {
+      "datasetId": "educacion_23.0",
+      "datasetTitle": "Base de Datos por Escuela 2021",
+      "fileName": "Diccionario de bases RA anonimizadas.xlsx",
+      "format": "XLSX",
+      "title": "Diccionario de variables: bases RA",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/datos-abiertos-de-la-secretaria-de-educacion",
+      "lastProcessed": "2025-10-09T06:41:18.522Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "educacion_23.0",
+    "title": "Base de Datos por Escuela 2021",
+    "description": "Las bases de datos incluyen información sistematizada de las principales variables del sistema educativo: matrícula, repitientes, sobreedad, promoción, abandono, secciones, cargos docentes y horas cátedra, entre otras. La información se encuentra clasificadas por modalidad, oferta educativa, sector de gestión, ámbito, educación técnica, entre otras. Cuadro de implementación. Diccionario de datos. Documentos Metodológicos.",
+    "theme": [
+      "educ",
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE",
+      "EDUC"
+    ],
+    "issued": "2024-08-01",
+    "modified": "2025-07-15T00:00:00",
+    "publisher": {
+      "mbox": "gestioninfo@educacion.gob.ar",
+      "name": "Secretaría de Educación de la Nación\nSubsecretaría de Evaluación e Información Educativa"
+    },
+    "landingPage": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/datos-abiertos-de-la-secretaria-de-educacion"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "files": {
+    "obras-gas.csv": {
+      "datasetId": "energia_768d848f-22eb-4d6f-b878-77982fb5f65d",
+      "datasetTitle": "Obras de GAS",
+      "fileName": "obras-gas.csv",
+      "format": "CSV",
+      "title": "Obras de GAS",
+      "accessURL": "http://datos.energia.gob.ar/dataset/768d848f-22eb-4d6f-b878-77982fb5f65d/resource/b0db214e-f3a7-4e34-9089-dd64d5f74dfb",
+      "lastProcessed": "2025-10-09T07:18:37.703Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_768d848f-22eb-4d6f-b878-77982fb5f65d",
+    "title": "Obras de GAS",
+    "description": "Obras vigentes que se desarrollan con aporte de fondos del Estado Nacional.Incluye obras de tendido de gasoductos, ramales, refuerzos,redes de distribución y domiciliarias así como de instalaciones complementarias,plantas compresoras, estaciones reguladoras de presión, etc.Este listado fue confeccionado por la Subsecretaría de Infraestructura Energética del Ministerio de Energía y Minería de la Nación y surge del seguimiento que la Coordinación de Obras de Gas realiza del desarrollo de las obras",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-07-16T12:53:17.998576",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

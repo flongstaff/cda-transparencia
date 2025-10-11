@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_3b7de3f0-b62f-411e-9151-1a861fd3b170",
+      "datasetTitle": "Lucha contra la trata de personas - Llamados línea 145 - Orientaciones",
+      "format": "gráfico",
+      "title": "Lucha contra la trata de personas. Denuncias y orientaciones en la línea 145 - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/3b7de3f0-b62f-411e-9151-1a861fd3b170/resource/5605cbff-522b-43f4-909c-6996d2cfeb46",
+      "lastProcessed": "2025-10-09T06:39:24.889Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_3b7de3f0-b62f-411e-9151-1a861fd3b170",
+    "title": "Lucha contra la trata de personas - Llamados línea 145 - Orientaciones",
+    "description": "Orientaciones llevadas a cabo ante comunicaciones recibidas por la Línea 145.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2018-06-11T18:45:35.865451",
+    "modified": "2025-09-16T13:34:21.919682",
+    "publisher": {
+      "mbox": "programarescate@jus.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Política Criminal. Programa Nacional de Rescate y Acompañamiento a las Personas Damnificadas por el Delito de Trata"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/lucha-contra-la-trata-de-personas-llamados-linea-145-orientaciones"
+  }
+}

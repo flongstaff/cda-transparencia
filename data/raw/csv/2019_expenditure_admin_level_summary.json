@@ -1,0 +1,43 @@
+{
+  "file_name": "2019_expenditure_admin_level.csv",
+  "row_count": 7,
+  "column_count": 3,
+  "columns": [
+    "level",
+    "amount",
+    "percentage"
+  ],
+  "sample_data": [
+    {
+      "level": "Ministerial",
+      "amount": 300000000.0,
+      "percentage": 33.3
+    },
+    {
+      "level": "Secretaría",
+      "amount": 250000000.0,
+      "percentage": 27.8
+    },
+    {
+      "level": "Subsecretaría",
+      "amount": 200000000.0,
+      "percentage": 22.2
+    },
+    {
+      "level": "Dirección General",
+      "amount": 150000000.0,
+      "percentage": 16.7
+    },
+    {
+      "level": NaN,
+      "amount": 201.0,
+      "percentage": NaN
+    }
+  ],
+  "data_types": {
+    "level": "object",
+    "amount": "float64",
+    "percentage": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

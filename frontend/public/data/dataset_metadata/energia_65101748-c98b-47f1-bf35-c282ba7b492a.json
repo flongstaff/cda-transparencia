@@ -1,0 +1,32 @@
+{
+  "files": {
+    "disponibilidad-de-petrleo-a-fin-de-mes.csv": {
+      "datasetId": "energia_65101748-c98b-47f1-bf35-c282ba7b492a",
+      "datasetTitle": "Disponibilidad de petróleo a fin de mes",
+      "fileName": "disponibilidad-de-petrleo-a-fin-de-mes.csv",
+      "format": "CSV",
+      "title": "Disponibilidad de petróleo a fin de mes",
+      "accessURL": "http://datos.energia.gob.ar/dataset/65101748-c98b-47f1-bf35-c282ba7b492a/resource/899f9397-838c-43ea-8bc8-2b6ec2753b1d",
+      "lastProcessed": "2025-10-09T06:39:00.320Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_65101748-c98b-47f1-bf35-c282ba7b492a",
+    "title": "Disponibilidad de petróleo a fin de mes",
+    "description": "Stock de Petróleo mensual",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:21.369041",
+    "modified": "2024-12-12T14:45:20.203201",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

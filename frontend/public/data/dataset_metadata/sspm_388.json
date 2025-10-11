@@ -1,0 +1,152 @@
+{
+  "files": {
+    "pib-agricola-subtotal-agricola-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-agricola-subtotal-agricola-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Agrícola. Subtotal Agrícola.  Millones de pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:39.845Z",
+      "status": "processed"
+    },
+    "pib-agricultura-caza-silvicultura-pesca-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-agricultura-caza-silvicultura-pesca-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Agricultura, Caza, Silvicultura y Pesca. Millones de pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:40.897Z",
+      "status": "processed"
+    },
+    "pib-comercio-al-por-mayor-menor-restaurantes-hoteles-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-comercio-al-por-mayor-menor-restaurantes-hoteles-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Comercio al por Mayor, Menor, Restaurantes y Hoteles. Millones de pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:41.972Z",
+      "status": "processed"
+    },
+    "pib-construcciones-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-construcciones-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Construcciones.  Millones de pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:43.058Z",
+      "status": "processed"
+    },
+    "pib-electricidad-gas-agua-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-electricidad-gas-agua-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Electricidad, Gas y Agua. Millones de pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:44.118Z",
+      "status": "processed"
+    },
+    "pib-establecimientos-financieros-seguros-bienes-inmuebles-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-establecimientos-financieros-seguros-bienes-inmuebles-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Establecimientos Financieros, Seguros y Bienes Inmuebles. Pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:45.247Z",
+      "status": "processed"
+    },
+    "pib-servicios-comunales-sociales-personales-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-servicios-comunales-sociales-personales-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Servicios Comunales, Sociales y Personales Millones de pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:46.317Z",
+      "status": "processed"
+    },
+    "pib-subtotal-pecuario-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-subtotal-pecuario-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Subtotal Pecuario Millones de pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:47.444Z",
+      "status": "processed"
+    },
+    "pib-transporte-almacenamiento-comunicaciones-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-transporte-almacenamiento-comunicaciones-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Transporte, Almacenamiento y Comunicaciones Millones de pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:48.492Z",
+      "status": "processed"
+    },
+    "pib-mercaderias-servicios-disponibles-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-mercaderias-servicios-disponibles-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Mercaderías y Servicios Disponibles. Millones de pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:49.546Z",
+      "status": "processed"
+    },
+    "pib-explotacion-minas-canteras-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-explotacion-minas-canteras-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Explotación Minas y Canteras Millones de pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:50.597Z",
+      "status": "processed"
+    },
+    "pib-industria-manufacturera-millones-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-industria-manufacturera-millones-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Industria Manufacturera. Millones de pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:51.661Z",
+      "status": "processed"
+    },
+    "pib-comercio-mayorista-minorista-restaurantes-hoteles-pesos-1960-trimestral.csv": {
+      "datasetId": "sspm_388",
+      "datasetTitle": "Producto Interno Bruto Sectorial 1970-1980",
+      "fileName": "pib-comercio-mayorista-minorista-restaurantes-hoteles-pesos-1960-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto Comercio Mayorista, Minorista, Restaurantes y Hoteles. Pesos constantes. Base 1960. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:52.890Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_388",
+    "title": "Producto Interno Bruto Sectorial 1970-1980",
+    "description": "Producto Interno Bruto Sectorial 1970-1980 a precios de 1960",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2018-02-28",
+    "modified": "2025-04-02T16:48:50.331498",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

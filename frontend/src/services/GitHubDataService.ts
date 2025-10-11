@@ -49,6 +49,11 @@ class GitHubDataService {
    * Get raw GitHub URL for file
    */
   private getFileUrl(filePath: string): string {
+    // Use environment variable if available for API endpoints
+    if (filePath.startsWith('/api/') && process.env.VITE_API_URL) {
+      return `${process.env.VITE_API_URL}${filePath.replace('/api/', '/')}`;
+    }
+    
     // Remove leading slash if present
     const cleanPath = filePath.startsWith('/') ? filePath.substring(1) : filePath;
     
@@ -58,6 +63,11 @@ class GitHubDataService {
         const hostname = window.location.hostname;
         // For GitHub Pages deployment or production domain
         if (hostname === 'cda-transparencia.org' || hostname.endsWith('github.io')) {
+          // Use environment variable if available, otherwise use relative path
+          if (process.env.VITE_API_URL) {
+            const baseUrl = process.env.VITE_API_URL.replace('/api', '');
+            return `${baseUrl}/${cleanPath}`;
+          }
           return `/${cleanPath}`;
         }
       }

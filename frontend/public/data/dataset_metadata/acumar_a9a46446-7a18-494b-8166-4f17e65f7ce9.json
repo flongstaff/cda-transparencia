@@ -1,0 +1,42 @@
+{
+  "files": {
+    "establecimientos_empadronados_052019.csv": {
+      "datasetId": "acumar_a9a46446-7a18-494b-8166-4f17e65f7ce9",
+      "datasetTitle": "Registro de Establecimientos de la Cuenca Matanza Riachuelo - 2019",
+      "fileName": "establecimientos_empadronados_052019.csv",
+      "format": "CSV",
+      "title": "Establecimientos Empadronados en la Cuenca Matanza Riachuelo Mayo 2019",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/a9a46446-7a18-494b-8166-4f17e65f7ce9/resource/dca9d704-8e4c-4bbb-bed1-2a7460788eb0",
+      "lastProcessed": "2025-10-09T08:03:30.499Z",
+      "status": "processed"
+    },
+    "establecimientos_empadronados_102019.csv": {
+      "datasetId": "acumar_a9a46446-7a18-494b-8166-4f17e65f7ce9",
+      "datasetTitle": "Registro de Establecimientos de la Cuenca Matanza Riachuelo - 2019",
+      "fileName": "establecimientos_empadronados_102019.csv",
+      "format": "CSV",
+      "title": "Establecimientos Empadronados en la Cuenca Matanza Riachuelo - Octubre 2019",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/a9a46446-7a18-494b-8166-4f17e65f7ce9/resource/6568f0a8-70e6-4588-9d5f-9d3242080db6",
+      "lastProcessed": "2025-10-09T08:03:35.617Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_a9a46446-7a18-494b-8166-4f17e65f7ce9",
+    "title": "Registro de Establecimientos de la Cuenca Matanza Riachuelo - 2019",
+    "description": "Datos extraídos del sistema SICOI correspondientes al último empadronamiento de establecimientos de la Cuenca Matanza Riachuelo que se inició en el último trimestre de 2018.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2019-05-17T15:40:29.933342",
+    "modified": "2025-02-07T16:44:43.208501",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección General Ambiental - ACUMAR"
+    },
+    "landingPage": "http://datos.acumar.gob.ar/dataset/registro-de-establecimientos-de-la-cuenca-matanza-riachuelo-2019"
+  }
+}

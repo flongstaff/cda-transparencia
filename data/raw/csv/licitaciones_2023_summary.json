@@ -1,0 +1,71 @@
+{
+  "file_name": "licitaciones_2023.csv",
+  "row_count": 93,
+  "column_count": 7,
+  "columns": [
+    "Número de Licitación",
+    "Objeto",
+    "Expediente",
+    "Fecha de Apertura",
+    "Monto Presupuestado",
+    "Valor del Pliego",
+    "Archivo Fuente"
+  ],
+  "sample_data": [
+    {
+      "Número de Licitación": "Licitación Nº7/2023",
+      "Objeto": "Reparación de edificios escolares",
+      "Expediente": "EXP-2023-0007",
+      "Fecha de Apertura": "2023-11-15",
+      "Monto Presupuestado": 20000000.0,
+      "Valor del Pliego": 300000.0,
+      "Archivo Fuente": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf"
+    },
+    {
+      "Número de Licitación": "Licitación Nº8/2023",
+      "Objeto": "Mantenimiento de red eléctrica",
+      "Expediente": "EXP-2023-0008",
+      "Fecha de Apertura": "2023-10-20",
+      "Monto Presupuestado": 15000000.0,
+      "Valor del Pliego": 250000.0,
+      "Archivo Fuente": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°8.pdf"
+    },
+    {
+      "Número de Licitación": "Licitación Nº9/2023",
+      "Objeto": "Servicios de limpieza municipal",
+      "Expediente": "EXP-2023-0009",
+      "Fecha de Apertura": "2023-10-05",
+      "Monto Presupuestado": 8000000.0,
+      "Valor del Pliego": 150000.0,
+      "Archivo Fuente": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°9.pdf"
+    },
+    {
+      "Número de Licitación": "Licitación Nº10/2023",
+      "Objeto": "Construcción de centro de salud",
+      "Expediente": "EXP-2023-0010",
+      "Fecha de Apertura": "2023-10-10",
+      "Monto Presupuestado": 35000000.0,
+      "Valor del Pliego": 500000.0,
+      "Archivo Fuente": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°10.pdf"
+    },
+    {
+      "Número de Licitación": "Licitación Nº11/2023",
+      "Objeto": "Adquisición de vehículos para el municipio",
+      "Expediente": "EXP-2023-0011",
+      "Fecha de Apertura": "2023-10-25",
+      "Monto Presupuestado": 25000000.0,
+      "Valor del Pliego": 400000.0,
+      "Archivo Fuente": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°11.pdf"
+    }
+  ],
+  "data_types": {
+    "Número de Licitación": "object",
+    "Objeto": "object",
+    "Expediente": "object",
+    "Fecha de Apertura": "object",
+    "Monto Presupuestado": "float64",
+    "Valor del Pliego": "float64",
+    "Archivo Fuente": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

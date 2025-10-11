@@ -1,0 +1,72 @@
+{
+  "files": {
+    "nombres_propios_frecuentes_anio_sexo_provincia_2012_2023.csv": {
+      "datasetId": "renaper_8",
+      "datasetTitle": "Nombres propios en Argentina",
+      "fileName": "nombres_propios_frecuentes_anio_sexo_provincia_2012_2023.csv",
+      "format": "CSV",
+      "title": "Nombres propios más frecuentes de las personas nacidas en Argentina por provincia (2012 - 2023)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T06:49:58.937Z",
+      "status": "processed"
+    },
+    "nombres_propios_provincia_anio_2012_2023.csv": {
+      "datasetId": "renaper_8",
+      "datasetTitle": "Nombres propios en Argentina",
+      "fileName": "nombres_propios_provincia_anio_2012_2023.csv",
+      "format": "CSV",
+      "title": "Nombres propios de las personas nacidas en Argentina por provincia y año (2012 - 2023)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T06:49:59.002Z",
+      "status": "processed"
+    },
+    "Metodologia_nombres_propios_Argentina.pdf": {
+      "datasetId": "renaper_8",
+      "datasetTitle": "Nombres propios en Argentina",
+      "fileName": "Metodologia_nombres_propios_Argentina.pdf",
+      "format": "PDF",
+      "title": "Metodología Nombres propios en Argentina",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T06:49:59.703Z",
+      "status": "processed"
+    },
+    "nombres_propios_frecuentes_anio_sexo_provincia_2012_2024.csv": {
+      "datasetId": "renaper_8",
+      "datasetTitle": "Nombres propios en Argentina",
+      "fileName": "nombres_propios_frecuentes_anio_sexo_provincia_2012_2024.csv",
+      "format": "CSV",
+      "title": "Nombres propios más frecuentes de las personas nacidas en Argentina por provincia (2012 - 2024)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T06:49:59.785Z",
+      "status": "processed"
+    },
+    "nombres_propios_provincia_anio_2012_2024.csv": {
+      "datasetId": "renaper_8",
+      "datasetTitle": "Nombres propios en Argentina",
+      "fileName": "nombres_propios_provincia_anio_2012_2024.csv",
+      "format": "CSV",
+      "title": "Nombres propios de las personas nacidas en Argentina por provincia y año (2012 - 2024)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T06:49:59.857Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "renaper_8",
+    "title": "Nombres propios en Argentina",
+    "description": "Nombres propios resgistados de las personas nacidas en Argentina",
+    "theme": [
+      "soci"
+    ],
+    "superTheme": [
+      "SOCI"
+    ],
+    "issued": "2024-09-18",
+    "modified": "2024-09-18",
+    "publisher": {
+      "mbox": "direccionnacionalpoblacion@renaper.gob.ar",
+      "name": "Dirección Nacional de Población del Renaper"
+    },
+    "landingPage": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion/informes-provinciales"
+  }
+}

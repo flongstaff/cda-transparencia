@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_0a0c3def-3d81-4850-854c-7af25831250b",
+      "datasetTitle": "Solicitudes de Condición de Legítimo Usuario de Armas de Fuego",
+      "format": "gráfico",
+      "title": "ANMaC - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/0a0c3def-3d81-4850-854c-7af25831250b/resource/691f6a67-08c5-483e-8428-f123f09c7243",
+      "lastProcessed": "2025-10-09T07:04:05.912Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_0a0c3def-3d81-4850-854c-7af25831250b",
+    "title": "Solicitudes de Condición de Legítimo Usuario de Armas de Fuego",
+    "description": "Solicitudes de Condición de Legítimo Usuario de Armas de Fuego comprendidas en el \"Sistema de Control Ciudadano para Autorizaciones\"",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2016-09-02T18:14:39.283242",
+    "modified": "2025-06-02T17:07:07.707662",
+    "publisher": {
+      "mbox": "informatica@anmac.gob.ar",
+      "name": "Ministerio de Justicia. Agencia Nacional de materiales Controlados - Coordinación de Sistemas"
+    },
+    "landingPage": "http://datos.jus.gob.ar/dataset/solicitudes-condicion-legitimo-usuario-armas-fuego"
+  }
+}

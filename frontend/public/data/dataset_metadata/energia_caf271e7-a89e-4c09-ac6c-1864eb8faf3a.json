@@ -1,0 +1,42 @@
+{
+  "files": {
+    "transporte-elctrico-at-estructuras.csv": {
+      "datasetId": "energia_caf271e7-a89e-4c09-ac6c-1864eb8faf3a",
+      "datasetTitle": "Transporte Eléctrico AT Estructuras",
+      "fileName": "transporte-elctrico-at-estructuras.csv",
+      "format": "CSV",
+      "title": "Transporte Eléctrico AT Estructuras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/caf271e7-a89e-4c09-ac6c-1864eb8faf3a/resource/dc118559-3b77-40d8-944a-3148cdb74e78",
+      "lastProcessed": "2025-10-09T06:50:48.514Z",
+      "status": "processed"
+    },
+    "transporte-elctrico-at-estructuras.zip": {
+      "datasetId": "energia_caf271e7-a89e-4c09-ac6c-1864eb8faf3a",
+      "datasetTitle": "Transporte Eléctrico AT Estructuras",
+      "fileName": "transporte-elctrico-at-estructuras.zip",
+      "format": "SHP",
+      "title": "Transporte Eléctrico AT Estructuras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/caf271e7-a89e-4c09-ac6c-1864eb8faf3a/resource/223df89a-1372-4cc9-b4e2-6878caa6dbe4",
+      "lastProcessed": "2025-10-09T06:50:48.515Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_caf271e7-a89e-4c09-ac6c-1864eb8faf3a",
+    "title": "Transporte Eléctrico AT Estructuras",
+    "description": "Estructuras de Alta tensión. ISO 19126: PowerSupplies, Este subgrupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía , mientras que la energía es en su mayoría de la electricidad.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-07-16T12:57:22.488072",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía.Subsecretaría de Transición y Planeamiento Energético.Dirección Nacional de Información Energética. \r\n\r\n"
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

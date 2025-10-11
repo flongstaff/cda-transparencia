@@ -1,0 +1,84 @@
+{
+  "files": {
+    "SIFER 2023.xlsx": {
+      "datasetId": "transporte_533366f4-cfb6-4492-8d3b-26d9436321e4",
+      "datasetTitle": "Sistema Ferroviario Integrado (SIFER)",
+      "fileName": "SIFER 2023.xlsx",
+      "format": "XLSX",
+      "title": "Subsidios al Transporte Automotor de Pasajeros - SIFER 2023",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/533366f4-cfb6-4492-8d3b-26d9436321e4/resource/c4fde862-3392-446f-bffc-b142b0663469",
+      "lastProcessed": "2025-10-09T07:34:32.943Z",
+      "status": "processed"
+    },
+    "SIFER_12_2022.xlsx": {
+      "datasetId": "transporte_533366f4-cfb6-4492-8d3b-26d9436321e4",
+      "datasetTitle": "Sistema Ferroviario Integrado (SIFER)",
+      "fileName": "SIFER_12_2022.xlsx",
+      "format": "XLSX",
+      "title": "Subsidios al Transporte Automotor de Pasajeros - SIFER año 2022",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/533366f4-cfb6-4492-8d3b-26d9436321e4/resource/bd639a7f-ee9d-4f69-b394-962d3d7cc965",
+      "lastProcessed": "2025-10-09T07:34:32.943Z",
+      "status": "processed"
+    },
+    "sifer_2021.xlsx": {
+      "datasetId": "transporte_533366f4-cfb6-4492-8d3b-26d9436321e4",
+      "datasetTitle": "Sistema Ferroviario Integrado (SIFER)",
+      "fileName": "sifer_2021.xlsx",
+      "format": "XLSX",
+      "title": "Subsidios al Transporte Automotor de Pasajeros - SIFER año 2021",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/533366f4-cfb6-4492-8d3b-26d9436321e4/resource/f1275c4f-15c1-428f-85d5-aab8bfe0e5a0",
+      "lastProcessed": "2025-10-09T07:34:32.943Z",
+      "status": "processed"
+    },
+    "SIFER_12_20.xlsx": {
+      "datasetId": "transporte_533366f4-cfb6-4492-8d3b-26d9436321e4",
+      "datasetTitle": "Sistema Ferroviario Integrado (SIFER)",
+      "fileName": "SIFER_12_20.xlsx",
+      "format": "XLSX",
+      "title": "Subsidios al Transporte Automotor de Pasajeros - SIFER año 2020",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/533366f4-cfb6-4492-8d3b-26d9436321e4/resource/f9fcf2d1-9e77-49e5-9d29-feb12420ad9a",
+      "lastProcessed": "2025-10-09T07:34:32.944Z",
+      "status": "processed"
+    },
+    "SIFER_12_19.xlsx": {
+      "datasetId": "transporte_533366f4-cfb6-4492-8d3b-26d9436321e4",
+      "datasetTitle": "Sistema Ferroviario Integrado (SIFER)",
+      "fileName": "SIFER_12_19.xlsx",
+      "format": "XLSX",
+      "title": "Subsidios al Transporte Automotor de Pasajeros - SIFER año 2019",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/533366f4-cfb6-4492-8d3b-26d9436321e4/resource/62537481-7826-41ef-8884-1fa76925308b",
+      "lastProcessed": "2025-10-09T07:34:32.944Z",
+      "status": "processed"
+    },
+    "SIFER al  29-01-2025 (1).xlsx": {
+      "datasetId": "transporte_533366f4-cfb6-4492-8d3b-26d9436321e4",
+      "datasetTitle": "Sistema Ferroviario Integrado (SIFER)",
+      "fileName": "SIFER al  29-01-2025 (1).xlsx",
+      "format": "XLSX",
+      "title": "Subsidios al Transporte Automotor de Pasajeros - SIFER año 2024",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/533366f4-cfb6-4492-8d3b-26d9436321e4/resource/0f9d9ab4-bf82-445d-84f1-d88a7ed6ecea",
+      "lastProcessed": "2025-10-09T07:34:32.944Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "transporte_533366f4-cfb6-4492-8d3b-26d9436321e4",
+    "title": "Sistema Ferroviario Integrado (SIFER)",
+    "description": "Subsidios y Compensaciones Transporte Ferroviario Son aquellas transferencias realizadas por la Adm. Pública a empresas o consumidores, para permitir que determinados servicios sean provistos a un costo inferior al necesario para cubrir los costos de producción. Estas transferencias suelen tener dos objetivos principales: fomentar el acceso a esos bienes o servicios por parte de segmentos específicos de la población e impulsar el desarrollo de sectores productivos determinados.-",
+    "theme": [
+      "econ",
+      "tran"
+    ],
+    "superTheme": [
+      "ECON",
+      "TRAN"
+    ],
+    "issued": "2022-04-01T17:04:15.487267",
+    "modified": "2022-09-22T13:35:44.139241",
+    "publisher": {
+      "mbox": "accesoalainformacion@transporte.gob.ar",
+      "name": "Dirección de Acceso a la Información Pública y Transparencia"
+    },
+    "landingPage": "https://datos.transporte.gob.ar/dataset/sistema-ferroviario-integrado-sifer"
+  }
+}

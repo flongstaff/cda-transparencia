@@ -1,0 +1,242 @@
+{
+  "files": {
+    "provincia-de-la-pampa.csv": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-la-pampa.csv",
+      "format": "CSV",
+      "title": "Provincia de La Pampa",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/a156f87a-0c24-47bb-962a-f401fdf8d52f",
+      "lastProcessed": "2025-10-09T07:18:39.111Z",
+      "status": "processed"
+    },
+    "provincia-de-mendoza.zip": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-mendoza.zip",
+      "format": "SHP",
+      "title": "Provincia de Mendoza",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/0168f2a5-0739-48a8-8b80-f9b7ee11efc9",
+      "lastProcessed": "2025-10-09T07:18:39.111Z",
+      "status": "processed"
+    },
+    "provincia-de-salta.zip": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-salta.zip",
+      "format": "SHP",
+      "title": "Provincia de Salta",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/bd43f1f9-ee99-4d73-9923-a65dda4c1cac",
+      "lastProcessed": "2025-10-09T07:18:39.112Z",
+      "status": "processed"
+    },
+    "provincia-de-mendoza.csv": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-mendoza.csv",
+      "format": "CSV",
+      "title": "Provincia de Mendoza",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/c0909315-d10d-412d-9f9c-890e73e3f12a",
+      "lastProcessed": "2025-10-09T07:18:40.575Z",
+      "status": "processed"
+    },
+    "provincia-de-tucumn.zip": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-tucumn.zip",
+      "format": "SHP",
+      "title": "Provincia de Tucumán",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/554d539a-8225-4dd0-878b-93dda881e525",
+      "lastProcessed": "2025-10-09T07:18:40.575Z",
+      "status": "processed"
+    },
+    "provincia-de-la-pampa.zip": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-la-pampa.zip",
+      "format": "SHP",
+      "title": "Provincia de La Pampa",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/4cead51a-ca15-445b-9a2c-7457a87c9600",
+      "lastProcessed": "2025-10-09T07:18:40.575Z",
+      "status": "processed"
+    },
+    "provincia-de-tucumn.csv": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-tucumn.csv",
+      "format": "CSV",
+      "title": "Provincia de Tucumán",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/2be8e373-b898-4e6e-acd1-52f8ab983851",
+      "lastProcessed": "2025-10-09T07:18:41.867Z",
+      "status": "processed"
+    },
+    "provincia-de-salta.csv": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-salta.csv",
+      "format": "CSV",
+      "title": "Provincia de Salta",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/ad679704-52cb-461d-8efa-a6e8fba23f16",
+      "lastProcessed": "2025-10-09T07:18:43.158Z",
+      "status": "processed"
+    },
+    "provincia-de-entre-ros-.csv": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-entre-ros-.csv",
+      "format": "CSV",
+      "title": "Provincia de Entre Ríos\r ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/8b06c64a-a205-4497-b3af-6393d15a4d11",
+      "lastProcessed": "2025-10-09T07:18:44.427Z",
+      "status": "processed"
+    },
+    "provincia-de-entre-ros.zip": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-entre-ros.zip",
+      "format": "SHP",
+      "title": "Provincia de Entre Ríos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/b0184a3e-1a6a-4cca-91fa-08fd7290ad46",
+      "lastProcessed": "2025-10-09T07:18:44.427Z",
+      "status": "processed"
+    },
+    "provincia-de-corrientes.csv": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-corrientes.csv",
+      "format": "CSV",
+      "title": "Provincia de Corrientes",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/d9f29ec4-0084-4567-b08f-93bf6a9df364",
+      "lastProcessed": "2025-10-09T07:18:45.773Z",
+      "status": "processed"
+    },
+    "provincia-de-corrientes-.zip": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-corrientes-.zip",
+      "format": "SHP",
+      "title": "Provincia de Corrientes\r ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/1bc386db-70b7-4237-a242-5d9cb097069b",
+      "lastProcessed": "2025-10-09T07:18:45.773Z",
+      "status": "processed"
+    },
+    "provincia-de-chaco.csv": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-chaco.csv",
+      "format": "CSV",
+      "title": "Provincia de Chaco",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/287c14b2-05f3-40cd-bc17-a1d533115752",
+      "lastProcessed": "2025-10-09T07:18:47.236Z",
+      "status": "processed"
+    },
+    "provincia-de-chaco.zip": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-chaco.zip",
+      "format": "SHP",
+      "title": "Provincia de Chaco",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/5300f832-a3dd-461d-84e6-0403882fc16e",
+      "lastProcessed": "2025-10-09T07:18:47.236Z",
+      "status": "processed"
+    },
+    "provincia-de-crdoba.csv": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-crdoba.csv",
+      "format": "CSV",
+      "title": "Provincia de Córdoba",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/05f005d4-bd9e-4f05-87e4-bd3e6ae17c58",
+      "lastProcessed": "2025-10-09T07:18:48.763Z",
+      "status": "processed"
+    },
+    "provincia-de-crdoba.zip": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-crdoba.zip",
+      "format": "SHP",
+      "title": "Provincia de Córdoba",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/566f1e6b-5efe-4c3d-badc-f78b67a21659",
+      "lastProcessed": "2025-10-09T07:18:48.763Z",
+      "status": "processed"
+    },
+    "provincia-de-buenos-aires-.csv": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-buenos-aires-.csv",
+      "format": "CSV",
+      "title": "Provincia de Buenos Aires\r ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/5e6a8705-ae3f-46bc-ae3e-d4135eb874da",
+      "lastProcessed": "2025-10-09T07:18:50.918Z",
+      "status": "processed"
+    },
+    "provincia-de-buenos-aires-.zip": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-buenos-aires-.zip",
+      "format": "SHP",
+      "title": "Provincia de Buenos Aires\r \r ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/d0fba0eb-bf0d-4a8d-b1ee-5e6a41bf1800",
+      "lastProcessed": "2025-10-09T07:18:50.918Z",
+      "status": "processed"
+    },
+    "provincia-de-santa-fe.csv": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-santa-fe.csv",
+      "format": "CSV",
+      "title": "Provincia de Santa Fe",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/0dd7877d-5fcc-4c4f-a6cc-5ba525d8c79d",
+      "lastProcessed": "2025-10-09T07:18:52.459Z",
+      "status": "processed"
+    },
+    "provincia-de-santa-fe.zip": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-santa-fe.zip",
+      "format": "SHP",
+      "title": "Provincia de Santa Fe",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/0d72ead6-1df6-47a1-b151-bb0392c801d8",
+      "lastProcessed": "2025-10-09T07:18:52.459Z",
+      "status": "processed"
+    },
+    "provincia-de-misiones-.csv": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-misiones-.csv",
+      "format": "CSV",
+      "title": "Provincia de Misiones\r ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/ee0187ac-4d8d-4529-bee9-c3e4aafe3257",
+      "lastProcessed": "2025-10-09T07:18:53.835Z",
+      "status": "processed"
+    },
+    "provincia-de-misiones-.zip": {
+      "datasetId": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+      "datasetTitle": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+      "fileName": "provincia-de-misiones-.zip",
+      "format": "SHP",
+      "title": "Provincia de Misiones\r \r ",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d29ba763-7ae5-4e18-85bf-03c323bbd163/resource/16da9daf-2154-42b9-adfd-ceb0b30574f1",
+      "lastProcessed": "2025-10-09T07:18:53.835Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_d29ba763-7ae5-4e18-85bf-03c323bbd163",
+    "title": "Energías Renovables - Balance por radio censal de Energía derivada de la Biomasa WISDOM",
+    "description": "Análisis espacial de la producción y consumo de dendrocombustibles aplicando la metodología de Mapeo de Oferta y Demanda Integrada de Dendrocombustibles (Woodfuel Integrated Supply/Demand Overview Mapping).",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2022-09-15T18:56:04.016543",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/energias-renovables-balance-por-radio-censal-de-energia-derivada-de-la-biomasa-wisdom"
+  }
+}

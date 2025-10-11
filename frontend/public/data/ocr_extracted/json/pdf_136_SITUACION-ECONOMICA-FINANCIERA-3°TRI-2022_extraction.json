@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_136_SITUACION-ECONOMICA-FINANCIERA-3°TRI-2022.pdf",
+  "file_hash": "c5c5813aab8afbd62de3014cdd534f1f",
+  "page_count": 3,
+  "text_length": 9543,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoR.A.F.A.M.\nSITUACIÓN ECONÓMICO-FINANCIERA Hoja: 1 de 3\n20/09/202308:34\n2022Del 01/07/2022 al 30/09/2022\nEjercicio:\nVigente Devengado Percibido Evolución de los Recursos\n1. Presupuestarios\n763.497.300,74 Ingresos corrientes 305.762.198,07 283.122.758,68\n102.227.622,96 Recursos de capital 68.052.090,78 68.052.100,78\n0,00 Fuentes Financieras 0,00\nTotal 351.174.859,46 373.814.288,85 865.724.923,70\n588.042.625,00 De libre disponibilidad 228.706.606,00 206.067.176,61\n277.682.298,70 Afectados 145.107.682,85 145.107.682,85\nTotal 351.174.859,46 373.814.288,85 865.724.923,70\n2. Extrapresupuestarios 24.457.076,16\nTotal General (1+2) 375.631.935,62 373.814.288,85 865.724.923,70Importe Cuenta Ahorro Inversión Financiamiento\nI. INGRESOS CORRIENTES 283.122.758,68\nII. GASTOS CORRIENTES 242.596.093,33\nIII. AHORRO CORRIENTE: (I - II) 40.526.665,35\nIV. RECURSOS DE CAPITAL 68.052.100,78\nV. GASTOS DE CAPITAL 163.130.580,14\nVI. INGRESOS TOTALES 351.174.859,46\nVII. GASTOS TOTALES 405.726.673,47\nVIII. RESULTADO FINANCIERO (VI - VII) -54.551.814,01\nIX. FUENTES FINANCIERAS 24.563.441,12\nX. APLICACIONES FINANCIERAS 17.421.993,59\nVigente Preventivo Pagado Devengado Compromiso Evolución de Gastos por Objeto\n1. Presupuestarios\n435.341.735,91 Gastos en personal 0,00 118.909.443,91 118.909.443,91 118.909.443,91\n140.913.999,67 Bienes de consumo 3.066.321,89 38.521.723,47 38.424.298,72 35.468.085,32\n91.491.596,60 Servicios no personales 45.788.065,36 87.142.446,26 70.506.534,56 70.518.960,45\n132.724.358,55 Bienes de uso -35.206.230,39 249.947.649,41 153.831.618,32 148.507.024,35\n52.765.170,83 Transferencias 98.165,00 24.046.690,46 24.046.690,46 24.078.385,06\n1.982.611,00 Activos financieros 0,00 576.000,00 576.000,00 576.000,00\n10.505.451,14 Servicio de la deuda y disminución de otros pasivos 0,00 162.967,65 162.967,65 162.967,65\n13.746.321,86 865.724.923,70 Total 519.306.921,16 398.220.866,74 406.457.553,62\n2. Extrapresupuestarios 30.058.564,30 30.058.564,30\n13.746.3...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:58.714453"
+}

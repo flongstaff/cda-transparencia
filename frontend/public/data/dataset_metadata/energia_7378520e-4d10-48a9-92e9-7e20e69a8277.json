@@ -1,0 +1,42 @@
+{
+  "files": {
+    "produccin-hidrocarburos-yacimientos.csv": {
+      "datasetId": "energia_7378520e-4d10-48a9-92e9-7e20e69a8277",
+      "datasetTitle": "Producción de hidrocarburos - Yacimientos",
+      "fileName": "produccin-hidrocarburos-yacimientos.csv",
+      "format": "CSV",
+      "title": "Producción Hidrocarburos Yacimientos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/7378520e-4d10-48a9-92e9-7e20e69a8277/resource/6130ac5d-e78e-4aef-9925-030db6434c56",
+      "lastProcessed": "2025-10-09T06:36:24.622Z",
+      "status": "processed"
+    },
+    "produccin-hidrocarburos-yacimientos.zip": {
+      "datasetId": "energia_7378520e-4d10-48a9-92e9-7e20e69a8277",
+      "datasetTitle": "Producción de hidrocarburos - Yacimientos",
+      "fileName": "produccin-hidrocarburos-yacimientos.zip",
+      "format": "SHP",
+      "title": "Producción Hidrocarburos Yacimientos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/7378520e-4d10-48a9-92e9-7e20e69a8277/resource/82f83e7e-5e07-4cf7-8015-0e01d2cfa51f",
+      "lastProcessed": "2025-10-09T06:36:24.623Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_7378520e-4d10-48a9-92e9-7e20e69a8277",
+    "title": "Producción de hidrocarburos - Yacimientos",
+    "description": "Ubicación y polígonos de yacimientos. ISO 19126: Extraction, Este subgrupo se compone de conceptos que se refieren a la extracción de materias primas y la excavación del suelo",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2020-04-22T17:33:08.696611",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

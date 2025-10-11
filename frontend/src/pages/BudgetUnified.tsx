@@ -440,8 +440,8 @@ const Budget: React.FC = () => {
               {activeTab === 'data' && (
                 <div className="space-y-6">
                   <UnifiedDataViewer 
-                    datasets={mockBudgetDatasets}
-                    documents={mockBudgetPDFs}
+                    datasets={masterData?.metadata?.datasets || mockBudgetDatasets}
+                    documents={currentDocuments || mockBudgetPDFs}
                     title="Datos Abiertos de Presupuesto"
                     description="Conjuntos de datos estructurados relacionados con el presupuesto municipal"
                     showFilters={true}

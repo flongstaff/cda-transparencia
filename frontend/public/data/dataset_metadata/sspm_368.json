@@ -1,0 +1,52 @@
+{
+  "files": {
+    "produccion-ventas-biocombustibles-anual.csv": {
+      "datasetId": "sspm_368",
+      "datasetTitle": "Producción y ventas de biocombustibles",
+      "fileName": "produccion-ventas-biocombustibles-anual.csv",
+      "format": "CSV",
+      "title": "Datos producción y ventas de biocombustibles. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:53.313Z",
+      "status": "processed"
+    },
+    "produccion-ventas-biocombustibles-anual-trimestral.csv": {
+      "datasetId": "sspm_368",
+      "datasetTitle": "Producción y ventas de biocombustibles",
+      "fileName": "produccion-ventas-biocombustibles-anual-trimestral.csv",
+      "format": "CSV",
+      "title": "Datos producción y ventas de biocombustibles. Datos trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:54.360Z",
+      "status": "processed"
+    },
+    "produccion-ventas-biocombustibles-anual-mensual.csv": {
+      "datasetId": "sspm_368",
+      "datasetTitle": "Producción y ventas de biocombustibles",
+      "fileName": "produccion-ventas-biocombustibles-anual-mensual.csv",
+      "format": "CSV",
+      "title": "Datos producción y ventas de biocombustibles. Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:55.410Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_368",
+    "title": "Producción y ventas de biocombustibles",
+    "description": "Información producción y ventas de biocombustibles",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-12-27",
+    "modified": "2025-03-24T10:01:22.408172",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

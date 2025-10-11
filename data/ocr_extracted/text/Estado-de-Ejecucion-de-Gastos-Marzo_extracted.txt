@@ -1,0 +1,34 @@
+Municipalidad de
+Carmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS
+Ejercicio
+:Hoja: 1 de 242 R.A.F.A.M.
+26/04/2025 13:01
+Del 02/01/2025 al 31/03/2025
+2025Partidas Incluidas respecto al Crédito Disponible: Todas
+Partidas Incluidas respecto al Crédito Vigente: Todas
+Devengado
+no pagadoCrédito
+DisponiblePagado Devengado Compromiso Preventivo Crédito
+VigenteModifica
+cionesCrédito
+AprobadoFuen.
+Fin.Objeto del GastoCrédito Vig.
+- Devengado
+Jurisdicción: 1110101000 - Conduccion Superior
+Apertura Programįtica: 01.00.00 - Desarrollo de politicas centrales
+110 - Tesoro Municipal
+1.0.0.0 - Gastos en personal
+1.1.0.0 - Personal permanente
+1.1.1.0 - Retribuciones del cargo
+1.1.1.1 - Personal Superior 72.473.695,00 0,00 72.473.695,00 0,00 11.508.672,00 11.508.672,00 11.508.672,00 60.965.023,00 0,00 60.965.023,00
+1.1.1.2 - Personal Jerárquico 16.544.709,23 0,00 16.544.709,23 0,00 1.638.958,20 1.638.958,20 1.638.958,20 14.905.751,03 0,00 14.905.751,03
+1.1.1.6 - Personal Obrero 10.746.813,63 0,00 10.746.813,63 0,00 2.666.518,20 2.666.518,20 2.666.518,20 8.080.295,43 0,00 8.080.295,43
+1.1.1.9 - Gastos Reservados 0,00 0,00 0,00 0,00 1.726.300,80 1.726.300,80 1.726.300,80 -1.726.300,80 0,00 -1.726.300,80
+99.765.217,86 0,00 99.765.217,86 0,00 17.540.449,20 17.540.449,20 17.540.449,20 82.224.768,66 0,00 Total Retribuciones del cargo 82.224.768,66
+1.1.3.0 - Retribuciones que no hacen al cargo
+1.1.3.1 - Antiguedad 10.712.647,45 0,00 10.712.647,45 0,00 2.339.343,10 2.339.343,10 2.339.343,10 8.373.304,35 0,00 8.373.304,35
+1.1.3.9 - Otras retribuciones 0,00 0,00 0,00 0,00 580.402,86 580.402,86 580.402,86 -580.402,86 0,00 -580.402,86
+10.712.647,45 0,00 10.712.647,45 0,00 2.919.745,96 2.919.745,96 2.919.745,96 7.792.901,49 0,00 Total Retribuciones que no hacen al cargo 7.792.901,49
+1.1.4.0 - Sueldo anual complementario 8.717.748,86 0,00 8.717.748,86 0,00 0,00 0,00 0,00 8.717.748,86 0,00 8.717.748,86
+1.1.6.0 - Contribuciones patronales
+1.1.6.1 - IPS 13.599.688,24 0,00 13.599.688,24 0,...

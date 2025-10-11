@@ -1,0 +1,151 @@
+{
+  "files": {
+    "RSU_e_evoluc_composicion_CABA_graf": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_e_evoluc_composicion_CABA_graf",
+      "format": "CSV",
+      "title": "Calidad y composición en porcentaje de los RSU generados en CABA",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=109",
+      "lastProcessed": "2025-10-09T06:51:52.002Z",
+      "status": "processed"
+    },
+    "RSU_a_generacion_pcia": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_a_generacion_pcia",
+      "format": "CSV",
+      "title": "Generación de Residuos Sólidos Urbanos (RSU) por jurisdicción, total país.",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=107",
+      "lastProcessed": "2025-10-09T06:51:53.351Z",
+      "status": "processed"
+    },
+    "RSU_b_generacion_percapita_pcia": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_b_generacion_percapita_pcia",
+      "format": "CSV",
+      "title": "Generación de Residuos Sólidos Urbanos por habitante",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=228",
+      "lastProcessed": "2025-10-09T06:51:54.687Z",
+      "status": "processed"
+    },
+    "RSU_ODS_1161": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_ODS_1161",
+      "format": "CSV",
+      "title": "Porcentaje de residuos sólidos urbanos (RSU) con disposición final adecuada",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=236",
+      "lastProcessed": "2025-10-09T06:51:56.109Z",
+      "status": "processed"
+    },
+    "RSU_valorizacion_porc_ODS1251": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_valorizacion_porc_ODS1251",
+      "format": "CSV",
+      "title": "Porcentaje nacional de valorización de residuos sólidos urbanos (RSU)",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=238",
+      "lastProcessed": "2025-10-09T06:51:57.532Z",
+      "status": "processed"
+    },
+    "RSU_i_mater_descar_import": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_i_mater_descar_import",
+      "format": "CSV",
+      "title": "Materiales del descarte importados utilizados como insumos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=232",
+      "lastProcessed": "2025-10-09T06:51:59.009Z",
+      "status": "processed"
+    },
+    "RSU_k_neumatico_reciclaje": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_k_neumatico_reciclaje",
+      "format": "CSV",
+      "title": "Neumáticos fuera de uso (NFU)",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=233",
+      "lastProcessed": "2025-10-09T06:52:00.401Z",
+      "status": "processed"
+    },
+    "RSU_g_recup_reciclado_Mov_transf": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_g_recup_reciclado_Mov_transf",
+      "format": "CSV",
+      "title": "Recuperación de papel y cartón. Año 2019",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=230",
+      "lastProcessed": "2025-10-09T06:52:01.838Z",
+      "status": "processed"
+    },
+    "RSU_l_peso_anual_raee_caba_2019": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_l_peso_anual_raee_caba_2019",
+      "format": "CSV",
+      "title": "Residuos de aparatos eléctricos y electrónicos (RAEE)",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=99",
+      "lastProcessed": "2025-10-09T06:52:03.108Z",
+      "status": "processed"
+    },
+    "RSU_j_rellenosanitario_cobertura": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_j_rellenosanitario_cobertura",
+      "format": "CSV",
+      "title": "Porcentaje de la población con servicio de disposición adecuada. Año 2017.",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=108",
+      "lastProcessed": "2025-10-09T06:52:04.416Z",
+      "status": "processed"
+    },
+    "RSU_t_CEAMSE_2024": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_t_CEAMSE_2024",
+      "format": "CSV",
+      "title": "Residuos dispuestos en Relleno Sanitario gestionados por el CEAMSE. Año 2022-2024",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=358",
+      "lastProcessed": "2025-10-09T06:52:05.728Z",
+      "status": "processed"
+    },
+    "RSU_q_ingresados_CEAMSE_amba_2025": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_q_ingresados_CEAMSE_amba_2025",
+      "format": "CSV",
+      "title": "Residuos Sólidos Urbanos recibidos en complejos ambientales",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=101",
+      "lastProcessed": "2025-10-09T06:52:07.122Z",
+      "status": "processed"
+    },
+    "RSU_u_ingresados_por_mes_CEAMSE": {
+      "datasetId": "ambiente_24.0",
+      "datasetTitle": "Residuos Sólidos Urbanos",
+      "fileName": "RSU_u_ingresados_por_mes_CEAMSE",
+      "format": "CSV",
+      "title": "Residuos sólidos urbanos recibidos en complejos ambientales por mes.",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=34&did=429",
+      "lastProcessed": "2025-10-09T06:52:08.507Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_24.0",
+    "title": "Residuos Sólidos Urbanos",
+    "description": "Muestra la generación, disposición, composición y distribución de los residuos sólidos urbanos por jurisdicción en los períodos considerados",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2020-09-28T00:00:00",
+    "modified": "2020-09-28T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

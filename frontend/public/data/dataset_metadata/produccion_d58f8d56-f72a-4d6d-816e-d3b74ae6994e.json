@@ -1,0 +1,33 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "produccion_d58f8d56-f72a-4d6d-816e-d3b74ae6994e",
+      "datasetTitle": "Registro de CAPE Emitidos - Resolución 166/2019",
+      "format": "cvs",
+      "title": "Registro de CAPE emitidos",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d58f8d56-f72a-4d6d-816e-d3b74ae6994e/resource/b0966ac6-349e-4673-8891-8db8ed871606",
+      "lastProcessed": "2025-10-09T08:07:51.218Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_d58f8d56-f72a-4d6d-816e-d3b74ae6994e",
+    "title": "Registro de CAPE Emitidos - Resolución 166/2019",
+    "description": "Listado de Certificados de Autopartes de Primer Equipo (CAPE) emitidos que se encuentran vigentes en el marco de lo establecido en la Resolución N° 166/2019.",
+    "theme": [
+      "gove",
+      "tran"
+    ],
+    "superTheme": [
+      "GOVE",
+      "TRAN"
+    ],
+    "issued": "2025-01-17T16:18:13.705866",
+    "modified": "2025-01-17T16:33:11.161281",
+    "publisher": {
+      "mbox": "lfomin@produccion.gob.ar",
+      "name": "Secretaría de Industria y Comercio – Subsecretaría de Gestión Productiva – Persona responsable: Ludmila Fomin"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/registro-de-cape-emitidos-resolucion"
+  }
+}

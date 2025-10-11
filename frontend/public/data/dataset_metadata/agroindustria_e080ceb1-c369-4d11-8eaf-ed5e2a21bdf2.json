@@ -1,0 +1,42 @@
+{
+  "files": {
+    "girasol-serie-1969-2023-anual.csv": {
+      "datasetId": "agroindustria_e080ceb1-c369-4d11-8eaf-ed5e2a21bdf2",
+      "datasetTitle": "Girasol - siembra, cosecha, producción, rendimiento",
+      "fileName": "girasol-serie-1969-2023-anual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo de girasol",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/e080ceb1-c369-4d11-8eaf-ed5e2a21bdf2/resource/a201f477-7021-4ba6-bbae-f218c100688c",
+      "lastProcessed": "2025-10-09T07:01:11.558Z",
+      "status": "processed"
+    },
+    "girasol-serie-1969-2023.csv": {
+      "datasetId": "agroindustria_e080ceb1-c369-4d11-8eaf-ed5e2a21bdf2",
+      "datasetTitle": "Girasol - siembra, cosecha, producción, rendimiento",
+      "fileName": "girasol-serie-1969-2023.csv",
+      "format": "CSV",
+      "title": "Girasol - serie siembra, cosecha, producción, rendimiento",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/e080ceb1-c369-4d11-8eaf-ed5e2a21bdf2/resource/3ce17c66-ebee-4c30-89e5-b1966df367d5",
+      "lastProcessed": "2025-10-09T07:01:15.051Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_e080ceb1-c369-4d11-8eaf-ed5e2a21bdf2",
+    "title": "Girasol - siembra, cosecha, producción, rendimiento",
+    "description": "Serie histórica de la superficie sembrada, superficie cosechada, producción y rendimiento de girasol en la Argentina desde 1969.",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2021-07-19T16:37:50.314178",
+    "modified": "2025-04-23T13:11:49.929954",
+    "publisher": {
+      "mbox": "direstiagri@magyp.gob.ar",
+      "name": "Ministerio de Agricultura, Ganadería y Pesca - Dirección Nacional de Agricultura"
+    },
+    "landingPage": "https://datos.magyp.gob.ar/dataset/girasol-siembra-cosecha-produccion-rendimiento"
+  }
+}

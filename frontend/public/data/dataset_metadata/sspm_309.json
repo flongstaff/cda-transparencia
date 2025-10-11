@@ -1,0 +1,32 @@
+{
+  "files": {
+    "brasil-actividad-economica-industrial-y-produccion-automotriz.csv": {
+      "datasetId": "sspm_309",
+      "datasetTitle": "Brasil Actividad económica, industrial y producción automotriz",
+      "fileName": "brasil-actividad-economica-industrial-y-produccion-automotriz.csv",
+      "format": "CSV",
+      "title": "Brasil Actividad económica, industrial y producción automotriz. Valores mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:59.665Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_309",
+    "title": "Brasil Actividad económica, industrial y producción automotriz",
+    "description": "Brasil Actividad económica, industrial y producción automotriz",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-30",
+    "modified": "2025-03-24T10:01:17.423960",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

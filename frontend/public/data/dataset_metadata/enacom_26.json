@@ -1,0 +1,302 @@
+{
+  "files": {
+    "Internet Accesos Banda Ancha Fija Provincias.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Banda Ancha Fija Provincias.xls",
+      "format": "XLS",
+      "title": "Internet Fija Accesos BAF Provincias-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-baf-provincias",
+      "lastProcessed": "2025-10-09T06:27:41.156Z",
+      "status": "processed"
+    },
+    "Internet Accesos Banda Ancha Fija Provincias.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Banda Ancha Fija Provincias.csv",
+      "format": "CSV",
+      "title": "Internet Fija Accesos BAF Provincias-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-baf-provincias",
+      "lastProcessed": "2025-10-09T06:27:42.666Z",
+      "status": "processed"
+    },
+    "Internet Accesos Banda Ancha Fija Totales.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Banda Ancha Fija Totales.xls",
+      "format": "XLS",
+      "title": "Internet Fija Accesos BAF Totales-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-baf-totales",
+      "lastProcessed": "2025-10-09T06:27:42.666Z",
+      "status": "processed"
+    },
+    "Internet Accesos Banda Ancha Fija Totales.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Banda Ancha Fija Totales.csv",
+      "format": "CSV",
+      "title": "Internet Fija Accesos BAF Totales-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-baf-totales",
+      "lastProcessed": "2025-10-09T06:27:43.860Z",
+      "status": "processed"
+    },
+    "Internet Accesos Tecnologia Localidades.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Tecnologia Localidades.xls",
+      "format": "XLS",
+      "title": "Internet Fija Accesos Tecnologia Localidades-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-tecnologias-localidades",
+      "lastProcessed": "2025-10-09T06:27:43.860Z",
+      "status": "processed"
+    },
+    "Internet Accesos Tecnologia Localidades.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Tecnologia Localidades.csv",
+      "format": "CSV",
+      "title": "Internet Fija Accesos Tecnologia Localidades-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-tecnologias-localidades",
+      "lastProcessed": "2025-10-09T06:27:48.064Z",
+      "status": "processed"
+    },
+    "Internet Accesos Tecnologia Provincias.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Tecnologia Provincias.xls",
+      "format": "XLS",
+      "title": "Internet Fija Accesos Tecnologia Provincias-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-tecnologias-provincias",
+      "lastProcessed": "2025-10-09T06:27:48.064Z",
+      "status": "processed"
+    },
+    "Internet Accesos Tecnologia Provincias.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Tecnologia Provincias.csv",
+      "format": "CSV",
+      "title": "Internet Fija Accesos Tecnologia Provincias-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-tecnologias-provincias",
+      "lastProcessed": "2025-10-09T06:27:49.921Z",
+      "status": "processed"
+    },
+    "Internet Accesos Tecnologia Totales.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Tecnologia Totales.xls",
+      "format": "XLS",
+      "title": "Internet Fija Accesos Tecnologia Totales-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-tecnologias-totales",
+      "lastProcessed": "2025-10-09T06:27:49.922Z",
+      "status": "processed"
+    },
+    "Internet Accesos Tecnologia Totales.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Tecnologia Totales.csv",
+      "format": "CSV",
+      "title": "Internet Fija Accesos Tecnologia Totales-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-tecnologias-totales",
+      "lastProcessed": "2025-10-09T06:27:51.130Z",
+      "status": "processed"
+    },
+    "Internet Accesos Velocidad Localidades.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Velocidad Localidades.xls",
+      "format": "XLS",
+      "title": "Internet Fija Accesos Velocidad Localidades-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-velocidad-localidades",
+      "lastProcessed": "2025-10-09T06:27:51.130Z",
+      "status": "processed"
+    },
+    "Internet Accesos Velocidad Localidades.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Velocidad Localidades.csv",
+      "format": "CSV",
+      "title": "Internet Fija Accesos Velocidad Localidades-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-velocidad-localidades",
+      "lastProcessed": "2025-10-09T06:27:59.533Z",
+      "status": "processed"
+    },
+    "Internet Accesos Velocidad Provincias.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Velocidad Provincias.xls",
+      "format": "XLS",
+      "title": "Internet Fija Accesos Velocidad Provincias-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-velocidad-provincias",
+      "lastProcessed": "2025-10-09T06:27:59.533Z",
+      "status": "processed"
+    },
+    "Internet Accesos Velocidad Provincias.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Velocidad Provincias.csv",
+      "format": "CSV",
+      "title": "Internet Fija Accesos Velocidad Provincias-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-velocidad-provincias",
+      "lastProcessed": "2025-10-09T06:28:06.126Z",
+      "status": "processed"
+    },
+    "Internet Accesos Velocidad Rango Provincias.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Velocidad Rango Provincias.xls",
+      "format": "XLS",
+      "title": "Internet Fija Accesos Velocidad Rango Provincias-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-velocidad-rango-provincias",
+      "lastProcessed": "2025-10-09T06:28:06.127Z",
+      "status": "processed"
+    },
+    "Internet Accesos Velocidad Rango Provincias.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Velocidad Rango Provincias.csv",
+      "format": "CSV",
+      "title": "Internet Fija Accesos Velocidad Rango Provincias-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-velocidad-rango-provincias",
+      "lastProcessed": "2025-10-09T06:28:07.965Z",
+      "status": "processed"
+    },
+    "Internet Accesos Velocidad Rango.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Velocidad Rango.xls",
+      "format": "XLS",
+      "title": "Internet Fija Accesos Velocidad Rango Totales-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-velocidad-rango-totales",
+      "lastProcessed": "2025-10-09T06:28:07.965Z",
+      "status": "processed"
+    },
+    "Internet Accesos Velocidad Rango.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Velocidad Rango.csv",
+      "format": "CSV",
+      "title": "Internet Fija Accesos Velocidad Rango Totales-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/accesos-velocidad-rango-totales",
+      "lastProcessed": "2025-10-09T06:28:09.153Z",
+      "status": "processed"
+    },
+    "Internet Ingresos.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Ingresos.xls",
+      "format": "XLS",
+      "title": "Internet Fija Ingresos-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/ingresos",
+      "lastProcessed": "2025-10-09T06:28:09.153Z",
+      "status": "processed"
+    },
+    "Internet Ingresos.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Ingresos.csv",
+      "format": "CSV",
+      "title": "Internet Fija Ingresos-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/ingresos",
+      "lastProcessed": "2025-10-09T06:28:10.260Z",
+      "status": "processed"
+    },
+    "Internet Accesos Penetracion Provincias.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Penetracion Provincias.xls",
+      "format": "XLS",
+      "title": "Internet Fija Penetracion Provincias-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/penetracion-provincias",
+      "lastProcessed": "2025-10-09T06:28:10.261Z",
+      "status": "processed"
+    },
+    "Internet Accesos Penetracion Provincias.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Penetracion Provincias.csv",
+      "format": "CSV",
+      "title": "Internet Fija Penetracion Provincias-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/penetracion-provincias",
+      "lastProcessed": "2025-10-09T06:28:11.740Z",
+      "status": "processed"
+    },
+    "Internet Accesos Penetracion.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Penetracion.xls",
+      "format": "XLS",
+      "title": "Internet Fija Penetracion Totales-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/penetracion-totales",
+      "lastProcessed": "2025-10-09T06:28:11.740Z",
+      "status": "processed"
+    },
+    "Internet Accesos Penetracion.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Accesos Penetracion.csv",
+      "format": "CSV",
+      "title": "Internet Fija Penetracion Totales-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/penetracion-totales",
+      "lastProcessed": "2025-10-09T06:28:12.811Z",
+      "status": "processed"
+    },
+    "Internet Velocidad Media Descarga Provincias.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Velocidad Media Descarga Provincias.xls",
+      "format": "XLS",
+      "title": "Internet Fija VMD Provincias-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/velocidad-media-provincias",
+      "lastProcessed": "2025-10-09T06:28:12.811Z",
+      "status": "processed"
+    },
+    "Internet Velocidad Media Descarga Provincias.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Velocidad Media Descarga Provincias.csv",
+      "format": "CSV",
+      "title": "Internet Fija VMD Provincias-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/velocidad-media-provincias",
+      "lastProcessed": "2025-10-09T06:28:13.967Z",
+      "status": "processed"
+    },
+    "Internet Velocidad Media Descarga.xls": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Velocidad Media Descarga.xls",
+      "format": "XLS",
+      "title": "Internet Fija VMD Totales-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/velocidad-media-totales",
+      "lastProcessed": "2025-10-09T06:28:13.967Z",
+      "status": "processed"
+    },
+    "Internet Velocidad Media Descarga.csv": {
+      "datasetId": "enacom_26",
+      "datasetTitle": "Internet Fija",
+      "fileName": "Internet Velocidad Media Descarga.csv",
+      "format": "CSV",
+      "title": "Internet Fija VMD Totales-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/velocidad-media-totales",
+      "lastProcessed": "2025-10-09T06:28:15.206Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "enacom_26",
+    "title": "Internet Fija",
+    "description": "Principales Indicadores de Mercado, Internet Fija",
+    "theme": [
+      "tech"
+    ],
+    "superTheme": [
+      "TECH"
+    ],
+    "issued": "2017-01-01",
+    "modified": "2025-09-08",
+    "publisher": {
+      "mbox": "indicadores@enacom.gob.ar",
+      "name": "Enacom.Direccion Nacional De Planificación Y Desarrollo."
+    },
+    "landingPage": "https://indicadores.enacom.gob.ar/DatosAbiertos/Internet/default"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_111_ESTADO-DE-EJECUCION-DE-GASTOS-2.pdf",
+  "file_hash": "9aae3c3e4b5bd70f3f2a5fab41470c3d",
+  "page_count": 254,
+  "text_length": 674612,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS\nEjercicio \n:Hoja: 1 de 254 R.A.F.A.M.\n19/09/2023 10:05\nDel 02/01/2023 al 31/03/2023\n2023Partidas Incluidas respecto al Crédito Disponible: Todas\nPartidas Incluidas respecto al Crédito Vigente: Todas\nDevengado \nno pagado Crédito \nDisponible Pagado Devengado Compromiso Preventivo Crédito \nVigente Modifica \nciones Crédito \nAprobado Fuen. \nFin. Objeto del GastoCrédito Vig. \n- Devengado \nJurisdicción: 1110101000 - Conduccion Superior \nApertura Programática: 01.00.00 - Desarrallo politicas centrales01.01.00 - Cond. y Gest. de Politicas Centrales (110)\n110 - Tesoro Municipal\n1.0.0.0 - Gastos en personal 1.1.0.0 - Personal permanente1.1.1.0 - Retribuciones del cargo 1.1.1.1 - Personal Superior\n5.223.293,24 0,00 5.223.293,24 0,00 2.005.875,20 2.005.875,20 2.005.875,20 3.217.418,04 0,00 3.217.418,04\n1.1.1.2 - Personal Jerárquico 0,00 0,00 0,00 0,00 305.578,00 305.578,00 305.578,00 -305.578,00 0,00 -305.578,00\n1.1.1.5 - Personal Administrativo 244.395,00 0,00 244.395,00 0,00 223.870,00 223.870,00 223.870,00 20.525,00 0,00 20.525,00\n1.1.1.9 - Gastos Reservados 783.493,97 0,00 783.493,97 0,00 300.881,28 300.881,28 300.881,28 482.612,69 0,00 482.612,69\n6.251.182,21 0,00 6.251.182,21 0,00 2.836.204,48 2.836.204,48 2.836.204,48 3.414.977,73 0,00 Total Retribuciones del cargo 3.414.977,73\n1.1.3.0 - Retribuciones que no hacen al cargo 1.1.3.1 - Antiguedad\n412.178,40 0,00 412.178,40 0,00 227.362,36 227.362,36 227.362,36 184.816,04 0,00 184.816,04 412.178,40 0,00 412.178,40 0,00 227.362,36 227.362,36 227.362,36 184.816,04 0,00\nTotal Retribuciones que no hacen al cargo 184.816,04\n1.1.4.0 - Sueldo anual complementario 597.062,47 0,00 597.062,47 0,00 0,00 0,00 0,00 597.062,47 0,00 597.062,47\n1.1.6.0 - Contribuciones patronales 1.1.6.1 - IPS\n595.368,80 0,00 595.368,80 0,00 0,00 0,00 0,00 595.368,80 0,00 595.368,80\n1.1.6.2 - IOMA 233.186,11 0,00 233.186,11 0,00 0,00 0,00 0,00 233.186,11 0,00 233.186,11 828.554,91 ...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:16:02.620280"
+}

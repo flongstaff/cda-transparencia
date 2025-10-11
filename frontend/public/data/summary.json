@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "title": "Carmen de Areco Transparency Data Summary",
+    "description": "Processed and analyzed data from Carmen de Areco's transparency portal",
+    "lastUpdated": "2025-10-09T08:38:14.031Z"
+  },
+  "statistics": {
+    "totalDatasets": 9,
+    "datasetsWithOCR": 0,
+    "datasetsWithFrontendReady": 0
+  },
+  "dataAvailability": {
+    "budgetData": true,
+    "executionReports": true,
+    "contracts": true,
+    "statistics": true
+  }
+}

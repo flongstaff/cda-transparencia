@@ -1,0 +1,82 @@
+{
+  "files": {
+    "personas_nacionalizadas_carta_de_ciudadania_sexo_edad_de_tramite.csv": {
+      "datasetId": "renaper_7",
+      "datasetTitle": "Población Nacionalizada en Argentina",
+      "fileName": "personas_nacionalizadas_carta_de_ciudadania_sexo_edad_de_tramite.csv",
+      "format": "CSV",
+      "title": "Personas nacionalizadas vía carta de ciudadanía por sexo y edad al momento del trámite (2013–2023)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T07:14:34.866Z",
+      "status": "processed"
+    },
+    "personas_nacionalizadas_carta_de_ciudadania_anio_de_tramite.csv": {
+      "datasetId": "renaper_7",
+      "datasetTitle": "Población Nacionalizada en Argentina",
+      "fileName": "personas_nacionalizadas_carta_de_ciudadania_anio_de_tramite.csv",
+      "format": "CSV",
+      "title": "Personas nacionalizadas vía carta de ciudadanía por año de trámite (2013–2023)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T07:14:34.936Z",
+      "status": "processed"
+    },
+    "personas_nacionalizadas_carta_de_ciudadania_provincia_residencia.csv": {
+      "datasetId": "renaper_7",
+      "datasetTitle": "Población Nacionalizada en Argentina",
+      "fileName": "personas_nacionalizadas_carta_de_ciudadania_provincia_residencia.csv",
+      "format": "CSV",
+      "title": "Personas nacionalizadas vía carta de ciudadanía por provincia de residencia (2013–2023)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T07:14:35.033Z",
+      "status": "processed"
+    },
+    "personas_nacionalizadas_opcion_sexo_edad_de_tramite.csv": {
+      "datasetId": "renaper_7",
+      "datasetTitle": "Población Nacionalizada en Argentina",
+      "fileName": "personas_nacionalizadas_opcion_sexo_edad_de_tramite.csv",
+      "format": "CSV",
+      "title": "Personas nacionalizadas por opción por sexo y edad al momento del trámite (2013–2023)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T07:14:35.090Z",
+      "status": "processed"
+    },
+    "personas_nacionalizadas_opcion_anio_de_tramite.csv": {
+      "datasetId": "renaper_7",
+      "datasetTitle": "Población Nacionalizada en Argentina",
+      "fileName": "personas_nacionalizadas_opcion_anio_de_tramite.csv",
+      "format": "CSV",
+      "title": "Personas nacionalizadas por opción por año de tramite (2013 - 2023)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T07:14:35.173Z",
+      "status": "processed"
+    },
+    "personas_nacionalizadas_opcion_provincia_residencia.csv": {
+      "datasetId": "renaper_7",
+      "datasetTitle": "Población Nacionalizada en Argentina",
+      "fileName": "personas_nacionalizadas_opcion_provincia_residencia.csv",
+      "format": "CSV",
+      "title": "Personas nacionalizadas por opción por provincia de residencia (2013 - 2023)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T07:14:35.235Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "renaper_7",
+    "title": "Población Nacionalizada en Argentina",
+    "description": "Nacionalizaciones efectuadas en Argentina a partir de Registros Administrativos",
+    "theme": [
+      "soci"
+    ],
+    "superTheme": [
+      "SOCI"
+    ],
+    "issued": "2023-11-29",
+    "modified": "2023-11-29",
+    "publisher": {
+      "mbox": "direccionnacionalpoblacion@renaper.gob.ar",
+      "name": "Dirección Nacional de Población del Renaper"
+    },
+    "landingPage": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion/informes-provinciales"
+  }
+}

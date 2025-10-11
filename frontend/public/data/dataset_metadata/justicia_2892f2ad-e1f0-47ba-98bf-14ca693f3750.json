@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_2892f2ad-e1f0-47ba-98bf-14ca693f3750",
+      "datasetTitle": "Curriculums Vitae de magistrados para cubrir vacantes en el Poder Judicial y el Ministerio Público",
+      "format": "ZIP",
+      "title": "Curriculums Vitae de magistrados para cubrir vacantes en el Poder Judicial y el Ministerio Público - 2017",
+      "accessURL": "https://datos.jus.gob.ar/dataset/2892f2ad-e1f0-47ba-98bf-14ca693f3750/resource/bcbf47dd-817f-46a6-a6d8-37eeef71e3ec",
+      "lastProcessed": "2025-10-09T06:50:53.948Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_2892f2ad-e1f0-47ba-98bf-14ca693f3750",
+    "title": "Curriculums Vitae de magistrados para cubrir vacantes en el Poder Judicial y el Ministerio Público",
+    "description": "Curriculums Vitae de los magistrados ternados para cubrir  las vacantes en el Poder Judicial y los Ministerios Públicos de la Nación, y los concursos en los cuales se presentaron.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-06-23T14:42:50.118542",
+    "modified": "2025-08-04T18:08:15.318853",
+    "publisher": {
+      "mbox": "oficinadecretos@jus.gov.ar",
+      "name": "Ministerio de Justicia. Secretaría de Justicia. Dirección Nacional de Relaciones con el Poder Judicial. Oficina Decretos"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/curriculums-vitae-de-magistrados-para-cubrir-vacantes-en-el-poder-judicial-y-el-ministerio-publico"
+  }
+}

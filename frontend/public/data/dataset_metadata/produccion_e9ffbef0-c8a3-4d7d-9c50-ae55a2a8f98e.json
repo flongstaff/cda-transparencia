@@ -1,0 +1,112 @@
+{
+  "files": {
+    "sepa_domingo.zip": {
+      "datasetId": "produccion_e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e",
+      "datasetTitle": "Precios Claros - SEPA Mayorista",
+      "fileName": "sepa_domingo.zip",
+      "format": "ZIP",
+      "title": "Domingo",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e/resource/64feff09-3166-4cd6-a79d-86bf0629b1e5",
+      "lastProcessed": "2025-10-09T06:28:48.143Z",
+      "status": "processed"
+    },
+    "sepa_lunes.zip": {
+      "datasetId": "produccion_e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e",
+      "datasetTitle": "Precios Claros - SEPA Mayorista",
+      "fileName": "sepa_lunes.zip",
+      "format": "ZIP",
+      "title": "Lunes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e/resource/14694559-88b5-4e4a-af83-a57527267828",
+      "lastProcessed": "2025-10-09T06:28:48.144Z",
+      "status": "processed"
+    },
+    "sepa_martes.zip": {
+      "datasetId": "produccion_e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e",
+      "datasetTitle": "Precios Claros - SEPA Mayorista",
+      "fileName": "sepa_martes.zip",
+      "format": "ZIP",
+      "title": "Martes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e/resource/92af1942-0135-45b4-a2da-e2c378156b8a",
+      "lastProcessed": "2025-10-09T06:28:48.144Z",
+      "status": "processed"
+    },
+    "sepa_miercoles.zip": {
+      "datasetId": "produccion_e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e",
+      "datasetTitle": "Precios Claros - SEPA Mayorista",
+      "fileName": "sepa_miercoles.zip",
+      "format": "ZIP",
+      "title": "Miércoles",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e/resource/b32aca87-3089-40b1-ac27-f1923edb2169",
+      "lastProcessed": "2025-10-09T06:28:48.144Z",
+      "status": "processed"
+    },
+    "sepa_jueves.zip": {
+      "datasetId": "produccion_e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e",
+      "datasetTitle": "Precios Claros - SEPA Mayorista",
+      "fileName": "sepa_jueves.zip",
+      "format": "ZIP",
+      "title": "Jueves",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e/resource/28087a16-f71f-4b67-bddc-a64a988a4753",
+      "lastProcessed": "2025-10-09T06:28:48.144Z",
+      "status": "processed"
+    },
+    "sepa_viernes.zip": {
+      "datasetId": "produccion_e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e",
+      "datasetTitle": "Precios Claros - SEPA Mayorista",
+      "fileName": "sepa_viernes.zip",
+      "format": "ZIP",
+      "title": "Viernes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e/resource/2cb1942b-418b-4450-b8aa-d110b52167d6",
+      "lastProcessed": "2025-10-09T06:28:48.144Z",
+      "status": "processed"
+    },
+    "sepa_sabado.zip": {
+      "datasetId": "produccion_e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e",
+      "datasetTitle": "Precios Claros - SEPA Mayorista",
+      "fileName": "sepa_sabado.zip",
+      "format": "ZIP",
+      "title": "Sábado",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e/resource/3b61177e-79cf-4aac-b298-5ff468763445",
+      "lastProcessed": "2025-10-09T06:28:48.144Z",
+      "status": "processed"
+    },
+    "maestro-provincias.xlsx": {
+      "datasetId": "produccion_e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e",
+      "datasetTitle": "Precios Claros - SEPA Mayorista",
+      "fileName": "maestro-provincias.xlsx",
+      "format": "XLSX",
+      "title": "Traductor de Códigos provinciales",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e/resource/8db9c572-4bb4-47cf-90f8-df90fba88fa9",
+      "lastProcessed": "2025-10-09T06:28:48.144Z",
+      "status": "processed"
+    },
+    "res448-2.pdf": {
+      "datasetId": "produccion_e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e",
+      "datasetTitle": "Precios Claros - SEPA Mayorista",
+      "fileName": "res448-2.pdf",
+      "format": "PDF",
+      "title": "Metadata (con detalle de los campos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e/resource/f72a1124-e2ea-4ff7-ab95-ba5af5acba89",
+      "lastProcessed": "2025-10-09T06:28:51.500Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_e9ffbef0-c8a3-4d7d-9c50-ae55a2a8f98e",
+    "title": "Precios Claros - SEPA Mayorista",
+    "description": "SEPA (Sistema Electrónico de Publicidad de Precios Argentinos) reúne los precios de comercios mayoristas (productos de consumo masivo) que cuenten con salón de ventas.\r\n https://www.preciosclaros.gob.ar/terminos_y_condiciones.html Contactanos por cualquier tipo consulta, sugerencia y/o reclamo (ej: datos provistos por comercios no fidedignos) al e-mail soportesepa@comercio.gob.ar",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2025-07-03T13:10:41.151953",
+    "modified": "2025-07-03T13:10:41.151953",
+    "publisher": {
+      "mbox": "soportesepa@comercio.gob.ar",
+      "name": "Subsecretaría de Defensa del Consumidor y Lealtad Comercial"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/precios-claros-sepa-mayoristas"
+  }
+}

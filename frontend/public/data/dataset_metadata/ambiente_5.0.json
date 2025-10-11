@@ -1,0 +1,81 @@
+{
+  "files": {
+    "AgI_a_ptastrat_cant_pcia_072022": {
+      "datasetId": "ambiente_5.0",
+      "datasetTitle": "Infraestructura hídrica",
+      "fileName": "AgI_a_ptastrat_cant_pcia_072022",
+      "format": "CSV",
+      "title": "Plantas de tratamiento por provincia",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=5&did=77",
+      "lastProcessed": "2025-10-09T06:59:20.551Z",
+      "status": "processed"
+    },
+    "AgI_f_efluentestratam_pcia_072022": {
+      "datasetId": "ambiente_5.0",
+      "datasetTitle": "Infraestructura hídrica",
+      "fileName": "AgI_f_efluentestratam_pcia_072022",
+      "format": "CSV",
+      "title": "Plantas de tratamiento por tipo de tecnología y por provincia",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=5&did=175",
+      "lastProcessed": "2025-10-09T06:59:21.847Z",
+      "status": "processed"
+    },
+    "AgI_b_pob_cloaca_acumar": {
+      "datasetId": "ambiente_5.0",
+      "datasetTitle": "Infraestructura hídrica",
+      "fileName": "AgI_b_pob_cloaca_acumar",
+      "format": "CSV",
+      "title": "Población incorporada al área con saneamiento cloacal en la cuenca Matanza Riachuelo",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=5&did=171",
+      "lastProcessed": "2025-10-09T06:59:23.116Z",
+      "status": "processed"
+    },
+    "AgI_c_pob_redaguapotable_cm": {
+      "datasetId": "ambiente_5.0",
+      "datasetTitle": "Infraestructura hídrica",
+      "fileName": "AgI_c_pob_redaguapotable_cm",
+      "format": "CSV",
+      "title": "Población incorporada al área con servicio de red de agua potable en la cuenca Matanza Riachuelo",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=5&did=172",
+      "lastProcessed": "2025-10-09T06:59:24.413Z",
+      "status": "processed"
+    },
+    "AgI_e_pobhogares_cloacas_porc": {
+      "datasetId": "ambiente_5.0",
+      "datasetTitle": "Infraestructura hídrica",
+      "fileName": "AgI_e_pobhogares_cloacas_porc",
+      "format": "CSV",
+      "title": "Porcentaje de la población en hogares con acceso a desagües cloacales",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=5&did=174",
+      "lastProcessed": "2025-10-09T06:59:25.751Z",
+      "status": "processed"
+    },
+    "AgI_d_pobhogares_aguaredpublica_porc": {
+      "datasetId": "ambiente_5.0",
+      "datasetTitle": "Infraestructura hídrica",
+      "fileName": "AgI_d_pobhogares_aguaredpublica_porc",
+      "format": "CSV",
+      "title": "Porcentaje de la población en hogares con acceso a agua segura de red pública",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=5&did=173",
+      "lastProcessed": "2025-10-09T06:59:27.274Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_5.0",
+    "title": "Infraestructura hídrica",
+    "description": "Muestra las plantas de tratamiento por provincia y tipo de tecnología y la población con acceso a cloacas y agua de red",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2021-12-02T00:00:00",
+    "modified": "2021-12-02T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

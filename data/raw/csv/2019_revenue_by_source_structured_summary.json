@@ -1,0 +1,71 @@
+{
+  "file_name": "2019_revenue_by_source_structured.csv",
+  "row_count": 23,
+  "column_count": 7,
+  "columns": [
+    "source",
+    "type",
+    "description",
+    "budgeted",
+    "executed",
+    "percentage",
+    "year"
+  ],
+  "sample_data": [
+    {
+      "source": "provincial_participation",
+      "type": "taxes",
+      "description": "Participación Impuestos Provinciales",
+      "budgeted": 0.0,
+      "executed": 379449.3,
+      "percentage": 0.0,
+      "year": 2019
+    },
+    {
+      "source": "property_tax",
+      "type": "rural",
+      "description": "Inmobiliario Rural No Afectado",
+      "budgeted": 0.0,
+      "executed": 177861.13,
+      "percentage": 0.0,
+      "year": 2019
+    },
+    {
+      "source": "revenue_tax",
+      "type": "gross_income",
+      "description": "Ingresos Brutos",
+      "budgeted": 0.0,
+      "executed": 428.24,
+      "percentage": 0.0,
+      "year": 2019
+    },
+    {
+      "source": "ordinary_resources",
+      "type": "funds",
+      "description": "Recursos Ordinarios",
+      "budgeted": 0.0,
+      "executed": 60532.5,
+      "percentage": 0.0,
+      "year": 2019
+    },
+    {
+      "source": "municipal_housing_fund",
+      "type": "housing",
+      "description": "Fondo Vivienda Municipal",
+      "budgeted": 0.0,
+      "executed": 190780.09,
+      "percentage": 0.0,
+      "year": 2019
+    }
+  ],
+  "data_types": {
+    "source": "object",
+    "type": "object",
+    "description": "object",
+    "budgeted": "float64",
+    "executed": "float64",
+    "percentage": "float64",
+    "year": "int64"
+  },
+  "processing_method": "pandas-read_csv"
+}

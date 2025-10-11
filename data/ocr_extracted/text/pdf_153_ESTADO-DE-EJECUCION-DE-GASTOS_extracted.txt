@@ -1,0 +1,32 @@
+Municipalidad de
+Carmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS
+Ejercicio 
+:Hoja: 1 de 256 R.A.F.A.M.
+19/09/2023 12:03
+Del 01/01/2022 al 31/03/2022
+2022Partidas Incluidas respecto al Crédito Disponible: Todas
+Partidas Incluidas respecto al Crédito Vigente: Todas
+Devengado 
+no pagado Crédito 
+Disponible Pagado Devengado Compromiso Preventivo Crédito 
+Vigente Modifica 
+ciones Crédito 
+Aprobado Fuen. 
+Fin. Objeto del GastoCrédito Vig. 
+- Devengado 
+Jurisdicción: 1110101000 - Conduccion Superior 
+Apertura Programática: 01.00.00 - Desarrallo politicas centrales01.01.00 - Cond. y Gest. de Politicas Centrales
+110 - Tesoro Municipal
+1.0.0.0 - Gastos en personal 1.1.0.0 - Personal permanente1.1.1.0 - Retribuciones del cargo 1.1.1.1 - Personal Superior
+6.464.511,00 0,00 6.464.511,00 0,00 1.033.356,60 1.033.356,60 1.033.356,60 5.431.154,40 0,00 5.431.154,40
+1.1.1.5 - Personal Administrativo 242.188,80 0,00 242.188,80 0,00 0,00 0,00 0,00 242.188,80 0,00 242.188,80
+1.1.1.9 - Gastos Reservados 0,00 0,00 0,00 0,00 155.003,49 155.003,49 155.003,49 -155.003,49 0,00 -155.003,49
+6.706.699,80 0,00 6.706.699,80 0,00 1.188.360,09 1.188.360,09 1.188.360,09 5.518.339,71 0,00 Total Retribuciones del cargo 5.518.339,71
+1.1.3.0 - Retribuciones que no hacen al cargo 1.1.3.1 - Antiguedad
+412.178,40 0,00 412.178,40 0,00 103.335,66 103.335,66 103.335,66 308.842,74 0,00 308.842,74 412.178,40 0,00 412.178,40 0,00 103.335,66 103.335,66 103.335,66 308.842,74 0,00
+Total Retribuciones que no hacen al cargo 308.842,74
+1.1.4.0 - Sueldo anual complementario 401.829,07 0,00 401.829,07 0,00 0,00 0,00 0,00 401.829,07 0,00 401.829,07
+1.1.6.0 - Contribuciones patronales 1.1.6.1 - IPS
+595.368,80 0,00 595.368,80 0,00 148.947,55 148.947,55 148.947,55 446.421,25 0,00 446.421,25
+1.1.6.2 - IOMA 233.186,11 0,00 233.186,11 0,00 65.607,09 65.607,09 65.607,09 167.579,02 0,00 167.579,02 828.554,91 0,00 828.554,91 0,00 214.554,64 214.554,64 214.554,64 614.000,27 0,00
+Total Contribuciones patronales 614.000,2...

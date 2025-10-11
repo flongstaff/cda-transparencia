@@ -1,0 +1,43 @@
+{
+  "file_name": "2019_revenue_by_type.csv",
+  "row_count": 5,
+  "column_count": 3,
+  "columns": [
+    "type",
+    "amount",
+    "percentage"
+  ],
+  "sample_data": [
+    {
+      "type": "Corrientes",
+      "amount": 800000000.0,
+      "percentage": 56.0
+    },
+    {
+      "type": "De Capital",
+      "amount": 600000000.0,
+      "percentage": 44.0
+    },
+    {
+      "type": NaN,
+      "amount": 201.0,
+      "percentage": NaN
+    },
+    {
+      "type": NaN,
+      "amount": 195.0,
+      "percentage": NaN
+    },
+    {
+      "type": NaN,
+      "amount": 201.0,
+      "percentage": NaN
+    }
+  ],
+  "data_types": {
+    "type": "object",
+    "amount": "float64",
+    "percentage": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

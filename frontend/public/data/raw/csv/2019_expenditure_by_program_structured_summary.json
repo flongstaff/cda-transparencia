@@ -1,0 +1,64 @@
+{
+  "file_name": "2019_expenditure_by_program_structured.csv",
+  "row_count": 22,
+  "column_count": 6,
+  "columns": [
+    "program_code",
+    "program_name",
+    "budgeted",
+    "executed",
+    "paid",
+    "year"
+  ],
+  "sample_data": [
+    {
+      "program_code": "1110101000-17",
+      "program_name": "Planificacion y desarrollo de politicas sociales, salu",
+      "budgeted": 17185446.15,
+      "executed": 17143446.15,
+      "paid": 16736420.07,
+      "year": 2019
+    },
+    {
+      "program_code": "111010100018",
+      "program_name": "Desarrollo Productivo en el Ambito Local",
+      "budgeted": 1739912.03,
+      "executed": 1739912.03,
+      "paid": 1701912.03,
+      "year": 2019
+    },
+    {
+      "program_code": "111010100019",
+      "program_name": "Desarrollo de Políticas Sociales",
+      "budgeted": 10930343.69,
+      "executed": 10930343.69,
+      "paid": 10745925.77,
+      "year": 2019
+    },
+    {
+      "program_code": "1110101000-20",
+      "program_name": "Desarrollo de Políticas de Educación",
+      "budgeted": 10265427.08,
+      "executed": 10265427.08,
+      "paid": 10265427.08,
+      "year": 2019
+    },
+    {
+      "program_code": "111010300026",
+      "program_name": "Fondo Educativo",
+      "budgeted": 25464554.77,
+      "executed": 25358513.52,
+      "paid": 25358513.52,
+      "year": 2019
+    }
+  ],
+  "data_types": {
+    "program_code": "object",
+    "program_name": "object",
+    "budgeted": "float64",
+    "executed": "float64",
+    "paid": "float64",
+    "year": "int64"
+  },
+  "processing_method": "pandas-read_csv"
+}

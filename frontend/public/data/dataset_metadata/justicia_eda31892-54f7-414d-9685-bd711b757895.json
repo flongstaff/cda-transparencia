@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_eda31892-54f7-414d-9685-bd711b757895",
+      "datasetTitle": "Declaraciones Juradas de actividades anteriores y posteriores a la función pública",
+      "format": "ZIP",
+      "title": "Declaraciones Juradas  - actividades anteriores y posteriores a la función pública - 2022",
+      "accessURL": "https://datos.jus.gob.ar/dataset/eda31892-54f7-414d-9685-bd711b757895/resource/b5c6a530-c055-467a-8f2e-135e25ce9756",
+      "lastProcessed": "2025-10-09T06:16:16.400Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_eda31892-54f7-414d-9685-bd711b757895",
+    "title": "Declaraciones Juradas de actividades anteriores y posteriores a la función pública",
+    "description": "Datos correspondientes al Sistema de Monitoreo de Actividades Privadas y Públicas Anteriores y Posteriores al ejercicio de la función pública.(MAPPAP).",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2022-10-25T17:05:11.615283",
+    "modified": "2025-10-03T19:11:55.637215",
+    "publisher": {
+      "mbox": "integridad.oa@gmail.com",
+      "name": "Ministerio de Justicia. Oficina Anticorrupción."
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/declaraciones-juradas-de-actividades-anteriores-y-posteriores-a-la-funcion-publica"
+  }
+}

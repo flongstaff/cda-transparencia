@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_f91e3405-2bd0-47eb-81bd-5d73835ec005",
+      "datasetTitle": "Producción de Petróleo desde 1950",
+      "lastProcessed": "2025-10-09T07:19:04.508Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_f91e3405-2bd0-47eb-81bd-5d73835ec005",
+    "title": "Producción de Petróleo desde 1950",
+    "description": "Serie de datos de producción de petróleo en Argentina desde el año 1950. La misma fue confeccionada por la Subsecretaría de Escenarios y Evaluación de Proyectos de la Secretaría de Planeamiento Energético Estratégico del Ministerio de Energía y Minería de la Nación, y surge del empalme de series disponibles en otras fuentes oficiales.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2023-05-19T13:34:20.594441",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

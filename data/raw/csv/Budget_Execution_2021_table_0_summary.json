@@ -1,0 +1,50 @@
+{
+  "file_name": "Budget_Execution_2021_table_0.csv",
+  "row_count": 5,
+  "column_count": 4,
+  "columns": [
+    "Quarter",
+    "Budgeted",
+    "Executed",
+    "Percentage"
+  ],
+  "sample_data": [
+    {
+      "Quarter": "Q1",
+      "Budgeted": "$75,000,000",
+      "Executed": "$73,500,000",
+      "Percentage": "98.0%"
+    },
+    {
+      "Quarter": "Q2",
+      "Budgeted": "$80,000,000",
+      "Executed": "$78,000,000",
+      "Percentage": "97.5%"
+    },
+    {
+      "Quarter": "Q3",
+      "Budgeted": "$85,000,000",
+      "Executed": "$83,500,000",
+      "Percentage": "98.2%"
+    },
+    {
+      "Quarter": "Q4",
+      "Budgeted": "$90,000,000",
+      "Executed": "$88,000,000",
+      "Percentage": "97.8%"
+    },
+    {
+      "Quarter": "Total",
+      "Budgeted": "$330,000,000",
+      "Executed": "$323,000,000",
+      "Percentage": "97.9%"
+    }
+  ],
+  "data_types": {
+    "Quarter": "object",
+    "Budgeted": "object",
+    "Executed": "object",
+    "Percentage": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

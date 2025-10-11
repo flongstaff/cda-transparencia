@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-licitacion-7-2023",
+      "title": "Licitación Pública N°7/2023 - Refuerzo de Sistema de Producción y Almacenamiento",
+      "distribution": [
+        {
+          "title": "LICITACION-PUBLICA-N°7.pdf",
+          "format": "PDF",
+          "fileName": "LICITACION-PUBLICA-N°7.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-licitacion-7-2023/LICITACION-PUBLICA-N°7.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-licitacion-7-2023/LICITACION-PUBLICA-N°7_extraction.json",
+            "pageCount": 2,
+            "textLength": 2,
+            "extractedPreview": "\n\n",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

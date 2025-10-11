@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-estadisticas-salud-2022",
+      "title": "Estadísticas de Salud 2022",
+      "distribution": [
+        {
+          "title": "BROMATOLOGIA.pdf",
+          "format": "PDF",
+          "fileName": "BROMATOLOGIA.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-estadisticas-salud-2022/BROMATOLOGIA.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-estadisticas-salud-2022/BROMATOLOGIA_extraction.json",
+            "pageCount": 1,
+            "textLength": 417,
+            "extractedPreview": "PERIODO CIRUGIAS % INTERANUAL\n2019 510 -\n2020 755 48%\n2021 1015 34,43%\n2022 160 0,84%\nTOTAL 2440\nPERIODO ANIMALES VACUNADOS % INTERANUAL\n2019 1200 -\n2020 1600 33,33%\n2021 3100 93,75%\n2022 - -\nTOTAL 59...",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "files": {
+    "indice-confianza-gobierno-valores-anuales.csv": {
+      "datasetId": "sspm_370",
+      "datasetTitle": "Índice de Confianza en el Gobierno",
+      "fileName": "indice-confianza-gobierno-valores-anuales.csv",
+      "format": "CSV",
+      "title": "Índice de Confianza en el Gobierno. Serie anual.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:10.864Z",
+      "status": "processed"
+    },
+    "indice-confianza-gobierno-valores-trimestrales.csv": {
+      "datasetId": "sspm_370",
+      "datasetTitle": "Índice de Confianza en el Gobierno",
+      "fileName": "indice-confianza-gobierno-valores-trimestrales.csv",
+      "format": "CSV",
+      "title": "Índice de Confianza en el Gobierno. Serie trimestral.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:11.941Z",
+      "status": "processed"
+    },
+    "indice-confianza-gobierno-valores-mensuales.csv": {
+      "datasetId": "sspm_370",
+      "datasetTitle": "Índice de Confianza en el Gobierno",
+      "fileName": "indice-confianza-gobierno-valores-mensuales.csv",
+      "format": "CSV",
+      "title": "Índice de Confianza en el Gobierno. Serie mensual.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:12.995Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_370",
+    "title": "Índice de Confianza en el Gobierno",
+    "description": "Índice de Confianza en el Gobierno - ICG en índice",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2025-02-04",
+    "modified": "2025-03-24T10:01:59.896162",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

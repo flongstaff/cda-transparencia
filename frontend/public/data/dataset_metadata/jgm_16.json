@@ -1,0 +1,452 @@
+{
+  "files": {
+    "indicadores-red-nodos.gz": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-red-nodos.gz",
+      "format": "GZ",
+      "title": "Indicadores agregados de Datos Abiertos de la APN (panel)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.1",
+      "lastProcessed": "2025-10-09T07:11:04.873Z",
+      "status": "processed"
+    },
+    "indicadores-red-nodos-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-red-nodos-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de la APN (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.2",
+      "lastProcessed": "2025-10-09T07:11:08.318Z",
+      "status": "processed"
+    },
+    "indicadores-datosgobar-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-datosgobar-series.csv",
+      "format": "CSV",
+      "title": "Indicadores del Portal Nacional de Datos Públicos - datos.gob.ar (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.3",
+      "lastProcessed": "2025-10-09T07:11:10.378Z",
+      "status": "processed"
+    },
+    "indicadores-nodos.gz": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-nodos.gz",
+      "format": "GZ",
+      "title": "Indicadores de Datos Abiertos de los organismos de la APN (panel)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.4",
+      "lastProcessed": "2025-10-09T07:11:10.378Z",
+      "status": "processed"
+    },
+    "indicadores-energia-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-energia-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Energía (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.5",
+      "lastProcessed": "2025-10-09T07:11:12.582Z",
+      "status": "processed"
+    },
+    "indicadores-agroindustria-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-agroindustria-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Agricultura, Ganadería y Pesca (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.6",
+      "lastProcessed": "2025-10-09T07:11:14.911Z",
+      "status": "processed"
+    },
+    "indicadores-modernizacion-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-modernizacion-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Modernización (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.7",
+      "lastProcessed": "2025-10-09T07:11:19.366Z",
+      "status": "processed"
+    },
+    "indicadores-aaip-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-aaip-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de la Agencia de Acceso a la Información Pública (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.8",
+      "lastProcessed": "2025-10-09T07:11:21.647Z",
+      "status": "processed"
+    },
+    "indicadores-acumar-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-acumar-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de ACUMAR (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.9",
+      "lastProcessed": "2025-10-09T07:11:23.877Z",
+      "status": "processed"
+    },
+    "indicadores-ambiente-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-ambiente-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Ambiente y Desarrollo Sostenible (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.10",
+      "lastProcessed": "2025-10-09T07:11:26.180Z",
+      "status": "processed"
+    },
+    "indicadores-arsat-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-arsat-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de ARSAT (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.11",
+      "lastProcessed": "2025-10-09T07:11:28.392Z",
+      "status": "processed"
+    },
+    "indicadores-cultura-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-cultura-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Cultura (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.12",
+      "lastProcessed": "2025-10-09T07:11:31.138Z",
+      "status": "processed"
+    },
+    "indicadores-defensa-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-defensa-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Defensa (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.13",
+      "lastProcessed": "2025-10-09T07:11:33.272Z",
+      "status": "processed"
+    },
+    "indicadores-desarrollo-social-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-desarrollo-social-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Desarrollo Social (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.14",
+      "lastProcessed": "2025-10-09T07:11:36.261Z",
+      "status": "processed"
+    },
+    "indicadores-enacom-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-enacom-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de ENACOM (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.15",
+      "lastProcessed": "2025-10-09T07:11:38.427Z",
+      "status": "processed"
+    },
+    "indicadores-enargas-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-enargas-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de ENARGAS (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.16",
+      "lastProcessed": "2025-10-09T07:11:40.749Z",
+      "status": "processed"
+    },
+    "indicadores-exterior-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-exterior-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Relaciones Exteriores y Culto (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.17",
+      "lastProcessed": "2025-10-09T07:11:43.636Z",
+      "status": "processed"
+    },
+    "indicadores-ign-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-ign-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de IGN (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.18",
+      "lastProcessed": "2025-10-09T07:11:46.196Z",
+      "status": "processed"
+    },
+    "indicadores-interior-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-interior-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Interior (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.19",
+      "lastProcessed": "2025-10-09T07:11:48.313Z",
+      "status": "processed"
+    },
+    "indicadores-jgm-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-jgm-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Jefatura de Gabinete de Ministros (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.20",
+      "lastProcessed": "2025-10-09T07:11:50.525Z",
+      "status": "processed"
+    },
+    "indicadores-justicia-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-justicia-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Justicia (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.21",
+      "lastProcessed": "2025-10-09T07:11:52.638Z",
+      "status": "processed"
+    },
+    "indicadores-mincyt-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-mincyt-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Ciencia y Tecnología (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.22",
+      "lastProcessed": "2025-10-09T07:11:54.896Z",
+      "status": "processed"
+    },
+    "indicadores-pami-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-pami-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de PAMI (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.23",
+      "lastProcessed": "2025-10-09T07:11:56.978Z",
+      "status": "processed"
+    },
+    "indicadores-produccion-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-produccion-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Industria y Desarrollo Productivo (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.24",
+      "lastProcessed": "2025-10-09T07:11:59.187Z",
+      "status": "processed"
+    },
+    "indicadores-salud-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-salud-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Salud (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.25",
+      "lastProcessed": "2025-10-09T07:12:01.312Z",
+      "status": "processed"
+    },
+    "indicadores-seguridad-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-seguridad-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Seguridad (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.26",
+      "lastProcessed": "2025-10-09T07:12:04.930Z",
+      "status": "processed"
+    },
+    "indicadores-smn-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-smn-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos del Servicio Meteorológico Nacional (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.28",
+      "lastProcessed": "2025-10-09T07:12:07.120Z",
+      "status": "processed"
+    },
+    "indicadores-sspm-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-sspm-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de la Subsecretaría de Programación Macroeconómica (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.31",
+      "lastProcessed": "2025-10-09T07:12:09.678Z",
+      "status": "processed"
+    },
+    "indicadores-sspre-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-sspre-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de la Subsecretaría de Presupuesto (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.33",
+      "lastProcessed": "2025-10-09T07:12:11.925Z",
+      "status": "processed"
+    },
+    "indicadores-transporte-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-transporte-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Transporte (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.34",
+      "lastProcessed": "2025-10-09T07:12:14.152Z",
+      "status": "processed"
+    },
+    "indicadores-turismo-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-turismo-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Turismo (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.35",
+      "lastProcessed": "2025-10-09T07:12:16.509Z",
+      "status": "processed"
+    },
+    "indicadores-educacion-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-educacion-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Educación (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.36",
+      "lastProcessed": "2025-10-09T07:12:19.377Z",
+      "status": "processed"
+    },
+    "indicadores-ssprys-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-ssprys-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de la Subsecretaría de Programación Regional y Sectorial (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.37",
+      "lastProcessed": "2025-10-09T07:12:21.856Z",
+      "status": "processed"
+    },
+    "indicadores-obras-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-obras-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Obras Públicas (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.38",
+      "lastProcessed": "2025-10-09T07:12:24.481Z",
+      "status": "processed"
+    },
+    "indicadores-trabajo-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-trabajo-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Trabajo, Empleo y Seguridad Social (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.39",
+      "lastProcessed": "2025-10-09T07:12:27.472Z",
+      "status": "processed"
+    },
+    "indicadores-shn-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-shn-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos del Servicio de Hidrografía Naval (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.40",
+      "lastProcessed": "2025-10-09T07:12:29.583Z",
+      "status": "processed"
+    },
+    "indicadores-inti-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-inti-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos del INTI (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.41",
+      "lastProcessed": "2025-10-09T07:12:32.246Z",
+      "status": "processed"
+    },
+    "indicadores-generos-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-generos-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Mujeres, Géneros y Diversidad (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.42",
+      "lastProcessed": "2025-10-09T07:12:34.544Z",
+      "status": "processed"
+    },
+    "indicadores-sedronar-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-sedronar-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de la Secretaría de Políticas Integrales sobre Drogas (SEDRONAR) (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.43",
+      "lastProcessed": "2025-10-09T07:12:36.767Z",
+      "status": "processed"
+    },
+    "indicadores-dine-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-dine-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de la Dirección Nacional Electoral (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.44",
+      "lastProcessed": "2025-10-09T07:12:39.049Z",
+      "status": "processed"
+    },
+    "indicadores-habitat-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-habitat-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Hábitat (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.45",
+      "lastProcessed": "2025-10-09T07:12:42.938Z",
+      "status": "processed"
+    },
+    "indicadores-renaper-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-renaper-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos del RENAPER (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.46",
+      "lastProcessed": "2025-10-09T07:12:46.026Z",
+      "status": "processed"
+    },
+    "indicadores-mineria-series.csv": {
+      "datasetId": "jgm_16",
+      "datasetTitle": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+      "fileName": "indicadores-mineria-series.csv",
+      "format": "CSV",
+      "title": "Indicadores agregados de Datos Abiertos de Minería (series)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn/archivo/jgm_16.47",
+      "lastProcessed": "2025-10-09T07:12:48.162Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "jgm_16",
+    "title": "Indicadores de la Red de Datos Abiertos de la Administración Pública Nacional (APN)",
+    "description": "Indicadores de seguimiento de sobre los catálogos de datos abiertos que forman parte de la política de apertura de datos de la Administración Pública Nacional.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2019-10-29T00:00:00",
+    "modified": "2025-04-07T18:38:21.940714",
+    "publisher": {
+      "mbox": "datosargentina@jefatura.gob.ar",
+      "name": "Jefatura de Gabinete de Ministros. Secretaría de Innovación, Ciencia y Tecnología. Subsecretaría de Tecnologías de la Información y las Comunicaciones."
+    },
+    "landingPage": "https://datos.gob.ar/dataset/jgm-indicadores-red-datos-abiertos-administracion-publica-nacional-apn"
+  }
+}

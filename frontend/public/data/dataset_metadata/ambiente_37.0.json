@@ -1,0 +1,91 @@
+{
+  "files": {
+    "TR_FISC_certif_emitidos_año_2023": {
+      "datasetId": "ambiente_37.0",
+      "datasetTitle": "Fiscalización ambiental",
+      "fileName": "TR_FISC_certif_emitidos_año_2023",
+      "format": "CSV",
+      "title": "Cantidad de certificados y extensiones de licencias de configuración ambiental expedidos por la UTOEV",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=68&did=356",
+      "lastProcessed": "2025-10-09T06:56:55.831Z",
+      "status": "processed"
+    },
+    "TR_FISC_homolog_tipo_norma_2025": {
+      "datasetId": "ambiente_37.0",
+      "datasetTitle": "Fiscalización ambiental",
+      "fileName": "TR_FISC_homolog_tipo_norma_2025",
+      "format": "CSV",
+      "title": "Distribución porcentual en la homologación de vehículos livianos, por tipo de norma Euro",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=68&did=395",
+      "lastProcessed": "2025-10-09T06:56:57.240Z",
+      "status": "processed"
+    },
+    "TR_FISC_homolog_tipo_combustible_2025": {
+      "datasetId": "ambiente_37.0",
+      "datasetTitle": "Fiscalización ambiental",
+      "fileName": "TR_FISC_homolog_tipo_combustible_2025",
+      "format": "CSV",
+      "title": "Distribución porcentual en la homologación de vehículos por tipo de combustible",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=68&did=361",
+      "lastProcessed": "2025-10-09T06:56:58.601Z",
+      "status": "processed"
+    },
+    "TR_FISC_fiscalizaciones_año_2024": {
+      "datasetId": "ambiente_37.0",
+      "datasetTitle": "Fiscalización ambiental",
+      "fileName": "TR_FISC_fiscalizaciones_año_2024",
+      "format": "CSV",
+      "title": "Cantidad de fiscalizaciones",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=68&did=353",
+      "lastProcessed": "2025-10-09T06:56:59.872Z",
+      "status": "processed"
+    },
+    "lca_CEG_26062024_final": {
+      "datasetId": "ambiente_37.0",
+      "datasetTitle": "Fiscalización ambiental",
+      "fileName": "lca_CEG_26062024_final",
+      "format": "CSV",
+      "title": "Licencia de Configuración Ambiental (LCA), Certificado de Emisiones Gaseosas y Certificado Emisiones Sonoras",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=68&did=267",
+      "lastProcessed": "2025-10-09T06:57:01.176Z",
+      "status": "processed"
+    },
+    "TR_FISC_limites_parametros_": {
+      "datasetId": "ambiente_37.0",
+      "datasetTitle": "Fiscalización ambiental",
+      "fileName": "TR_FISC_limites_parametros_",
+      "format": "CSV",
+      "title": "Límites de cumplimiento en el Control de Producción LCEGV",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=68&did=360",
+      "lastProcessed": "2025-10-09T06:57:02.434Z",
+      "status": "processed"
+    },
+    "TR_FISC_fiscalizaciones_año_por_jurisd_2025": {
+      "datasetId": "ambiente_37.0",
+      "datasetTitle": "Fiscalización ambiental",
+      "fileName": "TR_FISC_fiscalizaciones_año_por_jurisd_2025",
+      "format": "CSV",
+      "title": "Cantidad de fiscalizaciones por jurisdicción",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=10&stid=68&did=427",
+      "lastProcessed": "2025-10-09T06:57:03.721Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_37.0",
+    "title": "Fiscalización ambiental",
+    "description": "Muestra las actividades de fiscalización del Ministerio de Ambiente y Desarrollo Sostenible y los ensayos y/o controles del laboratorio de emisiones vehículares",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2021-12-31T00:00:00",
+    "modified": "2021-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

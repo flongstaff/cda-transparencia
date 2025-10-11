@@ -1,0 +1,92 @@
+{
+  "file_name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_2.csv",
+  "row_count": 8,
+  "column_count": 10,
+  "columns": [
+    "11.4.01.00 - Coparticipación Pcial. de Impuesto",
+    "21 - Origen Provincial - De",
+    "387.924.873,00",
+    "0,00",
+    "387.924.873,00.1",
+    "286.673.585,93",
+    "101.251.287,07",
+    "286.673.585,93.1",
+    "0,00.1",
+    "101.251.287,07.1"
+  ],
+  "sample_data": [
+    {
+      "11.4.01.00 - Coparticipación Pcial. de Impuesto": "Ley 10.559",
+      "21 - Origen Provincial - De": "libre disponibilidad",
+      "387.924.873,00": NaN,
+      "0,00": NaN,
+      "387.924.873,00.1": NaN,
+      "286.673.585,93": NaN,
+      "101.251.287,07": NaN,
+      "286.673.585,93.1": NaN,
+      "0,00.1": NaN,
+      "101.251.287,07.1": NaN
+    },
+    {
+      "11.4.01.00 - Coparticipación Pcial. de Impuesto": "11.4.02.00 - Fondo para el fortalecimiento de",
+      "21 - Origen Provincial - De": "21 - Origen Provincial - De",
+      "387.924.873,00": "20.198.398,39",
+      "0,00": "0,00",
+      "387.924.873,00.1": "20.198.398,39",
+      "286.673.585,93": "16.391.713,46",
+      "101.251.287,07": "3.806.684,93",
+      "286.673.585,93.1": "16.391.713,46",
+      "0,00.1": "0,00",
+      "101.251.287,07.1": "3.806.684,93"
+    },
+    {
+      "11.4.01.00 - Coparticipación Pcial. de Impuesto": "Recurso Municipales",
+      "21 - Origen Provincial - De": "libre disponibilidad",
+      "387.924.873,00": NaN,
+      "0,00": NaN,
+      "387.924.873,00.1": NaN,
+      "286.673.585,93": NaN,
+      "101.251.287,07": NaN,
+      "286.673.585,93.1": NaN,
+      "0,00.1": NaN,
+      "101.251.287,07.1": NaN
+    },
+    {
+      "11.4.01.00 - Coparticipación Pcial. de Impuesto": "11.4.03.00 - Fondo Municipal de Inclusion Social",
+      "21 - Origen Provincial - De": "21 - Origen Provincial - De",
+      "387.924.873,00": "8.232.276,23",
+      "0,00": "0,00",
+      "387.924.873,00.1": "8.232.276,23",
+      "286.673.585,93": "6.607.978,78",
+      "101.251.287,07": "1.624.297,45",
+      "286.673.585,93.1": "6.607.978,78",
+      "0,00.1": "0,00",
+      "101.251.287,07.1": "1.624.297,45"
+    },
+    {
+      "11.4.01.00 - Coparticipación Pcial. de Impuesto": NaN,
+      "21 - Origen Provincial - De": "libre disponibilidad",
+      "387.924.873,00": NaN,
+      "0,00": NaN,
+      "387.924.873,00.1": NaN,
+      "286.673.585,93": NaN,
+      "101.251.287,07": NaN,
+      "286.673.585,93.1": NaN,
+      "0,00.1": NaN,
+      "101.251.287,07.1": NaN
+    }
+  ],
+  "data_types": {
+    "11.4.01.00 - Coparticipación Pcial. de Impuesto": "object",
+    "21 - Origen Provincial - De": "object",
+    "387.924.873,00": "object",
+    "0,00": "object",
+    "387.924.873,00.1": "object",
+    "286.673.585,93": "object",
+    "101.251.287,07": "object",
+    "286.673.585,93.1": "object",
+    "0,00.1": "object",
+    "101.251.287,07.1": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

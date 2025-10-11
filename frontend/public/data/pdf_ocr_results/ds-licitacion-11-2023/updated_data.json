@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-licitacion-11-2023",
+      "title": "Licitación Pública N°11/2023 - Adquisición de Equipo de Nefrología",
+      "distribution": [
+        {
+          "title": "LICITACION-PUBLICA-N°11.pdf",
+          "format": "PDF",
+          "fileName": "LICITACION-PUBLICA-N°11.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-licitacion-11-2023/LICITACION-PUBLICA-N°11.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-licitacion-11-2023/LICITACION-PUBLICA-N°11_extraction.json",
+            "pageCount": 2,
+            "textLength": 2,
+            "extractedPreview": "\n\n",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

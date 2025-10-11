@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_7c268f77-e007-43ba-8a18-d50ef022f8e3",
+      "datasetTitle": "Registro de obsequios a funcionarios públicos",
+      "format": "ZIP",
+      "title": "Registro de obsequios a funcionarios públicos - 2018",
+      "accessURL": "https://datos.jus.gob.ar/dataset/7c268f77-e007-43ba-8a18-d50ef022f8e3/resource/278cbee7-7448-4f10-a9c7-b18ef469595c",
+      "lastProcessed": "2025-10-09T06:33:02.572Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_7c268f77-e007-43ba-8a18-d50ef022f8e3",
+    "title": "Registro de obsequios a funcionarios públicos",
+    "description": "Obsequios a funcionarios públicos registrados en el ámbito de la Oficina Anticorrupción.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-04-10T19:20:30.797398",
+    "modified": "2025-10-01T14:14:05.968390",
+    "publisher": {
+      "mbox": "aferrer@anticorrupcion.gob.ar",
+      "name": "Ministerio de Justicia. Oficina Anticorrupción"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/registro-de-obsequios-a-funcionarios-publicos"
+  }
+}

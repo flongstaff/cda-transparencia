@@ -1,0 +1,32 @@
+{
+  "files": {
+    "grandes-proyectos-de-inversion-res-256-2000.xlsx": {
+      "datasetId": "produccion_c7e38c13-2227-4577-8831-2744ef10450d",
+      "datasetTitle": "Grandes Proyectos de Inversión (Res 256/2000)",
+      "fileName": "grandes-proyectos-de-inversion-res-256-2000.xlsx",
+      "format": "XLS",
+      "title": "Proyectos aprobados",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/c7e38c13-2227-4577-8831-2744ef10450d/resource/cb73667c-fb3c-43fe-9dcd-6a0b54fdc74b",
+      "lastProcessed": "2025-10-09T08:05:53.751Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_c7e38c13-2227-4577-8831-2744ef10450d",
+    "title": "Grandes Proyectos de Inversión (Res 256/2000)",
+    "description": "Es un incentivo promocional dirigido a alentar las inversiones con el fin de aumentar la competitividad de los productos industrializados a través de la incorporación de tecnología de última generación. Para ello se establece el pago del 0% en concepto de derechos de importación para todos los bienes nuevos que formen parte de nuevas líneas de producción completas y autónomas, y su excepción al pago de tasa de comprobación de destino. ",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-07-21T14:08:19.742847",
+    "modified": "2022-07-28T11:32:03.182314",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo, Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa, Subsecretaría de Política y Gestión Comercial, Dirección Nacional de Gestión Comercial, Dirección de Exportaciones."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/grandes-proyectos-de-inversion-res-256-2000"
+  }
+}

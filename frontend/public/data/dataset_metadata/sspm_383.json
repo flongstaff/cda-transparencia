@@ -1,0 +1,52 @@
+{
+  "files": {
+    "oferta-demanda-global-millones-pesos-precios-1986-trimestral.csv": {
+      "datasetId": "sspm_383",
+      "datasetTitle": "Cuentas Nacionales 1980-1996",
+      "fileName": "oferta-demanda-global-millones-pesos-precios-1986-trimestral.csv",
+      "format": "CSV",
+      "title": "Oferta y Demanda Global. Millones de pesos constantes. Base 1986. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:58.945Z",
+      "status": "processed"
+    },
+    "pib-costo-factores-millones-pesos-1986-trimestral.csv": {
+      "datasetId": "sspm_383",
+      "datasetTitle": "Cuentas Nacionales 1980-1996",
+      "fileName": "pib-costo-factores-millones-pesos-1986-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto a costo de factores. Millones de pesos constantes. Base 1986. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:00.060Z",
+      "status": "processed"
+    },
+    "pib-costo-factores-desagregado-por-sector-millones-pesos-1986-trimestral.csv": {
+      "datasetId": "sspm_383",
+      "datasetTitle": "Cuentas Nacionales 1980-1996",
+      "fileName": "pib-costo-factores-desagregado-por-sector-millones-pesos-1986-trimestral.csv",
+      "format": "CSV",
+      "title": "Producto Interno Bruto a costo de factores, por sector.  Millones de pesos constantes. Base 1986. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:01.105Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_383",
+    "title": "Cuentas Nacionales 1980-1996",
+    "description": "Cuentas Nacionales 1980-1996 a Precios de 1986",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2018-02-20",
+    "modified": "2025-04-02T16:47:59.855622",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

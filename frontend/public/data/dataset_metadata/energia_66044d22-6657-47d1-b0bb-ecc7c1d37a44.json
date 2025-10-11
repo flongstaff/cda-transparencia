@@ -1,0 +1,62 @@
+{
+  "files": {
+    "exploracin-hidrocarburos-permisos-de-exploracin.csv": {
+      "datasetId": "energia_66044d22-6657-47d1-b0bb-ecc7c1d37a44",
+      "datasetTitle": "Exploración de hidrocarburos - Permisos de Exploración",
+      "fileName": "exploracin-hidrocarburos-permisos-de-exploracin.csv",
+      "format": "CSV",
+      "title": "Exploración Hidrocarburos Permisos de Exploración",
+      "accessURL": "http://datos.energia.gob.ar/dataset/66044d22-6657-47d1-b0bb-ecc7c1d37a44/resource/c33b6176-6025-41ee-b174-d4d7653735c3",
+      "lastProcessed": "2025-10-09T06:36:34.499Z",
+      "status": "processed"
+    },
+    "exploracin-hidrocarburos-permisos-de-exploracin.zip": {
+      "datasetId": "energia_66044d22-6657-47d1-b0bb-ecc7c1d37a44",
+      "datasetTitle": "Exploración de hidrocarburos - Permisos de Exploración",
+      "fileName": "exploracin-hidrocarburos-permisos-de-exploracin.zip",
+      "format": "SHP",
+      "title": "Exploración Hidrocarburos Permisos de Exploración",
+      "accessURL": "http://datos.energia.gob.ar/dataset/66044d22-6657-47d1-b0bb-ecc7c1d37a44/resource/f1d7f442-fcd1-450d-b392-7faf1156df89",
+      "lastProcessed": "2025-10-09T06:36:34.499Z",
+      "status": "processed"
+    },
+    "exploracin-de-hidrocarburos-permisos-de-exploracin-offshore-en-licitacin.zip": {
+      "datasetId": "energia_66044d22-6657-47d1-b0bb-ecc7c1d37a44",
+      "datasetTitle": "Exploración de hidrocarburos - Permisos de Exploración",
+      "fileName": "exploracin-de-hidrocarburos-permisos-de-exploracin-offshore-en-licitacin.zip",
+      "format": "SHP",
+      "title": "Exploración de hidrocarburos - Permisos de Exploración Offshore en Licitación",
+      "accessURL": "http://datos.energia.gob.ar/dataset/66044d22-6657-47d1-b0bb-ecc7c1d37a44/resource/fa334dc3-eb53-46ff-98dc-762d4a10528d",
+      "lastProcessed": "2025-10-09T06:36:34.499Z",
+      "status": "processed"
+    },
+    "exploracin-de-hidrocarburos-permisos-de-exploracin-offshore-en-licitacin.csv": {
+      "datasetId": "energia_66044d22-6657-47d1-b0bb-ecc7c1d37a44",
+      "datasetTitle": "Exploración de hidrocarburos - Permisos de Exploración",
+      "fileName": "exploracin-de-hidrocarburos-permisos-de-exploracin-offshore-en-licitacin.csv",
+      "format": "CSV",
+      "title": "Exploración de hidrocarburos - Permisos de Exploración Offshore en Licitación",
+      "accessURL": "http://datos.energia.gob.ar/dataset/66044d22-6657-47d1-b0bb-ecc7c1d37a44/resource/ba4235ad-d785-403b-a578-33705f9070ed",
+      "lastProcessed": "2025-10-09T06:36:36.106Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_66044d22-6657-47d1-b0bb-ecc7c1d37a44",
+    "title": "Exploración de hidrocarburos - Permisos de Exploración",
+    "description": "Ubicación y polígonos de permisos de exploración. ISO 19126: Extraction, Este subgrupo se compone de conceptos que se refieren a la extracción de materias primas y la excavación del suelo.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2022-02-16T12:23:13.558357",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

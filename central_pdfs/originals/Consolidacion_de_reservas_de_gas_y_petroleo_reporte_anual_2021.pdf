@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="es" class="ie ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="ie ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="es" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es"> <!--<![endif]-->
+  <head>
+    <!--[if lte ie 8]><script type="text/javascript" src="/fanstatic/vendor/:version:2018-08-16T11:43:08/html5.min.js"></script><![endif]-->
+<link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2018-08-16T11:43:08/select2/select2.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/css/:version:2018-08-16T11:43:08/main.min.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2018-08-16T11:43:08/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/ckanext-harvest/:version:2018-08-16T11:43:20/styles/harvest.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/gobar_css/:version:2019-04-01T08:44:31.64/:bundle:gobar_style.css;table.css" />
+
+    <meta charset="utf-8" />
+      <meta name="generator" content="ckan 2.7.4" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta property="og:url" content="http://datos.energia.gob.ar/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Datos Energía">
+    <meta property="og:site_name" content="Datos Energía">
+    <meta property="og:description" content="Portal de Datos Abiertos del sistema unificado de información energética de la Secretaría de Energía de la Nación.">
+    <meta property="og:image" content="http://datos.energia.gob.ar">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="2400">
+    <meta property="og:image:height" content="1260">
+    <meta property="og:locale" content="es_AR">
+    <meta name="google-site-verification" content="PhxGAk5uIb9tkLPu0cfD0Tpk-V0ez15Gqnqk1s1i99w" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site:id" content="@Energia_Ar"/>
+    <meta name="twitter:image:src" content="http://datos.energia.gob.ar">
+    <meta name="twitter:title" content="Datos Energía | Consolidacion de reservas de gas y petroleo, reporte anual 2021">
+    <meta name="twitter:description" content="Consolidacion de reservas de gas y petroleo, reporte anual 2021">
+    <title>
+    Datos Energía - Consolidacion de reservas de gas y petroleo, reporte anual 2021</title>
+
+    
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    
+        <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87547125-1', 'auto', {});
+     
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+    
+  
+      
+    
+  
+
+
+    
+      
+      
+    
+    
+  </head>
+
+  
+  <body data-site-root="http://datos.energia.gob.ar/" data-locale-root="http://datos.energia.gob.ar/" >
+
+    
+    <style type="text/css">
+        
+    </style>
+
+    <div class="footer-down">
+            
+<div id="header" class="container-fluid">
+    <div class="restricted-max-width">
+        <div id="header-spacing" class="col-xs-12 col-sm-10 col-sm-offset-1">
+
+            
+
+            <div class="col-xs-12 col-sm-5 no-padding logo-header">
+                <div class="logo-and-xs-icon">
+                    <i class="icon-reorder fa fa-bars" aria-hidden="true"></i>
+                    <a href="/">
+                        
+                        <img src="/user_images/logo_sec_energia_1lin-apisado.jpg" class="logo-ministerio">
+                    </a>
+                    
+                </div>
+                <div class="xs-navbar hidden">
+                    <div class="navbar-link">
+                        <a href="/dataset">
+                            DATASETS
+                        </a>
+                    </div>
+                    <hr>
+                    
+                        <div class="navbar-link">
+                            <a href="/series/api">
+                                SERIES
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="navbar-link">
+                            <a href="/organizaciones">
+                                ORGANIZACIONES
+                            </a>
+                        </div>
+                    
+					
+					 <div class="navbar-link">
+       <a title="SIG" class="header-link" href="https://www.argentina.gob.ar/economia/energia/informacion-geografica-energia" target="_blank">
+                    SIG 
+                      </a>
+
+                    </div> 
+					 <div class="navbar-link">
+					<a title="Visualizaciones" class="header-link" href="https://estadisticasenergia.mecon.gob.ar/portal/datos/" target="_blank">
+                    Visualizaciones 
+                      </a>
+					  <!-- <a href="/about">
+                                Visualizaciones
+                            </a>-->
+                     
+                     </div>
+
+                    
+                        <div class="navbar-link">
+                            <a href="/apis">
+                                APIs
+                            </a>
+                        </div>
+                    
+
+                    <!--<div class="navbar-link dropdown-navbar-link">
+                        <span class="username"></span> <svg class="user-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.46 128.46"><path d="M128.46,64.23A63.15,63.15,0,0,0,119.84,32,64.21,64.21,0,0,0,96.48,8.62,63.12,63.12,0,0,0,64.23,0,63.12,63.12,0,0,0,32,8.62,64.2,64.2,0,0,0,8.62,32,63.15,63.15,0,0,0,0,64.23,63.15,63.15,0,0,0,8.62,96.48a64.76,64.76,0,0,0,9.82,12.86l-.16.27a70.09,70.09,0,0,0,9.2,7.34c1.46,1,3,2,4.51,2.91a63.17,63.17,0,0,0,32.25,8.62,63.17,63.17,0,0,0,32.25-8.62,66.19,66.19,0,0,0,7-4.74,72.41,72.41,0,0,0,6.61-5.51l-.14-.23a64.76,64.76,0,0,0,9.85-12.89A63.15,63.15,0,0,0,128.46,64.23Zm-20.52,41.89C101.56,96.56,88,81,66.73,79.8a26.25,26.25,0,0,0,16.88-7.9,26.44,26.44,0,0,0,8-19.41,26.44,26.44,0,0,0-8-19.4,26.42,26.42,0,0,0-19.4-8,26.41,26.41,0,0,0-19.4,8,26.44,26.44,0,0,0-8,19.4,26.44,26.44,0,0,0,8,19.41,26.25,26.25,0,0,0,16.87,7.9C40.48,81,26.88,96.52,20.49,106.09a61.14,61.14,0,0,1-8.66-11.48A59.48,59.48,0,0,1,3.71,64.23a59.48,59.48,0,0,1,8.11-30.37,60.53,60.53,0,0,1,22-22A59.45,59.45,0,0,1,64.23,3.71,59.46,59.46,0,0,1,94.6,11.83a60.54,60.54,0,0,1,22,22,59.48,59.48,0,0,1,8.11,30.37,59.48,59.48,0,0,1-8.11,30.37A61.14,61.14,0,0,1,107.94,106.12Z" style="fill:#0695d6"/></svg>
+                    </div>-->
+                    <!--<div class="dropdown-navbar hidden">
+                        <div class="navbar-link">
+                            <a href="/configurar/mi_cuenta">
+                                MI CUENTA
+                            </a>
+                        </div><div class="navbar-link">
+                            <a href="http://portal-andino.readthedocs.io/es/latest/quickstart/" target="_blank">
+                                AYUDA
+                            </a>
+                        </div>
+
+                        <div class="navbar-link">
+                            <a href="/logout">
+                                SALIR
+                            </a>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-7 no-padding header-links"><a class="header-link" href="/dataset">Datasets</a><a class="header-link" href="/series/api">Series</a><a class="header-link" href="/organizaciones">Organizaciones</a><a title="Sistema de Información Geográfica" class="header-link" href="https://www.argentina.gob.ar/economia/energia/informacion-geografica-energia" target="_blank">SIG</a>
+					
+					<a title="Visualizaciones" class="header-link" href="https://estadisticasenergia.mecon.gob.ar/portal/datos/" target="_blank">
+                    Visualizaciones 
+                      </a>
+					<!--<a class="header-link" href="visualizaciones">Visualizaciones</a>--><a class="header-link" href="/apis">
+                            APIs
+                        </a></div>
+        </div>
+    </div>
+</div>
+        
+
+    <div class="resource-container container-fluid">
+        <div class="restricted-max-width">
+            <div class="resource col-xs-12 col-md-10 col-md-offset-1">
+                <div class="col-md-12 back-to-pkg">
+                    
+                    <a href="/dataset">Datos Energía</a> / <a href="/dataset/reservas-de-petroleo-y-gas">Dataset</a> / Recurso
+
+                    
+                    
+                </div>
+                <div class="col-md-10 col-xs-12 title">
+                    <h1>Consolidacion de reservas de gas y petroleo, reporte anual 2021</h1>
+
+                    <p>Consolidacion de reservas de gas y petroleo, reporte anual 2021</p>
+                </div>
+                <div class="col-md-2 col-xs-12 resource-actions">
+                    <a class="btn btn-green btn-block" href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Consolidacion_de_reservas_de_gas_y_petroleo_reporte_anual_2021.pdf">DESCARGAR</a>
+
+                    
+                    
+                </div>
+
+                <div class="resource-previsualization hidden-xs hidden-sm" style="display: None">
+                    <div class="resource-additional-info col-xs-12 col-md-12 row"
+                         style="border-bottom: 0; width: 103%; margin-bottom: 20px; margin-top: 30px;">
+                        <h2 class="title-h" style="padding-bottom: 0 !important;">Previsualización</h2>
+                    </div>
+
+                    <div class="data-preview hidden-xs hidden-sm col-md-12">
+                        
+                        
+
+                        
+                        
+                        
+                            
+                        
+                    </div>
+                </div>
+
+                
+                    <div class="hidden-xs hidden-sm attributes-table">
+                       
+
+
+
+
+
+
+
+
+
+                    </div>
+                
+
+                <div class="resource-additional-info col-xs-12 col-md-12 row" style="width: 102% !important;">
+                    <h2 class="title-h">Información adicional</h2>
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Responsable
+                            </div>
+                            <div class="col-xs-8 value">
+                                Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información.
+                            </div>
+                        </div>
+                    
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Formato
+                            </div>
+                            <div class="col-xs-8 value">
+                                
+                                <span class="label" data-format="application/pdf">application/pdf</span>
+                            </div>
+                        </div>
+                    
+
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Temas
+                            </div>
+                                    Exploración y Producción de Hidrocarburos
+                        </div>
+                    
+
+
+                    
+                        
+                    
+                        
+                            <div class="resource-additional col-xs-12">
+                                <div class="col-xs-4 key">
+                                    Frecuencia de actualización
+                                </div>
+                                <div class="col-xs-8 value">
+                                    Anualmente
+                                </div>
+                            </div>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+
+
+                    <div class="resource-additional col-xs-12">
+                        <div class="col-xs-4 key">
+                            Fecha de creación
+                        </div>
+                        <div class="col-xs-8 value">
+                            
+                                9 de febrero de 2023
+                            
+                        </div>
+                    </div>
+
+                    <div class="resource-additional col-xs-12">
+                        <div class="col-xs-4 key">
+                            Último cambio
+                        </div>
+                        <div class="col-xs-8 value">
+                            
+                                9 de febrero de 2023
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                
+
+                
+                    <div class="resource-alternative-packages col-xs-12 col-md-12 row" style="border-bottom: 0; width: 103%;">
+                        <h2 class="title-h">Otros recursos de este dataset</h2>
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2024.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2024.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2024 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión</h3>
+			 
+            <p><p>Reservas al 31/12/2024 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2023.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2023.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2023 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión</h3>
+			 
+            <p><p>Reservas al 31/12/2023 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2022.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2022.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2022 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión</h3>
+			 
+            <p><p>Reservas al 31/12/2022 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2021.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2021.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2021 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión</h3>
+			 
+            <p><p>Reservas al 31/12/2021 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/reservas-de-petroleo-y-gas/archivo/5b72c32f-ea1c-4f7e-a1d9-7b5338c717f8">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/MINEM_Informe_Reservas_HFVU_2016.pdf">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/MINEM_Informe_Reservas_HFVU_2016.pdf">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/reservas-de-petroleo-y-gas/archivo/5b72c32f-ea1c-4f7e-a1d9-7b5338c717f8"> 
+            <h3>Síntesis de la evolución de reservas de hidrocarburos al 31 de diciembre de cada año. Hasta el final de la vida útil de los yacimientos. Período 2007-2016</h3>
+			  </a> 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="pdf">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>pdf</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2020.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2020.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2020 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_cpcy_al_31_12_2019.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_cpcy_al_31_12_2019.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2019 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/reservas-de-petroleo-y-gas/archivo/b937174f-1cc8-4f1f-8647-3654d8af90fc">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reporte_de_Reservas_2018-Version_Final_24-Oct-19.pdf">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reporte_de_Reservas_2018-Version_Final_24-Oct-19.pdf">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/reservas-de-petroleo-y-gas/archivo/b937174f-1cc8-4f1f-8647-3654d8af90fc"> 
+            <h3>Consolidación de reservas de gas y petróleo de la República Argentina 2018</h3>
+			  </a> 
+            <p><p>Consolidación de reservas de gas y petróleo de la República Argentina 2018</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="pdf">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>pdf</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_hfvuy_31122018.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_hfvuy_31122018.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2018 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/reservas-de-petroleo-y-gas/archivo/86d366a9-3b47-47c6-b11d-f3a8865c1a9c">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/informe_reservas_2018v3.pdf">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/informe_reservas_2018v3.pdf">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/reservas-de-petroleo-y-gas/archivo/86d366a9-3b47-47c6-b11d-f3a8865c1a9c"> 
+            <h3>Síntesis de la evolución de reservas de hidrocarburos al 31 de diciembre de cada año. Hasta el final de la vida útil de los yacimientos. 2009-2018</h3>
+			  </a> 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="pdf">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>pdf</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122017.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122017.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2017 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/reservas-de-petroleo-y-gas/archivo/7f211694-c11e-418f-9077-2ad7ea73a3a6">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Informe_Reservas_HFVU_2017.pdf">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Informe_Reservas_HFVU_2017.pdf">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/reservas-de-petroleo-y-gas/archivo/7f211694-c11e-418f-9077-2ad7ea73a3a6"> 
+            <h3>Síntesis de la evolución de reservas de hidrocarburos al 31 de diciembre de cada año. Hasta el final de la vida útil de los yacimientos. 2008-2017</h3>
+			  </a> 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="pdf">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>pdf</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122016.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122016.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2016 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122016.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122016.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2016 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122015.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122015.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2015 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122015.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122015.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2015 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122014.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122014.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2014 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122014.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122014.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2014 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122013.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122013.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2013 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122013.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122013.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2013 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122012.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122012.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2012 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122012.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122012.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2012 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122011.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122011.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2011 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122011.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122011.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2011 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122010.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122010.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2010 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122010.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122010.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2010 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122009.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122009.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2009 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122009.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122009.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2009 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122008.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122008.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2008 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122008.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122008.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2008 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122007.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122007.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2007 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122007.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122007.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2007 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122006.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122006.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2006 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122006.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122006.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2006 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122005.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122005.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2005 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas.
+Fe de Erratas de planilla de Reservas al 31/12/2005: 
+ - Las áreas "Estancia La...</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122005.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122005.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2005 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas.
+Fe de Erratas de planilla de Reservas al 31/12/2005: 
+ - Las áreas "Estancia La...</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122004.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFVUY_31122004.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2004 hasta el Final de la Vida Útil de los Yacimientos</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122004.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/Reservas_HFC_31122004.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Reservas al 31/12/2004 hasta el Final de la Concesión</h3>
+			 
+            <p><p>Datos de Reservas Comprobadas y Probables de Petróleo y Gas</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/mercado_hidrocarburos/boletin_anual_reservas/boletin_anual_reservas.zip">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/mercado_hidrocarburos/boletin_anual_reservas/boletin_anual_reservas.zip">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Boletín Anual de Reservas 1998-2004</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="zip">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>zip</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                    </div>
+                
+            
+            </div>
+        </div>
+    </div>
+    
+
+            <div id="footer" class="container-fluid">
+    <div class="restricted-max-width">
+        <div id="footer-spacer" class="col-xs-10 col-xs-offset-1">
+            <div class="footer-section logo col-xs-12 col-sm-6 col-md-6">
+                <p>
+                    
+                    
+                    
+                        <a href="https://twitter.com/Energia_Ar" target="_blank" class="social-link">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+                        <a href="https://github.com/datosenergia" target="_blank" class="social-link">
+                            <i class="fa fa-github-alt" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+                        <a href="https://www.youtube.com/channel/UCBG6aIp-k20flVwpbOSa6pA" target="_blank" class="social-link">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                </p>
+                <div class="logo-edit-container">
+                    
+                    
+                    <a href="https://www.argentina.gob.ar/energia" target="_blank">
+                        <img src="/user_images/logo_mecon_se_2024_03-01.jpg" class="logo-ministerio">
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="footer-section links-internos hidden-xs hidden-sm col-md-3">
+                
+                
+            </div>
+            <div class="footer-section links-externos col-xs-12 col-sm-6 col-md-3">
+                
+                
+                    <p><a href="mailto:datosenergia@mecon.gob.ar">Contactanos</a></p>
+                
+				<p class="ckan-link">
+                    <a href="https://www.argentina.gob.ar/energia/info-energetica/datos-energia-marco-legal" target="_blank">Marco Legal</a> 
+				</p>
+                <p class="ckan-link">
+                    Desarrollado por<br><a href="https://github.com/datosgobar/distribuible.datos.gob.ar" target="_blank">Andino</a> con <a href="http://ckan.org/" target="_blank"><span class="ckan-name">CKAN</span></a>
+                </p>
+                <p class="ckan-link">
+                    Versión: 2.5.1
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+  
+    
+    <div class="js-hide" data-module="google-analytics"
+      data-module-googleanalytics_resource_prefix="">
+    </div>
+  
+
+
+      
+  <script>document.getElementsByTagName('html')[0].className += ' js';</script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2018-08-16T11:43:08/jquery.min.js"></script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2018-08-16T11:43:08/:bundle:bootstrap/js/bootstrap.min.js;jed.min.js;moment-with-locales.js;select2/select2.min.js"></script>
+<script type="text/javascript" src="/fanstatic/base/:version:2018-08-16T11:43:08/:bundle:plugins/jquery.inherit.min.js;plugins/jquery.proxy-all.min.js;plugins/jquery.url-helpers.min.js;plugins/jquery.date-helpers.min.js;plugins/jquery.slug.min.js;plugins/jquery.slug-preview.min.js;plugins/jquery.truncator.min.js;plugins/jquery.masonry.min.js;plugins/jquery.form-warning.min.js;sandbox.min.js;module.min.js;pubsub.min.js;client.min.js;notify.min.js;i18n.min.js;main.min.js;modules/select-switch.min.js;modules/slug-preview.min.js;modules/basic-form.min.js;modules/confirm-action.min.js;modules/api-info.min.js;modules/autocomplete.min.js;modules/custom-fields.min.js;modules/data-viewer.min.js;modules/table-selectable-rows.min.js;modules/resource-form.min.js;modules/resource-upload-field.min.js;modules/resource-reorder.min.js;modules/resource-view-reorder.min.js;modules/follow.min.js;modules/activity-stream.min.js;modules/dashboard.min.js;modules/resource-view-embed.min.js;view-filters.min.js;modules/resource-view-filters-form.min.js;modules/resource-view-filters.min.js;modules/table-toggle-more.min.js;modules/dataset-visibility.min.js;modules/media-grid.min.js;modules/image-upload.min.js"></script>
+<script type="text/javascript" src="/fanstatic/ckanext-googleanalytics/:version:2018-08-16T11:43:23/googleanalytics_event_tracking.js"></script>
+<script type="text/javascript" src="/fanstatic/gobar_js/:version:2023-06-05T12:32:37.19/:bundle:header.js;console_message.js;replace_svg.js;forms/custom_popup.js;package/resource/resource_view.js;libs/jquery-sortable.js;libs/clamp.js;libs/BootstrapMenu.js;libs/bootstrap_scripts.js"></script></body>
+</html>

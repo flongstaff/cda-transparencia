@@ -1,0 +1,13 @@
+{
+  "file_name": "boletin_oficial_pdf_8_Situacion-Economica-Financiera-al-31-12-22.pdf",
+  "file_hash": "edb9894b1d332ade0a376ec8e2266e0b",
+  "page_count": 3,
+  "text_length": 3,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:34.882526"
+}

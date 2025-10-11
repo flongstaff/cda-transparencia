@@ -1,0 +1,81 @@
+{
+  "files": {
+    "BqCM_a_bnotbn_num_2023": {
+      "datasetId": "ambiente_19.0",
+      "datasetTitle": "Conservación y  manejo de bosques nativos",
+      "fileName": "BqCM_a_bnotbn_num_2023",
+      "format": "CSV",
+      "title": "Evolución de OTBN provinciales y sus actualizaciones sancionadas en número",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=19&did=165",
+      "lastProcessed": "2025-10-09T06:58:43.654Z",
+      "status": "processed"
+    },
+    "BqCM_bnplan_porc_ODS1521_2022_05": {
+      "datasetId": "ambiente_19.0",
+      "datasetTitle": "Conservación y  manejo de bosques nativos",
+      "fileName": "BqCM_bnplan_porc_ODS1521_2022_05",
+      "format": "CSV",
+      "title": "Porcentaje de bosque nativo bajo manejo sustentable por tipo de plan",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=19&did=262",
+      "lastProcessed": "2025-10-09T06:58:45.190Z",
+      "status": "processed"
+    },
+    "BqCM_b_presupnbn_millpesos": {
+      "datasetId": "ambiente_19.0",
+      "datasetTitle": "Conservación y  manejo de bosques nativos",
+      "fileName": "BqCM_b_presupnbn_millpesos",
+      "format": "CSV",
+      "title": "Partidas presupuestarias asignadas al Programa Nacional de Protección de los Bosques Nativos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=19&did=170",
+      "lastProcessed": "2025-10-09T06:58:50.805Z",
+      "status": "processed"
+    },
+    "BqCM_d_planesaprob_tabl": {
+      "datasetId": "ambiente_19.0",
+      "datasetTitle": "Conservación y  manejo de bosques nativos",
+      "fileName": "BqCM_d_planesaprob_tabl",
+      "format": "CSV",
+      "title": "Planes financiados por año, según tipo de plan",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=19&did=182",
+      "lastProcessed": "2025-10-09T06:58:47.986Z",
+      "status": "processed"
+    },
+    "BqCM_e_bnplan_tabl": {
+      "datasetId": "ambiente_19.0",
+      "datasetTitle": "Conservación y  manejo de bosques nativos",
+      "fileName": "BqCM_e_bnplan_tabl",
+      "format": "CSV",
+      "title": "Superficie de bosque nativo bajo manejo sustentable por tipo de plan, por año, en hectáreas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=16&did=70",
+      "lastProcessed": "2025-10-09T06:58:49.339Z",
+      "status": "processed"
+    },
+    "TR_PODC_planintegral": {
+      "datasetId": "ambiente_19.0",
+      "datasetTitle": "Conservación y  manejo de bosques nativos",
+      "fileName": "TR_PODC_planintegral",
+      "format": "CSV",
+      "title": "Plan integral comunitario de pueblos originarios",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=19&did=247",
+      "lastProcessed": "2025-10-09T06:58:52.169Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_19.0",
+    "title": "Conservación y  manejo de bosques nativos",
+    "description": "Muestra datos sobre manejo sostenible de bosque nativo (presupuestos, tipos de planes, proyectos, entre otros).",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2018-12-31T00:00:00",
+    "modified": "2018-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

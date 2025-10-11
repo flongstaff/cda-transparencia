@@ -56,7 +56,7 @@ interface PDFDocument {
 interface UnifiedDataViewerProps {
   title?: string;
   description?: string;
-  datasets: Dataset[];
+  datasets?: Dataset[];
   documents?: PDFDocument[];
   showFilters?: boolean;
   showSearch?: boolean;
@@ -88,23 +88,23 @@ const UnifiedDataViewer: React.FC<UnifiedDataViewerProps> = ({
   // Get unique categories, formats and sources for filter dropdowns
   const categories = useMemo(() => 
     Array.from(new Set([
-      ...datasets.map(d => d.category), 
-      ...documents.map(d => d.category)
+      ...datasets?.map(d => d.category) || [], 
+      ...documents?.map(d => d.category) || []
     ])), [datasets, documents]
   );
   
   const formats = useMemo(() => 
-    Array.from(new Set(datasets.flatMap(d => d.formats))), [datasets]
+    Array.from(new Set(datasets?.flatMap(d => d.formats) || [])), [datasets]
   );
   
   const sources = useMemo(() => 
-    Array.from(new Set(datasets.map(d => d.source))), [datasets]
+    Array.from(new Set(datasets?.map(d => d.source) || [])), [datasets]
   );
 
   // Memoized filtering to prevent unnecessary recalculations
   const filteredResults = useMemo(() => {
-    let filteredDs = datasets;
-    let filteredDocs = documents;
+    let filteredDs = datasets || [];
+    let filteredDocs = documents || [];
 
     if (searchTerm) {
       filteredDs = filteredDs.filter(dataset =>
@@ -307,7 +307,7 @@ const UnifiedDataViewer: React.FC<UnifiedDataViewerProps> = ({
         {/* Unified Search Component */}
         <div className="mb-6">
           <UnifiedSearch 
-            allDatasets={datasets}
+            allDatasets={datasets || []}
             allDocuments={documents || []}
             placeholder="Buscar en todos los datasets y documentos..."
             onSearch={(results) => {

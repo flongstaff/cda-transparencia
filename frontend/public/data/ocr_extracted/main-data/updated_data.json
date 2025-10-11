@@ -1,0 +1,413 @@
+{
+  "title": "Datos abiertos Carmen de Areco - Catálogo Principal",
+  "description": "Catálogo unificado de datos públicos del Municipio de Carmen de Areco. Incluye presupuestos, ejecuciones, licitaciones y estadísticas (2019-2025).",
+  "lastUpdated": "2025-10-04T00:00:00Z",
+  "dataset": [
+    {
+      "identifier": "ds-presupuesto-2025",
+      "title": "Presupuesto Municipal 2025",
+      "description": "Presupuesto de gastos y recursos aprobado para 2025 (Ordenanza 3280/24). Incluye créditos por partida.",
+      "theme": "economia-y-finanzas",
+      "superTheme": "ECON",
+      "keywords": [
+        "Presupuesto",
+        "2025"
+      ],
+      "issued": "2025-02-21T00:00:00",
+      "modified": "2025-02-21T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/transparencia/presupuesto/",
+      "publisher": "Secretaría de Hacienda",
+      "distribution": [
+        {
+          "title": "Presupuesto 2025 Aprobado",
+          "format": "PDF",
+          "fileName": "PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/02/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/02/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-presupuesto-2025/PRESUPUESTO-2025-APROBADO-ORD-3280-24_extraction.json",
+            "pageCount": 331,
+            "textLength": 458647,
+            "extractedPreview": "\n\n\n\n\n\n\n\n \nPRESUPUESTO MUNICIPAL  \nCARMEN DE ARECO  \n2025  \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nCALCULO DE RECURSOS MUNICIPALES   \n \n \n \n \n \n \n \n \n \nANEXO I INFORMACION CONS...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    },
+    {
+      "identifier": "ds-ejecucion-gastos-2023-q4",
+      "title": "Ejecución Presupuestaria de Gastos 2023 - 4to Trimestre",
+      "description": "Estado de ejecución de gastos por finalidad, función, perspectiva de género y fuente de financiamiento (Q4 2023).",
+      "theme": "economia-y-finanzas",
+      "superTheme": "ECON",
+      "keywords": [
+        "Ejecución",
+        "Gastos",
+        "2023"
+      ],
+      "issued": "2024-04-23T00:00:00",
+      "modified": "2024-04-23T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
+      "publisher": "Secretaría de Hacienda",
+      "distribution": [
+        {
+          "title": "Por Finalidad y Función",
+          "format": "PDF",
+          "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4%C2%B0TRI.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4%C2%B0TRI.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-ejecucion-gastos-2023-q4/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI_extraction.json",
+            "pageCount": 2,
+            "textLength": 5004,
+            "extractedPreview": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS\nEjercicio: Hoja: 1 de 2R.A.F.A.M.\n23/04/2024 09:40\nDel 01/10/2023 al 31/12/2023(POR FINALIDAD Y FUNCIÓN)\n 2023\nDevengado \n...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        },
+        {
+          "title": "Por Perspectiva de Género",
+          "format": "PDF",
+          "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4%C2%B0TRIMESTRE-2023.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4%C2%B0TRIMESTRE-2023.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-ejecucion-gastos-2023-q4/ESTADO-DE-EJECUCION-DE-GASTOS-POR-PERSPECTIVA-DE-GENERO-4°TRIMESTRE-2023_extraction.json",
+            "pageCount": 5,
+            "textLength": 11940,
+            "extractedPreview": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS\nEjercicio \n:Hoja: 1 de 5 R.A.F.A.M.\n23/04/2024 09:59\nDel 01/10/2023 al 31/12/2023 2023(CON PERSPECTIVA DE GÉNERO)\nDevengad...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        },
+        {
+          "title": "Por Fuente de Financiamiento",
+          "format": "PDF",
+          "fileName": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4%C2%B0TRI.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4%C2%B0TRI.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-ejecucion-gastos-2023-q4/ESTADO-DE-EJECUCION-DE-GASTOS-POR-FUENTE-DE-FINANCIAMIENTO-2023-4°TRI_extraction.json",
+            "pageCount": 1,
+            "textLength": 1299,
+            "extractedPreview": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS\nEjercicio \n:Hoja: 1 de 1 R.A.F.A.M.\n23/04/2024 09:37\nDel 01/10/2023 al 31/12/20232023\nDevengado \nno pagado Crédito \nDispon...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    },
+    {
+      "identifier": "ds-cuenta-ahorro-2025",
+      "title": "Cuenta Ahorro Inversión Financiamiento 2025",
+      "description": "Reporte de cuenta ahorro, inversión y financiamiento para marzo y junio 2025.",
+      "theme": "economia-y-finanzas",
+      "superTheme": "ECON",
+      "keywords": [
+        "Ahorro",
+        "Inversión",
+        "Financiamiento",
+        "2025"
+      ],
+      "issued": "2025-04-26T00:00:00",
+      "modified": "2025-07-10T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
+      "publisher": "Secretaría de Hacienda",
+      "distribution": [
+        {
+          "title": "Marzo 2025",
+          "format": "PDF",
+          "fileName": "Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/04/Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/04/Cuenta-Ahorro-Inversion-Financiamiento-Marzo.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-cuenta-ahorro-2025/Cuenta-Ahorro-Inversion-Financiamiento-Marzo_extraction.json",
+            "pageCount": 3,
+            "textLength": 2985,
+            "extractedPreview": "CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.\n26/04/2025 12:53\nPresupuesto: 2025DE EJECUCION PRESUPUESTARIA \n02/01/2025 al 31/03/2025\nMunicipalidad de\nCarmen de Areco\nDESCRIPCION IMPO...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        },
+        {
+          "title": "Junio 2025",
+          "format": "PDF",
+          "fileName": "Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/07/Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/07/Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-cuenta-ahorro-2025/Cuenta-Ahorro-Inversion-Financiamiento-Junio_extraction.json",
+            "pageCount": 3,
+            "textLength": 2983,
+            "extractedPreview": "CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.\n10/07/2025 10:09\nPresupuesto: 2025DE EJECUCION PRESUPUESTARIA \n02/01/2025 al 30/06/2025\nMunicipalidad de\nCarmen de Areco\nDESCRIPCION IMPO...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    },
+    {
+      "identifier": "ds-ejecucion-recursos-2023-q4",
+      "title": "Ejecución Presupuestaria de Recursos 2023 - 4to Trimestre",
+      "description": "Estado de ejecución de recursos por carácter económico y procedencia (Q4 2023).",
+      "theme": "economia-y-finanzas",
+      "superTheme": "ECON",
+      "keywords": [
+        "Ejecución",
+        "Recursos",
+        "2023"
+      ],
+      "issued": "2024-04-23T00:00:00",
+      "modified": "2024-04-23T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/",
+      "publisher": "Secretaría de Hacienda",
+      "distribution": [
+        {
+          "title": "Por Carácter Económico",
+          "format": "PDF",
+          "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4%C2%B0TRI.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4%C2%B0TRI.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-ejecucion-recursos-2023-q4/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-2023-4°TRI_extraction.json",
+            "pageCount": 3,
+            "textLength": 6126,
+            "extractedPreview": "R.A.F.A.M.\nESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOS Hoja: 1 de 3\n23/04/202409:29\nMunicipalidad de\nCarmen de Areco Del 01/10/2023 al 31/12/2023 Ejercicio: 2023(POR CARACTER ECONÓMICO) \nCONSOLIDAD...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        },
+        {
+          "title": "Por Procedencia",
+          "format": "PDF",
+          "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4%C2%B0TRI.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/04/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4%C2%B0TRI.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-ejecucion-recursos-2023-q4/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2023-4°TRI_extraction.json",
+            "pageCount": 1,
+            "textLength": 1672,
+            "extractedPreview": "R.A.F.A.M.\nESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 1\n23/04/2024 09:27\nMunicipalidad de\nCarmen de Areco Del 01/10/2023 al 31/12/2023 Ejercicio: 2023(POR PROCEDENCIA)\nCONSOLIDADO\nProced...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    },
+    {
+      "identifier": "ds-ordenanza-fiscal-2023",
+      "title": "Ordenanza Fiscal 2023 (Vigente)",
+      "description": "Ordenanza fiscal 3198/23 para el ejercicio 2023, con determinación de obligaciones fiscales.",
+      "theme": "economia-y-finanzas",
+      "superTheme": "ECON",
+      "keywords": [
+        "Ordenanza",
+        "Fiscal",
+        "2023"
+      ],
+      "issued": "2023-12-01T00:00:00",
+      "modified": "2024-03-01T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/transparencia/ordenanzas-fiscales/",
+      "publisher": "Secretaría de Hacienda",
+      "distribution": [
+        {
+          "title": "Ordenanza Fiscal 3198/23",
+          "format": "PDF",
+          "fileName": "ORDENANZA-FISCAL-3198-23.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-FISCAL-3198-23.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-FISCAL-3198-23.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-ordenanza-fiscal-2023/ORDENANZA-FISCAL-3198-23_extraction.json",
+            "pageCount": 45,
+            "textLength": 45,
+            "extractedPreview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    },
+    {
+      "identifier": "ds-licitacion-7-2023",
+      "title": "Licitación Pública N°7/2023 - Refuerzo de Sistema de Producción y Almacenamiento",
+      "description": "Llamado a licitación para refuerzo en Gouin y Carmen de Areco (Norte y Marín). Apertura: 27/11/2023.",
+      "theme": "gobierno-y-sector-publico",
+      "superTheme": "ECON",
+      "keywords": [
+        "Licitación",
+        "Obras",
+        "Energía",
+        "2023"
+      ],
+      "issued": "2023-11-03T00:00:00",
+      "modified": "2023-11-27T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/transparencia/licitaciones/",
+      "publisher": "Secretaría de Planificación y Obras Públicas",
+      "distribution": [
+        {
+          "title": "Pliego N°7",
+          "format": "PDF",
+          "fileName": "LICITACION-PUBLICA-N°7.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/11/LICITACION-PUBLICA-N°7.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-licitacion-7-2023/LICITACION-PUBLICA-N°7_extraction.json",
+            "pageCount": 2,
+            "textLength": 2,
+            "extractedPreview": "\n\n",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    },
+    {
+      "identifier": "ds-estadisticas-salud-2021",
+      "title": "Estadísticas de Salud 2021",
+      "description": "Evolución de prestaciones en CAPS y estadísticas generales de salud.",
+      "theme": "salud-y-asistencia-social",
+      "superTheme": "SALU",
+      "keywords": [
+        "Salud",
+        "CAPS",
+        "Prestaciones",
+        "2021"
+      ],
+      "issued": "2022-01-01T00:00:00",
+      "modified": "2022-01-01T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/estadisticas/",
+      "publisher": "Oficina de Estadísticas",
+      "distribution": [
+        {
+          "title": "Estadísticas CAPS 2021",
+          "format": "PDF",
+          "fileName": "2021 CAPS ESTADISTICAS.pdf",
+          "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/2021%20CAPS%20ESTADISTICAS.pdf",
+          "downloadURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/2021%20CAPS%20ESTADISTICAS.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-estadisticas-salud-2021/2021 CAPS ESTADISTICAS_extraction.json",
+            "pageCount": 1,
+            "textLength": 1146,
+            "extractedPreview": "ESTADÍSTICAS DE LAS C.A.P.S.\nCAPS ENERO FEBRERO MARZO ABRIL MAYO JUNIO JULIO AGOSTO SEPTIEMBRE OCTUBRE NOVIEMBRE DICIEMBRE\nCAPS TRES SARGENTOS 169 214 296 247 191 310 404 237 258 229 259 218\nCAPS GOUI...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        },
+        {
+          "title": "Evolución Prestaciones CAPS",
+          "format": "PDF",
+          "fileName": "ESTADISTICAS-SALUD.pdf",
+          "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/ESTADISTICAS-SALUD.pdf",
+          "downloadURL": "https://www.carmendeareco.gob.ar/estadisticas/2021/ESTADISTICAS-SALUD.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-estadisticas-salud-2021/ESTADISTICAS-SALUD_extraction.json",
+            "pageCount": 5,
+            "textLength": 4403,
+            "extractedPreview": "PERÍODO 2016 2017 2018 2019 2020 2021\nCANTIDAD DE CONSULTAS 29,938 28,637 27,182 18,127 16,171 24,151\nEn el gráfico expuesto se puede ver la evolución de las prestaciones de servicio de las distintas ...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    },
+    {
+      "identifier": "ds-estadisticas-omic-2021",
+      "title": "Estadísticas OMIC 2021",
+      "description": "Casos ingresados en Oficina Municipal de Información al Consumidor (OMIC) 2021.",
+      "theme": "economia-y-finanzas",
+      "superTheme": "ECON",
+      "keywords": [
+        "OMIC",
+        "Consumidor",
+        "2021"
+      ],
+      "issued": "2022-01-01T00:00:00",
+      "modified": "2022-01-01T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/estadisticas/",
+      "publisher": "Oficina de Estadísticas",
+      "distribution": [
+        {
+          "title": "Casos OMIC 2021",
+          "format": "PDF",
+          "fileName": "2021 ESTADISTICAS OMIC.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/estadisticas/2021/2021%20ESTADISTICAS%20OMIC.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/estadisticas/2021/2021%20ESTADISTICAS%20OMIC.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-estadisticas-omic-2021/2021 ESTADISTICAS OMIC_extraction.json",
+            "pageCount": 4,
+            "textLength": 6603,
+            "extractedPreview": "Oficina Municipal de Información al Consumidor ENERO FEBRERO MARZO ABRIL MAYO JUNIO JULIO AGOSTO SEPTIEMBRE OCTUBRE NOVIEMBRE DICIEMBRE TOTAL\nTOTAL DE CASOS INGRESADOS\n2020 0 0 0 0 7 6 7 12 23 15 12 1...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    },
+    {
+      "identifier": "ds-estadisticas-seguridad-2021-2022",
+      "title": "Estadísticas de Seguridad Urbana 2021-2022",
+      "description": "Reportes de animales sueltos, infracciones y monitoreo policial.",
+      "theme": "justicia-seguridad-y-asuntos-legales",
+      "superTheme": "SEGU",
+      "keywords": [
+        "Seguridad",
+        "Urbana",
+        "Infracciones",
+        "2021",
+        "2022"
+      ],
+      "issued": "2022-01-12T00:00:00",
+      "modified": "2023-01-01T00:00:00",
+      "landingPage": "https://carmendeareco.gob.ar/estadisticas/",
+      "publisher": "Oficina de Estadísticas",
+      "distribution": [
+        {
+          "title": "Seguridad Urbana 2021",
+          "format": "PDF",
+          "fileName": "2021 SEGURIDAD URBANA.pdf",
+          "accessURL": "https://carmendeareco.gob.ar/estadisticas/2021/2021%20SEGURIDAD%20URBANA.pdf",
+          "downloadURL": "https://carmendeareco.gob.ar/estadisticas/2021/2021%20SEGURIDAD%20URBANA.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-estadisticas-seguridad-2021-2022/2021 SEGURIDAD URBANA_extraction.json",
+            "pageCount": 3,
+            "textLength": 3421,
+            "extractedPreview": "PERÍODO ENERO FEBRERO MARZO ABRIL MAYO JUNIO JULIO AGOSTO SEPTIEMBRE OCTUBRE NOVIEMBRE DICIEMBRE TOTAL\n2021 26 17 47 36 36 24 32 22 11 62 17 12 342\nPeriodicidad:  anual\nVariable:  actas\nUnidad de medi...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        },
+        {
+          "title": "Seguridad Urbana 2022",
+          "format": "PDF",
+          "fileName": "SEGURIDAD URBANA 2022.pdf",
+          "accessURL": "https://www.carmendeareco.gob.ar/estadisticas/2022/SEGURIDAD%20URBANA%202022.pdf",
+          "downloadURL": "https://www.carmendeareco.gob.ar/estadisticas/2022/SEGURIDAD%20URBANA%202022.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-estadisticas-seguridad-2021-2022/SEGURIDAD URBANA 2022_extraction.json",
+            "pageCount": 1,
+            "textLength": 3394,
+            "extractedPreview": "SEGURIDAD URBANA 2022\nPERÍODO ENERO FEBRERO MARZO ABRIL MAYO JUNIO JULIO AGOSTO SEPTIEMBRE OCTUBRE NOVIEMBRE DICIEMBRE TOTAL\n2022 20 36 38 38 21 38 34 36 40 26 29 34 390\nPeriodicidad:  anual\nVariable:...",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "files": {
+    "datasetespaciosgenero-.xlsx": {
+      "datasetId": "produccion_ed8cbb30-5472-496c-9706-b6207140f5f0",
+      "datasetTitle": "Espacios de género en las carteras de producción provinciales",
+      "fileName": "datasetespaciosgenero-.xlsx",
+      "format": ".XLSX",
+      "title": "DATASET Espacios de Género en las provincias",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/ed8cbb30-5472-496c-9706-b6207140f5f0/resource/e1cd6ed5-540c-4253-b827-f458e6b61689",
+      "lastProcessed": "2025-10-09T08:09:05.517Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_ed8cbb30-5472-496c-9706-b6207140f5f0",
+    "title": "Espacios de género en las carteras de producción provinciales",
+    "description": "El dataset consolida la evolución  en la creación de los espacios de género en las carteras productivas provinciales desde el año 2018 en adelante. Muestra información sobre el año de creación, el grado de institucionalidad y el organismo público del que depende. ",
+    "theme": [
+      "gove",
+      "soci",
+      "regi"
+    ],
+    "superTheme": [
+      "GOVE",
+      "REGI",
+      "SOCI"
+    ],
+    "issued": "2023-08-03T13:23:56.822855",
+    "modified": "2023-09-07T15:59:25.230479",
+    "publisher": {
+      "mbox": "dnseg@produccion.gob.ar",
+      "name": "Ministerio de Economía. Secretaría de Industria y Desarrollo Productivo. Subsecretaría de Analisis y Planificación Productiva. Dirección Nacional de Seguimiento y Evaluación de la Gestión. Gabinete de Género. "
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/relevamiento-espacios-de-genero-en-las-carteras-de-produccion-provinciales"
+  }
+}

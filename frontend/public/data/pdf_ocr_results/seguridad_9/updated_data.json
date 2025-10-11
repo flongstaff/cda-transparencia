@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "seguridad_9",
+      "title": "Delitos contra la propiedad. Sistema de Alerta Temprana. Estadísticas criminales",
+      "distribution": [
+        {
+          "title": "Informe_SAT-Propiedad_2023.pdf",
+          "format": "PDF",
+          "fileName": "Informe_SAT-Propiedad_2023.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/seguridad_9/Informe_SAT-Propiedad_2023.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/seguridad_9/Informe_SAT-Propiedad_2023_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

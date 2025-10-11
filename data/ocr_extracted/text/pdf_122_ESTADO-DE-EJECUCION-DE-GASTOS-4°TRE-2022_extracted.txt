@@ -1,0 +1,35 @@
+Municipalidad de
+Carmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS
+Ejercicio 
+:Hoja: 1 de 295 R.A.F.A.M.
+20/09/2023 09:12
+Del 01/10/2022 al 31/12/2022
+2022Partidas Incluidas respecto al Crédito Disponible: Todas
+Partidas Incluidas respecto al Crédito Vigente: Todas
+Devengado 
+no pagado Crédito 
+Disponible Pagado Devengado Compromiso Preventivo Crédito 
+Vigente Modifica 
+ciones Crédito 
+Aprobado Fuen. 
+Fin. Objeto del GastoCrédito Vig. 
+- Devengado 
+Jurisdicción: 1110101000 - Conduccion Superior 
+Apertura Programática: 01.00.00 - Desarrallo politicas centrales01.01.00 - Cond. y Gest. de Politicas Centrales
+110 - Tesoro Municipal
+1.0.0.0 - Gastos en personal 1.1.0.0 - Personal permanente1.1.1.0 - Retribuciones del cargo 1.1.1.1 - Personal Superior
+6.464.511,00 -1.241.217,76 5.223.293,24 0,00 1.735.702,40 1.735.702,40 1.735.702,40 0,00
+1.1.1.5 - Personal Administrativo 242.188,80 2.206,20 244.395,00 0,00 193.940,00 193.940,00 193.940,00 0,00
+1.1.1.9 - Gastos Reservados 0,00 783.493,97 783.493,97 0,00 260.355,36 260.355,36 260.355,36 0,00
+6.706.699,80 -455.517,59 6.251.182,21 0,00 2.189.997,76 2.189.997,76 2.189.997,76 0,00 Total Retribuciones del cargo
+1.1.3.0 - Retribuciones que no hacen al cargo 1.1.3.1 - Antiguedad
+412.178,40 0,00 412.178,40 0,00 185.656,85 185.656,85 185.656,85 0,00 412.178,40 0,00 412.178,40 0,00 185.656,85 185.656,85 185.656,85 0,00
+Total Retribuciones que no hacen al cargo
+1.1.4.0 - Sueldo anual complementario 401.829,07 195.233,40 597.062,47 0,00 383.926,49 383.926,49 383.926,49 0,00
+1.1.6.0 - Contribuciones patronales 1.1.6.1 - IPS
+595.368,80 0,00 595.368,80 0,00 204.214,21 204.214,21 204.214,21 0,00
+1.1.6.2 - IOMA 233.186,11 0,00 233.186,11 0,00 90.255,96 90.255,96 90.255,96 0,00 828.554,91 0,00 828.554,91 0,00 294.470,17 294.470,17 294.470,17 0,00
+Total Contribuciones patronales
+1.1.7.0 - Complementos 1.1.7.1 - Presentismo
+0,00 0,00 0,00 0,00 2.289,00 2.289,00 2.289,00 0,00
+1.1.7.3 - Bonif.Tareas Funcionales y determ. 0,00 205.540...

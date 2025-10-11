@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_84bf14b4-47bf-4efb-ad7c-0d70684a50d3",
+      "datasetTitle": "Obras de generación de electricidad",
+      "lastProcessed": "2025-10-09T07:24:07.084Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_84bf14b4-47bf-4efb-ad7c-0d70684a50d3",
+    "title": "Obras de generación de electricidad",
+    "description": "Listado de obras vigentes que se desarrollan con aporte de fondos del Estado Nacional. Incluye obras de centrales térmicas, nucleares, hidroeléctricas y de energías renovables, si las hubiere. Este listado fue confeccionado por la Subsecretaría de Infraestructura Energética del Ministerio de Energía y Minería de la Nación y surge del seguimiento que la Coordinación de Proyectos de Generación de Electricidad realiza del desarrollo de las obras.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2021-07-06T13:47:20.929562",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

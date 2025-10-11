@@ -1,4 +1,7 @@
 category,amount,percentage
-Salarios,200000000,22.0
-Beneficios sociales,50000000,5.5
-Jubilaciones propias,40000000,4.4
+Salarios,200000000.0,22.0
+Beneficios sociales,50000000.0,5.5
+Jubilaciones propias,40000000.0,4.4
+,201.0,
+,195.0,
+,201.0,

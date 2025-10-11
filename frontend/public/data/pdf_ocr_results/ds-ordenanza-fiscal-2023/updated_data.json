@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-ordenanza-fiscal-2023",
+      "title": "Ordenanza Fiscal 2023 (Vigente)",
+      "distribution": [
+        {
+          "title": "ORDENANZA-FISCAL-3198-23.pdf",
+          "format": "PDF",
+          "fileName": "ORDENANZA-FISCAL-3198-23.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-ordenanza-fiscal-2023/ORDENANZA-FISCAL-3198-23.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-ordenanza-fiscal-2023/ORDENANZA-FISCAL-3198-23_extraction.json",
+            "pageCount": 45,
+            "textLength": 45,
+            "extractedPreview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

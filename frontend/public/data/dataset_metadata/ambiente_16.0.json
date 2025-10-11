@@ -1,0 +1,91 @@
+{
+  "files": {
+    "BqE_a_tftal_superf": {
+      "datasetId": "ambiente_16.0",
+      "datasetTitle": "Estado del bosque nativo",
+      "fileName": "BqE_a_tftal_superf",
+      "format": "CSV",
+      "title": "Evolución de la superficie de bosque nativo",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=16&did=138",
+      "lastProcessed": "2025-10-09T06:59:28.732Z",
+      "status": "processed"
+    },
+    "BqE_tftal_porc_ODS_1511": {
+      "datasetId": "ambiente_16.0",
+      "datasetTitle": "Estado del bosque nativo",
+      "fileName": "BqE_tftal_porc_ODS_1511",
+      "format": "CSV",
+      "title": "Superficie de bosque nativo como porcentaje de la superficie total",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=16&did=261",
+      "lastProcessed": "2025-10-09T06:59:30.139Z",
+      "status": "processed"
+    },
+    "BqCM_bncons_pcia_ha": {
+      "datasetId": "ambiente_16.0",
+      "datasetTitle": "Estado del bosque nativo",
+      "fileName": "BqCM_bncons_pcia_ha",
+      "format": "CSV",
+      "title": "Superficie de bosque nativo por categoría de conservación, declarada por cada provincia, en hectáreas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=16&did=164",
+      "lastProcessed": "2025-10-09T06:59:31.394Z",
+      "status": "processed"
+    },
+    "BqE_b_regftal_perdtftal_porc_2020_tb": {
+      "datasetId": "ambiente_16.0",
+      "datasetTitle": "Estado del bosque nativo",
+      "fileName": "BqE_b_regftal_perdtftal_porc_2020_tb",
+      "format": "CSV",
+      "title": "Pérdida anual de bosque nativo por región forestal en porcentaje",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=16&did=142",
+      "lastProcessed": "2025-10-09T06:59:32.700Z",
+      "status": "processed"
+    },
+    "BqE_e_bn_percatpcia_ha": {
+      "datasetId": "ambiente_16.0",
+      "datasetTitle": "Estado del bosque nativo",
+      "fileName": "BqE_e_bn_percatpcia_ha",
+      "format": "CSV",
+      "title": "Pérdida de bosque nativo por provincia y categoría de conservación, según el OTBN-2021",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=16&did=150",
+      "lastProcessed": "2025-10-09T06:59:34.032Z",
+      "status": "processed"
+    },
+    "BqE_d_bn_perdida_porc": {
+      "datasetId": "ambiente_16.0",
+      "datasetTitle": "Estado del bosque nativo",
+      "fileName": "BqE_d_bn_perdida_porc",
+      "format": "CSV",
+      "title": "Pérdida de bosque nativo por año, en porcentaje",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=16&did=144",
+      "lastProcessed": "2025-10-09T06:59:35.473Z",
+      "status": "processed"
+    },
+    "BqE_bnperd_ha_ODS1522_2022nue": {
+      "datasetId": "ambiente_16.0",
+      "datasetTitle": "Estado del bosque nativo",
+      "fileName": "BqE_bnperd_ha_ODS1522_2022nue",
+      "format": "CSV",
+      "title": "Valor absoluto de pérdida de bosques nativos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=16&did=263",
+      "lastProcessed": "2025-10-09T06:59:36.901Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_16.0",
+    "title": "Estado del bosque nativo",
+    "description": "Muestra la superficie en porcentaje, evolucion y pérdidas de bosque nativo",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2023-03-31T00:00:00",
+    "modified": "2023-03-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

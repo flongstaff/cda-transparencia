@@ -1,0 +1,32 @@
+{
+  "files": {
+    "Consumidores - hipervulnerables.csv": {
+      "datasetId": "produccion_f6f32192-8b0c-4a3a-a40f-0e782b4eea46",
+      "datasetTitle": "Programa Consumidores Hipervulnerables",
+      "fileName": "Consumidores - hipervulnerables.csv",
+      "format": "CSV",
+      "title": "Consumidores Hipervulnerables",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/f6f32192-8b0c-4a3a-a40f-0e782b4eea46/resource/b84b8029-1026-4710-8bde-ec9d28aff1aa",
+      "lastProcessed": "2025-10-09T08:09:16.955Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_f6f32192-8b0c-4a3a-a40f-0e782b4eea46",
+    "title": "Programa Consumidores Hipervulnerables",
+    "description": "Datos correspondientes a las denuncias que realizan las y los consumidores en la Ventanilla\r\núnica Federal de Consumo y que la Dirección Nacional de Defensa del Consumidor y\r\nArbitraje del Consumo detecta como consumidores hipervulnerables debido a su condición,\r\nde acuerdo a lo dispuesto por la Resolución N° 139/2020.",
+    "theme": [
+      "soci"
+    ],
+    "superTheme": [
+      "SOCI"
+    ],
+    "issued": "2021-05-09T20:48:18.920181",
+    "modified": "2021-05-11T15:53:35.841114",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Secretaria de Comercio Interior. Subsecretaría de\r\nAcciones para la Defensa de las y los Consumidores. Dirección Nacional de Defensa del\r\nConsumidor y Arbitraje del Consumo."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/programa-consumidores-hipervulnerables"
+  }
+}

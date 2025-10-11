@@ -1,0 +1,42 @@
+{
+  "files": {
+    "motos-paten-series.csv": {
+      "datasetId": "produccion_25fd183a-d6c8-463e-bfb6-a1c26c325ac8",
+      "datasetTitle": "Archivo 2013-2019: Indicadores Sectoriales de Motos",
+      "fileName": "motos-paten-series.csv",
+      "format": "CSV",
+      "title": "Motos: número de patentamientos por categoría de motocicleta (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/25fd183a-d6c8-463e-bfb6-a1c26c325ac8/resource/3efed4c6-78c2-4fda-b181-c3dd19c6f1e6",
+      "lastProcessed": "2025-10-09T08:04:23.781Z",
+      "status": "processed"
+    },
+    "motos-paten-panel.csv": {
+      "datasetId": "produccion_25fd183a-d6c8-463e-bfb6-a1c26c325ac8",
+      "datasetTitle": "Archivo 2013-2019: Indicadores Sectoriales de Motos",
+      "fileName": "motos-paten-panel.csv",
+      "format": "CSV",
+      "title": "Motos: número de patentamientos por categoría de motocicleta (panel)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/25fd183a-d6c8-463e-bfb6-a1c26c325ac8/resource/26eef781-6e11-4c01-b215-8d845d79e884",
+      "lastProcessed": "2025-10-09T08:04:25.796Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_25fd183a-d6c8-463e-bfb6-a1c26c325ac8",
+    "title": "Archivo 2013-2019: Indicadores Sectoriales de Motos",
+    "description": "Resumen de los principales indicadores del sector de Motos, incluyendo motocicletas, scooters, ciclomotores, cuatriciclos y similares.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-04-28T17:01:26.712932",
+    "modified": "2021-05-11T15:53:03.045599",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Producción. Secretaría de Transformación Productiva. Subsecretaría de Desarrollo y Planeamiento Productivo"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/archivo-2013-2019-indicadores-sectoriales-de-motos"
+  }
+}

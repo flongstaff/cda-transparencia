@@ -1,0 +1,56 @@
+{
+  "file_name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_3.csv",
+  "row_count": 2,
+  "column_count": 10,
+  "columns": [
+    "11.9.01.00 - Ley 9226",
+    "21 - Origen Provincial - De",
+    "200.000,00",
+    "0,00",
+    "200.000,00.1",
+    "26.762,61",
+    "173.237,39",
+    "26.762,61.1",
+    "0,00.1",
+    "173.237,39.1"
+  ],
+  "sample_data": [
+    {
+      "11.9.01.00 - Ley 9226": NaN,
+      "21 - Origen Provincial - De": "libre disponibilidad",
+      "200.000,00": NaN,
+      "0,00": NaN,
+      "200.000,00.1": NaN,
+      "26.762,61": NaN,
+      "173.237,39": NaN,
+      "26.762,61.1": NaN,
+      "0,00.1": NaN,
+      "173.237,39.1": NaN
+    },
+    {
+      "11.9.01.00 - Ley 9226": "11.9.03.00 - Juegos de azar",
+      "21 - Origen Provincial - De": "21 - Origen Provincial - De",
+      "200.000,00": "4.124.257,95",
+      "0,00": "0,00",
+      "200.000,00.1": "4.124.257,95",
+      "26.762,61": "4.730.250,53",
+      "173.237,39": "-605.992,58",
+      "26.762,61.1": "4.730.250,53",
+      "0,00.1": "0,00",
+      "173.237,39.1": "-605.992,58"
+    }
+  ],
+  "data_types": {
+    "11.9.01.00 - Ley 9226": "object",
+    "21 - Origen Provincial - De": "object",
+    "200.000,00": "object",
+    "0,00": "object",
+    "200.000,00.1": "object",
+    "26.762,61": "object",
+    "173.237,39": "object",
+    "26.762,61.1": "object",
+    "0,00.1": "object",
+    "173.237,39.1": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

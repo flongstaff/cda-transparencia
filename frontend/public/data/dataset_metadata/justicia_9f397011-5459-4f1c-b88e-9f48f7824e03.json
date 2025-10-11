@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_9f397011-5459-4f1c-b88e-9f48f7824e03",
+      "datasetTitle": "Designaciones de magistrados de la Justicia Federal y de la Justicia Nacional",
+      "format": "gráfico",
+      "title": "Designación y renuncia de magistrados - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/9f397011-5459-4f1c-b88e-9f48f7824e03/resource/4cc739e7-df0d-46de-9a37-9706718fb9a7",
+      "lastProcessed": "2025-10-09T07:35:01.033Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_9f397011-5459-4f1c-b88e-9f48f7824e03",
+    "title": "Designaciones de magistrados de la Justicia Federal y de la Justicia Nacional",
+    "description": "Designaciones de jueces, fiscales y defensores de la Justicia Federal y de la Justicia Nacional de la República Argentina.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-06-16T13:36:42.787601",
+    "modified": "2025-03-10T18:48:14.214211",
+    "publisher": {
+      "mbox": "oficinadecretos@jus.gov.ar",
+      "name": "Ministerio de Justicia. Secretaría de Justicia. Dirección Nacional de Relaciones con el Poder Judicial. Oficina Decretos"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/designaciones-de-magistrados-de-la-justicia-federal-y-la-justicia-nacional"
+  }
+}

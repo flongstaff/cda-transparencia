@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "seguridad_6",
+      "title": "Homicidios dolosos. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "distribution": [
+        {
+          "title": "Informe_Homicidios-Dolosos_2023.pdf",
+          "format": "PDF",
+          "fileName": "Informe_Homicidios-Dolosos_2023.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/seguridad_6/Informe_Homicidios-Dolosos_2023.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/seguridad_6/Informe_Homicidios-Dolosos_2023_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

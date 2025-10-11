@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_4680199f-6234-4262-8a2a-8f7993bf784d",
+      "datasetTitle": "Declaraciones Juradas Patrimoniales Integrales de carácter público",
+      "format": "ZIP",
+      "title": "Declaraciones juradas patrimoniales integrales - 2016",
+      "accessURL": "https://datos.jus.gob.ar/dataset/4680199f-6234-4262-8a2a-8f7993bf784d/resource/a970f34e-871a-4000-a432-b5877c74adae",
+      "lastProcessed": "2025-10-09T07:42:31.289Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_4680199f-6234-4262-8a2a-8f7993bf784d",
+    "title": "Declaraciones Juradas Patrimoniales Integrales de carácter público",
+    "description": "Declaraciones Juradas Patrimoniales Integrales presentadas por los sujetos obligados conforme lo normado en la Ley de Ética Pública 25.188 modificada por la Ley 26.857.\r\n",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2016-09-09T21:47:48.029246",
+    "modified": "2025-02-26T17:32:36.900725",
+    "publisher": {
+      "mbox": "uniddjjoa@jus.gov.ar",
+      "name": "Ministerio de Justicia. Oficina Anticorrupción."
+    },
+    "landingPage": "https://www2.jus.gov.ar/consultaddjj"
+  }
+}

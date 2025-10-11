@@ -1,0 +1,122 @@
+{
+  "files": {
+    "Televisión Accesos Provincias.xls": {
+      "datasetId": "enacom_22",
+      "datasetTitle": "Tv por Suscripción",
+      "fileName": "Televisión Accesos Provincias.xls",
+      "format": "XLS",
+      "title": "Tv por Suscripción Accesos Provincias-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TV/accesos-provincias",
+      "lastProcessed": "2025-10-09T06:27:34.660Z",
+      "status": "processed"
+    },
+    "Televisión Accesos Provincias.csv": {
+      "datasetId": "enacom_22",
+      "datasetTitle": "Tv por Suscripción",
+      "fileName": "Televisión Accesos Provincias.csv",
+      "format": "CSV",
+      "title": "Tv por Suscripción Accesos Provincias-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TV/accesos-provincias",
+      "lastProcessed": "2025-10-09T06:27:36.267Z",
+      "status": "processed"
+    },
+    "Televisión Accesos Totales.xls": {
+      "datasetId": "enacom_22",
+      "datasetTitle": "Tv por Suscripción",
+      "fileName": "Televisión Accesos Totales.xls",
+      "format": "XLS",
+      "title": "Tv por Suscripción Accesos Totales-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TV/accesos-totales",
+      "lastProcessed": "2025-10-09T06:27:36.268Z",
+      "status": "processed"
+    },
+    "Televisión Accesos Totales.csv": {
+      "datasetId": "enacom_22",
+      "datasetTitle": "Tv por Suscripción",
+      "fileName": "Televisión Accesos Totales.csv",
+      "format": "CSV",
+      "title": "Tv por Suscripción Accesos Totales-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TV/accesos-totales",
+      "lastProcessed": "2025-10-09T06:27:37.415Z",
+      "status": "processed"
+    },
+    "Televisión Ingresos .xls": {
+      "datasetId": "enacom_22",
+      "datasetTitle": "Tv por Suscripción",
+      "fileName": "Televisión Ingresos .xls",
+      "format": "XLS",
+      "title": "Tv por Suscripción Ingresos-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TV/ingresos",
+      "lastProcessed": "2025-10-09T06:27:37.416Z",
+      "status": "processed"
+    },
+    "Televisión Ingresos .csv": {
+      "datasetId": "enacom_22",
+      "datasetTitle": "Tv por Suscripción",
+      "fileName": "Televisión Ingresos .csv",
+      "format": "CSV",
+      "title": "Tv por Suscripción Ingresos-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TV/ingresos",
+      "lastProcessed": "2025-10-09T06:27:38.536Z",
+      "status": "processed"
+    },
+    "Televisión Penetración Provincias.xls": {
+      "datasetId": "enacom_22",
+      "datasetTitle": "Tv por Suscripción",
+      "fileName": "Televisión Penetración Provincias.xls",
+      "format": "XLS",
+      "title": "Tv por Suscripción Penetracion Provincias-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TV/penetracion-provincias",
+      "lastProcessed": "2025-10-09T06:27:38.537Z",
+      "status": "processed"
+    },
+    "Televisión Penetración Provincias.csv": {
+      "datasetId": "enacom_22",
+      "datasetTitle": "Tv por Suscripción",
+      "fileName": "Televisión Penetración Provincias.csv",
+      "format": "CSV",
+      "title": "Tv por Suscripción Penetracion Provincias-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TV/penetracion-provincias",
+      "lastProcessed": "2025-10-09T06:27:40.079Z",
+      "status": "processed"
+    },
+    "Televisión Penetración Totales.xls": {
+      "datasetId": "enacom_22",
+      "datasetTitle": "Tv por Suscripción",
+      "fileName": "Televisión Penetración Totales.xls",
+      "format": "XLS",
+      "title": "Tv por Suscripción Penetracion Totales-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TV/penetracion-totales",
+      "lastProcessed": "2025-10-09T06:27:40.079Z",
+      "status": "processed"
+    },
+    "Televisión Penetración Totales.csv": {
+      "datasetId": "enacom_22",
+      "datasetTitle": "Tv por Suscripción",
+      "fileName": "Televisión Penetración Totales.csv",
+      "format": "CSV",
+      "title": "Tv por Suscripción Penetracion Totales-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/TV/penetracion-totales",
+      "lastProcessed": "2025-10-09T06:27:41.156Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "enacom_22",
+    "title": "Tv por Suscripción",
+    "description": "Principales Indicadores de Mercado, Tv por Suscripción",
+    "theme": [
+      "tech"
+    ],
+    "superTheme": [
+      "TECH"
+    ],
+    "issued": "2017-01-01",
+    "modified": "2025-09-08",
+    "publisher": {
+      "mbox": "indicadores@enacom.gob.ar",
+      "name": "Enacom.Direccion Nacional De Planificación Y Desarrollo."
+    },
+    "landingPage": "https://indicadores.enacom.gob.ar/DatosAbiertos/TV/default"
+  }
+}

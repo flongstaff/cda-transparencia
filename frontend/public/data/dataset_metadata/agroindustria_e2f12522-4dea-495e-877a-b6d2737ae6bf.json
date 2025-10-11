@@ -1,0 +1,60 @@
+{
+  "files": {
+    "captura-puerto-flota-2010-2018.csv": {
+      "datasetId": "agroindustria_e2f12522-4dea-495e-877a-b6d2737ae6bf",
+      "datasetTitle": "Pesca - Desembarques de capturas marítimas",
+      "fileName": "captura-puerto-flota-2010-2018.csv",
+      "format": "CSV",
+      "title": "Desembarque de captura de especies marítimas 2010 a 2018",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/e2f12522-4dea-495e-877a-b6d2737ae6bf/resource/1996a5ec-7075-4062-9a79-05868fc2a2e2",
+      "lastProcessed": "2025-10-09T06:52:14.226Z",
+      "status": "processed"
+    },
+    "captura-puerto-flota-2019.csv": {
+      "datasetId": "agroindustria_e2f12522-4dea-495e-877a-b6d2737ae6bf",
+      "datasetTitle": "Pesca - Desembarques de capturas marítimas",
+      "fileName": "captura-puerto-flota-2019.csv",
+      "format": "CSV",
+      "title": "Desembarque de captura de especies marítimas 2019",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/e2f12522-4dea-495e-877a-b6d2737ae6bf/resource/77a15b4a-71e1-4b81-9732-ae0b6863c8cc",
+      "lastProcessed": "2025-10-09T06:52:18.113Z",
+      "status": "processed"
+    },
+    "captura-puerto-flota-serie-tiempo.csv": {
+      "datasetId": "agroindustria_e2f12522-4dea-495e-877a-b6d2737ae6bf",
+      "datasetTitle": "Pesca - Desembarques de capturas marítimas",
+      "fileName": "captura-puerto-flota-serie-tiempo.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/e2f12522-4dea-495e-877a-b6d2737ae6bf/resource/1e46bdfc-ffe4-4569-ba6e-f532a8ff7e22",
+      "lastProcessed": "2025-10-09T06:52:21.817Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "agroindustria_e2f12522-4dea-495e-877a-b6d2737ae6bf",
+      "datasetTitle": "Pesca - Desembarques de capturas marítimas",
+      "format": "web",
+      "title": "Mapeo de los puertos y capturas",
+      "accessURL": "https://geoportal.agroindustria.gob.ar/tematizador/pesca/",
+      "lastProcessed": "2025-10-09T06:52:21.817Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_e2f12522-4dea-495e-877a-b6d2737ae6bf",
+    "title": "Pesca - Desembarques de capturas marítimas",
+    "description": "Datos correspondientes al desembarque de capturas marítimas por flota, puerto, especie y mes, para el período Enero 2010 a la actualidad.",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2019-07-26T12:31:31.326059",
+    "modified": "2023-11-29T14:35:20.209606",
+    "publisher": {
+      "name": "Subsecretaría de Pesca y Acuicultura"
+    },
+    "landingPage": "https://datos.magyp.gob.ar/dataset/http-www-magyp-gob-ar-sitio-areas-pesca-maritima-desembarques"
+  }
+}

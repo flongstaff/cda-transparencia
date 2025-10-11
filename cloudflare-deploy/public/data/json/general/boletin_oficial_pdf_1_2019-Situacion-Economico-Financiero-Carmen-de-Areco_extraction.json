@@ -1,0 +1,13 @@
+{
+  "file_name": "boletin_oficial_pdf_1_2019-Situacion-Economico-Financiero-Carmen-de-Areco.pdf",
+  "file_hash": "fe32674d4cb362db0c9cef02b05a5222",
+  "page_count": 2,
+  "text_length": 2,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:58.550482"
+}

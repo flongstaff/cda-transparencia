@@ -1,0 +1,52 @@
+{
+  "files": {
+    "datos-refeglo-25-04-2025.csv": {
+      "datasetId": "otros_14",
+      "datasetTitle": "REFEGLO - Registro Federal de Gobiernos Locales",
+      "fileName": "datos-refeglo-25-04-2025.csv",
+      "lastProcessed": "2025-10-09T07:07:30.909Z",
+      "status": "error",
+      "error": "Failed to download CSV: datos-refeglo-25-04-2025.csv"
+    },
+    "refeglo.geojson": {
+      "datasetId": "otros_14",
+      "datasetTitle": "REFEGLO - Registro Federal de Gobiernos Locales",
+      "fileName": "refeglo.geojson",
+      "format": "GeoJSON",
+      "title": "REFEGLO",
+      "accessURL": "https://gobiernoslocales.mininterior.gob.ar/",
+      "lastProcessed": "2025-10-09T07:07:30.909Z",
+      "status": "processed"
+    },
+    "refeglo.zip": {
+      "datasetId": "otros_14",
+      "datasetTitle": "REFEGLO - Registro Federal de Gobiernos Locales",
+      "fileName": "refeglo.zip",
+      "format": "SHAPE",
+      "title": "REFEGLO",
+      "accessURL": "https://gobiernoslocales.mininterior.gob.ar/",
+      "lastProcessed": "2025-10-09T07:07:30.910Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "otros_14",
+    "title": "REFEGLO - Registro Federal de Gobiernos Locales",
+    "description": "Una herramienta que facilita el acceso público a la información territorial y una mayor comprensión sobre las potencialidades y necesidades de desarrollo local.",
+    "theme": [
+      "gove",
+      "soci"
+    ],
+    "superTheme": [
+      "SOCI",
+      "GOVE"
+    ],
+    "issued": "2022-06-30",
+    "modified": "2025-05-19",
+    "publisher": {
+      "mbox": "datosmunicipales@mininterior.gob.ar",
+      "name": "Ministerio del Interior"
+    },
+    "landingPage": "https://gobiernoslocales.mininterior.gob.ar/"
+  }
+}

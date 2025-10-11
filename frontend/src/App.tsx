@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { DataProvider } from './contexts/DataContext';
+import { QueryProvider } from './providers/QueryProvider';
 import { register as registerServiceWorker } from './utils/serviceWorkerRegistration';
 import smartDataLoader from '@services/SmartDataLoader';
 import productionDataManager from '@services/ProductionDataManager';
@@ -17,10 +18,10 @@ import Sidebar from '@components/layout/Sidebar';
 import Footer from '@components/layout/Footer';
 
 // Core Pages
-import Budget from './pages/Budget';
+import Budget from './pages/BudgetUnified';
 import Treasury from './pages/TreasuryUnified';
 import ExpensesPage from './pages/ExpensesPage';
-import DebtPage from './pages/DebtUnified';
+import DebtPage from './pages/Debt';
 import InvestmentsPage from './pages/InvestmentsPage';
 import Salaries from './pages/Salaries';
 import ContractsAndTendersPage from './pages/ContractsAndTendersPage';
@@ -72,6 +73,7 @@ import CarmenDeArecoPage from './pages/CarmenDeArecoPage';
 import TestAllChartsPage from './pages/TestAllChartsPage';
 import DataConnectivityTest from './pages/DataConnectivityTest';
 import TestDataLoader from './pages/TestDataLoader';
+import APITestPage from './pages/APITestPage';
 
 // Advanced Analysis & Visualization Pages
 import GeographicVisualizationPage from './pages/GeographicVisualizationPage';
@@ -120,7 +122,7 @@ function App() {
       onSuccess: () => {
         console.log('[App] Service worker registered successfully');
       },
-      onUpdate: (registration) => {
+      onUpdate: () => {
         console.log('[App] New content available, please refresh');
         // Optionally show a notification to the user
       },
@@ -158,35 +160,41 @@ function App() {
     };
   }, []);
 
-  // Check if we're running on a custom domain vs GitHub Pages
-  const isCustomDomain = window.location.hostname !== 'flongstaff.github.io' && 
-                         window.location.hostname !== 'localhost' && 
-                         window.location.hostname !== '127.0.0.1';
+  // Check if we're running on GitHub Pages vs other environments
+  const isGitHubPages = window.location.hostname === 'flongstaff.github.io';
+  const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
-  // Redirect from /cda-transparencia/ to / when on custom domain
+  // Handle redirects for GitHub Pages vs other environments
   useEffect(() => {
-    if (isCustomDomain && window.location.pathname === '/cda-transparencia/') {
-      // On custom domain, redirect from subpath to root
-      window.location.replace('/');
-    } else if (!isCustomDomain && window.location.pathname === '/') {
-      // On GitHub Pages, redirect root to the subpath if needed
-      // Actually, GitHub Pages should be serving from /cda-transparencia/ already
-      // So this shouldn't happen in practice
+    // On GitHub Pages, ensure we're serving from the correct base path
+    if (isGitHubPages && window.location.pathname === '/') {
+      // When on GitHub Pages and accessing root, redirect to the proper subpath
+      window.location.replace('/cda-transparencia/');
     }
-  }, [isCustomDomain]);
+    // On GitHub Pages, redirect from GitHub Pages base subpath back to root when accessing custom domain
+    // This handles the case when the custom domain is set but still points to the GitHub Pages path
+    else if (window.location.pathname.startsWith('/cda-transparencia/') && 
+             !isGitHubPages && 
+             !isLocalhost &&
+             window.location.hostname === 'cda-transparencia.org') {
+      const newPath = window.location.pathname.replace('/cda-transparencia/', '/');
+      window.location.replace(newPath + window.location.search + window.location.hash);
+    }
+  }, [isGitHubPages, isLocalhost]);
 
   return (
-    <HelmetProvider>
-      <ThemeProvider>
-        <DataProvider>
-          <BrowserRouter>
-          <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-dark-background text-gray-900 dark:text-dark-text-primary transition-colors duration-300">
-          <GovernmentHeader />
-          <div className="flex flex-1 pt-16">
-            <Sidebar />
-            <main className="flex-grow ml-0 md:ml-4 lg:ml-20 transition-all duration-300">
-            <div className="container mx-auto px-4 py-6 sm:px-6 lg:px-8">
-                <Routes>
+    <QueryProvider>
+      <HelmetProvider>
+        <ThemeProvider>
+          <DataProvider>
+            <BrowserRouter>
+            <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-dark-background text-gray-900 dark:text-dark-text-primary transition-colors duration-300">
+            <GovernmentHeader />
+            <div className="flex flex-1 pt-16">
+              <Sidebar />
+              <main className="flex-grow ml-0 md:ml-4 lg:ml-20 transition-all duration-300">
+              <div className="container mx-auto px-4 py-6 sm:px-6 lg:px-8">
+                  <Routes>
                   {/* Main Dashboard Routes */}
                   <Route path="/" element={<Home />} />
                   <Route path="/dashboard" element={<DashboardWithHash />} />
@@ -290,6 +298,7 @@ function App() {
                   <Route path="/all-charts" element={<TestAllChartsPage />} />
                   <Route path="/data-connectivity-test" element={<DataConnectivityTest />} />
                   <Route path="/test-data-loader" element={<TestDataLoader />} />
+                  <Route path="/api-test" element={<APITestPage />} />
 
                   {/* Catch-all route for 404 */}
                   <Route path="*" element={<NotFoundPage />} />
@@ -303,6 +312,7 @@ function App() {
     </DataProvider>
   </ThemeProvider>
 </HelmetProvider>
+</QueryProvider>
   );
 }
 

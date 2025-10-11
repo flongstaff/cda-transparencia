@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_20.0",
+      "datasetTitle": "Comercio mundial de minería",
+      "lastProcessed": "2025-10-09T07:11:04.873Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_20.0",
+    "title": "Comercio mundial de minería",
+    "description": "Datos correspondientes al tablero de Comercio Mundial de Minería del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM), en base a datos de CEPII-BACI.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2025-04-09",
+    "modified": "2025-04-09",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

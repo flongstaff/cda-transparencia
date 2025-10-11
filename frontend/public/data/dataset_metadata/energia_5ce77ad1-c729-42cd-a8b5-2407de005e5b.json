@@ -1,0 +1,81 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_5ce77ad1-c729-42cd-a8b5-2407de005e5b",
+      "datasetTitle": "Estadísticas de biodiesel y bioetanol",
+      "format": "XLS",
+      "title": "Estadísticas de biodiesel y bioetanol",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5ce77ad1-c729-42cd-a8b5-2407de005e5b/resource/a0939bc9-81c8-47c7-99d7-b11c4e7fc457",
+      "lastProcessed": "2025-10-09T06:38:37.070Z",
+      "status": "processed"
+    },
+    "expo-biodiesel.csv": {
+      "datasetId": "energia_5ce77ad1-c729-42cd-a8b5-2407de005e5b",
+      "datasetTitle": "Estadísticas de biodiesel y bioetanol",
+      "fileName": "expo-biodiesel.csv",
+      "format": "CSV",
+      "title": "Biodiesel: exportaciones por destino",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5ce77ad1-c729-42cd-a8b5-2407de005e5b/resource/ace44023-c58b-4407-a38e-558c75f83804",
+      "lastProcessed": "2025-10-09T06:38:38.394Z",
+      "status": "processed"
+    },
+    "biodiesel.csv": {
+      "datasetId": "energia_5ce77ad1-c729-42cd-a8b5-2407de005e5b",
+      "datasetTitle": "Estadísticas de biodiesel y bioetanol",
+      "fileName": "biodiesel.csv",
+      "format": "CSV",
+      "title": "Biodiesel: detalle de cupos asignados, producción y ventas por empresa",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5ce77ad1-c729-42cd-a8b5-2407de005e5b/resource/766f9fb3-8165-4826-89da-3942d3fe6186",
+      "lastProcessed": "2025-10-09T06:38:39.732Z",
+      "status": "processed"
+    },
+    "biodiesel-produccin-ventas-y-exportaciones-total-pas.csv": {
+      "datasetId": "energia_5ce77ad1-c729-42cd-a8b5-2407de005e5b",
+      "datasetTitle": "Estadísticas de biodiesel y bioetanol",
+      "fileName": "biodiesel-produccin-ventas-y-exportaciones-total-pas.csv",
+      "format": "CSV",
+      "title": "Biodiesel: producción, ventas y exportaciones, total país",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5ce77ad1-c729-42cd-a8b5-2407de005e5b/resource/4e04bc74-8625-412c-acc2-48412f2509b4",
+      "lastProcessed": "2025-10-09T06:38:41.021Z",
+      "status": "processed"
+    },
+    "bioetanol.csv": {
+      "datasetId": "energia_5ce77ad1-c729-42cd-a8b5-2407de005e5b",
+      "datasetTitle": "Estadísticas de biodiesel y bioetanol",
+      "fileName": "bioetanol.csv",
+      "format": "CSV",
+      "title": "Bioetanol: detalle de cupos asignados, producción y ventas, por empresa",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5ce77ad1-c729-42cd-a8b5-2407de005e5b/resource/0df1eeda-854b-44b0-8ea6-1a537f167fa4",
+      "lastProcessed": "2025-10-09T06:38:42.395Z",
+      "status": "processed"
+    },
+    "bioetanol-produccin-y-ventas-total-pas-.csv": {
+      "datasetId": "energia_5ce77ad1-c729-42cd-a8b5-2407de005e5b",
+      "datasetTitle": "Estadísticas de biodiesel y bioetanol",
+      "fileName": "bioetanol-produccin-y-ventas-total-pas-.csv",
+      "format": "CSV",
+      "title": "Bioetanol: producción y ventas (total país)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5ce77ad1-c729-42cd-a8b5-2407de005e5b/resource/e5478cfe-b3ff-4fc7-a564-18cbe4752ad4",
+      "lastProcessed": "2025-10-09T06:38:43.719Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_5ce77ad1-c729-42cd-a8b5-2407de005e5b",
+    "title": "Estadísticas de biodiesel y bioetanol",
+    "description": "Detalles mensual de asignaciones, producción y ventas al mercado interno por empresa. Producción, ventas al mercado interno y exportaciones de Biodiesel. Producción y ventas de bioetanol. Resumen por provincia. Exportaciones de biodiesel por destino. \r\n",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-12-22T14:56:55.641090",
+    "modified": "2025-09-25T12:31:12.473752",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

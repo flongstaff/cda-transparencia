@@ -1,0 +1,142 @@
+{
+  "files": {
+    "vigilancia-de-dengue-y-zika-201812.xls": {
+      "datasetId": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+      "datasetTitle": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+      "fileName": "vigilancia-de-dengue-y-zika-201812.xls",
+      "format": "XLS",
+      "title": "Vigilancia de Dengue y Zika - diciembre 2018",
+      "accessURL": "http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/bdd4e662-42cf-47ee-b7b3-bc14f5acae2d",
+      "lastProcessed": "2025-10-09T06:20:29.110Z",
+      "status": "processed"
+    },
+    "informacion-publica-dengue-zika-nacional-hasta-20181231.csv": {
+      "datasetId": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+      "datasetTitle": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+      "fileName": "informacion-publica-dengue-zika-nacional-hasta-20181231.csv",
+      "format": "CSV",
+      "title": "Vigilancia de Dengue y Zika - diciembre 2018",
+      "accessURL": "http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/255440b0-d8b2-4247-87d2-91dfec29eb0f",
+      "lastProcessed": "2025-10-09T06:20:33.776Z",
+      "status": "processed"
+    },
+    "informacion-publica-dengue-zika-nacional-hasta-20191231_3.xlsx": {
+      "datasetId": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+      "datasetTitle": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+      "fileName": "informacion-publica-dengue-zika-nacional-hasta-20191231_3.xlsx",
+      "format": "XLS",
+      "title": "Vigilancia de Dengue y Zika - 2019",
+      "accessURL": "http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/ab93dc4b-4e6c-499b-9335-c548a701a870",
+      "lastProcessed": "2025-10-09T06:20:33.777Z",
+      "status": "processed"
+    },
+    "informacion-publica-dengue-zika-nacional-hasta-20201231_1.xlsx": {
+      "datasetId": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+      "datasetTitle": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+      "fileName": "informacion-publica-dengue-zika-nacional-hasta-20201231_1.xlsx",
+      "format": "XLS",
+      "title": "Vigilancia de Dengue y Zika - 2020",
+      "accessURL": "http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/3e11a05a-8287-4954-ab08-f698dc0ff3e1",
+      "lastProcessed": "2025-10-09T06:20:33.777Z",
+      "status": "processed"
+    },
+    "informacion-publica-dengue-zika-nacional-hasta-20210731.xlsx": {
+      "datasetId": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+      "datasetTitle": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+      "fileName": "informacion-publica-dengue-zika-nacional-hasta-20210731.xlsx",
+      "format": "XLS",
+      "title": "Vigilancia de Dengue y Zika - julio 2021",
+      "accessURL": "http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/9a6eed8b-6951-4348-b96d-3330eff13b2f",
+      "lastProcessed": "2025-10-09T06:20:33.777Z",
+      "status": "processed"
+    },
+    "1648473440-6ff92f5b32926ebfb17725a0ab8e991652470725-informacion-publica-dengue-zika-nacional-hasta-20211231.xlsx": {
+      "datasetId": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+      "datasetTitle": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+      "fileName": "1648473440-6ff92f5b32926ebfb17725a0ab8e991652470725-informacion-publica-dengue-zika-nacional-hasta-20211231.xlsx",
+      "format": "XLS",
+      "title": "Vigilancia de Dengue y Zika - Diciembre 2021",
+      "accessURL": "http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/8275ff70-94e5-4ee0-9cbb-630587daa618",
+      "lastProcessed": "2025-10-09T06:20:33.777Z",
+      "status": "processed"
+    },
+    "informacion-publica-dengue-zika-nacional -anio 2022.csv": {
+      "datasetId": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+      "datasetTitle": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+      "fileName": "informacion-publica-dengue-zika-nacional -anio 2022.csv",
+      "format": "CSV",
+      "title": "Vigilancia de Dengue y Zika - Diciembre 2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/30d76bcb-b8eb-4bf3-863e-c87d41724647",
+      "lastProcessed": "2025-10-09T06:20:37.808Z",
+      "status": "processed"
+    },
+    "informacion-publica-dengue-zika-nacional-se-1-a-52-de-2023-2024-06-10.csv": {
+      "datasetId": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+      "datasetTitle": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+      "fileName": "informacion-publica-dengue-zika-nacional-se-1-a-52-de-2023-2024-06-10.csv",
+      "format": "XLS",
+      "title": "Vigilancia de Dengue y Zika 1 a 52 - 2023-2024",
+      "accessURL": "http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/19075374-b180-48a0-aaaf-e0e44cd6816f",
+      "lastProcessed": "2025-10-09T06:20:37.808Z",
+      "status": "processed"
+    },
+    "informacion-publica-dengue-zika-nacional-se-1-a-52-de-2024-2025-01-06.csv": {
+      "datasetId": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+      "datasetTitle": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+      "fileName": "informacion-publica-dengue-zika-nacional-se-1-a-52-de-2024-2025-01-06.csv",
+      "format": "CSV",
+      "title": "Vigilancia de Dengue y Zika 1 a 52 - 2024",
+      "accessURL": "http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/1b18a1ff-c381-4c3b-8498-8a34854690d0",
+      "lastProcessed": "2025-10-09T06:20:41.953Z",
+      "status": "processed"
+    },
+    "informacion-publica-dengue-zika-nacional-se-1-a-52-de-2024-2025-01-13.csv": {
+      "datasetId": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+      "datasetTitle": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+      "fileName": "informacion-publica-dengue-zika-nacional-se-1-a-52-de-2024-2025-01-13.csv",
+      "format": "CSV",
+      "title": "Vigilancia de Dengue y Zika 1 a 52 - 2024_actualización_casos",
+      "accessURL": "http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/6ab1d526-afe2-4213-b216-ccb8369ef2f9",
+      "lastProcessed": "2025-10-09T06:20:46.067Z",
+      "status": "processed"
+    },
+    "informacion-publica-dengue-zika-nacional-se-1-a-52-de-2024-2025-05-05.csv": {
+      "datasetId": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+      "datasetTitle": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+      "fileName": "informacion-publica-dengue-zika-nacional-se-1-a-52-de-2024-2025-05-05.csv",
+      "format": "CSV",
+      "title": "Vigilancia de Dengue y Zika 1 a 52 - 2024-2025",
+      "accessURL": "http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/e57edd84-096d-4348-9137-2f5dae9c8f55",
+      "lastProcessed": "2025-10-09T06:20:50.183Z",
+      "status": "processed"
+    },
+    "informacion-publica-dengue-zika-nacional-se-1-a-38-de-2025-2025-09-29.csv": {
+      "datasetId": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+      "datasetTitle": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+      "fileName": "informacion-publica-dengue-zika-nacional-se-1-a-38-de-2025-2025-09-29.csv",
+      "format": "CSV",
+      "title": "Vigilancia de Dengue y Zika 1 al 38 - 2025",
+      "accessURL": "http://datos.salud.gob.ar/dataset/ceaa8e87-297e-4348-84b8-5c643e172500/resource/937f34bc-dc3d-4fa1-bb0b-09a749a69d23",
+      "lastProcessed": "2025-10-09T06:20:54.258Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_ceaa8e87-297e-4348-84b8-5c643e172500",
+    "title": "Vigilancia de las enfermedades por virus del Dengue y Zika",
+    "description": "Casos confirmados  de Dengue y Zika  correspondientes al Registro del Sistema Nacional de Vigilancia de la Salud 2.0\r\n",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2018-09-13T10:01:47.139710",
+    "modified": "2025-01-16T12:14:14.598807",
+    "publisher": {
+      "mbox": "areavigilanciamsal@gmail.com",
+      "name": "Ministerio de Salud. Secretaría de Promoción de la Salud, Prevención y Control de Riesgos. Subsecretaría de Prevención y Control de Enfermedades Comunicables e Inmunoprevenibles. Dirección Nacional de Epidemiología y Análisis de la Situación de Salud. Área de Vigilancia."
+    },
+    "landingPage": "https://www.argentina.gob.ar/salud/epidemiologia/boletinesepidemiologicos"
+  }
+}

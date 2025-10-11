@@ -1,0 +1,51 @@
+{
+  "files": {
+    "BqPF_pfnm_extrac_uso_tn": {
+      "datasetId": "ambiente_17.0",
+      "datasetTitle": "Productos forestales",
+      "fileName": "BqPF_pfnm_extrac_uso_tn",
+      "format": "CSV",
+      "title": "Evolución de los productos forestales no madereros (PFNM), según tipo de uso en toneladas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=17&did=163",
+      "lastProcessed": "2025-10-09T06:59:45.089Z",
+      "status": "processed"
+    },
+    "BqPF_extrac_tip_prov_2025": {
+      "datasetId": "ambiente_17.0",
+      "datasetTitle": "Productos forestales",
+      "fileName": "BqPF_extrac_tip_prov_2025",
+      "format": "CSV",
+      "title": "Extracción de productos forestales de especies nativas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=17&did=283",
+      "lastProcessed": "2025-10-09T06:59:46.428Z",
+      "status": "processed"
+    },
+    "BqPF_rolloslena_extrac_2025_m3_tn": {
+      "datasetId": "ambiente_17.0",
+      "datasetTitle": "Productos forestales",
+      "fileName": "BqPF_rolloslena_extrac_2025_m3_tn",
+      "format": "CSV",
+      "title": "Extracción de rollos y leña de especies nativas por año",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=5&stid=17&did=160",
+      "lastProcessed": "2025-10-09T06:59:47.763Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_17.0",
+    "title": "Productos forestales",
+    "description": "Muestra la extracción de los productos forestales de especies nativas y la evolución de los productos no madereros",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2018-12-31T00:00:00",
+    "modified": "2018-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

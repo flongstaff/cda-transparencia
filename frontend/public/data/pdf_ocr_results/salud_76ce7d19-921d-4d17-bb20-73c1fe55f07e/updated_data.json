@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "salud_76ce7d19-921d-4d17-bb20-73c1fe55f07e",
+      "title": "Serie histórica de defunciones ocurridas en Argentina por jurisdicción",
+      "distribution": [
+        {
+          "title": "DATOS-ABIERTOS-serie-histórica-defunciones-generales-jurisdicción--1914-2022.pdf",
+          "format": "PDF",
+          "fileName": "DATOS-ABIERTOS-serie-histórica-defunciones-generales-jurisdicción--1914-2022.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/salud_76ce7d19-921d-4d17-bb20-73c1fe55f07e/DATOS-ABIERTOS-serie-histórica-defunciones-generales-jurisdicción--1914-2022.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/salud_76ce7d19-921d-4d17-bb20-73c1fe55f07e/DATOS-ABIERTOS-serie-histórica-defunciones-generales-jurisdicción--1914-2022_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

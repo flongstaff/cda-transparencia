@@ -1,0 +1,51 @@
+{
+  "files": {
+    "BiC_ODS1581": {
+      "datasetId": "ambiente_14.0",
+      "datasetTitle": "Especies Exóticas Invasoras",
+      "fileName": "BiC_ODS1581",
+      "format": "CSV",
+      "title": "Número de actores capacitados para la gestión, el control, erradicación y monitoreo de las Especies Exóticas Invasoras",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=14&did=303",
+      "lastProcessed": "2025-10-09T07:00:05.910Z",
+      "status": "processed"
+    },
+    "BiC_ODS1581b": {
+      "datasetId": "ambiente_14.0",
+      "datasetTitle": "Especies Exóticas Invasoras",
+      "fileName": "BiC_ODS1581b",
+      "format": "CSV",
+      "title": "Porcentaje de jurisdicciones que cuentan con normativas específica sobre listado de especies exóticas invasoras",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=14&did=304",
+      "lastProcessed": "2025-10-09T07:00:07.220Z",
+      "status": "processed"
+    },
+    "BiEEI_castorimpacto_tdelfuego2016_2018": {
+      "datasetId": "ambiente_14.0",
+      "datasetTitle": "Especies Exóticas Invasoras",
+      "fileName": "BiEEI_castorimpacto_tdelfuego2016_2018",
+      "format": "CSV",
+      "title": "Impacto ambiental del castor en Tierra del Fuego",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=14&did=223",
+      "lastProcessed": "2025-10-09T07:00:08.542Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_14.0",
+    "title": "Especies Exóticas Invasoras",
+    "description": "Muestra las especies exóticas invasoras",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2019-12-31T00:00:00",
+    "modified": "2019-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

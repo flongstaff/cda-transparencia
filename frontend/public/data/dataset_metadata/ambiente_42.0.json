@@ -1,0 +1,51 @@
+{
+  "files": {
+    "APSp_benef_os_2022": {
+      "datasetId": "ambiente_42.0",
+      "datasetTitle": "Salud",
+      "fileName": "APSp_benef_os_2022",
+      "format": "CSV",
+      "title": "Beneficiarios de obras sociales por naturaleza institucional",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=12&stid=61&did=318",
+      "lastProcessed": "2025-10-09T07:00:42.656Z",
+      "status": "processed"
+    },
+    "APSp_salud_mort_inf_2025": {
+      "datasetId": "ambiente_42.0",
+      "datasetTitle": "Salud",
+      "fileName": "APSp_salud_mort_inf_2025",
+      "format": "CSV",
+      "title": "Tasa de mortalidad infantil",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=12&stid=61&did=253",
+      "lastProcessed": "2025-10-09T07:00:43.922Z",
+      "status": "processed"
+    },
+    "APSp_mort_materna_2020": {
+      "datasetId": "ambiente_42.0",
+      "datasetTitle": "Salud",
+      "fileName": "APSp_mort_materna_2020",
+      "format": "CSV",
+      "title": "Tasa de Mortalidad Materna",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=12&stid=61&did=321",
+      "lastProcessed": "2025-10-09T07:00:45.208Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_42.0",
+    "title": "Salud",
+    "description": "Muestra los beneficiarios de obras sociales, mortandad infantil y materna",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2023-02-03T00:00:00",
+    "modified": "2023-02-03T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

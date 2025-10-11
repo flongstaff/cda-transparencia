@@ -1,0 +1,41 @@
+{
+  "files": {
+    "LEYYOLAN_capacit_2022_2023_n": {
+      "datasetId": "ambiente_40.0",
+      "datasetTitle": "Ley Yolanda",
+      "fileName": "LEYYOLAN_capacit_2022_2023_n",
+      "format": "CSV",
+      "title": "Capacitaciones en el Estado Nacional",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=11&stid=76&did=343",
+      "lastProcessed": "2025-10-09T06:59:06.184Z",
+      "status": "processed"
+    },
+    "LEYYOLAN_adhesion_2022_n": {
+      "datasetId": "ambiente_40.0",
+      "datasetTitle": "Ley Yolanda",
+      "fileName": "LEYYOLAN_adhesion_2022_n",
+      "format": "CSV",
+      "title": "Jurisdicciones que adhirieron a la Ley",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=11&stid=76&did=342",
+      "lastProcessed": "2025-10-09T06:59:07.475Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_40.0",
+    "title": "Ley Yolanda",
+    "description": "Muestra las adhesiones provinciales a la  Ley y las capacitaciones realizadas en los tres poderes del Estado",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2023-02-02T00:00:00",
+    "modified": "2023-02-02T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

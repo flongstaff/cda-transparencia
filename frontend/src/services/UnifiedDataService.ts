@@ -299,7 +299,7 @@ class UnifiedDataService {
    */
   public async getAvailableYears(): Promise<number[]> {
     try {
-      const consolidatedIndex = await this.fetchData('/data/consolidated/index.json');
+      const consolidatedIndex = await this.fetchData('/data/api/index.json');
       return consolidatedIndex?.years || [2019, 2020, 2021, 2022, 2023, 2024, 2025];
     } catch (error) {
       console.error('[UNIFIED DATA SERVICE] Error loading available years:', error);
@@ -326,10 +326,37 @@ class UnifiedDataService {
       try {
         chartData = await this.fetchCsvData(`/data/charts/${chartFileName}`);
       } catch (error) {
-        // Fallback to consolidated data
-        if (year) {
-          const consolidatedData = await this.fetchData(`/data/consolidated/${year}/summary.json`);
-          chartData = this.transformConsolidatedToChart(consolidatedData, chartType);
+        // Try to load from raw CSV files in the data directory
+        try {
+          // Map chart types to CSV file names
+          const chartTypeToFileMap: Record<string, string> = {
+            'Financial_Reserves': 'Financial_Reserves',
+            'Revenue_Sources': 'Revenue_Sources',
+            'Budget_Execution': 'Budget_Execution',
+            'Debt_Report': 'Debt_Report',
+            'Economic_Report': 'Economic_Report',
+            'Expenditure_Report': 'Expenditure_Report',
+            'Investment_Report': 'Investment_Report',
+            'Personnel_Expenses': 'Personnel_Expenses',
+            'Fiscal_Balance_Report': 'Fiscal_Balance_Report',
+            'Infrastructure_Projects': 'Infrastructure_Projects',
+            'Gender_Budgeting': 'Gender_Budgeting',
+            'Health_Statistics': 'Health_Statistics',
+            'Education_Data': 'Education_Data',
+            'Quarterly_Execution': 'Quarterly_Execution'
+          };
+          
+          const fileNamePrefix = chartTypeToFileMap[chartType] || chartType;
+          const csvFileName = `${fileNamePrefix}_${year || new Date().getFullYear()}_table_0.csv`;
+          
+          // Try to load from raw CSV files
+          chartData = await this.fetchCsvData(`/data/raw/csv/${csvFileName}`);
+        } catch (csvError) {
+          // Fallback to consolidated data
+          if (year) {
+            const consolidatedData = await this.fetchData(`/data/api/financial/${year}/summary.json`);
+            chartData = this.transformConsolidatedToChart(consolidatedData, chartType);
+          }
         }
       }
 
@@ -364,7 +391,10 @@ class UnifiedDataService {
 
   private async fetchCsvData(path: string): Promise<any[]> {
     try {
-      const response = await fetch(path);
+      // For paths that start with /data/, use the relative path (since files in public are served at root)
+      const normalizedPath = path.startsWith('/data/') ? path : `/data/${path}`;
+      
+      const response = await fetch(normalizedPath);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -442,7 +472,7 @@ class UnifiedDataService {
 
   private async getBudgetData(year?: number): Promise<any> {
     if (year) {
-      const consolidatedData = await this.fetchData(`/data/consolidated/${year}/budget.json`);
+      const consolidatedData = await this.fetchData(`/data/api/financial/${year}/consolidated.json`);
       if (consolidatedData) return consolidatedData;
     }
     
@@ -452,16 +482,55 @@ class UnifiedDataService {
 
   private async getTreasuryData(year?: number): Promise<any> {
     if (year) {
-      const consolidatedData = await this.fetchData(`/data/consolidated/${year}/treasury.json`);
+      // Try to load consolidated data first
+      const consolidatedData = await this.fetchData(`/data/api/financial/${year}/consolidated.json`);
       if (consolidatedData) return consolidatedData;
+      
+      // If no consolidated data, try to load from processed data
+      const processedData = await this.fetchData(`/data/processed/${year}/consolidated_data.json`);
+      if (processedData) {
+        // Extract treasury-specific data from the processed data
+        const treasuryData: any = {
+          year: year,
+          income: processedData.total_income || processedData.income || 0,
+          expenses: processedData.total_expenses || processedData.expenses || 0,
+          balance: processedData.balance || 0,
+          reserves: [],
+          liquidity_data: [],
+          revenue_sources: []
+        };
+        
+        // Look for financial data in the processed data
+        if (processedData.financial_data_files) {
+          // Find reserves data
+          const reservesData = processedData.financial_data_files.find(
+            (file: any) => file.filename && file.filename.includes('Financial_Reserves')
+          );
+          if (reservesData) {
+            treasuryData.reserves = reservesData.sample_rows || [];
+            treasuryData.liquidity_data = reservesData.sample_rows || [];
+          }
+          
+          // Find revenue sources data
+          const revenueData = processedData.financial_data_files.find(
+            (file: any) => file.filename && file.filename.includes('Revenue_Sources')
+          );
+          if (revenueData) {
+            treasuryData.revenue_sources = revenueData.sample_rows || [];
+          }
+        }
+        
+        return treasuryData;
+      }
     }
     
+    // Fallback to chart data
     return await this.getChartData('Financial_Reserves', year);
   }
 
   private async getDebtData(year?: number): Promise<any> {
     if (year) {
-      const consolidatedData = await this.fetchData(`/data/consolidated/${year}/debt.json`);
+      const consolidatedData = await this.fetchData(`/data/api/financial/${year}/consolidated.json`);
       if (consolidatedData) return consolidatedData;
     }
     
@@ -470,7 +539,7 @@ class UnifiedDataService {
 
   private async getExpensesData(year?: number): Promise<any> {
     if (year) {
-      const consolidatedData = await this.fetchData(`/data/consolidated/${year}/summary.json`);
+      const consolidatedData = await this.fetchData(`/data/api/financial/${year}/summary.json`);
       if (consolidatedData?.expenditure) return consolidatedData.expenditure;
     }
     
@@ -483,7 +552,7 @@ class UnifiedDataService {
 
   private async getSalariesData(year?: number): Promise<any> {
     if (year) {
-      const consolidatedData = await this.fetchData(`/data/consolidated/${year}/salaries.json`);
+      const consolidatedData = await this.fetchData(`/data/api/financial/${year}/consolidated.json`);
       if (consolidatedData) return consolidatedData;
     }
     
@@ -492,7 +561,7 @@ class UnifiedDataService {
 
   private async getContractsData(year?: number): Promise<any> {
     if (year) {
-      const consolidatedData = await this.fetchData(`/data/consolidated/${year}/contracts.json`);
+      const consolidatedData = await this.fetchData(`/data/api/documents.json`);
       if (consolidatedData) return consolidatedData;
     }
     
@@ -501,7 +570,7 @@ class UnifiedDataService {
 
   private async getDocumentsData(year?: number): Promise<any> {
     if (year) {
-      const consolidatedData = await this.fetchData(`/data/consolidated/${year}/documents.json`);
+      const consolidatedData = await this.fetchData(`/data/api/documents.json`);
       if (consolidatedData) return consolidatedData;
     }
     
@@ -554,7 +623,7 @@ class UnifiedDataService {
 
   private async getGeneralData(pageName: string, year?: number): Promise<any> {
     // Generic data loading for any page
-    const consolidatedData = await this.fetchData(`/data/consolidated/${year || 2025}/summary.json`);
+    const consolidatedData = await this.fetchData(`/data/api/financial/${year || 2025}/summary.json`);
     return consolidatedData || {};
   }
 
@@ -563,7 +632,7 @@ class UnifiedDataService {
   private getBudgetSources(year?: number): DataSource[] {
     const sources: DataSource[] = [
       { type: 'csv', path: '/data/charts/Budget_Execution_consolidated_2019-2025.csv', category: 'budget' },
-      { type: 'json', path: `/data/consolidated/${year || 2025}/budget.json`, category: 'budget' }
+      { type: 'json', path: `/data/api/financial/${year || 2025}/consolidated.json`, category: 'budget' }
     ];
     if (year) {
       sources.push({ type: 'csv', path: `/data/processed/budget_execution_${year}.csv`, category: 'budget' });
@@ -574,21 +643,21 @@ class UnifiedDataService {
   private getTreasurySources(year?: number): DataSource[] {
     return [
       { type: 'csv', path: '/data/charts/Financial_Reserves_consolidated_2019-2025.csv', category: 'treasury' },
-      { type: 'json', path: `/data/consolidated/${year || 2025}/treasury.json`, category: 'treasury' }
+      { type: 'json', path: `/data/api/financial/${year || 2025}/consolidated.json`, category: 'treasury' }
     ];
   }
 
   private getDebtSources(year?: number): DataSource[] {
     return [
       { type: 'csv', path: '/data/charts/Debt_Report_consolidated_2019-2025.csv', category: 'debt' },
-      { type: 'json', path: `/data/consolidated/${year || 2025}/debt.json`, category: 'debt' }
+      { type: 'json', path: `/data/api/financial/${year || 2025}/consolidated.json`, category: 'debt' }
     ];
   }
 
   private getExpensesSources(year?: number): DataSource[] {
     return [
       { type: 'csv', path: '/data/charts/Expenditure_Report_consolidated_2019-2025.csv', category: 'expenses' },
-      { type: 'json', path: `/data/consolidated/${year || 2025}/summary.json`, category: 'expenses' }
+      { type: 'json', path: `/data/api/financial/${year || 2025}/summary.json`, category: 'expenses' }
     ];
   }
 
@@ -602,22 +671,22 @@ class UnifiedDataService {
   private getSalariesSources(year?: number): DataSource[] {
     return [
       { type: 'csv', path: '/data/charts/Personnel_Expenses_consolidated_2019-2025.csv', category: 'personnel' },
-      { type: 'json', path: `/data/consolidated/${year || 2025}/salaries.json`, category: 'personnel' }
+      { type: 'json', path: `/data/api/financial/${year || 2025}/consolidated.json`, category: 'personnel' }
     ];
   }
 
   private getContractsSources(year?: number): DataSource[] {
     return [
-      { type: 'json', path: `/data/consolidated/${year || 2025}/contracts.json`, category: 'contracts' },
+      { type: 'json', path: `/data/api/documents.json`, category: 'contracts' },
       { type: 'pdf', path: `/data/organized_by_subject/${year || 2025}/Contrataciones/`, category: 'contracts' }
     ];
   }
 
   private getDocumentsSources(year?: number): DataSource[] {
     return [
-      { type: 'json', path: `/data/consolidated/${year || 2025}/documents.json`, category: 'documents' },
+      { type: 'json', path: `/data/api/documents.json`, category: 'documents' },
       { type: 'pdf', path: `/data/web_accessible_pdfs/${year || 2025}/`, category: 'documents' },
-      { type: 'json', path: '/data/web_accessible_pdfs/pdf_index.json', category: 'documents' }
+      { type: 'json', path: '/data/api/pdf_metadata.json', category: 'documents' }
     ];
   }
 
@@ -638,14 +707,14 @@ class UnifiedDataService {
 
   private getDashboardSources(year?: number): DataSource[] {
     return [
-      { type: 'json', path: `/data/consolidated/${year || 2025}/summary.json`, category: 'dashboard' },
+      { type: 'json', path: `/data/api/financial/${year || 2025}/summary.json`, category: 'dashboard' },
       { type: 'csv', path: '/data/charts/Budget_Execution_consolidated_2019-2025.csv', category: 'dashboard' }
     ];
   }
 
   private getGeneralSources(pageName: string, year?: number): DataSource[] {
     return [
-      { type: 'json', path: `/data/consolidated/${year || 2025}/summary.json`, category: pageName }
+      { type: 'json', path: `/data/api/financial/${year || 2025}/summary.json`, category: pageName }
     ];
   }
 
@@ -675,7 +744,7 @@ class UnifiedDataService {
 
     try {
       // Load consolidated data for the year
-      const consolidatedData = await this.fetchData(`/data/consolidated/${year}/summary.json`);
+      const consolidatedData = await this.fetchData(`/data/api/financial/${year}/summary.json`);
 
       if (consolidatedData) {
         localData.budget = consolidatedData.budget || consolidatedData.financial_overview;
@@ -784,33 +853,35 @@ class UnifiedDataService {
     try {
       console.log(`[UNIFIED DATA SERVICE] Fetching analytics chart data for ${chartType} (${year || "all"})`);
 
-      // Build API URL for analytics chart data
-      const apiUrl = buildApiUrl(`analytics/chart/${chartType}`);
+      // First try to fetch from local files
+      const chartFileName = `${chartType}_consolidated_2019-2025.csv`;
       
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify({
-          year: year || new Date().getFullYear(),
-          type: chartType
-        })
-      });
-
+      // Try charts directory first
+      let response = await fetch(`/data/charts/${chartFileName}`);
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        // Try raw/csv directory
+        response = await fetch(`/data/raw/csv/${chartType}_Report_${year || new Date().getFullYear()}_table_0.csv`);
+        if (!response.ok) {
+          // Try processed/csv directory
+          response = await fetch(`/data/processed/csv/${chartType}_Report_${year || new Date().getFullYear()}_table_0.csv`);
+        }
+      }
+      
+      if (response.ok) {
+        const csvText = await response.text();
+        const csvData = this.parseCsv(csvText);
+        
+        console.log(`[UNIFIED DATA SERVICE] Local analytics chart data fetched for ${chartType}`, {
+          dataPoints: csvData.length,
+          chartType
+        });
+        
+        return csvData;
       }
 
-      const data = await response.json();
-      
-      console.log(`[UNIFIED DATA SERVICE] Analytics chart data fetched for ${chartType}`, {
-        dataPoints: data?.length || 0,
-        chartType
-      });
-      
-      return data;
+      // If local files don't exist, return mock data
+      console.log(`[UNIFIED DATA SERVICE] Local files not found for ${chartType}, returning mock data`);
+      return this.generateMockAnalyticsData(chartType, year);
 
     } catch (error) {
       console.error(`[UNIFIED DATA SERVICE] Error fetching analytics chart data for ${chartType}:`, error);

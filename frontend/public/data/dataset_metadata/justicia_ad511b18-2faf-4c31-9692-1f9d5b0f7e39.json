@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_ad511b18-2faf-4c31-9692-1f9d5b0f7e39",
+      "datasetTitle": "Estadística de designaciones de magistrados de la Justicia Federal y Nacional por género",
+      "format": "gráfico",
+      "title": "Designaciones de magistrados por género - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/ad511b18-2faf-4c31-9692-1f9d5b0f7e39/resource/924d8b9e-0f99-4421-adc5-7931c4522ad2",
+      "lastProcessed": "2025-10-09T07:35:06.298Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_ad511b18-2faf-4c31-9692-1f9d5b0f7e39",
+    "title": "Estadística de designaciones de magistrados de la Justicia Federal y Nacional por género",
+    "description": "Cantidad de hombres/mujeres designados/as desde el año 2000 hasta la fecha, en la justicia nacional y de la justicia federal de la República Argentina.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2018-02-19T14:31:19.514269",
+    "modified": "2025-03-10T18:47:30.441244",
+    "publisher": {
+      "mbox": "oficinadecretos@jus.gov.ar",
+      "name": "Ministerio de Justicia. Secretaría de Justicia. Dirección Nacional de Relaciones con el Poder Judicial. Oficina Decretos"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/estadistica-de-designaciones-de-magistrados-de-la-justicia-federal-y-nacional-por-genero"
+  }
+}

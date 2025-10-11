@@ -1,0 +1,32 @@
+{
+  "files": {
+    "relevamiento-expectativas-mercado-rem.csv": {
+      "datasetId": "sspm_430",
+      "datasetTitle": "Relevamiento de Expectativas de Mercado (REM)",
+      "fileName": "relevamiento-expectativas-mercado-rem.csv",
+      "format": "CSV",
+      "title": "Relevamiento de Expectativas de Mercado (REM). Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:55:23.876Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_430",
+    "title": "Relevamiento de Expectativas de Mercado (REM)",
+    "description": "Relevamiento de Expectativas de Mercado (REM). Variaciones porcentuales",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2018-01-14",
+    "modified": "2025-02-20T03:39:59.396650",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

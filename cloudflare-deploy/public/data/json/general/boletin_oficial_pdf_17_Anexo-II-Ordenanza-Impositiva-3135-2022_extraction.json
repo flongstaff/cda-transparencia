@@ -1,0 +1,13 @@
+{
+  "file_name": "boletin_oficial_pdf_17_Anexo-II-Ordenanza-Impositiva-3135-2022.pdf",
+  "file_hash": "c21bf4eb9ef420f1679b658847ca1852",
+  "page_count": 2,
+  "text_length": 2,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:57.788077"
+}

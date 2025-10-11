@@ -1,0 +1,52 @@
+{
+  "files": {
+    "produccin-de-glp-condensado-y-gasolina-estabilizada-produccin-de-glp.csv": {
+      "datasetId": "energia_55b83784-8f04-4018-91c7-027163c615b3",
+      "datasetTitle": "Producción de GLP",
+      "fileName": "produccin-de-glp-condensado-y-gasolina-estabilizada-produccin-de-glp.csv",
+      "format": "CSV",
+      "title": "Producción de GLP Condensado y Gasolina Estabilizada - Producción de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/55b83784-8f04-4018-91c7-027163c615b3/resource/8ccafc38-252d-404f-b354-71465519a01f",
+      "lastProcessed": "2025-10-09T06:38:51.194Z",
+      "status": "processed"
+    },
+    "produccin-de-glp-por-planta-ant-2009.csv": {
+      "datasetId": "energia_55b83784-8f04-4018-91c7-027163c615b3",
+      "datasetTitle": "Producción de GLP",
+      "fileName": "produccin-de-glp-por-planta-ant-2009.csv",
+      "format": "CSV",
+      "title": "Producción de GLP por planta ant. 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/55b83784-8f04-4018-91c7-027163c615b3/resource/6abeecd8-ed64-48ca-904a-53b61a00ece7",
+      "lastProcessed": "2025-10-09T06:38:52.538Z",
+      "status": "processed"
+    },
+    "glp-produccin-toneladas-.csv": {
+      "datasetId": "energia_55b83784-8f04-4018-91c7-027163c615b3",
+      "datasetTitle": "Producción de GLP",
+      "fileName": "glp-produccin-toneladas-.csv",
+      "format": "CSV",
+      "title": "GLP Producción (Toneladas)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/55b83784-8f04-4018-91c7-027163c615b3/resource/91965641-af12-4176-9751-920afe00e0dd",
+      "lastProcessed": "2025-10-09T06:38:54.016Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_55b83784-8f04-4018-91c7-027163c615b3",
+    "title": "Producción de GLP",
+    "description": "Producción de Gas Licuado de Petróleo por Planta de Procesamiento de Gas. SESCO.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:33:27.594071",
+    "modified": "2024-12-12T14:44:49.415985",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

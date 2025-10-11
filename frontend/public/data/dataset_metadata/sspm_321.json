@@ -1,0 +1,32 @@
+{
+  "files": {
+    "ingreso-de-la-inversion-extranjera-directa-por-pais-primer-nivel-de-residencia-bcra.csv": {
+      "datasetId": "sspm_321",
+      "datasetTitle": "Ingreso de la inversión extranjera directa por país primer nivel de residencia - BCRA",
+      "fileName": "ingreso-de-la-inversion-extranjera-directa-por-pais-primer-nivel-de-residencia-bcra.csv",
+      "format": "CSV",
+      "title": "Ingreso de la inversión extranjera directa por país primer nivel de residencia. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:43.586Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_321",
+    "title": "Ingreso de la inversión extranjera directa por país primer nivel de residencia - BCRA",
+    "description": "Ingreso de la IED de acciones y otras participaciones de capital por pais primer nivell de residencia - BCRA",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-30",
+    "modified": "2025-03-24T10:01:25.600009",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

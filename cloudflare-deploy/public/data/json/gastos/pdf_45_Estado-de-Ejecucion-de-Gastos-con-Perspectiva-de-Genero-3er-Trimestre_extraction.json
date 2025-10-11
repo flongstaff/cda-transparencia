@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_45_Estado-de-Ejecucion-de-Gastos-con-Perspectiva-de-Genero-3er-Trimestre.pdf",
+  "file_hash": "dc2e25f9cd8595789965c5e6e3b21ad2",
+  "page_count": 3,
+  "text_length": 9203,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS\nEjercicio\n:Hoja: 1 de 3 R.A.F.A.M.\n08/10/2024 11:01\nDel 02/01/2024 al 30/09/2024 2024(CON PERSPECTIVA DE GÉNERO)\nDevengado\nno pagadoCrédito\nDisponiblePagado Devengado Compromiso Preventivo Crédito\nVigenteModifica\ncionesCrédito\nAprobadoApertura ProgramáticaCrédito Vig.\n- Devengado\nJurisdicción: 1110114000 - Secretaria de Derechos Humanos\n17.00.00 - Direccion de Salud\n17.01.00 - Administracion de Salud (110) - PPG: 50% 74.448.777,40 7.572.901,13 82.021.678,54 1.594.334,75 51.024.860,47 51.024.860,47 48.502.483,71 29.402.483,34 30.996.818,07 2.522.376,77\n17.03.00 - CAPS (132-110) - PPG: 70% 83.328.489,16 19.526.033,52 102.854.522,69 6.545.686,21 67.534.362,15 67.527.864,75 63.792.707,97 28.774.474,33 35.326.657,94 3.735.156,78\n17.19.00 - Programa Nacional de Salud Comunitario (133) - PPG: 90% 0,00 369.000,00 369.000,00 0,00 369.000,00 369.000,00 369.000,00 0,00 0,00 0,00\n157.777.266,56 Total 27.467.934,65 185.245.201,23 8.140.020,96 118.928.222,62 118.921.725,22 112.664.191,68 58.176.957,67 6.257.533,55Direccion de Salud 66.323.476,01\n19.00.00 - Direccion de Inclusion Social\n19.01.00 - Adm de Inclusion Social - PPG: 70% 84.853.343,35 -7.926.196,23 76.927.147,13 442.890,00 34.030.473,21 34.030.473,21 32.826.594,28 42.453.783,93 42.896.673,92 1.203.878,93\n19.02.00 - Programa Alimentario - PPG: 70% 7.881.441,34 0,00 7.881.441,34 0,00 0,00 0,00 0,00 7.881.441,34 7.881.441,34 0,00\n19.03.00 - Adultos Mayores y Patio de los Abuelos - PPG: 70% 6.200.851,15 146.410,08 6.347.261,22 55.566,00 1.915.769,27 1.915.769,27 1.887.419,27 4.375.925,95 4.431.491,95 28.350,00\n19.04.00 - Fortalecimiento de Programas Sociales - PPG: 70% 11.768.276,58 804.631,26 12.572.907,84 0,00 7.152.110,00 7.152.110,00 6.907.110,00 5.420.797,84 5.420.797,84 245.000,00\n19.05.00 - Fondo Para el Desarrollo Comunitario (132) - PPG: 70% 0,00 765,94 765,94 0,00 0,00 0,00 0,00 765,94 765,94 0,00\n19.07.00 - Mejoramientos Habitacionales ...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:34.609669"
+}

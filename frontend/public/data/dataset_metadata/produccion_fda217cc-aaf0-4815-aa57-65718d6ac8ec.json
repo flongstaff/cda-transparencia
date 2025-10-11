@@ -1,0 +1,32 @@
+{
+  "files": {
+    "beneficios-otorgados-colaborativa-202401.xlsx": {
+      "datasetId": "produccion_fda217cc-aaf0-4815-aa57-65718d6ac8ec",
+      "datasetTitle": "Programa Producción Colaborativa de Economía del Conocimiento",
+      "fileName": "beneficios-otorgados-colaborativa-202401.xlsx",
+      "format": "XLS",
+      "title": "Beneficiarios del Programa Producción Colaborativa de la Economía del Conocimiento",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/fda217cc-aaf0-4815-aa57-65718d6ac8ec/resource/79370d15-9b86-4a42-993e-057fb114c225",
+      "lastProcessed": "2025-10-09T08:04:50.053Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_fda217cc-aaf0-4815-aa57-65718d6ac8ec",
+    "title": "Programa Producción Colaborativa de Economía del Conocimiento",
+    "description": "El objetivo del Programa consiste en brindar asistencia financiera a proyectos innovadores que combinen al menos dos de las actividades previstas en el Artículo 2° de la Ley N° 27.506 (exceptuando inciso e), y que en su ejecución promuevan la reactivación económica.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2022-01-21T14:53:40.845608",
+    "modified": "2024-01-16T15:50:40.419992",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo, Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa, Subsecretaría de Economía del Conocimiento, Dirección Nacional de Innovación Abierta, Dirección de Consolidación de Sectores Estratégicos"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/programa-produccion-colaborativa-de-economia-del-conocimiento"
+  }
+}

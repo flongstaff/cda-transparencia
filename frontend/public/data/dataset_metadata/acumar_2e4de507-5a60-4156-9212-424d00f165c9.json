@@ -1,0 +1,42 @@
+{
+  "files": {
+    "registro-proveedores-sociales-mipymes-20250425.csv": {
+      "datasetId": "acumar_2e4de507-5a60-4156-9212-424d00f165c9",
+      "datasetTitle": "Régimen Especial de Compras y Contrataciones a Proveedores Sociales y MiPyMEs",
+      "fileName": "registro-proveedores-sociales-mipymes-20250425.csv",
+      "format": "CSV",
+      "title": "Registro de Proveedores Sociales y MiPyMEs",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/2e4de507-5a60-4156-9212-424d00f165c9/resource/2a68b41c-7f17-4333-a64f-0e279890c5c7",
+      "lastProcessed": "2025-10-09T07:10:23.059Z",
+      "status": "processed"
+    },
+    "regimen-especial-compras-contrataciones-proveedores-sociales.csv": {
+      "datasetId": "acumar_2e4de507-5a60-4156-9212-424d00f165c9",
+      "datasetTitle": "Régimen Especial de Compras y Contrataciones a Proveedores Sociales y MiPyMEs",
+      "fileName": "regimen-especial-compras-contrataciones-proveedores-sociales.csv",
+      "format": "CSV",
+      "title": "Compras y Contrataciones a Proveedores Sociales y MiPyMEs",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/2e4de507-5a60-4156-9212-424d00f165c9/resource/8c7d9f42-d02d-45c2-b117-2d587e3d24f0",
+      "lastProcessed": "2025-10-09T07:10:25.566Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_2e4de507-5a60-4156-9212-424d00f165c9",
+    "title": "Régimen Especial de Compras y Contrataciones a Proveedores Sociales y MiPyMEs",
+    "description": "Datos correspondientes a los procesos de compras y contrataciones realizados por ACUMAR a través del Régimen Especial de Compras y Contrataciones a Proveedores Sociales y MiPyMEs. Aplicable para la contratación de obras, bienes y servicios, que por sus características, condiciones u objeto puedan ser satisfechos por personas humanas y/o jurídicas inscriptas en el Registro de Proveedores Sociales y MiPyMEs de ACUMAR.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2024-11-19T19:25:15.213406",
+    "modified": "2025-02-07T17:02:58.477785",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección General Administrativa"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/regimen-especial-de-compras-y-contrataciones-a-proveedores-sociales-y-mipymes"
+  }
+}

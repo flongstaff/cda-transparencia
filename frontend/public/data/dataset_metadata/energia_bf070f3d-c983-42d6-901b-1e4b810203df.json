@@ -1,0 +1,52 @@
+{
+  "files": {
+    "banderas.csv": {
+      "datasetId": "energia_bf070f3d-c983-42d6-901b-1e4b810203df",
+      "datasetTitle": "Padrón según Resolución 1104/2004",
+      "fileName": "banderas.csv",
+      "format": "CSV",
+      "title": "Banderas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bf070f3d-c983-42d6-901b-1e4b810203df/resource/47a8b39d-02be-4046-b706-9369c57bb28e",
+      "lastProcessed": "2025-10-09T06:50:43.751Z",
+      "status": "processed"
+    },
+    "productos.csv": {
+      "datasetId": "energia_bf070f3d-c983-42d6-901b-1e4b810203df",
+      "datasetTitle": "Padrón según Resolución 1104/2004",
+      "fileName": "productos.csv",
+      "format": "CSV",
+      "title": "Productos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bf070f3d-c983-42d6-901b-1e4b810203df/resource/9f476515-1059-4b10-9a59-e2f67cbd0bbf",
+      "lastProcessed": "2025-10-09T06:50:45.019Z",
+      "status": "processed"
+    },
+    "padron-eess-1104.csv": {
+      "datasetId": "energia_bf070f3d-c983-42d6-901b-1e4b810203df",
+      "datasetTitle": "Padrón según Resolución 1104/2004",
+      "fileName": "padron-eess-1104.csv",
+      "format": "CSV",
+      "title": "Padrón de estaciones de servicio según Resolución 1104/2004",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bf070f3d-c983-42d6-901b-1e4b810203df/resource/c8d1de5c-2f4d-41a3-98c0-55e746d8950f",
+      "lastProcessed": "2025-10-09T06:50:46.816Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_bf070f3d-c983-42d6-901b-1e4b810203df",
+    "title": "Padrón según Resolución 1104/2004",
+    "description": "Padrón de operadores, productos y banderas de la Resolución N° 1104/2004.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-02-21T13:39:24.358917",
+    "modified": "2021-07-12T11:33:21.007374",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

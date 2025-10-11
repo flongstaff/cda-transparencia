@@ -1,0 +1,62 @@
+{
+  "files": {
+    "renazepa-datos-csv.csv": {
+      "datasetId": "habitat_5",
+      "datasetTitle": "Relevamiento Nacional de Zonas Estratégicas de Producción de Alimentos",
+      "fileName": "renazepa-datos-csv.csv",
+      "format": "CSV",
+      "title": "Indicadores Sectores Renazepa",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu",
+      "lastProcessed": "2025-10-09T06:50:35.578Z",
+      "status": "processed"
+    },
+    "renazepa-datos-geojsonl.geojson": {
+      "datasetId": "habitat_5",
+      "datasetTitle": "Relevamiento Nacional de Zonas Estratégicas de Producción de Alimentos",
+      "fileName": "renazepa-datos-geojsonl.geojson",
+      "format": "GeoJSON",
+      "title": "Indicadores Sectores Renazepa - GeoJSON",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu",
+      "lastProcessed": "2025-10-09T06:50:35.578Z",
+      "status": "processed"
+    },
+    "renazepa-datos-gpkg.gpkg": {
+      "datasetId": "habitat_5",
+      "datasetTitle": "Relevamiento Nacional de Zonas Estratégicas de Producción de Alimentos",
+      "fileName": "renazepa-datos-gpkg.gpkg",
+      "format": "gpkg",
+      "title": "Indicadores Sectores Renazepa - GPKG",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu",
+      "lastProcessed": "2025-10-09T06:50:35.578Z",
+      "status": "processed"
+    },
+    "renazepa-datos-referencias.csv": {
+      "datasetId": "habitat_5",
+      "datasetTitle": "Relevamiento Nacional de Zonas Estratégicas de Producción de Alimentos",
+      "fileName": "renazepa-datos-referencias.csv",
+      "format": "CSV",
+      "title": "Referencias",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu",
+      "lastProcessed": "2025-10-09T06:50:35.667Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "habitat_5",
+    "title": "Relevamiento Nacional de Zonas Estratégicas de Producción de Alimentos",
+    "description": "Mapa de los sectores de las zonas estratégicas de Argentina relevados entre febrero y noviembre de 2023.",
+    "theme": [
+      "soci"
+    ],
+    "superTheme": [
+      "SOCI"
+    ],
+    "issued": "2023-12-06T15:51:10.749060",
+    "modified": "2023-12-15T00:00:00",
+    "publisher": {
+      "mbox": "datosabiertos@infraestructura.gob.ar",
+      "name": "Ministerio de Economía, Secretaría de Obras Públicas, Subsecretaría de Integración Socio Urbana"
+    },
+    "landingPage": "https://www.argentina.gob.ar/obras-publicas/sisu"
+  }
+}

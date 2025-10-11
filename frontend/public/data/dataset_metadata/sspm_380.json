@@ -1,0 +1,52 @@
+{
+  "files": {
+    "indice-confianza-consumidor-valores-anuales.csv": {
+      "datasetId": "sspm_380",
+      "datasetTitle": "Índice de Confianza del Consumidor",
+      "fileName": "indice-confianza-consumidor-valores-anuales.csv",
+      "format": "CSV",
+      "title": "Índice de Confianza del Consumidor. Serie Anual",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:45.838Z",
+      "status": "processed"
+    },
+    "indice-confianza-consumidor-valores-trimestrales.csv": {
+      "datasetId": "sspm_380",
+      "datasetTitle": "Índice de Confianza del Consumidor",
+      "fileName": "indice-confianza-consumidor-valores-trimestrales.csv",
+      "format": "CSV",
+      "title": "Índice de Confianza del Consumidor. Serie Trimestral",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:46.890Z",
+      "status": "processed"
+    },
+    "indice-confianza-consumidor-valores-mensuales.csv": {
+      "datasetId": "sspm_380",
+      "datasetTitle": "Índice de Confianza del Consumidor",
+      "fileName": "indice-confianza-consumidor-valores-mensuales.csv",
+      "format": "CSV",
+      "title": "Índice de Confianza del Consumidor. Serie Mensual.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:48.030Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_380",
+    "title": "Índice de Confianza del Consumidor",
+    "description": "Índice de Confianza del Consumidor - ICC en índice",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2018-01-14",
+    "modified": "2025-03-24T10:01:24.066172",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

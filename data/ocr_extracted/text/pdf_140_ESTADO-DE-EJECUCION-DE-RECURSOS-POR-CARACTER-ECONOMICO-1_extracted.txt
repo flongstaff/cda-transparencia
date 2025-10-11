@@ -1,0 +1,39 @@
+R.A.F.A.M.
+ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOS Hoja: 1 de 3
+19/09/202313:29
+Municipalidad de
+Carmen de Areco Del 01/04/2022 al 30/06/2022 Ejercicio: 2022(POR CARACTER ECONÓMICO) 
+CONSOLIDADO
+Descripción ModificacionesRecurso 
+Estimado Recurso 
+Vigente Recurso 
+Devengado Dif. entre 
+Vigente y 
+Devengado Recursos 
+Percibido Dif. entre 
+Devengado y 
+Percibido 
+RECURSOS
+INGRESOS CORRIENTES
+Ingresos tributarios
+Impuestos provinciales y nacionales 393.426.898,00 0,00 393.426.898,00 106.731.809,16 286.695.088,84 106.731.809,16 0,00
+Otros impuestos 82.635.806,00 0,00 82.635.806,00 23.155.762,57 59.480.043,43 20.557.250,02 2.598.512,55
+476.062.704,00 0,00 476.062.704,00 129.887.571,73 346.175.132,27 127.289.059,18 2.598.512,55 Total Ingresos tributarios
+Ingresos no tributarios
+Tasas 117.741.160,00 0,00 117.741.160,00 32.834.313,99 84.906.846,01 23.890.029,43 8.944.284,56
+Derechos 21.441.034,00 0,00 21.441.034,00 3.196.094,66 18.244.939,34 3.233.209,94 -37.115,28
+Otros no tributarios 43.839.782,00 231.025,00 44.070.807,00 11.340.678,99 32.730.128,01 11.340.678,99 0,00
+183.021.976,00 231.025,00 183.253.001,00 47.371.087,64 135.881.913,36 38.463.918,36 8.907.169,28 Total Ingresos no tributarios
+Rentas de la propiedad
+Intereses
+Intereses internos
+Intereses por depósitos 20.617.059,00 0,00 20.617.059,00 13.953.704,45 6.663.354,55 13.953.704,45 0,0020.617.059,00 0,00 20.617.059,00 13.953.704,45 6.663.354,55 13.953.704,45 0,00
+Total Intereses internos
+20.617.059,00 0,00 20.617.059,00 13.953.704,45 6.663.354,55 13.953.704,45 0,00 Total Intereses
+20.617.059,00 0,00 20.617.059,00 13.953.704,45 6.663.354,55 13.953.704,45 0,00 Total Rentas de la propiedad
+Transferencias Corrientes
+Del sector público
+Del sector público nacional
+De la administración central 0,00 24.303.105,15 24.303.105,15 24.490.855,14 -187.749,99 24.490.855,14 0,000,00 24.303.105,15 24.303.105,15 24.490.855,14 -187.749,99 24.490.855,14 0,00
+Total Del sector público nacionalDe provincias y municipios
+De gobier...

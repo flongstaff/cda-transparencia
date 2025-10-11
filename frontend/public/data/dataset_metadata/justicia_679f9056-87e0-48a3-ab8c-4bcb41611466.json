@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_679f9056-87e0-48a3-ab8c-4bcb41611466",
+      "datasetTitle": "Prendas de autos",
+      "format": "ZIP",
+      "title": "DNRPA. Prendas de autos  - 2018",
+      "accessURL": "https://datos.jus.gob.ar/dataset/679f9056-87e0-48a3-ab8c-4bcb41611466/resource/95bad58b-9b2d-454a-b039-ef93df916e5a",
+      "lastProcessed": "2025-10-09T06:40:52.182Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_679f9056-87e0-48a3-ab8c-4bcb41611466",
+    "title": "Prendas de autos",
+    "description": "Trámites de prenda de automotores inscriptos en los Registros Seccionales de la Propiedad del Automotor y Créditos Prendarios.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2019-01-04T13:14:45.956676",
+    "modified": "2025-09-11T14:41:50.935239",
+    "publisher": {
+      "mbox": "accesobd@dnrpa.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Dirección Nacional de los Registros Nacionales de la Propiedad del Automotor y Créditos Prendarios"
+    },
+    "landingPage": "https://www.dnrpa.gov.ar"
+  }
+}

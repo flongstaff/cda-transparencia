@@ -1,0 +1,42 @@
+{
+  "files": {
+    "energas-renovables-plantas-biocombustibles.csv": {
+      "datasetId": "energia_eccce607-f934-4e93-a40b-1cca44fd6cd6",
+      "datasetTitle": "Energías renovables - Plantas de biocombustibles",
+      "fileName": "energas-renovables-plantas-biocombustibles.csv",
+      "format": "CSV",
+      "title": "Energías Renovables Plantas Biocombustibles",
+      "accessURL": "http://datos.energia.gob.ar/dataset/eccce607-f934-4e93-a40b-1cca44fd6cd6/resource/d9b5c5b9-825a-4d23-9d4d-988ad1ede966",
+      "lastProcessed": "2025-10-09T07:01:54.664Z",
+      "status": "processed"
+    },
+    "energas-renovables-plantas-biocombustibles.zip": {
+      "datasetId": "energia_eccce607-f934-4e93-a40b-1cca44fd6cd6",
+      "datasetTitle": "Energías renovables - Plantas de biocombustibles",
+      "fileName": "energas-renovables-plantas-biocombustibles.zip",
+      "format": "SHP",
+      "title": "Energías Renovables Plantas Biocombustibles",
+      "accessURL": "http://datos.energia.gob.ar/dataset/eccce607-f934-4e93-a40b-1cca44fd6cd6/resource/1be449eb-c434-4362-99c4-d3b39c3892fb",
+      "lastProcessed": "2025-10-09T07:01:54.664Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_eccce607-f934-4e93-a40b-1cca44fd6cd6",
+    "title": "Energías renovables - Plantas de biocombustibles",
+    "description": "Plantas de biocombustibles. ISO 19126: PowerSupplies, Este subgrupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2023-06-02T13:32:57.772297",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

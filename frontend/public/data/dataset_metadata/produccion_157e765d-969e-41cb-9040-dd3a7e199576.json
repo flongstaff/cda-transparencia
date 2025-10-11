@@ -1,0 +1,32 @@
+{
+  "files": {
+    "Proyectos-aprobados-capacitacion-gob-subnacionales-202307.xlsx": {
+      "datasetId": "produccion_157e765d-969e-41cb-9040-dd3a7e199576",
+      "datasetTitle": "Programa Capacitación 4.0 y Economía del Conocimiento para Gobiernos Subnacionales",
+      "fileName": "Proyectos-aprobados-capacitacion-gob-subnacionales-202307.xlsx",
+      "format": "XLS",
+      "title": "Beneficiarios del Programa Capacitación 4.0 y Economía del Conocimiento",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/157e765d-969e-41cb-9040-dd3a7e199576/resource/41d1f07a-29bf-4c4d-a0b8-5da02c721a40",
+      "lastProcessed": "2025-10-09T08:04:14.113Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_157e765d-969e-41cb-9040-dd3a7e199576",
+    "title": "Programa Capacitación 4.0 y Economía del Conocimiento para Gobiernos Subnacionales",
+    "description": "El programa brinda asistencia financiera a gobiernos subnacionales que presenten proyectos de capacitación para su localidad dentro de los sectores contemplados en la ley de economía del conocimiento. Las formaciones deben estar enfocadas en lograr rápida empleabilidad, razón por la cual es importante que estén correctamente relacionadas con el sector productivo local y sus demandas formativas.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-07-02T10:45:26.545168",
+    "modified": "2023-07-07T12:09:10.308744",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo, Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa, Subsecretaría de Economía del Conocimiento, Dirección Nacional de Fortalecimiento Regional de la Economía del Conocimiento, Dirección de Desarrollo de Capital Humano."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/programa-capacitacion-4-0-y-economia-del-conocimiento-para-gobiernos-subnacionales"
+  }
+}

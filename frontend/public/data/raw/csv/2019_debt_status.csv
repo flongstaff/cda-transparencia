@@ -1,3 +1,6 @@
 type,amount,due_date
-Deuda flotante,30000000,2020-12-31
-Deuda consolidada,50000000,2025-12-31
+Deuda flotante,30000000.0,2020-12-31
+Deuda consolidada,50000000.0,2025-12-31
+,201.0,
+,195.0,
+,201.0,

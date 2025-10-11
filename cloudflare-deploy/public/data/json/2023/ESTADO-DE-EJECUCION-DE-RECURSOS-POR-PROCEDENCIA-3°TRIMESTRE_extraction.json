@@ -1,0 +1,13 @@
+{
+  "file_name": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-3°TRIMESTRE.pdf",
+  "file_hash": "b1764f8a171b057788f7106913c3beb5",
+  "page_count": 1,
+  "text_length": 1477,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "R.A.F.A.M.\nESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 1\n11/10/2023 08:49\nMunicipalidad de\nCarmen de Areco Del 01/07/2023 al 30/09/2023 Ejercicio: 2023(POR PROCEDENCIA)\nCONSOLIDADO\nProcedencia - RubroModifica \nciones Recurso \nEstimado Recurso \nVigente Recurso \nDevengado Dif. entre \nVigente y \nDevengado Recursos \nPercibido Dif. entre \nDevengado y \nPercibido \nOrigen Municipal \n15.151.877,06 135.108.746,85 72.939.895,59 150.260.623,91 223.200.519,50 906.942,81 222.293.576,69 De libre disponibilidad\n0,00 1.000.521,33 -22.578,40 1.000.521,33 977.942,93 977.942,93 0,00 Afectados\n222.293.576,69 1.884.885,74 224.178.462,43 151.261.145,24 72.917.317,19 136.109.268,18 15.151.877,06 Total Origen Municipal \nOrigen Provincial \n-3.257.259,24 355.656.096,50 135.152.600,89 352.398.837,26 487.551.438,15 0,00 487.551.438,15 De libre disponibilidad\n0,00 267.729.875,72 -8.283.906,56 267.729.875,72 259.445.969,16 259.445.969,16 0,00 Afectados\n487.551.438,15 259.445.969,16 746.997.407,31 620.128.712,98 126.868.694,33 623.385.972,22 -3.257.259,24 Total Origen Provincial \nOrigen Nacional \n0,00 49.225.178,33 23.022.221,22 49.225.178,33 72.247.399,55 72.247.399,55 0,00 Afectados\n0,00 72.247.399,55 72.247.399,55 49.225.178,33 23.022.221,22 49.225.178,33 0,00 Total Origen Nacional \n709.845.014,84 333.578.254,45 1.043.423.269,29 820.615.036,55 222.808.232,74 808.720.418,73 11.894.617,82 TOTAL GENERAL\nFiltro aplicado: Ejercicio: 2023 -  Fechas: 01/07/2023 al 30/09/2023\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:46.730312"
+}

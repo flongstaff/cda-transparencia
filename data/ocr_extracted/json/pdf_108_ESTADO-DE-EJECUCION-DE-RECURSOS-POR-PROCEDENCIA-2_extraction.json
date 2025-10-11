@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_108_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-2.pdf",
+  "file_hash": "39be589a0e5715673c43ae41469f5908",
+  "page_count": 1,
+  "text_length": 1751,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "R.A.F.A.M.\nESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 1\n19/09/2023 10:00\nMunicipalidad de\nCarmen de Areco Del 02/01/2023 al 31/03/2023 Ejercicio: 2023(POR PROCEDENCIA)\nCONSOLIDADO\nProcedencia - RubroModifica \nciones Recurso \nEstimado Recurso \nVigente Recurso \nDevengado Dif. entre \nVigente y \nDevengado Recursos \nPercibido Dif. entre \nDevengado y \nPercibido \nOrigen Municipal \n10.553.365,40 72.051.772,93 139.688.438,36 82.605.138,33 222.293.576,69 0,00 222.293.576,69 De libre disponibilidad\n0,00 10.193.859,65 -4.331.816,31 10.193.859,65 5.862.043,34 5.862.043,34 0,00 Afectados\n222.293.576,69 5.862.043,34 228.155.620,03 92.798.997,98 135.356.622,05 82.245.632,58 10.553.365,40 Total Origen Municipal \nOrigen Provincial \n-2.303.986,55 96.915.820,37 392.939.604,33 94.611.833,82 487.551.438,15 0,00 487.551.438,15 De libre disponibilidad\n0,00 199.138.420,47 -112.662.265,02 199.138.420,47 86.476.155,45 86.476.155,45 0,00 Afectados\n487.551.438,15 86.476.155,45 574.027.593,60 293.750.254,29 280.277.339,31 296.054.240,84 -2.303.986,55 Total Origen Provincial \nOrigen Nacional \n0,00 60.000.000,00 -60.000.000,00 60.000.000,00 0,00 0,00 0,00 De libre disponibilidad\n0,00 26.654.994,85 89.077.245,22 26.654.994,85 115.732.240,07 115.732.240,07 0,00 Afectados\n0,00 115.732.240,07 115.732.240,07 86.654.994,85 29.077.245,22 86.654.994,85 0,00 Total Origen Nacional \nOtros origenes \n0,00 1.300.002,00 -743.794,00 1.300.002,00 556.208,00 556.208,00 0,00 Afectados\n0,00 556.208,00 556.208,00 1.300.002,00 -743.794,00 1.300.002,00 0,00 Total Otros origenes \n709.845.014,84 208.626.646,86 918.471.661,70 474.504.249,12 443.967.412,58 466.254.870,27 8.249.378,85 TOTAL GENERAL\nFiltro aplicado: Ejercicio: 2023 -  Fechas: 02/01/2023 al 31/03/2023\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:53.814820"
+}

@@ -1,0 +1,32 @@
+{
+  "files": {
+    "editoriales-inscriptas-rise.xlsx": {
+      "datasetId": "produccion_44017f12-a280-4ae1-b8b0-2ba8f88b96c1",
+      "datasetTitle": "Registro de Importación del Sector Editorial (RISE)",
+      "fileName": "editoriales-inscriptas-rise.xlsx",
+      "format": "XLS",
+      "title": "Editoriales inscriptas en el RISE",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/44017f12-a280-4ae1-b8b0-2ba8f88b96c1/resource/404cdc67-5d5e-4964-8498-b833e3d219f6",
+      "lastProcessed": "2025-10-09T08:08:26.333Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_44017f12-a280-4ae1-b8b0-2ba8f88b96c1",
+    "title": "Registro de Importación del Sector Editorial (RISE)",
+    "description": "En el RISE están listadas aquellas empresas que tramitaron su inscripción para obtener la exención en los derechos de importación de papel para uso editorial.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-06-09T13:11:50.946950",
+    "modified": "2021-06-09T13:11:50.946950",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo, Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa, Subsecretaría de Industria, Dirección Nacional de Gestión de la Política Industrial, Dirección de Aplicación de la Política Industrial."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/registro-de-importacion-del-sector-editorial-rise"
+  }
+}

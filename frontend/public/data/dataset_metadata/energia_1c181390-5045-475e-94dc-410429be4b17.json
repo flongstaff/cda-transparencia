@@ -1,0 +1,51 @@
+{
+  "files": {
+    "precios-en-surtidor-resolucin-3142016.csv": {
+      "datasetId": "energia_1c181390-5045-475e-94dc-410429be4b17",
+      "datasetTitle": "Precios en Surtidor - Resolución 314/2016",
+      "fileName": "precios-en-surtidor-resolucin-3142016.csv",
+      "format": "CSV",
+      "title": "Precios vigentes en surtidor - Resolución 314/2016",
+      "accessURL": "http://datos.energia.gob.ar/dataset/1c181390-5045-475e-94dc-410429be4b17/resource/80ac25de-a44a-4445-9215-090cf55cfda5",
+      "lastProcessed": "2025-10-09T06:16:20.611Z",
+      "status": "processed"
+    },
+    "precios-historicos.csv": {
+      "datasetId": "energia_1c181390-5045-475e-94dc-410429be4b17",
+      "datasetTitle": "Precios en Surtidor - Resolución 314/2016",
+      "fileName": "precios-historicos.csv",
+      "format": "CSV",
+      "title": "Precios históricos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/1c181390-5045-475e-94dc-410429be4b17/resource/f8dda0d5-2a9f-4d34-b79b-4e63de3995df",
+      "lastProcessed": "2025-10-09T06:16:25.559Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "energia_1c181390-5045-475e-94dc-410429be4b17",
+      "datasetTitle": "Precios en Surtidor - Resolución 314/2016",
+      "format": "HTML",
+      "title": "Aplicaciones",
+      "accessURL": "http://datos.energia.gob.ar/dataset/1c181390-5045-475e-94dc-410429be4b17/resource/fb904131-778b-486b-a6ac-9780a2f5dad8",
+      "lastProcessed": "2025-10-09T06:16:25.559Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_1c181390-5045-475e-94dc-410429be4b17",
+    "title": "Precios en Surtidor - Resolución 314/2016",
+    "description": "Datos del Sistema en línea de información de precios de combustibles en surtidor, a través del cual los titulares de bocas de expendio de combustibles líquidos inscriptos en el registro creado por la resolución n° 1.102/2004 presentan la información relativa a precios de comercialización minorista dentro de las 8 (ocho) horas de producida una modificación en el precio en surtidor.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2018-03-21T17:19:44.921115",
+    "modified": "2024-05-23T10:05:21.712059",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

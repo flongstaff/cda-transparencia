@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-estadisticas-salud-2021",
+      "title": "Estadísticas de Salud 2021",
+      "distribution": [
+        {
+          "title": "ESTADISTICAS-SALUD.pdf",
+          "format": "PDF",
+          "fileName": "ESTADISTICAS-SALUD.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-estadisticas-salud-2021/ESTADISTICAS-SALUD.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-estadisticas-salud-2021/ESTADISTICAS-SALUD_extraction.json",
+            "pageCount": 5,
+            "textLength": 4403,
+            "extractedPreview": "PERÍODO 2016 2017 2018 2019 2020 2021\nCANTIDAD DE CONSULTAS 29,938 28,637 27,182 18,127 16,171 24,151\nEn el gráfico expuesto se puede ver la evolución de las prestaciones de servicio de las distintas ...",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

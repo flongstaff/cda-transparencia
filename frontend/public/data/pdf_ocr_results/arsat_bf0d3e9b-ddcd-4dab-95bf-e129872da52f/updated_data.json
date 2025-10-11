@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "arsat_bf0d3e9b-ddcd-4dab-95bf-e129872da52f",
+      "title": "Balances",
+      "distribution": [
+        {
+          "title": "Balance 2015 completo legalizado.pdf",
+          "format": "PDF",
+          "fileName": "Balance 2015 completo legalizado.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/arsat_bf0d3e9b-ddcd-4dab-95bf-e129872da52f/Balance 2015 completo legalizado.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/arsat_bf0d3e9b-ddcd-4dab-95bf-e129872da52f/Balance 2015 completo legalizado_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

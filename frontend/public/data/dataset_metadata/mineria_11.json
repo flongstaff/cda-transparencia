@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_11",
+      "datasetTitle": "Proyección de la demanda y oferta global de litio (Tablero global del litio - SIACAM)",
+      "lastProcessed": "2025-10-09T06:49:45.307Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_11",
+    "title": "Proyección de la demanda y oferta global de litio (Tablero global del litio - SIACAM)",
+    "description": "Datos correspondientes a la sección \"Proyección de la demanda y oferta global de litio\" del Tablero global del litio del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM), con proyecciones de la evolución de la demanda y oferta mundial de litio. Elaborado por la Secretaría de Minería con base en Cochilco y S&P Capital IQ.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2023-03-03",
+    "modified": "2025-09-02",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

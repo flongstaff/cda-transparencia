@@ -1,0 +1,42 @@
+{
+  "files": {
+    "plantas-biodigestoras-de-biomasa.zip": {
+      "datasetId": "energia_48d9e688-b634-4ad4-b1b8-704c4aa06538",
+      "datasetTitle": "Plantas biodigestoras de biomasa",
+      "fileName": "plantas-biodigestoras-de-biomasa.zip",
+      "format": "SHP",
+      "title": "Plantas biodigestoras de biomasa",
+      "accessURL": "http://datos.energia.gob.ar/dataset/48d9e688-b634-4ad4-b1b8-704c4aa06538/resource/eefe232e-34f2-4fc7-a628-b98a12bef7f8",
+      "lastProcessed": "2025-10-09T07:22:43.624Z",
+      "status": "processed"
+    },
+    "plantas-biodigestoras-de-biomasa.csv": {
+      "datasetId": "energia_48d9e688-b634-4ad4-b1b8-704c4aa06538",
+      "datasetTitle": "Plantas biodigestoras de biomasa",
+      "fileName": "plantas-biodigestoras-de-biomasa.csv",
+      "format": "CSV",
+      "title": "Plantas biodigestoras de biomasa",
+      "accessURL": "http://datos.energia.gob.ar/dataset/48d9e688-b634-4ad4-b1b8-704c4aa06538/resource/590bee83-00b2-471b-94e2-67642810e5dd",
+      "lastProcessed": "2025-10-09T07:22:44.955Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_48d9e688-b634-4ad4-b1b8-704c4aa06538",
+    "title": "Plantas biodigestoras de biomasa",
+    "description": "Programa PROBIOMASA (Proyecto para la promoción de la energía derivada de biomasa): Listado de plantas biodigestoras de biomasa. ",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2023-05-17T15:22:28.870308",
+    "modified": "2023-05-17T17:16:53.320400",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información"
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/plantas-biodigestoras-de-biomasa"
+  }
+}

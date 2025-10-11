@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_54_Estado-de-Ejecucion-de-Gastos-Junio.pdf",
+  "file_hash": "9836b5a5a1b30a40406f2da87b75122b",
+  "page_count": 267,
+  "text_length": 747316,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS\nEjercicio\n:Hoja: 1 de 267 R.A.F.A.M.\n26/08/2024 12:52\nDel 02/01/2024 al 30/06/2024\n2024Partidas Incluidas respecto al Crédito Disponible: Todas\nPartidas Incluidas respecto al Crédito Vigente: Todas\nDevengado\nno pagadoCrédito\nDisponiblePagado Devengado Compromiso Preventivo Crédito\nVigenteModifica\ncionesCrédito\nAprobadoFuen.\nFin.Objeto del GastoCrédito Vig.\n- Devengado\nJurisdicción: 1110101000 - Conduccion Superior\nApertura Programįtica: 01.00.00 - Desarrollo de politicas centrales\n110 - Tesoro Municipal\n1.0.0.0 - Gastos en personal\n1.1.0.0 - Personal permanente\n1.1.1.0 - Retribuciones del cargo\n1.1.1.1 - Personal Superior 36.368.200,05 0,00 36.368.200,05 0,00 12.324.211,20 12.324.211,20 12.324.211,20 24.043.988,85 0,00 24.043.988,85\n1.1.1.2 - Personal Jerárquico 13.830.306,93 0,00 13.830.306,93 0,00 2.325.656,52 2.325.656,52 2.325.656,52 11.504.650,41 0,00 11.504.650,41\n1.1.1.5 - Personal Administrativo 2.795.155,95 0,00 2.795.155,95 0,00 1.480.005,72 1.480.005,72 1.480.005,72 1.315.150,23 0,00 1.315.150,23\n1.1.1.6 - Personal Obrero 5.392.884,53 0,00 5.392.884,53 0,00 1.375.470,00 1.375.470,00 1.375.470,00 4.017.414,53 0,00 4.017.414,53\n1.1.1.9 - Gastos Reservados 0,00 757.471,68 757.471,68 0,00 1.848.631,68 1.848.631,68 1.848.631,68 -1.091.160,00 0,00 -1.091.160,00\n58.386.547,46 757.471,68 59.144.019,14 0,00 19.353.975,12 19.353.975,12 19.353.975,12 39.790.044,02 0,00 Total Retribuciones del cargo 39.790.044,02\n1.1.3.0 - Retribuciones que no hacen al cargo\n1.1.3.1 - Antiguedad 7.782.586,99 0,00 7.782.586,99 0,00 2.548.556,63 2.548.556,63 2.548.556,63 5.234.030,36 0,00 5.234.030,36\n1.1.3.9 - Otras retribuciones 0,00 253.668,69 253.668,69 0,00 888.814,50 888.814,50 888.814,50 -635.145,81 0,00 -635.145,81\n7.782.586,99 253.668,69 8.036.255,68 0,00 3.437.371,13 3.437.371,13 3.437.371,13 4.598.884,55 0,00 Total Retribuciones que no hacen al cargo 4.598.884,55\n1.1.4.0 - Sueldo anual complementar...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:16:10.076266"
+}

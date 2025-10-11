@@ -123,7 +123,7 @@ export const StatCard: React.FC<StatCardProps> = ({
             ) : (
               <TrendingDown className="w-4 h-4 mr-1 flex-shrink-0" />
             )}
-            <span className="font-medium">{Math.abs(trend.value)}%</span>
+            <span className="font-medium">{typeof trend.value === 'number' ? Math.abs(trend.value) : trend.value}%</span>
             {trend.label && (
               <span className="ml-1 text-gray-600 dark:text-gray-400">{trend.label}</span>
             )}

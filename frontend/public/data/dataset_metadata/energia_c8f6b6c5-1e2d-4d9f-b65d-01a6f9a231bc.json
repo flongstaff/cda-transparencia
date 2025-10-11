@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_c8f6b6c5-1e2d-4d9f-b65d-01a6f9a231bc",
+      "datasetTitle": "Precios de Venta al Mercado Interno de Petróleo Escalante",
+      "format": "ZIP",
+      "title": "Precios de Venta al Mercado Interno de petróleo escalante",
+      "accessURL": "http://datos.energia.gob.ar/dataset/c8f6b6c5-1e2d-4d9f-b65d-01a6f9a231bc/resource/fa89381a-577b-4cfe-bb03-f19f9fc3afbe",
+      "lastProcessed": "2025-10-09T07:21:28.211Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_c8f6b6c5-1e2d-4d9f-b65d-01a6f9a231bc",
+    "title": "Precios de Venta al Mercado Interno de Petróleo Escalante",
+    "description": "Precios de Venta al mercado interno ponderados por volumen de ventas.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-12-22T15:12:25.996908",
+    "modified": "2021-07-01T11:38:01.858632",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

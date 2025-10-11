@@ -1,0 +1,32 @@
+{
+  "files": {
+    "series-historicas-monetarias.csv": {
+      "datasetId": "sspm_174",
+      "datasetTitle": "Series históricas de estadísticas monetarias",
+      "fileName": "series-historicas-monetarias.csv",
+      "format": "CSV",
+      "title": "Series históricas de estadísticas monetarias de Argentina",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:30.275Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_174",
+    "title": "Series históricas de estadísticas monetarias",
+    "description": "Series históricas de estadísticas monetarias de Argentina",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:01:44.192932",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

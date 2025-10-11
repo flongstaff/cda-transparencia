@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_139_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+  "file_hash": "4eee714fab1efa92fe629ab2b22bda0a",
+  "page_count": 1,
+  "text_length": 1488,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "R.A.F.A.M.\nESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 1\n19/09/2023 13:28\nMunicipalidad de\nCarmen de Areco Del 01/04/2022 al 30/06/2022 Ejercicio: 2022(POR PROCEDENCIA)\nCONSOLIDADO\nProcedencia - RubroModifica \nciones Recurso \nEstimado Recurso \nVigente Recurso \nDevengado Dif. entre \nVigente y \nDevengado Recursos \nPercibido Dif. entre \nDevengado y \nPercibido \nOrigen Municipal \n8.907.169,28 51.557.435,29 131.554.368,43 60.464.604,57 192.018.973,00 0,00 192.018.973,00 De libre disponibilidad\n0,00 1.600.664,21 13.062.238,79 1.600.664,21 14.662.903,00 231.025,00 14.431.878,00 Afectados\n206.450.851,00 231.025,00 206.681.876,00 62.065.268,78 144.616.607,22 53.158.099,50 8.907.169,28 Total Origen Municipal \nOrigen Provincial \n2.598.512,55 118.217.036,20 275.208.103,25 120.815.548,75 396.023.652,00 0,00 396.023.652,00 De libre disponibilidad\n0,00 80.354.680,35 76.603.374,47 80.354.680,35 156.958.054,82 38.475.011,82 118.483.043,00 Afectados\n514.506.695,00 38.475.011,82 552.981.706,82 201.170.229,10 351.811.477,72 198.571.716,55 2.598.512,55 Total Origen Provincial \nOrigen Nacional \n0,00 119.639.478,21 -39.281.720,28 119.639.478,21 80.357.757,93 80.357.757,93 0,00 Afectados\n0,00 80.357.757,93 80.357.757,93 119.639.478,21 -39.281.720,28 119.639.478,21 0,00 Total Origen Nacional \n720.957.546,00 119.063.794,75 840.021.340,75 382.874.976,09 457.146.364,66 371.369.294,26 11.505.681,83 TOTAL GENERAL\nFiltro aplicado: Ejercicio: 2022 -  Fechas: 01/04/2022 al 30/06/2022\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:58.548068"
+}

@@ -1,0 +1,98 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "produccion_162dc5a6-7a95-4f19-9d85-063c9be23208",
+      "datasetTitle": "Porcentaje de puestos ocupados por mujeres, por sector de actividad",
+      "lastProcessed": "2025-10-09T08:08:09.368Z",
+      "status": "processed"
+    },
+    "share_mujer_privado_total": {
+      "datasetId": "produccion_162dc5a6-7a95-4f19-9d85-063c9be23208",
+      "datasetTitle": "Porcentaje de puestos ocupados por mujeres, por sector de actividad",
+      "fileName": "share_mujer_privado_total",
+      "format": "CSV",
+      "title": "Porcentaje de mujeres en el sector privado (total)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/0dafb018-3bda-4255-9fb6-7f50d371a350",
+      "lastProcessed": "2025-10-09T08:08:07.494Z",
+      "status": "processed"
+    },
+    "share_mujer_total_empresas_mensual_por_clae3.csv": {
+      "datasetId": "produccion_162dc5a6-7a95-4f19-9d85-063c9be23208",
+      "datasetTitle": "Porcentaje de puestos ocupados por mujeres, por sector de actividad",
+      "fileName": "share_mujer_total_empresas_mensual_por_clae3.csv",
+      "format": "CSV",
+      "title": " Porcentaje de mujeres en el total de empresas, por sector de actividad (CLAE a 3 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/8fbba9bc-15e9-4c11-adee-ca447dd76076",
+      "lastProcessed": "2025-10-09T08:08:11.382Z",
+      "status": "processed"
+    },
+    "share_mujer_total_empresas_mensual_por_clae2.csv": {
+      "datasetId": "produccion_162dc5a6-7a95-4f19-9d85-063c9be23208",
+      "datasetTitle": "Porcentaje de puestos ocupados por mujeres, por sector de actividad",
+      "fileName": "share_mujer_total_empresas_mensual_por_clae2.csv",
+      "format": "CSV",
+      "title": "Porcentaje de mujeres en el total de empresas, por sector de actividad (CLAE a 2 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/8874a96a-352d-40ac-8052-fb75bc465bfa",
+      "lastProcessed": "2025-10-09T08:08:13.350Z",
+      "status": "processed"
+    },
+    "share_mujer_total_empresas_mensual_por_letra.csv": {
+      "datasetId": "produccion_162dc5a6-7a95-4f19-9d85-063c9be23208",
+      "datasetTitle": "Porcentaje de puestos ocupados por mujeres, por sector de actividad",
+      "fileName": "share_mujer_total_empresas_mensual_por_letra.csv",
+      "format": "CSV",
+      "title": "Porcentaje de mujeres en el total de empresas, por sector de actividad (letra)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/f93ad11a-9f08-41c2-957f-476ab5631865",
+      "lastProcessed": "2025-10-09T08:08:15.288Z",
+      "status": "processed"
+    },
+    "share_mujer_total_empresas_total.csv": {
+      "datasetId": "produccion_162dc5a6-7a95-4f19-9d85-063c9be23208",
+      "datasetTitle": "Porcentaje de puestos ocupados por mujeres, por sector de actividad",
+      "fileName": "share_mujer_total_empresas_total.csv",
+      "format": "CSV",
+      "title": "Porcentaje de mujeres en el total de empresas (total)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/6907a8d3-6702-4b75-91ff-f8644606974d",
+      "lastProcessed": "2025-10-09T08:08:17.228Z",
+      "status": "processed"
+    },
+    "clae_agg.csv": {
+      "datasetId": "produccion_162dc5a6-7a95-4f19-9d85-063c9be23208",
+      "datasetTitle": "Porcentaje de puestos ocupados por mujeres, por sector de actividad",
+      "fileName": "clae_agg.csv",
+      "format": "CSV",
+      "title": "Diccionario de claes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/145dd127-630e-40a5-9a31-239e34a01d36",
+      "lastProcessed": "2025-10-09T08:08:19.269Z",
+      "status": "processed"
+    },
+    "metodologia.pdf": {
+      "datasetId": "produccion_162dc5a6-7a95-4f19-9d85-063c9be23208",
+      "datasetTitle": "Porcentaje de puestos ocupados por mujeres, por sector de actividad",
+      "fileName": "metodologia.pdf",
+      "format": "PDF",
+      "title": "Metodología",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/dc96479c-3b7b-449b-a3a1-6af75f008e34",
+      "lastProcessed": "2025-10-09T08:08:21.948Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_162dc5a6-7a95-4f19-9d85-063c9be23208",
+    "title": "Porcentaje de puestos ocupados por mujeres, por sector de actividad",
+    "description": "Desagrega la proporción de puestos de trabajo ocupados por mujeres sobre el total de puestos en cada rubro. El género de cada persona se identificó mediante otros registros administrativos.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-10-07T16:34:27.521106",
+    "modified": "2021-12-14T18:20:15.037896",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la Producción (CEP XXI)."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/proporcion-segun-generos-por-sector-de-actividad"
+  }
+}

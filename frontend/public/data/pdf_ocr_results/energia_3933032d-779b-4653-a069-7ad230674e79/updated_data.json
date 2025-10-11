@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "energia_3933032d-779b-4653-a069-7ad230674e79",
+      "title": "Generación Eléctrica Bruta Asociada a redes desde 1930",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/energia_3933032d-779b-4653-a069-7ad230674e79/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/energia_3933032d-779b-4653-a069-7ad230674e79/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

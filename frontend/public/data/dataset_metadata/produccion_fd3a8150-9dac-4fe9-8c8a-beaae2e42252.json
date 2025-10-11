@@ -1,0 +1,54 @@
+{
+  "files": {
+    "log-costo-fadeeac-series.csv": {
+      "datasetId": "produccion_fd3a8150-9dac-4fe9-8c8a-beaae2e42252",
+      "datasetTitle": "Archivo 2009-2019: Indicadores Sectoriales de Transporte y Logística",
+      "fileName": "log-costo-fadeeac-series.csv",
+      "format": "CSV",
+      "title": "Logística: Índice de costos de transporte automotor de cargas (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/fd3a8150-9dac-4fe9-8c8a-beaae2e42252/resource/d6c6c971-359e-4672-a807-07c09cad439f",
+      "lastProcessed": "2025-10-09T08:09:11.312Z",
+      "status": "processed"
+    },
+    "log-costo-cedol-series.csv": {
+      "datasetId": "produccion_fd3a8150-9dac-4fe9-8c8a-beaae2e42252",
+      "datasetTitle": "Archivo 2009-2019: Indicadores Sectoriales de Transporte y Logística",
+      "fileName": "log-costo-cedol-series.csv",
+      "format": "CSV",
+      "title": "Logística: Índice de costos logísticos (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/fd3a8150-9dac-4fe9-8c8a-beaae2e42252/resource/28b7134e-0409-418e-82ed-ef5ba386dd5b",
+      "lastProcessed": "2025-10-09T08:09:13.129Z",
+      "status": "processed"
+    },
+    "log-costo-cedol-panel.csv": {
+      "datasetId": "produccion_fd3a8150-9dac-4fe9-8c8a-beaae2e42252",
+      "datasetTitle": "Archivo 2009-2019: Indicadores Sectoriales de Transporte y Logística",
+      "fileName": "log-costo-cedol-panel.csv",
+      "format": "CSV",
+      "title": "Logística: Índice de costos logísticos (panel)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/fd3a8150-9dac-4fe9-8c8a-beaae2e42252/resource/d6477f41-ea25-4b25-bd27-749875aebd78",
+      "lastProcessed": "2025-10-09T08:09:15.075Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_fd3a8150-9dac-4fe9-8c8a-beaae2e42252",
+    "title": "Archivo 2009-2019: Indicadores Sectoriales de Transporte y Logística",
+    "description": "Resumen de los principales indicadores del sector de Transporte y Logística, costos principales insumos de las operaciones logísticas.",
+    "theme": [
+      "econ",
+      "tran"
+    ],
+    "superTheme": [
+      "ECON",
+      "TRAN"
+    ],
+    "issued": "2021-04-28T13:59:00.304397",
+    "modified": "2021-05-11T15:50:53.593626",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Producción. Secretaría de Transformación Productiva. Subsecretaría de Desarrollo y Planeamiento Productivo."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/historico-2009-2019-indicadores-sectoriales-de-transporte-y-logistica"
+  }
+}

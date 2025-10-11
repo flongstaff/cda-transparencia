@@ -1,0 +1,27 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "produccion_83eb1a02-47bf-4491-b281-4de026aae7f6",
+      "title": "Salario promedio de la población joven por sector de actividad y provincia",
+      "distribution": [
+        {
+          "title": "Metodología empleo joven por provincia y sector.pdf",
+          "format": "PDF",
+          "fileName": "Metodología empleo joven por provincia y sector.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/produccion_83eb1a02-47bf-4491-b281-4de026aae7f6/Metodología empleo joven por provincia y sector.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/produccion_83eb1a02-47bf-4491-b281-4de026aae7f6/Metodología empleo joven por provincia y sector_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    }
+  ]
+}

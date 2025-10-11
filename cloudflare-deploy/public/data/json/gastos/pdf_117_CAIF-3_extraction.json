@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_117_CAIF-3.pdf",
+  "file_hash": "9a2a34c7e8ad5037296c20b2f5204b0b",
+  "page_count": 3,
+  "text_length": 3073,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.\n19/09/2023 09:51\nPresupuesto: 2023DE EJECUCION PRESUPUESTARIA \n02/01/2023 al 31/03/2023\nMunicipalidad de\nCarmen de Areco\nDESCRIPCION IMPORTE\nI. INGRESOS CORRIENTES\nIngresos tributarios 140.118.060,71\nContribuciones a la Seguridad Social\nIngresos no Tributarios 65.375.896,39\nVentas de Bienes y Servicios\nIngresos de Operación\nRentas de la Propiedad 15.870.762,74\nTransferencias Corrientes 130.410.891,16\nContribuciones Figurativas para Financiaciones Corrientes\nTOTAL  INGRESOS CORRIENTES 351.775.611,00\nII. GASTOS CORRIENTES\nGastos de Operación\nGastos de Consumo 276.559.396,39\nRentas de la Propiedad 2.249,57\nPrestaciones de la Seguridad Social\nImpuestos Directos\nOtras Pérdidas\nTransferencias Corrientes 11.033.349,00\nGastos Figurativos para Transacciones Corrientes\nTOTAL  GASTOS CORRIENTES 287.594.994,96\nIII. AHORRO CORRIENTE: (I - II) 64.180.616,04\nResultado Corriente Primario (Ingresos Corrientes - Gastos Corrientes netos de Int. de la deuda) 64.182.865,61\nTOTAL  AHORRO CORRIENTE: (I - II) 128.363.481,65 64.180.616,04\nIV. RECURSOS DE CAPITAL\nRecursos Propios de Capital 600,00\nTransferencias de Capital 113.480.285,82\nDisminución de la Inversión Financiera 998.373,45\nContribuciones Figurativas para Financiaciones de Capital\nFiltro aplicado: Presupuesto: 2023 -  Fechas: 02/01/2023 al 31/03/2023\nCUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 2 de 3 R.A.F.A.M.\n19/09/2023 09:51\nPresupuesto: 2023DE EJECUCION PRESUPUESTARIA \n02/01/2023 al 31/03/2023\nMunicipalidad de\nCarmen de Areco\nDESCRIPCION IMPORTE\nTOTAL  RECURSOS DE CAPITAL 114.479.259,27\nV. GASTOS DE CAPITAL\nInversión Real Directa 114.216.297,72\nTransferencias de Capital 1.522.010,00\nInversión Financiera\nGastos Figurativos para Transacciones de Capital\nTOTAL  GASTOS DE CAPITAL 115.738.307,72\nVI. INGRESOS TOTALES 466.254.870,27\nTOTAL  INGRESOS TOTALES 466.254.870,27 466.254.870,27\nVII. GASTOS TOTALES 403.333.302,68\nTOTAL  GASTOS TOTALES 403.333.302,68 403.333.302,...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:21.802801"
+}

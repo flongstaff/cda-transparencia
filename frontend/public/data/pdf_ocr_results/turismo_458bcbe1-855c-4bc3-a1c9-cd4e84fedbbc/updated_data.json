@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "turismo_458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc",
+      "title": "Parques Nacionales",
+      "distribution": [
+        {
+          "title": "parques_nac.pdf",
+          "format": "PDF",
+          "fileName": "parques_nac.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/turismo_458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/parques_nac.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/turismo_458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/parques_nac_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

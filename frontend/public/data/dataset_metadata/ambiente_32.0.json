@@ -1,0 +1,71 @@
+{
+  "files": {
+    "OATI_montclas_km2yporc": {
+      "datasetId": "ambiente_32.0",
+      "datasetTitle": "Geología y geografía",
+      "fileName": "OATI_montclas_km2yporc",
+      "format": "CSV",
+      "title": "Clasificación de montaña",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=15&stid=77&did=225",
+      "lastProcessed": "2025-10-09T06:57:20.834Z",
+      "status": "processed"
+    },
+    "OATI_mont_pcia_km2": {
+      "datasetId": "ambiente_32.0",
+      "datasetTitle": "Geología y geografía",
+      "fileName": "OATI_mont_pcia_km2",
+      "format": "CSV",
+      "title": "Superficie de montaña por provincia, en km2 y porcentaje",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=15&stid=77&did=224",
+      "lastProcessed": "2025-10-09T06:57:22.089Z",
+      "status": "processed"
+    },
+    "OATI_long_fronteras_costas": {
+      "datasetId": "ambiente_32.0",
+      "datasetTitle": "Geología y geografía",
+      "fileName": "OATI_long_fronteras_costas",
+      "format": "CSV",
+      "title": "Longitud de fronteras y costas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=15&stid=77&did=344",
+      "lastProcessed": "2025-10-09T06:57:23.348Z",
+      "status": "processed"
+    },
+    "OATI_superficie_jurisdiccion": {
+      "datasetId": "ambiente_32.0",
+      "datasetTitle": "Geología y geografía",
+      "fileName": "OATI_superficie_jurisdiccion",
+      "format": "CSV",
+      "title": "Superficie y cantidad de departamentos/comunas por jurisdicción",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=15&stid=77&did=345",
+      "lastProcessed": "2025-10-09T06:57:24.646Z",
+      "status": "processed"
+    },
+    "OATI_mont_ecorregion_ha_2025": {
+      "datasetId": "ambiente_32.0",
+      "datasetTitle": "Geología y geografía",
+      "fileName": "OATI_mont_ecorregion_ha_2025",
+      "format": "CSV",
+      "title": "Superficie y porcentaje de montaña por ecorregión",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=15&stid=77&did=423",
+      "lastProcessed": "2025-10-09T06:57:25.902Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_32.0",
+    "title": "Geología y geografía",
+    "description": "Muestra la superficie y clasificación de montañas, la longitud de fronteras y costas y la superficie y cantidad de departamentos y comunas",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2020-12-31T00:00:00",
+    "modified": "2020-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

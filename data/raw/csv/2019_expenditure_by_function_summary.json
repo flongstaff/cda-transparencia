@@ -1,0 +1,44 @@
+{
+  "file_name": "2019_expenditure_by_function.csv",
+  "row_count": 4,
+  "column_count": 4,
+  "columns": [
+    "function",
+    "budget",
+    "execution",
+    "percentage"
+  ],
+  "sample_data": [
+    {
+      "function": "Servicios Públicos",
+      "budget": 250000000,
+      "execution": 235000000,
+      "percentage": 94.0
+    },
+    {
+      "function": "Cultura y Recreación",
+      "budget": 100000000,
+      "execution": 90000000,
+      "percentage": 90.0
+    },
+    {
+      "function": "Economía",
+      "budget": 75000000,
+      "execution": 70000000,
+      "percentage": 93.3
+    },
+    {
+      "function": "Hacienda",
+      "budget": 125000000,
+      "execution": 120000000,
+      "percentage": 96.0
+    }
+  ],
+  "data_types": {
+    "function": "object",
+    "budget": "int64",
+    "execution": "int64",
+    "percentage": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

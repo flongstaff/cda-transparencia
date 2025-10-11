@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "energia_ac79620f-8996-4fc3-b635-e96f188a7628",
+      "title": "Canon Hidrocarburífero",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/energia_ac79620f-8996-4fc3-b635-e96f188a7628/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/energia_ac79620f-8996-4fc3-b635-e96f188a7628/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

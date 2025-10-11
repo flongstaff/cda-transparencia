@@ -1,0 +1,142 @@
+{
+  "files": {
+    "beneficiarios-inscriptos-programa-sumar-con-cobertura-efectiva-basica-20181218.csv": {
+      "datasetId": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+      "datasetTitle": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+      "fileName": "beneficiarios-inscriptos-programa-sumar-con-cobertura-efectiva-basica-20181218.csv",
+      "format": "CSV",
+      "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB). Periodo 2017-12",
+      "accessURL": "http://datos.salud.gob.ar/dataset/29e8fcd4-2f27-4034-b869-f627620dd10f/resource/f9ae7085-b2aa-4c6e-9816-701f309ffee8",
+      "lastProcessed": "2025-10-09T07:56:10.572Z",
+      "status": "processed"
+    },
+    "beneficiarios-inscriptos-sumar-ceb-201806.csv": {
+      "datasetId": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+      "datasetTitle": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+      "fileName": "beneficiarios-inscriptos-sumar-ceb-201806.csv",
+      "format": "CSV",
+      "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB). Periodo 2018-06",
+      "accessURL": "http://datos.salud.gob.ar/dataset/29e8fcd4-2f27-4034-b869-f627620dd10f/resource/fac025c5-ec75-4e5a-9bbb-994b4d9dc69b",
+      "lastProcessed": "2025-10-09T07:56:14.749Z",
+      "status": "processed"
+    },
+    "beneficiarios-programa-sumar-201812.csv": {
+      "datasetId": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+      "datasetTitle": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+      "fileName": "beneficiarios-programa-sumar-201812.csv",
+      "format": "CSV",
+      "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB). Periodo 2018-12",
+      "accessURL": "http://datos.salud.gob.ar/dataset/29e8fcd4-2f27-4034-b869-f627620dd10f/resource/a6468f19-f492-49e6-ab84-eccea88edd98",
+      "lastProcessed": "2025-10-09T07:56:18.980Z",
+      "status": "processed"
+    },
+    "beneficiarios-programa-sumar-201812.xls": {
+      "datasetId": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+      "datasetTitle": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+      "fileName": "beneficiarios-programa-sumar-201812.xls",
+      "format": "XLS",
+      "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB). Periodo 2018-12",
+      "accessURL": "http://datos.salud.gob.ar/dataset/29e8fcd4-2f27-4034-b869-f627620dd10f/resource/1ae53ee6-9463-4592-8941-8d1c70ebd6ba",
+      "lastProcessed": "2025-10-09T07:56:18.980Z",
+      "status": "processed"
+    },
+    "beneficiarios-programa-sumar-201812.json": {
+      "datasetId": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+      "datasetTitle": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+      "fileName": "beneficiarios-programa-sumar-201812.json",
+      "format": "JSON",
+      "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB). Periodo 2018-12",
+      "accessURL": "http://datos.salud.gob.ar/dataset/29e8fcd4-2f27-4034-b869-f627620dd10f/resource/4aca51ee-0340-4ebc-bcbd-282c2efab92f",
+      "lastProcessed": "2025-10-09T07:56:18.981Z",
+      "status": "processed"
+    },
+    "beneficiarios-programa-sumar-201906.csv": {
+      "datasetId": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+      "datasetTitle": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+      "fileName": "beneficiarios-programa-sumar-201906.csv",
+      "format": "CSV",
+      "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB). Entre julio 2018 y junio 2019.",
+      "accessURL": "http://datos.salud.gob.ar/dataset/29e8fcd4-2f27-4034-b869-f627620dd10f/resource/b7c9b8af-d9e5-4acf-a812-798f2e3f98ce",
+      "lastProcessed": "2025-10-09T07:56:22.924Z",
+      "status": "processed"
+    },
+    "beneficiarios-programa-sumar-201912.csv": {
+      "datasetId": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+      "datasetTitle": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+      "fileName": "beneficiarios-programa-sumar-201912.csv",
+      "format": "CSV",
+      "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB). Año 2019",
+      "accessURL": "http://datos.salud.gob.ar/dataset/29e8fcd4-2f27-4034-b869-f627620dd10f/resource/9e3e5ea4-fb67-4d56-be46-717c6a00cb9d",
+      "lastProcessed": "2025-10-09T07:56:26.831Z",
+      "status": "processed"
+    },
+    "beneficiarios-inscriptos-programa-sumar-junio-2020.csv": {
+      "datasetId": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+      "datasetTitle": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+      "fileName": "beneficiarios-inscriptos-programa-sumar-junio-2020.csv",
+      "format": "CSV",
+      "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB). Año 2020",
+      "accessURL": "http://datos.salud.gob.ar/dataset/29e8fcd4-2f27-4034-b869-f627620dd10f/resource/9b41670a-664f-4ec2-bce0-d2faa12270fd",
+      "lastProcessed": "2025-10-09T07:56:31.054Z",
+      "status": "processed"
+    },
+    "beneficiarios-inscriptos-programa-sumar-07-2020-al-12-2021 (1).csv": {
+      "datasetId": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+      "datasetTitle": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+      "fileName": "beneficiarios-inscriptos-programa-sumar-07-2020-al-12-2021 (1).csv",
+      "format": "CSV",
+      "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB). Año 2021",
+      "accessURL": "http://datos.salud.gob.ar/dataset/29e8fcd4-2f27-4034-b869-f627620dd10f/resource/ca575be9-f19b-4cd1-9657-7bad48d63c15",
+      "lastProcessed": "2025-10-09T07:56:35.250Z",
+      "status": "processed"
+    },
+    "beneficiarios-inscriptos-programa-sumar-06-2022-y-12-2022_1.csv": {
+      "datasetId": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+      "datasetTitle": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+      "fileName": "beneficiarios-inscriptos-programa-sumar-06-2022-y-12-2022_1.csv",
+      "format": "CSV",
+      "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB). Junio  y Diciembre 2022.",
+      "accessURL": "http://datos.salud.gob.ar/dataset/29e8fcd4-2f27-4034-b869-f627620dd10f/resource/295c713c-a5fe-4aab-bb93-8fa52f9e7543",
+      "lastProcessed": "2025-10-09T07:56:39.777Z",
+      "status": "processed"
+    },
+    "beneficiarios-inscriptos-programa-sumar-06-2023.csv": {
+      "datasetId": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+      "datasetTitle": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+      "fileName": "beneficiarios-inscriptos-programa-sumar-06-2023.csv",
+      "format": "CSV",
+      "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB). Junio 2023.",
+      "accessURL": "http://datos.salud.gob.ar/dataset/29e8fcd4-2f27-4034-b869-f627620dd10f/resource/6b636f94-c88b-4fa5-b0c6-5dc20d4f9f47",
+      "lastProcessed": "2025-10-09T07:56:43.768Z",
+      "status": "processed"
+    },
+    "beneficiarios-inscriptos-programa-sumar-12-2023_3.csv": {
+      "datasetId": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+      "datasetTitle": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+      "fileName": "beneficiarios-inscriptos-programa-sumar-12-2023_3.csv",
+      "format": "CSV",
+      "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB). Diciembre 2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/29e8fcd4-2f27-4034-b869-f627620dd10f/resource/d3b480fc-f521-4a74-8106-8728e813e60c",
+      "lastProcessed": "2025-10-09T07:56:47.829Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_29e8fcd4-2f27-4034-b869-f627620dd10f",
+    "title": "Total de beneficiarios inscriptos al Programa Sumar con Cobertura Efectiva Básica (CEB)",
+    "description": "Beneficiarios del Programa Sumar inscriptos y con Cobertura Efectiva Básica (CEB) en el mes observado, desagregado por jurisdicción y por grupo etario: niños de 0 a 5 años, niños de 6 a 9 años, adolescentes de 10 a 19 años, mujeres de 20 a 64 años y hombres de 20 a 64 años.",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2018-06-21T11:13:57.128426",
+    "modified": "2025-02-11T10:11:22.087267",
+    "publisher": {
+      "mbox": "soportednfsp@msal.gov.ar",
+      "name": "Ministerio de Salud de la Nación. Secretaría de Gestión Sanitaria. Subsecretaría de Relaciones Sectoriales y Articulación. "
+    },
+    "landingPage": "http://www.salud.gob.ar/sumar/"
+  }
+}

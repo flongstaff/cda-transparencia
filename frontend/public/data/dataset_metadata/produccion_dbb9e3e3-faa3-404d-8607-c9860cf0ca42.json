@@ -1,0 +1,32 @@
+{
+  "files": {
+    "proyectos-aprobados-regimen-biotecnologia-202205.xlsx": {
+      "datasetId": "produccion_dbb9e3e3-faa3-404d-8607-c9860cf0ca42",
+      "datasetTitle": "Régimen de Promoción de Biotecnología Moderna",
+      "fileName": "proyectos-aprobados-regimen-biotecnologia-202205.xlsx",
+      "format": "XLS",
+      "title": "Beneficiarios de la Ley de Promoción de Biotecnología Moderna (Ley N° 26.270)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/dbb9e3e3-faa3-404d-8607-c9860cf0ca42/resource/e1e2cf67-08c8-41cc-90c8-e3f7ed1ed58e",
+      "lastProcessed": "2025-10-09T08:10:45.530Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_dbb9e3e3-faa3-404d-8607-c9860cf0ca42",
+    "title": "Régimen de Promoción de Biotecnología Moderna",
+    "description": "Tiene por objeto promover el desarrollo y la producción de la Biotecnología Moderna en todo el territorio nacional.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-07-01T18:11:54.203584",
+    "modified": "2024-01-29T11:32:21.618763",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo, Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa, Subsecretaría de Economía del Conocimiento, Dirección Nacional de Desarrollo de la Economía del Conocimiento, Dirección de Generación de Nuevas Empresas de la Economía del Conocimiento."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/regimen-de-promocion-de-biotecnologia-moderna"
+  }
+}

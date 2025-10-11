@@ -1,0 +1,34 @@
+{
+  "files": {
+    "proyectos-aprobados-solucionaverde-012023.xlsx": {
+      "datasetId": "produccion_ebc34553-30e4-479c-a8fe-16fc06b08c4a",
+      "datasetTitle": "Programa SOLUCIONA VERDE",
+      "fileName": "proyectos-aprobados-solucionaverde-012023.xlsx",
+      "format": "XLS",
+      "title": "Beneficiarios del Programa Soluciona VERDE",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/ebc34553-30e4-479c-a8fe-16fc06b08c4a/resource/aa4a4d6a-5afa-4dbc-b1f3-b3c252dae134",
+      "lastProcessed": "2025-10-09T08:07:51.217Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_ebc34553-30e4-479c-a8fe-16fc06b08c4a",
+    "title": "Programa SOLUCIONA VERDE",
+    "description": "El objetivo del Programa consiste en brindar asistencia financiera a personas jurídicas para contribuir a la sostenibilidad ambiental de la producción mediante el desarrollo, la implementación y/o la adopción de soluciones, productos y/o servicios innovadores vinculados a la Economía del Conocimiento",
+    "theme": [
+      "econ",
+      "envi"
+    ],
+    "superTheme": [
+      "ECON",
+      "ENVI"
+    ],
+    "issued": "2022-06-03T13:44:23.218227",
+    "modified": "2024-01-29T16:19:33.092595",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo, Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa, Subsecretaría de Economía del Conocimiento, Dirección de Desarrollo de la Economía del Conocimiento, Dirección para la Generación de Nuevas Empresas de la Economía del Conocimiento."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/programa-soluciona-verde"
+  }
+}

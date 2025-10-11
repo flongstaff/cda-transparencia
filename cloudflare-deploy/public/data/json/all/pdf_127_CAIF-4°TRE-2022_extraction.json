@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_127_CAIF-4°TRE-2022.pdf",
+  "file_hash": "a804bebdda65408f338ecc830dab43ef",
+  "page_count": 3,
+  "text_length": 3092,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.\n20/09/2023 09:07\nPresupuesto: 2022DE EJECUCION PRESUPUESTARIA \n01/10/2022 al 31/12/2022\nMunicipalidad de\nCarmen de Areco\nDESCRIPCION IMPORTE\nI. INGRESOS CORRIENTES\nIngresos tributarios 196.523.917,46\nContribuciones a la Seguridad Social\nIngresos no Tributarios 63.164.167,77\nVentas de Bienes y Servicios\nIngresos de Operación\nRentas de la Propiedad 15.044.024,25\nTransferencias Corrientes 110.782.954,09\nContribuciones Figurativas para Financiaciones Corrientes\nTOTAL  INGRESOS CORRIENTES 385.515.063,57\nII. GASTOS CORRIENTES\nGastos de Operación\nGastos de Consumo 337.853.666,92\nRentas de la Propiedad 8.836,61\nPrestaciones de la Seguridad Social\nImpuestos Directos\nOtras Pérdidas\nTransferencias Corrientes 21.555.430,42\nGastos Figurativos para Transacciones Corrientes\nTOTAL  GASTOS CORRIENTES 359.417.933,95\nIII. AHORRO CORRIENTE: (I - II) 26.097.129,62\nResultado Corriente Primario (Ingresos Corrientes - Gastos Corrientes netos de Int. de la deuda) 26.127.117,13\nTOTAL  AHORRO CORRIENTE: (I - II) 52.224.246,75 26.097.129,62\nIV. RECURSOS DE CAPITAL\nRecursos Propios de Capital\nTransferencias de Capital 219.313.959,81\nDisminución de la Inversión Financiera 570.104,02\nContribuciones Figurativas para Financiaciones de Capital\nFiltro aplicado: Presupuesto: 2022 -  Fechas: 01/10/2022 al 31/12/2022\nCUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 2 de 3 R.A.F.A.M.\n20/09/2023 09:07\nPresupuesto: 2022DE EJECUCION PRESUPUESTARIA \n01/10/2022 al 31/12/2022\nMunicipalidad de\nCarmen de Areco\nDESCRIPCION IMPORTE\nTOTAL  RECURSOS DE CAPITAL 219.884.063,83\nV. GASTOS DE CAPITAL\nInversión Real Directa 134.260.525,06\nTransferencias de Capital 1.101.683,62\nInversión Financiera\nGastos Figurativos para Transacciones de Capital\nTOTAL  GASTOS DE CAPITAL 135.362.208,68\nVI. INGRESOS TOTALES 605.399.127,40\nTOTAL  INGRESOS TOTALES 605.399.127,40 605.399.127,40\nVII. GASTOS TOTALES 494.780.142,63\nTOTAL  GASTOS TOTALES 494.780.142,63 494.780.142,63\nVIII....",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:57.758975"
+}

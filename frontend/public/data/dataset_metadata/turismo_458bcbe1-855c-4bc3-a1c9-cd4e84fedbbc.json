@@ -1,0 +1,76 @@
+{
+  "files": {
+    "visitas-residentes-y-no-residentes.csv": {
+      "datasetId": "turismo_458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc",
+      "datasetTitle": "Parques Nacionales",
+      "fileName": "visitas-residentes-y-no-residentes.csv",
+      "format": "CSV",
+      "title": "Visitas a los Parques Nacionales según tipo de residencia del visitante",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/resource/a570af75-ed33-427c-9797-980fc0cd8fd1",
+      "lastProcessed": "2025-10-09T07:10:00.118Z",
+      "status": "processed"
+    },
+    "visitas-residentes-y-no-residentes-por-region.csv": {
+      "datasetId": "turismo_458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc",
+      "datasetTitle": "Parques Nacionales",
+      "fileName": "visitas-residentes-y-no-residentes-por-region.csv",
+      "format": "CSV",
+      "title": "Visitas a los Parques Nacionales por región de destino según tipo de residencia del visitante",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/resource/e8f7c0d7-02f9-4fdd-aa83-d61c13f565ae",
+      "lastProcessed": "2025-10-09T07:10:03.314Z",
+      "status": "processed"
+    },
+    "parques_nac.pdf": {
+      "datasetId": "turismo_458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc",
+      "datasetTitle": "Parques Nacionales",
+      "fileName": "parques_nac.pdf",
+      "format": "PDF",
+      "title": "Ficha Técnica: Parques Nacionales",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/resource/06e92813-b7d7-4702-8298-d73db3dbdce0",
+      "lastProcessed": "2025-10-09T07:10:07.138Z",
+      "status": "processed"
+    },
+    "serie-tiempo-parques-nacionales-mensual.csv": {
+      "datasetId": "turismo_458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc",
+      "datasetTitle": "Parques Nacionales",
+      "fileName": "serie-tiempo-parques-nacionales-mensual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/resource/78aea6ed-761c-4659-bdf2-7fcb0f616fad",
+      "lastProcessed": "2025-10-09T07:10:10.327Z",
+      "status": "processed"
+    },
+    "novedades.csv": {
+      "datasetId": "turismo_458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc",
+      "datasetTitle": "Parques Nacionales",
+      "fileName": "novedades.csv",
+      "format": "CSV",
+      "title": "Novedades",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc/resource/678bc2ed-871b-4aae-a4a3-69f070b488aa",
+      "lastProcessed": "2025-10-09T07:10:13.492Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "turismo_458bcbe1-855c-4bc3-a1c9-cd4e84fedbbc",
+    "title": "Parques Nacionales",
+    "description": "Estadísticas de los Parques Nacionales del país en base al Registro Nacional de Autorizaciones, Recaudaciones e Infracciones (RENARI) de la Administración de Parques Nacionales. Se refiere al total de visitas registrados en parques nacionales según tipo de residencia del visitante (residente/no residente)",
+    "theme": [
+      "gove",
+      "envi",
+      "soci"
+    ],
+    "superTheme": [
+      "ENVI",
+      "GOVE",
+      "SOCI"
+    ],
+    "issued": "2020-12-29T17:56:48.673186",
+    "modified": "2024-07-24T15:41:27.438523",
+    "publisher": {
+      "mbox": "estadistica@turismo.gob.ar",
+      "name": "Subsecretaría de Turismo. Dirección Nacional de Mercados y Estadística"
+    },
+    "landingPage": "http://datos.yvera.gob.ar/dataset/parques-nacionales"
+  }
+}

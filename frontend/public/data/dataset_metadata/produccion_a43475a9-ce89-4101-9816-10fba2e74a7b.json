@@ -1,0 +1,32 @@
+{
+  "files": {
+    "Aprobados PAC Reactivación  final.xlsx": {
+      "datasetId": "produccion_a43475a9-ce89-4101-9816-10fba2e74a7b",
+      "datasetTitle": "Programa de Apoyo a la Competitividad (PAC). Emprendedores Reactivación Productiva",
+      "fileName": "Aprobados PAC Reactivación  final.xlsx",
+      "format": "XLSX",
+      "title": "Proyectos aprobados PAC Reactivación Productiva ",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/a43475a9-ce89-4101-9816-10fba2e74a7b/resource/0ee8ae97-4ca5-48cc-a006-17e4c6127c37",
+      "lastProcessed": "2025-10-09T08:05:28.621Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_a43475a9-ce89-4101-9816-10fba2e74a7b",
+    "title": "Programa de Apoyo a la Competitividad (PAC). Emprendedores Reactivación Productiva",
+    "description": "Proyectos seleccionados en la convocatoria del Programa de Apoyo a la Competitividad Emprendedores Reactivación Productiva - Año 2020\r\n",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-05-06T14:04:33.369107",
+    "modified": "2021-05-11T15:57:11.191483",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Secretaría de la Pequeña y Mediana Empresa y los Emprendedores. Subsecretaría de Emprendedores. Dirección Nacional de Apoyo al Desarrollo Emprendedor. \r\n"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/pac-emprendedores"
+  }
+}

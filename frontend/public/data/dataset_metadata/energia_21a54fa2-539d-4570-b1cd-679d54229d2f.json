@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_21a54fa2-539d-4570-b1cd-679d54229d2f",
+      "datasetTitle": "Padrón de operadores autorizados para la venta de combustibles líquidos",
+      "format": "ZIP",
+      "title": "Padrón de Operadores Autorizados",
+      "accessURL": "http://datos.energia.gob.ar/dataset/21a54fa2-539d-4570-b1cd-679d54229d2f/resource/231fb0d7-401b-4430-a69a-ebd067148100",
+      "lastProcessed": "2025-10-09T07:18:32.944Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_21a54fa2-539d-4570-b1cd-679d54229d2f",
+    "title": "Padrón de operadores autorizados para la venta de combustibles líquidos",
+    "description": "Registro de operadores autorizados para la venta de combustibles líquidos. Resolución SE 1102/2004 ",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:30.488389",
+    "modified": "2019-06-25T08:52:07.117582",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

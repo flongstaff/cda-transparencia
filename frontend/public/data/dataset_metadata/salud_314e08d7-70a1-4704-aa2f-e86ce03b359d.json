@@ -1,0 +1,32 @@
+{
+  "files": {
+    "tasa-natalidad-deis-2000-2023.csv": {
+      "datasetId": "salud_314e08d7-70a1-4704-aa2f-e86ce03b359d",
+      "datasetTitle": "Tasa de Natalidad",
+      "fileName": "tasa-natalidad-deis-2000-2023.csv",
+      "format": "CSV",
+      "title": "Tasa de Natalidad",
+      "accessURL": "http://datos.salud.gob.ar/dataset/314e08d7-70a1-4704-aa2f-e86ce03b359d/resource/0f68d5c6-e667-40ca-90fd-4784336e092e",
+      "lastProcessed": "2025-10-09T07:25:08.047Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_314e08d7-70a1-4704-aa2f-e86ce03b359d",
+    "title": "Tasa de Natalidad",
+    "description": "Tasa de Natalidad por 1000 habitantes registrada en la República Argentina",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2019-04-23T16:26:15.191237",
+    "modified": "2022-09-11T20:07:59.647910",
+    "publisher": {
+      "mbox": "informaciondeis@gmail.com",
+      "name": "Ministerio de Salud. Dirección de Estadística e Información en Salud (DEIS) "
+    },
+    "landingPage": "https://www.argentina.gob.ar/salud/deis"
+  }
+}

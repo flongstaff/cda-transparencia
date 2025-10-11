@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "transporte_abe45f2c-cf9f-458e-8b51-03ecda6f708a",
+      "datasetTitle": "Rutas Nacionales",
+      "format": "KML",
+      "title": "Rutas Nacionales",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/abe45f2c-cf9f-458e-8b51-03ecda6f708a/resource/c00b18f9-9b29-4911-bd1c-d870284b3968",
+      "lastProcessed": "2025-10-09T07:10:25.568Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "transporte_abe45f2c-cf9f-458e-8b51-03ecda6f708a",
+    "title": "Rutas Nacionales",
+    "description": "Rutas nacionales de la República Argentina. Relevadas por la Dirección Nacional de Vialidad.",
+    "theme": [
+      "tran"
+    ],
+    "superTheme": [
+      "TRAN"
+    ],
+    "issued": "2017-07-21T19:00:56.038346",
+    "modified": "2023-04-12T14:14:52.247535",
+    "publisher": {
+      "mbox": "dotes@transporte.gob.ar",
+      "name": "Dirección de Observatorio Nacional de Transporte"
+    },
+    "landingPage": "https://datos.transporte.gob.ar/dataset/rutas-nacionales"
+  }
+}

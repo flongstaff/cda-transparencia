@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_36c14e01-d3f6-47f3-9f12-9c25a48fe8c6",
+      "datasetTitle": "Renuncias de magistrados de la Justicia Federal y de la Justicia Nacional",
+      "format": "gráfico",
+      "title": "Designación y renuncia de magistrados - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/36c14e01-d3f6-47f3-9f12-9c25a48fe8c6/resource/3fe99cde-ee16-4277-9ced-473c88dcb4c6",
+      "lastProcessed": "2025-10-09T06:37:34.138Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_36c14e01-d3f6-47f3-9f12-9c25a48fe8c6",
+    "title": "Renuncias de magistrados de la Justicia Federal y de la Justicia Nacional",
+    "description": "Renuncias de jueces, fiscales y defensores de la Justicia Federal y de la Justicia Nacional de la República Argentina.\r\n",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-06-16T13:46:23.340802",
+    "modified": "2025-09-30T15:50:19.426891",
+    "publisher": {
+      "mbox": "oficinadecretos@jus.gov.ar",
+      "name": "Ministerio de Justicia. Secretaría de Justicia. Dirección Nacional de Relaciones con el Poder Judicial. Oficina Decretos"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/renuncias-de-magistrados-de-la-justicia-federal-y-de-la-justicia-nacional"
+  }
+}

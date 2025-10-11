@@ -1,0 +1,52 @@
+{
+  "files": {
+    "datos-historicos-industria-automotriz-unidades-anuales.csv": {
+      "datasetId": "sspm_330",
+      "datasetTitle": "Datos históricos de la industria automotriz",
+      "fileName": "datos-historicos-industria-automotriz-unidades-anuales.csv",
+      "format": "CSV",
+      "title": "Datos históricos de la industria automotriz. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:10.352Z",
+      "status": "processed"
+    },
+    "datos-historicos-industria-automotriz-unidades-trimestrales.csv": {
+      "datasetId": "sspm_330",
+      "datasetTitle": "Datos históricos de la industria automotriz",
+      "fileName": "datos-historicos-industria-automotriz-unidades-trimestrales.csv",
+      "format": "CSV",
+      "title": "Datos históricos de la industria automotriz. Datos trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:11.407Z",
+      "status": "processed"
+    },
+    "datos-historicos-industria-automotriz-unidades-mensuales.csv": {
+      "datasetId": "sspm_330",
+      "datasetTitle": "Datos históricos de la industria automotriz",
+      "fileName": "datos-historicos-industria-automotriz-unidades-mensuales.csv",
+      "format": "CSV",
+      "title": "Datos históricos de la industria automotriz. Datos menuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:12.463Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_330",
+    "title": "Datos históricos de la industria automotriz",
+    "description": "Datos históricos de la industria automotriz  en unidades",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-11-28",
+    "modified": "2025-03-24T10:01:07.659986",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "files": {
+    "Serie-original-actividad-economica-region.csv": {
+      "datasetId": "produccion_479c1989-d02a-4380-a682-b9a24c7ecaf0",
+      "datasetTitle": "Indicadores de actividad económica mensual de los países americanos",
+      "fileName": "Serie-original-actividad-economica-region.csv",
+      "format": "CSV",
+      "title": "Indicadores de actividad económica de la región (serie original)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/479c1989-d02a-4380-a682-b9a24c7ecaf0/resource/3e325442-ac0a-4fd8-8082-f3b6ce7f764e",
+      "lastProcessed": "2025-10-09T08:07:03.010Z",
+      "status": "processed"
+    },
+    "serie-desestacionalizada-actividad-economica-region.csv": {
+      "datasetId": "produccion_479c1989-d02a-4380-a682-b9a24c7ecaf0",
+      "datasetTitle": "Indicadores de actividad económica mensual de los países americanos",
+      "fileName": "serie-desestacionalizada-actividad-economica-region.csv",
+      "format": "CSV",
+      "title": "Indicadores de actividad económica de la región (serie desestacionalizada)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/479c1989-d02a-4380-a682-b9a24c7ecaf0/resource/49644621-41b7-492c-94d1-d7409f884bcd",
+      "lastProcessed": "2025-10-09T08:07:04.921Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_479c1989-d02a-4380-a682-b9a24c7ecaf0",
+    "title": "Indicadores de actividad económica mensual de los países americanos",
+    "description": "Muestra la evolución reciente de los indicadores de actividad económica del continente americano. Toma una muestra de países con disponibilidad mensual de los indicadores exponiendo tanto la serie original como la desestacionalizada. ",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-10-06T13:53:08.335142",
+    "modified": "2021-10-06T13:53:08.335142",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la producción (CEP XXI)"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/indicadores-de-actividad-economica-mensual-de-los-paises-americanos"
+  }
+}

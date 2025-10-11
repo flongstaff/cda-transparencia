@@ -1,0 +1,138 @@
+{
+  "files": {
+    "puestos_privados_mensual_por_clae6.csv": {
+      "datasetId": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "fileName": "puestos_privados_mensual_por_clae6.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo en el sector privado (CLAE a 6 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/15211f62-04dc-42ed-acdd-ff2bbcaf4779/resource/3effd219-24e9-4d8a-bb38-0636e11290b6",
+      "lastProcessed": "2025-10-09T08:04:27.653Z",
+      "status": "processed"
+    },
+    "puestos_privados_mensual_por_clae3.csv": {
+      "datasetId": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "fileName": "puestos_privados_mensual_por_clae3.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo en el sector privado (CLAE a 3 dígitos) ",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/15211f62-04dc-42ed-acdd-ff2bbcaf4779/resource/536ee15f-2a51-4c58-a520-b19dc0fca00e",
+      "lastProcessed": "2025-10-09T08:04:30.069Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "lastProcessed": "2025-10-09T08:04:32.307Z",
+      "status": "processed"
+    },
+    "puestos_privados_mensual_por_letra.csv": {
+      "datasetId": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "fileName": "puestos_privados_mensual_por_letra.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo en el sector privado (por letra) ",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/15211f62-04dc-42ed-acdd-ff2bbcaf4779/resource/85e11ee3-8348-4433-8a92-01c43909c00f",
+      "lastProcessed": "2025-10-09T08:04:34.194Z",
+      "status": "processed"
+    },
+    "puestos_privados_mensual_total.csv": {
+      "datasetId": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "fileName": "puestos_privados_mensual_total.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo en el sector privado (total)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/15211f62-04dc-42ed-acdd-ff2bbcaf4779/resource/d35756c1-19cc-4f33-8da1-0b61eb580e5a",
+      "lastProcessed": "2025-10-09T08:04:36.034Z",
+      "status": "processed"
+    },
+    "puestos_total_empresas_mensual_por_clae6.csv": {
+      "datasetId": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "fileName": "puestos_total_empresas_mensual_por_clae6.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo en el total de empresas (CLAE a 6 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/15211f62-04dc-42ed-acdd-ff2bbcaf4779/resource/4dffd59a-cc8c-4c9f-a76f-652f8bbe978d",
+      "lastProcessed": "2025-10-09T08:04:38.040Z",
+      "status": "processed"
+    },
+    "puestos_total_empresas_mensual_por_clae3.csv": {
+      "datasetId": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "fileName": "puestos_total_empresas_mensual_por_clae3.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo en el total de empresas (CLAE a 3 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/15211f62-04dc-42ed-acdd-ff2bbcaf4779/resource/c56cda4a-5ea0-40d8-a46b-e39097063567",
+      "lastProcessed": "2025-10-09T08:04:39.952Z",
+      "status": "processed"
+    },
+    "puestos_total_empresas_mensual_por_clae2.csv": {
+      "datasetId": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "fileName": "puestos_total_empresas_mensual_por_clae2.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo en el total de empresas (CLAE a 2 dígitos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/15211f62-04dc-42ed-acdd-ff2bbcaf4779/resource/24806db2-49f4-42e1-8cb5-1f1e2d58e6b5",
+      "lastProcessed": "2025-10-09T08:04:41.871Z",
+      "status": "processed"
+    },
+    "puestos_total_empresas_mensual_por_letra.csv": {
+      "datasetId": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "fileName": "puestos_total_empresas_mensual_por_letra.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo en el total de empresas (letra)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/15211f62-04dc-42ed-acdd-ff2bbcaf4779/resource/2e36e363-20f2-4a21-b7b7-159ea38f5667",
+      "lastProcessed": "2025-10-09T08:04:43.765Z",
+      "status": "processed"
+    },
+    "puestos_total_empresas_mensual_total.csv": {
+      "datasetId": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "fileName": "puestos_total_empresas_mensual_total.csv",
+      "format": "CSV",
+      "title": "Puestos de trabajo en el total de empresas (total)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/15211f62-04dc-42ed-acdd-ff2bbcaf4779/resource/9ac77a1e-5ed0-457e-810a-e53005ee6417",
+      "lastProcessed": "2025-10-09T08:04:45.625Z",
+      "status": "processed"
+    },
+    "clae_agg.csv": {
+      "datasetId": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "fileName": "clae_agg.csv",
+      "format": "CSV",
+      "title": "Diccionario de claes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/15211f62-04dc-42ed-acdd-ff2bbcaf4779/resource/0c48706b-94e0-4ba9-abac-7a02a44cd840",
+      "lastProcessed": "2025-10-09T08:04:47.547Z",
+      "status": "processed"
+    },
+    "metodologia.pdf": {
+      "datasetId": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+      "datasetTitle": "Puestos de trabajo asalariados registrados, por sector de actividad",
+      "fileName": "metodologia.pdf",
+      "format": "PDF",
+      "title": "Metodología",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/15211f62-04dc-42ed-acdd-ff2bbcaf4779/resource/0ee975c9-8241-4d29-9013-7e190644faad",
+      "lastProcessed": "2025-10-09T08:04:50.053Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_15211f62-04dc-42ed-acdd-ff2bbcaf4779",
+    "title": "Puestos de trabajo asalariados registrados, por sector de actividad",
+    "description": "Cantidad de puestos de trabajo asalariados registrados por sector de actividad. Vale tener en cuenta que una persona puede tener más de un puesto de trabajo (lo que se conoce como pluriempleo), de modo tal que la sumatoria de puestos de trabajo de un sector no es exactamente igual a la cantidad de personas que efectivamente trabaja en dicho sector.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-10-07T11:54:50.703522",
+    "modified": "2022-04-07T16:56:27.436319",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la Producción (CEP XXI)."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/puestos-de-trabajo-por-sector-productivo"
+  }
+}

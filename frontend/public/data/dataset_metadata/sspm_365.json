@@ -1,0 +1,52 @@
+{
+  "files": {
+    "exportaciones-sector-actividad-saldocomercial-rengo-empresa-exportadora-anual.csv": {
+      "datasetId": "sspm_365",
+      "datasetTitle": "Producción y Ventas de Petróleo, Gas y Derivados por Empresa",
+      "fileName": "exportaciones-sector-actividad-saldocomercial-rengo-empresa-exportadora-anual.csv",
+      "format": "CSV",
+      "title": "Exportaciones por sector de actividad, saldo comercial y rangos de exportación de la empresa exportadora. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:53.932Z",
+      "status": "processed"
+    },
+    "exportaciones-sector-actividad-saldocomercial-rengo-empresa-exportadora-trimestral.csv": {
+      "datasetId": "sspm_365",
+      "datasetTitle": "Producción y Ventas de Petróleo, Gas y Derivados por Empresa",
+      "fileName": "exportaciones-sector-actividad-saldocomercial-rengo-empresa-exportadora-trimestral.csv",
+      "format": "CSV",
+      "title": "Exportaciones por sector de actividad, saldo comercial y rangos de exportación de la empresa exportadora. Datos trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:54.986Z",
+      "status": "processed"
+    },
+    "exportaciones-sector-actividad-saldocomercial-rengo-empresa-exportadora-mensual.csv": {
+      "datasetId": "sspm_365",
+      "datasetTitle": "Producción y Ventas de Petróleo, Gas y Derivados por Empresa",
+      "fileName": "exportaciones-sector-actividad-saldocomercial-rengo-empresa-exportadora-mensual.csv",
+      "format": "CSV",
+      "title": "Exportaciones por sector de actividad, saldo comercial y rangos de exportación de la empresa exportadora. Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:56.034Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_365",
+    "title": "Producción y Ventas de Petróleo, Gas y Derivados por Empresa",
+    "description": "Datos producción y ventas por empresa",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-12-21",
+    "modified": "2025-03-24T10:02:13.897256",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

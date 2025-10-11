@@ -1,0 +1,52 @@
+{
+  "files": {
+    "saldo-comercial-clasificado-nomenclador-comun-mercosur-ncm-2-digitos-anual.csv": {
+      "datasetId": "sspm_164",
+      "datasetTitle": "Saldo comercial clasificado el Nomenclador Común del Mercosur (NCM)",
+      "fileName": "saldo-comercial-clasificado-nomenclador-comun-mercosur-ncm-2-digitos-anual.csv",
+      "format": "CSV",
+      "title": "Saldo comercial según Nomenclador Común del Mercosur NCM, a 2 dígitos. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:06.572Z",
+      "status": "processed"
+    },
+    "saldo-comercial-clasificado-nomenclador-comun-mercosur-ncm-2-digitos-trimestral.csv": {
+      "datasetId": "sspm_164",
+      "datasetTitle": "Saldo comercial clasificado el Nomenclador Común del Mercosur (NCM)",
+      "fileName": "saldo-comercial-clasificado-nomenclador-comun-mercosur-ncm-2-digitos-trimestral.csv",
+      "format": "CSV",
+      "title": "Saldo comercial según Nomenclador Común del Mercosur NCM, a 2 dígitos. Datros trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:07.624Z",
+      "status": "processed"
+    },
+    "saldo-comercial-clasificado-nomenclador-comun-mercosur-ncm-2-digitos-mensual.csv": {
+      "datasetId": "sspm_164",
+      "datasetTitle": "Saldo comercial clasificado el Nomenclador Común del Mercosur (NCM)",
+      "fileName": "saldo-comercial-clasificado-nomenclador-comun-mercosur-ncm-2-digitos-mensual.csv",
+      "format": "CSV",
+      "title": "Saldo comercial según Nomenclador Común del Mercosur NCM, a 2 dígitos. Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:08.683Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_164",
+    "title": "Saldo comercial clasificado el Nomenclador Común del Mercosur (NCM)",
+    "description": "Saldo comercial clasificado según el Nomenclador Común del Mercosur (NCM), a 2 dígitos",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:02:01.064425",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

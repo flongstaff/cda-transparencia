@@ -12,15 +12,15 @@ const defaultConfig = {
 
 // Production configuration for cda-transparencia.org
 const productionConfig = {
-  API_BASE_URL: 'https://cda-transparencia-api.franco-longstaff.workers.dev',
+  API_BASE_URL: 'https://cda-transparencia.franco-longstaff.workers.dev',
   CHARTS_DATA_URL: '/data/charts',
   USE_API: true,
 };
 
 // Configuration for GitHub Pages deployment
 const githubConfig = {
-  API_BASE_URL: 'https://api.cda-transparencia.org',
-  CHARTS_DATA_URL: 'https://api.cda-transparencia.org/data/charts',
+  API_BASE_URL: 'https://cda-transparencia.franco-longstaff.workers.dev',
+  CHARTS_DATA_URL: 'https://cda-transparencia.franco-longstaff.workers.dev/data/charts',
   USE_API: true,
 };
 

@@ -1,0 +1,102 @@
+{
+  "files": {
+    "precios-implicitos-oferta-demanda-global-base-1950100-anual.csv": {
+      "datasetId": "sspm_384",
+      "datasetTitle": "Cuentas Nacionales 1935-1962",
+      "fileName": "precios-implicitos-oferta-demanda-global-base-1950100-anual.csv",
+      "format": "CSV",
+      "title": "Precios Implícitos Oferta y Demanda Global. Base 1950. Valores anuales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:07.016Z",
+      "status": "processed"
+    },
+    "precios-implicitos-pib-costo-factores-base-1950100-anual.csv": {
+      "datasetId": "sspm_384",
+      "datasetTitle": "Cuentas Nacionales 1935-1962",
+      "fileName": "precios-implicitos-pib-costo-factores-base-1950100-anual.csv",
+      "format": "CSV",
+      "title": "Precios Implícitos Producto Interno Bruto a costo de factores. Base 1950. Valores anuales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:08.147Z",
+      "status": "processed"
+    },
+    "oferta-demanda-global-precios-constantes-1950-anual.csv": {
+      "datasetId": "sspm_384",
+      "datasetTitle": "Cuentas Nacionales 1935-1962",
+      "fileName": "oferta-demanda-global-precios-constantes-1950-anual.csv",
+      "format": "CSV",
+      "title": "Oferta y Demanda Global.  Precios constantes. Base 1950. Valores anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:09.316Z",
+      "status": "processed"
+    },
+    "inversion-bruta-interna-por-tipo-bien-precios-corrientes-anual.csv": {
+      "datasetId": "sspm_384",
+      "datasetTitle": "Cuentas Nacionales 1935-1962",
+      "fileName": "inversion-bruta-interna-por-tipo-bien-precios-corrientes-anual.csv",
+      "format": "CSV",
+      "title": "Inversión Bruta Interna por Tipo de Bien. Precios corrientes. Valores anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:10.435Z",
+      "status": "processed"
+    },
+    "oferta-demanda-global-total-precios-corrientes-anual.csv": {
+      "datasetId": "sspm_384",
+      "datasetTitle": "Cuentas Nacionales 1935-1962",
+      "fileName": "oferta-demanda-global-total-precios-corrientes-anual.csv",
+      "format": "CSV",
+      "title": "Oferta y Demanda Global. Precios corrientes. Valores anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:11.625Z",
+      "status": "processed"
+    },
+    "distribucion-ingreso-neto-nacional-millones-pesos-corrientes-anual.csv": {
+      "datasetId": "sspm_384",
+      "datasetTitle": "Cuentas Nacionales 1935-1962",
+      "fileName": "distribucion-ingreso-neto-nacional-millones-pesos-corrientes-anual.csv",
+      "format": "CSV",
+      "title": "Distribución del Ingreso Neto Nacional. Millones de pesos corrientes. Valores anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:12.677Z",
+      "status": "processed"
+    },
+    "ingreso-bruto-nacional-producto-bruto-interno-costo-factores-precios-constantes-1950-anual.csv": {
+      "datasetId": "sspm_384",
+      "datasetTitle": "Cuentas Nacionales 1935-1962",
+      "fileName": "ingreso-bruto-nacional-producto-bruto-interno-costo-factores-precios-constantes-1950-anual.csv",
+      "format": "CSV",
+      "title": "Ingreso Bruto Nacional y Producto Bruto Interno a costo de factores. Precios constantes. Base 1950. Valores anuales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:13.728Z",
+      "status": "processed"
+    },
+    "inversion-bruta-interna-por-sector-precios-constantes-1950-anual.csv": {
+      "datasetId": "sspm_384",
+      "datasetTitle": "Cuentas Nacionales 1935-1962",
+      "fileName": "inversion-bruta-interna-por-sector-precios-constantes-1950-anual.csv",
+      "format": "CSV",
+      "title": "Inversión Bruta Interna por Sector.  Precios constantes. Base 1950. Valores anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:14.774Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_384",
+    "title": "Cuentas Nacionales 1935-1962",
+    "description": "Cuentas Nacionales 1935-1962, a precios corrientes y de 1950",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2018-02-21",
+    "modified": "2025-04-02T16:48:39.387792",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

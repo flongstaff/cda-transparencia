@@ -1,0 +1,32 @@
+{
+  "files": {
+    "residuos-retirados-espejo-agua.csv": {
+      "datasetId": "acumar_bb7d7700-9247-4e7e-8e41-9d5d4cb39504",
+      "datasetTitle": "Limpieza de Espejo de Agua del Río Matanza Riachuelo",
+      "fileName": "residuos-retirados-espejo-agua.csv",
+      "format": "CSV",
+      "title": "Limpieza de espejo de agua del Río Matanza Riachuelo",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/bb7d7700-9247-4e7e-8e41-9d5d4cb39504/resource/2d3af879-f90b-4247-bcef-4be32b917d41",
+      "lastProcessed": "2025-10-09T07:09:48.467Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_bb7d7700-9247-4e7e-8e41-9d5d4cb39504",
+    "title": "Limpieza de Espejo de Agua del Río Matanza Riachuelo",
+    "description": "Datos correspondientes a la actividad de limpieza del espejo de agua (cauce principal) del Río Matanza Riachuelo, desde 2015 hasta la fecha.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2018-08-23T13:16:49.570736",
+    "modified": "2025-02-07T17:01:25.149168",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección de Gestión Integral de Residuos Sólidos"
+    },
+    "landingPage": "http://datos.acumar.gob.ar/dataset/limpieza-de-espejo-de-agua"
+  }
+}

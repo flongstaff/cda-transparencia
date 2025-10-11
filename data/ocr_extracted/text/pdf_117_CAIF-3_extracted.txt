@@ -1,0 +1,54 @@
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.
+19/09/2023 09:51
+Presupuesto: 2023DE EJECUCION PRESUPUESTARIA 
+02/01/2023 al 31/03/2023
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+I. INGRESOS CORRIENTES
+Ingresos tributarios 140.118.060,71
+Contribuciones a la Seguridad Social
+Ingresos no Tributarios 65.375.896,39
+Ventas de Bienes y Servicios
+Ingresos de Operación
+Rentas de la Propiedad 15.870.762,74
+Transferencias Corrientes 130.410.891,16
+Contribuciones Figurativas para Financiaciones Corrientes
+TOTAL  INGRESOS CORRIENTES 351.775.611,00
+II. GASTOS CORRIENTES
+Gastos de Operación
+Gastos de Consumo 276.559.396,39
+Rentas de la Propiedad 2.249,57
+Prestaciones de la Seguridad Social
+Impuestos Directos
+Otras Pérdidas
+Transferencias Corrientes 11.033.349,00
+Gastos Figurativos para Transacciones Corrientes
+TOTAL  GASTOS CORRIENTES 287.594.994,96
+III. AHORRO CORRIENTE: (I - II) 64.180.616,04
+Resultado Corriente Primario (Ingresos Corrientes - Gastos Corrientes netos de Int. de la deuda) 64.182.865,61
+TOTAL  AHORRO CORRIENTE: (I - II) 128.363.481,65 64.180.616,04
+IV. RECURSOS DE CAPITAL
+Recursos Propios de Capital 600,00
+Transferencias de Capital 113.480.285,82
+Disminución de la Inversión Financiera 998.373,45
+Contribuciones Figurativas para Financiaciones de Capital
+Filtro aplicado: Presupuesto: 2023 -  Fechas: 02/01/2023 al 31/03/2023
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 2 de 3 R.A.F.A.M.
+19/09/2023 09:51
+Presupuesto: 2023DE EJECUCION PRESUPUESTARIA 
+02/01/2023 al 31/03/2023
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+TOTAL  RECURSOS DE CAPITAL 114.479.259,27
+V. GASTOS DE CAPITAL
+Inversión Real Directa 114.216.297,72
+Transferencias de Capital 1.522.010,00
+Inversión Financiera
+Gastos Figurativos para Transacciones de Capital
+TOTAL  GASTOS DE CAPITAL 115.738.307,72
+VI. INGRESOS TOTALES 466.254.870,27
+TOTAL  INGRESOS TOTALES 466.254.870,27 466.254.870,27
+VII. GASTOS TOTALES 403.333.302,68
+TOTAL  GASTOS TOTALES 403.333.302,68 403.333.302,...

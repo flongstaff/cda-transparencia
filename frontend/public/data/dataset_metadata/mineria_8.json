@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_8",
+      "datasetTitle": "Exportaciones argentinas de litio (SIACAM)",
+      "lastProcessed": "2025-10-09T06:50:06.096Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_8",
+    "title": "Exportaciones argentinas de litio (SIACAM)",
+    "description": "Datos correspondientes a las \"Exportaciones argentinas de litio\" del Tablero de Comercio Exterior de Argentina del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM). Elaborado por la Dirección Nacional de Promoción y Economía Minera con base en Aduana.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2023-03-03",
+    "modified": "2025-08-21",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

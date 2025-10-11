@@ -1,0 +1,32 @@
+{
+  "files": {
+    "pib-agricola-subtotal-agricola-millones-pesos-1970-1980-trimestral.csv": {
+      "datasetId": "sspm_192",
+      "datasetTitle": "PIB Subtotal Agrícola en millones de pesos de 1960",
+      "fileName": "pib-agricola-subtotal-agricola-millones-pesos-1970-1980-trimestral.csv",
+      "format": "CSV",
+      "title": "PIB Subtotal Agrícola en millones de pesos de 1960. 1970-1980",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:14:53.943Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_192",
+    "title": "PIB Subtotal Agrícola en millones de pesos de 1960",
+    "description": "PIB Subtotal Agrícola en millones de pesos de 1960. Por componente",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-05",
+    "modified": "2025-04-02T16:48:48.742146",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

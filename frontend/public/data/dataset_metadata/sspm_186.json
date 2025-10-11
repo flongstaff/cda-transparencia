@@ -1,0 +1,52 @@
+{
+  "files": {
+    "gasto-publico-programas-segurida-anual.csv": {
+      "datasetId": "sspm_186",
+      "datasetTitle": "Gasto Público del Gobierno Nacional en Política de Ingresos",
+      "fileName": "gasto-publico-programas-segurida-anual.csv",
+      "format": "CSV",
+      "title": "Gasto Público del Gobierno Nacional en Política de Ingresos, por programa. Devengado anual en pesos corrientes",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:24.706Z",
+      "status": "processed"
+    },
+    "gasto-publico-programas-segurida-trimestral.csv": {
+      "datasetId": "sspm_186",
+      "datasetTitle": "Gasto Público del Gobierno Nacional en Política de Ingresos",
+      "fileName": "gasto-publico-programas-segurida-trimestral.csv",
+      "format": "CSV",
+      "title": "Gasto Público del Gobierno Nacional en Política de Ingresos, por programa. Devengado trimestral en pesos corrientes",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:25.870Z",
+      "status": "processed"
+    },
+    "gasto-publico-programas-segurida-mensual.csv": {
+      "datasetId": "sspm_186",
+      "datasetTitle": "Gasto Público del Gobierno Nacional en Política de Ingresos",
+      "fileName": "gasto-publico-programas-segurida-mensual.csv",
+      "format": "CSV",
+      "title": "Gasto Público del Gobierno Nacional en Política de Ingresos, por programa. Devengado mensual en pesos corrientes",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:26.947Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_186",
+    "title": "Gasto Público del Gobierno Nacional en Política de Ingresos",
+    "description": "Gasto Público en programas nacionales de seguridad social y de transferencias de ingresos dirigidos a población vulnerable, por programa. Devengado Mensual. En pesos corrientes.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-03",
+    "modified": "2025-03-24T10:01:49.467196",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

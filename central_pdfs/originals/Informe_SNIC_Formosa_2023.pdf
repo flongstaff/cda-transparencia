@@ -1,0 +1,854 @@
+
+ <!DOCTYPE html>
+<html lang="es" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+<head>
+  <link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Nav and address bar color -->
+  <meta name="theme-color" content="#242C4F">
+  <meta name="msapplication-navbutton-color" content="#242C4F">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#242C4F">
+  <script>
+  dataLayer = [{
+    'userIPaddress': '192.168.32.104',
+  }];
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P68ZXT');</script>
+  <!-- End Google Tag Manager -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="gtm-id" content="179659" />
+<meta name="gtm-tipo" content="area" />
+<meta name="gtm-padres" content="26548" />
+<meta name="gtm-padre" content="Ministerio de Seguridad Nacional" />
+<meta name="gtm-raiz" content="Ministerio de Seguridad Nacional" />
+<meta name="google-site-verification" content="fr0vldZfY64iDak0RkGzC7B2MBqjWAChwEIr8xTJomU" />
+<link href="https://www.argentina.gob.ar/manifest.json" rel="manifest" />
+<meta name="description" content="El Sistema Nacional de Información Criminal (SNIC) recolecta información sobre los hechos presuntamente delictuosos registrados por las fuerzas policiales, las fuerzas federales de seguridad y otras entidades oficiales de recepción de denuncias en todo el territorio de la República Argentina." />
+<meta name="keywords" content="gobierno, argentino, nacional, gobierno argentino, gobierno nacional, República Argentina, administración, gestión, pública, administración pública, gestión pública, digital, trámites, servicios, trámites en línea, gobierno digital, servicios en línea, servicios digitales, Estado, transparencia, ciudadanos, modernización, organismo, organismo público, organismos públicos, organismos, beneficios, beneficios" />
+<link rel="canonical" href="https://www.argentina.gob.ar/seguridad/estadisticascriminales" />
+<link rel="shortlink" href="https://www.argentina.gob.ar/node/179659" />
+<meta property="og:type" content="government" />
+<meta property="og:site_name" content="Argentina.gob.ar" />
+<meta property="og:url" content="https://www.argentina.gob.ar/seguridad/estadisticascriminales" />
+<meta property="og:title" content="Estadísticas criminales de la República Argentina" />
+<meta property="og:description" content="El Sistema Nacional de Información Criminal (SNIC) recolecta información sobre los hechos presuntamente delictuosos registrados por las fuerzas policiales, las fuerzas federales de seguridad y otras entidades oficiales de recepción de denuncias en todo el territorio de la República Argentina." />
+<meta property="og:updated_time" content="2025-05-23T15:03:28-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@CasaRosada" />
+<meta name="twitter:url" content="https://www.argentina.gob.ar/seguridad/estadisticascriminales" />
+<meta name="twitter:title" content="Estadísticas criminales de la República Argentina" />
+<meta name="twitter:description" content="El Sistema Nacional de Información Criminal (SNIC) recolecta información sobre los hechos presuntamente delictuosos registrados por las fuerzas policiales, las fuerzas federales de seguridad y otras" />
+<meta property="article:published_time" content="2019-11-14T13:27:09-03:00" />
+<meta property="article:modified_time" content="2025-05-23T15:03:28-03:00" />
+<link rel="shortcut icon" href="https://www.argentina.gob.ar/profiles/argentinagobar/themes/argentinagobar/argentinagobar_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="apple-touch-icon" href="https://www.argentina.gob.ar/sites/default/files/icon/icon-180x180.png" sizes="180x180" />
+<link rel="apple-touch-icon-precomposed" href="https://www.argentina.gob.ar/sites/default/files/icon/icon-180x180.png" sizes="180x180" />
+  <title>Estadísticas criminales de la República Argentina | Argentina.gob.ar</title>
+  <style>
+@import url("https://www.argentina.gob.ar/modules/system/system.base.css?t37pc8");
+</style>
+<style>
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_search/css/search.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_webform/css/custom-chosen.css?t37pc8");
+@import url("https://www.argentina.gob.ar/modules/field/theme/field.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/field_hidden/field_hidden.css?t37pc8");
+@import url("https://www.argentina.gob.ar/modules/node/node.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/user_prune/css/user_prune.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/views/css/views.css?t37pc8");
+</style>
+<style>
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/ctools/css/ctools.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/drupar_filtros/css/galeria.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/jgm_subastas/css/aabe.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/panels/css/panels.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/rate/rate.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_campana_gubernamental/css/argentinagobar_campana_gubernamental.css?t37pc8");
+</style>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" media="all" />
+<style>
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/vendor/bootstrap/css/bootstrap.min.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/css/icono-arg.css?t37pc8");
+@import url("https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/css/poncho.min.css?t37pc8");
+</style>
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="/profiles/argentinagobar/libraries/jquery.jquery-371/jquery-3.7.1.min.js?v=3.7.1"></script>
+<script>jQuery.migrateMute=true;jQuery.migrateTrace=false;</script>
+<script src="/profiles/argentinagobar/libraries/jquery.jquery-migrate/jquery-migrate-3.5.2.min.js?v=3.5.2"></script>
+<script src="https://www.argentina.gob.ar/misc/jquery-extend-3.4.0.js?v=3.7.1"></script>
+<script src="https://www.argentina.gob.ar/misc/jquery-html-prefilter-3.5.0-backport.js?v=3.7.1"></script>
+<script src="https://www.argentina.gob.ar/misc/jquery.once.js?v=1.2"></script>
+<script src="https://www.argentina.gob.ar/misc/drupal.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/jquery_update/js/jquery_browser.js?v=0.0.1"></script>
+<script src="https://www.argentina.gob.ar/misc/form-single-submit.js?v=7.103"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_areas/js/colorFondoGrupoAtajos.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_tramites/js/resize_media.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_usuarios/js/limpiarCampo.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/entityreference/js/entityreference.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/sites/default/files/languages/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/drupar_filtros/js/mdBlank.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/drupar_filtros/js/galeria.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/drupar_filtros/js/jquery.touchSwipe.min.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/jgm_subastas/js/aabe.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_webform/js/button.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/vuce_calendario/js/button.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_campana_gubernamental/js/argentinagobar_campana_gubernamental.js?t37pc8"></script>
+<script>dataLayer.push({
+          'event_name': 'trackPageview',
+          'nodo_id': '179659',
+          'nodos_padres': '26548',
+          'org_dependencia': 'Ministerio de Seguridad Nacional',
+          'ministerio': 'Ministerio de Seguridad Nacional',
+          'cont_tipo': 'area',
+        });</script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/vendor/bootstrap/js/bootstrap.min.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/js/scrolltotop.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/js/datatables.min.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/js/intl.min.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/js/device-breadcrumb.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/poncho/js/device-breadcrumb-listener.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/contrib/jquery_update/js/jquery_position.js?v=0.0.1"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"argentinagobar_theme","theme_token":"w6c8MiWCIthh-hSUvrdT2jUnwe7C2z6Nr71QqOJXL9w","js":{"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_search\/js\/solr_search.js":1,"profiles\/argentinagobar\/themes\/contrib\/bootstrap\/js\/bootstrap.js":1,"\/profiles\/argentinagobar\/libraries\/jquery.jquery-371\/jquery-3.7.1.min.js":1,"0":1,"\/profiles\/argentinagobar\/libraries\/jquery.jquery-migrate\/jquery-migrate-3.5.2.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/argentinagobar\/modules\/contrib\/jquery_update\/js\/jquery_browser.js":1,"misc\/form-single-submit.js":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_areas\/js\/colorFondoGrupoAtajos.js":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_tramites\/js\/resize_media.js":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_usuarios\/js\/limpiarCampo.js":1,"profiles\/argentinagobar\/modules\/contrib\/entityreference\/js\/entityreference.js":1,"public:\/\/languages\/es_-ItMtJilxuuiLFTCnmK_k5zP6zPqMXd_ji181zFXfvs.js":1,"profiles\/argentinagobar\/modules\/contrib\/drupar_filtros\/js\/mdBlank.js":1,"profiles\/argentinagobar\/modules\/contrib\/drupar_filtros\/js\/galeria.js":1,"profiles\/argentinagobar\/modules\/contrib\/drupar_filtros\/js\/jquery.touchSwipe.min.js":1,"profiles\/argentinagobar\/modules\/contrib\/jgm_subastas\/js\/aabe.js":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_webform\/js\/button.js":1,"profiles\/argentinagobar\/modules\/contrib\/vuce_calendario\/js\/button.js":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_campana_gubernamental\/js\/argentinagobar_campana_gubernamental.js":1,"1":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/vendor\/bootstrap\/js\/bootstrap.min.js":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/js\/scrolltotop.js":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/js\/datatables.min.js":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/js\/intl.min.js":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/js\/device-breadcrumb.js":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/js\/device-breadcrumb-listener.js":1,"profiles\/argentinagobar\/modules\/contrib\/jquery_update\/js\/jquery_position.js":1},"css":{"modules\/system\/system.base.css":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_search\/css\/search.css":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_webform\/css\/custom-chosen.css":1,"modules\/field\/theme\/field.css":1,"profiles\/argentinagobar\/modules\/contrib\/field_hidden\/field_hidden.css":1,"modules\/node\/node.css":1,"profiles\/argentinagobar\/modules\/contrib\/user_prune\/css\/user_prune.css":1,"profiles\/argentinagobar\/modules\/contrib\/views\/css\/views.css":1,"profiles\/argentinagobar\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/argentinagobar\/modules\/contrib\/drupar_filtros\/css\/galeria.css":1,"profiles\/argentinagobar\/modules\/contrib\/jgm_subastas\/css\/aabe.css":1,"profiles\/argentinagobar\/modules\/contrib\/panels\/css\/panels.css":1,"profiles\/argentinagobar\/modules\/contrib\/rate\/rate.css":1,"profiles\/argentinagobar\/modules\/argentinagobar\/argentinagobar_campana_gubernamental\/css\/argentinagobar_campana_gubernamental.css":1,"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/4.7.0\/css\/font-awesome.css":1,"https:\/\/fonts.googleapis.com\/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900\u0026display=swap":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/vendor\/bootstrap\/css\/bootstrap.min.css":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/css\/icono-arg.css":1,"profiles\/argentinagobar\/themes\/contrib\/poncho\/css\/poncho.min.css":1}},"urlIsAjaxTrusted":{"\/seguridad\/estadisticascriminales":true},"argentinagobar_campana_gubernamental":{"id_campaign":{},"ci_jgm_category":"Comunicaci\u00f3n interna - JGM","ci_jgm_action":"Elecciones legislativas 2025","ci_jgm_nodo":{},"ci_jgm_fecha_difusion":"20250728","ci_jgm_label":"https:\/\/www.argentina.gob.ar\/seguridad\/estadisticascriminales"},"ogContext":{"groupType":"node","gid":"179659"},"bootstrap":{"anchorsFix":"0","anchorsSmoothScrolling":"0","formHasError":1,"popoverEnabled":1,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"focus hover","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-179659 node-type-area og-context og-context-node og-context-node-179659 i18n-es">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe title="Script GTM" aria-hidden="true" src="//www.googletagmanager.com/ns.html?id=GTM-P68ZXT" style="display:none;visibility:hidden;height:0;width:0"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <h1 class="sr-only"><small>Presidencia de la Nación</small></h1>
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Pasar al contenido principal</a>
+  </div>
+    <div class="region region-page-top">
+    <section id="campaign" role="dialog" aria-labelledby="campaign01" aria-describedby="campaign02" style="padding:0px">
+  <a href="/elecciones-2025?utm_source=argentinaGobAr&utm_medium=web&utm_campaign=elecciones2025" title="Enlace a Campaña Nacional" id="js-titulo">
+    <div class="container-fluid> bg-warning">
+      <header class="sr-only">
+        <h1 id="campaign01">Campañas Nacionales</h1>
+      </header>
+      <div class="container">
+        <h2 id="campaign02" class="tituloContainerCam">
+          <strong>Elecciones legislativas 2025</strong> <span class="c_bajada"> | Este 26 de octubre votamos con Boleta Única Papel. Conocé más.</span>
+        </h2>
+      </div>
+    </div>
+  </a>
+</section>
+  </div>
+  
+<header>
+    <nav class="navbar navbar-top navbar-default border-bottom-amarillo">
+      <div class="container">
+        <div>
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/" id="navbar-brand" aria-label="Argentina.gob.ar Presidencia de la Nación">
+                              <img src="/profiles/argentinagobar/themes/argentinagobar/argentinagobar_theme/logo_argentina-azul.svg" alt="Argentina.gob.ar" height="50" width="254" />
+                                                      </a>
+              <a class="btn btn-mi-argentina btn-login visible-xs bg-miarg-azul" href="https://mi.argentina.gob.ar" title="Ingresar a Mi Argentina">
+                  <i class="icono-arg-mi-argentina text-white"></i><span class="sr-only">Ir a Mi Argentina</span></a>
+                                      <button onclick="jQuery('.navbar.navbar-top').addClass('state-search');" class="btn btn-mi-argentina btn-login visible-xs" aria-labelledby="edit-keys"><span class="fa fa-search fa-fw"></span><span class="sr-only">Buscar</span></button>       
+                            </div>
+
+                                          <div class="nav navbar-nav navbar-right hidden-xs">
+    <button onclick="jQuery('.navbar.navbar-top').removeClass('state-search');" class="btn btn-link btn-search-reset visible-xs"> <i class="fa fa-times"><span class="sr-only">Cerrar el buscador</span></i></button>
+    <div id="cd-login">
+      
+  <a href="https://mi.argentina.gob.ar/" id="btn-mi-argentina" class="btn hidden-xs p-l-1  btn-login bg-miarg-azul" aria-label="Ingresar a Mi Argentina">
+<i class=" fa-3x fa icono-arg-mi-argentina-extended text-white p-t-0"><span class="sr-only">Mi Argentina</span></i></a>
+</div>
+<!-- <section id="block-argentinagobar-search-apache-solr-search-navbar" class="block block-argentinagobar-search clearfix"> -->
+
+      
+  <div class="pull-left">
+  <form class="main-form" role="search" action="/seguridad/estadisticascriminales" method="post" id="apachesolr-search-custom-page-search-form" accept-charset="UTF-8"><div><input type="hidden" name="form_build_id" value="form-G0_BCSRaKpoVHT6NRanYiGdC1YKVb2SL7vqjcsZbeFw" />
+<input type="hidden" name="form_id" value="apachesolr_search_custom_page_search_form" />
+<div style="display:none;"><div class="form-item form-item-tarro-de-miel form-type-textfield form-group"> <label class="control-label" for="edit-tarro-de-miel">Dejar en blanco</label>
+<input class="form-control form-text" type="text" id="edit-tarro-de-miel" name="tarro_de_miel" value="" size="60" maxlength="128" /></div></div><div class="input-group">
+  <label class="sr-only" for="edit-keys">Buscar en el sitio</label><input placeholder="Buscá en el sitio" id="edit-keys" class="input-search form-control form-text" aria-label="Buscá en el sitio" type="text" name="keys" value="" size="20" maxlength="255" /><span class="input-group-btn"><button class="bg-white btn-search-reset btn btn-primary form-submit" aria-labelledby="edit-keys" aria-label="Buscar" type="submit" id="edit-submit" name="op" value="&lt;i class=&quot;fa fa-search text-primary&quot;&gt;&lt;/i&gt;&lt;span class=&quot;sr-only&quot;&gt;Buscar en el sitio&lt;/span&gt;"><i class="fa fa-search text-primary"></i><span class="sr-only">Buscar en el sitio</span></button>
+</span></div>
+</div></form></div>
+
+<!-- </section> -->
+</div>
+                        
+        </div>
+      </div>
+    </nav>
+  </header>
+<main>
+
+    
+            <span id="main-content"></span>
+      <div class="container">
+                        </div>
+        <div class="region region-content">
+     <div id="block-system-main" class="block block-system clearfix">
+
+      
+    <div class="panel-pane pane-jumbotron"  >
+  
+  
+  <div class="pane-content">
+    
+    <div class="jumbotron m-t-0">
+
+    <div class="jumbotron_bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" ><a itemprop="item" href="/"><span itemprop="name">Inicio</span></a><meta itemprop="position" content="1" /></li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" ><a itemprop="item" href="/seguridad"><span itemprop="name">Ministerio de Seguridad Nacional</span></a><meta itemprop="position" content="2" /></li>
+<li class="active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" ><span itemprop="name">Estadísticas criminales de la República Argentina</span><meta itemprop="position" content="3" /></li>
+</ol>          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="encabezado">
+      <div class="bg-arg-azul container-fluid p-y-2">
+         <div class="container">
+     <div class="row">
+         <div class="col-md-9 col-xs-12 col-sm-12">
+              <h1>Estadísticas criminales de la República Argentina</h1>
+                                 <p>El Sistema Nacional de Información Criminal (SNIC) recolecta información sobre los hechos presuntamente delictuosos registrados por las fuerzas policiales, las fuerzas federales de seguridad y otras entidades oficiales de recepción de denuncias en todo el territorio de la República Argentina.</p>
+	      
+                       </div>
+      </div>
+ </div>
+
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  
+  </div>
+  <div class="container">
+        <div class="row">
+      <div class="col-sm-6">
+            </div>
+      <div class="col-sm-6">
+        <div class="panel-pane pane-texto"  >
+  
+  
+  <div class="pane-content">
+    <div class=""><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@ts_components_2.7.0/dist/css/components.css" type="text/css">
+<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/datosgobar/series-tiempo-ar-explorer@ts_components_2.7.0/dist/js/components.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</div>
+  </div>
+
+  
+  </div>
+      </div>
+    </div>
+  </div>
+<section>
+  <article class="container content_format">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel-pane pane-texto"  >
+  
+  
+  <div class="pane-content">
+    <div class=""><div class="col-xs-12 col-sm-6 col-md-3">
+<div class="dato-nro">
+<div class="h2  text-info"> 3,8  <small></small></div>
+<p class="lead">Tasa de homicidios dolosos 2024 </p>
+<p class="text-muted">Cada 100.000 habitantes.</p>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="dato-nro">
+<div class="h2  text-success"> -12,7%  <small></small></div>
+<p class="lead">Variación 2024/2023.</p>
+<p class="text-muted"></p>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="dato-nro">
+<div class="h2  text-success"> -9,5%  <small></small></div>
+<p class="lead">Variación 2024/2022.</p>
+<p class="text-muted"></p>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3">
+<div class="dato-nro">
+<div class="h2  text-success"> -16,2%  <small></small></div>
+<p class="lead">Variación 2024/2021.</p>
+<p class="text-muted"></p>
+</div>
+</div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-separador"  >
+  
+  
+  <div class="pane-content">
+    <hr>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-alerta"  >
+  
+  
+  <div class="pane-content">
+    <div class="alert alert-default" role="alert">
+  <div class="media">
+      <div class="media-body">
+            <div class="margin-0"><p>Estamos actualizando la información. Pronto podrás acceder a nuevamente.</p>
+</div>
+    </div>
+  </div>
+</div>  </div>
+
+  
+  </div>
+    </div>
+  </article>
+</section>
+<section>
+  <div class="container">
+    <div class="panel-pane pane-texto"  >
+  
+  
+  <div class="pane-content">
+    <div class=""><div class="container" id="delitos_personas_panels">
+    <div class="row ">
+        <div class="col-md-12">
+            <h4 class="h4 section-title">Delitos contra las personas</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <select name="delitos-personas-selector" id="delitos-personas-selector-delitos-id" class="form-control">
+                <option value="1" selected>Homicidios dolosos</option>
+                <option value="2">Homicidios dolosos en grado de tentativa</option>
+                <option value="3">Muertes en Accidentes Viales</option>
+                <option value="4">Homicidios culposos por otros hechos</option>
+                <option value="5">Lesiones dolosas</option>
+                <option value="6">Lesiones culposas en Accidentes Viales</option>
+                <option value="7">Lesiones culposas por otros hechos</option>
+                <option value="8">Otros delitos contra las personas</option>
+                <option value="9">Delitos contra el honor</option>
+                <option value="10">Violaciones</option>
+                <option value="11">Otros delitos contra la integridad sexual</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <select name="delitos-personas-provincias-selector" id="delitos-personas-selector-provincias-id" class="form-control">
+                <option value="arg" selected>Total Argentina</option>
+                <option value="06">Buenos Aires</option>
+                <option value="10">Catamarca</option>
+                <option value="22">Chaco</option>
+                <option value="26">Chubut</option>
+                <option value="02">Ciudad Autónoma de Buenos Aires</option>
+                <option value="14">Córdoba</option>
+                <option value="18">Corrientes</option>
+                <option value="30">Entre Ríos</option>
+                <option value="34">Formosa</option>
+                <option value="38">Jujuy</option>
+                <option value="42">La Pampa</option>
+                <option value="46">La Rioja</option>
+                <option value="50">Mendoza</option>
+                <option value="54">Misiones</option>
+                <option value="58">Neuquén</option>
+                <option value="62">Río Negro</option>
+                <option value="66">Salta</option>
+                <option value="70">San Juan</option>
+                <option value="74">San Luis</option>
+                <option value="78">Santa Cruz</option>
+                <option value="82">Santa Fe</option>
+                <option value="86">Santiago del Estero</option>
+                <option value="94">Tierra del Fuego, Antártida e Islas del Atlántico Sur</option>
+                <option value="90">Tucumán</option>
+            </select>
+        </div>
+    </div>
+    <!-- COMIENZO DE LOS PANELES DE DELITOS-PERSONAS-PROVINCIAS-INDICADORES -->
+    <br>
+    <div class="row panels-row delitos-personas-panel" id="snic_1_hechos_victimas_arg_panel">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div style="margin-top: auto; margin-bottom: auto;" class="center-block card-wrapper" id='snic_1_hechos_arg_card'></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div style="margin-top: auto; margin-bottom: auto;" class="center-block card-wrapper" id='snic_1_victimas_arg_card'> </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="center-block full-width" style="height: 380px; width: 100%;" id='snic_1_victimas_hechos_arg_graphic'></div>
+        </div>
+    </div>
+    <!-- los nuevos paneles se agregan dinámicamente -->
+    <!-- FIN DE LOS PANELES DE DELITOS-PERSONAS-PROVINCIAS-INDICADORES -->
+</div></div>
+  </div>
+
+  
+  </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="panel-pane pane-texto"  >
+  
+  
+  <div class="pane-content">
+    <div class=""><div class="container" id="otros_delitos_panels">
+    <div class="row ">
+        <div class="col-md-12">
+            <h4 class="h4 section-title">Otros delitos</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <select name="otros-delitos-selector" id="otros-delitos-selector-delitos-id" class="form-control">
+                <option value="12" selected>Delitos contra el estado civil</option>
+                <option value="13">Amenazas</option>
+                <option value="14">Otros delitos contra la libertad</option>
+                <option value="15">Robos (excluye los agravados por el resultado de lesiones y/o muertes)</option>
+                <option value="16">Tentativas de robo (excluye las agravadas por el res. de lesiones y/o muerte)</option>
+                <option value="17">Robos agravados por el resultado de lesiones y/o muertes </option>
+                <option value="18">Tentativas de robo agravado por el resultado de lesiones y/o muertes</option>
+                <option value="19">Hurtos</option>
+                <option value="20">Tentativas de hurto</option>
+                <option value="21">Otros delitos contra la propiedad</option>
+                <option value="22">Delitos contra la seguridad pública</option>
+                <option value="23">Delitos contra el orden público</option>
+                <option value="24">Delitos contra la seguridad de la nación</option>
+                <option value="25">Delitos contra los poderes públicos y el orden constitucional</option>
+                <option value="26">Delitos contra la administración pública</option>
+                <option value="27">Delitos contra la fe pública</option>
+                <option value="28">Ley 23.737 (estupefacientes)</option>
+                <option value="29">Otros delitos previstos en leyes especiales</option>
+                <option value="32">Delitos contra el orden económico y financiero</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <select name="otros-delitos-provincias-selector" id="otros-delitos-selector-provincias-id" class="form-control">
+                <option value="arg" selected>Total Argentina</option>
+                <option value="06">Buenos Aires</option>
+                <option value="10">Catamarca</option>
+                <option value="22">Chaco</option>
+                <option value="26">Chubut</option>
+                <option value="02">Ciudad Autónoma de Buenos Aires</option>
+                <option value="14">Córdoba</option>
+                <option value="18">Corrientes</option>
+                <option value="30">Entre Ríos</option>
+                <option value="34">Formosa</option>
+                <option value="38">Jujuy</option>
+                <option value="42">La Pampa</option>
+                <option value="46">La Rioja</option>
+                <option value="50">Mendoza</option>
+                <option value="54">Misiones</option>
+                <option value="58">Neuquén</option>
+                <option value="62">Río Negro</option>
+                <option value="66">Salta</option>
+                <option value="70">San Juan</option>
+                <option value="74">San Luis</option>
+                <option value="78">Santa Cruz</option>
+                <option value="82">Santa Fe</option>
+                <option value="86">Santiago del Estero</option>
+                <option value="94">Tierra del Fuego, Antártida e Islas del Atlántico Sur</option>
+                <option value="90">Tucumán</option>
+            </select>
+        </div>
+    </div>
+    <!-- COMIENZO DE LOS PANELES DE OTROS-DELITOS-PROVINCIAS-INDICADORES -->
+    <br>
+    <div class="row panels-row otros-delitos-panel" id="snic_12_hechos_arg_panel">
+        <div style="margin-top: auto; margin-bottom: auto;" class="col-xs-12 col-sm-6 col-md-6">
+            <div class="center-block card-wrapper" id='snic_12_hechos_arg_card'></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="center-block full-width" style="height: 380px; width: 100%;" id='snic_12_hechos_arg_graphic'></div>
+        </div>
+    </div>
+    <!-- los nuevos paneles de provincia-indicadore se agregan dinámicamente -->
+    <!-- FIN DE LOS PANELES DE OTROS-DELITOS-PROVINCIAS-INDICADORES -->
+</div></div>
+  </div>
+
+  
+  </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="panel-pane pane-texto"  >
+  
+  
+  <div class="pane-content">
+    <div class=""><h2 class="h3">Descargas</h2>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-atajos"  >
+  
+  
+  <div class="pane-content">
+    <div class="row panels-row m-t-2 ">
+              <div class="col-xs-12 col-sm-6 col-md-6"><a href="/seguridad/estadisticascriminales/informes" class="panel panel-default"><div class="panel-body">
+  <div class="media">
+        <div class="media-left padding-20">
+      <i class="fa fa-fw fa-2x icono-arg-acrobat text-primary"></i>
+    </div>
+        <div class="media-body">
+      <h3>Informes</h3>
+          </div>
+  </div>
+</div>
+</a></div>
+              <div class="col-xs-12 col-sm-6 col-md-6"><a href="/seguridad/estadisticascriminales/bases-de-datos" class="panel panel-default"><div class="panel-body">
+  <div class="media">
+        <div class="media-left padding-20">
+      <i class="fa fa-fw fa-2x icono-arg-database text-primary"></i>
+    </div>
+        <div class="media-body">
+      <h3>Bases de datos</h3>
+          </div>
+  </div>
+</div>
+</a></div>
+      </div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-separador"  >
+  
+  
+  <div class="pane-content">
+    <hr>  </div>
+
+  
+  </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="panel-pane pane-texto"  >
+  
+  
+  <div class="pane-content">
+    <div class=""><div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="alert alert-info">
+            <div class="media">
+                <div class="media-left"> <i class="fa fa-check fa-fw fa-4x"></i></div>
+                <div class="media-body">
+                    <h5>Evaluación de calidad estadística</h5>
+                    <p>El Centro de Excelencia para información estadística de Gobierno, Seguridad Pública, Victimización y Justicia de la Oficina de las Naciones Unidas contra la Droga y el Delito (UNODC) otorgan el presente Grado de Calidad Estadística tipo</p>
+                    <p class="text-center h1 text-secondary">"A"</p>
+                    <p>al Ministerio de Seguridad de la República Argentina, obtenido de la revisión de calidad de la operación estadística denominada Sistema Nacional de Información Criminal (SNIC) con base en los Principios Fundamentales de las Estadísticas Oficiales de las Naciones Unidas.</p>
+                    <p>Ciudad Autómona de Buenos Aires, 28 de septiembre de 2018.</p>
+                    <div class="row m-t-4">
+                        <div class="col-xs-12 col-sm-12 col-md-6"><a href="http://www.cdeunodc.inegi.org.mx/" target="_blank"><img alt="Centro de Excelencia para Información Estadística de Gobierno, Seguridad Pública, Victimización y Justicia" src="/sites/default/files/cdeunodc-logo.png"> </a></div>
+                        <div class="col-xs-12 col-sm-12 col-md-6"><a href="https://www.unodc.org/unodc/es/index.html" target="_blank"><img alt="Oficina de las Naciones Unidas contra las Drogas y el Delito" src="/sites/default/files/unodc-logo.png"> </a></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+  </div>
+
+  
+  </div>
+    <div class="row">
+    <div class="col-sm-6">
+          </div>
+    <div class="col-sm-6">
+      <div class="panel-pane pane-texto"  >
+  
+  
+  <div class="pane-content">
+    <div class=""><script>
+$(document).ready(function() {
+    var INDICS_PARAMS = {
+        "hechos": { "color": 0, "title": "Hechos" },
+        "victimas": { "color": 3, "title": "Víctimas" }
+    }
+    function delitosPanelCard(provinceId, delitoId, variable) {
+        var serieId = "snic_" + delitoId + "_" + variable + "_" + provinceId
+        var cardTargetDiv = serieId + "_card"
+        TSComponents.Card.render(cardTargetDiv, {
+            serieId: serieId,
+            decimals: 0,
+            color: INDICS_PARAMS[variable]["color"],
+            title: INDICS_PARAMS[variable]["title"]
+        });
+    }
+    function delitosPersonasPanelGraphic(provinceId, delitoId) {
+        var serieIdHechos = "snic_" + delitoId + "_hechos_" + provinceId
+        var serieIdVictimas = "snic_" + delitoId + "_victimas_" + provinceId
+        var graphicTargetDiv = "snic_" + delitoId + "_victimas_hechos_" + provinceId + "_graphic"
+        var chartTypes = {}
+        chartTypes[serieIdHechos] = "column"
+        chartTypes[serieIdVictimas] = "column"
+        var seriesAxis = {}
+        seriesAxis[serieIdHechos] = "left"
+        seriesAxis[serieIdVictimas] = "left"
+        var decimalTooltips = {}
+        decimalTooltips[serieIdHechos] = 0
+        decimalTooltips[serieIdVictimas] = 0
+        TSComponents.Graphic.render(graphicTargetDiv, {
+            graphicUrl: "https://apis.datos.gob.ar/series/api/series?ids=" + serieIdHechos + "," + serieIdVictimas,
+            colors: [INDICS_PARAMS["hechos"]["color"],
+                INDICS_PARAMS["victimas"]["color"]
+            ],
+            chartTypes: chartTypes,
+            seriesAxis: seriesAxis,
+            decimalTooltips: decimalTooltips,
+            datePickerEnabled: false,
+            zoom: false,
+            navigator: true,
+            decimalRightAxis: 0,
+            decimalLeftAxis: 0
+        });
+    }
+    function delitosPersonasPanelHtml(provinceId, delitoId) {
+        var delitosPersonasPanelId = "#snic_" + delitoId + "_hechos_victimas_" + provinceId + "_panel"
+        if ($(delitosPersonasPanelId).length) {
+            // it exists
+        } else {
+            var panelTemplate = $("#snic_1_hechos_victimas_arg_panel").prop('outerHTML')
+            var newPanelHtml = panelTemplate.replace(/arg/g, provinceId).replace(/1/g, delitoId)
+            $("#delitos_personas_panels").append($(newPanelHtml))
+        }
+    }
+    function delitosPersonasPanel(provinceId, delitoId) {
+        delitosPersonasPanelHtml(provinceId, delitoId)
+        delitosPanelCard(provinceId, delitoId, "hechos")
+        delitosPanelCard(provinceId, delitoId, "victimas")
+        delitosPersonasPanelGraphic(provinceId, delitoId)
+    }
+    // crea el selector de DELITOS-PERSONAS-DELITOS
+    $("#delitos-personas-selector-delitos-id").on("change", function() {
+        var selectorDelitos = $(this);
+        var selectorProvincias = $("#delitos-personas-selector-provincias-id");
+        var delitoId = selectorDelitos.val()
+        var provinceId = selectorProvincias.val()
+        // hide all
+        $(".delitos-personas-panel").each(function() {
+            $(this).hide();
+        });
+        // crea el panel si todavía no existe
+        delitosPersonasPanel(provinceId, delitoId)
+        // show selected
+        $("#snic_" + delitoId + "_hechos_victimas_" + provinceId + "_panel").show();
+    });
+    // crea el selector de DELITOS-PERSONAS-PROVINCIAS
+    $("#delitos-personas-selector-provincias-id").on("change", function() {
+        var selectorDelitos = $("#delitos-personas-selector-delitos-id");
+        var selectorProvincias = $(this);
+        var provinceId = selectorProvincias.val()
+        var delitoId = selectorDelitos.val()
+        // hide all
+        $(".delitos-personas-panel").each(function() {
+            $(this).hide();
+        });
+        // crea el panel si todavía no existe
+        delitosPersonasPanel(provinceId, delitoId)
+        // show selected
+        $("#snic_" + delitoId + "_hechos_victimas_" + provinceId + "_panel").show();
+    });
+    // crea el primer panel de indicadores de delitos contra las personas
+    delitosPersonasPanel("arg", "1")
+})
+</script></div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-texto"  >
+  
+  
+  <div class="pane-content">
+    <div class=""><script>
+$(document).ready(function() {
+    var INDICS_PARAMS = {
+        "hechos": { "color": 0, "title": "Hechos" },
+        "victimas": { "color": 3, "title": "Víctimas" }
+    }
+    function delitosPanelCard(provinceId, delitoId, variable) {
+        var serieId = "snic_" + delitoId + "_" + variable + "_" + provinceId
+        var cardTargetDiv = serieId + "_card"
+        TSComponents.Card.render(cardTargetDiv, {
+            serieId: serieId,
+            decimals: 0,
+            color: INDICS_PARAMS[variable]["color"],
+            title: INDICS_PARAMS[variable]["title"]
+        });
+    }
+    function otrosDelitosPanelGraphic(provinceId, delitoId) {
+        var serieIdHechos = "snic_" + delitoId + "_hechos_" + provinceId
+        var graphicTargetDiv = "snic_" + delitoId + "_hechos_" + provinceId + "_graphic"
+        var chartTypes = {}
+        chartTypes[serieIdHechos] = "column"
+        // chartTypes[serieIdVictimas] = "column"
+        var seriesAxis = {}
+        seriesAxis[serieIdHechos] = "left"
+        // seriesAxis[serieIdVictimas] = "left"
+        var decimalTooltips = {}
+        decimalTooltips[serieIdHechos] = 0
+        // decimalTooltips[serieIdVictimas] = 0
+        TSComponents.Graphic.render(graphicTargetDiv, {
+            graphicUrl: "https://apis.datos.gob.ar/series/api/series?ids=" + serieIdHechos,
+            colors: [INDICS_PARAMS["hechos"]["color"]],
+            chartTypes: chartTypes,
+            seriesAxis: seriesAxis,
+            decimalTooltips: decimalTooltips,
+            datePickerEnabled: false,
+            zoom: false,
+            navigator: true,
+            decimalRightAxis: 0,
+            decimalLeftAxis: 0
+        });
+    }
+    function otrosDelitosPanelHtml(provinceId, delitoId) {
+        var delitosPersonasPanelId = "#snic_" + delitoId + "_hechos_" + provinceId + "_panel"
+        if ($(delitosPersonasPanelId).length) {
+            // it exists
+        } else {
+            var panelTemplate = $("#snic_12_hechos_arg_panel").prop('outerHTML')
+            var newPanelHtml = panelTemplate.replace(/arg/g, provinceId).replace(/12/g, delitoId)
+            $("#otros_delitos_panels").append($(newPanelHtml))
+        }
+    }
+    function otrosDelitosPanel(provinceId, delitoId) {
+        otrosDelitosPanelHtml(provinceId, delitoId)
+        delitosPanelCard(provinceId, delitoId, "hechos")
+        otrosDelitosPanelGraphic(provinceId, delitoId)
+    }
+    // crea el selector de OTROS-DELITOS-DELITOS
+    $("#otros-delitos-selector-delitos-id").on("change", function() {
+        var selectorDelitos = $(this);
+        var selectorProvincias = $("#otros-delitos-selector-provincias-id");
+        var delitoId = selectorDelitos.val()
+        var provinceId = selectorProvincias.val()
+        // hide all
+        $(".otros-delitos-panel").each(function() {
+            $(this).hide();
+        });
+        // crea el panel si todavía no existe
+        otrosDelitosPanel(provinceId, delitoId)
+        // show selected
+        $("#snic_" + delitoId + "_hechos_" + provinceId + "_panel").show();
+    });
+    // crea el selector de OTROS-DELITOS-PROVINCIAS
+    $("#otros-delitos-selector-provincias-id").on("change", function() {
+        var selectorDelitos = $("#otros-delitos-selector-delitos-id");
+        var selectorProvincias = $(this);
+        var delitoId = selectorDelitos.val()
+        var provinceId = selectorProvincias.val()
+        // hide all
+        $(".otros-delitos-panel").each(function() {
+            $(this).hide();
+        });
+        // crea el panel si todavía no existe
+        otrosDelitosPanel(provinceId, delitoId)
+        // show selected
+        $("#snic_" + delitoId + "_hechos_" + provinceId + "_panel").show();
+    });
+    // crea el primer panel de indicadores de delitos contra las personas
+    otrosDelitosPanel("arg", "12")
+})
+</script></div>
+  </div>
+
+  
+  </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+</div>
+  </div>
+
+    
+</main>
+
+<footer class="main-footer">
+  <div class="container">
+  <div class="row">
+      <div class="col-md-4 col-sm-12">
+                        <div class="region region-footer1">
+    <section id="block-menu-menu-footer-1" class="block block-menu clearfix">
+
+        <h2 class="block-title h3 section-title h3 section-title">Trámites</h2>
+    
+  <ul class="menu nav"><li class="first leaf"><a href="/turnos">Turnos</a></li>
+<li class="leaf"><a href="/innovacion/tramites-distancia-tad">Trámites a distancia</a></li>
+<li class="last leaf"><a href="/miargentina/mesadeayuda">Atención a la ciudadanía</a></li>
+</ul>
+</section>
+  </div>
+                </div>
+      <div class="col-md-4 col-sm-12">
+                        <div class="region region-footer2">
+    <section id="block-menu-menu-footer-2" class="block block-menu clearfix">
+
+        <h2 class="block-title h3 section-title h3 section-title">Acerca de la República Argentina</h2>
+    
+  <ul class="menu nav"><li class="first leaf"><a href="/pais">Nuestro país</a></li>
+<li class="leaf"><a href="/normativa">Leyes argentinas</a></li>
+<li class="leaf"><a href="/organismos">Organismos</a></li>
+<li class="last leaf"><a href="/desregulacion/mapa-del-estado">Mapa del Estado</a></li>
+</ul>
+</section>
+  </div>
+                </div>
+      <div class="col-md-4 col-sm-12">
+                        <div class="region region-footer3">
+    <section id="block-menu-menu-footer-3" class="block block-menu clearfix">
+
+        <h2 class="block-title h3 section-title h3 section-title">Acerca de Argentina.gob.ar</h2>
+    
+  <ul class="menu nav"><li class="first leaf"><a href="/acerca">Acerca de este sitio</a></li>
+<li class="leaf"><a href="/terminos-y-condiciones">Términos y condiciones</a></li>
+<li class="last leaf"><a href="/sugerencias">Sugerencias</a></li>
+</ul>
+</section>
+  </div>
+                </div>
+  </div>
+  </div>
+  <div class="container-fluid border-top-amarillo">
+    <div class="row sub-footer">
+      <div class="container">
+        <div class="col-sm-6 m-y-1 p-x-0">
+                        <!-- <p class="text-muted small m-b-2">
+              <a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank" rel="noreferrer">Los contenidos de Argentina.gob.ar están licenciados bajo Creative Commons Atribución 4.0 Internacional</a>            </p> -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://www.argentina.gob.ar/profiles/argentinagobar/modules/argentinagobar/argentinagobar_search/js/solr_search.js?t37pc8"></script>
+<script src="https://www.argentina.gob.ar/profiles/argentinagobar/themes/contrib/bootstrap/js/bootstrap.js?t37pc8"></script>
+  <div id="scrolltotop_parent">
+      <div tabindex="0" id="scrolltotop_arrow">
+        <i class="icono fa fa-arrow-circle-up" title="Scroll hacia arriba"></i><span class="sr-only">Scroll hacia arriba</span>
+      </div>
+  </div>
+</body>
+</html>

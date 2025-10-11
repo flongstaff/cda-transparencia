@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_d2c5f860-548c-44f5-a63c-03a66189a345",
+      "datasetTitle": "Mapas de Generación y Transporte Eléctrico",
+      "lastProcessed": "2025-10-09T07:19:24.672Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_d2c5f860-548c-44f5-a63c-03a66189a345",
+    "title": "Mapas de Generación y Transporte Eléctrico",
+    "description": " Mapas de generación y transporte eléctrico por región.\r\n",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-03-09T13:17:39.561137",
+    "modified": "2024-09-05T07:47:38.064146",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

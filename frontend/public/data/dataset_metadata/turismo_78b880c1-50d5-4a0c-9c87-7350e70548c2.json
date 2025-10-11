@@ -1,0 +1,284 @@
+{
+  "files": {
+    "turistas_pernoctes_estadia_media_turistas_no_residentes_por_residencia_ezeiza_aeroparque_mensual.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_estadia_media_turistas_no_residentes_por_residencia_ezeiza_aeroparque_mensual.csv",
+      "format": "CSV",
+      "title": "Turistas no residentes, pernoctaciones y estadía media mensual en Ezeiza y Aeroparque",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/32cd65c4-7558-48cf-a8ac-bbb07147b5a1",
+      "lastProcessed": "2025-10-09T06:17:00.291Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_estadia_media_turistas_no_residentes_por_residencia_ezeiza_aeroparque_trimest.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_estadia_media_turistas_no_residentes_por_residencia_ezeiza_aeroparque_trimest.csv",
+      "format": "CSV",
+      "title": "Turistas no residentes, pernoctaciones y estadía media trimestral en Ezeiza y Aeroparque",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/5a6eaddb-a874-4657-a184-8795e870d6b7",
+      "lastProcessed": "2025-10-09T06:17:03.689Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_estadia_media_turistas_no_residentes_por_residencia_aeropuerto_cordoba_trimes.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_estadia_media_turistas_no_residentes_por_residencia_aeropuerto_cordoba_trimes.csv",
+      "format": "CSV",
+      "title": "Turistas no residentes, pernoctaciones y estadía media trimestral en el Aeropuerto Internacional de Córdoba",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/dae8b7f8-f3dc-431b-887e-3de4b54f09a9",
+      "lastProcessed": "2025-10-09T06:17:07.005Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_estadia_media_turistas_no_residentes_por_residencia_aeropuerto_mendoza_trimes.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_estadia_media_turistas_no_residentes_por_residencia_aeropuerto_mendoza_trimes.csv",
+      "format": "CSV",
+      "title": "Turistas no residentes, pernoctaciones y estadía media trimestral en el Aeropuerto Internacional de Mendoza",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/c112ca01-2563-4a48-a8d6-1126af9a5f1d",
+      "lastProcessed": "2025-10-09T06:17:10.416Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_estadia_media_turistas_no_residentes_por_residencia_puerto_buenos_aires_trime.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_estadia_media_turistas_no_residentes_por_residencia_puerto_buenos_aires_trime.csv",
+      "format": "CSV",
+      "title": "Turistas no residentes, pernoctaciones y estadía media trimestral en el Puerto de Buenos Aires",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/6ca84a56-8006-435b-8062-e00868263174",
+      "lastProcessed": "2025-10-09T06:17:13.844Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_estadia_media_turistas_no_residentes_por_residencia_cristo_redentor_trimestra.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_estadia_media_turistas_no_residentes_por_residencia_cristo_redentor_trimestra.csv",
+      "format": "CSV",
+      "title": "Turistas no residentes, pernoctaciones y estadía media trimestral en el Paso Internacional Cristo Redentor",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/941a5faf-898d-47f5-b889-25e3919bc468",
+      "lastProcessed": "2025-10-09T06:17:17.287Z",
+      "status": "processed"
+    },
+    "turistas_no_residentes_por_motivo_de_viaje_segun_paso_trimestral.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_no_residentes_por_motivo_de_viaje_segun_paso_trimestral.csv",
+      "format": "CSV",
+      "title": "Turistas no residentes según principal motivo de viaje, por paso y trimestre",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/8ba3c9e8-3d57-4d31-90a7-f6a0ab5bd51b",
+      "lastProcessed": "2025-10-09T06:17:20.550Z",
+      "status": "processed"
+    },
+    "turistas_no_residentes_por_tipo_de_alojamiento_segun_paso_trimestral.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_no_residentes_por_tipo_de_alojamiento_segun_paso_trimestral.csv",
+      "format": "CSV",
+      "title": "Turistas no residentes según principal tipo de alojamiento, paso y trimestre",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/eba3bb00-e0d6-4d5f-bc87-364a3e0569dd",
+      "lastProcessed": "2025-10-09T06:17:23.943Z",
+      "status": "processed"
+    },
+    "gasto_total_promedio_diario_por_turista_en_usd_turistas_no_residentes_trimestral_segun_paso.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "gasto_total_promedio_diario_por_turista_en_usd_turistas_no_residentes_trimestral_segun_paso.csv",
+      "format": "CSV",
+      "title": "Gasto total, gasto por turista no residente y gasto promedio diario, en USD, por paso y trimestre",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/9a2c43e4-8037-4cf3-8559-bdab2a37ca94",
+      "lastProcessed": "2025-10-09T06:17:27.221Z",
+      "status": "processed"
+    },
+    "ficha_eti.pdf": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "ficha_eti.pdf",
+      "format": "PDF",
+      "title": "Ficha Técnica: ETI",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/a72b7476-fefd-4fe0-991d-a1cdaf15239f",
+      "lastProcessed": "2025-10-09T06:17:31.009Z",
+      "status": "processed"
+    },
+    "serie-tiempo-eti-trimestral.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "serie-tiempo-eti-trimestral.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo - Trimestral",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/54441076-c475-42ac-a844-47f57e688a84",
+      "lastProcessed": "2025-10-09T06:17:34.996Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_por_provincia_segun_origen_y_destinos_visitados_ezeiza_aeroparque.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_por_provincia_segun_origen_y_destinos_visitados_ezeiza_aeroparque.csv",
+      "format": "CSV",
+      "title": "Turistas y pernoctes según origen por provincia de destino y destinos visitados",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/4af57562-9ca5-4301-8865-e04e9bfdf327",
+      "lastProcessed": "2025-10-09T06:17:38.337Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_estadia_media_turistas_residentes_por_destino_ezeiza_aeroparque_mensual.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_estadia_media_turistas_residentes_por_destino_ezeiza_aeroparque_mensual.csv",
+      "format": "CSV",
+      "title": "Turistas residentes, pernoctaciones y estadía media mensual en Ezeiza y Aeroparque",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/63a4fd23-fe81-4cd1-b5bc-ca3abf6dda9d",
+      "lastProcessed": "2025-10-09T06:17:41.546Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_estadia_media_turistas_residentes_por_destino_ezeiza_aeroparque_trimestral.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_estadia_media_turistas_residentes_por_destino_ezeiza_aeroparque_trimestral.csv",
+      "format": "CSV",
+      "title": "Turistas residentes, pernoctaciones y estadía media trimestral en Ezeiza y Aeroparque",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/6373ee50-8eea-461b-8883-caa31faf0a07",
+      "lastProcessed": "2025-10-09T06:17:44.927Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_estadia_media_turistas_residentes_por_destino_aeropuerto_cordoba_trimestral.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_estadia_media_turistas_residentes_por_destino_aeropuerto_cordoba_trimestral.csv",
+      "format": "CSV",
+      "title": "Turistas residentes, pernoctaciones y estadía media trimestral en el Aeropuerto Internacional de Córdoba",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/badeabbe-0703-4750-b79d-bb235eb45e36",
+      "lastProcessed": "2025-10-09T06:17:48.189Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_estadia_media_turistas_residentes_por_destino_aeropuerto_mendoza_trimestral.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_estadia_media_turistas_residentes_por_destino_aeropuerto_mendoza_trimestral.csv",
+      "format": "CSV",
+      "title": "Turistas residentes, pernoctaciones y estadía media trimestral en el Aeropuerto Internacional de Mendoza",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/cd2cb69a-8aaa-4570-b519-0f1f2891bb61",
+      "lastProcessed": "2025-10-09T06:17:51.460Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_estadia_media_turistas_residentes_por_destino_puerto_buenos_aires_trimestral.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_estadia_media_turistas_residentes_por_destino_puerto_buenos_aires_trimestral.csv",
+      "format": "CSV",
+      "title": "Turistas residentes, pernoctaciones y estadía media trimestral en el Puerto de Buenos Aires",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/56917b04-edf9-4079-b904-cd61b7a63465",
+      "lastProcessed": "2025-10-09T06:17:54.882Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_estadia_media_turistas_residentes_por_destino_cristo_redentor_trimestral.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_estadia_media_turistas_residentes_por_destino_cristo_redentor_trimestral.csv",
+      "format": "CSV",
+      "title": "Turistas residentes, pernoctaciones y estadía media trimestral en el Paso Internacional Cristo Redentor",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/23c84cba-c265-405a-a135-ca98273c0729",
+      "lastProcessed": "2025-10-09T06:17:58.353Z",
+      "status": "processed"
+    },
+    "turistas_residentes_por_motivo_de_viaje_segun_paso_trimestral.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_residentes_por_motivo_de_viaje_segun_paso_trimestral.csv",
+      "format": "CSV",
+      "title": "Turistas residentes según principal motivo de viaje, por paso y trimestre",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/9a0dd910-3af7-41ea-aff2-cc89a2dedad3",
+      "lastProcessed": "2025-10-09T06:18:01.615Z",
+      "status": "processed"
+    },
+    "turistas_residentes_por_tipo_de_alojamiento_segun_paso_trimestral.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_residentes_por_tipo_de_alojamiento_segun_paso_trimestral.csv",
+      "format": "CSV",
+      "title": "Turistas residentes según principal tipo de alojamiento, paso y trimestre",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/6c938f69-ad6f-4bfa-82b1-c4df4b1d522e",
+      "lastProcessed": "2025-10-09T06:18:04.867Z",
+      "status": "processed"
+    },
+    "gasto_total_promedio_diario_por_turista_en_usd_turistas_residentes_trimestral_segun_paso.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "gasto_total_promedio_diario_por_turista_en_usd_turistas_residentes_trimestral_segun_paso.csv",
+      "format": "CSV",
+      "title": "Gasto total, gasto por turista residente y gasto promedio diario, en USD, por paso y trimestre",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/42801ab6-0fc6-476d-8f7c-9ecfc9a9e6e1",
+      "lastProcessed": "2025-10-09T06:18:08.176Z",
+      "status": "processed"
+    },
+    "serie-tiempo-eti-mensual.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "serie-tiempo-eti-mensual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo - Mensual",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/0b1f4fb0-c7b8-48f7-bcb2-a820b88f9a08",
+      "lastProcessed": "2025-10-09T06:18:11.523Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_por_provincia_segun_destinos_visitados_y_alojamiento_ezeiza_aeroparque_trimes.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_por_provincia_segun_destinos_visitados_y_alojamiento_ezeiza_aeroparque_trimes.csv",
+      "format": "CSV",
+      "title": "Turistas y pernoctes según principal tipo de alojamiento utilizado en su viaje a la Argentina, por provincia de destino y destinos visitados",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/e4efea07-7c17-42e8-9fb4-197777e43976",
+      "lastProcessed": "2025-10-09T06:18:14.933Z",
+      "status": "processed"
+    },
+    "turistas_pernoctes_por_provincia_segun_destinos_visitados_y_motivo_de_viaje_ezeiza_aeroparque_tr.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_pernoctes_por_provincia_segun_destinos_visitados_y_motivo_de_viaje_ezeiza_aeroparque_tr.csv",
+      "format": "CSV",
+      "title": "Turistas y pernoctes según motivo de viaje, por provincia de destino y destinos visitados",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/973b9964-1ec9-43c0-9f3b-a842bc5b41f9",
+      "lastProcessed": "2025-10-09T06:18:18.399Z",
+      "status": "processed"
+    },
+    "gasto_turistas_no_residentes_por_provincia_segun_destinos_visitados_ezeiza_aeroparque_trimestral.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "gasto_turistas_no_residentes_por_provincia_segun_destinos_visitados_ezeiza_aeroparque_trimestral.csv",
+      "format": "CSV",
+      "title": "Turistas, pernoctes y gasto (en el país y en la provincia), por provincia de destino y destinos visitados",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/09cee5f8-933c-4653-afb1-b7821bf8634f",
+      "lastProcessed": "2025-10-09T06:18:21.784Z",
+      "status": "processed"
+    },
+    "turistas_no_residentes_por_motivo_de_viaje_desagregado_todos_los_pasos_trimestral.csv": {
+      "datasetId": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+      "datasetTitle": "Encuesta de Turismo Internacional (ETI)",
+      "fileName": "turistas_no_residentes_por_motivo_de_viaje_desagregado_todos_los_pasos_trimestral.csv",
+      "format": "CSV",
+      "title": "Turistas y casos muestrales según motivo de viaje",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/78b880c1-50d5-4a0c-9c87-7350e70548c2/resource/d3490d30-251b-47b2-8e9b-53ec198305c9",
+      "lastProcessed": "2025-10-09T06:18:25.186Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "turismo_78b880c1-50d5-4a0c-9c87-7350e70548c2",
+    "title": "Encuesta de Turismo Internacional (ETI)",
+    "description": "Operativo de encuesta continuo desde el año 2004 realizado conjuntamente el INDEC y la Subsecretaría de Turismo. Refiere a estadísticas de turismo internacional de Argentina en los siguientes pasos relevados: Aerop. Int. de Ezeiza, Aerop. J. Newbery, Aerop. Int. de Córdoba, Aerop. Int. de Mendoza, Puerto de Bs. As. y el paso terrestre Cristo Redentor. Se cuenta con información de turistas residentes y no residentes, pernoctes, gasto, tipo de alojamiento, motivo del viaje, entre otras variables.",
+    "theme": [
+      "gove",
+      "soci"
+    ],
+    "superTheme": [
+      "GOVE",
+      "SOCI"
+    ],
+    "issued": "2022-05-30T12:49:50.198272",
+    "modified": "2024-07-24T15:39:46.621167",
+    "publisher": {
+      "mbox": "estadistica@turismo.gob.ar",
+      "name": "Subsecretaría de Turismo. Dirección Nacional de Mercados y Estadística"
+    },
+    "landingPage": "http://datos.yvera.gob.ar/dataset/"
+  }
+}

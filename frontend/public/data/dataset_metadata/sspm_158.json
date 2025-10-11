@@ -1,0 +1,32 @@
+{
+  "files": {
+    "remuneracion-imponible-promedio-trabajadores-estables-ripte-total-pais-pesos-serie-mensual.csv": {
+      "datasetId": "sspm_158",
+      "datasetTitle": "Remuneración imponible promedio de los trabajadores estables (RIPTE)",
+      "fileName": "remuneracion-imponible-promedio-trabajadores-estables-ripte-total-pais-pesos-serie-mensual.csv",
+      "format": "CSV",
+      "title": "Remuneración imponible promedio de los trabajadores estables RIPTE. Total país en pesos. Serie mensual",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:28.123Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_158",
+    "title": "Remuneración imponible promedio de los trabajadores estables (RIPTE)",
+    "description": "Remuneración imponible promedio de los trabajadores estables (RIPTE). Total país en pesos",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:01:48.624166",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

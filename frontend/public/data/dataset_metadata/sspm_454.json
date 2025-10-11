@@ -1,0 +1,52 @@
+{
+  "files": {
+    "salas-cine-caba.csv": {
+      "datasetId": "sspm_454",
+      "datasetTitle": "Salas cinematográficas y espectadores",
+      "fileName": "salas-cine-caba.csv",
+      "format": "CSV",
+      "title": "Cantidad de salas cinematográficas, espectadores y espectadores por sala. Ciudad de Buenos Aires (DISCONTINUADO)",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:25.273Z",
+      "status": "processed"
+    },
+    "salas-cine-gba.csv": {
+      "datasetId": "sspm_454",
+      "datasetTitle": "Salas cinematográficas y espectadores",
+      "fileName": "salas-cine-gba.csv",
+      "format": "CSV",
+      "title": "Cantidad de salas cinematográficas, espectadores y espectadores por sala. 24 partidos del Gran Buenos Aires (DISCONTINUADO)",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:26.429Z",
+      "status": "processed"
+    },
+    "salas-cine.csv": {
+      "datasetId": "sspm_454",
+      "datasetTitle": "Salas cinematográficas y espectadores",
+      "fileName": "salas-cine.csv",
+      "format": "CSV",
+      "title": "Cantidad de salas cinematográficas, espectadores y espectadores por sala. Total país",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:27.481Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_454",
+    "title": "Salas cinematográficas y espectadores",
+    "description": "Cantidad de salas cinematográficas, espectadores y espectadores por sala",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2019-03-11",
+    "modified": "2025-03-24T10:02:47.290648",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

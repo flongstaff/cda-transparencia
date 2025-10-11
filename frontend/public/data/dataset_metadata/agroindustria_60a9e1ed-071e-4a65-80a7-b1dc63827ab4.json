@@ -1,0 +1,42 @@
+{
+  "files": {
+    "mijo-serie-1935-2023-anual.csv": {
+      "datasetId": "agroindustria_60a9e1ed-071e-4a65-80a7-b1dc63827ab4",
+      "datasetTitle": "Mijo - siembra, cosecha, producción, rendimiento",
+      "fileName": "mijo-serie-1935-2023-anual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo de mijo",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/60a9e1ed-071e-4a65-80a7-b1dc63827ab4/resource/cb737197-9d24-4a7e-88ae-a8c8b3f5e358",
+      "lastProcessed": "2025-10-09T06:51:19.029Z",
+      "status": "processed"
+    },
+    "mijo-serie-1935-2023.csv": {
+      "datasetId": "agroindustria_60a9e1ed-071e-4a65-80a7-b1dc63827ab4",
+      "datasetTitle": "Mijo - siembra, cosecha, producción, rendimiento",
+      "fileName": "mijo-serie-1935-2023.csv",
+      "format": "CSV",
+      "title": "Mijo - serie siembra, cosecha, producción, rendimiento",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/60a9e1ed-071e-4a65-80a7-b1dc63827ab4/resource/121041ab-2dca-4087-bead-07fa149ad180",
+      "lastProcessed": "2025-10-09T06:51:22.715Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_60a9e1ed-071e-4a65-80a7-b1dc63827ab4",
+    "title": "Mijo - siembra, cosecha, producción, rendimiento",
+    "description": "Serie histórica de la superficie sembrada, superficie cosechada, producción y rendimiento de mijo en la Argentina desde 1935.",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2021-09-20T17:32:53.653206",
+    "modified": "2025-04-15T13:37:47.864007",
+    "publisher": {
+      "mbox": "direstiagri@magyp.gob.ar",
+      "name": "Ministerio de Agricultura, Ganadería y Pesca - Dirección Nacional de Agricultura"
+    },
+    "landingPage": "https://datos.agroindustria.gob.ar/dataset/mijo-siembra-cosecha-produccion-rendimiento"
+  }
+}

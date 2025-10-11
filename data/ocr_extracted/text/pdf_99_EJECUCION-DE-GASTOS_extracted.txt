@@ -1,0 +1,35 @@
+Municipalidad de
+Carmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS
+Ejercicio
+:Hoja: 1 de 285 R.A.F.A.M.
+18/09/2023 20:30
+Del 02/01/2023 al 30/06/2023
+2023Partidas Incluidas respecto al Crédito Disponible: Todas
+Partidas Incluidas respecto al Crédito Vigente: Todas
+Devengado
+no pagadoCrédito
+DisponiblePagado Devengado Compromiso Preventivo Crédito
+VigenteModifica
+cionesCrédito
+AprobadoFuen.
+Fin.Objeto del GastoCrédito Vig.
+- Devengado
+Jurisdicción: 1110101000 - Conduccion Superior
+Apertura Programática: 01.00.00 - Desarrallo politicas centrales
+01.01.00 - Cond. y Gest. de Politicas Centrales (110)
+110 - Tesoro Municipal
+1.0.0.0 - Gastos en personal
+1.1.0.0 - Personal permanente
+1.1.1.0 - Retribuciones del cargo
+1.1.1.1 - Personal Superior 5.223.293,24 0,00 5.223.293,24 0,00 4.495.724,80 4.495.724,80 4.495.724,80 727.568,44 0,00 727.568,44
+1.1.1.2 - Personal Jerárquico 0,00 0,00 0,00 0,00 1.317.079,40 1.317.079,40 1.317.079,40 -1.317.079,40 0,00 -1.317.079,40
+1.1.1.5 - Personal Administrativo 244.395,00 0,00 244.395,00 0,00 501.755,00 501.755,00 501.755,00 -257.360,00 0,00 -257.360,00
+1.1.1.9 - Gastos Reservados 783.493,97 0,00 783.493,97 0,00 674.358,72 674.358,72 674.358,72 109.135,25 0,00 109.135,25
+6.251.182,21 0,00 6.251.182,21 0,00 6.988.917,92 6.988.917,92 6.988.917,92 -737.735,71 0,00 Total Retribuciones del cargo -737.735,71
+1.1.3.0 - Retribuciones que no hacen al cargo
+1.1.3.1 - Antiguedad 412.178,40 0,00 412.178,40 0,00 509.582,36 509.582,36 509.582,36 -97.403,96 0,00 -97.403,96
+412.178,40 0,00 412.178,40 0,00 509.582,36 509.582,36 509.582,36 -97.403,96 0,00 Total Retribuciones que no hacen al cargo -97.403,96
+1.1.4.0 - Sueldo anual complementario 597.062,47 0,00 597.062,47 0,00 710.521,62 710.521,62 710.521,62 -113.459,15 0,00 -113.459,15
+1.1.6.0 - Contribuciones patronales
+1.1.6.1 - IPS 595.368,80 0,00 595.368,80 0,00 543.815,21 543.815,21 543.815,21 51.553,59 0,00 51.553,59
+1.1.6.2 - IOMA 233.186,11 0,00 233.186,11 0,00 235.574,29 235.574,29 2...

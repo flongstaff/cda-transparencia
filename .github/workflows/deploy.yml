@@ -59,10 +59,10 @@ jobs:
           node scripts/generate-data-index.js
           node scripts/transform-processed-data.js
           
-      - name: Build frontend for custom domain
+      - name: Build frontend for GitHub Pages
         run: |
           cd frontend
-          npm run build:custom-domain
+          npm run build:github
         env:
           VITE_API_URL: "https://cda-transparencia.franco-longstaff.workers.dev"
           VITE_USE_API: "true"

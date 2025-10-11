@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_852b58b1-98b5-4f80-9f80-62e09cf3cfbb",
+      "datasetTitle": "Estadística de trámites de maquinarias",
+      "format": "gráfico",
+      "title": "Trámites de maquinaria agrícola, vial e industrial - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/852b58b1-98b5-4f80-9f80-62e09cf3cfbb/resource/c5d29396-02a0-473e-9843-b3792b7b823c",
+      "lastProcessed": "2025-10-09T06:32:20.753Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_852b58b1-98b5-4f80-9f80-62e09cf3cfbb",
+    "title": "Estadística de trámites de maquinarias",
+    "description": "Cantidad de maquinarias 0km inscriptas y maquinarias transferidas, discriminadas por año, mes y provincia a la que pertenece el registro seccional en el cual se inscribió el trámite.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-06-28T18:19:55.932924",
+    "modified": "2025-10-01T14:41:02.450726",
+    "publisher": {
+      "mbox": "accesobd@dnrpa.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Dirección Nacional de los Registros Nacionales de la Propiedad del Automotor y Créditos Prendarios"
+    },
+    "landingPage": "https://www.dnrpa.gov.ar"
+  }
+}

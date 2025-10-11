@@ -1,0 +1,27 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "produccion_162dc5a6-7a95-4f19-9d85-063c9be23208",
+      "title": "Porcentaje de puestos ocupados por mujeres, por sector de actividad",
+      "distribution": [
+        {
+          "title": "metodologia.pdf",
+          "format": "PDF",
+          "fileName": "metodologia.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/produccion_162dc5a6-7a95-4f19-9d85-063c9be23208/metodologia.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/produccion_162dc5a6-7a95-4f19-9d85-063c9be23208/metodologia_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    }
+  ]
+}

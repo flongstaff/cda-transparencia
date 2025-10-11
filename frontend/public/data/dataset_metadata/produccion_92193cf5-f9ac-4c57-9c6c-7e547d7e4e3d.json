@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "produccion_92193cf5-f9ac-4c57-9c6c-7e547d7e4e3d",
+      "datasetTitle": "Sociedades de Garantía Recíproca (SGR)",
+      "format": "XLS",
+      "title": "10-GDU",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/92193cf5-f9ac-4c57-9c6c-7e547d7e4e3d/resource/1d786364-e2ff-4c4f-9623-bdd366872d1a",
+      "lastProcessed": "2025-10-09T07:04:11.144Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_92193cf5-f9ac-4c57-9c6c-7e547d7e4e3d",
+    "title": "Sociedades de Garantía Recíproca (SGR)",
+    "description": "Las Sociedades de Garantía Recíproca (SGR) tienen como objetivo facilitar el acceso al crédito a las MiPyMES, otorgando garantías que mejoran sus condiciones de financiamiento, en entidades financieras, mercado de capitales, organismos públicos y proveedores, tanto para inversiones productivas como para capital de trabajo. El informe de SGR presenta información mensual sobre los principales indicadores del Régimen de SGR.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-05-07T20:54:30.091551",
+    "modified": "2021-05-11T15:56:19.055398",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Secretaría de la Pequeña y Mediana Empresa y los Emprendedores. Subsecretaría de Financiamiento y Competitividad Pyme. Dirección Nacional de Financiamiento Pyme. Dirección del Régimen de Sociedades de Garantía Recíproca."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/sociedades-de-garantia-reciproca-sgr"
+  }
+}

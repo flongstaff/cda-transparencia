@@ -1,0 +1,111 @@
+{
+  "files": {
+    "APRN_f_defensa_2021": {
+      "datasetId": "ambiente_21.0",
+      "datasetTitle": "Áreas protegidas nacionales",
+      "fileName": "APRN_f_defensa_2021",
+      "format": "CSV",
+      "title": "Reservas naturales de la Defensa",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=23&did=190",
+      "lastProcessed": "2025-10-09T06:57:09.136Z",
+      "status": "processed"
+    },
+    "APRN_a_año": {
+      "datasetId": "ambiente_21.0",
+      "datasetTitle": "Áreas protegidas nacionales",
+      "fileName": "APRN_a_año",
+      "format": "CSV",
+      "title": "Áreas protegidas creadas por década",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=23&did=178",
+      "lastProcessed": "2025-10-09T06:57:10.520Z",
+      "status": "processed"
+    },
+    "APRN_g_jurisdiccion_ha_2025": {
+      "datasetId": "ambiente_21.0",
+      "datasetTitle": "Áreas protegidas nacionales",
+      "fileName": "APRN_g_jurisdiccion_ha_2025",
+      "format": "CSV",
+      "title": "Áreas protegidas nacionales y provinciales, por jurisdicción",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=23&did=191",
+      "lastProcessed": "2025-10-09T06:57:11.796Z",
+      "status": "processed"
+    },
+    "APRN_h_ubicacion_superycatint_ha": {
+      "datasetId": "ambiente_21.0",
+      "datasetTitle": "Áreas protegidas nacionales",
+      "fileName": "APRN_h_ubicacion_superycatint_ha",
+      "format": "CSV",
+      "title": "Superficie de áreas protegidas nacionales por región y categoría",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=23&did=192",
+      "lastProcessed": "2025-10-09T06:57:13.131Z",
+      "status": "processed"
+    },
+    "ods_costerofab": {
+      "datasetId": "ambiente_21.0",
+      "datasetTitle": "Áreas protegidas nacionales",
+      "fileName": "ods_costerofab",
+      "format": "CSV",
+      "title": "Porcentaje de territorio protegido en relación con la superficie total de la plataforma submarina",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=23&did=186",
+      "lastProcessed": "2025-10-09T06:57:14.459Z",
+      "status": "processed"
+    },
+    "APRN_AP_b_ecorregion_porc": {
+      "datasetId": "ambiente_21.0",
+      "datasetTitle": "Áreas protegidas nacionales",
+      "fileName": "APRN_AP_b_ecorregion_porc",
+      "format": "CSV",
+      "title": "Representatividad de las Áreas protegidas nacionales por ecorregión",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=23&did=180",
+      "lastProcessed": "2025-10-09T06:57:15.737Z",
+      "status": "processed"
+    },
+    "APRN_k_especies_ap_porc_2021": {
+      "datasetId": "ambiente_21.0",
+      "datasetTitle": "Áreas protegidas nacionales",
+      "fileName": "APRN_k_especies_ap_porc_2021",
+      "format": "CSV",
+      "title": "Representatividad de las especies en Áreas Protegidas Nacionales",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=23&did=341",
+      "lastProcessed": "2025-10-09T06:57:17.047Z",
+      "status": "processed"
+    },
+    "APRN_i_visitas_porc_2024": {
+      "datasetId": "ambiente_21.0",
+      "datasetTitle": "Áreas protegidas nacionales",
+      "fileName": "APRN_i_visitas_porc_2024",
+      "format": "CSV",
+      "title": "Visitantes registrados en los parques nacionales",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=23&did=193",
+      "lastProcessed": "2025-10-09T06:57:18.312Z",
+      "status": "processed"
+    },
+    "AgG_b_glaciares_nuevo_2023": {
+      "datasetId": "ambiente_21.0",
+      "datasetTitle": "Áreas protegidas nacionales",
+      "fileName": "AgG_b_glaciares_nuevo_2023",
+      "format": "CSV",
+      "title": "Superficie de áreas protegidas en glaciares",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=6&stid=21&did=168",
+      "lastProcessed": "2025-10-09T06:57:19.560Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_21.0",
+    "title": "Áreas protegidas nacionales",
+    "description": "Muestra la  superficie de las áreas protegidas nacionales y de la defensa por jurisdicción",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2022-08-04T00:00:00",
+    "modified": "2022-08-04T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

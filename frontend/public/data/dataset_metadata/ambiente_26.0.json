@@ -1,0 +1,138 @@
+{
+  "files": {
+    "RPSQ_a_acuerdos_multilaterales": {
+      "datasetId": "ambiente_26.0",
+      "datasetTitle": "Productos y sustancias químicas",
+      "fileName": "RPSQ_a_acuerdos_multilaterales",
+      "format": "CSV",
+      "title": "Acuerdos Multilaterales Ambientales en materia de productos químicos y desechos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=78&did=352",
+      "lastProcessed": "2025-10-09T06:59:08.738Z",
+      "status": "processed"
+    },
+    "RPSQ_a_Químicos_y_desechos_regulados": {
+      "datasetId": "ambiente_26.0",
+      "datasetTitle": "Productos y sustancias químicas",
+      "fileName": "RPSQ_a_Químicos_y_desechos_regulados",
+      "format": "CSV",
+      "title": "Contaminantes regulados",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=78&did=347",
+      "lastProcessed": "2025-10-09T06:59:09.997Z",
+      "status": "processed"
+    },
+    "AgC_l_monit_sust_indice_integ_biota": {
+      "datasetId": "ambiente_26.0",
+      "datasetTitle": "Productos y sustancias químicas",
+      "fileName": "AgC_l_monit_sust_indice_integ_biota",
+      "format": "CSV",
+      "title": "Índice de integridad biótica para la costa del Río de la Plata",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=78&did=386",
+      "lastProcessed": "2025-10-09T06:59:11.273Z",
+      "status": "processed"
+    },
+    "AgC_l_monit_sust_qcas_2021": {
+      "datasetId": "ambiente_26.0",
+      "datasetTitle": "Productos y sustancias químicas",
+      "fileName": "AgC_l_monit_sust_qcas_2021",
+      "format": "CSV",
+      "title": "Monitoreo de sustancias químicas en agua superficial del Río de la Plata. Año 2021-2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=78&did=330",
+      "lastProcessed": "2025-10-09T06:59:12.533Z",
+      "status": "processed"
+    },
+    "AgC_j_estaciones_monit_sust_qcas": {
+      "datasetId": "ambiente_26.0",
+      "datasetTitle": "Productos y sustancias químicas",
+      "fileName": "AgC_j_estaciones_monit_sust_qcas",
+      "format": "CSV",
+      "title": "Monitoreo de sustancias químicas en agua superficial del Río de la Plata. Ubicación de las estaciones",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=78&did=332",
+      "lastProcessed": "2025-10-09T06:59:13.886Z",
+      "status": "processed"
+    },
+    "AgC_I_monit_sust_qcas_SEDIM_Invie2022_ver2023": {
+      "datasetId": "ambiente_26.0",
+      "datasetTitle": "Productos y sustancias químicas",
+      "fileName": "AgC_I_monit_sust_qcas_SEDIM_Invie2022_ver2023",
+      "format": "CSV",
+      "title": "Monitoreo de sustancias químicas en sedimentos del Río de la Plata. Año 2022-2023.",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=78&did=385",
+      "lastProcessed": "2025-10-09T06:59:15.181Z",
+      "status": "processed"
+    },
+    "rpsq_chascomus_agua": {
+      "datasetId": "ambiente_26.0",
+      "datasetTitle": "Productos y sustancias químicas",
+      "fileName": "rpsq_chascomus_agua",
+      "format": "CSV",
+      "title": "Muestreo de sustancias en agua superficial de las lagunas Chascomús, Adela y Chis Chis. Verano 2024.",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=78&did=405",
+      "lastProcessed": "2025-10-09T06:59:16.440Z",
+      "status": "processed"
+    },
+    "rpsq_chascomus_biota": {
+      "datasetId": "ambiente_26.0",
+      "datasetTitle": "Productos y sustancias químicas",
+      "fileName": "rpsq_chascomus_biota",
+      "format": "CSV",
+      "title": "Muestreo de sustancias en biota de la laguna Chascomús. Verano 2024.",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=78&did=407",
+      "lastProcessed": "2025-10-09T06:59:17.853Z",
+      "status": "processed"
+    },
+    "rpsq_chascomus_sedimentos": {
+      "datasetId": "ambiente_26.0",
+      "datasetTitle": "Productos y sustancias químicas",
+      "fileName": "rpsq_chascomus_sedimentos",
+      "format": "CSV",
+      "title": "Muestreo de sustancias en sedimento de las lagunas Chascomús, Adela y Chis Chis. Verano 2024",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=78&did=406",
+      "lastProcessed": "2025-10-09T06:59:19.293Z",
+      "status": "processed"
+    },
+    "RPSQ_i_imp_y_expo_fitoterapico": {
+      "datasetId": "ambiente_26.0",
+      "datasetTitle": "Productos y sustancias químicas",
+      "fileName": "RPSQ_i_imp_y_expo_fitoterapico",
+      "title": "Importación y exportación de fitoterápicos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=78&did=414",
+      "lastProcessed": "2025-10-09T06:59:19.294Z",
+      "status": "processed"
+    },
+    "RPSQ_h_producc_prod_2025": {
+      "datasetId": "ambiente_26.0",
+      "datasetTitle": "Productos y sustancias químicas",
+      "fileName": "RPSQ_h_producc_prod_2025",
+      "title": "Producción de productos químicos básicos e intermedios",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=78&did=413",
+      "lastProcessed": "2025-10-09T06:59:19.294Z",
+      "status": "processed"
+    },
+    "RPSQ_j_nanotecnologia_2025": {
+      "datasetId": "ambiente_26.0",
+      "datasetTitle": "Productos y sustancias químicas",
+      "fileName": "RPSQ_j_nanotecnologia_2025",
+      "title": "Porcentaje de empresas de nanotecnología",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=78&did=415",
+      "lastProcessed": "2025-10-09T06:59:19.294Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_26.0",
+    "title": "Productos y sustancias químicas",
+    "description": "Muestra la legislación que regula los contaminantes según cada convenio o protocolo y el monitoreo de las sustancias químicas en las estaciones de monitoreo",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2022-10-20T00:00:00",
+    "modified": "2022-10-20T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

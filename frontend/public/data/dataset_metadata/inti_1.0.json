@@ -1,0 +1,32 @@
+{
+  "files": {
+    "oferta-tecnologica.csv": {
+      "datasetId": "inti_1.0",
+      "datasetTitle": "Oferta tecnológica del Instituto Nacional de Tecnologia Industrial",
+      "fileName": "oferta-tecnologica.csv",
+      "format": "CSV",
+      "title": "Oferta tecnológica",
+      "accessURL": "https://www.argentina.gob.ar/inti/transparencia-activa-instituto-nacional-de-tecnologia-industrial/catalogos-de-datos-abiertos",
+      "lastProcessed": "2025-10-09T06:42:11.578Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "inti_1.0",
+    "title": "Oferta tecnológica del Instituto Nacional de Tecnologia Industrial",
+    "description": "Oferta tecnológica del INTI",
+    "theme": [
+      "tech"
+    ],
+    "superTheme": [
+      "TECH"
+    ],
+    "issued": "2023-08-15",
+    "modified": "2023-08-15",
+    "publisher": {
+      "mbox": "ucg@inti.gob.ar",
+      "name": "Instituto Nacional de Tecnologia Industrial. Unidad de Control de Gestión"
+    },
+    "landingPage": "https://www.argentina.gob.ar/inti/transparencia-activa-instituto-nacional-de-tecnologia-industrial/catalogos-de-datos-abiertos"
+  }
+}

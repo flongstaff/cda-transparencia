@@ -1,0 +1,54 @@
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.
+26/04/2025 12:53
+Presupuesto: 2025DE EJECUCION PRESUPUESTARIA 
+02/01/2025 al 31/03/2025
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+I. INGRESOS CORRIENTES
+Ingresos tributarios 1.052.121.395,22
+Contribuciones a la Seguridad Social
+Ingresos no Tributarios 488.361.541,60
+Ventas de Bienes y Servicios
+Ingresos de Operación
+Rentas de la Propiedad 755.258,98
+Transferencias Corrientes 100.850.134,48
+Contribuciones Figurativas para Financiaciones Corrientes
+TOTAL  INGRESOS CORRIENTES 1.642.088.330,28
+II. GASTOS CORRIENTES
+Gastos de Operación
+Gastos de Consumo 1.649.774.059,45
+Rentas de la Propiedad 2.261,90
+Prestaciones de la Seguridad Social
+Impuestos Directos
+Otras Pérdidas
+Transferencias Corrientes 41.587.792,00
+Gastos Figurativos para Transacciones Corrientes
+TOTAL  GASTOS CORRIENTES 1.691.364.113,35
+III. AHORRO CORRIENTE: (I - II) -49.275.783,07
+Resultado Corriente Primario (Ingresos Corrientes - Gastos Corrientes netos de Int. de la deuda) -49.273.521,17
+IV. RECURSOS DE CAPITAL
+Recursos Propios de Capital
+Transferencias de Capital 232.690.775,64
+Disminución de la Inversión Financiera 1.870.891,17
+Filtro aplicado: Presupuesto: 2025 -  Fechas: 02/01/2025 al 31/03/2025
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 2 de 3 R.A.F.A.M.
+26/04/2025 12:53
+Presupuesto: 2025DE EJECUCION PRESUPUESTARIA 
+02/01/2025 al 31/03/2025
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+Contribuciones Figurativas para Financiaciones de Capital
+TOTAL  RECURSOS DE CAPITAL 234.561.666,81
+V. GASTOS DE CAPITAL
+Inversión Real Directa 292.491.518,53
+Transferencias de Capital 2.103.302,10
+Inversión Financiera 1.029.266,30
+Gastos Figurativos para Transacciones de Capital
+TOTAL  GASTOS DE CAPITAL 295.624.086,93
+VI. INGRESOS TOTALES 1.876.649.997,09
+TOTAL  INGRESOS TOTALES 1.876.649.997,09 1.876.649.997,09
+VII. GASTOS TOTALES 1.986.988.200,28
+TOTAL  GASTOS TOTALES 1.986.988.200,28 1.986.988.200,28
+VIII. RESULTADO FINANCIERO (VI -...

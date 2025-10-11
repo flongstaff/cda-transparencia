@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_30_Estado-de-Ejecucion-de-Gastos-por-Caracter-Economico-4to-Trimestre.pdf",
+  "file_hash": "706c04935312c9a40f58336de24b27a5",
+  "page_count": 3,
+  "text_length": 10502,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DE GASTOS\nEjercicio:Hoja: 1 de 3 R.A.F.A.M.\n27/02/2025 13:40\nDel 02/01/2024 al 31/12/20242024POR CARACTER ECONOMICO\nDevengado\nno pagadoCrédito\nDisponiblePagado Devengado Compromiso Preventivo Crédito\nVigenteModifica\ncionesCrédito\nAprobadoDescripciónCrédito Vig.\n- Devengado\nGASTOS\nGASTOS CORRIENTES\n  Gastos de consumo\n    Remuneraciones\n978.070.164,02 3.057.426.943,82 0,00 2.861.545.418,00 2.861.545.418,00 2.861.545.418,00 195.881.525,82 195.881.525,82 0,00 2.079.356.779,80       Sueldos y salarios\n10.344.373,13 269.689.630,39 0,00 236.470.545,80 236.470.545,80 236.470.545,80 33.219.084,59 33.219.084,59 0,00 259.345.257,26       Contribuciones patronales\n51.017.073,00 85.907.613,00 0,00 85.907.613,00 85.907.613,00 85.907.613,00 0,00 0,00 0,00 34.890.540,00       Prestaciones sociales\n15.736,65 15.736,65 0,00 15.736,65 15.736,65 15.736,65 0,00 0,00 0,00 0,00       Beneficios y compensaciones\n3.413.039.923,86 0,00 3.183.939.313,45 3.183.939.313,45 3.183.939.313,45 229.100.610,41 229.100.610,41 0,00     Total Remuneraciones 2.373.592.577,06 1.039.447.346,80\n    Bienes y servicios\n630.683.419,71 1.504.212.166,00 0,00 1.260.544.775,64 1.260.335.275,64 1.195.549.235,72 243.667.390,36 243.876.890,36 64.786.039,92 873.528.746,29       Bienes de consumo\n765.704.856,13 1.588.938.403,66 0,00 1.408.243.839,38 1.404.555.026,19 1.378.808.616,07 180.694.564,28 184.383.377,47 25.746.410,12 823.233.547,53       Servicios no personales\n3.093.150.569,66 0,00 2.668.788.615,02 2.664.890.301,83 2.574.357.851,79 424.361.954,64 428.260.267,83 90.532.450,04     Total Bienes y servicios 1.696.762.293,82 1.396.388.275,84\n6.506.190.493,52 0,00 5.852.727.928,47 5.848.829.615,28 5.758.297.165,24 653.462.565,05 657.360.878,24 90.532.450,04   Total Gastos de consumo 4.070.354.870,88 2.435.835.622,64\n  Rentas de la propiedad\n    Intereses\n      Intereses internos\n0,00 953.879,00 953.879,00 0,00 953.879,00 953.879,00 953.879,00 0,00 0,00 0,00       ...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:41.522575"
+}

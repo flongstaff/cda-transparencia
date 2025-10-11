@@ -120,7 +120,7 @@ export default class EnhancedDataService {
     return EnhancedDataService.instance;
   }
 
-  // Helper method to fetch JSON with caching
+  // Helper method to fetch JSON with caching and proper CORS handling
   private async fetchWithCache<T>(url: string, cacheKey: string): Promise<T | null> {
     const cached = this.cache.get<T>(cacheKey);
     if (cached && Date.now() < cached.expires) {
@@ -129,7 +129,16 @@ export default class EnhancedDataService {
     }
 
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With, Accept, X-API-Key'
+        }
+      });
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }

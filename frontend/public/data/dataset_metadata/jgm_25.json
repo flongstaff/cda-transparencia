@@ -1,0 +1,64 @@
+{
+  "files": {
+    "comunidad-abierta-iniciativas.csv": {
+      "datasetId": "jgm_25",
+      "datasetTitle": "Comunidad Abierta",
+      "fileName": "comunidad-abierta-iniciativas.csv",
+      "format": "CSV",
+      "title": "Iniciativas de Gobierno Abierto",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-comunidad-abierta/archivo/jgm_25.1",
+      "lastProcessed": "2025-10-09T07:18:30.914Z",
+      "status": "processed"
+    },
+    "comunidad-abierta-actores.csv": {
+      "datasetId": "jgm_25",
+      "datasetTitle": "Comunidad Abierta",
+      "fileName": "comunidad-abierta-actores.csv",
+      "format": "CSV",
+      "title": "Actores de Gobierno Abierto",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-comunidad-abierta/archivo/jgm_25.2",
+      "lastProcessed": "2025-10-09T07:18:32.943Z",
+      "status": "processed"
+    },
+    "comunidad-abierta-actores.zip": {
+      "datasetId": "jgm_25",
+      "datasetTitle": "Comunidad Abierta",
+      "fileName": "comunidad-abierta-actores.zip",
+      "format": "Shape",
+      "title": "Actores de Gobierno Abierto. Ubicación geográfica (Shape)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-comunidad-abierta/archivo/jgm_25.3",
+      "lastProcessed": "2025-10-09T07:18:32.944Z",
+      "status": "processed"
+    },
+    "comunidad-abierta-actores.geojson": {
+      "datasetId": "jgm_25",
+      "datasetTitle": "Comunidad Abierta",
+      "fileName": "comunidad-abierta-actores.geojson",
+      "format": "GeoJSON",
+      "title": "Actores de Gobierno Abierto. Ubicación geográfica (GeoJSON)",
+      "accessURL": "https://datos.gob.ar/dataset/jgm-comunidad-abierta/archivo/jgm_25.4",
+      "lastProcessed": "2025-10-09T07:18:32.944Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "jgm_25",
+    "title": "Comunidad Abierta",
+    "description": "Listado de iniciativas y proyectos que incorporan el enfoque de gobierno abierto y son llevados adelante por organismos de los distintos poderes y niveles del Estado, organizaciones de la sociedad civil y academia, entre otras y otros actores que participan de la agenda en todo el país.",
+    "theme": [
+      "gove",
+      "regi"
+    ],
+    "superTheme": [
+      "GOVE",
+      "REGI"
+    ],
+    "issued": "2022-05-20",
+    "modified": "2024-06-14",
+    "publisher": {
+      "mbox": "gobiernoabierto@jefatura.gob.ar",
+      "name": "Jefatura de Gabinete de Ministros. Secretaría de Innovación, Ciencia y Tecnología. Subsecretaría de Tecnologías de la Información y las Comunicaciones. Dirección Nacional de Gobierno Abierto"
+    },
+    "landingPage": "https://www.argentina.gob.ar/jefatura/innovacion-tecnologica/servicios-y-pais-digital/gobierno-abierto/comunidad-abierta"
+  }
+}

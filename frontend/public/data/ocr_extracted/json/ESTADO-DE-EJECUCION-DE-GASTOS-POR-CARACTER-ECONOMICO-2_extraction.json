@@ -1,0 +1,13 @@
+{
+  "file_name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-CARACTER-ECONOMICO-2.pdf",
+  "file_hash": "3e2705c60f1f4a48732517e7625cb0f9",
+  "page_count": 3,
+  "text_length": 9369,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DE GASTOS\nEjercicio \n:Hoja: 1 de 3 R.A.F.A.M.\n19/09/2023 10:07\nDel 02/01/2023 al 31/03/20232023POR CARACTER ECONOMICO\nDevengado \nno pagado Crédito \nDisponible Pagado Devengado Compromiso Preventivo Crédito \nVigente Modifica \nciones Crédito \nAprobado DescripciónCrédito Vig. \n- Devengado \nGASTOS\nGASTOS CORRIENTES\n  Gastos de consumo\n    Remuneraciones\n198.201,04 340.512.901,63 0,00 144.183.097,27 144.183.097,27 144.175.285,27 196.329.804,36 196.329.804,36 7.812,00 340.314.700,59       Sueldos y salarios\n0,00 34.415.979,41 0,00 0,00 0,00 0,00 34.415.979,41 34.415.979,41 0,00 34.415.979,41       Contribuciones patronales\n0,00 20.035.294,00 0,00 7.557.659,00 7.557.659,00 7.557.659,00 12.477.635,00 12.477.635,00 0,00 20.035.294,00       Prestaciones sociales\n0,00 5.462,57 0,00 0,00 0,00 0,00 5.462,57 5.462,57 0,00 5.462,57       Beneficios y compensaciones\n394.969.637,61 0,00 151.740.756,27 151.740.756,27 151.732.944,27 243.228.881,34 243.228.881,34 7.812,00     Total Remuneraciones 394.771.436,57 198.201,04\n    Bienes y servicios\n11.037.920,11 95.747.957,51 21.186.280,50 53.918.060,35 50.724.206,65 25.658.520,90 20.643.616,66 45.023.750,86 25.065.685,75 84.710.037,40       Bienes de consumo\n10.907.189,02 210.201.561,97 59.734.673,41 89.479.360,46 74.094.433,47 65.309.338,84 60.987.528,10 136.107.128,50 8.785.094,63 199.294.372,95       Servicios no personales\n305.949.519,48 80.920.953,91 143.397.420,81 124.818.640,12 90.967.859,74 81.631.144,76 181.130.879,36 33.850.780,38     Total Bienes y servicios 284.004.410,35 21.945.109,13\n700.919.157,09 80.920.953,91 295.138.177,08 276.559.396,39 242.700.804,01 324.860.026,10 424.359.760,70 33.858.592,38   Total Gastos de consumo 678.775.846,92 22.143.310,17\n  Rentas de la propiedad\n    Intereses\n      Intereses internos\n29.987,51 0,00 29.987,51 0,00 2.249,57 2.249,57 2.249,57 27.737,94 27.737,94 0,00         Intereses por deuda\n29.987,51 0,00 2.249,57 2.249,57 2.249,57 27.737,9...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:51.804974"
+}

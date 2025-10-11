@@ -1,0 +1,38 @@
+R.A.F.A.M.
+ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOS Hoja: 1 de 2
+11/10/202308:49
+Municipalidad de
+Carmen de Areco Del 01/07/2023 al 30/09/2023 Ejercicio: 2023(POR CARACTER ECONÓMICO) 
+CONSOLIDADO
+Descripción ModificacionesRecurso 
+Estimado Recurso 
+Vigente Recurso 
+Devengado Dif. entre 
+Vigente y 
+Devengado Recursos 
+Percibido Dif. entre 
+Devengado y 
+Percibido 
+RECURSOS
+INGRESOS CORRIENTES
+Ingresos tributarios
+Impuestos provinciales y nacionales 416.355.547,62 46.932.151,86 463.287.699,48 318.806.441,74 144.481.257,74 318.806.441,74 0,00
+Otros impuestos 69.980.556,53 7.182.162,49 77.162.719,02 33.326.769,32 43.835.949,70 36.584.028,56 -3.257.259,24
+486.336.104,15 54.114.314,35 540.450.418,50 352.133.211,06 188.317.207,44 355.390.470,30 -3.257.259,24 Total Ingresos tributarios
+Ingresos no tributarios
+Tasas 118.358.388,96 14.630,00 118.373.018,96 71.737.885,54 46.635.133,42 57.406.667,38 14.331.218,16
+Derechos 16.668.235,50 413.556,00 17.081.791,50 7.395.454,13 9.686.337,37 6.574.795,23 820.658,90
+Otros no tributarios 43.761.539,79 400.300,00 44.161.839,79 19.927.768,27 24.234.071,52 19.927.768,27 0,00
+178.788.164,25 828.486,00 179.616.650,25 99.061.107,94 80.555.542,31 83.909.230,88 15.151.877,06 Total Ingresos no tributarios
+Rentas de la propiedad
+Intereses
+Intereses internos
+Intereses por depósitos 42.988.154,74 0,00 42.988.154,74 51.098.168,55 -8.110.013,81 51.098.168,55 0,0042.988.154,74 0,00 42.988.154,74 51.098.168,55 -8.110.013,81 51.098.168,55 0,00
+Total Intereses internos
+42.988.154,74 0,00 42.988.154,74 51.098.168,55 -8.110.013,81 51.098.168,55 0,00 Total Intereses
+42.988.154,74 0,00 42.988.154,74 51.098.168,55 -8.110.013,81 51.098.168,55 0,00 Total Rentas de la propiedad
+Transferencias Corrientes
+Del sector público
+Del sector público nacional
+De la administración central 0,00 -24.174.099,87 -24.174.099,87 -23.879.349,87 -294.750,00 -23.879.349,87 0,000,00 -24.174.099,87 -24.174.099,87 -23.879.349,87 -294.750,00 -23.879.349,87 0,00
+Total Del sector p...

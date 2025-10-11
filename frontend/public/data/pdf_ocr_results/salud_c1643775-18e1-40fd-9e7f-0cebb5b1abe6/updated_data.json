@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "salud_c1643775-18e1-40fd-9e7f-0cebb5b1abe6",
+      "title": "Defunciones Generales Mensuales ocurridas y registradas en la República Argentina.",
+      "distribution": [
+        {
+          "title": "defunciones-generales-mensuales_2021.pdf",
+          "format": "PDF",
+          "fileName": "defunciones-generales-mensuales_2021.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/salud_c1643775-18e1-40fd-9e7f-0cebb5b1abe6/defunciones-generales-mensuales_2021.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/salud_c1643775-18e1-40fd-9e7f-0cebb5b1abe6/defunciones-generales-mensuales_2021_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

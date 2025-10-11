@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "produccion_de3aa5c7-9731-4ace-8239-f99075443482",
+      "datasetTitle": "Programa de apoyo a la competitividad (PAC)  Emprendedores 2021",
+      "format": "XLS",
+      "title": "PAC Innovación",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/de3aa5c7-9731-4ace-8239-f99075443482/resource/c1f827c1-db0d-4e94-8676-8fce1c0c0555",
+      "lastProcessed": "2025-10-09T08:04:14.113Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_de3aa5c7-9731-4ace-8239-f99075443482",
+    "title": "Programa de apoyo a la competitividad (PAC)  Emprendedores 2021",
+    "description": "Datos correspondientes a los proyectos aprobados del programa de apoyo a la competitividad en el año 2021 en su convocatoria a emprendedores.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2022-03-30T11:17:32.511726",
+    "modified": "2022-03-30T11:17:32.511726",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo, Secretaría de la Pequeña y Mediana Empresa y de los Emprendedores."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/programa-de-apoyo-a-la-competitividad-pac-emprendedores-2021"
+  }
+}

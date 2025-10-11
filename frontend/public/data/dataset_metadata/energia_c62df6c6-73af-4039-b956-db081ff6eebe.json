@@ -1,0 +1,42 @@
+{
+  "files": {
+    "generacin-elctrica-centrales-de-generacin.zip": {
+      "datasetId": "energia_c62df6c6-73af-4039-b956-db081ff6eebe",
+      "datasetTitle": "Generación Eléctrica - Centrales de generación",
+      "fileName": "generacin-elctrica-centrales-de-generacin.zip",
+      "format": "SHP",
+      "title": "Generación Eléctrica Centrales de Generación",
+      "accessURL": "http://datos.energia.gob.ar/dataset/c62df6c6-73af-4039-b956-db081ff6eebe/resource/512e8588-35dc-4b95-bf7a-89cd3bd00842",
+      "lastProcessed": "2025-10-09T06:49:46.100Z",
+      "status": "processed"
+    },
+    "generacin-elctrica-centrales-de-generacin.csv": {
+      "datasetId": "energia_c62df6c6-73af-4039-b956-db081ff6eebe",
+      "datasetTitle": "Generación Eléctrica - Centrales de generación",
+      "fileName": "generacin-elctrica-centrales-de-generacin.csv",
+      "format": "CSV",
+      "title": "Generación Eléctrica Centrales de Generación",
+      "accessURL": "http://datos.energia.gob.ar/dataset/c62df6c6-73af-4039-b956-db081ff6eebe/resource/230fdf38-8f12-4017-a1e8-d7a1bc4a1c1c",
+      "lastProcessed": "2025-10-09T06:49:48.100Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_c62df6c6-73af-4039-b956-db081ff6eebe",
+    "title": "Generación Eléctrica - Centrales de generación",
+    "description": "Centrales de Generación de Energía Eléctrica. ",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2023-03-29T14:38:52.590878",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

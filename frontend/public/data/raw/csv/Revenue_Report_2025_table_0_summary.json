@@ -1,0 +1,44 @@
+{
+  "file_name": "Revenue_Report_2025_table_0.csv",
+  "row_count": 4,
+  "column_count": 4,
+  "columns": [
+    "Concept",
+    "Budgeted",
+    "Executed",
+    "Percentage"
+  ],
+  "sample_data": [
+    {
+      "Concept": "Tributary Revenue",
+      "Budgeted": "$250,000,000",
+      "Executed": "$245,000,000",
+      "Percentage": "98%"
+    },
+    {
+      "Concept": "Non-tributary Revenue",
+      "Budgeted": "$50,000,000",
+      "Executed": "$48,000,000",
+      "Percentage": "96%"
+    },
+    {
+      "Concept": "Capital Revenue",
+      "Budgeted": "$30,000,000",
+      "Executed": "$28,000,000",
+      "Percentage": "93%"
+    },
+    {
+      "Concept": "Total",
+      "Budgeted": "$330,000,000",
+      "Executed": "$321,000,000",
+      "Percentage": "97.3%"
+    }
+  ],
+  "data_types": {
+    "Concept": "object",
+    "Budgeted": "object",
+    "Executed": "object",
+    "Percentage": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

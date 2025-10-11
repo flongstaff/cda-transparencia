@@ -1,0 +1,82 @@
+{
+  "files": {
+    "poblacion_identificada_provincia_agosto_2024.csv": {
+      "datasetId": "renaper_3",
+      "datasetTitle": "Estructura de población Argentina",
+      "fileName": "poblacion_identificada_provincia_agosto_2024.csv",
+      "format": "CSV",
+      "title": "Población identificada por provincia (Agosto 2024)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T06:49:59.981Z",
+      "status": "processed"
+    },
+    "poblacion_identificada_departamento_agosto_2024.csv": {
+      "datasetId": "renaper_3",
+      "datasetTitle": "Estructura de población Argentina",
+      "fileName": "poblacion_identificada_departamento_agosto_2024.csv",
+      "format": "CSV",
+      "title": "Población identificada por departamento (Agosto 2024)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T06:50:00.054Z",
+      "status": "processed"
+    },
+    "poblacion_identificada_provincia_enero_2025.csv": {
+      "datasetId": "renaper_3",
+      "datasetTitle": "Estructura de población Argentina",
+      "fileName": "poblacion_identificada_provincia_enero_2025.csv",
+      "format": "CSV",
+      "title": "Población identificada por provincia (Enero 2025)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T06:50:00.113Z",
+      "status": "processed"
+    },
+    "poblacion_identificada_departamento_enero_2025.csv": {
+      "datasetId": "renaper_3",
+      "datasetTitle": "Estructura de población Argentina",
+      "fileName": "poblacion_identificada_departamento_enero_2025.csv",
+      "format": "CSV",
+      "title": "Población identificada por departamento (Enero 2025)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T06:50:00.182Z",
+      "status": "processed"
+    },
+    "poblacion_identificada_provincia_junio_2025.csv": {
+      "datasetId": "renaper_3",
+      "datasetTitle": "Estructura de población Argentina",
+      "fileName": "poblacion_identificada_provincia_junio_2025.csv",
+      "format": "CSV",
+      "title": "Población identificada por provincia (Junio 2025)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T06:50:00.264Z",
+      "status": "processed"
+    },
+    "poblacion_identificada_departamento_junio_2025.csv": {
+      "datasetId": "renaper_3",
+      "datasetTitle": "Estructura de población Argentina",
+      "fileName": "poblacion_identificada_departamento_junio_2025.csv",
+      "format": "CSV",
+      "title": "Población identificada por departamento (Junio 2025)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T06:50:00.342Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "renaper_3",
+    "title": "Estructura de población Argentina",
+    "description": "Estructura de población identificada con residencia en Argentina",
+    "theme": [
+      "soci"
+    ],
+    "superTheme": [
+      "SOCI"
+    ],
+    "issued": "2023-08-30",
+    "modified": "2025-04-01",
+    "publisher": {
+      "mbox": "direccionnacionalpoblacion@renaper.gob.ar",
+      "name": "Dirección Nacional de Población del Renaper"
+    },
+    "landingPage": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion/informes-provinciales"
+  }
+}

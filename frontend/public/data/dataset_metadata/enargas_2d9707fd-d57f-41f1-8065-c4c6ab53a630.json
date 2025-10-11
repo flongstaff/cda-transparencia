@@ -1,0 +1,74 @@
+{
+  "files": {
+    "reclamos_enargas_2022.csv": {
+      "datasetId": "enargas_2d9707fd-d57f-41f1-8065-c4c6ab53a630",
+      "datasetTitle": "Reclamos resueltos por el ENARGAS",
+      "fileName": "reclamos_enargas_2022.csv",
+      "format": "CSV",
+      "title": "Reclamos ENARGAS resueltos en 2022",
+      "accessURL": "https://transparencia.enargas.gov.ar/dataset/2d9707fd-d57f-41f1-8065-c4c6ab53a630/resource/9a87762b-f81e-43ef-964c-e90f46d22e58",
+      "lastProcessed": "2025-10-09T08:04:03.667Z",
+      "status": "processed"
+    },
+    "reclamos_enargas_2021.csv": {
+      "datasetId": "enargas_2d9707fd-d57f-41f1-8065-c4c6ab53a630",
+      "datasetTitle": "Reclamos resueltos por el ENARGAS",
+      "fileName": "reclamos_enargas_2021.csv",
+      "format": "CSV",
+      "title": "Reclamos ENARGAS resueltos en 2021",
+      "accessURL": "https://transparencia.enargas.gov.ar/dataset/2d9707fd-d57f-41f1-8065-c4c6ab53a630/resource/79073c57-5723-498e-b3f2-a07d90bce533",
+      "lastProcessed": "2025-10-09T08:04:06.323Z",
+      "status": "processed"
+    },
+    "reclamos_enargas_2020.csv": {
+      "datasetId": "enargas_2d9707fd-d57f-41f1-8065-c4c6ab53a630",
+      "datasetTitle": "Reclamos resueltos por el ENARGAS",
+      "fileName": "reclamos_enargas_2020.csv",
+      "format": "CSV",
+      "title": "Reclamos ENARGAS resueltos en 2020",
+      "accessURL": "https://transparencia.enargas.gov.ar/dataset/2d9707fd-d57f-41f1-8065-c4c6ab53a630/resource/3cc8b728-63ca-4af0-afeb-de492b399b86",
+      "lastProcessed": "2025-10-09T08:04:08.885Z",
+      "status": "processed"
+    },
+    "reclamos_enargas_2019.csv": {
+      "datasetId": "enargas_2d9707fd-d57f-41f1-8065-c4c6ab53a630",
+      "datasetTitle": "Reclamos resueltos por el ENARGAS",
+      "fileName": "reclamos_enargas_2019.csv",
+      "format": "CSV",
+      "title": "Reclamos ENARGAS resueltos en 2019",
+      "accessURL": "https://transparencia.enargas.gov.ar/dataset/2d9707fd-d57f-41f1-8065-c4c6ab53a630/resource/60e80817-bbca-44fc-8df4-06a0f441cd6e",
+      "lastProcessed": "2025-10-09T08:04:11.421Z",
+      "status": "processed"
+    },
+    "reclamos_enargas_2018.csv": {
+      "datasetId": "enargas_2d9707fd-d57f-41f1-8065-c4c6ab53a630",
+      "datasetTitle": "Reclamos resueltos por el ENARGAS",
+      "fileName": "reclamos_enargas_2018.csv",
+      "format": "CSV",
+      "title": "Reclamos ENARGAS resueltos en 2018",
+      "accessURL": "https://transparencia.enargas.gov.ar/dataset/2d9707fd-d57f-41f1-8065-c4c6ab53a630/resource/8da31d71-57f2-4e77-bd07-604489b18e6d",
+      "lastProcessed": "2025-10-09T08:04:14.112Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "enargas_2d9707fd-d57f-41f1-8065-c4c6ab53a630",
+    "title": "Reclamos resueltos por el ENARGAS",
+    "description": "Incluye el total de reclamos ingresados al ENARGAS con estado \"Resuelto\" por Delegación Regional/Sede Central, Prestadora del servicio de distribución de gas natural, Tipo, Origen, Provincia (desde 2019 en adelante) y Mes/Año. Entiéndase como \"Resuelto\" al trámite de reclamo finalizado y clasificado como \"Procedente\" o \"Improcedente\".",
+    "theme": [
+      "ener",
+      "gove"
+    ],
+    "superTheme": [
+      "ENER",
+      "GOVE"
+    ],
+    "issued": "2019-11-20T15:59:55.590069",
+    "modified": "2022-07-08T17:13:13.837508",
+    "publisher": {
+      "mbox": "cjmasin@enargas.gov.ar",
+      "name": "Gerencia de Protección del Usuario (GPU)"
+    },
+    "landingPage": "https://transparencia.enargas.gov.ar/dataset/reclamos-resueltos-enargas"
+  }
+}

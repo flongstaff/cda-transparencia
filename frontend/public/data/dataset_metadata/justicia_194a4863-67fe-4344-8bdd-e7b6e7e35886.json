@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_194a4863-67fe-4344-8bdd-e7b6e7e35886",
+      "datasetTitle": "Listado de mediadores",
+      "format": "ZIP",
+      "title": "Listado de mediadores - 2017",
+      "accessURL": "https://datos.jus.gob.ar/dataset/194a4863-67fe-4344-8bdd-e7b6e7e35886/resource/9a0b247f-91d4-4f76-984f-30958b132014",
+      "lastProcessed": "2025-10-09T06:31:52.770Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_194a4863-67fe-4344-8bdd-e7b6e7e35886",
+    "title": "Listado de mediadores",
+    "description": "Listado de mediadores registrados para realizar mediaciones prejudiciales y judiciales en el Sistema MEPRE.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-05-19T18:49:36.717681",
+    "modified": "2025-10-01T15:31:10.573245",
+    "publisher": {
+      "mbox": "allamosa@jus.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Acceso a la Justicia. Dirección Nacional de Mediación y Métodos Participativos de Resolución de Conflictos"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/listado-de-mediadores"
+  }
+}

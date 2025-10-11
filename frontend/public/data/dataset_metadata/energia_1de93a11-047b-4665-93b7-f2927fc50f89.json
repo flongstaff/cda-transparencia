@@ -1,0 +1,52 @@
+{
+  "files": {
+    "distribucin-de-petrleo.csv": {
+      "datasetId": "energia_1de93a11-047b-4665-93b7-f2927fc50f89",
+      "datasetTitle": "Distribución de petróleo",
+      "fileName": "distribucin-de-petrleo.csv",
+      "format": "CSV",
+      "title": "Distribución de petróleo",
+      "accessURL": "http://datos.energia.gob.ar/dataset/1de93a11-047b-4665-93b7-f2927fc50f89/resource/d9948c4a-c81b-4ad0-943e-c41a99c3e33c",
+      "lastProcessed": "2025-10-09T06:38:55.758Z",
+      "status": "processed"
+    },
+    "distribucion-de-condensado.csv": {
+      "datasetId": "energia_1de93a11-047b-4665-93b7-f2927fc50f89",
+      "datasetTitle": "Distribución de petróleo",
+      "fileName": "distribucion-de-condensado.csv",
+      "format": "CSV",
+      "title": "Distribucion de condensado",
+      "accessURL": "http://datos.energia.gob.ar/dataset/1de93a11-047b-4665-93b7-f2927fc50f89/resource/a5554d87-db32-4980-9d5a-45d5641445ac",
+      "lastProcessed": "2025-10-09T06:38:57.207Z",
+      "status": "processed"
+    },
+    "distribucion-de-gasolina.csv": {
+      "datasetId": "energia_1de93a11-047b-4665-93b7-f2927fc50f89",
+      "datasetTitle": "Distribución de petróleo",
+      "fileName": "distribucion-de-gasolina.csv",
+      "format": "CSV",
+      "title": "Distribucion de gasolina",
+      "accessURL": "http://datos.energia.gob.ar/dataset/1de93a11-047b-4665-93b7-f2927fc50f89/resource/541a77dd-587d-4a3b-8279-20b432a66818",
+      "lastProcessed": "2025-10-09T06:38:58.674Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_1de93a11-047b-4665-93b7-f2927fc50f89",
+    "title": "Distribución de petróleo",
+    "description": "Distribución de Petróleo. SESCO.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:33:24.803724",
+    "modified": "2022-12-27T09:55:04.008859",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

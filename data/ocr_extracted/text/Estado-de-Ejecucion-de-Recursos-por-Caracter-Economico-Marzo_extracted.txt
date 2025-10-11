@@ -1,0 +1,40 @@
+R.A.F.A.M.
+ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 3
+26/04/202512:56
+Municipalidad de
+Carmen de Areco Del 02/01/2025 al 31/03/2025 Ejercicio: 2025(POR CARACTER ECONÓMICO)
+CONSOLIDADO
+Descripción ModificacionesRecurso
+EstimadoRecurso
+VigenteRecurso
+DevengadoDif. entre
+Vigente y
+DevengadoRecursos
+PercibidoDif. entre
+Devengado y
+Percibido
+RECURSOS
+INGRESOS CORRIENTES
+Ingresos tributarios
+Impuestos provinciales y nacionales 5.046.004.267,00 0,00 5.046.004.267,00 965.081.432,50 4.080.922.834,50 965.081.432,50 0,00
+Otros impuestos 809.823.649,00 0,00 809.823.649,00 80.878.678,63 728.944.970,37 87.039.962,72 -6.161.284,09
+5.855.827.916,00 0,00 5.855.827.916,00 1.045.960.111,13 4.809.867.804,87 1.052.121.395,22 -6.161.284,09 TotalIngresos tributarios
+Ingresos no tributarios
+Tasas 1.891.642.203,00 0,00 1.891.642.203,00 703.448.751,82 1.188.193.451,18 351.914.881,37 351.533.870,45
+Derechos 418.099.809,00 0,00 418.099.809,00 28.933.273,51 389.166.535,49 30.119.784,01 -1.186.510,50
+Otros no tributarios 442.672.306,00 0,00 442.672.306,00 106.326.876,22 336.345.429,78 106.326.876,22 0,00
+2.752.414.318,00 0,00 2.752.414.318,00 838.708.901,55 1.913.705.416,45 488.361.541,60 350.347.359,95 TotalIngresos no tributarios
+Rentas de la propiedad
+Intereses
+Intereses internos
+Intereses por depósitos 180.750.644,00 0,00 180.750.644,00 755.258,98 179.995.385,02 755.258,98 0,00
+180.750.644,00 0,00 180.750.644,00 755.258,98 179.995.385,02 755.258,98 0,00 Total Intereses internos
+180.750.644,00 0,00 180.750.644,00 755.258,98 179.995.385,02 755.258,98 0,00 Total Intereses
+180.750.644,00 0,00 180.750.644,00 755.258,98 179.995.385,02 755.258,98 0,00 TotalRentas de la propiedad
+Transferencias Corrientes
+Del sector privado
+De empresas privadas 0,00 0,00 0,00 3.333.873,00 -3.333.873,00 3.333.873,00 0,00
+0,00 0,00 0,00 3.333.873,00 -3.333.873,00 3.333.873,00 0,00 Total Del sector privado
+Del sector público
+De provincias y municipios
+De gobiernos provinciales 491.514.303,00 11.883.365,...

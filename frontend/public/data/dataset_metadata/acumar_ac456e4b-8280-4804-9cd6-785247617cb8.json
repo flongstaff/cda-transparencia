@@ -1,0 +1,42 @@
+{
+  "files": {
+    "agentes-contaminantes-2024-4-trimestre.csv": {
+      "datasetId": "acumar_ac456e4b-8280-4804-9cd6-785247617cb8",
+      "datasetTitle": "Agentes Contaminantes Identificados en la Cuenca Matanza Riachuelo (2024-2025)",
+      "fileName": "agentes-contaminantes-2024-4-trimestre.csv",
+      "format": "CSV",
+      "title": "Agentes Contaminantes identificados de la Cuenca Matanza Riachuelo - 2024",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/ac456e4b-8280-4804-9cd6-785247617cb8/resource/28caf69d-191a-4fbc-b0a1-d23cd66fcd2a",
+      "lastProcessed": "2025-10-09T07:07:56.850Z",
+      "status": "processed"
+    },
+    "agentes-contaminantes-2025-1-trimestre.csv": {
+      "datasetId": "acumar_ac456e4b-8280-4804-9cd6-785247617cb8",
+      "datasetTitle": "Agentes Contaminantes Identificados en la Cuenca Matanza Riachuelo (2024-2025)",
+      "fileName": "agentes-contaminantes-2025-1-trimestre.csv",
+      "format": "CSV",
+      "title": "Agentes Contaminantes identificados de la Cuenca Matanza Riachuelo - 2025",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/ac456e4b-8280-4804-9cd6-785247617cb8/resource/3e97ffe3-2e9b-43ec-9c3f-52f2385d25ae",
+      "lastProcessed": "2025-10-09T07:07:59.303Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_ac456e4b-8280-4804-9cd6-785247617cb8",
+    "title": "Agentes Contaminantes Identificados en la Cuenca Matanza Riachuelo (2024-2025)",
+    "description": "Datos correspondientes a los establecimientos declarados \"Agentes Contaminantes\" dentro de la Cuenca Matanza Riachuelo, conforme lo establecido en la Resolución ACUMAR 12/2019.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2024-12-19T19:26:58.235650",
+    "modified": "2025-05-26T17:09:59.632959",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección de Fiscalización y Adecuación Ambiental"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/agentes-contaminantes-identificados-cuenca-matanza-riachuelo"
+  }
+}

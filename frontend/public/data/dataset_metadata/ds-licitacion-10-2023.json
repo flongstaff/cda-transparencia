@@ -1,0 +1,31 @@
+{
+  "files": {
+    "LICITACION-PUBLICA-N°10.pdf": {
+      "datasetId": "ds-licitacion-10-2023",
+      "datasetTitle": "Licitación Pública N°10/2023 - Adquisición de Combi Mini Bus",
+      "fileName": "LICITACION-PUBLICA-N°10.pdf",
+      "format": "PDF",
+      "title": "Pliego N°10",
+      "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/10/LICITACION-PUBLICA-N°10.pdf",
+      "lastProcessed": "2025-10-09T06:14:15.954Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ds-licitacion-10-2023",
+    "title": "Licitación Pública N°10/2023 - Adquisición de Combi Mini Bus",
+    "description": "Llamado para adquisición de combi mini bus. Apertura: 13/11/2023.",
+    "theme": [
+      "gobierno-y-sector-publico"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2023-10-23T00:00:00",
+    "modified": "2023-10-23T00:00:00",
+    "publisher": {
+      "name": "Oficina de Compras"
+    },
+    "landingPage": "https://carmendeareco.gob.ar/transparencia/licitaciones/"
+  }
+}

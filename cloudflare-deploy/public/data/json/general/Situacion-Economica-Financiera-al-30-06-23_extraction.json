@@ -1,0 +1,13 @@
+{
+  "file_name": "Situacion-Economica-Financiera-al-30-06-23.pdf",
+  "file_hash": "ef662787fc3cb3a3328d6bbed71db56e",
+  "page_count": 3,
+  "text_length": 3,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:23.971338"
+}

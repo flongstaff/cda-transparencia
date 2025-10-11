@@ -1,0 +1,52 @@
+{
+  "files": {
+    "multas-empresas-mercado-de-glp-resmen-de-actas-de-inspeccin.csv": {
+      "datasetId": "energia_ce3693c7-4cab-40a1-9705-5b25b3d9145c",
+      "datasetTitle": "Notas y multas a empresas de GLP",
+      "fileName": "multas-empresas-mercado-de-glp-resmen-de-actas-de-inspeccin.csv",
+      "format": "CSV",
+      "title": "Resúmen de Actas de Inspección",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ce3693c7-4cab-40a1-9705-5b25b3d9145c/resource/def306d4-6f94-412a-ae57-8c4da8d08778",
+      "lastProcessed": "2025-10-09T06:51:29.372Z",
+      "status": "processed"
+    },
+    "multas-empresas-mercado-de-glp-resmen-de-multas.csv": {
+      "datasetId": "energia_ce3693c7-4cab-40a1-9705-5b25b3d9145c",
+      "datasetTitle": "Notas y multas a empresas de GLP",
+      "fileName": "multas-empresas-mercado-de-glp-resmen-de-multas.csv",
+      "format": "CSV",
+      "title": "Resúmen de Multas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ce3693c7-4cab-40a1-9705-5b25b3d9145c/resource/692b573f-c9ef-4d20-bc2b-b5f8a7e80544",
+      "lastProcessed": "2025-10-09T06:51:30.912Z",
+      "status": "processed"
+    },
+    "notas-empresas-mercado-de-glp.csv": {
+      "datasetId": "energia_ce3693c7-4cab-40a1-9705-5b25b3d9145c",
+      "datasetTitle": "Notas y multas a empresas de GLP",
+      "fileName": "notas-empresas-mercado-de-glp.csv",
+      "format": "CSV",
+      "title": "Notas empresas mercado de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/ce3693c7-4cab-40a1-9705-5b25b3d9145c/resource/09a2ed9b-c485-4421-b753-975450e7745f",
+      "lastProcessed": "2025-10-09T06:51:32.286Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_ce3693c7-4cab-40a1-9705-5b25b3d9145c",
+    "title": "Notas y multas a empresas de GLP",
+    "description": "Notas empresas mercado de GLP",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:40.972496",
+    "modified": "2023-07-31T11:14:09.241364",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

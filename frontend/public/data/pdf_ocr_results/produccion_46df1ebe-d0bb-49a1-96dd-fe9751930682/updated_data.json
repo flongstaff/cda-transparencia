@@ -1,0 +1,27 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "produccion_46df1ebe-d0bb-49a1-96dd-fe9751930682",
+      "title": "Graduados universitarios del sistema Araucano (2016-2018)",
+      "distribution": [
+        {
+          "title": "Metodología Araucano DA.pdf",
+          "format": "PDF",
+          "fileName": "Metodología Araucano DA.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/produccion_46df1ebe-d0bb-49a1-96dd-fe9751930682/Metodología Araucano DA.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/produccion_46df1ebe-d0bb-49a1-96dd-fe9751930682/Metodología Araucano DA_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    }
+  ]
+}

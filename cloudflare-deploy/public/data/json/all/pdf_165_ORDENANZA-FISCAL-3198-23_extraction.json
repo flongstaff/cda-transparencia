@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_165_ORDENANZA-FISCAL-3198-23.pdf",
+  "file_hash": "522d90b2dd5b1823416090a846144d80",
+  "page_count": 45,
+  "text_length": 45,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:51.182669"
+}

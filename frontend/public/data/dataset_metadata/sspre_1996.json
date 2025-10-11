@@ -1,0 +1,162 @@
+{
+  "files": {
+    "d-sector-institucional-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "d-sector-institucional-1996.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Sector Institucional 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.277Z",
+      "status": "processed"
+    },
+    "credito-anual-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "credito-anual-1996.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación anual 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.277Z",
+      "status": "processed"
+    },
+    "credito-mensual-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "credito-mensual-1996.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación mensual 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.277Z",
+      "status": "processed"
+    },
+    "d-apertura-programatica-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "d-apertura-programatica-1996.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Apertura Programática 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.277Z",
+      "status": "processed"
+    },
+    "d-clasificador-economico-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "d-clasificador-economico-1996.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Clasificador económico 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.277Z",
+      "status": "processed"
+    },
+    "d-finalidad-funcion-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "d-finalidad-funcion-1996.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Finalidad y Función 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.277Z",
+      "status": "processed"
+    },
+    "d-institucion-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "d-institucion-1996.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Institución 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.277Z",
+      "status": "processed"
+    },
+    "d-objeto-gasto-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "d-objeto-gasto-1996.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Objeto del gasto 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.277Z",
+      "status": "processed"
+    },
+    "d-rubro-recurso-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "d-rubro-recurso-1996.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Rubro del recurso 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.278Z",
+      "status": "processed"
+    },
+    "d-servicio-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "d-servicio-1996.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Servicio Administrativo Financiero 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.278Z",
+      "status": "processed"
+    },
+    "d-ubicacion-geografica-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "d-ubicacion-geografica-1996.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Ubicación geográfica 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.278Z",
+      "status": "processed"
+    },
+    "recursos-anual-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "recursos-anual-1996.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación anual 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.278Z",
+      "status": "processed"
+    },
+    "recursos-mensual-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "recursos-mensual-1996.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación mensual 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.278Z",
+      "status": "processed"
+    },
+    "d-fuente-financiamiento-1996.zip": {
+      "datasetId": "sspre_1996",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 1996.",
+      "fileName": "d-fuente-financiamiento-1996.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Fuente de Financiamiento 1996",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.278Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspre_1996",
+    "title": "Presupuesto de la Administración Pública Nacional 1996.",
+    "description": "Créditos y Recursos de la Administración Pública Nacional del ejercicio 1996.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2020-07-20T03:00:00Z",
+    "modified": "2020-07-03T20:06:14Z",
+    "publisher": {
+      "mbox": "info@presupuestoabierto.gob.ar",
+      "name": "Ministerio de Economía. Secretaría de Hacienda. Subsecretaría de Presupuesto."
+    },
+    "landingPage": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "boletin_oficial_pdf_11_SITUACION-ECONOMICO-FINANCIERA-DEL-02-01-2023-AL-31-12-2023.pdf",
+  "file_hash": "50a84b9143583debf5faf221e6947c6f",
+  "page_count": 3,
+  "text_length": 3,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:36.464815"
+}

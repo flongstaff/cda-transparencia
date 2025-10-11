@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "renaper_5",
+      "title": "Movilidad Residencial en Argentina",
+      "distribution": [
+        {
+          "title": "Metodologia_movilidad_residencial_interprovincial_argentina.pdf",
+          "format": "PDF",
+          "fileName": "Metodologia_movilidad_residencial_interprovincial_argentina.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/renaper_5/Metodologia_movilidad_residencial_interprovincial_argentina.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/renaper_5/Metodologia_movilidad_residencial_interprovincial_argentina_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

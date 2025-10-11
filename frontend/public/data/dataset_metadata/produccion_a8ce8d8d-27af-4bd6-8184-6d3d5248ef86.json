@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "produccion_a8ce8d8d-27af-4bd6-8184-6d3d5248ef86",
+      "datasetTitle": "Registro MiPyME",
+      "lastProcessed": "2025-10-09T08:04:51.905Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_a8ce8d8d-27af-4bd6-8184-6d3d5248ef86",
+    "title": "Registro MiPyME",
+    "description": "Agrupa a las sociedades, cooperativas, autónomos y monotributistas que realizan actividades comerciales, de servicios y productivas en el país y hayan obtenido al menos una vez la acreditación de la condición MiPyME mediante el Certificado correspondiente. El registro incluye tanto a contribuyentes empleadores como a un número significativo de contribuyentes no empleadores. La inscripción es voluntaria, por lo tanto no tiene una cobertura total sobre el universo de contribuyentes.   ",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-04-28T15:06:39.707395",
+    "modified": "2024-12-23T16:05:35.719254",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Secretaría de la Pequeña y Mediana Empresa y los Emprendedores. Subsecretaría de Financiamiento y Competitividad Pyme. Dirección Nacional de Fortalecimiento de la Competitividad Pyme."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/registro-mipyme"
+  }
+}

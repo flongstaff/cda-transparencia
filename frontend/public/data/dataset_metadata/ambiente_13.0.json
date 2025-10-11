@@ -1,0 +1,151 @@
+{
+  "files": {
+    "BiTP_d_lorovinoso_misiones19_num": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_d_lorovinoso_misiones19_num",
+      "format": "CSV",
+      "title": "Abundancia del Loro vinoso",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=210",
+      "lastProcessed": "2025-10-09T07:00:15.092Z",
+      "status": "processed"
+    },
+    "BiTP_m_venadopampas_85_13_num": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_m_venadopampas_85_13_num",
+      "format": "CSV",
+      "title": "Abundancia del venado de las pampas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=222",
+      "lastProcessed": "2025-10-09T07:00:16.424Z",
+      "status": "processed"
+    },
+    "BiTP_k_playerorojizo_tdfuego": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_k_playerorojizo_tdfuego",
+      "format": "CSV",
+      "title": "Censos aéreos del playero rojizo",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=221",
+      "lastProcessed": "2025-10-09T07:00:17.689Z",
+      "status": "processed"
+    },
+    "BiTP_j_pinguinomagallanes98_15_censos": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_j_pinguinomagallanes98_15_censos",
+      "format": "CSV",
+      "title": "Censos poblacionales del pingüino de Magallanes",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=220",
+      "lastProcessed": "2025-10-09T07:00:18.945Z",
+      "status": "processed"
+    },
+    "BiTP_h_pinguinoemperadoradultos_05_17": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_h_pinguinoemperadoradultos_05_17",
+      "format": "CSV",
+      "title": "Censos poblacionales del pingüino emperador adulto",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=217",
+      "lastProcessed": "2025-10-09T07:00:20.315Z",
+      "status": "processed"
+    },
+    "BiTP_i_pinguinomagallanes_estimac": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_i_pinguinomagallanes_estimac",
+      "format": "CSV",
+      "title": "Estimaciones de la población del pingüino de Magallanes",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=219",
+      "lastProcessed": "2025-10-09T07:00:21.568Z",
+      "status": "processed"
+    },
+    "BiTP_b_cauquencolorado_evol07-18_num": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_b_cauquencolorado_evol07-18_num",
+      "format": "CSV",
+      "title": "Evolución temporal del número total de cauquenes colorados",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=2",
+      "lastProcessed": "2025-10-09T07:00:23.008Z",
+      "status": "processed"
+    },
+    "BiTP_n_venadopampas_aguapey07_18_num": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_n_venadopampas_aguapey07_18_num",
+      "format": "CSV",
+      "title": "Monitoreos de venado de las pampas en la cuenca del Aguapey (Corrientes)",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=94",
+      "lastProcessed": "2025-10-09T07:00:24.260Z",
+      "status": "processed"
+    },
+    "BiTP_c_ciervopantanos_estibera75_11_num": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_c_ciervopantanos_estibera75_11_num",
+      "format": "CSV",
+      "title": "Población de ciervo de los pantanos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=209",
+      "lastProcessed": "2025-10-09T07:00:25.530Z",
+      "status": "processed"
+    },
+    "BiTP_f_pecarilaiado_sitios12_17_porc": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_f_pecarilaiado_sitios12_17_porc",
+      "format": "CSV",
+      "title": "Porcentaje de sitios con detección de pecarí labiado",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=215",
+      "lastProcessed": "2025-10-09T07:00:26.791Z",
+      "status": "processed"
+    },
+    "BiTP_g_quimilerositiosdetec_11_17_porc": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_g_quimilerositiosdetec_11_17_porc",
+      "format": "CSV",
+      "title": "Porcentaje de sitios con detección de quimileros",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=216",
+      "lastProcessed": "2025-10-09T07:00:28.109Z",
+      "status": "processed"
+    },
+    "BiTP_e_monoaullador_regauditivo_visual_num": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_e_monoaullador_regauditivo_visual_num",
+      "format": "CSV",
+      "title": "Registros auditivos o visuales de monos aulladores",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=218",
+      "lastProcessed": "2025-10-09T07:00:29.432Z",
+      "status": "processed"
+    },
+    "BiTP_a_cardenalamarillo_15_18_num": {
+      "datasetId": "ambiente_13.0",
+      "datasetTitle": "Tendencia poblacional de biodiversidad",
+      "fileName": "BiTP_a_cardenalamarillo_15_18_num",
+      "format": "CSV",
+      "title": "Total de ejemplares de Cardenal amarillo observados",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=13&did=208",
+      "lastProcessed": "2025-10-09T07:00:30.867Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_13.0",
+    "title": "Tendencia poblacional de biodiversidad",
+    "description": "Muestra poblaciones de especies relevantes",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2020-12-31T00:00:00",
+    "modified": "2020-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "files": {
+    "obras-infraestructura-2018.csv": {
+      "datasetId": "acumar_e7673e4e-2211-4c16-aef1-a89f9498ec4b",
+      "datasetTitle": "Seguimiento de Obras de Agua y Cloaca (2018-2023)",
+      "fileName": "obras-infraestructura-2018.csv",
+      "format": "CSV",
+      "title": "Reporte avance de obras de agua y cloaca - 2018",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/e7673e4e-2211-4c16-aef1-a89f9498ec4b/resource/19621071-d1b6-4beb-8661-d8200f6835db",
+      "lastProcessed": "2025-10-09T07:24:42.581Z",
+      "status": "processed"
+    },
+    "obras-infraestructura-2019.csv": {
+      "datasetId": "acumar_e7673e4e-2211-4c16-aef1-a89f9498ec4b",
+      "datasetTitle": "Seguimiento de Obras de Agua y Cloaca (2018-2023)",
+      "fileName": "obras-infraestructura-2019.csv",
+      "format": "CSV",
+      "title": "Reporte avance de obras de agua y cloaca - 2019",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/e7673e4e-2211-4c16-aef1-a89f9498ec4b/resource/b952edcd-c2c7-4491-ba92-f2979681fddc",
+      "lastProcessed": "2025-10-09T07:24:45.150Z",
+      "status": "processed"
+    },
+    "obras-infraestructura-2020.csv": {
+      "datasetId": "acumar_e7673e4e-2211-4c16-aef1-a89f9498ec4b",
+      "datasetTitle": "Seguimiento de Obras de Agua y Cloaca (2018-2023)",
+      "fileName": "obras-infraestructura-2020.csv",
+      "format": "CSV",
+      "title": "Reporte avance de obras de agua y cloaca - 2020",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/e7673e4e-2211-4c16-aef1-a89f9498ec4b/resource/f354678e-9c4a-4d63-ab85-a9156e1a21d3",
+      "lastProcessed": "2025-10-09T07:24:48.037Z",
+      "status": "processed"
+    },
+    "obras-infraestructura-2021.csv": {
+      "datasetId": "acumar_e7673e4e-2211-4c16-aef1-a89f9498ec4b",
+      "datasetTitle": "Seguimiento de Obras de Agua y Cloaca (2018-2023)",
+      "fileName": "obras-infraestructura-2021.csv",
+      "format": "CSV",
+      "title": "Reporte avance de obras de agua y cloaca - 2021",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/e7673e4e-2211-4c16-aef1-a89f9498ec4b/resource/f3298102-ed46-4750-ab76-14cde98ebfc1",
+      "lastProcessed": "2025-10-09T07:24:50.627Z",
+      "status": "processed"
+    },
+    "obras-infraestructura-2022.csv": {
+      "datasetId": "acumar_e7673e4e-2211-4c16-aef1-a89f9498ec4b",
+      "datasetTitle": "Seguimiento de Obras de Agua y Cloaca (2018-2023)",
+      "fileName": "obras-infraestructura-2022.csv",
+      "format": "CSV",
+      "title": "Reporte avance de obras de agua y cloaca - 2022",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/e7673e4e-2211-4c16-aef1-a89f9498ec4b/resource/a6ffb2f6-88d8-41f5-ad06-75f5f0cbb33b",
+      "lastProcessed": "2025-10-09T07:24:53.280Z",
+      "status": "processed"
+    },
+    "obras-infraestructura-2023.csv": {
+      "datasetId": "acumar_e7673e4e-2211-4c16-aef1-a89f9498ec4b",
+      "datasetTitle": "Seguimiento de Obras de Agua y Cloaca (2018-2023)",
+      "fileName": "obras-infraestructura-2023.csv",
+      "format": "CSV",
+      "title": "Reporte avance de obras de agua y cloaca - 2023",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/e7673e4e-2211-4c16-aef1-a89f9498ec4b/resource/f3949151-ded1-45ff-8b88-a9851c5491ea",
+      "lastProcessed": "2025-10-09T07:24:55.754Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_e7673e4e-2211-4c16-aef1-a89f9498ec4b",
+    "title": "Seguimiento de Obras de Agua y Cloaca (2018-2023)",
+    "description": "Datos correspondientes al seguimiento efectuado por ACUMAR de las obras de provisión de agua potable y saneamiento cloacal realizadas en la Cuenca Matanza Riachuelo, entre 2018 y 2023.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2025-03-13T15:07:55.419059",
+    "modified": "2025-03-13T15:07:55.419059",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Coordinación de Infraestructura"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/seguimiento-de-obras-de-agua-y-cloaca-2018-2023"
+  }
+}

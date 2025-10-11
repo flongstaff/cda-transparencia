@@ -1,0 +1,52 @@
+{
+  "files": {
+    "proyectos_fisu.csv": {
+      "datasetId": "habitat_2",
+      "datasetTitle": "Proyectos de integración socio urbana",
+      "fileName": "proyectos_fisu.csv",
+      "format": "CSV",
+      "title": "Proyectos financiados por el Fondo para la Integración Socio Urbana",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu/proyectos-de-integracion-socio-urbana",
+      "lastProcessed": "2025-10-09T06:41:19.013Z",
+      "status": "processed"
+    },
+    "proyectos_pisu.csv": {
+      "datasetId": "habitat_2",
+      "datasetTitle": "Proyectos de integración socio urbana",
+      "fileName": "proyectos_pisu.csv",
+      "format": "CSV",
+      "title": "Proyectos Programa de Integración Socio Urbana (PISU)",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu/proyectos-de-integracion-socio-urbana",
+      "lastProcessed": "2025-10-09T06:41:19.088Z",
+      "status": "processed"
+    },
+    "proyectos_ibp.csv": {
+      "datasetId": "habitat_2",
+      "datasetTitle": "Proyectos de integración socio urbana",
+      "fileName": "proyectos_ibp.csv",
+      "format": "CSV",
+      "title": "Proyectos de Programa Argentina Unida por la Integración de Barrios Populares",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu/proyectos-de-integracion-socio-urbana",
+      "lastProcessed": "2025-10-09T06:41:19.161Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "habitat_2",
+    "title": "Proyectos de integración socio urbana",
+    "description": "Listado de proyectos de integración socio urbana desarrollados en barrios populares.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2021-12-13T08:35:14.232920",
+    "modified": "2025-09-08T00:00:00",
+    "publisher": {
+      "mbox": "datosabiertos@infraestructura.gob.ar",
+      "name": "Ministerio de Economía, Secretaría de Obras Públicas, Subsecretaría de Integración Socio Urbana"
+    },
+    "landingPage": "https://www.argentina.gob.ar/obras-publicas/sisu/proyectos-de-integracion-socio-urbana"
+  }
+}

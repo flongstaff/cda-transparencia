@@ -1,0 +1,42 @@
+{
+  "files": {
+    "asalariados-registrados-sector-privado-segun-provincia-datos-con-estacionalidad.csv": {
+      "datasetId": "sspm_154",
+      "datasetTitle": "Asalariados registrados del sector privado, por provincia.",
+      "fileName": "asalariados-registrados-sector-privado-segun-provincia-datos-con-estacionalidad.csv",
+      "format": "CSV",
+      "title": "Asalariados registrados del sector privado, por provincia. Valores con estacionalidad",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:50.776Z",
+      "status": "processed"
+    },
+    "asalariados-registrados-sector-privado-segun-provincia-datos-sin-estacionalidad.csv": {
+      "datasetId": "sspm_154",
+      "datasetTitle": "Asalariados registrados del sector privado, por provincia.",
+      "fileName": "asalariados-registrados-sector-privado-segun-provincia-datos-sin-estacionalidad.csv",
+      "format": "CSV",
+      "title": "Asalariados registrados del sector privado, por provincia. Valores sin estacionalidad",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:51.826Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_154",
+    "title": "Asalariados registrados del sector privado, por provincia.",
+    "description": "Asalariados registrados del sector privado según provincia.  En miles de trabajadores",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:02:18.401788",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

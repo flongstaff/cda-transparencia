@@ -315,33 +315,42 @@ const Home: React.FC = () => {
 
           {/* Data Categories Distribution */}
           <ChartContainer
-            title="Distribución por Categorías de Datos"
+            title="Distribución de Documentos"
             description="Clasificación de información por tipo"
             icon={PieChart}
             height={350}
           >
-            <UnifiedChart
-              type="data_categories"
-              year={new Date().getFullYear()}
-              title="Categorías de Datos"
-              height={300}
-            />
+            <ErrorBoundary>
+              <React.Suspense fallback={<LoadingState />}>
+                <UnifiedChart
+                  type="document"
+                  year={new Date().getFullYear()}
+                  variant="pie"
+                  height={300}
+                />
+              </React.Suspense>
+            </ErrorBoundary>
           </ChartContainer>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           {/* Financial Data Growth */}
           <ChartContainer
-            title="Crecimiento de Datos Financieros"
-            description="Evolución de datos financieros publicados"
+            title="Tendencia Presupuestaria"
+            description="Evolución del presupuesto a lo largo del tiempo"
             icon={TrendingUp}
             height={350}
           >
-            <UnifiedChart
-              type="financial_data_growth"
-              year={null}
-              height={300}
-            />
+            <ErrorBoundary>
+              <React.Suspense fallback={<LoadingState />}>
+                <UnifiedChart
+                  type="budget-trend"
+                  year={new Date().getFullYear()}
+                  variant="area"
+                  height={300}
+                />
+              </React.Suspense>
+            </ErrorBoundary>
           </ChartContainer>
 
           {/* Data Quality Metrics */}

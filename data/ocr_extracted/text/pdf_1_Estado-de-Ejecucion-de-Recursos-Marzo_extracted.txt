@@ -1,0 +1,40 @@
+R.A.F.A.M.
+ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 11
+26/04/202512:54
+Municipalidad de
+Carmen de ArecoDel 02/01/2025 al 31/03/2025
+Ejercicio: 2025
+Rubro - Descripción ProcedenciaModifica
+cionesRecurso
+EstimadoRecurso
+VigenteRecurso
+DevengadoDif. entre
+Vigente y
+DevengadoRecursos
+PercibidoDif. entre
+Devengado y
+PercibidoDif. entre
+Vigente y
+Percibido
+11.0.00.00 - Ingresos Tributarios
+11.4.00.00 - Coparticipación de impuestos
+11.4.01.00 - Coparticipación Pcial. de Impuesto
+Ley 10.5593.996.907.472,00 0,00 900.026.290,90 900.026.290,90 3.996.907.472,00 3.096.881.181,10 0,00 3.096.881.181,10 21 - Origen Provincial - De
+libre disponibilidad
+11.4.02.00 - Fondo para el fortalecimiento de
+Recurso Municipales197.904.689,00 0,00 46.722.065,25 46.722.065,25 197.904.689,00 151.182.623,75 0,00 151.182.623,75 21 - Origen Provincial - De
+libre disponibilidad
+11.4.03.00 - Fondo Municipal de Inclusion Social 79.242.470,00 0,00 18.333.076,35 18.333.076,35 79.242.470,00 60.909.393,65 0,00 60.909.393,65 21 - Origen Provincial - De
+libre disponibilidad11.4.05.00 - Fondo Educativo 593.057.689,00 0,00 0,00 0,00 593.057.689,00 593.057.689,00 0,00 593.057.689,00 22 - Origen Provincial -
+Afectados11.4.06.00 - Fondo de Fortalecimiento Fiscal
+Municipal Ley 15.480  Art° 32178.891.947,00 0,00 0,00 0,00 178.891.947,00 178.891.947,00 0,00 178.891.947,00 21 - Origen Provincial - De
+libre disponibilidad
+5.046.004.267,00 0,00 5.046.004.267,00 965.081.432,50 4.080.922.834,50 965.081.432,50 0,00 Total Coparticipación de impuestos 4.080.922.834,50
+11.9.00.00 - Otros tributarios
+11.9.02.00 - Contribucion Energia Electrica 6% Art
+72 ter Ley 11.969
+11.9.02.01 - Contribucion 6% EDEN 58.206.978,00 0,00 24.380.390,15 24.380.390,15 58.206.978,00 33.826.587,85 0,00 33.826.587,85 21 - Origen Provincial - De
+libre disponibilidad
+11.9.02.03 - Contribucion 6% CEOPSA 0,00 0,00 247.694,06 247.694,06 0,00 -247.694,06 0,00 -247.694,06 21 - Origen Provincial - De
+libre disponibilidad
+58.206.978,00 0,00 5...

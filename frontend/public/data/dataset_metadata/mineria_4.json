@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_4",
+      "datasetTitle": "Balance Cambiario del SIACAM",
+      "lastProcessed": "2025-10-09T06:49:46.024Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_4",
+    "title": "Balance Cambiario del SIACAM",
+    "description": "Datos correspondientes al tablero de Divisas del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM). Elaborado por la Dirección Nacional de Promoción y Economía Minera (Subsecretaría de Desarrollo Minero, Secretaría de Minería, Ministerio de Economía de la Nación) en base a los datos del Banco Central de la República Argentina.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2022-12-07",
+    "modified": "2025-09-02",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

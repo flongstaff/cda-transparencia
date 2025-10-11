@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "seguridad_2",
+      "title": "SNIC - Provincial. Estadísticas criminales en la República Argentina por provincias",
+      "distribution": [
+        {
+          "title": "Informe_SNIC_Tucuman_2023.pdf",
+          "format": "PDF",
+          "fileName": "Informe_SNIC_Tucuman_2023.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/seguridad_2/Informe_SNIC_Tucuman_2023.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/seguridad_2/Informe_SNIC_Tucuman_2023_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "files": {
+    "precios-fob-oficiales-valores-diarios.csv": {
+      "datasetId": "sspm_358",
+      "datasetTitle": "Precios FOB oficiales",
+      "fileName": "precios-fob-oficiales-valores-diarios.csv",
+      "format": "CSV",
+      "title": "Precios FOB oficiales. Valores diarios",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:14.567Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_358",
+    "title": "Precios FOB oficiales",
+    "description": "Precios FOB oficiales en dólares por tonelada",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-12-11",
+    "modified": "2025-03-24T10:01:04.491993",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

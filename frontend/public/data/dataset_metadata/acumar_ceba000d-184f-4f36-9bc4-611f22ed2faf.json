@@ -1,0 +1,92 @@
+{
+  "files": {
+    "dimension-educacion-dimension-educacion.csv": {
+      "datasetId": "acumar_ceba000d-184f-4f36-9bc4-611f22ed2faf",
+      "datasetTitle": "Índice de Calidad de Vida (ICV) de la Cuenca Matanza Riachuelo",
+      "fileName": "dimension-educacion-dimension-educacion.csv",
+      "format": "CSV",
+      "title": "Dimensión Educación del ICV",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/ceba000d-184f-4f36-9bc4-611f22ed2faf/resource/b59913cd-e6cf-471b-9daf-c37c5d307b51",
+      "lastProcessed": "2025-10-09T08:03:08.353Z",
+      "status": "processed"
+    },
+    "dimension-entorno.csv": {
+      "datasetId": "acumar_ceba000d-184f-4f36-9bc4-611f22ed2faf",
+      "datasetTitle": "Índice de Calidad de Vida (ICV) de la Cuenca Matanza Riachuelo",
+      "fileName": "dimension-entorno.csv",
+      "format": "CSV",
+      "title": "Dimensión Entorno del ICV",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/ceba000d-184f-4f36-9bc4-611f22ed2faf/resource/6a3388f1-fb9f-42cf-92f4-7ed0621af4c4",
+      "lastProcessed": "2025-10-09T08:03:10.978Z",
+      "status": "processed"
+    },
+    "dimension-vivienda-1.csv": {
+      "datasetId": "acumar_ceba000d-184f-4f36-9bc4-611f22ed2faf",
+      "datasetTitle": "Índice de Calidad de Vida (ICV) de la Cuenca Matanza Riachuelo",
+      "fileName": "dimension-vivienda-1.csv",
+      "format": "CSV",
+      "title": "Dimensión Vivienda del ICV",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/ceba000d-184f-4f36-9bc4-611f22ed2faf/resource/6cca731f-32c0-4d13-b442-bea73c2e4201",
+      "lastProcessed": "2025-10-09T08:03:13.536Z",
+      "status": "processed"
+    },
+    "dimension-salud-2.csv": {
+      "datasetId": "acumar_ceba000d-184f-4f36-9bc4-611f22ed2faf",
+      "datasetTitle": "Índice de Calidad de Vida (ICV) de la Cuenca Matanza Riachuelo",
+      "fileName": "dimension-salud-2.csv",
+      "format": "CSV",
+      "title": "Dimensión Salud Pública del ICV",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/ceba000d-184f-4f36-9bc4-611f22ed2faf/resource/fd95f113-00b9-4064-bac6-32ed4b044a2b",
+      "lastProcessed": "2025-10-09T08:03:16.127Z",
+      "status": "processed"
+    },
+    "icv.csv": {
+      "datasetId": "acumar_ceba000d-184f-4f36-9bc4-611f22ed2faf",
+      "datasetTitle": "Índice de Calidad de Vida (ICV) de la Cuenca Matanza Riachuelo",
+      "fileName": "icv.csv",
+      "format": "CSV",
+      "title": "ICV de la Cuenca Matanza Riachuelo.",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/ceba000d-184f-4f36-9bc4-611f22ed2faf/resource/60331bdd-c64e-4b72-b00d-25836384e998",
+      "lastProcessed": "2025-10-09T08:03:18.662Z",
+      "status": "processed"
+    },
+    "icv-documento-metodologico-resumen.pdf": {
+      "datasetId": "acumar_ceba000d-184f-4f36-9bc4-611f22ed2faf",
+      "datasetTitle": "Índice de Calidad de Vida (ICV) de la Cuenca Matanza Riachuelo",
+      "fileName": "icv-documento-metodologico-resumen.pdf",
+      "format": "PDF",
+      "title": "Documento metodológico (Resumen)",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/ceba000d-184f-4f36-9bc4-611f22ed2faf/resource/a42553ae-e4cd-45ae-a0de-d4bb16279c87",
+      "lastProcessed": "2025-10-09T08:03:22.041Z",
+      "status": "processed"
+    },
+    "informe-final-icv-unlp-2017.pdf": {
+      "datasetId": "acumar_ceba000d-184f-4f36-9bc4-611f22ed2faf",
+      "datasetTitle": "Índice de Calidad de Vida (ICV) de la Cuenca Matanza Riachuelo",
+      "fileName": "informe-final-icv-unlp-2017.pdf",
+      "format": "PDF",
+      "title": "Índices e indicadores de calidad de vida y de agua en la Cuenca Matanza Riachuelo. Informe Final: Calidad de Vida (2017).",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/ceba000d-184f-4f36-9bc4-611f22ed2faf/resource/30665532-b8ce-499b-8b14-daa6b9c7d631",
+      "lastProcessed": "2025-10-09T08:03:25.239Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_ceba000d-184f-4f36-9bc4-611f22ed2faf",
+    "title": "Índice de Calidad de Vida (ICV) de la Cuenca Matanza Riachuelo",
+    "description": "Datos correspondientes al ICV, que forma parte del Sistema de Indicadores de ACUMAR.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2017-09-05T15:15:05.722528",
+    "modified": "2025-02-07T16:42:39.651600",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Coordinación de Gestión y Planificación"
+    },
+    "landingPage": "https://www.acumar.gob.ar/indicadores/indice-calidad-vida-icv"
+  }
+}

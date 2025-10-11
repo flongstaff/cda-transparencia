@@ -1,0 +1,38 @@
+{
+  "file_name": "2019_budget_execution_quarterly.csv",
+  "row_count": 4,
+  "column_count": 3,
+  "columns": [
+    "quarter",
+    "revenue_percentage",
+    "expenditure_percentage"
+  ],
+  "sample_data": [
+    {
+      "quarter": "Q1",
+      "revenue_percentage": 24.5,
+      "expenditure_percentage": 23.8
+    },
+    {
+      "quarter": "Q2",
+      "revenue_percentage": 51.2,
+      "expenditure_percentage": 49.6
+    },
+    {
+      "quarter": "Q3",
+      "revenue_percentage": 75.8,
+      "expenditure_percentage": 74.2
+    },
+    {
+      "quarter": "Q4",
+      "revenue_percentage": 100.0,
+      "expenditure_percentage": 98.7
+    }
+  ],
+  "data_types": {
+    "quarter": "object",
+    "revenue_percentage": "float64",
+    "expenditure_percentage": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

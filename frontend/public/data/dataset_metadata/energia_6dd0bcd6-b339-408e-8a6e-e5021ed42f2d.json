@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_6dd0bcd6-b339-408e-8a6e-e5021ed42f2d",
+      "datasetTitle": "Potencia Máxima del Sistema Eléctrico",
+      "lastProcessed": "2025-10-09T07:24:01.380Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_6dd0bcd6-b339-408e-8a6e-e5021ed42f2d",
+    "title": "Potencia Máxima del Sistema Eléctrico",
+    "description": "Evolución de la potencia máxima mensual del sistema interconectado nacional - período 1980 - 2017 en MW",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-12-28T15:32:54.566507",
+    "modified": "2020-01-16T19:43:03.535743",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://www.energia.gob.ar/dataset/potencia-maxima-del-sistema-electrico-1980-2017"
+  }
+}

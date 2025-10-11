@@ -1,0 +1,60 @@
+{
+  "file_name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-2023-4°TRI_tabula_table_2.csv",
+  "row_count": 2,
+  "column_count": 11,
+  "columns": [
+    "Unnamed: 0",
+    "Crédito",
+    "Modifica",
+    "Crédito.1",
+    "Preventivo",
+    "Compromiso",
+    "Devengado",
+    "Pagado",
+    "Crédito.2",
+    "Crédito Vig.",
+    "Devengado.1"
+  ],
+  "sample_data": [
+    {
+      "Unnamed: 0": "Finalidades y Funciones",
+      "Crédito": NaN,
+      "Modifica": NaN,
+      "Crédito.1": NaN,
+      "Preventivo": NaN,
+      "Compromiso": NaN,
+      "Devengado": NaN,
+      "Pagado": NaN,
+      "Crédito.2": NaN,
+      "Crédito Vig.": NaN,
+      "Devengado.1": NaN
+    },
+    {
+      "Unnamed: 0": NaN,
+      "Crédito": "Aprobado",
+      "Modifica": "ciones",
+      "Crédito.1": "Vigente",
+      "Preventivo": NaN,
+      "Compromiso": NaN,
+      "Devengado": NaN,
+      "Pagado": NaN,
+      "Crédito.2": "Disponible",
+      "Crédito Vig.": "- Devengado",
+      "Devengado.1": "no pagado"
+    }
+  ],
+  "data_types": {
+    "Unnamed: 0": "object",
+    "Crédito": "object",
+    "Modifica": "object",
+    "Crédito.1": "object",
+    "Preventivo": "float64",
+    "Compromiso": "float64",
+    "Devengado": "float64",
+    "Pagado": "float64",
+    "Crédito.2": "object",
+    "Crédito Vig.": "object",
+    "Devengado.1": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

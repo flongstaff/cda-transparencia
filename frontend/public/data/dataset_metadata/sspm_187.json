@@ -1,0 +1,32 @@
+{
+  "files": {
+    "beneficios-sipa-pnc.csv": {
+      "datasetId": "sspm_187",
+      "datasetTitle": "Política de Ingresos. Prestaciones de la seguridad social. BESS-MTESS",
+      "fileName": "beneficios-sipa-pnc.csv",
+      "format": "CSV",
+      "title": "Política de Ingresos. Prestaciones de la seguridad social. BESS-MTESS",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:57.555Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_187",
+    "title": "Política de Ingresos. Prestaciones de la seguridad social. BESS-MTESS",
+    "description": "Beneficios en vigor del SIPA, por tipo. PNC por tipo y por provincia. Beneficiarios del Sistema de Prestaciones por Desempleo. Datos anuales de beneficios liquidados a diciembre de cada año.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-03",
+    "modified": "2025-03-24T10:01:18.168019",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

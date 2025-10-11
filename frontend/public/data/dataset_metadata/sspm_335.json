@@ -1,0 +1,32 @@
+{
+  "files": {
+    "balance-pagos-datos-historicos.csv": {
+      "datasetId": "sspm_335",
+      "datasetTitle": "Balance de pagos en millones de dólares",
+      "fileName": "balance-pagos-datos-historicos.csv",
+      "format": "CSV",
+      "title": "Balance de pagos en millones de dólares. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:15:57.876Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_335",
+    "title": "Balance de pagos en millones de dólares",
+    "description": "Componentes del balance de pagos en millones de dólares. Valores anuales",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-11-28",
+    "modified": "2025-04-02T16:48:00.850518",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

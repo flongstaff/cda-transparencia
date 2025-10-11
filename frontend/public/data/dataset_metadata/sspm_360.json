@@ -1,0 +1,32 @@
+{
+  "files": {
+    "cantidad-de-empresas-exportadoras-por-sector-actividad-rangos-exportacion-saldo-comercial.csv": {
+      "datasetId": "sspm_360",
+      "datasetTitle": "Cantidad de empresas exportadoras por sector de actividad, rangos de exportación y saldo comercial",
+      "fileName": "cantidad-de-empresas-exportadoras-por-sector-actividad-rangos-exportacion-saldo-comercial.csv",
+      "format": "CSV",
+      "title": "Cantidad de empresas exportadoras por sector de actividad, rangos de exportación y saldo comercial. Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:40.206Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_360",
+    "title": "Cantidad de empresas exportadoras por sector de actividad, rangos de exportación y saldo comercial",
+    "description": "Datos cantidad de empresas exportadoras por sector de actividad, rangos de exportación y saldo comercial",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-12-12",
+    "modified": "2025-03-24T10:01:33.351832",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

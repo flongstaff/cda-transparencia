@@ -1,0 +1,50 @@
+{
+  "file_name": "2019_fiscal_balance.csv",
+  "row_count": 12,
+  "column_count": 4,
+  "columns": [
+    "month",
+    "revenue",
+    "expenditure",
+    "balance"
+  ],
+  "sample_data": [
+    {
+      "month": "Ene",
+      "revenue": 120000000,
+      "expenditure": 110000000,
+      "balance": 10000000
+    },
+    {
+      "month": "Feb",
+      "revenue": 115000000,
+      "expenditure": 105000000,
+      "balance": 10000000
+    },
+    {
+      "month": "Mar",
+      "revenue": 130000000,
+      "expenditure": 120000000,
+      "balance": 10000000
+    },
+    {
+      "month": "Abr",
+      "revenue": 125000000,
+      "expenditure": 115000000,
+      "balance": 10000000
+    },
+    {
+      "month": "May",
+      "revenue": 140000000,
+      "expenditure": 130000000,
+      "balance": 10000000
+    }
+  ],
+  "data_types": {
+    "month": "object",
+    "revenue": "int64",
+    "expenditure": "int64",
+    "balance": "int64"
+  },
+  "processing_method": "pandas-read_csv"
+}

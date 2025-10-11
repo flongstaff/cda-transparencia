@@ -1,0 +1,51 @@
+{
+  "files": {
+    "SE_tsecas_precip_km2": {
+      "datasetId": "ambiente_9.0",
+      "datasetTitle": "Estado del suelo",
+      "fileName": "SE_tsecas_precip_km2",
+      "format": "CSV",
+      "title": "Superficie de tierras secas en km2",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=3&stid=9&did=129",
+      "lastProcessed": "2025-10-09T07:01:05.397Z",
+      "status": "processed"
+    },
+    "ORDENES_DE_SUELOS_1117": {
+      "datasetId": "ambiente_9.0",
+      "datasetTitle": "Estado del suelo",
+      "fileName": "ORDENES_DE_SUELOS_1117",
+      "format": "CSV",
+      "title": "Órdenes de suelos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=3&stid=9&did=336",
+      "lastProcessed": "2025-10-09T07:01:06.665Z",
+      "status": "processed"
+    },
+    "SE_suelotipo_haporc": {
+      "datasetId": "ambiente_9.0",
+      "datasetTitle": "Estado del suelo",
+      "fileName": "SE_suelotipo_haporc",
+      "format": "CSV",
+      "title": "Superficie de tipo de uso de suelo, en hectáreas y porcentaje",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=3&stid=9&did=83",
+      "lastProcessed": "2025-10-09T07:01:07.932Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_9.0",
+    "title": "Estado del suelo",
+    "description": "Muestra los órdenes de suelo existentes en el país, el tipo de uso y la superficie de tierras secas",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2010-12-31T00:00:00",
+    "modified": "2010-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

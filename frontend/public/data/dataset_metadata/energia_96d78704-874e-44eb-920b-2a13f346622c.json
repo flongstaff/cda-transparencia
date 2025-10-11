@@ -1,0 +1,42 @@
+{
+  "files": {
+    "distribucin-elctrica-concesiones-de-empresas-distribuidoras.zip": {
+      "datasetId": "energia_96d78704-874e-44eb-920b-2a13f346622c",
+      "datasetTitle": "Distribución Eléctrica - Concesiones de empresas distribuidoras",
+      "fileName": "distribucin-elctrica-concesiones-de-empresas-distribuidoras.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica - Concesiones de empresas distribuidoras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/96d78704-874e-44eb-920b-2a13f346622c/resource/0862d65d-b90d-41cd-9c35-5c83bfecb6f3",
+      "lastProcessed": "2025-10-09T07:21:05.004Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-concesiones-de-empresas-distribuidoras.csv": {
+      "datasetId": "energia_96d78704-874e-44eb-920b-2a13f346622c",
+      "datasetTitle": "Distribución Eléctrica - Concesiones de empresas distribuidoras",
+      "fileName": "distribucin-elctrica-concesiones-de-empresas-distribuidoras.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica - Concesiones de empresas distribuidoras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/96d78704-874e-44eb-920b-2a13f346622c/resource/e0542ae9-b152-41a7-89eb-9f3bd70e508c",
+      "lastProcessed": "2025-10-09T07:21:06.245Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_96d78704-874e-44eb-920b-2a13f346622c",
+    "title": "Distribución Eléctrica - Concesiones de empresas distribuidoras",
+    "description": "Concesiones de empresas distribuidoras eléctricas. ISO 19126: PowerSupplies, Este subgrupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2023-04-05T12:25:43.686902",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/distribucion-electrica-concesiones-de-empresas-distribuidoras-"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "files": {
+    "ventas-al-mercado-interno-produccion-nacional-base-1994-valores-anuales.csv": {
+      "datasetId": "sspm_38",
+      "datasetTitle": "Ventas al Mercado Interno de Producción Nacional. Base 1994",
+      "fileName": "ventas-al-mercado-interno-produccion-nacional-base-1994-valores-anuales.csv",
+      "format": "CSV",
+      "title": "Ventas al Mercado Interno de Producción Nacional. Base 1994. Valores anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:45.446Z",
+      "status": "processed"
+    },
+    "ventas-al-mercado-interno-produccion-nacional-base-1994-valores-trimestrales.csv": {
+      "datasetId": "sspm_38",
+      "datasetTitle": "Ventas al Mercado Interno de Producción Nacional. Base 1994",
+      "fileName": "ventas-al-mercado-interno-produccion-nacional-base-1994-valores-trimestrales.csv",
+      "format": "CSV",
+      "title": "Ventas al Mercado Interno de Producción Nacional. Base 1994. Valores trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:46.501Z",
+      "status": "processed"
+    },
+    "ventas-al-mercado-interno-produccion-nacional-base-1994-valores-mensuales.csv": {
+      "datasetId": "sspm_38",
+      "datasetTitle": "Ventas al Mercado Interno de Producción Nacional. Base 1994",
+      "fileName": "ventas-al-mercado-interno-produccion-nacional-base-1994-valores-mensuales.csv",
+      "format": "CSV",
+      "title": "Ventas al Mercado Interno de Producción Nacional. Base 1994. Valores mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:47.574Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_38",
+    "title": "Ventas al Mercado Interno de Producción Nacional. Base 1994",
+    "description": "Índice de ventas al mercado interno de producción nacional según la base 1994",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:02:25.302701",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

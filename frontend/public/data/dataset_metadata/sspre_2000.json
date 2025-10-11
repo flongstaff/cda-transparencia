@@ -1,0 +1,162 @@
+{
+  "files": {
+    "d-sector-institucional-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "d-sector-institucional-2000.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Sector Institucional 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.267Z",
+      "status": "processed"
+    },
+    "credito-anual-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "credito-anual-2000.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación anual 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.267Z",
+      "status": "processed"
+    },
+    "credito-mensual-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "credito-mensual-2000.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación mensual 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.267Z",
+      "status": "processed"
+    },
+    "d-apertura-programatica-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "d-apertura-programatica-2000.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Apertura Programática 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.267Z",
+      "status": "processed"
+    },
+    "d-clasificador-economico-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "d-clasificador-economico-2000.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Clasificador económico 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.267Z",
+      "status": "processed"
+    },
+    "d-finalidad-funcion-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "d-finalidad-funcion-2000.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Finalidad y Función 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.267Z",
+      "status": "processed"
+    },
+    "d-fuente-financiamiento-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "d-fuente-financiamiento-2000.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Fuente de Financiamiento 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.268Z",
+      "status": "processed"
+    },
+    "d-institucion-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "d-institucion-2000.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Institución 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.268Z",
+      "status": "processed"
+    },
+    "d-objeto-gasto-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "d-objeto-gasto-2000.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Objeto del gasto 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.268Z",
+      "status": "processed"
+    },
+    "d-servicio-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "d-servicio-2000.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Servicio Administrativo Financiero 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.268Z",
+      "status": "processed"
+    },
+    "d-ubicacion-geografica-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "d-ubicacion-geografica-2000.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Ubicación geográfica 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.268Z",
+      "status": "processed"
+    },
+    "recursos-anual-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "recursos-anual-2000.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación anual 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.268Z",
+      "status": "processed"
+    },
+    "recursos-mensual-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "recursos-mensual-2000.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación mensual 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.268Z",
+      "status": "processed"
+    },
+    "d-rubro-recurso-2000.zip": {
+      "datasetId": "sspre_2000",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2000.",
+      "fileName": "d-rubro-recurso-2000.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Rubro del recurso 2000",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.268Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspre_2000",
+    "title": "Presupuesto de la Administración Pública Nacional 2000.",
+    "description": "Créditos y Recursos de la Administración Pública Nacional del ejercicio 2000.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2020-07-20T03:00:00Z",
+    "modified": "2020-07-03T19:19:36Z",
+    "publisher": {
+      "mbox": "info@presupuestoabierto.gob.ar",
+      "name": "Ministerio de Economía. Secretaría de Hacienda. Subsecretaría de Presupuesto."
+    },
+    "landingPage": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos"
+  }
+}

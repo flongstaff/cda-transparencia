@@ -1,0 +1,41 @@
+{
+  "files": {
+    "precios-en-planta-por-canales-de-comercializacin-desde-2013-volmenes-m3-y-precios-lts-.csv": {
+      "datasetId": "energia_27c857a7-8e88-4bcb-8822-984484df7c95",
+      "datasetTitle": "Precios en planta (Res. S.E. 606/2003)",
+      "fileName": "precios-en-planta-por-canales-de-comercializacin-desde-2013-volmenes-m3-y-precios-lts-.csv",
+      "format": "CSV",
+      "title": "Precios en planta por Canales de comercialización desde 2013, Volúmenes (m3) y Precios ($/lts.)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/27c857a7-8e88-4bcb-8822-984484df7c95/resource/c7c47e15-8850-4c63-94b5-618edb81de09",
+      "lastProcessed": "2025-10-09T06:39:09.429Z",
+      "status": "processed"
+    },
+    "precios-en-planta-por-reventa-a-estaciones-de-servicios-desde-2013-volmenes-m3-y-precios-lts-.csv": {
+      "datasetId": "energia_27c857a7-8e88-4bcb-8822-984484df7c95",
+      "datasetTitle": "Precios en planta (Res. S.E. 606/2003)",
+      "fileName": "precios-en-planta-por-reventa-a-estaciones-de-servicios-desde-2013-volmenes-m3-y-precios-lts-.csv",
+      "format": "CSV",
+      "title": "Precios en planta por Reventa a estaciones de servicios desde 2013, Volúmenes (m3) y Precios ($/lts.)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/27c857a7-8e88-4bcb-8822-984484df7c95/resource/33de61d4-0d60-4ecd-bd31-b6335d3755d8",
+      "lastProcessed": "2025-10-09T06:39:11.068Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_27c857a7-8e88-4bcb-8822-984484df7c95",
+    "title": "Precios en planta (Res. S.E. 606/2003)",
+    "description": "Precios y volúmenes en planta que informan los operadores que comercializan productos en el mercado y son sujetos pasivos del impuesto sobre los combustibles líquidos y el Gas Natural, en cumplimiento de la Resolución SE 606/2003 y de la Ley 23.966.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2019-09-27T17:21:19.485584",
+    "modified": "2023-05-19T14:18:52.473187",
+    "publisher": {
+      "name": "Secretaría de Energía"
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/precios-en-planta-res-s-e-606-2003"
+  }
+}

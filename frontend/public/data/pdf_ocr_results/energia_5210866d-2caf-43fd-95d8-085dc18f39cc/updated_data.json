@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "energia_5210866d-2caf-43fd-95d8-085dc18f39cc",
+      "title": "Producción Gas Natural desde 1950",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/energia_5210866d-2caf-43fd-95d8-085dc18f39cc/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/energia_5210866d-2caf-43fd-95d8-085dc18f39cc/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

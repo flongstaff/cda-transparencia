@@ -1,0 +1,6 @@
+{
+  "page_count": 25,
+  "text_length": 25,
+  "extracted_text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+  "fallback_method": "pypdf2"
+}

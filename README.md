@@ -67,6 +67,10 @@ The portal is deployed to three platforms for redundancy and performance:
 2. **Cloudflare Pages** - Secondary deployment for improved global performance
 3. **Cloudflare Workers** - API endpoint for external data integration
 
+### Detailed Deployment Guide
+
+See [DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md) for comprehensive deployment instructions covering all supported platforms.
+
 ### Custom Domain Deployment Note
 
 When deploying to GitHub Pages with a custom domain (cda-transparencia.org), ensure the build uses production mode to avoid subdirectory routing issues:
@@ -94,6 +98,17 @@ The deployment process is orchestrated through multiple GitHub Actions workflows
 3. **`deploy.yml`** - Deploys to Cloudflare Pages for custom domain (cda-transparencia.org) on a weekly schedule or manual trigger
 4. **`update-data.yml`** - Updates data files weekly by running data extraction and processing scripts
 5. **`build.yml`** - Tests and builds the application on every push and pull request
+
+## Enhanced Deployment with OCR Processing
+
+The project now includes enhanced deployment capabilities with OCR processing for PDF documents:
+
+- **PDF Processing**: All PDFs are processed with docstrange OCR for text extraction
+- **Data Organization**: Processed data is organized for GitHub Pages and CloudFlare deployment
+- **API Endpoints**: Consistent API structure for frontend consumption
+- **Deployment Automation**: Automated deployment to GitHub Pages with CloudFlare integration
+
+For detailed deployment instructions, see [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md).
 
 The actual GitHub Pages deployment is handled by GitHub's automatic `pages-build-deployment` using the `gh-pages` branch.
 

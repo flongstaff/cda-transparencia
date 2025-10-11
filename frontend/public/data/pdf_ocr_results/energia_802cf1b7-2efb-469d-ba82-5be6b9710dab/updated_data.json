@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "energia_802cf1b7-2efb-469d-ba82-5be6b9710dab",
+      "title": "Balances Energéticos",
+      "distribution": [
+        {
+          "title": "unknown.pdf",
+          "format": "PDF",
+          "fileName": "unknown.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/energia_802cf1b7-2efb-469d-ba82-5be6b9710dab/unknown.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/energia_802cf1b7-2efb-469d-ba82-5be6b9710dab/unknown_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "files": {
+    "defunciones-ocurridas-y-registradas-en-la-republica-argentina-anos-2005-2021.csv": {
+      "datasetId": "salud_27c588e8-43d0-411a-a40c-7ecc563c2c9f",
+      "datasetTitle": "Defunciones ocurridas y registradas en la República Argentina",
+      "fileName": "defunciones-ocurridas-y-registradas-en-la-republica-argentina-anos-2005-2021.csv",
+      "format": "CSV",
+      "title": "Defunciones ocurridas y registradas en la República Argentina entre los años 2005-2021",
+      "accessURL": "http://datos.salud.gob.ar/dataset/27c588e8-43d0-411a-a40c-7ecc563c2c9f/resource/fab9e990-865c-43c4-a643-3dbc3b70a934",
+      "lastProcessed": "2025-10-09T08:03:39.715Z",
+      "status": "processed"
+    },
+    "Defunciones ocurridas y registradas en la República Argentina entre los años 2005-2022.csv": {
+      "datasetId": "salud_27c588e8-43d0-411a-a40c-7ecc563c2c9f",
+      "datasetTitle": "Defunciones ocurridas y registradas en la República Argentina",
+      "fileName": "Defunciones ocurridas y registradas en la República Argentina entre los años 2005-2022.csv",
+      "format": "CSV",
+      "title": "Defunciones ocurridas y registradas en la República Argentina entre los años 2005-2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/27c588e8-43d0-411a-a40c-7ecc563c2c9f/resource/ccf688f4-db38-4b0f-86f3-c99341ac52ad",
+      "lastProcessed": "2025-10-09T08:03:43.913Z",
+      "status": "processed"
+    },
+    "defuncion2023.xlsx": {
+      "datasetId": "salud_27c588e8-43d0-411a-a40c-7ecc563c2c9f",
+      "datasetTitle": "Defunciones ocurridas y registradas en la República Argentina",
+      "fileName": "defuncion2023.xlsx",
+      "format": "XLSX",
+      "title": "Defunciones ocurridas y registradas en la República Argentina 2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/27c588e8-43d0-411a-a40c-7ecc563c2c9f/resource/442b14ea-72ab-49a3-b924-a46361deedfb",
+      "lastProcessed": "2025-10-09T08:03:43.913Z",
+      "status": "processed"
+    },
+    "defuncion2023.csv": {
+      "datasetId": "salud_27c588e8-43d0-411a-a40c-7ecc563c2c9f",
+      "datasetTitle": "Defunciones ocurridas y registradas en la República Argentina",
+      "fileName": "defuncion2023.csv",
+      "format": "CSV",
+      "title": "Defunciones ocurridas y registradas en la República Argentina 2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/27c588e8-43d0-411a-a40c-7ecc563c2c9f/resource/e71b36a0-a68b-4bb5-a969-0a25929785bb",
+      "lastProcessed": "2025-10-09T08:03:48.117Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_27c588e8-43d0-411a-a40c-7ecc563c2c9f",
+    "title": "Defunciones ocurridas y registradas en la República Argentina",
+    "description": "Cantidad de defunciones ocurridas y registradas en la República Argentina. Incluye las variables sociodemográficas: provincia de residencia, sexo, causa y edad de la defunción. También especifica si la muerte ocurrida fue materna",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2019-03-18T15:21:10.898104",
+    "modified": "2024-05-20T12:39:49.882814",
+    "publisher": {
+      "mbox": "informaciondeis@gmail.com",
+      "name": "Ministerio de Salud. Dirección de Estadística e Información en Salud (DEIS)"
+    },
+    "landingPage": "http://datos.salud.gob.ar/dataset/defunciones-ocurridas-y-registradas-en-la-republica-argentina-en-el-ano"
+  }
+}

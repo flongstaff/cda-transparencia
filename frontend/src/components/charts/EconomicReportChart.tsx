@@ -18,6 +18,7 @@ interface EconomicReportChartProps {
   showDescription?: boolean;
   className?: string;
   year?: number; // Optional year filter
+  data?: any; // Optional data prop to override default data loading
 }
 
 const EconomicReportChart: React.FC<EconomicReportChartProps> = ({
@@ -33,30 +34,34 @@ const EconomicReportChart: React.FC<EconomicReportChartProps> = ({
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   
-  // Load chart data using React Query
-  const { data, isLoading, isError, error: queryError } = useQuery({
+  // Load chart data using React Query or use provided data
+  const { data: queryData, isLoading, isError, error: queryError } = useQuery({
     queryKey: ['chart-data', 'Economic_Report'],
     queryFn: () => chartDataService.loadChartData('Economic_Report'),
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 10, // 10 minutes
+    enabled: !data // Only run query if no data prop is provided
   });
+  
+  // Use provided data or query data
+  const effectiveData = data || queryData;
   
   // Update component state when data changes
   useEffect(() => {
-    if (isLoading) {
+    if (isLoading && !data) {
       setLoading(true);
       setError(null);
-    } else if (isError) {
+    } else if (isError && !data) {
       setLoading(false);
       setError(queryError?.message || 'Error loading chart data');
-    } else if (data) {
+    } else if (effectiveData || data) {
       setLoading(false);
       setError(null);
 
       // Filter data by year if specified
-      let filteredData = data;
-      if (year && Array.isArray(data)) {
-        filteredData = data.filter((item: Record<string, unknown>) => {
+      let filteredData = effectiveData;
+      if (year && Array.isArray(effectiveData)) {
+        filteredData = effectiveData.filter((item: Record<string, unknown>) => {
           const itemYear = item.year || item.Year || item.YEAR || item.año || item.Año;
           return itemYear && parseInt(String(itemYear)) === year;
         });
@@ -64,7 +69,7 @@ const EconomicReportChart: React.FC<EconomicReportChartProps> = ({
 
       setChartData(filteredData);
     }
-  }, [data, isLoading, isError, queryError, year]);
+  }, [effectiveData, isLoading, isError, queryError, year, data]);
   
   // Handle data point clicks
   const handleDataPointClick = (dataPoint: Record<string, unknown>) => {

@@ -1,0 +1,32 @@
+{
+  "files": {
+    "montos-importaciones-exportaciones-regimen-ctit.xlsx": {
+      "datasetId": "produccion_384c75d9-cd34-4c66-91e7-65e08ac1bc88",
+      "datasetTitle": "Importación Temporaria CTIT",
+      "fileName": "montos-importaciones-exportaciones-regimen-ctit.xlsx",
+      "format": "XLS",
+      "title": "Monto total de importaciones y exportaciones bajo el régimen",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/384c75d9-cd34-4c66-91e7-65e08ac1bc88/resource/cec88e3b-b44c-4019-b60f-e6b232f7d0ff",
+      "lastProcessed": "2025-10-09T08:04:25.796Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_384c75d9-cd34-4c66-91e7-65e08ac1bc88",
+    "title": "Importación Temporaria CTIT",
+    "description": "Es un régimen de incentivo a las exportaciones que permite la importación de insumos para perfeccionamiento industrial sin pago de aranceles ni tributos para aquellos bienes finales que tendrán como destino la exportación. ",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-07-21T13:49:34.491730",
+    "modified": "2022-07-28T10:43:44.425722",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo, Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa, Subsecretaría de Política y Gestión Comercial, Dirección Nacional de Gestión Comercial, Dirección de Exportaciones."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/importacion-temporaria-ctit"
+  }
+}

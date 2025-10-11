@@ -1,0 +1,34 @@
+{
+  "files": {
+    "renabap-factores-de-riesgo.zip": {
+      "datasetId": "habitat_4",
+      "datasetTitle": "Factores de Riesgo en Barrios Populares del Gran Buenos Aires",
+      "fileName": "renabap-factores-de-riesgo.zip",
+      "format": "ZIP",
+      "title": "riesgo.zip",
+      "accessURL": "https://www.argentina.gob.ar/obras-publicas/sisu",
+      "lastProcessed": "2025-10-09T06:41:18.958Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "habitat_4",
+    "title": "Factores de Riesgo en Barrios Populares del Gran Buenos Aires",
+    "description": "Es un análisis de la información recogida por el Registro Nacional de Barrios Populares sobre factores de riesgo. Contiene datos sobre el emplazamiento de barrios populares cercanos a factores de riesgo, recogidos por los Diagnósticos Urbanos realizados en 2019.",
+    "theme": [
+      "soci",
+      "regi"
+    ],
+    "superTheme": [
+      "REGI",
+      "SOCI"
+    ],
+    "issued": "2022-08-16T05:16:32.188679",
+    "modified": "2024-08-16T00:00:00",
+    "publisher": {
+      "mbox": "datosabiertos@infraestructura.gob.ar",
+      "name": "Ministerio de Economía, Secretaría de Obras Públicas, Subsecretaría de Integración Socio Urbana"
+    },
+    "landingPage": "https://www.argentina.gob.ar/obras-publicas/sisu"
+  }
+}

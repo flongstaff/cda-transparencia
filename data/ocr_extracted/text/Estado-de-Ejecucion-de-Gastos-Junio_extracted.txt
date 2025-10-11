@@ -1,0 +1,34 @@
+Municipalidad de
+Carmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS
+Ejercicio
+:Hoja: 1 de 262 R.A.F.A.M.
+10/07/2025 10:26
+Del 02/01/2025 al 30/06/2025
+2025Partidas Incluidas respecto al Crédito Disponible: Todas
+Partidas Incluidas respecto al Crédito Vigente: Todas
+Devengado
+no pagadoCrédito
+DisponiblePagado Devengado Compromiso Preventivo Crédito
+VigenteModifica
+cionesCrédito
+AprobadoFuen.
+Fin.Objeto del GastoCrédito Vig.
+- Devengado
+Jurisdicción: 1110101000 - Conduccion Superior
+Apertura Programįtica: 01.00.00 - Desarrollo de politicas centrales
+110 - Tesoro Municipal
+1.0.0.0 - Gastos en personal
+1.1.0.0 - Personal permanente
+1.1.1.0 - Retribuciones del cargo
+1.1.1.1 - Personal Superior 72.473.695,00 0,00 72.473.695,00 0,00 23.400.966,40 23.400.966,40 23.400.966,40 49.072.728,60 0,00 49.072.728,60
+1.1.1.2 - Personal Jerárquico 16.544.709,23 0,00 16.544.709,23 0,00 3.332.548,34 3.332.548,34 3.332.548,34 13.212.160,89 0,00 13.212.160,89
+1.1.1.6 - Personal Obrero 10.746.813,63 0,00 10.746.813,63 0,00 5.421.920,34 5.421.920,34 5.421.920,34 5.324.893,29 0,00 5.324.893,29
+1.1.1.9 - Gastos Reservados 0,00 0,00 0,00 0,00 3.510.144,96 3.510.144,96 3.510.144,96 -3.510.144,96 0,00 -3.510.144,96
+99.765.217,86 0,00 99.765.217,86 0,00 35.665.580,04 35.665.580,04 35.665.580,04 64.099.637,82 0,00 Total Retribuciones del cargo 64.099.637,82
+1.1.3.0 - Retribuciones que no hacen al cargo
+1.1.3.1 - Antiguedad 10.712.647,45 0,00 10.712.647,45 0,00 4.819.645,15 4.819.645,15 4.819.645,15 5.893.002,30 0,00 5.893.002,30
+1.1.3.9 - Otras retribuciones 0,00 0,00 0,00 0,00 580.402,86 580.402,86 580.402,86 -580.402,86 0,00 -580.402,86
+10.712.647,45 0,00 10.712.647,45 0,00 5.400.048,01 5.400.048,01 5.400.048,01 5.312.599,44 0,00 Total Retribuciones que no hacen al cargo 5.312.599,44
+1.1.4.0 - Sueldo anual complementario 8.717.748,86 0,00 8.717.748,86 0,00 3.356.757,66 3.356.757,66 3.356.757,66 5.360.991,20 0,00 5.360.991,20
+1.1.6.0 - Contribuciones patronales
+1.1.6.1 - IPS 13.599.688,...

@@ -1,0 +1,42 @@
+{
+  "files": {
+    "ipi-manufacturero.csv": {
+      "datasetId": "sspm_453",
+      "datasetTitle": "Índice de Producción Industrial Manufacturero (IPI)",
+      "fileName": "ipi-manufacturero.csv",
+      "format": "CSV",
+      "title": "Índice de Producción Industrial Manufacturero (IPI). Nivel General, series original y desestacionalizada",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:43.273Z",
+      "status": "processed"
+    },
+    "ipi-manufacturero-sectores.csv": {
+      "datasetId": "sspm_453",
+      "datasetTitle": "Índice de Producción Industrial Manufacturero (IPI)",
+      "fileName": "ipi-manufacturero-sectores.csv",
+      "format": "CSV",
+      "title": "Índice de Producción Industrial Manufacturero (IPI). Divisiones y subclases",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:44.394Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_453",
+    "title": "Índice de Producción Industrial Manufacturero (IPI)",
+    "description": "Índice de Producción Industrial Manufacturero (IPI)",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2019-04-15",
+    "modified": "2025-03-24T10:02:27.838464",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

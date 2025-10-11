@@ -1,0 +1,27 @@
+{
+  "files": {
+    "unknown.csv": {
+      "datasetId": "ssprys_01",
+      "datasetTitle": "Indicadores Sectoriales y Provinciales",
+      "fileName": "unknown.csv",
+      "lastProcessed": "2025-10-09T06:48:52.660Z",
+      "status": "error",
+      "error": "Failed to download CSV: unknown.csv"
+    }
+  },
+  "info": {
+    "identifier": "ssprys_01",
+    "title": "Indicadores Sectoriales y Provinciales",
+    "description": "Indicadores Sectoriales y Provinciales",
+    "theme": [
+      "econ"
+    ],
+    "keywords": [],
+    "issued": "2019-10-02",
+    "modified": "2025-09-05",
+    "publisher": {
+      "mbox": "ssprys@mecon.gov.ar",
+      "name": "Ministerio de Economía. Subsecretaría de Programación Regional y Sectorial."
+    }
+  }
+}

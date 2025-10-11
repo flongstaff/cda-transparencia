@@ -1,0 +1,41 @@
+{
+  "files": {
+    "base-ensayos-compartida-mapa-de-la-calidad-2023-1.xlsx": {
+      "datasetId": "produccion_74fbc455-ed31-442a-8dd1-4359de3b2641",
+      "datasetTitle": "Plan Nacional de Calidad",
+      "fileName": "base-ensayos-compartida-mapa-de-la-calidad-2023-1.xlsx",
+      "format": "XLSX",
+      "title": "Oferta de ensayos RENACLAB",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/74fbc455-ed31-442a-8dd1-4359de3b2641/resource/d7c1acf5-4037-4f9f-89c6-ec2edb6ab4f1",
+      "lastProcessed": "2025-10-09T08:04:56.300Z",
+      "status": "processed"
+    },
+    "Proveedores Mapa de la calidad.xlsx": {
+      "datasetId": "produccion_74fbc455-ed31-442a-8dd1-4359de3b2641",
+      "datasetTitle": "Plan Nacional de Calidad",
+      "fileName": "Proveedores Mapa de la calidad.xlsx",
+      "format": "XLSX",
+      "title": "Proveedores Mapa de la Calidad",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/74fbc455-ed31-442a-8dd1-4359de3b2641/resource/5ed2c261-24ce-4597-8510-0acdd15d4a3b",
+      "lastProcessed": "2025-10-09T08:04:56.300Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_74fbc455-ed31-442a-8dd1-4359de3b2641",
+    "title": "Plan Nacional de Calidad",
+    "description": "Trabajamos en unificar y sistematizar la información referente a la oferta local de laboratorios con capacidades de ensayo y calibración para ponerla a disposición del sector productivo y demás organismos que componen el Sistema Nacional de Calidad.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2023-03-07T16:33:19.825992",
+    "modified": "2023-03-23T09:56:00.242007",
+    "publisher": {
+      "name": "No definido"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/plan-nacional-de-calidad"
+  }
+}

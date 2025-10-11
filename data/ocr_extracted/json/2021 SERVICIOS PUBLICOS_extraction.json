@@ -1,0 +1,13 @@
+{
+  "file_name": "2021 SERVICIOS PUBLICOS.pdf",
+  "file_hash": "e2412b1b8c4888ceab3529765afc8faf",
+  "page_count": 1,
+  "text_length": 1903,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "REPORTES CIUDADANOS EN SERVICIOS PÚBLICOS\n2021\nSERVICIOS PÚBLICOS ENE FEB. MAR. ABR. MAY. JUN. JUL. AGO. SEP. OCT. NOV. DIC. TOTAL\nReparaciones en la Red de agua 54 70 60 36 50 51 53 59 48 31 41 41 594\nReparaciones en la Red de cloacas 2 2 3 0 2 0 1 3 2 1 1 2 19\nDesobturaciones en la Red cloacal 13 33 46 40 48 40 70 74 53 32 30 32 511\nDesagotes Atmosféricos 18 20 13 4 10 3 0 0 0 0 0 0 68\nSolicitudes de Conexión a la red de agua 4 13 13 12 13 12 10 14 23 13 13 6 146\nSolicitudes de Conexión a la red cloacal 0 0 0 6 8 4 5 1 3 4 5 4 40\nTOTAL 91 138 135 98 131 110 139 151 129 81 90 85 1378\nPeriodicidad:  Mensual\nVariable:  cantidad de reportes FINALIZADOS\nUnidad de medida:  absoluto\nDescripcion:  indica la cantidad de reportes ingresados a la plataforma TRELLO por personal encargado de Obras Públicas\nFuente de datos:  se recolectan los datos a través de la Administración de Obras Públicas.\n5470\n60\n3650 51 5359\n48\n3141 4122\n3\n213\n2\n11 2133346\n4048\n407074\n53\n3230321820 13\n410\n30\n41313\n1213\n121014\n23\n1313 668\n451\n3\n454\nENE FEB. MAR. ABR. MAY. JUN. JUL. AGO. SEP. OCT. NOV. DIC.EVOLUCIÓN DE LOS REPORTES EN SERVICIOS PÚBLICOS\nOBRAS PÚBLICAS (2021)\nReparaciones en la Red de agua Reparaciones en la Red de cloacas Desobturaciones en la Red cloacal\nDesagotes Atmosféricos Solicitudes de Conexión a la red de agua Solicitudes de Conexión a la red cloacal\n5470\n60\n3650 515359\n48\n3141 41\n2 2 3 2 13 2 1 1 2133346\n4048\n407074\n53\n323032\n1820\n13\n410\n30 0 0 0 0 0413 13 12 13 12101423\n13 13\n6 684 513 4 5 491138135\n98131\n110139151\n129\n819085\nENE FEB. MAR. ABR. MAY. JUN. JUL. AGO. SEP. OCT. NOV. DIC.EVOLUCIÓN DE LOS REPORTES EN SERVICIOS PÚBLICOS\nOBRAS PÚBLICAS (2021)\nReparaciones en la Red de agua Reparaciones en la Red de cloacas Desobturaciones en la Red cloacal Desagotes Atmosféricos\nSolicitudes de Conexión a la red de agua Solicitudes de Conexión a la red cloacal TOTAL\nSERVICIOS PUBLICOS 2021\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:16:05.918817"
+}

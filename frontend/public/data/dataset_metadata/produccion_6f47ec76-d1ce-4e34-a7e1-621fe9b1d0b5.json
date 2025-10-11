@@ -1,0 +1,112 @@
+{
+  "files": {
+    "sepa_viernes.zip": {
+      "datasetId": "produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5",
+      "datasetTitle": "Precios Claros - Base SEPA",
+      "fileName": "sepa_viernes.zip",
+      "format": "ZIP",
+      "title": "Viernes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5/resource/91bc072a-4726-44a1-85ec-4a8467aad27e",
+      "lastProcessed": "2025-10-09T06:28:51.500Z",
+      "status": "processed"
+    },
+    "sepa_jueves.zip": {
+      "datasetId": "produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5",
+      "datasetTitle": "Precios Claros - Base SEPA",
+      "fileName": "sepa_jueves.zip",
+      "format": "ZIP",
+      "title": "Jueves",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5/resource/d076720f-a7f0-4af8-b1d6-1b99d5a90c14",
+      "lastProcessed": "2025-10-09T06:28:51.501Z",
+      "status": "processed"
+    },
+    "sepa_miercoles.zip": {
+      "datasetId": "produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5",
+      "datasetTitle": "Precios Claros - Base SEPA",
+      "fileName": "sepa_miercoles.zip",
+      "format": "ZIP",
+      "title": "Miércoles",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5/resource/1e92cd42-4f94-4071-a165-62c4cb2ce23c",
+      "lastProcessed": "2025-10-09T06:28:51.501Z",
+      "status": "processed"
+    },
+    "sepa_martes.zip": {
+      "datasetId": "produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5",
+      "datasetTitle": "Precios Claros - Base SEPA",
+      "fileName": "sepa_martes.zip",
+      "format": "ZIP",
+      "title": "Martes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5/resource/9dc06241-cc83-44f4-8e25-c9b1636b8bc8",
+      "lastProcessed": "2025-10-09T06:28:51.501Z",
+      "status": "processed"
+    },
+    "sepa_lunes.zip": {
+      "datasetId": "produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5",
+      "datasetTitle": "Precios Claros - Base SEPA",
+      "fileName": "sepa_lunes.zip",
+      "format": "ZIP",
+      "title": "Lunes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5/resource/0a9069a9-06e8-4f98-874d-da5578693290",
+      "lastProcessed": "2025-10-09T06:28:51.501Z",
+      "status": "processed"
+    },
+    "sepa_domingo.zip": {
+      "datasetId": "produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5",
+      "datasetTitle": "Precios Claros - Base SEPA",
+      "fileName": "sepa_domingo.zip",
+      "format": "ZIP",
+      "title": "Domingo",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5/resource/f8e75128-515a-436e-bf8d-5c63a62f2005",
+      "lastProcessed": "2025-10-09T06:28:51.501Z",
+      "status": "processed"
+    },
+    "sepa_sabado.zip": {
+      "datasetId": "produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5",
+      "datasetTitle": "Precios Claros - Base SEPA",
+      "fileName": "sepa_sabado.zip",
+      "format": "ZIP",
+      "title": "Sábado",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5/resource/b3c3da5d-213d-41e7-8d74-f23fda0a3c30",
+      "lastProcessed": "2025-10-09T06:28:51.501Z",
+      "status": "processed"
+    },
+    "maestro provincias.xlsx": {
+      "datasetId": "produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5",
+      "datasetTitle": "Precios Claros - Base SEPA",
+      "fileName": "maestro provincias.xlsx",
+      "format": "XLSX",
+      "title": "Traductor de código provinciales",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5/resource/e12edfc0-b0bc-4208-879a-b31b9573324b",
+      "lastProcessed": "2025-10-09T06:28:51.501Z",
+      "status": "processed"
+    },
+    "anexo_6201340_2.pdf": {
+      "datasetId": "produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5",
+      "datasetTitle": "Precios Claros - Base SEPA",
+      "fileName": "anexo_6201340_2.pdf",
+      "format": "PDF",
+      "title": "Metadata (con detalle de los campos)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5/resource/ace44eb9-c995-463f-bf8a-6f529d196a27",
+      "lastProcessed": "2025-10-09T06:28:54.038Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_6f47ec76-d1ce-4e34-a7e1-621fe9b1d0b5",
+    "title": "Precios Claros - Base SEPA",
+    "description": "SEPA (Sistema Electrónico de Publicidad de Precios Argentinos) reúne los precios de comercios minoristas (grandes establecimientos) de más de 70 mil productos en todo el país, lo que de forma agregada genera una base diaria de aproximadamente 12 millones de registros.\r\nhttps://www.preciosclaros.gob.ar/terminos_y_condiciones.html\r\n\r\nContactanos por cualquier tipo consulta, sugerencia y/o reclamo (ej: datos provistos por comercios no fidedignos) al e-mail soportesepa@comercio.gob.ar  ",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2024-08-14T15:36:38.340625",
+    "modified": "2024-09-06T13:47:22.512809",
+    "publisher": {
+      "mbox": "soportesepa@comercio.gob.ar",
+      "name": "Subsecretaría de Defensa del Consumidor y Lealtad Comercial"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/sepa-precios"
+  }
+}

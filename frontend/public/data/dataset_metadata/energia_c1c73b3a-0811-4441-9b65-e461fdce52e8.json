@@ -1,0 +1,32 @@
+{
+  "files": {
+    "productos-elaborados-a-partir-del-petrleo.csv": {
+      "datasetId": "energia_c1c73b3a-0811-4441-9b65-e461fdce52e8",
+      "datasetTitle": "Producción de combustibles",
+      "fileName": "productos-elaborados-a-partir-del-petrleo.csv",
+      "format": "CSV",
+      "title": "Productos Elaborados a partir del Petróleo",
+      "accessURL": "http://datos.energia.gob.ar/dataset/c1c73b3a-0811-4441-9b65-e461fdce52e8/resource/c11f1dd3-c6e2-41fe-8100-19c5d6bea239",
+      "lastProcessed": "2025-10-09T06:38:45.773Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_c1c73b3a-0811-4441-9b65-e461fdce52e8",
+    "title": "Producción de combustibles",
+    "description": "Productos elaborados de petróleo",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:33:23.081038",
+    "modified": "2021-07-12T11:11:40.862054",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

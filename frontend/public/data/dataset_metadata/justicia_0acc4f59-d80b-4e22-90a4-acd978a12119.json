@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_0acc4f59-d80b-4e22-90a4-acd978a12119",
+      "datasetTitle": "Bienes secuestrados y decomisados durante el proceso penal",
+      "format": "ZIP",
+      "title": "Bienes secuestrados y decomisados durante el proceso penal - 2017",
+      "accessURL": "https://datos.jus.gob.ar/dataset/0acc4f59-d80b-4e22-90a4-acd978a12119/resource/c5e5a765-7d55-49db-9f4e-5b47b428f973",
+      "lastProcessed": "2025-10-09T06:51:01.115Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_0acc4f59-d80b-4e22-90a4-acd978a12119",
+    "title": "Bienes secuestrados y decomisados durante el proceso penal",
+    "description": "Bienes decomisados y secuestrados o afectados a otra medida cautelar en los procesos penales del fueros federales y nacionales. La información que aquí se presenta es remitida por las autoridades judiciales al Registro Nacional de Bienes Secuestrados y Decomisados durante el Proceso Penal y/o extraída del Centro de Información Judicial (en lo vinculado a decomisos).\r\n",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-06-22T13:42:13.273232",
+    "modified": "2025-07-31T20:06:46.157939",
+    "publisher": {
+      "mbox": "rnbsd@jus.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Dirección Nacional del Registro Nacional de Bienes Secuestrados y Decomisados durante el Proceso Penal"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/bienes-secuestrados-y-decomisados-durante-el-proceso-penal"
+  }
+}

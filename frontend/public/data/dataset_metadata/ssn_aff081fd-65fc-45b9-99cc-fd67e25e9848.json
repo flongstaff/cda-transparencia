@@ -1,0 +1,43 @@
+{
+  "files": {
+    "indicadores-mercado-asegurador.csv": {
+      "datasetId": "ssn_aff081fd-65fc-45b9-99cc-fd67e25e9848",
+      "datasetTitle": "Indicadores del mercado asegurador",
+      "fileName": "indicadores-mercado-asegurador.csv",
+      "lastProcessed": "2025-10-09T07:28:14.060Z",
+      "status": "error",
+      "error": "Failed to download CSV: indicadores-mercado-asegurador.csv"
+    },
+    "indicadores-mercado-asegurador-patrimonial.csv": {
+      "datasetId": "ssn_aff081fd-65fc-45b9-99cc-fd67e25e9848",
+      "datasetTitle": "Indicadores del mercado asegurador",
+      "fileName": "indicadores-mercado-asegurador-patrimonial.csv",
+      "lastProcessed": "2025-10-09T07:31:20.095Z",
+      "status": "error",
+      "error": "Failed to download CSV: indicadores-mercado-asegurador-patrimonial.csv"
+    },
+    "indicadores-mercado-asegurador-gestion.csv": {
+      "datasetId": "ssn_aff081fd-65fc-45b9-99cc-fd67e25e9848",
+      "datasetTitle": "Indicadores del mercado asegurador",
+      "fileName": "indicadores-mercado-asegurador-gestion.csv",
+      "lastProcessed": "2025-10-09T07:34:26.108Z",
+      "status": "error",
+      "error": "Failed to download CSV: indicadores-mercado-asegurador-gestion.csv"
+    }
+  },
+  "info": {
+    "identifier": "ssn_aff081fd-65fc-45b9-99cc-fd67e25e9848",
+    "title": "Indicadores del mercado asegurador",
+    "description": "Indicadores patrimoniales y de gestión sobre las entidades aseguradoras elaborados a partir de la propia información que suministran las mismas en sus balances trimestrales y en otras declaraciones que presentan periódicamente ante la Superintendencia de Seguros de la Nación (SSN).",
+    "theme": [
+      "econ"
+    ],
+    "keywords": [],
+    "issued": "2024-09-22T21:39:28.090446",
+    "modified": "2025-03-15T15:57:20.713080",
+    "publisher": {
+      "mbox": "datosabiertos@ssn.gob.ar",
+      "name": "Ministerio de Economía, Superintendencia de Seguros de la Nación"
+    }
+  }
+}

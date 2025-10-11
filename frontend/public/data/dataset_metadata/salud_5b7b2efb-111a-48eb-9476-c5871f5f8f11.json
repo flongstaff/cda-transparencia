@@ -1,0 +1,132 @@
+{
+  "files": {
+    "renisbase1.csv": {
+      "datasetId": "salud_5b7b2efb-111a-48eb-9476-c5871f5f8f11",
+      "datasetTitle": "Registro Nacional de Investigaciones en Salud (RENIS)",
+      "fileName": "renisbase1.csv",
+      "format": "CSV",
+      "title": "Registro Nacional de Investigaciones en Salud (RENIS) - julio 2018",
+      "accessURL": "http://datos.salud.gob.ar/dataset/5b7b2efb-111a-48eb-9476-c5871f5f8f11/resource/1db00660-6e24-437f-97a3-3fe2edcf967c",
+      "lastProcessed": "2025-10-09T06:40:19.867Z",
+      "status": "processed"
+    },
+    "registro-nacional-de-investigaciones-en-salud-renis-20181221.xls": {
+      "datasetId": "salud_5b7b2efb-111a-48eb-9476-c5871f5f8f11",
+      "datasetTitle": "Registro Nacional de Investigaciones en Salud (RENIS)",
+      "fileName": "registro-nacional-de-investigaciones-en-salud-renis-20181221.xls",
+      "format": "XLS",
+      "title": "Registro Nacional de Investigaciones en Salud (RENIS) - diciembre 2018",
+      "accessURL": "http://datos.salud.gob.ar/dataset/5b7b2efb-111a-48eb-9476-c5871f5f8f11/resource/5ede7041-c773-465a-86a5-390754c76813",
+      "lastProcessed": "2025-10-09T06:40:19.867Z",
+      "status": "processed"
+    },
+    "registro-nacional-investigaciones-salud.xlsx": {
+      "datasetId": "salud_5b7b2efb-111a-48eb-9476-c5871f5f8f11",
+      "datasetTitle": "Registro Nacional de Investigaciones en Salud (RENIS)",
+      "fileName": "registro-nacional-investigaciones-salud.xlsx",
+      "format": "XLS",
+      "title": "Registro Nacional de Investigaciones en Salud (RENIS) . Histórico  hasta 2019 ",
+      "accessURL": "http://datos.salud.gob.ar/dataset/5b7b2efb-111a-48eb-9476-c5871f5f8f11/resource/3297758e-e609-4365-9316-962896af79f4",
+      "lastProcessed": "2025-10-09T06:40:19.867Z",
+      "status": "processed"
+    },
+    "Renis-30-12-2020.xls": {
+      "datasetId": "salud_5b7b2efb-111a-48eb-9476-c5871f5f8f11",
+      "datasetTitle": "Registro Nacional de Investigaciones en Salud (RENIS)",
+      "fileName": "Renis-30-12-2020.xls",
+      "format": "XLS",
+      "title": "Registro Nacional de Investigaciones en Salud (RENIS) - enero 2021",
+      "accessURL": "http://datos.salud.gob.ar/dataset/5b7b2efb-111a-48eb-9476-c5871f5f8f11/resource/40408a3d-62c7-4fb5-8cf1-360986c07ff4",
+      "lastProcessed": "2025-10-09T06:40:19.868Z",
+      "status": "processed"
+    },
+    "actualizacion-renis-septiembre-2021.xlsx": {
+      "datasetId": "salud_5b7b2efb-111a-48eb-9476-c5871f5f8f11",
+      "datasetTitle": "Registro Nacional de Investigaciones en Salud (RENIS)",
+      "fileName": "actualizacion-renis-septiembre-2021.xlsx",
+      "format": "XLS",
+      "title": "Registro Nacional de Investigaciones en Salud (RENIS) - Septiembre 2021",
+      "accessURL": "http://datos.salud.gob.ar/dataset/5b7b2efb-111a-48eb-9476-c5871f5f8f11/resource/8a664cd5-25bf-4963-af0b-1ea545164dec",
+      "lastProcessed": "2025-10-09T06:40:19.868Z",
+      "status": "processed"
+    },
+    "base-renis-abril-2022.xlsx": {
+      "datasetId": "salud_5b7b2efb-111a-48eb-9476-c5871f5f8f11",
+      "datasetTitle": "Registro Nacional de Investigaciones en Salud (RENIS)",
+      "fileName": "base-renis-abril-2022.xlsx",
+      "format": "XLS",
+      "title": "Registro Nacional de Investigaciones en Salud (RENIS) - Abril 2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/5b7b2efb-111a-48eb-9476-c5871f5f8f11/resource/4c916250-e075-4384-8741-7edccb8071a9",
+      "lastProcessed": "2025-10-09T06:40:19.868Z",
+      "status": "processed"
+    },
+    "agosto-2022.xlsx": {
+      "datasetId": "salud_5b7b2efb-111a-48eb-9476-c5871f5f8f11",
+      "datasetTitle": "Registro Nacional de Investigaciones en Salud (RENIS)",
+      "fileName": "agosto-2022.xlsx",
+      "format": "XLSX",
+      "title": "Registro Nacional de Investigaciones en Salud (RENIS) - Agosto 2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/5b7b2efb-111a-48eb-9476-c5871f5f8f11/resource/9138876b-7477-47da-a7d5-0f54de12f348",
+      "lastProcessed": "2025-10-09T06:40:19.868Z",
+      "status": "processed"
+    },
+    "renis-para-data-base-junio-2023.xlsx": {
+      "datasetId": "salud_5b7b2efb-111a-48eb-9476-c5871f5f8f11",
+      "datasetTitle": "Registro Nacional de Investigaciones en Salud (RENIS)",
+      "fileName": "renis-para-data-base-junio-2023.xlsx",
+      "format": "XLSX",
+      "title": "Registro Nacional de Investigaciones en Salud (RENIS) - Junio 2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/5b7b2efb-111a-48eb-9476-c5871f5f8f11/resource/7ab375f9-3421-47a9-9c1a-faa507b1123c",
+      "lastProcessed": "2025-10-09T06:40:19.868Z",
+      "status": "processed"
+    },
+    "base-renis-a-mayo-2024-2.xlsx": {
+      "datasetId": "salud_5b7b2efb-111a-48eb-9476-c5871f5f8f11",
+      "datasetTitle": "Registro Nacional de Investigaciones en Salud (RENIS)",
+      "fileName": "base-renis-a-mayo-2024-2.xlsx",
+      "format": "XLSX",
+      "title": "Registro Nacional de Investigaciones en Salud (RENIS) - Mayo 2024",
+      "accessURL": "http://datos.salud.gob.ar/dataset/5b7b2efb-111a-48eb-9476-c5871f5f8f11/resource/04d6fd92-52a6-4c71-a359-7285a1297e2b",
+      "lastProcessed": "2025-10-09T06:40:19.868Z",
+      "status": "processed"
+    },
+    "renis_a-diciembre-2024.xlsx": {
+      "datasetId": "salud_5b7b2efb-111a-48eb-9476-c5871f5f8f11",
+      "datasetTitle": "Registro Nacional de Investigaciones en Salud (RENIS)",
+      "fileName": "renis_a-diciembre-2024.xlsx",
+      "format": "XLSX",
+      "title": "Registro Nacional de Investigaciones en Salud (RENIS) - Diciembre 2024",
+      "accessURL": "http://datos.salud.gob.ar/dataset/5b7b2efb-111a-48eb-9476-c5871f5f8f11/resource/2955a26a-53dc-4e4d-99ef-db3b69de5d43",
+      "lastProcessed": "2025-10-09T06:40:19.868Z",
+      "status": "processed"
+    },
+    "renis_actualizacion-_mayo-2025.xlsx": {
+      "datasetId": "salud_5b7b2efb-111a-48eb-9476-c5871f5f8f11",
+      "datasetTitle": "Registro Nacional de Investigaciones en Salud (RENIS)",
+      "fileName": "renis_actualizacion-_mayo-2025.xlsx",
+      "format": "XLSX",
+      "title": "Registro Nacional de Investigaciones en Salud (RENIS) - Mayo 2025",
+      "accessURL": "http://datos.salud.gob.ar/dataset/5b7b2efb-111a-48eb-9476-c5871f5f8f11/resource/42300891-2b99-498a-a55b-0304546bd1e7",
+      "lastProcessed": "2025-10-09T06:40:19.868Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_5b7b2efb-111a-48eb-9476-c5871f5f8f11",
+    "title": "Registro Nacional de Investigaciones en Salud (RENIS)",
+    "description": "Datos correspondientes al Registro Nacional de Investigaciones en salud",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2018-06-15T10:26:37.753402",
+    "modified": "2025-09-15T11:09:25.258692",
+    "publisher": {
+      "mbox": "saludinvestiga@msal.gov.ar",
+      "name": "Ministerio de Salud. Dirección de Investigación para la Salud."
+    },
+    "landingPage": "https://www.argentina.gob.ar/salud/registroinvestigaciones"
+  }
+}

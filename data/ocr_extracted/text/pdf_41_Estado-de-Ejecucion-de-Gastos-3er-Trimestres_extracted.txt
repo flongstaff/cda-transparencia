@@ -1,0 +1,33 @@
+Municipalidad de
+Carmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS
+Ejercicio
+:Hoja: 1 de 284 R.A.F.A.M.
+08/10/2024 10:53
+Del 02/01/2024 al 30/09/2024
+2024Partidas Incluidas respecto al Crédito Disponible: Todas
+Partidas Incluidas respecto al Crédito Vigente: Todas
+Devengado
+no pagadoCrédito
+DisponiblePagado Devengado Compromiso Preventivo Crédito
+VigenteModifica
+cionesCrédito
+AprobadoFuen.
+Fin.Objeto del GastoCrédito Vig.
+- Devengado
+Jurisdicción: 1110101000 - Conduccion Superior
+Apertura Programįtica: 01.00.00 - Desarrollo de politicas centrales
+110 - Tesoro Municipal
+1.0.0.0 - Gastos en personal
+1.1.0.0 - Personal permanente
+1.1.1.0 - Retribuciones del cargo
+1.1.1.1 - Personal Superior 36.368.200,05 0,00 36.368.200,05 0,00 21.190.579,20 21.190.579,20 21.190.579,20 15.177.620,85 0,00 15.177.620,85
+1.1.1.2 - Personal Jerárquico 13.830.306,93 0,00 13.830.306,93 0,00 5.488.258,32 5.488.258,32 5.488.258,32 8.342.048,61 0,00 8.342.048,61
+1.1.1.5 - Personal Administrativo 2.795.155,95 0,00 2.795.155,95 0,00 2.544.761,52 2.544.761,52 2.544.761,52 250.394,43 0,00 250.394,43
+1.1.1.6 - Personal Obrero 5.392.884,53 0,00 5.392.884,53 0,00 3.429.775,80 3.429.775,80 3.429.775,80 1.963.108,73 0,00 1.963.108,73
+1.1.1.9 - Gastos Reservados 0,00 757.471,68 757.471,68 0,00 3.178.586,88 3.178.586,88 3.178.586,88 -2.421.115,20 0,00 -2.421.115,20
+58.386.547,46 757.471,68 59.144.019,14 0,00 35.831.961,72 35.831.961,72 35.831.961,72 23.312.057,42 0,00 Total Retribuciones del cargo 23.312.057,42
+1.1.3.0 - Retribuciones que no hacen al cargo
+1.1.3.1 - Antiguedad 7.782.586,99 0,00 7.782.586,99 0,00 5.217.768,80 5.217.768,80 5.217.768,80 2.564.818,19 0,00 2.564.818,19
+1.1.3.9 - Otras retribuciones 0,00 253.668,69 253.668,69 0,00 2.424.930,15 2.424.930,15 2.424.930,15 -2.171.261,46 0,00 -2.171.261,46
+7.782.586,99 253.668,69 8.036.255,68 0,00 7.642.698,95 7.642.698,95 7.642.698,95 393.556,73 0,00 Total Retribuciones que no hacen al cargo 393.556,73
+1.1.4.0 - Sueldo anual complementar...

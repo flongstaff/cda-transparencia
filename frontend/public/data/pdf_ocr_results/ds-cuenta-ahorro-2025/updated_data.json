@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-cuenta-ahorro-2025",
+      "title": "Cuenta Ahorro Inversión Financiamiento 2025",
+      "distribution": [
+        {
+          "title": "Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+          "format": "PDF",
+          "fileName": "Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-cuenta-ahorro-2025/Cuenta-Ahorro-Inversion-Financiamiento-Junio.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-cuenta-ahorro-2025/Cuenta-Ahorro-Inversion-Financiamiento-Junio_extraction.json",
+            "pageCount": 3,
+            "textLength": 2983,
+            "extractedPreview": "CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.\n10/07/2025 10:09\nPresupuesto: 2025DE EJECUCION PRESUPUESTARIA \n02/01/2025 al 30/06/2025\nMunicipalidad de\nCarmen de Areco\nDESCRIPCION IMPO...",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

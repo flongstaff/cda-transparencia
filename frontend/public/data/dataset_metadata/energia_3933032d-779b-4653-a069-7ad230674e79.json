@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_3933032d-779b-4653-a069-7ad230674e79",
+      "datasetTitle": "Generación Eléctrica Bruta Asociada a redes desde 1930",
+      "lastProcessed": "2025-10-09T07:19:01.352Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_3933032d-779b-4653-a069-7ad230674e79",
+    "title": "Generación Eléctrica Bruta Asociada a redes desde 1930",
+    "description": "Serie de datos de generación eléctrica bruta asociada a redes desde el año 1930. La misma fue confeccionada por la Subsecretaría de Escenarios y Evaluación de Proyectos de la Secretaría de Planeamiento Energético Estratégico del Ministerio de Energía y Minería de la Nación, y surge del empalme de series disponibles en otras fuentes oficiales.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2021-07-02T14:13:23.442320",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

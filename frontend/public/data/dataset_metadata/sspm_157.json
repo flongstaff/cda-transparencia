@@ -1,0 +1,42 @@
+{
+  "files": {
+    "remuneracion-bruta-promedio-asalariados-registrados-sector-privado-segun-actividad-con-estacionalidad.csv": {
+      "datasetId": "sspm_157",
+      "datasetTitle": "Remuneración bruta de los asalariados registrados del sector privado según rama de actividad",
+      "fileName": "remuneracion-bruta-promedio-asalariados-registrados-sector-privado-segun-actividad-con-estacionalidad.csv",
+      "format": "CSV",
+      "title": "Remuneración bruta promedio de los asalariados registrados del sector privado, por rama de actividad. Valores con estacionalidad",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:02.361Z",
+      "status": "processed"
+    },
+    "remuneracion-bruta-promedio-asalariados-registrados-sector-privado-segun-actividad-sin-estacionalidad.csv": {
+      "datasetId": "sspm_157",
+      "datasetTitle": "Remuneración bruta de los asalariados registrados del sector privado según rama de actividad",
+      "fileName": "remuneracion-bruta-promedio-asalariados-registrados-sector-privado-segun-actividad-sin-estacionalidad.csv",
+      "format": "CSV",
+      "title": "Remuneración bruta promedio de los asalariados registrados del sector privado, por rama de actividad. Valores sin estacionalidad",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:03.408Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_157",
+    "title": "Remuneración bruta de los asalariados registrados del sector privado según rama de actividad",
+    "description": "Remuneración bruta promedio de los asalariados registrados del sector privado según rama de actividad. Serie original y desestacionalizada en pesos corrientes",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:02:06.238603",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

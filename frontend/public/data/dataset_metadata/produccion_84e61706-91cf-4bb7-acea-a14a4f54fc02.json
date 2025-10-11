@@ -1,0 +1,32 @@
+{
+  "files": {
+    "Banco-de-evaluaciones-de-la-política-nacional-de-desarrollo-productivo.xlsx": {
+      "datasetId": "produccion_84e61706-91cf-4bb7-acea-a14a4f54fc02",
+      "datasetTitle": "Banco de evaluaciones de la política nacional de desarrollo productivo",
+      "fileName": "Banco-de-evaluaciones-de-la-política-nacional-de-desarrollo-productivo.xlsx",
+      "format": "XLS",
+      "title": "Banco de evaluaciones de la Secretaría de Industria y Desarrollo Productivo",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/84e61706-91cf-4bb7-acea-a14a4f54fc02/resource/e5736c9a-b2e9-4da8-beca-c325e7caa929",
+      "lastProcessed": "2025-10-09T08:03:35.618Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_84e61706-91cf-4bb7-acea-a14a4f54fc02",
+    "title": "Banco de evaluaciones de la política nacional de desarrollo productivo",
+    "description": "Dataset que consolida las evaluaciones sobre programas de desarrollo productivo desde el año 2011 en adelante. De cada evaluación incluye: síntesis de resultados; metodología; ficha técnica; e informe completo. También incluye una propuesta metodológica para la evaluación de la política industrial y productiva nacional.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2023-08-02T18:36:40.472421",
+    "modified": "2025-02-07T16:02:36.608401",
+    "publisher": {
+      "mbox": "dnseg@produccion.gob.ar",
+      "name": "Ministerio de Economía. Dirección Nacional de Seguimiento y Evaluación de la Gestión."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/banco-de-evaluaciones-de-la-secretaria-de-industria-y-desarrollo-productivo"
+  }
+}

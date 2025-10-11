@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_145_ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-1.pdf",
+  "file_hash": "47fb06bd048361d89dde0c90b79588a5",
+  "page_count": 2,
+  "text_length": 4855,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS\nEjercicio: Hoja: 1 de 2R.A.F.A.M.\n19/09/2023 13:34\nDel 01/04/2022 al 30/06/2022(POR FINALIDAD Y FUNCIÓN)\n 2022\nDevengado \nno pagado Crédito \nDisponible Pagado Devengado Compromiso Preventivo Crédito \nVigente Modifica \nciones Crédito \nAprobado Finalidades y FuncionesCrédito Vig. \n- Devengado \n100 - Administración Gubernamental\n120 Judicial 5.475.666,27 0,00 5.475.666,27 0,00 1.069.923,30 1.069.923,30 1.069.923,30 0.00\n130 Dirección superior ejecutiva 116.500.703,93 0,00 116.500.703,93 715.651,07 36.419.257,84 36.651.709,89 36.345.618,63 306,091.26\n150 Relaciones interiores 13.781.164,10 0,00 13.781.164,10 314.858,00 4.194.195,22 4.585.195,22 4.226.207,32 358,987.90\n160 Administración Fiscal 7.843.282,46 0,00 7.843.282,46 0,00 2.778.178,69 2.413.822,69 2.566.009,69 -152,187.00\n   Total  Administración Gubernamental 512.892,16 44.207.758,94 44.720.651,10 44.461.555,05 1.030.509,07 143.600.816,76 0,00 143.600.816,76\n200 - Servicios de seguridad\n210 Seguridad interior 35.190.564,28 2.120.815,00 37.311.379,28 90.828,46 13.922.676,39 13.831.431,39 15.129.799,05 -1,298,367.66\n   Total  Servicios de seguridad -1.298.367,66 15.129.799,05 13.831.431,39 13.922.676,39 90.828,46 37.311.379,28 2.120.815,00 35.190.564,28\n300 - Servicios sociales\n310 Salud 75.387.681,48 500.000,00 75.887.681,48 1.581.913,22 18.368.959,61 30.420.550,05 30.232.148,44 188,401.61\n320 Promoción y asistencia social 38.323.763,39 0,00 38.323.763,39 16.022,38 16.359.873,71 15.645.948,33 15.487.073,03 158,875.30\n330 Seguridad social 9.257.356,05 0,00 9.257.356,05 24.487,50 2.817.624,89 2.884.243,64 3.172.945,30 -288,701.66\n340 - Educacion y Cultura\n10.000.000,00 -2.000.000,00 8.000.000,00 0,00 817.200,00 817.200,00 817.200,00 0.00 343 Educación media y técnica\n8.160.896,00 736.790,00 8.897.686,00 -677.583,50 2.804.336,13 2.804.336,13 5.793.823,32 -2,989,487.19 346 Deporte y recreación\n8.983.043,00 -5.866.040,94 3.117.002,06 0,00 71...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:25.821346"
+}

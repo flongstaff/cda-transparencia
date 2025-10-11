@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_ba515c43-5eb3-4073-9056-6bdc54ddb974",
+      "datasetTitle": "Archivos recibidos de los ministerios públicos provinciales",
+      "format": "ZIP",
+      "title": "Archivos recibidos de los ministerios públicos provinciales 2018",
+      "accessURL": "https://datos.jus.gob.ar/dataset/ba515c43-5eb3-4073-9056-6bdc54ddb974/resource/242ff20b-6dbf-41cc-a100-4fd2e37dd3e6",
+      "lastProcessed": "2025-10-09T06:54:39.208Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_ba515c43-5eb3-4073-9056-6bdc54ddb974",
+    "title": "Archivos recibidos de los ministerios públicos provinciales",
+    "description": "Archivos recibidos de los ministerios públicos provinciales según lo establecido en el Protocolo de Implementación del Convenio Interjurisdiccional de Datos Abiertos de Justicia (tabla1, tabla1.1, tabla2 y tabla2.1).",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2019-04-16T17:17:58.776990",
+    "modified": "2025-07-01T17:58:31.083465",
+    "publisher": {
+      "mbox": "datosjusticia@jus.gob.ar",
+      "name": "Ministerio de Justicia"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/archivos-recibidos-de-los-ministerios-publicos-provinciales"
+  }
+}

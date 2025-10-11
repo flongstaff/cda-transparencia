@@ -1,0 +1,38 @@
+{
+  "files": {
+    "producciongasnaturaldesde-1950.csv": {
+      "datasetId": "energia_5210866d-2caf-43fd-95d8-085dc18f39cc",
+      "datasetTitle": "Producción Gas Natural desde 1950",
+      "fileName": "producciongasnaturaldesde-1950.csv",
+      "format": "CSV",
+      "title": "Producción Gas Natural desde 1950",
+      "accessURL": "http://datos.energia.gob.ar/dataset/5210866d-2caf-43fd-95d8-085dc18f39cc/resource/0622e111-dbfd-45e9-bf94-bdce83b978c0",
+      "lastProcessed": "2025-10-09T07:21:25.831Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "energia_5210866d-2caf-43fd-95d8-085dc18f39cc",
+      "datasetTitle": "Producción Gas Natural desde 1950",
+      "lastProcessed": "2025-10-09T07:21:28.211Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_5210866d-2caf-43fd-95d8-085dc18f39cc",
+    "title": "Producción Gas Natural desde 1950",
+    "description": "Serie de datos de producción de gas natural en Argentina desde el año 1950. La misma fue confeccionada por la Subsecretaría de Escenarios y Evaluación de Proyectos de la Secretaría de Planeamiento Energético Estratégico del Ministerio de Energía y Minería de la Nación, y surge del empalme de series disponibles en otras fuentes oficiales.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2023-05-19T14:43:30.607921",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

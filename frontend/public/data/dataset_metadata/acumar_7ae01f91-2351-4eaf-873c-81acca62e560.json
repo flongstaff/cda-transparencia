@@ -1,0 +1,42 @@
+{
+  "files": {
+    "tn-residuos-retirados-basurales.csv": {
+      "datasetId": "acumar_7ae01f91-2351-4eaf-873c-81acca62e560",
+      "datasetTitle": "Limpieza de Residuos en la Cuenca Matanza Riachuelo",
+      "fileName": "tn-residuos-retirados-basurales.csv",
+      "format": "CSV",
+      "title": "Limpieza de basurales de la Cuenca Matanza Riachuelo",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/7ae01f91-2351-4eaf-873c-81acca62e560/resource/755c6cc8-282d-4757-9762-8c414528a177",
+      "lastProcessed": "2025-10-09T07:09:43.252Z",
+      "status": "processed"
+    },
+    "tn-residuos-retirados-punto-arrojos.csv": {
+      "datasetId": "acumar_7ae01f91-2351-4eaf-873c-81acca62e560",
+      "datasetTitle": "Limpieza de Residuos en la Cuenca Matanza Riachuelo",
+      "fileName": "tn-residuos-retirados-punto-arrojos.csv",
+      "format": "CSV",
+      "title": "Limpieza de puntos de arrojo de la Cuenca Matanza Riachuelo",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/7ae01f91-2351-4eaf-873c-81acca62e560/resource/f534d9c5-ab5f-45dd-a459-26b1a24898d6",
+      "lastProcessed": "2025-10-09T07:09:45.799Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_7ae01f91-2351-4eaf-873c-81acca62e560",
+    "title": "Limpieza de Residuos en la Cuenca Matanza Riachuelo",
+    "description": "Datos correspondiente a la cantidad de residuos retirados por ACUMAR de basurales y/o puntos de arrojo de la Cuenca Matanza Riachuelo.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2024-12-03T15:06:25.028705",
+    "modified": "2025-02-07T17:01:10.822362",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección de Gestión Integral de Residuos Sólidos"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/limpieza-de-residuos-en-la-cuenca-matanza-riachuelo"
+  }
+}

@@ -1,0 +1,482 @@
+{
+  "files": {
+    "d-servicio-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "d-servicio-2024.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Servicio Administrativo Financiero 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "credito-mensual-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "credito-mensual-2024.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación mensual 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "credito-diario-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "credito-diario-2024.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación diaria 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "resumen-presupuesto-gastos-ejercicio-vigente-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "resumen-presupuesto-gastos-ejercicio-vigente-2024.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución resumida 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "recursos-mensual-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "recursos-mensual-2024.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación mensual 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "recursos-diario-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "recursos-diario-2024.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación diaria 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "d-apertura-programatica-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "d-apertura-programatica-2024.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Apertura Programática 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "d-fuente-financiamiento-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "d-fuente-financiamiento-2024.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Fuente de Financiamiento 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "d-institucion-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "d-institucion-2024.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Institución 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "d-sector-institucional-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "d-sector-institucional-2024.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Sector Institucional 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "d-rubro-recurso-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "d-rubro-recurso-2024.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Rubro del recurso 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "etiqueta-medicion-fisico-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "etiqueta-medicion-fisico-2024.zip",
+      "format": "ZIP",
+      "title": "Etiquetas de medicion física anual 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "etiqueta-medicion-financiero-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "etiqueta-medicion-financiero-2024.zip",
+      "format": "ZIP",
+      "title": "Etiquetas de medicion financiera anual 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "credito-anual-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "credito-anual-2024.zip",
+      "format": "ZIP",
+      "title": "Presupuesto de gastos y su ejecución detallada - agrupación anual 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.261Z",
+      "status": "processed"
+    },
+    "recursos-anual-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "recursos-anual-2024.zip",
+      "format": "ZIP",
+      "title": "Estimación de recursos y su ejecución - agrupación anual 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.262Z",
+      "status": "processed"
+    },
+    "d-clasificador-economico-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "d-clasificador-economico-2024.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Clasificador económico 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.262Z",
+      "status": "processed"
+    },
+    "d-finalidad-funcion-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "d-finalidad-funcion-2024.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Finalidad y Función 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.262Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-trimestre-1-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ejecucion-fisica-trimestre-1-2024.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física primer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.262Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-trimestre-2-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ejecucion-fisica-trimestre-2-2024.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física segundo trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.262Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-trimestre-3-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ejecucion-fisica-trimestre-3-2024.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física tercer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.262Z",
+      "status": "processed"
+    },
+    "ejecucion-fisica-trimestre-4-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ejecucion-fisica-trimestre-4-2024.zip",
+      "format": "ZIP",
+      "title": "Programación y ejecución física cuarto trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.262Z",
+      "status": "processed"
+    },
+    "d-objeto-gasto-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "d-objeto-gasto-2024.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Objeto del gasto 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.262Z",
+      "status": "processed"
+    },
+    "d-ubicacion-geografica-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "d-ubicacion-geografica-2024.zip",
+      "format": "ZIP",
+      "title": "Clasificador presupuestario Ubicación geográfica 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.262Z",
+      "status": "processed"
+    },
+    "pc-proy24-finfun-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "pc-proy24-finfun-2024.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto Finalidad Función 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.262Z",
+      "status": "processed"
+    },
+    "pc-proy24-finrecursosxrubro-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "pc-proy24-finrecursosxrubro-2024.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto de Recursos 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.263Z",
+      "status": "processed"
+    },
+    "pc-proy24-finxaperprog-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "pc-proy24-finxaperprog-2024.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto de Gastos por Apertura Programatica 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.263Z",
+      "status": "processed"
+    },
+    "pc-proy24-finxobjdelgasto-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "pc-proy24-finxobjdelgasto-2024.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto de Gastos por Partida Presupuestaria 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.263Z",
+      "status": "processed"
+    },
+    "pc-proy24-metasfisicas-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "pc-proy24-metasfisicas-2024.zip",
+      "format": "ZIP",
+      "title": "Proyecto de Ley de Presupuesto Metas Físicas 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.263Z",
+      "status": "processed"
+    },
+    "discapacidad-metas-trimestral_2024_1-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "discapacidad-metas-trimestral_2024_1-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero del gasto vinculado a la atención de personas con discapacidad primer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.263Z",
+      "status": "processed"
+    },
+    "discapacidad-financiero-trimestral_2024_1-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "discapacidad-financiero-trimestral_2024_1-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero del gasto vinculado a la atención de personas con discapacidad primer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.263Z",
+      "status": "processed"
+    },
+    "ninez-metas-trimestral_2024_3-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ninez-metas-trimestral_2024_3-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de niñez tercer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.263Z",
+      "status": "processed"
+    },
+    "ninez-financiero-trimestral_2024_3-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ninez-financiero-trimestral_2024_3-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de niñez tercer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.263Z",
+      "status": "processed"
+    },
+    "discapacidad-metas-trimestral_2024_3-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "discapacidad-metas-trimestral_2024_3-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero del gasto vinculado a la atención de personas con discapacidad tercer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.263Z",
+      "status": "processed"
+    },
+    "discapacidad-financiero-trimestral_2024_3-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "discapacidad-financiero-trimestral_2024_3-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero del gasto vinculado a la atención de personas con discapacidad tercer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.264Z",
+      "status": "processed"
+    },
+    "discapacidad-metas-trimestral_2024_2-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "discapacidad-metas-trimestral_2024_2-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero del gasto vinculado a la atención de personas con discapacidad segundo trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.264Z",
+      "status": "processed"
+    },
+    "discapacidad-financiero-trimestral_2024_2-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "discapacidad-financiero-trimestral_2024_2-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero del gasto vinculado a la atención de personas con discapacidad segundo trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.264Z",
+      "status": "processed"
+    },
+    "ambiente-metas-trimestral_2024_1-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ambiente-metas-trimestral_2024_1-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico en ambiente sostenible primer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.264Z",
+      "status": "processed"
+    },
+    "ambiente-financiero-trimestral_2024_1-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ambiente-financiero-trimestral_2024_1-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero en ambiente sostenible primer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.264Z",
+      "status": "processed"
+    },
+    "ninez-metas-trimestral_2024_2-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ninez-metas-trimestral_2024_2-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de niñez segundo trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.264Z",
+      "status": "processed"
+    },
+    "ninez-financiero-trimestral_2024_2-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ninez-financiero-trimestral_2024_2-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de niñez segundo trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.265Z",
+      "status": "processed"
+    },
+    "mapeo-interanual-partidas-gasto-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "mapeo-interanual-partidas-gasto-2024.zip",
+      "format": "ZIP",
+      "title": "Mapeo Jurisdiccional 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.265Z",
+      "status": "processed"
+    },
+    "ninez-metas-trimestral_2024_1-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ninez-metas-trimestral_2024_1-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico de niñez primer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.265Z",
+      "status": "processed"
+    },
+    "ninez-financiero-trimestral_2024_1-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ninez-financiero-trimestral_2024_1-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero de niñez primer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.265Z",
+      "status": "processed"
+    },
+    "clima-financiero-trimestral_2024_2-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "clima-financiero-trimestral_2024_2-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero en ambiente sostenible segundo trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.265Z",
+      "status": "processed"
+    },
+    "ambiente-metas-trimestral_2024_3-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ambiente-metas-trimestral_2024_3-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento físico en ambiente sostenible tercer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.265Z",
+      "status": "processed"
+    },
+    "ambiente-financiero-trimestral_2024_3-2024.zip": {
+      "datasetId": "sspre_2024",
+      "datasetTitle": "Presupuesto de la Administración Pública Nacional 2024.",
+      "fileName": "ambiente-financiero-trimestral_2024_3-2024.zip",
+      "format": "ZIP",
+      "title": "Seguimiento financiero en ambiente sostenible tercer trimestre 2024",
+      "accessURL": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos",
+      "lastProcessed": "2025-10-09T07:34:36.265Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspre_2024",
+    "title": "Presupuesto de la Administración Pública Nacional 2024.",
+    "description": "Créditos y Recursos de la Administración Pública Nacional del ejercicio 2024.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2024-01-23T11:30:01Z",
+    "modified": "2024-12-30T16:59:44Z",
+    "publisher": {
+      "mbox": "info@presupuestoabierto.gob.ar",
+      "name": "Ministerio de Economía. Secretaría de Hacienda. Subsecretaría de Presupuesto."
+    },
+    "landingPage": "https://www.presupuestoabierto.gob.ar/sici/datos-abiertos"
+  }
+}

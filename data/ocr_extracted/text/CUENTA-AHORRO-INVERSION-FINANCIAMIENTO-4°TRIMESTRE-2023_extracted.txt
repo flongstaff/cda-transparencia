@@ -1,0 +1,54 @@
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.
+23/04/2024 09:42
+Presupuesto: 2023DE EJECUCION PRESUPUESTARIA 
+01/10/2023 al 31/12/2023
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+I. INGRESOS CORRIENTES
+Ingresos tributarios 405.641.279,98
+Contribuciones a la Seguridad Social
+Ingresos no Tributarios 123.975.509,52
+Ventas de Bienes y Servicios
+Ingresos de Operación
+Rentas de la Propiedad 48.226.550,86
+Transferencias Corrientes 159.090.465,32
+Contribuciones Figurativas para Financiaciones Corrientes
+TOTAL  INGRESOS CORRIENTES 736.933.805,68
+II. GASTOS CORRIENTES
+Gastos de Operación
+Gastos de Consumo 722.204.496,17
+Rentas de la Propiedad 6.232,70
+Prestaciones de la Seguridad Social
+Impuestos Directos
+Otras Pérdidas
+Transferencias Corrientes 37.126.274,12
+Gastos Figurativos para Transacciones Corrientes
+TOTAL  GASTOS CORRIENTES 759.337.002,99
+III. AHORRO CORRIENTE: (I - II) -22.403.197,31
+Resultado Corriente Primario (Ingresos Corrientes - Gastos Corrientes netos de Int. de la deuda) -22.377.398,42
+TOTAL  AHORRO CORRIENTE: (I - II) -22.403.197,31
+IV. RECURSOS DE CAPITAL
+Recursos Propios de Capital 140,00
+Transferencias de Capital 299.779.317,72
+Disminución de la Inversión Financiera 992.587,14
+Contribuciones Figurativas para Financiaciones de Capital
+Filtro aplicado: Presupuesto: 2023 -  Fechas: 01/10/2023 al 31/12/2023
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 2 de 3 R.A.F.A.M.
+23/04/2024 09:42
+Presupuesto: 2023DE EJECUCION PRESUPUESTARIA 
+01/10/2023 al 31/12/2023
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+TOTAL  RECURSOS DE CAPITAL 300.772.044,86
+V. GASTOS DE CAPITAL
+Inversión Real Directa 386.419.714,29
+Transferencias de Capital 7.406.574,06
+Inversión Financiera
+Gastos Figurativos para Transacciones de Capital
+TOTAL  GASTOS DE CAPITAL 393.826.288,35
+VI. INGRESOS TOTALES 1.037.705.850,54
+TOTAL  INGRESOS TOTALES 1.037.705.850,54 1.037.705.850,54
+VII. GASTOS TOTALES 1.153.163.291,34
+TOTAL  GASTOS TOTALES 1.153.163.291,34 1.153.163.291...

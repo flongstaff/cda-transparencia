@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_a6eb5ab3-5c4c-40cb-b901-839f60a148e4",
+      "datasetTitle": "Selección de magistrados del Poder Judicial y el Ministerio Público de la Nación",
+      "format": "ZIP",
+      "title": "Ternas para la selección de magistrados en el Poder Judicial y el Ministerio Público de la Nación - 2017",
+      "accessURL": "https://datos.jus.gob.ar/dataset/a6eb5ab3-5c4c-40cb-b901-839f60a148e4/resource/06f5d3d6-2dcb-44ad-b4cf-3dfbb7a557c3",
+      "lastProcessed": "2025-10-09T06:50:30.050Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_a6eb5ab3-5c4c-40cb-b901-839f60a148e4",
+    "title": "Selección de magistrados del Poder Judicial y el Ministerio Público de la Nación",
+    "description": "Vacantes a cubrir en el Poder Judicial y Ministerios Públicos de la Nación, concursos abiertos a tal fin, integración de las respectivas ternas, puntajes obtenidos por los profesionales propuestos en las etapas de evaluación cumplidas y Curriculum Vitae de los postulantes.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-06-08T14:17:01.334940",
+    "modified": "2025-08-04T18:10:11.516749",
+    "publisher": {
+      "mbox": "oficinadecretos@jus.gov.ar",
+      "name": "Ministerio de Justicia. Secretaría de Justicia. Dirección Nacional de Relaciones con el Poder Judicial. Oficina Decretos"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/seleccion-de-magistrados-del-poder-judicial-y-el-ministerio-publico-de-la-nacion"
+  }
+}

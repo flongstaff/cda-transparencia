@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_119_ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-4°TRE-2022.pdf",
+  "file_hash": "9036ae5260c948ea2567e2f1e70f402a",
+  "page_count": 1,
+  "text_length": 1695,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "R.A.F.A.M.\nESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 1\n20/09/2023 09:09\nMunicipalidad de\nCarmen de Areco Del 01/10/2022 al 31/12/2022 Ejercicio: 2022(POR PROCEDENCIA)\nCONSOLIDADO\nProcedencia - RubroModifica \nciones Recurso \nEstimado Recurso \nVigente Recurso \nDevengado Dif. entre \nVigente y \nDevengado Recursos \nPercibido Dif. entre \nDevengado y \nPercibido \nOrigen Municipal \n8.561.061,35 75.559.188,99 182.111.151,91 84.120.250,34 266.231.402,25 74.212.429,25 192.018.973,00 De libre disponibilidad\n0,00 3.219.107,05 11.921.589,82 3.219.107,05 15.140.696,87 708.818,87 14.431.878,00 Afectados\n206.450.851,00 74.921.248,12 281.372.099,12 87.339.357,39 194.032.741,73 78.778.296,04 8.561.061,35 Total Origen Municipal \nOrigen Provincial \n8.533.129,96 182.139.194,50 351.879.113,69 190.672.324,46 542.551.438,15 146.527.786,15 396.023.652,00 De libre disponibilidad\n0,00 142.557.142,94 108.768.065,05 142.557.142,94 251.325.207,99 132.842.164,99 118.483.043,00 Afectados\n514.506.695,00 279.369.951,14 793.876.646,14 333.229.467,40 460.647.178,74 324.696.337,44 8.533.129,96 Total Origen Provincial \nOrigen Nacional \n0,00 200.424.493,92 500.000,00 200.424.493,92 200.924.493,92 200.924.493,92 0,00 Afectados\n0,00 200.924.493,92 200.924.493,92 200.424.493,92 500.000,00 200.424.493,92 0,00 Total Origen Nacional \nOtros origenes \n0,00 1.500.000,00 0,00 1.500.000,00 1.500.000,00 1.500.000,00 0,00 Afectados\n0,00 1.500.000,00 1.500.000,00 1.500.000,00 0,00 1.500.000,00 0,00 Total Otros origenes \n720.957.546,00 556.715.693,18 1.277.673.239,18 622.493.318,71 655.179.920,47 605.399.127,40 17.094.191,31 TOTAL GENERAL\nFiltro aplicado: Ejercicio: 2022 -  Fechas: 01/10/2022 al 31/12/2022\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:51.851878"
+}

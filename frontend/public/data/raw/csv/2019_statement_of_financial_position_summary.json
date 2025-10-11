@@ -1,0 +1,36 @@
+{
+  "file_name": "2019_statement_of_financial_position.csv",
+  "row_count": 13,
+  "column_count": 2,
+  "columns": [
+    "Estado de Situacion Patrimonial",
+    "Saldo"
+  ],
+  "sample_data": [
+    {
+      "Estado de Situacion Patrimonial": "200.062.157",
+      "Saldo": 87
+    },
+    {
+      "Estado de Situacion Patrimonial": "72.871.274",
+      "Saldo": 53
+    },
+    {
+      "Estado de Situacion Patrimonial": "127.190.883",
+      "Saldo": 34
+    },
+    {
+      "Estado de Situacion Patrimonial": "-7.154.118",
+      "Saldo": 35
+    },
+    {
+      "Estado de Situacion Patrimonial": "-5.669.298",
+      "Saldo": 76
+    }
+  ],
+  "data_types": {
+    "Estado de Situacion Patrimonial": "object",
+    "Saldo": "int64"
+  },
+  "processing_method": "pandas-read_csv"
+}

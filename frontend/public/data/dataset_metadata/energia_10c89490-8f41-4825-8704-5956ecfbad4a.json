@@ -1,0 +1,42 @@
+{
+  "files": {
+    "estaciones-de-bombeo.zip": {
+      "datasetId": "energia_10c89490-8f41-4825-8704-5956ecfbad4a",
+      "datasetTitle": "Estaciones de Bombeo",
+      "fileName": "estaciones-de-bombeo.zip",
+      "format": "SHP",
+      "title": "Estaciones de Bombeo",
+      "accessURL": "http://datos.energia.gob.ar/dataset/10c89490-8f41-4825-8704-5956ecfbad4a/resource/18d56632-9990-46cb-a2b9-fd6f5a433965",
+      "lastProcessed": "2025-10-09T06:52:21.819Z",
+      "status": "processed"
+    },
+    "estaciones-de-bombeo.csv": {
+      "datasetId": "energia_10c89490-8f41-4825-8704-5956ecfbad4a",
+      "datasetTitle": "Estaciones de Bombeo",
+      "fileName": "estaciones-de-bombeo.csv",
+      "format": "CSV",
+      "title": "Estaciones de Bombeo",
+      "accessURL": "http://datos.energia.gob.ar/dataset/10c89490-8f41-4825-8704-5956ecfbad4a/resource/bd3eac84-9ae2-478b-8311-f1344b64a325",
+      "lastProcessed": "2025-10-09T06:52:23.651Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_10c89490-8f41-4825-8704-5956ecfbad4a",
+    "title": "Estaciones de Bombeo",
+    "description": "Estaciones de bombeo habilitadas por la Resolución 419.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2023-07-13T13:31:33.408947",
+    "modified": "2023-07-13T15:03:14.585208",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/estaciones-de-bombeo"
+  }
+}

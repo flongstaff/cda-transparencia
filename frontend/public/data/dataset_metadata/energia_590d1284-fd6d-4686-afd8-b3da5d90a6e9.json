@@ -1,0 +1,399 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "format": "ZIP",
+      "title": "Producción de Petróleo y Gas - hasta 2008 -  (Tablas Dinámicas)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/f4cf0c95-68c7-476e-b279-89e0d43b1b71",
+      "lastProcessed": "2025-10-09T06:23:09.191Z",
+      "status": "processed"
+    },
+    "disponibilidad-de-petrleo-a-fin-de-mes-ant-2009.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "disponibilidad-de-petrleo-a-fin-de-mes-ant-2009.csv",
+      "format": "CSV",
+      "title": "Disponibilidad de petróleo a fin de mes ant. 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/99386094-7986-42db-8a9b-a55e37c0553e",
+      "lastProcessed": "2025-10-09T06:23:10.612Z",
+      "status": "processed"
+    },
+    "dist-de-condensado-y-existencias-a-fin-de-mes-ant-2009.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "dist-de-condensado-y-existencias-a-fin-de-mes-ant-2009.csv",
+      "format": "CSV",
+      "title": "Dist. de condensado y existencias a fin de mes ant. 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/9cd9a075-5a6b-4e0a-9f7a-11511601deb3",
+      "lastProcessed": "2025-10-09T06:23:12.051Z",
+      "status": "processed"
+    },
+    "distribucion-de-gasolina-y-existencias-a-fin-de-mes-ant-2009.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "distribucion-de-gasolina-y-existencias-a-fin-de-mes-ant-2009.csv",
+      "format": "CSV",
+      "title": "Distribucion de gasolina y existencias a fin de mes ant. 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/9bcc12ab-4a6e-477e-9e86-0a384cc5bb6a",
+      "lastProcessed": "2025-10-09T06:23:13.687Z",
+      "status": "processed"
+    },
+    "distribucin-de-petrleo-y-existencias-a-fin-de-mes-ant-2009.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "distribucin-de-petrleo-y-existencias-a-fin-de-mes-ant-2009.csv",
+      "format": "CSV",
+      "title": "Distribución de petróleo y existencias a fin de mes ant. 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/9885c716-ae48-4d97-8ce4-297b071381cf",
+      "lastProcessed": "2025-10-09T06:23:15.172Z",
+      "status": "processed"
+    },
+    "produccin-de-glp-condensado-y-gasolina-estabilizada-entradas-y-mermas.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-glp-condensado-y-gasolina-estabilizada-entradas-y-mermas.csv",
+      "format": "CSV",
+      "title": "Producción de GLP Condensado y Gasolina Estabilizada - Entradas y Mermas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/73510ba0-ea2b-488a-8056-f9c5f80cbf50",
+      "lastProcessed": "2025-10-09T06:23:16.592Z",
+      "status": "processed"
+    },
+    "produccin-de-petrleo-anterior-al-2009.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-petrleo-anterior-al-2009.csv",
+      "format": "CSV",
+      "title": "Producción de petróleo anterior al 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/e163d708-3355-4eac-8ae8-b6162ceb75d0",
+      "lastProcessed": "2025-10-09T06:23:19.533Z",
+      "status": "processed"
+    },
+    "produccin-de-petrleo-por-yacimiento.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-petrleo-por-yacimiento.csv",
+      "format": "CSV",
+      "title": "Producción de petróleo por yacimiento",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/745facdc-73dc-46d8-83d5-d027bdaa3210",
+      "lastProcessed": "2025-10-09T06:23:37.601Z",
+      "status": "processed"
+    },
+    "gas-entregado-por-plantas.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "gas-entregado-por-plantas.csv",
+      "format": "CSV",
+      "title": "Gas entregado por plantas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/6526a900-170a-4b33-855f-f114b4cf593d",
+      "lastProcessed": "2025-10-09T06:23:40.144Z",
+      "status": "processed"
+    },
+    "gas-recibido-retenido-aventado-por-plantas.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "gas-recibido-retenido-aventado-por-plantas.csv",
+      "format": "CSV",
+      "title": "Gas recibido retenido aventado por plantas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/a4fafdd4-5fa4-4603-8126-62e27dc38972",
+      "lastProcessed": "2025-10-09T06:23:41.683Z",
+      "status": "processed"
+    },
+    "gas-retenido-recibido-y-aventado-ant-2009.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "gas-retenido-recibido-y-aventado-ant-2009.csv",
+      "format": "CSV",
+      "title": "Gas retenido, recibido y aventado ant. 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/820f5634-9096-42d9-9b4c-adc11b48b008",
+      "lastProcessed": "2025-10-09T06:23:43.716Z",
+      "status": "processed"
+    },
+    "produccin-de-gas-anterior-al-2009.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-gas-anterior-al-2009.csv",
+      "format": "CSV",
+      "title": "Producción de gas anterior al 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/8ac9bbe0-0ec0-45e2-b102-c50391dee7f8",
+      "lastProcessed": "2025-10-09T06:23:45.806Z",
+      "status": "processed"
+    },
+    "produccin-de-gas-por-yacimiento.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-gas-por-yacimiento.csv",
+      "format": "CSV",
+      "title": "Producción de gas por yacimiento",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/ce479c85-2e8b-441e-9c68-9681597b3694",
+      "lastProcessed": "2025-10-09T06:23:52.604Z",
+      "status": "processed"
+    },
+    "serie-produccion-gas-natural-sesco.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "serie-produccion-gas-natural-sesco.csv",
+      "format": "CSV",
+      "title": "Serie histórica de producción de Gas Natural por cuenca (SESCO Upstream)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/0d1af33c-2791-4114-a276-51fe70478a09",
+      "lastProcessed": "2025-10-09T06:23:54.483Z",
+      "status": "processed"
+    },
+    "serie-produccion-petroleo-sesco.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "serie-produccion-petroleo-sesco.csv",
+      "format": "CSV",
+      "title": "Serie histórica de producción de petróleo por cuenca (SESCO Upstream)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/d198fbff-2e2b-4d47-834b-356765b1fa08",
+      "lastProcessed": "2025-10-09T06:23:55.849Z",
+      "status": "processed"
+    },
+    "balance-de-gas-desde-2009.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "balance-de-gas-desde-2009.csv",
+      "format": "CSV",
+      "title": "Balance de gas desde 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/11614a62-9713-4b8f-8b8c-2a8050780140",
+      "lastProcessed": "2025-10-09T06:24:02.969Z",
+      "status": "processed"
+    },
+    "produccin-petrleo-sesco-tight-y-shale-captulo-iv-por-cuenca.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-petrleo-sesco-tight-y-shale-captulo-iv-por-cuenca.csv",
+      "format": "CSV",
+      "title": "Producción petróleo sesco + Tight y Shale capítulo IV por cuenca",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/aa524d41-f6b7-42dc-ae24-3b4a895002ab",
+      "lastProcessed": "2025-10-09T06:24:04.517Z",
+      "status": "processed"
+    },
+    "produccin-petrleo-sesco-tight-y-shale-captulo-iv-por-provincia.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-petrleo-sesco-tight-y-shale-captulo-iv-por-provincia.csv",
+      "format": "CSV",
+      "title": "Producción petróleo sesco + Tight y Shale capítulo IV por provincia",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/86270da2-6292-4719-b7c1-20671ff9ae40",
+      "lastProcessed": "2025-10-09T06:24:06.044Z",
+      "status": "processed"
+    },
+    "produccin-petrleo-sesco-tight-y-shale-captulo-iv-por-empresa.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-petrleo-sesco-tight-y-shale-captulo-iv-por-empresa.csv",
+      "format": "CSV",
+      "title": "Producción petróleo sesco + Tight y Shale capítulo IV por empresa",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/4cc61040-aa44-440d-a912-91bd6c26b8a7",
+      "lastProcessed": "2025-10-09T06:24:07.588Z",
+      "status": "processed"
+    },
+    "produccin-gas-sesco-tight-y-shale-captulo-iv-por-cuenca.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-gas-sesco-tight-y-shale-captulo-iv-por-cuenca.csv",
+      "format": "CSV",
+      "title": "Producción gas sesco + Tight y Shale capítulo IV por cuenca",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/f44d3962-08ce-48e8-b2e3-88f65e1dcb77",
+      "lastProcessed": "2025-10-09T06:24:09.110Z",
+      "status": "processed"
+    },
+    "produccin-gas-sesco-tight-y-shale-captulo-iv-por-provincia.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-gas-sesco-tight-y-shale-captulo-iv-por-provincia.csv",
+      "format": "CSV",
+      "title": "Producción gas sesco + Tight y Shale capítulo IV por provincia",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/ad1b9472-a370-47e7-8de3-b742495ec7f1",
+      "lastProcessed": "2025-10-09T06:24:10.658Z",
+      "status": "processed"
+    },
+    "produccin-gas-sesco-tight-y-shale-captulo-iv-por-empresa.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-gas-sesco-tight-y-shale-captulo-iv-por-empresa.csv",
+      "format": "CSV",
+      "title": "Producción gas sesco + Tight y Shale capítulo IV por empresa",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/63129e00-6a96-4d6e-9ce1-9e6c60287e16",
+      "lastProcessed": "2025-10-09T06:24:12.257Z",
+      "status": "processed"
+    },
+    "produccin-de-gas-promedio-diaria-por-empresa.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-gas-promedio-diaria-por-empresa.csv",
+      "format": "CSV",
+      "title": "Producción de gas promedio diaria por empresa",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/419094dd-2905-4ac3-9398-e81513013e5e",
+      "lastProcessed": "2025-10-09T06:24:13.745Z",
+      "status": "processed"
+    },
+    "produccin-de-gas-promedio-diaria-por-cuenca.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-gas-promedio-diaria-por-cuenca.csv",
+      "format": "CSV",
+      "title": "Producción de gas promedio diaria por cuenca",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/6a7866a1-723f-420c-898f-c482613646c5",
+      "lastProcessed": "2025-10-09T06:24:15.269Z",
+      "status": "processed"
+    },
+    "produccin-de-gas-promedio-diaria-por-provincia.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-gas-promedio-diaria-por-provincia.csv",
+      "format": "CSV",
+      "title": "Producción de gas promedio diaria por provincia",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/3d37d4f3-9b65-488e-9e64-bcd7483719fa",
+      "lastProcessed": "2025-10-09T06:24:16.600Z",
+      "status": "processed"
+    },
+    "produccin-de-petrleo-promedio-diaria-por-provincia.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-petrleo-promedio-diaria-por-provincia.csv",
+      "format": "CSV",
+      "title": "Producción de petróleo promedio diaria por provincia",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/a512fef1-e98e-44af-b940-76168a4bc523",
+      "lastProcessed": "2025-10-09T06:24:18.247Z",
+      "status": "processed"
+    },
+    "produccin-de-petrleo-promedio-diaria-por-cuenca.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-petrleo-promedio-diaria-por-cuenca.csv",
+      "format": "CSV",
+      "title": "Producción de petróleo promedio diaria por cuenca",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/570015c9-fa8b-44a4-9bb6-02bd1b2c6c90",
+      "lastProcessed": "2025-10-09T06:24:19.754Z",
+      "status": "processed"
+    },
+    "produccin-de-petrleo-promedio-diaria-por-empresa.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-petrleo-promedio-diaria-por-empresa.csv",
+      "lastProcessed": "2025-10-09T06:24:31.242Z",
+      "status": "error",
+      "error": "Failed to download CSV: produccin-de-petrleo-promedio-diaria-por-empresa.csv"
+    },
+    "produccin-petrleo-sesco-tight-y-shale-captulo-iv-por-yacimiento.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-petrleo-sesco-tight-y-shale-captulo-iv-por-yacimiento.csv",
+      "format": "CSV",
+      "title": "Producción petróleo sesco + Tight y Shale capítulo IV",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/83a2b597-b087-4815-b17d-cd70990d6a79",
+      "lastProcessed": "2025-10-09T06:24:35.509Z",
+      "status": "processed"
+    },
+    "produccin-gas-sesco-tight-y-shale-captulo-iv-por-yacimiento.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-gas-sesco-tight-y-shale-captulo-iv-por-yacimiento.csv",
+      "format": "CSV",
+      "title": "Producción gas sesco + Tight y Shale capítulo IV",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/931cfb07-37b7-414a-ae8b-528dff6f9f14",
+      "lastProcessed": "2025-10-09T06:24:41.282Z",
+      "status": "processed"
+    },
+    "produccin-de-petrleo-promedio-diaria-por-yacimiento.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-petrleo-promedio-diaria-por-yacimiento.csv",
+      "format": "CSV",
+      "title": "Producción de petróleo promedio diaria por yacimiento",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/e7102ae1-9e9d-45f0-a439-ca450ad8813c",
+      "lastProcessed": "2025-10-09T06:24:43.495Z",
+      "status": "processed"
+    },
+    "produccin-de-gas-promedio-diaria-por-yacimiento.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-gas-promedio-diaria-por-yacimiento.csv",
+      "format": "CSV",
+      "title": "Producción de gas promedio diaria por yacimiento",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/2f939eee-0b3c-4176-8eb9-c4a1abd1bc37",
+      "lastProcessed": "2025-10-09T06:24:44.943Z",
+      "status": "processed"
+    },
+    "produccin-de-gas-promedio-diaria-total-pais.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-gas-promedio-diaria-total-pais.csv",
+      "format": "CSV",
+      "title": "Producción de gas promedio diaria total pais",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/553340f5-6e0b-422f-b13f-4f8ad9e3dfae",
+      "lastProcessed": "2025-10-09T06:24:46.404Z",
+      "status": "processed"
+    },
+    "produccin-de-petrleo-promedio-diaria-total-pais.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-petrleo-promedio-diaria-total-pais.csv",
+      "format": "CSV",
+      "title": "Producción de petróleo promedio diaria total pais",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/b3329802-9bb7-4478-8aad-423763ca7623",
+      "lastProcessed": "2025-10-09T06:24:47.687Z",
+      "status": "processed"
+    },
+    "produccin-petrleo-sesco-tight-y-shale-captulo-iv-total-pais.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-petrleo-sesco-tight-y-shale-captulo-iv-total-pais.csv",
+      "format": "CSV",
+      "title": "Producción petróleo sesco + Tight y Shale capítulo IV total pais",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/f640943b-c049-4124-925c-6463c67b2e9a",
+      "lastProcessed": "2025-10-09T06:24:49.075Z",
+      "status": "processed"
+    },
+    "produccin-gas-sesco-tight-y-shale-captulo-iv-total-pais.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-gas-sesco-tight-y-shale-captulo-iv-total-pais.csv",
+      "format": "CSV",
+      "title": "Producción gas sesco + Tight y Shale capítulo IV total pais",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/39eff4aa-dac1-4df0-bd0a-7e6d2853d169",
+      "lastProcessed": "2025-10-09T06:24:50.599Z",
+      "status": "processed"
+    },
+    "produccin-de-gas-por-area-y-conformacin-de-consorcio.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-gas-por-area-y-conformacin-de-consorcio.csv",
+      "format": "CSV",
+      "title": "Producción de gas por area y conformación de consorcio",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/d5dde488-fdfd-44a8-862a-b98298007674",
+      "lastProcessed": "2025-10-09T06:24:54.492Z",
+      "status": "processed"
+    },
+    "produccin-de-petrleo-por-area-y-conformacin-de-consorcio.csv": {
+      "datasetId": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+      "datasetTitle": "Producción de Petróleo y Gas (SESCO)",
+      "fileName": "produccin-de-petrleo-por-area-y-conformacin-de-consorcio.csv",
+      "format": "CSV",
+      "title": "Producción de petróleo por area y conformación de consorcio",
+      "accessURL": "http://datos.energia.gob.ar/dataset/590d1284-fd6d-4686-afd8-b3da5d90a6e9/resource/68c3975f-564d-4c26-bbc9-164a3536578f",
+      "lastProcessed": "2025-10-09T06:24:59.612Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_590d1284-fd6d-4686-afd8-b3da5d90a6e9",
+    "title": "Producción de Petróleo y Gas (SESCO)",
+    "description": "Producción de Petróleo y Gas (SESCO).",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-12-22T13:42:08.246705",
+    "modified": "2025-09-25T16:00:48.743121",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

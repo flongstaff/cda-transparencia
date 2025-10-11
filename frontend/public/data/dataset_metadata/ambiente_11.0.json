@@ -1,0 +1,61 @@
+{
+  "files": {
+    "BiI_ecorregiones_superf": {
+      "datasetId": "ambiente_11.0",
+      "datasetTitle": "Inventario de biodiversidad",
+      "fileName": "BiI_ecorregiones_superf",
+      "format": "CSV",
+      "title": "Ecorregiones de Argentina",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=11&did=92",
+      "lastProcessed": "2025-10-09T06:59:39.468Z",
+      "status": "processed"
+    },
+    "BiI_especietaxon_num": {
+      "datasetId": "ambiente_11.0",
+      "datasetTitle": "Inventario de biodiversidad",
+      "fileName": "BiI_especietaxon_num",
+      "format": "CSV",
+      "title": "Cantidad de especies por taxón",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=11&did=196",
+      "lastProcessed": "2025-10-09T06:59:40.791Z",
+      "status": "processed"
+    },
+    "BiC_reptiles1": {
+      "datasetId": "ambiente_11.0",
+      "datasetTitle": "Inventario de biodiversidad",
+      "fileName": "BiC_reptiles1",
+      "format": "CSV",
+      "title": "Cantidad de especies y subespecies por jurisdicción. Reptiles",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=11&did=411",
+      "lastProcessed": "2025-10-09T06:59:42.134Z",
+      "status": "processed"
+    },
+    "BiC_anfibios1": {
+      "datasetId": "ambiente_11.0",
+      "datasetTitle": "Inventario de biodiversidad",
+      "fileName": "BiC_anfibios1",
+      "format": "CSV",
+      "title": "Cantidad de especies y subespecies por jurisdicción. Anfibios",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=4&stid=11&did=410",
+      "lastProcessed": "2025-10-09T06:59:43.567Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_11.0",
+    "title": "Inventario de biodiversidad",
+    "description": "Muestra las ecorregiones y la cantidad de especies por taxón en Argentina",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2020-12-31T00:00:00",
+    "modified": "2020-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_66_Estado-de-Ejecucion-de-Gastos-por-Fuente-de-Financiamiento-Marzo.pdf",
+  "file_hash": "654ee70d7485833d6266d41ce6c4ff56",
+  "page_count": 1,
+  "text_length": 1407,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS\nEjercicio\n:Hoja: 1 de 1 R.A.F.A.M.\n26/08/2024 12:55\nDel 02/01/2024 al 31/03/20242024\nDevengado\nno pagadoCrédito\nDisponiblePagado Devengado Compromiso Preventivo Crédito\nVigenteModifica\ncionesCrédito\nAprobadoCrédito Vig.\n- DevengadoFuente de Financiamiento\n110 - Tesoro Municipal 4.070.320.352,42 0,00 4.070.320.352,42 107.566.947,28 690.818.089,96 678.737.460,93 636.080.342,79 3.271.935.315,18 3.391.582.891,49 42.657.118,14\n131 - Rec. Afec. Espec. - De origen municipal 59.607.063,40 7.756.548,61 67.363.612,01 1.218.558,32 13.485.408,04 13.485.408,04 13.485.408,04 52.659.645,65 53.878.203,97 0,00\n132 - Rec. Afec. Espec. - De origen provincial 664.158.836,04 107.117.444,55 771.276.280,59 53.592.426,39 73.820.471,19 73.820.471,19 70.698.238,11 643.863.383,01 697.455.809,40 3.122.233,08\n133 - Rec. Afec. Espec. - De origen nacional 0,00 14.788.164,12 14.788.164,12 0,00 535.600,00 535.600,00 535.600,00 14.252.564,12 14.252.564,12 0,00\n140 - Transferencias internas 0,00 4.564.910,01 4.564.910,01 0,00 2.708.000,00 2.708.000,00 1.354.000,00 1.856.910,01 1.856.910,01 1.354.000,00\n4.928.313.319,15 162.377.931,99 781.367.569,19 769.286.940,16 722.153.588,94 3.984.567.817,97 47.133.351,22 TOTALES GENERALES 4.794.086.251,86 134.227.067,29 4.159.026.378,99\nFiltro aplicado: Ejercicio: 2024 -  Fechas: 02/01/2024 al 31/03/2024\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:36.474350"
+}

@@ -1,0 +1,122 @@
+{
+  "files": {
+    "escritura-canti-series.csv": {
+      "datasetId": "produccion_d602a8d8-c2e6-42e3-90f3-13fa889db3a1",
+      "datasetTitle": "Archivo 2002-2019: Indicadores Sectoriales de la Construcción",
+      "fileName": "escritura-canti-series.csv",
+      "format": "CSV",
+      "title": "Construcción: cantidad de escrituraciones en CABA y Provincia de Buenos Aires (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d602a8d8-c2e6-42e3-90f3-13fa889db3a1/resource/e716db72-38bb-489f-a2fd-72538608c881",
+      "lastProcessed": "2025-10-09T08:05:55.600Z",
+      "status": "processed"
+    },
+    "escritura-canti-panel.csv": {
+      "datasetId": "produccion_d602a8d8-c2e6-42e3-90f3-13fa889db3a1",
+      "datasetTitle": "Archivo 2002-2019: Indicadores Sectoriales de la Construcción",
+      "fileName": "escritura-canti-panel.csv",
+      "format": "CSV",
+      "title": "Construcción: cantidad de escrituraciones en CABA y Provincia de Buenos Aires (panel)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d602a8d8-c2e6-42e3-90f3-13fa889db3a1/resource/6d9677fa-df9e-40aa-8b12-c75951bebdb0",
+      "lastProcessed": "2025-10-09T08:05:57.990Z",
+      "status": "processed"
+    },
+    "construya-series.csv": {
+      "datasetId": "produccion_d602a8d8-c2e6-42e3-90f3-13fa889db3a1",
+      "datasetTitle": "Archivo 2002-2019: Indicadores Sectoriales de la Construcción",
+      "fileName": "construya-series.csv",
+      "format": "CSV",
+      "title": "Construcción: Índice Construya con y sin estacionalidad (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d602a8d8-c2e6-42e3-90f3-13fa889db3a1/resource/ee940d79-8b2b-4dd1-970f-224159806553",
+      "lastProcessed": "2025-10-09T08:05:59.842Z",
+      "status": "processed"
+    },
+    "construya-panel.csv": {
+      "datasetId": "produccion_d602a8d8-c2e6-42e3-90f3-13fa889db3a1",
+      "datasetTitle": "Archivo 2002-2019: Indicadores Sectoriales de la Construcción",
+      "fileName": "construya-panel.csv",
+      "format": "CSV",
+      "title": "Construcción: Índice Construya con y sin estacionalidad (panel)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d602a8d8-c2e6-42e3-90f3-13fa889db3a1/resource/b297e2f3-3713-4570-a0b1-db44d488f7e0",
+      "lastProcessed": "2025-10-09T08:06:01.765Z",
+      "status": "processed"
+    },
+    "costo-const-series.csv": {
+      "datasetId": "produccion_d602a8d8-c2e6-42e3-90f3-13fa889db3a1",
+      "datasetTitle": "Archivo 2002-2019: Indicadores Sectoriales de la Construcción",
+      "fileName": "costo-const-series.csv",
+      "format": "CSV",
+      "title": "Construcción: Índice de Costo de la Construcción por gran componente (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d602a8d8-c2e6-42e3-90f3-13fa889db3a1/resource/3521649d-5ac9-41d7-bcce-6637cdda90a5",
+      "lastProcessed": "2025-10-09T08:06:03.717Z",
+      "status": "processed"
+    },
+    "costo-const-panel (1).csv": {
+      "datasetId": "produccion_d602a8d8-c2e6-42e3-90f3-13fa889db3a1",
+      "datasetTitle": "Archivo 2002-2019: Indicadores Sectoriales de la Construcción",
+      "fileName": "costo-const-panel (1).csv",
+      "format": "CSV",
+      "title": "Construcción: Índice de Costo de la Construcción por gran componente (panel)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d602a8d8-c2e6-42e3-90f3-13fa889db3a1/resource/baaee4fb-3ddd-4cd7-9d0e-c78844654511",
+      "lastProcessed": "2025-10-09T08:06:05.950Z",
+      "status": "processed"
+    },
+    "escritura-valor-series.csv": {
+      "datasetId": "produccion_d602a8d8-c2e6-42e3-90f3-13fa889db3a1",
+      "datasetTitle": "Archivo 2002-2019: Indicadores Sectoriales de la Construcción",
+      "fileName": "escritura-valor-series.csv",
+      "format": "CSV",
+      "title": "Construcción: valor de las escrituraciones en CABA y Provincia de Buenos Aires (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d602a8d8-c2e6-42e3-90f3-13fa889db3a1/resource/de953ca9-b3c2-49da-b4d8-b57fbef5624d",
+      "lastProcessed": "2025-10-09T08:06:07.992Z",
+      "status": "processed"
+    },
+    "escritura-valor-panel.csv": {
+      "datasetId": "produccion_d602a8d8-c2e6-42e3-90f3-13fa889db3a1",
+      "datasetTitle": "Archivo 2002-2019: Indicadores Sectoriales de la Construcción",
+      "fileName": "escritura-valor-panel.csv",
+      "format": "CSV",
+      "title": "Construcción: valor de las escrituraciones en CABA y Provincia de Buenos Aires (panel)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d602a8d8-c2e6-42e3-90f3-13fa889db3a1/resource/8819a761-b983-4af7-ada3-5854ee332597",
+      "lastProcessed": "2025-10-09T08:06:10.139Z",
+      "status": "processed"
+    },
+    "cemento-series.csv": {
+      "datasetId": "produccion_d602a8d8-c2e6-42e3-90f3-13fa889db3a1",
+      "datasetTitle": "Archivo 2002-2019: Indicadores Sectoriales de la Construcción",
+      "fileName": "cemento-series.csv",
+      "format": "CSV",
+      "title": "Inversión: despachos de cemento por tipo de envase (series)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d602a8d8-c2e6-42e3-90f3-13fa889db3a1/resource/37b6bb44-c06d-4c60-a7a0-6025c684f08c",
+      "lastProcessed": "2025-10-09T08:06:12.296Z",
+      "status": "processed"
+    },
+    "cemento-panel.csv": {
+      "datasetId": "produccion_d602a8d8-c2e6-42e3-90f3-13fa889db3a1",
+      "datasetTitle": "Archivo 2002-2019: Indicadores Sectoriales de la Construcción",
+      "fileName": "cemento-panel.csv",
+      "format": "CSV",
+      "title": "Inversión: despachos de cemento por tipo de envase (panel)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d602a8d8-c2e6-42e3-90f3-13fa889db3a1/resource/38cd32b3-a308-4b9e-ad1f-07a12aca59e0",
+      "lastProcessed": "2025-10-09T08:06:14.453Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_d602a8d8-c2e6-42e3-90f3-13fa889db3a1",
+    "title": "Archivo 2002-2019: Indicadores Sectoriales de la Construcción",
+    "description": "Resumen de los principales indicadores del sector de la Construcción y rubro Inmobiliario.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-04-29T14:16:11.371959",
+    "modified": "2021-05-11T15:49:13.734642",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Producción. Secretaría de Transformación Productiva. Subsecretaría de Desarrollo y Planeamiento Productivo. "
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/archivo-2002-2019-indicadores-sectoriales-de-la-construccion"
+  }
+}

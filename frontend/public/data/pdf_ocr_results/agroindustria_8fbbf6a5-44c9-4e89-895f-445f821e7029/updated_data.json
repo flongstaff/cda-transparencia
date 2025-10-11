@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "agroindustria_8fbbf6a5-44c9-4e89-895f-445f821e7029",
+      "title": "Aves - Índice del Costo de la Producción de Pollos Parrilleros",
+      "distribution": [
+        {
+          "title": "pollo-parrillero-2025-08Ago-indice-costo-produccion.pdf",
+          "format": "PDF",
+          "fileName": "pollo-parrillero-2025-08Ago-indice-costo-produccion.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/agroindustria_8fbbf6a5-44c9-4e89-895f-445f821e7029/pollo-parrillero-2025-08Ago-indice-costo-produccion.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/agroindustria_8fbbf6a5-44c9-4e89-895f-445f821e7029/pollo-parrillero-2025-08Ago-indice-costo-produccion_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

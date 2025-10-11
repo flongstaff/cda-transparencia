@@ -1,0 +1,36 @@
+{
+  "files": {
+    "Ley-25080-resoluciones-inversiones-bosques-cultivados-2025-04-29.csv": {
+      "datasetId": "agroindustria_1102dd01-5b08-4495-a8a0-08dfe126ba5d",
+      "datasetTitle": "Forestales - Ley 25.080 inversiones para bosques cultivados",
+      "fileName": "Ley-25080-resoluciones-inversiones-bosques-cultivados-2025-04-29.csv",
+      "format": "CSV",
+      "title": "Ley 25.080 de inversiones para bosques cultivados",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/1102dd01-5b08-4495-a8a0-08dfe126ba5d/resource/2e1279e9-1cde-451a-9452-a541723fea84",
+      "lastProcessed": "2025-10-09T07:09:53.216Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_1102dd01-5b08-4495-a8a0-08dfe126ba5d",
+    "title": "Forestales - Ley 25.080 inversiones para bosques cultivados",
+    "description": "Se presenta el acceso a las resoluciones de pago de la “Ley 25.080 de inversiones para bosques cultivados” .",
+    "theme": [
+      "agri",
+      "econ",
+      "gove"
+    ],
+    "superTheme": [
+      "AGRI",
+      "ECON",
+      "GOVE"
+    ],
+    "issued": "2018-12-10T13:00:40.491992",
+    "modified": "2025-05-08T07:25:06.529752",
+    "publisher": {
+      "mbox": "ssdfi@magyp.gob.ar",
+      "name": "Dirección Nacional de Desarrollo Foresto Industrial"
+    },
+    "landingPage": "http://www.agroindustria.gob.ar/sitio/areas/ss_desarrollo_foresto_industrial/"
+  }
+}

@@ -1,0 +1,444 @@
+source,type,description,budgeted,executed,percentage,year,category,subcategory
+,,,,,,2016,,
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,revenue,current
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,revenue,capital
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,revenue,financial_sources
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,revenue,total
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,revenue,discretionary
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,revenue,earmarked
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,expenditure,personnel
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,expenditure,consumables
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,expenditure,services
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,expenditure,capital_goods
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,expenditure,transfers
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,expenditure,financial_assets
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,expenditure,debt_service
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,expenditure,total
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,financial_position,current_assets
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,financial_position,non_current_assets
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,financial_position,current_liabilities
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,financial_position,non_current_liabilities
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,financial_result,operating_result
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,financial_result,net_result
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019,,
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,revenue,current
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,revenue,capital
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,revenue,financial_sources
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,revenue,total
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,revenue,discretionary
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,revenue,earmarked
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,expenditure,personnel
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,expenditure,consumables
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,expenditure,services
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,expenditure,capital_goods
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,expenditure,transfers
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,expenditure,financial_assets
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,expenditure,debt_service
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,expenditure,total
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,financial_position,current_assets
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,financial_position,non_current_assets
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,financial_position,current_liabilities
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,financial_position,non_current_liabilities
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,financial_result,operating_result
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,financial_result,net_result
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019,,
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,revenue,current
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,revenue,capital
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,revenue,financial_sources
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,revenue,total
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,revenue,discretionary
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,revenue,earmarked
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,expenditure,personnel
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,expenditure,consumables
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,expenditure,services
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,expenditure,capital_goods
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,expenditure,transfers
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,expenditure,financial_assets
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,expenditure,debt_service
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,expenditure,total
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,financial_position,current_assets
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,financial_position,non_current_assets
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,financial_position,current_liabilities
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,financial_position,non_current_liabilities
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,financial_result,operating_result
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,financial_result,net_result
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019,,
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,revenue,current
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,revenue,capital
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,revenue,financial_sources
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,revenue,total
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,revenue,discretionary
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,revenue,earmarked
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,expenditure,personnel
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,expenditure,consumables
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,expenditure,services
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,expenditure,capital_goods
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,expenditure,transfers
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,expenditure,financial_assets
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,expenditure,debt_service
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,expenditure,total
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,financial_position,current_assets
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,financial_position,non_current_assets
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,financial_position,current_liabilities
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,financial_position,non_current_liabilities
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,financial_result,operating_result
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,financial_result,net_result
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019,,
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,revenue,current
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,revenue,capital
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,revenue,financial_sources
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,revenue,total
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,revenue,discretionary
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,revenue,earmarked
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,expenditure,personnel
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,expenditure,consumables
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,expenditure,services
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,expenditure,capital_goods
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,expenditure,transfers
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,expenditure,financial_assets
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,expenditure,debt_service
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,expenditure,total
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,financial_position,current_assets
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,financial_position,non_current_assets
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,financial_position,current_liabilities
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,financial_position,non_current_liabilities
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,financial_result,operating_result
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,financial_result,net_result
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019,,
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,revenue,current
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,revenue,capital
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,revenue,financial_sources
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,revenue,total
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,revenue,discretionary
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,revenue,earmarked
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,expenditure,personnel
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,expenditure,consumables
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,expenditure,services
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,expenditure,capital_goods
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,expenditure,transfers
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,expenditure,financial_assets
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,expenditure,debt_service
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,expenditure,total
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,financial_position,current_assets
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,financial_position,non_current_assets
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,financial_position,current_liabilities
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,financial_position,non_current_liabilities
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,financial_result,operating_result
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,financial_result,net_result
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019,,
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,revenue,current
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,revenue,capital
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,revenue,financial_sources
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,revenue,total
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,revenue,discretionary
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,revenue,earmarked
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,expenditure,personnel
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,expenditure,consumables
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,expenditure,services
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,expenditure,capital_goods
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,expenditure,transfers
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,expenditure,financial_assets
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,expenditure,debt_service
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,expenditure,total
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,financial_position,current_assets
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,financial_position,non_current_assets
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,financial_position,current_liabilities
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,financial_position,non_current_liabilities
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,financial_result,operating_result
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,financial_result,net_result
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019,,
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,revenue,current
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,revenue,capital
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,revenue,financial_sources
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,revenue,total
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,revenue,discretionary
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,revenue,earmarked
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,expenditure,personnel
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,expenditure,consumables
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,expenditure,services
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,expenditure,capital_goods
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,expenditure,transfers
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,expenditure,financial_assets
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,expenditure,debt_service
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,expenditure,total
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,financial_position,current_assets
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,financial_position,non_current_assets
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,financial_position,current_liabilities
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,financial_position,non_current_liabilities
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,financial_result,operating_result
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,financial_result,net_result
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019,,
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,revenue,current
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,revenue,capital
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,revenue,financial_sources
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,revenue,total
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,revenue,discretionary
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,revenue,earmarked
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,expenditure,personnel
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,expenditure,consumables
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,expenditure,services
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,expenditure,capital_goods
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,expenditure,transfers
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,expenditure,financial_assets
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,expenditure,debt_service
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,expenditure,total
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,financial_position,current_assets
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,financial_position,non_current_assets
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,financial_position,current_liabilities
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,financial_position,non_current_liabilities
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,financial_result,operating_result
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,financial_result,net_result
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019,,
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,revenue,current
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,revenue,capital
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,revenue,financial_sources
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,revenue,total
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,revenue,discretionary
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,revenue,earmarked
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,expenditure,personnel
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,expenditure,consumables
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,expenditure,services
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,expenditure,capital_goods
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,expenditure,transfers
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,expenditure,financial_assets
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,expenditure,debt_service
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,expenditure,total
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,financial_position,current_assets
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,financial_position,non_current_assets
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,financial_position,current_liabilities
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,financial_position,non_current_liabilities
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,financial_result,operating_result
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,financial_result,net_result
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019,,
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,revenue,current
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,revenue,capital
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,revenue,financial_sources
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,revenue,total
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,revenue,discretionary
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,revenue,earmarked
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,expenditure,personnel
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,expenditure,consumables
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,expenditure,services
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,expenditure,capital_goods
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,expenditure,transfers
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,expenditure,financial_assets
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,expenditure,debt_service
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,expenditure,total
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,financial_position,current_assets
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,financial_position,non_current_assets
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,financial_position,current_liabilities
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,financial_position,non_current_liabilities
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,financial_result,operating_result
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,financial_result,net_result
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019,,
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,revenue,current
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,revenue,capital
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,revenue,financial_sources
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,revenue,total
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,revenue,discretionary
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,revenue,earmarked
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,expenditure,personnel
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,expenditure,consumables
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,expenditure,services
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,expenditure,capital_goods
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,expenditure,transfers
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,expenditure,financial_assets
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,expenditure,debt_service
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,expenditure,total
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,financial_position,current_assets
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,financial_position,non_current_assets
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,financial_position,current_liabilities
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,financial_position,non_current_liabilities
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,financial_result,operating_result
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,financial_result,net_result
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019,,
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,revenue,current
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,revenue,capital
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,revenue,financial_sources
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,revenue,total
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,revenue,discretionary
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,revenue,earmarked
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,expenditure,personnel
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,expenditure,consumables
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,expenditure,services
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,expenditure,capital_goods
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,expenditure,transfers
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,expenditure,financial_assets
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,expenditure,debt_service
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,expenditure,total
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,financial_position,current_assets
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,financial_position,non_current_assets
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,financial_position,current_liabilities
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,financial_position,non_current_liabilities
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,financial_result,operating_result
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,financial_result,net_result
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019,,
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,revenue,current
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,revenue,capital
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,revenue,financial_sources
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,revenue,total
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,revenue,discretionary
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,revenue,earmarked
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,expenditure,personnel
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,expenditure,consumables
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,expenditure,services
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,expenditure,capital_goods
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,expenditure,transfers
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,expenditure,financial_assets
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,expenditure,debt_service
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,expenditure,total
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,financial_position,current_assets
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,financial_position,non_current_assets
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,financial_position,current_liabilities
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,financial_position,non_current_liabilities
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,financial_result,operating_result
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,financial_result,net_result
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019,,
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,revenue,current
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,revenue,capital
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,revenue,financial_sources
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,revenue,total
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,revenue,discretionary
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,revenue,earmarked
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,expenditure,personnel
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,expenditure,consumables
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,expenditure,services
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,expenditure,capital_goods
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,expenditure,transfers
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,expenditure,financial_assets
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,expenditure,debt_service
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,expenditure,total
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,financial_position,current_assets
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,financial_position,non_current_assets
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,financial_position,current_liabilities
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,financial_position,non_current_liabilities
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,financial_result,operating_result
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,financial_result,net_result
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019,,
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,revenue,current
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,revenue,capital
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,revenue,financial_sources
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,revenue,total
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,revenue,discretionary
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,revenue,earmarked
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,expenditure,personnel
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,expenditure,consumables
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,expenditure,services
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,expenditure,capital_goods
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,expenditure,transfers
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,expenditure,financial_assets
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,expenditure,debt_service
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,expenditure,total
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,financial_position,current_assets
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,financial_position,non_current_assets
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,financial_position,current_liabilities
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,financial_position,non_current_liabilities
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,financial_result,operating_result
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,financial_result,net_result
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019,,
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,revenue,current
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,revenue,capital
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,revenue,financial_sources
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,revenue,total
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,revenue,discretionary
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,revenue,earmarked
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,expenditure,personnel
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,expenditure,consumables
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,expenditure,services
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,expenditure,capital_goods
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,expenditure,transfers
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,expenditure,financial_assets
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,expenditure,debt_service
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,expenditure,total
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,financial_position,current_assets
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,financial_position,non_current_assets
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,financial_position,current_liabilities
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,financial_position,non_current_liabilities
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,financial_result,operating_result
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,financial_result,net_result
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019,,
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,revenue,current
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,revenue,capital
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,revenue,financial_sources
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,revenue,total
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,revenue,discretionary
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,revenue,earmarked
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,expenditure,personnel
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,expenditure,consumables
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,expenditure,services
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,expenditure,capital_goods
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,expenditure,transfers
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,expenditure,financial_assets
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,expenditure,debt_service
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,expenditure,total
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,financial_position,current_assets
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,financial_position,non_current_assets
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,financial_position,current_liabilities
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,financial_position,non_current_liabilities
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,financial_result,operating_result
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,financial_result,net_result
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019,,
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,revenue,current
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,revenue,capital
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,revenue,financial_sources
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,revenue,total
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,revenue,discretionary
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,revenue,earmarked
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,expenditure,personnel
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,expenditure,consumables
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,expenditure,services
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,expenditure,capital_goods
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,expenditure,transfers
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,expenditure,financial_assets
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,expenditure,debt_service
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,expenditure,total
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,financial_position,current_assets
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,financial_position,non_current_assets
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,financial_position,current_liabilities
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,financial_position,non_current_liabilities
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,financial_result,operating_result
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,financial_result,net_result
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019,,
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,revenue,current
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,revenue,capital
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,revenue,financial_sources
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,revenue,total
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,revenue,discretionary
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,revenue,earmarked
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,expenditure,personnel
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,expenditure,consumables
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,expenditure,services
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,expenditure,capital_goods
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,expenditure,transfers
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,expenditure,financial_assets
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,expenditure,debt_service
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,expenditure,total
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,financial_position,current_assets
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,financial_position,non_current_assets
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,financial_position,current_liabilities
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,financial_position,non_current_liabilities
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,financial_result,operating_result
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,financial_result,net_result
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019,,
+,,Ingresos corrientes,241879702.14,232492993.99,96.12,2019,revenue,current
+,,Recursos de capital,1632279.86,1632279.86,100.0,2019,revenue,capital
+,,Fuentes Financieras,0.0,0.0,0.0,2019,revenue,financial_sources
+,,Total Recursos,243511982.0,234125273.85,96.15,2019,revenue,total
+,,De libre disponibilidad,185792776.35,176406068.2,95.0,2019,revenue,discretionary
+,,Afectados,57719205.65,57719205.65,100.0,2019,revenue,earmarked
+,,Gastos en personal,115221488.53,115221488.53,100.0,2019,expenditure,personnel
+,,Bienes de consumo,48292633.9,45006222.39,93.19,2019,expenditure,consumables
+,,Servicios no personales,66281069.41,64584379.32,97.44,2019,expenditure,services
+,,Bienes de uso,30571005.55,29993727.4,98.11,2019,expenditure,capital_goods
+,,Transferencias,10376925.15,10248500.66,98.76,2019,expenditure,transfers
+,,Activos financieros,517575.61,517575.61,100.0,2019,expenditure,financial_assets
+,,Servicio de la deuda,639104.18,639104.18,100.0,2019,expenditure,debt_service
+,,Total Gastos,271899802.33,266210998.09,97.91,2019,expenditure,total
+,,ACTIVO CORRIENTE,0.0,72871274.53,0.0,2019,financial_position,current_assets
+,,ACTIVO NO CORRIENTE,0.0,127190883.34,0.0,2019,financial_position,non_current_assets
+,,PASIVO CORRIENTE,0.0,-5669298.76,0.0,2019,financial_position,current_liabilities
+,,PASIVO NO CORRIENTE,0.0,-1484819.59,0.0,2019,financial_position,non_current_liabilities
+,,Resultado Artículo 44,0.0,832790.44,0.0,2019,financial_result,operating_result
+,,Resultado del ejercicio,0.0,-14721351.66,0.0,2019,financial_result,net_result
+,,,,,,2019,,
+,,,,,,2024,,

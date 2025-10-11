@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_5",
+      "datasetTitle": "Cantidad de empresas mineras (SIACAM)",
+      "lastProcessed": "2025-10-09T06:49:49.856Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_5",
+    "title": "Cantidad de empresas mineras (SIACAM)",
+    "description": "Datos correspondientes al tablero de Cantidad de Empresas del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM). Elaborado por la Dirección Nacional de Promoción y Economia Minera con base a MECTRA.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2022-12-07",
+    "modified": "2025-09-01",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

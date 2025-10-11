@@ -1,0 +1,51 @@
+{
+  "files": {
+    "procesamiento-de-petroleo-crudo-y-otras-cargas.csv": {
+      "datasetId": "energia_570627b9-3e2e-41b9-b661-71afa37bd63e",
+      "datasetTitle": "Elaboración de combustibles",
+      "fileName": "procesamiento-de-petroleo-crudo-y-otras-cargas.csv",
+      "format": "CSV",
+      "title": "Procesamiento de Petróleo Crudo y Otras Cargas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/570627b9-3e2e-41b9-b661-71afa37bd63e/resource/7fc0a5ad-a79b-4f3f-b8f6-63a66e30645c",
+      "lastProcessed": "2025-10-09T07:21:16.133Z",
+      "status": "processed"
+    },
+    "subproductos-procesados-por-refineria-ant-2009.csv": {
+      "datasetId": "energia_570627b9-3e2e-41b9-b661-71afa37bd63e",
+      "datasetTitle": "Elaboración de combustibles",
+      "fileName": "subproductos-procesados-por-refineria-ant-2009.csv",
+      "format": "CSV",
+      "title": "Subproductos procesados por refineria ant. 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/570627b9-3e2e-41b9-b661-71afa37bd63e/resource/b63cbd72-c6a5-4c09-9db4-5554942a06d3",
+      "lastProcessed": "2025-10-09T07:21:17.613Z",
+      "status": "processed"
+    },
+    "petroleo-procesado-por-refineria-anterior-al-2009.csv": {
+      "datasetId": "energia_570627b9-3e2e-41b9-b661-71afa37bd63e",
+      "datasetTitle": "Elaboración de combustibles",
+      "fileName": "petroleo-procesado-por-refineria-anterior-al-2009.csv",
+      "format": "CSV",
+      "title": "Petróleo procesado por refineria anterior al 2009",
+      "accessURL": "http://datos.energia.gob.ar/dataset/570627b9-3e2e-41b9-b661-71afa37bd63e/resource/af4d70db-8b0a-44c4-9f84-c20904d08ada",
+      "lastProcessed": "2025-10-09T07:21:19.113Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_570627b9-3e2e-41b9-b661-71afa37bd63e",
+    "title": "Elaboración de combustibles",
+    "description": "Cargas de Petróleo y otros cortes a las Refinerías del país",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2018-03-22T16:58:45.525810",
+    "modified": "2021-07-12T11:11:13.825660",
+    "publisher": {
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

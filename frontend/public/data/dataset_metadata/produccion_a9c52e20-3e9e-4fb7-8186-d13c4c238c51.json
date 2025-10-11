@@ -1,0 +1,48 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "produccion_a9c52e20-3e9e-4fb7-8186-d13c4c238c51",
+      "datasetTitle": "Fichas Sectoriales CEP XXI",
+      "lastProcessed": "2025-10-09T08:08:24.352Z",
+      "status": "processed"
+    },
+    "Diccionario-nombres-fichas.xlsx": {
+      "datasetId": "produccion_a9c52e20-3e9e-4fb7-8186-d13c4c238c51",
+      "datasetTitle": "Fichas Sectoriales CEP XXI",
+      "fileName": "Diccionario-nombres-fichas.xlsx",
+      "format": "XLSX",
+      "title": "Diccionario Variables Fichas Sectoriales",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/a9c52e20-3e9e-4fb7-8186-d13c4c238c51/resource/0cbe32b6-076a-47a6-ac39-edbe09ff17df",
+      "lastProcessed": "2025-10-09T08:08:24.352Z",
+      "status": "processed"
+    },
+    "Fichas-Sectoriales-FINAL.csv": {
+      "datasetId": "produccion_a9c52e20-3e9e-4fb7-8186-d13c4c238c51",
+      "datasetTitle": "Fichas Sectoriales CEP XXI",
+      "fileName": "Fichas-Sectoriales-FINAL.csv",
+      "format": "CSV",
+      "title": "Fichas Sectoriales CEP XXI",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/a9c52e20-3e9e-4fb7-8186-d13c4c238c51/resource/10288f57-c45c-41bb-be96-4d142dec92dc",
+      "lastProcessed": "2025-10-09T08:08:26.332Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_a9c52e20-3e9e-4fb7-8186-d13c4c238c51",
+    "title": "Fichas Sectoriales CEP XXI",
+    "description": "Indicadores sectoriales, muchos de elaboración propia (CEP XXI), inéditos previamente. Se trata de 118 indicadores, que pueden agruparse en 6 macrobloques: ocupación total; producción y productividad; salarios; pobreza; género y comercio exterior. Se trata de información anual, del período 2004-2021, desagregada en división similar a CIIU a nivel letra, y similar a CIIU nivel dos dígitos dentro de industria manufacturera, hoteles y restaurantes, y transporte, almacenamiento y comunicaciones.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-11-11T11:07:47.588895",
+    "modified": "2022-08-04T10:51:38.126804",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la Producción (CEP XXI)"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/fichas-sectoriales-cep-xxi"
+  }
+}

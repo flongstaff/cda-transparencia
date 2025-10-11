@@ -1,0 +1,32 @@
+{
+  "files": {
+    "certificados-impo-mineria.csv": {
+      "datasetId": "energia_022eb3e3-e2ff-47e9-a770-7d54f6bcbefa",
+      "datasetTitle": "Certificados de importación según régimen de inversiones mineras",
+      "fileName": "certificados-impo-mineria.csv",
+      "format": "CSV",
+      "title": "Certificados de importación según régimen de inversiones mineras",
+      "accessURL": "http://datos.energia.gob.ar/dataset/022eb3e3-e2ff-47e9-a770-7d54f6bcbefa/resource/50a81ccc-62c6-45cc-941f-297c1cad25fe",
+      "lastProcessed": "2025-10-09T07:22:26.269Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_022eb3e3-e2ff-47e9-a770-7d54f6bcbefa",
+    "title": "Certificados de importación según régimen de inversiones mineras",
+    "description": "Evolución de cantidad de certificados de importación según régimen de inversiones mineras (Ley 24.196). Años 1993-2015. Equipos corresponde a bienes de capital, partes y accesorios. Insumos son aquellos productos que se agotan en el proceso de producción.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2017-08-10T15:12:05.759710",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/certificados-de-importacion-segun-regimen-de-inversiones-mineras"
+  }
+}

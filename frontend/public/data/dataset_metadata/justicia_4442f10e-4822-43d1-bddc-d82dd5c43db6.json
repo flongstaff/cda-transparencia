@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_4442f10e-4822-43d1-bddc-d82dd5c43db6",
+      "datasetTitle": "Solicitudes de acceso a la información pública en el Ministerio de Justicia y Derechos Humanos",
+      "format": "ZIP",
+      "title": "Solicitudes de acceso a la información pública - 2017",
+      "accessURL": "https://datos.jus.gob.ar/dataset/4442f10e-4822-43d1-bddc-d82dd5c43db6/resource/4540ada8-ba4d-436b-812a-8d90f19faef4",
+      "lastProcessed": "2025-10-09T06:49:55.472Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_4442f10e-4822-43d1-bddc-d82dd5c43db6",
+    "title": "Solicitudes de acceso a la información pública en el Ministerio de Justicia y Derechos Humanos",
+    "description": "Solicitudes de acceso a la información pública en el Ministerio de Justicia.\r\n",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-07-04T15:14:39.142937",
+    "modified": "2025-09-01T13:17:55.286240",
+    "publisher": {
+      "mbox": "lmosquera@jus.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Gestión Administrativa. Dirección de Gestión Documental y Despacho"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/solicitudes-de-acceso-a-la-informacion-publica-en-el-ministerio-de-justicia-y-derechos-humanos"
+  }
+}

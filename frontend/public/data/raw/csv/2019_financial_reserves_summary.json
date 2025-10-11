@@ -1,0 +1,36 @@
+{
+  "file_name": "2019_financial_reserves.csv",
+  "row_count": 6,
+  "column_count": 2,
+  "columns": [
+    "fund",
+    "amount"
+  ],
+  "sample_data": [
+    {
+      "fund": "Fondo de contingencia",
+      "amount": 50000000.0
+    },
+    {
+      "fund": "Fondo de amortización",
+      "amount": 30000000.0
+    },
+    {
+      "fund": "Otros",
+      "amount": 20000000.0
+    },
+    {
+      "fund": NaN,
+      "amount": 201.0
+    },
+    {
+      "fund": NaN,
+      "amount": 195.0
+    }
+  ],
+  "data_types": {
+    "fund": "object",
+    "amount": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

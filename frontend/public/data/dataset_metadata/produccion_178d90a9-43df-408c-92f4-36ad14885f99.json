@@ -1,0 +1,32 @@
+{
+  "files": {
+    "ipi-mundial.csv": {
+      "datasetId": "produccion_178d90a9-43df-408c-92f4-36ad14885f99",
+      "datasetTitle": "Índice de Producción Industrial Mundial (IPI Mundial)",
+      "fileName": "ipi-mundial.csv",
+      "format": "CSV",
+      "title": "Índice de Producción Industrial Mundial (IPI Mundial)",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/178d90a9-43df-408c-92f4-36ad14885f99/resource/88adb84d-622d-43d6-91fc-8f87f8bac91c",
+      "lastProcessed": "2025-10-09T08:09:18.787Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_178d90a9-43df-408c-92f4-36ad14885f99",
+    "title": "Índice de Producción Industrial Mundial (IPI Mundial)",
+    "description": "Es un indicador de elaboración propia que muestra la evolución de la actividad industrial de los socios comerciales más importantes de Argentina y de las principales economías del mundo. Brinda un panorama internacional de la producción industrial y pone en contexto la coyuntura económica. Toma una muestra de países y pondera la evolución de la producción industrial según su contribución en el PBI Mundial. Considera la industria en un sentido amplio: incluye petróleo, minería y energía.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-04-29T15:13:54.928167",
+    "modified": "2022-09-07T16:24:00.944795",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la producción (CEP XXI)"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/indice-de-produccion-industrial-mundial-ipi-mundial"
+  }
+}

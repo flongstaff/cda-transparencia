@@ -1,0 +1,546 @@
+{
+  "files": {
+    "personas_2011.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2011.json",
+      "format": "JSON",
+      "title": "personas_2011",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/6597ab15-d9ae-4dce-9b6f-876bf39d26c3",
+      "lastProcessed": "2025-10-09T07:04:00.593Z",
+      "status": "processed"
+    },
+    "personas_2012.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2012.csv",
+      "format": "CSV",
+      "title": "personas_2012",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/5d49a616-2fc1-4270-8b09-73f1f5cdd335",
+      "lastProcessed": "2025-10-09T07:03:27.209Z",
+      "status": "processed"
+    },
+    "personas_2012.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2012.json",
+      "format": "JSON",
+      "title": "personas_2012",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/9960659f-a17d-4a51-98af-1b67e281e0d3",
+      "lastProcessed": "2025-10-09T07:03:27.210Z",
+      "status": "processed"
+    },
+    "personas_2013.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2013.csv",
+      "format": "CSV",
+      "title": "personas_2013",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/0fb38a7e-829b-4128-b318-4affd51c022c",
+      "lastProcessed": "2025-10-09T07:03:31.001Z",
+      "status": "processed"
+    },
+    "personas_2013.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2013.json",
+      "format": "JSON",
+      "title": "personas_2013",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/e9dc57dd-ef56-4d99-940e-ec9b6351bec4",
+      "lastProcessed": "2025-10-09T07:03:31.002Z",
+      "status": "processed"
+    },
+    "personas_2014.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2014.csv",
+      "format": "CSV",
+      "title": "personas_2014",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/0c8dfedc-a2b5-4c0a-8e78-eed5fe90025f",
+      "lastProcessed": "2025-10-09T07:03:35.426Z",
+      "status": "processed"
+    },
+    "personas_2014.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2014.json",
+      "format": "JSON",
+      "title": "personas_2014",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/c532931d-94cf-4948-8f93-f501851008b0",
+      "lastProcessed": "2025-10-09T07:03:35.426Z",
+      "status": "processed"
+    },
+    "personas_2015.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2015.csv",
+      "format": "CSV",
+      "title": "personas_2015",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/b5c212d2-104f-426c-95d0-25ac5bf819d8",
+      "lastProcessed": "2025-10-09T07:03:38.865Z",
+      "status": "processed"
+    },
+    "personas_2015.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2015.json",
+      "format": "JSON",
+      "title": "personas_2015",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/d19f1020-0efb-451e-a3fe-e9e126a87a00",
+      "lastProcessed": "2025-10-09T07:03:38.865Z",
+      "status": "processed"
+    },
+    "personas_2016.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2016.csv",
+      "format": "CSV",
+      "title": "personas_2016",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/2fbdbf08-4de0-4a1b-92d5-d16751757ab8",
+      "lastProcessed": "2025-10-09T07:03:42.765Z",
+      "status": "processed"
+    },
+    "personas_2016.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2016.json",
+      "format": "JSON",
+      "title": "personas_2016",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/f8973d0a-4f98-4b15-9e05-18b6882dd51c",
+      "lastProcessed": "2025-10-09T07:03:42.765Z",
+      "status": "processed"
+    },
+    "personas_2017.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2017.csv",
+      "format": "CSV",
+      "title": "personas_2017",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/ff318872-775a-4403-bff5-a1c5cdeb85ea",
+      "lastProcessed": "2025-10-09T07:03:46.340Z",
+      "status": "processed"
+    },
+    "personas_2017.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2017.json",
+      "format": "JSON",
+      "title": "personas_2017",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/cdcd5329-9efa-4dc6-9417-027a4c028f50",
+      "lastProcessed": "2025-10-09T07:03:46.341Z",
+      "status": "processed"
+    },
+    "personas_2018.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2018.csv",
+      "format": "CSV",
+      "title": "personas_2018",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/7b07fb44-64c3-4902-ab73-f59d4ed8a2f5",
+      "lastProcessed": "2025-10-09T07:03:50.136Z",
+      "status": "processed"
+    },
+    "personas_2018.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2018.json",
+      "format": "JSON",
+      "title": "personas_2018",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/d64311a6-a65b-4693-addb-99b88cfc2587",
+      "lastProcessed": "2025-10-09T07:03:50.137Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2011.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2011.csv",
+      "format": "CSV",
+      "title": "personas_indicadores_genero_2011",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/cdd821b1-55e1-44cc-8b19-72673d037f18",
+      "lastProcessed": "2025-10-09T07:02:25.157Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2011.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2011.json",
+      "format": "JSON",
+      "title": "personas_indicadores_genero_2011",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/ed3a4f5b-dbcc-40ba-9342-5ace0741bcc8",
+      "lastProcessed": "2025-10-09T07:02:25.158Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2012.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2012.csv",
+      "format": "CSV",
+      "title": "personas_indicadores_genero_2012",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/57c82785-09ab-44af-b25b-c6344bf26ead",
+      "lastProcessed": "2025-10-09T07:04:00.592Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2012.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2012.json",
+      "format": "JSON",
+      "title": "personas_indicadores_genero_2012",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/4c7baf69-c84b-4c3d-8416-fb09004386ad",
+      "lastProcessed": "2025-10-09T07:02:28.834Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2013.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2013.csv",
+      "format": "CSV",
+      "title": "personas_indicadores_genero_2013",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/11def25d-4939-45ce-9775-b6801dcc1dc2",
+      "lastProcessed": "2025-10-09T07:02:32.709Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2013.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2013.json",
+      "format": "JSON",
+      "title": "personas_indicadores_genero_2013",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/b5fba1c2-11ab-4d98-ba26-1ae96c30ed69",
+      "lastProcessed": "2025-10-09T07:02:32.710Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2014.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2014.csv",
+      "format": "CSV",
+      "title": "personas_indicadores_genero_2014",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/c614cc08-ad3c-4614-9754-6b497183c1b3",
+      "lastProcessed": "2025-10-09T07:02:36.411Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2014.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2014.json",
+      "format": "JSON",
+      "title": "personas_indicadores_genero_2014",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/3457b25b-777b-428b-aa1e-b8b27bec7135",
+      "lastProcessed": "2025-10-09T07:02:36.412Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2015.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2015.csv",
+      "format": "CSV",
+      "title": "personas_indicadores_genero_2015",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/16e0f9eb-de8f-4d94-8bc4-d72465cf7a29",
+      "lastProcessed": "2025-10-09T07:02:39.973Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2015.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2015.json",
+      "format": "JSON",
+      "title": "personas_indicadores_genero_2015",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/21949591-0eb9-4b3a-9a46-cf669c373fdd",
+      "lastProcessed": "2025-10-09T07:02:39.974Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2016.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2016.csv",
+      "format": "CSV",
+      "title": "personas_indicadores_genero_2016",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/0449f2f1-414c-41b6-84d3-9ad8346c7313",
+      "lastProcessed": "2025-10-09T07:02:43.680Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2016.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2016.json",
+      "format": "JSON",
+      "title": "personas_indicadores_genero_2016",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/30090c70-5d8e-4638-8eb8-cdaef6c8ef68",
+      "lastProcessed": "2025-10-09T07:02:43.681Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2017.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2017.csv",
+      "format": "CSV",
+      "title": "personas_indicadores_genero_2017",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/17940af2-8082-4262-a36f-3e7474b35931",
+      "lastProcessed": "2025-10-09T07:02:47.469Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2017.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2017.json",
+      "format": "JSON",
+      "title": "personas_indicadores_genero_2017",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/a7dd15a1-d4cc-4a90-8fe2-0a71da4af50b",
+      "lastProcessed": "2025-10-09T07:02:47.469Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2018.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2018.csv",
+      "format": "CSV",
+      "title": "personas_indicadores_genero_2018",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/f3dd2f11-5c1d-40d2-8b0d-41ebef6dff31",
+      "lastProcessed": "2025-10-09T07:02:51.142Z",
+      "status": "processed"
+    },
+    "personas_indicadores_genero_2018.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_indicadores_genero_2018.json",
+      "format": "JSON",
+      "title": "personas_indicadores_genero_2018",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/c4f27a22-2326-47b3-bb70-d1fd7d16b906",
+      "lastProcessed": "2025-10-09T07:02:51.142Z",
+      "status": "processed"
+    },
+    "personas.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas.csv",
+      "format": "CSV",
+      "title": "personas",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/8ab77b16-f1a8-4d3f-b664-67becf83a9b9",
+      "lastProcessed": "2025-10-09T07:03:57.126Z",
+      "status": "processed"
+    },
+    "personas.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas.json",
+      "format": "JSON",
+      "title": "personas",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/64a3fdbc-4500-472a-8dad-8b342c97a46f",
+      "lastProcessed": "2025-10-09T07:03:57.126Z",
+      "status": "processed"
+    },
+    "ref_SEXO.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_SEXO.csv",
+      "format": "CSV",
+      "title": "ref_SEXO",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/a69384fd-fd1b-4be6-9521-00c833583b63",
+      "lastProcessed": "2025-10-09T07:02:58.265Z",
+      "status": "processed"
+    },
+    "ref_SEXO.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_SEXO.json",
+      "format": "JSON",
+      "title": "ref_SEXO",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/a3ebcdf1-2095-4f5d-87db-0d5a50f6ac33",
+      "lastProcessed": "2025-10-09T07:02:58.266Z",
+      "status": "processed"
+    },
+    "ref_GRADO_ACADEMICO.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_GRADO_ACADEMICO.csv",
+      "format": "CSV",
+      "title": "ref_GRADO_ACADEMICO",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/d54a9918-1f9e-4951-bbce-ea24d728f195",
+      "lastProcessed": "2025-10-09T07:03:01.984Z",
+      "status": "processed"
+    },
+    "ref_GRADO_ACADEMICO.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_GRADO_ACADEMICO.json",
+      "format": "JSON",
+      "title": "ref_GRADO_ACADEMICO",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/b63af885-e33d-4cd8-9ab0-7c43e681eafa",
+      "lastProcessed": "2025-10-09T07:03:01.985Z",
+      "status": "processed"
+    },
+    "ref_disciplina.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_disciplina.csv",
+      "format": "CSV",
+      "title": "ref_DISCIPLINA",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/ab280873-8206-4e16-a020-064a9243277f",
+      "lastProcessed": "2025-10-09T07:03:05.410Z",
+      "status": "processed"
+    },
+    "ref_DISCIPLINA.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_DISCIPLINA.json",
+      "format": "JSON",
+      "title": "ref_DISCIPLINA",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/07c6ff2d-d205-4875-a225-3f12bcaf8bda",
+      "lastProcessed": "2025-10-09T07:03:05.411Z",
+      "status": "processed"
+    },
+    "ref_TIPO_PERSONAL.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_TIPO_PERSONAL.csv",
+      "format": "CSV",
+      "title": "ref_TIPO_PERSONAL",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/90d498e9-5a96-46df-b51d-956b5702bb02",
+      "lastProcessed": "2025-10-09T07:03:09.071Z",
+      "status": "processed"
+    },
+    "ref_TIPO_PERSONAL.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_TIPO_PERSONAL.json",
+      "format": "JSON",
+      "title": "ref_TIPO_PERSONAL",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/c1d371fd-9b94-485e-896d-92bf4e363af0",
+      "lastProcessed": "2025-10-09T07:03:09.072Z",
+      "status": "processed"
+    },
+    "ref_CATEGORIA_CONICET.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_CATEGORIA_CONICET.csv",
+      "format": "CSV",
+      "title": "ref_CATEGORIA_CONICET",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/c72c9f88-d9ef-4349-bb20-5c9a1aca5d67",
+      "lastProcessed": "2025-10-09T07:03:12.687Z",
+      "status": "processed"
+    },
+    "ref_CATEGORIA_CONICET.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_CATEGORIA_CONICET.json",
+      "format": "JSON",
+      "title": "ref_CATEGORIA_CONICET",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/5e7235ea-90b1-4a6c-8522-24ed50d16570",
+      "lastProcessed": "2025-10-09T07:03:12.687Z",
+      "status": "processed"
+    },
+    "ref_TIPO_DEDICACION_HORARIA_SEMANAL.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_TIPO_DEDICACION_HORARIA_SEMANAL.csv",
+      "format": "CSV",
+      "title": "ref_TIPO_DEDICACION_HORARIA_SEMANAL",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/730a11f0-d961-4bae-9f65-ab3736d7ddbd",
+      "lastProcessed": "2025-10-09T07:03:16.155Z",
+      "status": "processed"
+    },
+    "ref_TIPO_DEDICACION_HORARIA_SEMANAL.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_TIPO_DEDICACION_HORARIA_SEMANAL.json",
+      "format": "JSON",
+      "title": "ref_TIPO_DEDICACION_HORARIA_SEMANAL",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/3e94b120-d402-427d-9f2b-bb3cb59cc0c9",
+      "lastProcessed": "2025-10-09T07:03:16.155Z",
+      "status": "processed"
+    },
+    "ref_clase_cargo.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_clase_cargo.csv",
+      "format": "CSV",
+      "title": "ref_CLASE_CARGO",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/0098aa63-cad3-4d58-bc2e-213d3b2950c1",
+      "lastProcessed": "2025-10-09T07:03:20.060Z",
+      "status": "processed"
+    },
+    "ref_CLASE_CARGO.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_CLASE_CARGO.json",
+      "format": "JSON",
+      "title": "ref_CLASE_CARGO",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/5719d3a8-bf19-49ae-830b-74f3fd5e094e",
+      "lastProcessed": "2025-10-09T07:03:20.061Z",
+      "status": "processed"
+    },
+    "ref_TIPO_CONDICION_DOCENTE.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_TIPO_CONDICION_DOCENTE.csv",
+      "format": "CSV",
+      "title": "ref_TIPO_CONDICION_DOCENTE",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/7d5d4957-81e1-4ac7-99f5-0ad7a88a3111",
+      "lastProcessed": "2025-10-09T07:03:23.531Z",
+      "status": "processed"
+    },
+    "ref_TIPO_CONDICION_DOCENTE.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "ref_TIPO_CONDICION_DOCENTE.json",
+      "format": "JSON",
+      "title": "ref_TIPO_CONDICION_DOCENTE",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/3b5c63a1-4ecf-423e-b0c4-ab62ab1b6149",
+      "lastProcessed": "2025-10-09T07:03:23.531Z",
+      "status": "processed"
+    },
+    "personas_2019.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2019.csv",
+      "format": "CSV",
+      "title": "personas_2019",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/91a963a0-be14-4f70-9cbb-2122afdff201",
+      "lastProcessed": "2025-10-09T07:03:53.698Z",
+      "status": "processed"
+    },
+    "personas_2019.json": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2019.json",
+      "format": "JSON",
+      "title": "personas_2019",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/0d4bc4a9-f4aa-4272-9eb8-ff00c7a0b076",
+      "lastProcessed": "2025-10-09T07:03:53.699Z",
+      "status": "processed"
+    },
+    "personas_2020.csv": {
+      "datasetId": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+      "datasetTitle": "Personal de ciencia y tecnología",
+      "fileName": "personas_2020.csv",
+      "format": "JSON",
+      "title": "personas_2020",
+      "accessURL": "https://datasets.datos.mincyt.gob.ar/dataset/06ae9728-c376-47bd-9c41-fbdca68707c6/resource/5743ab23-022b-482a-a50a-afd547518ad3",
+      "lastProcessed": "2025-10-09T07:03:53.699Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mincyt_06ae9728-c376-47bd-9c41-fbdca68707c6",
+    "title": "Personal de ciencia y tecnología",
+    "description": "El personal de CyT en una unidad estadística incluye a todas las personas involucradas directamente en I+D así como a aquellas que brindan servicios directos para las actividades de I + D (como gerentes de I + D, administradores, técnicos y personal de oficina).\r\n",
+    "theme": [
+      "tech",
+      "educ",
+      "gove"
+    ],
+    "superTheme": [
+      "EDUC",
+      "GOVE",
+      "TECH"
+    ],
+    "issued": "2019-02-08T13:13:53.120937",
+    "modified": "2019-02-08T15:27:22.312576",
+    "publisher": {
+      "mbox": "ciencia.abierta@mincyt.gob.ar",
+      "name": "Sistema de Información de Ciencia y Tecnología Argentino (SICYTAR)\r\n"
+    },
+    "landingPage": "https://datasets.datos.mincyt.gob.ar/dataset/personal-de-ciencia-y-tecnologia"
+  }
+}

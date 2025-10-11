@@ -1,0 +1,42 @@
+{
+  "files": {
+    "comercializacin-de-hidrocarburos-terminales-de-despacho-de-combustibles-lquidos-segn-res-110204-.zip": {
+      "datasetId": "energia_4adf2cf0-621c-49e6-8434-9d787765d9ea",
+      "datasetTitle": "Comercialización de hidrocarburos - Combustibles líquidos - Aeroplantas (según Res. 1102/04)",
+      "fileName": "comercializacin-de-hidrocarburos-terminales-de-despacho-de-combustibles-lquidos-segn-res-110204-.zip",
+      "format": "SHP",
+      "title": "Comercialización de hidrocarburos - Combustibles líquidos - Aeroplantas (según Res. 1102/04)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/4adf2cf0-621c-49e6-8434-9d787765d9ea/resource/7b9ee6ba-07d1-4584-96d1-f7a6b5e47661",
+      "lastProcessed": "2025-10-09T06:31:27.001Z",
+      "status": "processed"
+    },
+    "comercializacin-de-hidrocarburos-combustibles-lquidos-aeroplantas-segn-res-110204-.csv": {
+      "datasetId": "energia_4adf2cf0-621c-49e6-8434-9d787765d9ea",
+      "datasetTitle": "Comercialización de hidrocarburos - Combustibles líquidos - Aeroplantas (según Res. 1102/04)",
+      "fileName": "comercializacin-de-hidrocarburos-combustibles-lquidos-aeroplantas-segn-res-110204-.csv",
+      "format": "CSV",
+      "title": "Comercialización de hidrocarburos - Combustibles líquidos - Aeroplantas (según Res. 1102/04)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/4adf2cf0-621c-49e6-8434-9d787765d9ea/resource/69389cee-0174-42de-8cfb-aec035a19816",
+      "lastProcessed": "2025-10-09T06:31:28.405Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_4adf2cf0-621c-49e6-8434-9d787765d9ea",
+    "title": "Comercialización de hidrocarburos - Combustibles líquidos - Aeroplantas (según Res. 1102/04)",
+    "description": "Aeroplantas para comercialización de combustibles líquidos. Datos según Resolución 1102/04.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-06-11T10:58:05.932915",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

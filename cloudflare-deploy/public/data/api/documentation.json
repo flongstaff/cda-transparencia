@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "endpoints": {
+    "processed_data": {
+      "path": "/data/processed",
+      "description": "All processed data from OCR extraction",
+      "methods": [
+        "GET"
+      ],
+      "subdirectories": [
+        "csv/",
+        "json/",
+        "text/"
+      ]
+    },
+    "categorized_data": {
+      "path": "/data/json/{category}/",
+      "description": "Data organized by category (gastos, ingresos, licitaciones, etc.)",
+      "methods": [
+        "GET"
+      ],
+      "categories": [
+        "gastos",
+        "ingresos",
+        "presupuesto",
+        "licitaciones",
+        "salud",
+        "educacion",
+        "seguridad",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ]
+    },
+    "raw_data": {
+      "path": "/data/raw/",
+      "description": "Original data files",
+      "methods": [
+        "GET"
+      ]
+    },
+    "main_catalogs": {
+      "path": "/data/{main-data.json|data.json|main.json}",
+      "description": "Main data catalogs",
+      "methods": [
+        "GET"
+      ]
+    }
+  },
+  "last_updated": "2025-10-10T17:55:10.001166",
+  "documentation": "/api/documentation.json"
+}

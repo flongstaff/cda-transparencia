@@ -1,0 +1,31 @@
+{
+  "files": {
+    "ORDENANZA-FISCAL-3198-23.pdf": {
+      "datasetId": "ds-ordenanza-fiscal-2023",
+      "datasetTitle": "Ordenanza Fiscal 2023 (Vigente)",
+      "fileName": "ORDENANZA-FISCAL-3198-23.pdf",
+      "format": "PDF",
+      "title": "Ordenanza Fiscal 3198/23",
+      "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2024/03/ORDENANZA-FISCAL-3198-23.pdf",
+      "lastProcessed": "2025-10-09T06:13:39.225Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ds-ordenanza-fiscal-2023",
+    "title": "Ordenanza Fiscal 2023 (Vigente)",
+    "description": "Ordenanza fiscal 3198/23 para el ejercicio 2023, con determinación de obligaciones fiscales.",
+    "theme": [
+      "economia-y-finanzas"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2023-12-01T00:00:00",
+    "modified": "2024-03-01T00:00:00",
+    "publisher": {
+      "name": "Secretaría de Hacienda"
+    },
+    "landingPage": "https://carmendeareco.gob.ar/transparencia/ordenanzas-fiscales/"
+  }
+}

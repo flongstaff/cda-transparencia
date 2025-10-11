@@ -1,0 +1,31 @@
+{
+  "files": {
+    "AtAA_a_evolucion_consumo_hcfc_2022": {
+      "datasetId": "ambiente_7.0",
+      "datasetTitle": "Alta atmósfera",
+      "fileName": "AtAA_a_evolucion_consumo_hcfc_2022",
+      "format": "CSV",
+      "title": "Consumo de hidroclorofluorocarbonos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=2&stid=7&did=211",
+      "lastProcessed": "2025-10-09T06:57:51.246Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_7.0",
+    "title": "Alta atmósfera",
+    "description": "Muestra la evolución del consumo de hidroclorofluorocarbonos (HCFC)",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2023-04-08T00:00:00",
+    "modified": "2023-04-08T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

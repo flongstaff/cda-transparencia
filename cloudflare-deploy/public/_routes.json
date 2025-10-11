@@ -1,5 +1,19 @@
 {
   "version": 1,
-  "include": ["/*"],
-  "exclude": []
+  "include": [
+    "/api/*",
+    "/data/*",
+    "/health"
+  ],
+  "exclude": [
+    "/assets/*",
+    "*.png",
+    "*.jpg",
+    "*.jpeg",
+    "*.gif",
+    "*.svg",
+    "*.ico",
+    "*.css",
+    "*.js"
+  ]
 }

@@ -1,0 +1,28 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_70fc10e1-aa70-4dc9-9dfb-478875f684d8",
+      "datasetTitle": "Sistema Nacional de Estadísticas sobre Ejecución de la Pena - SNEEP - Series de tiempo",
+      "lastProcessed": "2025-10-09T06:31:04.595Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_70fc10e1-aa70-4dc9-9dfb-478875f684d8",
+    "title": "Sistema Nacional de Estadísticas sobre Ejecución de la Pena - SNEEP - Series de tiempo",
+    "description": "Series de tiempo en relación a información recopilada en el censo realizado sobre el total de la población detenida al día 31 de diciembre de cada año, en cada establecimiento de la República Argentina",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2021-01-03T19:55:41.037067",
+    "modified": "2025-09-30T20:09:50.259675",
+    "publisher": {
+      "mbox": "holaeta@jus.gov.ar",
+      "name": "Ministerio de Justicia. Secretaría de Justicia. Subsecretaría de Política Criminal. Dirección Nacional de Política Criminal en Materia de Justicia y Legislación Pena"
+    },
+    "landingPage": "https://www2.jus.gov.ar/dnpc"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "produccion_cff92f9d-5b8d-4c86-b39e-eb7cbd6da2b9",
+      "datasetTitle": "Salario mediano de la población joven por sector de actividad y provincia",
+      "lastProcessed": "2025-10-09T08:05:23.762Z",
+      "status": "processed"
+    },
+    "clae_agg.csv": {
+      "datasetId": "produccion_cff92f9d-5b8d-4c86-b39e-eb7cbd6da2b9",
+      "datasetTitle": "Salario mediano de la población joven por sector de actividad y provincia",
+      "fileName": "clae_agg.csv",
+      "format": "CSV",
+      "title": "Diccionario de claes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/cff92f9d-5b8d-4c86-b39e-eb7cbd6da2b9/resource/287db29f-fb5c-46d8-bb33-3f53c6d7c4a5",
+      "lastProcessed": "2025-10-09T08:05:25.982Z",
+      "status": "processed"
+    },
+    "Metodología empleo joven por provincia y sector.pdf": {
+      "datasetId": "produccion_cff92f9d-5b8d-4c86-b39e-eb7cbd6da2b9",
+      "datasetTitle": "Salario mediano de la población joven por sector de actividad y provincia",
+      "fileName": "Metodología empleo joven por provincia y sector.pdf",
+      "format": "PDF",
+      "title": "Metodología",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/cff92f9d-5b8d-4c86-b39e-eb7cbd6da2b9/resource/3ec0bd2a-73f0-435a-9bda-6984671e09aa",
+      "lastProcessed": "2025-10-09T08:05:28.620Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_cff92f9d-5b8d-4c86-b39e-eb7cbd6da2b9",
+    "title": "Salario mediano de la población joven por sector de actividad y provincia",
+    "description": "Datos correspondientes al empleo registrado de la población joven, comprendida esta entre los 18 y los 24 años. Las series se presentan para tres universos: sector privado, \"total empresas\" (sector privado + empresas públicas) y total. Se presentan series totales para cada universo, como a su vez se presentan también series desagregadas por provincia y sector productivo para cada uno de estos.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2023-09-13T16:26:22.317266",
+    "modified": "2023-09-13T16:26:22.317266",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Economía. Secretaria de Desarrollo Productivo. Dirección Nacional de Estudios para la Producción."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/salario-mediano-de-la-poblacion-joven-por-sector-de-actividad-y-provincia"
+  }
+}

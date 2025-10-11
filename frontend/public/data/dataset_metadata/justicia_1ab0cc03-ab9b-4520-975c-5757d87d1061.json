@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_1ab0cc03-ab9b-4520-975c-5757d87d1061",
+      "datasetTitle": "Estadística de trámites de automotores",
+      "format": "gráfico",
+      "title": "Trámites de automotores - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/1ab0cc03-ab9b-4520-975c-5757d87d1061/resource/2ff74844-e563-4120-8a90-816eb1dfd888",
+      "lastProcessed": "2025-10-09T06:32:41.826Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_1ab0cc03-ab9b-4520-975c-5757d87d1061",
+    "title": "Estadística de trámites de automotores",
+    "description": "Cantidad de automotores 0km inscriptos y automotores transferidos, discriminados por año, mes y provincia a la que pertenece el registro seccional en el cual se inscribió el trámite.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2017-06-28T17:28:28.132200",
+    "modified": "2025-10-01T14:54:08.016955",
+    "publisher": {
+      "mbox": "accesobd@dnrpa.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Dirección Nacional de los Registros Nacionales de la Propiedad del Automotor y Créditos Prendarios"
+    },
+    "landingPage": "https://www.dnrpa.gov.ar"
+  }
+}

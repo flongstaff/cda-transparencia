@@ -1,0 +1,142 @@
+{
+  "files": {
+    "Telefonía móvil Accesos Totales.xls": {
+      "datasetId": "enacom_21",
+      "datasetTitle": "Comunicaciones Móviles",
+      "fileName": "Telefonía móvil Accesos Totales.xls",
+      "format": "XLS",
+      "title": "Comunicaciones Móviles Accesos-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/accesos-totales",
+      "lastProcessed": "2025-10-09T06:27:28.081Z",
+      "status": "processed"
+    },
+    "Telefonía móvil Accesos Totales.csv": {
+      "datasetId": "enacom_21",
+      "datasetTitle": "Comunicaciones Móviles",
+      "fileName": "Telefonía móvil Accesos Totales.csv",
+      "format": "CSV",
+      "title": "Comunicaciones Móviles Accesos-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/accesos-totales",
+      "lastProcessed": "2025-10-09T06:27:29.203Z",
+      "status": "processed"
+    },
+    "Telefonía móvil Ingresos.xls": {
+      "datasetId": "enacom_21",
+      "datasetTitle": "Comunicaciones Móviles",
+      "fileName": "Telefonía móvil Ingresos.xls",
+      "format": "XLS",
+      "title": "Comunicaciones Móviles Ingresos-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/ingresos",
+      "lastProcessed": "2025-10-09T06:27:29.203Z",
+      "status": "processed"
+    },
+    "Telefonía móvil Ingresos.csv": {
+      "datasetId": "enacom_21",
+      "datasetTitle": "Comunicaciones Móviles",
+      "fileName": "Telefonía móvil Ingresos.csv",
+      "format": "CSV",
+      "title": "Comunicaciones Móviles Ingresos-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/ingresos",
+      "lastProcessed": "2025-10-09T06:27:30.276Z",
+      "status": "processed"
+    },
+    "Telefonía móvil Llamadas Salientes.xls": {
+      "datasetId": "enacom_21",
+      "datasetTitle": "Comunicaciones Móviles",
+      "fileName": "Telefonía móvil Llamadas Salientes.xls",
+      "format": "XLS",
+      "title": "Comunicaciones Móviles Llamadas-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/llamadas",
+      "lastProcessed": "2025-10-09T06:27:30.276Z",
+      "status": "processed"
+    },
+    "Telefonía móvil Llamadas Salientes.csv": {
+      "datasetId": "enacom_21",
+      "datasetTitle": "Comunicaciones Móviles",
+      "fileName": "Telefonía móvil Llamadas Salientes.csv",
+      "format": "CSV",
+      "title": "Comunicaciones Móviles Llamadas-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/llamadas",
+      "lastProcessed": "2025-10-09T06:27:31.361Z",
+      "status": "processed"
+    },
+    "Telefonía móvil Minutos Salientes.xls": {
+      "datasetId": "enacom_21",
+      "datasetTitle": "Comunicaciones Móviles",
+      "fileName": "Telefonía móvil Minutos Salientes.xls",
+      "format": "XLS",
+      "title": "Comunicaciones Móviles Minutos-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/minutos",
+      "lastProcessed": "2025-10-09T06:27:31.361Z",
+      "status": "processed"
+    },
+    "Telefonía móvil Minutos Salientes.csv": {
+      "datasetId": "enacom_21",
+      "datasetTitle": "Comunicaciones Móviles",
+      "fileName": "Telefonía móvil Minutos Salientes.csv",
+      "format": "CSV",
+      "title": "Comunicaciones Móviles Minutos-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/minutos",
+      "lastProcessed": "2025-10-09T06:27:32.432Z",
+      "status": "processed"
+    },
+    "Telefonía móvil Penetración.xls": {
+      "datasetId": "enacom_21",
+      "datasetTitle": "Comunicaciones Móviles",
+      "fileName": "Telefonía móvil Penetración.xls",
+      "format": "XLS",
+      "title": "Comunicaciones Móviles Penetracion-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/penetracion",
+      "lastProcessed": "2025-10-09T06:27:32.432Z",
+      "status": "processed"
+    },
+    "Telefonía móvil Penetración.csv": {
+      "datasetId": "enacom_21",
+      "datasetTitle": "Comunicaciones Móviles",
+      "fileName": "Telefonía móvil Penetración.csv",
+      "format": "CSV",
+      "title": "Comunicaciones Móviles Penetracion-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/penetracion",
+      "lastProcessed": "2025-10-09T06:27:33.576Z",
+      "status": "processed"
+    },
+    "Telefonía móvil SMS Salientes.xls": {
+      "datasetId": "enacom_21",
+      "datasetTitle": "Comunicaciones Móviles",
+      "fileName": "Telefonía móvil SMS Salientes.xls",
+      "format": "XLS",
+      "title": "Comunicaciones Móviles SMS-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/sms",
+      "lastProcessed": "2025-10-09T06:27:33.576Z",
+      "status": "processed"
+    },
+    "Telefonía móvil SMS Salientes.csv": {
+      "datasetId": "enacom_21",
+      "datasetTitle": "Comunicaciones Móviles",
+      "fileName": "Telefonía móvil SMS Salientes.csv",
+      "format": "CSV",
+      "title": "Comunicaciones Móviles SMS-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/sms",
+      "lastProcessed": "2025-10-09T06:27:34.660Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "enacom_21",
+    "title": "Comunicaciones Móviles",
+    "description": "Principales Indicadores de Mercado, Comunicaciones Moviles",
+    "theme": [
+      "tech"
+    ],
+    "superTheme": [
+      "TECH"
+    ],
+    "issued": "2017-01-01",
+    "modified": "2025-09-08",
+    "publisher": {
+      "mbox": "indicadores@enacom.gob.ar",
+      "name": "Enacom.Direccion Nacional De Planificación Y Desarrollo."
+    },
+    "landingPage": "https://indicadores.enacom.gob.ar/DatosAbiertos/ComunicacionesMoviles/default"
+  }
+}

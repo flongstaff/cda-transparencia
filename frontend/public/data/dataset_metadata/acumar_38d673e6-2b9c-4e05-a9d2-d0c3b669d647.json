@@ -1,0 +1,172 @@
+{
+  "files": {
+    "informacion-publica-2011.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2011.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2011",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/8c567b4d-c4f3-4a5d-9686-24f02d8f470a",
+      "lastProcessed": "2025-10-09T07:10:28.140Z",
+      "status": "processed"
+    },
+    "informacion-publica-2012.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2012.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2012",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/3e8ae1ee-7ca5-4fa5-a1fb-6327a44917cb",
+      "lastProcessed": "2025-10-09T07:10:30.694Z",
+      "status": "processed"
+    },
+    "informacion-publica-2013.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2013.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2013",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/fc2d7932-fb27-40be-a53b-68e6690212db",
+      "lastProcessed": "2025-10-09T07:10:33.230Z",
+      "status": "processed"
+    },
+    "informacion-publica-2014.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2014.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2014",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/8222568f-4f1e-4c97-8ae2-22682c965c3a",
+      "lastProcessed": "2025-10-09T07:10:35.884Z",
+      "status": "processed"
+    },
+    "informacion-publica-2015.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2015.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2015",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/be76f77b-72cf-4e2a-81eb-9a9b178d0793",
+      "lastProcessed": "2025-10-09T07:10:38.480Z",
+      "status": "processed"
+    },
+    "informacion-publica-2016.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2016.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2016",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/8d5a6930-eaf5-4b45-b405-0936edeb812b",
+      "lastProcessed": "2025-10-09T07:10:41.066Z",
+      "status": "processed"
+    },
+    "informacion-publica-2017.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2017.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2017",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/dd5f4ed9-b617-4473-8945-a93ac07650d6",
+      "lastProcessed": "2025-10-09T07:10:43.729Z",
+      "status": "processed"
+    },
+    "informacion-publica-2018.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2018.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2018",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/8e1fd71a-dcaf-4955-a2b1-72837738be7b",
+      "lastProcessed": "2025-10-09T07:10:46.304Z",
+      "status": "processed"
+    },
+    "informacion-publica-2019.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2019.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2019",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/8e93a708-b8d7-48d4-96ff-1a50663644c9",
+      "lastProcessed": "2025-10-09T07:10:48.950Z",
+      "status": "processed"
+    },
+    "informacion-publica-2020.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2020.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2020",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/a026a815-fbbc-42db-86da-1407492b12ab",
+      "lastProcessed": "2025-10-09T07:10:51.565Z",
+      "status": "processed"
+    },
+    "informacion-publica-2021.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2021.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2021",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/2e8fdb8b-ee88-4370-9282-d5588a061368",
+      "lastProcessed": "2025-10-09T07:10:54.120Z",
+      "status": "processed"
+    },
+    "informacion-publica-2022.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2022.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2022",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/c5a1567a-6aa8-45b3-9f24-d9347fd05782",
+      "lastProcessed": "2025-10-09T07:10:56.777Z",
+      "status": "processed"
+    },
+    "informacion-publica-2023.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2023.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2023",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/0344e15f-47c0-4d4f-a316-e0c7a95acb69",
+      "lastProcessed": "2025-10-09T07:10:59.444Z",
+      "status": "processed"
+    },
+    "informacion-publica-2024.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2024.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2024 ",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/c8302a52-584f-4347-8b09-11afca31dd49",
+      "lastProcessed": "2025-10-09T07:11:01.947Z",
+      "status": "processed"
+    },
+    "informacion-publica-2025-1-trimestre.csv": {
+      "datasetId": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+      "datasetTitle": "Solicitudes de Información Pública Recibidas por ACUMAR",
+      "fileName": "informacion-publica-2025-1-trimestre.csv",
+      "format": "CSV",
+      "title": "Solicitudes de Acceso a la Información Pública - 2025",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/38d673e6-2b9c-4e05-a9d2-d0c3b669d647/resource/98c34c60-5cda-4b67-b652-d32eb88254cb",
+      "lastProcessed": "2025-10-09T07:11:04.443Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_38d673e6-2b9c-4e05-a9d2-d0c3b669d647",
+    "title": "Solicitudes de Información Pública Recibidas por ACUMAR",
+    "description": "Datos correspondientes a las Solicitudes de Información Pública recibidas por ACUMAR, desde 2011 hasta la fecha.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2024-11-15T14:21:35.322039",
+    "modified": "2025-04-22T18:46:25.954877",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Coordinación de Documentación, Acceso a la Información Pública y Transparencia"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/solicitudes-de-informacion-publica-recibidas-por-acumar"
+  }
+}

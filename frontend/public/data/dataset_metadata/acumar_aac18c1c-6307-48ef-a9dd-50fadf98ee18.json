@@ -1,0 +1,32 @@
+{
+  "files": {
+    "eisaar-2016-2024.csv": {
+      "datasetId": "acumar_aac18c1c-6307-48ef-a9dd-50fadf98ee18",
+      "datasetTitle": "Evaluación Integral de Salud Ambiental en Áreas de Riesgo (EISAAR) en la Cuenca Matanza Riachuelo",
+      "fileName": "eisaar-2016-2024.csv",
+      "format": "CSV",
+      "title": "Evaluación Integral de Salud Ambiental en Áreas de Riesgo (EISAAR) en la Cuenca Matanza Riachuelo",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/aac18c1c-6307-48ef-a9dd-50fadf98ee18/resource/4f8d1c46-8a5b-4863-9cb1-d4dd457944e8",
+      "lastProcessed": "2025-10-09T08:03:27.920Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_aac18c1c-6307-48ef-a9dd-50fadf98ee18",
+    "title": "Evaluación Integral de Salud Ambiental en Áreas de Riesgo (EISAAR) en la Cuenca Matanza Riachuelo",
+    "description": "Datos correspondientes a las EISAAR, que son implementadas desde 2016, buscando de forma activa situaciones de riesgo y/o daño a la salud en barrios/urbanizaciones no emergentes (UREM) de la Cuenca. Comienzan con una aproximación comunitaria que es profundizada con un relevamiento hogar por hogar, identificando riesgos o daños sociosanitario ambientales en las personas y comunidades y evaluando la necesidad de estudios específicos y/o de intervenciones, individuales o colectivas.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2024-12-03T15:48:33.210268",
+    "modified": "2025-02-07T16:59:23.409157",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección de Salud"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/evaluacion-integral-de-salud-ambiental-en-la-cuenca-matanza-riachuelo"
+  }
+}

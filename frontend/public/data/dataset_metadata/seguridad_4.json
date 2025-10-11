@@ -1,0 +1,62 @@
+{
+  "files": {
+    "Informe_Muertes_violentas_mujeres_2019.pdf": {
+      "datasetId": "seguridad_4",
+      "datasetTitle": "Estadísticas criminales en la República Argentina. Muertes violentas de mujeres",
+      "fileName": "Informe_Muertes_violentas_mujeres_2019.pdf",
+      "format": "PDF",
+      "title": "Violencias extremas y muertes violentas de mujeres. República Argentina (2017-2019) (informe).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:44.404Z",
+      "status": "processed"
+    },
+    "Informe_Muertes_violentas_y_otras_violencias_contra_mujeres_2020.pdf": {
+      "datasetId": "seguridad_4",
+      "datasetTitle": "Estadísticas criminales en la República Argentina. Muertes violentas de mujeres",
+      "fileName": "Informe_Muertes_violentas_y_otras_violencias_contra_mujeres_2020.pdf",
+      "format": "PDF",
+      "title": "Muertes violentas y otras violencias contra mujeres. (2017-2020).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:45.101Z",
+      "status": "processed"
+    },
+    "Informe_Muertes_violentas_y_otras_violencias_contra_mujeres_2021.pdf": {
+      "datasetId": "seguridad_4",
+      "datasetTitle": "Estadísticas criminales en la República Argentina. Muertes violentas de mujeres",
+      "fileName": "Informe_Muertes_violentas_y_otras_violencias_contra_mujeres_2021.pdf",
+      "format": "PDF",
+      "title": "Muertes violentas y otras violencias contra mujeres. (2017-2021).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:45.761Z",
+      "status": "processed"
+    },
+    "Informe_Muertes_violentas_y_otras_violencias_contra_mujeres_2022.pdf": {
+      "datasetId": "seguridad_4",
+      "datasetTitle": "Estadísticas criminales en la República Argentina. Muertes violentas de mujeres",
+      "fileName": "Informe_Muertes_violentas_y_otras_violencias_contra_mujeres_2022.pdf",
+      "format": "PDF",
+      "title": "Muertes violentas y otras violencias contra mujeres. (2017-2022).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:46.439Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "seguridad_4",
+    "title": "Estadísticas criminales en la República Argentina. Muertes violentas de mujeres",
+    "description": "Muertes violentas y otras violencias contra mujeres. República Argentina",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2020-12-04T00:00:00",
+    "modified": "2023-12-09T00:00:00",
+    "publisher": {
+      "mbox": "snic-sat@minseg.gob.ar",
+      "name": "Ministerio de Seguridad de la Nación. Dirección Nacional de Estadística Criminal."
+    },
+    "landingPage": "https://www.argentina.gob.ar/seguridad/estadisticascriminales"
+  }
+}

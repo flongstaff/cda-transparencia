@@ -1,0 +1,13 @@
+{
+  "file_name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-3°TRIMESTRE.pdf",
+  "file_hash": "d95f87c5969395970d963c70c5ffb7cb",
+  "page_count": 2,
+  "text_length": 5107,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS\nEjercicio: Hoja: 1 de 2R.A.F.A.M.\n11/10/2023 08:55\nDel 01/07/2023 al 30/09/2023(POR FINALIDAD Y FUNCIÓN)\n 2023\nDevengado \nno pagado Crédito \nDisponible Pagado Devengado Compromiso Preventivo Crédito \nVigente Modifica \nciones Crédito \nAprobado Finalidades y FuncionesCrédito Vig. \n- Devengado \n100 - Administración Gubernamental\n120 Judicial 5.094.516,82 0,00 5.094.516,82 0,00 3.913.035,57 3.913.035,57 3.925.024,12 -11,988.55\n130 Dirección superior ejecutiva 61.178.742,20 -15.000.000,00 46.178.742,20 -207.485,33 44.231.993,06 45.581.343,06 46.018.622,57 -437,279.51\n150 Relaciones interiores 15.680.462,98 0,00 15.680.462,98 733.030,40 9.500.154,78 9.289.571,46 9.799.045,35 -509,473.89\n160 Administración Fiscal 94.522.032,49 0,00 94.522.032,49 -1.185.217,10 62.546.558,46 62.626.614,59 61.558.142,35 1,068,472.24\n   Total  Administración Gubernamental 109.730,29 121.300.834,39 121.410.564,68 120.191.741,87 -659.672,03 161.475.754,49 -15.000.000,00 176.475.754,49\n200 - Servicios de seguridad\n210 Seguridad interior 36.033.673,00 5.099.160,00 41.132.833,00 280.485,07 36.177.775,95 36.068.775,95 35.909.243,10 159,532.85\n   Total  Servicios de seguridad 159.532,85 35.909.243,10 36.068.775,95 36.177.775,95 280.485,07 41.132.833,00 5.099.160,00 36.033.673,00\n300 - Servicios sociales\n310 Salud 75.611.190,09 2.203.039,98 77.814.230,07 1.419.191,66 51.788.468,80 52.592.584,23 52.570.630,21 21,954.02\n320 Promoción y asistencia social 43.961.684,27 57.154.491,28 101.116.175,55 536.102,65 70.809.894,86 69.976.479,69 71.487.271,73 -1,510,792.04\n330 Seguridad social 19.438.371,78 2.983.365,00 22.421.736,78 -955.149,00 12.032.777,26 12.014.449,26 12.828.127,68 -813,678.42\n340 - Educacion y Cultura\n11.410.424,87 28.793.422,76 40.203.847,63 8.614.832,44 38.819.987,20 18.229.871,28 17.967.567,27 262,304.01 346 Deporte y recreación\n0,00 0,00 0,00 0,00 300.000,00 300.000,00 300.000,00 0.00 344 Educación superior y un...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:34.180822"
+}

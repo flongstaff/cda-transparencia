@@ -1,0 +1,50 @@
+{
+  "file_name": "Education_Data_2020_table_0.csv",
+  "row_count": 5,
+  "column_count": 4,
+  "columns": [
+    "Column_0",
+    "Column_1",
+    "Column_2",
+    "Column_3"
+  ],
+  "sample_data": [
+    {
+      "Column_0": "Indicator",
+      "Column_1": "2020",
+      "Column_2": "2019",
+      "Column_3": "Variation"
+    },
+    {
+      "Column_0": "Schools",
+      "Column_1": "25",
+      "Column_2": "25",
+      "Column_3": "0.0%"
+    },
+    {
+      "Column_0": "Teachers",
+      "Column_1": "180",
+      "Column_2": "175",
+      "Column_3": "2.9%"
+    },
+    {
+      "Column_0": "Students",
+      "Column_1": "2,400",
+      "Column_2": "2,350",
+      "Column_3": "2.1%"
+    },
+    {
+      "Column_0": "Education Budget %",
+      "Column_1": "12.3%",
+      "Column_2": "12.1%",
+      "Column_3": "0.2%"
+    }
+  ],
+  "data_types": {
+    "Column_0": "object",
+    "Column_1": "object",
+    "Column_2": "object",
+    "Column_3": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

@@ -1,0 +1,43 @@
+{
+  "file_name": "2019_capital_current_expenditure.csv",
+  "row_count": 5,
+  "column_count": 3,
+  "columns": [
+    "type",
+    "amount",
+    "percentage"
+  ],
+  "sample_data": [
+    {
+      "type": "Gasto corriente",
+      "amount": 700000000.0,
+      "percentage": 77.8
+    },
+    {
+      "type": "Gasto de capital",
+      "amount": 200000000.0,
+      "percentage": 22.2
+    },
+    {
+      "type": NaN,
+      "amount": 201.0,
+      "percentage": NaN
+    },
+    {
+      "type": NaN,
+      "amount": 195.0,
+      "percentage": NaN
+    },
+    {
+      "type": NaN,
+      "amount": 201.0,
+      "percentage": NaN
+    }
+  ],
+  "data_types": {
+    "type": "object",
+    "amount": "float64",
+    "percentage": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

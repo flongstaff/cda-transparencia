@@ -1,0 +1,37 @@
+{
+  "pdf_directories": [
+    "public/data/pdfs",
+    "frontend/public/data/organized_by_subject",
+    "frontend/public/data/processed_pdfs",
+    "frontend/public/data/pdf_ocr_results",
+    "cloudflare-deploy/public/data/pdfs",
+    "cloudflare-deploy/public/data/web_accessible_pdfs",
+    "data/ocr_extracted/main/pdfs",
+    "data/ocr_extracted/data/pdfs",
+    "data/ocr_extracted/main-data/pdfs",
+    "src/data/downloaded/pdfs"
+  ],
+  "central_pdf_location": "central_pdfs",
+  "sync_strategy": {
+    "copy": "Copy PDFs to each location",
+    "symlink": "Create symbolic links to central location (not supported on all systems)",
+    "reference": "Maintain a registry of file locations and hashes"
+  },
+  "organization_rules": {
+    "by_year": ["2021", "2022", "2023", "2024", "2025"],
+    "by_category": [
+      "Ejecución de Gastos",
+      "Ejecución de Recursos", 
+      "Situación Económico-Financiera",
+      "Contrataciones",
+      "Estadísticas de Salud",
+      "Recursos Humanos",
+      "Documentos Generales"
+    ]
+  },
+  "backup_strategy": {
+    "daily": "Create daily backups of central PDFs",
+    "weekly": "Create weekly archive of all PDFs",
+    "on_change": "Backup when PDFs are added/updated"
+  }
+}

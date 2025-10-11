@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_97_RECURSOS-POR-CARACTER-ECONOMICO.pdf",
+  "file_hash": "752786f50222177b6ed1cb5f86169907",
+  "page_count": 3,
+  "text_length": 6158,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "R.A.F.A.M.\nESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 3\n18/09/202320:27\nMunicipalidad de\nCarmen de Areco Del 02/01/2023 al 30/06/2023 Ejercicio: 2023(POR CARACTER ECONÓMICO)\nCONSOLIDADO\nDescripción ModificacionesRecurso\nEstimadoRecurso\nVigenteRecurso\nDevengadoDif. entre\nVigente y\nDevengadoRecursos\nPercibidoDif. entre\nDevengado y\nPercibido\nRECURSOS\nINGRESOS CORRIENTES\nIngresos tributarios\nImpuestos provinciales y nacionales 416.355.547,62 82.486.812,37 498.842.359,99 416.036.576,17 82.805.783,82 416.036.576,17 0,00\nOtros impuestos 69.980.556,53 8.638.121,47 78.618.678,00 45.305.783,58 33.312.894,42 40.302.140,88 5.003.642,70\n486.336.104,15 91.124.933,84 577.461.037,99 461.342.359,75 116.118.678,24 456.338.717,05 5.003.642,70 TotalIngresos tributarios\nIngresos no tributarios\nTasas 118.358.388,96 139.000,00 118.497.388,96 150.720.727,42 -32.223.338,46 100.823.623,83 49.897.103,59\nDerechos 16.668.235,50 38.292,00 16.706.527,50 10.449.481,20 6.257.046,30 10.580.950,34 -131.469,14\nOtros no tributarios 43.761.539,79 10.952.331,34 54.713.871,13 41.498.721,93 13.215.149,20 41.549.230,75 -50.508,82\n178.788.164,25 11.129.623,34 189.917.787,59 202.668.930,55 -12.751.142,96 152.953.804,92 49.715.125,63 TotalIngresos no tributarios\nRentas de la propiedad\nIntereses\nIntereses internos\nIntereses por depósitos 42.988.154,74 0,00 42.988.154,74 26.951.862,65 16.036.292,09 26.951.862,65 0,00\n42.988.154,74 0,00 42.988.154,74 26.951.862,65 16.036.292,09 26.951.862,65 0,00 Total Intereses internos\n42.988.154,74 0,00 42.988.154,74 26.951.862,65 16.036.292,09 26.951.862,65 0,00 Total Intereses\n42.988.154,74 0,00 42.988.154,74 26.951.862,65 16.036.292,09 26.951.862,65 0,00 TotalRentas de la propiedad\nTransferencias Corrientes\nDel sector privado\nDe empresas privadas 0,00 3.100.002,00 3.100.002,00 3.100.002,00 0,00 3.100.002,00 0,00\n0,00 3.100.002,00 3.100.002,00 3.100.002,00 0,00 3.100.002,00 0,00 Total Del sector privado\nDel sector público\nDel sector público nacional\nDe la admin...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:16:02.713720"
+}

@@ -1,0 +1,42 @@
+{
+  "files": {
+    "geologa-climatologa-isobatas.csv": {
+      "datasetId": "energia_2dddc76d-1b55-4076-883a-cbc38546b9d2",
+      "datasetTitle": "Geología Climatología Isobatas",
+      "fileName": "geologa-climatologa-isobatas.csv",
+      "format": "CSV",
+      "title": "Geología Climatología Isobatas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2dddc76d-1b55-4076-883a-cbc38546b9d2/resource/cc72d88f-5c67-4f64-8a97-014f5742c531",
+      "lastProcessed": "2025-10-09T07:21:14.351Z",
+      "status": "processed"
+    },
+    "geologa-climatologa-isobatas.zip": {
+      "datasetId": "energia_2dddc76d-1b55-4076-883a-cbc38546b9d2",
+      "datasetTitle": "Geología Climatología Isobatas",
+      "fileName": "geologa-climatologa-isobatas.zip",
+      "format": "SHP",
+      "title": "Geología Climatología Isobatas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2dddc76d-1b55-4076-883a-cbc38546b9d2/resource/b44d78b6-141d-40db-85e8-c5d2a69c3621",
+      "lastProcessed": "2025-10-09T07:21:14.351Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_2dddc76d-1b55-4076-883a-cbc38546b9d2",
+    "title": "Geología Climatología Isobatas",
+    "description": "Isobatas. ISO 19126: Depths, Este subgrupo se compone de conceptos que se utilizan para describir las profundidades de las masas de agua.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-07-16T12:38:32.519568",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información. "
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

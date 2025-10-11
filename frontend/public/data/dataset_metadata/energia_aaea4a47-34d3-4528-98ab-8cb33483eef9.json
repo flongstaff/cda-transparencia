@@ -1,0 +1,42 @@
+{
+  "files": {
+    "energas-renovables-puntos-de-inters-geotrmico.csv": {
+      "datasetId": "energia_aaea4a47-34d3-4528-98ab-8cb33483eef9",
+      "datasetTitle": "Energías renovables - Puntos de Interés Geotérmico",
+      "fileName": "energas-renovables-puntos-de-inters-geotrmico.csv",
+      "format": "CSV",
+      "title": "Energías Renovables Puntos de Interés Geotérmico",
+      "accessURL": "http://datos.energia.gob.ar/dataset/aaea4a47-34d3-4528-98ab-8cb33483eef9/resource/963b2a77-9653-416b-9145-5033638e438b",
+      "lastProcessed": "2025-10-09T07:23:58.150Z",
+      "status": "processed"
+    },
+    "energas-renovables-puntos-de-inters-geotrmico.zip": {
+      "datasetId": "energia_aaea4a47-34d3-4528-98ab-8cb33483eef9",
+      "datasetTitle": "Energías renovables - Puntos de Interés Geotérmico",
+      "fileName": "energas-renovables-puntos-de-inters-geotrmico.zip",
+      "format": "SHP",
+      "title": "Energías Renovables Puntos de Interés Geotérmico",
+      "accessURL": "http://datos.energia.gob.ar/dataset/aaea4a47-34d3-4528-98ab-8cb33483eef9/resource/31d37be3-b8d0-465e-a3e2-e3f199fd7c8f",
+      "lastProcessed": "2025-10-09T07:23:58.151Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_aaea4a47-34d3-4528-98ab-8cb33483eef9",
+    "title": "Energías renovables - Puntos de Interés Geotérmico",
+    "description": "Puntos de interés geotérmico. ISO 19126: NaturalResources, Este subgrupo se compone de conceptos que se refieren a materias primas y sus depósitos.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-07-16T12:27:19.118392",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

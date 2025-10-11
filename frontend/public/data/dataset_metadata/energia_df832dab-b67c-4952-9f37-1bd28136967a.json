@@ -1,0 +1,62 @@
+{
+  "files": {
+    "resolucin-318-constancias-de-auditoras.csv": {
+      "datasetId": "energia_df832dab-b67c-4952-9f37-1bd28136967a",
+      "datasetTitle": "Padrón de medidores de petróleo y gas",
+      "fileName": "resolucin-318-constancias-de-auditoras.csv",
+      "format": "CSV",
+      "title": "Resolución 318 - Constancias de Auditorías",
+      "accessURL": "http://datos.energia.gob.ar/dataset/df832dab-b67c-4952-9f37-1bd28136967a/resource/13947bf2-f68b-4b2d-a165-9cdadf08202a",
+      "lastProcessed": "2025-10-09T06:31:22.793Z",
+      "status": "processed"
+    },
+    "resolucin-318-control-de-auditoras.csv": {
+      "datasetId": "energia_df832dab-b67c-4952-9f37-1bd28136967a",
+      "datasetTitle": "Padrón de medidores de petróleo y gas",
+      "fileName": "resolucin-318-control-de-auditoras.csv",
+      "format": "CSV",
+      "title": "Resolución 318 -  Control de Auditorías",
+      "accessURL": "http://datos.energia.gob.ar/dataset/df832dab-b67c-4952-9f37-1bd28136967a/resource/51af09a5-62ff-4fcc-bc42-0120a45131ce",
+      "lastProcessed": "2025-10-09T06:31:24.164Z",
+      "status": "processed"
+    },
+    "resolucin-554-instalaciones-empadronadas.csv": {
+      "datasetId": "energia_df832dab-b67c-4952-9f37-1bd28136967a",
+      "datasetTitle": "Padrón de medidores de petróleo y gas",
+      "fileName": "resolucin-554-instalaciones-empadronadas.csv",
+      "format": "CSV",
+      "title": "Resolución 554- Instalaciones Empadronadas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/df832dab-b67c-4952-9f37-1bd28136967a/resource/7ec67ff3-d0e3-46d0-98c4-24499975b596",
+      "lastProcessed": "2025-10-09T06:31:25.505Z",
+      "status": "processed"
+    },
+    "resolucin-554-medidores-empadronados.csv": {
+      "datasetId": "energia_df832dab-b67c-4952-9f37-1bd28136967a",
+      "datasetTitle": "Padrón de medidores de petróleo y gas",
+      "fileName": "resolucin-554-medidores-empadronados.csv",
+      "format": "CSV",
+      "title": "Resolución 554 - Medidores Empadronados",
+      "accessURL": "http://datos.energia.gob.ar/dataset/df832dab-b67c-4952-9f37-1bd28136967a/resource/f7c9b119-4320-4ab2-94ba-ca611ea695ce",
+      "lastProcessed": "2025-10-09T06:31:27.001Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_df832dab-b67c-4952-9f37-1bd28136967a",
+    "title": "Padrón de medidores de petróleo y gas",
+    "description": "Medidores Empadronados. Resolución N° 557/2022 (ex- Resol. N°318/2010)\r\n\r\n",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:38.859992",
+    "modified": "2025-07-23T10:17:06.234517",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

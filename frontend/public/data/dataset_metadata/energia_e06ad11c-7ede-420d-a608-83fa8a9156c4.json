@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_e06ad11c-7ede-420d-a608-83fa8a9156c4",
+      "datasetTitle": "Partes diarios de gas natural",
+      "format": "PHP",
+      "title": "Partes de Distribución y Transporte",
+      "accessURL": "http://datos.energia.gob.ar/dataset/e06ad11c-7ede-420d-a608-83fa8a9156c4/resource/0edd3c0d-31ed-4417-ad8a-110095c3e795",
+      "lastProcessed": "2025-10-09T06:52:23.653Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_e06ad11c-7ede-420d-a608-83fa8a9156c4",
+    "title": "Partes diarios de gas natural",
+    "description": "Requerimientos y partes diarios operativos, de importación y exportación de gas natural  - Datos de ENARGAS.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-07-21T04:47:19.452641",
+    "modified": "2025-07-04T09:31:56.929227",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "ENARGAS."
+    },
+    "landingPage": "https://www.enargas.gob.ar/home.php"
+  }
+}

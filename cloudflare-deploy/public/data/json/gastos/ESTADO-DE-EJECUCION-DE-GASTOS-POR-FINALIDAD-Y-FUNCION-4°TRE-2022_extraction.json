@@ -1,0 +1,13 @@
+{
+  "file_name": "ESTADO-DE-EJECUCION-DE-GASTOS-POR-FINALIDAD-Y-FUNCION-4°TRE-2022.pdf",
+  "file_hash": "0292c130de7c993dc0702b61bf2ff201",
+  "page_count": 2,
+  "text_length": 5444,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS\nEjercicio: Hoja: 1 de 2R.A.F.A.M.\n20/09/2023 10:01\nDel 01/10/2022 al 31/12/2022(POR FINALIDAD Y FUNCIÓN)\n 2022\nDevengado \nno pagado Crédito \nDisponible Pagado Devengado Compromiso Preventivo Crédito \nVigente Modifica \nciones Crédito \nAprobado Finalidades y FuncionesCrédito Vig. \n- Devengado \n100 - Administración Gubernamental\n120 Judicial 5.475.666,27 27.046,96 5.502.713,23 0,00 2.517.434,90 2.517.434,90 2.495.500,50 21,934.40\n130 Dirección superior ejecutiva 116.500.703,93 56.993.393,74 173.494.097,67 -1.259.453,48 64.227.386,00 66.909.246,34 67.803.040,44 -893,794.10\n150 Relaciones interiores 13.781.164,10 2.649.160,59 16.430.324,69 -254.340,00 4.135.848,97 4.943.848,97 4.977.249,20 -33,400.23\n160 Administración Fiscal 7.843.282,46 2.626.628,26 10.469.910,72 -589.500,00 3.094.915,76 3.711.415,76 4.033.647,76 -322,232.00\n170 Control de la gestión pública 0,00 540.000,00 540.000,00 0,00 0,00 270.000,00 270.000,00 0.00\n   Total  Administración Gubernamental -1.227.491,93 79.579.437,90 78.351.945,97 73.975.585,63 -2.103.293,48 206.437.046,31 62.836.229,55 143.600.816,76\n200 - Servicios de seguridad\n210 Seguridad interior 35.190.564,28 24.076.121,35 59.266.685,63 -1.321.521,74 20.558.667,10 21.115.717,10 22.495.860,91 -1,380,143.81\n   Total  Servicios de seguridad -1.380.143,81 22.495.860,91 21.115.717,10 20.558.667,10 -1.321.521,74 59.266.685,63 24.076.121,35 35.190.564,28\n300 - Servicios sociales\n310 Salud 75.387.681,48 33.304.755,42 108.692.436,90 -2.807.518,10 29.336.406,45 33.857.095,46 34.655.009,30 -797,913.84\n320 Promoción y asistencia social 38.323.763,39 24.599.569,40 62.923.332,79 -1.983.659,92 23.559.358,97 23.695.858,97 22.903.973,83 791,885.14\n330 Seguridad social 9.257.356,05 2.267.174,85 11.524.530,90 -71.000,00 3.181.770,56 3.596.633,56 3.835.242,38 -238,608.82\n340 - Educacion y Cultura\n10.000.000,00 -2.708.308,65 7.291.691,35 0,00 1.236.600,00 1.236.600,00 1.236.600,00 0.00 ...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:26.164214"
+}

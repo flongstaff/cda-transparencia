@@ -1,0 +1,42 @@
+{
+  "files": {
+    "distribucin-elctrica-apelp-la-pampa-mt-lneas.zip": {
+      "datasetId": "energia_69feceec-2e8c-4baf-af45-dd00b202aca6",
+      "datasetTitle": "Distribución Eléctrica Apelp La Pampa Media Tensión  Líneas",
+      "fileName": "distribucin-elctrica-apelp-la-pampa-mt-lneas.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Apelp La Pampa Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/69feceec-2e8c-4baf-af45-dd00b202aca6/resource/a7d18c56-321b-46a6-9457-e453f06d7189",
+      "lastProcessed": "2025-10-09T07:18:34.793Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-apelp-la-pampa-mt-lneas.csv": {
+      "datasetId": "energia_69feceec-2e8c-4baf-af45-dd00b202aca6",
+      "datasetTitle": "Distribución Eléctrica Apelp La Pampa Media Tensión  Líneas",
+      "fileName": "distribucin-elctrica-apelp-la-pampa-mt-lneas.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Apelp La Pampa Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/69feceec-2e8c-4baf-af45-dd00b202aca6/resource/1d05d6c0-4bc6-468b-a2bc-6e1711ebfe83",
+      "lastProcessed": "2025-10-09T07:18:36.121Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_69feceec-2e8c-4baf-af45-dd00b202aca6",
+    "title": "Distribución Eléctrica Apelp La Pampa Media Tensión  Líneas",
+    "description": "Red Media Tensión APELP ISO 19126: DistributionNetworks, Este subgrupo se compone de conceptos que se relacionan con el transporte en las redes, tales como tuberías o canales, por encima o por debajo de la superficie.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2018-04-24T20:56:28.171489",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/distribucion-electrica-apelp-la-pampa-mt-lineas"
+  }
+}

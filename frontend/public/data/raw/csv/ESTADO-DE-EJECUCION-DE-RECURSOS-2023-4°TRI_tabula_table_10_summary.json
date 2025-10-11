@@ -1,0 +1,56 @@
+{
+  "file_name": "ESTADO-DE-EJECUCION-DE-RECURSOS-2023-4°TRI_tabula_table_10.csv",
+  "row_count": 2,
+  "column_count": 10,
+  "columns": [
+    "Rubro - Descripción",
+    "Procedencia",
+    "Recurso",
+    "Modifica",
+    "Recurso.1",
+    "Recurso.2",
+    "Dif. entre",
+    "Recursos",
+    "Dif. entre.1",
+    "Dif. entre.2"
+  ],
+  "sample_data": [
+    {
+      "Rubro - Descripción": NaN,
+      "Procedencia": NaN,
+      "Recurso": "Estimado",
+      "Modifica": "ciones",
+      "Recurso.1": "Vigente",
+      "Recurso.2": "Devengado",
+      "Dif. entre": "Vigente y",
+      "Recursos": "Percibido",
+      "Dif. entre.1": "Devengado y",
+      "Dif. entre.2": "Vigente y"
+    },
+    {
+      "Rubro - Descripción": NaN,
+      "Procedencia": NaN,
+      "Recurso": NaN,
+      "Modifica": NaN,
+      "Recurso.1": NaN,
+      "Recurso.2": NaN,
+      "Dif. entre": "Devengado",
+      "Recursos": NaN,
+      "Dif. entre.1": "Percibido",
+      "Dif. entre.2": "Percibido"
+    }
+  ],
+  "data_types": {
+    "Rubro - Descripción": "float64",
+    "Procedencia": "float64",
+    "Recurso": "object",
+    "Modifica": "object",
+    "Recurso.1": "object",
+    "Recurso.2": "object",
+    "Dif. entre": "object",
+    "Recursos": "object",
+    "Dif. entre.1": "object",
+    "Dif. entre.2": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

@@ -1,0 +1,102 @@
+{
+  "files": {
+    "Facturación Totales.xls": {
+      "datasetId": "enacom_25",
+      "datasetTitle": "Mercado Postal",
+      "fileName": "Facturación Totales.xls",
+      "format": "XLS",
+      "title": "Mercado Postal Facturacion Totales-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/MercadoPostal/facturacion-totales",
+      "lastProcessed": "2025-10-09T06:28:15.206Z",
+      "status": "processed"
+    },
+    "Facturación Totales.csv": {
+      "datasetId": "enacom_25",
+      "datasetTitle": "Mercado Postal",
+      "fileName": "Facturación Totales.csv",
+      "format": "CSV",
+      "title": "Mercado Postal Facturacion Totales-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/MercadoPostal/facturacion-totales",
+      "lastProcessed": "2025-10-09T06:28:16.341Z",
+      "status": "processed"
+    },
+    "Producción Totales.xls": {
+      "datasetId": "enacom_25",
+      "datasetTitle": "Mercado Postal",
+      "fileName": "Producción Totales.xls",
+      "format": "XLS",
+      "title": "Mercado Postal Produccion Totales-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/MercadoPostal/produccion-totales",
+      "lastProcessed": "2025-10-09T06:28:16.342Z",
+      "status": "processed"
+    },
+    "Producción Totales.csv": {
+      "datasetId": "enacom_25",
+      "datasetTitle": "Mercado Postal",
+      "fileName": "Producción Totales.csv",
+      "format": "CSV",
+      "title": "Mercado Postal Produccion Totales-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/MercadoPostal/produccion-totales",
+      "lastProcessed": "2025-10-09T06:28:17.553Z",
+      "status": "processed"
+    },
+    "Servicios Postales Provincias.xls": {
+      "datasetId": "enacom_25",
+      "datasetTitle": "Mercado Postal",
+      "fileName": "Servicios Postales Provincias.xls",
+      "format": "XLS",
+      "title": "Mercado Postal Facturacion Produccion Provincias-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/MercadoPostal/postales-provincias",
+      "lastProcessed": "2025-10-09T06:28:17.554Z",
+      "status": "processed"
+    },
+    "Servicios Postales Provincias.csv": {
+      "datasetId": "enacom_25",
+      "datasetTitle": "Mercado Postal",
+      "fileName": "Servicios Postales Provincias.csv",
+      "format": "CSV",
+      "title": "Mercado Postal Facturacion Produccion Provincias-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/MercadoPostal/postales-provincias",
+      "lastProcessed": "2025-10-09T06:28:19.076Z",
+      "status": "processed"
+    },
+    "Personal Ocupado.xls": {
+      "datasetId": "enacom_25",
+      "datasetTitle": "Mercado Postal",
+      "fileName": "Personal Ocupado.xls",
+      "format": "XLS",
+      "title": "Mercado Postal Personal-xls",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/MercadoPostal/personal",
+      "lastProcessed": "2025-10-09T06:28:19.076Z",
+      "status": "processed"
+    },
+    "Personal Ocupado.csv": {
+      "datasetId": "enacom_25",
+      "datasetTitle": "Mercado Postal",
+      "fileName": "Personal Ocupado.csv",
+      "format": "CSV",
+      "title": "Mercado Postal Personal-csv",
+      "accessURL": "https://indicadores.enacom.gob.ar/DatosAbiertos/MercadoPostal/personal",
+      "lastProcessed": "2025-10-09T06:28:20.223Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "enacom_25",
+    "title": "Mercado Postal",
+    "description": "Principales Indicadores de Mercado, Mercado Postal",
+    "theme": [
+      "tech"
+    ],
+    "superTheme": [
+      "TECH"
+    ],
+    "issued": "2017-01-01",
+    "modified": "2025-09-08",
+    "publisher": {
+      "mbox": "indicadores@enacom.gob.ar",
+      "name": "Enacom.Direccion Nacional De Planificación Y Desarrollo."
+    },
+    "landingPage": "https://indicadores.enacom.gob.ar/DatosAbiertos/MercadoPostal/default"
+  }
+}

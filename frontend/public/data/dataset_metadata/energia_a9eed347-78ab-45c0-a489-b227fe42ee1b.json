@@ -1,0 +1,42 @@
+{
+  "files": {
+    "refinacin-hidrocarburos-refineras.zip": {
+      "datasetId": "energia_a9eed347-78ab-45c0-a489-b227fe42ee1b",
+      "datasetTitle": "Refinerías de hidrocarburos",
+      "fileName": "refinacin-hidrocarburos-refineras.zip",
+      "format": "SHP",
+      "title": "Refinación Hidrocarburos Refinerías",
+      "accessURL": "http://datos.energia.gob.ar/dataset/a9eed347-78ab-45c0-a489-b227fe42ee1b/resource/4399cb2d-c221-4b9a-9799-8fc008cefd77",
+      "lastProcessed": "2025-10-09T06:36:26.923Z",
+      "status": "processed"
+    },
+    "refinacin-hidrocarburos-refineras.csv": {
+      "datasetId": "energia_a9eed347-78ab-45c0-a489-b227fe42ee1b",
+      "datasetTitle": "Refinerías de hidrocarburos",
+      "fileName": "refinacin-hidrocarburos-refineras.csv",
+      "format": "CSV",
+      "title": "Refinación Hidrocarburos Refinerías",
+      "accessURL": "http://datos.energia.gob.ar/dataset/a9eed347-78ab-45c0-a489-b227fe42ee1b/resource/fcad1e1a-1cb1-4ef8-8529-ea4ee5ef548a",
+      "lastProcessed": "2025-10-09T06:36:28.203Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_a9eed347-78ab-45c0-a489-b227fe42ee1b",
+    "title": "Refinerías de hidrocarburos",
+    "description": "Ubicación de Refinerías de Hidrocarburos según Res419/1998. ISO 19126: PowerSupplies, Este subgrupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía , mientras que la energía es en su mayoría de la electricidad.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2022-07-20T15:31:49.327555",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

@@ -1,0 +1,32 @@
+R.A.F.A.M.
+ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOS Hoja: 1 de 9
+20/09/202308:35
+Municipalidad de
+Carmen de ArecoDel 01/07/2022 al 30/09/2022
+Ejercicio: 2022
+Rubro - Descripción ProcedenciaModifica 
+ciones Recurso 
+Estimado Recurso 
+Vigente Recurso 
+Devengado Dif. entre 
+Vigente y 
+Devengado Recursos 
+Percibido Dif. entre 
+Devengado y 
+Percibido Dif. entre 
+Vigente y 
+Percibido 
+11.0.00.00 - Ingresos Tributarios
+11.4.00.00 - Coparticipación de impuestos
+11.4.01.00 - Coparticipación Pcial. de ImpuestoLey 10.559 306.427.211,00 0,00 114.687.708,53 114.687.708,53 306.427.211,00 191.739.502,47 0,00 191.739.502,47 21 - Origen Provincial - De
+libre disponibilidad
+11.4.02.00 - Fondo para el fortalecimiento deRecurso Municipales 16.034.694,00 0,00 5.633.734,19 5.633.734,19 16.034.694,00 10.400.959,81 0,00 10.400.959,81 21 - Origen Provincial - De
+libre disponibilidad
+11.4.03.00 - Fondo Municipal de Inclusion Social 6.510.038,00 0,00 2.295.596,47 2.295.596,47 6.510.038,00 4.214.441,53 0,00 4.214.441,53 21 - Origen Provincial - De
+libre disponibilidad11.4.05.00 - Fondo Educativo 64.454.955,00 0,00 18.753.184,10 18.753.184,10 64.454.955,00 45.701.770,90 0,00 45.701.770,90 22 - Origen Provincial -
+Afectados393.426.898,00 0,00 393.426.898,00 141.370.223,29 252.056.674,71 141.370.223,29 0,00 Total Coparticipación de impuestos 252.056.674,71
+11.9.00.00 - Otros tributarios
+11.9.01.00 - Ley 9226 200.000,00 0,00 4.723,79 4.723,79 200.000,00 195.276,21 0,00 195.276,21 21 - Origen Provincial - De
+libre disponibilidad11.9.03.00 - Juegos de azar 500.000,00 0,00 1.677.761,76 1.677.761,76 500.000,00 -1.177.761,76 0,00 -1.177.761,76 21 - Origen Provincial - De
+libre disponibilidad11.9.04.00 - Inmobiliario Rural.Afectado 16.799.431,00 0,00 3.793.685,00 3.793.685,00 16.799.431,00 13.005.746,00 0,00 13.005.746,00 22 - Origen Provincial -
+Afectados11.9.05.00 - Inmobiliario Rural. No afectado 53.879.681,00 0,00 12.880.472,39 12.880.472,39 53.879.681,00 40.999.208,61 0,00 40.999.208,61 21 - ...

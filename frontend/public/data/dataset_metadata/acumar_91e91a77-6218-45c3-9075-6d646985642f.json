@@ -1,0 +1,92 @@
+{
+  "files": {
+    "agentes-contaminantes-excluidos-2017.csv": {
+      "datasetId": "acumar_91e91a77-6218-45c3-9075-6d646985642f",
+      "datasetTitle": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR (2017-2023)",
+      "fileName": "agentes-contaminantes-excluidos-2017.csv",
+      "format": "CSV",
+      "title": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR - 2017",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91e91a77-6218-45c3-9075-6d646985642f/resource/52d5af01-f167-45e6-92c5-613c6ab97926",
+      "lastProcessed": "2025-10-09T08:02:15.132Z",
+      "status": "processed"
+    },
+    "agentes-contaminantes-excluidos-2018.csv": {
+      "datasetId": "acumar_91e91a77-6218-45c3-9075-6d646985642f",
+      "datasetTitle": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR (2017-2023)",
+      "fileName": "agentes-contaminantes-excluidos-2018.csv",
+      "format": "CSV",
+      "title": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR - 2018",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91e91a77-6218-45c3-9075-6d646985642f/resource/b01cfa04-4a02-4d09-9276-dd6802b74fcc",
+      "lastProcessed": "2025-10-09T08:02:17.794Z",
+      "status": "processed"
+    },
+    "agentes-contaminantes-excluidos-2019.csv": {
+      "datasetId": "acumar_91e91a77-6218-45c3-9075-6d646985642f",
+      "datasetTitle": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR (2017-2023)",
+      "fileName": "agentes-contaminantes-excluidos-2019.csv",
+      "format": "CSV",
+      "title": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR - 2019",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91e91a77-6218-45c3-9075-6d646985642f/resource/f5a23ec5-af23-4d95-b2a1-5ce43aa75637",
+      "lastProcessed": "2025-10-09T08:02:20.560Z",
+      "status": "processed"
+    },
+    "agentes-contaminantes-excluidos-2020.csv": {
+      "datasetId": "acumar_91e91a77-6218-45c3-9075-6d646985642f",
+      "datasetTitle": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR (2017-2023)",
+      "fileName": "agentes-contaminantes-excluidos-2020.csv",
+      "format": "CSV",
+      "title": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR - 2020",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91e91a77-6218-45c3-9075-6d646985642f/resource/c8d97905-06b4-4a23-9dab-b3880332a2c8",
+      "lastProcessed": "2025-10-09T08:02:23.715Z",
+      "status": "processed"
+    },
+    "agentes-contaminantes-excluidos-2021.csv": {
+      "datasetId": "acumar_91e91a77-6218-45c3-9075-6d646985642f",
+      "datasetTitle": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR (2017-2023)",
+      "fileName": "agentes-contaminantes-excluidos-2021.csv",
+      "format": "CSV",
+      "title": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR -  2021",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91e91a77-6218-45c3-9075-6d646985642f/resource/b86f8662-6991-4430-ac4e-397815a1b80b",
+      "lastProcessed": "2025-10-09T08:02:26.704Z",
+      "status": "processed"
+    },
+    "agentes-contaminantes-excluidos-2022.csv": {
+      "datasetId": "acumar_91e91a77-6218-45c3-9075-6d646985642f",
+      "datasetTitle": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR (2017-2023)",
+      "fileName": "agentes-contaminantes-excluidos-2022.csv",
+      "format": "CSV",
+      "title": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR - 2022",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91e91a77-6218-45c3-9075-6d646985642f/resource/3e1302a5-64cc-48c1-b448-11ed027a45bd",
+      "lastProcessed": "2025-10-09T08:02:29.365Z",
+      "status": "processed"
+    },
+    "agentes-contaminantes-excluidos-2023.csv": {
+      "datasetId": "acumar_91e91a77-6218-45c3-9075-6d646985642f",
+      "datasetTitle": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR (2017-2023)",
+      "fileName": "agentes-contaminantes-excluidos-2023.csv",
+      "format": "CSV",
+      "title": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR - 2023",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/91e91a77-6218-45c3-9075-6d646985642f/resource/07064cc4-6851-4c3c-927b-bf147086d7d7",
+      "lastProcessed": "2025-10-09T08:02:31.961Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_91e91a77-6218-45c3-9075-6d646985642f",
+    "title": "Establecimientos Excluidos del Registro de Agentes Contaminantes de ACUMAR (2017-2023)",
+    "description": "Datos correspondientes a los establecimientos de la Cuenca Matanza Riachuelo excluidos del Registro de Agentes Contaminantes del organismo entre 2017 y 2023, según los criterios establecidos en la Resolución ACUMAR 12/2019 y sus normas complementarias.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2025-01-10T15:13:31.331322",
+    "modified": "2025-02-07T16:44:57.641910",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección de Fiscalización y Adecuación Ambiental"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/establecimientos-excluidos-del-registro-de-agentes-contaminantes-de-acumar-2017-2023"
+  }
+}

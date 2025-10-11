@@ -1,0 +1,42 @@
+{
+  "files": {
+    "produccin-hidrocarburos-puntos-de-venteo-declarados.csv": {
+      "datasetId": "energia_530bb019-32f4-4eaf-b550-1fc05f8b129f",
+      "datasetTitle": "Producción de hidrocarburos - Puntos de Venteo Declarados",
+      "fileName": "produccin-hidrocarburos-puntos-de-venteo-declarados.csv",
+      "format": "CSV",
+      "title": "Producción Hidrocarburos Puntos de Venteo Declarados",
+      "accessURL": "http://datos.energia.gob.ar/dataset/530bb019-32f4-4eaf-b550-1fc05f8b129f/resource/c3812323-0c38-43b7-8bc6-f05fb5113626",
+      "lastProcessed": "2025-10-09T06:36:31.771Z",
+      "status": "processed"
+    },
+    "produccin-hidrocarburos-puntos-de-venteo-declarados.zip": {
+      "datasetId": "energia_530bb019-32f4-4eaf-b550-1fc05f8b129f",
+      "datasetTitle": "Producción de hidrocarburos - Puntos de Venteo Declarados",
+      "fileName": "produccin-hidrocarburos-puntos-de-venteo-declarados.zip",
+      "format": "SHP",
+      "title": "Producción Hidrocarburos Puntos de Venteo Declarados",
+      "accessURL": "http://datos.energia.gob.ar/dataset/530bb019-32f4-4eaf-b550-1fc05f8b129f/resource/c855899c-546b-4acc-94a0-fbfa6a83458d",
+      "lastProcessed": "2025-10-09T06:36:31.772Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_530bb019-32f4-4eaf-b550-1fc05f8b129f",
+    "title": "Producción de hidrocarburos - Puntos de Venteo Declarados",
+    "description": "Ubicación de Puntos de venteos declarados. ISO 19126: Extraction, Este subgrupo se compone de conceptos que se refieren a la extracción de materias primas y la excavación del suelo.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2021-01-20T10:40:13.150975",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

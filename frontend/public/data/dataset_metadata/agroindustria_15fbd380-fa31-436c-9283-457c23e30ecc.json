@@ -1,0 +1,51 @@
+{
+  "files": {
+    "renapa-apiarios-colmenas-provincia-departamento-2025-Junio.csv": {
+      "datasetId": "agroindustria_15fbd380-fa31-436c-9283-457c23e30ecc",
+      "datasetTitle": "Apicultura - Registro Nacional de Productores Apícolas",
+      "fileName": "renapa-apiarios-colmenas-provincia-departamento-2025-Junio.csv",
+      "format": "CSV",
+      "title": "Apiarios y colmenas - por departamento",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/15fbd380-fa31-436c-9283-457c23e30ecc/resource/68c49b26-6953-4656-8a32-dae497315e11",
+      "lastProcessed": "2025-10-09T06:53:52.323Z",
+      "status": "processed"
+    },
+    "renapa-productores-apiarios-colmenas-provincia-2025-Junio.csv": {
+      "datasetId": "agroindustria_15fbd380-fa31-436c-9283-457c23e30ecc",
+      "datasetTitle": "Apicultura - Registro Nacional de Productores Apícolas",
+      "fileName": "renapa-productores-apiarios-colmenas-provincia-2025-Junio.csv",
+      "format": "CSV",
+      "title": "Productores, apíarios y colmenas - por provincia",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/15fbd380-fa31-436c-9283-457c23e30ecc/resource/fcf61106-a82c-4ce7-9997-a7f0f40345b5",
+      "lastProcessed": "2025-10-09T06:53:56.082Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "agroindustria_15fbd380-fa31-436c-9283-457c23e30ecc",
+      "datasetTitle": "Apicultura - Registro Nacional de Productores Apícolas",
+      "format": "url",
+      "title": "Visor de Apiarios y Colmenas",
+      "accessURL": "https://geoportal.agroindustria.gob.ar/tematizador/apicola/",
+      "lastProcessed": "2025-10-09T06:53:56.082Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_15fbd380-fa31-436c-9283-457c23e30ecc",
+    "title": "Apicultura - Registro Nacional de Productores Apícolas",
+    "description": "Ubicación, cantidad de apiarios y suma de colmenas a nivel departamental vinculados a la producción de miel de acuerdo a los datos informados en el Registro Nacional de Productores Apícolas (RENAPA).",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2019-01-11T18:44:46.853332",
+    "modified": "2025-07-01T10:31:41.594624",
+    "publisher": {
+      "mbox": "renapa@magyp.gob.ar",
+      "name": "Coordinación Apícola - Registro Nacional de Productores Apícolas"
+    },
+    "landingPage": "https://datos.magyp.gob.ar/dataset/registro-nacional-de-productores-apicolas"
+  }
+}

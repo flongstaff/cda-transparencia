@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-ejecucion-recursos-2022",
+      "title": "Ejecución Presupuestaria de Recursos 2022",
+      "distribution": [
+        {
+          "title": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+          "format": "PDF",
+          "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-ejecucion-recursos-2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-ejecucion-recursos-2022/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1_extraction.json",
+            "pageCount": 1,
+            "textLength": 1488,
+            "extractedPreview": "R.A.F.A.M.\nESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 1\n19/09/2023 13:28\nMunicipalidad de\nCarmen de Areco Del 01/04/2022 al 30/06/2022 Ejercicio: 2022(POR PROCEDENCIA)\nCONSOLIDADO\nProced...",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

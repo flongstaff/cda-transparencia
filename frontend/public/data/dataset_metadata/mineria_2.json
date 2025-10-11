@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_2",
+      "datasetTitle": "Precios Internacionales de Minerales del SIACAM",
+      "format": "XLSX",
+      "title": "Precios Internacionales de Minerales",
+      "accessURL": "https://www.argentina.gob.ar/economia/mineria",
+      "lastProcessed": "2025-10-09T06:49:10.112Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_2",
+    "title": "Precios Internacionales de Minerales del SIACAM",
+    "description": "Datos correspondientes al tablero de Precios Internacionales del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM). Elaborado por la Dirección Nacional de Promoción y Economía Minera (Subsecretaría de Desarrollo Minero, Secretaría de Minería, Ministerio de Economía de la Nación) en base a Banco Mundial, FastMarkets, Fred y Cameco. Índice: 100 = Enero de 2019.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2022-12-07",
+    "modified": "2025-09-04",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

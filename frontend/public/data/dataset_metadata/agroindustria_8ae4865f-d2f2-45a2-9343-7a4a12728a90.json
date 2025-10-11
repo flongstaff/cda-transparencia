@@ -1,0 +1,82 @@
+{
+  "files": {
+    "soja-serie-1941-2023-anual.csv": {
+      "datasetId": "agroindustria_8ae4865f-d2f2-45a2-9343-7a4a12728a90",
+      "datasetTitle": "Soja - siembra, cosecha, producción, rendimiento",
+      "fileName": "soja-serie-1941-2023-anual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo de soja",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/8ae4865f-d2f2-45a2-9343-7a4a12728a90/resource/3bfe4630-91e2-46cd-82ad-cf8dc94d3dfb",
+      "lastProcessed": "2025-10-09T07:01:18.850Z",
+      "status": "processed"
+    },
+    "soja-1ra-anual-2000-2019.csv": {
+      "datasetId": "agroindustria_8ae4865f-d2f2-45a2-9343-7a4a12728a90",
+      "datasetTitle": "Soja - siembra, cosecha, producción, rendimiento",
+      "fileName": "soja-1ra-anual-2000-2019.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo de soja de 1ra",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/8ae4865f-d2f2-45a2-9343-7a4a12728a90/resource/db0bfc1a-0bf4-43b6-a855-fec00bb1803c",
+      "lastProcessed": "2025-10-09T07:01:22.678Z",
+      "status": "processed"
+    },
+    "soja-2da-anual-2000-2019.csv": {
+      "datasetId": "agroindustria_8ae4865f-d2f2-45a2-9343-7a4a12728a90",
+      "datasetTitle": "Soja - siembra, cosecha, producción, rendimiento",
+      "fileName": "soja-2da-anual-2000-2019.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo de soja 2da",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/8ae4865f-d2f2-45a2-9343-7a4a12728a90/resource/02c27dde-f8a9-4d76-925a-8c5c82371f0d",
+      "lastProcessed": "2025-10-09T07:01:26.744Z",
+      "status": "processed"
+    },
+    "soja-serie-1941-2023.csv": {
+      "datasetId": "agroindustria_8ae4865f-d2f2-45a2-9343-7a4a12728a90",
+      "datasetTitle": "Soja - siembra, cosecha, producción, rendimiento",
+      "fileName": "soja-serie-1941-2023.csv",
+      "format": "CSV",
+      "title": "Soja - serie siembra, cosecha, producción, rendimiento",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/8ae4865f-d2f2-45a2-9343-7a4a12728a90/resource/ba694aa3-99d2-4d7d-9936-60f88e36ad9a",
+      "lastProcessed": "2025-10-09T07:01:30.330Z",
+      "status": "processed"
+    },
+    "soja-1ra-serie-2000-2019.csv": {
+      "datasetId": "agroindustria_8ae4865f-d2f2-45a2-9343-7a4a12728a90",
+      "datasetTitle": "Soja - siembra, cosecha, producción, rendimiento",
+      "fileName": "soja-1ra-serie-2000-2019.csv",
+      "format": "CSV",
+      "title": "Soja 1ra - serie siembra, cosecha, producción, rendimiento",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/8ae4865f-d2f2-45a2-9343-7a4a12728a90/resource/60a9bb59-c37b-41a0-9ff0-47b94f92cd23",
+      "lastProcessed": "2025-10-09T07:01:33.890Z",
+      "status": "processed"
+    },
+    "soja-2da-serie-2000-2019.csv": {
+      "datasetId": "agroindustria_8ae4865f-d2f2-45a2-9343-7a4a12728a90",
+      "datasetTitle": "Soja - siembra, cosecha, producción, rendimiento",
+      "fileName": "soja-2da-serie-2000-2019.csv",
+      "format": "CSV",
+      "title": "Soja 2da - serie siembra, cosecha, producción, rendimiento",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/8ae4865f-d2f2-45a2-9343-7a4a12728a90/resource/e03f5a87-2e9c-4042-bdbf-b73f03d45946",
+      "lastProcessed": "2025-10-09T07:01:37.453Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_8ae4865f-d2f2-45a2-9343-7a4a12728a90",
+    "title": "Soja - siembra, cosecha, producción, rendimiento",
+    "description": "Serie histórica de la superficie sembrada, superficie cosechada, producción y rendimiento de maní en la Argentina desde 1941.",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2021-07-18T20:29:03.046964",
+    "modified": "2025-04-28T13:47:33.337882",
+    "publisher": {
+      "mbox": "direstiagri@magyp.gob.ar",
+      "name": "Ministerio de Agricultura, Ganadería y Pesca - Dirección Nacional de Agricultura"
+    },
+    "landingPage": "https://datos.agroindustria.gob.ar/dataset/soja-siembra-cosecha-produccion-rendimiento"
+  }
+}

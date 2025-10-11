@@ -1,0 +1,42 @@
+{
+  "files": {
+    "produccin-hidrocarburos-lotes-de-explotacin.zip": {
+      "datasetId": "energia_dbed71cd-1f2b-461a-b05d-a1903bd0ef03",
+      "datasetTitle": "Producción de hidrocarburos - Lotes de Explotación",
+      "fileName": "produccin-hidrocarburos-lotes-de-explotacin.zip",
+      "format": "SHP",
+      "title": "Producción Hidrocarburos Lotes de Explotación",
+      "accessURL": "http://datos.energia.gob.ar/dataset/dbed71cd-1f2b-461a-b05d-a1903bd0ef03/resource/a477baf5-3870-4b33-b4b3-37ab892d58c0",
+      "lastProcessed": "2025-10-09T06:36:39.113Z",
+      "status": "processed"
+    },
+    "produccin-hidrocarburos-lotes-de-explotacin.csv": {
+      "datasetId": "energia_dbed71cd-1f2b-461a-b05d-a1903bd0ef03",
+      "datasetTitle": "Producción de hidrocarburos - Lotes de Explotación",
+      "fileName": "produccin-hidrocarburos-lotes-de-explotacin.csv",
+      "format": "CSV",
+      "title": "Producción Hidrocarburos Lotes de Explotación",
+      "accessURL": "http://datos.energia.gob.ar/dataset/dbed71cd-1f2b-461a-b05d-a1903bd0ef03/resource/2fa87f4e-b22d-4d7a-8f44-b571023ccd9c",
+      "lastProcessed": "2025-10-09T06:36:40.460Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_dbed71cd-1f2b-461a-b05d-a1903bd0ef03",
+    "title": "Producción de hidrocarburos - Lotes de Explotación",
+    "description": "Lotes de explotación. ISO 19126: Extraction, Este subgrupo se compone de conceptos que se refieren a la extracción de materias primas y la excavación del suelo.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2020-04-22T17:34:28.922564",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

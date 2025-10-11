@@ -1,0 +1,102 @@
+{
+  "files": {
+    "SAT-MV-BU_2017-2023.xlsx": {
+      "datasetId": "seguridad_7",
+      "datasetTitle": "Muertes viales. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "SAT-MV-BU_2017-2023.xlsx",
+      "format": "XLSX",
+      "title": "Hechos y víctimas de muertes viales en la República Argentina. Total nacional (panel) (.xlsx).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:49.357Z",
+      "status": "processed"
+    },
+    "SAT-MV-BU_2017-2023.csv": {
+      "datasetId": "seguridad_7",
+      "datasetTitle": "Muertes viales. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "SAT-MV-BU_2017-2023.csv",
+      "format": "CSV",
+      "title": "Hechos y víctimas de muertes viales en la República Argentina. Total nacional (panel) (.csv).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:49.431Z",
+      "status": "processed"
+    },
+    "SAT-MV-BU_2017-2023.dta": {
+      "datasetId": "seguridad_7",
+      "datasetTitle": "Muertes viales. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "SAT-MV-BU_2017-2023.dta",
+      "format": "dta",
+      "title": "Hechos y víctimas de muertes viales en la República Argentina. Total nacional (panel) (.dta).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:49.431Z",
+      "status": "processed"
+    },
+    "SAT-MV-BU_2017-2023.sav": {
+      "datasetId": "seguridad_7",
+      "datasetTitle": "Muertes viales. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "SAT-MV-BU_2017-2023.sav",
+      "format": "sav",
+      "title": "Hechos y víctimas de muertes viales en la República Argentina. Total nacional (panel) (.sav).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:49.431Z",
+      "status": "processed"
+    },
+    "Manual de usuario Base SAT-MV_2024.pdf": {
+      "datasetId": "seguridad_7",
+      "datasetTitle": "Muertes viales. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "Manual de usuario Base SAT-MV_2024.pdf",
+      "format": "PDF",
+      "title": "Manual de usuario. Base sistema de alerta temprana - Muertes viales.",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:50.132Z",
+      "status": "processed"
+    },
+    "Informe_Muertes_Viales_2020.pdf": {
+      "datasetId": "seguridad_7",
+      "datasetTitle": "Muertes viales. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "Informe_Muertes_Viales_2020.pdf",
+      "format": "PDF",
+      "title": "Informe Muertes Viales (2017-2020).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:50.846Z",
+      "status": "processed"
+    },
+    "Informe_Muertes-Viales_2021.pdf": {
+      "datasetId": "seguridad_7",
+      "datasetTitle": "Muertes viales. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "Informe_Muertes-Viales_2021.pdf",
+      "format": "PDF",
+      "title": "Informe Muertes Viales (2017-2021).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:51.536Z",
+      "status": "processed"
+    },
+    "Informe_Muertes-Viales_2023.pdf": {
+      "datasetId": "seguridad_7",
+      "datasetTitle": "Muertes viales. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+      "fileName": "Informe_Muertes-Viales_2023.pdf",
+      "format": "PDF",
+      "title": "Informe Muertes Viales (2017-2023).",
+      "accessURL": "https://www.argentina.gob.ar/seguridad/estadisticascriminales",
+      "lastProcessed": "2025-10-09T07:34:52.207Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "seguridad_7",
+    "title": "Muertes viales. Sistema de Alerta Temprana. Estadísticas criminales en la República Argentina.",
+    "description": "Microdatos e informe de muertes viales informadas al Sistema de Alerta Temprana (SAT) del Sistema Nacional de Información Criminal (SNIC).",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2021-11-01T00:00:00",
+    "modified": "2024-12-20T00:00:00",
+    "publisher": {
+      "mbox": "snic-sat@minseg.gob.ar",
+      "name": "Ministerio de Seguridad de la Nación. Dirección Nacional de Estadística Criminal."
+    },
+    "landingPage": "https://www.argentina.gob.ar/seguridad/estadisticascriminales"
+  }
+}

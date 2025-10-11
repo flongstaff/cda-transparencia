@@ -1,0 +1,82 @@
+{
+  "files": {
+    "Cebada-total-serie-1938-2024-anual.csv": {
+      "datasetId": "agroindustria_060f3fa3-060a-4a5d-a753-b928cb00d2eb",
+      "datasetTitle": "Cebada - siembra, cosecha, producción, rendimiento",
+      "fileName": "Cebada-total-serie-1938-2024-anual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo de cebada",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/060f3fa3-060a-4a5d-a753-b928cb00d2eb/resource/473aa24d-fcf9-448f-a8a7-a3f2e6283abc",
+      "lastProcessed": "2025-10-09T07:09:21.875Z",
+      "status": "processed"
+    },
+    "cebada-cervecera-serie-1938-2015-anual.csv": {
+      "datasetId": "agroindustria_060f3fa3-060a-4a5d-a753-b928cb00d2eb",
+      "datasetTitle": "Cebada - siembra, cosecha, producción, rendimiento",
+      "fileName": "cebada-cervecera-serie-1938-2015-anual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo de cebada cervecera",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/060f3fa3-060a-4a5d-a753-b928cb00d2eb/resource/d9b51ac0-5d0f-4adf-8f59-306a416952d9",
+      "lastProcessed": "2025-10-09T07:09:26.110Z",
+      "status": "processed"
+    },
+    "cebada-forrajera-serie-1938-2015-anual.csv": {
+      "datasetId": "agroindustria_060f3fa3-060a-4a5d-a753-b928cb00d2eb",
+      "datasetTitle": "Cebada - siembra, cosecha, producción, rendimiento",
+      "fileName": "cebada-forrajera-serie-1938-2015-anual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo de cebada forrajera",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/060f3fa3-060a-4a5d-a753-b928cb00d2eb/resource/ca36e1c6-33e4-4fa5-b9b4-14307a193542",
+      "lastProcessed": "2025-10-09T07:09:29.693Z",
+      "status": "processed"
+    },
+    "Cebada-total-serie-1938-2024.csv": {
+      "datasetId": "agroindustria_060f3fa3-060a-4a5d-a753-b928cb00d2eb",
+      "datasetTitle": "Cebada - siembra, cosecha, producción, rendimiento",
+      "fileName": "Cebada-total-serie-1938-2024.csv",
+      "format": "CSV",
+      "title": "Cebada - serie siembra, cosecha, producción, rendimiento",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/060f3fa3-060a-4a5d-a753-b928cb00d2eb/resource/372399b2-8219-4539-a869-eea386f8b528",
+      "lastProcessed": "2025-10-09T07:09:33.381Z",
+      "status": "processed"
+    },
+    "cebada-cervecera-serie-1938-2015.csv": {
+      "datasetId": "agroindustria_060f3fa3-060a-4a5d-a753-b928cb00d2eb",
+      "datasetTitle": "Cebada - siembra, cosecha, producción, rendimiento",
+      "fileName": "cebada-cervecera-serie-1938-2015.csv",
+      "format": "CSV",
+      "title": "Cebada cervecera - serie siembra, cosecha, producción, rendimiento",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/060f3fa3-060a-4a5d-a753-b928cb00d2eb/resource/7c8556f4-04f7-4b3f-8f2c-9f2d1717dda3",
+      "lastProcessed": "2025-10-09T07:09:37.066Z",
+      "status": "processed"
+    },
+    "cebada-forrajera-serie-1938-2015.csv": {
+      "datasetId": "agroindustria_060f3fa3-060a-4a5d-a753-b928cb00d2eb",
+      "datasetTitle": "Cebada - siembra, cosecha, producción, rendimiento",
+      "fileName": "cebada-forrajera-serie-1938-2015.csv",
+      "format": "CSV",
+      "title": "Cebada forrajera - serie siembra, cosecha, producción, rendimiento",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/060f3fa3-060a-4a5d-a753-b928cb00d2eb/resource/b0f43fb1-3402-49b2-bf1c-20eb2c9c3e1d",
+      "lastProcessed": "2025-10-09T07:09:40.733Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_060f3fa3-060a-4a5d-a753-b928cb00d2eb",
+    "title": "Cebada - siembra, cosecha, producción, rendimiento",
+    "description": "Serie histórica de la superficie sembrada, superficie cosechada, producción y rendimiento de cebada en la Argentina desde 1938.",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2024-10-08T14:41:51.746177",
+    "modified": "2025-04-30T09:06:45.506950",
+    "publisher": {
+      "mbox": "direstiagri@magyp.gob.ar",
+      "name": "Secretaría de Agricultura, Ganadería y Pesca - Dirección Nacional de Agricultura"
+    },
+    "landingPage": "https://datos.magyp.gob.ar/dataset/cebada-siembra-cosecha-produccion-rendimiento"
+  }
+}

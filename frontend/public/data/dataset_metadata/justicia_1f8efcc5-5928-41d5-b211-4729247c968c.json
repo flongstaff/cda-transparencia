@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_1f8efcc5-5928-41d5-b211-4729247c968c",
+      "datasetTitle": "Denuncias a empresas y trabajadores de control de admisión y permanencia en RENCAP",
+      "format": "ZIP",
+      "title": "Denuncias a empresas y trabajadores de control de admisión y permanencia en RENCAP - 2018",
+      "accessURL": "https://datos.jus.gob.ar/dataset/1f8efcc5-5928-41d5-b211-4729247c968c/resource/cb30a32f-36e1-4839-b11b-7fc78ef451fc",
+      "lastProcessed": "2025-10-09T06:50:35.510Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_1f8efcc5-5928-41d5-b211-4729247c968c",
+    "title": "Denuncias a empresas y trabajadores de control de admisión y permanencia en RENCAP",
+    "description": "Información generada por las denuncias recibidas en el Registro Nacional de empresas y trabajadores de control de admisión y permanencia (RENCAP).",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2018-06-13T16:13:44.867591",
+    "modified": "2025-08-12T14:46:43.680032",
+    "publisher": {
+      "mbox": "rencap@jus.gob.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Dirección Nacional del Registro Nacional de Empresas y Trabajadores de Control de Admisión y Permanencia."
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/denuncias-a-empresas-y-trabajadores-de-control-de-admision-y-permanencia-en-rencap"
+  }
+}

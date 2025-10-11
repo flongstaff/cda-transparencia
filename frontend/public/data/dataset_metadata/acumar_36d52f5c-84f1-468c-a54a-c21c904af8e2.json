@@ -1,0 +1,187 @@
+{
+  "files": {
+    "unknown.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "unknown.csv",
+      "lastProcessed": "2025-10-09T07:57:36.794Z",
+      "status": "error",
+      "error": "Failed to download CSV: unknown.csv"
+    },
+    "reporte-trimestral_3.T.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "reporte-trimestral_3.T.csv",
+      "lastProcessed": "2025-10-09T07:57:50.458Z",
+      "status": "error",
+      "error": "Failed to download CSV: reporte-trimestral_3.T.csv"
+    },
+    "obras_ejecucion_122018.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras_ejecucion_122018.csv",
+      "lastProcessed": "2025-10-09T07:58:04.093Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras_ejecucion_122018.csv"
+    },
+    "obras_ejecucion_032019.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras_ejecucion_032019.csv",
+      "lastProcessed": "2025-10-09T07:58:17.599Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras_ejecucion_032019.csv"
+    },
+    "obras_ejecucion_072019.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras_ejecucion_072019.csv",
+      "lastProcessed": "2025-10-09T07:58:31.442Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras_ejecucion_072019.csv"
+    },
+    "obras_ejecucion_122019.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras_ejecucion_122019.csv",
+      "lastProcessed": "2025-10-09T07:58:45.393Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras_ejecucion_122019.csv"
+    },
+    "obras_ejecucion_122019-primer-trimestre-2020-excel-2.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras_ejecucion_122019-primer-trimestre-2020-excel-2.csv",
+      "lastProcessed": "2025-10-09T07:58:59.042Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras_ejecucion_122019-primer-trimestre-2020-excel-2.csv"
+    },
+    "obras_ejecucion_122019-segundo-trimestre-2020-excel-2.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras_ejecucion_122019-segundo-trimestre-2020-excel-2.csv",
+      "lastProcessed": "2025-10-09T07:59:12.861Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras_ejecucion_122019-segundo-trimestre-2020-excel-2.csv"
+    },
+    "obras_ejecucion_122019 tercer trimestre 2020 excel (2).csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras_ejecucion_122019 tercer trimestre 2020 excel (2).csv",
+      "lastProcessed": "2025-10-09T07:59:26.669Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras_ejecucion_122019 tercer trimestre 2020 excel (2).csv"
+    },
+    "obras_ejecucion_122019 cuarto trimestre 2020 excel (2).csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras_ejecucion_122019 cuarto trimestre 2020 excel (2).csv",
+      "lastProcessed": "2025-10-09T07:59:40.362Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras_ejecucion_122019 cuarto trimestre 2020 excel (2).csv"
+    },
+    "1er-trimestre_ene_mar_2021_comunicacion.xlsx-listado-completo-de-obras.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "1er-trimestre_ene_mar_2021_comunicacion.xlsx-listado-completo-de-obras.csv",
+      "lastProcessed": "2025-10-09T07:59:54.353Z",
+      "status": "error",
+      "error": "Failed to download CSV: 1er-trimestre_ene_mar_2021_comunicacion.xlsx-listado-completo-de-obras.csv"
+    },
+    "2do Trimestre_ABR_JUN_2021_Comunicación.xlsx - Listado completo de obras.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "2do Trimestre_ABR_JUN_2021_Comunicación.xlsx - Listado completo de obras.csv",
+      "lastProcessed": "2025-10-09T08:00:08.242Z",
+      "status": "error",
+      "error": "Failed to download CSV: 2do Trimestre_ABR_JUN_2021_Comunicación.xlsx - Listado completo de obras.csv"
+    },
+    "3er Trimestre_JUL_SEP_2021_Comunicación.xlsx - Listado completo de obras.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "3er Trimestre_JUL_SEP_2021_Comunicación.xlsx - Listado completo de obras.csv",
+      "lastProcessed": "2025-10-09T08:00:21.692Z",
+      "status": "error",
+      "error": "Failed to download CSV: 3er Trimestre_JUL_SEP_2021_Comunicación.xlsx - Listado completo de obras.csv"
+    },
+    "4to-trimestre_oct_dic_2021_comunicacion.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "4to-trimestre_oct_dic_2021_comunicacion.csv",
+      "lastProcessed": "2025-10-09T08:00:35.510Z",
+      "status": "error",
+      "error": "Failed to download CSV: 4to-trimestre_oct_dic_2021_comunicacion.csv"
+    },
+    "obras-agua-cloaca-primer-trimestre-2022-1.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras-agua-cloaca-primer-trimestre-2022-1.csv",
+      "lastProcessed": "2025-10-09T08:00:49.325Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras-agua-cloaca-primer-trimestre-2022-1.csv"
+    },
+    "obras-agua-cloaca-segundo-trimestre-2022 (1).csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras-agua-cloaca-segundo-trimestre-2022 (1).csv",
+      "lastProcessed": "2025-10-09T08:01:03.212Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras-agua-cloaca-segundo-trimestre-2022 (1).csv"
+    },
+    "obras-agua-cloaca-tercer-trimestre-2022-1.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras-agua-cloaca-tercer-trimestre-2022-1.csv",
+      "lastProcessed": "2025-10-09T08:01:17.081Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras-agua-cloaca-tercer-trimestre-2022-1.csv"
+    },
+    "obras-agua-cloaca-cuarto-trimestre-2022-1.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras-agua-cloaca-cuarto-trimestre-2022-1.csv",
+      "lastProcessed": "2025-10-09T08:01:31.406Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras-agua-cloaca-cuarto-trimestre-2022-1.csv"
+    },
+    "obras-agua-cloaca-primer-trimestre-2023.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras-agua-cloaca-primer-trimestre-2023.csv",
+      "lastProcessed": "2025-10-09T08:01:45.072Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras-agua-cloaca-primer-trimestre-2023.csv"
+    },
+    "obras-agua-cloaca-segundo-trimestre-2023.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras-agua-cloaca-segundo-trimestre-2023.csv",
+      "lastProcessed": "2025-10-09T08:01:58.864Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras-agua-cloaca-segundo-trimestre-2023.csv"
+    },
+    "obras-agua-cloaca-tercer-trimestre-2023.csv": {
+      "datasetId": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+      "datasetTitle": "Avance de Obras de Agua y Cloaca",
+      "fileName": "obras-agua-cloaca-tercer-trimestre-2023.csv",
+      "lastProcessed": "2025-10-09T08:02:12.281Z",
+      "status": "error",
+      "error": "Failed to download CSV: obras-agua-cloaca-tercer-trimestre-2023.csv"
+    }
+  },
+  "info": {
+    "identifier": "acumar_36d52f5c-84f1-468c-a54a-c21c904af8e2",
+    "title": "Avance de Obras de Agua y Cloaca",
+    "description": "Datos correspondientes al seguimiento realizado por ACUMAR de las obras de agua y cloaca en la Cuenca Matanza Riachuelo.",
+    "theme": [
+      "envi"
+    ],
+    "keywords": [],
+    "issued": "2018-10-12T21:32:02.514519",
+    "modified": "2025-02-07T17:01:00.678944",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección Técnica - Coordinación de Infraestructura"
+    }
+  }
+}

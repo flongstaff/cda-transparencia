@@ -185,6 +185,32 @@ node sync-external-data.js
 📊 Total: 12 files, 20.1 KB
 ```
 
+### OCR Processing and Data Indexing
+
+The system now includes OCR processing capabilities for PDF documents and enhanced data indexing:
+
+#### Link Data Files
+```bash
+cd backend && node scripts/link-data-files.js
+```
+
+#### Run Complete OCR Workflow
+```bash
+cd backend && node scripts/ocr-workflow.js
+```
+
+#### Process Individual PDF with Advanced OCR
+```bash
+cd backend && node scripts/parse-pdf.js --advanced
+```
+
+#### Test OCR Functionality
+```bash
+cd backend && node scripts/test-ocr.js
+```
+
+The system automatically processes PDFs from data catalogs and extracts text for improved searchability and data analysis.
+
 ### Check Cache Health
 ```bash
 curl http://localhost:5175/data/external/cache_manifest.json | python3 -m json.tool
@@ -266,6 +292,107 @@ cd scripts && node sync-external-data.js
 ---
 
 ## 🚀 Deployment
+
+The Carmen de Areco Transparency Portal is designed for flexible deployment across multiple platforms. The system consists of:
+
+1. **Frontend Application**: React + TypeScript + Vite application
+2. **Backend API Proxy**: Node.js Express server that handles external data sources
+3. **Cloudflare Worker**: Acts as a CORS proxy for external API requests
+4. **GitHub Pages**: Hosts the static frontend application
+5. **Data Processing Pipeline**: Python and Node.js scripts that process external data
+
+### Current Deployment Architecture
+
+```
+Internet Users
+       ↓
+[Custom Domain: cda-transparencia.org] OR [GitHub Pages: username.github.io/cda-transparencia/]
+       ↓
+[Cloudflare CDN] ←→ [Cloudflare Worker (API Proxy)]
+       ↓                      ↓
+[GitHub Pages]        [External Data Sources]
+   (Static Files)      (Carmen de Areco, GBA, etc.)
+
+When users access data:
+1. Frontend makes API requests to Cloudflare Worker
+2. Worker forwards requests to GitHub Pages data files
+3. For external sources, worker fetches from original sources
+4. Responses are cached and returned with proper CORS headers
+```
+
+### GitHub Pages Deployment
+
+GitHub Pages hosts the static frontend application and pre-processed data files:
+
+```bash
+# Build for GitHub Pages (uses base path "/cda-transparencia/")
+cd frontend && npm run build:github
+
+# Deploy to GitHub Pages
+cd frontend && npm run deploy
+```
+
+### Custom Domain Deployment
+
+For custom domains like cda-transparencia.org:
+
+```bash
+# Build for custom domain (uses base path "/")
+cd frontend && npm run build:custom-domain
+
+# Deploy through your hosting provider
+```
+
+### Cloudflare Worker Deployment
+
+The Cloudflare Worker acts as an API proxy to handle CORS issues:
+
+1. **Automatic Deployment**: Through GitHub Actions when GitHub Pages deployment succeeds
+2. **Manual Deployment**: Using Wrangler CLI
+
+```bash
+# Deploy worker manually (requires Cloudflare credentials)
+npx wrangler deploy
+```
+
+### Traditional Server Deployment
+
+For self-hosted deployments:
+
+1. **Build and deploy frontend**:
+   ```bash
+   cd frontend && npm run build
+   # Copy frontend/dist to web server
+   ```
+
+2. **Start backend proxy server**:
+   ```bash
+   cd backend && npm run proxy
+   # Or: node proxy-server.js
+   ```
+
+3. **Set up reverse proxy** (nginx/Apache) to route:
+   - `/` → Frontend static files
+   - `/api/*` → Backend proxy server
+
+4. **Set up automated data sync**:
+   ```bash
+   # Add to crontab for daily updates
+   crontab -e
+   # Add: 0 3 * * * cd /path/to/cda-transparencia/scripts && node sync-external-data.js
+   ```
+
+### Vercel/Netlify Deployment
+
+1. Connect your Git repository to Vercel/Netlify
+2. Set build command: `cd frontend && npm run build`
+3. Set output directory: `frontend/dist`
+4. Set environment variables:
+   - `VITE_API_URL`: Your API endpoint
+   - `VITE_USE_API`: true
+5. Deploy backend separately on platforms like Railway or Render
+
+---
 
 ### For Custom Domain Deployment
 

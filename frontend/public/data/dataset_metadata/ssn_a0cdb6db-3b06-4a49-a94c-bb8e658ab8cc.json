@@ -1,0 +1,27 @@
+{
+  "files": {
+    "productores-asesores-sociedad.csv": {
+      "datasetId": "ssn_a0cdb6db-3b06-4a49-a94c-bb8e658ab8cc",
+      "datasetTitle": "Sociedades de Productores Asesores de Seguros",
+      "fileName": "productores-asesores-sociedad.csv",
+      "lastProcessed": "2025-10-09T07:52:16.643Z",
+      "status": "error",
+      "error": "Failed to download CSV: productores-asesores-sociedad.csv"
+    }
+  },
+  "info": {
+    "identifier": "ssn_a0cdb6db-3b06-4a49-a94c-bb8e658ab8cc",
+    "title": "Sociedades de Productores Asesores de Seguros",
+    "description": "Datos correspondientes a las Sociedades de Productores Asesores de Seguros habilitadas por la Superintendencia de Seguros de la Nación (SSN)",
+    "theme": [
+      "econ"
+    ],
+    "keywords": [],
+    "issued": "2024-09-30T13:09:12.801286",
+    "modified": "2024-09-30T13:16:33.198469",
+    "publisher": {
+      "mbox": "datosabiertos@ssn.gob.ar",
+      "name": "Ministerio de Economía, Superintendencia de Seguros de la Nación"
+    }
+  }
+}

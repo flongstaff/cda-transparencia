@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_731b108b-5d8d-4d98-9b50-c897cd9c2d52",
+      "datasetTitle": "Ministerios públicos - Casos",
+      "format": "gráfico",
+      "title": "Casos iniciados en los Ministerios Públicos - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/731b108b-5d8d-4d98-9b50-c897cd9c2d52/resource/d514bfca-eec7-4f72-9a1a-3b2eb8bada5e",
+      "lastProcessed": "2025-10-09T06:36:56.772Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_731b108b-5d8d-4d98-9b50-c897cd9c2d52",
+    "title": "Ministerios públicos - Casos",
+    "description": "Datos obtenidos a partir de datos primarios remitidos por los ministerios públicos, siguiendo el Protocolo Técnico de Datos y de Procesos, en el marco del Convenio Interjurisdiccional de Datos Abiertos de Justicia.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2019-05-09T18:58:41.072875",
+    "modified": "2025-09-30T19:15:11.178536",
+    "publisher": {
+      "mbox": "datosjusticia@jus.gob.ar",
+      "name": "Ministerio de Justicia"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/ministerios-publicos-casos"
+  }
+}

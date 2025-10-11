@@ -1,0 +1,81 @@
+{
+  "files": {
+    "SD_indicearidez_km2": {
+      "datasetId": "ambiente_10.0",
+      "datasetTitle": "Degradación en tierras",
+      "fileName": "SD_indicearidez_km2",
+      "format": "CSV",
+      "title": "Índice de aridez en km2",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=3&stid=10&did=197",
+      "lastProcessed": "2025-10-09T06:58:57.895Z",
+      "status": "processed"
+    },
+    "SD_tendendegra_km2yporc": {
+      "datasetId": "ambiente_10.0",
+      "datasetTitle": "Degradación en tierras",
+      "fileName": "SD_tendendegra_km2yporc",
+      "format": "CSV",
+      "title": "Tendencia de la degradación de tierras, en km2 y porcentaje",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=3&stid=10&did=199",
+      "lastProcessed": "2025-10-09T06:58:59.201Z",
+      "status": "processed"
+    },
+    "SD_tsecasdeg_km2": {
+      "datasetId": "ambiente_10.0",
+      "datasetTitle": "Degradación en tierras",
+      "fileName": "SD_tsecasdeg_km2",
+      "format": "CSV",
+      "title": "Tipo y grado de degradación en tierras secas",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=3&stid=10&did=195",
+      "lastProcessed": "2025-10-09T06:59:00.551Z",
+      "status": "processed"
+    },
+    "SD_cobertura_suelo": {
+      "datasetId": "ambiente_10.0",
+      "datasetTitle": "Degradación en tierras",
+      "fileName": "SD_cobertura_suelo",
+      "format": "CSV",
+      "title": "Cambio en la cobertura del suelo",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=3&stid=10&did=264",
+      "lastProcessed": "2025-10-09T06:59:01.824Z",
+      "status": "processed"
+    },
+    "SD_productividad_suelo": {
+      "datasetId": "ambiente_10.0",
+      "datasetTitle": "Degradación en tierras",
+      "fileName": "SD_productividad_suelo",
+      "format": "CSV",
+      "title": "Tendencias de la Productividad de la tierra",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=3&stid=10&did=265",
+      "lastProcessed": "2025-10-09T06:59:03.170Z",
+      "status": "processed"
+    },
+    "SD_carbono_suelo_2022": {
+      "datasetId": "ambiente_10.0",
+      "datasetTitle": "Degradación en tierras",
+      "fileName": "SD_carbono_suelo_2022",
+      "format": "CSV",
+      "title": "Nivel de las Reservas de Carbono en la superficie y en el suelo",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=3&stid=10&did=284",
+      "lastProcessed": "2025-10-09T06:59:04.451Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_10.0",
+    "title": "Degradación en tierras",
+    "description": "Muestra el tipo, superficie y porcentaje de tierras secas y el índice de aridez",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2019-12-31T00:00:00",
+    "modified": "2019-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

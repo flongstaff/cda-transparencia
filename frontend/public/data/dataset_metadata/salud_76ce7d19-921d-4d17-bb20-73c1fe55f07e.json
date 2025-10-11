@@ -1,0 +1,52 @@
+{
+  "files": {
+    "DATOS-ABIERTOS-serie-histórica-defunciones-generales-jurisdicción--1914-2022.pdf": {
+      "datasetId": "salud_76ce7d19-921d-4d17-bb20-73c1fe55f07e",
+      "datasetTitle": "Serie histórica de defunciones ocurridas en Argentina por jurisdicción",
+      "fileName": "DATOS-ABIERTOS-serie-histórica-defunciones-generales-jurisdicción--1914-2022.pdf",
+      "format": "PDF",
+      "title": "Serie histórica de defunciones 1914-2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/76ce7d19-921d-4d17-bb20-73c1fe55f07e/resource/67a32df1-dfb3-4603-ae40-8077411e6802",
+      "lastProcessed": "2025-10-09T07:16:06.214Z",
+      "status": "processed"
+    },
+    "serie-historica-ocurrida-argentina-jurisdiccion-1914-2023.csv": {
+      "datasetId": "salud_76ce7d19-921d-4d17-bb20-73c1fe55f07e",
+      "datasetTitle": "Serie histórica de defunciones ocurridas en Argentina por jurisdicción",
+      "fileName": "serie-historica-ocurrida-argentina-jurisdiccion-1914-2023.csv",
+      "format": "CSV",
+      "title": "Serie histórica de defunciones ocurrida en Argentina por jurisdicción 1914-2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/76ce7d19-921d-4d17-bb20-73c1fe55f07e/resource/a4d3c1c7-63c3-4ad6-91e7-ffef6198c8c0",
+      "lastProcessed": "2025-10-09T07:16:10.301Z",
+      "status": "processed"
+    },
+    "serie-historica-ocurrida-argentina-jurisdiccion-1914-2022.xlsx": {
+      "datasetId": "salud_76ce7d19-921d-4d17-bb20-73c1fe55f07e",
+      "datasetTitle": "Serie histórica de defunciones ocurridas en Argentina por jurisdicción",
+      "fileName": "serie-historica-ocurrida-argentina-jurisdiccion-1914-2022.xlsx",
+      "format": "XLSX",
+      "title": "Serie histórica de defunciones ocurrida en Argentina por jurisdicción 1914-2022 (Excel)",
+      "accessURL": "http://datos.salud.gob.ar/dataset/76ce7d19-921d-4d17-bb20-73c1fe55f07e/resource/4b3ad25f-b648-4f3f-b652-092a6c7b8eb3",
+      "lastProcessed": "2025-10-09T07:16:10.301Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_76ce7d19-921d-4d17-bb20-73c1fe55f07e",
+    "title": "Serie histórica de defunciones ocurridas en Argentina por jurisdicción",
+    "description": "Los datos de defunción  fueron recopilados de las publicaciones disponibles en la Dirección de Estadística e Información en Salud, correspondientes a distintos periodos de la República Argentina.Por favor leer el pdf adjunto a la serie.",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2024-04-05T13:04:37.460679",
+    "modified": "2024-04-05T13:04:37.460679",
+    "publisher": {
+      "mbox": "deis@msal.gov.ar",
+      "name": "Dirección de Estadística e Información en Salud - DEIS - Datos Abiertos"
+    },
+    "landingPage": "http://datos.salud.gob.ar/dataset/serie-historica-de-defunciones-ocurridas-en-argentina-por-jurisdiccion"
+  }
+}

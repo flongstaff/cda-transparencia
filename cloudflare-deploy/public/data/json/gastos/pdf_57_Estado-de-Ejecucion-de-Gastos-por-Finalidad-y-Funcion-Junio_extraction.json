@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_57_Estado-de-Ejecucion-de-Gastos-por-Finalidad-y-Funcion-Junio.pdf",
+  "file_hash": "fa0ac2c6bbbb9d9faace84e24e4c1a7e",
+  "page_count": 2,
+  "text_length": 6506,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoESTADO DE EJECUCION DEL PRESUPUESTO DE GASTOS\nEjercicio: Hoja: 1 de 2R.A.F.A.M.\n26/08/2024 12:57\nDel 02/01/2024 al 30/06/2024(POR FINALIDAD Y FUNCIÓN)\n 2024\nDevengado\nno pagadoCrédito\nDisponiblePagado Devengado Compromiso Preventivo Crédito\nVigenteModifica\ncionesCrédito\nAprobadoFinalidades y FuncionesCrédito Vig.\n- Devengado\n100 - Administración Gubernamental\n120Judicial 19.439.751,85 -1.203.409,92 18.236.341,93 0,00 0,00 0,00 0,00 18.236.341,93 0.00 18.236.341,93\n130Dirección superior ejecutiva 342.291.831,73 2.831.045,53 345.122.877,26 8.697.690,85 171.679.400,79 171.670.587,60 168.265.432,12 164.745.785,62 3,405,155.48 173.452.289,66\n160Administración Fiscal 534.952.994,19 9.505.457,08 544.458.451,27 15.026.764,19 306.468.419,83 304.334.789,83 300.702.052,44 222.963.267,25 3,632,737.39 240.123.661,44\n180Información y estadísticas básicas 65.840.925,81 1.786.939,54 67.627.865,35 1.272.120,00 38.785.392,37 36.396.392,35 36.275.392,35 27.570.352,98 121,000.00 31.231.473,00\n   Total  Administración Gubernamental 7.158.892,87 463.043.766,03 433.515.747,78 505.242.876,91 512.401.769,78 516.933.212,99 24.996.575,04 975.445.535,81 12.920.032,23 962.525.503,58\n200 - Servicios de seguridad\n210Seguridad interior 280.272.515,90 19.358.942,85 299.631.458,75 11.663.957,98 164.301.382,38 162.548.822,38 153.384.820,70 123.666.118,39 9,164,001.68 137.082.636,37\n   Total  Servicios de seguridad 9.164.001,68 137.082.636,37 123.666.118,39 153.384.820,70 162.548.822,38 164.301.382,38 11.663.957,98 299.631.458,75 19.358.942,85 280.272.515,90\n300 - Servicios sociales\n310Salud 358.135.274,43 66.259.451,05 424.394.725,48 14.215.845,31 217.627.653,72 216.566.820,88 212.620.559,27 192.551.226,45 3,946,261.61 207.827.904,60\n320Promoción y asistencia social 301.962.785,02 -673.488,00 301.289.297,02 6.668.314,02 103.796.713,50 103.796.713,50 100.110.371,86 190.824.269,50 3,686,341.64 197.492.583,52\n330Seguridad social 11.259.201,92 0,00 11.259.201,92 0,00 0,00 ...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:21.796999"
+}

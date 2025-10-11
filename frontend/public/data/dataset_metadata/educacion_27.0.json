@@ -1,0 +1,74 @@
+{
+  "files": {
+    "tasa_de_repitencia_3.10": {
+      "datasetId": "educacion_27.0",
+      "datasetTitle": "Indicadores Educativos",
+      "fileName": "tasa_de_repitencia_3.10",
+      "format": "ZIP",
+      "title": "Repitencia",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/indicadores",
+      "lastProcessed": "2025-10-09T06:41:18.525Z",
+      "status": "processed"
+    },
+    "tasa_de_abandono_interanual_3.10": {
+      "datasetId": "educacion_27.0",
+      "datasetTitle": "Indicadores Educativos",
+      "fileName": "tasa_de_abandono_interanual_3.10",
+      "format": "ZIP",
+      "title": "Abandono Interanual",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/indicadores",
+      "lastProcessed": "2025-10-09T06:41:18.525Z",
+      "status": "processed"
+    },
+    "tasas_de_sobreedad_3.10": {
+      "datasetId": "educacion_27.0",
+      "datasetTitle": "Indicadores Educativos",
+      "fileName": "tasas_de_sobreedad_3.10",
+      "format": "ZIP",
+      "title": "Sobreedad",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/indicadores",
+      "lastProcessed": "2025-10-09T06:41:18.525Z",
+      "status": "processed"
+    },
+    "tasas_de_escolarizacion_3.10": {
+      "datasetId": "educacion_27.0",
+      "datasetTitle": "Indicadores Educativos",
+      "fileName": "tasas_de_escolarizacion_3.10",
+      "format": "ZIP",
+      "title": "Tasas de Escolarización",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/indicadores",
+      "lastProcessed": "2025-10-09T06:41:18.526Z",
+      "status": "processed"
+    },
+    "documentos_metodologicos_3.10": {
+      "datasetId": "educacion_27.0",
+      "datasetTitle": "Indicadores Educativos",
+      "fileName": "documentos_metodologicos_3.10",
+      "format": "ZIP",
+      "title": "Documentos Metodológicos",
+      "accessURL": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/indicadores",
+      "lastProcessed": "2025-10-09T06:41:18.526Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "educacion_27.0",
+    "title": "Indicadores Educativos",
+    "description": "En este dataset podrás encontrar indicadores educativos a nivel nacional sobre: Promoción Efectiva, Repitencia, Abandono Interanual, Sobreedad, Tasas de Escolarización. Todos estos desagregados por nivel de enseñanza y jurisdicción.",
+    "theme": [
+      "educ",
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE",
+      "EDUC"
+    ],
+    "issued": "2024-11-06T00:00:00",
+    "modified": "2025-07-15T00:00:00",
+    "publisher": {
+      "mbox": "gestioninfo@educacion.gob.ar",
+      "name": "Secretaría de Educación de la Nación\nSubsecretaría de Evaluación e Información Educativa"
+    },
+    "landingPage": "https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/indicadores"
+  }
+}

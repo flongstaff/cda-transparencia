@@ -1,0 +1,42 @@
+{
+  "files": {
+    "transporte-elctrico-at-lneas.zip": {
+      "datasetId": "energia_53014951-6ee1-4e99-a830-c4d0eb373496",
+      "datasetTitle": "Transporte Eléctrico AT Líneas",
+      "fileName": "transporte-elctrico-at-lneas.zip",
+      "format": "SHP",
+      "title": "Transporte Eléctrico AT Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/53014951-6ee1-4e99-a830-c4d0eb373496/resource/e035f103-ad43-41f5-8041-987527ad5635",
+      "lastProcessed": "2025-10-09T06:48:52.661Z",
+      "status": "processed"
+    },
+    "transporte-elctrico-at-lneas.csv": {
+      "datasetId": "energia_53014951-6ee1-4e99-a830-c4d0eb373496",
+      "datasetTitle": "Transporte Eléctrico AT Líneas",
+      "fileName": "transporte-elctrico-at-lneas.csv",
+      "format": "CSV",
+      "title": "Transporte Eléctrico AT Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/53014951-6ee1-4e99-a830-c4d0eb373496/resource/32c751ba-d887-4b6b-91bb-14e3f2639b51",
+      "lastProcessed": "2025-10-09T06:48:54.648Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_53014951-6ee1-4e99-a830-c4d0eb373496",
+    "title": "Transporte Eléctrico AT Líneas",
+    "description": "Lineas de Alta tensión. ISO 19126: PowerSupplies, Este subgrupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía , mientras que la energía es en su mayoría de la electricidad.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-07-16T13:02:24.300351",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía.Subsecretaría de Transición y Planeamiento Energético.Dirección Nacional de Información Energética. \r\n\r\n"
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

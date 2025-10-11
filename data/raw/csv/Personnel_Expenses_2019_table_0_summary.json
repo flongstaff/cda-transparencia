@@ -1,0 +1,44 @@
+{
+  "file_name": "Personnel_Expenses_2019_table_0.csv",
+  "row_count": 4,
+  "column_count": 4,
+  "columns": [
+    "Category",
+    "Budgeted",
+    "Executed",
+    "Percentage"
+  ],
+  "sample_data": [
+    {
+      "Category": "Salaries",
+      "Budgeted": "$80,000,000",
+      "Executed": "$79,000,000",
+      "Percentage": "98.8%"
+    },
+    {
+      "Category": "Social Charges",
+      "Budgeted": "$25,000,000",
+      "Executed": "$24,500,000",
+      "Percentage": "98.0%"
+    },
+    {
+      "Category": "Pensions",
+      "Budgeted": "$15,000,000",
+      "Executed": "$14,800,000",
+      "Percentage": "98.7%"
+    },
+    {
+      "Category": "Total",
+      "Budgeted": "$120,000,000",
+      "Executed": "$118,300,000",
+      "Percentage": "98.6%"
+    }
+  ],
+  "data_types": {
+    "Category": "object",
+    "Budgeted": "object",
+    "Executed": "object",
+    "Percentage": "object"
+  },
+  "processing_method": "pandas-read_csv"
+}

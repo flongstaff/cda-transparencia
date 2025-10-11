@@ -1,0 +1,52 @@
+{
+  "files": {
+    "recaudacion-tributaria-datos-anuales.csv": {
+      "datasetId": "sspm_172",
+      "datasetTitle": "Principales subgrupos de recaudación tributaria",
+      "fileName": "recaudacion-tributaria-datos-anuales.csv",
+      "format": "CSV",
+      "title": "Principales subgrupos de recaudación tributaria. Millones de pesos. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:15.291Z",
+      "status": "processed"
+    },
+    "recaudacion-tributaria-datos-trimestrales.csv": {
+      "datasetId": "sspm_172",
+      "datasetTitle": "Principales subgrupos de recaudación tributaria",
+      "fileName": "recaudacion-tributaria-datos-trimestrales.csv",
+      "format": "CSV",
+      "title": "Principales subgrupos de recaudación tributaria. Millones de pesos. Datos trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:16.546Z",
+      "status": "processed"
+    },
+    "recaudacion-tributaria-datos-mensuales.csv": {
+      "datasetId": "sspm_172",
+      "datasetTitle": "Principales subgrupos de recaudación tributaria",
+      "fileName": "recaudacion-tributaria-datos-mensuales.csv",
+      "format": "CSV",
+      "title": "Principales subgrupos de recaudación tributaria. Millones de pesos. Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:17.716Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_172",
+    "title": "Principales subgrupos de recaudación tributaria",
+    "description": "Datos Subgrupos de recaudación tributaria",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:02:53.412064",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

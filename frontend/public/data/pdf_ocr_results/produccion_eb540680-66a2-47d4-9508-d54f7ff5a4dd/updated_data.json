@@ -1,0 +1,27 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd",
+      "title": "Asistencia de Emergencia al Trabajo y la Producción (ATP)",
+      "distribution": [
+        {
+          "title": "nota-metodologica.pdf",
+          "format": "PDF",
+          "fileName": "nota-metodologica.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd/nota-metodologica.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/produccion_eb540680-66a2-47d4-9508-d54f7ff5a4dd/nota-metodologica_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "tableCount": 0,
+            "figureCount": 0,
+            "method": "docstrange"
+          }
+        }
+      ]
+    }
+  ]
+}

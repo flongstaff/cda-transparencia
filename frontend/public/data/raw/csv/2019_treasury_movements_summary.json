@@ -1,0 +1,36 @@
+{
+  "file_name": "2019_treasury_movements.csv",
+  "row_count": 9,
+  "column_count": 2,
+  "columns": [
+    "Movimientos de Tesoreria",
+    "Importe"
+  ],
+  "sample_data": [
+    {
+      "Movimientos de Tesoreria": "38.450.309",
+      "Importe": 46.0
+    },
+    {
+      "Movimientos de Tesoreria": "256.777.746",
+      "Importe": 96.0
+    },
+    {
+      "Movimientos de Tesoreria": "81.414.933",
+      "Importe": 29.0
+    },
+    {
+      "Movimientos de Tesoreria": "288.831.257",
+      "Importe": 22.0
+    },
+    {
+      "Movimientos de Tesoreria": "81.414.933",
+      "Importe": 29.0
+    }
+  ],
+  "data_types": {
+    "Movimientos de Tesoreria": "object",
+    "Importe": "float64"
+  },
+  "processing_method": "pandas-read_csv"
+}

@@ -1,0 +1,34 @@
+{
+  "files": {
+    "REPORTES CIUDADANOS 2022.pdf": {
+      "datasetId": "ds-estadisticas-reportes-2022",
+      "datasetTitle": "Reportes Ciudadanos y Siembras 2022",
+      "fileName": "REPORTES CIUDADANOS 2022.pdf",
+      "lastProcessed": "2025-10-09T06:15:46.965Z",
+      "status": "error",
+      "error": "Failed to download PDF: REPORTES CIUDADANOS 2022.pdf"
+    },
+    "SIEMBRA 2012-2021.pdf": {
+      "datasetId": "ds-estadisticas-reportes-2022",
+      "datasetTitle": "Reportes Ciudadanos y Siembras 2022",
+      "fileName": "SIEMBRA 2012-2021.pdf",
+      "lastProcessed": "2025-10-09T06:15:56.268Z",
+      "status": "error",
+      "error": "Failed to download PDF: SIEMBRA 2012-2021.pdf"
+    }
+  },
+  "info": {
+    "identifier": "ds-estadisticas-reportes-2022",
+    "title": "Reportes Ciudadanos y Siembras 2022",
+    "description": "Reportes ciudadanos (barrido, cortes de pasto) y siembra agrícola 2012-2021.",
+    "theme": [
+      "economia-y-finanzas"
+    ],
+    "keywords": [],
+    "issued": "2023-01-01T00:00:00",
+    "modified": "2023-01-01T00:00:00",
+    "publisher": {
+      "name": "Oficina de Estadísticas"
+    }
+  }
+}

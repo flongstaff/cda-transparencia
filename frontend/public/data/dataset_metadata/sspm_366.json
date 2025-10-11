@@ -1,0 +1,52 @@
+{
+  "files": {
+    "exportaciones-actividad-saldo-comercial-empresa-exportadora-anual.csv": {
+      "datasetId": "sspm_366",
+      "datasetTitle": "Pozos de petróleo y metros perforados",
+      "fileName": "exportaciones-actividad-saldo-comercial-empresa-exportadora-anual.csv",
+      "format": "CSV",
+      "title": "Exportaciones por sector de actividad, saldo comercial y rangos de exportación de la empresa exportadora. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:34.002Z",
+      "status": "processed"
+    },
+    "exportaciones-actividad-saldo-comercial-empresa-exportadora-trimestral.csv": {
+      "datasetId": "sspm_366",
+      "datasetTitle": "Pozos de petróleo y metros perforados",
+      "fileName": "exportaciones-actividad-saldo-comercial-empresa-exportadora-trimestral.csv",
+      "format": "CSV",
+      "title": "Exportaciones por sector de actividad, saldo comercial y rangos de exportación de la empresa exportadora. Datos trimestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:35.183Z",
+      "status": "processed"
+    },
+    "exportaciones-actividad-saldo-comercial-empresa-exportadora-mensul.csv": {
+      "datasetId": "sspm_366",
+      "datasetTitle": "Pozos de petróleo y metros perforados",
+      "fileName": "exportaciones-actividad-saldo-comercial-empresa-exportadora-mensul.csv",
+      "format": "CSV",
+      "title": "Exportaciones por sector de actividad, saldo comercial y rangos de exportación de la empresa exportadora. Datos mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:36.309Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_366",
+    "title": "Pozos de petróleo y metros perforados",
+    "description": "Datos pozos y metros perforados",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-12-21",
+    "modified": "2025-03-24T10:02:39.382484",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

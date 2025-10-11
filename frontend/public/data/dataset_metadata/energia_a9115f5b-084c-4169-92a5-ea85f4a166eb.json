@@ -1,0 +1,42 @@
+{
+  "files": {
+    "plantas-productoras-y-refinadoras-de-aceite-vegetal.zip": {
+      "datasetId": "energia_a9115f5b-084c-4169-92a5-ea85f4a166eb",
+      "datasetTitle": "Plantas Productoras y Refinadoras de Aceite Vegetal",
+      "fileName": "plantas-productoras-y-refinadoras-de-aceite-vegetal.zip",
+      "format": "SHP",
+      "title": "Plantas Productoras y Refinadoras de Aceite Vegetal",
+      "accessURL": "http://datos.energia.gob.ar/dataset/a9115f5b-084c-4169-92a5-ea85f4a166eb/resource/99d31f11-56f1-40a4-9191-0dfbfb680949",
+      "lastProcessed": "2025-10-09T07:19:04.509Z",
+      "status": "processed"
+    },
+    "plantas-productoras-y-refinadoras-de-aceite-vegetal.csv": {
+      "datasetId": "energia_a9115f5b-084c-4169-92a5-ea85f4a166eb",
+      "datasetTitle": "Plantas Productoras y Refinadoras de Aceite Vegetal",
+      "fileName": "plantas-productoras-y-refinadoras-de-aceite-vegetal.csv",
+      "format": "CSV",
+      "title": "Plantas Productoras y Refinadoras de Aceite Vegetal",
+      "accessURL": "http://datos.energia.gob.ar/dataset/a9115f5b-084c-4169-92a5-ea85f4a166eb/resource/3f177450-8d92-48e9-a846-91537db5322e",
+      "lastProcessed": "2025-10-09T07:19:05.807Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_a9115f5b-084c-4169-92a5-ea85f4a166eb",
+    "title": "Plantas Productoras y Refinadoras de Aceite Vegetal",
+    "description": "Plantas Productoras y Refinerías de aceite vegetal georreferenciadas por la Dirección de Información Energética de la Secretaria de Energía en base a información descargada del sitio de la Cámara de la Industria Aceitera de la República Argentina (CIARA). ",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2023-06-07T14:29:07.921758",
+    "modified": "2023-06-07T14:44:43.599448",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de proyectos. Dirección Nacional de Información Energética. Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/plantas-productoras-y-refinadoras-de-aceite-vegetal"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "files": {
+    "agente-contaminante-vigente-2017.csv": {
+      "datasetId": "acumar_9998c5fd-9784-4ab1-98d6-76af83ea64dd",
+      "datasetTitle": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo (2017-2023)",
+      "fileName": "agente-contaminante-vigente-2017.csv",
+      "format": "CSV",
+      "title": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo - 2017",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/9998c5fd-9784-4ab1-98d6-76af83ea64dd/resource/74efb7d3-adf4-4441-9d42-67162b9817f7",
+      "lastProcessed": "2025-10-09T08:02:50.702Z",
+      "status": "processed"
+    },
+    "agente-contaminante-vigente-2018.csv": {
+      "datasetId": "acumar_9998c5fd-9784-4ab1-98d6-76af83ea64dd",
+      "datasetTitle": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo (2017-2023)",
+      "fileName": "agente-contaminante-vigente-2018.csv",
+      "format": "CSV",
+      "title": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo - 2018",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/9998c5fd-9784-4ab1-98d6-76af83ea64dd/resource/d975c03c-3035-43c9-b0fa-c418395ffcdc",
+      "lastProcessed": "2025-10-09T08:02:53.227Z",
+      "status": "processed"
+    },
+    "agente-contaminante-vigente-2019.csv": {
+      "datasetId": "acumar_9998c5fd-9784-4ab1-98d6-76af83ea64dd",
+      "datasetTitle": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo (2017-2023)",
+      "fileName": "agente-contaminante-vigente-2019.csv",
+      "format": "CSV",
+      "title": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo - 2019",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/9998c5fd-9784-4ab1-98d6-76af83ea64dd/resource/ff752252-042a-4cd7-b68d-ec558708d717",
+      "lastProcessed": "2025-10-09T08:02:55.731Z",
+      "status": "processed"
+    },
+    "agente-contaminante-vigente-2020.csv": {
+      "datasetId": "acumar_9998c5fd-9784-4ab1-98d6-76af83ea64dd",
+      "datasetTitle": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo (2017-2023)",
+      "fileName": "agente-contaminante-vigente-2020.csv",
+      "format": "CSV",
+      "title": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo - 2020",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/9998c5fd-9784-4ab1-98d6-76af83ea64dd/resource/a78d1906-c025-4a4a-9abb-661f9f16a587",
+      "lastProcessed": "2025-10-09T08:02:58.227Z",
+      "status": "processed"
+    },
+    "agente-contaminante-vigente-2021.csv": {
+      "datasetId": "acumar_9998c5fd-9784-4ab1-98d6-76af83ea64dd",
+      "datasetTitle": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo (2017-2023)",
+      "fileName": "agente-contaminante-vigente-2021.csv",
+      "format": "CSV",
+      "title": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo - 2021",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/9998c5fd-9784-4ab1-98d6-76af83ea64dd/resource/785d8130-82c6-488f-a9af-1069141e2b4a",
+      "lastProcessed": "2025-10-09T08:03:00.756Z",
+      "status": "processed"
+    },
+    "agente-contaminante-vigente-2022.csv": {
+      "datasetId": "acumar_9998c5fd-9784-4ab1-98d6-76af83ea64dd",
+      "datasetTitle": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo (2017-2023)",
+      "fileName": "agente-contaminante-vigente-2022.csv",
+      "format": "CSV",
+      "title": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo - 2022",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/9998c5fd-9784-4ab1-98d6-76af83ea64dd/resource/0320c2fc-162f-4bae-9c06-12a1da21ce3a",
+      "lastProcessed": "2025-10-09T08:03:03.330Z",
+      "status": "processed"
+    },
+    "agente-contaminante-vigente-2023.csv": {
+      "datasetId": "acumar_9998c5fd-9784-4ab1-98d6-76af83ea64dd",
+      "datasetTitle": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo (2017-2023)",
+      "fileName": "agente-contaminante-vigente-2023.csv",
+      "format": "CSV",
+      "title": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo - 2023",
+      "accessURL": "https://datos.acumar.gob.ar/dataset/9998c5fd-9784-4ab1-98d6-76af83ea64dd/resource/55c2843c-06e1-4883-a1c0-b385d64c5796",
+      "lastProcessed": "2025-10-09T08:03:05.778Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "acumar_9998c5fd-9784-4ab1-98d6-76af83ea64dd",
+    "title": "Agentes Contaminantes Vigentes en la Cuenca Matanza Riachuelo (2017-2023)",
+    "description": "Datos correspondientes a los establecimientos declarados \"Agentes Contaminantes\" por ACUMAR, entre 2017 y 2023.",
+    "theme": [
+      "gove"
+    ],
+    "superTheme": [
+      "GOVE"
+    ],
+    "issued": "2025-01-13T20:06:16.227968",
+    "modified": "2025-02-07T16:46:45.384966",
+    "publisher": {
+      "mbox": "prensa@acumar.gob.ar",
+      "name": "Dirección de Fiscalización y Adecuación Ambiental"
+    },
+    "landingPage": "https://datos.acumar.gob.ar/dataset/agentes-contaminantes-vigentes-en-la-cuenca-matanza-riachuelo-2017-2023"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "files": {
+    "icaacumar_2023": {
+      "datasetId": "ambiente_47.0",
+      "datasetTitle": "Índice de calidad de agua",
+      "fileName": "icaacumar_2023",
+      "format": "CSV",
+      "title": "Índice de Calidad de Agua Superficial para Uso IV en la Cuenca Matanza Riachuelo, por estación y período anual (junio-mayo)",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=2&did=382",
+      "lastProcessed": "2025-10-09T07:00:02.134Z",
+      "status": "processed"
+    },
+    "AgC_p_indice_riodelaplata_estac_total": {
+      "datasetId": "ambiente_47.0",
+      "datasetTitle": "Índice de calidad de agua",
+      "fileName": "AgC_p_indice_riodelaplata_estac_total",
+      "format": "CSV",
+      "title": "Índice de calidad del agua por estación y año",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=2&did=149",
+      "lastProcessed": "2025-10-09T07:00:03.391Z",
+      "status": "processed"
+    },
+    "AgC_l_monit_sust_indice_integ_biota": {
+      "datasetId": "ambiente_47.0",
+      "datasetTitle": "Índice de calidad de agua",
+      "fileName": "AgC_l_monit_sust_indice_integ_biota",
+      "format": "CSV",
+      "title": "Índice de integridad biótica para la costa del Río de la Plata",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=2&did=386",
+      "lastProcessed": "2025-10-09T07:00:04.658Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_47.0",
+    "title": "Índice de calidad de agua",
+    "description": "Muestra los índices de calidad de agua n el Río de la Plata y en la Cuenca Matanza Riachuelo",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2023-08-10T00:00:00",
+    "modified": "2023-08-10T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

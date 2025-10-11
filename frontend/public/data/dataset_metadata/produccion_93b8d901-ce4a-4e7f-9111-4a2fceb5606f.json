@@ -1,0 +1,32 @@
+{
+  "files": {
+    "concentracion-del-valor-exportado-en-los-primeros-5-destinos-y-en-los-primeros-5-productos-a-6-digitos-de-ncm-por-anio.csv": {
+      "datasetId": "produccion_93b8d901-ce4a-4e7f-9111-4a2fceb5606f",
+      "datasetTitle": "Concentración anual del valor exportado en los primeros 5 destinos y en los primeros 5 productos",
+      "fileName": "concentracion-del-valor-exportado-en-los-primeros-5-destinos-y-en-los-primeros-5-productos-a-6-digitos-de-ncm-por-anio.csv",
+      "format": "CSV",
+      "title": "Concentración anual del valor exportado en los primeros 5 destinos y en los primeros 5 productos",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/93b8d901-ce4a-4e7f-9111-4a2fceb5606f/resource/100b42a2-c98b-4efd-bf0a-17879e04e649",
+      "lastProcessed": "2025-10-09T08:10:45.530Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_93b8d901-ce4a-4e7f-9111-4a2fceb5606f",
+    "title": "Concentración anual del valor exportado en los primeros 5 destinos y en los primeros 5 productos",
+    "description": "Concentración del valor exportado en los primeros 5 destinos y en los primeros 5 productos (con apertura a 6 dígitos del Nomenclador Común del Mercosur), por año, entre 2000 y 2015",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-10-13T18:59:08.307137",
+    "modified": "2021-10-13T18:59:08.307137",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la Producción (CEP XXI)"
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/concentracion-anual-del-valor-exportado-en-los-primeros-5-destinos-y-en-los-primeros-5-productos"
+  }
+}

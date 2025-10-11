@@ -5,6 +5,7 @@
 
 import externalAPIsService from "./ExternalDataAdapter";
 import { githubDataService } from './GitHubDataService';
+import cloudflareDataService from './CloudflareDataService';
 import EnhancedDataService from './EnhancedDataService';
 
 // Define types for the data service
@@ -109,8 +110,20 @@ class ProductionDataService {
         return cached.data as T;
       }
 
-      // Fetch fresh data
-      const data = await this.fetchDataWithFallback<T>(url, [], options);
+      // Fetch fresh data with proper CORS headers
+      const fetchOptions: RequestInit = {
+        ...options,
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+          'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With, Accept',
+          ...options.headers
+        }
+      };
+
+      const data = await this.fetchDataWithFallback<T>(url, [], fetchOptions);
       
       if (data) {
         // Cache the result
@@ -155,7 +168,27 @@ class ProductionDataService {
       
       // Try multiple approaches to get data
       
-      // Approach 1: Try to get data from GitHub repository first
+      // Approach 1: Try to get data from Cloudflare service first (optimized for production)
+      try {
+        const cloudflareData = await cloudflareDataService.loadYearData(currentYear);
+        if (cloudflareData.success) {
+          console.log(`[PROD DATA SERVICE] Successfully loaded data from Cloudflare for ${currentYear}`);
+          const masterData = this.transformCloudflareData(cloudflareData.data, currentYear);
+          
+          // Cache the result
+          this.cache.set(cacheKey, {
+            data: masterData,
+            timestamp: Date.now(),
+            expires: Date.now() + this.LONG_CACHE_DURATION
+          });
+
+          return masterData;
+        }
+      } catch (cloudflareError) {
+        console.warn(`[PROD DATA SERVICE] Cloudflare service failed for ${currentYear}:`, cloudflareError);
+      }
+      
+      // Approach 2: Try to get data from GitHub repository
       const githubData = await githubDataService.loadYearData(currentYear);
       
       if (githubData.success) {
@@ -172,7 +205,7 @@ class ProductionDataService {
         return masterData;
       }
       
-      // Approach 2: Try to get data from EnhancedDataService
+      // Approach 3: Try to get data from EnhancedDataService
       console.log(`[PROD DATA SERVICE] Trying EnhancedDataService for ${currentYear}`);
       const enhancedData = await this.getEnhancedYearData(currentYear);
       
@@ -190,7 +223,7 @@ class ProductionDataService {
         return masterData;
       }
       
-      // Approach 3: Try to get data from ExternalAPIsService
+      // Approach 4: Try to get data from ExternalAPIsService
       console.log(`[PROD DATA SERVICE] Trying ExternalAPIsService for ${currentYear}`);
       const externalData = await externalAPIsService.getCarmenDeArecoData();
       

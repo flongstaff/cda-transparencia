@@ -1,0 +1,27 @@
+{
+  "files": {
+    "agentes-institorios.csv": {
+      "datasetId": "ssn_48fd39bf-b9f4-4b98-a116-d25959048969",
+      "datasetTitle": "Agentes Institorios",
+      "fileName": "agentes-institorios.csv",
+      "lastProcessed": "2025-10-09T07:49:10.633Z",
+      "status": "error",
+      "error": "Failed to download CSV: agentes-institorios.csv"
+    }
+  },
+  "info": {
+    "identifier": "ssn_48fd39bf-b9f4-4b98-a116-d25959048969",
+    "title": "Agentes Institorios",
+    "description": "Datos sobre los agentes institorios habilitados por la Superintendencia de Seguros de la Nación (SSN).",
+    "theme": [
+      "econ"
+    ],
+    "keywords": [],
+    "issued": "2024-09-24T10:15:09.968835",
+    "modified": "2024-09-24T10:15:09.968835",
+    "publisher": {
+      "mbox": "datosabiertos@ssn.gob.ar",
+      "name": "Ministerio de Economía, Superintendencia de Seguros de la Nación"
+    }
+  }
+}

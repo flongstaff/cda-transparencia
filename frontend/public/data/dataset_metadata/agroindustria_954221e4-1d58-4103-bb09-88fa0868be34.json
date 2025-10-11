@@ -1,0 +1,42 @@
+{
+  "files": {
+    "mani-serie-1927-2023-anual.csv": {
+      "datasetId": "agroindustria_954221e4-1d58-4103-bb09-88fa0868be34",
+      "datasetTitle": "Maní - siembra, cosecha, producción, rendimiento",
+      "fileName": "mani-serie-1927-2023-anual.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo de maní",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/954221e4-1d58-4103-bb09-88fa0868be34/resource/08d54f4f-44ee-4349-a86f-2a9c763bdc65",
+      "lastProcessed": "2025-10-09T07:01:48.481Z",
+      "status": "processed"
+    },
+    "mani-serie-1927-2023.csv": {
+      "datasetId": "agroindustria_954221e4-1d58-4103-bb09-88fa0868be34",
+      "datasetTitle": "Maní - siembra, cosecha, producción, rendimiento",
+      "fileName": "mani-serie-1927-2023.csv",
+      "format": "CSV",
+      "title": "Maní - serie siembra, cosecha, producción, rendimiento",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/954221e4-1d58-4103-bb09-88fa0868be34/resource/e315eec7-1121-4449-acff-48bb2da2a33b",
+      "lastProcessed": "2025-10-09T07:01:52.170Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_954221e4-1d58-4103-bb09-88fa0868be34",
+    "title": "Maní - siembra, cosecha, producción, rendimiento",
+    "description": "Serie histórica de la superficie sembrada, superficie cosechada, producción y rendimiento de maní en la Argentina desde 1927.",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2021-07-16T11:13:10.983765",
+    "modified": "2024-09-24T14:38:24.274618",
+    "publisher": {
+      "mbox": "direstiagri@magyp.gob.ar",
+      "name": "Ministerio de Agricultura, Ganadería y Pesca - Dirección Nacional de Agricultura"
+    },
+    "landingPage": "https://datos.magyp.gob.ar/dataset/mani-siembra-cosecha-produccion-rendimiento"
+  }
+}

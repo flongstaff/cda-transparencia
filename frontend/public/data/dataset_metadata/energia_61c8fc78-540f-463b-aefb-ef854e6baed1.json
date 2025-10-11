@@ -1,0 +1,51 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_61c8fc78-540f-463b-aefb-ef854e6baed1",
+      "datasetTitle": "Reservas de Petróleo y Gas",
+      "format": "ZIP",
+      "title": "Boletín Anual de Reservas 1998-2004",
+      "accessURL": "http://datos.energia.gob.ar/dataset/61c8fc78-540f-463b-aefb-ef854e6baed1/resource/14f8c4bc-98f9-4786-bfd8-09f6d77d319f",
+      "lastProcessed": "2025-10-09T06:41:43.131Z",
+      "status": "processed"
+    },
+    "Consolidacion_de_reservas_de_gas_y_petroleo_reporte_anual_2021.pdf": {
+      "datasetId": "energia_61c8fc78-540f-463b-aefb-ef854e6baed1",
+      "datasetTitle": "Reservas de Petróleo y Gas",
+      "fileName": "Consolidacion_de_reservas_de_gas_y_petroleo_reporte_anual_2021.pdf",
+      "format": "PDF",
+      "title": "Consolidacion de reservas de gas y petroleo, reporte anual 2021",
+      "accessURL": "http://datos.energia.gob.ar/dataset/61c8fc78-540f-463b-aefb-ef854e6baed1/resource/b8921e3b-0258-4401-88df-22e7c11042cf",
+      "lastProcessed": "2025-10-09T06:41:34.860Z",
+      "status": "processed"
+    },
+    "reservas_cpcy_al_31_12_2019.zip": {
+      "datasetId": "energia_61c8fc78-540f-463b-aefb-ef854e6baed1",
+      "datasetTitle": "Reservas de Petróleo y Gas",
+      "fileName": "reservas_cpcy_al_31_12_2019.zip",
+      "format": "ZIP",
+      "title": "Reservas al 31/12/2019 hasta el Final de la Vida Útil de los Yacimientos/ Fin de la concesión",
+      "accessURL": "http://datos.energia.gob.ar/dataset/61c8fc78-540f-463b-aefb-ef854e6baed1/resource/a6335f54-75d6-4d21-85a4-d8343a21548a",
+      "lastProcessed": "2025-10-09T06:41:37.011Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_61c8fc78-540f-463b-aefb-ef854e6baed1",
+    "title": "Reservas de Petróleo y Gas",
+    "description": "Datos de Reservas Comprobadas, Probables, posibles y recursos de Petróleo y Gas. Por cuenca, provincia y yacimiento y concesión.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-12-22T19:05:03.262287",
+    "modified": "2025-09-09T11:42:31.222980",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

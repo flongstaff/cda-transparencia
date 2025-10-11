@@ -1,0 +1,116 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30",
+      "datasetTitle": "Matriz Origen-Destino vial de Transporte de Cargas - años 2012, 2014, 2016 y 2018",
+      "format": "SHP",
+      "title": "Carga transportada total 2018.",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/3869ea48-0c3f-4f17-b46b-5919e1815f30/resource/72b37de6-a1cb-4914-9f6b-033202c2fec7",
+      "lastProcessed": "2025-10-09T06:51:22.716Z",
+      "status": "processed"
+    },
+    "Informe_Metodologico_Matrices_Origen_y_Destino_de_Cargas_2018_Final.pdf": {
+      "datasetId": "transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30",
+      "datasetTitle": "Matriz Origen-Destino vial de Transporte de Cargas - años 2012, 2014, 2016 y 2018",
+      "fileName": "Informe_Metodologico_Matrices_Origen_y_Destino_de_Cargas_2018_Final.pdf",
+      "format": "PDF",
+      "title": "Informe Metodológico Matriz Origen Destino - 2018",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/3869ea48-0c3f-4f17-b46b-5919e1815f30/resource/6457df85-bf46-40dc-8fea-c8904608fb5e",
+      "lastProcessed": "2025-10-09T06:51:27.529Z",
+      "status": "processed"
+    },
+    "MTX 2018.zip": {
+      "datasetId": "transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30",
+      "datasetTitle": "Matriz Origen-Destino vial de Transporte de Cargas - años 2012, 2014, 2016 y 2018",
+      "fileName": "MTX 2018.zip",
+      "format": "ZIP",
+      "title": "Matriz Origen-Destino vial de Transporte de Cargas actualización al año 2018",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/3869ea48-0c3f-4f17-b46b-5919e1815f30/resource/202252ea-8741-4e0d-9981-3026ab611a99",
+      "lastProcessed": "2025-10-09T06:51:27.529Z",
+      "status": "processed"
+    },
+    "2016.zip": {
+      "datasetId": "transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30",
+      "datasetTitle": "Matriz Origen-Destino vial de Transporte de Cargas - años 2012, 2014, 2016 y 2018",
+      "fileName": "2016.zip",
+      "format": "ZIP",
+      "title": "Matriz Origen-Destino vial de Transporte de Cargas actualización al año 2016",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/3869ea48-0c3f-4f17-b46b-5919e1815f30/resource/e8089792-b609-4c7b-9fd4-d6c9fda8ead2",
+      "lastProcessed": "2025-10-09T06:51:27.529Z",
+      "status": "processed"
+    },
+    "2014.zip": {
+      "datasetId": "transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30",
+      "datasetTitle": "Matriz Origen-Destino vial de Transporte de Cargas - años 2012, 2014, 2016 y 2018",
+      "fileName": "2014.zip",
+      "format": "ZIP",
+      "title": "Matriz Origen-Destino vial de Transporte de Cargas actualización al año 2014",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/3869ea48-0c3f-4f17-b46b-5919e1815f30/resource/9cc2160e-55e1-441f-a000-c5a0ce3b06f0",
+      "lastProcessed": "2025-10-09T06:51:27.529Z",
+      "status": "processed"
+    },
+    "2012.zip": {
+      "datasetId": "transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30",
+      "datasetTitle": "Matriz Origen-Destino vial de Transporte de Cargas - años 2012, 2014, 2016 y 2018",
+      "fileName": "2012.zip",
+      "format": "ZIP",
+      "title": "Matriz Origen-Destino vial de Transporte de Cargas actualización al año 2012",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/3869ea48-0c3f-4f17-b46b-5919e1815f30/resource/6d0052f6-c1a9-4076-9608-9dd8605bde49",
+      "lastProcessed": "2025-10-09T06:51:27.530Z",
+      "status": "processed"
+    },
+    "02. ZONIFICACION.jpg": {
+      "datasetId": "transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30",
+      "datasetTitle": "Matriz Origen-Destino vial de Transporte de Cargas - años 2012, 2014, 2016 y 2018",
+      "fileName": "02. ZONIFICACION.jpg",
+      "format": "JPEG",
+      "title": "zonificación",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/3869ea48-0c3f-4f17-b46b-5919e1815f30/resource/e30513f7-65b0-453c-b42c-d431063f3153",
+      "lastProcessed": "2025-10-09T06:51:27.530Z",
+      "status": "processed"
+    },
+    "03. CODIGOS DE ZONAS.xls": {
+      "datasetId": "transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30",
+      "datasetTitle": "Matriz Origen-Destino vial de Transporte de Cargas - años 2012, 2014, 2016 y 2018",
+      "fileName": "03. CODIGOS DE ZONAS.xls",
+      "format": "XLS",
+      "title": "Codigo de zonas",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/3869ea48-0c3f-4f17-b46b-5919e1815f30/resource/1d2cf181-89fc-4ba1-9803-2508b47ec1a3",
+      "lastProcessed": "2025-10-09T06:51:27.530Z",
+      "status": "processed"
+    },
+    "Red Vial 2018 (1).rar": {
+      "datasetId": "transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30",
+      "datasetTitle": "Matriz Origen-Destino vial de Transporte de Cargas - años 2012, 2014, 2016 y 2018",
+      "fileName": "Red Vial 2018 (1).rar",
+      "format": "shape",
+      "title": "Red vial simplificada y asignaciones por grupo de producto 2018",
+      "accessURL": "https://datos.transporte.gob.ar/dataset/3869ea48-0c3f-4f17-b46b-5919e1815f30/resource/09dd4a90-3178-4f28-8b5d-45a69f1919dc",
+      "lastProcessed": "2025-10-09T06:51:27.530Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "transporte_3869ea48-0c3f-4f17-b46b-5919e1815f30",
+    "title": "Matriz Origen-Destino vial de Transporte de Cargas - años 2012, 2014, 2016 y 2018",
+    "description": "Matriz Origen-Destino vial de Transporte de Cargas actualización - años 2012, 2014, 2016 y 2018",
+    "theme": [
+      "agri",
+      "econ",
+      "gove",
+      "tran"
+    ],
+    "superTheme": [
+      "AGRI",
+      "ECON",
+      "GOVE",
+      "TRAN"
+    ],
+    "issued": "2023-08-16T14:01:54.991932",
+    "modified": "2023-09-13T14:47:58.875436",
+    "publisher": {
+      "name": "Subsecretaría de Planificación de Transporte de Cargas y Logística"
+    },
+    "landingPage": "https://datos.transporte.gob.ar/dataset/matriz-od-vial-cargas"
+  }
+}

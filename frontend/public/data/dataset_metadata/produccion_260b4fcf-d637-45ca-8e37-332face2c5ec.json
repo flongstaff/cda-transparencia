@@ -1,0 +1,114 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "produccion_260b4fcf-d637-45ca-8e37-332face2c5ec",
+      "datasetTitle": "Salarios promedio y mediano, por provincia y sector de actividad",
+      "lastProcessed": "2025-10-09T08:09:58.055Z",
+      "status": "processed"
+    },
+    "w_mean_prod.csv": {
+      "datasetId": "produccion_260b4fcf-d637-45ca-8e37-332face2c5ec",
+      "datasetTitle": "Salarios promedio y mediano, por provincia y sector de actividad",
+      "fileName": "w_mean_prod.csv",
+      "format": "CSV",
+      "title": "Salario promedio por provincia y clae2, total empresas",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/260b4fcf-d637-45ca-8e37-332face2c5ec/resource/a40f78ce-cd0d-4929-a1f5-1565069c3c46",
+      "lastProcessed": "2025-10-09T08:09:22.587Z",
+      "status": "processed"
+    },
+    "w_mean_todos.csv": {
+      "datasetId": "produccion_260b4fcf-d637-45ca-8e37-332face2c5ec",
+      "datasetTitle": "Salarios promedio y mediano, por provincia y sector de actividad",
+      "fileName": "w_mean_todos.csv",
+      "format": "CSV",
+      "title": "Salario promedio por provincia y clae2, total",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/260b4fcf-d637-45ca-8e37-332face2c5ec/resource/19b1db6d-8606-4c25-8190-3136d8e6ed85",
+      "lastProcessed": "2025-10-09T08:09:24.501Z",
+      "status": "processed"
+    },
+    "w_mean_priv": {
+      "datasetId": "produccion_260b4fcf-d637-45ca-8e37-332face2c5ec",
+      "datasetTitle": "Salarios promedio y mediano, por provincia y sector de actividad",
+      "fileName": "w_mean_priv",
+      "format": "CSV",
+      "title": "Salario promedio por provincia, sector privado",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/260b4fcf-d637-45ca-8e37-332face2c5ec/resource/53e7c905-a061-4f6e-8392-a1f5e6bb9c30",
+      "lastProcessed": "2025-10-09T08:09:32.280Z",
+      "status": "processed"
+    },
+    "w_mean_prod": {
+      "datasetId": "produccion_260b4fcf-d637-45ca-8e37-332face2c5ec",
+      "datasetTitle": "Salarios promedio y mediano, por provincia y sector de actividad",
+      "fileName": "w_mean_prod",
+      "format": "CSV",
+      "title": "Salario promedio por provincia, total empresas",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/260b4fcf-d637-45ca-8e37-332face2c5ec/resource/6ac0d93e-631f-44b8-9888-cf11c506814d",
+      "lastProcessed": "2025-10-09T08:09:34.143Z",
+      "status": "processed"
+    },
+    "w_median_priv": {
+      "datasetId": "produccion_260b4fcf-d637-45ca-8e37-332face2c5ec",
+      "datasetTitle": "Salarios promedio y mediano, por provincia y sector de actividad",
+      "fileName": "w_median_priv",
+      "format": "CSV",
+      "title": "Salario mediano por provincia, sector privado",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/260b4fcf-d637-45ca-8e37-332face2c5ec/resource/45c7d4e8-8439-48f7-b222-ab99f3c5c2d6",
+      "lastProcessed": "2025-10-09T08:09:50.058Z",
+      "status": "processed"
+    },
+    "w_median_prod": {
+      "datasetId": "produccion_260b4fcf-d637-45ca-8e37-332face2c5ec",
+      "datasetTitle": "Salarios promedio y mediano, por provincia y sector de actividad",
+      "fileName": "w_median_prod",
+      "format": "CSV",
+      "title": "Salario mediano por provincia, total empresas",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/260b4fcf-d637-45ca-8e37-332face2c5ec/resource/70406e73-c2a6-471e-b667-d7aeac64567d",
+      "lastProcessed": "2025-10-09T08:09:51.893Z",
+      "status": "processed"
+    },
+    "w_median_todos": {
+      "datasetId": "produccion_260b4fcf-d637-45ca-8e37-332face2c5ec",
+      "datasetTitle": "Salarios promedio y mediano, por provincia y sector de actividad",
+      "fileName": "w_median_todos",
+      "format": "CSV",
+      "title": "Salario mediano por provincia, total",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/260b4fcf-d637-45ca-8e37-332face2c5ec/resource/3c157859-ff69-4b42-86ec-c0657117c6cd",
+      "lastProcessed": "2025-10-09T08:09:53.746Z",
+      "status": "processed"
+    },
+    "clae_agg.csv": {
+      "datasetId": "produccion_260b4fcf-d637-45ca-8e37-332face2c5ec",
+      "datasetTitle": "Salarios promedio y mediano, por provincia y sector de actividad",
+      "fileName": "clae_agg.csv",
+      "format": "CSV",
+      "title": "Diccionario de claes",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/260b4fcf-d637-45ca-8e37-332face2c5ec/resource/d306d2b6-e758-4d2a-a1c1-d58e24282fd3",
+      "lastProcessed": "2025-10-09T08:09:55.597Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_260b4fcf-d637-45ca-8e37-332face2c5ec",
+    "title": "Salarios promedio y mediano, por provincia y sector de actividad",
+    "description": "Datos correspondientes a los salarios brutos promedio y mediano de los asalariados registrados, por provincia (de acuerdo a la ubicación del establecimiento donde tiene lugar la relación laboral) y por sector de actividad. Las series se presentan para tres universos: sector privado, \"total empresas\" (sector privado + empresas públicas) y total. Los datos tienen una frecuencia mensual y van desde 2007 hasta la actualidad (con excepción de la serie total, que inicia en 2013).",
+    "theme": [
+      "agri",
+      "econ",
+      "gove",
+      "regi"
+    ],
+    "superTheme": [
+      "AGRI",
+      "ECON",
+      "GOVE",
+      "REGI"
+    ],
+    "issued": "2021-11-09T18:42:50.862663",
+    "modified": "2021-11-16T15:47:40.973536",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la Producción."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/salarios-promedio-y-mediano-por-provincia-y-sector-de-actividad"
+  }
+}

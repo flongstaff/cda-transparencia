@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_78b8782e-f2ac-45e8-af65-b2efa365a959",
+      "datasetTitle": "Producción, aportes, ventas y cupos de Butano",
+      "format": "XLS",
+      "title": "Producción, aportes, ventas y cupos de Butano",
+      "accessURL": "http://datos.energia.gob.ar/dataset/78b8782e-f2ac-45e8-af65-b2efa365a959/resource/3fcaed4a-251a-4b5f-a656-d31bee9669a0",
+      "lastProcessed": "2025-10-09T07:20:51.262Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_78b8782e-f2ac-45e8-af65-b2efa365a959",
+    "title": "Producción, aportes, ventas y cupos de Butano",
+    "description": "Producción, aportes, ventas y cupos de Butano",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-05-26T13:30:12.019313",
+    "modified": "2023-07-31T12:33:14.587223",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_f6932e82-a039-4462-968d-7dcda77d1a3e",
+      "datasetTitle": "Transferencias de autos",
+      "format": "ZIP",
+      "title": "DNRPA. Transferencias de autos - 2018",
+      "accessURL": "https://datos.jus.gob.ar/dataset/f6932e82-a039-4462-968d-7dcda77d1a3e/resource/893f8dc5-eeff-476d-bbe3-eb224494abd7",
+      "lastProcessed": "2025-10-09T06:41:02.801Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_f6932e82-a039-4462-968d-7dcda77d1a3e",
+    "title": "Transferencias de autos",
+    "description": "Trámites de transferencia de automotores inscriptos en los Registros Seccionales de la Propiedad del Automotor y Créditos Prendarios.\r\n",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2018-03-23T13:53:52.380036",
+    "modified": "2025-09-11T14:47:57.935294",
+    "publisher": {
+      "mbox": "accesobd@dnrpa.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Dirección Nacional de los Registros Nacionales de la Propiedad del Automotor y Créditos Prendarios"
+    },
+    "landingPage": "https://www.dnrpa.gov.ar"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "files": {
+    "stock-de-inversion-extranjera-directa-bcra.csv": {
+      "datasetId": "sspm_312",
+      "datasetTitle": "Stock de Inversión Extranjera Directa - BCRA",
+      "fileName": "stock-de-inversion-extranjera-directa-bcra.csv",
+      "format": "CSV",
+      "title": "Stock de Inversión Extranjera Directa. Valores semestrales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:00.725Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_312",
+    "title": "Stock de Inversión Extranjera Directa - BCRA",
+    "description": "Posición pasiva bruta de IED en Argentina - BCRA",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-30",
+    "modified": "2025-03-24T10:01:16.830542",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

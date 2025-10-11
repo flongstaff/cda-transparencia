@@ -1,0 +1,31 @@
+{
+  "files": {
+    "PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf": {
+      "datasetId": "ds-presupuesto-2025",
+      "datasetTitle": "Presupuesto Municipal 2025",
+      "fileName": "PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+      "format": "PDF",
+      "title": "Presupuesto 2025 Aprobado",
+      "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2025/02/PRESUPUESTO-2025-APROBADO-ORD-3280-24.pdf",
+      "lastProcessed": "2025-10-09T06:11:34.153Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ds-presupuesto-2025",
+    "title": "Presupuesto Municipal 2025",
+    "description": "Presupuesto de gastos y recursos aprobado para 2025 (Ordenanza 3280/24). Incluye créditos por partida.",
+    "theme": [
+      "economia-y-finanzas"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2025-02-21T00:00:00",
+    "modified": "2025-02-21T00:00:00",
+    "publisher": {
+      "name": "Secretaría de Hacienda"
+    },
+    "landingPage": "https://carmendeareco.gob.ar/transparencia/presupuesto/"
+  }
+}

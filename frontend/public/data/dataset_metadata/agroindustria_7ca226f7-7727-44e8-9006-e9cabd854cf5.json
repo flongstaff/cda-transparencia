@@ -1,0 +1,42 @@
+{
+  "files": {
+    "existencias-porcinas-provincia-departamento-2008-2019.csv": {
+      "datasetId": "agroindustria_7ca226f7-7727-44e8-9006-e9cabd854cf5",
+      "datasetTitle": "SENASA - Existencias porcinas",
+      "fileName": "existencias-porcinas-provincia-departamento-2008-2019.csv",
+      "format": "CSV",
+      "title": "Existencias porcinas",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/7ca226f7-7727-44e8-9006-e9cabd854cf5/resource/e2ab186a-465d-481d-9159-e145f1435074",
+      "lastProcessed": "2025-10-09T07:34:29.546Z",
+      "status": "processed"
+    },
+    "existencias-porcinas-2008-2019.csv": {
+      "datasetId": "agroindustria_7ca226f7-7727-44e8-9006-e9cabd854cf5",
+      "datasetTitle": "SENASA - Existencias porcinas",
+      "fileName": "existencias-porcinas-2008-2019.csv",
+      "format": "CSV",
+      "title": "Serie de tiempo",
+      "accessURL": "https://datos.magyp.gob.ar/dataset/7ca226f7-7727-44e8-9006-e9cabd854cf5/resource/e3449277-41e5-41f8-a759-78802cd9ccf4",
+      "lastProcessed": "2025-10-09T07:34:32.938Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "agroindustria_7ca226f7-7727-44e8-9006-e9cabd854cf5",
+    "title": "SENASA - Existencias porcinas",
+    "description": "Existencias porcinas por provincia y partido / departamento, clasificadas en categorías.",
+    "theme": [
+      "agri"
+    ],
+    "superTheme": [
+      "AGRI"
+    ],
+    "issued": "2019-09-12T12:44:04.754035",
+    "modified": "2019-10-24T10:35:31.900600",
+    "publisher": {
+      "mbox": "desycg@senasa.gob.ar",
+      "name": "Dirección Nacional de Sanidad Animal"
+    },
+    "landingPage": "https://datos.agroindustria.gob.ar/dataset/senasa-existencias-porcinas"
+  }
+}

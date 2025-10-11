@@ -1,0 +1,42 @@
+{
+  "files": {
+    "empleo-registrado-sector-privado-por-actividad-estacionalidad.csv": {
+      "datasetId": "sspm_155",
+      "datasetTitle": "Empleo registrado del sector privado, por sector de actividad.",
+      "fileName": "empleo-registrado-sector-privado-por-actividad-estacionalidad.csv",
+      "format": "CSV",
+      "title": "Empleo registrado del sector privado por sector de actividad. Valores con estacionalidad",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:40.861Z",
+      "status": "processed"
+    },
+    "empleo-registrado-sector-privado-por-actividad-datos-sin-estacionalidad.csv": {
+      "datasetId": "sspm_155",
+      "datasetTitle": "Empleo registrado del sector privado, por sector de actividad.",
+      "fileName": "empleo-registrado-sector-privado-por-actividad-datos-sin-estacionalidad.csv",
+      "format": "CSV",
+      "title": "Empleo registrado del sector privado por sector de actividad. Valores sin estacionalidad",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:42.148Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_155",
+    "title": "Empleo registrado del sector privado, por sector de actividad.",
+    "description": "Empleo registrado del sector privado por sector de actividad. Cantidad de puestos de trabajo",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:02:31.189738",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

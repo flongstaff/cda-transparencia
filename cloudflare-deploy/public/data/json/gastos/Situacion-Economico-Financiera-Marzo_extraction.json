@@ -1,0 +1,13 @@
+{
+  "file_name": "Situacion-Economico-Financiera-Marzo.pdf",
+  "file_hash": "47b2fc9df5af4526e7ef56d949742220",
+  "page_count": 3,
+  "text_length": 10080,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "Municipalidad de\nCarmen de ArecoR.A.F.A.M.\nSITUACIÓN ECONÓMICO-FINANCIERAHoja: 1 de 3\n26/04/202512:51\n2025Del 02/01/2025 al 31/03/2025\nEjercicio:\nVigente Devengado Percibido Evolución de los Recursos\n1. Presupuestarios\n9.292.390.546,87 Ingresos corrientes 1.986.274.406,14 1.642.088.330,28\n232.690.775,64 Recursos de capital 234.561.666,81 234.561.666,81\n248.570.888,33 Fuentes Financieras 0,00\nTotal 1.876.649.997,09 2.220.836.072,95 9.773.652.210,84\n7.584.239.893,00 De libre disponibilidad 1.836.149.363,50 1.491.963.287,64\n2.189.412.317,84 Afectados 384.686.709,45 384.686.709,45\nTotal 1.876.649.997,09 2.220.836.072,95 9.773.652.210,84\n2. Extrapresupuestarios 181.405.214,52\nTotal General (1+2) 2.058.055.211,61 2.220.836.072,95 9.773.652.210,84Importe Cuenta Ahorro Inversión Financiamiento\nI. INGRESOS CORRIENTES 1.642.088.330,28\nII. GASTOS CORRIENTES 1.691.364.113,35\nIII. AHORRO CORRIENTE: (I - II) -49.275.783,07\nIV. RECURSOS DE CAPITAL 234.561.666,81\nV. GASTOS DE CAPITAL 295.624.086,93\nVI. INGRESOS TOTALES 1.876.649.997,09\nVII. GASTOS TOTALES 1.986.988.200,28\nVIII. RESULTADO FINANCIERO (VI - VII) -110.338.203,19\nIX. FUENTES FINANCIERAS 200.979.350,48\nX. APLICACIONES FINANCIERAS 90.641.147,29\nVigente Preventivo Pagado Devengado Compromiso Evolución de Gastos por Objeto\n1. Presupuestarios\n4.663.962.888,00 Gastos en personal 0,00 1.106.272.127,65 1.106.272.127,65 1.106.272.127,65\n1.909.776.013,68 Bienes de consumo 61.851.630,34 251.779.909,04 251.626.109,04 153.137.493,07\n1.474.140.714,98 Servicios no personales 110.889.142,18 326.541.717,69 291.875.822,76 272.932.553,05\n884.601.083,39 Bienes de uso 2.534.448,00 292.491.518,53 292.491.518,53 286.373.243,53\n694.060.883,14 Transferencias 448.970,00 55.649.806,00 43.691.094,10 43.627.124,10\n676.118,65 Activos financieros 0,00 1.229.266,30 1.229.266,30 1.229.266,30\n146.434.509,00 Servicio de la deuda y disminución de otros pasivos 0,00 90.443.409,19 90.443.409,19 90.443.409,19\n175.724.190,52 9.773.652.210,84 Total 2.124.407.7...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:16:10.208683"
+}

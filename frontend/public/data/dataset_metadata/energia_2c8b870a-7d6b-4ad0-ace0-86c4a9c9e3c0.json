@@ -1,0 +1,42 @@
+{
+  "files": {
+    "cuencas-hdricas-cohife.csv": {
+      "datasetId": "energia_2c8b870a-7d6b-4ad0-ace0-86c4a9c9e3c0",
+      "datasetTitle": "Cuencas Hídricas - COHIFE",
+      "fileName": "cuencas-hdricas-cohife.csv",
+      "format": "CSV",
+      "title": "Cuencas Hídricas - COHIFE",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2c8b870a-7d6b-4ad0-ace0-86c4a9c9e3c0/resource/7c52d4a9-6588-4330-8ae9-b885caba7a1a",
+      "lastProcessed": "2025-10-09T07:18:55.243Z",
+      "status": "processed"
+    },
+    "cuencas-hdricas-cohife.zip": {
+      "datasetId": "energia_2c8b870a-7d6b-4ad0-ace0-86c4a9c9e3c0",
+      "datasetTitle": "Cuencas Hídricas - COHIFE",
+      "fileName": "cuencas-hdricas-cohife.zip",
+      "format": "SHP",
+      "title": "Cuencas Hídricas - COHIFE",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2c8b870a-7d6b-4ad0-ace0-86c4a9c9e3c0/resource/ace98ef1-e7a8-4d5d-8f44-2e85a2d824a4",
+      "lastProcessed": "2025-10-09T07:18:55.243Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_2c8b870a-7d6b-4ad0-ace0-86c4a9c9e3c0",
+    "title": "Cuencas Hídricas - COHIFE",
+    "description": "Cuencas hídricas de la República Argentina. Información compilada y publicada originalmente por el Consejo Hídrico Federal",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2023-07-13T14:29:03.546776",
+    "modified": "2023-07-13T14:29:03.546776",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información. "
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/cuencas-hidricas-cohife"
+  }
+}

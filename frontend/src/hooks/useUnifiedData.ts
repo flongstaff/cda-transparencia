@@ -73,8 +73,8 @@ export const useUnifiedData = (options: UseUnifiedDataOptions): UseUnifiedDataRe
 
       // Fetch standardized data with visualization formatting
       const pageData: PageData = await unifiedDataService.getPageData(page, year || new Date().getFullYear(), includeExternal);
-      setData(pageData.data);
-      setSources(pageData.sources);
+      setData(pageData.data || {});
+      setSources(pageData.sources || []);
       setExternalData(pageData.externalData || null);
       setLiveDataEnabled(pageData.liveDataEnabled);
 

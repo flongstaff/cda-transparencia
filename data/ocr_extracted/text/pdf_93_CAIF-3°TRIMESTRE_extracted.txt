@@ -1,0 +1,54 @@
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 1 de 3 R.A.F.A.M.
+11/10/2023 08:45
+Presupuesto: 2023DE EJECUCION PRESUPUESTARIA 
+01/07/2023 al 30/09/2023
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+I. INGRESOS CORRIENTES
+Ingresos tributarios 355.390.470,30
+Contribuciones a la Seguridad Social
+Ingresos no Tributarios 83.909.230,88
+Ventas de Bienes y Servicios
+Ingresos de Operación
+Rentas de la Propiedad 51.098.168,55
+Transferencias Corrientes 166.052.445,33
+Contribuciones Figurativas para Financiaciones Corrientes
+TOTAL  INGRESOS CORRIENTES 656.450.315,06
+II. GASTOS CORRIENTES
+Gastos de Operación
+Gastos de Consumo 583.148.053,96
+Rentas de la Propiedad 7.849,49
+Prestaciones de la Seguridad Social 11.400.000,00
+Impuestos Directos
+Otras Pérdidas
+Transferencias Corrientes 33.271.340,70
+Gastos Figurativos para Transacciones Corrientes
+TOTAL  GASTOS CORRIENTES 627.827.244,15
+III. AHORRO CORRIENTE: (I - II) 28.623.070,91
+Resultado Corriente Primario (Ingresos Corrientes - Gastos Corrientes netos de Int. de la deuda) 28.642.637,10
+TOTAL  AHORRO CORRIENTE: (I - II) 57.265.708,01 28.623.070,91
+IV. RECURSOS DE CAPITAL
+Recursos Propios de Capital
+Transferencias de Capital 151.168.234,92
+Disminución de la Inversión Financiera 1.101.868,75
+Contribuciones Figurativas para Financiaciones de Capital
+Filtro aplicado: Presupuesto: 2023 -  Fechas: 01/07/2023 al 30/09/2023
+CUENTA AHORRO INVERSIÓN FINANCIAMIENTO Hoja: 2 de 3 R.A.F.A.M.
+11/10/2023 08:45
+Presupuesto: 2023DE EJECUCION PRESUPUESTARIA 
+01/07/2023 al 30/09/2023
+Municipalidad de
+Carmen de Areco
+DESCRIPCION IMPORTE
+TOTAL  RECURSOS DE CAPITAL 152.270.103,67
+V. GASTOS DE CAPITAL
+Inversión Real Directa 64.402.352,35
+Transferencias de Capital 26.684.014,91
+Inversión Financiera
+Gastos Figurativos para Transacciones de Capital
+TOTAL  GASTOS DE CAPITAL 91.086.367,26
+VI. INGRESOS TOTALES 808.720.418,73
+TOTAL  INGRESOS TOTALES 808.720.418,73 808.720.418,73
+VII. GASTOS TOTALES 718.913.611,41
+TOTAL  GASTOS TOTALES 718.913.611,41 718.9...

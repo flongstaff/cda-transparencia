@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_162_ORDENANZA-IMPOSITIVA-3282-25.pdf",
+  "file_hash": "fe2b92ace0b29345b291c69a109eab21",
+  "page_count": 24,
+  "text_length": 24,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:16:02.663782"
+}

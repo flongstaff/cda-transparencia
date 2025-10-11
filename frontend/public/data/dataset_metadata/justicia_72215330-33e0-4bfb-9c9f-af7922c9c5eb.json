@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_72215330-33e0-4bfb-9c9f-af7922c9c5eb",
+      "datasetTitle": "Archivos recibidos de los poderes judiciales provinciales - Justicia no penal",
+      "format": "ZIP",
+      "title": "Archivos recibidos de los poderes judiciales provinciales referidos a causas no penales 2018",
+      "accessURL": "https://datos.jus.gob.ar/dataset/72215330-33e0-4bfb-9c9f-af7922c9c5eb/resource/570a7778-285e-4fce-a203-1bf6106638f3",
+      "lastProcessed": "2025-10-09T06:53:47.998Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_72215330-33e0-4bfb-9c9f-af7922c9c5eb",
+    "title": "Archivos recibidos de los poderes judiciales provinciales - Justicia no penal",
+    "description": "Archivos recibidos de los poderes judiciales referidos a causas no penales según lo establecido en el Protocolo de implementación del convenio interjurisdiccional de datos abiertos de justicia (tabla3, tabla3.1, tabla4, tabla4.1 y tabla4.2).\r\n",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2019-05-20T19:02:25.703392",
+    "modified": "2025-07-01T17:56:12.474036",
+    "publisher": {
+      "mbox": "datosjusticia@jus.gob.ar",
+      "name": "Ministerio de Justicia"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/archivos-recibidos-de-los-poderes-judiciales-provinciales-justicia-no-penal"
+  }
+}

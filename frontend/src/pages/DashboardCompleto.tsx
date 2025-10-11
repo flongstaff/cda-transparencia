@@ -942,6 +942,23 @@ const DashboardCompleto: React.FC = () => {
         )}
       </div>
 
+      {/* Unified Data Viewer Section */}
+      <div className="mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+        <ErrorBoundary>
+          <UnifiedDataViewer
+            title="Datos Abiertos del Portal"
+            description="Conjuntos de datos estructurados y documentos oficiales relacionados con la transparencia municipal"
+            category="transparency"
+            theme={['gov', 'transparency', 'municipal']}
+            year={selectedYear}
+            showSearch={true}
+            defaultTab="all"
+            maxPDFs={15}
+            maxDatasets={25}
+          />
+        </ErrorBoundary>
+      </div>
+
       {/* System Status Footer */}
       <div className="bg-white border-t border-gray-200 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

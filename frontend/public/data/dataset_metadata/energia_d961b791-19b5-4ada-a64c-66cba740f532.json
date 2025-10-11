@@ -1,0 +1,42 @@
+{
+  "files": {
+    "listado-de-estudios-ambientales.csv": {
+      "datasetId": "energia_d961b791-19b5-4ada-a64c-66cba740f532",
+      "datasetTitle": "Actividad ambiental de petróleo y gas",
+      "fileName": "listado-de-estudios-ambientales.csv",
+      "format": "CSV",
+      "title": "Listado de Estudios Ambientales",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d961b791-19b5-4ada-a64c-66cba740f532/resource/7b8583fe-8994-4efa-9fbf-79c4a3f2f467",
+      "lastProcessed": "2025-10-09T06:36:21.599Z",
+      "status": "processed"
+    },
+    "listado-de-estudios-ambientales-ductos.csv": {
+      "datasetId": "energia_d961b791-19b5-4ada-a64c-66cba740f532",
+      "datasetTitle": "Actividad ambiental de petróleo y gas",
+      "fileName": "listado-de-estudios-ambientales-ductos.csv",
+      "format": "CSV",
+      "title": "Listado de Estudios Ambientales Ductos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/d961b791-19b5-4ada-a64c-66cba740f532/resource/ea46f616-1fb1-4f63-9e96-54bccd3065e8",
+      "lastProcessed": "2025-10-09T06:36:22.984Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_d961b791-19b5-4ada-a64c-66cba740f532",
+    "title": "Actividad ambiental de petróleo y gas",
+    "description": "Listado de Estudios Ambientales",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:36.208388",
+    "modified": "2023-05-02T19:45:21.800064",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "file_name": "pdf_63_Estado-de-Ejecucion-de-Recursos-por-Caracter-Economico-Marzo.pdf",
+  "file_hash": "94240e9a2c8a52517d556de3f002a0b0",
+  "page_count": 3,
+  "text_length": 5771,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "R.A.F.A.M.\nESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 3\n26/08/202412:47\nMunicipalidad de\nCarmen de Areco Del 02/01/2024 al 31/03/2024 Ejercicio: 2024(POR CARACTER ECONÓMICO)\nCONSOLIDADO\nDescripción ModificacionesRecurso\nEstimadoRecurso\nVigenteRecurso\nDevengadoDif. entre\nVigente y\nDevengadoRecursos\nPercibidoDif. entre\nDevengado y\nPercibido\nRECURSOS\nINGRESOS CORRIENTES\nIngresos tributarios\nImpuestos provinciales y nacionales 2.366.975.383,01 0,00 2.366.975.383,01 489.896.280,52 1.877.079.102,49 489.896.280,52 0,00\nOtros impuestos 272.693.746,34 0,00 272.693.746,34 18.260.267,25 254.433.479,09 21.472.879,16 -3.212.611,91\n2.639.669.129,35 0,00 2.639.669.129,35 508.156.547,77 2.131.512.581,58 511.369.159,68 -3.212.611,91 TotalIngresos tributarios\nIngresos no tributarios\nTasas 1.156.536.291,27 583.500,00 1.157.119.791,27 69.593.908,68 1.087.525.882,59 76.016.809,48 -6.422.900,80\nDerechos 229.832.680,39 709.851,84 230.542.532,23 14.985.638,07 215.556.894,16 15.113.493,07 -127.855,00\nOtros no tributarios 280.175.468,34 0,00 280.175.468,34 55.759.627,84 224.415.840,50 55.759.627,84 0,00\n1.666.544.440,00 1.293.351,84 1.667.837.791,84 140.339.174,59 1.527.498.617,25 146.889.930,39 -6.550.755,80 TotalIngresos no tributarios\nRentas de la propiedad\nIntereses\nIntereses internos\nIntereses por depósitos 260.166.770,67 0,00 260.166.770,67 887.430,93 259.279.339,74 887.430,93 0,00\n260.166.770,67 0,00 260.166.770,67 887.430,93 259.279.339,74 887.430,93 0,00 Total Intereses internos\n260.166.770,67 0,00 260.166.770,67 887.430,93 259.279.339,74 887.430,93 0,00 Total Intereses\n260.166.770,67 0,00 260.166.770,67 887.430,93 259.279.339,74 887.430,93 0,00 TotalRentas de la propiedad\nTransferencias Corrientes\nDel sector privado\nDe empresas privadas 0,00 1.374.366,67 1.374.366,67 1.374.366,67 0,00 1.374.366,67 0,00\n0,00 1.374.366,67 1.374.366,67 1.374.366,67 0,00 1.374.366,67 0,00 Total Del sector privado\nDel sector público\nDel sector público nacional\nDe la administración central ...",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:23.808954"
+}

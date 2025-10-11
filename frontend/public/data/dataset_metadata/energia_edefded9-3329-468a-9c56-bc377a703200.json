@@ -1,0 +1,42 @@
+{
+  "files": {
+    "distribucin-elctrica-reas-de-distribucin-de-cooperativas.zip": {
+      "datasetId": "energia_edefded9-3329-468a-9c56-bc377a703200",
+      "datasetTitle": "Distribución Eléctrica - Áreas de distribución de cooperativas",
+      "fileName": "distribucin-elctrica-reas-de-distribucin-de-cooperativas.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Áreas de Distribución de Cooperativas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/edefded9-3329-468a-9c56-bc377a703200/resource/9f433685-6771-48ba-bd32-a63ac3342384",
+      "lastProcessed": "2025-10-09T07:19:05.808Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-reas-de-distribucin-de-cooperativas.csv": {
+      "datasetId": "energia_edefded9-3329-468a-9c56-bc377a703200",
+      "datasetTitle": "Distribución Eléctrica - Áreas de distribución de cooperativas",
+      "fileName": "distribucin-elctrica-reas-de-distribucin-de-cooperativas.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Áreas de Distribución de Cooperativas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/edefded9-3329-468a-9c56-bc377a703200/resource/57716675-588e-47f2-93c2-dd0c2c2c3c8e",
+      "lastProcessed": "2025-10-09T07:19:07.263Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_edefded9-3329-468a-9c56-bc377a703200",
+    "title": "Distribución Eléctrica - Áreas de distribución de cooperativas",
+    "description": "Concesiones de cooperativas eléctricas ISO 19126: PowerSupplies, Este subgrupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-06-11T11:01:10.806609",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

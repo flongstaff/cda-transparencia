@@ -1,0 +1,92 @@
+{
+  "files": {
+    "estadisticas-vitales-nacidos-vivos-registrados-2017.xls": {
+      "datasetId": "salud_d1350588-d8bb-4892-b21c-48738311e218",
+      "datasetTitle": "Nacidos Vivos Registrados por Jurisdicción de Residencia de la Madre - República Argentina",
+      "fileName": "estadisticas-vitales-nacidos-vivos-registrados-2017.xls",
+      "format": "XLS",
+      "title": "Nacidos vivos registrados en la República Argentina para el año 2017",
+      "accessURL": "http://datos.salud.gob.ar/dataset/d1350588-d8bb-4892-b21c-48738311e218/resource/9d3d84ea-8c5e-4ace-a67b-7ac1a6cf494a",
+      "lastProcessed": "2025-10-09T06:38:00.533Z",
+      "status": "processed"
+    },
+    "estadisticas-vitales-nacidos-vivos-registrados-2017.csv": {
+      "datasetId": "salud_d1350588-d8bb-4892-b21c-48738311e218",
+      "datasetTitle": "Nacidos Vivos Registrados por Jurisdicción de Residencia de la Madre - República Argentina",
+      "fileName": "estadisticas-vitales-nacidos-vivos-registrados-2017.csv",
+      "format": "CSV",
+      "title": "Nacidos vivos registrados en la República Argentina para el año 2017",
+      "accessURL": "http://datos.salud.gob.ar/dataset/d1350588-d8bb-4892-b21c-48738311e218/resource/b04f2d74-ebbf-459d-a9a6-90b4985670ca",
+      "lastProcessed": "2025-10-09T06:38:04.624Z",
+      "status": "processed"
+    },
+    "nacidos-vivos-registrados-en-la-república-argentina-deis-entre-los-años-2005-2021.csv": {
+      "datasetId": "salud_d1350588-d8bb-4892-b21c-48738311e218",
+      "datasetTitle": "Nacidos Vivos Registrados por Jurisdicción de Residencia de la Madre - República Argentina",
+      "fileName": "nacidos-vivos-registrados-en-la-república-argentina-deis-entre-los-años-2005-2021.csv",
+      "format": "CSV",
+      "title": "Nacidos vivos registrados en la República Argentina entre los años 2005-2021",
+      "accessURL": "http://datos.salud.gob.ar/dataset/d1350588-d8bb-4892-b21c-48738311e218/resource/3c891522-8448-4490-a7da-6deba78d3b32",
+      "lastProcessed": "2025-10-09T06:38:08.738Z",
+      "status": "processed"
+    },
+    "nacidos-vivos-registrados 2018_deis.csv": {
+      "datasetId": "salud_d1350588-d8bb-4892-b21c-48738311e218",
+      "datasetTitle": "Nacidos Vivos Registrados por Jurisdicción de Residencia de la Madre - República Argentina",
+      "fileName": "nacidos-vivos-registrados 2018_deis.csv",
+      "format": "CSV",
+      "title": "Nacidos vivos registrados en la República Argentina para el año 2018",
+      "accessURL": "http://datos.salud.gob.ar/dataset/d1350588-d8bb-4892-b21c-48738311e218/resource/e1ae5157-2a94-4e2a-b147-43da647facc1",
+      "lastProcessed": "2025-10-09T06:38:12.809Z",
+      "status": "processed"
+    },
+    "Nacidos vivos registrados en la República Argentina entre los años 2005-2022.csv": {
+      "datasetId": "salud_d1350588-d8bb-4892-b21c-48738311e218",
+      "datasetTitle": "Nacidos Vivos Registrados por Jurisdicción de Residencia de la Madre - República Argentina",
+      "fileName": "Nacidos vivos registrados en la República Argentina entre los años 2005-2022.csv",
+      "format": "CSV",
+      "title": "Nacidos vivos registrados en la República Argentina entre los años 2005-2022",
+      "accessURL": "http://datos.salud.gob.ar/dataset/d1350588-d8bb-4892-b21c-48738311e218/resource/5a68ea36-03fe-4b38-b590-d7cf2a13b821",
+      "lastProcessed": "2025-10-09T06:38:16.857Z",
+      "status": "processed"
+    },
+    "nacimientos2023.xlsx": {
+      "datasetId": "salud_d1350588-d8bb-4892-b21c-48738311e218",
+      "datasetTitle": "Nacidos Vivos Registrados por Jurisdicción de Residencia de la Madre - República Argentina",
+      "fileName": "nacimientos2023.xlsx",
+      "format": "XLSX",
+      "title": "Nacidos vivos registrados en la República Argentina 2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/d1350588-d8bb-4892-b21c-48738311e218/resource/0bf89ae6-92e0-4608-bade-fe52438dddbf",
+      "lastProcessed": "2025-10-09T06:38:16.857Z",
+      "status": "processed"
+    },
+    "nacimientos2023.csv": {
+      "datasetId": "salud_d1350588-d8bb-4892-b21c-48738311e218",
+      "datasetTitle": "Nacidos Vivos Registrados por Jurisdicción de Residencia de la Madre - República Argentina",
+      "fileName": "nacimientos2023.csv",
+      "format": "CSV",
+      "title": "Nacidos vivos registrados en la República Argentina 2023",
+      "accessURL": "http://datos.salud.gob.ar/dataset/d1350588-d8bb-4892-b21c-48738311e218/resource/40e722b8-72eb-49a0-89dc-5ee174bf63b4",
+      "lastProcessed": "2025-10-09T06:38:20.889Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "salud_d1350588-d8bb-4892-b21c-48738311e218",
+    "title": "Nacidos Vivos Registrados por Jurisdicción de Residencia de la Madre - República Argentina",
+    "description": "Datos de nacidos vivos registrados en la República Argentina incluyendo jurisdicción de residencia de la madre, tipo de parto y otras variables de interés seleccionadas",
+    "theme": [
+      "heal"
+    ],
+    "superTheme": [
+      "HEAL"
+    ],
+    "issued": "2019-03-18T12:58:16.291484",
+    "modified": "2024-05-20T14:37:07.139826",
+    "publisher": {
+      "mbox": "informaciondeis@gmail.com",
+      "name": "Ministerio de Salud. Dirección de Estadística e Información en Salud (DEIS)"
+    },
+    "landingPage": "http://datos.salud.gob.ar/dataset/nacidos-vivos-registrados-por-jurisdiccion-de-residencia-de-la-madre-republica-argentina-ano"
+  }
+}

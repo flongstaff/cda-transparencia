@@ -1,0 +1,74 @@
+{
+  "files": {
+    "puna_indicadores_provincias.csv": {
+      "datasetId": "turismo_c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb",
+      "datasetTitle": "Base de Datos de Alojamientos Colectivos en Argentina",
+      "fileName": "puna_indicadores_provincias.csv",
+      "format": "CSV",
+      "title": "Plazas, habitaciones y establecimientos de alojamiento turístico disponibles por provincia",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb/resource/67727a58-7a43-450d-a685-a9fba9218b20",
+      "lastProcessed": "2025-10-09T06:50:10.917Z",
+      "status": "processed"
+    },
+    "puna_indicadores_categorias.csv": {
+      "datasetId": "turismo_c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb",
+      "datasetTitle": "Base de Datos de Alojamientos Colectivos en Argentina",
+      "fileName": "puna_indicadores_categorias.csv",
+      "format": "CSV",
+      "title": "Plazas, habitaciones y establecimientos de alojamiento turístico disponibles por provincia según categoría",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb/resource/d948548d-bc56-4462-b5cd-cc425fedf0e7",
+      "lastProcessed": "2025-10-09T06:50:14.160Z",
+      "status": "processed"
+    },
+    "puna_indicadores_cadena.csv": {
+      "datasetId": "turismo_c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb",
+      "datasetTitle": "Base de Datos de Alojamientos Colectivos en Argentina",
+      "fileName": "puna_indicadores_cadena.csv",
+      "format": "CSV",
+      "title": "Plazas y establecimientos de cadenas hoteleras según tipo de cadena",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb/resource/f7f748b8-5852-4ca5-bc05-fe7dedafa254",
+      "lastProcessed": "2025-10-09T06:50:17.506Z",
+      "status": "processed"
+    },
+    "puna_base_agregada.csv": {
+      "datasetId": "turismo_c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb",
+      "datasetTitle": "Base de Datos de Alojamientos Colectivos en Argentina",
+      "fileName": "puna_base_agregada.csv",
+      "format": "CSV",
+      "title": "Base agrupada de alojamiento colectivo",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb/resource/01d23e57-ba58-48ed-a1c9-e1604ae78a1d",
+      "lastProcessed": "2025-10-09T06:50:20.865Z",
+      "status": "processed"
+    },
+    "data-oferta-alojamiento.pdf": {
+      "datasetId": "turismo_c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb",
+      "datasetTitle": "Base de Datos de Alojamientos Colectivos en Argentina",
+      "fileName": "data-oferta-alojamiento.pdf",
+      "format": "PDF",
+      "title": "Ficha Técnica: Alojamiento Colectivo",
+      "accessURL": "https://datos.yvera.gob.ar/dataset/c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb/resource/3aef82ad-ab6a-455a-a9dc-2bcb39755959",
+      "lastProcessed": "2025-10-09T06:50:24.771Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "turismo_c9dc110e-2a09-4b51-ac0a-a2db2ca76fbb",
+    "title": "Base de Datos de Alojamientos Colectivos en Argentina",
+    "description": "Listado de establecimientos de alojamiento colectivo turístico de la Argentina, en el que se detallan las principales variables a partir de información proveniente de los organismos provinciales y municipales de turismo, el INDEC a través de la Encuesta de Ocupación Hotelera y de fuentes secundarias especializadas en turismo relevadas desde la Subsecretaría de Turismo.",
+    "theme": [
+      "gove",
+      "soci"
+    ],
+    "superTheme": [
+      "GOVE",
+      "SOCI"
+    ],
+    "issued": "2022-05-16T18:59:30.567644",
+    "modified": "2025-08-19T12:05:18.630889",
+    "publisher": {
+      "mbox": "estadistica@turismo.gob.ar",
+      "name": "Subsecretaría de Turismo. Dirección de Mercados y Estadísticas"
+    },
+    "landingPage": "http://datos.yvera.gob.ar/dataset/"
+  }
+}

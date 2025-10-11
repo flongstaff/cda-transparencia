@@ -1,0 +1,27 @@
+{
+  "files": {
+    "intermediarios-reaseguro.csv": {
+      "datasetId": "ssn_b0563bb6-9e61-4e3b-ac19-672f9f998bcf",
+      "datasetTitle": "Intermediarios en reaseguros",
+      "fileName": "intermediarios-reaseguro.csv",
+      "lastProcessed": "2025-10-09T07:55:22.653Z",
+      "status": "error",
+      "error": "Failed to download CSV: intermediarios-reaseguro.csv"
+    }
+  },
+  "info": {
+    "identifier": "ssn_b0563bb6-9e61-4e3b-ac19-672f9f998bcf",
+    "title": "Intermediarios en reaseguros",
+    "description": "Datos acerca de los intermediarios en reaseguros registrados ante la Superintendencia de Seguros de la Nación (SSN)",
+    "theme": [
+      "econ"
+    ],
+    "keywords": [],
+    "issued": "2024-09-23T14:45:21.814410",
+    "modified": "2024-09-23T14:45:21.814410",
+    "publisher": {
+      "mbox": "datosabiertos@ssn.gob.ar",
+      "name": "Ministerio de Economía, Superintendencia de Seguros de la Nación"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "files": {
+    "datasetgenero.xlsx": {
+      "datasetId": "produccion_d770d893-692b-4419-8aff-786a92c316a0",
+      "datasetTitle": "Diagnóstico federal de políticas productivas con enfoque de género en Argentina",
+      "fileName": "datasetgenero.xlsx",
+      "format": ".xlsx",
+      "title": "Diagnóstico federal de políticas productivas con enfoque de género en Argentina",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/d770d893-692b-4419-8aff-786a92c316a0/resource/4d52acd9-426b-4db0-9535-f293ead4635f",
+      "lastProcessed": "2025-10-09T08:04:56.300Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_d770d893-692b-4419-8aff-786a92c316a0",
+    "title": "Diagnóstico federal de políticas productivas con enfoque de género en Argentina",
+    "description": "Dataset que consolida los resultados del relevamiento federal de políticas productivas con enfoque de género. Contiene una síntesis de todas las políticas productivas con enfoque de género que se desarrollaron en cada una de las provincias del país con información sobre año de creación, provincia, región, objetivo principal, fuente de financiamiento, rama de actividad, instrumentos ofrecidos entre otras variables.",
+    "theme": [
+      "gove",
+      "soci",
+      "regi"
+    ],
+    "superTheme": [
+      "GOVE",
+      "REGI",
+      "SOCI"
+    ],
+    "issued": "2023-08-16T15:10:43.993593",
+    "modified": "2023-09-07T15:59:40.332541",
+    "publisher": {
+      "mbox": "dnseg@produccion.gob.ar",
+      "name": "Ministerio de Economía. Secretaría de Industria y Desarrollo Productivo. Subsecretaría de Análisis Productiva. Dirección Nacional de Seguimiento y Evaluación de la Gestión; Gabinete de Género."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/diagnostico-federal-de-politicas-productivas-con-enfoque-de-genero-en-argentina"
+  }
+}

@@ -12,7 +12,9 @@ const CORS_CONFIG = {
     'X-Requested-With', 
     'Accept',
     'X-API-Key',
-    'X-CSRF-Token'
+    'X-CSRF-Token',
+    'X-Forwarded-For',
+    'X-Original-Host'
   ],
   exposedHeaders: [],
   credentials: false,
@@ -28,6 +30,7 @@ export function handleCORS(request) {
     'Access-Control-Allow-Methods': CORS_CONFIG.methods.join(', '),
     'Access-Control-Allow-Headers': CORS_CONFIG.allowedHeaders.join(', '),
     'Access-Control-Max-Age': CORS_CONFIG.maxAge.toString(),
+    'Access-Control-Allow-Credentials': 'true'
   });
 
   return new Response(null, {
@@ -45,6 +48,7 @@ export function createResponse({ status = 200, data = null, headers = {} }) {
     'Access-Control-Allow-Origin': CORS_CONFIG.origin,
     'Access-Control-Allow-Methods': CORS_CONFIG.methods.join(', '),
     'Access-Control-Allow-Headers': CORS_CONFIG.allowedHeaders.join(', '),
+    'Access-Control-Allow-Credentials': 'true',
     ...headers
   });
 
@@ -76,6 +80,7 @@ export function expressCORSMiddleware(req, res, next) {
   res.header('Access-Control-Allow-Methods', CORS_CONFIG.methods.join(', '));
   res.header('Access-Control-Allow-Headers', CORS_CONFIG.allowedHeaders.join(', '));
   res.header('Access-Control-Max-Age', CORS_CONFIG.maxAge.toString());
+  res.header('Access-Control-Allow-Credentials', 'true');
   
   // Handle preflight requests
   if (req.method === 'OPTIONS') {

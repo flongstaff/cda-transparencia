@@ -1,0 +1,256 @@
+{
+  "files": {
+    "2015-septiembre.zip": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-septiembre.zip",
+      "format": "SHP",
+      "title": "2015 Septiembre",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/6276cd24-3ffe-4aed-b4fe-f5d24d97486b",
+      "lastProcessed": "2025-10-09T07:22:46.509Z",
+      "status": "processed"
+    },
+    "2015-septiembre.csv": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-septiembre.csv",
+      "lastProcessed": "2025-10-09T07:22:57.595Z",
+      "status": "error",
+      "error": "Failed to download CSV: 2015-septiembre.csv"
+    },
+    "2015-agosto.csv": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-agosto.csv",
+      "format": "CSV",
+      "title": "2015 Agosto",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/88ca5ceb-577a-4dde-abc5-baa2a7de0b71",
+      "lastProcessed": "2025-10-09T07:22:59.290Z",
+      "status": "processed"
+    },
+    "2015-abril.zip": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-abril.zip",
+      "format": "SHP",
+      "title": "2015 Abril",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/2ecbb2ab-5031-4618-b01c-062da5ab00d4",
+      "lastProcessed": "2025-10-09T07:22:59.291Z",
+      "status": "processed"
+    },
+    "2015-febrero.zip": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-febrero.zip",
+      "format": "SHP",
+      "title": "2015 Febrero",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/c0671625-f238-4636-ac6c-546401771672",
+      "lastProcessed": "2025-10-09T07:22:59.292Z",
+      "status": "processed"
+    },
+    "2015-agosto.zip": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-agosto.zip",
+      "format": "SHP",
+      "title": "2015 Agosto",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/321f4f57-205a-423d-bfb6-478b879f18e8",
+      "lastProcessed": "2025-10-09T07:22:59.292Z",
+      "status": "processed"
+    },
+    "2015-octubre.csv": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-octubre.csv",
+      "format": "CSV",
+      "title": "2015 Octubre",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/9f246ee0-b69a-45f7-ac87-c8d9dad643c0",
+      "lastProcessed": "2025-10-09T07:23:00.687Z",
+      "status": "processed"
+    },
+    "2015-marzo.zip": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-marzo.zip",
+      "format": "SHP",
+      "title": "2015 Marzo",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/ea069051-c575-4582-828b-8064ee622b0e",
+      "lastProcessed": "2025-10-09T07:23:00.687Z",
+      "status": "processed"
+    },
+    "2015-marzo.csv": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-marzo.csv",
+      "format": "CSV",
+      "title": "2015 Marzo",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/31e96991-25a1-4195-b7bf-b04c6bf083d0",
+      "lastProcessed": "2025-10-09T07:23:02.203Z",
+      "status": "processed"
+    },
+    "2015-mayo.zip": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-mayo.zip",
+      "format": "SHP",
+      "title": "2015 Mayo",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/337b8dbe-0eaf-498d-9a0f-650012280c0f",
+      "lastProcessed": "2025-10-09T07:23:02.204Z",
+      "status": "processed"
+    },
+    "2015-abril.csv": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-abril.csv",
+      "format": "CSV",
+      "title": "2015 Abril",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/bc87c35a-90fb-4fee-9032-e905fbffeccd",
+      "lastProcessed": "2025-10-09T07:23:03.790Z",
+      "status": "processed"
+    },
+    "2015-enero.zip": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-enero.zip",
+      "format": "SHP",
+      "title": "2015 Enero",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/f411a8ab-ddb4-4a88-90a3-94d96ac8e310",
+      "lastProcessed": "2025-10-09T07:23:03.790Z",
+      "status": "processed"
+    },
+    "2015-diciembre.csv": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-diciembre.csv",
+      "format": "CSV",
+      "title": "2015 Diciembre",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/fd1db9aa-71f1-4934-846b-5d15f8eac2dc",
+      "lastProcessed": "2025-10-09T07:23:05.141Z",
+      "status": "processed"
+    },
+    "2015-octubre.zip": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-octubre.zip",
+      "format": "SHP",
+      "title": "2015 Octubre",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/e8cc019d-c4a2-4f13-bba5-0bc67511f94d",
+      "lastProcessed": "2025-10-09T07:23:05.141Z",
+      "status": "processed"
+    },
+    "2015-julio.zip": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-julio.zip",
+      "format": "SHP",
+      "title": "2015 Julio",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/d660d45f-77ec-44e3-9dfc-c5e4e5ca05f1",
+      "lastProcessed": "2025-10-09T07:23:05.141Z",
+      "status": "processed"
+    },
+    "2015-diciembre.zip": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-diciembre.zip",
+      "format": "SHP",
+      "title": "2015 Diciembre",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/09b68dce-ba2c-461b-b0aa-5195a76279ba",
+      "lastProcessed": "2025-10-09T07:23:05.142Z",
+      "status": "processed"
+    },
+    "2015-julio.csv": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-julio.csv",
+      "format": "CSV",
+      "title": "2015 Julio",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/95970c7c-b995-4892-b4db-6412a2dc2997",
+      "lastProcessed": "2025-10-09T07:23:06.483Z",
+      "status": "processed"
+    },
+    "2015-noviembre.zip": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-noviembre.zip",
+      "format": "SHP",
+      "title": "2015 Noviembre",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/3937e0f0-f353-4960-a635-55dc2156cb4e",
+      "lastProcessed": "2025-10-09T07:23:06.483Z",
+      "status": "processed"
+    },
+    "2015-junio.csv": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-junio.csv",
+      "format": "CSV",
+      "title": "2015 Junio",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/5fd603f7-fabb-453b-980f-1f454adea440",
+      "lastProcessed": "2025-10-09T07:23:07.892Z",
+      "status": "processed"
+    },
+    "2015-mayo.csv": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-mayo.csv",
+      "format": "CSV",
+      "title": "2015 Mayo",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/dc738d50-e8ee-4066-be60-fe610166221d",
+      "lastProcessed": "2025-10-09T07:23:09.264Z",
+      "status": "processed"
+    },
+    "2015-junio.zip": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-junio.zip",
+      "format": "SHP",
+      "title": "2015 Junio",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/ba661c62-9920-4cbb-b8b1-2be520ad0623",
+      "lastProcessed": "2025-10-09T07:23:09.264Z",
+      "status": "processed"
+    },
+    "2015-enero.csv": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-enero.csv",
+      "format": "CSV",
+      "title": "2015 Enero",
+      "accessURL": "http://datos.energia.gob.ar/dataset/292d47b8-07f7-4acc-b37f-2544ee8c89b4/resource/d64b1a12-e9dc-4ca7-acde-e55ae2b4082d",
+      "lastProcessed": "2025-10-09T07:23:10.631Z",
+      "status": "processed"
+    },
+    "2015-febrero.csv": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-febrero.csv",
+      "lastProcessed": "2025-10-09T07:23:22.242Z",
+      "status": "error",
+      "error": "Failed to download CSV: 2015-febrero.csv"
+    },
+    "2015-noviembre.csv": {
+      "datasetId": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+      "datasetTitle": "Energías renovables - Radiación Solar Incidente",
+      "fileName": "2015-noviembre.csv",
+      "lastProcessed": "2025-10-09T07:23:33.761Z",
+      "status": "error",
+      "error": "Failed to download CSV: 2015-noviembre.csv"
+    }
+  },
+  "info": {
+    "identifier": "energia_292d47b8-07f7-4acc-b37f-2544ee8c89b4",
+    "title": "Energías renovables - Radiación Solar Incidente",
+    "description": "Radiación solar incidente por unidad de área horizontal durante un periodo de tiempo determinado. ISO 19126: Natural Resources, Este subgrupo se compone de conceptos que se refieren a materias primas y sus depósitos.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2018-04-24T21:38:22.468885",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/energias-renovables-radiacion-solar-incidente"
+  }
+}

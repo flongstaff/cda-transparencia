@@ -13,21 +13,30 @@ const CORS_HEADERS = {
 };
 
 // Handle CORS preflight requests
-function handleCors() {
+function handleCors(request) {
+  const origin = request.headers.get('Origin') || '*';
+  const corsHeaders = {
+    ...CORS_HEADERS,
+    'Access-Control-Allow-Origin': origin
+  };
+  
   return new Response(null, {
     status: 204,
-    headers: CORS_HEADERS
+    headers: corsHeaders
   });
 }
 
 // Add CORS headers to response
-function addCorsHeaders(response) {
+function addCorsHeaders(response, request) {
   const headers = new Headers(response.headers);
+  const origin = request.headers.get('Origin') || '*';
   
   // Add CORS headers
-  Object.entries(CORS_HEADERS).forEach(([key, value]) => {
-    headers.set(key, value);
-  });
+  headers.set('Access-Control-Allow-Origin', origin);
+  headers.set('Access-Control-Allow-Methods', CORS_HEADERS['Access-Control-Allow-Methods']);
+  headers.set('Access-Control-Allow-Headers', CORS_HEADERS['Access-Control-Allow-Headers']);
+  headers.set('Access-Control-Max-Age', CORS_HEADERS['Access-Control-Max-Age']);
+  headers.set('Access-Control-Allow-Credentials', CORS_HEADERS['Access-Control-Allow-Credentials']);
   
   return new Response(response.body, {
     status: response.status,
@@ -36,45 +45,142 @@ function addCorsHeaders(response) {
   });
 }
 
+// Fetch data from GitHub repository
+async function fetchFromGitHub(path) {
+  // Remove leading slash if present
+  const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+  
+  // For external data, fetch from GitHub raw URL
+  if (cleanPath.startsWith('data/external/')) {
+    const dataUrl = `https://raw.githubusercontent.com/flongstaff/cda-transparencia/main/${cleanPath}`;
+    
+    console.log(`[Worker] Fetching external data from GitHub raw: ${dataUrl}`);
+    
+    // Fetch with proper headers
+    const response = await fetch(dataUrl, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'Carmen-de-Areco-Transparency-Portal/1.0 (Cloudflare Workers)'
+      }
+    });
+    
+    console.log(`[Worker] GitHub raw response status: ${response.status}`);
+    
+    return response;
+  }
+  
+  // For chart data, fetch from GitHub raw URL
+  if (cleanPath.startsWith('data/charts/')) {
+    const dataUrl = `https://raw.githubusercontent.com/flongstaff/cda-transparencia/main/frontend/public/${cleanPath}`;
+    
+    console.log(`[Worker] Fetching chart data from GitHub raw: ${dataUrl}`);
+    
+    // Fetch with proper headers
+    const response = await fetch(dataUrl, {
+      method: 'GET',
+      headers: {
+        'Accept': 'text/csv',
+        'User-Agent': 'Carmen-de-Areco-Transparency-Portal/1.0 (Cloudflare Workers)'
+      }
+    });
+    
+    console.log(`[Worker] GitHub raw response status: ${response.status}`);
+    
+    return response;
+  }
+  
+  // For consolidated data, fetch from GitHub raw URL
+  if (cleanPath.startsWith('data/consolidated/') || cleanPath.startsWith('data/')) {
+    const dataUrl = `https://raw.githubusercontent.com/flongstaff/cda-transparencia/main/frontend/public/${cleanPath}`;
+    
+    console.log(`[Worker] Fetching data from GitHub raw: ${dataUrl}`);
+    
+    // Fetch with proper headers
+    const response = await fetch(dataUrl, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'Carmen-de-Areco-Transparency-Portal/1.0 (Cloudflare Workers)'
+      }
+    });
+    
+    console.log(`[Worker] GitHub raw response status: ${response.status}`);
+    
+    return response;
+  }
+  
+  // For other paths, construct the full GitHub Pages URL
+  const dataUrl = `https://flongstaff.github.io/cda-transparencia/${cleanPath}`;
+  
+  console.log(`[Worker] Fetching from GitHub Pages: ${dataUrl}`);
+  
+  // Fetch with proper headers
+  const response = await fetch(dataUrl, {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'User-Agent': 'Carmen-de-Areco-Transparency-Portal/1.0 (Cloudflare Workers)'
+    }
+  });
+  
+  console.log(`[Worker] GitHub Pages response status: ${response.status}`);
+  
+  return response;
+}
+
 // Main fetch handler
 export default {
   async fetch(request, env, ctx) {
     // Handle CORS preflight
     if (request.method === 'OPTIONS') {
-      return handleCors();
+      return handleCors(request);
     }
 
     try {
-      // Proxy requests to the backend API
+      // Parse the request URL
       const url = new URL(request.url);
       
-      // If requesting API endpoints, proxy to backend
+      // Handle API endpoints by fetching from GitHub
       if (url.pathname.startsWith('/api/')) {
-        // Construct backend URL - using the Fly.io backend
-        const backendUrl = `https://cda-transparency-api.fly.dev${url.pathname}${url.search}`;
+        // Map API endpoints to GitHub paths
+        let githubPath = url.pathname.replace('/api/', '/data/');
         
-        // Create new request with proper headers
-        const newRequest = new Request(backendUrl, {
-          method: request.method,
-          headers: {
-            ...Object.fromEntries(request.headers),
-            'X-Forwarded-For': request.headers.get('cf-connecting-ip') || '',
-            'X-Original-Host': url.host,
-            'Host': 'cda-transparency-api.fly.dev'
-          },
-          body: ['GET', 'HEAD'].includes(request.method) ? null : await request.blob(),
-        });
-
-        // Fetch from backend
-        const response = await fetch(newRequest);
+        // Special handling for external data endpoints
+        if (url.pathname === '/api/external/carmen-de-areco') {
+          // For this endpoint, we return the consolidated Carmen de Areco official data
+          githubPath = '/data/carmen_official.json';
+        }
+        
+        // Special handling for chart data endpoints
+        if (url.pathname.startsWith('/api/charts/')) {
+          // Map chart data endpoints to the correct chart data path
+          githubPath = url.pathname.replace('/api/charts/', '/data/charts/');
+        }
+        
+        // Special handling for consolidated data endpoints
+        if (url.pathname.startsWith('/api/external/consolidated/')) {
+          // Map to the correct consolidated data path
+          githubPath = url.pathname.replace('/api/external/', '/data/');
+        }
+        
+        // Add appropriate file extension based on path
+        if (githubPath.startsWith('/data/charts/') && !githubPath.endsWith('.csv')) {
+          githubPath += '.csv';
+        } else if (!githubPath.endsWith('.json') && !githubPath.endsWith('/')) {
+          githubPath += '.json';
+        }
+        
+        // Fetch from GitHub
+        const response = await fetchFromGitHub(githubPath);
         
         // Add CORS headers to response
-        return addCorsHeaders(response);
+        return addCorsHeaders(response, request);
       }
       
       // Special handling for /health endpoint
       if (url.pathname === '/health') {
-        return addCorsHeaders(new Response(
+        const response = new Response(
           JSON.stringify({
             status: 'ok',
             timestamp: new Date().toISOString(),
@@ -83,26 +189,26 @@ export default {
           }),
           {
             headers: {
-              'Content-Type': 'application/json',
-              ...CORS_HEADERS
+              'Content-Type': 'application/json'
             }
           }
-        ));
+        );
+        return addCorsHeaders(response, request);
       }
       
       // For all other paths, return 404
-      return addCorsHeaders(new Response('Not Found', { 
+      const response = new Response('Not Found', { 
         status: 404,
         headers: {
-          'Content-Type': 'text/plain',
-          ...CORS_HEADERS
+          'Content-Type': 'text/plain'
         }
-      }));
+      });
+      return addCorsHeaders(response, request);
       
     } catch (error) {
       console.error('Worker error:', error);
       
-      return addCorsHeaders(new Response(
+      const response = new Response(
         JSON.stringify({
           error: 'Internal Server Error',
           message: error.message
@@ -110,11 +216,11 @@ export default {
         {
           status: 500,
           headers: {
-            'Content-Type': 'application/json',
-            ...CORS_HEADERS
+            'Content-Type': 'application/json'
           }
         }
-      ));
+      );
+      return addCorsHeaders(response, request);
     }
   }
 };

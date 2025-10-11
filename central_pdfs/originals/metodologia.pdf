@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="es" class="ie ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="ie ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="es" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es"> <!--<![endif]-->
+  <head>
+    <!--[if lte ie 8]><script type="text/javascript" src="/fanstatic/vendor/:version:2019-12-02T16:58:12/html5.min.js"></script><![endif]-->
+<link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2019-12-02T16:58:12/select2/select2.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/css/:version:2019-12-02T16:58:12/main.min.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2019-12-02T16:58:12/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/gobar_css/:version:2019-12-02T17:16:31/:bundle:gobar_style.css;table.css" />
+
+    <meta charset="utf-8" />
+      <meta name="generator" content="ckan 2.7.6" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta property="og:url" content="https://datos.produccion.gob.ar/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://datos.produccion.gob.ar">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="2400">
+    <meta property="og:image:height" content="1260">
+    <meta property="og:locale" content="es_AR">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site:id" content="@"/>
+    <meta name="twitter:image:src" content="https://datos.produccion.gob.ar">
+    <meta name="twitter:title" content="Datos Producción | Metodología">
+    <meta name="twitter:description" content="Documento que detalla la metodología empleada para la elaboración de las series.">
+    <title>
+    Datos Abiertos de Desarrollo Productivo - Metodología</title>
+
+    
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    
+        <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-185890531-1', 'auto', {});
+     
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+    
+      
+    
+
+    
+      
+      
+    
+    
+  </head>
+
+  
+  <body data-site-root="https://datos.produccion.gob.ar/" data-locale-root="https://datos.produccion.gob.ar/" >
+
+    
+    <style type="text/css">
+        
+    </style>
+
+    <div class="footer-down">
+            
+<div id="header" class="container-fluid">
+    <div class="restricted-max-width">
+        <div id="header-spacing" class="col-xs-12 col-sm-10 col-sm-offset-1">
+
+            
+
+            <div class="col-xs-12 col-sm-5 no-padding logo-header">
+                <div class="logo-and-xs-icon">
+                    <i class="icon-reorder fa fa-bars" aria-hidden="true"></i>
+                    <a href="/">
+                        
+                        <img src="/user_images/SIC4.png" alt="/" class="logo-ministerio">
+                    </a>
+                    
+                </div>
+                <div class="xs-navbar hidden">
+                    <div class="navbar-link">
+                        <a href="/dataset">
+                            DATASETS
+                        </a>
+                    </div>
+                    <hr>
+                    
+                    
+                        <div class="navbar-link">
+                            <a href="/organizaciones">
+                                ORGANIZACIONES
+                            </a>
+                        </div>
+                    
+
+                    
+
+                    <div class="navbar-link dropdown-navbar-link">
+                        <span class="username"></span> <svg class="user-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.46 128.46"><path d="M128.46,64.23A63.15,63.15,0,0,0,119.84,32,64.21,64.21,0,0,0,96.48,8.62,63.12,63.12,0,0,0,64.23,0,63.12,63.12,0,0,0,32,8.62,64.2,64.2,0,0,0,8.62,32,63.15,63.15,0,0,0,0,64.23,63.15,63.15,0,0,0,8.62,96.48a64.76,64.76,0,0,0,9.82,12.86l-.16.27a70.09,70.09,0,0,0,9.2,7.34c1.46,1,3,2,4.51,2.91a63.17,63.17,0,0,0,32.25,8.62,63.17,63.17,0,0,0,32.25-8.62,66.19,66.19,0,0,0,7-4.74,72.41,72.41,0,0,0,6.61-5.51l-.14-.23a64.76,64.76,0,0,0,9.85-12.89A63.15,63.15,0,0,0,128.46,64.23Zm-20.52,41.89C101.56,96.56,88,81,66.73,79.8a26.25,26.25,0,0,0,16.88-7.9,26.44,26.44,0,0,0,8-19.41,26.44,26.44,0,0,0-8-19.4,26.42,26.42,0,0,0-19.4-8,26.41,26.41,0,0,0-19.4,8,26.44,26.44,0,0,0-8,19.4,26.44,26.44,0,0,0,8,19.41,26.25,26.25,0,0,0,16.87,7.9C40.48,81,26.88,96.52,20.49,106.09a61.14,61.14,0,0,1-8.66-11.48A59.48,59.48,0,0,1,3.71,64.23a59.48,59.48,0,0,1,8.11-30.37,60.53,60.53,0,0,1,22-22A59.45,59.45,0,0,1,64.23,3.71,59.46,59.46,0,0,1,94.6,11.83a60.54,60.54,0,0,1,22,22,59.48,59.48,0,0,1,8.11,30.37,59.48,59.48,0,0,1-8.11,30.37A61.14,61.14,0,0,1,107.94,106.12Z" style="fill:#0695d6"/></svg>
+                    </div>
+                    <div class="dropdown-navbar hidden">
+                        <div class="navbar-link">
+                            <a href="/configurar/mi_cuenta">
+                                MI CUENTA
+                            </a>
+                        </div><div class="navbar-link">
+                            <a href="https://datosgobar.github.io/portal-andino/quickstart/" target="_blank">
+                                AYUDA
+                            </a>
+                        </div>
+
+                        <div class="navbar-link">
+                            <a href="/logout">
+                                SALIR
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-7 no-padding header-links"><a class="header-link" href="/dataset">Datasets</a><a class="header-link" href="/organizaciones">Organizaciones</a></div>
+        </div>
+    </div>
+</div>
+        
+
+    <div class="resource-container container-fluid">
+        <div class="restricted-max-width">
+            <div class="resource col-xs-12 col-md-10 col-md-offset-1">
+                <div class="col-md-12 back-to-pkg">
+                    
+                    <a href="/dataset">Datos Abiertos de Desarrollo Productivo</a> / <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad">Dataset</a> / Recurso
+
+                    
+                    
+                </div>
+                <div class="col-md-10 col-xs-12 title">
+                    <h1>Metodología</h1>
+
+                    <p>Documento que detalla la metodología empleada para la elaboración de las series.</p>
+                </div>
+                <div class="col-md-2 col-xs-12 resource-actions">
+                    <a class="btn btn-green btn-block" href="https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/dc96479c-3b7b-449b-a3a1-6af75f008e34/download/metodologia.pdf">DESCARGAR</a>
+
+                    
+                    
+                </div>
+
+                <div class="resource-previsualization hidden-xs hidden-sm" style="display: None">
+                    <div class="resource-additional-info col-xs-12 col-md-12 row"
+                         style="border-bottom: 0; width: 103%; margin-bottom: 20px; margin-top: 30px;">
+                        <h2 class="title-h" style="padding-bottom: 0 !important;">Previsualización</h2>
+                    </div>
+
+                    <div class="data-preview hidden-xs hidden-sm col-md-12">
+                        
+                        
+
+                        
+                        
+                        
+                            
+                        
+                    </div>
+                </div>
+
+                
+                    <div class="hidden-xs hidden-sm attributes-table">
+                       
+
+
+
+
+
+
+
+
+
+                    </div>
+                
+
+                <div class="resource-additional-info col-xs-12 col-md-12 row" style="width: 102% !important;">
+                    <h2 class="title-h">Información adicional</h2>
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Responsable
+                            </div>
+                            <div class="col-xs-8 value">
+                                Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Dirección Nacional de Estudios para la Producción (CEP XXI).
+                            </div>
+                        </div>
+                    
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Formato
+                            </div>
+                            <div class="col-xs-8 value">
+                                
+                                <span class="label" data-format="application/pdf">application/pdf</span>
+                            </div>
+                        </div>
+                    
+
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Temas
+                            </div>
+                                    Industria
+                        </div>
+                    
+
+                    
+                        
+                            
+                        
+                            
+                                <div class="resource-additional col-xs-12">
+                                    <div class="col-xs-4 key">
+                                        Frecuencia de actualización
+                                    </div>
+                                    <div class="col-xs-8 value">
+                                        Mensualmente
+                                    </div>
+                                </div>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                    
+
+
+                    <div class="resource-additional col-xs-12">
+                        <div class="col-xs-4 key">
+                            Fecha de creación
+                        </div>
+                        <div class="col-xs-8 value">
+                            
+                                7 de octubre de 2021
+                            
+                        </div>
+                    </div>
+
+                    <div class="resource-additional col-xs-12">
+                        <div class="col-xs-4 key">
+                            Último cambio
+                        </div>
+                        <div class="col-xs-8 value">
+                            
+                                11 de agosto de 2023
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                
+
+                
+                    <div class="resource-alternative-packages col-xs-12 col-md-12 row" style="border-bottom: 0; width: 103%;">
+                        <h2 class="title-h">Otros recursos de este dataset</h2>
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/10fd6c71-49e9-4c6a-a8df-a403cb8cedf9">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_mensual_por_clae6.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/10fd6c71-49e9-4c6a-a8df-a403cb8cedf9">
+        <div class="package-info">
+
+            <h3>Porcentaje de mujeres en el sector privado, por sector de actividad (CLAE a 6 dígitos)</h3>
+
+            <p>Porcentaje de puestos de trabajo ocupados por mujeres en el sector privado, por mes y sector de actividad (CLAE a 6 dígitos)</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/478231a4-8d19-4745-a772-136f2c16e96c">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_mensual_por_clae3.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/478231a4-8d19-4745-a772-136f2c16e96c">
+        <div class="package-info">
+
+            <h3>Porcentaje de mujeres en el sector privado, por sector de actividad (CLAE a 3 dígitos)</h3>
+
+            <p>Porcentaje de puestos de trabajo ocupados por mujeres en el sector privado, por mes y sector de actividad (CLAE a 3 dígitos)</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/8ebac9d4-b07a-4a3f-a483-6d063d302246">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_mensual_por_clae2.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/8ebac9d4-b07a-4a3f-a483-6d063d302246">
+        <div class="package-info">
+
+            <h3> Porcentaje de mujeres en el sector privado, por sector de actividad (CLAE a 2 dígitos)</h3>
+
+            <p>Porcentaje de puestos ocupados por mujeres en el sector privado, por mes y sector de actividad (CLAE a 2 dígitos)</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/f0780315-49fe-4602-84d9-e00182a98437">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_mensual_por_letra.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/f0780315-49fe-4602-84d9-e00182a98437">
+        <div class="package-info">
+
+            <h3>Porcentaje de mujeres en el sector privado, por sector de actividad (letra)</h3>
+
+            <p>Porcentaje de puestos de trabajo ocupados por mujeres en el sector privado, por mes y sector de actividad (letra)</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/0dafb018-3bda-4255-9fb6-7f50d371a350">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_total.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/0dafb018-3bda-4255-9fb6-7f50d371a350">
+        <div class="package-info">
+
+            <h3>Porcentaje de mujeres en el sector privado (total)</h3>
+
+            <p>Porcentaje de puestos de trabajo ocupados por mujeres en el total del sector privado, por mes.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/7cc294dd-ae7e-4fc5-902b-2872e7c6226a">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_mensual_por_clae6.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/7cc294dd-ae7e-4fc5-902b-2872e7c6226a">
+        <div class="package-info">
+
+            <h3>Porcentaje de mujeres en el total de empresas, por sector de actividad (CLAE a 6 dígitos)</h3>
+
+            <p>Porcentaje de puestos de trabajo ocupados por mujeres en el total de empresas, por mes y sector de actividad (CLAE a 6 dígitos). Incluye el sector...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/8fbba9bc-15e9-4c11-adee-ca447dd76076">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_mensual_por_clae3.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/8fbba9bc-15e9-4c11-adee-ca447dd76076">
+        <div class="package-info">
+
+            <h3> Porcentaje de mujeres en el total de empresas, por sector de actividad (CLAE a 3 dígitos)</h3>
+
+            <p>Porcentaje de puestos de trabajo ocupados por mujeres en el total de empresas, por mes y sector de actividad (CLAE a 3 dígitos). Incluye el sector...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/8874a96a-352d-40ac-8052-fb75bc465bfa">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_mensual_por_clae2.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/8874a96a-352d-40ac-8052-fb75bc465bfa">
+        <div class="package-info">
+
+            <h3>Porcentaje de mujeres en el total de empresas, por sector de actividad (CLAE a 2 dígitos)</h3>
+
+            <p>Porcentaje de puestos de trabajo ocupados por mujeres en el total de empresas, por mes y sector de actividad (CLAE a 2 dígitos). Incluye el sector...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/f93ad11a-9f08-41c2-957f-476ab5631865">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_mensual_por_letra.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/f93ad11a-9f08-41c2-957f-476ab5631865">
+        <div class="package-info">
+
+            <h3>Porcentaje de mujeres en el total de empresas, por sector de actividad (letra)</h3>
+
+            <p>Porcentaje de puestos de trabajo ocupados por mujeres en el total de empresas, por mes y sector de actividad (letra). Incluye el sector privado...</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/6907a8d3-6702-4b75-91ff-f8644606974d">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_total.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/6907a8d3-6702-4b75-91ff-f8644606974d">
+        <div class="package-info">
+
+            <h3>Porcentaje de mujeres en el total de empresas (total)</h3>
+
+            <p>Porcentaje de puestos de trabajo ocupados por mujeres en el total de empresas, por mes. Incluye el sector privado y empresas públicas.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+
+<div class="pkg-container">
+    <div class="pkg-actions">
+        <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/145dd127-630e-40a5-9a31-239e34a01d36">
+            <button>CONSULTAR</button>
+        </a>
+        <a href="https://cdn.produccion.gob.ar/cdn-cep/clae_agg.csv">
+            <button>DESCARGAR</button>
+        </a>
+    </div>
+    <a href="/dataset/proporcion-segun-generos-por-sector-de-actividad/archivo/145dd127-630e-40a5-9a31-239e34a01d36">
+        <div class="package-info">
+
+            <h3>Diccionario de claes</h3>
+
+            <p>Contiene los nomencladores utilizados por AFIP para clasificar actividades con su correspondiente descripción.</p>
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+    </a>
+</div>
+                            
+                        
+                            
+                        
+                    </div>
+                
+            
+            </div>
+        </div>
+    </div>
+    
+
+            <div id="footer" class="container-fluid">
+    <div class="restricted-max-width">
+        <div id="footer-spacer" class="col-xs-10 col-xs-offset-1">
+            <div class="footer-section logo col-xs-12 col-sm-6 col-md-6">
+                <p>
+                    
+                    
+                    
+                        <a href="https://twitter.com/MinEconomia_Ar" target="_blank" class="social-link">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+                        <a href="https://www.instagram.com/economia_arg" target="_blank" class="social-link">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+                        <a href="https://www.youtube.com/user/@MinEconom%C3%ADa_AR" target="_blank" class="social-link">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+                        <a href="http://www.linkedin.com/company/ministerio-de-economia-argentina" target="_blank" class="social-link">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+
+                    
+                </p>
+                <div class="logo-edit-container">
+                    
+                    
+                    <a href="https://www.argentina.gob.ar/economia" target="_blank">
+                        <img src="/user_images/SIC.png" alt="https://www.argentina.gob.ar/economia" class="logo-ministerio">
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="footer-section links-internos hidden-xs hidden-sm col-md-3">
+                
+                
+            </div>
+            <div class="footer-section links-externos col-xs-12 col-sm-6 col-md-3">
+                
+                
+                    <p><a href="mailto:dnmejoradelagestion@produccion.gob.ar">Contactanos</a></p>
+                
+                <p class="ckan-link">
+                    Desarrollado por<br><a href="https://github.com/datosgobar/distribuible.datos.gob.ar" target="_blank">Andino</a> con <a href="http://ckan.org/" target="_blank"><span class="ckan-name">CKAN</span></a>
+                </p>
+                <p class="ckan-link">
+                    Versión: 2.6.3
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+            <script type="application/ld+json">
+            {
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/8ebac9d4-b07a-4a3f-a483-6d063d302246",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 92615,
+            "schema:dateModified": "2022-04-06T18:26:27.744161",
+            "schema:datePublished": "2021-10-07T16:31:14.656574",
+            "schema:description": "Porcentaje de puestos ocupados por mujeres en el sector privado, por mes y sector de actividad (CLAE a 2 d\u00edgitos)",
+            "schema:encodingFormat": "CSV",
+            "schema:name": " Porcentaje de mujeres en el sector privado, por sector de actividad (CLAE a 2 d\u00edgitos)",
+            "schema:url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_mensual_por_clae2.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/dc96479c-3b7b-449b-a3a1-6af75f008e34",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 50202,
+            "schema:dateModified": "2023-08-11T19:50:57.252279",
+            "schema:datePublished": "2021-10-07T16:21:42.654500",
+            "schema:description": "Documento que detalla la metodolog\u00eda empleada para la elaboraci\u00f3n de las series.",
+            "schema:encodingFormat": "PDF",
+            "schema:name": "Metodolog\u00eda",
+            "schema:url": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/dc96479c-3b7b-449b-a3a1-6af75f008e34/download/metodologia.pdf"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/8fbba9bc-15e9-4c11-adee-ca447dd76076",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 241021,
+            "schema:dateModified": "2022-04-06T18:29:48.371309",
+            "schema:datePublished": "2021-10-07T16:39:59.599350",
+            "schema:description": "Porcentaje de puestos de trabajo ocupados por mujeres en el total de empresas, por mes y sector de actividad (CLAE a 3 d\u00edgitos). Incluye el sector privado y empresas p\u00fablicas.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": " Porcentaje de mujeres en el total de empresas, por sector de actividad (CLAE a 3 d\u00edgitos)",
+            "schema:url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_mensual_por_clae3.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/145dd127-630e-40a5-9a31-239e34a01d36",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 239412,
+            "schema:dateModified": "2022-04-06T18:36:58.038196",
+            "schema:datePublished": "2021-10-07T16:21:19.394337",
+            "schema:description": "Contiene los nomencladores utilizados por AFIP para clasificar actividades con su correspondiente descripci\u00f3n.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Diccionario de claes",
+            "schema:url": "https://cdn.produccion.gob.ar/cdn-cep/clae_agg.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/organization/33bb6091-482e-4a96-aa6c-aa78f3af1793",
+            "@type": "schema:Organization",
+            "schema:contactPoint": {
+                "@id": "_:N5a9055df2588492dbfc2ed4afcc21ae7"
+            },
+            "schema:name": "Direcci\u00f3n Nacional de Estudios para la Producci\u00f3n (CEP XXI)"
+        },
+        {
+            "@id": "_:Nffb36d08ea1244838a9b681f7999e5fe",
+            "@type": "schema:GeoShape",
+            "schema:polygon": "ARG"
+        },
+        {
+            "@id": "_:Nea5df4bd9aa249a8aa3ed216fb018335",
+            "@type": "schema:Place",
+            "schema:geo": {
+                "@id": "_:Nffb36d08ea1244838a9b681f7999e5fe"
+            }
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/6907a8d3-6702-4b75-91ff-f8644606974d",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 1228,
+            "schema:dateModified": "2022-04-06T18:33:33.902903",
+            "schema:datePublished": "2021-12-10T18:23:54.112733",
+            "schema:description": "Porcentaje de puestos de trabajo ocupados por mujeres en el total de empresas, por mes. Incluye el sector privado y empresas p\u00fablicas.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Porcentaje de mujeres en el total de empresas (total)",
+            "schema:url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_total.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/10fd6c71-49e9-4c6a-a8df-a403cb8cedf9",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 1037046,
+            "schema:dateModified": "2022-04-06T18:25:33.925938",
+            "schema:datePublished": "2021-10-07T16:25:06.034642",
+            "schema:description": "Porcentaje de puestos de trabajo ocupados por mujeres en el sector privado, por mes y sector de actividad (CLAE a 6 d\u00edgitos)",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Porcentaje de mujeres en el sector privado, por sector de actividad (CLAE a 6 d\u00edgitos)",
+            "schema:url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_mensual_por_clae6.csv"
+        },
+        {
+            "@id": "_:N5a9055df2588492dbfc2ed4afcc21ae7",
+            "@type": "schema:ContactPoint",
+            "schema:contactType": "customer service",
+            "schema:email": "dnmejoradelagestion@produccion.gob.ar",
+            "schema:name": "Ministerio de Desarrollo Productivo. Unidad Gabinete de Asesores. Direcci\u00f3n Nacional de Estudios para la Producci\u00f3n (CEP XXI).",
+            "schema:url": "https://datos.produccion.gob.ar"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/0dafb018-3bda-4255-9fb6-7f50d371a350",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 1210,
+            "schema:dateModified": "2022-04-06T18:21:07.759707",
+            "schema:datePublished": "2021-12-10T17:54:45.028850",
+            "schema:description": "Porcentaje de puestos de trabajo ocupados por mujeres en el total del sector privado, por mes.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Porcentaje de mujeres en el sector privado (total)",
+            "schema:url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_total.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/478231a4-8d19-4745-a772-136f2c16e96c",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 241303,
+            "schema:dateModified": "2022-04-06T18:26:06.159118",
+            "schema:datePublished": "2021-10-07T16:27:55.919923",
+            "schema:description": "Porcentaje de puestos de trabajo ocupados por mujeres en el sector privado, por mes y sector de actividad (CLAE a 3 d\u00edgitos)",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Porcentaje de mujeres en el sector privado, por sector de actividad (CLAE a 3 d\u00edgitos)",
+            "schema:url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_mensual_por_clae3.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/7cc294dd-ae7e-4fc5-902b-2872e7c6226a",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 1039417,
+            "schema:dateModified": "2022-04-06T18:24:59.589102",
+            "schema:datePublished": "2021-10-07T16:36:41.916552",
+            "schema:description": "Porcentaje de puestos de trabajo ocupados por mujeres en el total de empresas, por mes y sector de actividad (CLAE a 6 d\u00edgitos). Incluye el sector privado y empresas p\u00fablicas.",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Porcentaje de mujeres en el total de empresas, por sector de actividad (CLAE a 6 d\u00edgitos)",
+            "schema:url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_mensual_por_clae6.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/f0780315-49fe-4602-84d9-e00182a98437",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 22630,
+            "schema:dateModified": "2022-04-06T18:28:44.317961",
+            "schema:datePublished": "2021-10-07T16:33:59.620293",
+            "schema:description": "Porcentaje de puestos de trabajo ocupados por mujeres en el sector privado, por mes y sector de actividad (letra)",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Porcentaje de mujeres en el sector privado, por sector de actividad (letra)",
+            "schema:url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_privado_mensual_por_letra.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/8874a96a-352d-40ac-8052-fb75bc465bfa",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 92553,
+            "schema:dateModified": "2022-04-06T18:32:10.331044",
+            "schema:datePublished": "2021-10-07T16:42:33.449024",
+            "schema:description": "Porcentaje de puestos de trabajo ocupados por mujeres en el total de empresas, por mes y sector de actividad (CLAE a 2 d\u00edgitos). Incluye el sector privado y empresas p\u00fablicas.\r\n",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Porcentaje de mujeres en el total de empresas, por sector de actividad (CLAE a 2 d\u00edgitos)",
+            "schema:url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_mensual_por_clae2.csv"
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208",
+            "@type": "schema:Dataset",
+            "schema:dateModified": "2021-12-14T18:20:15.037896",
+            "schema:datePublished": "2021-10-07T16:34:27.521106",
+            "schema:description": "Desagrega la proporci\u00f3n de puestos de trabajo ocupados por mujeres sobre el total de puestos en cada rubro. El g\u00e9nero de cada persona se identific\u00f3 mediante otros registros administrativos.",
+            "schema:distribution": [
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/8ebac9d4-b07a-4a3f-a483-6d063d302246"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/dc96479c-3b7b-449b-a3a1-6af75f008e34"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/10fd6c71-49e9-4c6a-a8df-a403cb8cedf9"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/478231a4-8d19-4745-a772-136f2c16e96c"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/8874a96a-352d-40ac-8052-fb75bc465bfa"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/8fbba9bc-15e9-4c11-adee-ca447dd76076"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/6907a8d3-6702-4b75-91ff-f8644606974d"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/7cc294dd-ae7e-4fc5-902b-2872e7c6226a"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/f0780315-49fe-4602-84d9-e00182a98437"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/f93ad11a-9f08-41c2-957f-476ab5631865"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/0dafb018-3bda-4255-9fb6-7f50d371a350"
+                },
+                {
+                    "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/145dd127-630e-40a5-9a31-239e34a01d36"
+                }
+            ],
+            "schema:keywords": [
+                "Mujeres",
+                "Sector",
+                "G\u00e9nero",
+                "Empleo",
+                "Trabajadores"
+            ],
+            "schema:name": "Porcentaje de puestos ocupados por mujeres, por sector de actividad",
+            "schema:publisher": {
+                "@id": "https://datos.produccion.gob.ar/organization/33bb6091-482e-4a96-aa6c-aa78f3af1793"
+            },
+            "schema:spatialCoverage": {
+                "@id": "_:Nea5df4bd9aa249a8aa3ed216fb018335"
+            }
+        },
+        {
+            "@id": "https://datos.produccion.gob.ar/dataset/162dc5a6-7a95-4f19-9d85-063c9be23208/resource/f93ad11a-9f08-41c2-957f-476ab5631865",
+            "@type": "schema:DataDownload",
+            "schema:contentSize": 22506,
+            "schema:dateModified": "2022-04-06T18:32:53.150053",
+            "schema:datePublished": "2021-10-07T16:45:00.497516",
+            "schema:description": "Porcentaje de puestos de trabajo ocupados por mujeres en el total de empresas, por mes y sector de actividad (letra). Incluye el sector privado y empresas p\u00fablicas.\r\n",
+            "schema:encodingFormat": "CSV",
+            "schema:name": "Porcentaje de mujeres en el total de empresas, por sector de actividad (letra)",
+            "schema:url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/share-mujer/share_mujer_total_empresas_mensual_por_letra.csv"
+        }
+    ]
+}
+            </script>
+            
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+  
+    
+    <div class="js-hide" data-module="google-analytics"
+      data-module-googleanalytics_resource_prefix="">
+    </div>
+  
+
+
+      
+  <script>document.getElementsByTagName('html')[0].className += ' js';</script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2019-12-02T16:58:12/jquery.min.js"></script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2019-12-02T16:58:12/:bundle:bootstrap/js/bootstrap.min.js;jed.min.js;moment-with-locales.js;select2/select2.min.js"></script>
+<script type="text/javascript" src="/fanstatic/base/:version:2019-12-02T16:58:12/:bundle:plugins/jquery.inherit.min.js;plugins/jquery.proxy-all.min.js;plugins/jquery.url-helpers.min.js;plugins/jquery.date-helpers.min.js;plugins/jquery.slug.min.js;plugins/jquery.slug-preview.min.js;plugins/jquery.truncator.min.js;plugins/jquery.masonry.min.js;plugins/jquery.form-warning.min.js;sandbox.min.js;module.min.js;pubsub.min.js;client.min.js;notify.min.js;i18n.min.js;main.min.js;modules/select-switch.min.js;modules/slug-preview.min.js;modules/basic-form.min.js;modules/confirm-action.min.js;modules/api-info.min.js;modules/autocomplete.min.js;modules/custom-fields.min.js;modules/data-viewer.min.js;modules/table-selectable-rows.min.js;modules/resource-form.min.js;modules/resource-upload-field.min.js;modules/resource-reorder.min.js;modules/resource-view-reorder.min.js;modules/follow.min.js;modules/activity-stream.min.js;modules/dashboard.min.js;modules/resource-view-embed.min.js;view-filters.min.js;modules/resource-view-filters-form.min.js;modules/resource-view-filters.min.js;modules/table-toggle-more.min.js;modules/dataset-visibility.min.js;modules/media-grid.min.js;modules/image-upload.min.js"></script>
+<script type="text/javascript" src="/fanstatic/ckanext-googleanalytics/:version:2019-12-02T16:58:24/googleanalytics_event_tracking.js"></script>
+<script type="text/javascript" src="/fanstatic/gobar_js/:version:2019-12-02T17:16:31/:bundle:header.js;replace_svg.js;console_message.js;package/resource/resource_view.js;forms/custom_popup.js;libs/BootstrapMenu.js;libs/bootstrap_scripts.js;libs/clamp.js"></script></body>
+</html>

@@ -1,0 +1,101 @@
+{
+  "files": {
+    "RiI_d_cant_focos_calor_año": {
+      "datasetId": "ambiente_35.0",
+      "datasetTitle": "Incendios forestales",
+      "fileName": "RiI_d_cant_focos_calor_año",
+      "format": "CSV",
+      "title": "Cantidad de focos de calor registrados por año",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=19&stid=51&did=333",
+      "lastProcessed": "2025-10-09T06:58:15.683Z",
+      "status": "processed"
+    },
+    "RiI_d_cant_focos_calor_prov_2015-2024_totales": {
+      "datasetId": "ambiente_35.0",
+      "datasetTitle": "Incendios forestales",
+      "fileName": "RiI_d_cant_focos_calor_prov_2015-2024_totales",
+      "format": "CSV",
+      "title": "Cantidad de focos de calor registrados por jurisdicción y año",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=19&stid=51&did=409",
+      "lastProcessed": "2025-10-09T06:58:17.152Z",
+      "status": "processed"
+    },
+    "RiI_d_cant_focos_calor_prov_2015_2024": {
+      "datasetId": "ambiente_35.0",
+      "datasetTitle": "Incendios forestales",
+      "fileName": "RiI_d_cant_focos_calor_prov_2015_2024",
+      "format": "CSV",
+      "title": "Cantidad de focos de calor registrados por jurisdicción y por mes. Año 2015-2024",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=19&stid=51&did=315",
+      "lastProcessed": "2025-10-09T06:58:18.484Z",
+      "status": "processed"
+    },
+    "RiI_a_cantidad_incendios_mes_2017_2025_marzo": {
+      "datasetId": "ambiente_35.0",
+      "datasetTitle": "Incendios forestales",
+      "fileName": "RiI_a_cantidad_incendios_mes_2017_2025_marzo",
+      "format": "CSV",
+      "title": "Cantidad de incendios reportados por mes",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=19&stid=51&did=312",
+      "lastProcessed": "2025-10-09T06:58:19.978Z",
+      "status": "processed"
+    },
+    "RiI_b_cantidad_incendios_prov_2017_2025": {
+      "datasetId": "ambiente_35.0",
+      "datasetTitle": "Incendios forestales",
+      "fileName": "RiI_b_cantidad_incendios_prov_2017_2025",
+      "format": "CSV",
+      "title": "Cantidad de incendios reportados por provincia",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=19&stid=51&did=313",
+      "lastProcessed": "2025-10-09T06:58:21.348Z",
+      "status": "processed"
+    },
+    "RiI_e_cant_incendio_region_2017_2024": {
+      "datasetId": "ambiente_35.0",
+      "datasetTitle": "Incendios forestales",
+      "fileName": "RiI_e_cant_incendio_region_2017_2024",
+      "format": "CSV",
+      "title": "Cantidad de incendios reportados por región",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=19&stid=51&did=316",
+      "lastProcessed": "2025-10-09T06:58:22.661Z",
+      "status": "processed"
+    },
+    "ordenamiento_piecas": {
+      "datasetId": "ambiente_35.0",
+      "datasetTitle": "Incendios forestales",
+      "fileName": "ordenamiento_piecas",
+      "format": "CSV",
+      "title": "Porcentaje de la superficie quemada total y por provincia del territorio PIECAS-DP. Año 2020",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=19&stid=51&did=132",
+      "lastProcessed": "2025-10-09T06:58:24.195Z",
+      "status": "processed"
+    },
+    "RiI_c_hectareas_incendios_prov_2017_2025": {
+      "datasetId": "ambiente_35.0",
+      "datasetTitle": "Incendios forestales",
+      "fileName": "RiI_c_hectareas_incendios_prov_2017_2025",
+      "format": "CSV",
+      "title": "Superficie afectada por incendios reportados, por jurisdicción",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=19&stid=51&did=314",
+      "lastProcessed": "2025-10-09T06:58:25.630Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_35.0",
+    "title": "Incendios forestales",
+    "description": "Muestra los focos de calor e incendios forestales reportados por año y por provincias y la superficie afectada",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2023-03-03T00:00:00",
+    "modified": "2023-03-03T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

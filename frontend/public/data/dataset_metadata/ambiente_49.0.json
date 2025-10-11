@@ -1,0 +1,31 @@
+{
+  "files": {
+    "EARC_PRI_acciones_2024": {
+      "datasetId": "ambiente_49.0",
+      "datasetTitle": "Reconversión industrial",
+      "fileName": "EARC_PRI_acciones_2024",
+      "format": "CSV",
+      "title": "Acciones instrumentadas en el marco de los convenios de reconversión industrial",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=16&stid=109&did=433",
+      "lastProcessed": "2025-10-09T06:39:12.658Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_49.0",
+    "title": "Reconversión industrial",
+    "description": "Muestra las acciones instrumentadas y englobadas en los distintos aspectos.",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2024-01-01T00:00:00",
+    "modified": "2024-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

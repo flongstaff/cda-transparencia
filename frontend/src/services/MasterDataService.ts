@@ -447,18 +447,17 @@ class MasterDataService {
     const normalizedType = dataType === 'salary' ? 'salaries' : dataType;
 
     // Define multiple search patterns for robust data discovery
-    // Priority order: consolidated processed data -> organized analysis -> frontend data
+    // Priority order: NEW API structure -> main catalog -> organized data -> legacy paths
     const patterns = [
-      `data/consolidated/${year}/${normalizedType}.json`, // HIGHEST PRIORITY - Processed PDF data
-      `data/consolidated/${year}/${dataType}.json`,
+      `data/api/financial/${year}/consolidated.json`, // HIGHEST PRIORITY - New API structure with consolidated data
+      `data/api/financial/${year}/${normalizedType}.json`,
+      `data/api/financial/${year}/summary.json`,
+      `data/main.json`, // Main data catalog
+      `data/api/${normalizedType}.json`,
+      `data/json/${year}/${normalizedType}_${year}.json`,
       `data/organized_analysis/financial_oversight/${dataType}_analysis/${dataType}_data_${year}.json`,
-      `data/organized_analysis/financial_oversight/${dataType}_monitoring/${dataType}_data_${year}.json`,
-      `data/organized_analysis/financial_oversight/${dataType}_oversight/${dataType}_data_${year}.json`,
       `data/organized_documents/json/${dataType}_data_${year}.json`,
-      `data/organized_documents/json/${dataType}_data.json`,
-      `frontend/src/data/${dataType}_data_${year}.json`,
-      `data/organized_documents/json/${dataType.toUpperCase()}_DATA_${year}.json`,
-      `data/organized_documents/json/${dataType.toLowerCase()}_${year}.json`
+      `frontend/src/data/${dataType}_data_${year}.json`
     ];
 
     // Try each pattern with local paths first, then GitHub as fallback

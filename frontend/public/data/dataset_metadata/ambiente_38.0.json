@@ -1,0 +1,51 @@
+{
+  "files": {
+    "EPAEA_capacitaciones": {
+      "datasetId": "ambiente_38.0",
+      "datasetTitle": "Educación ambiental",
+      "fileName": "EPAEA_capacitaciones",
+      "format": "CSV",
+      "title": "Capacitaciones de Educación Ambiental",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=11&stid=55&did=248",
+      "lastProcessed": "2025-10-09T07:00:46.532Z",
+      "status": "processed"
+    },
+    "EPAEA_capacitaciones_2020_2022_nuevo": {
+      "datasetId": "ambiente_38.0",
+      "datasetTitle": "Educación ambiental",
+      "fileName": "EPAEA_capacitaciones_2020_2022_nuevo",
+      "format": "CSV",
+      "title": "Capacitaciones de Educación Ambiental por tema, año 2020-2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=11&stid=55&did=349",
+      "lastProcessed": "2025-10-09T07:00:48.067Z",
+      "status": "processed"
+    },
+    "EPAEA_encuentros": {
+      "datasetId": "ambiente_38.0",
+      "datasetTitle": "Educación ambiental",
+      "fileName": "EPAEA_encuentros",
+      "format": "CSV",
+      "title": "Encuentros y jornadas de Educación Ambiental",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=11&stid=55&did=255",
+      "lastProcessed": "2025-10-09T07:00:49.330Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_38.0",
+    "title": "Educación ambiental",
+    "description": "Muestra las capacitaciones y encuentros de educación ambiental realizados en los períodos considerados",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2022-12-31T00:00:00",
+    "modified": "2022-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

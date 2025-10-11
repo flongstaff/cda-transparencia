@@ -13,3 +13,20 @@ export { default as FinancialCategoryNavigation } from './FinancialCategoryNavig
 
 // Re-export chart types
 // export type { ChartType } from './StandardizedChart'; // Missing component
+
+// Modern UI components
+export { 
+  ModernTabs, 
+  ModernTabsList, 
+  ModernTabsTrigger, 
+  ModernTabsContent, 
+  ModernCard, 
+  ModernStatCard, 
+  ModernChartContainer,
+  ModernDataTable,
+  ModernSearchFilter,
+  ResponsiveGrid,
+  ModernAccordion,
+  ModernSpinner,
+  ModernEmptyState
+} from './modern-components-all';

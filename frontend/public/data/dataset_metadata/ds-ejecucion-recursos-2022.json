@@ -1,0 +1,57 @@
+{
+  "files": {
+    "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf": {
+      "datasetId": "ds-ejecucion-recursos-2022",
+      "datasetTitle": "Ejecución Presupuestaria de Recursos 2022",
+      "fileName": "ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf",
+      "lastProcessed": "2025-10-09T06:13:12.936Z",
+      "status": "error",
+      "error": "Failed to download PDF: ESTADOS-DE-EJECUCION-DE-RECURSOS-POR-CARACTER-ECONOMICO-3°TRI-2022.pdf"
+    },
+    "ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf": {
+      "datasetId": "ds-ejecucion-recursos-2022",
+      "datasetTitle": "Ejecución Presupuestaria de Recursos 2022",
+      "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+      "format": "PDF",
+      "title": "Q2 Por Carácter Económico",
+      "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-1.pdf",
+      "lastProcessed": "2025-10-09T06:13:15.891Z",
+      "status": "processed"
+    },
+    "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf": {
+      "datasetId": "ds-ejecucion-recursos-2022",
+      "datasetTitle": "Ejecución Presupuestaria de Recursos 2022",
+      "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+      "format": "PDF",
+      "title": "Q2 Por Procedencia",
+      "accessURL": "https://carmendeareco.gob.ar/wp-content/uploads/2023/09/ESTADO-DE-EJECUCION-DE-RECURSOS-POR-PROCEDENCIA-1.pdf",
+      "lastProcessed": "2025-10-09T06:13:18.336Z",
+      "status": "processed"
+    },
+    "ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf": {
+      "datasetId": "ds-ejecucion-recursos-2022",
+      "datasetTitle": "Ejecución Presupuestaria de Recursos 2022",
+      "fileName": "ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf",
+      "lastProcessed": "2025-10-09T06:13:27.792Z",
+      "status": "error",
+      "error": "Failed to download PDF: ESTADO-DE-EJECUCION-DE-RECURSOS-4°TRE-2022.pdf"
+    }
+  },
+  "info": {
+    "identifier": "ds-ejecucion-recursos-2022",
+    "title": "Ejecución Presupuestaria de Recursos 2022",
+    "description": "Estados de ejecución de recursos por carácter económico, procedencia y trimestres (2022).",
+    "theme": [
+      "economia-y-finanzas"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2023-09-19T00:00:00",
+    "modified": "2023-10-20T00:00:00",
+    "publisher": {
+      "name": "Secretaría de Hacienda"
+    },
+    "landingPage": "https://carmendeareco.gob.ar/transparencia/ejecucion-presupuestaria/"
+  }
+}

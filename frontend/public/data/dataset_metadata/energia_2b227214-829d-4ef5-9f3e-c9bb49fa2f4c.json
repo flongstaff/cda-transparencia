@@ -1,0 +1,52 @@
+{
+  "files": {
+    "registro-de-empresas-petroleras-del-upstream-inscripciones-anuales.csv": {
+      "datasetId": "energia_2b227214-829d-4ef5-9f3e-c9bb49fa2f4c",
+      "datasetTitle": "Registro de empresas de hidrocarburos del upstream",
+      "fileName": "registro-de-empresas-petroleras-del-upstream-inscripciones-anuales.csv",
+      "format": "CSV",
+      "title": "Registro de Empresas Petroleras del Upstream - Inscripciones Anuales",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2b227214-829d-4ef5-9f3e-c9bb49fa2f4c/resource/dec5cd65-8ac7-4f76-933c-aa6ae498fd3e",
+      "lastProcessed": "2025-10-09T06:38:47.111Z",
+      "status": "processed"
+    },
+    "conformacin-de-consorcios-listado-oficial-.csv": {
+      "datasetId": "energia_2b227214-829d-4ef5-9f3e-c9bb49fa2f4c",
+      "datasetTitle": "Registro de empresas de hidrocarburos del upstream",
+      "fileName": "conformacin-de-consorcios-listado-oficial-.csv",
+      "format": "CSV",
+      "title": "Conformación de consorcios (Listado Único)",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2b227214-829d-4ef5-9f3e-c9bb49fa2f4c/resource/4f417d63-b53c-4424-8cc3-98dd276f129a",
+      "lastProcessed": "2025-10-09T06:38:48.423Z",
+      "status": "processed"
+    },
+    "conformacin-de-utes-concesionarias-de-reas.csv": {
+      "datasetId": "energia_2b227214-829d-4ef5-9f3e-c9bb49fa2f4c",
+      "datasetTitle": "Registro de empresas de hidrocarburos del upstream",
+      "fileName": "conformacin-de-utes-concesionarias-de-reas.csv",
+      "format": "CSV",
+      "title": "Conformación de UTES concesionarias de áreas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/2b227214-829d-4ef5-9f3e-c9bb49fa2f4c/resource/397f2409-4d70-4ff6-be78-0b33d373df08",
+      "lastProcessed": "2025-10-09T06:38:49.693Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_2b227214-829d-4ef5-9f3e-c9bb49fa2f4c",
+    "title": "Registro de empresas de hidrocarburos del upstream",
+    "description": "Registro de Empresas Petroleras del Upstream - Inscripciones Anuales",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:33:21.697424",
+    "modified": "2020-04-24T11:57:00.586168",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

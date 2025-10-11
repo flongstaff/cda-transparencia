@@ -1,0 +1,32 @@
+{
+  "files": {
+    "cinemometros.csv": {
+      "datasetId": "inti_3.0",
+      "datasetTitle": "Verificación periódica de cinemómetros",
+      "fileName": "cinemometros.csv",
+      "format": "CSV",
+      "title": "Listado de cinemómetros",
+      "accessURL": "https://www.argentina.gob.ar/inti/transparencia-activa-instituto-nacional-de-tecnologia-industrial/catalogos-de-datos-abiertos",
+      "lastProcessed": "2025-10-09T06:42:11.506Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "inti_3.0",
+    "title": "Verificación periódica de cinemómetros",
+    "description": "Este listado indica la fecha de verificación periódica de cinemómetros realizada por el INTI. Listado de vigencia actual dirigirse a: https://www.inti.gob.ar/areas/metrologia-y-calidad/metrologia/metrologia-legal",
+    "theme": [
+      "tech"
+    ],
+    "superTheme": [
+      "TECH"
+    ],
+    "issued": "2023-11-13",
+    "modified": "2023-11-13",
+    "publisher": {
+      "mbox": "ucg@inti.gob.ar",
+      "name": "Instituto Nacional de Tecnologia Industrial. Unidad de Control de Gestión"
+    },
+    "landingPage": "https://www.argentina.gob.ar/inti/transparencia-activa-instituto-nacional-de-tecnologia-industrial/catalogos-de-datos-abiertos"
+  }
+}

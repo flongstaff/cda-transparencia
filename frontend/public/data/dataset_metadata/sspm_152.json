@@ -1,0 +1,32 @@
+{
+  "files": {
+    "asalariados-registrados-sector-privado-segun-rama-actividad-ocupacion-mensual-base-2009.csv": {
+      "datasetId": "sspm_152",
+      "datasetTitle": "Asalariados registrados del sector privado, por rama de actividad de la ocupación principal.",
+      "fileName": "asalariados-registrados-sector-privado-segun-rama-actividad-ocupacion-mensual-base-2009.csv",
+      "format": "CSV",
+      "title": "Asalariados registrados del sector privado, por rama de actividad de la ocupacion. Base 2009. Valores mensuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:09.734Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_152",
+    "title": "Asalariados registrados del sector privado, por rama de actividad de la ocupación principal.",
+    "description": "Total de asalariados registrados del sector privado según rama de actividad de la ocupación principal, en miles. Base 2009",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:02:00.197927",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

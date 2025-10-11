@@ -1,0 +1,32 @@
+{
+  "files": {
+    "prestaciones-previsionales-sipa-por-tipo.csv": {
+      "datasetId": "sspm_189",
+      "datasetTitle": "Política de Ingresos. Prestaciones de la seguridad social. ANSES",
+      "fileName": "prestaciones-previsionales-sipa-por-tipo.csv",
+      "format": "CSV",
+      "title": "Política de Ingresos. Prestaciones de la seguridad social. ANSES",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:16:39.689Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_189",
+    "title": "Política de Ingresos. Prestaciones de la seguridad social. ANSES",
+    "description": "Prestaciones Previsionales de SIPA, por tipo. PUAM. AAFF por hijo e hijo discapacitado. Titulares de derecho de AUH-AUE. Titulares de derecho del PROG.R.ES.AR.. Prestaciones del Seguro por Desempleo. Datos de beneficios mensuales liquidados. Desde enero de 2009",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-10-03",
+    "modified": "2025-03-24T10:02:33.868366",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

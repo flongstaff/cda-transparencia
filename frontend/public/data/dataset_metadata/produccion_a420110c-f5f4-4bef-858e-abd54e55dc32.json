@@ -1,0 +1,32 @@
+{
+  "files": {
+    "empresas-participantes-ciclo-capacitaciones.xlsx": {
+      "datasetId": "produccion_a420110c-f5f4-4bef-858e-abd54e55dc32",
+      "datasetTitle": "Ciclo de Capacitación: “Aportes a la mejora de la inserción internacional de las empresas\"",
+      "fileName": "empresas-participantes-ciclo-capacitaciones.xlsx",
+      "format": "XLS",
+      "title": "Empresas capacitadas",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/a420110c-f5f4-4bef-858e-abd54e55dc32/resource/2cbfd6f5-f232-4844-8efc-d46fbc2f8a71",
+      "lastProcessed": "2025-10-09T08:08:26.333Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_a420110c-f5f4-4bef-858e-abd54e55dc32",
+    "title": "Ciclo de Capacitación: “Aportes a la mejora de la inserción internacional de las empresas\"",
+    "description": "Se trata de un ciclo que consiste en tres encuentros de capacitación, dirigido a PyMEs que exporten o estén próximas a hacerlo. Las mismas son convocadas por los municipios o provincias a pedido de la Subsecretaría. Los ejes de la capacitación son los siguientes: 1)  Proyecciones del mercado mundial; 2) Herramientas de gestión exportadora y 3) Herramientas de fortalecimiento comercial.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2021-07-23T14:56:08.920985",
+    "modified": "2022-07-26T15:34:46.073027",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo, Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa, Subsecretaría de Política y Gestión Comercial, Dirección Nacional de Gestión Comercial, Dirección de Exportaciones."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/ciclo-de-capacitacion-aportes-a-la-mejora-de-la-insercion-internacional-de-las-empresas"
+  }
+}

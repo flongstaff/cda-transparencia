@@ -1,0 +1,41 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_30fcb906-5374-4790-aa89-368c0d3ef314",
+      "datasetTitle": "Precios de biodiesel",
+      "format": "XLS",
+      "title": "Insumo para fórmula de cálculo de Biodiesel Res 83/18",
+      "accessURL": "http://datos.energia.gob.ar/dataset/30fcb906-5374-4790-aa89-368c0d3ef314/resource/8e14e588-dfec-4a29-a2f4-65f5fdecec56",
+      "lastProcessed": "2025-10-09T06:31:47.345Z",
+      "status": "processed"
+    },
+    "biocombustible-precios-de-biodiesel.csv": {
+      "datasetId": "energia_30fcb906-5374-4790-aa89-368c0d3ef314",
+      "datasetTitle": "Precios de biodiesel",
+      "fileName": "biocombustible-precios-de-biodiesel.csv",
+      "format": "CSV",
+      "title": "Biocombustibles - Precios de biodiesel",
+      "accessURL": "http://datos.energia.gob.ar/dataset/30fcb906-5374-4790-aa89-368c0d3ef314/resource/b68507ca-f6ff-406f-85cf-2d706a2b993f",
+      "lastProcessed": "2025-10-09T06:31:47.345Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_30fcb906-5374-4790-aa89-368c0d3ef314",
+    "title": "Precios de biodiesel",
+    "description": "Precios de biodiesel desde noviembre de 2012 [AR$/t] y derechos de exportación establecidos por la Unidad Ejecutiva Interdisciplinaria de Monitoreo. ",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-12-22T15:02:43.128638",
+    "modified": "2025-07-14T12:44:47.286694",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

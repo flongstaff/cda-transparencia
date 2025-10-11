@@ -1,0 +1,13 @@
+{
+  "file_name": "boletin_oficial_pdf_12_Situacion-Economico-Financiera-al-30-06-24-1.pdf",
+  "file_hash": "c607a3b70794b62c4a0c2179e104e869",
+  "page_count": 3,
+  "text_length": 3,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2",
+  "extraction_timestamp": "2025-10-10T17:15:58.866292"
+}

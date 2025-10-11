@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "mineria_1",
+      "datasetTitle": "Cartera de Proyectos Mineros en Argentina del SIACAM",
+      "format": "XLSX",
+      "title": "Proyectos mineros no metalíferos y rocas de aplicación",
+      "accessURL": "https://www.argentina.gob.ar/economia/mineria",
+      "lastProcessed": "2025-10-09T06:52:21.818Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "mineria_1",
+    "title": "Cartera de Proyectos Mineros en Argentina del SIACAM",
+    "description": "Datos correspondientes al tablero de Cartera de Proyectos del Sistema de Información Abierta a la Comunidad sobre la Actividad Minera en Argentina (SIACAM). Elaborado por la Dirección Nacional de Promoción y Economía Minera (Subsecretaría de Desarrollo Minero, Secretaría de Minería, Ministerio de Economía de la Nación).",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2022-12-07",
+    "modified": "2025-07-07",
+    "publisher": {
+      "mbox": "datosabiertosmineria@mecon.gov.ar",
+      "name": "Ministerio de Economía. Secretaría de Minería. Subsecretaría de Desarrollo Minero."
+    },
+    "landingPage": "https://www.argentina.gob.ar/economia/mineria"
+  }
+}

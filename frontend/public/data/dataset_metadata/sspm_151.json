@@ -1,0 +1,32 @@
+{
+  "files": {
+    "trabajadores-registrados-modalidad-ocupacional-principal-mensual-total-pais-miles-base-2012.csv": {
+      "datasetId": "sspm_151",
+      "datasetTitle": "Trabajadores registrados según modalidad ocupacional principal. Base 2012",
+      "fileName": "trabajadores-registrados-modalidad-ocupacional-principal-mensual-total-pais-miles-base-2012.csv",
+      "format": "CSV",
+      "title": "Trabajadores registrados según modalidad ocupacional principal. Total del país en miles. Base 2012. Valores mensuales.",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:17:16.156Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_151",
+    "title": "Trabajadores registrados según modalidad ocupacional principal. Base 2012",
+    "description": "Trabajadores registrados según modalidad ocupacional principal. Total del país en miles. Base enero 2012",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2017-09-28",
+    "modified": "2025-03-24T10:01:57.043043",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

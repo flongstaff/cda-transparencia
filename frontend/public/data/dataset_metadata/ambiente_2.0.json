@@ -1,0 +1,311 @@
+{
+  "files": {
+    "AgC_ACUIFERO_freatico_ACUMAR_2021_2024": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_ACUIFERO_freatico_ACUMAR_2021_2024",
+      "format": "CSV",
+      "title": "Acuífero freático. Concentración de nitratos. Año 2021-2024",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=421",
+      "lastProcessed": "2025-10-09T06:39:37.249Z",
+      "status": "processed"
+    },
+    "AgC_ACUIFERO_puelche_ACUMAR_2021_2024": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_ACUIFERO_puelche_ACUMAR_2021_2024",
+      "format": "CSV",
+      "title": "Acuífero Puelche. Concentración de nitratos. Año 2021-2024",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=422",
+      "lastProcessed": "2025-10-09T06:39:38.715Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2004": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2004",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2004",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=372",
+      "lastProcessed": "2025-10-09T06:39:39.967Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2005": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2005",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2005",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=371",
+      "lastProcessed": "2025-10-09T06:39:41.239Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2006_1": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2006_1",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2006",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=369",
+      "lastProcessed": "2025-10-09T06:39:42.508Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2007": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2007",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2007",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=367",
+      "lastProcessed": "2025-10-09T06:39:43.766Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2008": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2008",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2008",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=366",
+      "lastProcessed": "2025-10-09T06:39:45.066Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2009": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2009",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2009",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=365",
+      "lastProcessed": "2025-10-09T06:39:46.499Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2010": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2010",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2010",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=364",
+      "lastProcessed": "2025-10-09T06:39:47.772Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2013": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2013",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2013",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=363",
+      "lastProcessed": "2025-10-09T06:39:49.081Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2014": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2014",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2014",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=359",
+      "lastProcessed": "2025-10-09T06:39:50.353Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2015": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2015",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2015",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=362",
+      "lastProcessed": "2025-10-09T06:39:51.720Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2016": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2016",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2016",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=357",
+      "lastProcessed": "2025-10-09T06:39:53.084Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2017_nuevo": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2017_nuevo",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2017",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=334",
+      "lastProcessed": "2025-10-09T06:39:54.486Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2018": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2018",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2018",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=153",
+      "lastProcessed": "2025-10-09T06:39:55.827Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2019": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2019",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2019",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=158",
+      "lastProcessed": "2025-10-09T06:39:57.365Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata_2020": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata_2020",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2020",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=257",
+      "lastProcessed": "2025-10-09T06:39:58.785Z",
+      "status": "processed"
+    },
+    "AgC_z_riodelaplata_2021_nuev": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_z_riodelaplata_2021_nuev",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2021",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=327",
+      "lastProcessed": "2025-10-09T06:40:00.119Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata2022": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata2022",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=326",
+      "lastProcessed": "2025-10-09T06:40:01.450Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata2022_final_2023_4": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata2022_final_2023_4",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2023",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=367",
+      "lastProcessed": "2025-10-09T06:40:02.882Z",
+      "status": "processed"
+    },
+    "AgC_z_riodelaplata_2024_verano": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_z_riodelaplata_2024_verano",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2024",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=408",
+      "lastProcessed": "2025-10-09T06:40:04.419Z",
+      "status": "processed"
+    },
+    "AgC_y_riodelaplata2025": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_y_riodelaplata2025",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Año 2025",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=428",
+      "lastProcessed": "2025-10-09T06:40:05.855Z",
+      "status": "processed"
+    },
+    "AgC_l_monit_sust_qcas_2021_2022": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_l_monit_sust_qcas_2021_2022",
+      "format": "CSV",
+      "title": "Monitoreo de sustancias químicas en agua superficial del Río de la Plata. Año 2021-2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=330",
+      "lastProcessed": "2025-10-09T06:40:07.300Z",
+      "status": "processed"
+    },
+    "AgC_j_estaciones_monit_sust_qcas": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_j_estaciones_monit_sust_qcas",
+      "format": "CSV",
+      "title": "Monitoreo de sustancias químicas en agua superficial del Río de la Plata. Ubicación de las estaciones",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=332",
+      "lastProcessed": "2025-10-09T06:40:08.822Z",
+      "status": "processed"
+    },
+    "AgC_I_monit_sust_qcas_SEDIM_Invie2022_ver2023": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_I_monit_sust_qcas_SEDIM_Invie2022_ver2023",
+      "format": "CSV",
+      "title": "Monitoreo de sustancias químicas en sedimentos del Río de la Plata. Año 2022-2023.",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=385",
+      "lastProcessed": "2025-10-09T06:40:10.252Z",
+      "status": "processed"
+    },
+    "rpsq_chascomus_agua": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "rpsq_chascomus_agua",
+      "format": "CSV",
+      "title": "Muestreo de sustancias en agua superficial de las lagunas Chascomús, Adela y Chis Chis. Verano 2024.",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=405",
+      "lastProcessed": "2025-10-09T06:40:11.789Z",
+      "status": "processed"
+    },
+    "rpsq_chascomus_biota": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "rpsq_chascomus_biota",
+      "format": "CSV",
+      "title": "Muestreo de sustancias en biota de la laguna Chascomús. Verano 2024.",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=407",
+      "lastProcessed": "2025-10-09T06:40:13.224Z",
+      "status": "processed"
+    },
+    "rpsq_chascomus_sedimentos": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "rpsq_chascomus_sedimentos",
+      "format": "CSV",
+      "title": "Muestreo de sustancias en sedimento de las lagunas Chascomús, Adela y Chis Chis. Verano 2024",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=406",
+      "lastProcessed": "2025-10-09T06:40:14.568Z",
+      "status": "processed"
+    },
+    "AgC_p_indice_ICA_campañas_2023_prom": {
+      "datasetId": "ambiente_2.0",
+      "datasetTitle": "Monitoreo de calidad del agua",
+      "fileName": "AgC_p_indice_ICA_campañas_2023_prom",
+      "format": "CSV",
+      "title": "Monitoreo calidad del agua en el Rio de la Plata. Sitios de monitoreo. Promedio de los ICA 2023",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=105&did=418",
+      "lastProcessed": "2025-10-09T06:40:15.990Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_2.0",
+    "title": "Monitoreo de calidad del agua",
+    "description": "Muestra los monitoreos de calidad del agua en el Río de la Plata en la Red de Intercambio de Información de los Gobiernos Locales (RIIGLO) y de de las lagunas Chascomús, Adela y Chis Chis",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2023-08-10T00:00:00",
+    "modified": "2023-08-10T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

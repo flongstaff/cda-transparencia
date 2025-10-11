@@ -1,0 +1,41 @@
+R.A.F.A.M.
+ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 13
+27/02/202513:28
+Municipalidad de
+Carmen de ArecoDel 02/01/2024 al 31/12/2024
+Ejercicio: 2024
+Rubro - Descripción ProcedenciaModifica
+cionesRecurso
+EstimadoRecurso
+VigenteRecurso
+DevengadoDif. entre
+Vigente y
+DevengadoRecursos
+PercibidoDif. entre
+Devengado y
+PercibidoDif. entre
+Vigente y
+Percibido
+11.0.00.00 - Ingresos Tributarios
+11.4.00.00 - Coparticipación de impuestos
+11.4.01.00 - Coparticipación Pcial. de Impuesto
+Ley 10.5591.842.117.958,38 870.010.271,33 2.712.128.229,71 2.712.128.229,71 2.712.128.229,71 0,00 0,00 0,00 21 - Origen Provincial - De
+libre disponibilidad
+11.4.02.00 - Fondo para el fortalecimiento de
+Recurso Municipales97.452.306,60 46.358.465,22 143.810.771,82 143.810.771,82 143.810.771,82 0,00 0,00 0,00 21 - Origen Provincial - De
+libre disponibilidad
+11.4.03.00 - Fondo Municipal de Inclusion Social 40.554.586,60 16.017.418,52 56.572.005,12 56.572.005,12 56.572.005,12 0,00 0,00 0,00 21 - Origen Provincial - De
+libre disponibilidad11.4.05.00 - Fondo Educativo 386.850.531,43 30.284.630,70 417.135.162,13 417.135.162,13 417.135.162,13 0,00 0,00 0,00 22 - Origen Provincial -
+Afectados11.4.06.00 - Fondo de Fortalecimiento Fiscal
+Municipal Ley 15.480  Art° 320,00 127.863.814,16 127.863.814,16 127.863.814,16 127.863.814,16 0,00 0,00 0,00 21 - Origen Provincial - De
+libre disponibilidad
+2.366.975.383,01 1.090.534.599,93 3.457.509.982,94 3.457.509.982,94 0,00 3.457.509.982,94 0,00 Total Coparticipación de impuestos 0,00
+11.9.00.00 - Otros tributarios
+11.9.01.00 - Ley 9226
+11.9.02.00 - Contribucion Energia Electrica 6% Art
+72 ter Ley 11.969
+11.9.02.01 - Contribucion 6% EDEN 0,00 55.499.178,33 55.499.178,33 55.499.178,33 55.499.178,33 0,00 0,00 0,00 21 - Origen Provincial - De
+libre disponibilidad
+11.9.02.02 - Contribucion 6% CELCA 0,00 187.064.768,16 187.064.768,16 187.064.768,16 187.064.768,16 0,00 0,00 0,00 21 - Origen Provincial - De
+libre disponibilidad
+11.9.02.03 - Contribucion 6% CE...

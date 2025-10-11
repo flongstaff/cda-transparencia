@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-ordenanzas-2021-2022",
+      "title": "Ordenanzas Fiscales e Impositivas 2021-2022",
+      "distribution": [
+        {
+          "title": "Ordenanza-Fiscal-3112-2022.pdf",
+          "format": "PDF",
+          "fileName": "Ordenanza-Fiscal-3112-2022.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-ordenanzas-2021-2022/Ordenanza-Fiscal-3112-2022.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-ordenanzas-2021-2022/Ordenanza-Fiscal-3112-2022_extraction.json",
+            "pageCount": 56,
+            "textLength": 56,
+            "extractedPreview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

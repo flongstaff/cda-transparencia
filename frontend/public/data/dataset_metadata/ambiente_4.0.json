@@ -1,0 +1,61 @@
+{
+  "files": {
+    "AgG_a_glaciarescant_pcia": {
+      "datasetId": "ambiente_4.0",
+      "datasetTitle": "Glaciares",
+      "fileName": "AgG_a_glaciarescant_pcia",
+      "format": "CSV",
+      "title": "Cantidad de glaciares por provincia",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=4&did=166",
+      "lastProcessed": "2025-10-09T07:00:34.855Z",
+      "status": "processed"
+    },
+    "AgG_b_glaciares_anp": {
+      "datasetId": "ambiente_4.0",
+      "datasetTitle": "Glaciares",
+      "fileName": "AgG_b_glaciares_anp",
+      "format": "CSV",
+      "title": "Superficie de áreas protegidas en glaciares",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=4&did=168",
+      "lastProcessed": "2025-10-09T07:00:36.112Z",
+      "status": "processed"
+    },
+    "AgG_e_glaciares_Region": {
+      "datasetId": "ambiente_4.0",
+      "datasetTitle": "Glaciares",
+      "fileName": "AgG_e_glaciares_Region",
+      "format": "CSV",
+      "title": "Superficie de glaciares por región",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=4&did=167",
+      "lastProcessed": "2025-10-09T07:00:37.578Z",
+      "status": "processed"
+    },
+    "AgG_c_glaciarestipo_pcia": {
+      "datasetId": "ambiente_4.0",
+      "datasetTitle": "Glaciares",
+      "fileName": "AgG_c_glaciarestipo_pcia",
+      "format": "CSV",
+      "title": "Tipo y área de glaciares por provincia",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=1&stid=4&did=87",
+      "lastProcessed": "2025-10-09T07:00:38.878Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_4.0",
+    "title": "Glaciares",
+    "description": "Muestra la cantidad, superficie, distribución y tipo de glaciares",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2019-12-31T00:00:00",
+    "modified": "2019-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

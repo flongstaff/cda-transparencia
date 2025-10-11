@@ -1,0 +1,26 @@
+{
+  "files": {
+    "ADMINISTRACION PUBLICA.pdf": {
+      "datasetId": "ds-estadisticas-admin-2022",
+      "datasetTitle": "Administración Pública 2022",
+      "fileName": "ADMINISTRACION PUBLICA.pdf",
+      "lastProcessed": "2025-10-09T06:16:05.834Z",
+      "status": "error",
+      "error": "Failed to download PDF: ADMINISTRACION PUBLICA.pdf"
+    }
+  },
+  "info": {
+    "identifier": "ds-estadisticas-admin-2022",
+    "title": "Administración Pública 2022",
+    "description": "Estadísticas de personal y estructura orgánica en administración pública.",
+    "theme": [
+      "gobierno-y-sector-publico"
+    ],
+    "keywords": [],
+    "issued": "2023-01-01T00:00:00",
+    "modified": "2023-01-01T00:00:00",
+    "publisher": {
+      "name": "Oficina de Estadísticas"
+    }
+  }
+}

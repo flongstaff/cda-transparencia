@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_a9bdfec2-0af4-433a-b810-38c91275a251",
+      "datasetTitle": "Robos y recuperos de autos",
+      "format": "ZIP",
+      "title": "DNRPA. Robos y recuperos de autos  - 2018",
+      "accessURL": "https://datos.jus.gob.ar/dataset/a9bdfec2-0af4-433a-b810-38c91275a251/resource/e6898e12-3236-4c11-be63-17bbfc3e594d",
+      "lastProcessed": "2025-10-09T06:40:46.843Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_a9bdfec2-0af4-433a-b810-38c91275a251",
+    "title": "Robos y recuperos de autos",
+    "description": "Trámites de robos y recuperos de automotores inscriptos en los Registros Seccionales de la Propiedad del Automotor y Créditos Prendarios.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2018-06-14T18:34:41.788563",
+    "modified": "2025-09-11T14:39:33.287850",
+    "publisher": {
+      "mbox": "accesobd@dnrpa.gov.ar",
+      "name": "Ministerio de Justicia. Subsecretaría de Asuntos Registrales. Dirección Nacional de los Registros Nacionales de la Propiedad del Automotor y Créditos Prendarios"
+    },
+    "landingPage": "https://www.dnrpa.gov.ar"
+  }
+}

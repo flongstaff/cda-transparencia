@@ -1,0 +1,102 @@
+{
+  "files": {
+    "compras-de-distribuidor-envases-de-glp.csv": {
+      "datasetId": "energia_bada5328-3e7d-47b7-8fdc-85dbe2bc748e",
+      "datasetTitle": "Compras de GLP",
+      "fileName": "compras-de-distribuidor-envases-de-glp.csv",
+      "format": "CSV",
+      "title": "Compras de distribuidores de envases de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bada5328-3e7d-47b7-8fdc-85dbe2bc748e/resource/57bdab5b-783f-4277-a0e6-7bf199d57c2a",
+      "lastProcessed": "2025-10-09T06:40:21.463Z",
+      "status": "processed"
+    },
+    "compras-de-consumidores-de-glp.csv": {
+      "datasetId": "energia_bada5328-3e7d-47b7-8fdc-85dbe2bc748e",
+      "datasetTitle": "Compras de GLP",
+      "fileName": "compras-de-consumidores-de-glp.csv",
+      "format": "CSV",
+      "title": "Compras de consumidores de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bada5328-3e7d-47b7-8fdc-85dbe2bc748e/resource/67c38265-28f8-446a-97f0-0ec9f6001964",
+      "lastProcessed": "2025-10-09T06:40:22.753Z",
+      "status": "processed"
+    },
+    "compras-de-fraccionadores-de-glp.csv": {
+      "datasetId": "energia_bada5328-3e7d-47b7-8fdc-85dbe2bc748e",
+      "datasetTitle": "Compras de GLP",
+      "fileName": "compras-de-fraccionadores-de-glp.csv",
+      "format": "CSV",
+      "title": "Compras de fraccionadores de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bada5328-3e7d-47b7-8fdc-85dbe2bc748e/resource/f030a3a1-5a65-46c7-ba1e-f958ee05b8d2",
+      "lastProcessed": "2025-10-09T06:40:24.225Z",
+      "status": "processed"
+    },
+    "compras-de-productores-de-glp.csv": {
+      "datasetId": "energia_bada5328-3e7d-47b7-8fdc-85dbe2bc748e",
+      "datasetTitle": "Compras de GLP",
+      "fileName": "compras-de-productores-de-glp.csv",
+      "format": "CSV",
+      "title": "Compras de productores de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bada5328-3e7d-47b7-8fdc-85dbe2bc748e/resource/d8405011-5517-4299-862b-953e5855b19a",
+      "lastProcessed": "2025-10-09T06:40:25.590Z",
+      "status": "processed"
+    },
+    "compras-de-petroqumicas-de-glp.csv": {
+      "datasetId": "energia_bada5328-3e7d-47b7-8fdc-85dbe2bc748e",
+      "datasetTitle": "Compras de GLP",
+      "fileName": "compras-de-petroqumicas-de-glp.csv",
+      "format": "CSV",
+      "title": "Compras de petroquímicas de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bada5328-3e7d-47b7-8fdc-85dbe2bc748e/resource/74a1de23-67b4-4e14-8c8d-bf212766d264",
+      "lastProcessed": "2025-10-09T06:40:27.179Z",
+      "status": "processed"
+    },
+    "compras-de-aerosoleras-de-glp.csv": {
+      "datasetId": "energia_bada5328-3e7d-47b7-8fdc-85dbe2bc748e",
+      "datasetTitle": "Compras de GLP",
+      "fileName": "compras-de-aerosoleras-de-glp.csv",
+      "format": "CSV",
+      "title": "Compras de aerosoleras de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bada5328-3e7d-47b7-8fdc-85dbe2bc748e/resource/807c3f71-c005-4ea0-8a05-ef4cb7a4e52a",
+      "lastProcessed": "2025-10-09T06:40:28.482Z",
+      "status": "processed"
+    },
+    "compras-de-distribuidor-de-glp.csv": {
+      "datasetId": "energia_bada5328-3e7d-47b7-8fdc-85dbe2bc748e",
+      "datasetTitle": "Compras de GLP",
+      "fileName": "compras-de-distribuidor-de-glp.csv",
+      "format": "CSV",
+      "title": "Compras de distribuidores de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bada5328-3e7d-47b7-8fdc-85dbe2bc748e/resource/2e40f6e0-f381-47d7-a847-cdef06523bb8",
+      "lastProcessed": "2025-10-09T06:40:29.939Z",
+      "status": "processed"
+    },
+    "compras-de-comercializador-de-glp.csv": {
+      "datasetId": "energia_bada5328-3e7d-47b7-8fdc-85dbe2bc748e",
+      "datasetTitle": "Compras de GLP",
+      "fileName": "compras-de-comercializador-de-glp.csv",
+      "format": "CSV",
+      "title": "Compras de Comercializador de GLP",
+      "accessURL": "http://datos.energia.gob.ar/dataset/bada5328-3e7d-47b7-8fdc-85dbe2bc748e/resource/efa52395-3a01-4676-b6a6-b18d3bc6ceb4",
+      "lastProcessed": "2025-10-09T06:40:31.255Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_bada5328-3e7d-47b7-8fdc-85dbe2bc748e",
+    "title": "Compras de GLP",
+    "description": "Detalle mensual de compras de GLP por volumen y tipo de cliente. (Pesos y toneladas).\r\n",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:34.409962",
+    "modified": "2023-07-31T11:10:36.011051",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

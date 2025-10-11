@@ -1,0 +1,32 @@
+{
+  "files": {
+    "proyectos-aprobados-satelital-012024.xlsx": {
+      "datasetId": "produccion_a89260c1-86a4-4668-95ff-93d2d51a8da4",
+      "datasetTitle": "Programa POTENCIAR Satelital",
+      "fileName": "proyectos-aprobados-satelital-012024.xlsx",
+      "format": "XLS",
+      "title": "Beneficiarios del Programa POTENCIAR Satelital",
+      "accessURL": "https://datos.produccion.gob.ar/dataset/a89260c1-86a4-4668-95ff-93d2d51a8da4/resource/5c192150-317a-4f1b-b474-08f3e1eb6bae",
+      "lastProcessed": "2025-10-09T08:04:25.797Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "produccion_a89260c1-86a4-4668-95ff-93d2d51a8da4",
+    "title": "Programa POTENCIAR Satelital",
+    "description": "El objetivo del Programa consiste en fortalecer al sector satelital, brindando financiamiento a los proyectos basados en actividades de Economía del Conocimiento, que en su ejecución promuevan, tanto para los mercados interno y externo, la creación de nuevos prototipos, productos y/o servicios, así como la modificación de procesos productivos y/o logísticos, la generación de plataformas tecnológicas, entre otras finalidades.",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2022-01-24T11:00:00.729352",
+    "modified": "2023-07-13T14:59:43.844859",
+    "publisher": {
+      "mbox": "dnmejoradelagestion@produccion.gob.ar",
+      "name": "Ministerio de Desarrollo Productivo, Secretaría de Industria, Economía del Conocimiento y Gestión Comercial Externa, Subsecretaría de Economía del Conocimiento, Dirección Nacional de Innovación Abierta, Dirección de Consolidación de Sectores Estratégicos."
+    },
+    "landingPage": "https://datos.produccion.gob.ar/dataset/programa-potenciar-satelital"
+  }
+}

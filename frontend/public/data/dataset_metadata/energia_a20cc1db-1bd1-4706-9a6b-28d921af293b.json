@@ -1,0 +1,32 @@
+{
+  "files": {
+    "actas-de-verificacin-de-eess.csv": {
+      "datasetId": "energia_a20cc1db-1bd1-4706-9a6b-28d921af293b",
+      "datasetTitle": "Inspecciones de abastecimiento en instalaciones de hidrocarburos",
+      "fileName": "actas-de-verificacin-de-eess.csv",
+      "format": "CSV",
+      "title": "Actas de inspecciones de abastecimiento en instalaciones de combustibles líquidos",
+      "accessURL": "http://datos.energia.gob.ar/dataset/a20cc1db-1bd1-4706-9a6b-28d921af293b/resource/ca9dfa0d-2e7c-488e-ba92-4b545f5e060d",
+      "lastProcessed": "2025-10-09T07:18:34.792Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_a20cc1db-1bd1-4706-9a6b-28d921af293b",
+    "title": "Inspecciones de abastecimiento en instalaciones de hidrocarburos",
+    "description": "Actas de Verificación de EESS",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2017-01-20T16:34:42.931471",
+    "modified": "2023-01-17T10:53:49.266104",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/auditorias-e-inspecciones-en-instalaciones-de-hidrocarburos"
+  }
+}

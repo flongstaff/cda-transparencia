@@ -1,21 +1,24 @@
-"source","type","description","budgeted","executed","percentage","year"
-"provincial_participation","taxes","Participación Impuestos Provinciales",0.00,379449.30,0.00,"2019"
-"property_tax","rural","Inmobiliario Rural No Afectado",0.00,177861.13,0.00,"2019"
-"revenue_tax","gross_income","Ingresos Brutos",0.00,428.24,0.00,"2019"
-"ordinary_resources","funds","Recursos Ordinarios",0.00,60532.50,0.00,"2019"
-"municipal_housing_fund","housing","Fondo Vivienda Municipal",0.00,190780.09,0.00,"2019"
-"rural_property","affected","Inmobiliario Rural Afectado",0.00,858657.57,0.00,"2019"
-"municipal_productive_fund","development","Fondo Productivo Municipal",0.00,43966.04,0.00,"2019"
-"network_expansion_fund","utilities","Fondo Tendiend Redes",0.00,2548.20,0.00,"2019"
-"communal_police","security","Policia Comunal",0.00,4380.14,0.00,"2019"
-"second_chance","social","Segunda Oportunidad",0.00,586.04,0.00,"2019"
-"affected_resources","special","Recursos Afectados",0.00,3509966.87,0.00,"2019"
-"nacer_plan","health","Plan NACER",0.00,3310.50,0.00,"2019"
-"soy_fund","education","Fondo Solidario Pcial Soja",0.00,462.10,0.00,"2019"
-"educational_coparticipation","education","Coparticipacion Fondo Educativo",0.00,42141.33,0.00,"2019"
-"infrastructure_fund","infrastructure","Fondo de Infraestructura",0.00,22842.71,0.00,"2019"
-"samo","health","Sistema de Atención Médica Organizada",0.00,80299.94,0.00,"2019"
-"national_municipal_plan","infrastructure","Plan Nacional de Obras Municipales",0.00,284875.02,0.00,"2019"
-"habitat_north","housing","Habitat Norte Interior Y Obras Y Vivienda",0.00,0.80,0.00,"2019"
-"third_party_account","miscellaneous","Cuenta de Terceros",0.00,733710.68,0.00,"2019"
-"total_disponibilities","cash","Total Disponibilidades",0.00,6396799.20,0.00,"2019"
+source,type,description,budgeted,executed,percentage,year
+provincial_participation,taxes,Participación Impuestos Provinciales,0.0,379449.3,0.0,2019
+property_tax,rural,Inmobiliario Rural No Afectado,0.0,177861.13,0.0,2019
+revenue_tax,gross_income,Ingresos Brutos,0.0,428.24,0.0,2019
+ordinary_resources,funds,Recursos Ordinarios,0.0,60532.5,0.0,2019
+municipal_housing_fund,housing,Fondo Vivienda Municipal,0.0,190780.09,0.0,2019
+rural_property,affected,Inmobiliario Rural Afectado,0.0,858657.57,0.0,2019
+municipal_productive_fund,development,Fondo Productivo Municipal,0.0,43966.04,0.0,2019
+network_expansion_fund,utilities,Fondo Tendiend Redes,0.0,2548.2,0.0,2019
+communal_police,security,Policia Comunal,0.0,4380.14,0.0,2019
+second_chance,social,Segunda Oportunidad,0.0,586.04,0.0,2019
+affected_resources,special,Recursos Afectados,0.0,3509966.87,0.0,2019
+nacer_plan,health,Plan NACER,0.0,3310.5,0.0,2019
+soy_fund,education,Fondo Solidario Pcial Soja,0.0,462.1,0.0,2019
+educational_coparticipation,education,Coparticipacion Fondo Educativo,0.0,42141.33,0.0,2019
+infrastructure_fund,infrastructure,Fondo de Infraestructura,0.0,22842.71,0.0,2019
+samo,health,Sistema de Atención Médica Organizada,0.0,80299.94,0.0,2019
+national_municipal_plan,infrastructure,Plan Nacional de Obras Municipales,0.0,284875.02,0.0,2019
+habitat_north,housing,Habitat Norte Interior Y Obras Y Vivienda,0.0,0.8,0.0,2019
+third_party_account,miscellaneous,Cuenta de Terceros,0.0,733710.68,0.0,2019
+total_disponibilities,cash,Total Disponibilidades,0.0,6396799.2,0.0,2019
+,,,,,,2019
+,,,,,,2024
+,,,,,,2016

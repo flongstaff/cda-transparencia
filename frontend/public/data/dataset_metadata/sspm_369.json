@@ -1,0 +1,52 @@
+{
+  "files": {
+    "embarques-de-oleaginosas-y-cereales-anuales.csv": {
+      "datasetId": "sspm_369",
+      "datasetTitle": "Embarques de Oleaginosas y Cereales",
+      "fileName": "embarques-de-oleaginosas-y-cereales-anuales.csv",
+      "format": "CSV",
+      "title": "Embarques de Oleaginosas y Cereales. Datos anuales",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:22.300Z",
+      "status": "processed"
+    },
+    "embarques-de-oleaginosas-y-cereales-trimestral.csv": {
+      "datasetId": "sspm_369",
+      "datasetTitle": "Embarques de Oleaginosas y Cereales",
+      "fileName": "embarques-de-oleaginosas-y-cereales-trimestral.csv",
+      "format": "CSV",
+      "title": "Embarques de Oleaginosas y Cereales. Datos trimestral",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:23.354Z",
+      "status": "processed"
+    },
+    "embarques-de-oleaginosas-y-cereales-mensual.csv": {
+      "datasetId": "sspm_369",
+      "datasetTitle": "Embarques de Oleaginosas y Cereales",
+      "fileName": "embarques-de-oleaginosas-y-cereales-mensual.csv",
+      "format": "CSV",
+      "title": "Embarques de Oleaginosas y Cereales. Datos mensual",
+      "accessURL": "https://www.economia.gob.ar/datos/",
+      "lastProcessed": "2025-10-09T07:18:24.402Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "sspm_369",
+    "title": "Embarques de Oleaginosas y Cereales",
+    "description": "Embarques de Oleaginosas y Cereales",
+    "theme": [
+      "econ"
+    ],
+    "superTheme": [
+      "ECON"
+    ],
+    "issued": "2018-01-05",
+    "modified": "2025-03-24T10:00:55.276989",
+    "publisher": {
+      "mbox": "datoseconomicos@mecon.gov.ar",
+      "name": "Subsecretaría de Programación Macroeconómica"
+    },
+    "landingPage": "https://www.economia.gob.ar/datos/"
+  }
+}

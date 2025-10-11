@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "justicia_d59c2d29-d561-4ad2-a032-cc82b40db2d3",
+      "datasetTitle": "Base SAIJ de Normativa Provincial",
+      "format": "gráfico",
+      "title": "Base SAIJ de Normativa Provincial - Gráficos estadísticos",
+      "accessURL": "https://datos.jus.gob.ar/dataset/d59c2d29-d561-4ad2-a032-cc82b40db2d3/resource/234d2da3-e1fa-4d38-916a-88b264f788b5",
+      "lastProcessed": "2025-10-09T06:32:31.312Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "justicia_d59c2d29-d561-4ad2-a032-cc82b40db2d3",
+    "title": "Base SAIJ de Normativa Provincial",
+    "description": "Base de documentos digitales normativos provinciales: leyes, decretos leyes, textos ordenados, códigos y Constituciones publicados en el Boletín Oficial de la Provincia correspondiente.",
+    "theme": [
+      "just"
+    ],
+    "superTheme": [
+      "JUST"
+    ],
+    "issued": "2016-11-22T16:09:24.483249",
+    "modified": "2025-10-01T13:59:11.678740",
+    "publisher": {
+      "mbox": "datosabiertos@saij.gob.ar",
+      "name": "Ministerio de Justicia. Secretaría de Justicia. Dirección Nacional del Sistema Argentino de Información Jurídica"
+    },
+    "landingPage": "https://datos.jus.gob.ar/dataset/base-saij-de-normativa-provincial"
+  }
+}

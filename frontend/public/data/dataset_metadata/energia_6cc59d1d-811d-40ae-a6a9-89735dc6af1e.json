@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_6cc59d1d-811d-40ae-a6a9-89735dc6af1e",
+      "datasetTitle": "GLP - Paridad de Exportación de referencia",
+      "format": "XLS",
+      "title": "GLP - Paridad de Exportación de referencia",
+      "accessURL": "http://datos.energia.gob.ar/dataset/6cc59d1d-811d-40ae-a6a9-89735dc6af1e/resource/465c58fc-3a3e-4ba8-ad02-f5f674e5f710",
+      "lastProcessed": "2025-10-09T06:31:47.346Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_6cc59d1d-811d-40ae-a6a9-89735dc6af1e",
+    "title": "GLP - Paridad de Exportación de referencia",
+    "description": "Valores de la paridad de exportación de referencia para el propano y butano ($/Ton) ",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2018-03-28T17:21:58.319360",
+    "modified": "2025-10-01T17:02:47.756659",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía.Subsecretaría de Transición y Planeamiento Energético.Dirección Nacional de Información Energética. "
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

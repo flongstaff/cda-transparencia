@@ -1,0 +1,61 @@
+{
+  "files": {
+    "EARC_inscriptospcia_num_2023": {
+      "datasetId": "ambiente_34.0",
+      "datasetTitle": "Registro de consultores en evaluación ambiental",
+      "fileName": "EARC_inscriptospcia_num_2023",
+      "format": "CSV",
+      "title": "Cantidad de consultores inscriptos en el Registro Nacional de Consultores en Evaluación Ambiental, por provincia y año",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=16&stid=58&did=212",
+      "lastProcessed": "2025-10-09T06:48:57.393Z",
+      "status": "processed"
+    },
+    "EARC_consultores_indiv_2025": {
+      "datasetId": "ambiente_34.0",
+      "datasetTitle": "Registro de consultores en evaluación ambiental",
+      "fileName": "EARC_consultores_indiv_2025",
+      "format": "CSV",
+      "title": "Consultores individuales",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=16&stid=58&did=311",
+      "lastProcessed": "2025-10-09T06:48:58.660Z",
+      "status": "processed"
+    },
+    "EARC_firmasinscrippcia_num_2023": {
+      "datasetId": "ambiente_34.0",
+      "datasetTitle": "Registro de consultores en evaluación ambiental",
+      "fileName": "EARC_firmasinscrippcia_num_2023",
+      "format": "CSV",
+      "title": "Cantidad de firmas consultoras inscriptas en el Registro Nacional de Consultores en Evaluación Ambiental, por provincia y año",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=16&stid=58&did=213",
+      "lastProcessed": "2025-10-09T06:49:00.074Z",
+      "status": "processed"
+    },
+    "EARC_firmasinscrppcia_2025": {
+      "datasetId": "ambiente_34.0",
+      "datasetTitle": "Registro de consultores en evaluación ambiental",
+      "fileName": "EARC_firmasinscrppcia_2025",
+      "format": "CSV",
+      "title": "Firmas consultoras",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=16&stid=58&did=308",
+      "lastProcessed": "2025-10-09T06:49:01.354Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_34.0",
+    "title": "Registro de consultores en evaluación ambiental",
+    "description": "Muestra los consultores y la firmas consultoras inscriptas por provincia en el registro del Ministerio de Ambiente y Desarrollo Sostenible",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2018-12-31T00:00:00",
+    "modified": "2018-12-31T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

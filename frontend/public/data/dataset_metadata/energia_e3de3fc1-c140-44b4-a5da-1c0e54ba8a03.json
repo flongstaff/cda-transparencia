@@ -1,0 +1,31 @@
+{
+  "files": {
+    "undefined": {
+      "datasetId": "energia_e3de3fc1-c140-44b4-a5da-1c0e54ba8a03",
+      "datasetTitle": "GLP - Parque de envases hábiles de 10, 15 y 45 Kg. de capacidad",
+      "format": "XLSX",
+      "title": "GLP - Parque de envases hábiles de 10, 15 y 45 Kg. de capacidad",
+      "accessURL": "http://datos.energia.gob.ar/dataset/e3de3fc1-c140-44b4-a5da-1c0e54ba8a03/resource/c9535fba-18ce-41aa-aae8-cb8c6f181490",
+      "lastProcessed": "2025-10-09T07:20:59.177Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_e3de3fc1-c140-44b4-a5da-1c0e54ba8a03",
+    "title": "GLP - Parque de envases hábiles de 10, 15 y 45 Kg. de capacidad",
+    "description": "Parque de envases hábiles de 10, 15 y 45 Kg. de capacidad, que comprende el período 01/01/2011 al 30/12/2020",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2018-01-08T17:49:36.319791",
+    "modified": "2024-07-16T12:40:35.235029",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

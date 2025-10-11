@@ -363,17 +363,18 @@ class SmartDataLoader {
     const y = year || new Date().getFullYear();
 
     const commonSources = [
-      `/data/consolidated/${y}/summary.json`
+      `/data/api/enhanced_summary.json`,
+      `/data/main.json`
     ];
 
     const pageSpecificSources: Record<string, string[]> = {
-      budget: [`/data/consolidated/${y}/budget.json`, `/data/charts/Budget_Execution_consolidated_2019-2025.csv`],
-      treasury: [`/data/consolidated/${y}/treasury.json`],
-      debt: [`/data/consolidated/${y}/debt.json`],
-      expenses: [`/data/charts/Expenditure_Report_consolidated_2019-2025.csv`],
-      salaries: [`/data/consolidated/${y}/salaries.json`],
-      contracts: [`/data/consolidated/${y}/contracts.json`],
-      documents: [`/data/web_accessible_pdfs/pdf_index.json`]
+      budget: [`/data/api/financial/${y}/consolidated.json`, `/data/charts/Budget_Execution_consolidated_2019-2025.csv`, `/data/main.json`],
+      treasury: [`/data/api/financial/${y}/consolidated.json`, `/data/main.json`],
+      debt: [`/data/api/financial/${y}/consolidated.json`, `/data/main.json`],
+      expenses: [`/data/api/financial/${y}/expenditure_by_program.json`, `/data/charts/Expenditure_Report_consolidated_2019-2025.csv`, `/data/main.json`],
+      salaries: [`/data/api/financial/${y}/consolidated.json`, `/data/main.json`],
+      contracts: [`/data/api/documents.json`, `/data/main.json`],
+      documents: [`/data/api/documents.json`, `/data/api/pdf_metadata.json`]
     };
 
     return [...commonSources, ...(pageSpecificSources[pageName.toLowerCase()] || [])];
@@ -505,8 +506,9 @@ class SmartDataLoader {
 
     const currentYear = new Date().getFullYear();
     const essentialData = [
-      `/data/consolidated/${currentYear}/summary.json`,
-      `/data/data-index.json`,
+      `/data/api/enhanced_summary.json`,
+      `/data/main.json`,
+      `/data/api/index.json`,
       `/data/multi_source_report.json`
     ];
 

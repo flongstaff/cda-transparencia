@@ -1,0 +1,71 @@
+{
+  "file_name": "2019_financial_summary_structured.csv",
+  "row_count": 23,
+  "column_count": 7,
+  "columns": [
+    "category",
+    "subcategory",
+    "description",
+    "budgeted",
+    "executed",
+    "percentage",
+    "year"
+  ],
+  "sample_data": [
+    {
+      "category": "revenue",
+      "subcategory": "current",
+      "description": "Ingresos corrientes",
+      "budgeted": 241879702.14,
+      "executed": 232492993.99,
+      "percentage": 96.12,
+      "year": 2019
+    },
+    {
+      "category": "revenue",
+      "subcategory": "capital",
+      "description": "Recursos de capital",
+      "budgeted": 1632279.86,
+      "executed": 1632279.86,
+      "percentage": 100.0,
+      "year": 2019
+    },
+    {
+      "category": "revenue",
+      "subcategory": "financial_sources",
+      "description": "Fuentes Financieras",
+      "budgeted": 0.0,
+      "executed": 0.0,
+      "percentage": 0.0,
+      "year": 2019
+    },
+    {
+      "category": "revenue",
+      "subcategory": "total",
+      "description": "Total Recursos",
+      "budgeted": 243511982.0,
+      "executed": 234125273.85,
+      "percentage": 96.15,
+      "year": 2019
+    },
+    {
+      "category": "revenue",
+      "subcategory": "discretionary",
+      "description": "De libre disponibilidad",
+      "budgeted": 185792776.35,
+      "executed": 176406068.2,
+      "percentage": 95.0,
+      "year": 2019
+    }
+  ],
+  "data_types": {
+    "category": "object",
+    "subcategory": "object",
+    "description": "object",
+    "budgeted": "float64",
+    "executed": "float64",
+    "percentage": "float64",
+    "year": "int64"
+  },
+  "processing_method": "pandas-read_csv"
+}

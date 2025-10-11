@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5",
+      "title": "Conectividad Aérea",
+      "distribution": [
+        {
+          "title": "2023.08.24_conectividad.pdf",
+          "format": "PDF",
+          "fileName": "2023.08.24_conectividad.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5/2023.08.24_conectividad.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/turismo_c0e7bc3d-553c-405c-8b32-79282b28ffd5/2023.08.24_conectividad_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

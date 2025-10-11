@@ -1,0 +1,122 @@
+{
+  "files": {
+    "distribucin-elctrica-edesur-at-lneas.csv": {
+      "datasetId": "energia_6cd06091-3498-457a-87cd-be1bf50f9e40",
+      "datasetTitle": "Distribución Eléctrica Edesur",
+      "fileName": "distribucin-elctrica-edesur-at-lneas.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edesur Alta Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/6cd06091-3498-457a-87cd-be1bf50f9e40/resource/7e586ac4-feac-4c7c-9528-61e5bfcf3378",
+      "lastProcessed": "2025-10-09T07:21:07.489Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edesur-at-postes.csv": {
+      "datasetId": "energia_6cd06091-3498-457a-87cd-be1bf50f9e40",
+      "datasetTitle": "Distribución Eléctrica Edesur",
+      "fileName": "distribucin-elctrica-edesur-at-postes.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edesur Alta Tensión Postes",
+      "accessURL": "http://datos.energia.gob.ar/dataset/6cd06091-3498-457a-87cd-be1bf50f9e40/resource/f46c040e-f893-4a64-bfe2-378d21bbedef",
+      "lastProcessed": "2025-10-09T07:21:08.744Z",
+      "status": "processed"
+    },
+    "at-salidas.zip": {
+      "datasetId": "energia_6cd06091-3498-457a-87cd-be1bf50f9e40",
+      "datasetTitle": "Distribución Eléctrica Edesur",
+      "fileName": "at-salidas.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edesur - Alta Tensión  Salidas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/6cd06091-3498-457a-87cd-be1bf50f9e40/resource/9b888b25-2978-49a3-8ced-a53ac3a961ac",
+      "lastProcessed": "2025-10-09T07:21:08.744Z",
+      "status": "processed"
+    },
+    "at-postes.zip": {
+      "datasetId": "energia_6cd06091-3498-457a-87cd-be1bf50f9e40",
+      "datasetTitle": "Distribución Eléctrica Edesur",
+      "fileName": "at-postes.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edesur Alta Tensión Postes",
+      "accessURL": "http://datos.energia.gob.ar/dataset/6cd06091-3498-457a-87cd-be1bf50f9e40/resource/d0c3b8ef-d404-4151-bf81-df6b74a957b0",
+      "lastProcessed": "2025-10-09T07:21:08.744Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edesur-at-empalmes.csv": {
+      "datasetId": "energia_6cd06091-3498-457a-87cd-be1bf50f9e40",
+      "datasetTitle": "Distribución Eléctrica Edesur",
+      "fileName": "distribucin-elctrica-edesur-at-empalmes.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edesur Alta Tensión  Empalmes",
+      "accessURL": "http://datos.energia.gob.ar/dataset/6cd06091-3498-457a-87cd-be1bf50f9e40/resource/b1917834-1e28-4bcc-9ccb-b5b80f991156",
+      "lastProcessed": "2025-10-09T07:21:09.993Z",
+      "status": "processed"
+    },
+    "at-lneas.zip": {
+      "datasetId": "energia_6cd06091-3498-457a-87cd-be1bf50f9e40",
+      "datasetTitle": "Distribución Eléctrica Edesur",
+      "fileName": "at-lneas.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edesur Alta Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/6cd06091-3498-457a-87cd-be1bf50f9e40/resource/fa933621-8110-44a8-bafa-219c4b102b8e",
+      "lastProcessed": "2025-10-09T07:21:09.994Z",
+      "status": "processed"
+    },
+    "at-empalmes.zip": {
+      "datasetId": "energia_6cd06091-3498-457a-87cd-be1bf50f9e40",
+      "datasetTitle": "Distribución Eléctrica Edesur",
+      "fileName": "at-empalmes.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edesur Alta Tensión Empalmes",
+      "accessURL": "http://datos.energia.gob.ar/dataset/6cd06091-3498-457a-87cd-be1bf50f9e40/resource/46cb81d8-afd6-4ffa-adb0-69a3e943f9dc",
+      "lastProcessed": "2025-10-09T07:21:09.994Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edesur-at-salidas.csv": {
+      "datasetId": "energia_6cd06091-3498-457a-87cd-be1bf50f9e40",
+      "datasetTitle": "Distribución Eléctrica Edesur",
+      "fileName": "distribucin-elctrica-edesur-at-salidas.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edesur Alta Tensión  Salidas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/6cd06091-3498-457a-87cd-be1bf50f9e40/resource/bd2235c4-9f84-47a2-a7f8-8f45e839cc00",
+      "lastProcessed": "2025-10-09T07:21:11.264Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edesur-media-tensin-lneas.zip": {
+      "datasetId": "energia_6cd06091-3498-457a-87cd-be1bf50f9e40",
+      "datasetTitle": "Distribución Eléctrica Edesur",
+      "fileName": "distribucin-elctrica-edesur-media-tensin-lneas.zip",
+      "format": "SHP",
+      "title": "Distribución Eléctrica Edesur Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/6cd06091-3498-457a-87cd-be1bf50f9e40/resource/76a4ce35-d1a4-48b4-8131-8e703fb4894c",
+      "lastProcessed": "2025-10-09T07:21:11.265Z",
+      "status": "processed"
+    },
+    "distribucin-elctrica-edesur-media-tensin-lneas.csv": {
+      "datasetId": "energia_6cd06091-3498-457a-87cd-be1bf50f9e40",
+      "datasetTitle": "Distribución Eléctrica Edesur",
+      "fileName": "distribucin-elctrica-edesur-media-tensin-lneas.csv",
+      "format": "CSV",
+      "title": "Distribución Eléctrica Edesur Media Tensión Líneas",
+      "accessURL": "http://datos.energia.gob.ar/dataset/6cd06091-3498-457a-87cd-be1bf50f9e40/resource/92ca8920-4b05-4d95-8156-c77ffbb87e47",
+      "lastProcessed": "2025-10-09T07:21:13.024Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_6cd06091-3498-457a-87cd-be1bf50f9e40",
+    "title": "Distribución Eléctrica Edesur",
+    "description": "Este grupo se compone de conceptos que se relacionan con la producción, transporte y distribución de energía.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-06-11T11:00:48.163685",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-licitacion-9-2023",
+      "title": "Licitación Pública N°9/2023 - Adquisición de Camioneta Utilitaria",
+      "distribution": [
+        {
+          "title": "LICITACION-PUBLICA-N°9.pdf",
+          "format": "PDF",
+          "fileName": "LICITACION-PUBLICA-N°9.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-licitacion-9-2023/LICITACION-PUBLICA-N°9.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-licitacion-9-2023/LICITACION-PUBLICA-N°9_extraction.json",
+            "pageCount": 2,
+            "textLength": 2,
+            "extractedPreview": "\n\n",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

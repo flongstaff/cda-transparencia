@@ -1,0 +1,40 @@
+R.A.F.A.M.
+ESTADO DE EJECUCION PRESUPUESTARIA DE RECURSOSHoja: 1 de 3
+26/08/202412:47
+Municipalidad de
+Carmen de Areco Del 02/01/2024 al 31/03/2024 Ejercicio: 2024(POR CARACTER ECONÓMICO)
+CONSOLIDADO
+Descripción ModificacionesRecurso
+EstimadoRecurso
+VigenteRecurso
+DevengadoDif. entre
+Vigente y
+DevengadoRecursos
+PercibidoDif. entre
+Devengado y
+Percibido
+RECURSOS
+INGRESOS CORRIENTES
+Ingresos tributarios
+Impuestos provinciales y nacionales 2.366.975.383,01 0,00 2.366.975.383,01 489.896.280,52 1.877.079.102,49 489.896.280,52 0,00
+Otros impuestos 272.693.746,34 0,00 272.693.746,34 18.260.267,25 254.433.479,09 21.472.879,16 -3.212.611,91
+2.639.669.129,35 0,00 2.639.669.129,35 508.156.547,77 2.131.512.581,58 511.369.159,68 -3.212.611,91 TotalIngresos tributarios
+Ingresos no tributarios
+Tasas 1.156.536.291,27 583.500,00 1.157.119.791,27 69.593.908,68 1.087.525.882,59 76.016.809,48 -6.422.900,80
+Derechos 229.832.680,39 709.851,84 230.542.532,23 14.985.638,07 215.556.894,16 15.113.493,07 -127.855,00
+Otros no tributarios 280.175.468,34 0,00 280.175.468,34 55.759.627,84 224.415.840,50 55.759.627,84 0,00
+1.666.544.440,00 1.293.351,84 1.667.837.791,84 140.339.174,59 1.527.498.617,25 146.889.930,39 -6.550.755,80 TotalIngresos no tributarios
+Rentas de la propiedad
+Intereses
+Intereses internos
+Intereses por depósitos 260.166.770,67 0,00 260.166.770,67 887.430,93 259.279.339,74 887.430,93 0,00
+260.166.770,67 0,00 260.166.770,67 887.430,93 259.279.339,74 887.430,93 0,00 Total Intereses internos
+260.166.770,67 0,00 260.166.770,67 887.430,93 259.279.339,74 887.430,93 0,00 Total Intereses
+260.166.770,67 0,00 260.166.770,67 887.430,93 259.279.339,74 887.430,93 0,00 TotalRentas de la propiedad
+Transferencias Corrientes
+Del sector privado
+De empresas privadas 0,00 1.374.366,67 1.374.366,67 1.374.366,67 0,00 1.374.366,67 0,00
+0,00 1.374.366,67 1.374.366,67 1.374.366,67 0,00 1.374.366,67 0,00 Total Del sector privado
+Del sector público
+Del sector público nacional
+De la administración central ...

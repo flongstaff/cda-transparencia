@@ -1,26 +1,24 @@
 {
-  "name": "Carmen de Areco Transparency Portal",
+  "project": "cda-transparencia",
   "version": "1.0.0",
-  "deployment_date": "2025-09-28T04:47:20.920Z",
-  "structure": "cloudflare-optimized",
-  "features": [
-    "red-flag-detection",
-    "interactive-charts",
-    "static-fallbacks",
-    "api-endpoints",
-    "mobile-responsive"
-  ],
-  "deployment_checklist": [
-    "✅ Frontend build copied",
-    "✅ Data structure prepared",
-    "✅ Static charts generated",
-    "✅ API endpoints created",
-    "✅ Configuration files copied",
-    "✅ Redirects configured"
-  ],
-  "deployment_commands": [
-    "1. cd frontend",
-    "2. npm run build",
-    "3. Deploy to Cloudflare Pages using GitHub Actions"
-  ]
+  "deployment_type": "cloudflare-workers",
+  "custom_domain": "cda-transparencia.org",
+  "cloudflare_url": "https://cda-transparencia.franco-longstaff.workers.dev/",
+  "deploy_timestamp": "2025-10-10T17:17:10Z",
+  "backend_config": {
+    "worker_script": "worker.js",
+    "api_endpoints": [
+      "/api/processed",
+      "/api/json",
+      "/api/csv",
+      "/health"
+    ],
+    "cors_enabled": true,
+    "github_data_source": true
+  },
+  "data_org": {
+    "structured": true,
+    "organized_by_category": true,
+    "api_ready": true
+  }
 }

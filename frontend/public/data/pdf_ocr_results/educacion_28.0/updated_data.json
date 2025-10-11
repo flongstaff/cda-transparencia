@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "educacion_28.0",
+      "title": "Censos Docentes",
+      "distribution": [
+        {
+          "title": "cnd_2004.pdf",
+          "format": "PDF",
+          "fileName": "cnd_2004.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/educacion_28.0/cnd_2004.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/educacion_28.0/cnd_2004_extraction.json",
+            "pageCount": 1,
+            "textLength": 0,
+            "extractedPreview": "",
+            "method": "none"
+          }
+        }
+      ]
+    }
+  ]
+}

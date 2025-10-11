@@ -1,0 +1,4389 @@
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="es" class="ie ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="ie ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="es" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es"> <!--<![endif]-->
+  <head>
+    <!--[if lte ie 8]><script type="text/javascript" src="/fanstatic/vendor/:version:2018-08-16T11:43:08/html5.min.js"></script><![endif]-->
+<link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2018-08-16T11:43:08/select2/select2.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/css/:version:2018-08-16T11:43:08/main.min.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/vendor/:version:2018-08-16T11:43:08/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/ckanext-harvest/:version:2018-08-16T11:43:20/styles/harvest.css" />
+<link rel="stylesheet" type="text/css" href="/fanstatic/gobar_css/:version:2019-04-01T08:44:31.64/:bundle:gobar_style.css;table.css" />
+
+    <meta charset="utf-8" />
+      <meta name="generator" content="ckan 2.7.4" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta property="og:url" content="http://datos.energia.gob.ar/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Datos Energía">
+    <meta property="og:site_name" content="Datos Energía">
+    <meta property="og:description" content="Portal de Datos Abiertos del sistema unificado de información energética de la Secretaría de Energía de la Nación.">
+    <meta property="og:image" content="http://datos.energia.gob.ar">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="2400">
+    <meta property="og:image:height" content="1260">
+    <meta property="og:locale" content="es_AR">
+    <meta name="google-site-verification" content="PhxGAk5uIb9tkLPu0cfD0Tpk-V0ez15Gqnqk1s1i99w" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site:id" content="@Energia_Ar"/>
+    <meta name="twitter:image:src" content="http://datos.energia.gob.ar">
+    <meta name="twitter:title" content="Datos Energía | Balance Energético Nacional Serie histórica – Indicadores Desde 1960 actualizado al año 2018">
+    <meta name="twitter:description" content="Noviembre de 2019">
+    <title>
+    Datos Energía - Balance Energético Nacional Serie histórica – Indicadores Desde 1960 actualizado al año 2018</title>
+
+    
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    
+        <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87547125-1', 'auto', {});
+     
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+    
+  
+      
+    
+  
+
+
+    
+      
+      
+    
+    
+  </head>
+
+  
+  <body data-site-root="http://datos.energia.gob.ar/" data-locale-root="http://datos.energia.gob.ar/" >
+
+    
+    <style type="text/css">
+        
+    </style>
+
+    <div class="footer-down">
+            
+<div id="header" class="container-fluid">
+    <div class="restricted-max-width">
+        <div id="header-spacing" class="col-xs-12 col-sm-10 col-sm-offset-1">
+
+            
+
+            <div class="col-xs-12 col-sm-5 no-padding logo-header">
+                <div class="logo-and-xs-icon">
+                    <i class="icon-reorder fa fa-bars" aria-hidden="true"></i>
+                    <a href="/">
+                        
+                        <img src="/user_images/logo_sec_energia_1lin-apisado.jpg" class="logo-ministerio">
+                    </a>
+                    
+                </div>
+                <div class="xs-navbar hidden">
+                    <div class="navbar-link">
+                        <a href="/dataset">
+                            DATASETS
+                        </a>
+                    </div>
+                    <hr>
+                    
+                        <div class="navbar-link">
+                            <a href="/series/api">
+                                SERIES
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="navbar-link">
+                            <a href="/organizaciones">
+                                ORGANIZACIONES
+                            </a>
+                        </div>
+                    
+					
+					 <div class="navbar-link">
+       <a title="SIG" class="header-link" href="https://www.argentina.gob.ar/economia/energia/informacion-geografica-energia" target="_blank">
+                    SIG 
+                      </a>
+
+                    </div> 
+					 <div class="navbar-link">
+					<a title="Visualizaciones" class="header-link" href="https://estadisticasenergia.mecon.gob.ar/portal/datos/" target="_blank">
+                    Visualizaciones 
+                      </a>
+					  <!-- <a href="/about">
+                                Visualizaciones
+                            </a>-->
+                     
+                     </div>
+
+                    
+                        <div class="navbar-link">
+                            <a href="/apis">
+                                APIs
+                            </a>
+                        </div>
+                    
+
+                    <!--<div class="navbar-link dropdown-navbar-link">
+                        <span class="username"></span> <svg class="user-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.46 128.46"><path d="M128.46,64.23A63.15,63.15,0,0,0,119.84,32,64.21,64.21,0,0,0,96.48,8.62,63.12,63.12,0,0,0,64.23,0,63.12,63.12,0,0,0,32,8.62,64.2,64.2,0,0,0,8.62,32,63.15,63.15,0,0,0,0,64.23,63.15,63.15,0,0,0,8.62,96.48a64.76,64.76,0,0,0,9.82,12.86l-.16.27a70.09,70.09,0,0,0,9.2,7.34c1.46,1,3,2,4.51,2.91a63.17,63.17,0,0,0,32.25,8.62,63.17,63.17,0,0,0,32.25-8.62,66.19,66.19,0,0,0,7-4.74,72.41,72.41,0,0,0,6.61-5.51l-.14-.23a64.76,64.76,0,0,0,9.85-12.89A63.15,63.15,0,0,0,128.46,64.23Zm-20.52,41.89C101.56,96.56,88,81,66.73,79.8a26.25,26.25,0,0,0,16.88-7.9,26.44,26.44,0,0,0,8-19.41,26.44,26.44,0,0,0-8-19.4,26.42,26.42,0,0,0-19.4-8,26.41,26.41,0,0,0-19.4,8,26.44,26.44,0,0,0-8,19.4,26.44,26.44,0,0,0,8,19.41,26.25,26.25,0,0,0,16.87,7.9C40.48,81,26.88,96.52,20.49,106.09a61.14,61.14,0,0,1-8.66-11.48A59.48,59.48,0,0,1,3.71,64.23a59.48,59.48,0,0,1,8.11-30.37,60.53,60.53,0,0,1,22-22A59.45,59.45,0,0,1,64.23,3.71,59.46,59.46,0,0,1,94.6,11.83a60.54,60.54,0,0,1,22,22,59.48,59.48,0,0,1,8.11,30.37,59.48,59.48,0,0,1-8.11,30.37A61.14,61.14,0,0,1,107.94,106.12Z" style="fill:#0695d6"/></svg>
+                    </div>-->
+                    <!--<div class="dropdown-navbar hidden">
+                        <div class="navbar-link">
+                            <a href="/configurar/mi_cuenta">
+                                MI CUENTA
+                            </a>
+                        </div><div class="navbar-link">
+                            <a href="http://portal-andino.readthedocs.io/es/latest/quickstart/" target="_blank">
+                                AYUDA
+                            </a>
+                        </div>
+
+                        <div class="navbar-link">
+                            <a href="/logout">
+                                SALIR
+                            </a>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-7 no-padding header-links"><a class="header-link" href="/dataset">Datasets</a><a class="header-link" href="/series/api">Series</a><a class="header-link" href="/organizaciones">Organizaciones</a><a title="Sistema de Información Geográfica" class="header-link" href="https://www.argentina.gob.ar/economia/energia/informacion-geografica-energia" target="_blank">SIG</a>
+					
+					<a title="Visualizaciones" class="header-link" href="https://estadisticasenergia.mecon.gob.ar/portal/datos/" target="_blank">
+                    Visualizaciones 
+                      </a>
+					<!--<a class="header-link" href="visualizaciones">Visualizaciones</a>--><a class="header-link" href="/apis">
+                            APIs
+                        </a></div>
+        </div>
+    </div>
+</div>
+        
+
+    <div class="resource-container container-fluid">
+        <div class="restricted-max-width">
+            <div class="resource col-xs-12 col-md-10 col-md-offset-1">
+                <div class="col-md-12 back-to-pkg">
+                    
+                    <a href="/dataset">Datos Energía</a> / <a href="/dataset/balances-energeticos">Dataset</a> / Recurso
+
+                    
+                    
+                </div>
+                <div class="col-md-10 col-xs-12 title">
+                    <h1>Balance Energético Nacional Serie histórica – Indicadores Desde 1960 actualizado al año 2018</h1>
+
+                    <p>Noviembre de 2019</p>
+                </div>
+                <div class="col-md-2 col-xs-12 resource-actions">
+                    <a class="btn btn-green btn-block" href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/2019_11_10_sintesis_balances_energeticos_2018_pub.pdf">DESCARGAR</a>
+
+                    
+                    
+                </div>
+
+                <div class="resource-previsualization hidden-xs hidden-sm" style="display: None">
+                    <div class="resource-additional-info col-xs-12 col-md-12 row"
+                         style="border-bottom: 0; width: 103%; margin-bottom: 20px; margin-top: 30px;">
+                        <h2 class="title-h" style="padding-bottom: 0 !important;">Previsualización</h2>
+                    </div>
+
+                    <div class="data-preview hidden-xs hidden-sm col-md-12">
+                        
+                        
+
+                        
+                        
+                        
+                            
+                        
+                    </div>
+                </div>
+
+                
+                    <div class="hidden-xs hidden-sm attributes-table">
+                       
+
+
+
+
+
+
+
+
+
+                    </div>
+                
+
+                <div class="resource-additional-info col-xs-12 col-md-12 row" style="width: 102% !important;">
+                    <h2 class="title-h">Información adicional</h2>
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Responsable
+                            </div>
+                            <div class="col-xs-8 value">
+                                Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información.
+                            </div>
+                        </div>
+                    
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Formato
+                            </div>
+                            <div class="col-xs-8 value">
+                                
+                                <span class="label" data-format="application/pdf">application/pdf</span>
+                            </div>
+                        </div>
+                    
+
+
+                    
+                        <div class="resource-additional col-xs-12">
+                            <div class="col-xs-4 key">
+                                Temas
+                            </div>
+                                    Biocombustibles
+                                    Comercialización de Gas Natural
+                                    Comercialización de Hidrocarburos Líquidos
+                                    Comercio Exterior
+                                    Distribución de Energía Eléctrica
+                                    Distribución de Gas Natural
+                                    Energías Renovables
+                                    Exploración y Producción de Hidrocarburos
+                                    Generación de Energía Eléctrica
+                                    Publicaciones
+                                    Refinación de Hidrocarburos
+                                    Transporte de Energía Eléctrica
+                                    Transporte de Hidrocarburos
+                        </div>
+                    
+
+
+                    
+                        
+                    
+                        
+                    
+                        
+                            <div class="resource-additional col-xs-12">
+                                <div class="col-xs-4 key">
+                                    Frecuencia de actualización
+                                </div>
+                                <div class="col-xs-8 value">
+                                    Anualmente
+                                </div>
+                            </div>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+
+
+                    <div class="resource-additional col-xs-12">
+                        <div class="col-xs-4 key">
+                            Fecha de creación
+                        </div>
+                        <div class="col-xs-8 value">
+                            
+                                10 de diciembre de 2019
+                            
+                        </div>
+                    </div>
+
+                    <div class="resource-additional col-xs-12">
+                        <div class="col-xs-4 key">
+                            Último cambio
+                        </div>
+                        <div class="col-xs-8 value">
+                            
+                                10 de diciembre de 2019
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                
+
+                
+                    <div class="resource-alternative-packages col-xs-12 col-md-12 row" style="border-bottom: 0; width: 103%;">
+                        <h2 class="title-h">Otros recursos de este dataset</h2>
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="https://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2024/Balance_2024_V0_H.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="https://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2024/Balance_2024_V0_H.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balances Energéticos Nacionales Año 2024</h3>
+			 
+            <p><p>Balances Energéticos Nacionales Año 2024</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="https://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2023/Balance_2023_V0_H.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="https://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2023/Balance_2023_V0_H.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balances Energéticos Nacionales Año 2023</h3>
+			 
+            <p><p>Balances Energéticos año 2023</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/e944f041-a7f3-4b52-a72b-93f7ec869c0e">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balance_energia_util_2022/Balance_Energia_Util_2022.pdf">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balance_energia_util_2022/Balance_Energia_Util_2022.pdf">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/e944f041-a7f3-4b52-a72b-93f7ec869c0e"> 
+            <h3>Balance de Energía Útil 2022</h3>
+			  </a> 
+            <p><p>Balance de Energía Útil 2022</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="pdf">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>pdf</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="https://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2022/balance_2022_V0_horizontal.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="https://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2022/balance_2022_V0_horizontal.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balances Energéticos Nacionales Año 2022</h3>
+			 
+            <p><p>Balances Energéticos año 2022</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/b641b231-d255-4b8e-8bb2-065841b88dc4">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2021/sintesisbalancesenergeticos2021v1.pdf">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2021/sintesisbalancesenergeticos2021v1.pdf">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/b641b231-d255-4b8e-8bb2-065841b88dc4"> 
+            <h3>Balance Energético Nacional - Síntesis histórica 1960 - 2021</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - Síntesis histórica 1960 - 2021</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="pdf">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>pdf</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2021/balance_2021_V1.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2021/balance_2021_V1.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balances Energéticos Nacionales Año 2021</h3>
+			 
+            <p><p>Balances Energéticos Año 2021</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2020/balance_2020_V0_horizontal.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2020/balance_2020_V0_horizontal.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balances Energéticos Nacionales Año 2020</h3>
+			 
+            <p><p>Balances Energéticos Año 2020</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/balance_2019_v0_horizontal.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/balance_2019_v0_horizontal.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balances Energéticos Nacionales Año 2019</h3>
+			 
+            <p><p>Balances Energéticos Año 2019</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+         <a href="https://datosgobar.github.io/energia/"  target="_blank">
+            <button>IR AL SITIO</button>
+        </a>  
+        <!--<a href="https://datosgobar.github.io/energia/">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Diagramas Sankey de Balances Energéticos</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="html">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>html</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/e1d2ce4e-608b-4d70-8b66-89318316cb1d">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/documento-metodologico-balance-energetico-nacional-final-2015.pdf">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/documento-metodologico-balance-energetico-nacional-final-2015.pdf">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/e1d2ce4e-608b-4d70-8b66-89318316cb1d"> 
+            <h3>Documento metodológico del Balance Energético Nacional de la República Argentina, año 2015</h3>
+			  </a> 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="pdf">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>pdf</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2018/balance_2018_horizontal.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2018/balance_2018_horizontal.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balance Energético Nacional de la República Argentina, año 2018</h3>
+			 
+            <p><p>BEN 2018</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2017/balance_2017_V0_horiz.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2017/balance_2017_V0_horiz.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balance Energético Nacional de la República Argentina, año 2017</h3>
+			 
+            <p><p>BEN 2017</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/2017/balance_2016_version_1.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/2017/balance_2016_version_1.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balance Energético Nacional de la República Argentina, año 2016</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/2017/BEN_2015_version_3.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/2017/BEN_2015_version_3.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balance Energético Nacional de la República Argentina, año 2015</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/9d4eabc0-2bbe-46d7-9022-35bb3faf7021">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="https://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2022/estimacion_consumo_sector_agropecuario.pdf">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="https://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2022/estimacion_consumo_sector_agropecuario.pdf">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/9d4eabc0-2bbe-46d7-9022-35bb3faf7021"> 
+            <h3>Balance Energético Nacional - Estimación del consumo en el sector agropecuario</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - Estimación del consumo en el sector agropecuario</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="pdf">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>pdf</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/2017/Serie_BEN_2010-2016_V2b.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/2017/Serie_BEN_2010-2016_V2b.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balance Energético Nacional - Serie 2010-2016</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/serie-ben-2000-2009.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/serie-ben-2000-2009.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balance Energético Nacional - Serie 2000-2009</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/serie-ben-1990-1999.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/serie-ben-1990-1999.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balance Energético Nacional - Serie 1990-1999</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/serie-ben-1980-1989.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/serie-ben-1980-1989.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balance Energético Nacional - Serie 1980-1989</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/serie-ben-1970-1979.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/serie-ben-1970-1979.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balance Energético Nacional - Serie 1970-1979</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/serie-ben-1960-1969.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_2016/balances/serie-ben-1960-1969.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Balance Energético Nacional - Serie 1960-1969</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/10edb270-9000-4f69-a92a-4755068353bc">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/Documento_Balance_Misiones_2018.pdf">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/Documento_Balance_Misiones_2018.pdf">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/10edb270-9000-4f69-a92a-4755068353bc"> 
+            <h3>Balance Energético Misiones 2018</h3>
+			  </a> 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="pdf">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>pdf</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_MISIONES_2018.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_MISIONES_2018.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Misiones 2018</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/41016f41-5e3c-4857-84d9-49ee0e2ba2ff">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/notas_metodologicas_balances_energeticos_provinciales_serie_1.pdf">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/notas_metodologicas_balances_energeticos_provinciales_serie_1.pdf">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/41016f41-5e3c-4857-84d9-49ee0e2ba2ff"> 
+            <h3>Balances Energéticos Provinciales</h3>
+			  </a> 
+            <p><p>Notas metodológicas y consolidación de la información. Serie 1: Provincias de La Rioja, Mendoza, Neuquén, Santa Cruz y Tierra del Fuego</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="pdf">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>pdf</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_BuenosAires_2015-2019.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_BuenosAires_2015-2019.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Buenos Aires 2015-2019</h3>
+			 
+            <p><p>Buenos Aires 2015-2019</p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_LaRioja_2015-2016.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_LaRioja_2015-2016.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>La Rioja 2015-2016</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_Mendoza_2015-2016.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_Mendoza_2015-2016.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Mendoza 2015-2016</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_Neuquen_2015-2016.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_Neuquen_2015-2016.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Neuquen 2015-2016</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_SantaCruz_2015-2016.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_SantaCruz_2015-2016.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Santa Cruz 2015-2016</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_TierraDelFuego_2015-2016.xlsx">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_provinciales/BEP_TierraDelFuego_2015-2016.xlsx">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 
+            <h3>Tierra del Fuego 2015-2016</h3>
+			 
+            <p></p>
+			     
+        </div>
+
+        <div class="pkg-file-img" data-format="xlsx">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>xlsx</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/a3536c35-964d-43ff-bbfe-88fdfe60e200">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://datos.energia.gob.ar/dataset/802cf1b7-2efb-469d-ba82-5be6b9710dab/resource/a3536c35-964d-43ff-bbfe-88fdfe60e200/download/series-ben-1960-2016.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://datos.energia.gob.ar/dataset/802cf1b7-2efb-469d-ba82-5be6b9710dab/resource/a3536c35-964d-43ff-bbfe-88fdfe60e200/download/series-ben-1960-2016.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/a3536c35-964d-43ff-bbfe-88fdfe60e200"> 
+            <h3>Serie BEN 1960-2016</h3>
+			  </a> 
+            <p><p>Serie BEN 1960-2016</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/a3536c35-964d-43ff-bbfe-88fdfe60e200"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/fb7852ef-9125-4537-a681-5639815d48e0">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2016.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2016.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/fb7852ef-9125-4537-a681-5639815d48e0"> 
+            <h3>Balance Energético Nacional - 2016 </h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2016</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/fb7852ef-9125-4537-a681-5639815d48e0"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/91316ac3-8957-4274-b632-b6aea70a9e8a">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2015.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2015.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/91316ac3-8957-4274-b632-b6aea70a9e8a"> 
+            <h3> Balance Energético Nacional - 2015</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2015</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/91316ac3-8957-4274-b632-b6aea70a9e8a"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/6bfcf943-127f-4d80-b7ff-8dfd0ee907ec">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2014.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2014.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/6bfcf943-127f-4d80-b7ff-8dfd0ee907ec"> 
+            <h3>Balance Energético Nacional - 2014</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2014</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/6bfcf943-127f-4d80-b7ff-8dfd0ee907ec"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/abd2f92d-8ca2-4ede-a7ad-162f06596c15">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2013.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2013.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/abd2f92d-8ca2-4ede-a7ad-162f06596c15"> 
+            <h3>Balance Energético Nacional - 2013</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2013</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/abd2f92d-8ca2-4ede-a7ad-162f06596c15"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/cc3209d4-d677-4776-a47b-18d765d413be">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2012.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2012.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/cc3209d4-d677-4776-a47b-18d765d413be"> 
+            <h3>Balance Energético Nacional - 2012</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2012</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/cc3209d4-d677-4776-a47b-18d765d413be"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/11817efd-0451-476a-8104-76a74165fec8">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2011.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2011.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/11817efd-0451-476a-8104-76a74165fec8"> 
+            <h3>Balance Energético Nacional - 2011</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2011</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/11817efd-0451-476a-8104-76a74165fec8"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/fc02ef94-7a71-413d-a945-5203ba414460">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2010.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2010.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/fc02ef94-7a71-413d-a945-5203ba414460"> 
+            <h3>Balance Energético Nacional - 2010</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2010</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/fc02ef94-7a71-413d-a945-5203ba414460"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/7bacffcf-fdf4-4822-8476-ac963304baa1">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://datos.energia.gob.ar/dataset/802cf1b7-2efb-469d-ba82-5be6b9710dab/resource/7bacffcf-fdf4-4822-8476-ac963304baa1/download/ben-2009.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://datos.energia.gob.ar/dataset/802cf1b7-2efb-469d-ba82-5be6b9710dab/resource/7bacffcf-fdf4-4822-8476-ac963304baa1/download/ben-2009.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/7bacffcf-fdf4-4822-8476-ac963304baa1"> 
+            <h3>Balance Energético Nacional - 2009</h3>
+			  </a> 
+            <p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/7bacffcf-fdf4-4822-8476-ac963304baa1"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/25a68a5a-4e71-4391-9324-6558e3de0a2d">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2008.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2008.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/25a68a5a-4e71-4391-9324-6558e3de0a2d"> 
+            <h3>Balance Energético Nacional - 2008</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2008</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/25a68a5a-4e71-4391-9324-6558e3de0a2d"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/83891db7-13d5-4d68-95e5-79d40887b213">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2007.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2007.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/83891db7-13d5-4d68-95e5-79d40887b213"> 
+            <h3> Balance Energético Nacional - 2007</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2007</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/83891db7-13d5-4d68-95e5-79d40887b213"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/927ba901-ff03-4f0b-ae89-0c8f041ecfa8">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2006.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2006.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/927ba901-ff03-4f0b-ae89-0c8f041ecfa8"> 
+            <h3>Balance Energético Nacional - 2006</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2006</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/927ba901-ff03-4f0b-ae89-0c8f041ecfa8"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/98028492-6671-461f-993f-e222464195b4">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2005.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2005.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/98028492-6671-461f-993f-e222464195b4"> 
+            <h3>Balance Energético Nacional - 2005</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2005</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/98028492-6671-461f-993f-e222464195b4"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/9e941a85-34a9-4098-b782-5455401266f3">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2004.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2004.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/9e941a85-34a9-4098-b782-5455401266f3"> 
+            <h3>Balance Energético Nacional - 2004</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2004</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/9e941a85-34a9-4098-b782-5455401266f3"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/b5aa8ef4-a510-41a5-b56a-1bf55fca1336">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2003.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2003.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/b5aa8ef4-a510-41a5-b56a-1bf55fca1336"> 
+            <h3>Balance Energético Nacional - 2003</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2003</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/b5aa8ef4-a510-41a5-b56a-1bf55fca1336"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/6a0e2aae-985f-466b-ba5f-616463a1d69c">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2002.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2002.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/6a0e2aae-985f-466b-ba5f-616463a1d69c"> 
+            <h3>Balance Energético Nacional - 2002</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2002</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/6a0e2aae-985f-466b-ba5f-616463a1d69c"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/e382891e-d007-4bcf-81d1-067a3ccaa27d">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2001.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2001.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/e382891e-d007-4bcf-81d1-067a3ccaa27d"> 
+            <h3>Balance Energético Nacional - 2001</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2001</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/e382891e-d007-4bcf-81d1-067a3ccaa27d"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/29a35467-0a6f-4464-9394-d17ec5d5d61d">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2000.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-2000.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/29a35467-0a6f-4464-9394-d17ec5d5d61d"> 
+            <h3>Balance Energético Nacional - 2000</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 2000</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/29a35467-0a6f-4464-9394-d17ec5d5d61d"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/f1dc99c4-2b70-4f2c-a7f4-9b0d0d3e8c80">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1999.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1999.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/f1dc99c4-2b70-4f2c-a7f4-9b0d0d3e8c80"> 
+            <h3>Balance Energético Nacional - 1999</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1999</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/f1dc99c4-2b70-4f2c-a7f4-9b0d0d3e8c80"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/109f91e3-1ad6-4d4f-b283-5ce84bf67aaa">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1998.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1998.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/109f91e3-1ad6-4d4f-b283-5ce84bf67aaa"> 
+            <h3>Balance Energético Nacional - 1998</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1998</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/109f91e3-1ad6-4d4f-b283-5ce84bf67aaa"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/277da022-31b9-43fb-b131-1e508ef30662">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1997.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1997.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/277da022-31b9-43fb-b131-1e508ef30662"> 
+            <h3>Balance Energético Nacional - 1997</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1997</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/277da022-31b9-43fb-b131-1e508ef30662"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/75fa5d18-eb06-437f-9288-6b3513fac8e7">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1996.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1996.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/75fa5d18-eb06-437f-9288-6b3513fac8e7"> 
+            <h3>Balance Energético Nacional - 1996</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1996</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/75fa5d18-eb06-437f-9288-6b3513fac8e7"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/4c0c3ded-624e-4877-a15a-feae8229cb63">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1995.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1995.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/4c0c3ded-624e-4877-a15a-feae8229cb63"> 
+            <h3> Balance Energético Nacional - 1995</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1995</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/4c0c3ded-624e-4877-a15a-feae8229cb63"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/dee1f357-46f4-47cb-94df-99864947805c">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1994.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1994.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/dee1f357-46f4-47cb-94df-99864947805c"> 
+            <h3>Balance Energético Nacional - 1994</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1994</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/dee1f357-46f4-47cb-94df-99864947805c"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/1e9d515e-a206-4ce4-a6a9-06520acd69b3">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1993.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1993.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/1e9d515e-a206-4ce4-a6a9-06520acd69b3"> 
+            <h3>Balance Energético Nacional - 1993</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1993</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/1e9d515e-a206-4ce4-a6a9-06520acd69b3"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/bf70ddc0-daaa-4b41-b54c-d4d5f2462f6f">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1992.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1992.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/bf70ddc0-daaa-4b41-b54c-d4d5f2462f6f"> 
+            <h3>Balance Energético Nacional - 1992</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1992</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/bf70ddc0-daaa-4b41-b54c-d4d5f2462f6f"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/291f87f3-402b-4a6d-b9cf-1bd64796e894">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1991.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1991.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/291f87f3-402b-4a6d-b9cf-1bd64796e894"> 
+            <h3>Balance Energético Nacional - 1991</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1991</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/291f87f3-402b-4a6d-b9cf-1bd64796e894"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/58870f88-7884-42e9-8af2-4695bc726a98">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1990.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1990.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/58870f88-7884-42e9-8af2-4695bc726a98"> 
+            <h3>Balance Energético Nacional - 1990</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1990</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/58870f88-7884-42e9-8af2-4695bc726a98"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/57f9b208-6520-482c-b69d-c0a2990faa68">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1989.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1989.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/57f9b208-6520-482c-b69d-c0a2990faa68"> 
+            <h3> Balance Energético Nacional - 1989</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1989</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/57f9b208-6520-482c-b69d-c0a2990faa68"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/dcce75c6-c13d-46c6-a42d-5fd31c1526cd">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1988.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1988.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/dcce75c6-c13d-46c6-a42d-5fd31c1526cd"> 
+            <h3>Balance Energético Nacional - 1988</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1988</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/dcce75c6-c13d-46c6-a42d-5fd31c1526cd"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/1a72ab6a-46d7-4f82-8e85-608a7482ffd1">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1987.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1987.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/1a72ab6a-46d7-4f82-8e85-608a7482ffd1"> 
+            <h3>Balance Energético Nacional - 1987</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1987</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/1a72ab6a-46d7-4f82-8e85-608a7482ffd1"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/acc50575-ee10-41dc-9c7b-1485b4e5dcdf">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1986.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1986.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/acc50575-ee10-41dc-9c7b-1485b4e5dcdf"> 
+            <h3>Balance Energético Nacional - 1986</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1986</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/acc50575-ee10-41dc-9c7b-1485b4e5dcdf"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/bdb606df-ca50-4dde-a8f5-f0a7eaa5e9fd">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1985.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1985.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/bdb606df-ca50-4dde-a8f5-f0a7eaa5e9fd"> 
+            <h3>Balance Energético Nacional - 1985</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1985</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/bdb606df-ca50-4dde-a8f5-f0a7eaa5e9fd"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/cf6204ec-8227-4cf5-ae00-67050526cae5">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1984.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1984.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/cf6204ec-8227-4cf5-ae00-67050526cae5"> 
+            <h3> Balance Energético Nacional - 1984</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1984</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/cf6204ec-8227-4cf5-ae00-67050526cae5"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/2c6101fc-8058-4112-8de2-b1baa8eae421">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1983.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1983.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/2c6101fc-8058-4112-8de2-b1baa8eae421"> 
+            <h3>Balance Energético Nacional - 1983</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1983</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/2c6101fc-8058-4112-8de2-b1baa8eae421"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/2c738f40-e5f9-42b5-81b8-fbf4b5021c35">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1982.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1982.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/2c738f40-e5f9-42b5-81b8-fbf4b5021c35"> 
+            <h3>Balance Energético Nacional - 1982</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1982</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/2c738f40-e5f9-42b5-81b8-fbf4b5021c35"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/eadf4f42-9c84-4e58-989b-d47a423d9431">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1981.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1981.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/eadf4f42-9c84-4e58-989b-d47a423d9431"> 
+            <h3>Balance Energético Nacional - 1981</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1981</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/eadf4f42-9c84-4e58-989b-d47a423d9431"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/b67b8610-a2a0-440d-bba0-19dd3003bad2">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1980.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1980.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/b67b8610-a2a0-440d-bba0-19dd3003bad2"> 
+            <h3> Balance Energético Nacional - 1980</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1980</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/b67b8610-a2a0-440d-bba0-19dd3003bad2"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/f2bb5879-ceef-4a45-8b3f-193455483ca9">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1979.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1979.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/f2bb5879-ceef-4a45-8b3f-193455483ca9"> 
+            <h3>Balance Energético Nacional - 1979</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1979</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/f2bb5879-ceef-4a45-8b3f-193455483ca9"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/9dd6d0fb-624d-469c-8da3-eb80478e6ff3">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1978.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1978.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/9dd6d0fb-624d-469c-8da3-eb80478e6ff3"> 
+            <h3>Balance Energético Nacional - 1978</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1978</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/9dd6d0fb-624d-469c-8da3-eb80478e6ff3"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/c97f819e-59dd-438d-b207-f7a9cf54e27c">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1977.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1977.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/c97f819e-59dd-438d-b207-f7a9cf54e27c"> 
+            <h3>Balance Energético Nacional - 1977</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1977</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/c97f819e-59dd-438d-b207-f7a9cf54e27c"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/51ab5cc7-77e1-4345-94b6-0a60e03ea2d6">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1976.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1976.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/51ab5cc7-77e1-4345-94b6-0a60e03ea2d6"> 
+            <h3>Balance Energético Nacional - 1976</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1976</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/51ab5cc7-77e1-4345-94b6-0a60e03ea2d6"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/f9b95324-f7b6-4148-bab8-765e88d348b6">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1975.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1975.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/f9b95324-f7b6-4148-bab8-765e88d348b6"> 
+            <h3>Balance Energético Nacional - 1975</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1975</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/f9b95324-f7b6-4148-bab8-765e88d348b6"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/50cfcd0a-f768-4b56-81cc-8d9fff731125">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1974.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1974.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/50cfcd0a-f768-4b56-81cc-8d9fff731125"> 
+            <h3>Balance Energético Nacional - 1974</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1974</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/50cfcd0a-f768-4b56-81cc-8d9fff731125"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/d4b62d88-0583-4acf-8d26-76825eb37f01">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1973.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1973.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/d4b62d88-0583-4acf-8d26-76825eb37f01"> 
+            <h3>Balance Energético Nacional - 1973</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1973</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/d4b62d88-0583-4acf-8d26-76825eb37f01"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/047eb2c0-130d-451d-847c-16417439f8c9">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1972.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1972.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/047eb2c0-130d-451d-847c-16417439f8c9"> 
+            <h3>Balance Energético Nacional - 1972</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1972</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/047eb2c0-130d-451d-847c-16417439f8c9"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/ddcbb871-3ba7-43c7-bd07-a81752051dca">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1971.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1971.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/ddcbb871-3ba7-43c7-bd07-a81752051dca"> 
+            <h3>Balance Energético Nacional - 1971</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1971</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/ddcbb871-3ba7-43c7-bd07-a81752051dca"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/4ca31227-ca44-452e-829a-af267b6e11e1">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1970.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1970.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/4ca31227-ca44-452e-829a-af267b6e11e1"> 
+            <h3>Balance Energético Nacional - 1970</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1970</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/4ca31227-ca44-452e-829a-af267b6e11e1"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/7f2f1469-4c53-45b6-aa43-90945331c022">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1969.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1969.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/7f2f1469-4c53-45b6-aa43-90945331c022"> 
+            <h3>Balance Energético Nacional - 1969</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1969</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/7f2f1469-4c53-45b6-aa43-90945331c022"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/16438b55-4332-454d-a591-9ada136dcc74">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1968.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1968.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/16438b55-4332-454d-a591-9ada136dcc74"> 
+            <h3> Balance Energético Nacional - 1968</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1968</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/16438b55-4332-454d-a591-9ada136dcc74"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/a6ca65b7-a9b7-4f93-8171-07010116ec68">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1967.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1967.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/a6ca65b7-a9b7-4f93-8171-07010116ec68"> 
+            <h3> Balance Energético Nacional - 1967</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1967</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/a6ca65b7-a9b7-4f93-8171-07010116ec68"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/9dbea1fd-7969-4901-8a6b-0ffd9ac07e46">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1966.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1966.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/9dbea1fd-7969-4901-8a6b-0ffd9ac07e46"> 
+            <h3> Balance Energético Nacional - 1966</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1966</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/9dbea1fd-7969-4901-8a6b-0ffd9ac07e46"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/f7f883d3-ad02-42d6-84ce-700401c590fb">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1965.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1965.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/f7f883d3-ad02-42d6-84ce-700401c590fb"> 
+            <h3> Balance Energético Nacional - 1965</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1965</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/f7f883d3-ad02-42d6-84ce-700401c590fb"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/8855738f-3d32-4381-9f4e-a0a119fa916f">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1964.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1964.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/8855738f-3d32-4381-9f4e-a0a119fa916f"> 
+            <h3>Balance Energético Nacional - 1964</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1964</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/8855738f-3d32-4381-9f4e-a0a119fa916f"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/a2988484-2d86-4eb8-8d94-b56061d3191a">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1963.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1963.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/a2988484-2d86-4eb8-8d94-b56061d3191a"> 
+            <h3>Balance Energético Nacional - 1963</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1963</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/a2988484-2d86-4eb8-8d94-b56061d3191a"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/24de014d-f419-48f2-ae97-cab3dd15109c">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1962.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1962.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/24de014d-f419-48f2-ae97-cab3dd15109c"> 
+            <h3>Balance Energético Nacional - 1962</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1962</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/24de014d-f419-48f2-ae97-cab3dd15109c"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                            
+                                
+                                    
+                                
+                                
+<div class="pkg-container">
+    <div class="pkg-actions">
+	  
+        <a href="/dataset/balances-energeticos/archivo/ac929175-b75e-4971-a816-9c1b7a96ee04">
+            <button>CONSULTAR</button>
+        </a>
+        
+        
+		  
+		<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1961.csv">
+            <button>DESCARGAR</button>
+        </a>
+		 
+        <!--<a href="http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/energia_en_gral/balances_energeticos/ben-1961.csv">
+            <button>DESCARGAR</button>
+        </a>-->
+    </div>
+    
+        <div class="package-info">
+			 <a href="/dataset/balances-energeticos/archivo/ac929175-b75e-4971-a816-9c1b7a96ee04"> 
+            <h3>Balance Energético Nacional - 1961</h3>
+			  </a> 
+            <p><p>Balance Energético Nacional - 1961</p></p>
+			     
+			<a target='_blank' href="/datastore/odata3.0/ac929175-b75e-4971-a816-9c1b7a96ee04"><span class="label" data-format="api">OData</span></a>
+			  
+        </div>
+
+        <div class="pkg-file-img" data-format="csv">
+            <?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 75" style="enable-background:new 0 0 60 75;" xml:space="preserve">
+<path class="st0" d="M7.5,0C3.4,0,0,3.4,0,7.5l0,60C0,71.6,3.3,75,7.5,75h45c4.1,0,7.5-3.4,7.5-7.5v-45L37.5,0H7.5z M36.8,23.2V2.6
+	l20.6,20.6H36.8z"/>
+</svg>
+            <p>csv</p>
+        </div>
+   
+</div>
+<hr style="border-top:solid 1px #DCDCDC; margin:0;">
+                            
+                        
+                    </div>
+                
+            
+            </div>
+        </div>
+    </div>
+    
+
+            <div id="footer" class="container-fluid">
+    <div class="restricted-max-width">
+        <div id="footer-spacer" class="col-xs-10 col-xs-offset-1">
+            <div class="footer-section logo col-xs-12 col-sm-6 col-md-6">
+                <p>
+                    
+                    
+                    
+                        <a href="https://twitter.com/Energia_Ar" target="_blank" class="social-link">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+                        <a href="https://github.com/datosenergia" target="_blank" class="social-link">
+                            <i class="fa fa-github-alt" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+                        <a href="https://www.youtube.com/channel/UCBG6aIp-k20flVwpbOSa6pA" target="_blank" class="social-link">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </a>
+                    
+
+                    
+                </p>
+                <div class="logo-edit-container">
+                    
+                    
+                    <a href="https://www.argentina.gob.ar/energia" target="_blank">
+                        <img src="/user_images/logo_mecon_se_2024_03-01.jpg" class="logo-ministerio">
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="footer-section links-internos hidden-xs hidden-sm col-md-3">
+                
+                
+            </div>
+            <div class="footer-section links-externos col-xs-12 col-sm-6 col-md-3">
+                
+                
+                    <p><a href="mailto:datosenergia@mecon.gob.ar">Contactanos</a></p>
+                
+				<p class="ckan-link">
+                    <a href="https://www.argentina.gob.ar/energia/info-energetica/datos-energia-marco-legal" target="_blank">Marco Legal</a> 
+				</p>
+                <p class="ckan-link">
+                    Desarrollado por<br><a href="https://github.com/datosgobar/distribuible.datos.gob.ar" target="_blank">Andino</a> con <a href="http://ckan.org/" target="_blank"><span class="ckan-name">CKAN</span></a>
+                </p>
+                <p class="ckan-link">
+                    Versión: 2.5.1
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+  
+    
+    <div class="js-hide" data-module="google-analytics"
+      data-module-googleanalytics_resource_prefix="">
+    </div>
+  
+
+
+      
+  <script>document.getElementsByTagName('html')[0].className += ' js';</script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2018-08-16T11:43:08/jquery.min.js"></script>
+<script type="text/javascript" src="/fanstatic/vendor/:version:2018-08-16T11:43:08/:bundle:bootstrap/js/bootstrap.min.js;jed.min.js;moment-with-locales.js;select2/select2.min.js"></script>
+<script type="text/javascript" src="/fanstatic/base/:version:2018-08-16T11:43:08/:bundle:plugins/jquery.inherit.min.js;plugins/jquery.proxy-all.min.js;plugins/jquery.url-helpers.min.js;plugins/jquery.date-helpers.min.js;plugins/jquery.slug.min.js;plugins/jquery.slug-preview.min.js;plugins/jquery.truncator.min.js;plugins/jquery.masonry.min.js;plugins/jquery.form-warning.min.js;sandbox.min.js;module.min.js;pubsub.min.js;client.min.js;notify.min.js;i18n.min.js;main.min.js;modules/select-switch.min.js;modules/slug-preview.min.js;modules/basic-form.min.js;modules/confirm-action.min.js;modules/api-info.min.js;modules/autocomplete.min.js;modules/custom-fields.min.js;modules/data-viewer.min.js;modules/table-selectable-rows.min.js;modules/resource-form.min.js;modules/resource-upload-field.min.js;modules/resource-reorder.min.js;modules/resource-view-reorder.min.js;modules/follow.min.js;modules/activity-stream.min.js;modules/dashboard.min.js;modules/resource-view-embed.min.js;view-filters.min.js;modules/resource-view-filters-form.min.js;modules/resource-view-filters.min.js;modules/table-toggle-more.min.js;modules/dataset-visibility.min.js;modules/media-grid.min.js;modules/image-upload.min.js"></script>
+<script type="text/javascript" src="/fanstatic/ckanext-googleanalytics/:version:2018-08-16T11:43:23/googleanalytics_event_tracking.js"></script>
+<script type="text/javascript" src="/fanstatic/gobar_js/:version:2023-06-05T12:32:37.19/:bundle:header.js;console_message.js;replace_svg.js;forms/custom_popup.js;package/resource/resource_view.js;libs/jquery-sortable.js;libs/clamp.js;libs/BootstrapMenu.js;libs/bootstrap_scripts.js"></script></body>
+</html>

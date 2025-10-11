@@ -1,0 +1,51 @@
+{
+  "files": {
+    "exploracin-hidrocarburos-cuencas-sedimentarias.csv": {
+      "datasetId": "energia_0d4a18ee-9371-439a-8a94-4f53a9822664",
+      "datasetTitle": "Exploración Hidrocarburos Cuencas Sedimentarias",
+      "fileName": "exploracin-hidrocarburos-cuencas-sedimentarias.csv",
+      "format": "CSV",
+      "title": "Exploración Hidrocarburos Cuencas Sedimentarias",
+      "accessURL": "http://datos.energia.gob.ar/dataset/0d4a18ee-9371-439a-8a94-4f53a9822664/resource/04263302-626d-4a81-9564-106e08b975a3",
+      "lastProcessed": "2025-10-09T07:21:23.354Z",
+      "status": "processed"
+    },
+    "exploracin-hidrocarburos-cuencas-sedimentarias.zip": {
+      "datasetId": "energia_0d4a18ee-9371-439a-8a94-4f53a9822664",
+      "datasetTitle": "Exploración Hidrocarburos Cuencas Sedimentarias",
+      "fileName": "exploracin-hidrocarburos-cuencas-sedimentarias.zip",
+      "format": "SHP",
+      "title": "Exploración Hidrocarburos Cuencas Sedimentarias",
+      "accessURL": "http://datos.energia.gob.ar/dataset/0d4a18ee-9371-439a-8a94-4f53a9822664/resource/c477f5a7-75cf-4123-ba7b-e298eb52abbd",
+      "lastProcessed": "2025-10-09T07:21:23.355Z",
+      "status": "processed"
+    },
+    "undefined": {
+      "datasetId": "energia_0d4a18ee-9371-439a-8a94-4f53a9822664",
+      "datasetTitle": "Exploración Hidrocarburos Cuencas Sedimentarias",
+      "format": "PHP",
+      "title": "Mapa de Exploración de Hidrocarburos - Pozos, Concesiones de Explotación, Yacimientos y Cuencas Sedimentarias",
+      "accessURL": "http://datos.energia.gob.ar/dataset/0d4a18ee-9371-439a-8a94-4f53a9822664/resource/9f602b6e-2bef-4ac4-895d-f6ecd6bb1866",
+      "lastProcessed": "2025-10-09T07:21:23.355Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_0d4a18ee-9371-439a-8a94-4f53a9822664",
+    "title": "Exploración Hidrocarburos Cuencas Sedimentarias",
+    "description": "Cuencas sedimentarias. ISO 19126: NaturalResources, Este subgrupo se compone de conceptos que se refieren a materias primas y sus depósitos.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2024-07-16T12:37:51.639946",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información. "
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "page_count": 45,
+  "text_length": 45,
+  "table_count": 0,
+  "figure_count": 0,
+  "extracted_text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+  "tables_data": [],
+  "figures_data": [],
+  "processing_method": "pypdf2"
+}

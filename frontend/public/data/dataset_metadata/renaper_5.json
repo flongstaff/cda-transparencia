@@ -1,0 +1,62 @@
+{
+  "files": {
+    "movilidad_residencial_interprovincial_argentina_2012_2022.csv": {
+      "datasetId": "renaper_5",
+      "datasetTitle": "Movilidad Residencial en Argentina",
+      "fileName": "movilidad_residencial_interprovincial_argentina_2012_2022.csv",
+      "format": "CSV",
+      "title": "Movilidad Residencial Interprovincial en Argentina (Decenio 2012 - 2022)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T07:14:35.295Z",
+      "status": "processed"
+    },
+    "Metodologia_movilidad_residencial_interprovincial_argentina.pdf": {
+      "datasetId": "renaper_5",
+      "datasetTitle": "Movilidad Residencial en Argentina",
+      "fileName": "Metodologia_movilidad_residencial_interprovincial_argentina.pdf",
+      "format": "PDF",
+      "title": "Metodología Movilidad Residencial Interprovincial en Argentina",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T07:14:36.479Z",
+      "status": "processed"
+    },
+    "movilidad_residencial_departamentos_flujos_2012_2022.csv": {
+      "datasetId": "renaper_5",
+      "datasetTitle": "Movilidad Residencial en Argentina",
+      "fileName": "movilidad_residencial_departamentos_flujos_2012_2022.csv",
+      "format": "CSV",
+      "title": "Movilidad residencial interdepartamental en Argentina (Decenio 2012 - 2022)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T07:14:36.550Z",
+      "status": "processed"
+    },
+    "movilidad_residencial_departamento_inmigrantes_emigrantes_2012_2022.csv": {
+      "datasetId": "renaper_5",
+      "datasetTitle": "Movilidad Residencial en Argentina",
+      "fileName": "movilidad_residencial_departamento_inmigrantes_emigrantes_2012_2022.csv",
+      "format": "CSV",
+      "title": "Emigrantes e inmigrantes por departamento (Decenio 2012 - 2022)",
+      "accessURL": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion",
+      "lastProcessed": "2025-10-09T07:14:36.616Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "renaper_5",
+    "title": "Movilidad Residencial en Argentina",
+    "description": "Movilidad residencial en Argentina a partir de registros del RENAPER",
+    "theme": [
+      "soci"
+    ],
+    "superTheme": [
+      "SOCI"
+    ],
+    "issued": "2023-10-04",
+    "modified": "2023-10-04",
+    "publisher": {
+      "mbox": "direccionnacionalpoblacion@renaper.gob.ar",
+      "name": "Dirección Nacional de Población del Renaper"
+    },
+    "landingPage": "https://www.argentina.gob.ar/interior/renaper/estadistica-de-poblacion/informes-provinciales"
+  }
+}

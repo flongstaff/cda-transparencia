@@ -1,0 +1,42 @@
+{
+  "files": {
+    "exploracin-hidrocarburos-ssmicas-3d.csv": {
+      "datasetId": "energia_11540156-6454-47c8-9748-c8f8705f62c0",
+      "datasetTitle": "Exploración de hidrocarburos - Inventario de Sísmicas 3D",
+      "fileName": "exploracin-hidrocarburos-ssmicas-3d.csv",
+      "format": "CSV",
+      "title": "Exploración Hidrocarburos Sísmicas 3D",
+      "accessURL": "http://datos.energia.gob.ar/dataset/11540156-6454-47c8-9748-c8f8705f62c0/resource/dae27747-fb0b-49a2-9be0-712bfc0f6266",
+      "lastProcessed": "2025-10-09T06:36:37.534Z",
+      "status": "processed"
+    },
+    "exploracin-hidrocarburos-ssmicas-3d.zip": {
+      "datasetId": "energia_11540156-6454-47c8-9748-c8f8705f62c0",
+      "datasetTitle": "Exploración de hidrocarburos - Inventario de Sísmicas 3D",
+      "fileName": "exploracin-hidrocarburos-ssmicas-3d.zip",
+      "format": "SHP",
+      "title": "Exploración Hidrocarburos Sísmicas 3D",
+      "accessURL": "http://datos.energia.gob.ar/dataset/11540156-6454-47c8-9748-c8f8705f62c0/resource/9292f9e8-e098-4512-9019-cc3b72c14b50",
+      "lastProcessed": "2025-10-09T06:36:37.534Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "energia_11540156-6454-47c8-9748-c8f8705f62c0",
+    "title": "Exploración de hidrocarburos - Inventario de Sísmicas 3D",
+    "description": "Inventario de Sísmicas 3D. ISO 19126: Extraction, Este subgrupo se compone de conceptos que se refieren a la extracción de materias primas y la excavación del suelo.",
+    "theme": [
+      "ener"
+    ],
+    "superTheme": [
+      "ENER"
+    ],
+    "issued": "2016-11-07T13:33:34.985951",
+    "modified": "2020-04-22T17:40:25.681965",
+    "publisher": {
+      "mbox": "tienerg-energia@mecon.gob.ar",
+      "name": "Secretaría de Energía. Subsecretaría de Transición y Planeamiento Energético. Dirección Nacional de Escenarios y Evaluación de Proyectos. Dirección de Información Energética.Tecnología de la Información."
+    },
+    "landingPage": "http://datos.energia.gob.ar/dataset/"
+  }
+}

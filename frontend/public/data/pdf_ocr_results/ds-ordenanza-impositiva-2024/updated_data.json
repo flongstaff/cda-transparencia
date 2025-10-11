@@ -1,0 +1,25 @@
+{
+  "title": "Temporary PDF for OCR processing",
+  "description": "Data structure for processing a single PDF with docstrange",
+  "dataset": [
+    {
+      "identifier": "ds-ordenanza-impositiva-2024",
+      "title": "Ordenanza Impositiva 2024",
+      "distribution": [
+        {
+          "title": "ORDENANZA-IMPOSITIVA-3202-24.pdf",
+          "format": "PDF",
+          "fileName": "ORDENANZA-IMPOSITIVA-3202-24.pdf",
+          "localPath": "/Users/flong/Developer/cda-transparencia/backend/data/downloads/ds-ordenanza-impositiva-2024/ORDENANZA-IMPOSITIVA-3202-24.pdf",
+          "extractionResult": {
+            "extractionPath": "pdfs/ds-ordenanza-impositiva-2024/ORDENANZA-IMPOSITIVA-3202-24_extraction.json",
+            "pageCount": 25,
+            "textLength": 25,
+            "extractedPreview": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+            "method": "pypdf2"
+          }
+        }
+      ]
+    }
+  ]
+}

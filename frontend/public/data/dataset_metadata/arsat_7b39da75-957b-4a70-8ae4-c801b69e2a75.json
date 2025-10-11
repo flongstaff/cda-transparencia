@@ -1,0 +1,61 @@
+{
+  "files": {
+    "CINEAR-visualizaciones-totales-2025-01_v1.csv": {
+      "datasetId": "arsat_7b39da75-957b-4a70-8ae4-c801b69e2a75",
+      "datasetTitle": "Cine.Ar Play",
+      "fileName": "CINEAR-visualizaciones-totales-2025-01_v1.csv",
+      "format": "CSV",
+      "title": "Visualizaciones Totales",
+      "accessURL": "https://datos.arsat.com.ar/dataset/7b39da75-957b-4a70-8ae4-c801b69e2a75/resource/4e44f9ec-e280-4cc3-84f3-ea9935f0165a",
+      "lastProcessed": "2025-10-09T07:35:12.160Z",
+      "status": "processed"
+    },
+    "CINEAR-usuarios-unicos-visualizaciones-2025-01_v1.csv": {
+      "datasetId": "arsat_7b39da75-957b-4a70-8ae4-c801b69e2a75",
+      "datasetTitle": "Cine.Ar Play",
+      "fileName": "CINEAR-usuarios-unicos-visualizaciones-2025-01_v1.csv",
+      "format": "CSV",
+      "title": "Usuarios Únicos con Visualizaciones",
+      "accessURL": "https://datos.arsat.com.ar/dataset/7b39da75-957b-4a70-8ae4-c801b69e2a75/resource/b5fa629c-a435-4b93-82f5-b1c8589c9c4a",
+      "lastProcessed": "2025-10-09T07:35:16.490Z",
+      "status": "processed"
+    },
+    "CINEAR-nuevos-usuarios-2025-01_v1.csv": {
+      "datasetId": "arsat_7b39da75-957b-4a70-8ae4-c801b69e2a75",
+      "datasetTitle": "Cine.Ar Play",
+      "fileName": "CINEAR-nuevos-usuarios-2025-01_v1.csv",
+      "format": "CSV",
+      "title": "Usuarios Nuevos",
+      "accessURL": "https://datos.arsat.com.ar/dataset/7b39da75-957b-4a70-8ae4-c801b69e2a75/resource/af95daed-ad0f-4ce6-8642-18ea913be6f6",
+      "lastProcessed": "2025-10-09T07:35:20.998Z",
+      "status": "processed"
+    },
+    "cinear-total-horas-vistas-2025-01_v1.csv": {
+      "datasetId": "arsat_7b39da75-957b-4a70-8ae4-c801b69e2a75",
+      "datasetTitle": "Cine.Ar Play",
+      "fileName": "cinear-total-horas-vistas-2025-01_v1.csv",
+      "format": "CSV",
+      "title": "Horas Vistas",
+      "accessURL": "https://datos.arsat.com.ar/dataset/7b39da75-957b-4a70-8ae4-c801b69e2a75/resource/5c280bb8-f95c-41bb-8982-44ac2837837f",
+      "lastProcessed": "2025-10-09T07:35:27.359Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "arsat_7b39da75-957b-4a70-8ae4-c801b69e2a75",
+    "title": "Cine.Ar Play",
+    "description": "Cine.Ar Play es una plataforma de video a demanda de contenidos nacionales, gratuita, desarrollada por Arsat y el INCAA.      \r\nEl 25/11/21 cumple 6 años de vida ininterrumpidos (hasta Abril 2017 se llamó Odeon) y acumula + 2.000.000 de usuarios registrados.        \r\n",
+    "theme": [
+      "tech"
+    ],
+    "superTheme": [
+      "TECH"
+    ],
+    "issued": "2021-11-15T08:07:51.579031",
+    "modified": "2024-10-29T13:27:34.164037",
+    "publisher": {
+      "name": "ARSAT"
+    },
+    "landingPage": "https://datos.arsat.com.ar/dataset/cinear-play"
+  }
+}

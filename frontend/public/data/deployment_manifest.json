@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-10-10T06:44:24.993Z",
+  "version": "1.0.0",
+  "directories": [
+    "processed",
+    "consolidated",
+    "metadata",
+    "historical",
+    "external"
+  ],
+  "files": [
+    "data.json",
+    "main-data.json",
+    "main.json"
+  ],
+  "source": "main_data_directory",
+  "destination": "frontend/public/data"
+}

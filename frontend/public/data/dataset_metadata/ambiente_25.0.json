@@ -1,0 +1,161 @@
+{
+  "files": {
+    "RPE_f_adhesion_ley_24051_2023": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_f_adhesion_ley_24051_2023",
+      "format": "CSV",
+      "title": "Adhesión a la ley 24051",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=373",
+      "lastProcessed": "2025-10-09T06:57:52.499Z",
+      "status": "processed"
+    },
+    "RPE_j_operadores_resid_peligr_2023": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_j_operadores_resid_peligr_2023",
+      "format": "CSV",
+      "title": "Cantidad de operadores habilitados de residuos peligrosos de la Ley 24051",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=376",
+      "lastProcessed": "2025-10-09T06:57:53.766Z",
+      "status": "processed"
+    },
+    "RPE_o_residuos_envases_agroq_nuevo": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_o_residuos_envases_agroq_nuevo",
+      "format": "CSV",
+      "title": "Cantidad de residuos de envases y agroquimicos obsoletos (Y4) tratados",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=380",
+      "lastProcessed": "2025-10-09T06:57:55.023Z",
+      "status": "processed"
+    },
+    "RPE_p_residuos_mercurio_2023": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_p_residuos_mercurio_2023",
+      "format": "CSV",
+      "title": "Cantidad de residuos de mercurio tratados",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=381",
+      "lastProcessed": "2025-10-09T06:57:56.295Z",
+      "status": "processed"
+    },
+    "RPE_n_residuos_tratado_pilas_nuevo": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_n_residuos_tratado_pilas_nuevo",
+      "format": "CSV",
+      "title": "Cantidad de residuos de pilas y baterías tratados",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=379",
+      "lastProcessed": "2025-10-09T06:57:57.591Z",
+      "status": "processed"
+    },
+    "RPE_m_residuos_hidrocarb_2022": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_m_residuos_hidrocarb_2022",
+      "format": "CSV",
+      "title": "Cantidad de residuos hidrocarburos, emulsiones y aceites vegetales tratados",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=378",
+      "lastProcessed": "2025-10-09T06:57:58.978Z",
+      "status": "processed"
+    },
+    "RPE_l_residuos_tratados_2018_2022": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_l_residuos_tratados_2018_2022",
+      "format": "CSV",
+      "title": "Cantidad de residuos peligrosos tratados en interjurisdicción, por operación de eliminación",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=377",
+      "lastProcessed": "2025-10-09T06:58:00.441Z",
+      "status": "processed"
+    },
+    "RPE_b_Eliminacion_pbc_2023": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_b_Eliminacion_pbc_2023",
+      "format": "CSV",
+      "title": "Eliminación de residuos contaminados con PCBs",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=226",
+      "lastProcessed": "2025-10-09T06:58:01.705Z",
+      "status": "processed"
+    },
+    "RPE_c_exportacion_resid_pelig": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_c_exportacion_resid_pelig",
+      "format": "CSV",
+      "title": "Exportación de Residuos Peligrosos",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=227",
+      "lastProcessed": "2025-10-09T06:58:02.959Z",
+      "status": "processed"
+    },
+    "RPE_ODS_1241": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_ODS_1241",
+      "format": "CSV",
+      "title": "Nivel de cumplimiento de los compromisos y obligaciones ante los Acuerdos Multilaterales de productos químicos y desechos de los cuales Argentina es Parte",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=301",
+      "lastProcessed": "2025-10-09T06:58:04.460Z",
+      "status": "processed"
+    },
+    "anexo_iii_ley_24051": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "anexo_iii_ley_24051",
+      "format": "CSV",
+      "title": "Operaciones de acuerdo al Anexo III de la Ley Nº. 24051",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=85",
+      "lastProcessed": "2025-10-09T06:58:06.018Z",
+      "status": "processed"
+    },
+    "RPE_h_jurisdicc_reciben_porcen_2023": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_h_jurisdicc_reciben_porcen_2023",
+      "format": "CSV",
+      "title": "Porcentaje de residuos peligrosos, excluyendo residuos patogénicos, recibido en las jurisdicciones.",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=374",
+      "lastProcessed": "2025-10-09T06:58:07.595Z",
+      "status": "processed"
+    },
+    "RPE_i_mov_interjurisd_patogenicos_2022": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_i_mov_interjurisd_patogenicos_2022",
+      "format": "CSV",
+      "title": "Registro de salidas y entradas de residuos patogénicos entre las distintas jurisdicciones",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=375",
+      "lastProcessed": "2025-10-09T06:58:09.166Z",
+      "status": "processed"
+    },
+    "RPE_e_mov_interjurisd_2023": {
+      "datasetId": "ambiente_25.0",
+      "datasetTitle": "Residuos peligrosos",
+      "fileName": "RPE_e_mov_interjurisd_2023",
+      "format": "CSV",
+      "title": "Registro de salidas y entradas de residuos peligrosos entre las distintas jurisdicciones. Año 2022",
+      "accessURL": "https://ciam.ambiente.gob.ar/repositorio.php?tid=8&stid=35&did=351",
+      "lastProcessed": "2025-10-09T06:58:10.434Z",
+      "status": "processed"
+    }
+  },
+  "info": {
+    "identifier": "ambiente_25.0",
+    "title": "Residuos peligrosos",
+    "description": "Muestra los movimientos interjurisdiccionales de residuos peligrosos, las jurisdicciones que adhieren al la ley 24.051, cantidad de residuos de envases de agroquímicos, de pilas, de baterías, de mercurio y de hidrocarburos, emulsiones y aceites vegetales tratados",
+    "theme": [
+      "envi"
+    ],
+    "superTheme": [
+      "ENVI"
+    ],
+    "issued": "2020-09-28T00:00:00",
+    "modified": "2020-09-28T00:00:00",
+    "publisher": {
+      "name": "Subsecretaría de Ambiente"
+    },
+    "landingPage": "https://ciam.ambiente.gob.ar/index.php"
+  }
+}

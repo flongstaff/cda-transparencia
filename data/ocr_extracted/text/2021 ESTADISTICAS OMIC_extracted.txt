@@ -1,0 +1,41 @@
+Oficina Municipal de Información al Consumidor ENERO FEBRERO MARZO ABRIL MAYO JUNIO JULIO AGOSTO SEPTIEMBRE OCTUBRE NOVIEMBRE DICIEMBRE TOTAL
+TOTAL DE CASOS INGRESADOS
+2020 0 0 0 0 7 6 7 12 23 15 12 13 95
+RECLAMANTES POR GÉNERO
+Masculino 0 0 0 0 0 4 4 3 8 7 4 7 37
+Femenino 0 0 0 0 7 2 3 9 15 8 8 6 58
+Otros 0 0 0 0 0 0 0 0 0 0 0 0 0
+DISTRIBUCIÓN PORCENTUAL SEGÚN LOS CASOS TRATADOS 0% 0% 0% 0% 7% 6% 7% 12% 23% 15% 12% 13% 95%
+Acuerdo homologado 0% 0% 0% 0% 3% 4% 1% 9% 20% 14% 9% 11% 71%
+Acuerdo no homologado 0% 0% 0% 0% 0% 0% 1% 2% 2% 1% 1% 0% 7%
+Derivación a otra dependencia 0% 0% 0% 0% 2% 2% 1% 0% 0% 0% 1% 1% 7%
+Rechazo a la denuncia 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%
+Sanción 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%
+En trámite 0% 0% 0% 0% 2% 0% 2% 1% 1% 0% 1% 1% 8%
+Acuerdo conciliatorio 0% 0% 0% 0% 0% 0% 2% 0% 0% 0% 0% 0% 2%
+Prescripción 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%
+Sin competencia 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%
+Pendiente 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%
+Desistimiento 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%
+TOTALES 0 0 0 0 7 6 7 12 23 15 12 13 95
+Periodicidad:  mensual-anual
+Variable:  cantidad de casos ingresados
+Unidad de medida:  absoluto
+Descripcion:  indica la cantidad de casos ingresados a la Oficina de OMIC.
+La Oficina de OMIC empezó a funcionar a partir de mayo del año 2020. Es por eso que no hay datos a comienzos del año.
+Fuente de datos:  se recolectan los datos a través de la Oficina de OMIC.
+7671223
+15
+1213
+M A Y O J U N I O J U L I O A G O S T O S E P T I E M B R E O C T U B R E N O V I E M B R E D I C I E M B R EEVOLUCIÓN DE LOS CASOS INGRESADOS
+(OMIC)
+PERÍODO 2020
+CASOS INGRESADOS 2020
+00004438747
+0000723915886
+E N E R O  F E B R E R OM A R Z OA B R I LM A Y OJ U N I OJ U L I OA G O S T OS E P T I E M B R EO C T U B R EN O V I E M B R ED I C I E M B R ECANTIDAD DE CASOS SEGÚN GÉNERO
+(OMIC)
+PERÍODO 2020
+Masculino Femenino
+
+Oficina Municipal de Información al Consumidor ENERO FEBRERO MARZO ABRIL MAYO JUNIO JULIO AGOSTO SEPTIEMBR...
