@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface GanttTask {
   id: string;

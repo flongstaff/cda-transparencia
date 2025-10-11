@@ -1,13 +1,11 @@
 import React, { useMemo } from 'react';
-import {
-  BarChart,
+import { BarChart,
   Bar,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend
-} from 'recharts';
+  Legend, ResponsiveContainer } from 'recharts';
 import { formatCurrencyARS } from '../../utils/formatters';
 import StandardizedSection from '../ui/StandardizedSection';
 import useResponsive from '../../hooks/useResponsive';

@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { z } from 'zod';
 import { AlertTriangle, Loader2 } from 'lucide-react';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 // Lazy load the chart component with error handling
 const ComprehensiveChart = lazy(() =>

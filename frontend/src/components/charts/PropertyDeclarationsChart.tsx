@@ -1,5 +1,6 @@
 import React from 'react';
 import ComprehensiveChart from '../charts/ComprehensiveChart';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface Props {
   year: number;

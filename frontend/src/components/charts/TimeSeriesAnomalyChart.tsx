@@ -8,6 +8,7 @@ import { useQuery } from '@tanstack/react-query';
 import BaseChart, { SupportedChartType } from './BaseChart';
 import chartDataService from '../../services/charts/ChartDataService';
 import { Alert, CircularProgress, Box, Typography } from '@mui/material';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 // Props for the Time Series Anomaly Chart component
 interface TimeSeriesAnomalyChartProps {

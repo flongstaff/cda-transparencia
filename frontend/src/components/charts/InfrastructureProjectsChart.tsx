@@ -8,6 +8,7 @@ import { useQuery } from '@tanstack/react-query';
 import BaseChart, { SupportedChartType } from './BaseChart';
 import chartDataService, { CHART_TYPE_NAMES, CHART_TYPE_DESCRIPTIONS } from '../../services/charts/ChartDataService';
 import { Alert, CircularProgress, Box, Typography } from '@mui/material';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 // Props for the InfrastructureProjects Chart component
 interface InfrastructureProjectsChartProps {

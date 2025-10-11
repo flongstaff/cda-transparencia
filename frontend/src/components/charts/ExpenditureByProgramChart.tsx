@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { ExpenditureByProgram } from '../../services/FinancialDataService';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface ExpenditureByProgramChartProps {
   data: ExpenditureByProgram;

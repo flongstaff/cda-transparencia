@@ -22,6 +22,7 @@ import {
   formatPercentageARS, 
   formatDateARS 
 } from '../../utils/formatters';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 // Define consistent color palette for all charts
 const CHART_COLORS = {

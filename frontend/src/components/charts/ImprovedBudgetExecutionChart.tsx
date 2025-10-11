@@ -11,6 +11,7 @@ import {
 } from 'recharts';
 import { formatCurrencyARS } from '../../utils/formatters';
 import StandardizedSection from '../ui/StandardizedSection';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface BudgetExecutionData {
   sector: string;

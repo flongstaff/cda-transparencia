@@ -51,6 +51,7 @@ import {
   XCircle,
   Info
 } from 'lucide-react';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 import dataIntegrationService from '../../services/DataIntegrationService';
 import chartDataService from '../../services/charts/ChartDataService';
 
@@ -193,51 +194,157 @@ const EnhancedDataVisualization: React.FC<EnhancedDataVisualizationProps> = ({
     setError(null);
 
     try {
-      // Try to load data from the chart data service first (highest priority)
-      const chartTypeName = getChartTypeName(dataType);
-      const rawData = await chartDataService.loadChartData(chartTypeName as any);
-      
-      if (rawData && rawData.length > 0) {
-        // Process the raw chart data directly
-        const processedData = processRawChartData(rawData, dataType);
-        setData(processedData);
-      } else {
-        // Fallback to data integration service
-        const integratedData = await dataIntegrationService.loadIntegratedData(year);
-        const processedData = processDataForType(integratedData, dataType);
-        setData(processedData);
-      }
-    } catch (chartDataError) {
-      console.warn('Failed to load data from chart data service:', chartDataError);
-      
-      try {
-        // Fallback to data integration service
-        const integratedData = await dataIntegrationService.loadIntegratedData(year);
-        const processedData = processDataForType(integratedData, dataType);
-        setData(processedData);
-      } catch (integrationError) {
-        console.warn('Failed to load data from integration service:', integrationError);
-        
-        try {
-          // Fallback to loading from local JSON if service fails
-          const response = await fetch(`/data/processed/${year}/consolidated_data.json`);
-          if (!response.ok) {
-            throw new Error(`Failed to load data for ${year}`);
-          }
+      // PRIORITY 1: Try CloudflareWorkerDataService first (modern data source)
+      console.log(`📥 Loading data for ${dataType} (year: ${year}) via CloudflareWorkerDataService`);
+      const response = await cloudflareWorkerDataService.loadYearData(year);
 
-          const consolidatedData = await response.json();
-          const processedData = processDataForType(consolidatedData, dataType);
+      if (response.success && response.data) {
+        console.log('✅ Data loaded successfully from CloudflareWorkerDataService');
+        const processedData = processCloudflareData(response.data, dataType);
+
+        if (processedData && processedData.length > 0) {
           setData(processedData);
-        } catch (localError) {
-          console.error('Error loading data from local JSON:', localError);
-          setError(localError instanceof Error ? localError.message : 'Error loading data');
-          // Fallback to sample data only as last resort
-          setData(generateSampleData(dataType));
+          return;
         }
       }
+
+      // PRIORITY 2: Try chart data service
+      console.log('⚠️ Cloudflare data empty, trying chart data service');
+      const chartTypeName = getChartTypeName(dataType);
+      const rawData = await chartDataService.loadChartData(chartTypeName as any);
+
+      if (rawData && rawData.length > 0) {
+        const processedData = processRawChartData(rawData, dataType);
+        setData(processedData);
+        return;
+      }
+
+      // PRIORITY 3: Try data integration service
+      console.log('⚠️  Chart data service empty, trying data integration service');
+      const integratedData = await dataIntegrationService.loadIntegratedData(year);
+      const processedData = processDataForType(integratedData, dataType);
+
+      if (processedData && processedData.length > 0) {
+        setData(processedData);
+        return;
+      }
+
+      // PRIORITY 4: Try local JSON files
+      console.log('⚠️  Integration service empty, trying local JSON');
+      const localResponse = await fetch(`/data/processed/${year}/consolidated_data.json`);
+      if (localResponse.ok) {
+        const consolidatedData = await localResponse.json();
+        const processedData = processDataForType(consolidatedData, dataType);
+
+        if (processedData && processedData.length > 0) {
+          setData(processedData);
+          return;
+        }
+      }
+
+      // LAST RESORT: Use sample data
+      console.warn('⚠️  All data sources failed or returned empty, using sample data');
+      setError('No se pudieron cargar datos reales. Mostrando datos de ejemplo.');
+      setData(generateSampleData(dataType));
+
+    } catch (error) {
+      console.error('❌ Error in loadData:', error);
+      setError(error instanceof Error ? error.message : 'Error loading data');
+      // Only use sample data as absolute last resort
+      setData(generateSampleData(dataType));
     } finally {
       setLoading(false);
     }
+  };
+
+  // New function to process Cloudflare Worker data
+  const processCloudflareData = (cloudflareData: any, type: string): FinancialData[] => {
+    switch (type) {
+      case 'budget':
+        if (cloudflareData.budget) {
+          // Handle budget data from Cloudflare worker
+          const budget = cloudflareData.budget;
+          if (Array.isArray(budget)) {
+            return budget.map((item: any, index: number) => ({
+              category: item.category || item.name || `Categoría ${index + 1}`,
+              budgeted: parseFloat(item.budgeted || item.presupuestado || '0'),
+              executed: parseFloat(item.executed || item.ejecutado || '0'),
+              percentage: parseFloat(item.percentage || item.execution_rate || '0'),
+              variance: parseFloat(item.variance || '0'),
+              trend: item.trend || (item.executed > item.budgeted ? 'up' : 'down')
+            }));
+          }
+        }
+        break;
+
+      case 'revenue':
+        if (cloudflareData.treasury) {
+          return [{
+            category: 'Ingresos Totales',
+            budgeted: cloudflareData.treasury.income || cloudflareData.treasury.total_revenue || 0,
+            executed: cloudflareData.treasury.income || cloudflareData.treasury.total_revenue || 0,
+            percentage: 100,
+            variance: 0,
+            trend: 'stable'
+          }];
+        }
+        break;
+
+      case 'expenditure':
+        if (cloudflareData.treasury) {
+          return [{
+            category: 'Gastos Totales',
+            budgeted: cloudflareData.treasury.expenses || cloudflareData.treasury.total_expenses || 0,
+            executed: cloudflareData.treasury.expenses || cloudflareData.treasury.total_expenses || 0,
+            percentage: 100,
+            variance: 0,
+            trend: 'stable'
+          }];
+        }
+        break;
+
+      case 'debt':
+        if (cloudflareData.debt) {
+          return [{
+            category: 'Deuda Total',
+            budgeted: cloudflareData.debt.total_debt || 0,
+            executed: cloudflareData.debt.total_debt || 0,
+            percentage: 100,
+            variance: 0,
+            trend: 'stable'
+          }];
+        }
+        break;
+
+      case 'personnel':
+        if (cloudflareData.salaries && Array.isArray(cloudflareData.salaries)) {
+          return cloudflareData.salaries.map((item: any, index: number) => ({
+            category: item.name || item.position || `Empleado ${index + 1}`,
+            budgeted: item.salary || 0,
+            executed: item.salary || 0,
+            percentage: 100,
+            variance: 0,
+            trend: 'stable'
+          }));
+        }
+        break;
+
+      case 'contracts':
+      case 'infrastructure':
+        if (cloudflareData.contracts && Array.isArray(cloudflareData.contracts)) {
+          return cloudflareData.contracts.map((item: any, index: number) => ({
+            category: item.name || item.description || `Contrato ${index + 1}`,
+            budgeted: item.amount || item.total || 0,
+            executed: item.executed || item.amount || 0,
+            percentage: item.progress || 100,
+            variance: 0,
+            trend: 'stable'
+          }));
+        }
+        break;
+    }
+
+    return [];
   };
 
   const processDataForType = (consolidatedData: any, type: string): FinancialData[] => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ResponsiveFunnel } from '@nivo/funnel';
 import { motion } from 'framer-motion';
+import { cloudflareWorkerDataService } from '../../services/CloudflareWorkerDataService';
 
 interface FunnelDataPoint {
   id: string;
