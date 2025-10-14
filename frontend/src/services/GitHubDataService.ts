@@ -73,6 +73,11 @@ class GitHubDataService {
       }
     }
     
+    // Handle PDF files from the new central_pdfs/originals/ directory
+    if (cleanPath.startsWith('central_pdfs/')) {
+      return `${this.config.baseUrl}/${this.config.owner}/${this.config.repo}/${this.config.branch}/${cleanPath}`;
+    }
+    
     return `${this.config.baseUrl}/${this.config.owner}/${this.config.repo}/${this.config.branch}/${cleanPath}`;
   }
 
@@ -315,12 +320,82 @@ class GitHubDataService {
 
   /**
    * Load comprehensive data for a specific year
+   * Optimized to use consolidated datasets first, then fallback to individual files
    */
   async loadYearData(year: number): Promise<GitHubDataResponse> {
     try {
       console.log(`🚀 Loading comprehensive data for year ${year} from GitHub`);
 
-      // Try multiple data source patterns to find the right files
+      // First, try to get the consolidated year data (most efficient - single file)
+      const consolidatedResponse = await this.fetchJson(`data/consolidated/${year}/summary.json`);
+      if (consolidatedResponse.success && consolidatedResponse.data) {
+        console.log(`✅ Loaded consolidated data for year ${year}`);
+        return {
+          success: true,
+          data: {
+            ...consolidatedResponse.data,
+            year,
+            sources: [`github:data/consolidated/${year}/summary.json`],
+            lastUpdated: new Date().toISOString()
+          },
+          source: 'github_raw',
+          lastModified: consolidatedResponse.lastModified
+        };
+      }
+
+      // Second, try the multi-source report with year-specific filtering
+      const multiSourceResponse = await this.fetchJson('data/multi_source_report.json');
+      if (multiSourceResponse.success && multiSourceResponse.data) {
+        const multiSourceData = multiSourceResponse.data;
+        
+        // Try to extract year-specific data from multi-source report
+        if (multiSourceData.sources) {
+          const yearData = {
+            year,
+            budget: multiSourceData.sources.budget?.structured_data?.[year] || null,
+            contracts: multiSourceData.sources.contracts?.structured_data?.[year]?.contracts || [],
+            salaries: multiSourceData.sources.salaries?.structured_data?.[year]?.salaries || [],
+            documents: multiSourceData.sources.documents?.structured_data?.[year]?.documents || [],
+            treasury: multiSourceData.sources.treasury?.structured_data?.[year] || null,
+            debt: multiSourceData.sources.debt?.structured_data?.[year] || null,
+            sources: ['github:data/multi_source_report.json'],
+            lastUpdated: new Date().toISOString()
+          };
+          
+          // Check if we have any meaningful data for this year
+          const hasData = yearData.budget || yearData.contracts.length > 0 || 
+                         yearData.salaries.length > 0 || yearData.documents.length > 0;
+          
+          if (hasData) {
+            console.log(`✅ Loaded multi-source data for year ${year}`);
+            return {
+              success: true,
+              data: yearData,
+              source: 'github_raw',
+              lastModified: multiSourceResponse.lastModified
+            };
+          }
+        }
+      }
+
+      // Third, try the processed data file which should contain all processed info
+      const processedResponse = await this.fetchJson(`data/processed/${year}/processed_data.json`);
+      if (processedResponse.success && processedResponse.data) {
+        console.log(`✅ Loaded processed data for year ${year}`);
+        return {
+          success: true,
+          data: {
+            ...processedResponse.data,
+            year,
+            sources: [`github:data/processed/${year}/processed_data.json`],
+            lastUpdated: new Date().toISOString()
+          },
+          source: 'github_raw',
+          lastModified: processedResponse.lastModified
+        };
+      }
+
+      // If consolidated data isn't available, try the individual component files
       const dataPatterns = [
         // Primary pattern - consolidated data
         {
@@ -393,83 +468,6 @@ class GitHubDataService {
         }
       }
 
-      // If no data found, try to get from multi-source report as fallback
-      if (!foundData) {
-        console.log(`No specific year data found for ${year}, trying multi-source report...`);
-        const multiSourceResponse = await this.fetchJson('data/multi_source_report.json');
-
-        if (multiSourceResponse.success && multiSourceResponse.data) {
-          const multiSourceData = multiSourceResponse.data;
-
-          // Extract year-specific data from multi-source report
-          if (multiSourceData.sources) {
-            // Budget data
-            if (multiSourceData.sources.budget?.structured_data?.[year]) {
-              consolidatedData.budget = multiSourceData.sources.budget.structured_data[year];
-              foundData = true;
-            }
-
-            // Contracts data
-            if (multiSourceData.sources.contracts?.structured_data?.[year]) {
-              consolidatedData.contracts = multiSourceData.sources.contracts.structured_data[year].contracts || [];
-              foundData = true;
-            }
-
-            // Salaries data
-            if (multiSourceData.sources.salaries?.structured_data?.[year]) {
-              consolidatedData.salaries = multiSourceData.sources.salaries.structured_data[year].salaries || [];
-              foundData = true;
-            }
-
-            // Documents data
-            if (multiSourceData.sources.documents?.structured_data?.[year]) {
-              consolidatedData.documents = multiSourceData.sources.documents.structured_data[year].documents || [];
-              foundData = true;
-            }
-
-            // Treasury data
-            if (multiSourceData.sources.treasury?.structured_data?.[year]) {
-              consolidatedData.treasury = multiSourceData.sources.treasury.structured_data[year];
-              foundData = true;
-            }
-
-            // Debt data
-            if (multiSourceData.sources.debt?.structured_data?.[year]) {
-              consolidatedData.debt = multiSourceData.sources.debt.structured_data[year];
-              foundData = true;
-            }
-
-            consolidatedData.sources.push('github:data/multi_source_report.json');
-          }
-
-          // Multi-year summary data
-          if (multiSourceData.multi_year_summary) {
-            const yearSummary = multiSourceData.multi_year_summary.find((y: any) => y.year === year);
-            if (yearSummary) {
-              consolidatedData.summary = yearSummary;
-              foundData = true;
-            }
-          }
-        }
-      }
-
-      // If still no data, try to get from comprehensive data index
-      if (!foundData) {
-        console.log(`No multi-source data for ${year}, trying comprehensive index...`);
-        const indexResponse = await this.fetchJson('frontend/src/data/comprehensive_data_index.json');
-
-        if (indexResponse.success && indexResponse.data) {
-          const indexData = indexResponse.data;
-
-          // Try to extract year data from comprehensive index
-          if (indexData.financial_data?.[year]) {
-            consolidatedData.budget = indexData.financial_data[year];
-            consolidatedData.sources.push('github:frontend/src/data/comprehensive_data_index.json');
-            foundData = true;
-          }
-        }
-      }
-
       return {
         success: foundData,
         data: consolidatedData,
@@ -490,10 +488,88 @@ class GitHubDataService {
 
   /**
    * Load all available data (multi-year)
+   * Optimized to use consolidated dataset first, then individual years as needed
    */
   async loadAllData(): Promise<GitHubDataResponse> {
     try {
-      // Get years from the repository index first
+      // First, try to get comprehensive data from the master index or consolidated file
+      const masterDataResponse = await this.fetchJson('data/master_index.json');
+      if (masterDataResponse.success && masterDataResponse.data) {
+        console.log('✅ Loaded master index data');
+        return {
+          success: true,
+          data: {
+            ...masterDataResponse.data,
+            metadata: {
+              source: 'GitHub Repository',
+              repository: `${this.config.owner}/${this.config.repo}`,
+              branch: this.config.branch,
+              fetched_at: new Date().toISOString()
+            }
+          },
+          source: 'github_raw',
+          lastModified: masterDataResponse.lastModified
+        };
+      }
+
+      // Second, try the multi-source report which may contain multi-year data
+      const multiSourceResponse = await this.fetchJson('data/multi_source_report.json');
+      if (multiSourceResponse.success && multiSourceResponse.data) {
+        const multiSourceData = multiSourceResponse.data;
+        
+        // If the multi-source report contains the byYear data structure, return it directly
+        if (multiSourceData.byYear) {
+          console.log('✅ Loaded multi-source report with all years data');
+          return {
+            success: true,
+            data: {
+              ...multiSourceData,
+              metadata: {
+                source: 'GitHub Repository',
+                repository: `${this.config.owner}/${this.config.repo}`,
+                branch: this.config.branch,
+                fetched_at: new Date().toISOString()
+              }
+            },
+            source: 'github_raw',
+            lastModified: multiSourceResponse.lastModified
+          };
+        }
+        
+        // Otherwise, extract years from multi-source data if available
+        if (multiSourceData.multi_year_summary) {
+          const years = multiSourceData.multi_year_summary.map((item: any) => item.year).filter((year: number) => year);
+          console.log(`✅ Loaded multi-source report with ${years.length} years:`, years);
+          
+          const allData = {
+            byYear: {} as Record<number, any>,
+            summary: {
+              total_documents: multiSourceData.total_documents || 0,
+              years_covered: years,
+              categories: multiSourceData.categories || [],
+              audit_completion_rate: multiSourceData.audit_completion_rate || 0,
+              external_sources_active: multiSourceData.external_sources_active || 0,
+              last_updated: new Date().toISOString()
+            },
+            external_validation: multiSourceData.external_validation || [],
+            metadata: {
+              source: 'GitHub Repository',
+              repository: `${this.config.owner}/${this.config.repo}`,
+              branch: this.config.branch,
+              fetched_at: new Date().toISOString()
+            }
+          };
+          
+          return {
+            success: true,
+            data: allData,
+            source: 'github_raw',
+            lastModified: multiSourceResponse.lastModified
+          };
+        }
+      }
+
+      // Fallback: Get years from the repository index and load them individually
       const indexResponse = await this.fetchJson('data/index.json');
       let years = [2020, 2021, 2022, 2023, 2024, 2025];
 

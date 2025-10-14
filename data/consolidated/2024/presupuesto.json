@@ -1,0 +1,549 @@
+{
+  "year": 2024,
+  "type": "presupuesto",
+  "generated_at": "2025-10-14T10:18:12.327829",
+  "document_count": 1,
+  "total_amount": 9280507181.0,
+  "documents": [
+    {
+      "metadata": {
+        "filename": "pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24_6.pdf",
+        "title": "Pdf 160 Presupuesto 2025 Aprobado Ord 3280 24 6",
+        "document_type": "PRESUPUESTO",
+        "date": "24/11/2024",
+        "year": 2024,
+        "amount": 9280507181.0,
+        "currency": "ARS",
+        "budget_lines_count": 100,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:49:51.080398",
+        "has_tables": true,
+        "text_length": 891362,
+        "json_file": "pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24_6_structured.json"
+      },
+      "content": {
+        "filename": "pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24_6.pdf",
+        "processed_date": "2025-10-14T09:49:51.080398",
+        "document_type": "PRESUPUESTO",
+        "title": "Pdf 160 Presupuesto 2025 Aprobado Ord 3280 24 6",
+        "date": "24/11/2024",
+        "amount": 9280507181.0,
+        "currency": "ARS",
+        "entities": [
+          "Municipalidad de Carmen de Areco"
+        ],
+        "categories": [
+          "PRESUPUESTO"
+        ],
+        "budget_lines": [
+          {
+            "line_item": "Presupuesto:",
+            "amount": 2025.0,
+            "description": "Presupuesto:"
+          },
+          {
+            "line_item": "Rubro             Denominación                                               Ejecutado 2023 Estimado 2024 Programado",
+            "amount": 2025.0,
+            "description": "Rubro             Denominación                                               Ejecutado 2023 Estimado 2024 Programado"
+          },
+          {
+            "line_item": "1140100       Coparticipación Pcial. de Impuesto Ley 10.559                 851.510.056,04   2.018.017.592,71",
+            "amount": 3996907472.0,
+            "description": "1140100       Coparticipación Pcial. de Impuesto Ley 10.559                 851.510.056,04   2.018.017.592,71"
+          },
+          {
+            "line_item": "1140200       Fondo para el fortalecimiento de Recurso Municipales           44.803.283,68     108.729.364,17",
+            "amount": 197904689.0,
+            "description": "1140200       Fondo para el fortalecimiento de Recurso Municipales           44.803.283,68     108.729.364,17"
+          },
+          {
+            "line_item": "1140300       Fondo Municipal de Inclusion Social                            18.072.898,92      44.601.764,16",
+            "amount": 79242470.0,
+            "description": "1140300       Fondo Municipal de Inclusion Social                            18.072.898,92      44.601.764,16"
+          },
+          {
+            "line_item": "1140500       Fondo Educativo                                               172.795.650,05     386.850.531,43",
+            "amount": 593057689.0,
+            "description": "1140500       Fondo Educativo                                               172.795.650,05     386.850.531,43"
+          },
+          {
+            "line_item": "1140600       Fondo de Fortalecimiento Fiscal Municipal Ley 15.480 Art°               0,00      88.779.962,00",
+            "amount": 178891947.0,
+            "description": "1140600       Fondo de Fortalecimiento Fiscal Municipal Ley 15.480 Art°               0,00      88.779.962,00"
+          },
+          {
+            "line_item": "1190201       Contribucion 6% EDEN                                                    0,00     24.562.455,36",
+            "amount": 58206978.0,
+            "description": "1190201       Contribucion 6% EDEN                                                    0,00     24.562.455,36"
+          },
+          {
+            "line_item": "1190300       Juegos de azar                                                  8.058.690,19     20.019.861,40",
+            "amount": 35948407.0,
+            "description": "1190300       Juegos de azar                                                  8.058.690,19     20.019.861,40"
+          },
+          {
+            "line_item": "1190400       Inmobiliario Rural.Afectado                                    25.375.457,11     73.471.196,10",
+            "amount": 137859675.0,
+            "description": "1190400       Inmobiliario Rural.Afectado                                    25.375.457,11     73.471.196,10"
+          },
+          {
+            "line_item": "1190500       Inmobiliario Rural. No afectado                                75.241.474,45    170.447.487,42",
+            "amount": 480891438.0,
+            "description": "1190500       Inmobiliario Rural. No afectado                                75.241.474,45    170.447.487,42"
+          },
+          {
+            "line_item": "1190600       Ingresos Brutos. Ley 13010                                      8.933.313,59     22.573.707,20",
+            "amount": 53790386.0,
+            "description": "1190600       Ingresos Brutos. Ley 13010                                      8.933.313,59     22.573.707,20"
+          },
+          {
+            "line_item": "1190701       Impuesto Automotor.Del ejercicio                                6.593.352,91     11.680.159,85",
+            "amount": 24371032.0,
+            "description": "1190701       Impuesto Automotor.Del ejercicio                                6.593.352,91     11.680.159,85"
+          },
+          {
+            "line_item": "1190702       Impuesto Automotor. Ejercicios Anteriores                       5.883.090,80     11.001.311,89",
+            "amount": 18755733.0,
+            "description": "1190702       Impuesto Automotor. Ejercicios Anteriores                       5.883.090,80     11.001.311,89"
+          },
+          {
+            "line_item": "1210101       Alumbrado ,Barrido y Limpieza del Ejercicio                    21.120.802,26    237.078.461,86",
+            "amount": 205840957.0,
+            "description": "1210101       Alumbrado ,Barrido y Limpieza del Ejercicio                    21.120.802,26    237.078.461,86"
+          },
+          {
+            "line_item": "1210102       Alumbrado, barrido y Limpieza de Ejercicios Anteriores          5.027.164,86     11.354.692,13",
+            "amount": 41168191.0,
+            "description": "1210102       Alumbrado, barrido y Limpieza de Ejercicios Anteriores          5.027.164,86     11.354.692,13"
+          },
+          {
+            "line_item": "1210104       Contribucion de Fortalecimiento de la Seguridad                         0,00      5.349.812,77",
+            "amount": 28173939.0,
+            "description": "1210104       Contribucion de Fortalecimiento de la Seguridad                         0,00      5.349.812,77"
+          },
+          {
+            "line_item": "1210200       Servicios especiales de limpieza e Higiene                        142.276,20      1.357.944,00",
+            "amount": 3652484.0,
+            "description": "1210200       Servicios especiales de limpieza e Higiene                        142.276,20      1.357.944,00"
+          },
+          {
+            "line_item": "1210301       Servicios Rurales del ejercicio                               101.892.063,30    734.198.372,64",
+            "amount": 838265660.0,
+            "description": "1210301       Servicios Rurales del ejercicio                               101.892.063,30    734.198.372,64"
+          },
+          {
+            "line_item": "1210302       Servicios Rurales.Ejercicios Anteriores                         6.122.425,68     18.601.554,30",
+            "amount": 83826566.0,
+            "description": "1210302       Servicios Rurales.Ejercicios Anteriores                         6.122.425,68     18.601.554,30"
+          },
+          {
+            "line_item": "1210400       Habilitación de comercios e industrias                            518.138,88      2.771.969,60",
+            "amount": 35521223.0,
+            "description": "1210400       Habilitación de comercios e industrias                            518.138,88      2.771.969,60"
+          },
+          {
+            "line_item": "1210501       Inspección de seguridad e higiene.Del Ejercicio                23.047.086,56     60.246.949,74",
+            "amount": 208872502.0,
+            "description": "1210501       Inspección de seguridad e higiene.Del Ejercicio                23.047.086,56     60.246.949,74"
+          },
+          {
+            "line_item": "1210502       Inspección de seguridad e higiene.De ejercicios anteriores      6.988.746,40     26.220.129,16",
+            "amount": 18378058.0,
+            "description": "1210502       Inspección de seguridad e higiene.De ejercicios anteriores      6.988.746,40     26.220.129,16"
+          },
+          {
+            "line_item": "1211501       Serv. Sanitarios - Del ejercicio                               27.162.356,68    101.875.446,79",
+            "amount": 203170781.0,
+            "description": "1211501       Serv. Sanitarios - Del ejercicio                               27.162.356,68    101.875.446,79"
+          },
+          {
+            "line_item": "1211502       Serv. Sanitarios - Ejercicios Anteriores                        8.870.000,32     23.918.812,08",
+            "amount": 18176353.0,
+            "description": "1211502       Serv. Sanitarios - Ejercicios Anteriores                        8.870.000,32     23.918.812,08"
+          },
+          {
+            "line_item": "1211503       Serv. Sanitarios Mant. Ampliacion y Conexion                      365.226,00      2.624.700,00",
+            "amount": 8058014.0,
+            "description": "1211503       Serv. Sanitarios Mant. Ampliacion y Conexion                      365.226,00      2.624.700,00"
+          },
+          {
+            "line_item": "1211504       Contribucion para la prevencion Zoonótica                               0,00      9.050.539,70",
+            "amount": 27363323.0,
+            "description": "1211504       Contribucion para la prevencion Zoonótica                               0,00      9.050.539,70"
+          },
+          {
+            "line_item": "1211601       Marcas y Señales del ej.                                       20.953.122,00     61.641.684,00",
+            "amount": 75174152.0,
+            "description": "1211601       Marcas y Señales del ej.                                       20.953.122,00     61.641.684,00"
+          },
+          {
+            "line_item": "1211701       Tasa Vial Urbana y Abiental del Ejercicio                               0,00              0,00",
+            "amount": 96000000.0,
+            "description": "1211701       Tasa Vial Urbana y Abiental del Ejercicio                               0,00              0,00"
+          },
+          {
+            "line_item": "1220301       Publicidad y propaganda ejercicio                                  58.607,60      2.000.000,00",
+            "amount": 35000000.0,
+            "description": "1220301       Publicidad y propaganda ejercicio                                  58.607,60      2.000.000,00"
+          },
+          {
+            "line_item": "1220501       Derecho de Ocupación Via Publica LD                                     0,00              0,00",
+            "amount": 7520556.0,
+            "description": "1220501       Derecho de Ocupación Via Publica LD                                     0,00              0,00"
+          },
+          {
+            "line_item": "1220502       Derecho de Ocupación Via Publica Afectado GAS                           0,00              0,00",
+            "amount": 247023800.0,
+            "description": "1220502       Derecho de Ocupación Via Publica Afectado GAS                           0,00              0,00"
+          },
+          {
+            "line_item": "1220800       Cementerio                                                      1.670.106,72      4.005.481,84",
+            "amount": 12097585.0,
+            "description": "1220800       Cementerio                                                      1.670.106,72      4.005.481,84"
+          },
+          {
+            "line_item": "1221000       Patentes de Rodados                                               469.960,93      2.549.419,76",
+            "amount": 8315408.0,
+            "description": "1221000       Patentes de Rodados                                               469.960,93      2.549.419,76"
+          },
+          {
+            "line_item": "1221100       Derechos de Construcción                                        5.284.157,60     13.366.477,37",
+            "amount": 17030309.0,
+            "description": "1221100       Derechos de Construcción                                        5.284.157,60     13.366.477,37"
+          },
+          {
+            "line_item": "1221300       Derecho de Uso de Espacios Aereos                               6.357.791,58     22.420.779,84",
+            "amount": 28771422.0,
+            "description": "1221300       Derecho de Uso de Espacios Aereos                               6.357.791,58     22.420.779,84"
+          },
+          {
+            "line_item": "1221701       Venta ambulante - libre disponibilidad                            993.321,36      5.020.533,33",
+            "amount": 19643153.0,
+            "description": "1221701       Venta ambulante - libre disponibilidad                            993.321,36      5.020.533,33"
+          },
+          {
+            "line_item": "1229901       Derechos de oficina                                            10.867.236,70     33.055.191,40",
+            "amount": 42697576.0,
+            "description": "1229901       Derechos de oficina                                            10.867.236,70     33.055.191,40"
+          },
+          {
+            "line_item": "1260200       Infracción a las Obligaciones Fiscales                          9.571.592,51     21.488.572,65",
+            "amount": 41499129.0,
+            "description": "1260200       Infracción a las Obligaciones Fiscales                          9.571.592,51     21.488.572,65"
+          },
+          {
+            "line_item": "1260400       (10096/0) Infracciones normativas vigentes y REBA               1.053.643,75      6.493.874,00",
+            "amount": 12701998.0,
+            "description": "1260400       (10096/0) Infracciones normativas vigentes y REBA               1.053.643,75      6.493.874,00"
+          },
+          {
+            "line_item": "1260500       Infraccion normativas vigentes y REBA ( de libre disp)          1.053.643,75      3.354.108,33",
+            "amount": 12701998.0,
+            "description": "1260500       Infraccion normativas vigentes y REBA ( de libre disp)          1.053.643,75      3.354.108,33"
+          },
+          {
+            "line_item": "1290100       Balneario Municipal Ord. Nro.2355/08-Dec.733/08                12.344.533,22     48.581.742,00",
+            "amount": 56911587.0,
+            "description": "1290100       Balneario Municipal Ord. Nro.2355/08-Dec.733/08                12.344.533,22     48.581.742,00"
+          },
+          {
+            "line_item": "1290200       Ingresos Varios                                                 5.952.377,69     11.012.258,83",
+            "amount": 16084578.0,
+            "description": "1290200       Ingresos Varios                                                 5.952.377,69     11.012.258,83"
+          },
+          {
+            "line_item": "1290600       Seguridad Vial y Movilidad Urbana - Multas -                   60.641.500,26    190.615.992,89",
+            "amount": 302773016.0,
+            "description": "1290600       Seguridad Vial y Movilidad Urbana - Multas -                   60.641.500,26    190.615.992,89"
+          },
+          {
+            "line_item": "1620102       Intereses plazo fijo                                                    0,00        301.575,34",
+            "amount": 30125107.0,
+            "description": "1620102       Intereses plazo fijo                                                    0,00        301.575,34"
+          },
+          {
+            "line_item": "1620104       Intereses por Fondos Comunes de Inversion                     126.276.582,06    260.166.770,67",
+            "amount": 150625537.0,
+            "description": "1620104       Intereses por Fondos Comunes de Inversion                     126.276.582,06    260.166.770,67"
+          },
+          {
+            "line_item": "1750101       Convenio Policia Comunal                                       17.021.520,00     34.219.944,00",
+            "amount": 42711702.0,
+            "description": "1750101       Convenio Policia Comunal                                       17.021.520,00     34.219.944,00"
+          },
+          {
+            "line_item": "1750107       Centro Día                                                      4.705.540,00     10.352.188,00",
+            "amount": 17504458.0,
+            "description": "1750107       Centro Día                                                      4.705.540,00     10.352.188,00"
+          },
+          {
+            "line_item": "1750108       Casa del Niño                                                  25.000.747,00     55.475.999,00",
+            "amount": 106513918.0,
+            "description": "1750108       Casa del Niño                                                  25.000.747,00     55.475.999,00"
+          },
+          {
+            "line_item": "1750109       Fondo de Fortalecimiento Programas Sociales                     7.804.840,99     16.811.823,69",
+            "amount": 26814754.0,
+            "description": "1750109       Fondo de Fortalecimiento Programas Sociales                     7.804.840,99     16.811.823,69"
+          },
+          {
+            "line_item": "Presupuesto:",
+            "amount": 2025.0,
+            "description": "Presupuesto:"
+          },
+          {
+            "line_item": "Rubro            Denominación                                          Ejecutado 2023 Estimado 2024 Programado",
+            "amount": 2025.0,
+            "description": "Rubro            Denominación                                          Ejecutado 2023 Estimado 2024 Programado"
+          },
+          {
+            "line_item": "1750110       CEAMSE                                                   4.683.568,39     12.222.523,00",
+            "amount": 18028544.0,
+            "description": "1750110       CEAMSE                                                   4.683.568,39     12.222.523,00"
+          },
+          {
+            "line_item": "1750112       Niñez y Adoles - Prog.Operadores de calle                3.480.300,00      8.134.500,00",
+            "amount": 13572749.0,
+            "description": "1750112       Niñez y Adoles - Prog.Operadores de calle                3.480.300,00      8.134.500,00"
+          },
+          {
+            "line_item": "1750113       Casa de Abrigo Niñez y Adolescencia                     22.750.976,00     48.528.230,00",
+            "amount": 93174202.0,
+            "description": "1750113       Casa de Abrigo Niñez y Adolescencia                     22.750.976,00     48.528.230,00"
+          },
+          {
+            "line_item": "1750117       Subsidio Ministerio de Salud -SAMO-                      1.295.603,98        997.597,62",
+            "amount": 1915387.0,
+            "description": "1750117       Subsidio Ministerio de Salud -SAMO-                      1.295.603,98        997.597,62"
+          },
+          {
+            "line_item": "1750121       Convenio IOMA                                              639.080,40      1.248.458,52",
+            "amount": 2397040.0,
+            "description": "1750121       Convenio IOMA                                              639.080,40      1.248.458,52"
+          },
+          {
+            "line_item": "1750122       Juegos Buenos Aires                                     25.175.830,00     30.219.728,00",
+            "amount": 90658752.0,
+            "description": "1750122       Juegos Buenos Aires                                     25.175.830,00     30.219.728,00"
+          },
+          {
+            "line_item": "1750123       Plan Sumar                                               4.267.546,00      3.333.710,00",
+            "amount": 6400723.0,
+            "description": "1750123       Plan Sumar                                               4.267.546,00      3.333.710,00"
+          },
+          {
+            "line_item": "1750138       Ministerio de Desarrollo Social Prog. ENVION             5.159.440,00      6.815.584,00",
+            "amount": 14323780.0,
+            "description": "1750138       Ministerio de Desarrollo Social Prog. ENVION             5.159.440,00      6.815.584,00"
+          },
+          {
+            "line_item": "1750141       Barrio Adentro                                           2.760.000,00      7.108.704,00",
+            "amount": 13648712.0,
+            "description": "1750141       Barrio Adentro                                           2.760.000,00      7.108.704,00"
+          },
+          {
+            "line_item": "1750152       Programa Jugemos Piola (Niñez y Adolecencia PBA)         6.510.310,00      6.388.704,00",
+            "amount": 12266312.0,
+            "description": "1750152       Programa Jugemos Piola (Niñez y Adolecencia PBA)         6.510.310,00      6.388.704,00"
+          },
+          {
+            "line_item": "1750160       Programa Centros Juveniles Dir. Juventud PBA             1.873.360,00      6.989.360,00",
+            "amount": 13419571.0,
+            "description": "1750160       Programa Centros Juveniles Dir. Juventud PBA             1.873.360,00      6.989.360,00"
+          },
+          {
+            "line_item": "1750161       Programa Centros de Acompañamiento Socio Comunitario     1.397.760,00      8.470.260,00",
+            "amount": 16262899.0,
+            "description": "1750161       Programa Centros de Acompañamiento Socio Comunitario     1.397.760,00      8.470.260,00"
+          },
+          {
+            "line_item": "1750164       Programa YENDO                                                   0,00        990.000,00",
+            "amount": 1900800.0,
+            "description": "1750164       Programa YENDO                                                   0,00        990.000,00"
+          },
+          {
+            "line_item": "Totales:       1.816.598.155,37 5.159.766.554,54",
+            "amount": 9280507181.0,
+            "description": "Totales:       1.816.598.155,37 5.159.766.554,54"
+          },
+          {
+            "line_item": "Presupuesto:",
+            "amount": 2025.0,
+            "description": "Presupuesto:"
+          },
+          {
+            "line_item": "Rubro           Denominación                                             Ejecutado 2023 Estimado 2024 Programado",
+            "amount": 2025.0,
+            "description": "Rubro           Denominación                                             Ejecutado 2023 Estimado 2024 Programado"
+          },
+          {
+            "line_item": "Presupuesto:",
+            "amount": 2025.0,
+            "description": "Presupuesto:"
+          },
+          {
+            "line_item": "1140100 - Coparticipación Pcial. de Impuesto Ley 10.559                           3.996.907.472,00         0,00",
+            "amount": 3996907472.0,
+            "description": "1140100 - Coparticipación Pcial. de Impuesto Ley 10.559                           3.996.907.472,00         0,00"
+          },
+          {
+            "line_item": "1140200 - Fondo para el fortalecimiento de Recurso Municipales                   197.904.689,00         0,00",
+            "amount": 197904689.0,
+            "description": "1140200 - Fondo para el fortalecimiento de Recurso Municipales                   197.904.689,00         0,00"
+          },
+          {
+            "line_item": "1140300 - Fondo Municipal de Inclusion Social                                     79.242.470,00         0,00",
+            "amount": 79242470.0,
+            "description": "1140300 - Fondo Municipal de Inclusion Social                                     79.242.470,00         0,00"
+          },
+          {
+            "line_item": "1140500 - Fondo Educativo                                                        593.057.689,00         0,00",
+            "amount": 593057689.0,
+            "description": "1140500 - Fondo Educativo                                                        593.057.689,00         0,00"
+          },
+          {
+            "line_item": "1140600 - Fondo de Fortalecimiento Fiscal Municipal Ley 15.480 Art° 178.891.947,00                      0,00",
+            "amount": 178891947.0,
+            "description": "1140600 - Fondo de Fortalecimiento Fiscal Municipal Ley 15.480 Art° 178.891.947,00                      0,00"
+          },
+          {
+            "line_item": "Total Coparticipación de impuestos                             5.046.004.267,00                       0,00",
+            "amount": 5046004267.0,
+            "description": "Total Coparticipación de impuestos                             5.046.004.267,00                       0,00"
+          },
+          {
+            "line_item": "1190200 - Contribucion Energia Electrica 6% Art 72 ter Ley",
+            "amount": 11969.0,
+            "description": "1190200 - Contribucion Energia Electrica 6% Art 72 ter Ley"
+          },
+          {
+            "line_item": "1190201 - Contribucion 6% EDEN                                                 58.206.978,00          0,00",
+            "amount": 58206978.0,
+            "description": "1190201 - Contribucion 6% EDEN                                                 58.206.978,00          0,00"
+          },
+          {
+            "line_item": "1190300 - Juegos de azar                                                          35.948.407,00         0,00",
+            "amount": 35948407.0,
+            "description": "1190300 - Juegos de azar                                                          35.948.407,00         0,00"
+          },
+          {
+            "line_item": "1190400 - Inmobiliario Rural.Afectado                                            137.859.675,00         0,00",
+            "amount": 137859675.0,
+            "description": "1190400 - Inmobiliario Rural.Afectado                                            137.859.675,00         0,00"
+          },
+          {
+            "line_item": "1190500 - Inmobiliario Rural. No afectado                                        480.891.438,00         0,00",
+            "amount": 480891438.0,
+            "description": "1190500 - Inmobiliario Rural. No afectado                                        480.891.438,00         0,00"
+          },
+          {
+            "line_item": "1190600 - Ingresos Brutos. Ley 13010                                              53.790.386,00         0,00",
+            "amount": 53790386.0,
+            "description": "1190600 - Ingresos Brutos. Ley 13010                                              53.790.386,00         0,00"
+          },
+          {
+            "line_item": "1190701 - Impuesto Automotor.Del ejercicio                                     24.371.032,00          0,00",
+            "amount": 24371032.0,
+            "description": "1190701 - Impuesto Automotor.Del ejercicio                                     24.371.032,00          0,00"
+          },
+          {
+            "line_item": "1190702 - Impuesto Automotor. Ejercicios Anteriores                            18.755.733,00          0,00",
+            "amount": 18755733.0,
+            "description": "1190702 - Impuesto Automotor. Ejercicios Anteriores                            18.755.733,00          0,00"
+          },
+          {
+            "line_item": "Total Otros tributarios                                                   809.823.649,00             0,00",
+            "amount": 809823649.0,
+            "description": "Total Otros tributarios                                                   809.823.649,00             0,00"
+          },
+          {
+            "line_item": "Total Ingresos Tributarios                                               5.855.827.916,00            0,00",
+            "amount": 5855827916.0,
+            "description": "Total Ingresos Tributarios                                               5.855.827.916,00            0,00"
+          },
+          {
+            "line_item": "1210101 - Alumbrado ,Barrido y Limpieza del Ejercicio                         205.840.957,00          0,00",
+            "amount": 205840957.0,
+            "description": "1210101 - Alumbrado ,Barrido y Limpieza del Ejercicio                         205.840.957,00          0,00"
+          },
+          {
+            "line_item": "1210102 - Alumbrado, barrido y Limpieza de Ejercicios Anteriores               41.168.191,00          0,00",
+            "amount": 41168191.0,
+            "description": "1210102 - Alumbrado, barrido y Limpieza de Ejercicios Anteriores               41.168.191,00          0,00"
+          },
+          {
+            "line_item": "1210104 - Contribucion de Fortalecimiento de la Seguridad                      28.173.939,00          0,00",
+            "amount": 28173939.0,
+            "description": "1210104 - Contribucion de Fortalecimiento de la Seguridad                      28.173.939,00          0,00"
+          },
+          {
+            "line_item": "1210200 - Servicios especiales de limpieza e Higiene                               3.652.484,00         0,00",
+            "amount": 3652484.0,
+            "description": "1210200 - Servicios especiales de limpieza e Higiene                               3.652.484,00         0,00"
+          },
+          {
+            "line_item": "1210301 - Servicios Rurales del ejercicio                                     838.265.660,00          0,00",
+            "amount": 838265660.0,
+            "description": "1210301 - Servicios Rurales del ejercicio                                     838.265.660,00          0,00"
+          },
+          {
+            "line_item": "1210302 - Servicios Rurales.Ejercicios Anteriores                              83.826.566,00          0,00",
+            "amount": 83826566.0,
+            "description": "1210302 - Servicios Rurales.Ejercicios Anteriores                              83.826.566,00          0,00"
+          },
+          {
+            "line_item": "1210400 - Habilitación de comercios e industrias                                  35.521.223,00         0,00",
+            "amount": 35521223.0,
+            "description": "1210400 - Habilitación de comercios e industrias                                  35.521.223,00         0,00"
+          },
+          {
+            "line_item": "1210501 - Inspección de seguridad e higiene.Del Ejercicio                     208.872.502,00          0,00",
+            "amount": 208872502.0,
+            "description": "1210501 - Inspección de seguridad e higiene.Del Ejercicio                     208.872.502,00          0,00"
+          },
+          {
+            "line_item": "1210502 - Inspección de seguridad e higiene.De ejercicios                      18.378.058,00          0,00",
+            "amount": 18378058.0,
+            "description": "1210502 - Inspección de seguridad e higiene.De ejercicios                      18.378.058,00          0,00"
+          },
+          {
+            "line_item": "1211501 - Serv. Sanitarios - Del ejercicio                                    203.170.781,00          0,00",
+            "amount": 203170781.0,
+            "description": "1211501 - Serv. Sanitarios - Del ejercicio                                    203.170.781,00          0,00"
+          },
+          {
+            "line_item": "1211502 - Serv. Sanitarios - Ejercicios Anteriores                             18.176.353,00          0,00",
+            "amount": 18176353.0,
+            "description": "1211502 - Serv. Sanitarios - Ejercicios Anteriores                             18.176.353,00          0,00"
+          },
+          {
+            "line_item": "1211503 - Serv. Sanitarios Mant. Ampliacion y Conexion                          8.058.014,00          0,00",
+            "amount": 8058014.0,
+            "description": "1211503 - Serv. Sanitarios Mant. Ampliacion y Conexion                          8.058.014,00          0,00"
+          },
+          {
+            "line_item": "Presupuesto:",
+            "amount": 2025.0,
+            "description": "Presupuesto:"
+          },
+          {
+            "line_item": "1211504 - Contribucion para la prevencion Zoonótica                            27.363.323,00          0,00",
+            "amount": 27363323.0,
+            "description": "1211504 - Contribucion para la prevencion Zoonótica                            27.363.323,00          0,00"
+          },
+          {
+            "line_item": "1211601 - Marcas y Señales del ej.                                             75.174.152,00          0,00",
+            "amount": 75174152.0,
+            "description": "1211601 - Marcas y Señales del ej.                                             75.174.152,00          0,00"
+          }
+        ],
+        "text_length": 891362,
+        "extraction_method": "pdftotext",
+        "has_tables": true,
+        "text_content": "\f\f\f\f\f\f\f\fPRESUPUESTO MUNICIPAL\nCARMEN DE ARECO\n2025\n\fCALCULO DE RECURSOS MUNICIPALES\n\n\n\n\nANEXO I INFORMACION CONSOLIDADA\n\n\n•   PROGRAMACION DE LOS RECURSOS\n•   RECURSOS POR RUBRO\n•   RECURSOS POR CARÁCTER ECONÓMICO\n•   RECURSOS POR SU PROCEDENCIA\n\n\n\n\n(Aspectos abordados en función de modelos e instructivos\nde los Artículos N°12 y N°13, Decreto 2980)\n\f                                                          R.A.F.A.M.                                                  Hoja: 1 de 3\n\n\n                                PROGRAMACION DE LOS RECURSOS\n   Municipalidad de                                                                                               24/11/2024   12:33\n   Carmen de Areco\n                                         (EN PESOS)\n\n\nJurisdicción:      1110100000 - Departamento Ejecutivo\n                                                                                                                          Form. 2\n\nSubjurisdicción: 1110103000 - Secretaria de Hacienda y Finanzas\n                                                                                                        Presupuesto:           2025\n\n\nRubro             Denominación                                               Ejecutado 2023 Estimado 2024 Programado 2025\n\n  1140100       Coparticipación Pcial. de Impuesto Ley 10.559                 851.510.056,04   2.018.017.592,71     3.996.907.472,00\n  1140200       Fondo para el fortalecimiento de Recurso Municipales           44.803.283,68     108.729.364,17       197.904.689,00\n  1140300       Fondo Municipal de Inclusion Social                            18.072.898,92      44.601.764,16        79.242.470,00\n  1140500       Fondo Educativo                                               172.795.650,05     386.850.531,43       593.057.689,00\n  1140600       Fondo de Fortalecimiento Fiscal Municipal Ley 15.480 Art°               0,00      88.779.962,00       178.891.947,00\n                32\n  1190201       Contribucion 6% EDEN                                                    0,00     24.562.455,36        58.206.978,00\n  1190300       Juegos de azar                                                  8.058.690,19     20.019.861,40        35.948.407,00\n  1190400       Inmobiliario Rural.Afectado                                    25.375.457,11     73.471.196,10       137.859.675,00\n  1190500       Inmobiliario Rural. No afectado                                75.241.474,45    170.447.487,42       480.891.438,00\n  1190600       Ingresos Brutos. Ley 13010                                      8.933.313,59     22.573.707,20        53.790.386,00\n  1190701       Impuesto Automotor.Del ejercicio                                6.593.352,91     11.680.159,85        24.371.032,00\n  1190702       Impuesto Automotor. Ejercicios Anteriores                       5.883.090,80     11.001.311,89        18.755.733,00\n  1210101       Alumbrado ,Barrido y Limpieza del Ejercicio                    21.120.802,26    237.078.461,86       205.840.957,00\n  1210102       Alumbrado, barrido y Limpieza de Ejercicios Anteriores          5.027.164,86     11.354.692,13        41.168.191,00\n  1210104       Contribucion de Fortalecimiento de la Seguridad                         0,00      5.349.812,77        28.173.939,00\n  1210200       Servicios especiales de limpieza e Higiene                        142.276,20      1.357.944,00         3.652.484,00\n  1210301       Servicios Rurales del ejercicio                               101.892.063,30    734.198.372,64       838.265.660,00\n  1210302       Servicios Rurales.Ejercicios Anteriores                         6.122.425,68     18.601.554,30        83.826.566,00\n  1210400       Habilitación de comercios e industrias                            518.138,88      2.771.969,60        35.521.223,00\n  1210501       Inspección de seguridad e higiene.Del Ejercicio                23.047.086,56     60.246.949,74       208.872.502,00\n  1210502       Inspección de seguridad e higiene.De ejercicios anteriores      6.988.746,40     26.220.129,16        18.378.058,00\n  1211501       Serv. Sanitarios - Del ejercicio                               27.162.356,68    101.875.446,79       203.170.781,00\n  1211502       Serv. Sanitarios - Ejercicios Anteriores                        8.870.000,32     23.918.812,08        18.176.353,00\n  1211503       Serv. Sanitarios Mant. Ampliacion y Conexion                      365.226,00      2.624.700,00         8.058.014,00\n  1211504       Contribucion para la prevencion Zoonótica                               0,00      9.050.539,70        27.363.323,00\n  1211601       Marcas y Señales del ej.                                       20.953.122,00     61.641.684,00        75.174.152,00\n  1211701       Tasa Vial Urbana y Abiental del Ejercicio                               0,00              0,00        96.000.000,00\n  1220301       Publicidad y propaganda ejercicio                                  58.607,60      2.000.000,00        35.000.000,00\n  1220501       Derec",
+        "raw_content": "{\"document_type\": \"PRESUPUESTO\", \"title\": \"pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24_6\", \"date\": \"24/11/2024\", \"amount\": 9280507181.0, \"budget_lines\": [{\"line_item\": \"Presupuesto:\", \"amount\": 2025.0, \"description\": \"Presupuesto:\"}, {\"line_item\": \"Rubro             Denominaci\\u00f3n                                               Ejecutado 2023 Estimado 2024 Programado\", \"amount\": 2025.0, \"description\": \"Rubro             Denominaci\\u00f3n                                               Ejecutado 2023 Estimado 2024 Programado\"}, {\"line_item\": \"1140100       Coparticipaci\\u00f3n Pcial. de Impuesto Ley 10.559                 851.510.056,04   2.018.017.592,71\", \"amount\": 3996907472.0, \"description\": \"1140100       Coparticipaci\\u00f3n Pcial. de Impuesto Ley 10.559                 851.510.056,04   2.018.017.592,71\"}, {\"line_item\": \"1140200       Fondo para el fortalecimiento de Recurso Municipales           44.803.283,68     108.729.364,17\", \"amount\": 197904689.0, \"description\": \"1140200       Fondo para el fortalecimiento de Recurso Municipales           44.803.283,68     108.729.364,17\"}, {\"line_item\": \"1140300       Fondo Municipal de Inclusion Social                            18.072.898,92      44.601.764,16\", \"amount\": 79242470.0, \"description\": \"1140300       Fondo Municipal de Inclusion Social                            18.072.898,92      44.601.764,16\"}, {\"line_item\": \"1140500       Fondo Educativo                                               172.795.650,05     386.850.531,43\", \"amount\": 593057689.0, \"description\": \"1140500       Fondo Educativo                                               172.795.650,05     386.850.531,43\"}, {\"line_item\": \"1140600       Fondo de Fortalecimiento Fiscal Municipal Ley 15.480 Art\\u00b0               0,00      88.779.962,00\", \"amount\": 178891947.0, \"description\": \"1140600       Fondo de Fortalecimiento Fiscal Municipal Ley 15.480 Art\\u00b0               0,00      88.779.962,00\"}, {\"line_item\": \"1190201       Contribucion 6% EDEN                                                    0,00     24.562.455,36\", \"amount\": 58206978.0, \"description\": \"1190201       Contribucion 6% EDEN                                                    0,00     24.562.455,36\"}, {\"line_item\": \"1190300       Juegos de azar                                                  8.058.690,19     20.019.861,40\", \"amount\": 35948407.0, \"description\": \"1190300       Juegos de azar                                                  8.058.690,19     20.019.861,40\"}, {\"line_item\": \"1190400       Inmobiliario Rural.Afectado                                    25.375.457,11     73.471.196,10\", \"amount\": 137859675.0, \"description\": \"1190400       Inmobiliario Rural.Afectado                                    25.375.457,11     73.471.196,10\"}, {\"line_item\": \"1190500       Inmobiliario Rural. No afectado                                75.241.474,45    170.447.487,42\", \"amount\": 480891438.0, \"description\": \"1190500       Inmobiliario Rural. No afectado                                75.241.474,45    170.447.487,42\"}, {\"line_item\": \"1190600       Ingresos Brutos. Ley 13010                                      8.933.313,59     22.573.707,20\", \"amount\": 53790386.0, \"description\": \"1190600       Ingresos Brutos. Ley 13010                                      8.933.313,59     22.573.707,20\"}, {\"line_item\": \"1190701       Impuesto Automotor.Del ejercicio                                6.593.352,91     11.680.159,85\", \"amount\": 24371032.0, \"description\": \"1190701       Impuesto Automotor.Del ejercicio                                6.593.352,91     11.680.159,85\"}, {\"line_item\": \"1190702       Impuesto Automotor. Ejercicios Anteriores                       5.883.090,80     11.001.311,89\", \"amount\": 18755733.0, \"description\": \"1190702       Impuesto Automotor. Ejercicios Anteriores                       5.883.090,80     11.001.311,89\"}, {\"line_item\": \"1210101       Alumbrado ,Barrido y Limpieza del Ejercicio                    21.120.802,26    237.078.461,86\", \"amount\": 205840957.0, \"description\": \"1210101       Alumbrado ,Barrido y Limpieza del Ejercicio                    21.120.802,26    237.078.461,86\"}, {\"line_item\": \"1210102       Alumbrado, barrido y Limpieza de Ejercicios Anteriores          5.027.164,86     11.354.692,13\", \"amount\": 41168191.0, \"description\": \"1210102       Alumbrado, barrido y Limpieza de Ejercicios Anteriores          5.027.164,86     11.354.692,13\"}, {\"line_item\": \"1210104       Contribucion de Fortalecimiento de la Seguridad                         0,00      5.349.812,77\", \"amount\": 28173939.0, \"description\": \"1210104       Contribucion de Fortalecimiento de la Seguridad                         0,00      5.349.812,77\"}, {\"line_item\": \"1210200       Servicios especiales de limpieza e Higiene                        142.276,20      1.357.944,00\", \"amount\": 3652484.0, \"description\": \"1210200       Servicios especiales de limpieza e Higiene                        142.276,20      1.357.944,00\"}, {\"line_item\": \"1210301       Servicios Rurales del ejercicio                               101.892.063,30    734.198.372,64\", \"amount\": 838265660.0, \"description\": \"1210301       Servicios Rurales del ejercicio                               101.892.063,30    734.198.372,64\"}, {\"line_item\": \"1210302       Servicios Rurales.Ejercicios Anteriores                         6.122.425,68     18.601.554,30\", \"amount\": 83826566.0, \"description\": \"1210302       Servicios Rurales.Ejercicios Anteriores                         6.122.425,68     18.601.554,30\"}, {\"line_item\": \"1210400       Habilitaci\\u00f3n de comercios e industrias                            518.138,88      2.771.969,60\", \"amount\": 35521223.0, \"description\": \"1210400       Habilitaci\\u00f3n de comercios e industrias                            518.138,88      2.771.969,60\"}, {\"line_item\": \"1210501       Inspecci\\u00f3n de seguridad e higiene.Del Ejercicio                23.047.086,56     60.246.949,74\", \"amount\": 208872502.0, \"description\": \"1210501       Inspecci\\u00f3n de seguridad e higiene.Del Ejercicio                23.047.086,56     60.246.949,74\"}, {\"line_item\": \"1210502       Inspecci\\u00f3n de seguridad e higiene.De ejercicios anteriores      6.988.746,40     26.220.129,16\", \"amount\": 18378058.0, \"description\": \"1210502       Inspecci\\u00f3n de seguridad e higiene.De ejercicios anteriores      6.988.746,40     26.220.129,16\"}, {\"line_item\": \"1211501       Serv. Sanitarios - Del ejercicio                               27.162.356,68    101.875.446,79\", \"amount\": 203170781.0, \"description\": \"1211501       Serv. Sanitarios - Del ejercicio                               27.162.356,68    101.875.446,79\"}, {\"line_item\": \"1211502       Serv. Sanitarios - Ejercicios Anteriores                        8.870.000,32     23.918.812,08\", \"amount\": 18176353.0, \"description\": \"1211502       Serv. Sanitarios - Ejercicios Anteriores                        8.870.000,32     23.918.812,08\"}, {\"line_item\": \"1211503       Serv. Sanitarios Mant. Ampliacion y Conexion                      365.226,00      2.624.700,00\", \"amount\": 8058014.0, \"description\": \"1211503       Serv. Sanitarios Mant. Ampliacion y Conexion                      365.226,00      2.624.700,00\"}, {\"line_item\": \"1211504       Contribucion para la prevencion Zoon\\u00f3tica                               0,00      9.050.539,70\", \"amount\": 27363323.0, \"description\": \"1211504       Contribucion para la prevencion Zoon\\u00f3tica                               0,00      9.050.539,70\"}, {\"line_item\": \"1211601       Marcas y Se\\u00f1ales del ej.                                       20.953.122,00     61.641.684,00\", \"amount\": 75174152.0, \"description\": \"1211601       Marcas y Se\\u00f1ales del ej.                                       20.953.122,00     61.641.684,00\"}, {\"line_item\": \"1211701       Tasa Vial Urbana y Abiental del Ejercicio                               0,00              0,00\", \"amount\": 96000000.0, \"description\": \"1211701       Tasa Vial Urbana y Abiental del Ejercicio                               0,00              0,00\"}, {\"line_item\": \"1220301       Publicidad y propaganda ejercicio                                  58.607,60      2.000.000,00\", \"amount\": 35000000.0, \"description\": \"1220301       Publicidad y propaganda ejercicio                                  58.607,60      2.000.000,00\"}, {\"line_item\": \"1220501       Derecho de Ocupaci\\u00f3n Via Publica LD                                     0,00              0,00\", \"amount\": 7520556.0, \"description\": \"1220501       Derecho de Ocupaci\\u00f3n Via Publica LD                                     0,00              0,00\"}, {\"line_item\": \"1220502       Derecho de Ocupaci\\u00f3n Via Publica Afectado GAS                           0,00              0,00\", \"amount\": 247023800.0, \"description\": \"1220502       Derecho de Ocupaci\\u00f3n Via Publica Afectado GAS                           0,00              0,00\"}, {\"line_item\": \"1220800       Cementerio                                                      1.670.106,72      4.005.481,84\", \"amount\": 12097585.0, \"description\": \"1220800       Cementerio                                                      1.670.106,72      4.005.481,84\"}, {\"line_item\": \"1221000       Patentes de Rodados                                               469.960,93      2.549.419,76\", \"amount\": 8315408.0, \"description\": \"1221000       Patentes de Rodados                                               469.960,93      2.549.419,76\"}, {\"line_item\": \"1221100       Derechos de Construcci\\u00f3n                                        5.284.157,60     13.366.477,37\", \"amount\": 17030309.0, \"description\": \"1221100       Derechos de Construcci\\u00f3n                                        5.284.157,60     13.366.477,37\"}, {\"line_item\": \"1221300       Derecho de Uso de Espacios Aereos                               6.357.791,58     22.420.779,84\", \"amount\": 28771422.0, \"description\": \"1221300       Derecho de Uso de Espacios Aereos                               6.357.791,58     22.420.779,84\"}, {\"line_item\": \"1221701       Venta ambulante - libre disponibilidad                            993.321,36      5.020.533,33\", \"amount\": 19643153.0, \"description\": \"1221701       Venta ambulante - libre disponibilidad                            993.321,36      5.020.533,33\"}, {\"line_item\": \"1229901       Derechos de oficina                                            10.867.236,70     33.055.191,40\", \"amount\": 42697576.0, \"description\": \"1229901       Derechos de oficina                                            10.867.236,70     33.055.191,40\"}, {\"line_item\": \"1260200       Infracci\\u00f3n a las Obligaciones Fiscales                          9.571.592,51     21.488.572,65\", \"amount\": 41499129.0, \"description\": \"1260200       Infracci\\u00f3n a las Obligaciones Fiscales                          9.571.592,51     21.488.572,65\"}, {\"line_item\": \"1260400       (10096/0) Infracciones normativas vigentes y REBA               1.053.643,75      6.493.874,00\", \"amount\": 12701998.0, \"description\": \"1260400       (10096/0) Infracciones normativas vigentes y REBA               1.053.643,75      6.493.874,00\"}, {\"line_item\": \"1260500       Infraccion normativas vigentes y REBA ( de libre disp)          1.053.643,75      3.354.108,33\", \"amount\": 12701998.0, \"description\": \"1260500       Infraccion normativas vigentes y REBA ( de libre disp)          1.053.643,75      3.354.108,33\"}, {\"line_item\": \"1290100       Balneario Municipal Ord. Nro.2355/08-Dec.733/08                12.344.533,22     48.581.742,00\", \"amount\": 56911587.0, \"description\": \"1290100       Balneario Municipal Ord. Nro.2355/08-Dec.733/08                12.344.533,22     48.581.742,00\"}, {\"line_item\": \"1290200       Ingresos Varios                                                 5.952.377,69     11.012.258,83\", \"amount\": 16084578.0, \"description\": \"1290200       Ingresos Varios                                                 5.952.377,69     11.012.258,83\"}, {\"line_item\": \"1290600       Seguridad Vial y Movilidad Urbana - Multas -                   60.641.500,26    190.615.992,89\", \"amount\": 302773016.0, \"description\": \"1290600       Seguridad Vial y Movilidad Urbana - Multas -                   60.641.500,26    190.615.992,89\"}, {\"line_item\": \"1620102       Intereses plazo fijo                                                    0,00        301.575,34\", \"amount\": 30125107.0, \"description\": \"1620102       Intereses plazo fijo                                                    0,00        301.575,34\"}, {\"line_item\": \"1620104       Intereses por Fondos Comunes de Inversion                     126.276.582,06    260.166.770,67\", \"amount\": 150625537.0, \"description\": \"1620104       Intereses por Fondos Comunes de Inversion                     126.276.582,06    260.166.770,67\"}, {\"line_item\": \"1750101       Convenio Policia Comunal                                       17.021.520,00     34.219.944,00\", \"amount\": 42711702.0, \"description\": \"1750101       Convenio Policia Comunal                                       17.021.520,00     34.219.944,00\"}, {\"line_item\": \"1750107       Centro D\\u00eda                                                      4.705.540,00     10.352.188,00\", \"amount\": 17504458.0, \"description\": \"1750107       Centro D\\u00eda                                                      4.705.540,00     10.352.188,00\"}, {\"line_item\": \"1750108       Casa del Ni\\u00f1o                                                  25.000.747,00     55.475.999,00\", \"amount\": 106513918.0, \"description\": \"1750108       Casa del Ni\\u00f1o                                                  25.000.747,00     55.475.999,00\"}, {\"line_item\": \"1750109       Fondo de Fortalecimiento Programas Sociales                     7.804.840,99     16.811.823,69\", \"amount\": 26814754.0, \"description\": \"1750109       Fondo de Fortalecimiento Programas Sociales                     7.804.840,99     16.811.823,69\"}, {\"line_item\": \"Presupuesto:\", \"amount\": 2025.0, \"description\": \"Presupuesto:\"}, {\"line_item\": \"Rubro            Denominaci\\u00f3n                                          Ejecutado 2023 Estimado 2024 Programado\", \"amount\": 2025.0, \"description\": \"Rubro            Denominaci\\u00f3n                                          Ejecutado 2023 Estimado 2024 Programado\"}, {\"line_item\": \"1750110       CEAMSE                                                   4.683.568,39     12.222.523,00\", \"amount\": 18028544.0, \"description\": \"1750110       CEAMSE                                                   4.683.568,39     12.222.523,00\"}, {\"line_item\": \"1750112       Ni\\u00f1ez y Adoles - Prog.Operadores de calle                3.480.300,00      8.134.500,00\", \"amount\": 13572749.0, \"description\": \"1750112       Ni\\u00f1ez y Adoles - Prog.Operadores de calle                3.480.300,00      8.134.500,00\"}, {\"line_item\": \"1750113       Casa de Abrigo Ni\\u00f1ez y Adolescencia                     22.750.976,00     48.528.230,00\", \"amount\": 93174202.0, \"description\": \"1750113       Casa de Abrigo Ni\\u00f1ez y Adolescencia                     22.750.976,00     48.528.230,00\"}, {\"line_item\": \"1750117       Subsidio Ministerio de Salud -SAMO-                      1.295.603,98        997.597,62\", \"amount\": 1915387.0, \"description\": \"1750117       Subsidio Ministerio de Salud -SAMO-                      1.295.603,98        997.597,62\"}, {\"line_item\": \"1750121       Convenio IOMA                                              639.080,40      1.248.458,52\", \"amount\": 2397040.0, \"description\": \"1750121       Convenio IOMA                                              639.080,40      1.248.458,52\"}, {\"line_item\": \"1750122       Juegos Buenos Aires                                     25.175.830,00     30.219.728,00\", \"amount\": 90658752.0, \"description\": \"1750122       Juegos Buenos Aires                                     25.175.830,00     30.219.728,00\"}, {\"line_item\": \"1750123       Plan Sumar                                               4.267.546,00      3.333.710,00\", \"amount\": 6400723.0, \"description\": \"1750123       Plan Sumar                                               4.267.546,00      3.333.710,00\"}, {\"line_item\": \"1750138       Ministerio de Desarrollo Social Prog. ENVION             5.159.440,00      6.815.584,00\", \"amount\": 14323780.0, \"description\": \"1750138       Ministerio de Desarrollo Social Prog. ENVION             5.159.440,00      6.815.584,00\"}, {\"line_item\": \"1750141       Barrio Adentro                                           2.760.000,00      7.108.704,00\", \"amount\": 13648712.0, \"description\": \"1750141       Barrio Adentro                                           2.760.000,00      7.108.704,00\"}, {\"line_item\": \"1750152       Programa Jugemos Piola (Ni\\u00f1ez y Adolecencia PBA)         6.510.310,00      6.388.704,00\", \"amount\": 12266312.0, \"description\": \"1750152       Programa Jugemos Piola (Ni\\u00f1ez y Adolecencia PBA)         6.510.310,00      6.388.704,00\"}, {\"line_item\": \"1750160       Programa Centros Juveniles Dir. Juventud PBA             1.873.360,00      6.989.360,00\", \"amount\": 13419571.0, \"description\": \"1750160       Programa Centros Juveniles Dir. Juventud PBA             1.873.360,00      6.989.360,00\"}, {\"line_item\": \"1750161       Programa Centros de Acompa\\u00f1amiento Socio Comunitario     1.397.760,00      8.470.260,00\", \"amount\": 16262899.0, \"description\": \"1750161       Programa Centros de Acompa\\u00f1amiento Socio Comunitario     1.397.760,00      8.470.260,00\"}, {\"line_item\": \"1750164       Programa YENDO                                                   0,00        990.000,00\", \"amount\": 1900800.0, \"description\": \"1750164       Programa YENDO                                                   0,00        990.000,00\"}, {\"line_item\": \"Totales:       1.816.598.155,37 5.159.766.554,54\", \"amount\": 9280507181.0, \"description\": \"Totales:       1.816.598.155,37 5.159.766.554,54\"}, {\"line_item\": \"Presupuesto:\", \"amount\": 2025.0, \"description\": \"Presupuesto:\"}, {\"line_item\": \"Rubro           Denominaci\\u00f3n                                             Ejecutado 2023 Estimado 2024 Programado\", \"amount\": 2025.0, \"description\": \"Rubro           Denominaci\\u00f3n                                             Ejecutado 2023 Estimado 2024 Programado\"}, {\"line_item\": \"Presupuesto:\", \"amount\": 2025.0, \"description\": \"Presupuesto:\"}, {\"line_item\": \"1140100 - Coparticipaci\\u00f3n Pcial. de Impuesto Ley 10.559                           3.996.907.472,00         0,00\", \"amount\": 3996907472.0, \"description\": \"1140100 - Coparticipaci\\u00f3n Pcial. de Impuesto Ley 10.559                           3.996.907.472,00         0,00\"}, {\"line_item\": \"1140200 - Fondo para el fortalecimiento de Recurso Municipales                   197.904.689,00         0,00\", \"amount\": 197904689.0, \"description\": \"1140200 - Fondo para el fortalecimiento de Recurso Municipales                   197.904.689,00         0,00\"}, {\"line_item\": \"1140300 - Fondo Municipal de Inclusion Social                                     79.242.470,00         0,00\", \"amount\": 79242470.0, \"description\": \"1140300 - Fondo Municipal de Inclusion Social                                     79.242.470,00         0,00\"}, {\"line_item\": \"1140500 - Fondo Educativo                                                        593.057.689,00         0,00\", \"amount\": 593057689.0, \"description\": \"1140500 - Fondo Educativo                                                        593.057.689,00         0,00\"}, {\"line_item\": \"1140600 - Fondo de Fortalecimiento Fiscal Municipal Ley 15.480 Art\\u00b0 178.891.947,00                      0,00\", \"amount\": 178891947.0, \"description\": \"1140600 - Fondo de Fortalecimiento Fiscal Municipal Ley 15.480 Art\\u00b0 178.891.947,00                      0,00\"}, {\"line_item\": \"Total Coparticipaci\\u00f3n de impuestos                             5.046.004.267,00                       0,00\", \"amount\": 5046004267.0, \"description\": \"Total Coparticipaci\\u00f3n de impuestos                             5.046.004.267,00                       0,00\"}, {\"line_item\": \"1190200 - Contribucion Energia Electrica 6% Art 72 ter Ley\", \"amount\": 11969.0, \"description\": \"1190200 - Contribucion Energia Electrica 6% Art 72 ter Ley\"}, {\"line_item\": \"1190201 - Contribucion 6% EDEN                                                 58.206.978,00          0,00\", \"amount\": 58206978.0, \"description\": \"1190201 - Contribucion 6% EDEN                                                 58.206.978,00          0,00\"}, {\"line_item\": \"1190300 - Juegos de azar                                                          35.948.407,00         0,00\", \"amount\": 35948407.0, \"description\": \"1190300 - Juegos de azar                                                          35.948.407,00         0,00\"}, {\"line_item\": \"1190400 - Inmobiliario Rural.Afectado                                            137.859.675,00         0,00\", \"amount\": 137859675.0, \"description\": \"1190400 - Inmobiliario Rural.Afectado                                            137.859.675,00         0,00\"}, {\"line_item\": \"1190500 - Inmobiliario Rural. No afectado                                        480.891.438,00         0,00\", \"amount\": 480891438.0, \"description\": \"1190500 - Inmobiliario Rural. No afectado                                        480.891.438,00         0,00\"}, {\"line_item\": \"1190600 - Ingresos Brutos. Ley 13010                                              53.790.386,00         0,00\", \"amount\": 53790386.0, \"description\": \"1190600 - Ingresos Brutos. Ley 13010                                              53.790.386,00         0,00\"}, {\"line_item\": \"1190701 - Impuesto Automotor.Del ejercicio                                     24.371.032,00          0,00\", \"amount\": 24371032.0, \"description\": \"1190701 - Impuesto Automotor.Del ejercicio                                     24.371.032,00          0,00\"}, {\"line_item\": \"1190702 - Impuesto Automotor. Ejercicios Anteriores                            18.755.733,00          0,00\", \"amount\": 18755733.0, \"description\": \"1190702 - Impuesto Automotor. Ejercicios Anteriores                            18.755.733,00          0,00\"}, {\"line_item\": \"Total Otros tributarios                                                   809.823.649,00             0,00\", \"amount\": 809823649.0, \"description\": \"Total Otros tributarios                                                   809.823.649,00             0,00\"}, {\"line_item\": \"Total Ingresos Tributarios                                               5.855.827.916,00            0,00\", \"amount\": 5855827916.0, \"description\": \"Total Ingresos Tributarios                                               5.855.827.916,00            0,00\"}, {\"line_item\": \"1210101 - Alumbrado ,Barrido y Limpieza del Ejercicio                         205.840.957,00          0,00\", \"amount\": 205840957.0, \"description\": \"1210101 - Alumbrado ,Barrido y Limpieza del Ejercicio                         205.840.957,00          0,00\"}, {\"line_item\": \"1210102 - Alumbrado, barrido y Limpieza de Ejercicios Anteriores               41.168.191,00          0,00\", \"amount\": 41168191.0, \"description\": \"1210102 - Alumbrado, barrido y Limpieza de Ejercicios Anteriores               41.168.191,00          0,00\"}, {\"line_item\": \"1210104 - Contribucion de Fortalecimiento de la Seguridad                      28.173.939,00          0,00\", \"amount\": 28173939.0, \"description\": \"1210104 - Contribucion de Fortalecimiento de la Seguridad                      28.173.939,00          0,00\"}, {\"line_item\": \"1210200 - Servicios especiales de limpieza e Higiene                               3.652.484,00         0,00\", \"amount\": 3652484.0, \"description\": \"1210200 - Servicios especiales de limpieza e Higiene                               3.652.484,00         0,00\"}, {\"line_item\": \"1210301 - Servicios Rurales del ejercicio                                     838.265.660,00          0,00\", \"amount\": 838265660.0, \"description\": \"1210301 - Servicios Rurales del ejercicio                                     838.265.660,00          0,00\"}, {\"line_item\": \"1210302 - Servicios Rurales.Ejercicios Anteriores                              83.826.566,00          0,00\", \"amount\": 83826566.0, \"description\": \"1210302 - Servicios Rurales.Ejercicios Anteriores                              83.826.566,00          0,00\"}, {\"line_item\": \"1210400 - Habilitaci\\u00f3n de comercios e industrias                                  35.521.223,00         0,00\", \"amount\": 35521223.0, \"description\": \"1210400 - Habilitaci\\u00f3n de comercios e industrias                                  35.521.223,00         0,00\"}, {\"line_item\": \"1210501 - Inspecci\\u00f3n de seguridad e higiene.Del Ejercicio                     208.872.502,00          0,00\", \"amount\": 208872502.0, \"description\": \"1210501 - Inspecci\\u00f3n de seguridad e higiene.Del Ejercicio                     208.872.502,00          0,00\"}, {\"line_item\": \"1210502 - Inspecci\\u00f3n de seguridad e higiene.De ejercicios                      18.378.058,00          0,00\", \"amount\": 18378058.0, \"description\": \"1210502 - Inspecci\\u00f3n de seguridad e higiene.De ejercicios                      18.378.058,00          0,00\"}, {\"line_item\": \"1211501 - Serv. Sanitarios - Del ejercicio                                    203.170.781,00          0,00\", \"amount\": 203170781.0, \"description\": \"1211501 - Serv. Sanitarios - Del ejercicio                                    203.170.781,00          0,00\"}, {\"line_item\": \"1211502 - Serv. Sanitarios - Ejercicios Anteriores                             18.176.353,00          0,00\", \"amount\": 18176353.0, \"description\": \"1211502 - Serv. Sanitarios - Ejercicios Anteriores                             18.176.353,00          0,00\"}, {\"line_item\": \"1211503 - Serv. Sanitarios Mant. Ampliacion y Conexion                          8.058.014,00          0,00\", \"amount\": 8058014.0, \"description\": \"1211503 - Serv. Sanitarios Mant. Ampliacion y Conexion                          8.058.014,00          0,00\"}, {\"line_item\": \"Presupuesto:\", \"amount\": 2025.0, \"description\": \"Presupuesto:\"}, {\"line_item\": \"1211504 - Contribucion para la prevencion Zoon\\u00f3tica                            27.363.323,00          0,00\", \"amount\": 27363323.0, \"description\": \"1211504 - Contribucion para la prevencion Zoon\\u00f3tica                            27.363.323,00          0,00\"}, {\"line_item\": \"1211601 - Marcas y Se\\u00f1ales del ej.                                             75.174.152,00          0,00\", \"amount\": 75174152.0, \"description\": \"1211601 - Marcas y Se\\u00f1ales del ej.                                             75.174.152,00          0,00\"}]}"
+      },
+      "source_file": "pdf_160_PRESUPUESTO-2025-APROBADO-ORD-3280-24_6_structured.json"
+    }
+  ]
+}

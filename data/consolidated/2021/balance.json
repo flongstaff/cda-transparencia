@@ -1,0 +1,549 @@
+{
+  "year": 2021,
+  "type": "balance",
+  "generated_at": "2025-10-14T10:18:12.278056",
+  "document_count": 1,
+  "total_amount": 376346103.37,
+  "documents": [
+    {
+      "metadata": {
+        "filename": "pdf_60_BALANCE-GENERAL-2020_6.pdf",
+        "title": "Pdf 60 Balance General 2020 6",
+        "document_type": "BALANCE",
+        "date": "31/03/2021",
+        "year": 2021,
+        "amount": 376346103.37,
+        "currency": "ARS",
+        "budget_lines_count": 100,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:49:56.027598",
+        "has_tables": true,
+        "text_length": 22649,
+        "json_file": "pdf_60_BALANCE-GENERAL-2020_6_structured.json"
+      },
+      "content": {
+        "filename": "pdf_60_BALANCE-GENERAL-2020_6.pdf",
+        "processed_date": "2025-10-14T09:49:56.027598",
+        "document_type": "BALANCE",
+        "title": "Pdf 60 Balance General 2020 6",
+        "date": "31/03/2021",
+        "amount": 376346103.37,
+        "currency": "ARS",
+        "entities": [
+          "Municipalidad de Carmen de Areco"
+        ],
+        "categories": [
+          "BALANCE"
+        ],
+        "budget_lines": [
+          {
+            "line_item": "Al día 31/12/2020       Ejercicio:",
+            "amount": 2020.0,
+            "description": "Al día 31/12/2020       Ejercicio:"
+          },
+          {
+            "line_item": "100000000 ACTIVO",
+            "amount": 280639837.02,
+            "description": "100000000 ACTIVO"
+          },
+          {
+            "line_item": "110000000 ACTIVO CORRIENTE",
+            "amount": 116073003.86,
+            "description": "110000000 ACTIVO CORRIENTE"
+          },
+          {
+            "line_item": "111000000 Disponibilidades",
+            "amount": 48879919.69,
+            "description": "111000000 Disponibilidades"
+          },
+          {
+            "line_item": "111200000 Bancos",
+            "amount": 48879919.69,
+            "description": "111200000 Bancos"
+          },
+          {
+            "line_item": "111210000 Fondos ordinarios",
+            "amount": 18525182.44,
+            "description": "111210000 Fondos ordinarios"
+          },
+          {
+            "line_item": "111210100    Banco de la Provincia de Buenos Aires",
+            "amount": 18525182.44,
+            "description": "111210100    Banco de la Provincia de Buenos Aires"
+          },
+          {
+            "line_item": "111210104 PARTICIPACION IMPUESTOS PROVINCIALES",
+            "amount": 3157727.38,
+            "description": "111210104 PARTICIPACION IMPUESTOS PROVINCIALES"
+          },
+          {
+            "line_item": "111210107 INMOBILIARIO RURAL NO AFECTADO",
+            "amount": 166864.02,
+            "description": "111210107 INMOBILIARIO RURAL NO AFECTADO"
+          },
+          {
+            "line_item": "111210108 INGRESOS BRUTOS",
+            "amount": 654.63,
+            "description": "111210108 INGRESOS BRUTOS"
+          },
+          {
+            "line_item": "111210117 RECURSOS ORDINARIOS",
+            "amount": 15199936.41,
+            "description": "111210117 RECURSOS ORDINARIOS"
+          },
+          {
+            "line_item": "111220000 Fondos con afectación específica",
+            "amount": 28550755.12,
+            "description": "111220000 Fondos con afectación específica"
+          },
+          {
+            "line_item": "111220100   BANCO PCIA.DE BS.AS",
+            "amount": 25231115.3,
+            "description": "111220100   BANCO PCIA.DE BS.AS"
+          },
+          {
+            "line_item": "111220101 FONDO VIVIENDA MUNICIPAL",
+            "amount": 58568.49,
+            "description": "111220101 FONDO VIVIENDA MUNICIPAL"
+          },
+          {
+            "line_item": "111220102 INMOBILIARIO RURAL AFECTADO",
+            "amount": 2368861.58,
+            "description": "111220102 INMOBILIARIO RURAL AFECTADO"
+          },
+          {
+            "line_item": "111220103 FONDO PRODUCTIVO MUNICIPAL",
+            "amount": 50333.0,
+            "description": "111220103 FONDO PRODUCTIVO MUNICIPAL"
+          },
+          {
+            "line_item": "111220106 FONDO TENDIENDO REDES",
+            "amount": 2548.2,
+            "description": "111220106 FONDO TENDIENDO REDES"
+          },
+          {
+            "line_item": "111220107 POLICIA COMUNAL",
+            "amount": 614839.56,
+            "description": "111220107 POLICIA COMUNAL"
+          },
+          {
+            "line_item": "111220109 RECURSOS AFECTADOS",
+            "amount": 14051970.98,
+            "description": "111220109 RECURSOS AFECTADOS"
+          },
+          {
+            "line_item": "111220112 PLAN NACER",
+            "amount": 527018.46,
+            "description": "111220112 PLAN NACER"
+          },
+          {
+            "line_item": "111220113 FONDO SOLIDARIO PCIAL SOJA",
+            "amount": 462.1,
+            "description": "111220113 FONDO SOLIDARIO PCIAL SOJA"
+          },
+          {
+            "line_item": "111220114 COPARTICIPACION FONDO EDUCATIVO",
+            "amount": 6977941.9,
+            "description": "111220114 COPARTICIPACION FONDO EDUCATIVO"
+          },
+          {
+            "line_item": "111220115 FONDO DE INFRAESTRUCTURA",
+            "amount": 356226.88,
+            "description": "111220115 FONDO DE INFRAESTRUCTURA"
+          },
+          {
+            "line_item": "111220118 S.A.M.O, Sistema de Atención Médica Organizada",
+            "amount": 222344.15,
+            "description": "111220118 S.A.M.O, Sistema de Atención Médica Organizada"
+          },
+          {
+            "line_item": "111220200    BANCO DE LA NACION ARGENTINA",
+            "amount": 3319639.82,
+            "description": "111220200    BANCO DE LA NACION ARGENTINA"
+          },
+          {
+            "line_item": "111220203 PLAN NACIONAL DE OBRAS MUNICIPALES",
+            "amount": 3319639.82,
+            "description": "111220203 PLAN NACIONAL DE OBRAS MUNICIPALES"
+          },
+          {
+            "line_item": "111230000 Fondos de terceros",
+            "amount": 1803982.13,
+            "description": "111230000 Fondos de terceros"
+          },
+          {
+            "line_item": "111230101 CUENTA DE TERCEROS",
+            "amount": 1803982.13,
+            "description": "111230101 CUENTA DE TERCEROS"
+          },
+          {
+            "line_item": "112000000 Inversiones financieras",
+            "amount": 55233.46,
+            "description": "112000000 Inversiones financieras"
+          },
+          {
+            "line_item": "112300000 Préstamos otorgados",
+            "amount": 55233.46,
+            "description": "112300000 Préstamos otorgados"
+          },
+          {
+            "line_item": "113000000 Créditos",
+            "amount": 85412021.9,
+            "description": "113000000 Créditos"
+          },
+          {
+            "line_item": "113100000 Cuentas a cobrar",
+            "amount": 85288721.9,
+            "description": "113100000 Cuentas a cobrar"
+          },
+          {
+            "line_item": "113110000 Deudores tributarios",
+            "amount": 11887134.33,
+            "description": "113110000 Deudores tributarios"
+          },
+          {
+            "line_item": "113120000 Deudores no tributarios",
+            "amount": 72849324.13,
+            "description": "113120000 Deudores no tributarios"
+          },
+          {
+            "line_item": "113130000 Deudores por contribuciones de mejoras",
+            "amount": 552263.44,
+            "description": "113130000 Deudores por contribuciones de mejoras"
+          },
+          {
+            "line_item": "113400000 Anticipos",
+            "amount": 123300.0,
+            "description": "113400000 Anticipos"
+          },
+          {
+            "line_item": "113490000 Otros anticipos",
+            "amount": 123300.0,
+            "description": "113490000 Otros anticipos"
+          },
+          {
+            "line_item": "114000000 Previsión para incobrables                                          -",
+            "amount": 18274171.19,
+            "description": "114000000 Previsión para incobrables                                          -"
+          },
+          {
+            "line_item": "114100000 Previsión para incobrables por cuentas a cobrar                  -",
+            "amount": 18274171.19,
+            "description": "114100000 Previsión para incobrables por cuentas a cobrar                  -"
+          },
+          {
+            "line_item": "120000000 ACTIVO NO CORRIENTE",
+            "amount": 164566833.16,
+            "description": "120000000 ACTIVO NO CORRIENTE"
+          },
+          {
+            "line_item": "Al día 31/12/2020     Ejercicio:",
+            "amount": 2020.0,
+            "description": "Al día 31/12/2020     Ejercicio:"
+          },
+          {
+            "line_item": "123000000 Inversiones financieras",
+            "amount": 1254717.92,
+            "description": "123000000 Inversiones financieras"
+          },
+          {
+            "line_item": "123100000 Acciones y aportes de capital",
+            "amount": 148.88,
+            "description": "123100000 Acciones y aportes de capital"
+          },
+          {
+            "line_item": "123110000 Acciones",
+            "amount": 148.88,
+            "description": "123110000 Acciones"
+          },
+          {
+            "line_item": "123400000 Préstamos otorgados a largo plazo",
+            "amount": 1254569.04,
+            "description": "123400000 Préstamos otorgados a largo plazo"
+          },
+          {
+            "line_item": "124000000 Bienes de uso",
+            "amount": 179217659.35,
+            "description": "124000000 Bienes de uso"
+          },
+          {
+            "line_item": "124100000 Edificios e instalaciones",
+            "amount": 8382351.72,
+            "description": "124100000 Edificios e instalaciones"
+          },
+          {
+            "line_item": "124200000 Tierras y terrenos",
+            "amount": 677110.09,
+            "description": "124200000 Tierras y terrenos"
+          },
+          {
+            "line_item": "124300000 Maquinaria y equipo",
+            "amount": 42558222.45,
+            "description": "124300000 Maquinaria y equipo"
+          },
+          {
+            "line_item": "124310000 Maquinaria y equipo de producción",
+            "amount": 4640514.63,
+            "description": "124310000 Maquinaria y equipo de producción"
+          },
+          {
+            "line_item": "124320000 Equipo de transporte, tracción y elevación",
+            "amount": 19976236.94,
+            "description": "124320000 Equipo de transporte, tracción y elevación"
+          },
+          {
+            "line_item": "124330000 Equipo sanitario y de laboratorio",
+            "amount": 941438.62,
+            "description": "124330000 Equipo sanitario y de laboratorio"
+          },
+          {
+            "line_item": "124340000 Equipo de comunicación y señalamiento",
+            "amount": 2507165.58,
+            "description": "124340000 Equipo de comunicación y señalamiento"
+          },
+          {
+            "line_item": "124350000 Equipo educacional y recreativo",
+            "amount": 2457368.6,
+            "description": "124350000 Equipo educacional y recreativo"
+          },
+          {
+            "line_item": "124360000 Equipos para computación",
+            "amount": 2586959.27,
+            "description": "124360000 Equipos para computación"
+          },
+          {
+            "line_item": "124370000 Equipos de oficina y muebles",
+            "amount": 3072148.21,
+            "description": "124370000 Equipos de oficina y muebles"
+          },
+          {
+            "line_item": "124380000 Herramientas y repuestos mayores",
+            "amount": 3086962.28,
+            "description": "124380000 Herramientas y repuestos mayores"
+          },
+          {
+            "line_item": "124390000 Equipos varios",
+            "amount": 3289428.32,
+            "description": "124390000 Equipos varios"
+          },
+          {
+            "line_item": "124400000 Equipo de seguridad",
+            "amount": 173026.0,
+            "description": "124400000 Equipo de seguridad"
+          },
+          {
+            "line_item": "124500000 Construcciones en proceso en bienes de dominio privado",
+            "amount": 30213023.3,
+            "description": "124500000 Construcciones en proceso en bienes de dominio privado"
+          },
+          {
+            "line_item": "124600000 Construcciones en proceso en bienes de dominio público",
+            "amount": 97171683.79,
+            "description": "124600000 Construcciones en proceso en bienes de dominio público"
+          },
+          {
+            "line_item": "124900000 Otros bienes de uso",
+            "amount": 42242.0,
+            "description": "124900000 Otros bienes de uso"
+          },
+          {
+            "line_item": "125000000 (Amortización acumulada de bienes de uso)                        -",
+            "amount": 15905544.11,
+            "description": "125000000 (Amortización acumulada de bienes de uso)                        -"
+          },
+          {
+            "line_item": "125100000 (Edificios e instalaciones)                                      -",
+            "amount": 277525.3,
+            "description": "125100000 (Edificios e instalaciones)                                      -"
+          },
+          {
+            "line_item": "125300000 (Maquinaria y equipo)                                         -",
+            "amount": 15521407.1,
+            "description": "125300000 (Maquinaria y equipo)                                         -"
+          },
+          {
+            "line_item": "125310000 (Maquinaria y equipo de producción)                         -",
+            "amount": 1710249.58,
+            "description": "125310000 (Maquinaria y equipo de producción)                         -"
+          },
+          {
+            "line_item": "125320000 (Equipo de transporte, tracción y elevación)                -",
+            "amount": 3845380.99,
+            "description": "125320000 (Equipo de transporte, tracción y elevación)                -"
+          },
+          {
+            "line_item": "125330000 (Equipo sanitario y de laboratorio)                           -",
+            "amount": 371647.25,
+            "description": "125330000 (Equipo sanitario y de laboratorio)                           -"
+          },
+          {
+            "line_item": "125340000 (Equipo de comunicación y señalamiento)                     -",
+            "amount": 1781622.37,
+            "description": "125340000 (Equipo de comunicación y señalamiento)                     -"
+          },
+          {
+            "line_item": "125350000 (Equipo educacional y recreativo)                           -",
+            "amount": 1503494.8,
+            "description": "125350000 (Equipo educacional y recreativo)                           -"
+          },
+          {
+            "line_item": "125360000 (Equipos para computación)                                  -",
+            "amount": 1426145.8,
+            "description": "125360000 (Equipos para computación)                                  -"
+          },
+          {
+            "line_item": "125370000 (Equipos de oficina y muebles)                              -",
+            "amount": 1888599.35,
+            "description": "125370000 (Equipos de oficina y muebles)                              -"
+          },
+          {
+            "line_item": "125380000 (Herramientas y repuestos mayores)                          -",
+            "amount": 1727274.25,
+            "description": "125380000 (Herramientas y repuestos mayores)                          -"
+          },
+          {
+            "line_item": "125390000 (Equipos varios)                                            -",
+            "amount": 1266992.71,
+            "description": "125390000 (Equipos varios)                                            -"
+          },
+          {
+            "line_item": "125400000 (Equipo de seguridad)                                             -",
+            "amount": 97695.82,
+            "description": "125400000 (Equipo de seguridad)                                             -"
+          },
+          {
+            "line_item": "125900000 (Otros bienes de uso)                                              -",
+            "amount": 8915.89,
+            "description": "125900000 (Otros bienes de uso)                                              -"
+          },
+          {
+            "line_item": "126000000 Bienes inmateriales",
+            "amount": 14807.92,
+            "description": "126000000 Bienes inmateriales"
+          },
+          {
+            "line_item": "126110000 Derechos de propiedad intelectual",
+            "amount": 14807.92,
+            "description": "126110000 Derechos de propiedad intelectual"
+          },
+          {
+            "line_item": "127000000 (Amortización acumulada de bienes inmateriales)                      -",
+            "amount": 14807.92,
+            "description": "127000000 (Amortización acumulada de bienes inmateriales)                      -"
+          },
+          {
+            "line_item": "127110000 Am Ac Derechos de propiedad intelectual                        -",
+            "amount": 14807.92,
+            "description": "127110000 Am Ac Derechos de propiedad intelectual                        -"
+          },
+          {
+            "line_item": "200000000 PASIVO                                                                 -",
+            "amount": 14693645.13,
+            "description": "200000000 PASIVO                                                                 -"
+          },
+          {
+            "line_item": "210000000 PASIVO CORRIENTE                                                     -",
+            "amount": 6603923.14,
+            "description": "210000000 PASIVO CORRIENTE                                                     -"
+          },
+          {
+            "line_item": "211000000 Deudas                                                            -",
+            "amount": 6321559.87,
+            "description": "211000000 Deudas                                                            -"
+          },
+          {
+            "line_item": "211100000 Cuentas comerciales a pagar                                    -",
+            "amount": 4427439.84,
+            "description": "211100000 Cuentas comerciales a pagar                                    -"
+          },
+          {
+            "line_item": "211200000 Contratistas                                                     -",
+            "amount": 138600.0,
+            "description": "211200000 Contratistas                                                     -"
+          },
+          {
+            "line_item": "211400000 Retenciones a pagar                                            -",
+            "amount": 1521618.86,
+            "description": "211400000 Retenciones a pagar                                            -"
+          },
+          {
+            "line_item": "211410000 Retenciones de impuestos a pagar DGI                          -",
+            "amount": 474745.25,
+            "description": "211410000 Retenciones de impuestos a pagar DGI                          -"
+          },
+          {
+            "line_item": "211420000 Retenciones de impuestos provinciales                         -",
+            "amount": 874448.41,
+            "description": "211420000 Retenciones de impuestos provinciales                         -"
+          },
+          {
+            "line_item": "Al día 31/12/2020       Ejercicio:",
+            "amount": 2020.0,
+            "description": "Al día 31/12/2020       Ejercicio:"
+          },
+          {
+            "line_item": "211430000 Retenciones del sistema de Prev Social                           -",
+            "amount": 3975.31,
+            "description": "211430000 Retenciones del sistema de Prev Social                           -"
+          },
+          {
+            "line_item": "211440000 Retenciones del sistema de Obra Social                           -",
+            "amount": 8780.2,
+            "description": "211440000 Retenciones del sistema de Obra Social                           -"
+          },
+          {
+            "line_item": "211480000 Retención IVA                                                  -",
+            "amount": 116235.17,
+            "description": "211480000 Retención IVA                                                  -"
+          },
+          {
+            "line_item": "211490000 OTRAS RETENCIONES                                               -",
+            "amount": 43434.52,
+            "description": "211490000 OTRAS RETENCIONES                                               -"
+          },
+          {
+            "line_item": "211490100   Sindicato de Trabajadores Municipales                       -",
+            "amount": 1903.51,
+            "description": "211490100   Sindicato de Trabajadores Municipales                       -"
+          },
+          {
+            "line_item": "211490200   U.P.C.N.                                                        -",
+            "amount": 803.19,
+            "description": "211490200   U.P.C.N.                                                        -"
+          },
+          {
+            "line_item": "211490300     S.O.E.M.S.P.                                                  -",
+            "amount": 973.06,
+            "description": "211490300     S.O.E.M.S.P.                                                  -"
+          },
+          {
+            "line_item": "211490400     APORTES PARTIDARIOS                                       -",
+            "amount": 8835.62,
+            "description": "211490400     APORTES PARTIDARIOS                                       -"
+          },
+          {
+            "line_item": "211490500     SINDICATO A.T.E.                                              -",
+            "amount": 243.29,
+            "description": "211490500     SINDICATO A.T.E.                                              -"
+          },
+          {
+            "line_item": "211490600     ARGENTINA SALUD Y VIDA                                        -",
+            "amount": 489.6,
+            "description": "211490600     ARGENTINA SALUD Y VIDA                                        -"
+          },
+          {
+            "line_item": "211490700     PERSONAL VIVIENDA                                         -",
+            "amount": 1992.8,
+            "description": "211490700     PERSONAL VIVIENDA                                         -"
+          }
+        ],
+        "text_length": 22649,
+        "extraction_method": "pdftotext",
+        "has_tables": true,
+        "text_content": "                                                         R.A.F.A.M.               Hoja: 1 de 5\n\n                                                 Balance General              31/03/2021 21:16\nMunicipalidad de\nCarmen de Areco\n                                                      Al día 31/12/2020       Ejercicio: 2020\n\n\n Cuenta                   Descripción                                               Saldo\n100000000 ACTIVO                                                                   280.639.837,02\n   110000000 ACTIVO CORRIENTE                                                      116.073.003,86\n      111000000 Disponibilidades                                                    48.879.919,69\n         111200000 Bancos                                                           48.879.919,69\n            111210000 Fondos ordinarios                                             18.525.182,44\n               111210100    Banco de la Provincia de Buenos Aires                   18.525.182,44\n                  111210104 PARTICIPACION IMPUESTOS PROVINCIALES                     3.157.727,38\n                   111210107 INMOBILIARIO RURAL NO AFECTADO                           166.864,02\n                   111210108 INGRESOS BRUTOS                                                654,63\n                   111210117 RECURSOS ORDINARIOS                                    15.199.936,41\n            111220000 Fondos con afectación específica                              28.550.755,12\n               111220100   BANCO PCIA.DE BS.AS                                      25.231.115,30\n                   111220101 FONDO VIVIENDA MUNICIPAL                                   58.568,49\n                   111220102 INMOBILIARIO RURAL AFECTADO                             2.368.861,58\n                   111220103 FONDO PRODUCTIVO MUNICIPAL                                 50.333,00\n                   111220106 FONDO TENDIENDO REDES                                       2.548,20\n                   111220107 POLICIA COMUNAL                                          614.839,56\n                   111220109 RECURSOS AFECTADOS                                     14.051.970,98\n                   111220112 PLAN NACER                                               527.018,46\n                   111220113 FONDO SOLIDARIO PCIAL SOJA                                     462,10\n                   111220114 COPARTICIPACION FONDO EDUCATIVO                         6.977.941,90\n                   111220115 FONDO DE INFRAESTRUCTURA                                  356.226,88\n                   111220118 S.A.M.O, Sistema de Atención Médica Organizada            222.344,15\n               111220200    BANCO DE LA NACION ARGENTINA                             3.319.639,82\n                   111220203 PLAN NACIONAL DE OBRAS MUNICIPALES                      3.319.639,82\n            111230000 Fondos de terceros                                             1.803.982,13\n                  111230101 CUENTA DE TERCEROS                                       1.803.982,13\n           111280000 Movimientos Transitorios                                                0,00\n           111290000 Otros depósitos bancarios                                               0,00\n     112000000 Inversiones financieras                                                  55.233,46\n        112100000 Inversiones temporarias                                                    0,00\n           112110000 Plazos Fijos                                                            0,00\n           112120000 Otras Inversiones Temporarias                                           0,00\n        112200000 Títulos y valores                                                          0,00\n        112300000 Préstamos otorgados                                                   55.233,46\n     113000000 Créditos                                                             85.412.021,90\n        113100000 Cuentas a cobrar                                                  85.288.721,90\n           113110000 Deudores tributarios                                           11.887.134,33\n           113120000 Deudores no tributarios                                        72.849.324,13\n           113130000 Deudores por contribuciones de mejoras                            552.263,44\n        113300000 Recaudación en tránsito                                                    0,00\n        113400000 Anticipos                                                            123.300,00\n           113490000 Otros anticipos                                                   123.300,00\n           113990000 Otros créditos a cobrar                                                 0,00\n     114000000 Previsión para incobrables                                          -18.274.171,19\n        114100000 Previsión para incobrables por cuentas a cobrar                  -18.274.171,19\n     115000000 Bienes de cambio                                                    ",
+        "raw_content": "{\"document_type\": \"BALANCE\", \"title\": \"pdf_60_BALANCE-GENERAL-2020_6\", \"date\": \"31/03/2021\", \"amount\": 376346103.37, \"budget_lines\": [{\"line_item\": \"Al d\\u00eda 31/12/2020       Ejercicio:\", \"amount\": 2020.0, \"description\": \"Al d\\u00eda 31/12/2020       Ejercicio:\"}, {\"line_item\": \"100000000 ACTIVO\", \"amount\": 280639837.02, \"description\": \"100000000 ACTIVO\"}, {\"line_item\": \"110000000 ACTIVO CORRIENTE\", \"amount\": 116073003.86, \"description\": \"110000000 ACTIVO CORRIENTE\"}, {\"line_item\": \"111000000 Disponibilidades\", \"amount\": 48879919.69, \"description\": \"111000000 Disponibilidades\"}, {\"line_item\": \"111200000 Bancos\", \"amount\": 48879919.69, \"description\": \"111200000 Bancos\"}, {\"line_item\": \"111210000 Fondos ordinarios\", \"amount\": 18525182.44, \"description\": \"111210000 Fondos ordinarios\"}, {\"line_item\": \"111210100    Banco de la Provincia de Buenos Aires\", \"amount\": 18525182.44, \"description\": \"111210100    Banco de la Provincia de Buenos Aires\"}, {\"line_item\": \"111210104 PARTICIPACION IMPUESTOS PROVINCIALES\", \"amount\": 3157727.38, \"description\": \"111210104 PARTICIPACION IMPUESTOS PROVINCIALES\"}, {\"line_item\": \"111210107 INMOBILIARIO RURAL NO AFECTADO\", \"amount\": 166864.02, \"description\": \"111210107 INMOBILIARIO RURAL NO AFECTADO\"}, {\"line_item\": \"111210108 INGRESOS BRUTOS\", \"amount\": 654.63, \"description\": \"111210108 INGRESOS BRUTOS\"}, {\"line_item\": \"111210117 RECURSOS ORDINARIOS\", \"amount\": 15199936.41, \"description\": \"111210117 RECURSOS ORDINARIOS\"}, {\"line_item\": \"111220000 Fondos con afectaci\\u00f3n espec\\u00edfica\", \"amount\": 28550755.12, \"description\": \"111220000 Fondos con afectaci\\u00f3n espec\\u00edfica\"}, {\"line_item\": \"111220100   BANCO PCIA.DE BS.AS\", \"amount\": 25231115.3, \"description\": \"111220100   BANCO PCIA.DE BS.AS\"}, {\"line_item\": \"111220101 FONDO VIVIENDA MUNICIPAL\", \"amount\": 58568.49, \"description\": \"111220101 FONDO VIVIENDA MUNICIPAL\"}, {\"line_item\": \"111220102 INMOBILIARIO RURAL AFECTADO\", \"amount\": 2368861.58, \"description\": \"111220102 INMOBILIARIO RURAL AFECTADO\"}, {\"line_item\": \"111220103 FONDO PRODUCTIVO MUNICIPAL\", \"amount\": 50333.0, \"description\": \"111220103 FONDO PRODUCTIVO MUNICIPAL\"}, {\"line_item\": \"111220106 FONDO TENDIENDO REDES\", \"amount\": 2548.2, \"description\": \"111220106 FONDO TENDIENDO REDES\"}, {\"line_item\": \"111220107 POLICIA COMUNAL\", \"amount\": 614839.56, \"description\": \"111220107 POLICIA COMUNAL\"}, {\"line_item\": \"111220109 RECURSOS AFECTADOS\", \"amount\": 14051970.98, \"description\": \"111220109 RECURSOS AFECTADOS\"}, {\"line_item\": \"111220112 PLAN NACER\", \"amount\": 527018.46, \"description\": \"111220112 PLAN NACER\"}, {\"line_item\": \"111220113 FONDO SOLIDARIO PCIAL SOJA\", \"amount\": 462.1, \"description\": \"111220113 FONDO SOLIDARIO PCIAL SOJA\"}, {\"line_item\": \"111220114 COPARTICIPACION FONDO EDUCATIVO\", \"amount\": 6977941.9, \"description\": \"111220114 COPARTICIPACION FONDO EDUCATIVO\"}, {\"line_item\": \"111220115 FONDO DE INFRAESTRUCTURA\", \"amount\": 356226.88, \"description\": \"111220115 FONDO DE INFRAESTRUCTURA\"}, {\"line_item\": \"111220118 S.A.M.O, Sistema de Atenci\\u00f3n M\\u00e9dica Organizada\", \"amount\": 222344.15, \"description\": \"111220118 S.A.M.O, Sistema de Atenci\\u00f3n M\\u00e9dica Organizada\"}, {\"line_item\": \"111220200    BANCO DE LA NACION ARGENTINA\", \"amount\": 3319639.82, \"description\": \"111220200    BANCO DE LA NACION ARGENTINA\"}, {\"line_item\": \"111220203 PLAN NACIONAL DE OBRAS MUNICIPALES\", \"amount\": 3319639.82, \"description\": \"111220203 PLAN NACIONAL DE OBRAS MUNICIPALES\"}, {\"line_item\": \"111230000 Fondos de terceros\", \"amount\": 1803982.13, \"description\": \"111230000 Fondos de terceros\"}, {\"line_item\": \"111230101 CUENTA DE TERCEROS\", \"amount\": 1803982.13, \"description\": \"111230101 CUENTA DE TERCEROS\"}, {\"line_item\": \"112000000 Inversiones financieras\", \"amount\": 55233.46, \"description\": \"112000000 Inversiones financieras\"}, {\"line_item\": \"112300000 Pr\\u00e9stamos otorgados\", \"amount\": 55233.46, \"description\": \"112300000 Pr\\u00e9stamos otorgados\"}, {\"line_item\": \"113000000 Cr\\u00e9ditos\", \"amount\": 85412021.9, \"description\": \"113000000 Cr\\u00e9ditos\"}, {\"line_item\": \"113100000 Cuentas a cobrar\", \"amount\": 85288721.9, \"description\": \"113100000 Cuentas a cobrar\"}, {\"line_item\": \"113110000 Deudores tributarios\", \"amount\": 11887134.33, \"description\": \"113110000 Deudores tributarios\"}, {\"line_item\": \"113120000 Deudores no tributarios\", \"amount\": 72849324.13, \"description\": \"113120000 Deudores no tributarios\"}, {\"line_item\": \"113130000 Deudores por contribuciones de mejoras\", \"amount\": 552263.44, \"description\": \"113130000 Deudores por contribuciones de mejoras\"}, {\"line_item\": \"113400000 Anticipos\", \"amount\": 123300.0, \"description\": \"113400000 Anticipos\"}, {\"line_item\": \"113490000 Otros anticipos\", \"amount\": 123300.0, \"description\": \"113490000 Otros anticipos\"}, {\"line_item\": \"114000000 Previsi\\u00f3n para incobrables                                          -\", \"amount\": 18274171.19, \"description\": \"114000000 Previsi\\u00f3n para incobrables                                          -\"}, {\"line_item\": \"114100000 Previsi\\u00f3n para incobrables por cuentas a cobrar                  -\", \"amount\": 18274171.19, \"description\": \"114100000 Previsi\\u00f3n para incobrables por cuentas a cobrar                  -\"}, {\"line_item\": \"120000000 ACTIVO NO CORRIENTE\", \"amount\": 164566833.16, \"description\": \"120000000 ACTIVO NO CORRIENTE\"}, {\"line_item\": \"Al d\\u00eda 31/12/2020     Ejercicio:\", \"amount\": 2020.0, \"description\": \"Al d\\u00eda 31/12/2020     Ejercicio:\"}, {\"line_item\": \"123000000 Inversiones financieras\", \"amount\": 1254717.92, \"description\": \"123000000 Inversiones financieras\"}, {\"line_item\": \"123100000 Acciones y aportes de capital\", \"amount\": 148.88, \"description\": \"123100000 Acciones y aportes de capital\"}, {\"line_item\": \"123110000 Acciones\", \"amount\": 148.88, \"description\": \"123110000 Acciones\"}, {\"line_item\": \"123400000 Pr\\u00e9stamos otorgados a largo plazo\", \"amount\": 1254569.04, \"description\": \"123400000 Pr\\u00e9stamos otorgados a largo plazo\"}, {\"line_item\": \"124000000 Bienes de uso\", \"amount\": 179217659.35, \"description\": \"124000000 Bienes de uso\"}, {\"line_item\": \"124100000 Edificios e instalaciones\", \"amount\": 8382351.72, \"description\": \"124100000 Edificios e instalaciones\"}, {\"line_item\": \"124200000 Tierras y terrenos\", \"amount\": 677110.09, \"description\": \"124200000 Tierras y terrenos\"}, {\"line_item\": \"124300000 Maquinaria y equipo\", \"amount\": 42558222.45, \"description\": \"124300000 Maquinaria y equipo\"}, {\"line_item\": \"124310000 Maquinaria y equipo de producci\\u00f3n\", \"amount\": 4640514.63, \"description\": \"124310000 Maquinaria y equipo de producci\\u00f3n\"}, {\"line_item\": \"124320000 Equipo de transporte, tracci\\u00f3n y elevaci\\u00f3n\", \"amount\": 19976236.94, \"description\": \"124320000 Equipo de transporte, tracci\\u00f3n y elevaci\\u00f3n\"}, {\"line_item\": \"124330000 Equipo sanitario y de laboratorio\", \"amount\": 941438.62, \"description\": \"124330000 Equipo sanitario y de laboratorio\"}, {\"line_item\": \"124340000 Equipo de comunicaci\\u00f3n y se\\u00f1alamiento\", \"amount\": 2507165.58, \"description\": \"124340000 Equipo de comunicaci\\u00f3n y se\\u00f1alamiento\"}, {\"line_item\": \"124350000 Equipo educacional y recreativo\", \"amount\": 2457368.6, \"description\": \"124350000 Equipo educacional y recreativo\"}, {\"line_item\": \"124360000 Equipos para computaci\\u00f3n\", \"amount\": 2586959.27, \"description\": \"124360000 Equipos para computaci\\u00f3n\"}, {\"line_item\": \"124370000 Equipos de oficina y muebles\", \"amount\": 3072148.21, \"description\": \"124370000 Equipos de oficina y muebles\"}, {\"line_item\": \"124380000 Herramientas y repuestos mayores\", \"amount\": 3086962.28, \"description\": \"124380000 Herramientas y repuestos mayores\"}, {\"line_item\": \"124390000 Equipos varios\", \"amount\": 3289428.32, \"description\": \"124390000 Equipos varios\"}, {\"line_item\": \"124400000 Equipo de seguridad\", \"amount\": 173026.0, \"description\": \"124400000 Equipo de seguridad\"}, {\"line_item\": \"124500000 Construcciones en proceso en bienes de dominio privado\", \"amount\": 30213023.3, \"description\": \"124500000 Construcciones en proceso en bienes de dominio privado\"}, {\"line_item\": \"124600000 Construcciones en proceso en bienes de dominio p\\u00fablico\", \"amount\": 97171683.79, \"description\": \"124600000 Construcciones en proceso en bienes de dominio p\\u00fablico\"}, {\"line_item\": \"124900000 Otros bienes de uso\", \"amount\": 42242.0, \"description\": \"124900000 Otros bienes de uso\"}, {\"line_item\": \"125000000 (Amortizaci\\u00f3n acumulada de bienes de uso)                        -\", \"amount\": 15905544.11, \"description\": \"125000000 (Amortizaci\\u00f3n acumulada de bienes de uso)                        -\"}, {\"line_item\": \"125100000 (Edificios e instalaciones)                                      -\", \"amount\": 277525.3, \"description\": \"125100000 (Edificios e instalaciones)                                      -\"}, {\"line_item\": \"125300000 (Maquinaria y equipo)                                         -\", \"amount\": 15521407.1, \"description\": \"125300000 (Maquinaria y equipo)                                         -\"}, {\"line_item\": \"125310000 (Maquinaria y equipo de producci\\u00f3n)                         -\", \"amount\": 1710249.58, \"description\": \"125310000 (Maquinaria y equipo de producci\\u00f3n)                         -\"}, {\"line_item\": \"125320000 (Equipo de transporte, tracci\\u00f3n y elevaci\\u00f3n)                -\", \"amount\": 3845380.99, \"description\": \"125320000 (Equipo de transporte, tracci\\u00f3n y elevaci\\u00f3n)                -\"}, {\"line_item\": \"125330000 (Equipo sanitario y de laboratorio)                           -\", \"amount\": 371647.25, \"description\": \"125330000 (Equipo sanitario y de laboratorio)                           -\"}, {\"line_item\": \"125340000 (Equipo de comunicaci\\u00f3n y se\\u00f1alamiento)                     -\", \"amount\": 1781622.37, \"description\": \"125340000 (Equipo de comunicaci\\u00f3n y se\\u00f1alamiento)                     -\"}, {\"line_item\": \"125350000 (Equipo educacional y recreativo)                           -\", \"amount\": 1503494.8, \"description\": \"125350000 (Equipo educacional y recreativo)                           -\"}, {\"line_item\": \"125360000 (Equipos para computaci\\u00f3n)                                  -\", \"amount\": 1426145.8, \"description\": \"125360000 (Equipos para computaci\\u00f3n)                                  -\"}, {\"line_item\": \"125370000 (Equipos de oficina y muebles)                              -\", \"amount\": 1888599.35, \"description\": \"125370000 (Equipos de oficina y muebles)                              -\"}, {\"line_item\": \"125380000 (Herramientas y repuestos mayores)                          -\", \"amount\": 1727274.25, \"description\": \"125380000 (Herramientas y repuestos mayores)                          -\"}, {\"line_item\": \"125390000 (Equipos varios)                                            -\", \"amount\": 1266992.71, \"description\": \"125390000 (Equipos varios)                                            -\"}, {\"line_item\": \"125400000 (Equipo de seguridad)                                             -\", \"amount\": 97695.82, \"description\": \"125400000 (Equipo de seguridad)                                             -\"}, {\"line_item\": \"125900000 (Otros bienes de uso)                                              -\", \"amount\": 8915.89, \"description\": \"125900000 (Otros bienes de uso)                                              -\"}, {\"line_item\": \"126000000 Bienes inmateriales\", \"amount\": 14807.92, \"description\": \"126000000 Bienes inmateriales\"}, {\"line_item\": \"126110000 Derechos de propiedad intelectual\", \"amount\": 14807.92, \"description\": \"126110000 Derechos de propiedad intelectual\"}, {\"line_item\": \"127000000 (Amortizaci\\u00f3n acumulada de bienes inmateriales)                      -\", \"amount\": 14807.92, \"description\": \"127000000 (Amortizaci\\u00f3n acumulada de bienes inmateriales)                      -\"}, {\"line_item\": \"127110000 Am Ac Derechos de propiedad intelectual                        -\", \"amount\": 14807.92, \"description\": \"127110000 Am Ac Derechos de propiedad intelectual                        -\"}, {\"line_item\": \"200000000 PASIVO                                                                 -\", \"amount\": 14693645.13, \"description\": \"200000000 PASIVO                                                                 -\"}, {\"line_item\": \"210000000 PASIVO CORRIENTE                                                     -\", \"amount\": 6603923.14, \"description\": \"210000000 PASIVO CORRIENTE                                                     -\"}, {\"line_item\": \"211000000 Deudas                                                            -\", \"amount\": 6321559.87, \"description\": \"211000000 Deudas                                                            -\"}, {\"line_item\": \"211100000 Cuentas comerciales a pagar                                    -\", \"amount\": 4427439.84, \"description\": \"211100000 Cuentas comerciales a pagar                                    -\"}, {\"line_item\": \"211200000 Contratistas                                                     -\", \"amount\": 138600.0, \"description\": \"211200000 Contratistas                                                     -\"}, {\"line_item\": \"211400000 Retenciones a pagar                                            -\", \"amount\": 1521618.86, \"description\": \"211400000 Retenciones a pagar                                            -\"}, {\"line_item\": \"211410000 Retenciones de impuestos a pagar DGI                          -\", \"amount\": 474745.25, \"description\": \"211410000 Retenciones de impuestos a pagar DGI                          -\"}, {\"line_item\": \"211420000 Retenciones de impuestos provinciales                         -\", \"amount\": 874448.41, \"description\": \"211420000 Retenciones de impuestos provinciales                         -\"}, {\"line_item\": \"Al d\\u00eda 31/12/2020       Ejercicio:\", \"amount\": 2020.0, \"description\": \"Al d\\u00eda 31/12/2020       Ejercicio:\"}, {\"line_item\": \"211430000 Retenciones del sistema de Prev Social                           -\", \"amount\": 3975.31, \"description\": \"211430000 Retenciones del sistema de Prev Social                           -\"}, {\"line_item\": \"211440000 Retenciones del sistema de Obra Social                           -\", \"amount\": 8780.2, \"description\": \"211440000 Retenciones del sistema de Obra Social                           -\"}, {\"line_item\": \"211480000 Retenci\\u00f3n IVA                                                  -\", \"amount\": 116235.17, \"description\": \"211480000 Retenci\\u00f3n IVA                                                  -\"}, {\"line_item\": \"211490000 OTRAS RETENCIONES                                               -\", \"amount\": 43434.52, \"description\": \"211490000 OTRAS RETENCIONES                                               -\"}, {\"line_item\": \"211490100   Sindicato de Trabajadores Municipales                       -\", \"amount\": 1903.51, \"description\": \"211490100   Sindicato de Trabajadores Municipales                       -\"}, {\"line_item\": \"211490200   U.P.C.N.                                                        -\", \"amount\": 803.19, \"description\": \"211490200   U.P.C.N.                                                        -\"}, {\"line_item\": \"211490300     S.O.E.M.S.P.                                                  -\", \"amount\": 973.06, \"description\": \"211490300     S.O.E.M.S.P.                                                  -\"}, {\"line_item\": \"211490400     APORTES PARTIDARIOS                                       -\", \"amount\": 8835.62, \"description\": \"211490400     APORTES PARTIDARIOS                                       -\"}, {\"line_item\": \"211490500     SINDICATO A.T.E.                                              -\", \"amount\": 243.29, \"description\": \"211490500     SINDICATO A.T.E.                                              -\"}, {\"line_item\": \"211490600     ARGENTINA SALUD Y VIDA                                        -\", \"amount\": 489.6, \"description\": \"211490600     ARGENTINA SALUD Y VIDA                                        -\"}, {\"line_item\": \"211490700     PERSONAL VIVIENDA                                         -\", \"amount\": 1992.8, \"description\": \"211490700     PERSONAL VIVIENDA                                         -\"}]}"
+      },
+      "source_file": "pdf_60_BALANCE-GENERAL-2020_6_structured.json"
+    }
+  ]
+}

@@ -191,6 +191,7 @@ class DataSourceIndicatorsService {
             lastUpdated = aaipData.lastModified || lastUpdated;
           }
           break;
+        }
 
         default:
           // For unknown sources, try to get basic info

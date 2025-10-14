@@ -61,8 +61,13 @@ class CloudflareDataService {
    * Determine the appropriate Cloudflare worker URL based on environment
    */
   private getWorkerProxyUrl(): string {
-    // Use environment variable if available
-    if (typeof window !== 'undefined' && process.env.VITE_API_URL) {
+    // Use environment variable if available (Vite way)
+    if (typeof window !== 'undefined' && import.meta.env.VITE_API_URL) {
+      return import.meta.env.VITE_API_URL.replace('/api', ''); // Remove /api suffix to get base URL
+    }
+    
+    // Fallback to process.env for compatibility with older setups
+    if (typeof window !== 'undefined' && typeof process !== 'undefined' && process.env && process.env.VITE_API_URL) {
       return process.env.VITE_API_URL.replace('/api', ''); // Remove /api suffix to get base URL
     }
     
@@ -394,17 +399,9 @@ class CloudflareDataService {
    * Get direct URL for static assets
    */
   private getDirectUrl(filePath: string): string {
-    if (typeof window !== 'undefined') {
-      const hostname = window.location.hostname;
-      
-      // For deployed sites, use relative path which will be served from the same domain
-      if (hostname === 'cda-transparencia.org' || hostname.endsWith('github.io')) {
-        return filePath.startsWith('/') ? filePath : `/${filePath}`;
-      }
-    }
-    
-    // For development
-    return `/src/${filePath}`;
+    // Always use relative path from public folder
+    // In Vite, public folder is served from root
+    return filePath.startsWith('/') ? filePath : `/${filePath}`;
   }
 
   /**
@@ -644,7 +641,7 @@ class CloudflareDataService {
       // If no data found, try to get from multi-source report as fallback
       if (!foundData) {
         console.log(`No specific year data found for ${year}, trying multi-source report...`);
-        const multiSourceResponse = await this.fetchJson('data/multi_source_report.json');
+        const ocrIndexResponse = await this.fetchJson('data/ocr_extracted/extraction_index.json');
 
         if (multiSourceResponse.success && multiSourceResponse.data) {
           const multiSourceData = multiSourceResponse.data;
@@ -704,7 +701,7 @@ class CloudflareDataService {
       // If still no data, try to get from comprehensive data index
       if (!foundData) {
         console.log(`No multi-source data for ${year}, trying comprehensive index...`);
-        const indexResponse = await this.fetchJson('frontend/src/data/comprehensive_data_index.json');
+        const indexResponse = await this.fetchJson('data/master_data_index.json');
 
         if (indexResponse.success && indexResponse.data) {
           const indexData = indexResponse.data;
@@ -769,7 +766,7 @@ class CloudflareDataService {
     
     try {
       // Get years from the repository index first
-      const indexResponse = await this.fetchJson('data/consolidated/index.json');
+      const indexResponse = await this.fetchJson('data/master_data_index.json');
       let years = [2020, 2021, 2022, 2023, 2024, 2025];
 
       if (indexResponse.success) {
@@ -875,7 +872,7 @@ class CloudflareDataService {
   async getAvailableYears(): Promise<number[]> {
     try {
       // Try to fetch the index file first (with caching)
-      const indexResponse = await this.fetchJson('data/consolidated/index.json');
+      const indexResponse = await this.fetchJson('data/master_data_index.json');
       if (indexResponse.success && indexResponse.data?.availableYears) {
         return indexResponse.data.availableYears;
       }

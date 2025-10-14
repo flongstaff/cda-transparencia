@@ -1,0 +1,363 @@
+{
+  "year": 2021,
+  "type": "general",
+  "generated_at": "2025-10-14T10:18:12.277140",
+  "document_count": 4,
+  "total_amount": 0,
+  "documents": [
+    {
+      "metadata": {
+        "filename": "2021 CAPS ESTADISTICAS_6.pdf",
+        "title": "2021 Caps Estadisticas 6",
+        "document_type": "GENERAL",
+        "date": "2021-01-01",
+        "year": 2021,
+        "amount": 0,
+        "currency": null,
+        "budget_lines_count": 20,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:48:58.308468",
+        "has_tables": true,
+        "text_length": 6061,
+        "json_file": "2021 CAPS ESTADISTICAS_6_structured.json"
+      },
+      "content": {
+        "filename": "2021 CAPS ESTADISTICAS_6.pdf",
+        "processed_date": "2025-10-14T09:48:58.308468",
+        "document_type": "GENERAL",
+        "title": "2021 Caps Estadisticas 6",
+        "date": "2021-01-01",
+        "amount": 0,
+        "currency": null,
+        "entities": [],
+        "categories": [
+          "GENERAL"
+        ],
+        "budget_lines": [
+          {
+            "line_item": "CAPS TRES SARGENTOS                      169              214           296            247            191        310           404          237           258         229         259",
+            "amount": 218.0,
+            "description": "CAPS TRES SARGENTOS                      169              214           296            247            191        310           404          237           258         229         259"
+          },
+          {
+            "line_item": "CAPS GOUIN                               106              252           108            217            112        255           171          159           135         120         135",
+            "amount": 128.0,
+            "description": "CAPS GOUIN                               106              252           108            217            112        255           171          159           135         120         135"
+          },
+          {
+            "line_item": "CAPS RIGACCI                             350              211           720            747            491        727           735          666           520         832         606",
+            "amount": 581.0,
+            "description": "CAPS RIGACCI                             350              211           720            747            491        727           735          666           520         832         606"
+          },
+          {
+            "line_item": "CAPS ETCHART                             216              165           397            444            386        475           577          595           742         486         672",
+            "amount": 700.0,
+            "description": "CAPS ETCHART                             216              165           397            444            386        475           577          595           742         486         672"
+          },
+          {
+            "line_item": "CAPS ALTOS DEL CANAL                     141              441           375            475            368        355           313          465           436         409         340",
+            "amount": 307.0,
+            "description": "CAPS ALTOS DEL CANAL                     141              441           375            475            368        355           313          465           436         409         340"
+          },
+          {
+            "line_item": "CAPS BARRIO MARIN                        408              403           394            325            394        400           400          325           475         192         531",
+            "amount": 648.0,
+            "description": "CAPS BARRIO MARIN                        408              403           394            325            394        400           400          325           475         192         531"
+          },
+          {
+            "line_item": "CAPS BARRIO NORTE                        316              346           1029          1462           1028        914           809          915           770         685         844",
+            "amount": 761.0,
+            "description": "CAPS BARRIO NORTE                        316              346           1029          1462           1028        914           809          915           770         685         844"
+          },
+          {
+            "line_item": "914             809                           770                         844",
+            "amount": 761.0,
+            "description": "914             809                           770                         844"
+          },
+          {
+            "line_item": "1028",
+            "amount": 400.0,
+            "description": "1028"
+          },
+          {
+            "line_item": "325                            400                            325            475                         531",
+            "amount": 648.0,
+            "description": "325                            400                            325            475                         531"
+          },
+          {
+            "line_item": "475                            355",
+            "amount": 465.0,
+            "description": "475                            355"
+          },
+          {
+            "line_item": "346                                                                                                              436            409",
+            "amount": 340.0,
+            "description": "346                                                                                                              436            409"
+          },
+          {
+            "line_item": "397                             368                                            595",
+            "amount": 672.0,
+            "description": "397                             368                                            595"
+          },
+          {
+            "line_item": "386             727",
+            "amount": 735.0,
+            "description": "386             727"
+          },
+          {
+            "line_item": "216               165                720                                                                            666",
+            "amount": 832.0,
+            "description": "216               165                720                                                                            666"
+          },
+          {
+            "line_item": "520                         606",
+            "amount": 581.0,
+            "description": "520                         606"
+          },
+          {
+            "line_item": "350                                                                                  255",
+            "amount": 171.0,
+            "description": "350                                                                                  255"
+          },
+          {
+            "line_item": "252                108              217                                                           159            135",
+            "amount": 135.0,
+            "description": "252                108              217                                                           159            135"
+          },
+          {
+            "line_item": "112                                                                          120",
+            "amount": 128.0,
+            "description": "112                                                                          120"
+          },
+          {
+            "line_item": "214                296              247            191             310                            237            258            229          259",
+            "amount": 218.0,
+            "description": "214                296              247            191             310                            237            258            229          259"
+          }
+        ],
+        "text_length": 6061,
+        "extraction_method": "pdftotext",
+        "has_tables": true,
+        "text_content": "                                                                        ESTADÍSTICAS DE LAS C.A.P.S.\n\n            CAPS                        ENERO           FEBRERO        MARZO          ABRIL          MAYO       JUNIO         JULIO       AGOSTO      SEPTIEMBRE    OCTUBRE    NOVIEMBRE   DICIEMBRE\nCAPS TRES SARGENTOS                      169              214           296            247            191        310           404          237           258         229         259          218\nCAPS GOUIN                               106              252           108            217            112        255           171          159           135         120         135          128\nCAPS RIGACCI                             350              211           720            747            491        727           735          666           520         832         606          581\nCAPS ETCHART                             216              165           397            444            386        475           577          595           742         486         672          700\nCAPS ALTOS DEL CANAL                     141              441           375            475            368        355           313          465           436         409         340          307\nCAPS BARRIO MARIN                        408              403           394            325            394        400           400          325           475         192         531          648\nCAPS BARRIO NORTE                        316              346           1029          1462           1028        914           809          915           770         685         844          761\n\n\n\n     EVOLUCIÓN DE CONSULTAS POR C.A.P.S.\n      CAPS TRES SARGENTOS         CAPS GOUIN         CAPS RIGACCI     CAPS ETCHART     CAPS ALTOS DEL CANAL     CAPS BARRIO MARIN     CAPS BARRIO NORTE\n\n\n\n\n                                                               1462\n                                                                                               914             809                           770                         844         761\n                                                                                                                              915\n                                           1029\n                                                                                                                                                            685\n                                                                               1028                            400\n                                                                325                            400                            325            475                         531         648\n                                                                                                                                                            192\n                                               394                                                             313\n                                                                475                            355                            465\n                            346                                                                                                              436            409          340\n                                                                               394                                                                                                   307\n                                               375\n          316                                                                                                  577\n                            403                                                                475\n                                                                444                                                                                         486\n                                               397                             368                                            595                                        672\n                                                                                                                                             742                                     700\n          408\n                            441\n                                                                               386             727             735\n          141\n                                                                747\n          216               165                720                                                                            666                           832\n                                                                                                                                             520                         606         581\n                            211                                                491\n          350               ",
+        "raw_content": "{\"document_type\": \"GENERAL\", \"title\": \"2021 CAPS ESTADISTICAS_6\", \"date\": \"2021-01-01\", \"amount\": 0, \"budget_lines\": [{\"line_item\": \"CAPS TRES SARGENTOS                      169              214           296            247            191        310           404          237           258         229         259\", \"amount\": 218.0, \"description\": \"CAPS TRES SARGENTOS                      169              214           296            247            191        310           404          237           258         229         259\"}, {\"line_item\": \"CAPS GOUIN                               106              252           108            217            112        255           171          159           135         120         135\", \"amount\": 128.0, \"description\": \"CAPS GOUIN                               106              252           108            217            112        255           171          159           135         120         135\"}, {\"line_item\": \"CAPS RIGACCI                             350              211           720            747            491        727           735          666           520         832         606\", \"amount\": 581.0, \"description\": \"CAPS RIGACCI                             350              211           720            747            491        727           735          666           520         832         606\"}, {\"line_item\": \"CAPS ETCHART                             216              165           397            444            386        475           577          595           742         486         672\", \"amount\": 700.0, \"description\": \"CAPS ETCHART                             216              165           397            444            386        475           577          595           742         486         672\"}, {\"line_item\": \"CAPS ALTOS DEL CANAL                     141              441           375            475            368        355           313          465           436         409         340\", \"amount\": 307.0, \"description\": \"CAPS ALTOS DEL CANAL                     141              441           375            475            368        355           313          465           436         409         340\"}, {\"line_item\": \"CAPS BARRIO MARIN                        408              403           394            325            394        400           400          325           475         192         531\", \"amount\": 648.0, \"description\": \"CAPS BARRIO MARIN                        408              403           394            325            394        400           400          325           475         192         531\"}, {\"line_item\": \"CAPS BARRIO NORTE                        316              346           1029          1462           1028        914           809          915           770         685         844\", \"amount\": 761.0, \"description\": \"CAPS BARRIO NORTE                        316              346           1029          1462           1028        914           809          915           770         685         844\"}, {\"line_item\": \"914             809                           770                         844\", \"amount\": 761.0, \"description\": \"914             809                           770                         844\"}, {\"line_item\": \"1028\", \"amount\": 400.0, \"description\": \"1028\"}, {\"line_item\": \"325                            400                            325            475                         531\", \"amount\": 648.0, \"description\": \"325                            400                            325            475                         531\"}, {\"line_item\": \"475                            355\", \"amount\": 465.0, \"description\": \"475                            355\"}, {\"line_item\": \"346                                                                                                              436            409\", \"amount\": 340.0, \"description\": \"346                                                                                                              436            409\"}, {\"line_item\": \"397                             368                                            595\", \"amount\": 672.0, \"description\": \"397                             368                                            595\"}, {\"line_item\": \"386             727\", \"amount\": 735.0, \"description\": \"386             727\"}, {\"line_item\": \"216               165                720                                                                            666\", \"amount\": 832.0, \"description\": \"216               165                720                                                                            666\"}, {\"line_item\": \"520                         606\", \"amount\": 581.0, \"description\": \"520                         606\"}, {\"line_item\": \"350                                                                                  255\", \"amount\": 171.0, \"description\": \"350                                                                                  255\"}, {\"line_item\": \"252                108              217                                                           159            135\", \"amount\": 135.0, \"description\": \"252                108              217                                                           159            135\"}, {\"line_item\": \"112                                                                          120\", \"amount\": 128.0, \"description\": \"112                                                                          120\"}, {\"line_item\": \"214                296              247            191             310                            237            258            229          259\", \"amount\": 218.0, \"description\": \"214                296              247            191             310                            237            258            229          259\"}]}"
+      },
+      "source_file": "2021 CAPS ESTADISTICAS_6_structured.json"
+    },
+    {
+      "metadata": {
+        "filename": "2021 ESTADISTICAS OMIC_16.pdf",
+        "title": "2021 Estadisticas Omic 16",
+        "document_type": "GENERAL",
+        "date": "2021-01-01",
+        "year": 2021,
+        "amount": 0,
+        "currency": null,
+        "budget_lines_count": 7,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:48:58.346448",
+        "has_tables": true,
+        "text_length": 25087,
+        "json_file": "2021 ESTADISTICAS OMIC_16_structured.json"
+      },
+      "content": {
+        "filename": "2021 ESTADISTICAS OMIC_16.pdf",
+        "processed_date": "2025-10-14T09:48:58.346448",
+        "document_type": "GENERAL",
+        "title": "2021 Estadisticas Omic 16",
+        "date": "2021-01-01",
+        "amount": 0,
+        "currency": null,
+        "entities": [],
+        "categories": [
+          "GENERAL"
+        ],
+        "budget_lines": [
+          {
+            "line_item": "PERÍODO",
+            "amount": 2020.0,
+            "description": "PERÍODO"
+          },
+          {
+            "line_item": "CASOS INGRESADOS",
+            "amount": 2020.0,
+            "description": "CASOS INGRESADOS"
+          },
+          {
+            "line_item": "PERÍODO",
+            "amount": 2020.0,
+            "description": "PERÍODO"
+          },
+          {
+            "line_item": "PERÍODO",
+            "amount": 2021.0,
+            "description": "PERÍODO"
+          },
+          {
+            "line_item": "PERÍODO",
+            "amount": 2021.0,
+            "description": "PERÍODO"
+          },
+          {
+            "line_item": "PERIODO",
+            "amount": 2020.0,
+            "description": "PERIODO"
+          },
+          {
+            "line_item": "PERIODO",
+            "amount": 2021.0,
+            "description": "PERIODO"
+          }
+        ],
+        "text_length": 25087,
+        "extraction_method": "pdftotext",
+        "has_tables": true,
+        "text_content": "           Oficina Municipal de Información al Consumidor                       ENERO           FEBRERO        MARZO          ABRIL           MAYO        JUNIO     JULIO       AGOSTO   SEPTIEMBRE     OCTUBRE   NOVIEMBRE   DICIEMBRE   TOTAL\n\nTOTAL DE CASOS INGRESADOS\n   2020                                                                            0               0             0             0               7            6        7              12       23           15         12          13        95\n\nRECLAMANTES POR GÉNERO\n   Masculino                                                                       0               0             0             0               0            4        4              3         8            7          4           7        37\n   Femenino                                                                        0               0             0             0               7            2        3              9        15            8          8           6        58\n   Otros                                                                           0               0             0             0               0            0        0              0         0            0          0           0         0\n\nDISTRIBUCIÓN PORCENTUAL SEGÚN LOS CASOS TRATADOS                                  0%               0%           0%             0%              7%          6%        7%          12%        23%          15%         12%        13%       95%\n   Acuerdo homologado                                                             0%               0%           0%             0%              3%          4%        1%             9%      20%          14%         9%         11%       71%\n   Acuerdo no homologado                                                          0%               0%           0%             0%              0%          0%        1%             2%       2%           1%         1%         0%        7%\n   Derivación a otra dependencia                                                  0%               0%           0%             0%              2%          2%        1%             0%       0%           0%         1%         1%        7%\n   Rechazo a la denuncia                                                          0%               0%           0%             0%              0%          0%        0%             0%       0%           0%         0%         0%        0%\n   Sanción                                                                        0%               0%           0%             0%              0%          0%        0%             0%       0%           0%         0%         0%        0%\n   En trámite                                                                     0%               0%           0%             0%              2%          0%        2%             1%       1%           0%         1%         1%        8%\n   Acuerdo conciliatorio                                                          0%               0%           0%             0%              0%          0%        2%             0%       0%           0%         0%         0%        2%\n   Prescripción                                                                   0%               0%           0%             0%              0%          0%        0%             0%       0%           0%         0%         0%        0%\n   Sin competencia                                                                0%               0%           0%             0%              0%          0%        0%             0%       0%           0%         0%         0%        0%\n   Pendiente                                                                      0%               0%           0%             0%              0%          0%        0%             0%       0%           0%         0%         0%        0%\n   Desistimiento                                                                  0%               0%           0%             0%              0%          0%        0%             0%       0%           0%         0%         0%        0%\n\n                                 TOTALES                                           0               0             0             0               7           6         7              12      23            15         12          13        95\n\n\nPeriodicidad: mensual-anual\nVariable: cantidad de casos ingresados\nUnidad de medida: absoluto\nDescripcion: indica la cantidad de casos ingresados a la Oficina de OMIC.\nLa Oficina de OMIC empezó a funcionar a partir de mayo del año 2020. Es por eso que no hay datos a comienzos del año.\nFuente de datos: se recolectan los datos a través de la Oficina de OMIC.\n\n\n\n\n                                 EVOLUCIÓN DE LOS CASOS INGRESADOS\n                                 (OMIC)\n                                 PERÍODO 2020\n                                                                                                                                         23\n\n\n\n          ",
+        "raw_content": "{\"document_type\": \"GENERAL\", \"title\": \"2021 ESTADISTICAS OMIC_16\", \"date\": \"2021-01-01\", \"amount\": 0, \"budget_lines\": [{\"line_item\": \"PER\\u00cdODO\", \"amount\": 2020.0, \"description\": \"PER\\u00cdODO\"}, {\"line_item\": \"CASOS INGRESADOS\", \"amount\": 2020.0, \"description\": \"CASOS INGRESADOS\"}, {\"line_item\": \"PER\\u00cdODO\", \"amount\": 2020.0, \"description\": \"PER\\u00cdODO\"}, {\"line_item\": \"PER\\u00cdODO\", \"amount\": 2021.0, \"description\": \"PER\\u00cdODO\"}, {\"line_item\": \"PER\\u00cdODO\", \"amount\": 2021.0, \"description\": \"PER\\u00cdODO\"}, {\"line_item\": \"PERIODO\", \"amount\": 2020.0, \"description\": \"PERIODO\"}, {\"line_item\": \"PERIODO\", \"amount\": 2021.0, \"description\": \"PERIODO\"}]}"
+      },
+      "source_file": "2021 ESTADISTICAS OMIC_16_structured.json"
+    },
+    {
+      "metadata": {
+        "filename": "2021 SEGURIDAD URBANA.pdf",
+        "title": "2021 Seguridad Urbana",
+        "document_type": "GENERAL",
+        "date": "2021-01-01",
+        "year": 2021,
+        "amount": 0,
+        "currency": null,
+        "budget_lines_count": 7,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:48:58.376725",
+        "has_tables": true,
+        "text_length": 13873,
+        "json_file": "2021 SEGURIDAD URBANA_structured.json"
+      },
+      "content": {
+        "filename": "2021 SEGURIDAD URBANA.pdf",
+        "processed_date": "2025-10-14T09:48:58.376725",
+        "document_type": "GENERAL",
+        "title": "2021 Seguridad Urbana",
+        "date": "2021-01-01",
+        "amount": 0,
+        "currency": null,
+        "entities": [
+          "Municipalidad de Carmen de Areco"
+        ],
+        "categories": [
+          "GENERAL"
+        ],
+        "budget_lines": [
+          {
+            "line_item": "CANTIDAD DE ACTAS LABRADAS POR PERSONAL DE MOVILIDAD",
+            "amount": 2021.0,
+            "description": "CANTIDAD DE ACTAS LABRADAS POR PERSONAL DE MOVILIDAD"
+          },
+          {
+            "line_item": "2021                                                             26         17        47       36       36        24       32            22         11         62           17            12",
+            "amount": 342.0,
+            "description": "2021                                                             26         17        47       36       36        24       32            22         11         62           17            12"
+          },
+          {
+            "line_item": "FALTA DE DOCUMENTACION                                                                                                   19       11       41      17      17     16      27       11          8         46          4           8",
+            "amount": 225.0,
+            "description": "FALTA DE DOCUMENTACION                                                                                                   19       11       41      17      17     16      27       11          8         46          4           8"
+          },
+          {
+            "line_item": "TOTAL                                                                                                                    26       17       47      36      36     24      32       22         11         62         17          12",
+            "amount": 342.0,
+            "description": "TOTAL                                                                                                                    26       17       47      36      36     24      32       22         11         62         17          12"
+          },
+          {
+            "line_item": "FEMENINO                                                                                                       9             6               20      10             10         10             13             9            2                  16                  2           1",
+            "amount": 108.0,
+            "description": "FEMENINO                                                                                                       9             6               20      10             10         10             13             9            2                  16                  2           1"
+          },
+          {
+            "line_item": "MASCULINO                                                                                                     17            11               27      26             10         14             19             13           9                  46                 15          11",
+            "amount": 218.0,
+            "description": "MASCULINO                                                                                                     17            11               27      26             10         14             19             13           9                  46                 15          11"
+          },
+          {
+            "line_item": "TOTAL                                      26            17               47      36             36         24             32             22          11                  62                 17          12",
+            "amount": 342.0,
+            "description": "TOTAL                                      26            17               47      36             36         24             32             22          11                  62                 17          12"
+          }
+        ],
+        "text_length": 13873,
+        "extraction_method": "pdftotext",
+        "has_tables": true,
+        "text_content": "                                                                                              CANTIDAD DE ACTAS LABRADAS POR PERSONAL DE MOVILIDAD 2021\n                                                                            PERÍODO                                                             ENERO     FEBRERO    MARZO    ABRIL    MAYO      JUNIO    JULIO        AGOSTO   SEPTIEMBRE   OCTUBRE     NOVIEMBRE    DICIEMBRE   TOTAL\n\n                                                                                2021                                                             26         17        47       36       36        24       32            22         11         62           17            12       342\n\n\n\n\nPeriodicidad: anual\nVariable: actas\nUnidad de medida: absoluto\nDescripcion: indica la cantidad de actas labradas mensualmente por personal encargado de realizar los controles de Seguridad\ny Control Urbano en el Partido de Carmen de Areco.\nFuente de datos: se recolectan los datos a traves de la Oficina de Movilidad.\n\n\n\n\n                              CANTIDAD DE ACTAS LABRADAS POR PERSONAL DE MOVILIDAD\n                              (2021)\n                                       ENERO              FEBRERO                MARZO             ABRIL            MAYO        JUNIO   JULIO    AGOSTO      SEPTIEMBRE      OCTUBRE     NOVIEMBRE       DICIEMBRE\n\n\n\n\n                                                                                                                                                                                                                                 62\n\n                                                                                                      47\n                                                                                                                               36           36\n                                                                                                                                                                             32\n                                            26                                                                                                               24                                22\n                                                                          17                                                                                                                                                                        17\n                                                                                                                                                                                                                  11                                                 12\n                                          ENERO                        FEBRERO                      MARZO                      ABRIL        MAYO             JUNIO           JULIO            AGOSTO       SEPTIEMBRE           OCTUBRE       NOVIEMBRE          DICIEMBRE\n\f                                                                   DESCRIPCION                                              ENERO   FEBRERO   MARZO   ABRIL   MAYO   JUNIO   JULIO   AGOSTO   SEPTIEMBRE   OCTUBRE   NOVIEMBRE   DICIEMBRE   TOTAL\n\n    ANIMALES SUELTOS EN LA VIA PUBLICA                                                                                        0        1        3       1       0      0      1        2           1         2           0           0        11\n    CIRCULAR A CONTRAMANO, SOBRE SEPARADORES DE TRANSITO, O FUERA DE LA CALZADA                                               0        0        0       0       3      1      0        4           0         0           0           0        8\n    CIRCULAR HABLANDO POR TELEFONO                                                                                            0        0        0       0       0      0      0        0           0         0           0           0        0\n    LAMINA DE POLARIZADOS EN PARABRISAS                                                                                       0        0        0       0       0      0      0        0           0         0           1           0\n    CIRCULAR SIN CASCO O CON CASCO SIN USO DEBIDO                                                                             0        0        0       5       0      3      3        0           0         0           0           0         11\n    CIRCULAR SIN CINTURON DE SEGURIDAD                                                                                        0        0        0       0       0      0      0        0           0         0           0           0         0\n    CIRCULAR SIN PLACAS DE IDENTIFICACION DE DOMINIO COLOCADAS                                                                0        0        0       3       1      0      0        0           1         4           0           0         9\n    CIRCULAR SIN RESPETAR SEMAFOROS                                               ",
+        "raw_content": "{\"document_type\": \"GENERAL\", \"title\": \"2021 SEGURIDAD URBANA\", \"date\": \"2021-01-01\", \"amount\": 0, \"budget_lines\": [{\"line_item\": \"CANTIDAD DE ACTAS LABRADAS POR PERSONAL DE MOVILIDAD\", \"amount\": 2021.0, \"description\": \"CANTIDAD DE ACTAS LABRADAS POR PERSONAL DE MOVILIDAD\"}, {\"line_item\": \"2021                                                             26         17        47       36       36        24       32            22         11         62           17            12\", \"amount\": 342.0, \"description\": \"2021                                                             26         17        47       36       36        24       32            22         11         62           17            12\"}, {\"line_item\": \"FALTA DE DOCUMENTACION                                                                                                   19       11       41      17      17     16      27       11          8         46          4           8\", \"amount\": 225.0, \"description\": \"FALTA DE DOCUMENTACION                                                                                                   19       11       41      17      17     16      27       11          8         46          4           8\"}, {\"line_item\": \"TOTAL                                                                                                                    26       17       47      36      36     24      32       22         11         62         17          12\", \"amount\": 342.0, \"description\": \"TOTAL                                                                                                                    26       17       47      36      36     24      32       22         11         62         17          12\"}, {\"line_item\": \"FEMENINO                                                                                                       9             6               20      10             10         10             13             9            2                  16                  2           1\", \"amount\": 108.0, \"description\": \"FEMENINO                                                                                                       9             6               20      10             10         10             13             9            2                  16                  2           1\"}, {\"line_item\": \"MASCULINO                                                                                                     17            11               27      26             10         14             19             13           9                  46                 15          11\", \"amount\": 218.0, \"description\": \"MASCULINO                                                                                                     17            11               27      26             10         14             19             13           9                  46                 15          11\"}, {\"line_item\": \"TOTAL                                      26            17               47      36             36         24             32             22          11                  62                 17          12\", \"amount\": 342.0, \"description\": \"TOTAL                                      26            17               47      36             36         24             32             22          11                  62                 17          12\"}]}"
+      },
+      "source_file": "2021 SEGURIDAD URBANA_structured.json"
+    },
+    {
+      "metadata": {
+        "filename": "2021 SERVICIOS PUBLICOS_6.pdf",
+        "title": "2021 Servicios Publicos 6",
+        "document_type": "GENERAL",
+        "date": "2021-01-01",
+        "year": 2021,
+        "amount": 0,
+        "currency": null,
+        "budget_lines_count": 6,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:48:58.406688",
+        "has_tables": true,
+        "text_length": 13926,
+        "json_file": "2021 SERVICIOS PUBLICOS_6_structured.json"
+      },
+      "content": {
+        "filename": "2021 SERVICIOS PUBLICOS_6.pdf",
+        "processed_date": "2025-10-14T09:48:58.406688",
+        "document_type": "GENERAL",
+        "title": "2021 Servicios Publicos 6",
+        "date": "2021-01-01",
+        "amount": 0,
+        "currency": null,
+        "entities": [],
+        "categories": [
+          "GENERAL"
+        ],
+        "budget_lines": [
+          {
+            "line_item": "Reparaciones en la Red de agua                                54          70                60              36                 50                 51                53                        59                   48                  31                   41                 41",
+            "amount": 594.0,
+            "description": "Reparaciones en la Red de agua                                54          70                60              36                 50                 51                53                        59                   48                  31                   41                 41"
+          },
+          {
+            "line_item": "Desobturaciones en la Red cloacal                             13          33                46              40                 48                 40                70                        74                   53                  32                   30                 32",
+            "amount": 511.0,
+            "description": "Desobturaciones en la Red cloacal                             13          33                46              40                 48                 40                70                        74                   53                  32                   30                 32"
+          },
+          {
+            "line_item": "Solicitudes de Conexión a la red de agua                       4          13                13              12                 13                 12                10                        14                   23                  13                   13                  6",
+            "amount": 146.0,
+            "description": "Solicitudes de Conexión a la red de agua                       4          13                13              12                 13                 12                10                        14                   23                  13                   13                  6"
+          },
+          {
+            "line_item": "TOTAL                                                          91          138               135             98                 131                110               139                       151                  129                 81                   90                 85",
+            "amount": 1378.0,
+            "description": "TOTAL                                                          91          138               135             98                 131                110               139                       151                  129                 81                   90                 85"
+          },
+          {
+            "line_item": "138                135",
+            "amount": 139.0,
+            "description": "138                135"
+          },
+          {
+            "line_item": "SERVICIOS PUBLICOS",
+            "amount": 2021.0,
+            "description": "SERVICIOS PUBLICOS"
+          }
+        ],
+        "text_length": 13926,
+        "extraction_method": "pdftotext",
+        "has_tables": true,
+        "text_content": "                                                                       REPORTES CIUDADANOS EN SERVICIOS PÚBLICOS\n                                                                                        2021\n        SERVICIOS PÚBLICOS                                      ENE          FEB.              MAR.          ABR.               MAY.                 JUN.              JUL.                   AGO.                    SEP.            OCT.                  NOV.                  DIC.                TOTAL\n    Reparaciones en la Red de agua                                54          70                60              36                 50                 51                53                        59                   48                  31                   41                 41                      594\n    Reparaciones en la Red de cloacas                              2           2                 3               0                  2                  0                 1                         3                    2                   1                    1                  2                      19\n    Desobturaciones en la Red cloacal                             13          33                46              40                 48                 40                70                        74                   53                  32                   30                 32                      511\n    Desagotes Atmosféricos                                        18          20                13               4                 10                  3                 0                         0                    0                   0                    0                  0                      68\n    Solicitudes de Conexión a la red de agua                       4          13                13              12                 13                 12                10                        14                   23                  13                   13                  6                      146\n    Solicitudes de Conexión a la red cloacal                       0           0                 0               6                  8                  4                 5                         1                    3                   4                    5                  4                      40\n   TOTAL                                                          91          138               135             98                 131                110               139                       151                  129                 81                   90                 85                     1378\n\n\n\nPeriodicidad: Mensual\nVariable: cantidad de reportes FINALIZADOS\nUnidad de medida: absoluto\nDescripcion: indica la cantidad de reportes ingresados a la plataforma TRELLO por personal encargado de Obras Públicas\nFuente de datos: se recolectan los datos a través de la Administración de Obras Públicas.\n\n\n\n\n   EVOLUCIÓN DE LOS REPORTES EN SERVICIOS PÚBLICOS\n   OBRAS PÚBLICAS (2021)\n\n\n                                                                                                                                                                                 1\n                                                                                                                                                                                14\n                                                                                                                                                      5\n                                         13                                                                                                          10\n                                                           13                                         8                                                                                                       3\n                                         20                13                                         13                                                                                                      23\n                                                                                                      10                   4\n                                                                                                                                                                                                              0\n                                                                                                                           12                                                   74\n                                                                              6                                            3\n                 4                       33                                                                                                          70                                                                                                          5\n               ",
+        "raw_content": "{\"document_type\": \"GENERAL\", \"title\": \"2021 SERVICIOS PUBLICOS_6\", \"date\": \"2021-01-01\", \"amount\": 0, \"budget_lines\": [{\"line_item\": \"Reparaciones en la Red de agua                                54          70                60              36                 50                 51                53                        59                   48                  31                   41                 41\", \"amount\": 594.0, \"description\": \"Reparaciones en la Red de agua                                54          70                60              36                 50                 51                53                        59                   48                  31                   41                 41\"}, {\"line_item\": \"Desobturaciones en la Red cloacal                             13          33                46              40                 48                 40                70                        74                   53                  32                   30                 32\", \"amount\": 511.0, \"description\": \"Desobturaciones en la Red cloacal                             13          33                46              40                 48                 40                70                        74                   53                  32                   30                 32\"}, {\"line_item\": \"Solicitudes de Conexi\\u00f3n a la red de agua                       4          13                13              12                 13                 12                10                        14                   23                  13                   13                  6\", \"amount\": 146.0, \"description\": \"Solicitudes de Conexi\\u00f3n a la red de agua                       4          13                13              12                 13                 12                10                        14                   23                  13                   13                  6\"}, {\"line_item\": \"TOTAL                                                          91          138               135             98                 131                110               139                       151                  129                 81                   90                 85\", \"amount\": 1378.0, \"description\": \"TOTAL                                                          91          138               135             98                 131                110               139                       151                  129                 81                   90                 85\"}, {\"line_item\": \"138                135\", \"amount\": 139.0, \"description\": \"138                135\"}, {\"line_item\": \"SERVICIOS PUBLICOS\", \"amount\": 2021.0, \"description\": \"SERVICIOS PUBLICOS\"}]}"
+      },
+      "source_file": "2021 SERVICIOS PUBLICOS_6_structured.json"
+    }
+  ]
+}

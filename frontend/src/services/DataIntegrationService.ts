@@ -11,6 +11,8 @@
 
 import externalAPIsService from "./ExternalDataAdapter";
 import yearSpecificDataService from './YearSpecificDataService';
+import githubDataService from './GitHubDataService';
+import optimizedDataService from './OptimizedDataService';
 import Papa from 'papaparse';
 
 export interface IntegratedData {
@@ -84,6 +86,10 @@ class DataIntegrationService {
    * Load integrated data for a specific year
    * Combines external APIs, local JSON, CSV data, and generated fallback
    */
+  /**
+   * Load integrated data for a specific year
+   * Combines external APIs, local JSON, CSV data, and generated fallback
+   */
   async loadIntegratedData(year: number): Promise<IntegratedData> {
     const cacheKey = `integrated_${year}`;
     const cached = this.cache.get(cacheKey);
@@ -127,6 +133,161 @@ class DataIntegrationService {
       // Final fallback to generated data only
       const fallbackData = await this.loadGeneratedData(year);
       return this.createIntegratedDataFromGenerated(fallbackData, year);
+    }
+  }
+
+  /**
+   * Load integrated data with optimization for low resource usage
+   * Uses the optimized data service to load only necessary data
+   */
+  async loadOptimizedIntegratedData(year: number): Promise<IntegratedData> {
+    const cacheKey = `optimized_integrated_${year}`;
+    const cached = this.cache.get(cacheKey);
+
+    if (cached && (Date.now() - cached.timestamp) < this.CACHE_DURATION) {
+      console.log(`📦 Using cached optimized integrated data for year ${year}`);
+      return cached.data;
+    }
+
+    console.log(`🚀 Loading optimized integrated data for year ${year}...`);
+
+    try {
+      // Load core financial data types using optimized service
+      const [budgetData, contractsData, salariesData, treasuryData, debtData] = await Promise.allSettled([
+        optimizedDataService.loadData({ year, dataType: 'budget' }),
+        optimizedDataService.loadData({ year, dataType: 'contracts' }),
+        optimizedDataService.loadData({ year, dataType: 'salaries' }),
+        optimizedDataService.loadData({ year, dataType: 'treasury' }),
+        optimizedDataService.loadData({ year, dataType: 'debt' })
+      ]);
+
+      // Process results
+      const integratedData: IntegratedData = {
+        budget: {
+          total_budget: 0,
+          total_executed: 0,
+          execution_rate: 0,
+          quarterly_data: [],
+          source: 'generated',
+          last_updated: new Date().toISOString()
+        },
+        contracts: [],
+        salaries: {
+          totalPayroll: 0,
+          employeeCount: 0,
+          averageSalary: 0,
+          positions: []
+        },
+        documents: [],
+        treasury: {
+          balance: 0,
+          income: 0,
+          expenses: 0
+        },
+        debt: {
+          total_debt: 0,
+          debt_service: 0
+        },
+        external_validation: [],
+        metadata: {
+          sources_used: [],
+          integration_success: false,
+          external_data_available: false,
+          last_sync: new Date().toISOString()
+        }
+      };
+
+      // Extract budget data
+      if (budgetData.status === 'fulfilled' && budgetData.value.success) {
+        const data = budgetData.value.data;
+        integratedData.budget = {
+          total_budget: data.total_budget || data.totalBudget || 0,
+          total_executed: data.total_executed || data.totalExecuted || 0,
+          execution_rate: data.execution_rate || data.executionRate || 0,
+          quarterly_data: data.quarterly_data || data.quarterlyData || [],
+          source: budgetData.value.source,
+          last_updated: budgetData.value.lastModified || new Date().toISOString()
+        };
+        integratedData.metadata.sources_used.push(`optimized:${budgetData.value.source}:budget`);
+      }
+
+      // Extract contracts data
+      if (contractsData.status === 'fulfilled' && contractsData.value.success) {
+        integratedData.contracts = Array.isArray(contractsData.value.data) ? contractsData.value.data : [];
+        integratedData.metadata.sources_used.push(`optimized:${contractsData.value.source}:contracts`);
+      }
+
+      // Extract salaries data
+      if (salariesData.status === 'fulfilled' && salariesData.value.success) {
+        const data = salariesData.value.data;
+        integratedData.salaries = {
+          totalPayroll: data.totalPayroll || data.total_payroll || 0,
+          employeeCount: data.employeeCount || data.employee_count || 0,
+          averageSalary: data.averageSalary || data.average_salary || 0,
+          positions: Array.isArray(data.positions) ? data.positions : []
+        };
+        integratedData.metadata.sources_used.push(`optimized:${salariesData.value.source}:salaries`);
+      }
+
+      // Extract treasury data
+      if (treasuryData.status === 'fulfilled' && treasuryData.value.success) {
+        const data = treasuryData.value.data;
+        integratedData.treasury = {
+          balance: data.balance || 0,
+          income: data.income || data.total_revenue || 0,
+          expenses: data.expenses || data.total_expenses || 0,
+          total_revenue: data.total_revenue || data.income || 0,
+          total_expenses: data.total_expenses || data.expenses || 0
+        };
+        integratedData.metadata.sources_used.push(`optimized:${treasuryData.value.source}:treasury`);
+      }
+
+      // Extract debt data
+      if (debtData.status === 'fulfilled' && debtData.value.success) {
+        const data = debtData.value.data;
+        integratedData.debt = {
+          total_debt: data.total_debt || data.totalDebt || 0,
+          debt_service: data.debt_service || data.debtService || 0
+        };
+        integratedData.metadata.sources_used.push(`optimized:${debtData.value.source}:debt`);
+      }
+
+      // Try to load documents data as well
+      try {
+        const documentsData = await optimizedDataService.loadData({ year, dataType: 'documents' });
+        if (documentsData.success) {
+          integratedData.documents = Array.isArray(documentsData.data) ? documentsData.data : [];
+          integratedData.metadata.sources_used.push(`optimized:${documentsData.source}:documents`);
+        }
+      } catch (documentsError) {
+        console.warn(`⚠️ Documents data not available for year ${year}:`, documentsError);
+      }
+
+      // Update metadata
+      integratedData.metadata.integration_success = integratedData.metadata.sources_used.length > 0;
+      integratedData.metadata.external_data_available = integratedData.metadata.sources_used.some(source => 
+        source.includes('external') || source.includes('github')
+      );
+
+      // Cache the result
+      this.cache.set(cacheKey, {
+        data: integratedData,
+        timestamp: Date.now()
+      });
+
+      console.log(`✅ Optimized integrated data loaded for year ${year}:`, {
+        sources: integratedData.metadata.sources_used,
+        external_available: integratedData.metadata.external_data_available
+      });
+
+      return integratedData;
+
+    } catch (error) {
+      console.error(`❌ Error loading optimized integrated data for year ${year}:`, error);
+
+      // Final fallback to regular integrated data loading
+      const fallbackData = await this.loadIntegratedData(year);
+      return fallbackData;
     }
   }
 
@@ -188,7 +349,24 @@ class DataIntegrationService {
         console.log(`⚠️ Cloudflare Workers API not available:`, cloudflareError.message);
       }
 
-      // If Cloudflare Workers API failed, try the external API services
+      // If Cloudflare Workers API failed, try the GitHub data service as a bridge
+      try {
+        const githubData = await githubDataService.loadYearData(year);
+        if (githubData.success && githubData.data) {
+          console.log(`✅ GitHub data service loaded for year ${year}`);
+          return {
+            name: 'GitHub Data Service',
+            data: githubData.data,
+            success: true,
+            timestamp: githubData.lastModified || new Date().toISOString(),
+            source_type: 'github'
+          };
+        }
+      } catch (githubError) {
+        console.log(`⚠️ GitHub data service not available:`, githubError.message);
+      }
+
+      // If GitHub data service failed, try the external API services
       const [carmenData, nationalData, geoData] = await Promise.allSettled([
         externalAPIsService.getCarmenDeArecoData(),
         externalAPIsService.getNationalBudgetData(),

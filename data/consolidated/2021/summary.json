@@ -1,24 +1,149 @@
 {
   "year": 2021,
-  "financial_overview": {
-    "total_budget": 308700000,
-    "total_executed": 287780063,
-    "execution_rate": 93.22,
-    "executed_infra": 55125000,
-    "personnel": 143325000
+  "generated_at": "2025-10-14T10:18:12.275923",
+  "summary": {
+    "total_documents": 8,
+    "by_type": {
+      "personal": 1,
+      "general": 4,
+      "normativa": 2,
+      "balance": 1
+    },
+    "total_amounts": {
+      "personal": 0,
+      "general": 0,
+      "normativa": 2524374.0,
+      "balance": 376346103.37
+    }
   },
-  "key_metrics": {
-    "budget_per_capita": 9647,
-    "documents_processed": 39,
-    "contracts_managed": 31
-  },
-  "data_quality": {
-    "completeness": 91,
-    "accuracy": 96,
-    "last_validated": "2025-09-28T18:50:04.347Z"
-  },
-  "metadata": {
-    "processed_date": "2025-09-28T18:50:04.347Z",
-    "data_sources": 12
+  "documents": {
+    "personal": [
+      {
+        "filename": "2021 ADMINISTRACION DE PERSONAL.pdf",
+        "title": "2021 Administracion De Personal",
+        "document_type": "PERSONAL",
+        "date": "2021-01-01",
+        "year": 2021,
+        "amount": 0,
+        "currency": null,
+        "budget_lines_count": 35,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:48:58.282235",
+        "has_tables": true,
+        "text_length": 22400,
+        "json_file": "2021 ADMINISTRACION DE PERSONAL_structured.json"
+      }
+    ],
+    "general": [
+      {
+        "filename": "2021 CAPS ESTADISTICAS_6.pdf",
+        "title": "2021 Caps Estadisticas 6",
+        "document_type": "GENERAL",
+        "date": "2021-01-01",
+        "year": 2021,
+        "amount": 0,
+        "currency": null,
+        "budget_lines_count": 20,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:48:58.308468",
+        "has_tables": true,
+        "text_length": 6061,
+        "json_file": "2021 CAPS ESTADISTICAS_6_structured.json"
+      },
+      {
+        "filename": "2021 ESTADISTICAS OMIC_16.pdf",
+        "title": "2021 Estadisticas Omic 16",
+        "document_type": "GENERAL",
+        "date": "2021-01-01",
+        "year": 2021,
+        "amount": 0,
+        "currency": null,
+        "budget_lines_count": 7,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:48:58.346448",
+        "has_tables": true,
+        "text_length": 25087,
+        "json_file": "2021 ESTADISTICAS OMIC_16_structured.json"
+      },
+      {
+        "filename": "2021 SEGURIDAD URBANA.pdf",
+        "title": "2021 Seguridad Urbana",
+        "document_type": "GENERAL",
+        "date": "2021-01-01",
+        "year": 2021,
+        "amount": 0,
+        "currency": null,
+        "budget_lines_count": 7,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:48:58.376725",
+        "has_tables": true,
+        "text_length": 13873,
+        "json_file": "2021 SEGURIDAD URBANA_structured.json"
+      },
+      {
+        "filename": "2021 SERVICIOS PUBLICOS_6.pdf",
+        "title": "2021 Servicios Publicos 6",
+        "document_type": "GENERAL",
+        "date": "2021-01-01",
+        "year": 2021,
+        "amount": 0,
+        "currency": null,
+        "budget_lines_count": 6,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:48:58.406688",
+        "has_tables": true,
+        "text_length": 13926,
+        "json_file": "2021 SERVICIOS PUBLICOS_6_structured.json"
+      }
+    ],
+    "normativa": [
+      {
+        "filename": "Ordenanza-Fiscal-3057-2021_6.pdf",
+        "title": "Ordenanza Fiscal 3057 2021 6",
+        "document_type": "NORMATIVA",
+        "date": "2021-01-01",
+        "year": 2021,
+        "amount": 24374.0,
+        "currency": "ARS",
+        "budget_lines_count": 0,
+        "extraction_method": "ocrmypdf+simple_extraction",
+        "processed_date": "2025-10-13T19:57:07.623619",
+        "has_tables": false,
+        "text_length": 0,
+        "json_file": "Ordenanza-Fiscal-3057-2021_6_structured.json"
+      },
+      {
+        "filename": "Ordenanza-Impositiva-3059-2021.pdf",
+        "title": "Ordenanza Impositiva 3059 2021",
+        "document_type": "NORMATIVA",
+        "date": "1/7/2021",
+        "year": 2021,
+        "amount": 2500000.0,
+        "currency": "ARS",
+        "budget_lines_count": 17,
+        "extraction_method": "ocrmypdf+simple_extraction",
+        "processed_date": "2025-10-13T19:58:17.007990",
+        "has_tables": false,
+        "text_length": 0,
+        "json_file": "Ordenanza-Impositiva-3059-2021_structured.json"
+      }
+    ],
+    "balance": [
+      {
+        "filename": "pdf_60_BALANCE-GENERAL-2020_6.pdf",
+        "title": "Pdf 60 Balance General 2020 6",
+        "document_type": "BALANCE",
+        "date": "31/03/2021",
+        "year": 2021,
+        "amount": 376346103.37,
+        "currency": "ARS",
+        "budget_lines_count": 100,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:49:56.027598",
+        "has_tables": true,
+        "text_length": 22649,
+        "json_file": "pdf_60_BALANCE-GENERAL-2020_6_structured.json"
+      }
+    ]
   }
 }

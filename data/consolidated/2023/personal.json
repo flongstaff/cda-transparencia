@@ -1,0 +1,213 @@
+{
+  "year": 2023,
+  "type": "personal",
+  "generated_at": "2025-10-14T10:18:12.309697",
+  "document_count": 6,
+  "total_amount": 5269331.2,
+  "documents": [
+    {
+      "metadata": {
+        "filename": "pdf_175_SUELDOS-SEPTIEMBRE-2023.pdf",
+        "title": "Pdf 175 Sueldos Septiembre 2023",
+        "document_type": "PERSONAL",
+        "date": "2023-01-01",
+        "year": 2023,
+        "amount": 1151404.8,
+        "currency": "ARS",
+        "budget_lines_count": 0,
+        "extraction_method": "ocrmypdf+simple_extraction",
+        "processed_date": "2025-10-13T20:02:25.362118",
+        "has_tables": false,
+        "text_length": 0,
+        "json_file": "pdf_175_SUELDOS-SEPTIEMBRE-2023_structured.json"
+      },
+      "content": {
+        "filename": "pdf_175_SUELDOS-SEPTIEMBRE-2023.pdf",
+        "processed_date": "2025-10-13T20:02:25.362118",
+        "document_type": "PERSONAL",
+        "title": "Pdf 175 Sueldos Septiembre 2023",
+        "date": "2023-01-01",
+        "amount": 1151404.8,
+        "currency": "ARS",
+        "entities": [],
+        "categories": [
+          "PERSONAL"
+        ],
+        "budget_lines": [],
+        "text_content": "CUADRO DE VALORES SUELDOS BASICOS BRUTOS:\n\nMODULO\n\nCODIGO\n\nCARGO\n\nESCALAFONARIO\n\n$\n\nCANT\n\n257,01\n\nSEPTIEMBRE\n\nMODULOS\n\n01 - SUPERIOR\n\n01.50.09\n\nCONCEJALES/AS\n\nS\n\n01.56.05\n\nSECRETARIOS/AS\n\nS\n\n239.876,00\n647.665,20\n\n01.59.01\n\nINTENDENTE\n\n$5\n\n1.151.404,80\n\n02 - JERARQUICO\n\n02.02.10\n\nCOORDINADOR\n\nS\n\n287.851,20\n\n02.13.10\n\nINSPECTOR V - C9\n\n467\n\nS\n\n120.023,67\n\n02.18.10\n\nINSPECTOR IV - C11\n\n500\n\nS\n\n128.505,00\n\n02.24.10\n\nINSPECTOR 11 - C13\n\n538\n\nS\n\n138.271,38\n\n02.31.10\n\nINSPECTOR || - C17\n\n590\n\nS\n\n151.635,90\n\n02.35.10\n\nINSPECTOR | - C18\n\n620\n\nS\n\n159.346,20\n\n02.38.10\n\nJERARQUICO JEFE DE SECCIÓN C19\n\n638\n\nS\n\n163.972,38\n\n02.39.10\n\nJERARQUICO JEFE DE DIVISION Il - C20\n\n666\n\nS\n\n171.168,66\n\n02.44.10\n\nJERARQUICO JEFE DE DIVISION | - C24\n\n790\n\nS\n\n203.037,90\n\n02.45.10\n\nJERARQUICO JEFE DE DEPARTAMENTO || C25\n\n850\n\nS\n\n218.458,50\n\n02.47.10\n\nJERARQUICO JEFE DE DEPARTAMENTO| - C27\n\n960\n\nS\n\n246.729,60\n\n02.52.10\n\nJEFE DE AREA\n\n1064\n\nS\n\n273.458,64\n\n02.53.10\n\nDIRECTOR\n\nS\n\n467.758,20\n\n02.54.03\n\nJEFE DE COMPRAS\n\nS\n\n467.758,20\n\n02.55.04\n\nTESORERO\n\nS\n\n467.758,20\n\n02.57.06\n\nCONTADOR\n\nS\n\n539.721,00\n\n02.60.07\n\nDELEGADOS MUNICIPALES\n\nS\n\n287.851,20\n\n02.72.10\n\nCOORDINADOR\n\nS\n\n287.851,20\n\n03 - PROFESIONAL\n\n03.21.11\n\nPROFESIONAL\nV - C13\n\n538\n\nS\n\n138.271,38\n\n03.27.11\n\nPROFESIONAL IV - C15\n\n555\n\nS\n\n142.640,55\n\n03.33.11\n\nPROFESIONAL II! - C18\n\n620\n\nS\n\n159.346,20\n\n03.41.11\n\nPROFESIONAL || - C22\n\n760\n\nS\n\n195.327,60\n\n03.43.11\n\nPROFESIONAL | - C24\n\n790\n\nS\n\n203.037,90\n\n03.11.12\n\nTECNICO V - C9\n\n467\n\nS\n\n120.023,67\n\n03.16.12\n\nTECNICO IV - C11\n\n500\n\nS\n\n128.505,00\n\n03.22.12\n\nTECNICO III. C13\n\n538\n\nS\n\n138.271,38\n\n03.29.12\n\nTECNICO II - C17\n\n590\n\nS\n\n151.635,90\n\n03.37.12\n\nTECNICO| - C19\n\n638\n\nS\n\n163.972,38\n\n04 - TECNICOS\n\n05 - ADMINISTRATIVO\n\n05.12.13\n\nADMINISTRTIVO V - C9\n\n467\n\nS\n\n120.023,67\n\n05.17.13\n\nADMINISTRATIVO IV - C11\n\n500\n\nS\n\n128.505,00\n\n05.23.13\n\nADMINISTRATIVO lll - C13\n\n538\n\nS\n\n138.271,38\n\n05.30.13\n\nADMINISTRATIVO || - C17\n\n590\n\nS\n\n151.635,90\n\n05.34.13\n\nADMINISTRATIVO| - C18\n\n620\n\nS\n\n159.346,20\n\n06 - OBRERO\n\n06.14.14\n\nOBRERO V - C9\n\n467\n\nS\n\n120.023,67\n\n06.19.14\n\nOBRERO IV - C11\n\n500\n\nS\n\n128.505,00\n\n06.25.14\n\nOBRERO lll - C13\n\n538\n\nS\n\n138.271,38\n\n06.32.14\n\nOBRERO ll - C17\n\n590\n\nS\n\n151.635,90\n\n06.36.14\n\nOBRERO| - C18\n\n620\n\nS\n\n159.346,20\n\n07 - SERVICIOS\n\n07.10.15\n\nSERVICIO IV - C8\n\n480\n\nS\n\n123.364,80\n\n07.20.15\n\nSERVICIO 111 - C12\n\n520\n\nS\n\n133.645,20\n\n07.26.15\n\nSERVICIO Il - C14\n\n545\n\nS\n\n140.070,45\n\n07.28.15\n\nSERVICIO | - C16\n\n560\n\nS\n\n143.925,60\n\nS\n\n120.339,87\n\n09 - TEMPORARIOS\n\n09.62.17\n\nTEMPORARIO\n\nVALOR MO\n\n\f",
+        "raw_content": "{\"document_type\": \"PERSONAL\", \"title\": \"pdf_175_SUELDOS-SEPTIEMBRE-2023\", \"date\": \"2023-01-01\", \"amount\": 1151404.8, \"budget_lines\": []}"
+      },
+      "source_file": "pdf_175_SUELDOS-SEPTIEMBRE-2023_structured.json"
+    },
+    {
+      "metadata": {
+        "filename": "pdf_176_SUELDOS-JULIO-2023_6.pdf",
+        "title": "Pdf 176 Sueldos Julio 2023 6",
+        "document_type": "PERSONAL",
+        "date": "2023-01-01",
+        "year": 2023,
+        "amount": 1001235.2,
+        "currency": "ARS",
+        "budget_lines_count": 0,
+        "extraction_method": "ocrmypdf+simple_extraction",
+        "processed_date": "2025-10-13T20:02:29.944155",
+        "has_tables": false,
+        "text_length": 0,
+        "json_file": "pdf_176_SUELDOS-JULIO-2023_6_structured.json"
+      },
+      "content": {
+        "filename": "pdf_176_SUELDOS-JULIO-2023_6.pdf",
+        "processed_date": "2025-10-13T20:02:29.944155",
+        "document_type": "PERSONAL",
+        "title": "Pdf 176 Sueldos Julio 2023 6",
+        "date": "2023-01-01",
+        "amount": 1001235.2,
+        "currency": "ARS",
+        "entities": [],
+        "categories": [
+          "PERSONAL"
+        ],
+        "budget_lines": [],
+        "text_content": "CUADRO DE VALORES SUELDOS BASICOS BRUTOS:\n\nMODULO\n[e0]»][cjo)\n\nCARGO\n\nESCALAFONARIO\n\n$\n\nCANT\n\n223,49\nJULIO\n\nMODULOS\n\n01 - SUPERIOR\n\n01.50.09\n\nCONCEJALES/AS\n\nS\n\n208.590,67\n\n01.56.05\n\nSECRETARIOS/AS\n\nS\n\n563.194,80\n\nINTENDENTE\n\n$\n\n1.001.235,20\n\n01.59.01\n\n02 - JERARQUICO\n\n02.02.10\n\nCOORDINADOR\n\nS\n\n250.308,80\n\n02.13.10\n\nINSPECTOR V - C9\n\n467\n\nS\n\n104.369,83\n\n02.18.10\n\nINSPECTOR IV - C11\n\n500\n\nS\n\n111.745,00\n\n02.24.10\n\nINSPECTOR 11! - C13\n\n538\n\nS\n\n120.237,62\n\n02.31.10\n\nINSPECTOR || - C17\n\n590\n\nS\n\n131.859,10\n\n02.35.10\n\nINSPECTOR | - C18\n\n620\n\nS\n\n138.563,80\n\n02.38.10\n\nJERARQUICO JEFE DE SECCION C19\n\n638\n\nS\n\n142.586,62\n\n02.39.10\n\nJERARQUICO JEFE DE DIVISION Il - C20\n\n666\n\nS\n\n148.844,34\n\n02.44.10\n\nJERARQUICO JEFE DE DIVISION | - C24\n\n790\n\nS\n\n176.557,10\n\n02.45.10\n\nJERARQUICO JEFE DE DEPARTAMENTO ll C25\n\n850\n\nS\n\n189.966,50\n\n02.47.10\n\nJERARQUICO JEFE DE DEPARTAMENTO| - C27\n\n960\n\nS\n\n214.550,40\n\n02.52.10\n\nJEFE DE AREA\n\n1064\n\nS\n\n237.793,36\n\n02.53.10\n\nDIRECTOR\n\nS\n\n406.751,80\n\n02.54.03\n\nJEFE DE COMPRAS\n\nS\n\n406.751,80\n\n02.55.04\n\nTESORERO\n\nS\n\n406.751,80\n\n02.57.06\n\nCONTADOR\n\nS\n\n469.329,00\n\n02.60.07\n\nDELEGADOS MUNICIPALES\n\nS\n\n250.308,80\n\n02.72.10\n\nCOORDINADOR\n\nS\n\n250.308,80\n\n03 - PROFESIONAL\n\n03.21.11\n\nPROFESIONAL V - C13\n\n538\n\nS\n\n120.237,62\n\n03.27.11\n\nPROFESIONAL IV - C15\n\n555\n\nS\n\n124.036,95\n\n03.33.11\n\nPROFESIONAL lll - C18\n\n620\n\nS\n\n138.563,80\n\n03.41.11\n\nPROFESIONAL II - C22\n\n760\n\nS\n\n169.852,40\n\n03.43.11\n\nPROFESIONAL | - C24\n\n790\n\nS\n\n176.557,10\n\n04 - TECNICOS\n\n03.11.12\n\nTECNICO Y - C9\n\n467\n\nS\n\n104.369,83\n\n03.16.12\n\nTECNICO IV - C11\n\n500\n\nS\n\n111.745,00\n\n03.22.12\n\nTECNICO I!I.. C13\n\n538\n\nS\n\n120.237,62\n\n03.29.12\n\nTECNICO ll - C17\n\n590\n\nS\n\n131.859,10\n\n03.37.12\n\nTECNICO| - C19\n\n638\n\nS\n\n142.586,62\n\n05 - ADMINISTRATIVO\n\n05.12.13\n\nADMINISTRTIVO Y - C9\n\n467\n\nS\n\n104.369,83\n\n05.17.13\n\nADMINISTRATIVO IV - C11\n\n500\n\nS\n\n111.745,00\n\n05.23.13\n\nADMINISTRATIVO lIl - C13\n\n538\n\nS\n\n120.237,62\n\n05.30.13\n\nADMINISTRATIVO 1| - C17\n\n590\n\nS\n\n131.859,10\n\n05.34.13\n\nADMINISTRATIVO| - C18\n\n620\n\nS\n\n138.563,80\n\n06 - OBRERO\n\n06.14.14\n\nOBRERO V - C9\n\n467\n\nS\n\n104.369,83\n\n06.19.14\n\nOBRERO IV - C11\n\n500\n\nS\n\n111.745,00\n\n06.25.14\n\nOBRERO ll! - C13\n\n538\n\nS\n\n120.237,62\n\n06.32.14\n\nOBRERO ll - C17\n\n590\n\nS\n\n131.859,10\n\nOBRERO| - C18\n\n620\n\nS\n\n138.563,80\n\n06.36.14\n\n07 - SERVICIOS\n\n07.10.15\n\nSERVICIO IV - C8\n\n480\n\nS\n\n107.275,20\n\n07.20.15\n\nSERVICIO l1I - C12\n\n520\n\nS\n\n116.214,80\n\n07.26.15\n\nSERVICIO ll - C14\n\n545\n\nS\n\n121.802,05\n\n07.28.15\n\nSERVICIO | - C16\n\n560\n\nS\n\n125.154,40\n\nS\n\n104.644,79\n\n09 - TEMPORARIOS\n\n09.62.17\n\nTEMPORARIO\n\n\f",
+        "raw_content": "{\"document_type\": \"PERSONAL\", \"title\": \"pdf_176_SUELDOS-JULIO-2023_6\", \"date\": \"2023-01-01\", \"amount\": 1001235.2, \"budget_lines\": []}"
+      },
+      "source_file": "pdf_176_SUELDOS-JULIO-2023_6_structured.json"
+    },
+    {
+      "metadata": {
+        "filename": "pdf_177_SUELDOS-JUNIO-2023_15.pdf",
+        "title": "Pdf 177 Sueldos Junio 2023 15",
+        "document_type": "PERSONAL",
+        "date": "2023-01-01",
+        "year": 2023,
+        "amount": 910201.6,
+        "currency": "ARS",
+        "budget_lines_count": 0,
+        "extraction_method": "ocrmypdf+simple_extraction",
+        "processed_date": "2025-10-13T20:02:35.153726",
+        "has_tables": false,
+        "text_length": 0,
+        "json_file": "pdf_177_SUELDOS-JUNIO-2023_15_structured.json"
+      },
+      "content": {
+        "filename": "pdf_177_SUELDOS-JUNIO-2023_15.pdf",
+        "processed_date": "2025-10-13T20:02:35.153726",
+        "document_type": "PERSONAL",
+        "title": "Pdf 177 Sueldos Junio 2023 15",
+        "date": "2023-01-01",
+        "amount": 910201.6,
+        "currency": "ARS",
+        "entities": [],
+        "categories": [
+          "PERSONAL"
+        ],
+        "budget_lines": [],
+        "text_content": "CUADRO DE VALORES SUELDOS BASICOS BRUTOS:\n\nMODULO\nCODIGO\n\nCARGO\n\nESCALAFONARIO\n\n$\n\n203,17\n\nCANT\nMODULOS\n\n01 - SUPERIOR\n\n01.50.09\n\nCONCEJALES/AS\n\nS\n\n189.625,33\n\n01.56.05\n\nSECRETARIOS/AS\n\nS\n\n511.988,40\n\nINTENDENTE\n\nS\n\n910.201,60\n\nS\n\n227.550,40\n\n01.59.01\n\n02 - JERARQUICO\n\n02.02.10\n\nCOORDINADOR\n\n02.13.10\n\nINSPECTOR V - C9\n\n467\n\nS\n\n94.880,39\n\n02.18.10\n\nINSPECTOR IV - C11\n\n500\n\nS\n\n101.585,00\n\n02.24.10\n\nINSPECTOR 111 - C13\n\n538\n\nS\n\n109.305,46\n\n02.31.10\n\nINSPECTOR Il - C17\n\n590\n\nS\n\n119.870,30\n\n02.35.10\n\nINSPECTOR | - C18\n\n620\n\nS\n\n125.965,40\n\n02.38.10\n\nJERARQUICO JEFE DE SECCION C19\n\n638\n\nS\n\n129.622,46\n\n02.39.10\n\nJERARQUICO JEFE DE DIVISION Il - C20\n\n666\n\nS\n\n135.311,22\n\n02.44.10\n\nJERARQUICO JEFE DE DIVISION | - C24\n\n790\n\nS\n\n160.504,30\n\n02.45.10\n\nJERARQUICO JEFE DE DEPARTAMENTO ll C25\n\n850\n\nS\n\n172.694,50\n\n02.47.10\n\nJERARQUICO JEFE DE DEPARTAMENTO| - C27\n\n960\n\nS\n\n195.043,20\n\n02.52.10\n\nJEFE DE AREA\n\n1064\n\nS\n\n216.172,88\n\n02.53.10\n\nDIRECTOR\n\nS\n\n369.769,40\n\n02.54.03\n\nJEFE DE COMPRAS\n\nS\n\n369.769,40\n\n02.55.04\n\nTESORERO\n\nS\n\n369.769,40\n\n02.57.06\n\nCONTADOR\n\nS\n\n426.657,00\n\n02.60.07\n\nDELEGADOS MUNICIPALES\n\nS\n\n227.550,40\n\n02.72.10\n\nCOORDINADOR\n\nS\n\n227.550,40\n\n03 - PROFESIONAL\n\n03.21.11\n\nPROFESIONAL V - C13\n\n538\n\nS\n\n109.305,46\n\n03.27.11\n\nPROFESIONAL IV - C15\n\n555\n\nS\n\n112.759,35\n\n03.33.11\n\nPROFESIONAL lll - C18\n\n620\n\nS\n\n125.965,40\n\n03.41.11\n\nPROFESIONAL Il - C22\n\n760\n\nS\n\n154.409,20\n\n03.43.11\n\nPROFESIONAL | - C24\n\n790\n\nS\n\n160.504,30\n\n04 - TECNICOS\n\n03.11.12\n\nTECNICO V - C9\n\n467\n\nS\n\n94.880,39\n\n03.16.12\n\nTECNICO IV - C11\n\n500\n\nS\n\n101.585,00\n\n03.22.12\n\nTECNICO III. C13\n\n538\n\nS\n\n109.305,46\n\n03.29.12\n\nTECNICO ll - C17\n\n590\n\nS\n\n119.870,30\n\n03.37.12\n\nTECNICO| - C19\n\n638\n\nS\n\n129.622,46\n\n05 - ADMINISTRATIVO\n\n05.12.13\n\nADMINISTRTIVO V - C9\n\n467\n\nS\n\n94.880,39\n\n05.17.13\n\nADMINISTRATIVO IV - C11\n\n500\n\nS\n\n101.585,00\n\n05.23.13\n\nADMINISTRATIVO 1I| - C13\n\n538\n\nS\n\n109.305,46\n\n05.30.13\n\nADMINISTRATIVO || - C17\n\n590\n\nS\n\n119.870,30\n\n05.34.13\n\nADMINISTRATIVO| - C18\n\n620\n\nS\n\n125.965,40\n\n06 - OBRERO\n\n06.14.14\n\nOBRERO V - C9\n\n467\n\nS\n\n94.880,39\n\n06.19.14\n\nOBRERO IV - C11\n\n500\n\nS\n\n101.585,00\n\n06.25.14\n\nOBRERO l!! - C13\n\n538\n\nS\n\n109.305,46\n\n06.32.14\n\nOBRERO ll - C17\n\n590\n\nS\n\n119.870,30\n\nOBRERO| - C18\n\n620\n\nS\n\n125.965,40\n\n06.36.14\n\n07 - SERVICIOS\n\n07.10.15\n\nSERVICIO IV - C8\n\n480\n\nS\n\n97.521,60\n\n07.20.15\n\nSERVICIO 11I - C12\n\n520\n\nS\n\n105.648,40\n\n07.26.15\n\nSERVICIO II - C14\n\n545\n\nS\n\n110.727,65\n\n07.28.15\n\nSERVICIO| - C16\n\n560\n\nS\n\n113.775,20\n\nS\n\n95.130,35\n\n09 - TEMPORARIOS\n\n09.62.17\n\nTEMPORARIO\n\n\f",
+        "raw_content": "{\"document_type\": \"PERSONAL\", \"title\": \"pdf_177_SUELDOS-JUNIO-2023_15\", \"date\": \"2023-01-01\", \"amount\": 910201.6, \"budget_lines\": []}"
+      },
+      "source_file": "pdf_177_SUELDOS-JUNIO-2023_15_structured.json"
+    },
+    {
+      "metadata": {
+        "filename": "pdf_178_SUELDOS-MAYO-2023_15.pdf",
+        "title": "Pdf 178 Sueldos Mayo 2023 15",
+        "document_type": "PERSONAL",
+        "date": "2023-01-01",
+        "year": 2023,
+        "amount": 827456.0,
+        "currency": "ARS",
+        "budget_lines_count": 0,
+        "extraction_method": "ocrmypdf+simple_extraction",
+        "processed_date": "2025-10-13T20:02:39.720987",
+        "has_tables": false,
+        "text_length": 0,
+        "json_file": "pdf_178_SUELDOS-MAYO-2023_15_structured.json"
+      },
+      "content": {
+        "filename": "pdf_178_SUELDOS-MAYO-2023_15.pdf",
+        "processed_date": "2025-10-13T20:02:39.720987",
+        "document_type": "PERSONAL",
+        "title": "Pdf 178 Sueldos Mayo 2023 15",
+        "date": "2023-01-01",
+        "amount": 827456.0,
+        "currency": "ARS",
+        "entities": [],
+        "categories": [
+          "PERSONAL"
+        ],
+        "budget_lines": [],
+        "text_content": "CUADRO DE VALORES SUELDOS BASICOS BRUTOS:\n\nMODULO\nCODIGO\n\nCARGO\n\nESCALAFONARIO\n\n$\n\nCANT\n\n184,70\n\nMAYO\n\nMODULOS\n\n01 - SUPERIOR\n\n01.50.09\n\nCONCEJALES/AS\n\nS\n\n172.386,67\n\n01.56.05\n\nSECRETARIOS/AS\n\nS\n\n465.444,00\n\nINTENDENTE\n\nS\n\n827.456,00\n\n01.59.01\n\n02 - JERARQUICO\n\n02.02.10\n\nCOORDINADOR\n\nS\n\n206.864,00\n\n02.13.10\n\nINSPECTOR V - C9\n\n467\n\nS\n\n86.254,90\n\n02.18.10\n\nINSPECTOR IV - C11\n\n500\n\nS\n\n92.350,00\n\n02.24.10\n\nINSPECTOR 11! - C13\n\n538\n\nS\n\n99.368,60\n\n02.31.10\n\nINSPECTOR || - C17\n\n590\n\nS\n\n108.973,00\n\n02.35.10\n\nINSPECTOR | - C18\n\n620\n\nS\n\n114.514,00\n\n02.38.10\n\nJERARQUICO JEFE DE SECCION C19\n\n638\n\nS\n\n117.838,60\n\n02.39.10\n\nJERARQUICO JEFE DE DIVISION Il - C20\n\n666\n\nS\n\n123.010,20\n\n02.44.10\n\nJERARQUICO JEFE DE DIVISION | - C24\n\n790\n\nS\n\n145.913,00\n\n02.45.10\n\nJERARQUICO JEFE DE DEPARTAMENTO ll C25\n\n850\n\nS\n\n156.995,00\n\n02.47.10\n\nJERARQUICO JEFE DE DEPARTAMENTO| - C27\n\n960\n\nS\n\n177.312,00\n\n02.52.10\n\nJEFE DE AREA\n\n1064\n\nS\n\n196.520,80\n\n02.53.10\n\nDIRECTOR\n\nS\n\n336.154,00\n\n02.54.03\n\nJEFE DE COMPRAS\n\nS\n\n336.154,00\n\n02.55.04\n\nTESORERO\n\nS\n\n336.154,00\n\n02.57.06\n\nCONTADOR\n\nS\n\n387.870,00\n\n02.60.07\n\nDELEGADOS MUNICIPALES\n\nS\n\n206.864,00\n\n02.72.10\n\nCOORDINADOR\n\nS\n\n206.864,00\n\n03 - PROFESIONAL\n\n03.21.11\n\nPROFESIONAL V - C13\n\n538\n\nS\n\n99.368,60\n\n03.27.11\n\nPROFESIONAL IV - C15\n\n555\n\nS\n\n102.508,50\n\n03.33.11\n\nPROFESIONAL lll - C18\n\n620\n\nS\n\n114.514,00\n\n03.41.11\n\nPROFESIONAL II - C22\n\n760\n\nS\n\n140.372,00\n\n03.43.11\n\nPROFESIONAL | - C24\n\n790\n\nS\n\n145.913,00\n\n04 - TECNICOS\n\n03.11.12\n\nTECNICO Y - C9\n\n467\n\nS\n\n86.254,90\n\n03.16.12\n\nTECNICO IV - C11\n\n500\n\nS\n\n92.350,00\n\n03.22.12\n\nTECNICO I!I.. C13\n\n538\n\nS\n\n99.368,60\n\n03.29.12\n\nTECNICO ll - C17\n\n590\n\nS\n\n108.973,00\n\n03.37.12\n\nTECNICO| - C19\n\n638\n\nS\n\n117.838,60\n\n05 - ADMINISTRATIVO\n\n05.12.13\n\nADMINISTRTIVO Y - C9\n\n467\n\nS\n\n86.254,90\n\n05.17.13\n\nADMINISTRATIVO IV - C11\n\n500\n\nS\n\n92.350,00\n\n05.23.13\n\nADMINISTRATIVO lIl - C13\n\n538\n\nS\n\n99.368,60\n\n05.30.13\n\nADMINISTRATIVO 1| - C17\n\n590\n\nS\n\n108.973,00\n\n05.34.13\n\nADMINISTRATIVO| - C18\n\n620\n\nS\n\n114.514,00\n\n06 - OBRERO\n\n06.14.14\n\nOBRERO V - C9\n\n467\n\nS\n\n86.254,90\n\n06.19.14\n\nOBRERO IV - C11\n\n500\n\nS\n\n92.350,00\n\n06.25.14\n\nOBRERO ll! - C13\n\n538\n\nS\n\n99.368,60\n\n06.32.14\n\nOBRERO ll - C17\n\n590\n\nS\n\n108.973,00\n\nOBRERO| - C18\n\n620\n\nS\n\n114.514,00\n\n88.656,00\n\n06.36.14\n\n07 - SERVICIOS\n\n07.10.15\n\nSERVICIO IV - C8\n\n480\n\nS\n\n07.20.15\n\nSERVICIO l1I - C12\n\n520\n\nS\n\n96.044,00\n\n07.26.15\n\nSERVICIO ll - C14\n\n545\n\nS\n\n100.661,50\n\nSERVICIO | - C16\n\n560\n\nS\n\n103.432,00\n\nS\n\n86.482,14\n\n07.28.15\n\n09 - TEMPORARIOS\n\n09.62.17\n\nTEMPORARIO\n\n\f",
+        "raw_content": "{\"document_type\": \"PERSONAL\", \"title\": \"pdf_178_SUELDOS-MAYO-2023_15\", \"date\": \"2023-01-01\", \"amount\": 827456.0, \"budget_lines\": []}"
+      },
+      "source_file": "pdf_178_SUELDOS-MAYO-2023_15_structured.json"
+    },
+    {
+      "metadata": {
+        "filename": "pdf_179_SUELDOS-MARZO-2023.pdf",
+        "title": "Pdf 179 Sueldos Marzo 2023",
+        "document_type": "PERSONAL",
+        "date": "2023-01-01",
+        "year": 2023,
+        "amount": 752192.0,
+        "currency": "ARS",
+        "budget_lines_count": 0,
+        "extraction_method": "ocrmypdf+simple_extraction",
+        "processed_date": "2025-10-13T20:02:44.239121",
+        "has_tables": false,
+        "text_length": 0,
+        "json_file": "pdf_179_SUELDOS-MARZO-2023_structured.json"
+      },
+      "content": {
+        "filename": "pdf_179_SUELDOS-MARZO-2023.pdf",
+        "processed_date": "2025-10-13T20:02:44.239121",
+        "document_type": "PERSONAL",
+        "title": "Pdf 179 Sueldos Marzo 2023",
+        "date": "2023-01-01",
+        "amount": 752192.0,
+        "currency": "ARS",
+        "entities": [],
+        "categories": [
+          "PERSONAL"
+        ],
+        "budget_lines": [],
+        "text_content": "CUADRO DE VALORES SUELDOS BASICOS BRUTOS:\n\nMODULO\n[e0]»][cjo)\n\nCARGO\n\nESCALAFONARIO\n\n$\n\n167,90\n\nCANT\nMODULOS\n\n01 - SUPERIOR\n\n01.50.09\n\nCONCEJALES/AS\n\nS\n\n156.706,67\n\n01.56.05\n\nSECRETARIOS/AS\n\nS\n\n423.108,00\n\nINTENDENTE\n\nS\n\n752.192,00\n\n01.59.01\n\n02 - JERARQUICO\n\n02.02.10\n\nCOORDINADOR\n\nS\n\n188.048,00\n\n02.13.10\n\nINSPECTOR V - C9\n\n467\n\nS\n\n78.409,30\n\n02.18.10\n\nINSPECTOR IV - C11\n\n500\n\nS\n\n83.950,00\n\n02.24.10\n\nINSPECTOR 11! - C13\n\n538\n\nS\n\n90.330,20\n\n02.31.10\n\nINSPECTOR || - C17\n\n590\n\nS\n\n99.061,00\n\n02.35.10\n\nINSPECTOR | - C18\n\n620\n\nS\n\n104.098,00\n\n02.38.10\n\nJERARQUICO JEFE DE SECCION C19\n\n638\n\nS\n\n107.120,20\n\n02.39.10\n\nJERARQUICO JEFE DE DIVISION Il - C20\n\n666\n\nS\n\n111.821,40\n\n02.44.10\n\nJERARQUICO JEFE DE DIVISION | - C24\n\n790\n\nS\n\n132.641,00\n\n02.45.10\n\nJERARQUICO JEFE DE DEPARTAMENTO ll C25\n\n850\n\nS\n\n142.715,00\n\n02.47.10\n\nJERARQUICO JEFE DE DEPARTAMENTO| - C27\n\n960\n\nS\n\n161.184,00\n\n02.52.10\n\nJEFE DE AREA\n\n1064\n\nS\n\n178.645,60\n\n02.53.10\n\nDIRECTOR\n\nS\n\n305.578,00\n\n02.54.03\n\nJEFE DE COMPRAS\n\nS\n\n305.578,00\n\n02.55.04\n\nTESORERO\n\nS\n\n305.578,00\n\n02.57.06\n\nCONTADOR\n\nS\n\n352.590,00\n\n02.60.07\n\nDELEGADOS MUNICIPALES\n\nS\n\n188.048,00\n\n02.72.10\n\nCOORDINADOR\n\nS\n\n188.048,00\n\n90.330,20\n\n03 - PROFESIONAL\n\n03.21.11\n\nPROFESIONAL V - C13\n\n538\n\nS\n\n03.27.11\n\nPROFESIONAL IV - C15\n\n555\n\nS\n\n93.184,50\n\n03.33.11\n\nPROFESIONAL lll - C18\n\n620\n\nS\n\n104.098,00\n\n03.41.11\n\nPROFESIONAL II - C22\n\n760\n\nS\n\n127.604,00\n\n03.43.11\n\nPROFESIONAL | - C24\n\n790\n\nS\n\n132.641,00\n\n04 - TECNICOS\n\n03.11.12\n\nTECNICO Y - C9\n\n467\n\nS\n\n78.409,30\n\n03.16.12\n\nTECNICO IV - C11\n\n500\n\nS\n\n83.950,00\n\n03.22.12\n\nTECNICO I!I.. C13\n\n538\n\nS\n\n90.330,20\n\n03.29.12\n\nTECNICO ll - C17\n\n590\n\nS\n\n99.061,00\n\n03.37.12\n\nTECNICO| - C19\n\n638\n\nS\n\n107.120,20\n\n05.12.13\n\nADMINISTRTIVO Y - C9\n\n467\n\nS\n\n78.409,30\n\n05.17.13\n\nADMINISTRATIVO IV - C11\n\n500\n\nS\n\n83.950,00\n\n05.23.13\n\nADMINISTRATIVO lIl - C13\n\n538\n\nS\n\n90.330,20\n\n05.30.13\n\nADMINISTRATIVO 1| - C17\n\n590\n\nS\n\n99.061,00\n\n05.34.13\n\nADMINISTRATIVO| - C18\n\n620\n\nS\n\n104.098,00\n\n05 - ADMINISTRATIVO\n\n06 - OBRERO\n\n06.14.14\n\nOBRERO V - C9\n\n467\n\nS\n\n78.409,30\n\n06.19.14\n\nOBRERO IV - C11\n\n500\n\nS\n\n83.950,00\n\n06.25.14\n\nOBRERO ll! - C13\n\n538\n\nS\n\n90.330,20\n\n06.32.14\n\nOBRERO ll - C17\n\n590\n\nS\n\n99.061,00\n\n06.36.14\n\nOBRERO| - C18\n\n620\n\nS\n\n104.098,00\n\n07 - SERVICIOS\n\n07.10.15\n\nSERVICIO IV - C8\n\n480\n\nS\n\n80.592,00\n\n07.20.15\n\nSERVICIO l1I - C12\n\n520\n\nS\n\n87.308,00\n\n07.26.15\n\nSERVICIO ll - C14\n\n545\n\nS\n\n91.505,50\n\n07.28.15\n\nSERVICIO | - C16\n\n560\n\nS\n\n94.024,00\n\nS\n\n78.615,87\n\n09 - TEMPORARIOS\n\n09.62.17\n\nTEMPORARIO\n\n\f",
+        "raw_content": "{\"document_type\": \"PERSONAL\", \"title\": \"pdf_179_SUELDOS-MARZO-2023\", \"date\": \"2023-01-01\", \"amount\": 752192.0, \"budget_lines\": []}"
+      },
+      "source_file": "pdf_179_SUELDOS-MARZO-2023_structured.json"
+    },
+    {
+      "metadata": {
+        "filename": "pdf_180_SUELDOS-ENERO-2023_15.pdf",
+        "title": "Pdf 180 Sueldos Enero 2023 15",
+        "document_type": "PERSONAL",
+        "date": "2023-01-01",
+        "year": 2023,
+        "amount": 626841.6,
+        "currency": "ARS",
+        "budget_lines_count": 0,
+        "extraction_method": "ocrmypdf+simple_extraction",
+        "processed_date": "2025-10-13T20:02:51.016289",
+        "has_tables": false,
+        "text_length": 0,
+        "json_file": "pdf_180_SUELDOS-ENERO-2023_15_structured.json"
+      },
+      "content": {
+        "filename": "pdf_180_SUELDOS-ENERO-2023_15.pdf",
+        "processed_date": "2025-10-13T20:02:51.016289",
+        "document_type": "PERSONAL",
+        "title": "Pdf 180 Sueldos Enero 2023 15",
+        "date": "2023-01-01",
+        "amount": 626841.6,
+        "currency": "ARS",
+        "entities": [],
+        "categories": [
+          "PERSONAL"
+        ],
+        "budget_lines": [],
+        "text_content": "CUADRO DE VALORES SUELDOS BASICOS BRUTOS:\n\nMODULO\n[e0]»][cjo)\n\nCARGO\n\nESCALAFONARIO\n\n$\n\n139,92\n\nCANT\nMODULOS\n\n01 - SUPERIOR\n\n01.50.09\n\nCONCEJALES/AS\n\nS\n\n130.592,00\n\n01.56.05\n\nSECRETARIOS/AS\n\nS\n\n352.598,40\n\nINTENDENTE\n\nS\n\n626.841,60\n\n01.59.01\n\n02 - JERARQUICO\n\n02.02.10\n\nCOORDINADOR\n\nS\n\n156.710,40\n\n02.13.10\n\nINSPECTOR V - C9\n\n467\n\nS\n\n65.342,64\n\n02.18.10\n\nINSPECTOR IV - C11\n\n500\n\nS\n\n69.960,00\n\n02.24.10\n\nINSPECTOR 11! - C13\n\n538\n\nS\n\n75.276,96\n\n02.31.10\n\nINSPECTOR || - C17\n\n590\n\nS\n\n82.552,80\n\n02.35.10\n\nINSPECTOR | - C18\n\n620\n\nS\n\n86.750,40\n\n02.38.10\n\nJERARQUICO JEFE DE SECCION C19\n\n638\n\nS\n\n89.268,96\n\n02.39.10\n\nJERARQUICO JEFE DE DIVISION Il - C20\n\n666\n\nS\n\n93.186,72\n\n02.44.10\n\nJERARQUICO JEFE DE DIVISION | - C24\n\n790\n\nS\n\n110.536,80\n\n02.45.10\n\nJERARQUICO JEFE DE DEPARTAMENTO ll C25\n\n850\n\nS\n\n118.932,00\n\n02.47.10\n\nJERARQUICO JEFE DE DEPARTAMENTO| - C27\n\n960\n\nS\n\n134.323,20\n\n02.52.10\n\nJEFE DE AREA\n\n1064\n\nS\n\n148.874,88\n\n02.53.10\n\nDIRECTOR\n\nS\n\n254.654,40\n\n02.54.03\n\nJEFE DE COMPRAS\n\nS\n\n254.654,40\n\n02.55.04\n\nTESORERO\n\nS\n\n254.654,40\n\n02.57.06\n\nCONTADOR\n\nS\n\n293.832,00\n\n02.60.07\n\nDELEGADOS MUNICIPALES\n\nS\n\n156.710,40\n\n02.72.10\n\nCOORDINADOR\n\nS\n\n156.710,40\n\n03 - PROFESIONAL\n\n03.21.11\n\nPROFESIONAL V - C13\n\n538\n\nS\n\n75.276,96\n\n03.27.11\n\nPROFESIONAL IV - C15\n\n555\n\nS\n\n77.655,60\n\n03.33.11\n\nPROFESIONAL lll - C18\n\n620\n\nS\n\n86.750,40\n\n03.41.11\n\nPROFESIONAL II - C22\n\n760\n\nS\n\n106.339,20\n\nPROFESIONAL | - C24\n\n790\n\nS\n\n110.536,80\n\n03.43.11\n\n04 - TECNICOS\n\n03.11.12\n\nTECNICO Y - C9\n\n467\n\nS\n\n65.342,64\n\n03.16.12\n\nTECNICO IV - C11\n\n500\n\nS\n\n69.960,00\n\n03.22.12\n\nTECNICO I!I.. C13\n\n538\n\nS\n\n75.276,96\n\n03.29.12\n\nTECNICO ll - C17\n\n590\n\nS\n\n82.552,80\n\n03.37.12\n\nTECNICO| - C19\n\n638\n\nS\n\n89.268,96\n\n05 - ADMINISTRATIVO\n\n05.12.13\n\nADMINISTRTIVO Y - C9\n\n467\n\nS\n\n65.342,64\n\n05.17.13\n\nADMINISTRATIVO IV - C11\n\n500\n\nS\n\n69.960,00\n\n05.23.13\n\nADMINISTRATIVO lIl - C13\n\n538\n\nS\n\n75.276,96\n\n05.30.13\n\nADMINISTRATIVO 1| - C17\n\n590\n\nS\n\n82.552,80\n\n05.34.13\n\nADMINISTRATIVO| - C18\n\n620\n\nS\n\n86.750,40\n\n06 - OBRERO\n\n06.14.14\n\nOBRERO V - C9\n\n467\n\nS\n\n65.342,64\n\n06.19.14\n\nOBRERO IV - C11\n\n500\n\nS\n\n69.960,00\n\n06.25.14\n\nOBRERO ll! - C13\n\n538\n\nS\n\n75.276,96\n\n06.32.14\n\nOBRERO ll - C17\n\n590\n\nS\n\n82.552,80\n\n06.36.14\n\nOBRERO| - C18\n\n620\n\nS\n\n86.750,40\n\n07 - SERVICIOS\n\n07.10.15\n\nSERVICIO IV - C8\n\n480\n\nS\n\n67.161,60\n\n07.20.15\n\nSERVICIO l1I - C12\n\n520\n\nS\n\n72.758,40\n\n07.26.15\n\nSERVICIO ll - C14\n\n545\n\nS\n\n76.256,40\n\n07.28.15\n\nSERVICIO | - C16\n\n560\n\nS\n\n78.355,20\n\nS\n\n65.514,78\n\n09 - TEMPORARIOS\n\n09.62.17\n\nTEMPORARIO\n\n\f",
+        "raw_content": "{\"document_type\": \"PERSONAL\", \"title\": \"pdf_180_SUELDOS-ENERO-2023_15\", \"date\": \"2023-01-01\", \"amount\": 626841.6, \"budget_lines\": []}"
+      },
+      "source_file": "pdf_180_SUELDOS-ENERO-2023_15_structured.json"
+    }
+  ]
+}

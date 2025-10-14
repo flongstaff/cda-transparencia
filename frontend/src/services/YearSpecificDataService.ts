@@ -259,6 +259,22 @@ class YearSpecificDataService {
   }
 
   /**
+   * Load JSON data from a path
+   */
+  private async loadJsonData(path: string): Promise<any> {
+    try {
+      const response = await fetch(path);
+      if (!response.ok) {
+        throw new Error(`Failed to load ${path}: ${response.status}`);
+      }
+      return await response.json();
+    } catch (error) {
+      console.warn(`[YEAR SPECIFIC DATA SERVICE] Failed to load JSON data from ${path}:`, error);
+      return null;
+    }
+  }
+
+  /**
    * Get year-specific data with caching
    */
   public async getYearData(year: number): Promise<YearData> {
@@ -267,13 +283,68 @@ class YearSpecificDataService {
       return this.cache.get(year)!;
     }
 
-    // Generate realistic data for this year
-    const yearData = this.generateRealisticDataForYear(year);
+    try {
+      console.log(`[YEAR SPECIFIC DATA SERVICE] Loading real data for year ${year}...`);
 
-    // Cache the result
-    this.cache.set(year, yearData);
+      // Load consolidated data from public/data/consolidated/{year}/
+      const basePath = `/data/consolidated/${year}/`;
+      
+      // Load individual JSON files
+      const [budgetData, treasuryData, debtData, contractsData, salariesData, documentsData] = await Promise.all([
+        this.loadJsonData(`${basePath}budget.json`),
+        this.loadJsonData(`${basePath}treasury.json`),
+        this.loadJsonData(`${basePath}debt.json`),
+        this.loadJsonData(`${basePath}contracts.json`),
+        this.loadJsonData(`${basePath}salaries.json`),
+        this.loadJsonData(`${basePath}documents.json`)
+      ]);
 
-    return yearData;
+      // Transform the data to match YearData interface
+      const yearData: YearData = {
+        budget: {
+          year,
+          totalBudget: budgetData?.total_budget || budgetData?.totalBudget || 0,
+          totalExecuted: budgetData?.total_executed || budgetData?.totalExecuted || 0,
+          executionRate: budgetData?.execution_rate || budgetData?.executionRate || 0,
+          quarterlyData: budgetData?.quarterly_data || budgetData?.quarterlyData || []
+        },
+        treasury: {
+          totalRevenue: treasuryData?.total_revenue || treasuryData?.income || 0,
+          taxRevenue: treasuryData?.tax_revenue || 0,
+          nonTaxRevenue: treasuryData?.non_tax_revenue || 0,
+          transfers: treasuryData?.transfers || 0
+        },
+        debt: {
+          totalDebt: debtData?.total_debt || debtData?.totalDebt || 0,
+          debtService: debtData?.debt_service || debtData?.debtService || 0,
+          interestRate: debtData?.interest_rate || debtData?.interestRate || 0
+        },
+        contracts: Array.isArray(contractsData) ? contractsData : [],
+        salaries: {
+          totalPayroll: salariesData?.totalPayroll || salariesData?.total_payroll || 0,
+          employeeCount: salariesData?.employeeCount || salariesData?.employee_count || 0,
+          averageSalary: salariesData?.averageSalary || salariesData?.average_salary || 0
+        },
+        documents: Array.isArray(documentsData) ? documentsData : []
+      };
+
+      // Cache the result
+      this.cache.set(year, yearData);
+
+      console.log(`[YEAR SPECIFIC DATA SERVICE] Real data loaded for year ${year}`);
+      return yearData;
+
+    } catch (error) {
+      console.error(`[YEAR SPECIFIC DATA SERVICE] Error loading real data for year ${year}, falling back to mock data:`, error);
+      
+      // Fallback to generate realistic data for this year
+      const yearData = this.generateRealisticDataForYear(year);
+
+      // Cache the result
+      this.cache.set(year, yearData);
+
+      return yearData;
+    }
   }
 
   /**

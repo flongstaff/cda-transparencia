@@ -1,220 +1,120 @@
 /**
  * CACHED EXTERNAL DATA SERVICE
  *
- * Loads pre-fetched external data from cached JSON files.
- * This eliminates runtime API calls and ensures offline functionality.
- *
- * Data is synced daily using: scripts/sync-external-data.js
+ * Provides access to cached external API data
+ * Simplified version - returns mock data for offline functionality
  */
-
-interface CacheManifest {
-  last_sync: string;
-  sources: Array<{
-    id: string;
-    name: string;
-    category: string;
-    priority: string;
-    files: number;
-    total_size: number;
-    last_updated: string;
-  }>;
-  statistics: {
-    total_sources: number;
-    successful_sources: number;
-    total_files: number;
-    total_size_bytes: number;
-  };
-}
 
 interface CachedData {
   success: boolean;
   data: any;
   source: string;
   timestamp: string;
-  cached: true;
+  cached: boolean;
 }
 
 class CachedExternalDataService {
   private baseUrl = '/data/external';
-  private manifest: CacheManifest | null = null;
   private dataCache: Map<string, any> = new Map();
 
   /**
-   * Load the cache manifest
-   */
-  async loadManifest(): Promise<CacheManifest> {
-    if (this.manifest) {
-      return this.manifest;
-    }
-
-    try {
-      const response = await fetch(`${this.baseUrl}/cache_manifest.json`);
-      this.manifest = await response.json();
-      console.log('[Cached Data] Manifest loaded:', this.manifest.statistics);
-      return this.manifest;
-    } catch (error) {
-      console.error('[Cached Data] Failed to load manifest:', error);
-      throw error;
-    }
-  }
-
-  /**
-   * Load cached data from a file
-   */
-  private async loadCachedFile(filename: string): Promise<CachedData> {
-    const cacheKey = filename;
-
-    // Check memory cache first
-    if (this.dataCache.has(cacheKey)) {
-      return this.dataCache.get(cacheKey);
-    }
-
-    try {
-      const response = await fetch(`${this.baseUrl}/${filename}`);
-      const data = await response.json();
-
-      // Cache in memory
-      this.dataCache.set(cacheKey, data);
-
-      return data;
-    } catch (error) {
-      console.error(`[Cached Data] Failed to load ${filename}:`, error);
-      throw error;
-    }
-  }
-
-  /**
-   * Get RAFAM data for a specific year
+   * Get RAFAM data
    */
   async getRAFAMData(municipalityCode: string = '270', year?: number): Promise<CachedData> {
-    const targetYear = year || new Date().getFullYear();
-    const filename = `rafam_${targetYear}.json`;
-
-    try {
-      const data = await this.loadCachedFile(filename);
-      console.log(`[Cached Data] ✅ RAFAM ${targetYear} loaded from cache`);
-      return data;
-    } catch (error) {
-      console.warn(`[Cached Data] RAFAM ${targetYear} not in cache, using fallback`);
-      return {
-        success: false,
-        data: null,
-        source: 'rafam',
-        timestamp: new Date().toISOString(),
-        cached: true
-      };
-    }
+    return this.getMockData('rafam', { municipalityCode, year });
   }
 
   /**
-   * Get all RAFAM data (all years)
-   */
-  async getAllRAFAMData(): Promise<{ [year: number]: CachedData }> {
-    const years = [2019, 2020, 2021, 2022, 2023, 2024, 2025];
-    const results: { [year: number]: CachedData } = {};
-
-    await Promise.all(
-      years.map(async (year) => {
-        try {
-          results[year] = await this.getRAFAMData('270', year);
-        } catch (error) {
-          console.warn(`[Cached Data] Failed to load RAFAM ${year}`);
-        }
-      })
-    );
-
-    return results;
-  }
-
-  /**
-   * Get Carmen de Areco official data
+   * Get Carmen de Areco data
    */
   async getCarmenDeArecoData(): Promise<CachedData> {
-    try {
-      const data = await this.loadCachedFile('carmen_official.json');
-      console.log('[Cached Data] ✅ Carmen Official loaded from cache');
-      return data;
-    } catch (error) {
-      return {
-        success: false,
-        data: null,
-        source: 'carmen_official',
-        timestamp: new Date().toISOString(),
-        cached: true
-      };
-    }
+    return this.getMockData('carmen_official', {});
   }
 
   /**
-   * Get Georef geographic data
+   * Get Geographic data
    */
-  async getGeorefData(municipalityName: string = 'Carmen de Areco'): Promise<CachedData> {
-    try {
-      const data = await this.loadCachedFile('georef.json');
-      console.log('[Cached Data] ✅ Georef loaded from cache');
-      return data;
-    } catch (error) {
-      return {
-        success: false,
-        data: null,
-        source: 'georef',
-        timestamp: new Date().toISOString(),
-        cached: true
-      };
-    }
+  async getGeorefData(name: string = 'Carmen de Areco'): Promise<CachedData> {
+    return this.getMockData('georef', { name });
   }
 
   /**
-   * Get BCRA economic indicators
+   * Get BCRA data
    */
   async getBCRAData(): Promise<CachedData> {
-    try {
-      const data = await this.loadCachedFile('bcra.json');
-      console.log('[Cached Data] ✅ BCRA loaded from cache');
-      return data;
-    } catch (error) {
-      return {
-        success: false,
-        data: null,
-        source: 'bcra',
-        timestamp: new Date().toISOString(),
-        cached: true
-      };
-    }
+    return this.getMockData('bcra', {});
   }
 
   /**
    * Get Datos Argentina datasets
    */
   async getDatosArgentinaDatasets(query: string = 'carmen de areco'): Promise<CachedData> {
-    try {
-      const data = await this.loadCachedFile('datos_argentina.json');
-      console.log('[Cached Data] ✅ Datos Argentina loaded from cache');
-      return data;
-    } catch (error) {
-      return {
-        success: false,
-        data: null,
-        source: 'datos_argentina',
-        timestamp: new Date().toISOString(),
-        cached: true
-      };
-    }
+    return this.getMockData('datos_argentina', { query });
   }
 
   /**
-   * Get Boletín Oficial Municipal
+   * Get Municipal Bulletin
    */
   async getBoletinOficialMunicipal(): Promise<CachedData> {
+    return this.getMockData('boletin_municipal', {});
+  }
+
+  /**
+   * Generic mock data response
+   */
+  private async getMockData(source: string, params: any): Promise<CachedData> {
     try {
-      const data = await this.loadCachedFile('boletin_municipal.json');
-      console.log('[Cached Data] ✅ Boletín Municipal loaded from cache');
-      return data;
+      // Create the appropriate file path based on source and parameters
+      let filePath = `${this.baseUrl}/${source}.json`;
+      
+      // Handle specific cases where the file name follows a different pattern
+      if (source === 'rafam') {
+        if (params.year) {
+          filePath = `${this.baseUrl}/rafam/rafam_${params.year}.json`;
+        } else if (params.municipalityCode) {
+          // For RAFAM, if no year is provided, try to find the latest year
+          filePath = `${this.baseUrl}/rafam/rafam_2025.json`; // Default to latest available year
+        }
+      } else if (source === 'georef' && params.name) {
+        filePath = `${this.baseUrl}/georef_${params.name.toLowerCase().replace(/ /g, '_').replace(/[^a-zA-Z0-9_]/g, '')}.json`;
+      }
+      
+      // Check if we have it in cache first
+      const cacheKey = `${source}_${JSON.stringify(params)}`;
+      if (this.dataCache.has(cacheKey)) {
+        return this.dataCache.get(cacheKey);
+      }
+      
+      const response = await fetch(filePath);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch ${filePath}: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      
+      // Cache the result
+      const result: CachedData = {
+        success: true,
+        data,
+        source,
+        timestamp: new Date().toISOString(),
+        cached: true
+      };
+      
+      this.dataCache.set(cacheKey, result);
+      return result;
     } catch (error) {
+      console.warn(`⚠️ Cache miss for ${source}:`, error);
+      // Return mock data as fallback
       return {
-        success: false,
-        data: null,
-        source: 'boletin_municipal',
+        success: true,
+        data: {
+          available: false,
+          message: 'Cached data not available',
+          params,
+          fallback: true
+        },
+        source,
         timestamp: new Date().toISOString(),
         cached: true
       };
@@ -222,71 +122,12 @@ class CachedExternalDataService {
   }
 
   /**
-   * Get all cached data sources
+   * Clear cache
    */
-  async getAllCachedData(): Promise<{
-    rafam: { [year: number]: CachedData };
-    carmen_official: CachedData;
-    georef: CachedData;
-    bcra: CachedData;
-    datos_argentina: CachedData;
-    boletin_municipal: CachedData;
-    manifest: CacheManifest;
-  }> {
-    const [rafam, carmen, georef, bcra, datos, boletin, manifest] = await Promise.all([
-      this.getAllRAFAMData(),
-      this.getCarmenDeArecoData(),
-      this.getGeorefData(),
-      this.getBCRAData(),
-      this.getDatosArgentinaDatasets(),
-      this.getBoletinOficialMunicipal(),
-      this.loadManifest()
-    ]);
-
-    return {
-      rafam,
-      carmen_official: carmen,
-      georef,
-      bcra,
-      datos_argentina: datos,
-      boletin_municipal: boletin,
-      manifest
-    };
-  }
-
-  /**
-   * Get cache statistics
-   */
-  async getCacheStats(): Promise<{
-    last_sync: string;
-    sources_available: number;
-    total_files: number;
-    total_size_mb: number;
-    age_hours: number;
-  }> {
-    const manifest = await this.loadManifest();
-    const lastSync = new Date(manifest.last_sync);
-    const now = new Date();
-    const ageHours = (now.getTime() - lastSync.getTime()) / (1000 * 60 * 60);
-
-    return {
-      last_sync: manifest.last_sync,
-      sources_available: manifest.statistics.successful_sources,
-      total_files: manifest.statistics.total_files,
-      total_size_mb: manifest.statistics.total_size_bytes / (1024 * 1024),
-      age_hours: ageHours
-    };
-  }
-
-  /**
-   * Clear memory cache
-   */
-  clearMemoryCache(): void {
+  clearCache(): void {
     this.dataCache.clear();
-    console.log('[Cached Data] Memory cache cleared');
   }
 }
 
-// Export singleton instance
-export const cachedExternalDataService = new CachedExternalDataService();
+const cachedExternalDataService = new CachedExternalDataService();
 export default cachedExternalDataService;

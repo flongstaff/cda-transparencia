@@ -1,0 +1,579 @@
+{
+  "year": 2024,
+  "type": "personal",
+  "generated_at": "2025-10-14T10:18:12.328612",
+  "document_count": 2,
+  "total_amount": 5436659.2,
+  "documents": [
+    {
+      "metadata": {
+        "filename": "pdf_173_ESCALA-SALARIAL-OCTUBRE-2024_6.pdf",
+        "title": "Pdf 173 Escala Salarial Octubre 2024 6",
+        "document_type": "PERSONAL",
+        "date": "2024-01-01",
+        "year": 2024,
+        "amount": 3487456.0,
+        "currency": "ARS",
+        "budget_lines_count": 50,
+        "extraction_method": "ocrmypdf+simple_extraction",
+        "processed_date": "2025-10-13T20:02:13.174662",
+        "has_tables": false,
+        "text_length": 0,
+        "json_file": "pdf_173_ESCALA-SALARIAL-OCTUBRE-2024_6_structured.json"
+      },
+      "content": {
+        "filename": "pdf_173_ESCALA-SALARIAL-OCTUBRE-2024_6.pdf",
+        "processed_date": "2025-10-13T20:02:13.174662",
+        "document_type": "PERSONAL",
+        "title": "Pdf 173 Escala Salarial Octubre 2024 6",
+        "date": "2024-01-01",
+        "amount": 3487456.0,
+        "currency": "ARS",
+        "entities": [],
+        "categories": [
+          "PERSONAL"
+        ],
+        "budget_lines": [
+          {
+            "line_item": "$",
+            "amount": 3487456.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 167397.89,
+            "description": "-S"
+          },
+          {
+            "line_item": "-S",
+            "amount": 453369.28,
+            "description": "-S"
+          },
+          {
+            "line_item": "$",
+            "amount": 2866688.83,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 726553.33,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 34874.56,
+            "description": "-S"
+          },
+          {
+            "line_item": "-S",
+            "amount": 94451.93,
+            "description": "-S"
+          },
+          {
+            "line_item": "$",
+            "amount": 597226.84,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 1961694.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 94161.31,
+            "description": "-S"
+          },
+          {
+            "line_item": "-S",
+            "amount": 255020.22,
+            "description": "-S"
+          },
+          {
+            "line_item": "$",
+            "amount": 1612512.47,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 1634745.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 78467.76,
+            "description": "-S"
+          },
+          {
+            "line_item": "-S",
+            "amount": 212516.85,
+            "description": "-S"
+          },
+          {
+            "line_item": "$",
+            "amount": 1343760.39,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 1416779.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 68005.39,
+            "description": "-S"
+          },
+          {
+            "line_item": "-S",
+            "amount": 184181.27,
+            "description": "-S"
+          },
+          {
+            "line_item": "$",
+            "amount": 1164592.34,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 1198813.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 57543.02,
+            "description": "-S"
+          },
+          {
+            "line_item": "-S",
+            "amount": 155845.69,
+            "description": "-S"
+          },
+          {
+            "line_item": "$",
+            "amount": 985424.29,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 871864.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 41849.47,
+            "description": "-S"
+          },
+          {
+            "line_item": "-S",
+            "amount": 113342.32,
+            "description": "-S"
+          },
+          {
+            "line_item": "$",
+            "amount": 716672.21,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 871864.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 41849.47,
+            "description": "-S"
+          },
+          {
+            "line_item": "-S",
+            "amount": 113342.32,
+            "description": "-S"
+          },
+          {
+            "line_item": "$",
+            "amount": 716672.21,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 828270.8,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 39757.0,
+            "description": "-S"
+          },
+          {
+            "line_item": "-S",
+            "amount": 107675.2,
+            "description": "-S"
+          },
+          {
+            "line_item": "$",
+            "amount": 680838.6,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 1634745.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 78467.76,
+            "description": "-S"
+          },
+          {
+            "line_item": "-S",
+            "amount": 212516.85,
+            "description": "-S"
+          },
+          {
+            "line_item": "$",
+            "amount": 1343760.39,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 1416779.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 68005.39,
+            "description": "-S"
+          },
+          {
+            "line_item": "-S",
+            "amount": 184181.27,
+            "description": "-S"
+          },
+          {
+            "line_item": "$",
+            "amount": 1164592.34,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 1416779.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 68005.39,
+            "description": "-S"
+          },
+          {
+            "line_item": "-S",
+            "amount": 184181.27,
+            "description": "-S"
+          },
+          {
+            "line_item": "$",
+            "amount": 1164592.34,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 1416779.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-S",
+            "amount": 68005.39,
+            "description": "-S"
+          }
+        ],
+        "text_content": "CARGOS\n\nMETODO DE\n\nSUELDO\n\nCALCULO\n\nBRUTO\n\nIOMA 4,8%\n\nDEDUCCIONES\nIPS 13%\n\nSUELDO NETO\n\nPERSONAL SUPERIOR\n\nSEGÚN LOM\n\nINTENDENTE\n\nSEGÚN LOM\n\n$ 3.487.456,00\n\n-S 167.397,89\n\n-S 453.369,28\n\n$ 2.866.688,83\n\nCONCEJALES\n\nSEGÚN LOM\n\n$ 726.553,33\n\n-S 34.874,56\n\n-S 94.451,93\n\n$ 597.226,84\n\nPERSONAL SUPERIOR\n\nCANT SUEL INGR\n\nSECRETARIOS\n\n9,0\n\n$ 1.961.694,00\n\n-S 94.161,31\n\n-S 255.020,22\n\n$ 1.612.512,47\n\nSUBSECRETARIOS\n\n7,5\n\n$ 1.634.745,00\n\n-S 78.467,76\n\n-S 212.516,85\n\n$ 1.343.760,39\n\nDIRECTOR\n\n6,5\n\n$ 1.416.779,00\n\n-S 68.005,39\n\n-S 184.181,27\n\n$ 1.164.592,34\n\nSUBDIRECTOR\n\n5,5\n\n$ 1.198.813,00\n\n-S 57.543,02\n\n-S 155.845,69\n\n$ 985.424,29\n\nCOORDINADOR\n\n4,0\n\n$ 871.864,00\n\n-S 41.849,47\n\n-S 113.342,32\n\n$ 716.672,21\n\nDELEGADO\n\n4,0\n\n$ 871.864,00\n\n-S 41.849,47\n\n-S 113.342,32\n\n$ 716.672,21\n\nJEFES DE AREA\n\n3,8\n\n$ 828.270,80\n\n-S 39.757,00\n\n-S 107.675,20\n\n$ 680.838,60\n\nDE LEY\nCONTADOR\n\n7,5\n\n$ 1.634.745,00\n\n-S 78.467,76\n\n-S 212.516,85\n\n$ 1.343.760,39\n\nJUEZ DE FALTAS\n\n6,5\n\n$ 1.416.779,00\n\n-S 68.005,39\n\n-S 184.181,27\n\n$ 1.164.592,34\n\nTESORERO\n\n6,5\n\n$ 1.416.779,00\n\n-S 68.005,39\n\n-S 184.181,27\n\n$ 1.164.592,34\n\nJEFE DE COMPRAS\n\n6,5\n\n$ 1.416.779,00\n\n-S 68.005,39\n\n-S 184.181,27\n\n$ 1.164.592,34\n\n02 - JERARQUICO\n\nCANT MODULOS\n\nJERÁRQUICO JEFE DE DEPARTAMENTO| - C27\n\n960,00\n\n$ 747.312,00\n\n-S 35.870,98\n\n-S 97.150,56\n\n$ 614.290,46\n\nJERÁRQUICO JEFE DE DEPARTAMENTO II C25\n\n850,00\n\n$ 661.682,50\n\n-S 31.760,76\n\n-S 86.018,73\n\n$ 543.903,02\n\nJERARQUICO JEFE DE DIVISION | - C24\n\n790,00\n\n$ 614.975,50\n\n-S 29.518,82\n\n-S 79.946,82\n\n$ 505.509,86\n\nJERARQUICO JEFE DE DIVISION ll - C20\n\n666,00\n\n$ 518.447,70\n\n-S 24.885,49\n\n-S 67.398,20\n\n$ 426.164,01\n\nJERARQUICO JEFE DE SECCION C19\n\n638,00\n\n$ 496.651,10\n\n-S 23.839,25\n\n-S 64.564,64\n\n$ 408.247,20\n\nINSPECTOR | - C18\n\n620,00\n\n$ 482.639,00\n\n-S 23.166,67\n\n-S 62.743,07\n\n$ 396.729,26\n\nINSPECTOR ll - C17\n\n590,00\n\n$ 459.285,50\n\n-S 22.045,70\n\n-S 59.707,12\n\n$ 377.532,68\n\nINSPECTOR lll - C13\n\n538,00\n\n$ 418.806,10\n\n-S 20.102,69\n\n-S 54.444,79\n\n$ 344.258,61\n\nINSPECTOR IV - C11\n\n500,00\n\n$ 389.225,00\n\n-S 18.682,80\n\n-S 50.599,25\n\n$ 319.942,95\n\nINSPECTOR V - C9\n\n467,00\n\n$ 363.536,15\n\n-S 17.449,74\n\n-S 47.259,70\n\n$ 298.826,72\n\nPROFESIONAL V - C13\n\n538,00\n\n$ 418.806,10\n\n-S 20.102,69\n\n-S 54.444,79\n\n$ 344.258,61\n\nPROFESIONAL IV - C15\n\n555,00\n\n$ 432.039,75\n\n-S 20.737,91\n\n-S 56.165,17\n\n$ 355.136,67\n\nPROFESIONAL lll - C18\n\n620,00\n\n$ 482.639,00\n\n-S 23.166,67\n\n-S 62.743,07\n\n$ 396.729,26\n\nPROFESIONAL ll - C22\n\n760,00\n\n$ 591.622,00\n\n-S 28.397,86\n\n-S 76.910,86\n\n$ 486.313,28\n\nPROFESIONAL | - C24\n\n790,00\n\n$ 614.975,50\n\n-S 29.518,82\n\n-S 79.946,82\n\n$ 505.509,86\n\nTECNICO V - C9\n\n467,00\n\n$ 363.536,15\n\n-S 17.449,74\n\n-S 47.259,70\n\n$ 298.826,72\n\nTECNICO IV - C11\n\n500,00\n\n$ 389.225,00\n\n-S 18.682,80\n\n-S 50.599,25\n\n$ 319.942,95\n\nTECNICO III. C13\n\n538,00\n\n$ 418.806,10\n\n-S 20.102,69\n\n-S 54.444,79\n\n$ 344.258,61\n\nTECNICO ll - C17\n\n590,00\n\n$ 459.285,50\n\n-S 22.045,70\n\n-S 59.707,12\n\n$ 377.532,68\n\nTECNICO | - C19\n\n638,00\n\n$ 496.651,10\n\n-S 23.839,25\n\n-S 64.564,64\n\n$ 408.247,20\n\nADMINISTRTIVO V - C9\n\n467,00\n\n$ 363.536,15\n\n-S 17.449,74\n\n-S 47.259,70\n\n$ 298.826,72\n\nADMINISTRATIVO IV - C11\n\n500,00\n\n$ 389.225,00\n\n-S 18.682,80\n\n-S 50.599,25\n\n$ 319.942,95\n\nADMINISTRATIVO lIl - C13\n\n538,00\n\n$ 418.806,10\n\n-S 20.102,69\n\n-S 54.444,79\n\n$ 344.258,61\n\nADMINISTRATIVO 1I - C17\n\n590,00\n\n$ 459.285,50\n\n-S 22.045,70\n\n-S 59.707,12\n\n$ 377.532,68\n\nADMINISTRATIVO| - C18\n\n620,00\n\n$ 482.639,00\n\n-S 23.166,67\n\n-S 62.743,07\n\n$ 396.729,26\n\nOBRERO V - C9\n\n467,00\n\n$ 363.536,15\n\n-S 17.449,74\n\n-S 47.259,70\n\n$ 298.826,72\n\nOBRERO IV - C11\n\n500,00\n\n$ 389.225,00\n\n-S 18.682,80\n\n-S 50.599,25\n\n$ 319.942,95\n\nOBRERO ll! - C13\n\n538,00\n\n$ 418.806,10\n\n-S 20.102,69\n\n-S 54.444,79\n\n$ 344.258,61\n\nOBRERO ll - C17\n\n590,00\n\n$ 459.285,50\n\n-S 22.045,70\n\n-S 59.707,12\n\n$ 377.532,68\n\nOBRERO| - C18\n\n620,00\n\n$ 482.639,00\n\n-S 23.166,67\n\n-S 62.743,07\n\n$ 396.729,26\n\nSERVICIO IV - C8\n\n480,00\n\n$ 373.656,00\n\n-S 17.935,49\n\n-S 48.575,28\n\n$ 307.145,23\n\nSERVICIO III - C12\n\n520,00\n\n$ 404.794,00\n\n-S 19.430,11\n\n-S 52.623,22\n\n$ 332.740,67\n\nSERVICIO ll - C14\n\n545,00\n\n$ 424.255,25\n\n-S 20.364,25\n\n-S 55.153,18\n\n$ 348.737,82\n\nBASICO INGRESANTE\n\n280,00\n\n$ 217.966,00\n\n03 - PROFESIONAL\n\n04 - TECNICOS\n\n05 - ADMINISTRATIVO\n\n06 - OBRERO\n\n07 - SERVICIOS\n\nTEMPORARIOS\n\nVALOR HORA\n\nTEMPORARIO |\n\n$ 3.037,44\n\n$ 364.493,06\n\n-S 17.495,67\n\n$ 47.384,10\n\n$ 394.381,49\n\nTEMPORARIO 1l\n\n$ 4.138,95\n\n$ 496.674,18\n\n-S 23.840,36\n\n$ 64.567,64\n\n$ 537.401,46\n\nTEMPORARIO lll\n\n$ 4.998,33\n\n$ 599.799,95\n\n-S 28.790,40\n\n$ 77.973,99\n\n$ 648.983,55\n\nTEMPORARIO IV\n\n$ 6.227,87\n\n$ 747.344,71\n\n-S 35.872,55\n\n$ 97.154,81\n\n$ 808.626,98\n\nVALOR DEL MODULO\n\n$ 778,45\n\n\f\f",
+        "raw_content": "{\"document_type\": \"PERSONAL\", \"title\": \"pdf_173_ESCALA-SALARIAL-OCTUBRE-2024_6\", \"date\": \"2024-01-01\", \"amount\": 3487456.0, \"budget_lines\": [{\"line_item\": \"$\", \"amount\": 3487456.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 167397.89, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 453369.28, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 2866688.83, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 726553.33, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 34874.56, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 94451.93, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 597226.84, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 1961694.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 94161.31, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 255020.22, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 1612512.47, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 1634745.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 78467.76, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 212516.85, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 1343760.39, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 1416779.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 68005.39, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 184181.27, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 1164592.34, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 1198813.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 57543.02, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 155845.69, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 985424.29, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 871864.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 41849.47, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 113342.32, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 716672.21, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 871864.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 41849.47, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 113342.32, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 716672.21, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 828270.8, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 39757.0, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 107675.2, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 680838.6, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 1634745.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 78467.76, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 212516.85, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 1343760.39, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 1416779.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 68005.39, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 184181.27, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 1164592.34, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 1416779.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 68005.39, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 184181.27, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 1164592.34, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 1416779.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 68005.39, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 184181.27, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 1164592.34, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 747312.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 35870.98, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 97150.56, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 614290.46, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 661682.5, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 31760.76, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 86018.73, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 543903.02, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 614975.5, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 29518.82, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 79946.82, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 505509.86, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 518447.7, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 24885.49, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 67398.2, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 426164.01, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 496651.1, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 23839.25, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 64564.64, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 408247.2, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 482639.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 23166.67, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 62743.07, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 396729.26, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 459285.5, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 22045.7, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 59707.12, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 377532.68, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 418806.1, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 20102.69, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 54444.79, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 344258.61, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 389225.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 18682.8, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 50599.25, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 319942.95, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 363536.15, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 17449.74, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 47259.7, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 298826.72, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 418806.1, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 20102.69, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 54444.79, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 344258.61, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 432039.75, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 20737.91, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 56165.17, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 355136.67, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 482639.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 23166.67, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 62743.07, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 396729.26, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 591622.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 28397.86, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 76910.86, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 486313.28, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 614975.5, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 29518.82, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 79946.82, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 505509.86, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 363536.15, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 17449.74, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 47259.7, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 298826.72, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 389225.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 18682.8, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 50599.25, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 319942.95, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 418806.1, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 20102.69, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 54444.79, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 344258.61, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 459285.5, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 22045.7, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 59707.12, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 377532.68, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 496651.1, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 23839.25, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 64564.64, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 408247.2, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 363536.15, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 17449.74, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 47259.7, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 298826.72, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 389225.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 18682.8, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 50599.25, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 319942.95, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 418806.1, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 20102.69, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 54444.79, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 344258.61, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 459285.5, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 22045.7, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 59707.12, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 377532.68, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 482639.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 23166.67, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 62743.07, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 396729.26, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 363536.15, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 17449.74, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 47259.7, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 298826.72, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 389225.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 18682.8, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 50599.25, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 319942.95, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 418806.1, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 20102.69, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 54444.79, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 344258.61, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 459285.5, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 22045.7, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 59707.12, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 377532.68, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 482639.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 23166.67, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 62743.07, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 396729.26, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 373656.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 17935.49, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 48575.28, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 307145.23, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 404794.0, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 19430.11, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 52623.22, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 332740.67, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 424255.25, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 20364.25, \"description\": \"-S\"}, {\"line_item\": \"-S\", \"amount\": 55153.18, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 348737.82, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 217966.0, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 3037.44, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 364493.06, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 17495.67, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 47384.1, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 394381.49, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 4138.95, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 496674.18, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 23840.36, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 64567.64, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 537401.46, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 4998.33, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 599799.95, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 28790.4, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 77973.99, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 648983.55, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 6227.87, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 747344.71, \"description\": \"$\"}, {\"line_item\": \"-S\", \"amount\": 35872.55, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 97154.81, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 808626.98, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 778.45, \"description\": \"$\"}]}"
+      },
+      "source_file": "pdf_173_ESCALA-SALARIAL-OCTUBRE-2024_6_structured.json"
+    },
+    {
+      "metadata": {
+        "filename": "pdf_174_ESCALAS-SALARIALES-FEBRERO-2024_15.pdf",
+        "title": "Pdf 174 Escalas Salariales Febrero 2024 15",
+        "document_type": "PERSONAL",
+        "date": "2024-01-01",
+        "year": 2024,
+        "amount": 1949203.2,
+        "currency": "ARS",
+        "budget_lines_count": 50,
+        "extraction_method": "ocrmypdf+simple_extraction",
+        "processed_date": "2025-10-13T20:02:20.784650",
+        "has_tables": false,
+        "text_length": 0,
+        "json_file": "pdf_174_ESCALAS-SALARIALES-FEBRERO-2024_15_structured.json"
+      },
+      "content": {
+        "filename": "pdf_174_ESCALAS-SALARIALES-FEBRERO-2024_15.pdf",
+        "processed_date": "2025-10-13T20:02:20.784650",
+        "document_type": "PERSONAL",
+        "title": "Pdf 174 Escalas Salariales Febrero 2024 15",
+        "date": "2024-01-01",
+        "amount": 1949203.2,
+        "currency": "ARS",
+        "entities": [],
+        "categories": [
+          "PERSONAL"
+        ],
+        "budget_lines": [
+          {
+            "line_item": "$",
+            "amount": 435.09,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 1949203.2,
+            "description": "$"
+          },
+          {
+            "line_item": "-5",
+            "amount": 93561.75,
+            "description": "-5"
+          },
+          {
+            "line_item": "-$",
+            "amount": 253396.42,
+            "description": "-$"
+          },
+          {
+            "line_item": "$",
+            "amount": 1602245.03,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 406084.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-$5",
+            "amount": 19492.03,
+            "description": "-$5"
+          },
+          {
+            "line_item": "-5",
+            "amount": 52790.92,
+            "description": "-5"
+          },
+          {
+            "line_item": "$",
+            "amount": 333801.05,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 1096426.8,
+            "description": "$"
+          },
+          {
+            "line_item": "-5",
+            "amount": 52628.49,
+            "description": "-5"
+          },
+          {
+            "line_item": "-5",
+            "amount": 142535.48,
+            "description": "-5"
+          },
+          {
+            "line_item": "$",
+            "amount": 901262.83,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 913689.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-5",
+            "amount": 43857.07,
+            "description": "-5"
+          },
+          {
+            "line_item": "-5",
+            "amount": 118779.57,
+            "description": "-5"
+          },
+          {
+            "line_item": "$",
+            "amount": 751052.36,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 791863.8,
+            "description": "$"
+          },
+          {
+            "line_item": "-$5",
+            "amount": 38009.46,
+            "description": "-$5"
+          },
+          {
+            "line_item": "-5",
+            "amount": 102942.29,
+            "description": "-5"
+          },
+          {
+            "line_item": "$",
+            "amount": 650912.04,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 670038.6,
+            "description": "$"
+          },
+          {
+            "line_item": "-5",
+            "amount": 32161.85,
+            "description": "-5"
+          },
+          {
+            "line_item": "-$5",
+            "amount": 87105.02,
+            "description": "-$5"
+          },
+          {
+            "line_item": "$",
+            "amount": 550771.73,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 487300.8,
+            "description": "$"
+          },
+          {
+            "line_item": "-5",
+            "amount": 23390.44,
+            "description": "-5"
+          },
+          {
+            "line_item": "-5",
+            "amount": 63349.1,
+            "description": "-5"
+          },
+          {
+            "line_item": "$",
+            "amount": 400561.26,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 487300.8,
+            "description": "$"
+          },
+          {
+            "line_item": "-5",
+            "amount": 23390.44,
+            "description": "-5"
+          },
+          {
+            "line_item": "-5",
+            "amount": 63349.1,
+            "description": "-5"
+          },
+          {
+            "line_item": "$",
+            "amount": 400561.26,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 462935.76,
+            "description": "$"
+          },
+          {
+            "line_item": "-$",
+            "amount": 22220.92,
+            "description": "-$"
+          },
+          {
+            "line_item": "-5",
+            "amount": 60181.65,
+            "description": "-5"
+          },
+          {
+            "line_item": "$",
+            "amount": 380533.19,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 913689.0,
+            "description": "$"
+          },
+          {
+            "line_item": "-5",
+            "amount": 43857.07,
+            "description": "-5"
+          },
+          {
+            "line_item": "-5",
+            "amount": 118779.57,
+            "description": "-5"
+          },
+          {
+            "line_item": "$",
+            "amount": 751052.36,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 791863.8,
+            "description": "$"
+          },
+          {
+            "line_item": "-$5",
+            "amount": 38009.46,
+            "description": "-$5"
+          },
+          {
+            "line_item": "-5",
+            "amount": 102942.29,
+            "description": "-5"
+          },
+          {
+            "line_item": "$",
+            "amount": 650912.04,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 791863.8,
+            "description": "$"
+          },
+          {
+            "line_item": "-$5",
+            "amount": 38009.46,
+            "description": "-$5"
+          },
+          {
+            "line_item": "-5",
+            "amount": 102942.29,
+            "description": "-5"
+          },
+          {
+            "line_item": "$",
+            "amount": 650912.04,
+            "description": "$"
+          },
+          {
+            "line_item": "$",
+            "amount": 791863.8,
+            "description": "$"
+          }
+        ],
+        "text_content": "CARGOS\n\nMETODO DE\n\nSUELDO\n\nCALCULO\n\nBRUTO\n\nDEDUCCIONES\n¡OMA 4,8%\n\nIPS 13%\n\nVALOR DEL\nSUELDO NETO\n\n$ 435,09\n\nPERSONAL SUPERIOR\n\nSEGÚN LOM\n\nINTENDENTE\n\nSEGÚN LOM\n\n$ 1.949.203,20\n\n-5 93.561,75\n\n-$ 253.396,42\n\n$ 1.602.245,03\n\nCONCEJALES\n\nSEGÚN LOM\n\n$ 406.084,00\n\n-$5 19.492,03\n\n-5 52.790,92\n\n$ 333.801,05\n\nPERSONAL SUPERIOR\n\nCANT SUEL INGR\n\nSECRETARIOS\n\n9,0\n\n$ 1.096.426,80\n\n-5 52.628,49\n\n-5 142.535,48\n\n$ 901.262,83\n\nSUBSECRETARIOS\n\n7,5\n\n$ 913.689,00\n\n-5 43.857,07\n\n-5 118.779,57\n\n$ 751.052,36\n\nDIRECTOR\n\n6,5\n\n$ 791.863,80\n\n-$5 38.009,46\n\n-5 102.942,29\n\n$ 650.912,04\n\nSUBDIRECTOR\n\n5,5\n\n$ 670.038,60\n\n-5 32.161,85\n\n-$5 87.105,02\n\n$ 550.771,73\n\nCOORDINADOR\n\n4,0\n\n$ 487.300,80\n\n-5 23.390,44\n\n-5 63.349,10\n\n$ 400.561,26\n\nDELEGADO\n\n4,0\n\n$ 487.300,80\n\n-5 23.390,44\n\n-5 63.349,10\n\n$ 400.561,26\n\nJEFES DE AREA\n\n3,8\n\n$ 462.935,76\n\n-$ 22.220,92\n\n-5 60.181,65\n\n$ 380.533,19\n\nDE LEY\n\nCONTADOR\n\n7,5\n\n$ 913.689,00\n\n-5 43.857,07\n\n-5 118.779,57\n\n$ 751.052,36\n\nJUEZ DE FALTAS\n\n6,5\n\n$ 791.863,80\n\n-$5 38.009,46\n\n-5 102.942,29\n\n$ 650.912,04\n\nTESORERO\n\n6,5\n\n$ 791.863,80\n\n-$5 38.009,46\n\n-5 102.942,29\n\n$ 650.912,04\n\nJEFE DE COMPRAS\n\n6,5\n\n$ 791.863,80\n\n-$5 38.009,46\n\n-5 102.942,29\n\n$ 650.912,04\n\n02 - JERARQUICO\n\nCANT MODULOS\n\nJERARQUICO JEFE DE DEPARTAMENTO| - C27\n\n960,00\n\n$ 417.686,40\n\n-$5 20.048,95\n\n-$ 54.299,23\n\n$ 343.338,22\n\nJERARQUICO JEFE DE DEPARTAMENTO II C25\n\n850,00\n\n$ 369.826,50\n\n-5 17.751,67\n\n-$ 48.077,45\n\n$ 303.997,38\n\nJERARQUICO JEFE DE DIVISION | - C24\n\n790,00\n\n$ 343.721,10\n\n-5 16.498,61\n\n-$ 44.683,74\n\n$ 282.538,74\n\nJERARQUICO JEFE DE DIVISION ll - C20\n\n666,00\n\n$ 289.769,94\n\n-5 13.908,96\n\n-S 37.670,09\n\n$ 238.190,89\n\nJERARQUICO JEFE DE SECCION C19\n\n638,00\n\n$ 277.587,42\n\n-5 13.324,20\n\n-S 36.086,36\n\n$ 228.176,86\n\nINSPECTOR | - C18\n\n620,00\n\n$ 269.755,80\n\n-5 12.948,28\n\n-$ 35.068,25\n\n$ 221.739,27\n\nINSPECTOR Il - C17\n\n590,00\n\n$ 256.703,10\n\n-5 12.321,75\n\n-$ 33.371,40\n\n$ 211.009,95\n\nINSPECTOR 11! - C13\n\n538,00\n\n$ 234.078,42\n\n-5 11.235,76\n\n-S 30.430,19\n\n$ 192.412,46\n\nINSPECTOR IV - C11\n\n500,00\n\n$ 217.545,00\n\n-5 10.442,16\n\n-$ 28.280,85\n\n$ 178.821,99\n\nINSPECTOR V - C9\n\n467,00\n\n$ 203.187,03\n\n-5 9.752,98\n\n-$ 26.414,31\n\n$ 167.019,74\n\nPROFESIONAL V - C13\n\n538,00\n\n$ 234.078,42\n\n-5 11.235,76\n\n-5 30.430,19\n\n$ 192.412,46\n\nPROFESIONAL IV - C15\n\n555,00\n\n$ 241.474,95\n\n-5 11.590,80\n\n-5 31.391,74\n\n$ 198.492,41\n\nPROFESIONAL !1I - C18\n\n620,00\n\n$ 269.755,80\n\n-5 12.948,28\n\n-5 35.068,25\n\n$ 221.739,27\n\nPROFESIONAL ll - C22\n\n760,00\n\n$ 330.668,40\n\n-5 15.872,08\n\n-5 42.986,89\n\n$ 271.809,42\n\nPROFESIONAL | - C24\n\n790,00\n\n$ 343.721,10\n\n-5 16.498,61\n\n-5 44.683,74\n\n$ 282.538,74\n\nTECNICO Y - C9\n\n467,00\n\n$ 203.187,03\n\n-5 9.752,98\n\n-5 26.414,31\n\n$ 167.019,74\n\nTECNICO IV - C11\n\n500,00\n\n$ 217.545,00\n\n-5 10.442,16\n\n-$5 28.280,85\n\n$ 178.821,99\n\nTECNICO 11I.. C13\n\n538,00\n\n$ 234.078,42\n\n-5 11.235,76\n\n-5 30.430,19\n\n$ 192.412,46\n\nTECNICO || - C17\n\n590,00\n\n$ 256.703,10\n\n-5 12.321,75\n\n-5 33.371,40\n\n$ 211.009,95\n\nTECNICO | - C19\n\n638,00\n\n$ 277.587,42\n\n-5 13.324,20\n\n-5 36.086,36\n\n$ 228.176,86\n\nADMINISTRTIVO V - C9\n\n467,00\n\n$ 203.187,03\n\n-5 9.752,98\n\n-5 26.414,31\n\n$ 167.019,74\n\nADMINISTRATIVO IV - C11\n\n500,00\n\n$ 217.545,00\n\n-5 10.442,16\n\n-$5 28.280,85\n\n$ 178.821,99\n\nADMINISTRATIVO II - C13\n\n538,00\n\n$ 234.078,42\n\n-5 11.235,76\n\n-5 30.430,19\n\n$ 192.412,46\n\nADMINISTRATIVO || - C17\n\n590,00\n\n$ 256.703,10\n\n-5 12.321,75\n\n-5 33.371,40\n\n$ 211.009,95\n\nADMINISTRATIVO | - C18\n\n620,00\n\n$ 269.755,80\n\n-5 12.948,28\n\n-5 35.068,25\n\n$ 221.739,27\n\nOBREROV - C9\n\n467,00\n\n$ 203.187,03\n\n-5 9.752,98\n\n-5 26.414,31\n\n$ 167.019,74\n\nOBRERO IV - C11\n\n500,00\n\n$ 217.545,00\n\n-5 10.442,16\n\n-$5 28.280,85\n\n$ 178.821,99\n\nOBRERO ll! - C13\n\n538,00\n\n$ 234.078,42\n\n-5 11.235,76\n\n-5 30.430,19\n\n$ 192.412,46\n\nOBRERO ll - C17\n\n590,00\n\n$ 256.703,10\n\n-5 12.321,75\n\n-5 33.371,40\n\n$ 211.009,95\n\nOBRERO| - C18\n\n620,00\n\n$ 269.755,80\n\n-5 12.948,28\n\n-5 35.068,25\n\n$ 221.739,27\n\nSERVICIO IV - C8\n\n480,00\n\n$ 208.843,20\n\n-5 10.024,47\n\n-5 27.149,62\n\n$ 171.669,11\n\nSERVICIO 111 - C12\n\n520,00\n\n$ 226.246,80\n\n-5 10.859,85\n\n-5 29.412,08\n\n$ 185.974,87\n\nSERVICIO || - C14\n\n545,00\n\n$ 237.124,05\n\n-5 11.381,95\n\n-$5 30.826,13\n\n$ 194.915,97\n\nBASICO INGRESANTE\n\n280,00\n\n03 - PROFESIONAL\n\n04 - TECNICOS\n\n05 - ADMINISTRATIVO\n\n06 - OBRERO\n\n07 - SERVICIOS\n\n$\n\nMODULO\n\n121.825,20\n\nTEMPORARIOS\n\nVALOR HORA\n\nTEMPORARIO |\n\n$ 1.697,69\n\n$ 203.722,91\n\n-5 9.778,70\n\n-5 26.483,98\n\n$ 167.460,23\n\nTEMPORARIO ll\n\n$ 2.313,35\n\n$ 277.601,74\n\n-5 13.324,88\n\n-$5 36.088,23\n\n$ 228.188,63\n\nTEMPORARIO lll\n\n$ 2.793,67\n\n$ 335.240,92\n\n-5 16.091,56\n\n-5 43.581,32\n\n$ 275.568,04\n\nTEMPORARIO IV\n\n$ 3.480,89\n\n$ 417.706,82\n\n-$ 20.049,93\n\n-5 54.301,89\n\n$ 343.355,01\n\n\f",
+        "raw_content": "{\"document_type\": \"PERSONAL\", \"title\": \"pdf_174_ESCALAS-SALARIALES-FEBRERO-2024_15\", \"date\": \"2024-01-01\", \"amount\": 1949203.2, \"budget_lines\": [{\"line_item\": \"$\", \"amount\": 435.09, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 1949203.2, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 93561.75, \"description\": \"-5\"}, {\"line_item\": \"-$\", \"amount\": 253396.42, \"description\": \"-$\"}, {\"line_item\": \"$\", \"amount\": 1602245.03, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 406084.0, \"description\": \"$\"}, {\"line_item\": \"-$5\", \"amount\": 19492.03, \"description\": \"-$5\"}, {\"line_item\": \"-5\", \"amount\": 52790.92, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 333801.05, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 1096426.8, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 52628.49, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 142535.48, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 901262.83, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 913689.0, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 43857.07, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 118779.57, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 751052.36, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 791863.8, \"description\": \"$\"}, {\"line_item\": \"-$5\", \"amount\": 38009.46, \"description\": \"-$5\"}, {\"line_item\": \"-5\", \"amount\": 102942.29, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 650912.04, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 670038.6, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 32161.85, \"description\": \"-5\"}, {\"line_item\": \"-$5\", \"amount\": 87105.02, \"description\": \"-$5\"}, {\"line_item\": \"$\", \"amount\": 550771.73, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 487300.8, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 23390.44, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 63349.1, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 400561.26, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 487300.8, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 23390.44, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 63349.1, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 400561.26, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 462935.76, \"description\": \"$\"}, {\"line_item\": \"-$\", \"amount\": 22220.92, \"description\": \"-$\"}, {\"line_item\": \"-5\", \"amount\": 60181.65, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 380533.19, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 913689.0, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 43857.07, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 118779.57, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 751052.36, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 791863.8, \"description\": \"$\"}, {\"line_item\": \"-$5\", \"amount\": 38009.46, \"description\": \"-$5\"}, {\"line_item\": \"-5\", \"amount\": 102942.29, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 650912.04, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 791863.8, \"description\": \"$\"}, {\"line_item\": \"-$5\", \"amount\": 38009.46, \"description\": \"-$5\"}, {\"line_item\": \"-5\", \"amount\": 102942.29, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 650912.04, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 791863.8, \"description\": \"$\"}, {\"line_item\": \"-$5\", \"amount\": 38009.46, \"description\": \"-$5\"}, {\"line_item\": \"-5\", \"amount\": 102942.29, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 650912.04, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 417686.4, \"description\": \"$\"}, {\"line_item\": \"-$5\", \"amount\": 20048.95, \"description\": \"-$5\"}, {\"line_item\": \"-$\", \"amount\": 54299.23, \"description\": \"-$\"}, {\"line_item\": \"$\", \"amount\": 343338.22, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 369826.5, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 17751.67, \"description\": \"-5\"}, {\"line_item\": \"-$\", \"amount\": 48077.45, \"description\": \"-$\"}, {\"line_item\": \"$\", \"amount\": 303997.38, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 343721.1, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 16498.61, \"description\": \"-5\"}, {\"line_item\": \"-$\", \"amount\": 44683.74, \"description\": \"-$\"}, {\"line_item\": \"$\", \"amount\": 282538.74, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 289769.94, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 13908.96, \"description\": \"-5\"}, {\"line_item\": \"-S\", \"amount\": 37670.09, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 238190.89, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 277587.42, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 13324.2, \"description\": \"-5\"}, {\"line_item\": \"-S\", \"amount\": 36086.36, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 228176.86, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 269755.8, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 12948.28, \"description\": \"-5\"}, {\"line_item\": \"-$\", \"amount\": 35068.25, \"description\": \"-$\"}, {\"line_item\": \"$\", \"amount\": 221739.27, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 256703.1, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 12321.75, \"description\": \"-5\"}, {\"line_item\": \"-$\", \"amount\": 33371.4, \"description\": \"-$\"}, {\"line_item\": \"$\", \"amount\": 211009.95, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 234078.42, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 11235.76, \"description\": \"-5\"}, {\"line_item\": \"-S\", \"amount\": 30430.19, \"description\": \"-S\"}, {\"line_item\": \"$\", \"amount\": 192412.46, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 217545.0, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 10442.16, \"description\": \"-5\"}, {\"line_item\": \"-$\", \"amount\": 28280.85, \"description\": \"-$\"}, {\"line_item\": \"$\", \"amount\": 178821.99, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 203187.03, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 9752.98, \"description\": \"-5\"}, {\"line_item\": \"-$\", \"amount\": 26414.31, \"description\": \"-$\"}, {\"line_item\": \"$\", \"amount\": 167019.74, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 234078.42, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 11235.76, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 30430.19, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 192412.46, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 241474.95, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 11590.8, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 31391.74, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 198492.41, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 269755.8, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 12948.28, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 35068.25, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 221739.27, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 330668.4, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 15872.08, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 42986.89, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 271809.42, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 343721.1, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 16498.61, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 44683.74, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 282538.74, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 203187.03, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 9752.98, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 26414.31, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 167019.74, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 217545.0, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 10442.16, \"description\": \"-5\"}, {\"line_item\": \"-$5\", \"amount\": 28280.85, \"description\": \"-$5\"}, {\"line_item\": \"$\", \"amount\": 178821.99, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 234078.42, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 11235.76, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 30430.19, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 192412.46, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 256703.1, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 12321.75, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 33371.4, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 211009.95, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 277587.42, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 13324.2, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 36086.36, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 228176.86, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 203187.03, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 9752.98, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 26414.31, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 167019.74, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 217545.0, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 10442.16, \"description\": \"-5\"}, {\"line_item\": \"-$5\", \"amount\": 28280.85, \"description\": \"-$5\"}, {\"line_item\": \"$\", \"amount\": 178821.99, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 234078.42, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 11235.76, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 30430.19, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 192412.46, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 256703.1, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 12321.75, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 33371.4, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 211009.95, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 269755.8, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 12948.28, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 35068.25, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 221739.27, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 203187.03, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 9752.98, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 26414.31, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 167019.74, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 217545.0, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 10442.16, \"description\": \"-5\"}, {\"line_item\": \"-$5\", \"amount\": 28280.85, \"description\": \"-$5\"}, {\"line_item\": \"$\", \"amount\": 178821.99, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 234078.42, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 11235.76, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 30430.19, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 192412.46, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 256703.1, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 12321.75, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 33371.4, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 211009.95, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 269755.8, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 12948.28, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 35068.25, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 221739.27, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 208843.2, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 10024.47, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 27149.62, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 171669.11, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 226246.8, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 10859.85, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 29412.08, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 185974.87, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 237124.05, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 11381.95, \"description\": \"-5\"}, {\"line_item\": \"-$5\", \"amount\": 30826.13, \"description\": \"-$5\"}, {\"line_item\": \"$\", \"amount\": 194915.97, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 1697.69, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 203722.91, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 9778.7, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 26483.98, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 167460.23, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 2313.35, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 277601.74, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 13324.88, \"description\": \"-5\"}, {\"line_item\": \"-$5\", \"amount\": 36088.23, \"description\": \"-$5\"}, {\"line_item\": \"$\", \"amount\": 228188.63, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 2793.67, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 335240.92, \"description\": \"$\"}, {\"line_item\": \"-5\", \"amount\": 16091.56, \"description\": \"-5\"}, {\"line_item\": \"-5\", \"amount\": 43581.32, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 275568.04, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 3480.89, \"description\": \"$\"}, {\"line_item\": \"$\", \"amount\": 417706.82, \"description\": \"$\"}, {\"line_item\": \"-$\", \"amount\": 20049.93, \"description\": \"-$\"}, {\"line_item\": \"-5\", \"amount\": 54301.89, \"description\": \"-5\"}, {\"line_item\": \"$\", \"amount\": 343355.01, \"description\": \"$\"}]}"
+      },
+      "source_file": "pdf_174_ESCALAS-SALARIALES-FEBRERO-2024_15_structured.json"
+    }
+  ]
+}

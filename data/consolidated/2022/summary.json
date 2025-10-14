@@ -1,24 +1,62 @@
 {
   "year": 2022,
-  "financial_overview": {
-    "total_budget": 324135000,
-    "total_executed": 303702919,
-    "execution_rate": 93.7,
-    "executed_infra": 58460063,
-    "personnel": 150491250
+  "generated_at": "2025-10-14T10:18:12.279622",
+  "summary": {
+    "total_documents": 3,
+    "by_type": {
+      "general": 3
+    },
+    "total_amounts": {
+      "general": 1833005149.22
+    }
   },
-  "key_metrics": {
-    "budget_per_capita": 10129,
-    "documents_processed": 41,
-    "contracts_managed": 34
-  },
-  "data_quality": {
-    "completeness": 92,
-    "accuracy": 97,
-    "last_validated": "2025-09-28T18:50:04.348Z"
-  },
-  "metadata": {
-    "processed_date": "2025-09-28T18:50:04.348Z",
-    "data_sources": 12
+  "documents": {
+    "general": [
+      {
+        "filename": "SEGURIDAD URBANA 2022_6.pdf",
+        "title": "Seguridad Urbana 2022 6",
+        "document_type": "GENERAL",
+        "date": "2022-01-01",
+        "year": 2022,
+        "amount": 0,
+        "currency": null,
+        "budget_lines_count": 10,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:49:41.500082",
+        "has_tables": true,
+        "text_length": 17106,
+        "json_file": "SEGURIDAD URBANA 2022_6_structured.json"
+      },
+      {
+        "filename": "boletin_oficial_pdf_5_SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021.._27.pdf",
+        "title": "Boletin Oficial Pdf 5 Situacion Economico Financiera Al Cierre 2021.. 27",
+        "document_type": "GENERAL",
+        "date": "16/03/2022",
+        "year": 2022,
+        "amount": 802704862.77,
+        "currency": "ARS",
+        "budget_lines_count": 81,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:49:43.742229",
+        "has_tables": true,
+        "text_length": 13929,
+        "json_file": "boletin_oficial_pdf_5_SITUACION-ECONOMICO-FINANCIERA-AL-CIERRE-2021.._27_structured.json"
+      },
+      {
+        "filename": "boletin_oficial_pdf_6_SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022_22.pdf",
+        "title": "Boletin Oficial Pdf 6 Situacion Economico Financiera Al 30 06 2022 22",
+        "document_type": "GENERAL",
+        "date": "07/07/2022",
+        "year": 2022,
+        "amount": 1030300286.45,
+        "currency": "ARS",
+        "budget_lines_count": 84,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:49:43.774944",
+        "has_tables": true,
+        "text_length": 17621,
+        "json_file": "boletin_oficial_pdf_6_SITUACION-ECONOMICO-FINANCIERA-AL-30-06-2022_22_structured.json"
+      }
+    ]
   }
 }

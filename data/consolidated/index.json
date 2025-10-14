@@ -1,10 +1,6 @@
 {
-  "generated_at": "2025-09-28T18:50:04.352Z",
+  "generated_at": "2025-10-13T00:00:00.000Z",
   "available_years": [
-    2017,
-    2018,
-    2019,
-    2020,
     2021,
     2022,
     2023,
@@ -12,5 +8,5 @@
     2025
   ],
   "latest_year": 2025,
-  "earliest_year": 2017
+  "earliest_year": 2021
 }

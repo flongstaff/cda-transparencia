@@ -7,9 +7,11 @@
  * - Progressive loading for large datasets
  * - Background prefetching of likely-needed data
  * - IndexedDB persistence for offline support
+ * - GitHub Pages + Cloudflare optimization
  */
 
 import dataCachingService from './DataCachingService';
+import { dataPathResolver } from '../config/dataPathConfig';
 
 export interface LoadingPriority {
   immediate: string[]; // Load right now
@@ -219,7 +221,17 @@ class SmartDataLoader {
    */
   private async fetchLocal(path: string): Promise<any> {
     try {
-      const response = await fetch(path);
+      // Use intelligent path resolver
+      const resolvedPath = dataPathResolver.isAbsoluteUrl(path)
+        ? path
+        : dataPathResolver.getDataUrl(path);
+
+      // Get optimal fetch options based on file type
+      const fileExt = path.split('.').pop() || 'json';
+      const fileType = fileExt === 'csv' ? 'csv' : fileExt === 'pdf' ? 'pdf' : 'json';
+      const fetchOptions = dataPathResolver.getFetchOptions(fileType);
+
+      const response = await fetch(resolvedPath, fetchOptions);
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }

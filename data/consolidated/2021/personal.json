@@ -1,0 +1,222 @@
+{
+  "year": 2021,
+  "type": "personal",
+  "generated_at": "2025-10-14T10:18:12.276686",
+  "document_count": 1,
+  "total_amount": 0,
+  "documents": [
+    {
+      "metadata": {
+        "filename": "2021 ADMINISTRACION DE PERSONAL.pdf",
+        "title": "2021 Administracion De Personal",
+        "document_type": "PERSONAL",
+        "date": "2021-01-01",
+        "year": 2021,
+        "amount": 0,
+        "currency": null,
+        "budget_lines_count": 35,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:48:58.282235",
+        "has_tables": true,
+        "text_length": 22400,
+        "json_file": "2021 ADMINISTRACION DE PERSONAL_structured.json"
+      },
+      "content": {
+        "filename": "2021 ADMINISTRACION DE PERSONAL.pdf",
+        "processed_date": "2025-10-14T09:48:58.282235",
+        "document_type": "PERSONAL",
+        "title": "2021 Administracion De Personal",
+        "date": "2021-01-01",
+        "amount": 0,
+        "currency": null,
+        "entities": [],
+        "categories": [
+          "PERSONAL"
+        ],
+        "budget_lines": [
+          {
+            "line_item": "2021            206                  91             69.36                 30.64",
+            "amount": 297.0,
+            "description": "2021            206                  91             69.36                 30.64"
+          },
+          {
+            "line_item": "PLANTEL DE PERSONAL GENERAL",
+            "amount": 2021.0,
+            "description": "PLANTEL DE PERSONAL GENERAL"
+          },
+          {
+            "line_item": "PLANTEL DE PERSONAL GRAL.",
+            "amount": 2021.0,
+            "description": "PLANTEL DE PERSONAL GRAL."
+          },
+          {
+            "line_item": "PLANTEL DE PERSONAL GENERAL",
+            "amount": 2021.0,
+            "description": "PLANTEL DE PERSONAL GENERAL"
+          },
+          {
+            "line_item": "PLANTEL DE PERSONAL GRAL.",
+            "amount": 2021.0,
+            "description": "PLANTEL DE PERSONAL GRAL."
+          },
+          {
+            "line_item": "Secretaría de Planificación Urbana                 85                    34                 41.26                 37.36",
+            "amount": 119.0,
+            "description": "Secretaría de Planificación Urbana                 85                    34                 41.26                 37.36"
+          },
+          {
+            "line_item": "TOTAL                                                206                   91                  100                   100",
+            "amount": 297.0,
+            "description": "TOTAL                                                206                   91                  100                   100"
+          },
+          {
+            "line_item": "PLANTEL DE PERSONAL GRAL.",
+            "amount": 2021.0,
+            "description": "PLANTEL DE PERSONAL GRAL."
+          },
+          {
+            "line_item": "PLANTEL DE PERSONAL GRAL.",
+            "amount": 2021.0,
+            "description": "PLANTEL DE PERSONAL GRAL."
+          },
+          {
+            "line_item": "2021                161                 241          40.05                 59.95",
+            "amount": 402.0,
+            "description": "2021                161                 241          40.05                 59.95"
+          },
+          {
+            "line_item": "PLANTEL DE PERSONAL GRAL.",
+            "amount": 2021.0,
+            "description": "PLANTEL DE PERSONAL GRAL."
+          },
+          {
+            "line_item": "2014           275               178             97                                            281          284",
+            "amount": 289.0,
+            "description": "2014           275               178             97                                            281          284"
+          },
+          {
+            "line_item": "275                                    268",
+            "amount": 268.0,
+            "description": "275                                    268"
+          },
+          {
+            "line_item": "2015           281               180",
+            "amount": 101.0,
+            "description": "2015           281               180"
+          },
+          {
+            "line_item": "2016           284               181            103",
+            "amount": 212.0,
+            "description": "2016           284               181            103"
+          },
+          {
+            "line_item": "2017           268               184             84        192                                                181           184",
+            "amount": 192.0,
+            "description": "2017           268               184             84        192                                                181           184"
+          },
+          {
+            "line_item": "173         178         180                                    173",
+            "amount": 179.0,
+            "description": "173         178         180                                    173"
+          },
+          {
+            "line_item": "2019           289               192             97",
+            "amount": 134.0,
+            "description": "2019           289               192             97"
+          },
+          {
+            "line_item": "2012        2013        2014        2015          2016         2017        2018          2019        2020",
+            "amount": 2021.0,
+            "description": "2012        2013        2014        2015          2016         2017        2018          2019        2020"
+          },
+          {
+            "line_item": "PLANTEL DE PERSONAL GRAL.",
+            "amount": 2021.0,
+            "description": "PLANTEL DE PERSONAL GRAL."
+          },
+          {
+            "line_item": "2014           275               178             97                                                      281              284",
+            "amount": 289.0,
+            "description": "2014           275               178             97                                                      281              284"
+          },
+          {
+            "line_item": "275                                               268",
+            "amount": 268.0,
+            "description": "275                                               268"
+          },
+          {
+            "line_item": "2015           281               180",
+            "amount": 101.0,
+            "description": "2015           281               180"
+          },
+          {
+            "line_item": "2016           284               181            103",
+            "amount": 212.0,
+            "description": "2016           284               181            103"
+          },
+          {
+            "line_item": "2017           268               184             84        192                                                              181              184",
+            "amount": 192.0,
+            "description": "2017           268               184             84        192                                                              181              184"
+          },
+          {
+            "line_item": "173         178             180                                               173",
+            "amount": 179.0,
+            "description": "173         178             180                                               173"
+          },
+          {
+            "line_item": "2019           289               192             97",
+            "amount": 134.0,
+            "description": "2019           289               192             97"
+          },
+          {
+            "line_item": "2012          2013            2014            2015             2016            2017            2018              2019        2020",
+            "amount": 2021.0,
+            "description": "2012          2013            2014            2015             2016            2017            2018              2019        2020"
+          },
+          {
+            "line_item": "2016           116              73               43",
+            "amount": 153.0,
+            "description": "2016           116              73               43"
+          },
+          {
+            "line_item": "2017           110              70               40",
+            "amount": 147.0,
+            "description": "2017           110              70               40"
+          },
+          {
+            "line_item": "2018           103              72               31",
+            "amount": 125.0,
+            "description": "2018           103              72               31"
+          },
+          {
+            "line_item": "2019           147              102              45                                                      116",
+            "amount": 116.0,
+            "description": "2019           147              102              45                                                      116"
+          },
+          {
+            "line_item": "2020           153              90               63                                      101                                                               103",
+            "amount": 102.0,
+            "description": "2020           153              90               63                                      101                                                               103"
+          },
+          {
+            "line_item": "2012           2013           2014            2015             2016             2017            2018              2019        2020",
+            "amount": 2021.0,
+            "description": "2012           2013           2014            2015             2016             2017            2018              2019        2020"
+          },
+          {
+            "line_item": "PLANTEL DE PERSONAL GRAL.",
+            "amount": 2021.0,
+            "description": "PLANTEL DE PERSONAL GRAL."
+          }
+        ],
+        "text_length": 22400,
+        "extraction_method": "pdftotext",
+        "has_tables": true,
+        "text_content": "                ADMINISTRACIÓN DE PERSONAL MUNICIPAL\n            PLANTEL DE PERSONAL MUNICIPAL PERMANENTES Y TEMPORARIOS\n\n                                      CANTIDAD                              PORCENTAJES\n              PERIODO                                                                              TOTAL\n                            PERMANENTES          TEMPORARIOS     PERMANENTES       TEMPORARIOS\n                2021            206                  91             69.36                 30.64     297\n\n\n\nPLANTEL DE PERSONAL GENERAL 2021\n(PERMANENTES Y TEMPORARIOS)\n\n\n\n               206\n\n\n\n                                                                                           91\n\n              PERMANENTES                                                            TEMPORARIOS\n                                  PERMANENTES      TEMPORARIOS\n\n\n\n\n                              PLANTEL DE PERSONAL GRAL. 2021\n\f                        ADMINISTRACIÓN DE PERSONAL MUNICIPAL\n\nPLANTEL DE PERSONAL GENERAL 2021\n(PERMANENTES Y TEMPORARIOS)\n                         TEMPORARIOS\n                             31%\n                                                     3   P…6\n\n\n\n\n                                                                        PERMANENTES\n                                                                            69%\n PERMANENTES   TEMPORARIOS\n\n\n\n\n                                       PLANTEL DE PERSONAL GRAL. 2021\n\f                                         ADMINISTRACIÓN DE PERSONAL MUNICIPAL\n\n                                            PLANTEL DE PERSONAL MUNICIPAL POR JURISDICCIÓN\n                                                                                CANTIDAD                                   PORCENTAJES\n                                   JURISDICCIÓN                                                                                                              TOTAL\n                                                                    PERMANENTES            TEMPORARIOS       PERMANENTES          TEMPORARIOS\n                       Conduccion Superior                                 4                    3                   1.94                 3.30                  7\n                       Secretaria de Hacienda y Finanzas                  21                    7                  10.19                 7.69                 28\n                       Secretaría de Gobierno                             23                    24                 11.17                 26.37                47\n                       Secretaría de Planificación Urbana                 85                    34                 41.26                 37.36                119\n                       Secretaría de Derechos Humanos                     56                    23                 27.18                 25.27                79\n                       H.C.D.                                             17                    0                   8.25                 0.00                 17\n                     TOTAL                                                206                   91                  100                   100                 297\n\n\nPLANTEL GENERAL DESAGREGADO POR JURISDICCIÓN\n(PERMANENTES Y TEMPORARIOS)\n\n\n   PERMANENTES           TEMPORARIOS\n                                                                                                 85\n\n\n\n\n                                                                                                                                  56\n\n\n\n                                                                                                              34\n\n                                                                   23           24                                                               23\n                                    21\n                                                                                                                                                                     17\n\n     4           3                                7\n   Conduccion Superior      Secretaria de Hacienda y Finanzas   Secretaría de Gobierno   Secretaría de Planificación Urbana Secretaría de Derechos Humanos                H.C.D.\n\n\n\n\n                                                                        PLANTEL DE PERSONAL GRAL. 2021\n\f                                      ADMINISTRACIÓN DE PERSONAL MUNICIPAL\n\nPLANTEL GENERAL DESAGREGADO POR  JURISDICCIÓN\n                             PLANTEL GENERAL\n(PERMANENTES)               DESAGREGADO POR\n                                              H.C.D.            JURISDICCIÓN                       2%       Conduccion Superior\n                                               8%              (PERMANENTES)                                        2%\n                                                                           8%                  10%\n                                                                                               ",
+        "raw_content": "{\"document_type\": \"PERSONAL\", \"title\": \"2021 ADMINISTRACION DE PERSONAL\", \"date\": \"2021-01-01\", \"amount\": 0, \"budget_lines\": [{\"line_item\": \"2021            206                  91             69.36                 30.64\", \"amount\": 297.0, \"description\": \"2021            206                  91             69.36                 30.64\"}, {\"line_item\": \"PLANTEL DE PERSONAL GENERAL\", \"amount\": 2021.0, \"description\": \"PLANTEL DE PERSONAL GENERAL\"}, {\"line_item\": \"PLANTEL DE PERSONAL GRAL.\", \"amount\": 2021.0, \"description\": \"PLANTEL DE PERSONAL GRAL.\"}, {\"line_item\": \"PLANTEL DE PERSONAL GENERAL\", \"amount\": 2021.0, \"description\": \"PLANTEL DE PERSONAL GENERAL\"}, {\"line_item\": \"PLANTEL DE PERSONAL GRAL.\", \"amount\": 2021.0, \"description\": \"PLANTEL DE PERSONAL GRAL.\"}, {\"line_item\": \"Secretar\\u00eda de Planificaci\\u00f3n Urbana                 85                    34                 41.26                 37.36\", \"amount\": 119.0, \"description\": \"Secretar\\u00eda de Planificaci\\u00f3n Urbana                 85                    34                 41.26                 37.36\"}, {\"line_item\": \"TOTAL                                                206                   91                  100                   100\", \"amount\": 297.0, \"description\": \"TOTAL                                                206                   91                  100                   100\"}, {\"line_item\": \"PLANTEL DE PERSONAL GRAL.\", \"amount\": 2021.0, \"description\": \"PLANTEL DE PERSONAL GRAL.\"}, {\"line_item\": \"PLANTEL DE PERSONAL GRAL.\", \"amount\": 2021.0, \"description\": \"PLANTEL DE PERSONAL GRAL.\"}, {\"line_item\": \"2021                161                 241          40.05                 59.95\", \"amount\": 402.0, \"description\": \"2021                161                 241          40.05                 59.95\"}, {\"line_item\": \"PLANTEL DE PERSONAL GRAL.\", \"amount\": 2021.0, \"description\": \"PLANTEL DE PERSONAL GRAL.\"}, {\"line_item\": \"2014           275               178             97                                            281          284\", \"amount\": 289.0, \"description\": \"2014           275               178             97                                            281          284\"}, {\"line_item\": \"275                                    268\", \"amount\": 268.0, \"description\": \"275                                    268\"}, {\"line_item\": \"2015           281               180\", \"amount\": 101.0, \"description\": \"2015           281               180\"}, {\"line_item\": \"2016           284               181            103\", \"amount\": 212.0, \"description\": \"2016           284               181            103\"}, {\"line_item\": \"2017           268               184             84        192                                                181           184\", \"amount\": 192.0, \"description\": \"2017           268               184             84        192                                                181           184\"}, {\"line_item\": \"173         178         180                                    173\", \"amount\": 179.0, \"description\": \"173         178         180                                    173\"}, {\"line_item\": \"2019           289               192             97\", \"amount\": 134.0, \"description\": \"2019           289               192             97\"}, {\"line_item\": \"2012        2013        2014        2015          2016         2017        2018          2019        2020\", \"amount\": 2021.0, \"description\": \"2012        2013        2014        2015          2016         2017        2018          2019        2020\"}, {\"line_item\": \"PLANTEL DE PERSONAL GRAL.\", \"amount\": 2021.0, \"description\": \"PLANTEL DE PERSONAL GRAL.\"}, {\"line_item\": \"2014           275               178             97                                                      281              284\", \"amount\": 289.0, \"description\": \"2014           275               178             97                                                      281              284\"}, {\"line_item\": \"275                                               268\", \"amount\": 268.0, \"description\": \"275                                               268\"}, {\"line_item\": \"2015           281               180\", \"amount\": 101.0, \"description\": \"2015           281               180\"}, {\"line_item\": \"2016           284               181            103\", \"amount\": 212.0, \"description\": \"2016           284               181            103\"}, {\"line_item\": \"2017           268               184             84        192                                                              181              184\", \"amount\": 192.0, \"description\": \"2017           268               184             84        192                                                              181              184\"}, {\"line_item\": \"173         178             180                                               173\", \"amount\": 179.0, \"description\": \"173         178             180                                               173\"}, {\"line_item\": \"2019           289               192             97\", \"amount\": 134.0, \"description\": \"2019           289               192             97\"}, {\"line_item\": \"2012          2013            2014            2015             2016            2017            2018              2019        2020\", \"amount\": 2021.0, \"description\": \"2012          2013            2014            2015             2016            2017            2018              2019        2020\"}, {\"line_item\": \"2016           116              73               43\", \"amount\": 153.0, \"description\": \"2016           116              73               43\"}, {\"line_item\": \"2017           110              70               40\", \"amount\": 147.0, \"description\": \"2017           110              70               40\"}, {\"line_item\": \"2018           103              72               31\", \"amount\": 125.0, \"description\": \"2018           103              72               31\"}, {\"line_item\": \"2019           147              102              45                                                      116\", \"amount\": 116.0, \"description\": \"2019           147              102              45                                                      116\"}, {\"line_item\": \"2020           153              90               63                                      101                                                               103\", \"amount\": 102.0, \"description\": \"2020           153              90               63                                      101                                                               103\"}, {\"line_item\": \"2012           2013           2014            2015             2016             2017            2018              2019        2020\", \"amount\": 2021.0, \"description\": \"2012           2013           2014            2015             2016             2017            2018              2019        2020\"}, {\"line_item\": \"PLANTEL DE PERSONAL GRAL.\", \"amount\": 2021.0, \"description\": \"PLANTEL DE PERSONAL GRAL.\"}]}"
+      },
+      "source_file": "2021 ADMINISTRACION DE PERSONAL_structured.json"
+    }
+  ]
+}

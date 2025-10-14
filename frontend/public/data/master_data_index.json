@@ -1,0 +1,63 @@
+{
+  "generated_at": "2025-10-14T10:18:12.348388",
+  "version": "1.0",
+  "summary": {
+    "total_documents": 181,
+    "total_years": 5,
+    "by_type": {
+      "PERSONAL": 9,
+      "GENERAL": 46,
+      "TESORERIA": 14,
+      "GASTOS": 70,
+      "RECURSOS": 38,
+      "NORMATIVA": 2,
+      "PRESUPUESTO": 1,
+      "BALANCE": 1
+    },
+    "total_amounts": {
+      "TESORERIA": 12983980699.359999,
+      "GENERAL": 66976633293.71,
+      "GASTOS": 198257664195.16006,
+      "RECURSOS": 147894332301.86002,
+      "NORMATIVA": 2524374.0,
+      "PRESUPUESTO": 9280507181.0,
+      "PERSONAL": 10705990.4,
+      "BALANCE": 376346103.37
+    },
+    "extraction_methods": {
+      "pdftotext": 151,
+      "ocrmypdf+simple_extraction": 11
+    }
+  },
+  "data_structure": {
+    "backend": {
+      "consolidated": "data/consolidated",
+      "ocr_extracted": "data/ocr_extracted/json",
+      "processed": "data/processed",
+      "charts": "data/central_data/charts"
+    },
+    "frontend": {
+      "consolidated": "data/consolidated",
+      "ocr_extracted": "data/ocr_extracted",
+      "charts": "data/charts"
+    }
+  },
+  "years_available": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "chart_files": [
+    "budget_execution_all_years.csv",
+    "revenue_vs_expenses.csv",
+    "document_type_distribution.csv"
+  ],
+  "access_patterns": {
+    "by_year": "data/consolidated/{year}/summary.json",
+    "by_type": "data/consolidated/{year}/{type}.json",
+    "ocr_index": "data/ocr_extracted/extraction_index.json",
+    "charts": "data/charts/{chart_name}.csv"
+  }
+}

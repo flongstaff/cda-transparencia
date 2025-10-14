@@ -1,0 +1,534 @@
+{
+  "year": 2024,
+  "type": "tesoreria",
+  "generated_at": "2025-10-14T10:18:12.326693",
+  "document_count": 1,
+  "total_amount": 1875547363.96,
+  "documents": [
+    {
+      "metadata": {
+        "filename": "SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE_24.pdf",
+        "title": "Situacion Economica Financiera 4°Trimestre 24",
+        "document_type": "TESORERIA",
+        "date": "23/04/2024",
+        "year": 2024,
+        "amount": 1875547363.96,
+        "currency": "ARS",
+        "budget_lines_count": 97,
+        "extraction_method": "pdftotext",
+        "processed_date": "2025-10-14T09:49:41.528481",
+        "has_tables": true,
+        "text_length": 19486,
+        "json_file": "SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE_24_structured.json"
+      },
+      "content": {
+        "filename": "SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE_24.pdf",
+        "processed_date": "2025-10-14T09:49:41.528481",
+        "document_type": "TESORERIA",
+        "title": "Situacion Economica Financiera 4°Trimestre 24",
+        "date": "23/04/2024",
+        "amount": 1875547363.96,
+        "currency": "ARS",
+        "entities": [
+          "Municipalidad de Carmen de Areco"
+        ],
+        "categories": [
+          "TESORERIA"
+        ],
+        "budget_lines": [
+          {
+            "line_item": "Del 01/10/2023 al 31/12/",
+            "amount": 2023.0,
+            "description": "Del 01/10/2023 al 31/12/"
+          },
+          {
+            "line_item": "(Excluidos movimientos de cierre)                                                  Ejercicio:",
+            "amount": 2023.0,
+            "description": "(Excluidos movimientos de cierre)                                                  Ejercicio:"
+          },
+          {
+            "line_item": "1. Presupuestarios                                                                                I. INGRESOS CORRIENTES",
+            "amount": 736933805.68,
+            "description": "1. Presupuestarios                                                                                I. INGRESOS CORRIENTES"
+          },
+          {
+            "line_item": "Ingresos corrientes                  833.340.880,32     772.490.862,97        736.933.805,68      II. GASTOS CORRIENTES",
+            "amount": 759337002.99,
+            "description": "Ingresos corrientes                  833.340.880,32     772.490.862,97        736.933.805,68      II. GASTOS CORRIENTES"
+          },
+          {
+            "line_item": "Recursos de capital                  317.724.402,42     300.773.844,86                            III. AHORRO CORRIENTE: (I - II)                 -",
+            "amount": 22403197.31,
+            "description": "Recursos de capital                  317.724.402,42     300.773.844,86                            III. AHORRO CORRIENTE: (I - II)                 -"
+          },
+          {
+            "line_item": "Fuentes Financieras                            0,00       7.590.000,00",
+            "amount": 7590000.0,
+            "description": "Fuentes Financieras                            0,00       7.590.000,00"
+          },
+          {
+            "line_item": "IV. RECURSOS DE CAPITAL",
+            "amount": 300772044.86,
+            "description": "IV. RECURSOS DE CAPITAL"
+          },
+          {
+            "line_item": "Total                              1.151.065.282,74   1.080.854.707,83",
+            "amount": 1045295850.54,
+            "description": "Total                              1.151.065.282,74   1.080.854.707,83"
+          },
+          {
+            "line_item": "V. GASTOS DE CAPITAL",
+            "amount": 393826288.35,
+            "description": "V. GASTOS DE CAPITAL"
+          },
+          {
+            "line_item": "De libre disponibilidad              707.904.244,54     660.635.187,09",
+            "amount": 625076329.8,
+            "description": "De libre disponibilidad              707.904.244,54     660.635.187,09"
+          },
+          {
+            "line_item": "Afectados                            443.161.038,20     420.219.520,74        420.219.520,74      VI. INGRESOS TOTALES",
+            "amount": 1037705850.54,
+            "description": "Afectados                            443.161.038,20     420.219.520,74        420.219.520,74      VI. INGRESOS TOTALES"
+          },
+          {
+            "line_item": "Total                              1.151.065.282,74   1.080.854.707,83      1.045.295.850,54      VII. GASTOS TOTALES",
+            "amount": 1153163291.34,
+            "description": "Total                              1.151.065.282,74   1.080.854.707,83      1.045.295.850,54      VII. GASTOS TOTALES"
+          },
+          {
+            "line_item": "2. Extrapresupuestarios",
+            "amount": 77031733.49,
+            "description": "2. Extrapresupuestarios"
+          },
+          {
+            "line_item": "VIII. RESULTADO FINANCIERO (VI - VII)           -",
+            "amount": 115457440.8,
+            "description": "VIII. RESULTADO FINANCIERO (VI - VII)           -"
+          },
+          {
+            "line_item": "Total General (1+2)                1.151.065.282,74   1.080.854.707,83",
+            "amount": 1122327584.03,
+            "description": "Total General (1+2)                1.151.065.282,74   1.080.854.707,83"
+          },
+          {
+            "line_item": "IX. FUENTES FINANCIERAS",
+            "amount": 139177741.37,
+            "description": "IX. FUENTES FINANCIERAS"
+          },
+          {
+            "line_item": "X. APLICACIONES FINANCIERAS",
+            "amount": 12141161.07,
+            "description": "X. APLICACIONES FINANCIERAS"
+          },
+          {
+            "line_item": "Gastos en personal                                      425.302.830,51                   0,00        378.030.954,00         378.030.954,00",
+            "amount": 378030954.0,
+            "description": "Gastos en personal                                      425.302.830,51                   0,00        378.030.954,00         378.030.954,00"
+          },
+          {
+            "line_item": "Bienes de consumo                                       108.490.515,08         -43.268.384,16        134.811.632,40         137.848.709,27",
+            "amount": 134027772.6,
+            "description": "Bienes de consumo                                       108.490.515,08         -43.268.384,16        134.811.632,40         137.848.709,27"
+          },
+          {
+            "line_item": "Servicios no personales                                 242.564.143,23         -57.425.228,22        187.887.369,43         224.518.451,47",
+            "amount": 226586849.36,
+            "description": "Servicios no personales                                 242.564.143,23         -57.425.228,22        187.887.369,43         224.518.451,47"
+          },
+          {
+            "line_item": "Bienes de uso                                           324.170.056,02        -361.010.107,06        638.705.149,95         368.226.095,72",
+            "amount": 368931975.72,
+            "description": "Bienes de uso                                           324.170.056,02        -361.010.107,06        638.705.149,95         368.226.095,72"
+          },
+          {
+            "line_item": "Transferencias                                           44.124.804,07        -213.113.121,91         46.514.298,14          44.532.848,18",
+            "amount": 44589790.18,
+            "description": "Transferencias                                           44.124.804,07        -213.113.121,91         46.514.298,14          44.532.848,18"
+          },
+          {
+            "line_item": "Activos financieros                                        -710.581,35                   0,00         11.720.000,00          11.720.000,00",
+            "amount": 11720000.0,
+            "description": "Activos financieros                                        -710.581,35                   0,00         11.720.000,00          11.720.000,00"
+          },
+          {
+            "line_item": "Servicio de la deuda y disminución de otros pasivos       7.123.515,18                   0,00            427.393,77             427.393,77",
+            "amount": 427393.77,
+            "description": "Servicio de la deuda y disminución de otros pasivos       7.123.515,18                   0,00            427.393,77             427.393,77"
+          },
+          {
+            "line_item": "Total                                                 1.151.065.282,74        -674.816.841,35      1.398.096.797,69       1.165.304.452,41",
+            "amount": 1164314735.63,
+            "description": "Total                                                 1.151.065.282,74        -674.816.841,35      1.398.096.797,69       1.165.304.452,41"
+          },
+          {
+            "line_item": "2. Extrapresupuestarios                                                                                                      62.189.355,31",
+            "amount": 65439241.15,
+            "description": "2. Extrapresupuestarios                                                                                                      62.189.355,31"
+          },
+          {
+            "line_item": "Total General (1+2)                                   1.151.065.282,74        -674.816.841,35      1.398.096.797,69       1.227.493.807,72",
+            "amount": 1229753976.78,
+            "description": "Total General (1+2)                                   1.151.065.282,74        -674.816.841,35      1.398.096.797,69       1.227.493.807,72"
+          },
+          {
+            "line_item": "1110101000 - 16 Direccion de Legales y Tecnica                    6.389.863,93            0,00     5.044.487,66                 5.044.487,66",
+            "amount": 5044487.66,
+            "description": "1110101000 - 16 Direccion de Legales y Tecnica                    6.389.863,93            0,00     5.044.487,66                 5.044.487,66"
+          },
+          {
+            "line_item": "1110103000 - 16 Direccion de Relaciones de Trabajo                6.340.030,77            0,00     4.823.043,96                 4.823.043,96",
+            "amount": 4823043.96,
+            "description": "1110103000 - 16 Direccion de Relaciones de Trabajo                6.340.030,77            0,00     4.823.043,96                 4.823.043,96"
+          },
+          {
+            "line_item": "1110103000 - 26 Fondo Educativo                                  26.319.028,86   -8.047.040,00    17.765.937,60                39.737.544,07",
+            "amount": 39756395.87,
+            "description": "1110103000 - 26 Fondo Educativo                                  26.319.028,86   -8.047.040,00    17.765.937,60                39.737.544,07"
+          },
+          {
+            "line_item": "1110103000 - 27 Programa Especial de Emergencia Educativa PEED      698.444,35 -217.470.418,73    12.926.889,32                 4.242.533,40",
+            "amount": 4242533.4,
+            "description": "1110103000 - 27 Programa Especial de Emergencia Educativa PEED      698.444,35 -217.470.418,73    12.926.889,32                 4.242.533,40"
+          },
+          {
+            "line_item": "1110111000 - 16 Oficina de Empleo                                 3.352.922,37            0,00     2.571.161,09                 2.571.161,09",
+            "amount": 2603506.09,
+            "description": "1110111000 - 16 Oficina de Empleo                                 3.352.922,37            0,00     2.571.161,09                 2.571.161,09"
+          },
+          {
+            "line_item": "1110111000 - 17 Direccion de Bromatologia y Zoonosis             15.098.644,29     -126.269,60     9.647.829,31                 9.690.016,31",
+            "amount": 9379032.11,
+            "description": "1110111000 - 17 Direccion de Bromatologia y Zoonosis             15.098.644,29     -126.269,60     9.647.829,31                 9.690.016,31"
+          },
+          {
+            "line_item": "1110111000 - 18 Direccion de Produccion Ciencia y Tecnologia      9.194.441,85   -2.902.928,01     8.933.816,61                 6.036.888,60",
+            "amount": 6003288.6,
+            "description": "1110111000 - 18 Direccion de Produccion Ciencia y Tecnologia      9.194.441,85   -2.902.928,01     8.933.816,61                 6.036.888,60"
+          },
+          {
+            "line_item": "1110111000 - 22 Direccion de Produccion (NO USAR)                         0,00      -15.500,00        -1.576,00                    -1.576,00            -",
+            "amount": 1576.0,
+            "description": "1110111000 - 22 Direccion de Produccion (NO USAR)                         0,00      -15.500,00        -1.576,00                    -1.576,00            -"
+          },
+          {
+            "line_item": "1110111000 - 25 Adm. y Gest. de Direccion de Cultura             29.265.603,70   -9.258.164,72    25.885.403,65                33.344.315,30",
+            "amount": 32743430.36,
+            "description": "1110111000 - 25 Adm. y Gest. de Direccion de Cultura             29.265.603,70   -9.258.164,72    25.885.403,65                33.344.315,30"
+          },
+          {
+            "line_item": "1110111000 - 26 Adm. y Gest. de Direccion de Turismo             12.299.941,21   -4.232.718,57    14.186.120,67                14.186.120,67",
+            "amount": 14395500.47,
+            "description": "1110111000 - 26 Adm. y Gest. de Direccion de Turismo             12.299.941,21   -4.232.718,57    14.186.120,67                14.186.120,67"
+          },
+          {
+            "line_item": "1110111000 - 27 Direccion de Seguridad y Proteccion Ciudadana    43.127.823,41   -1.654.520,54    45.264.133,38                46.767.933,38",
+            "amount": 48003258.72,
+            "description": "1110111000 - 27 Direccion de Seguridad y Proteccion Ciudadana    43.127.823,41   -1.654.520,54    45.264.133,38                46.767.933,38"
+          },
+          {
+            "line_item": "1110113000 - 16 Direccion de Higiene Urbana y Medio Ambiente    235.958.915,48 -49.943.752,53    247.832.409,08               267.299.404,76",
+            "amount": 265736797.63,
+            "description": "1110113000 - 16 Direccion de Higiene Urbana y Medio Ambiente    235.958.915,48 -49.943.752,53    247.832.409,08               267.299.404,76"
+          },
+          {
+            "line_item": "1110113000 - 17 Obras y Servicios Publicos                      142.451.455,35 -19.424.769,39    115.660.269,36               120.496.279,96",
+            "amount": 123492826.04,
+            "description": "1110113000 - 17 Obras y Servicios Publicos                      142.451.455,35 -19.424.769,39    115.660.269,36               120.496.279,96"
+          },
+          {
+            "line_item": "1110113000 - 52 Obras de Infraestructura Urbana                  70.201.165,27 -337.479.756,12   382.236.600,50               100.017.474,28",
+            "amount": 100161910.39,
+            "description": "1110113000 - 52 Obras de Infraestructura Urbana                  70.201.165,27 -337.479.756,12   382.236.600,50               100.017.474,28"
+          },
+          {
+            "line_item": "1110114000 - 17 Direccion de Salud                              126.314.178,63   -5.418.802,70   124.945.955,61               124.921.918,16",
+            "amount": 123551966.75,
+            "description": "1110114000 - 17 Direccion de Salud                              126.314.178,63   -5.418.802,70   124.945.955,61               124.921.918,16"
+          },
+          {
+            "line_item": "1110114000 - 18 Adm. y Cond. de Abordaje Territorial              2.010.625,13            0,00     1.467.576,72                 1.467.576,72",
+            "amount": 1467576.72,
+            "description": "1110114000 - 18 Adm. y Cond. de Abordaje Territorial              2.010.625,13            0,00     1.467.576,72                 1.467.576,72"
+          },
+          {
+            "line_item": "1110114000 - 19 Direccion de Inclusion Social                    54.767.135,63   -1.574.216,23    51.289.908,04                51.289.908,04",
+            "amount": 51606859.14,
+            "description": "1110114000 - 19 Direccion de Inclusion Social                    54.767.135,63   -1.574.216,23    51.289.908,04                51.289.908,04"
+          },
+          {
+            "line_item": "1110114000 - 20 Direccion de Educacion y Deportes                69.578.059,18   -3.266.009,73    62.825.585,71                63.298.715,71",
+            "amount": 60624175.81,
+            "description": "1110114000 - 20 Direccion de Educacion y Deportes                69.578.059,18   -3.266.009,73    62.825.585,71                63.298.715,71"
+          },
+          {
+            "line_item": "1110114000 - 21 Oficina de Adultos Mayores                        2.468.172,86      -20.000,00     1.870.237,22                 1.870.237,22",
+            "amount": 2030726.02,
+            "description": "1110114000 - 21 Oficina de Adultos Mayores                        2.468.172,86      -20.000,00     1.870.237,22                 1.870.237,22"
+          },
+          {
+            "line_item": "1110114000 - 26 Direccion de Juventud                             7.913.956,89   -1.428.550,00     7.182.304,78                 7.310.079,78",
+            "amount": 7310079.78,
+            "description": "1110114000 - 26 Direccion de Juventud                             7.913.956,89   -1.428.550,00     7.182.304,78                 7.310.079,78"
+          },
+          {
+            "line_item": "1110114000 - 28 Direccion de Niñez y Adolescencia                20.777.292,86   -1.555.720,37    18.836.302,40                19.474.817,57",
+            "amount": 19819813.62,
+            "description": "1110114000 - 28 Direccion de Niñez y Adolescencia                20.777.292,86   -1.555.720,37    18.836.302,40                19.474.817,57"
+          },
+          {
+            "line_item": "1110114000 - 29 Direccion de Mujeres y Diversidades               6.086.870,88      -13.296,00     4.068.913,60                 7.568.913,60",
+            "amount": 7637181.69,
+            "description": "1110114000 - 29 Direccion de Mujeres y Diversidades               6.086.870,88      -13.296,00     4.068.913,60                 7.568.913,60"
+          },
+          {
+            "line_item": "Actividades Centrales                                           237.541.035,50 -10.543.908,11    218.585.698,50               219.598.869,25",
+            "amount": 220119131.88,
+            "description": "Actividades Centrales                                           237.541.035,50 -10.543.908,11    218.585.698,50               219.598.869,25"
+          },
+          {
+            "line_item": "Partidas no asignables a programas                                7.093.527,67            0,00       421.161,07                   421.161,07",
+            "amount": 421161.07,
+            "description": "Partidas no asignables a programas                                7.093.527,67            0,00       421.161,07                   421.161,07"
+          },
+          {
+            "line_item": "Total Departamento Ejecutivo                                  1.133.415.027,41 -674.376.341,35 1.384.270.169,84             1.151.477.824,56",
+            "amount": 1150973107.78,
+            "description": "Total Departamento Ejecutivo                                  1.133.415.027,41 -674.376.341,35 1.384.270.169,84             1.151.477.824,56"
+          },
+          {
+            "line_item": "Actividades Centrales                                                17.650.255,33         -440.500,00    13.826.627,85        13.826.627,85",
+            "amount": 13341627.85,
+            "description": "Actividades Centrales                                                17.650.255,33         -440.500,00    13.826.627,85        13.826.627,85"
+          },
+          {
+            "line_item": "Total H.C.D.                                                         17.650.255,33         -440.500,00    13.826.627,85        13.826.627,85",
+            "amount": 13341627.85,
+            "description": "Total H.C.D.                                                         17.650.255,33         -440.500,00    13.826.627,85        13.826.627,85"
+          },
+          {
+            "line_item": "Total General                                                      1.151.065.282,74 -674.816.841,35 1.398.096.797,69        1.165.304.452,41",
+            "amount": 1164314735.63,
+            "description": "Total General                                                      1.151.065.282,74 -674.816.841,35 1.398.096.797,69        1.165.304.452,41"
+          },
+          {
+            "line_item": "Del 01/10/2023 al 31/12/",
+            "amount": 2023.0,
+            "description": "Del 01/10/2023 al 31/12/"
+          },
+          {
+            "line_item": "(Excluidos movimientos de cierre)                                      Ejercicio:",
+            "amount": 2023.0,
+            "description": "(Excluidos movimientos de cierre)                                      Ejercicio:"
+          },
+          {
+            "line_item": "100000000 ACTIVO",
+            "amount": 1875547363.96,
+            "description": "100000000 ACTIVO"
+          },
+          {
+            "line_item": "Saldo Inicial:",
+            "amount": 28456648.12,
+            "description": "Saldo Inicial:"
+          },
+          {
+            "line_item": "Ingresos del Período:                           1.122.327.584,03    110000000   ACTIVO CORRIENTE",
+            "amount": 367417608.31,
+            "description": "Ingresos del Período:                           1.122.327.584,03    110000000   ACTIVO CORRIENTE"
+          },
+          {
+            "line_item": "Ingresos de Ajustes Contables:                  1.315.447.766,29    120000000   ACTIVO NO CORRIENTE",
+            "amount": 1508129755.65,
+            "description": "Ingresos de Ajustes Contables:                  1.315.447.766,29    120000000   ACTIVO NO CORRIENTE"
+          },
+          {
+            "line_item": "Gastos del Período:",
+            "amount": 1229753976.78,
+            "description": "Gastos del Período:"
+          },
+          {
+            "line_item": "Egresos de Ajustes Contables:",
+            "amount": 1121147766.29,
+            "description": "Egresos de Ajustes Contables:"
+          },
+          {
+            "line_item": "Saldo final:                                                       200000000 PASIVO                              -",
+            "amount": 61337056.77,
+            "description": "Saldo final:                                                       200000000 PASIVO                              -"
+          },
+          {
+            "line_item": "Demostración del Saldo                                                          210000000   PASIVO CORRIENTE                 -",
+            "amount": 45723302.7,
+            "description": "Demostración del Saldo                                                          210000000   PASIVO CORRIENTE                 -"
+          },
+          {
+            "line_item": "111210117 RECURSOS ORDINARIOS (50328/8)                      23.858.084,38     220000000   PASIVO NO CORRIENTE              -",
+            "amount": 15613754.07,
+            "description": "111210117 RECURSOS ORDINARIOS (50328/8)                      23.858.084,38     220000000   PASIVO NO CORRIENTE              -"
+          },
+          {
+            "line_item": "111220101 FONDO VIVIENDA MUNICIPAL (10041/0)",
+            "amount": 32512.61,
+            "description": "111220101 FONDO VIVIENDA MUNICIPAL (10041/0)"
+          },
+          {
+            "line_item": "111220102 INMOBILIARIO RURAL AFECTADO (10085/4)",
+            "amount": 280788.77,
+            "description": "111220102 INMOBILIARIO RURAL AFECTADO (10085/4)"
+          },
+          {
+            "line_item": "111220103 FONDO PRODUCTIVO MUNICIPAL (10089/2)                   61.409,72    300000000 PATRIMONIO                       -",
+            "amount": 1814210307.19,
+            "description": "111220103 FONDO PRODUCTIVO MUNICIPAL (10089/2)                   61.409,72    300000000 PATRIMONIO                       -"
+          },
+          {
+            "line_item": "111220106 FONDO TENDIENDO REDES (10092/2)",
+            "amount": 2548.2,
+            "description": "111220106 FONDO TENDIENDO REDES (10092/2)"
+          },
+          {
+            "line_item": "310000000 PATRIMONIO PUBLICO              -",
+            "amount": 1814210307.19,
+            "description": "310000000 PATRIMONIO PUBLICO              -"
+          },
+          {
+            "line_item": "111220107 POLICIA COMUNAL (10093/9)",
+            "amount": 148008.67,
+            "description": "111220107 POLICIA COMUNAL (10093/9)"
+          },
+          {
+            "line_item": "311000000 Capital fiscal                   -",
+            "amount": 16311591.84,
+            "description": "311000000 Capital fiscal                   -"
+          },
+          {
+            "line_item": "111220109 RECURSOS AFECTADOS (10096/0)",
+            "amount": 57847982.36,
+            "description": "111220109 RECURSOS AFECTADOS (10096/0)"
+          },
+          {
+            "line_item": "312000000 Resultados de la cuenta       -",
+            "amount": 1797898715.35,
+            "description": "312000000 Resultados de la cuenta       -"
+          },
+          {
+            "line_item": "111220114 COPARTICIPACION FONDO EDUCATIVO (50283/4)           2.536.059,29        312100000 Resultados de ejercicios     -",
+            "amount": 1168498037.51,
+            "description": "111220114 COPARTICIPACION FONDO EDUCATIVO (50283/4)           2.536.059,29        312100000 Resultados de ejercicios     -"
+          },
+          {
+            "line_item": "111220116 FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)              633,75        312200000 Resultado del ejercicio        -",
+            "amount": 746750841.27,
+            "description": "111220116 FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)              633,75        312200000 Resultado del ejercicio        -"
+          },
+          {
+            "line_item": "(51006/8)",
+            "amount": 117350163.43,
+            "description": "(51006/8)"
+          },
+          {
+            "line_item": "111220212 HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)",
+            "amount": 723349.78,
+            "description": "111220212 HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)"
+          },
+          {
+            "line_item": "111230101 CUENTA DE TERCEROS (10097/7)",
+            "amount": 15721434.85,
+            "description": "111230101 CUENTA DE TERCEROS (10097/7)"
+          },
+          {
+            "line_item": "Total Disponibilidades:",
+            "amount": 115330255.37,
+            "description": "Total Disponibilidades:"
+          },
+          {
+            "line_item": "Del 01/10/2023 al 31/12/",
+            "amount": 2023.0,
+            "description": "Del 01/10/2023 al 31/12/"
+          },
+          {
+            "line_item": "(Excluidos movimientos de cierre)                                             Ejercicio:",
+            "amount": 2023.0,
+            "description": "(Excluidos movimientos de cierre)                                             Ejercicio:"
+          },
+          {
+            "line_item": "en el ańo        Oct-Dic 2023        Oct-Dic",
+            "amount": 2023.0,
+            "description": "en el ańo        Oct-Dic 2023        Oct-Dic"
+          },
+          {
+            "line_item": "59 Mediacion de Multas y Contravenciones (Multas Efectuadas)                            400                 100                 400",
+            "amount": 300.0,
+            "description": "59 Mediacion de Multas y Contravenciones (Multas Efectuadas)                            400                 100                 400"
+          },
+          {
+            "line_item": "61 Servicios de Castraciones (Castraciones)                                             500                 100                 500",
+            "amount": 400.0,
+            "description": "61 Servicios de Castraciones (Castraciones)                                             500                 100                 500"
+          },
+          {
+            "line_item": "7 Control sanitario de comercios ventas de productos alimenticios                       400                 100                 400",
+            "amount": 300.0,
+            "description": "7 Control sanitario de comercios ventas de productos alimenticios                       400                 100                 400"
+          },
+          {
+            "line_item": "1 Infracciones de Transito (Infracciones)                                               600                 150                 600",
+            "amount": 450.0,
+            "description": "1 Infracciones de Transito (Infracciones)                                               600                 150                 600"
+          },
+          {
+            "line_item": "48 Centro operativo de seguridad ciudadana (cantidad de cámaras de                      198                     98              396",
+            "amount": 298.0,
+            "description": "48 Centro operativo de seguridad ciudadana (cantidad de cámaras de                      198                     98              396"
+          },
+          {
+            "line_item": "58 Asistencias a vecinos (Cantidad de vecinos que se presta servicios)               17.000               4.250              17.000",
+            "amount": 12750.0,
+            "description": "58 Asistencias a vecinos (Cantidad de vecinos que se presta servicios)               17.000               4.250              17.000"
+          },
+          {
+            "line_item": "53 Reparación de calles a través de bacheo con asgalto negro (Cuadras)                  150                     35              150",
+            "amount": 115.0,
+            "description": "53 Reparación de calles a través de bacheo con asgalto negro (Cuadras)                  150                     35              150"
+          },
+          {
+            "line_item": "30 Atención de personas en CAPS (Cantidad de personas asitidas)                       9.920               2.410               9.920",
+            "amount": 7510.0,
+            "description": "30 Atención de personas en CAPS (Cantidad de personas asitidas)                       9.920               2.410               9.920"
+          },
+          {
+            "line_item": "58 Asistencias a vecinos (Familias asistidas)                                         2.350                 595               2.350",
+            "amount": 1755.0,
+            "description": "58 Asistencias a vecinos (Familias asistidas)                                         2.350                 595               2.350"
+          },
+          {
+            "line_item": "25 Favorecer el funcionamiento de los Establecimientos Educativos.                      184                     46              184",
+            "amount": 138.0,
+            "description": "25 Favorecer el funcionamiento de los Establecimientos Educativos.                      184                     46              184"
+          },
+          {
+            "line_item": "64 Asistencia a Personas Mayores (Adultos asistidos)                                    985                 246                 985",
+            "amount": 739.0,
+            "description": "64 Asistencia a Personas Mayores (Adultos asistidos)                                    985                 246                 985"
+          },
+          {
+            "line_item": "46 Programa solidario y cultural para la juventud (Fomentar la participacion            754                     50              754",
+            "amount": 704.0,
+            "description": "46 Programa solidario y cultural para la juventud (Fomentar la participacion            754                     50              754"
+          },
+          {
+            "line_item": "35 Creación de talleres socio educativos (Apoyar a las Mujeres vulnerables)             253                     60              253",
+            "amount": 193.0,
+            "description": "35 Creación de talleres socio educativos (Apoyar a las Mujeres vulnerables)             253                     60              253"
+          }
+        ],
+        "text_length": 19486,
+        "extraction_method": "pdftotext",
+        "has_tables": true,
+        "text_content": "                                                                         R.A.F.A.M.                                                             Hoja: 1 de 3\n\n                                            SITUACIÓN ECONÓMICO-FINANCIERA                                                            23/04/2024             09:41\n      Municipalidad de\n                                                         Del 01/10/2023 al 31/12/2023\n      Carmen de Areco\n                                                          (Excluidos movimientos de cierre)                                                  Ejercicio: 2023\n\nEvolución de los Recursos             Vigente          Devengado              Percibido           Cuenta Ahorro Inversión Financiamiento           Importe\n1. Presupuestarios                                                                                I. INGRESOS CORRIENTES                          736.933.805,68\nIngresos corrientes                  833.340.880,32     772.490.862,97        736.933.805,68      II. GASTOS CORRIENTES                           759.337.002,99\nRecursos de capital                  317.724.402,42     300.773.844,86                            III. AHORRO CORRIENTE: (I - II)                 -22.403.197,31\n                                                                              300.772.044,86\nFuentes Financieras                            0,00       7.590.000,00          7.590.000,00\n                                                                                                  IV. RECURSOS DE CAPITAL                         300.772.044,86\nTotal                              1.151.065.282,74   1.080.854.707,83      1.045.295.850,54\n                                                                                                  V. GASTOS DE CAPITAL                            393.826.288,35\nDe libre disponibilidad              707.904.244,54     660.635.187,09        625.076.329,80\nAfectados                            443.161.038,20     420.219.520,74        420.219.520,74      VI. INGRESOS TOTALES                           1.037.705.850,54\nTotal                              1.151.065.282,74   1.080.854.707,83      1.045.295.850,54      VII. GASTOS TOTALES                            1.153.163.291,34\n2. Extrapresupuestarios                                                        77.031.733,49\n                                                                                                  VIII. RESULTADO FINANCIERO (VI - VII)           -115.457.440,80\nTotal General (1+2)                1.151.065.282,74   1.080.854.707,83      1.122.327.584,03\n                                                                                                  IX. FUENTES FINANCIERAS                         139.177.741,37\n                                                                                                  X. APLICACIONES FINANCIERAS                      12.141.161,07\n\n\n\nEvolución de Gastos por Objeto                           Vigente              Preventivo            Compromiso            Devengado               Pagado\n1. Presupuestarios\nGastos en personal                                      425.302.830,51                   0,00        378.030.954,00         378.030.954,00         378.030.954,00\nBienes de consumo                                       108.490.515,08         -43.268.384,16        134.811.632,40         137.848.709,27         134.027.772,60\nServicios no personales                                 242.564.143,23         -57.425.228,22        187.887.369,43         224.518.451,47         226.586.849,36\nBienes de uso                                           324.170.056,02        -361.010.107,06        638.705.149,95         368.226.095,72         368.931.975,72\nTransferencias                                           44.124.804,07        -213.113.121,91         46.514.298,14          44.532.848,18          44.589.790,18\nActivos financieros                                        -710.581,35                   0,00         11.720.000,00          11.720.000,00          11.720.000,00\nServicio de la deuda y disminución de otros pasivos       7.123.515,18                   0,00            427.393,77             427.393,77             427.393,77\nTotal                                                 1.151.065.282,74        -674.816.841,35      1.398.096.797,69       1.165.304.452,41       1.164.314.735,63\n2. Extrapresupuestarios                                                                                                      62.189.355,31          65.439.241,15\n\nTotal General (1+2)                                   1.151.065.282,74        -674.816.841,35      1.398.096.797,69       1.227.493.807,72       1.229.753.976,78\n\n\nEvolución de Gastos por Programa                                         Vigente          Preventivo      Compromiso          Devengado             Pagado\nDepartamento Ejecutivo\n1110101000 - 16 Direccion de Legales y Tecnica                    6.389.863,93          ",
+        "raw_content": "{\"document_type\": \"TESORERIA\", \"title\": \"SITUACION-ECONOMICA-FINANCIERA-4\\u00b0TRIMESTRE_24\", \"date\": \"23/04/2024\", \"amount\": 1875547363.96, \"budget_lines\": [{\"line_item\": \"Del 01/10/2023 al 31/12/\", \"amount\": 2023.0, \"description\": \"Del 01/10/2023 al 31/12/\"}, {\"line_item\": \"(Excluidos movimientos de cierre)                                                  Ejercicio:\", \"amount\": 2023.0, \"description\": \"(Excluidos movimientos de cierre)                                                  Ejercicio:\"}, {\"line_item\": \"1. Presupuestarios                                                                                I. INGRESOS CORRIENTES\", \"amount\": 736933805.68, \"description\": \"1. Presupuestarios                                                                                I. INGRESOS CORRIENTES\"}, {\"line_item\": \"Ingresos corrientes                  833.340.880,32     772.490.862,97        736.933.805,68      II. GASTOS CORRIENTES\", \"amount\": 759337002.99, \"description\": \"Ingresos corrientes                  833.340.880,32     772.490.862,97        736.933.805,68      II. GASTOS CORRIENTES\"}, {\"line_item\": \"Recursos de capital                  317.724.402,42     300.773.844,86                            III. AHORRO CORRIENTE: (I - II)                 -\", \"amount\": 22403197.31, \"description\": \"Recursos de capital                  317.724.402,42     300.773.844,86                            III. AHORRO CORRIENTE: (I - II)                 -\"}, {\"line_item\": \"Fuentes Financieras                            0,00       7.590.000,00\", \"amount\": 7590000.0, \"description\": \"Fuentes Financieras                            0,00       7.590.000,00\"}, {\"line_item\": \"IV. RECURSOS DE CAPITAL\", \"amount\": 300772044.86, \"description\": \"IV. RECURSOS DE CAPITAL\"}, {\"line_item\": \"Total                              1.151.065.282,74   1.080.854.707,83\", \"amount\": 1045295850.54, \"description\": \"Total                              1.151.065.282,74   1.080.854.707,83\"}, {\"line_item\": \"V. GASTOS DE CAPITAL\", \"amount\": 393826288.35, \"description\": \"V. GASTOS DE CAPITAL\"}, {\"line_item\": \"De libre disponibilidad              707.904.244,54     660.635.187,09\", \"amount\": 625076329.8, \"description\": \"De libre disponibilidad              707.904.244,54     660.635.187,09\"}, {\"line_item\": \"Afectados                            443.161.038,20     420.219.520,74        420.219.520,74      VI. INGRESOS TOTALES\", \"amount\": 1037705850.54, \"description\": \"Afectados                            443.161.038,20     420.219.520,74        420.219.520,74      VI. INGRESOS TOTALES\"}, {\"line_item\": \"Total                              1.151.065.282,74   1.080.854.707,83      1.045.295.850,54      VII. GASTOS TOTALES\", \"amount\": 1153163291.34, \"description\": \"Total                              1.151.065.282,74   1.080.854.707,83      1.045.295.850,54      VII. GASTOS TOTALES\"}, {\"line_item\": \"2. Extrapresupuestarios\", \"amount\": 77031733.49, \"description\": \"2. Extrapresupuestarios\"}, {\"line_item\": \"VIII. RESULTADO FINANCIERO (VI - VII)           -\", \"amount\": 115457440.8, \"description\": \"VIII. RESULTADO FINANCIERO (VI - VII)           -\"}, {\"line_item\": \"Total General (1+2)                1.151.065.282,74   1.080.854.707,83\", \"amount\": 1122327584.03, \"description\": \"Total General (1+2)                1.151.065.282,74   1.080.854.707,83\"}, {\"line_item\": \"IX. FUENTES FINANCIERAS\", \"amount\": 139177741.37, \"description\": \"IX. FUENTES FINANCIERAS\"}, {\"line_item\": \"X. APLICACIONES FINANCIERAS\", \"amount\": 12141161.07, \"description\": \"X. APLICACIONES FINANCIERAS\"}, {\"line_item\": \"Gastos en personal                                      425.302.830,51                   0,00        378.030.954,00         378.030.954,00\", \"amount\": 378030954.0, \"description\": \"Gastos en personal                                      425.302.830,51                   0,00        378.030.954,00         378.030.954,00\"}, {\"line_item\": \"Bienes de consumo                                       108.490.515,08         -43.268.384,16        134.811.632,40         137.848.709,27\", \"amount\": 134027772.6, \"description\": \"Bienes de consumo                                       108.490.515,08         -43.268.384,16        134.811.632,40         137.848.709,27\"}, {\"line_item\": \"Servicios no personales                                 242.564.143,23         -57.425.228,22        187.887.369,43         224.518.451,47\", \"amount\": 226586849.36, \"description\": \"Servicios no personales                                 242.564.143,23         -57.425.228,22        187.887.369,43         224.518.451,47\"}, {\"line_item\": \"Bienes de uso                                           324.170.056,02        -361.010.107,06        638.705.149,95         368.226.095,72\", \"amount\": 368931975.72, \"description\": \"Bienes de uso                                           324.170.056,02        -361.010.107,06        638.705.149,95         368.226.095,72\"}, {\"line_item\": \"Transferencias                                           44.124.804,07        -213.113.121,91         46.514.298,14          44.532.848,18\", \"amount\": 44589790.18, \"description\": \"Transferencias                                           44.124.804,07        -213.113.121,91         46.514.298,14          44.532.848,18\"}, {\"line_item\": \"Activos financieros                                        -710.581,35                   0,00         11.720.000,00          11.720.000,00\", \"amount\": 11720000.0, \"description\": \"Activos financieros                                        -710.581,35                   0,00         11.720.000,00          11.720.000,00\"}, {\"line_item\": \"Servicio de la deuda y disminuci\\u00f3n de otros pasivos       7.123.515,18                   0,00            427.393,77             427.393,77\", \"amount\": 427393.77, \"description\": \"Servicio de la deuda y disminuci\\u00f3n de otros pasivos       7.123.515,18                   0,00            427.393,77             427.393,77\"}, {\"line_item\": \"Total                                                 1.151.065.282,74        -674.816.841,35      1.398.096.797,69       1.165.304.452,41\", \"amount\": 1164314735.63, \"description\": \"Total                                                 1.151.065.282,74        -674.816.841,35      1.398.096.797,69       1.165.304.452,41\"}, {\"line_item\": \"2. Extrapresupuestarios                                                                                                      62.189.355,31\", \"amount\": 65439241.15, \"description\": \"2. Extrapresupuestarios                                                                                                      62.189.355,31\"}, {\"line_item\": \"Total General (1+2)                                   1.151.065.282,74        -674.816.841,35      1.398.096.797,69       1.227.493.807,72\", \"amount\": 1229753976.78, \"description\": \"Total General (1+2)                                   1.151.065.282,74        -674.816.841,35      1.398.096.797,69       1.227.493.807,72\"}, {\"line_item\": \"1110101000 - 16 Direccion de Legales y Tecnica                    6.389.863,93            0,00     5.044.487,66                 5.044.487,66\", \"amount\": 5044487.66, \"description\": \"1110101000 - 16 Direccion de Legales y Tecnica                    6.389.863,93            0,00     5.044.487,66                 5.044.487,66\"}, {\"line_item\": \"1110103000 - 16 Direccion de Relaciones de Trabajo                6.340.030,77            0,00     4.823.043,96                 4.823.043,96\", \"amount\": 4823043.96, \"description\": \"1110103000 - 16 Direccion de Relaciones de Trabajo                6.340.030,77            0,00     4.823.043,96                 4.823.043,96\"}, {\"line_item\": \"1110103000 - 26 Fondo Educativo                                  26.319.028,86   -8.047.040,00    17.765.937,60                39.737.544,07\", \"amount\": 39756395.87, \"description\": \"1110103000 - 26 Fondo Educativo                                  26.319.028,86   -8.047.040,00    17.765.937,60                39.737.544,07\"}, {\"line_item\": \"1110103000 - 27 Programa Especial de Emergencia Educativa PEED      698.444,35 -217.470.418,73    12.926.889,32                 4.242.533,40\", \"amount\": 4242533.4, \"description\": \"1110103000 - 27 Programa Especial de Emergencia Educativa PEED      698.444,35 -217.470.418,73    12.926.889,32                 4.242.533,40\"}, {\"line_item\": \"1110111000 - 16 Oficina de Empleo                                 3.352.922,37            0,00     2.571.161,09                 2.571.161,09\", \"amount\": 2603506.09, \"description\": \"1110111000 - 16 Oficina de Empleo                                 3.352.922,37            0,00     2.571.161,09                 2.571.161,09\"}, {\"line_item\": \"1110111000 - 17 Direccion de Bromatologia y Zoonosis             15.098.644,29     -126.269,60     9.647.829,31                 9.690.016,31\", \"amount\": 9379032.11, \"description\": \"1110111000 - 17 Direccion de Bromatologia y Zoonosis             15.098.644,29     -126.269,60     9.647.829,31                 9.690.016,31\"}, {\"line_item\": \"1110111000 - 18 Direccion de Produccion Ciencia y Tecnologia      9.194.441,85   -2.902.928,01     8.933.816,61                 6.036.888,60\", \"amount\": 6003288.6, \"description\": \"1110111000 - 18 Direccion de Produccion Ciencia y Tecnologia      9.194.441,85   -2.902.928,01     8.933.816,61                 6.036.888,60\"}, {\"line_item\": \"1110111000 - 22 Direccion de Produccion (NO USAR)                         0,00      -15.500,00        -1.576,00                    -1.576,00            -\", \"amount\": 1576.0, \"description\": \"1110111000 - 22 Direccion de Produccion (NO USAR)                         0,00      -15.500,00        -1.576,00                    -1.576,00            -\"}, {\"line_item\": \"1110111000 - 25 Adm. y Gest. de Direccion de Cultura             29.265.603,70   -9.258.164,72    25.885.403,65                33.344.315,30\", \"amount\": 32743430.36, \"description\": \"1110111000 - 25 Adm. y Gest. de Direccion de Cultura             29.265.603,70   -9.258.164,72    25.885.403,65                33.344.315,30\"}, {\"line_item\": \"1110111000 - 26 Adm. y Gest. de Direccion de Turismo             12.299.941,21   -4.232.718,57    14.186.120,67                14.186.120,67\", \"amount\": 14395500.47, \"description\": \"1110111000 - 26 Adm. y Gest. de Direccion de Turismo             12.299.941,21   -4.232.718,57    14.186.120,67                14.186.120,67\"}, {\"line_item\": \"1110111000 - 27 Direccion de Seguridad y Proteccion Ciudadana    43.127.823,41   -1.654.520,54    45.264.133,38                46.767.933,38\", \"amount\": 48003258.72, \"description\": \"1110111000 - 27 Direccion de Seguridad y Proteccion Ciudadana    43.127.823,41   -1.654.520,54    45.264.133,38                46.767.933,38\"}, {\"line_item\": \"1110113000 - 16 Direccion de Higiene Urbana y Medio Ambiente    235.958.915,48 -49.943.752,53    247.832.409,08               267.299.404,76\", \"amount\": 265736797.63, \"description\": \"1110113000 - 16 Direccion de Higiene Urbana y Medio Ambiente    235.958.915,48 -49.943.752,53    247.832.409,08               267.299.404,76\"}, {\"line_item\": \"1110113000 - 17 Obras y Servicios Publicos                      142.451.455,35 -19.424.769,39    115.660.269,36               120.496.279,96\", \"amount\": 123492826.04, \"description\": \"1110113000 - 17 Obras y Servicios Publicos                      142.451.455,35 -19.424.769,39    115.660.269,36               120.496.279,96\"}, {\"line_item\": \"1110113000 - 52 Obras de Infraestructura Urbana                  70.201.165,27 -337.479.756,12   382.236.600,50               100.017.474,28\", \"amount\": 100161910.39, \"description\": \"1110113000 - 52 Obras de Infraestructura Urbana                  70.201.165,27 -337.479.756,12   382.236.600,50               100.017.474,28\"}, {\"line_item\": \"1110114000 - 17 Direccion de Salud                              126.314.178,63   -5.418.802,70   124.945.955,61               124.921.918,16\", \"amount\": 123551966.75, \"description\": \"1110114000 - 17 Direccion de Salud                              126.314.178,63   -5.418.802,70   124.945.955,61               124.921.918,16\"}, {\"line_item\": \"1110114000 - 18 Adm. y Cond. de Abordaje Territorial              2.010.625,13            0,00     1.467.576,72                 1.467.576,72\", \"amount\": 1467576.72, \"description\": \"1110114000 - 18 Adm. y Cond. de Abordaje Territorial              2.010.625,13            0,00     1.467.576,72                 1.467.576,72\"}, {\"line_item\": \"1110114000 - 19 Direccion de Inclusion Social                    54.767.135,63   -1.574.216,23    51.289.908,04                51.289.908,04\", \"amount\": 51606859.14, \"description\": \"1110114000 - 19 Direccion de Inclusion Social                    54.767.135,63   -1.574.216,23    51.289.908,04                51.289.908,04\"}, {\"line_item\": \"1110114000 - 20 Direccion de Educacion y Deportes                69.578.059,18   -3.266.009,73    62.825.585,71                63.298.715,71\", \"amount\": 60624175.81, \"description\": \"1110114000 - 20 Direccion de Educacion y Deportes                69.578.059,18   -3.266.009,73    62.825.585,71                63.298.715,71\"}, {\"line_item\": \"1110114000 - 21 Oficina de Adultos Mayores                        2.468.172,86      -20.000,00     1.870.237,22                 1.870.237,22\", \"amount\": 2030726.02, \"description\": \"1110114000 - 21 Oficina de Adultos Mayores                        2.468.172,86      -20.000,00     1.870.237,22                 1.870.237,22\"}, {\"line_item\": \"1110114000 - 26 Direccion de Juventud                             7.913.956,89   -1.428.550,00     7.182.304,78                 7.310.079,78\", \"amount\": 7310079.78, \"description\": \"1110114000 - 26 Direccion de Juventud                             7.913.956,89   -1.428.550,00     7.182.304,78                 7.310.079,78\"}, {\"line_item\": \"1110114000 - 28 Direccion de Ni\\u00f1ez y Adolescencia                20.777.292,86   -1.555.720,37    18.836.302,40                19.474.817,57\", \"amount\": 19819813.62, \"description\": \"1110114000 - 28 Direccion de Ni\\u00f1ez y Adolescencia                20.777.292,86   -1.555.720,37    18.836.302,40                19.474.817,57\"}, {\"line_item\": \"1110114000 - 29 Direccion de Mujeres y Diversidades               6.086.870,88      -13.296,00     4.068.913,60                 7.568.913,60\", \"amount\": 7637181.69, \"description\": \"1110114000 - 29 Direccion de Mujeres y Diversidades               6.086.870,88      -13.296,00     4.068.913,60                 7.568.913,60\"}, {\"line_item\": \"Actividades Centrales                                           237.541.035,50 -10.543.908,11    218.585.698,50               219.598.869,25\", \"amount\": 220119131.88, \"description\": \"Actividades Centrales                                           237.541.035,50 -10.543.908,11    218.585.698,50               219.598.869,25\"}, {\"line_item\": \"Partidas no asignables a programas                                7.093.527,67            0,00       421.161,07                   421.161,07\", \"amount\": 421161.07, \"description\": \"Partidas no asignables a programas                                7.093.527,67            0,00       421.161,07                   421.161,07\"}, {\"line_item\": \"Total Departamento Ejecutivo                                  1.133.415.027,41 -674.376.341,35 1.384.270.169,84             1.151.477.824,56\", \"amount\": 1150973107.78, \"description\": \"Total Departamento Ejecutivo                                  1.133.415.027,41 -674.376.341,35 1.384.270.169,84             1.151.477.824,56\"}, {\"line_item\": \"Actividades Centrales                                                17.650.255,33         -440.500,00    13.826.627,85        13.826.627,85\", \"amount\": 13341627.85, \"description\": \"Actividades Centrales                                                17.650.255,33         -440.500,00    13.826.627,85        13.826.627,85\"}, {\"line_item\": \"Total H.C.D.                                                         17.650.255,33         -440.500,00    13.826.627,85        13.826.627,85\", \"amount\": 13341627.85, \"description\": \"Total H.C.D.                                                         17.650.255,33         -440.500,00    13.826.627,85        13.826.627,85\"}, {\"line_item\": \"Total General                                                      1.151.065.282,74 -674.816.841,35 1.398.096.797,69        1.165.304.452,41\", \"amount\": 1164314735.63, \"description\": \"Total General                                                      1.151.065.282,74 -674.816.841,35 1.398.096.797,69        1.165.304.452,41\"}, {\"line_item\": \"Del 01/10/2023 al 31/12/\", \"amount\": 2023.0, \"description\": \"Del 01/10/2023 al 31/12/\"}, {\"line_item\": \"(Excluidos movimientos de cierre)                                      Ejercicio:\", \"amount\": 2023.0, \"description\": \"(Excluidos movimientos de cierre)                                      Ejercicio:\"}, {\"line_item\": \"100000000 ACTIVO\", \"amount\": 1875547363.96, \"description\": \"100000000 ACTIVO\"}, {\"line_item\": \"Saldo Inicial:\", \"amount\": 28456648.12, \"description\": \"Saldo Inicial:\"}, {\"line_item\": \"Ingresos del Per\\u00edodo:                           1.122.327.584,03    110000000   ACTIVO CORRIENTE\", \"amount\": 367417608.31, \"description\": \"Ingresos del Per\\u00edodo:                           1.122.327.584,03    110000000   ACTIVO CORRIENTE\"}, {\"line_item\": \"Ingresos de Ajustes Contables:                  1.315.447.766,29    120000000   ACTIVO NO CORRIENTE\", \"amount\": 1508129755.65, \"description\": \"Ingresos de Ajustes Contables:                  1.315.447.766,29    120000000   ACTIVO NO CORRIENTE\"}, {\"line_item\": \"Gastos del Per\\u00edodo:\", \"amount\": 1229753976.78, \"description\": \"Gastos del Per\\u00edodo:\"}, {\"line_item\": \"Egresos de Ajustes Contables:\", \"amount\": 1121147766.29, \"description\": \"Egresos de Ajustes Contables:\"}, {\"line_item\": \"Saldo final:                                                       200000000 PASIVO                              -\", \"amount\": 61337056.77, \"description\": \"Saldo final:                                                       200000000 PASIVO                              -\"}, {\"line_item\": \"Demostraci\\u00f3n del Saldo                                                          210000000   PASIVO CORRIENTE                 -\", \"amount\": 45723302.7, \"description\": \"Demostraci\\u00f3n del Saldo                                                          210000000   PASIVO CORRIENTE                 -\"}, {\"line_item\": \"111210117 RECURSOS ORDINARIOS (50328/8)                      23.858.084,38     220000000   PASIVO NO CORRIENTE              -\", \"amount\": 15613754.07, \"description\": \"111210117 RECURSOS ORDINARIOS (50328/8)                      23.858.084,38     220000000   PASIVO NO CORRIENTE              -\"}, {\"line_item\": \"111220101 FONDO VIVIENDA MUNICIPAL (10041/0)\", \"amount\": 32512.61, \"description\": \"111220101 FONDO VIVIENDA MUNICIPAL (10041/0)\"}, {\"line_item\": \"111220102 INMOBILIARIO RURAL AFECTADO (10085/4)\", \"amount\": 280788.77, \"description\": \"111220102 INMOBILIARIO RURAL AFECTADO (10085/4)\"}, {\"line_item\": \"111220103 FONDO PRODUCTIVO MUNICIPAL (10089/2)                   61.409,72    300000000 PATRIMONIO                       -\", \"amount\": 1814210307.19, \"description\": \"111220103 FONDO PRODUCTIVO MUNICIPAL (10089/2)                   61.409,72    300000000 PATRIMONIO                       -\"}, {\"line_item\": \"111220106 FONDO TENDIENDO REDES (10092/2)\", \"amount\": 2548.2, \"description\": \"111220106 FONDO TENDIENDO REDES (10092/2)\"}, {\"line_item\": \"310000000 PATRIMONIO PUBLICO              -\", \"amount\": 1814210307.19, \"description\": \"310000000 PATRIMONIO PUBLICO              -\"}, {\"line_item\": \"111220107 POLICIA COMUNAL (10093/9)\", \"amount\": 148008.67, \"description\": \"111220107 POLICIA COMUNAL (10093/9)\"}, {\"line_item\": \"311000000 Capital fiscal                   -\", \"amount\": 16311591.84, \"description\": \"311000000 Capital fiscal                   -\"}, {\"line_item\": \"111220109 RECURSOS AFECTADOS (10096/0)\", \"amount\": 57847982.36, \"description\": \"111220109 RECURSOS AFECTADOS (10096/0)\"}, {\"line_item\": \"312000000 Resultados de la cuenta       -\", \"amount\": 1797898715.35, \"description\": \"312000000 Resultados de la cuenta       -\"}, {\"line_item\": \"111220114 COPARTICIPACION FONDO EDUCATIVO (50283/4)           2.536.059,29        312100000 Resultados de ejercicios     -\", \"amount\": 1168498037.51, \"description\": \"111220114 COPARTICIPACION FONDO EDUCATIVO (50283/4)           2.536.059,29        312100000 Resultados de ejercicios     -\"}, {\"line_item\": \"111220116 FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)              633,75        312200000 Resultado del ejercicio        -\", \"amount\": 746750841.27, \"description\": \"111220116 FONDO MUNICIPAL DE FORT. SEGURIDAD (50406/9)              633,75        312200000 Resultado del ejercicio        -\"}, {\"line_item\": \"(51006/8)\", \"amount\": 117350163.43, \"description\": \"(51006/8)\"}, {\"line_item\": \"111220212 HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)\", \"amount\": 723349.78, \"description\": \"111220212 HABITAT NORTE OBRAS Y VIVIENDA NACION (247/00)\"}, {\"line_item\": \"111230101 CUENTA DE TERCEROS (10097/7)\", \"amount\": 15721434.85, \"description\": \"111230101 CUENTA DE TERCEROS (10097/7)\"}, {\"line_item\": \"Total Disponibilidades:\", \"amount\": 115330255.37, \"description\": \"Total Disponibilidades:\"}, {\"line_item\": \"Del 01/10/2023 al 31/12/\", \"amount\": 2023.0, \"description\": \"Del 01/10/2023 al 31/12/\"}, {\"line_item\": \"(Excluidos movimientos de cierre)                                             Ejercicio:\", \"amount\": 2023.0, \"description\": \"(Excluidos movimientos de cierre)                                             Ejercicio:\"}, {\"line_item\": \"en el a\\u0144o        Oct-Dic 2023        Oct-Dic\", \"amount\": 2023.0, \"description\": \"en el a\\u0144o        Oct-Dic 2023        Oct-Dic\"}, {\"line_item\": \"59 Mediacion de Multas y Contravenciones (Multas Efectuadas)                            400                 100                 400\", \"amount\": 300.0, \"description\": \"59 Mediacion de Multas y Contravenciones (Multas Efectuadas)                            400                 100                 400\"}, {\"line_item\": \"61 Servicios de Castraciones (Castraciones)                                             500                 100                 500\", \"amount\": 400.0, \"description\": \"61 Servicios de Castraciones (Castraciones)                                             500                 100                 500\"}, {\"line_item\": \"7 Control sanitario de comercios ventas de productos alimenticios                       400                 100                 400\", \"amount\": 300.0, \"description\": \"7 Control sanitario de comercios ventas de productos alimenticios                       400                 100                 400\"}, {\"line_item\": \"1 Infracciones de Transito (Infracciones)                                               600                 150                 600\", \"amount\": 450.0, \"description\": \"1 Infracciones de Transito (Infracciones)                                               600                 150                 600\"}, {\"line_item\": \"48 Centro operativo de seguridad ciudadana (cantidad de c\\u00e1maras de                      198                     98              396\", \"amount\": 298.0, \"description\": \"48 Centro operativo de seguridad ciudadana (cantidad de c\\u00e1maras de                      198                     98              396\"}, {\"line_item\": \"58 Asistencias a vecinos (Cantidad de vecinos que se presta servicios)               17.000               4.250              17.000\", \"amount\": 12750.0, \"description\": \"58 Asistencias a vecinos (Cantidad de vecinos que se presta servicios)               17.000               4.250              17.000\"}, {\"line_item\": \"53 Reparaci\\u00f3n de calles a trav\\u00e9s de bacheo con asgalto negro (Cuadras)                  150                     35              150\", \"amount\": 115.0, \"description\": \"53 Reparaci\\u00f3n de calles a trav\\u00e9s de bacheo con asgalto negro (Cuadras)                  150                     35              150\"}, {\"line_item\": \"30 Atenci\\u00f3n de personas en CAPS (Cantidad de personas asitidas)                       9.920               2.410               9.920\", \"amount\": 7510.0, \"description\": \"30 Atenci\\u00f3n de personas en CAPS (Cantidad de personas asitidas)                       9.920               2.410               9.920\"}, {\"line_item\": \"58 Asistencias a vecinos (Familias asistidas)                                         2.350                 595               2.350\", \"amount\": 1755.0, \"description\": \"58 Asistencias a vecinos (Familias asistidas)                                         2.350                 595               2.350\"}, {\"line_item\": \"25 Favorecer el funcionamiento de los Establecimientos Educativos.                      184                     46              184\", \"amount\": 138.0, \"description\": \"25 Favorecer el funcionamiento de los Establecimientos Educativos.                      184                     46              184\"}, {\"line_item\": \"64 Asistencia a Personas Mayores (Adultos asistidos)                                    985                 246                 985\", \"amount\": 739.0, \"description\": \"64 Asistencia a Personas Mayores (Adultos asistidos)                                    985                 246                 985\"}, {\"line_item\": \"46 Programa solidario y cultural para la juventud (Fomentar la participacion            754                     50              754\", \"amount\": 704.0, \"description\": \"46 Programa solidario y cultural para la juventud (Fomentar la participacion            754                     50              754\"}, {\"line_item\": \"35 Creaci\\u00f3n de talleres socio educativos (Apoyar a las Mujeres vulnerables)             253                     60              253\", \"amount\": 193.0, \"description\": \"35 Creaci\\u00f3n de talleres socio educativos (Apoyar a las Mujeres vulnerables)             253                     60              253\"}]}"
+      },
+      "source_file": "SITUACION-ECONOMICA-FINANCIERA-4°TRIMESTRE_24_structured.json"
+    }
+  ]
+}

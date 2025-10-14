@@ -7,20 +7,13 @@ import EnhancedDataService from './EnhancedDataService';
 import externalAPIsService from "./ExternalDataAdapter";
 import { githubDataService } from './GitHubDataService';
 import { dataSyncService } from './DataSyncService';
-import {
-  DATA_LOCATIONS,
-  AVAILABLE_YEARS as CONFIGURED_YEARS,
-  getConsolidatedDataPath,
-  getGitHubRawUrl,
-  getDataPath,
-  EXTERNAL_APIS as CONFIGURED_EXTERNAL_APIS
-} from '../config/dataConfig';
+import { getDataUrl, getConsolidatedPath, getOCRPath, getChartDataPath } from '../config/dataPathConfig';
 
-// GitHub repository configuration from centralized config
-const GITHUB_RAW_BASE = DATA_LOCATIONS.GITHUB_RAW;
+// GitHub repository configuration
+const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/flongstaff/cda-transparencia/main/frontend/public/data';
 
-// Available years for data - from configuration (2017-2025)
-const AVAILABLE_YEARS = CONFIGURED_YEARS;
+// Available years for data (2017-2025)
+const AVAILABLE_YEARS = [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
 
 // GitHub API configuration for dynamic resource discovery
 const GITHUB_API_CONFIG = {
@@ -32,8 +25,12 @@ const GITHUB_API_CONFIG = {
   }
 };
 
-// External API configurations from centralized config
-const EXTERNAL_APIS = CONFIGURED_EXTERNAL_APIS;
+// External API configurations
+const EXTERNAL_APIS = {
+  PRESUPUESTO_ABIERTO: { enabled: false },
+  GEOREF: { enabled: false },
+  INDEC: { enabled: false }
+};
 
 export interface Document {
   id: string;
