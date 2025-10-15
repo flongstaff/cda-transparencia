@@ -110,12 +110,6 @@ The project now includes enhanced deployment capabilities with OCR processing fo
 
 For detailed deployment instructions, see [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md).
 
-The actual GitHub Pages deployment is handled by GitHub's automatic `pages-build-deployment` using the `gh-pages` branch.
-
-For the Cloudflare deployment to work, the following secrets must be configured in the repository settings:
-- `CLOUDFLARE_API_TOKEN`
-- `CLOUDFLARE_ACCOUNT_ID`
-
 ## Data Sources
 
 The portal integrates data from multiple sources:
